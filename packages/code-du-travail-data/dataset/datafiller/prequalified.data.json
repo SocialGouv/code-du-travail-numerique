@@ -6103,6 +6103,79 @@
     ]
   },
   {
+    "title": "coronavirus",
+    "theme": "7ab00fdc-433b-4a31-92e7-838a85304f8b",
+    "refs": [
+      {
+        "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
+        "title": "Ministère du travail : notre dossier sur le coronavirus"
+      },
+      {
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
+        "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant"
+      },
+      {
+        "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
+        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)"
+      },
+      {
+        "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
+        "title": "Télétravail dans le secteur privé"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
+        "title": "Coronavirus : je suis salarié"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
+        "title": "Coronavirus : je suis employeur"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
+        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer"
+      },
+      {
+        "url": "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
+        "title": "Mesures exceptionnelles de soutien aux intermittents et salariés du secteur culturel dans le cadre de la crise sanitaire"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-suspension-de-laccueil-dans-les-cfa-et-les-organismes-de-formation-et-continuite-dactivite-a-distance",
+        "title": "CORONAVIRUS : suspension de l’accueil dans les CFA et les organismes de formation et continuité d’activité à distance"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t3-Les-restaurants-d-entreprise-peuvent-rester-ouverts-mais-doivent-etre-nbsp",
+        "title": "Coronavirus - COVID-19 et monde du Travail : 3. les restaurants d’entreprise peuvent rester ouverts, mais doivent être aménagés pour laisser un mètre de distance entre les places à table"
+      },
+      {
+        "url": "/fiche-ministere-travail/conventions-de-fne-formation",
+        "title": "Conventions de FNE-Formation"
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
+        "title": "Coronavirus – COVID-19 | Questions-réponses Mon Compte Formation"
+      }
+    ],
+    "variants": [
+      "coronavirus",
+      "covid 19",
+      "covid",
+      "épidémie",
+      "epidemie",
+      "confinement",
+      "coronavirus teletravail",
+      "pandemie",
+      "pendemie",
+      "pandémie",
+      "virus",
+      "covid 19 et travail",
+      "covid et travail",
+      "épidémie et travail",
+      "epidemie et travail",
+      "confinement et travail",
+      "travail pendant confinement"
+    ]
+  },
+  {
     "title": "cse",
     "theme": "fc69c570-5520-478e-9302-3e226e1cc718",
     "refs": [
@@ -7367,17 +7440,27 @@
       {
         "url": "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse",
         "title": "Un salarié peut-il refuser de travailler dans une situation dangereuse ?",
-        "position": 1
+        "position": 0
       },
       {
         "url": "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur",
         "title": "Sécurité et santé au travail : obligations de l'employeur",
+        "position": 1
+      },
+      {
+        "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
+        "title": "Ministère du travail : notre dossier sur le coronavirus",
         "position": 2
       },
       {
         "url": "/fiche-service-public/dans-quels-cas-recourir-a-linspecteur-du-travail",
         "title": "Dans quels cas recourir à l'inspecteur du travail ?",
         "position": 3
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
+        "title": "Coronavirus : je suis salarié",
+        "position": 4
       }
     ],
     "variants": [

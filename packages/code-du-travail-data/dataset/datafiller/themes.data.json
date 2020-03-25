@@ -999,6 +999,14 @@
       {
         "url": "/fiche-ministere-travail/plans-de-sante-au-travail-pst#Plan-de-sante-au-travail-2016-20-PST-3",
         "title": "Plan de santé au travail 2016-20 (PST"
+      },
+      {
+        "url": "/fiche-ministere-travail/covid-19-situation-des-travailleurs-frontaliers",
+        "title": "COVID-19 : situation des travailleurs frontaliers"
+      },
+      {
+        "url": "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
+        "title": "Mesures exceptionnelles de soutien aux intermittents et salariés du secteur culturel dans le cadre de la crise sanitaire"
       }
     ],
     "slug": "61-conditions-de-travail",
@@ -5263,6 +5271,10 @@
         "title": "Garantie jeunes (accompagnement pour trouver un travail)"
       },
       {
+        "url": "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
+        "title": "Rémunération d'un salarié placé en activité partielle (chômage partiel)"
+      },
+      {
         "url": "/fiche-ministere-travail/les-creches-a-vocation-dinsertion-professionnelle-vip-en-quoi-cela-consiste#Les-creches-VIP-quel-est-le-concept",
         "title": "VIP, en quoi cela consiste ? : les crèches vip, quel est le concept ?"
       },
@@ -6052,6 +6064,10 @@
       },
       {
         "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
+      },
+      {
+        "url": "/fiche-service-public/quest-ce-quun-abandon-de-poste-par-un-salarie-dans-le-secteur-prive",
+        "title": "Qu'est-ce qu'un abandon de poste par un salarié dans le secteur privé ?"
       },
       {
         "url": "/fiche-ministere-travail/la-procedure-en-cas-de-licenciement-pour-motif-personnel#En-quoi-consiste-l-entretien-prealable",
@@ -7808,6 +7824,22 @@
       {
         "url": "/fiche-service-public/en-quoi-consiste-le-droit-dalerte-du-comite-social-et-economique-cse",
         "title": "En quoi consiste le droit d'alerte du comité social et économique (CSE) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-definition-et-cadre-de-mise-en-place",
+        "title": "CSE : définition et cadre de mise en place"
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-definition-et-cadre-de-mise-en-place#Qu-est-ce-que-le-comite-social-et-economique-CSE",
+        "title": "Qu’est-ce que le comité social et économique (CSE) ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-definition-et-cadre-de-mise-en-place#Le-CSE-obligatoire-dans-quelles-entreprises",
+        "title": "Le CSE : obligatoire dans quelles entreprises ?"
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-definition-et-cadre-de-mise-en-place#Dans-quel-cadre-le-CSE-doit-il-etre-mis-en-place",
+        "title": "Dans quel cadre le CSE doit-il être mis en place ?"
       }
     ],
     "slug": "71-representation-du-personnel",
@@ -9464,6 +9496,10 @@
         "title": "Justificatif de l’employeur de déplacement professionnel"
       },
       {
+        "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
+        "title": "Ministère du travail : notre dossier sur le coronavirus"
+      },
+      {
         "url": "/fiche-service-public/complementaire-sante-dentreprise-mutuelle-sante",
         "title": "Complémentaire santé d'entreprise (mutuelle santé)"
       },
@@ -9722,8 +9758,8 @@
         "slug": "34-heures-supplementaires-dequivalence-et-astreintes"
       },
       {
-        "title": "Travail de nuit et en soiréee",
-        "slug": "36-travail-de-nuit-et-en-soireee"
+        "title": "Travail de nuit et en soirée",
+        "slug": "36-travail-de-nuit-et-en-soiree"
       }
     ],
     "icon": "Time",
@@ -9899,11 +9935,11 @@
         "title": "Le travail en soirée : quelles sont les contreparties et les garanties accordées aux salariés travaillant en soirée ?"
       }
     ],
-    "slug": "36-travail-de-nuit-et-en-soireee",
+    "slug": "36-travail-de-nuit-et-en-soiree",
     "source": "themes",
-    "title": "Travail de nuit et en soiréee",
+    "title": "Travail de nuit et en soirée",
     "variants": [
-      "Travail de nuit et en soiréee"
+      "Travail de nuit et en soirée"
     ]
   },
   {
@@ -10111,6 +10147,10 @@
       },
       {
         "url": "/fiche-service-public/recrutement-dun-travailleur-etranger-non-europeen"
+      },
+      {
+        "url": "/fiche-service-public/salari-etranger-quest-ce-que-lopposabilite-de-la-situation-de-lemploi",
+        "title": "Salari�� étranger : qu'est-ce que l'opposabilité de la situation de l'emploi ?"
       }
     ],
     "slug": "114-travailleurs-etrangers",
