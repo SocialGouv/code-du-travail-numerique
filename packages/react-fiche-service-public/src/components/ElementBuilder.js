@@ -83,6 +83,7 @@ export function ElementBuilder({ data, headingLevel }) {
     case "ANoter":
     case "ASavoir":
     case "Attention":
+    case "Avertissement":
     case "Rappel":
       return (
         <ANoter variant="dark">
