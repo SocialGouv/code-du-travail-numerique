@@ -47,6 +47,7 @@
     "koa-mount": "^4.0.0",
     "koa-router": "^9.0.1",
     "koa-send": "^5.0.0",
+    "lit-element": "2.3.1",
     "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
     "next": "9.4.4",
