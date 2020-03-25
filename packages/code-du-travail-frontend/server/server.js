@@ -70,6 +70,8 @@ nextApp.prepare().then(() => {
             "https://www.googletagmanager.com",
             "*.fabrique.social.gouv.fr",
             "https://cdnjs.cloudflare.com",
+            "https://cdn.jsdelivr.net",
+            "https://unpkg.com",
           ],
           frameSrc: [
             "https://mon-entreprise.fr",
@@ -90,10 +92,10 @@ nextApp.prepare().then(() => {
         },
         reportOnly: () => dev,
       },
-    }),
+    })
   );
   if (dev) {
-    router.post("/report-violation", ctx => {
+    router.post("/report-violation", (ctx) => {
       if (ctx.request.body) {
         console.log("CSP Violation: ", ctx.request.body);
       } else {
@@ -103,7 +105,7 @@ nextApp.prepare().then(() => {
     });
   }
   if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
       if (!isProdUrl && !isHealthCheckUrl) {
@@ -114,21 +116,21 @@ nextApp.prepare().then(() => {
       await next();
     });
   } else {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();
     });
   }
 
-  router.get("/health", async ctx => {
+  router.get("/health", async (ctx) => {
     ctx.body = { status: "up and running" };
   });
 
-  router.get("/robots.txt", async ctx => {
+  router.get("/robots.txt", async (ctx) => {
     ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
-  router.all("*", async ctx => {
+  router.all("*", async (ctx) => {
     await nextHandler(ctx.req, ctx.res);
     ctx.respond = false;
   });
@@ -140,9 +142,9 @@ nextApp.prepare().then(() => {
 
   // centralize error logging
   server.on("error", (err, ctx) => {
-    Sentry.withScope(function(scope) {
+    Sentry.withScope(function (scope) {
       scope.setTag(`koa`, true);
-      scope.addEventProcessor(function(event) {
+      scope.addEventProcessor(function (event) {
         return Sentry.Handlers.parseRequest(event, ctx.request);
       });
       Sentry.captureException(err);

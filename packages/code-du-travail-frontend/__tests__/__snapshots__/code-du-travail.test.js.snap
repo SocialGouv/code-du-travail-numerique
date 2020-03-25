@@ -1525,6 +1525,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               Article introuvable
             </div>
           </div>
+          
           <div
             class="c30"
           >

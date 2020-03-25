@@ -758,6 +758,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: center;
 }
 
+.c62 {
+  width: 100%;
+}
+
 .c43 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -927,10 +931,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c35 {
   width: 80%;
-}
-
-.c62 {
-  width: 100%;
 }
 
 .c54 {
@@ -3560,6 +3560,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: center;
 }
 
+.c62 {
+  width: 100%;
+}
+
 .c43 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3729,10 +3733,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c35 {
   width: 80%;
-}
-
-.c62 {
-  width: 100%;
 }
 
 .c54 {

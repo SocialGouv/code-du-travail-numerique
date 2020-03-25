@@ -45,6 +45,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-helmet": "^5.2.0",
     "koa-router": "^8.0.8",
+    "lit-element": "2.3.1",
     "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
     "next": "9.3.6",
