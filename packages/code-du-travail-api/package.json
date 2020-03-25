@@ -39,6 +39,7 @@
     "koa-router": "^8.0.8",
     "koa-send": "^5.0.0",
     "lodash.deburr": "^4.1.0",
+    "memoizee": "^0.4.14",
     "node-fetch": "^2.6.0",
     "winston": "^3.2.1"
   },
