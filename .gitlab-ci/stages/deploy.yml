@@ -33,7 +33,6 @@ Create namespace:
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
     - kubectl get secret elastic-apm --namespace=cdtn-secret --export -o yaml |
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
-
 #
 
 .deploy_stage: &deploy_stage
@@ -82,6 +81,7 @@ Create namespace:
     CONTEXT: api
     PORT: 8000
     VALUES_FILE: ./.k8s/api.values.yml
+    ENABLE_APM: "false"
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${API_HOST}
@@ -99,9 +99,11 @@ Deploy @cdtn/api (dev):
       --set deployment.resources.requests.cpu=.3m
 
 Deploy @cdtn/api (prod):
-  <<: *deploy_api_stage
-  <<: *prod_stage
-
+  extends:
+    - .deploy_api_stage
+    - .prod_stage
+  variables:
+    ENABLE_APM: "true"
 #
 #
 #
