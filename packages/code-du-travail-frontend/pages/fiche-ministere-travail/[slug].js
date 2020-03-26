@@ -60,7 +60,7 @@ class Fiche extends React.Component {
           description={description}
           image={ogImage}
         />
-        <Answer
+        <StyledAnswer
           title={title}
           relatedItems={relatedItems}
           emptyMessage="Cette fiche n'a pas été trouvée"
@@ -71,7 +71,7 @@ class Fiche extends React.Component {
         >
           {untitledSection && <Html>{untitledSection.html}</Html>}
           <Accordion preExpanded={[anchor]} items={titledSections} />
-        </Answer>
+        </StyledAnswer>
       </Layout>
     );
   }
@@ -94,5 +94,12 @@ const TabContent = styled(Html)`
   }
   & > *:last-child {
     margin-bottom: 0;
+  }
+`;
+
+const StyledAnswer = styled(Answer)`
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `;

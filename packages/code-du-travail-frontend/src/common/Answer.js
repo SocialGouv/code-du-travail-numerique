@@ -25,6 +25,7 @@ function Answer({
   additionalContent,
   breadcrumbs = [],
   children = null,
+  className,
   date,
   dateLabel,
   emptyMessage = "Aucun résultat",
@@ -43,7 +44,7 @@ function Answer({
     <>
       <Breadcrumbs items={breadcrumbs} />
       <MainAsideLayout>
-        <MainContent hasResults={relatedItems.length > 0}>
+        <MainContent hasResults={relatedItems.length > 0} className={className}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
