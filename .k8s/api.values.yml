@@ -68,6 +68,8 @@ deployment:
       value: "${NLP_URL}"
     - name: NODE_ENV
       value: "production"
+    - name: ELASTIC_APM_ACTIVE
+      value: "$ENABLE_APM"
     - name: PORT
       value: "${PORT}"
     - name: VERSION
