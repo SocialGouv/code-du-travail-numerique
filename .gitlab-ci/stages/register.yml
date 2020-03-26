@@ -30,6 +30,16 @@ Register elasticsearch image:
     DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
 
+Register nlp image:
+  <<: *register_stage
+  stage: "Prepare"
+  variables:
+    CONTEXT: packages/code-du-travail-nlp
+    DOCKER_BUILD_ARGS: >-
+      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
+
 #
 
 Register api image:
@@ -50,24 +60,33 @@ Register frontend image:
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
 
-Register nlp image:
-  <<: *register_stage
-  variables:
-    CONTEXT: packages/code-du-travail-nlp
-    DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
-
 Register data image:
   <<: *register_stage
-  stage: "Post Registration"
+  services:
+    - name: docker:19-dind
+    - name: $CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA
+      alias: nlp
   needs:
     - Register nlp image
+    - Register socialgouv/cdtn base image
+
   variables:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+      --build-arg NLP_URL=http://nlp:${NLP_PORT}
+      --network=host
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
+  before_script:
+    - |-
+      echo "connecting to http://nlp:${NLP_PORT}";
+
+      retry=60;
+      while
+        ! wget --spider "http://nlp:${NLP_PORT}/api/ready" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 1 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
+
+#

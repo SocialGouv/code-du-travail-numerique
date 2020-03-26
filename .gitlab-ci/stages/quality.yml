@@ -95,7 +95,7 @@ Test @cdtn/api:
     - |-
       echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA";
       echo $ELASTICSEARCH_URL;
-      retry=180;
+      retry=60;
       while
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];

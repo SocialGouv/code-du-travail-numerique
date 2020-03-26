@@ -7,7 +7,6 @@ RUN apk add --no-cache git=~2 curl=~7
 #
 
 WORKDIR /app
-RUN chown node:node /app
 
 #
 
@@ -48,5 +47,3 @@ COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
-
-USER node
