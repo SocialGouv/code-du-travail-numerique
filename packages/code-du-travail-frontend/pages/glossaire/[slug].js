@@ -1,7 +1,6 @@
 import React from "react";
-import glossary from "@cdt/data...datafiller/glossary.data.json";
+import getConfig from "next/config";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styled from "styled-components";
 import {
   Container,
@@ -18,11 +17,11 @@ import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
 import { FocusRoot } from "../../src/a11y";
 
-function Term({ pageUrl, ogImage }) {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [term] = glossary.filter((term) => slug === term.slug);
+const {
+  publicRuntimeConfig: { API_URL },
+} = getConfig();
 
+function Term({ pageUrl, ogImage, term }) {
   return (
     <Layout>
       <Metas
@@ -79,7 +78,14 @@ function Term({ pageUrl, ogImage }) {
     </Layout>
   );
 }
-
+Term.getInitialProps = async ({ query: { slug } }) => {
+  const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
+  if (!responseContainer.ok) {
+    return { statusCode: responseContainer.status };
+  }
+  const term = await responseContainer.json();
+  return { term };
+};
 export default Term;
 
 const { spacings } = theme;

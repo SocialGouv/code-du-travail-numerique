@@ -1,6 +1,6 @@
 import React from "react";
-import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
+import getConfig from "next/config";
 
 import styled from "styled-components";
 import {
@@ -17,10 +17,14 @@ import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { FocusRoot } from "../../src/a11y";
 
+const {
+  publicRuntimeConfig: { API_URL },
+} = getConfig();
+
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
 
-function Glossaire({ pageUrl, ogImage }) {
+function Glossaire({ pageUrl, ogImage, glossary }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
     <Layout>
@@ -44,6 +48,14 @@ function Glossaire({ pageUrl, ogImage }) {
     </Layout>
   );
 }
+Glossaire.getInitialProps = async () => {
+  const responseContainer = await fetch(`${API_URL}/glossary`);
+  if (!responseContainer.ok) {
+    return { statusCode: responseContainer.status };
+  }
+  const glossary = await responseContainer.json();
+  return { glossary };
+};
 
 export default Glossaire;
 
