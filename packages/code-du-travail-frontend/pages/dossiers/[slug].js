@@ -97,7 +97,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                   </li>
                 ))}
                 {externalRefs.map(({ title, url }) => (
-                  <li key={url}>
+                  <li key={`${title}${url}`}>
                     <LeftArrowLink
                       href={url}
                       rel="noopener nofollow"
@@ -137,7 +137,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             ))}
             {externalRefs.map(({ action, icon, title, url }) => (
               <CallToActionTile
-                key={url}
+                key={`${title}${url}`}
                 action={action}
                 custom
                 title={title}

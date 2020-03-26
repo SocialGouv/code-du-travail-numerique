@@ -44,13 +44,17 @@ Coronavirus et données personnelles :
       },
       {
         type: "secondary",
+        url: "/fiche-ministere-travail/activite-partielle",
+      },
+      {
+        type: "secondary",
         url:
           "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
       },
       {
         type: "secondary",
         url:
-          "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle",
+          "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
       },
       {
         type: "secondary",
