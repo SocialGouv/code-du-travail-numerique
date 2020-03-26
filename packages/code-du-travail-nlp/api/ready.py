@@ -9,4 +9,4 @@ def add_ready(app, nlp):
         if nlp.is_ready:
             return "green"
         else:
-            abort(500, "Service unavailable")
+            abort(503, "Service unavailable")
