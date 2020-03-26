@@ -8,7 +8,12 @@ import { logger } from "./indexing/logger";
 logger.silent = true;
 const t0 = Date.now();
 const NLP_URL = process.env.NLP_URL;
-const excludeSources = [SOURCES.CDT];
+const excludeSources = [
+  SOURCES.CDT,
+  SOURCES.GLOSSARY,
+  SOURCES.PREQUALIFIED,
+  SOURCES.HIGHLIGHTS,
+];
 const queue = new PQueue({ concurrency: 3 });
 
 function fetchVector(data) {
