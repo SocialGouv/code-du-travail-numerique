@@ -2,15 +2,15 @@ const { SOURCES, getRouteBySource } = require("@cdt/sources");
 const allThemes = require("@cdt/data...datafiller/themes.data.json");
 const tools = require("./internals.json");
 
-const themes = allThemes.filter(theme =>
-  theme.refs.some(ref =>
-    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`),
-  ),
+const themes = allThemes.filter((theme) =>
+  theme.refs.some((ref) =>
+    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
+  )
 );
 
-const toolsWithBreadCrumbs = tools.map(tool => {
-  const theme = themes.find(theme =>
-    theme.refs.some(ref => ref.url.match(new RegExp(tool.slug))),
+const toolsWithBreadCrumbs = tools.map((tool) => {
+  const theme = themes.find((theme) =>
+    theme.refs.some((ref) => ref.url.match(new RegExp(tool.slug)))
   );
   let breadcrumbs = [];
   if (theme) {

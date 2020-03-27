@@ -49,6 +49,11 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
+          "/fiche-ministere-travail/coronavirus-covid-19-fiches-conseils-metiers-pour-les-salaries-et-les-employeurs",
+      },
+      {
+        type: "secondary",
+        url:
           "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
       },
       {

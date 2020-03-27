@@ -128,29 +128,31 @@ async function* cdtnDocumentsGen() {
   yield getCourriers();
 
   logger.info("=== Outils ===");
-  yield require("../dataset/tools").map(
-    ({
-      action,
-      breadcrumbs,
-      date,
-      description,
-      icon,
-      questions,
-      slug,
-      title,
-    }) => ({
-      action,
-      breadcrumbs,
-      date,
-      description,
-      icon,
-      slug,
-      source: SOURCES.TOOLS,
-      text: questions.join("\n"),
-      title,
-      excludeFromSearch: false,
-    })
-  );
+  yield require("../dataset/tools")
+    .filter((tool) => tool.slug !== "simulateur-embauche")
+    .map(
+      ({
+        action,
+        breadcrumbs,
+        date,
+        description,
+        icon,
+        questions,
+        slug,
+        title,
+      }) => ({
+        action,
+        breadcrumbs,
+        date,
+        description,
+        icon,
+        slug,
+        source: SOURCES.TOOLS,
+        text: questions.join("\n"),
+        title,
+        excludeFromSearch: false,
+      })
+    );
 
   logger.info("=== Outils externes ===");
   yield require("../dataset/tools/externals.json").map(
