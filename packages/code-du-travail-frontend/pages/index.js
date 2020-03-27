@@ -57,7 +57,7 @@ export const DocumentsTile = (
 
 const selectedTools = [
   tools.find((tool) => tool.slug === "preavis-demission"),
-  tools.find((tool) => tool.slug === "simulateur-embauche"),
+  tools.find((tool) => tool.slug === "indemnite-licenciement"),
 ];
 
 const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (

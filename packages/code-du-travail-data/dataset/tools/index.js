@@ -8,26 +8,24 @@ const themes = allThemes.filter((theme) =>
   )
 );
 
-const toolsWithBreadCrumbs = tools
-  .filter((tool) => tool.slug !== "simulateur-embauche")
-  .map((tool) => {
-    const theme = themes.find((theme) =>
-      theme.refs.some((ref) => ref.url.match(new RegExp(tool.slug)))
-    );
-    let breadcrumbs = [];
-    if (theme) {
-      breadcrumbs = (theme.breadcrumbs || []).concat([
-        {
-          label: theme.title,
-          slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
-        },
-      ]);
-    }
+const toolsWithBreadCrumbs = tools.map((tool) => {
+  const theme = themes.find((theme) =>
+    theme.refs.some((ref) => ref.url.match(new RegExp(tool.slug)))
+  );
+  let breadcrumbs = [];
+  if (theme) {
+    breadcrumbs = (theme.breadcrumbs || []).concat([
+      {
+        label: theme.title,
+        slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
+      },
+    ]);
+  }
 
-    return {
-      ...tool,
-      breadcrumbs,
-    };
-  });
+  return {
+    ...tool,
+    breadcrumbs,
+  };
+});
 
 module.exports = toolsWithBreadCrumbs;
