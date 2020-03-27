@@ -11,17 +11,18 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const withTM = function(config) {
+const withTM = function (config) {
   if (process.env.NODE_ENV === "production") {
     return withTranspileModule(config);
   }
   return config;
 };
 
-const compose = (...fns) => args => fns.reduceRight((arg, fn) => fn(arg), args);
+const compose = (...fns) => (args) =>
+  fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
-  webpack: config => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.test.js$/,
       loader: "ignore-loader",
@@ -49,5 +50,5 @@ const nextConfig = {
 module.exports = compose(
   withSourceMaps,
   withBundleAnalyzer,
-  withTM,
+  withTM
 )(nextConfig);
