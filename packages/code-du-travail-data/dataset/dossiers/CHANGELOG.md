@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.12.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.11.0...v4.12.0) (2020-03-27)
+
+
+### Features
+
+* **data:** update-data and hide simulateur ([#2542](https://github.com/SocialGouv/code-du-travail-numerique/issues/2542)) ([205eb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/205eb151e8b8f924a0bd737fb1c9bda65a0c9360))
+
+
+
+
+
 # [4.11.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.11.0-alpha.1...v4.11.0) (2020-03-27)
 
 **Note:** Version bump only for package @cdt/data...dossiers
