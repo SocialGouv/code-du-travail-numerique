@@ -13,10 +13,13 @@ const { resolveReferences } = require("./referenceResolver");
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
 
-const formatAnchor = node => {
+const formatAnchor = (node) => {
   if (node.textContent === "") {
     node.remove();
     return;
+  }
+  if (node.getElementsByTagName("img").length) {
+    node.classList.add("no-after");
   }
   let href = node.getAttribute("href");
   // remove ATTAg(...) on pdf link
@@ -36,12 +39,12 @@ const formatAnchor = node => {
   }
 };
 
-const flattenCsBlocs = node => {
+const flattenCsBlocs = (node) => {
   node.insertAdjacentHTML("afterend", node.innerHTML);
   node.parentNode.removeChild(node);
 };
 
-const getSectionTag = article => {
+const getSectionTag = (article) => {
   const h3 = $$(article, ".main-article__texte h3").length && "h3";
   const h4 = $$(article, ".main-article__texte h4").length && "h4";
   const h5 = $$(article, ".main-article__texte h5").length && "h5";
@@ -53,8 +56,8 @@ function parseDom(dom, url) {
   $$(article, "a").forEach(formatAnchor);
   $$(article, ".cs_blocs").forEach(flattenCsBlocs);
   $$(article, "img")
-    .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
-    .forEach(node => {
+    .filter((node) => node.getAttribute("src").indexOf("data:image") === -1)
+    .forEach((node) => {
       // remove adaptImgFix(this) on hero img
       node.removeAttribute("onmousedown");
       let src = node.getAttribute("src");
@@ -77,7 +80,7 @@ function parseDom(dom, url) {
   intro = intro && intro.innerHTML.trim();
   const description = $(
     dom.window.document,
-    "meta[name=description]",
+    "meta[name=description]"
   ).getAttribute("content");
   const sections = [];
   const sectionTag = getSectionTag(article);
@@ -111,8 +114,8 @@ function parseDom(dom, url) {
   // Gets all the titled content
   const articleChildren = $$(article, ".main-article__texte > *");
   articleChildren
-    .filter(el => el.getAttribute("id"))
-    .forEach(function(el) {
+    .filter((el) => el.getAttribute("id"))
+    .forEach(function (el) {
       if (el.tagName.toLowerCase() === sectionTag) {
         let nextEl = el.nextElementSibling;
         const section = {
@@ -148,7 +151,7 @@ function parseDom(dom, url) {
   };
 }
 
-const fetchAndParse = urls => {
+const fetchAndParse = (urls) => {
   const limit = pLimit(15);
   let count = 0;
   const spinner = ora(`fetching 0/${urls.length}`).start();
@@ -169,24 +172,24 @@ const fetchAndParse = urls => {
   }
 
   async function parseFiches(urls) {
-    const inputs = urls.map(url => limit(() => parseFiche(url)));
+    const inputs = urls.map((url) => limit(() => parseFiche(url)));
     const results = (await Promise.all(inputs)).filter(
-      fiche => !!fiche.sections,
+      (fiche) => !!fiche.sections
     );
     fs.writeFileSync(
       "./fiches-mt.json",
       JSON.stringify(
-        results.map(fiche => ({
+        results.map((fiche) => ({
           ...fiche,
           sections: fiche.sections.map(
             // description and text are not needed in the file
             // eslint-disable-next-line no-unused-vars
-            ({ description, text, ...section }) => section,
+            ({ description, text, ...section }) => section
           ),
         })),
         null,
-        2,
-      ),
+        2
+      )
     );
 
     const fiches = results
@@ -194,7 +197,7 @@ const fetchAndParse = urls => {
       .reduce((accumulator, documents) => accumulator.concat(documents), []);
     fs.writeFileSync(
       "./fiches-mt-split.json",
-      JSON.stringify(fiches.filter(Boolean), null, 2),
+      JSON.stringify(fiches.filter(Boolean), null, 2)
     );
 
     spinner.stop().clear();
@@ -208,7 +211,7 @@ module.exports = {
 };
 
 if (module === require.main) {
-  fetchAndParse(urls).catch(error => {
+  fetchAndParse(urls).catch((error) => {
     console.error(error);
   });
 }
