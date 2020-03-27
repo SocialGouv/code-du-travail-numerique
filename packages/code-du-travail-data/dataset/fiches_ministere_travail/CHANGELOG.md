@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.10.0...v4.11.0-alpha.0) (2020-03-27)
+
+
+### Features
+
+* **chore:** update fiches mt and fix images too large ([#2536](https://github.com/SocialGouv/code-du-travail-numerique/issues/2536)) ([c10699f](https://github.com/SocialGouv/code-du-travail-numerique/commit/c10699fbcaf99496cafd6dd9aeffda0672307c05))
+
+
+
+
+
 # [4.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.9.0...v4.10.0) (2020-03-24)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail

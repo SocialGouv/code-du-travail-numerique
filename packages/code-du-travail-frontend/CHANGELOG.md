@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.10.0...v4.11.0-alpha.0) (2020-03-27)
+
+
+### Bug Fixes
+
+* packages/code-du-travail-frontend/package.json to reduce vulnerabilities ([#2540](https://github.com/SocialGouv/code-du-travail-numerique/issues/2540)) ([36fdf05](https://github.com/SocialGouv/code-du-travail-numerique/commit/36fdf05dd1fc77ec56089479dbe3e1b255273f84))
+
+
+### Features
+
+* **chore:** update dossier ([#2537](https://github.com/SocialGouv/code-du-travail-numerique/issues/2537)) ([e7df6f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7df6f5b4a526e309e7afb3dffbf5f1227219144))
+* **chore:** update fiches mt and fix images too large ([#2536](https://github.com/SocialGouv/code-du-travail-numerique/issues/2536)) ([c10699f](https://github.com/SocialGouv/code-du-travail-numerique/commit/c10699fbcaf99496cafd6dd9aeffda0672307c05))
+
+
+
+
+
 # [4.10.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.9.0...v4.10.0) (2020-03-24)
 
 
