@@ -17,20 +17,20 @@ const TYPES = ["particuliers", "professionnels", "associations"];
 const contribFicheId = contributions
   .map(({ answers }) => extractMdxContentUrl(answers.generic.markdown))
   .filter(Boolean)
-  .map(url => {
+  .map((url) => {
     const [, id] = url.match(/\/(\w+)$/);
     return id;
   });
 
 const fullFiches = [].concat(
-  ...TYPES.map(type =>
+  ...TYPES.map((type) =>
     fiches[type]
-      .filter(id => id.match(/F[0-9]+/))
-      .map(id => fiches.getFiche(type, id)),
-  ),
+      .filter((id) => id.match(/F[0-9]+/))
+      .map((id) => fiches.getFiche(type, id))
+  )
 );
 
-const setTheme = fiche => ({
+const setTheme = (fiche) => ({
   ...fiche,
   ...getThemeFiche(fiche),
 });
@@ -66,7 +66,7 @@ const getFichesSP = () =>
         references_juridiques,
         url,
         excludeFromSearch: contribFicheId.includes(id),
-      }),
+      })
     );
 
 module.exports = { getFichesSP };
