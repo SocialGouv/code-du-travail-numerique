@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...tools",
-  "version": "4.11.0-alpha.1",
+  "version": "4.11.0",
   "private": true,
   "license": "MIT",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@cdt/data...datafiller": "^4.11.0-alpha.1",
-    "@cdt/sources": "^4.11.0-alpha.1"
+    "@cdt/data...datafiller": "^4.11.0",
+    "@cdt/sources": "^4.11.0"
   }
 }
