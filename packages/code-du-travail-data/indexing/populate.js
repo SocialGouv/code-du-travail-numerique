@@ -200,6 +200,27 @@ async function* cdtnDocumentsGen() {
       };
     }
   );
+  logger.info("=== Hightlights ===");
+  yield [
+    {
+      source: SOURCES.HIGHLIGHTS,
+      data: require("../dataset/datafiller/highlights.data.json"),
+    },
+  ];
+  logger.info("=== glossary ===");
+  yield [
+    {
+      source: SOURCES.GLOSSARY,
+      data: require("../dataset/datafiller/glossary.data.json"),
+    },
+  ];
+  logger.info("=== PreQualified Request ===");
+  yield [
+    {
+      source: SOURCES.PREQUALIFIED,
+      data: require("../dataset/datafiller/prequalified.data.json"),
+    },
+  ];
 }
 
 export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };

@@ -11,7 +11,7 @@ const getDocumentByUrlQuery = (
     "url",
     "action",
     "breadcrumbs",
-  ],
+  ]
 ) => {
   const [, source, slug] = url.split("/");
   const esSource = getSourceByRoute(source);

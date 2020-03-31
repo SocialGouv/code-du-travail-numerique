@@ -43,7 +43,7 @@ const CDT_ES = "cdt_es";
  * @param {string} querystring.skipSavedResults A `skipSavedResults` querystring param indicates that we skip the savedResults search
  * @returns {Object} Results.
  */
-router.get("/search", async ctx => {
+router.get("/search", async (ctx) => {
   const { q: query } = ctx.query;
 
   const sources = [
@@ -63,15 +63,15 @@ router.get("/search", async ctx => {
   let articles = [];
   let themes = [];
   if (knownQueryResult) {
-    knownQueryResult.forEach(item => (item._source.algo = "pre-qualified"));
+    knownQueryResult.forEach((item) => (item._source.algo = "pre-qualified"));
     documents = knownQueryResult.filter(({ _source: { source } }) =>
-      sources.includes(source),
+      sources.includes(source)
     );
     articles = knownQueryResult.filter(
-      ({ _source: { source } }) => source === SOURCES.CDT,
+      ({ _source: { source } }) => source === SOURCES.CDT
     );
     themes = knownQueryResult.filter(
-      ({ _source: { source } }) => source === SOURCES.THEMES,
+      ({ _source: { source } }) => source === SOURCES.THEMES
     );
   }
 
@@ -82,14 +82,14 @@ router.get("/search", async ctx => {
   if (!knownQueryResult || shouldRequestThemes) {
     logger.info(
       `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
-        query,
-      )}`,
+        query
+      )}`
     );
     const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`,
+      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
     )
-      .then(response => (response = response.json()))
-      .catch(error => {
+      .then((response) => (response = response.json()))
+      .catch((error) => {
         logger.error(error);
         return [];
       });
@@ -148,25 +148,25 @@ router.get("/search", async ctx => {
     const { hits: { hits: semanticHits } = { hits: [] } } = results[
       DOCUMENTS_SEM
     ];
-    fulltextHits.forEach(item => (item._source.algo = "fulltext"));
-    semanticHits.forEach(item => (item._source.algo = "semantic"));
+    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+    semanticHits.forEach((item) => (item._source.algo = "semantic"));
 
     // we only consider semantic results above a given threshold
     const semanticHitsFiltered = semanticHits.filter(
-      item => item._score > SEMANTIC_THRESHOLD,
+      (item) => item._score > SEMANTIC_THRESHOLD
     );
-    semanticHitsFiltered.forEach(item => (item._source.algo = "semantic"));
+    semanticHitsFiltered.forEach((item) => (item._source.algo = "semantic"));
     documents = mergePipe(fulltextHits, semanticHitsFiltered, size);
   }
   if (shouldRequestThemes) {
     const { hits: { hits: fulltextHits } = { hits: [] } } = results[THEMES_ES];
     const { hits: { hits: semanticHits } = { hits: [] } } = results[THEMES_SEM];
-    fulltextHits.forEach(item => (item._source.algo = "fulltext"));
-    semanticHits.forEach(item => (item._source.algo = "semantic"));
+    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+    semanticHits.forEach((item) => (item._source.algo = "semantic"));
     themes = removeDuplicate(
       themes
         .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
-        .slice(0, THEMES_RESULTS_NUMBER),
+        .slice(0, THEMES_RESULTS_NUMBER)
     );
   }
   if (shouldRequestCdt) {

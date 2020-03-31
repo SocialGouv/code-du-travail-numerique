@@ -3,8 +3,12 @@ import { writeFile as _writeFile } from "fs";
 import { promisify } from "util";
 import { join } from "path";
 import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
+import highlightsData from "./highlights.json";
+import glossaryData from "./glossary.json";
+import preQualifiedData from "./prequalified.json";
 import { getSheetMTQuery } from "../src/server/routes/sheets-mt/search.elastic.js";
 import getAgreementBody from "../src/server/routes/conventions/getAgreementBySlug.elastic.js";
+
 import {
   DOCUMENTS,
   MT_SHEETS,
@@ -76,9 +80,10 @@ async function updateDocumentsData(slugs) {
         data.push(item._source);
       }
     }
+    data.push(highlightsData, preQualifiedData, glossaryData);
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
-      JSON.stringify(data, 0, 2),
+      JSON.stringify(data, 0, 2)
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -88,21 +93,21 @@ async function updateThemes(slugs) {
   const data = themes.filter(({ slug }) => slugs.includes(slug));
   await writeFile(
     join(__dirname, "./cdtn_theme.data.json"),
-    JSON.stringify(data, 0, 2),
+    JSON.stringify(data, 0, 2)
   );
 }
 
 async function updateFichesMT(slugs) {
   const index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
   const requests = [];
-  slugs.forEach(slug => {
+  slugs.forEach((slug) => {
     requests.push({ index });
     requests.push(getSheetMTQuery({ slug }));
   });
   try {
     const { body } = await client.msearch({ body: requests });
     const data = [];
-    body.responses.forEach(res => {
+    body.responses.forEach((res) => {
       if (res.hits.hits.length === 1) {
         const [item] = res.hits.hits;
         data.push(item._source);
@@ -110,7 +115,7 @@ async function updateFichesMT(slugs) {
     });
     await writeFile(
       join(__dirname, "./fiches_ministere_travail.data.json"),
-      JSON.stringify(data, 0, 2),
+      JSON.stringify(data, 0, 2)
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -120,14 +125,14 @@ async function updateFichesMT(slugs) {
 async function updateAgreements(slugs) {
   const index = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
   const requests = [];
-  slugs.forEach(slug => {
+  slugs.forEach((slug) => {
     requests.push({ index });
     requests.push(getAgreementBody({ slug }));
   });
   try {
     const { body } = await client.msearch({ body: requests });
     const data = [];
-    body.responses.forEach(res => {
+    body.responses.forEach((res) => {
       if (res.hits.hits.length === 1) {
         const [item] = res.hits.hits;
         data.push(item._source);
@@ -135,7 +140,7 @@ async function updateAgreements(slugs) {
     });
     await writeFile(
       join(__dirname, "./cdtn_agreement.data.json"),
-      JSON.stringify(data, 0, 2),
+      JSON.stringify(data, 0, 2)
     );
   } catch (error) {
     console.error(error.meta || error);
@@ -143,10 +148,12 @@ async function updateAgreements(slugs) {
 }
 
 if (module === require.main) {
-  updateDocumentsData(documentsSlugs).catch(error =>
-    console.error("›››" + error),
+  updateDocumentsData(documentsSlugs).catch((error) =>
+    console.error("›››" + error)
   );
-  updateThemes(themesSlugs).catch(error => console.error("›››" + error));
-  updateFichesMT(ficheMTSlugs).catch(error => console.error("›››" + error));
-  updateAgreements(agreementSlugs).catch(error => console.error("›››" + error));
+  updateThemes(themesSlugs).catch((error) => console.error("›››" + error));
+  updateFichesMT(ficheMTSlugs).catch((error) => console.error("›››" + error));
+  updateAgreements(agreementSlugs).catch((error) =>
+    console.error("›››" + error)
+  );
 }

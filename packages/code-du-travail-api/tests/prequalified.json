@@ -1,0 +1,154 @@
+{
+  "source": "prequalified",
+  "data": [
+    {
+      "title": "comment-demissionner",
+      "theme": "688661b6-f614-47a7-99cf-e70b15e691ef",
+      "refs": [
+        {
+          "url": "/fiche-service-public/demission-dun-salarie",
+          "title": "Démission d'un salarié",
+          "position": 0
+        },
+        {
+          "url": "/fiche-ministere-travail/la-demission#Comment-presenter-une-demission",
+          "title": "La démission : comment présenter une démission ?",
+          "position": 1
+        },
+        {
+          "url": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
+          "title": "Peut-on percevoir l'allocation chômage en cas de démission ?",
+          "position": 2
+        },
+        {
+          "url": "/fiche-ministere-travail/la-demission#Faut-il-respecter-un-preavis",
+          "title": "La démission : faut-il respecter un préavis ?",
+          "position": 3
+        },
+        {
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-ses-conges-payes",
+          "title": "Peut-on démissionner pendant ses congés payés ?",
+          "position": 4
+        },
+        {
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie",
+          "title": "Peut-on démissionner pendant un arrêt maladie ?",
+          "position": 5
+        },
+        {
+          "url": "/fiche-ministere-travail/la-demission#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
+          "title": "La démission : le salarié peut-il « démissionner » dans le cadre d’un contrat à durée déterminée ?",
+          "position": 6
+        },
+        {
+          "url": "/fiche-ministere-travail/la-demission#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
+          "title": "La démission : le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
+          "position": 7
+        },
+        {
+          "url": "/fiche-ministere-travail/la-demission#Et-les-heures-pour-recherche-d-emploi",
+          "title": "La démission : et les heures pour recherche d’emploi ?",
+          "position": 8
+        },
+        {
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-maternite",
+          "title": "Peut-on démissionner pendant un congé maternité ?",
+          "position": 9
+        },
+        {
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental",
+          "title": "Peut-on démissionner pendant un congé parental ?",
+          "position": 10
+        },
+        {
+          "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier",
+          "title": "Démission du salarié à domicile employé par un particulier",
+          "position": 11
+        },
+        {
+          "url": "/fiche-service-public/demission-dune-assistante-maternelle",
+          "title": "Démission d'une assistante maternelle",
+          "position": 12
+        },
+        {
+          "url": "/code-du-travail/l1231-1",
+          "title": "Article L1231-1",
+          "position": 13
+        },
+        {
+          "url": "/code-du-travail/l1237-1",
+          "title": "Article L1237-1",
+          "position": 14
+        },
+        {
+          "url": "/code-du-travail/l1237-2",
+          "title": "Article L1237-2",
+          "position": 15
+        }
+      ],
+      "variants": [
+        "comment demissionner",
+        "demande de demission",
+        "demande de démission",
+        "demission",
+        "démission",
+        "demmission",
+        "je veux démissionner",
+        "je veux démissionner comment faire ?",
+        "je veux partir de mon travail",
+        "je veux quitter mon travail",
+        "quitter son travail",
+        "partir de son travail",
+        "quitter son emploi",
+        "comment je peux démissionner ?",
+        "comment je dois démissionner ?",
+        "comment puis-je démissionner ?",
+        "procédure pour démissionner",
+        "démissionner",
+        "demissionner",
+        "quelle est la procédure pour démissionner ?",
+        "comment faire pour démissionner ?",
+        "Je veux démissionner, quelles formalités dois-je respecter ?",
+        "comment rédiger sa lettre de démission ?",
+        "rupture du contrat de travail à l'initiative du salarié",
+        "rupture du contrat de travail par le salarié",
+        "mettre fin à mon contrat de travail",
+        "comment présenter sa démission ?",
+        "formalités d’une démission"
+      ]
+    },
+    {
+      "title": "cse",
+      "theme": "fc69c570-5520-478e-9302-3e226e1cc718",
+      "refs": [
+        {
+          "url": "/fiche-service-public/comite-social-et-economique-cse",
+          "title": "Comité social et économique (CSE)",
+          "position": 1
+        },
+        {
+          "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-chsct-ou-le-cse",
+          "title": "Hygiène et sécurité : quand faut-il consulter le CHSCT (ou le CSE) ?",
+          "position": 2
+        },
+        {
+          "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-comite-dentreprise-ce",
+          "title": "Comment se déroulent les réunions du comité d'entreprise (CE) ?",
+          "position": 3
+        }
+      ],
+      "variants": [
+        "cse",
+        "Comité social et économique",
+        "Quel est le rôle du CSE ?",
+        "C'est quoi le CSE ?",
+        "Quelles sont les institutions représentatives du personnel ?",
+        "Quel est le rôle des instances représentatives du personnel ?",
+        "missions du cse",
+        "cse definition",
+        "cse entreprise",
+        "Quels sont les IRP ?"
+      ]
+    }
+  ]
+}

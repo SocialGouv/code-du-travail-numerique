@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return glossary matching the slug 1`] = `
+Object {
+  "abbrs": Array [],
+  "definition": "<p>Mesure d'urgence prise par précaution.</p>",
+  "refs": Array [
+    Object {
+      "url": "https://www.service-public.fr/particuliers/glossaire/R37450",
+    },
+  ],
+  "slug": "a-titre-conservatoire",
+  "title": "A titre conservatoire",
+  "variants": Array [],
+}
+`;
+
+exports[`return glossary terms 1`] = `
+Array [
+  Object {
+    "abbrs": Array [],
+    "definition": "<p>Mesure d'urgence prise par précaution.</p>",
+    "refs": Array [
+      Object {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R37450",
+      },
+    ],
+    "slug": "a-titre-conservatoire",
+    "title": "A titre conservatoire",
+    "variants": Array [],
+  },
+]
+`;
