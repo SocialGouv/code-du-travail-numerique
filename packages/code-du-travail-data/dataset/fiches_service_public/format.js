@@ -1,7 +1,7 @@
 const parseReference = require("./parseReference");
 
 const getChild = (element, name) =>
-  element.children.find(el => el.name === name);
+  element.children.find((el) => el.name === name);
 
 // Beware, this one is recursive
 function getText(element = { text: "" }) {
@@ -9,12 +9,12 @@ function getText(element = { text: "" }) {
     return element.text.trim();
   }
   if (element.children) {
-    return element.children.map(child => getText(child)).join(" ");
+    return element.children.map((child) => getText(child)).join(" ");
   }
   return "";
 }
 
-const format = fiche => {
+const format = (fiche) => {
   if (!fiche.children[0].name === "Publication") return null;
 
   const publication = fiche.children[0];
@@ -22,7 +22,7 @@ const format = fiche => {
 
   // We filter out the elements we will never use nor display
   publication.children = publication.children.filter(
-    child => child.name !== "OuSAdresser" && child.name !== "ServiceEnLigne",
+    (child) => child.name !== "OuSAdresser" && child.name !== "ServiceEnLigne"
   );
 
   const title = getText(getChild(publication, "dc:title"));
@@ -42,7 +42,7 @@ const format = fiche => {
   const text = intro + " " + texte + " " + listeSituations;
 
   const references_juridiques = publication.children
-    .filter(el => el.name === "Reference")
+    .filter((el) => el.name === "Reference")
     .map(parseReference)
     .reduce((acc, val) => acc.concat(val), []) // flatten the array
     .filter(Boolean);

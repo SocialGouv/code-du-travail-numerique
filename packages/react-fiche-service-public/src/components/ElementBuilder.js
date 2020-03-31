@@ -17,12 +17,8 @@ import Title from "./Title";
 
 const { spacings } = theme;
 
-const parseChildren = (children, headingLevel) => (
-  <ElementBuilder data={children} headingLevel={headingLevel} />
-);
-
 // Beware, this one is recursive
-export function ElementBuilder({ data, headingLevel }) {
+export function ElementBuilder({ data, headingLevel, parentAttributes }) {
   const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element. It occurs sometimes.
@@ -34,6 +30,7 @@ export function ElementBuilder({ data, headingLevel }) {
         key={seedId(child)}
         data={child}
         headingLevel={headingLevel}
+        parentAttributes={parentAttributes}
       />
     ));
   }
@@ -76,9 +73,15 @@ export function ElementBuilder({ data, headingLevel }) {
       if (data.children.find((child) => child.name === "Chapitre")) {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
-      return parseChildren(data.children, headingLevel);
+      return (
+        <ElementBuilder data={data.children} headingLevel={headingLevel} />
+      );
     case "Titre":
-      return <Title level={headingLevel}>{getText(data)}</Title>;
+      return (
+        <Title level={headingLevel} date={parentAttributes.date}>
+          {getText(data)}
+        </Title>
+      );
     // "Simple" elements, we can immediately parse their children
     case "ANoter":
     case "ASavoir":
@@ -87,25 +90,49 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Rappel":
       return (
         <ANoter variant="dark">
-          {parseChildren(data.children, headingLevel + 1)}
+          <ElementBuilder
+            data={data.children}
+            headingLevel={headingLevel + 1}
+            parentAttributes={data.attributes}
+          />
         </ANoter>
       );
     case "Chapitre":
     case "SousChapitre":
-      return parseChildren(data.children, headingLevel);
+      return (
+        <ElementBuilder data={data.children} headingLevel={headingLevel} />
+      );
     case "Expression":
-      return <i>{parseChildren(data.children, headingLevel)}</i>;
+      return (
+        <i>
+          <ElementBuilder data={data.children} headingLevel={headingLevel} />
+        </i>
+      );
     case "MiseEnEvidence":
     case "Valeur":
-      return <strong>{parseChildren(data.children, headingLevel)}</strong>;
+      return (
+        <strong>
+          <ElementBuilder data={data.children} headingLevel={headingLevel} />
+        </strong>
+      );
     case "Paragraphe":
-      return <p>{parseChildren(data.children, headingLevel)}</p>;
+      return (
+        <p>
+          <ElementBuilder data={data.children} headingLevel={headingLevel} />
+        </p>
+      );
     case "Exposant":
-      return <sup>{parseChildren(data.children, headingLevel)}</sup>;
+      return (
+        <sup>
+          <ElementBuilder data={data.children} headingLevel={headingLevel} />
+        </sup>
+      );
     // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
-      return parseChildren(data.children, headingLevel);
+      return (
+        <ElementBuilder data={data.children} headingLevel={headingLevel} />
+      );
     // Otherwise we simply ignore the element
     default:
       return null;
@@ -115,10 +142,12 @@ export function ElementBuilder({ data, headingLevel }) {
 ElementBuilder.propTypes = {
   data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   headingLevel: PropTypes.number,
+  parentAttributes: PropTypes.object,
 };
 
 ElementBuilder.defaultProps = {
   headingLevel: 0,
+  parentAttributes: {},
 };
 
 const ANoter = styled(Wrapper)`

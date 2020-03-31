@@ -4,6 +4,7 @@ import { spacings } from "../../theme";
 import { Section } from "../../layout/Section";
 import { Wrapper } from "../../layout/Wrapper";
 import { Heading } from ".";
+import { Subtitle } from "../Subtitle";
 
 export default {
   component: Heading,
@@ -32,6 +33,12 @@ export const base = () => (
           This is a stripped shifted heading (h4)
         </Heading>
       </Wrapper>
+    </Section>
+    <Section>
+      <Heading>
+        This is a heading with a subtitle inside
+        <Subtitle>Subtitle</Subtitle>
+      </Heading>
     </Section>
   </>
 );
