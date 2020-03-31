@@ -18,6 +18,8 @@ import Title from "./Title";
 const { spacings } = theme;
 
 // Beware, this one is recursive
+// parentAttributes only purpose for now is to pass a date to the title element
+// from the parent level (Avertissement element), we might remove it later
 export function ElementBuilder({ data, headingLevel, parentAttributes }) {
   const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
