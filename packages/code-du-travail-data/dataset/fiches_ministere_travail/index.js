@@ -45,9 +45,9 @@ const flattenCsBlocs = (node) => {
 };
 
 const getSectionTag = (article) => {
-  const h3 = $$(article, ".main-article__texte h3").length && "h3";
-  const h4 = $$(article, ".main-article__texte h4").length && "h4";
-  const h5 = $$(article, ".main-article__texte h5").length && "h5";
+  const h3 = $$(article, ".main-article__texte > h3").length && "h3";
+  const h4 = $$(article, ".main-article__texte > h4").length && "h4";
+  const h5 = $$(article, ".main-article__texte > h5").length && "h5";
   return h3 || h4 || h5;
 };
 
