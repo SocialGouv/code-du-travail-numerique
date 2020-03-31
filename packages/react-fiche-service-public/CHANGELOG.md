@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.14.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.13.0...v4.14.0) (2020-03-31)
+
+
+### Features
+
+* **data:** add date to Avertissement element ([#2551](https://github.com/SocialGouv/code-du-travail-numerique/issues/2551)) ([415dab0](https://github.com/SocialGouv/code-du-travail-numerique/commit/415dab037b8fd6da32b3864ea898577e74b604d2))
+
+
+
+
+
 # [4.11.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.11.0-alpha.1...v4.11.0) (2020-03-27)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public
