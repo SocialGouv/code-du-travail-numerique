@@ -18,7 +18,7 @@ function splitArticle(article) {
     "5 questions réponses sur ",
     "5 questions sur ",
     "5 questions-réponses sur ",
-    "5 questions/réponses sur "
+    "5 questions/réponses sur ",
   ];
   for (const pattern of patterns) {
     prefixTitle = prefixTitle.replace(pattern, "");
@@ -33,7 +33,7 @@ function splitArticle(article) {
         html,
         text,
         references,
-        title: sectionTitle
+        title: sectionTitle,
       }) => {
         const title = transformSectionTitle({ sectionTitle, prefixTitle });
         return {
@@ -43,7 +43,7 @@ function splitArticle(article) {
           slug: `${slug}${anchor ? `#${anchor}` : ""}`,
           text,
           references,
-          title
+          title,
         };
       }
     );
@@ -68,7 +68,7 @@ function transformSectionTitle({ sectionTitle: title, prefixTitle }) {
   // replace multiple spaces by a single space.
   sectionTitle = sectionTitle.replace(/\s+/g, " ").trim();
 
-  return sectionTitle.trim().replace(/^\w/, value => value.toUpperCase());
+  return sectionTitle.trim().replace(/^\w/, (value) => value.toUpperCase());
 }
 
 module.exports = { splitArticle };
