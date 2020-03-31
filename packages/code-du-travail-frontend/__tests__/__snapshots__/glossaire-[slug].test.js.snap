@@ -1281,7 +1281,7 @@ exports[`<Term /> should render 1`] = `
           </div>
           <a
             class="c13"
-            href="/recherche?slug=accord-dentreprise"
+            href="/recherche?q="
           >
             <svg
               fill="none"
