@@ -6,10 +6,10 @@ ENV LATEST=$LATEST
 
 WORKDIR /app
 
+COPY ./bump-socialgouv.js /app/bump-socialgouv.js
 RUN node bump-socialgouv.js > ./package.json
 RUN yarn
 RUN yarn build
-
 
 COPY ./dist /app/dist
 COPY ./node_modules/@socialgouv/kali-data/data ./node_modules/@socialgouv/kali-data/data
