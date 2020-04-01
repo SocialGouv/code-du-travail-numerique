@@ -76,7 +76,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -117,9 +117,9 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   overflow: visible;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c6:focus,
+.c6:hover,
+.c6:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -187,7 +187,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c8 {
+.c7 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -196,7 +196,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   transition: transform 250ms linear;
 }
 
-.c0:hover .c8 {
+.c0:hover .c7 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -249,7 +249,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c8 {
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -269,7 +269,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
@@ -362,28 +362,19 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 font-size="default"
                 font-weight="400"
               >
-                Vous pouvez joindre l’équipe en charge de la conception et du développement du site à l’adresse suivante : 
-                <a
-                  class="c6"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
-                >
-                  codedutravailnumerique@travail.gouv.fr
-                </a>
-              </span>
-            </p>
-            <p>
-              <span
-                class="c5"
-                font-size="default"
-                font-weight="400"
-              >
-                Attention : l’équipe n’est pas habilitée à répondre aux questions concernant le droit du travail. Si vous avez besoin de renseignements sur votre situation ou celle d’un proche, nous vous invitons à contacter 
+                <strong>
+                  Attention :
+                </strong>
+                 aucune réponse en droit du travail ne pourra vous être apportée via l'adresse ci-dessous.
+                <br />
+                <br />
+                Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
                 <button
-                  class="c0 c7"
+                  class="c0 c6"
                 >
-                  les services dédiés
+                  les services du ministre du travail.
                   <svg
-                    class="c8"
+                    class="c7"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -393,7 +384,21 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                     />
                   </svg>
                 </button>
-                .
+              </span>
+            </p>
+            <p>
+              <span
+                class="c5"
+                font-size="default"
+                font-weight="400"
+              >
+                Si vous avez une suggestion sur l'utilisation de ce site ou si vous avez rencontré un problème technique, vous pouvez nous contacter à cette adresse : 
+                <a
+                  class="c8"
+                  href="mailto:codedutravailnumerique@travail.gouv.fr"
+                >
+                  codedutravailnumerique@travail.gouv.fr
+                </a>
               </span>
             </p>
             <button
