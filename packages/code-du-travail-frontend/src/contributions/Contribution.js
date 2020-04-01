@@ -169,7 +169,7 @@ const Contribution = ({ answers, content }) => {
                   Ce contenu est personnalisé avec les informations de la
                   convention collective:
                 </StyledDiv>
-                <Toast variant="primary" onRemove={() => setConvention()}>
+                <Toast variant="secondary" onRemove={() => setConvention()}>
                   {convention.shortTitle}
                 </Toast>
                 {conventionAnswer ? (
@@ -225,7 +225,6 @@ const CustomWrapper = styled(Wrapper)`
 
 const StyledDiv = styled.div`
   margin-bottom: ${spacings.tiny};
-  color: ${({ theme }) => theme.primary};
 `;
 
 const StyledTitle = styled(Title)`
