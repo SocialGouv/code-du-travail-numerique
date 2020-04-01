@@ -10,22 +10,74 @@ include:
     file: /base_docker_kubectl_image_stage.yml
     ref: v9.1.1
   #
-  - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
-
-  - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
+  # - /.gitlab-ci/variables.yml
+  # - /.gitlab-ci/stages/quality.yml
+  # - /.gitlab-ci/stages/register.yml
+  # - /.gitlab-ci/stages/manual.yml
+  # - /.gitlab-ci/stages/scan.yml
+  # - /.gitlab-ci/stages/deploy.yml
+  # - /.gitlab-ci/stages/notify.yml
+  # - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
 
 stages:
-  - "Prepare"
-  - "Code Quality"
-  - "Manual Deploy"
+  # - "Prepare"
+  # - "Code Quality"
+  # - "Manual Deploy"
+  # - "Registration"
+  # - "Post Registration"
+  # - "Deploy"
+  # - "Notify Finished Deployment"
+  # - E2E test
   - "Registration"
-  - "Post Registration"
-  - "Deploy"
-  - "Notify Finished Deployment"
-  - E2E test
+
+Launch data update:
+  stage: Prepare
+  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.12.0
+  when: manual
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
+  script:
+    - curl
+      --request POST
+      --form "token=${CI_JOB_TOKEN}"
+      --form "ref=${CI_COMMIT_REF_NAME}"
+      --form "variables[DATA_UPDATE]=latest"
+      ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+Register data image:
+  extends: .base_register_stage
+  only:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $DATA_UPDATE
+  stage: "Registration"
+  services:
+    - name: docker:19-dind
+    - name: $CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA
+      alias: nlp
+  needs:
+    - Register nlp image
+    - Register socialgouv/cdtn base image
+
+  variables:
+    CONTEXT: packages/code-du-travail-data
+    DOCKER_BUILD_ARGS: >-
+      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+      --build-arg NLP_URL=http://nlp:${NLP_PORT}
+      --network=host
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/data
+  before_script:
+    - |-
+      echo "connecting to http://nlp:${NLP_PORT}";
+
+      retry=60;
+      while
+        ! wget --spider "http://nlp:${NLP_PORT}/api/ready" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 1 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
