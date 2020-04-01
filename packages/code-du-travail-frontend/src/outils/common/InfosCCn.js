@@ -40,9 +40,11 @@ function StepInfoCCn({ form, isOptionnal = true }) {
             return (
               <>
                 <Question>La convention collective</Question>
-                <p>Vous avez sélectionné la convention collective&nbsp;</p>
+                <p>
+                  Vous avez sélectionné la convention collective&nbsp;:&nbsp;
+                </p>
                 <Toast
-                  variant="primary"
+                  variant="secondary"
                   onRemove={(event) => {
                     event.preventDefault();
                     setConvention();

@@ -77,7 +77,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   min-height: 48px;
   color: #3e486e;
   background-color: #fff;
-  border-color: #f66663;
+  border-color: #7994d4;
   border-style: solid;
   border-width: 2px;
   border-radius: 0.6rem;
@@ -100,7 +100,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 
 .c4 {
   margin-top: 0.4rem;
-  color: #f66663;
+  color: #7994d4;
 }
 
 .c0 {
@@ -149,7 +149,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
     La convention collective
   </label>
   <p>
-    Vous avez sélectionné la convention collective 
+    Vous avez sélectionné la convention collective : 
   </p>
   <div
     class="c1"
@@ -170,7 +170,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
-        variant="primary"
+        variant="secondary"
         viewBox="0 0 24 24"
         width="24"
         xmlns="http://www.w3.org/2000/svg"
