@@ -20,7 +20,7 @@ include:
   # - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
 
 stages:
-  # - "Prepare"
+  - "Prepare"
   # - "Code Quality"
   # - "Manual Deploy"
   # - "Registration"
