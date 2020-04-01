@@ -75,11 +75,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-right: 2.4rem;
 }
 
-.c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -312,7 +307,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 @media (max-width:600px) {
   .c4 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -620,11 +614,6 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-right: 2.4rem;
 }
 
-.c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -857,7 +846,6 @@ exports[`<Contribution /> should render answer references 1`] = `
 @media (max-width:600px) {
   .c4 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -1165,11 +1153,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   margin-right: 2.4rem;
 }
 
-.c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -1402,7 +1385,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 @media (max-width:600px) {
   .c4 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -1710,11 +1692,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-right: 2.4rem;
 }
 
-.c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -1947,7 +1924,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
 @media (max-width:600px) {
   .c4 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }
@@ -2255,11 +2231,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-right: 2.4rem;
 }
 
-.c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -2460,7 +2431,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 @media (max-width:600px) {
   .c4 {
     width: 3.4rem;
-    height: 3.4rem;
     margin-right: 1rem;
   }
 }

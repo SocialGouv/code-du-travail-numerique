@@ -31,23 +31,25 @@ export const ContactModal = ({ children: renderProp }) => {
             <Heading as="h4">Contact </Heading>
             <p>
               <Text>
-                Vous pouvez joindre l’équipe en charge de la conception et du
-                développement du site à l’adresse suivante&nbsp;:&nbsp;
-                <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
-                  codedutravailnumerique@travail.gouv.fr
-                </StyledLink>
+                <strong>Attention :</strong> aucune réponse en droit du travail
+                ne pourra vous être apportée via l&apos;adresse ci-dessous.
+                <br />
+                <br />
+                Si vous souhaitez nous interroger sur vos droits ou sur des
+                dispositions en droit du travail, nous vous invitons à contacter
+                <Button variant="link" onClick={showServiceRenseignement}>
+                  les services du ministre du travail.
+                </Button>
               </Text>
             </p>
             <p>
               <Text>
-                Attention : l’équipe n’est pas habilitée à répondre aux
-                questions concernant le droit du travail. Si vous avez besoin de
-                renseignements sur votre situation ou celle d’un proche, nous
-                vous invitons à contacter&nbsp;
-                <Button variant="link" onClick={showServiceRenseignement}>
-                  les services dédiés
-                </Button>
-                .
+                Si vous avez une suggestion sur l&apos;utilisation de ce site ou
+                si vous avez rencontré un problème technique, vous pouvez nous
+                contacter à cette adresse&nbsp;:&nbsp;
+                <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
+                  codedutravailnumerique@travail.gouv.fr
+                </StyledLink>
               </Text>
             </p>
           </>
