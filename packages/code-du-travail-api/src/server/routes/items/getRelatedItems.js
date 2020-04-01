@@ -26,28 +26,33 @@ async function getRelatedItems({ title, settings, slug }) {
   ];
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
+  logger.info(
+    `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
+      title.toLowerCase()
+    )}`
+  );
   const query_vector = await fetchWithTimeout(
-    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`,
-  )
-    .then(response => (response = response.json()))
-    .catch(error => {
-      logger.error(error);
-      return [];
-    });
-  const semBody = getSemBody({
-    query_vector,
-    // we +1 the size to remove the document source that should match perfectly for the given vector
-    size: MAX_RESULTS + 1,
-    sources,
+    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`
+  ).catch((error) => {
+    logger.error(error.message);
   });
-  // we use relatedItem query _source to have the same prop returned
-  // for both request
-  // semBody._source = relatedItemBody._source;
-  requestBodies.push({ index }, semBody);
+
+  if (query_vector) {
+    const semBody = getSemBody({
+      query_vector,
+      // we +1 the size to remove the document source that should match perfectly for the given vector
+      size: MAX_RESULTS + 1,
+      sources,
+    });
+    // we use relatedItem query _source to have the same prop returned
+    // for both request
+    // semBody._source = relatedItemBody._source;
+    requestBodies.push({ index }, semBody);
+  }
 
   const {
     body: {
-      responses: [esResponse = [], semResponse = []],
+      responses: [esResponse = {}, semResponse = {}],
     },
   } = await elasticsearchClient.msearch({ body: requestBodies });
 

@@ -22,7 +22,7 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} :slug The item slug to fetch.
  * @returns {Object} Result.
  */
-router.get("/items/:source/:slug", async ctx => {
+router.get("/items/:source/:slug", async (ctx) => {
   const { source, slug } = ctx.params;
   const body = getItemBySlugBody({ source, slug });
   const response = await elasticsearchClient.search({ index, body });
@@ -43,6 +43,7 @@ router.get("/items/:source/:slug", async ctx => {
     title,
     settings: [{ _id }],
   });
+  delete item._source.title_vector;
   ctx.body = {
     ...item,
     relatedItems,
@@ -58,7 +59,7 @@ router.get("/items/:source/:slug", async ctx => {
  * @param {string} :id The item id.
  * @returns {Object} Result.
  */
-router.get("/items/:id", async ctx => {
+router.get("/items/:id", async (ctx) => {
   const { id } = ctx.params;
 
   const response = await elasticsearchClient.get({
@@ -66,6 +67,7 @@ router.get("/items/:id", async ctx => {
     type: "_doc",
     id,
   });
+  delete response.body._source.title_vector;
   ctx.body = response.body;
 });
 
@@ -78,7 +80,7 @@ router.get("/items/:id", async ctx => {
  * @param {string} :url The item url.
  * @returns {Object} Result.
  */
-router.get("/items", async ctx => {
+router.get("/items", async (ctx) => {
   const { url } = ctx.query;
   const body = getDocumentByUrlBody({ url });
   // for travail-gouv url we need to search in MT_SHEET index since
@@ -93,7 +95,8 @@ router.get("/items", async ctx => {
   }
 
   const [item] = response.body.hits.hits;
-  ctx.body = { ...item };
+  delete item.title_vector;
+  ctx.body = item;
 });
 
 module.exports = router;

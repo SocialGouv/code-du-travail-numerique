@@ -70,13 +70,8 @@ app.use(glossaryRoute.routes());
 app.use(versionRoutes.routes());
 
 if (process.env.NODE_ENV !== "production") {
-  console.log("-- DEV MODE ---");
+  logger.info("-- DEV MODE ---");
 }
-
-// centralize error logging
-app.on("error", ({ statusCode, message }) => {
-  logger.error(`${statusCode} - ${message}`);
-});
 
 // Server.
 const server = app.listen(PORT, () => {
