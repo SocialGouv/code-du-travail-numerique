@@ -2823,3 +2823,5 @@
 {"entity": "m\u00e9tallurgie", "value": 51.98}
 {"entity": "mutation", "value": 51.44}
 {"entity": "contrat de professionnalisation", "value": 51.44}
+{"entity": "coronavirus", "value": 80.00}
+{"entity": "covid 19", "value": 70.00}
