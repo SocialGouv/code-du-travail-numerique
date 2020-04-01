@@ -7,13 +7,12 @@ const promisedCopyFile = promisify(copyFile);
 const promisedAccess = promisify(access);
 
 //
-
-(async () => {
+async function main() {
   try {
     await promisedAccess("./dockerenv");
     // Running inside a docker instance, dont modify files
     return;
-  } catch (e) {}
+  } catch (e) { }
 
   try {
     await promisedAccess("./.env");
@@ -35,10 +34,12 @@ const promisedAccess = promisify(access);
     const env = process.env.NODE_ENV === "production" ? "prod" : "dev";
     await promisedCopyFile(
       `docker-compose.override.${env}.yml`,
-      "docker-compose.override.yml",
+      "docker-compose.override.yml"
     );
     console.log(
-      `Copy "docker-compose.override.${env}.yml" to "docker-compose.override.yml"`,
+      `Copy "docker-compose.override.${env}.yml" to "docker-compose.override.yml"`
     );
   }
-})();
+}
+
+main().catch(console.error);

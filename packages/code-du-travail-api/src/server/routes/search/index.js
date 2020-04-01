@@ -87,22 +87,21 @@ router.get("/search", async (ctx) => {
     );
     const query_vector = await fetchWithTimeout(
       `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
-    )
-      .then((response) => (response = response.json()))
-      .catch((error) => {
-        logger.error(error);
-        return [];
-      });
+    ).catch((error) => {
+      logger.error(error.message);
+    });
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
         { index },
         getSearchBody({ query, size, sources }),
       ];
-      searches[DOCUMENTS_SEM] = [
-        { index },
-        getSemBody({ query_vector, size, sources }),
-      ];
+      if (query_vector) {
+        searches[DOCUMENTS_SEM] = [
+          { index },
+          getSemBody({ query_vector, size, sources }),
+        ];
+      }
     }
 
     if (shouldRequestThemes) {
@@ -114,14 +113,16 @@ router.get("/search", async (ctx) => {
           size: themeNumber,
         }),
       ];
-      searches[THEMES_SEM] = [
-        { index },
-        getSemBody({
-          query_vector,
-          size: themeNumber,
-          sources: [SOURCES.THEMES],
-        }),
-      ];
+      if (query_vector) {
+        searches[THEMES_SEM] = [
+          { index },
+          getSemBody({
+            query_vector,
+            size: themeNumber,
+            sources: [SOURCES.THEMES],
+          }),
+        ];
+      }
     }
   }
 
@@ -142,12 +143,9 @@ router.get("/search", async (ctx) => {
   });
 
   if (!knownQueryResult) {
-    const { hits: { hits: fulltextHits } = { hits: [] } } = results[
-      DOCUMENTS_ES
-    ];
-    const { hits: { hits: semanticHits } = { hits: [] } } = results[
-      DOCUMENTS_SEM
-    ];
+    const fulltextHits = extractHits(results[DOCUMENTS_ES]);
+    const semanticHits = extractHits(results[DOCUMENTS_SEM]);
+
     fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
     semanticHits.forEach((item) => (item._source.algo = "semantic"));
 
@@ -159,8 +157,8 @@ router.get("/search", async (ctx) => {
     documents = mergePipe(fulltextHits, semanticHitsFiltered, size);
   }
   if (shouldRequestThemes) {
-    const { hits: { hits: fulltextHits } = { hits: [] } } = results[THEMES_ES];
-    const { hits: { hits: semanticHits } = { hits: [] } } = results[THEMES_SEM];
+    const fulltextHits = extractHits(results[THEMES_ES]);
+    const semanticHits = extractHits(results[THEMES_SEM]);
     fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
     semanticHits.forEach((item) => (item._source.algo = "semantic"));
     themes = removeDuplicate(
@@ -189,6 +187,13 @@ router.get("/search", async (ctx) => {
 });
 
 module.exports = router;
+
+function extractHits(response) {
+  if (response && response.hits) {
+    return response.hits.hits;
+  }
+  return [];
+}
 
 async function msearch({ client, searches }) {
   const requests = [];

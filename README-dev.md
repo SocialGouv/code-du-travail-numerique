@@ -10,6 +10,13 @@
 
 <br/><br/>
 
+## URLs
+
+### Demos
+
+- Production : <https://code.travail.gouv.fr>
+- master (dev) : <https://master-code-travail.dev.fabrique.social.gouv.fr>
+
 ## Installation
 
 Make sure you're using NodeJS 12+.
@@ -20,7 +27,7 @@ $ yarn
 $ yarn build
 ```
 
-Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`
+Note: environment file can be created using [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`, default to `dev`
 
 ### Dev
 
@@ -40,7 +47,12 @@ Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](
 Run the frontend with our online latest API :
 
 ```sh
-# Launch packages/code-du-travail-frontend dev
+API_URL=https://api-master-code-travail.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev
+```
+
+If you need to work on both frontend and api, don't provide API_URL as it will fallback to `http://localhost:1317/api/v1`
+
+```sh
 yarn workspace @cdt/frontend dev
 ```
 
@@ -48,17 +60,11 @@ The React components are defined in the [react-ui](./packages/react-ui) package 
 
 #### Backend
 
-To run the NodeJS API, you need an Elastic Search instance and a [python-nlp](./packages/code-du-travail-nlp) instance.
+To run the NodeJS API, you need an Elasticsearch instance and a [python-nlp](./packages/code-du-travail-nlp) instance.
 
 The provided [docker-compose.yml](./docker-compose.yml) provide all the environment.
 
-If you opted for the `docker-compose.override.dev.yml` config (Good choice !) you will need to have a local monorepo image.
-So let's build it.
-
-```sh
-# Build the monorepo image
-$ docker build . -t cdtn_master:local
-```
+We recommend to use the `docker-compose.override.dev.yml` config for local development.
 
 To fill your ElasticSearch, you'll need to get the latest dataset dump from our registry :
 
@@ -66,8 +72,8 @@ To fill your ElasticSearch, you'll need to get the latest dataset dump from our 
 $ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
 $ docker run \
         --rm \
-        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dump.tf.json \
-        > ./packages/code-du-travail-nlp/data/dump.tf.json
+        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dist/dump.data.json \
+        >! packages/code-du-travail-data/dist/dump.tf.json
 ```
 
 Then you can launch services using docker-compose
@@ -83,14 +89,59 @@ $ yarn workspace @cdt/data populate-dev
 yarn workspace @cdt/api dev
 ```
 
-## URLs
+## Howto
 
-### Demos
+In this section you will find commands that you may need during your work
 
-- Production : <https://code.travail.gouv.fr>
-- master (dev) : <https://master-code-travail.dev.fabrique.social.gouv.fr>
+Build a local NLP image
 
-### Tools
+```
+docker build -t cdtn_nlp:local packages/code-du-travail-nlp
+```
+
+Start a local NLP image
+
+```
+docker run --rm --name cdtn-nlp -p 5000:5000 cdtn_nlp:local
+```
+
+Create a dump with semantic vectors (you will need a NLP service running)
+(if NLP_URL env is not provide it will create a dump without semantic vectors)
+
+```
+NLP_URL=http://localhost:5000 yarn workspace @cdt/data dump-dev
+```
+
+Populate elasticsearch index using a local dump
+
+```
+yarn workspace @cdt/data populate-dev
+```
+
+Download a dump from master data image
+
+```
+docker run \
+   --rm --entrypoint cat \
+   registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) \
+   /app/dist/dump.data.json \
+   >! packages/code-du-travail-data/dist/dump.tf.json
+```
+
+You can also read the packages readme
+
+- [Nlp README](./packages/code-du-travail-nlp/README.md)
+- [Data README](./packages/code-du-travail-nlp/README.md)
+- [API README](./packages/code-du-travail-nlp/README.md)
+- [e2e README](./optional/e2e/README.md)
+
+## Contributions
+
+- See [code of conduct](./CODE_OF_CONDUCT.md)
+- Work on feature branches
+- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+
+### Issues
 
 - Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
 - nomenclature des labels :
@@ -99,12 +150,6 @@ yarn workspace @cdt/api dev
   - p : name of `p`roduct (we differentiate ES and nav by themes for now)
   - s : `s`tatus of the issue
   - o : name of the dedicated t`o`ol
-
-## Contributions
-
-- See [code of conduct](./CODE_OF_CONDUCT.md)
-- Work on feature branches
-- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
 
 ## License
 
