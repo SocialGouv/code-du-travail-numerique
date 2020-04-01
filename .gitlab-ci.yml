@@ -57,11 +57,8 @@ Register data image:
   stage: "Registration"
   services:
     - name: docker:19-dind
-    - name: $CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA
+    - name: $CI_REGISTRY_IMAGE/nlp:$dcf83dec93a57aade9d19ef4ec41f99943484bd2
       alias: nlp
-  needs:
-    - Register nlp image
-    - Register socialgouv/cdtn base image
 
   variables:
     CONTEXT: packages/code-du-travail-data
