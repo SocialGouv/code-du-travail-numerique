@@ -7,6 +7,7 @@ ENV LATEST=$LATEST
 WORKDIR /app
 
 COPY ./package.json /app/package.json
+COPY ./bump-socialgouv.js /app/bump-socialgouv.js
 
 RUN node bump-socialgouv.js > ./package-latest.json
 RUN mv package-latest.json > ./package.json
