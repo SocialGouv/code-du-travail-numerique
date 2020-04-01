@@ -24,15 +24,15 @@ const CODE_SS = CODE_PREFIX + "_SS";
 
 const CODE_TRAVAIL = {
   name: "code du travail",
-  id: "LEGITEXT000006072050"
+  id: "LEGITEXT000006072050",
 };
 
 const codesFullNames = {
   [CODE_SS]: {
     name: "code de la sécurité sociale",
-    id: "LEGITEXT000006073189"
+    id: "LEGITEXT000006073189",
   },
-  [CODE_TRA]: CODE_TRAVAIL
+  [CODE_TRA]: CODE_TRAVAIL,
 };
 
 // maximum distance between code tokens and corresponding article ref
@@ -54,7 +54,7 @@ function prefixMatcher(token) {
 
   // if starts with possible prefix
   const matchingPrefix =
-    validPrefix.filter(p => lowToken.startsWith(p)).length > 0;
+    validPrefix.filter((p) => lowToken.startsWith(p)).length > 0;
 
   if (matchingPrefix) {
     const residual = lowToken.slice(1);
@@ -90,7 +90,7 @@ function infixMatcher(token) {
 // classify sequence of tokens to identify references to articles
 function classifyTokens(tokens) {
   // step 1 : check for prefix matches or articles
-  const step1 = tokens.map(token => {
+  const step1 = tokens.map((token) => {
     const prefix = prefixMatcher(token);
     const infix = infixMatcher(token);
     const article = articleMatcher(token);
@@ -156,7 +156,7 @@ function classifyTokens(tokens) {
     predictions.push(...residual.map(() => false));
   }
 
-  return predictions.map(p => (p ? ARTICLE : NEGATIVE));
+  return predictions.map((p) => (p ? ARTICLE : NEGATIVE));
 }
 
 function identifyCodes(tokens, predicitions) {
@@ -221,7 +221,7 @@ function extractReferences(text) {
       }
       // case code, we associate it to articles within range
       else if (pred.startsWith(CODE_PREFIX) && acc.length > 0) {
-        acc.forEach(match => {
+        acc.forEach((match) => {
           // if no code yet and in range
           if (!match.code && match.index + range >= index) {
             match.code = codesFullNames[pred];
@@ -240,5 +240,5 @@ module.exports = {
   classifyTokens,
   extractReferences,
   codesFullNames,
-  CODE_TRAVAIL
+  CODE_TRAVAIL,
 };

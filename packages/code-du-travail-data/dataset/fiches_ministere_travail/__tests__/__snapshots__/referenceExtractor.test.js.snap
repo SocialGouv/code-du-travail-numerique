@@ -343,6 +343,24 @@ Array [
     "id": "LEGIARTI000039624940",
   },
   Object {
+    "article": "R. 2313-4",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "R2313-4",
+    "id": "LEGIARTI000036414723",
+  },
+  Object {
+    "article": "R. 2313-5",
+    "code": Object {
+      "id": "LEGITEXT000006072050",
+      "name": "code du travail",
+    },
+    "fmt": "R2313-5",
+    "id": "LEGIARTI000039347715",
+  },
+  Object {
     "article": "R. 2313-6",
     "code": Object {
       "id": "LEGITEXT000006072050",
