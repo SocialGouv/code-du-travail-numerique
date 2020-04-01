@@ -57,24 +57,14 @@ Register data image:
   stage: "Registration"
   services:
     - name: docker:19-dind
-    - name: $CI_REGISTRY_IMAGE/nlp:$dcf83dec93a57aade9d19ef4ec41f99943484bd2
-      alias: nlp
+    # - name: $CI_REGISTRY_IMAGE/nlp:$dcf83dec93a57aade9d19ef4ec41f99943484bd2
+    #   alias: nlp
 
   variables:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg NLP_URL=http://nlp:${NLP_PORT}
+      --build-arg LATEST=true
       --network=host
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
-  before_script:
-    - |-
-      echo "connecting to http://nlp:${NLP_PORT}";
-
-      retry=60;
-      while
-        ! wget --spider "http://nlp:${NLP_PORT}/api/ready" &&
-        [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 1 ; done ;
-      [ "$retry" -eq "-1" ] && exit 1
