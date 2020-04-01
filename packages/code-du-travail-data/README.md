@@ -1,31 +1,36 @@
 # code-du-travail-data
 
-L'image docker DATA contient un dump des documents ainsi que les vecteurs associés à chaque documents.
-Ce fichier est récupéré de l'image [NLP](../code-du-travail-nlp/README.md#Docker).
-Ce document est par la suite utilisé par le container data pour réaliser l'indexation.
+L'image docker DATA contient un dump des documents ainsi que les vecteurs associés à chaque document pour réaliser l'indexation.
 
 ## Données
 
-Par defaut, le script d'indexation va chercher les données dans `/packages/code-du-travail-nlp/data/data.tf.json` mais il possible de changer ce chemin avec la variable d'environnement `DUMP-PATH`.
+Par defaut, le script d'indexation va chercher les données dans `/packages/code-du-travail-nlp/data/dist/dump.data.json` mais il possible de changer ce chemin avec la variable d'environnement `DUMP_PATH`.
 
 ### Génération en local
 
 Une premiere version du dump (sans les vecteurs) peut être générée via la commande.
 
 ```sh
-$ yarn workspace @cdt/data -s dump > cdtn.data.json
+$ yarn workspace @cdt/data dump-dev
 ```
 
-Dans cette version du dump, les documents ne contiennent pas les vecteurs pour la recherche sémantique.
-Il faut ensuite lancer le script de dump de l'api nlp pour rajouter les vecteurs.
+Pour réaliser un dump avec les vecteurs semantiques, il est necessaire de spécifier la variable d'environnement `NLP_URL`. Reporter vous au [README.md du projet nlp](../code-du-travail-nlp/README.md) pour voir comment démarrer une instance le service
 
-### Récupération depuis une image
+```sh
+$ NLP_URL=http://localhost:5000 yarn workspace @cdt/data dump-dev
+```
+
+### Récupération depuis l'image master
 
 Si vous disposez d'une image nlp sur votre machine vous pouvez copier le fichier de dump complet
 via la commande docker suivante.
 
 ```sh
-$ docker run --rm --entrypoint cat cdtn_nlp:local  /app/data/dump.tf.json  > dump.data.json
+docker run \
+   --rm --entrypoint cat \
+   registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) \
+   /app/dist/dump.data.json \
+   >! packages/code-du-travail-data/dist/dump.tf.json
 ```
 
 ## Related

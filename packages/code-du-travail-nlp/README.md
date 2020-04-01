@@ -14,18 +14,6 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-Cette API a besoin d'un fichier `data/dump.json` produit par l'image docker du monorepo.
-
-Vous pouvez la récupérer ici :
-
-```sh
-$ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
-$ docker run \
-        --rm \
-        --entrypoint cat $CDTN_REGISTRY:$(git rev-parse origin/master) /app/packages/code-du-travail-data/dist/dump.data.json \
-        > ./data/dump.json
-```
-
 ## Démarer l'api python
 
 L'api utise Flask et tourne sur le port 5000.
@@ -33,4 +21,18 @@ L'api utise Flask et tourne sur le port 5000.
 ```sh
 . venv/bin/activate
 FLASK_ENV=development FLASK_APP=api flask run
+```
+
+## Image Docker
+
+Contruire l'image nlp
+
+```sh
+$ docker build -t cdtn_nlp:local .
+```
+
+lancer l'image nlp localement
+
+```sh
+$ docker run --rm --name cdtn-nlp -p 5000:5000 cdtn_nlp:local
 ```
