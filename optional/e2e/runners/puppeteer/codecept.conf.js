@@ -3,22 +3,22 @@ exports.config = {
   helpers: {
     Puppeteer: {
       chrome: {
-        args: process.env.CI
+        args: (process.env.CI
           ? ["--no-sandbox", "--disable-setuid-sandbox"]
-          : ["--window-size=1024,1024"],
+          : ["--window-size=1024,1024"]
+        ).concat(["--lang=fr_FR"]),
         defaultViewport: {
           width: 1024,
           height: 1024,
         },
         executablePath: process.env.CI && "/usr/bin/chromium-browser",
-        headless: process.env.CI
-          ? true
-          : process.env.CODECEPT_HEADED
-          ? false
-          : true,
+        headless: process.env.CODECEPT_HEADED ? false : true,
       },
       restart: false,
       url: process.env.CODECEPT_BASEURL || "http://localhost:3000",
+    },
+    FocusHelper: {
+      require: "./helpers/focus.js",
     },
   },
   include: {
@@ -29,10 +29,11 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: "../../features/*.feature",
+    features: "../../features/**/*.feature",
     steps: ["./step_definitions/global.js"],
   },
   plugins: {
+    pauseOnFail: {},
     screenshotOnFail: {
       enabled: true,
     },
