@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { formatIdcc } from "@cdt/data/lib";
+import { formatIdcc } from "@cdt/data";
 import slugify from "@cdt/data/slugify";
 import { Button, theme } from "@socialgouv/react-ui";
 
@@ -32,19 +32,19 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
     </StyledLink>
   ) : (
-    <Link
-      as={`/convention-collective/${getConventionSlug({
-        num,
-        shortTitle,
-      })}`}
-      href="/convention-collective/[slug]"
-      passHref
-    >
-      <StyledLink {...commonProps}>
-        {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-      </StyledLink>
-    </Link>
-  );
+      <Link
+        as={`/convention-collective/${getConventionSlug({
+          num,
+          shortTitle,
+        })}`}
+        href="/convention-collective/[slug]"
+        passHref
+      >
+        <StyledLink {...commonProps}>
+          {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        </StyledLink>
+      </Link>
+    );
 };
 
 const { spacings } = theme;

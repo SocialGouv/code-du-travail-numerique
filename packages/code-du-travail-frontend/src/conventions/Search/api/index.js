@@ -1,4 +1,4 @@
-import { parseIdcc } from "@cdt/data/lib";
+import { parseIdcc } from "@cdt/data";
 
 import getQueryType from "./getQueryType";
 import { searchConvention } from "./convention.service";

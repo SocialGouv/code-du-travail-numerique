@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 import { format, parseISO } from "date-fns";
-import { formatIdcc } from "@cdt/data/lib";
+import { formatIdcc } from "@cdt/data";
 
 const Detail = ({ label, children }) => (
   <StyledDetail>

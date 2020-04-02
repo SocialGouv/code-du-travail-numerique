@@ -4,7 +4,7 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { formatIdcc } from "@cdt/data/lib";
+import { formatIdcc } from "@cdt/data";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Text } from "@socialgouv/react-ui";
 

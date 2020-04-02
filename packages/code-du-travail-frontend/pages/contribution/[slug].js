@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 import Answer from "../../src/common/Answer";
 import Contribution from "../../src/contributions/Contribution";
-import extractMdxContentUrl from "@cdt/data...contributions/extractMdxContentUrl";
+import { extractMdxContentUrl } from "@cdt/data";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
