@@ -30,30 +30,29 @@ stages:
   # - E2E test
   - "Registration"
 
-Launch data update:
-  stage: Prepare
-  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.12.0
-  when: manual
-  except:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
-  script:
-    - curl
-      --request POST
-      --form "token=${CI_JOB_TOKEN}"
-      --form "ref=${CI_COMMIT_REF_NAME}"
-      --form "variables[DATA_UPDATE]=latest"
-      ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+# Launch data update:
+#   stage: Prepare
+#   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.12.0
+#   when: manual
+#   except:
+#     variables:
+#       # Don't run when deploying in production an existing image
+#       - $PRODUCTION
+#       # Don't run when running e2e tests
+#       - $E2E_TEST
+#   script:
+#     - curl
+#       --request POST
+#       --form "token=${CI_JOB_TOKEN}"
+#       --form "ref=${CI_COMMIT_REF_NAME}"
+#       --form "variables[DATA_UPDATE]=latest"
+#       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
 
 Register data image:
   extends: .base_register_stage
-  only:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $DATA_UPDATE
+  # only:
+  #   variables:
+  #     - $DATA_UPDATE
   stage: "Registration"
   services:
     - name: docker:19-dind
@@ -64,7 +63,7 @@ Register data image:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+      --build-arg TAG_BASE_IMAGE=$dcf83dec93a57aade9d19ef4ec41f99943484bd2
       --build-arg LATEST=true
       --network=host
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data

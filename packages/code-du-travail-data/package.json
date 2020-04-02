@@ -14,6 +14,7 @@
     "populate-dev": "node -r esm indexing/index.js",
     "populate": "NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
+    "prepare-dump": "node -r esm predump",
     "prepush": "yarn lint",
     "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
   },
@@ -29,9 +30,9 @@
   "dependencies": {
     "@cdt/sources": "^4.14.0",
     "@elastic/elasticsearch": "^7.6.1",
-    "@socialgouv/fiches-vdd": "latest",
-    "@socialgouv/kali-data": "latest",
-    "@socialgouv/legi-data": "latest",
+    "@socialgouv/fiches-vdd": "^1.0.194",
+    "@socialgouv/kali-data": "^1.3.31",
+    "@socialgouv/legi-data": "^1.1.19",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "node-fetch": "^2.6.0",
