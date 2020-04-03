@@ -165,7 +165,10 @@ function StepIndemnite({ form }) {
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
         <FormuleWrapper>
-          <MathJax math={"`" + formule + "`"} />
+          <MathJax
+            script="/static/mathjax/MathJax.js?config=TeX-MML-AM_HTMLorMML"
+            math={"`" + formule + "`"}
+          />
         </FormuleWrapper>
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>

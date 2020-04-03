@@ -22,7 +22,10 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
         <FormuleWrapper>
-          <MathJax math={"`" + formula + "`"} />
+          <MathJax
+            script="/static/mathjax/MathJax.js?config=TeX-MML-AM_HTMLorMML"
+            math={"`" + formula + "`"}
+          />
         </FormuleWrapper>
       </ErrorBoundary>
     </Details>

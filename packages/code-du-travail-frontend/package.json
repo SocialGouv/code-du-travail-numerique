@@ -58,7 +58,7 @@
     "react-final-form": "^6.3.5",
     "react-final-form-arrays": "^3.1.1",
     "react-final-form-listeners": "^1.0.2",
-    "react-mathjax-preview": "^0.1.16",
+    "react-mathjax-preview": "^1.2.2",
     "react-svg-spinner": "^1.0.4",
     "react-uid": "^2.2.0",
     "rehype-raw": "^4.0.2",
