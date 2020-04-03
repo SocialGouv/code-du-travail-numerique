@@ -1,4 +1,4 @@
-const extractMdxContentUrl = require("../");
+const { extractMdxContentUrl } = require("../");
 
 const tests = [
   {

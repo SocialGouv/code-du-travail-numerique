@@ -32,19 +32,19 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
     </StyledLink>
   ) : (
-      <Link
-        as={`/convention-collective/${getConventionSlug({
-          num,
-          shortTitle,
-        })}`}
-        href="/convention-collective/[slug]"
-        passHref
-      >
-        <StyledLink {...commonProps}>
-          {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-        </StyledLink>
-      </Link>
-    );
+    <Link
+      as={`/convention-collective/${getConventionSlug({
+        num,
+        shortTitle,
+      })}`}
+      href="/convention-collective/[slug]"
+      passHref
+    >
+      <StyledLink {...commonProps}>
+        {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+      </StyledLink>
+    </Link>
+  );
 };
 
 const { spacings } = theme;
