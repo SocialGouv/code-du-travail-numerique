@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.15.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.15.0...v4.15.1) (2020-04-03)
+
+
+### Bug Fixes
+
+* **api:** remove  memory leak from closure([#2566](https://github.com/SocialGouv/code-du-travail-numerique/issues/2566)) ([b91977c](https://github.com/SocialGouv/code-du-travail-numerique/commit/b91977cdbb5abf5a82cc68ecabc652764090b5aa))
+
+
+
+
+
 # [4.15.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.14.0...v4.15.0) (2020-04-03)
 
 
