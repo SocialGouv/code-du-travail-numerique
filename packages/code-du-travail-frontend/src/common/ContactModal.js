@@ -34,7 +34,7 @@ export const ContactModal = ({ children: renderProp }) => {
                 Si vous souhaitez nous interroger sur vos droits ou sur des
                 dispositions en droit du travail, nous vous invitons à contacter{" "}
                 <Button variant="link" onClick={showServiceRenseignement}>
-                  les services du ministre du travail
+                  les services du ministère du Travail
                 </Button>
               </p>
               <p>

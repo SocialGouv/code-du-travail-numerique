@@ -375,7 +375,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 <button
                   class="c0 c6"
                 >
-                  les services du ministre du travail
+                  les services du ministère du Travail
                   <svg
                     class="c7"
                     fill="none"
