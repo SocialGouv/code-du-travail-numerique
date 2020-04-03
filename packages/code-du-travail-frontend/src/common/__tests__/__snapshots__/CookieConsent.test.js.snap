@@ -143,9 +143,9 @@ exports[`<CookieConsent /> should render 1`] = `
         Nous utilisons des cookies pour établir des mesures anonymisées de fréquentation et d’utilisation du site.
         <a
           class="c3"
-          href="/mentions-legales"
+          href="/politique-confidentialite#cookie"
           rel="noopener noreferrer"
-          title="Mentions legales"
+          title="Politique de confidentialité"
         >
           En savoir plus
         </a>
