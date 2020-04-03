@@ -9,7 +9,7 @@ import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import themes from "../dataset/datafiller/themes.data.json";
-import { createThemer } from "./ breadcrumbs";
+import { createThemer } from "./breadcrumbs";
 
 const getTheme = createThemer(themes);
 
