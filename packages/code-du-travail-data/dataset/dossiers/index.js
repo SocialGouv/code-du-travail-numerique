@@ -78,6 +78,11 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
+          "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
+      },
+      {
+        type: "secondary",
+        url:
           "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse",
       },
       {
