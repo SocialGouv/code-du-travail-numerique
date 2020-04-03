@@ -23,7 +23,16 @@ const preprocess = (q) => {
 
 // We populate the saved queries in an object in order to ease
 //  searches and map variant matches with the actual known query.
-function _getKnownQueriesSet(knownQueries) {
+
+async function _getPrequalified() {
+  const body = getPrequalifiedBody();
+  const response = await elasticsearchClient.search({ index, body });
+  if (response.body.hits.total.value === 0) {
+    return null;
+  }
+
+  const knownQueries = response.body.hits.hits[0]._source.data;
+
   const knownQueriesSet = knownQueries.reduce((queries, query) => {
     for (const variant of query.variants) {
       const prepro = preprocess(variant);
@@ -31,12 +40,18 @@ function _getKnownQueriesSet(knownQueries) {
     }
     return queries;
   }, {});
+
   return {
     knownQueriesSet,
     allVariants: Object.keys(knownQueriesSet),
   };
 }
-const getKnownQueriesSet = memoizee(_getKnownQueriesSet);
+
+const getPrequalified = memoizee(_getPrequalified, {
+  promise: true,
+  maxAge: 1000 * 5,
+  preFetch: true,
+});
 
 const fuzzOptions = {
   scorer: fuzz.ratio,
@@ -84,13 +99,8 @@ const testMatch = ({ query, knownQueriesSet, allVariants }) => {
 
 // find known query if any
 const getSavedResult = async (query) => {
-  const body = getPrequalifiedBody();
-  const response = await elasticsearchClient.search({ index, body });
-  if (response.body.hits.total.value === 0) {
-    return null;
-  }
-  const preQualifiedData = response.body.hits.hits[0]._source.data;
-  const { knownQueriesSet, allVariants } = getKnownQueriesSet(preQualifiedData);
+  const { knownQueriesSet, allVariants } = await getPrequalified();
+
   const knownQuery =
     query.length > 3 && testMatch({ query, knownQueriesSet, allVariants });
 
