@@ -103,9 +103,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
       >
         <div
           id="react-mathjax-preview-result"
-        >
-          \`1337% * 3.14\`
-        </div>
+        />
       </div>
     </div>
   </details>

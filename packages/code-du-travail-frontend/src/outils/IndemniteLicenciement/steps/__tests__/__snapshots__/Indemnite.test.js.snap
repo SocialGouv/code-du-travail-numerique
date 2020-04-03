@@ -157,9 +157,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       >
         <div
           id="react-mathjax-preview-result"
-        >
-          \`1/4 * Sref * A * 2\`
-        </div>
+        />
       </div>
     </div>
   </details>

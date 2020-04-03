@@ -261,9 +261,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`Sref * A\`
-            </div>
+            />
           </div>
         </div>
       </details>
@@ -350,9 +348,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`1337 * Sref * foo\`
-            </div>
+            />
           </div>
         </div>
       </details>
@@ -581,9 +577,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`Sref * A\`
-            </div>
+            />
           </div>
         </div>
       </details>
@@ -670,9 +664,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           >
             <div
               id="react-mathjax-preview-result"
-            >
-              \`1337 * Sref * foo\`
-            </div>
+            />
           </div>
         </div>
       </details>
