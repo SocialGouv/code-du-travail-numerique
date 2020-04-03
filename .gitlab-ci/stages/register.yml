@@ -37,15 +37,17 @@ Register nlp image:
     CONTEXT: packages/code-du-travail-nlp
     IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
   after_script:
-    - docker pull "${IMAGE_NAME}:${CI_DEFAULT_BRANCH}"
-    - docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_DEFAULT_BRANCH} > MASTER_LAYERS
-    - docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
     - >-
-      if cmp -s MASTER_LAYERS COMMIT_LAYERS ; then
-        echo "No changes detected."
-        touch ${CONTEXT}/USE_MASTER
-      else
-        echo "Changes detected."
+      if [[ "${BRANCH_NAME}" != "master" ]]; then
+        docker pull "${IMAGE_NAME}:${CI_DEFAULT_BRANCH}"
+        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_DEFAULT_BRANCH} > MASTER_LAYERS
+        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
+        if cmp -s MASTER_LAYERS COMMIT_LAYERS ; then
+          echo "No changes detected."
+          touch ${CONTEXT}/USE_MASTER
+        else
+          echo "Changes detected."
+        fi
       fi
   artifacts:
     expire_in: 30 mins
