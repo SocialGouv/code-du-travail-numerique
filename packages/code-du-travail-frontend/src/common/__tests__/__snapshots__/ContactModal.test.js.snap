@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactModal /> renders a popup when click on button 1`] = `
+.c5 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c11:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -76,7 +92,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -117,9 +133,9 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   overflow: visible;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c6:focus,
+.c6:hover,
+.c6:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -187,7 +203,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c8 {
+.c7 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -196,7 +212,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   transition: transform 250ms linear;
 }
 
-.c0:hover .c8 {
+.c0:hover .c7 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -233,27 +249,27 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 .c4 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
+  margin-top: 0;
 }
 
-.c5 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c6 {
+.c8 {
   font-weight: bold;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c5 {
+    padding: 0 5pt;
+    border: none;
+  }
 }
 
 @media (max-width:600px) {
@@ -269,7 +285,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
@@ -305,12 +321,6 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     position: fixed;
     top: 1rem;
     right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
   }
 }
 
@@ -354,36 +364,20 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
             <h4
               class="c4"
             >
-              Contact 
+              Contact
             </h4>
-            <p>
-              <span
-                class="c5"
-                font-size="default"
-                font-weight="400"
-              >
-                Vous pouvez joindre l’équipe en charge de la conception et du développement du site à l’adresse suivante : 
-                <a
-                  class="c6"
-                  href="mailto:codedutravailnumerique@travail.gouv.fr"
-                >
-                  codedutravailnumerique@travail.gouv.fr
-                </a>
-              </span>
-            </p>
-            <p>
-              <span
-                class="c5"
-                font-size="default"
-                font-weight="400"
-              >
-                Attention : l’équipe n’est pas habilitée à répondre aux questions concernant le droit du travail. Si vous avez besoin de renseignements sur votre situation ou celle d’un proche, nous vous invitons à contacter 
+            <div
+              class="c5"
+            >
+              <p>
+                Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
+                 
                 <button
-                  class="c0 c7"
+                  class="c0 c6"
                 >
-                  les services dédiés
+                  les services du ministre du travail
                   <svg
-                    class="c8"
+                    class="c7"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -393,8 +387,32 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                     />
                   </svg>
                 </button>
-                .
-              </span>
+              </p>
+              <p>
+                <strong>
+                  Attention
+                </strong>
+                 : Aucune réponse en droit du travail ne pourra vous être apportée via l’adresse ci-dessous.
+              </p>
+            </div>
+            <p>
+              Si vous avez une 
+              <strong>
+                suggestion
+              </strong>
+               sur l’utilisation de ce site ou si vous avez rencontré un
+               
+              <strong>
+                problème technique
+              </strong>
+              , vous pouvez nous contacter à cette adresse :
+               
+              <a
+                class="c8"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
+              >
+                codedutravailnumerique@travail.gouv.fr
+              </a>
             </p>
             <button
               class="c0 c9 c10"
