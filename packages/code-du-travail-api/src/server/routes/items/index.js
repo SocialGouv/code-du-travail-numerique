@@ -68,7 +68,7 @@ router.get("/items/:id", async (ctx) => {
     id,
   });
   delete response.body._source.title_vector;
-  ctx.body = response.body;
+  ctx.body = { ...response.body };
 });
 
 /**
@@ -96,7 +96,7 @@ router.get("/items", async (ctx) => {
 
   const [item] = response.body.hits.hits;
   delete item.title_vector;
-  ctx.body = item;
+  ctx.body = { ...item };
 });
 
 module.exports = router;

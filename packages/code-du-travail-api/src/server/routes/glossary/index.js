@@ -61,7 +61,7 @@ router.get("/glossary/:slug", async (ctx) => {
   if (!term) {
     ctx.throw(404, `there is no glossary term that match slug ${slug}`);
   }
-  ctx.body = term;
+  ctx.body = { ...term };
 });
 
 module.exports = router;

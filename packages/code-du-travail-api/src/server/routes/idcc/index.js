@@ -22,11 +22,11 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} querystring.q A `q` querystring param containing the query to process.
  * @returns {Object} Results.
  */
-router.get("/idcc", async ctx => {
+router.get("/idcc", async (ctx) => {
   const body = getIdccBody({ query: ctx.request.query.q });
 
   const response = await elasticsearchClient.search({ index, body });
-  ctx.body = response.body;
+  ctx.body = { ...response.body };
 });
 
 module.exports = router;

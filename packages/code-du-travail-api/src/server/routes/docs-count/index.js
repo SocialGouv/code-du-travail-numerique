@@ -19,11 +19,11 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} :id The item ID to fetch.
  * @returns {Object} Result.
  */
-router.get("/docsCount", async ctx => {
+router.get("/docsCount", async (ctx) => {
   const {
     body: { aggregations },
   } = await elasticsearchClient.search({ index, body: docsCountBody });
-  ctx.body = aggregations;
+  ctx.body = { ...aggregations };
 });
 
 module.exports = router;
