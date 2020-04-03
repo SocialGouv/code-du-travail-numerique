@@ -50,14 +50,6 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <script src="/static/polyfill.min.js" />
-          <script
-            type="text/javascript"
-            src="/static/tarteaucitron/tarteaucitron.js"
-          ></script>
-          <script
-            type="text/javascript"
-            src="/static/tarteaucitron/initTarteaucitron.js"
-          ></script>
         </Head>
         <body>
           <noscript>

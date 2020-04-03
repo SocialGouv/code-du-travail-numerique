@@ -21,9 +21,9 @@ const CookieConsent = () => {
         Nous utilisons des cookies pour établir des mesures anonymisées de
         fréquentation et d’utilisation du site.
         <A
-          title="Mentions legales"
+          title="Politique de confidentialité"
           rel="noopener noreferrer"
-          href="/mentions-legales"
+          href="/politique-confidentialite#cookie"
         >
           En savoir plus
         </A>

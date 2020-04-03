@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import getConfig from "next/config";
 import Link from "next/link";
 import styled from "styled-components";
@@ -26,12 +26,6 @@ const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 const Footer = () => {
   const router = useRouter();
   const path = router.asPath;
-
-  const [cookieConsent, setCookieConsent] = useState(false);
-  useEffect(() => {
-    const consent = /tarteaucitron=!gtag=true/.test(document.cookie);
-    setCookieConsent(consent);
-  }, [path]);
 
   return (
     <OverflowWrapper>
@@ -237,15 +231,6 @@ const Footer = () => {
             cnil.fr
           </StyledGovLink>
         </GovernmentSection>
-        {cookieConsent && (
-          <img
-            style={{ position: "absolute" }}
-            src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
-            width="1"
-            height="1"
-            alt=""
-          />
-        )}
       </StyledFooter>
     </OverflowWrapper>
   );
