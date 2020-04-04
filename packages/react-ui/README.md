@@ -9,7 +9,7 @@ Build is automatically triggered by netlify everytime a changed is pushed to the
 
 ```js
 
-import { Component, AnotherComponent } "@socialgouv/react-ui"
+import { Component, AnotherComponent } from "@socialgouv/react-ui"
 
 const App = (
   <Component>
