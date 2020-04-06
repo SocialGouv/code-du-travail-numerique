@@ -131,6 +131,15 @@ Coronavirus et données personnelles :
         action: "Consulter",
       },
       {
+        type: "externalTool",
+        title: "Simulateur d’activité partielle",
+        description:
+          "Estimez simplement le montant de l’allocation d’activité partielle.",
+        url: "http://www.simulateurap.emploi.gouv.fr",
+        icon: "Calculator",
+        action: "Consulter",
+      },
+      {
         type: "template",
         url:
           "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",

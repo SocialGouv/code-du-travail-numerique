@@ -683,24 +683,24 @@
     "theme": "a33ad5a9-f7ab-4433-b30f-81ac81fdae34",
     "refs": [
       {
-        "url": "/fiche-ministere-travail/amiante#Cadre-reglementaire",
-        "title": "Amiante : cadre réglementaire",
-        "position": 1
+        "url": "/fiche-ministere-travail/amiante#Reperage-avant-travaux",
+        "title": "Amiante : repérage avant-travaux",
+        "position": 0
       },
       {
         "url": "/fiche-ministere-travail/amiante#Interventions-sur-materiaux-amiantes-les-modes-operatoires-a-mettre-en-nbsp",
         "title": "Amiante : interventions sur matériaux amiantés : les modes opératoires à mettre en œuvre pour se protéger lors d’interventions courantes",
-        "position": 2
-      },
-      {
-        "url": "/fiche-ministere-travail/amiante#Reperage-avant-travaux",
-        "title": "Amiante : repérage avant-travaux",
-        "position": 3
+        "position": 1
       },
       {
         "url": "/fiche-ministere-travail/amiante#Pour-en-savoir-plus",
         "title": "Amiante : pour en savoir plus",
-        "position": 4
+        "position": 2
+      },
+      {
+        "url": "/fiche-ministere-travail/amiante#Cadre-reglementaire",
+        "title": "Amiante : cadre réglementaire",
+        "position": 3
       }
     ],
     "variants": [
@@ -742,34 +742,34 @@
     "theme": "47042834-cd29-400f-9f80-fc8a22067c3d",
     "refs": [
       {
+        "url": "/fiche-ministere-travail/la-mensualisation#Le-montant-du-salaire-peut-il-varier",
+        "title": "La mensualisation : le montant du salaire peut-il varier ?",
+        "position": 0
+      },
+      {
         "url": "/fiche-ministere-travail/la-mensualisation#Comment-se-calcule-le-salaire-mensuel",
         "title": "La mensualisation : comment se calcule le salaire mensuel ?",
         "position": 1
       },
       {
-        "url": "/outils/simulateur-embauche",
-        "title": "Salaire brut/net",
+        "url": "/fiche-ministere-travail/la-mensualisation#Quels-sont-les-autres-effets-de-la-mensualisation",
+        "title": "La mensualisation : quels sont les autres effets de la mensualisation ?",
         "position": 2
       },
       {
-        "url": "/fiche-ministere-travail/la-mensualisation#Le-montant-du-salaire-peut-il-varier",
-        "title": "La mensualisation : le montant du salaire peut-il varier ?",
+        "url": "/outils/simulateur-embauche",
+        "title": "Salaire brut/net",
         "position": 3
-      },
-      {
-        "url": "/fiche-ministere-travail/la-mensualisation#Quels-sont-les-autres-effets-de-la-mensualisation",
-        "title": "La mensualisation : quels sont les autres effets de la mensualisation ?",
-        "position": 4
       },
       {
         "url": "/fiche-ministere-travail/le-salaire-fixation-et-paiement#Comment-est-fixe-le-salaire-de-base",
         "title": "Le salaire : comment est fixé le salaire de base ?",
-        "position": 5
+        "position": 4
       },
       {
         "url": "/fiche-ministere-travail/le-salaire-fixation-et-paiement",
         "title": "Le salaire : fixation et paiement",
-        "position": 6
+        "position": 5
       }
     ],
     "variants": [

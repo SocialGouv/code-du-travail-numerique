@@ -2589,20 +2589,20 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-vdd@^1.0.194":
-  version "1.0.194"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.0.194.tgz#3ec7447cb3c5a199f008713a8d02ccb7b5d715a4"
-  integrity sha512-IHIVRwIWy9PLiul3gNyIibBXIpNrgxCwBS0ZVD1TX+KF6bHoxf1GN7HdSdTJQBqsvfhaMZfayFztDfRe+wl1UA==
+"@socialgouv/fiches-vdd@^1.0.197":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.1.0.tgz#f0965c9490aa14f1c4ff17c7b9d10f7006ffca17"
+  integrity sha512-jdtfpXd+pPnczXI/8R7E1rxSXZMIjV620nH40r/MqAM09f74E2/4n9yoVw03CcsD2gMyDpDfi6POwFk1XE7s1Q==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
     unzipper "^0.10.10"
     xml-js "^1.6.11"
 
-"@socialgouv/fiches-vdd@^1.0.197":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.1.0.tgz#f0965c9490aa14f1c4ff17c7b9d10f7006ffca17"
-  integrity sha512-jdtfpXd+pPnczXI/8R7E1rxSXZMIjV620nH40r/MqAM09f74E2/4n9yoVw03CcsD2gMyDpDfi6POwFk1XE7s1Q==
+"@socialgouv/fiches-vdd@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.7.0.tgz#8871f34c32c6cc12aed9c7a35e597f6b6192e354"
+  integrity sha512-Rc6U7yXEQba8Che8059K40/QsTvs4fvY5I+oDTmQZ5ELdwZVDNYbHopD1bFT+OVcKKCdb7SNZyM4xHr2RlP8Ow==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"

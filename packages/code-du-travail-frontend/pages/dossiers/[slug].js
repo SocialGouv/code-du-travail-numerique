@@ -47,6 +47,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   const themeRefs = refs.filter(({ type }) => type === "theme");
   const templateRefs = refs.filter(({ type }) => type === "template");
   const externalRefs = refs.filter(({ type }) => type === "external");
+  const externalToolsRefs = refs.filter(({ type }) => type === "externalTool");
   const componentMappings = {
     ul: FlatList,
     a: LeftArrowLink,
@@ -109,6 +110,21 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                   </li>
                 ))}
               </FlatList>
+              <Heading id="liens-utiles">Outils utiles</Heading>
+              <FlatList>
+                {externalToolsRefs.map(({ title, url }) => (
+                  <li key={`${title}${url}`}>
+                    <LeftArrowLink
+                      href={url}
+                      rel="noopener nofollow"
+                      target="_blank"
+                      className="no-after"
+                    >
+                      {title}
+                    </LeftArrowLink>
+                  </li>
+                ))}
+              </FlatList>
               <Heading>Liens utiles</Heading>
               <Mdx markdown={asideContent} components={componentMappings} />
             </Container>
@@ -149,6 +165,20 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
               ></CallToActionTile>
             ))}
           </Grid>
+          <Title>Les outils suivants peuvent vous intéresser</Title>
+          {externalToolsRefs.map(({ action, icon, title, url }) => (
+            <CallToActionTile
+              key={`${title}${url}`}
+              action={action}
+              custom
+              title={title}
+              icon={icons[icon]}
+              href={url}
+              rel="noopener nofollow"
+              target="_blank"
+              className="no-after"
+            ></CallToActionTile>
+          ))}
           <Title>Les thèmes suivants peuvent vous intéresser</Title>
           <Grid>
             {themeRefs.map((item) => (
