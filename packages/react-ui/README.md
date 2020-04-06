@@ -21,7 +21,7 @@ const App = (
 
 ## Providing a theme
 
-React UI is a themed UI. In order to make it work in your project, you must provide it a theme.
+React UI is a themed UI. In order to make it work in your project, you must provide it with a theme.
 
 ### Basic option
 
