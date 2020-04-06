@@ -1,6 +1,9 @@
 import * as keyframes from "./keyframes";
 import * as theme from "./theme";
 
+// Theme Provider
+export { ThemeProvider, useTheme } from "./ThemeProvider";
+
 // Layout
 export { Container } from "./layout/Container";
 export { Section } from "./layout/Section";

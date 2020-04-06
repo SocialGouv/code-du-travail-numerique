@@ -4,14 +4,13 @@ import App from "next/app";
 import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
 
-import { GlobalStyles } from "@socialgouv/react-ui";
+import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
 
 import ErrorPage from "./_error";
 
 import { initPiwik } from "../src/piwik";
 import { initializeSentry } from "../src/sentry";
 
-import { ThemeProvider } from "../src/layout/ThemeProvider.js";
 import { A11y } from "../src/a11y";
 
 import HeadBandAlert from "../src/common/HeadBandAlert";
