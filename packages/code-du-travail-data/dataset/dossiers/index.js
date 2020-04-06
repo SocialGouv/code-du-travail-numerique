@@ -135,7 +135,7 @@ Coronavirus et données personnelles :
         title: "Simulateur d’activité partielle",
         description:
           "Estimez simplement le montant de l’allocation d’activité partielle.",
-        url: "http://www.simulateurap.emploi.gouv.fr/",
+        url: "http://www.simulateurap.emploi.gouv.fr",
         icon: "Calculator",
         action: "Consulter",
       },

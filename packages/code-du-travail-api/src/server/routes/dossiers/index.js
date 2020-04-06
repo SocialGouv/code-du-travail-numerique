@@ -10,6 +10,9 @@ const getEsReferences = require("../search/getEsReferences");
 const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+
+const isInternalUrl = (url) => url.match(/^\//);
+
 /**
  * Return thematic files that match a given slug
  *
@@ -29,18 +32,19 @@ router.get("/dossiers/:slug", async (ctx) => {
   }
 
   const thematicFile = response.body.hits.hits[0]._source;
-
   const refTypeByUrl = [];
   for (const { url, type } of thematicFile.refs) {
-    const [, slug] = url.match(/\/.+\/(.+)$/);
-    refTypeByUrl[slug] = type;
+    if (isInternalUrl(url)) {
+      const [, slug] = url.match(/\/.+\/(.+)$/);
+      refTypeByUrl[slug] = type;
+    }
   }
   const refs = await getEsReferences(thematicFile.refs);
 
   ctx.body = {
     ...thematicFile,
     refs: refs.map(({ _source }) => {
-      _source.type = refTypeByUrl[_source.slug] || "external";
+      _source.type = refTypeByUrl[_source.slug] || _source.type;
       return _source;
     }),
   };
