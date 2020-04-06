@@ -1,3 +1,5 @@
+require("dotenv").config({ path: "../../.env" });
+
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
@@ -23,7 +25,7 @@ const versionRoutes = require("./routes/version");
 const { logger } = require("./utils/logger");
 
 const app = new Koa();
-const PORT = process.env.PORT || 1337;
+const PORT = process.env.API_PORT;
 
 app.use(cors());
 /**

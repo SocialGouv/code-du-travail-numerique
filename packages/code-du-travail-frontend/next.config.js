@@ -1,3 +1,5 @@
+require("dotenv").config({ path: "../../.env" });
+
 const withSourceMaps = require("@zeit/next-source-maps");
 
 const withTranspileModule = require("next-transpile-modules")([
@@ -33,13 +35,9 @@ const nextConfig = {
   useFileSystemPublicRoutes: true,
   poweredByHeader: false,
   publicRuntimeConfig: {
-    API_SIRET2IDCC_URL:
-      process.env.API_SIRET2IDCC_URL ||
-      "https://siret2idcc.fabrique.social.gouv.fr/api/v2",
-    API_ENTREPRISE_URL:
-      process.env.API_ENTREPRISE_URL ||
-      "https://entreprise.data.gouv.fr/api/sirene/v1",
-    API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
+    API_SIRET2IDCC_URL: process.env.API_SIRET2IDCC_URL,
+    API_ENTREPRISE_URL: process.env.API_ENTREPRISE_URL,
+    API_URL: process.env.API_URL,
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,

@@ -1,3 +1,5 @@
+require("dotenv").config({ path: "../../.env" });
+
 // Import prerequisite packages
 const next = require("next");
 const Koa = require("koa");
@@ -5,6 +7,7 @@ const Router = require("koa-router");
 const helmet = require("koa-helmet");
 const bodyParser = require("koa-bodyparser");
 const Sentry = require("@sentry/node");
+const url = require("url");
 
 /**
  * this env variable is use to target developpement / staging deployement
@@ -49,20 +52,26 @@ nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
 
+  const defaultSrc = [
+    "'self'",
+    "*.travail.gouv.fr",
+    "*.data.gouv.fr",
+    "*.fabrique.social.gouv.fr",
+  ];
+
   if (dev) {
     // handle local csp reportUri endpoint
     server.use(bodyParser());
+    const { origin } = url.parse(process.env.API_URL);
+    if (origin) {
+      defaultSrc.push(origin);
+    }
   }
   server.use(
     helmet({
       contentSecurityPolicy: {
         directives: {
-          defaultSrc: [
-            "'self'",
-            "*.travail.gouv.fr",
-            "*.data.gouv.fr",
-            "*.fabrique.social.gouv.fr",
-          ],
+          defaultSrc,
           scriptSrc: [
             "'self'",
             "'unsafe-inline'",
@@ -90,10 +99,10 @@ nextApp.prepare().then(() => {
         },
         reportOnly: () => dev,
       },
-    }),
+    })
   );
   if (dev) {
-    router.post("/report-violation", ctx => {
+    router.post("/report-violation", (ctx) => {
       if (ctx.request.body) {
         console.log("CSP Violation: ", ctx.request.body);
       } else {
@@ -103,7 +112,7 @@ nextApp.prepare().then(() => {
     });
   }
   if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
       if (!isProdUrl && !isHealthCheckUrl) {
@@ -114,21 +123,21 @@ nextApp.prepare().then(() => {
       await next();
     });
   } else {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();
     });
   }
 
-  router.get("/health", async ctx => {
+  router.get("/health", async (ctx) => {
     ctx.body = { status: "up and running" };
   });
 
-  router.get("/robots.txt", async ctx => {
+  router.get("/robots.txt", async (ctx) => {
     ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
-  router.all("*", async ctx => {
+  router.all("*", async (ctx) => {
     await nextHandler(ctx.req, ctx.res);
     ctx.respond = false;
   });
@@ -140,9 +149,9 @@ nextApp.prepare().then(() => {
 
   // centralize error logging
   server.on("error", (err, ctx) => {
-    Sentry.withScope(function(scope) {
+    Sentry.withScope(function (scope) {
       scope.setTag(`koa`, true);
-      scope.addEventProcessor(function(event) {
+      scope.addEventProcessor(function (event) {
         return Sentry.Handlers.parseRequest(event, ctx.request);
       });
       Sentry.captureException(err);

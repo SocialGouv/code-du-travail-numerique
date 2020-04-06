@@ -17,7 +17,7 @@ const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 const themeIndex = `${ES_INDEX_PREFIX}_${THEMES}`;
 
-const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
+const NLP_URL = process.env.NLP_URL;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
