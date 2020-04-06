@@ -2,6 +2,8 @@ const thematicFiles = [
   {
     slug: "ministere-du-travail-notre-dossier-sur-le-coronavirus",
     title: "Ministère du travail : notre dossier sur le coronavirus",
+    metaDescription:
+      "Coronavirus et le travail : télétravail, démarches chômage partiel, santé, sécurité, obligations de l’employeur, congés payés, arrêt de travail pour garder ses enfants, droit de retrait...",
     description:
       "L’essentiel à savoir sur le Coronavirus en tant que salarié ou employeur : des fiches pratiques, des liens utiles, des modèles de courriers téléchargeables, etc.",
     asideContent: `
@@ -35,12 +37,7 @@ Coronavirus et données personnelles :
       {
         type: "main",
         url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
-      },
-      {
-        type: "main",
-        url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
+          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
       },
       {
         type: "secondary",

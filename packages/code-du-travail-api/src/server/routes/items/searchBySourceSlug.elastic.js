@@ -26,6 +26,7 @@ function getSearchBody({ source, slug }) {
       "icon", // outils
       "id",
       "notaHtml",
+      "metaDescription", // dossiers
       "path", // code-du-travail
       "raw", // service-public
       "references_juridiques", // service-public, ministere-travail
