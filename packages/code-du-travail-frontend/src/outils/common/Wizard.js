@@ -142,7 +142,7 @@ function Wizard({
               />
               {stepIndex > 0 && stepIndex < steps.length && (
                 <Notice>
-                  <Mandatory>*</Mandatory> Champs obligatoire
+                  <Mandatory>*</Mandatory> Champs obligatoires
                 </Notice>
               )}
               {process.env.NODE_ENV !== "production" &&

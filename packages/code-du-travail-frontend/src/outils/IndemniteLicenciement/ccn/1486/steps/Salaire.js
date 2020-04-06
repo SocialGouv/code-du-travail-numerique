@@ -4,10 +4,9 @@ import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 import { subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Table as UITable, Toast, theme } from "@socialgouv/react-ui";
+import { Input, Table as UITable, Toast, theme } from "@socialgouv/react-ui";
 
 import { parse } from "../../../../common/date";
-import { Input } from "../../../../common/stepStyles";
 import { InlineError } from "../../../../common/ErrorField";
 import { isNumber } from "../../../../common/validators";
 import { YesNoQuestion } from "../../../../common/YesNoQuestion";

@@ -5,7 +5,6 @@ import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
-import { Summary } from "../../common/stepStyles";
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
@@ -39,6 +38,11 @@ FormulaDetails.propTypes = {
 };
 
 const { spacings, fonts } = theme;
+
+export const Summary = styled.summary`
+  display: block;
+  margin-bottom: ${spacings.base};
+`;
 
 const Details = styled.details`
   margin-top: ${spacings.medium};

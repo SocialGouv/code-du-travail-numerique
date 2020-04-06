@@ -4,7 +4,9 @@ import { Field } from "react-final-form";
 import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Button, icons, Input, theme } from "@socialgouv/react-ui";
+import { icons, Input, theme } from "@socialgouv/react-ui";
+
+import { AddButton, DelButton } from "../../common/Buttons";
 import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
@@ -44,16 +46,13 @@ function Primes({ name, visible = true, onChange }) {
                   </div>
                 )}
               />
-              <DelButton variant="flat" onClick={() => fields.remove(index)}>
+              <StyledDelButton onClick={() => fields.remove(index)}>
                 Supprimer
-              </DelButton>
+              </StyledDelButton>
             </Row>
           ))}
           {visible && (
-            <AddButton
-              variant="link"
-              onClick={() => fields.push({ prime: null })}
-            >
+            <AddButton onClick={() => fields.push({ prime: null })}>
               Ajouter une prime
             </AddButton>
           )}
@@ -74,15 +73,11 @@ const { spacings } = theme;
 
 const Row = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-bottom: ${spacings.tiny};
 `;
 
-const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin-left: ${spacings.medium};
-`;
-
-const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
-  margin: ${spacings.medium} 0;
+const StyledDelButton = styled(DelButton)`
+  margin-left: ${spacings.base};
 `;

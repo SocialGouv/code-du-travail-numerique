@@ -14,10 +14,10 @@ export function AddButton({ children, ...props }) {
 
 export function DelButton({ children, ...props }) {
   return (
-    <StyledDelButton narrow variant="naked" type="button" {...props}>
+    <Button narrow small variant="naked" type="button" {...props}>
       {children}
       <CloseIcon aria-hidden="true" />
-    </StyledDelButton>
+    </Button>
   );
 }
 const { spacings } = theme;
@@ -26,10 +26,6 @@ const StyledAddButton = styled(Button)`
   align-self: flex-start;
   margin: ${spacings.small} 0;
   padding-left: 0;
-`;
-
-const StyledDelButton = styled(Button)`
-  margin-left: ${spacings.small};
 `;
 
 const CloseIcon = styled(icons.Close)`

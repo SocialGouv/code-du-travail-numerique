@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { Toast, theme } from "@socialgouv/react-ui";
+import { Input, Toast, theme } from "@socialgouv/react-ui";
 
-import { Label, Input, SectionTitle } from "../../../../common/stepStyles";
+import { Label, SectionTitle } from "../../../../common/stepStyles";
 import { isNumber } from "../../../../common/validators";
 import { Error } from "../../../../common/ErrorField";
 import { YesNoQuestion } from "../../../../common/YesNoQuestion";

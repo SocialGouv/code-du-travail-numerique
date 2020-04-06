@@ -8,6 +8,14 @@
   ],
   "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
   "rules": {
+    "property-no-vendor-prefix": [
+      true,
+      ignoreProperties: ["/grid/"]
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      ignoreValues: ["grid"]
+    ],
     "order/properties-order": [[], { severity: "warning" }],
     "plugin/rational-order": [
       true,
