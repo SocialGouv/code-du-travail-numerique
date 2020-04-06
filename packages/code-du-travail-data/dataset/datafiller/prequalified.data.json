@@ -2714,11 +2714,16 @@
       {
         "url": "/fiche-service-public/secteur-prive-activite-partielle-du-salarie",
         "title": "Secteur privé : activité partielle du salarié",
-        "position": 1
+        "position": 0
       },
       {
         "url": "/fiche-ministere-travail/activite-partielle#L-info-en",
         "title": "Activité partielle : l’info en +",
+        "position": 1
+      },
+      {
+        "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
+        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
         "position": 2
       },
       {
@@ -2752,13 +2757,13 @@
         "position": 8
       },
       {
-        "url": "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle",
-        "title": "Rémunération d'un salarié placé en activité partielle",
+        "url": "/external/simulateur-dactivite-partielle",
+        "title": "Simulateur d’activité partielle",
         "position": 9
       },
       {
-        "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
+        "url": "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle",
+        "title": "Rémunération d'un salarié placé en activité partielle",
         "position": 10
       },
       {

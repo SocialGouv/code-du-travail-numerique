@@ -40,7 +40,13 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   if (!dossier) {
     return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
   }
-  const { title, description = "", refs, asideContent = "" } = dossier;
+  const {
+    title,
+    description = "",
+    metaDescription,
+    refs,
+    asideContent = "",
+  } = dossier;
 
   const mainRefs = refs.filter(({ type }) => type === "main");
   const secondaryRefs = refs.filter(({ type }) => type === "secondary");
@@ -52,12 +58,13 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
     ul: FlatList,
     a: LeftArrowLink,
   };
+
   return (
     <Layout>
       <Metas
         url={pageUrl}
-        title={`${title}`}
-        description={title}
+        title={title}
+        description={metaDescription || description || title}
         image={ogImage}
       />
       <Section>
