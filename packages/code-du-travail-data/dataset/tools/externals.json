@@ -1,5 +1,12 @@
 [
   {
+    "title": "Simulateur d’activité partielle",
+    "description": "Estimez simplement le montant de l’allocation d’activité partielle.",
+    "url": "http://www.simulateurap.emploi.gouv.fr/",
+    "icon": "Calculator",
+    "action": "Consulter"
+  },
+  {
     "title": "Attestation sur l’honneur : déplacement dérogatoire",
     "description": "Attestation individuelle de déplacement dérogatoire à remplir pour chaque déplacement non professionnel",
     "url": "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-derogatoire-et-justificatif-de-deplacement-professionnel",
@@ -29,7 +36,7 @@
   },
   {
     "title": "TéléRC",
-    "description": "Le service de saisie d'une demande d'homologation de rupture conventionnelle",
+    "description": "Le service de saisie d'une demande d’homologation de rupture conventionnelle",
     "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=20",
     "icon": "Contract",
     "action": "Consulter"
