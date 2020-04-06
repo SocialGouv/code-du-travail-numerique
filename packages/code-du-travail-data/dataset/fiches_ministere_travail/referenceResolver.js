@@ -1,6 +1,6 @@
 /*
 Here we resolve the references : 
-Given an article and its code (code du travail ou securite sociale), we search for its
+Given an article (or a range) and its code (code du travail ou securite sociale), we search for its
 actual id in the legi data corpus. 
 */
 
@@ -16,72 +16,107 @@ Object.values(codesFullNames).forEach(({ id }) => {
 // duplicated in reference Extractor
 const rangeMarkers = ["à", "à"];
 
+// in case of a range (like "L. 4733-9 à 4733-11"), we try to identify
+// the articles implicitly included within the range
 function unravelRange(range) {
   // TODO : deal with actual ranges (N to M)
   const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
 
-  if (mark) {
-    const parts = range.article.split(mark).map((a) => a.split("-"));
+  // if (mark) {
+  const parts = range.article
+    .split(mark)
+    .map((a) => a.split("-").map((p) => p.trim()));
 
-    // ok cases only if two elements
-    if (parts.length == 2) {
-      const originalStart = Array.from(parts[0]);
+  // ok cases only if two elements
+  if (parts.length == 2) {
+    const originalStart = Array.from(parts[0]);
+    const originalEnd = Array.from(parts[1]);
 
-      // replace first parts to only keep digit
-      const start = parts[0];
-      start[0] = start[0].replace(/\D/g, "");
-      const startLast = parseInt(start.slice(-1));
+    // replace first parts to only keep digit
+    const start = parts[0];
+    start[0] = start[0].replace(/\D/g, "");
+    const startLast = parseInt(start.slice(-1));
 
-      const end = parts[1];
-      end[0] = end[0].replace(/\D/g, "");
-      const endLast = parseInt(end.slice(-1));
+    const end = parts[1];
+    end[0] = end[0].replace(/\D/g, "");
+    const endLast = parseInt(end.slice(-1));
 
-      // standard case "articles R. 2313-3-2 à R. 2313-3-10" :
-      // same size
-      if (
-        start.length == end.length &&
-        // test same first parts ?
-        // next line would be great but well yunno
-        // start.slice(0, -1) == end.slice(0, -1) &&
-        // in JS we like it dirty
-        JSON.stringify(start.slice(0, -1)) ==
-        JSON.stringify(end.slice(0, -1)) &&
-        // start smaller than end
-        startLast < endLast
-      ) {
-        // console.log("HERE");
-        // console.log(endLast - startLast + 1);
-        const length = endLast - startLast + 1;
-        range = [...Array(length).keys()].map((i) => i + startLast);
+    // case 1 : "articles R. 2313-3-2 à R. 2313-3-10"
+    const case1 =
+      start.length == end.length &&
+      // test same first parts ?
+      // next line would be great
+      // start.slice(0, -1) == end.slice(0, -1) &&
+      // but instead, we got this for now
+      JSON.stringify(start.slice(0, -1)) == JSON.stringify(end.slice(0, -1));
 
-        return range.map((n) => {
-          const parts = Array.from(originalStart).slice(0, -1);
+    // case 2 : "articles R. 2313-3-2 à 10" but not "articles R. 2313-3-2 à R. 2314"
+    const case2 =
+      start.length > 1 &&
+      end.length == 1 &&
+      startLast < endLast &&
+      /^\d+$/.test(originalEnd);
+
+    // case 3 : "articles R. 2313-3 à 2313-3-19"
+    const case3 =
+      start.length + 1 == end.length &&
+      JSON.stringify(start) == JSON.stringify(end.slice(0, -1));
+
+    // case 4 : "L. 732-10 à L. 732-12-1"
+    const case4 =
+      start.length + 1 == end.length &&
+      JSON.stringify(start) != JSON.stringify(end.slice(0, -1));
+    JSON.stringify(start).slice(0, -1) == JSON.stringify(end.slice(0, -2));
+
+    let partedRanges = [];
+
+    const createRange = (originalParts, size, n) =>
+      [...Array(size).keys()]
+        .map((i) => i + n)
+        .map((n) => {
+          const parts = Array.from(originalParts);
           parts.push(n);
-          const article = parts.join("-");
-          return { article, code: range.code };
+          return parts;
         });
 
-        // console.log([...Array(length).keys()].map((i) => i + startLast));
-      } else {
-        console.log(start);
-        console.log(startLast);
-        console.log(end);
-        console.log(endLast);
-        console.log(start.slice(0, -1));
-        console.log(end.slice(0, -1));
-        console.log(start.slice(0, -1) == end.slice(0, -1));
-        console.log("ERROR " + "\n" + JSON.stringify(range, null, 2));
-      }
+    if (case1 || case2) {
+      const length = endLast - startLast + 1;
+      partedRanges = createRange(originalStart.slice(0, -1), length, startLast);
+    } else if (case3) {
+      partedRanges = createRange(originalStart, endLast, 1);
+      partedRanges.push(originalStart);
+    } else if (case4) {
+      // first order range FO
+      const startFO = startLast;
+      const endFO = parseInt(end.slice(-2));
+      const lengthFO = endFO - startFO + 1;
+      const rangesFO = createRange(
+        originalStart.slice(0, -1),
+        lengthFO,
+        startLast
+      );
 
-      // if (!lengths.every((val, i, arr) => val === arr[0])) {
+      // second order range SO
+      const startSO = originalEnd.slice(0, -1);
+      const lengthSO = endLast;
+      const rangesSO = createRange(startSO, lengthSO, 1);
+      partedRanges = rangesFO.concat(rangesSO);
     } else {
-      console.log("ERROR " + "\n" + JSON.stringify(range, null, 2));
+      console.log(
+        "ERROR, cannot parse case :\n" + JSON.stringify(range, null, 2)
+      );
+      partedRanges = [originalStart, originalEnd];
     }
-  }
 
-  return range.article.split(mark).map((a) => {
-    return { article: a.trim(), code: range.code };
-  });
+    return partedRanges.map((parts) => {
+      const article = parts.join("-");
+      return { article, code: range.code };
+    });
+  } else {
+    return range.article.split(mark).map((a) => {
+      return { article: a.trim(), code: range.code };
+    });
+  }
 }
 
 function formatArticle(article) {
@@ -118,7 +153,20 @@ function resolveReference(ref) {
 }
 
 function resolveReferences(refs) {
-  return refs.map((ref) => resolveReference(ref)).flat();
+  const resolvedRefs = refs.map((ref) => resolveReference(ref)).flat();
+
+  return resolvedRefs.reduce((acc, art) => {
+    // drop duplicated references
+    const existing = acc
+      .map((a) => [a.article, a.fmt])
+      .flat()
+      .filter((v) => v);
+
+    if (!(existing.includes(art.fmt) || existing.includes(art.article))) {
+      acc.push(art);
+    }
+    return acc;
+  }, []);
 }
 
 module.exports = { resolveReferences };

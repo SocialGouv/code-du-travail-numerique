@@ -76,14 +76,20 @@ it("should resolve example codes", () => {
 });
 
 const rangeCases = [
-  "articles R. 2313-3 à R. 2313-6",
+  "articles R. 2313-3 à R. 2313-6 et article R.2313-3",
   "articles R. 2313-3-2 à R. 2313-3-10",
   "articles L 4121-1 à 5",
-  "L. 732-10 à L. 732-12-1",
+  "L. 732-10 à L. 732-12-2",
   "L. 613-19 à L. 613-19-2",
+  "L. 613-2 à L. 614",
 ];
 
 it("should resolve ranges", () => {
-  const refs = rangeCases.map((c) => extractReferences(c));
-  console.log(refs);
+  const refs = rangeCases.map((c) => {
+    const extractedRefs = extractReferences(c);
+    const resolvedRefs = resolveReferences(extractedRefs);
+    return resolvedRefs;
+  });
+
+  expect(refs).toMatchSnapshot();
 });
