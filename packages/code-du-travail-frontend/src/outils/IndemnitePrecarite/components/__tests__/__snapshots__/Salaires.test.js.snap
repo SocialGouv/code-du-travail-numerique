@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaires /> should add a salaire 1`] = `
-.c12 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -31,69 +31,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
   appearance: none;
   height: 4rem;
   padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c12:link,
-.c12:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c12[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
   color: #3e486e;
   background: transparent;
   border-color: transparent;
@@ -249,7 +186,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   max-width: 40rem;
 }
 
-.c13 {
+.c11 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -257,17 +194,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
   padding-left: 0;
 }
 
-.c9 {
-  margin-left: 1rem;
-}
-
-.c11 {
+.c10 {
   width: 2rem;
   margin-left: 0.4rem;
   color: #f66663;
 }
 
-.c14 {
+.c12 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
@@ -295,12 +228,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -341,7 +268,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -410,13 +337,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="c8 c9 c10"
+      class="c8 c9"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c11"
+        class="c10"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -430,12 +357,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="c12 c13"
+    class="c8 c11"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c14"
+      class="c12"
       fill="none"
       viewBox="0 0 16 16"
     >
@@ -545,10 +472,6 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
   }
@@ -643,8 +566,8 @@ exports[`<Salaires /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
+  height: 4rem;
+  padding: 0 1rem;
   color: #3e486e;
   background: transparent;
   border-color: transparent;
@@ -671,69 +594,6 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 .c8[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c12:link,
-.c12:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c12[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -863,7 +723,7 @@ exports[`<Salaires /> should render 1`] = `
   max-width: 40rem;
 }
 
-.c13 {
+.c11 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -871,17 +731,13 @@ exports[`<Salaires /> should render 1`] = `
   padding-left: 0;
 }
 
-.c9 {
-  margin-left: 1rem;
-}
-
-.c11 {
+.c10 {
   width: 2rem;
   margin-left: 0.4rem;
   color: #f66663;
 }
 
-.c14 {
+.c12 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
@@ -918,12 +774,6 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
   .c5 {
     width: 100%;
   }
@@ -955,7 +805,7 @@ exports[`<Salaires /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -1024,13 +874,13 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="c8 c9 c10"
+      class="c8 c9"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c11"
+        class="c10"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -1044,12 +894,12 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="c12 c13"
+    class="c8 c11"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c14"
+      class="c12"
       fill="none"
       viewBox="0 0 16 16"
     >

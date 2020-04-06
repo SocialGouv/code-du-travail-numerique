@@ -1385,7 +1385,7 @@ exports[`<Recherche /> should render 1`] = `
               <div
                 class="c28"
               />
-              Vous n'avez pas trouvé ce que vous cherchiez ? Essayez …
+              Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
             </h3>
             <div
               class="c29"
