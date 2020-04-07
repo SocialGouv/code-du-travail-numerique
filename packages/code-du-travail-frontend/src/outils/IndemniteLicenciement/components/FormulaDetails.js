@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 
+import MathFormula from "../../common/MathFormula";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { Summary } from "../../common/stepStyles";
 
@@ -21,12 +21,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       </ListDetails>
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
-        <FormuleWrapper>
-          <MathJax
-            script="/static/mathjax/MathJax.js?config=TeX-MML-AM_HTMLorMML"
-            math={"`" + formula + "`"}
-          />
-        </FormuleWrapper>
+        <MathFormula math={formula} />
       </ErrorBoundary>
     </Details>
   );
@@ -58,8 +53,4 @@ const ListDetails = styled.ul`
 
 const ItemDetails = styled.li`
   font-size: ${fonts.sizes.small};
-`;
-
-const FormuleWrapper = styled.div`
-  margin: ${spacings.base} 0;
 `;

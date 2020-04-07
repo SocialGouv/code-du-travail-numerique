@@ -34,6 +34,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   white-space: pre-line;
 }
 
+.c6 {
+  margin: 1.6rem 0;
+}
+
 .c3 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -45,10 +49,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c5 {
   font-size: 1.4rem;
-}
-
-.c6 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
@@ -212,6 +212,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   white-space: pre-line;
 }
 
+.c6 {
+  margin: 1.6rem 0;
+}
+
 .c3 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -223,10 +227,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c5 {
   font-size: 1.4rem;
-}
-
-.c6 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
@@ -385,6 +385,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   white-space: pre-line;
 }
 
+.c6 {
+  margin: 1.6rem 0;
+}
+
 .c3 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -396,10 +400,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c5 {
   font-size: 1.4rem;
-}
-
-.c6 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
@@ -565,6 +565,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   white-space: pre-line;
 }
 
+.c6 {
+  margin: 1.6rem 0;
+}
+
 .c3 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -576,10 +580,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c5 {
   font-size: 1.4rem;
-}
-
-.c6 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
@@ -738,6 +738,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   white-space: pre-line;
 }
 
+.c6 {
+  margin: 1.6rem 0;
+}
+
 .c3 {
   font-weight: bold;
   font-size: 1.4rem;
@@ -749,10 +753,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c5 {
   font-size: 1.4rem;
-}
-
-.c6 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {

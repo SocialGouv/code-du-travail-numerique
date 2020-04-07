@@ -39,6 +39,10 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   text-align: left;
 }
 
+.c11 {
+  margin: 1.6rem 0;
+}
+
 .c4 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -75,10 +79,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 
 .c10 {
   font-size: 1.4rem;
-}
-
-.c11 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {

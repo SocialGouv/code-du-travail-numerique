@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormulaDetails /> should render 1`] = `
+.c5 {
+  margin: 1.6rem 0;
+}
+
 .c1 {
   display: block;
   margin-bottom: 1.6rem;
@@ -21,10 +25,6 @@ exports[`<FormulaDetails /> should render 1`] = `
 
 .c4 {
   font-size: 1.4rem;
-}
-
-.c5 {
-  margin: 1.6rem 0;
 }
 
 <div>

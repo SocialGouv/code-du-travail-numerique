@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { theme, Alert } from "@socialgouv/react-ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 import { getIndemnitePrecarite } from "../indemnite";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
@@ -12,6 +11,7 @@ import {
   getSituationsFor,
   getRef,
 } from "../../common/situations.utils";
+import MathFormula from "../../common/MathFormula";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
 function Disclaimer({ situation, idcc }) {
@@ -164,12 +164,7 @@ function StepIndemnite({ form }) {
       )}
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
-        <FormuleWrapper>
-          <MathJax
-            script="/static/mathjax/MathJax.js?config=TeX-MML-AM_HTMLorMML"
-            math={"`" + formule + "`"}
-          />
-        </FormuleWrapper>
+        <MathFormula math={formule} />
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>
       {getRef(legalRefs)}
@@ -201,7 +196,7 @@ function StepIndemnite({ form }) {
 
 export { StepIndemnite };
 
-const { spacings, fonts } = theme;
+const { fonts } = theme;
 
 const Heading = styled.strong`
   font-weight: bold;
@@ -214,7 +209,4 @@ const List = styled.ul`
 `;
 const Item = styled.li`
   font-size: ${fonts.sizes.small};
-`;
-const FormuleWrapper = styled.div`
-  margin: ${spacings.base} 0;
 `;

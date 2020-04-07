@@ -51,6 +51,10 @@ exports[`<Result /> should render 1`] = `
   font-size: 1.8rem;
 }
 
+.c12 {
+  margin: 1.6rem 0;
+}
+
 .c7 {
   margin-top: 2rem;
 }
@@ -66,10 +70,6 @@ exports[`<Result /> should render 1`] = `
 
 .c11 {
   font-size: 1.4rem;
-}
-
-.c12 {
-  margin: 1.6rem 0;
 }
 
 .c2 {

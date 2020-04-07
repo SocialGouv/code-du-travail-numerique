@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MathFormula /> should render 1`] = `
+.c0 {
+  margin: 1.6rem 0;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      />
+    </div>
+  </div>
+</div>
+`;

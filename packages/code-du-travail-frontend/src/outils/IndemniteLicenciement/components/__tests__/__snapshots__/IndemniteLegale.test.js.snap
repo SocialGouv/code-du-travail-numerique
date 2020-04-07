@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteLegale /> should render 1`] = `
+.c7 {
+  margin: 1.6rem 0;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -37,10 +41,6 @@ exports[`<IndemniteLegale /> should render 1`] = `
 
 .c6 {
   font-size: 1.4rem;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 @media (max-width:600px) {
