@@ -1,30 +1,42 @@
 import React, { useState, useContext, useEffect, useMemo } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
-import { useLocalStorage } from "../lib/useLocalStorage";
+import { blackAndWhiteColors, colors } from "./theme";
 
 export const BLACK_AND_WHITE_STORAGE_KEY = "blackAndWhiteTheme";
-
-const { colors, blackAndWhiteColors } = theme;
 
 const ThemeContext = React.createContext({
   currentTheme: colors,
   toggleTheme: () => {},
 });
 
+const isBlackAndWhiteTheme = () => {
+  if (typeof window !== "undefined") {
+    return (
+      window.localStorage &&
+      Boolean(
+        window.localStorage.getItem(BLACK_AND_WHITE_STORAGE_KEY) === "true"
+      )
+    );
+  }
+  return false;
+};
+
+const setBlackAndWhiteTheme = (value) => {
+  if (typeof window !== "undefined") {
+    window.localStorage &&
+      window.localStorage.setItem(BLACK_AND_WHITE_STORAGE_KEY, value);
+  }
+};
+
 export const ThemeProvider = (props) => {
-  const [isBlackAndWhiteTheme, setBlackAndWhiteTheme] = useLocalStorage(
-    BLACK_AND_WHITE_STORAGE_KEY,
-    false
-  );
   const [currentTheme, setCurrentTheme] = useState(colors);
 
   useEffect(() => {
-    if (isBlackAndWhiteTheme) {
+    if (isBlackAndWhiteTheme()) {
       setCurrentTheme(blackAndWhiteColors);
     }
-  }, [isBlackAndWhiteTheme]);
+  }, [currentTheme]);
 
   const api = useMemo(
     () => ({
@@ -32,14 +44,14 @@ export const ThemeProvider = (props) => {
       toggleTheme: () => {
         if (currentTheme === colors) {
           setCurrentTheme(blackAndWhiteColors);
-          setBlackAndWhiteTheme(true);
+          setBlackAndWhiteTheme("true");
         } else {
           setCurrentTheme(colors);
-          setBlackAndWhiteTheme(false);
+          setBlackAndWhiteTheme("false");
         }
       },
     }),
-    [currentTheme, setBlackAndWhiteTheme]
+    [currentTheme]
   );
 
   return (

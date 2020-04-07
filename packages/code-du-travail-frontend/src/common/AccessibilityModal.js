@@ -6,9 +6,8 @@ import {
   Modal,
   Title,
   theme,
+  useTheme,
 } from "@socialgouv/react-ui";
-
-import { useTheme } from "../layout/ThemeProvider.js";
 
 export const AccessibilityModal = ({ children: renderProp }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
