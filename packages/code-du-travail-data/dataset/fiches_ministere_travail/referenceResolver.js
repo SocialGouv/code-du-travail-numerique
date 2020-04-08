@@ -96,6 +96,15 @@ function unravelRange(range) {
         startLast
       );
 
+      if (endFO < startFO)
+        console.log(
+          `ERROR, non standard case :\n ${JSON.stringify(
+            range.article,
+            null,
+            2
+          )} \n`
+        );
+
       // second order range SO
       const startSO = originalEnd.slice(0, -1);
       const lengthSO = endLast;
@@ -103,7 +112,11 @@ function unravelRange(range) {
       partedRanges = rangesFO.concat(rangesSO);
     } else {
       console.log(
-        "ERROR, cannot parse case :\n" + JSON.stringify(range, null, 2)
+        `ERROR, cannot parse case :\n ${JSON.stringify(
+          range.article,
+          null,
+          2
+        )} \n`
       );
       partedRanges = [originalStart, originalEnd];
     }
@@ -155,7 +168,7 @@ function resolveReference(ref) {
 function resolveReferences(refs) {
   const resolvedRefs = refs.map((ref) => resolveReference(ref)).flat();
 
-  return resolvedRefs.reduce((acc, art) => {
+  const deduplicated = resolvedRefs.reduce((acc, art) => {
     // drop duplicated references
     const existing = acc
       .map((a) => [a.article, a.fmt])
@@ -167,6 +180,21 @@ function resolveReferences(refs) {
     }
     return acc;
   }, []);
+
+  // group by code
+  const grouped = deduplicated.reduce((acc, art) => {
+    const { code, ...rawArticle } = art;
+    const parsedCode = code ? code : { id: "CODE_UNKNOWN" };
+
+    if (!Object.keys(acc).includes(parsedCode.id)) {
+      acc[parsedCode.id] = { name: parsedCode.name, articles: [] };
+    }
+
+    acc[parsedCode.id].articles.push(rawArticle);
+
+    return acc;
+  }, {});
+  return grouped;
 }
 
 module.exports = { resolveReferences };

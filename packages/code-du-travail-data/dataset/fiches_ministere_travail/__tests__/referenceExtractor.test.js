@@ -82,6 +82,7 @@ const rangeCases = [
   "L. 732-10 à L. 732-12-2",
   "L. 613-19 à L. 613-19-2",
   "L. 613-2 à L. 614",
+  "articles L. 1237-17 à L. 1237-16-14 du code du travail",
 ];
 
 it("should resolve ranges", () => {
