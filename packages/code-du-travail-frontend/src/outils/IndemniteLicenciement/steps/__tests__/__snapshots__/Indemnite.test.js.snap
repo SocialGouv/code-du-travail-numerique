@@ -35,22 +35,6 @@ exports[`<StepIndemnite /> should render 1`] = `
   text-align: left;
 }
 
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
 .c3 {
   display: block;
   margin-bottom: 1.6rem;
@@ -75,6 +59,22 @@ exports[`<StepIndemnite /> should render 1`] = `
 
 .c7 {
   margin: 1.6rem 0;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
 }
 
 @media print {

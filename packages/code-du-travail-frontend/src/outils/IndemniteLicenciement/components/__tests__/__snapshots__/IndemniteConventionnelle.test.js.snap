@@ -61,11 +61,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   white-space: pre-line;
 }
 
-.c8 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -93,6 +88,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c8 {
+  display: block;
+  margin-bottom: 1.6rem;
 }
 
 .c7 {
@@ -381,11 +381,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   white-space: pre-line;
 }
 
-.c8 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -413,6 +408,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c8 {
+  display: block;
+  margin-bottom: 1.6rem;
 }
 
 .c7 {

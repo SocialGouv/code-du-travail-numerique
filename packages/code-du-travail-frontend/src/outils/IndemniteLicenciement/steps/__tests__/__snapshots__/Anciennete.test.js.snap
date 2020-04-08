@@ -379,8 +379,6 @@ exports[`<Anciennete /> should render 1`] = `
         Non
       </label>
     </div>
-    
-    
     <button
       data-testid="nextBt"
     >

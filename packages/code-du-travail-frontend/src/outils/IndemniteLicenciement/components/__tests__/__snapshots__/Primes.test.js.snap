@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Primes /> should add a prime 1`] = `
-.c7 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -29,102 +29,39 @@ exports[`<Primes /> should add a prime 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c7:focus,
-.c7:hover,
-.c7:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  height: 4rem;
+  padding: 0 1rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
-  opacity: 1;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c9 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c4:hover .c9 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
 }
 
 .c1 {
@@ -226,15 +163,35 @@ exports[`<Primes /> should add a prime 1`] = `
   color: #9298af;
 }
 
+.c7 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c6 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c8 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -242,29 +199,13 @@ exports[`<Primes /> should add a prime 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c6 {
-  margin-left: 2rem;
-}
-
-.c8 {
-  margin: 2rem 0;
+.c5 {
+  margin-left: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c4 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 0 3rem;
   }
 }
 
@@ -314,33 +255,49 @@ exports[`<Primes /> should add a prime 1`] = `
       </span>
     </div>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       type="button"
     >
       Supprimer
+      <svg
+        aria-hidden="true"
+        class="c6"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
     </button>
   </div>
   <button
-    class="c4 c7 c8"
+    class="c4 c7"
     type="button"
   >
-    Ajouter une prime
     <svg
-      class="c9"
+      aria-hidden="true"
+      class="c8"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une prime
   </button>
 </div>
 `;
 
 exports[`<Primes /> should delete a primes 1`] = `
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -368,55 +325,57 @@ exports[`<Primes /> should delete a primes 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c1:focus,
-.c1:hover,
-.c1:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c0:link,
+.c0:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
 }
 
-.c3 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
+.c0:not([disabled]):hover,
+.c0:not([disabled]):active,
+.c0:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
 }
 
-.c0:hover .c3 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+.c0[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c1 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
 }
 
 .c2 {
-  margin: 2rem 0;
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
 }
 
 @media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.4rem;
   }
 }
@@ -434,26 +393,29 @@ exports[`<Primes /> should delete a primes 1`] = `
     Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
   </p>
   <button
-    class="c0 c1 c2"
+    class="c0 c1"
     type="button"
   >
-    Ajouter une prime
     <svg
-      class="c3"
+      aria-hidden="true"
+      class="c2"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une prime
   </button>
 </div>
 `;
 
 exports[`<Primes /> should render 1`] = `
-.c5 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -481,102 +443,39 @@ exports[`<Primes /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  height: 4rem;
+  padding: 0 1rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
-  opacity: 1;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c7:focus,
-.c7:hover,
-.c7:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c9 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c4:hover .c9 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
 }
 
 .c1 {
@@ -678,15 +577,35 @@ exports[`<Primes /> should render 1`] = `
   color: #9298af;
 }
 
+.c7 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c6 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c8 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -694,28 +613,12 @@ exports[`<Primes /> should render 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c6 {
-  margin-left: 2rem;
-}
-
-.c8 {
-  margin: 2rem 0;
+.c5 {
+  margin-left: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
+  .c4 {
     font-size: 1.4rem;
   }
 }
@@ -766,27 +669,43 @@ exports[`<Primes /> should render 1`] = `
       </span>
     </div>
     <button
-      class="c4 c5 c6"
+      class="c4 c5"
       type="button"
     >
       Supprimer
+      <svg
+        aria-hidden="true"
+        class="c6"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
     </button>
   </div>
   <button
-    class="c4 c7 c8"
+    class="c4 c7"
     type="button"
   >
-    Ajouter une prime
     <svg
-      class="c9"
+      aria-hidden="true"
+      class="c8"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une prime
   </button>
 </div>
 `;

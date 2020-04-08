@@ -1011,7 +1011,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       >
         *
       </span>
-       Champs obligatoire
+       Champs obligatoires
     </p>
   </form>
 </div>
@@ -2498,7 +2498,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       >
         *
       </span>
-       Champs obligatoire
+       Champs obligatoires
     </p>
   </form>
 </div>

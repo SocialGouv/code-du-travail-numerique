@@ -86,7 +86,7 @@ class SearchPage extends React.Component {
                     variant="primary"
                     stripped
                   >
-                    Vous n&apos;avez pas trouvé ce que vous cherchiez ? Essayez
+                    Vous n’avez pas trouvé ce que vous cherchiez ? Essayez
                     &hellip;
                   </Heading>
                   <StyledContent>

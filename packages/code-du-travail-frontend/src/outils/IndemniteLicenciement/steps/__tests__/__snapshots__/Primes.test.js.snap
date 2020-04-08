@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepPrimes /> should render 1`] = `
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -29,102 +29,39 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  height: 4rem;
+  padding: 0 1rem;
   color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
+  background: transparent;
+  border-color: transparent;
   box-shadow: none;
   opacity: 1;
 }
 
-.c10:link,
-.c10:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
-  opacity: 1;
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: transparent;
+  border-color: transparent;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c12:focus,
-.c12:hover,
-.c12:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c14 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c9:hover .c14 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
 }
 
 .c6 {
@@ -314,15 +251,35 @@ exports[`<StepPrimes /> should render 1`] = `
   color: #eb5757;
 }
 
+.c12 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c11 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c13 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -330,28 +287,12 @@ exports[`<StepPrimes /> should render 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c11 {
-  margin-left: 2rem;
-}
-
-.c13 {
-  margin: 2rem 0;
+.c10 {
+  margin-left: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
+  .c9 {
     font-size: 1.4rem;
   }
 }
@@ -452,27 +393,43 @@ exports[`<StepPrimes /> should render 1`] = `
       </span>
     </div>
     <button
-      class="c9 c10 c11"
+      class="c9 c10"
       type="button"
     >
       Supprimer
+      <svg
+        aria-hidden="true"
+        class="c11"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
     </button>
   </div>
   <button
-    class="c9 c12 c13"
+    class="c9 c12"
     type="button"
   >
-    Ajouter une prime
     <svg
-      class="c14"
+      aria-hidden="true"
+      class="c13"
       fill="none"
-      viewBox="0 0 28 15"
+      viewBox="0 0 16 16"
     >
       <path
-        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
+    Ajouter une prime
   </button>
 </div>
 `;

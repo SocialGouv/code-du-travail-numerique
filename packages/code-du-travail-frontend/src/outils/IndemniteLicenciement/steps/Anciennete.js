@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Field } from "react-final-form";
 import createDecorator from "final-form-calculate";
 import { isAfter, differenceInMonths, format } from "date-fns";
 
@@ -10,7 +9,7 @@ import { parse } from "../../common/date";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { TextQuestion } from "../../common/TextQuestion";
 import { ErrorComputedField } from "../../common/ErrorField";
-import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
+import { AbsencePeriods, MOTIFS } from "../components/AbsencePeriods";
 
 function validate({
   dateEntree,
@@ -36,7 +35,7 @@ function validate({
     (absencePeriods || [])
       .filter((period) => Boolean(period.duration))
       .reduce((total, item) => {
-        const motif = motifs.find((motif) => motif.label === item.type);
+        const motif = MOTIFS.find((motif) => motif.label === item.type);
         return total + item.duration * motif.value;
       }, 0) / 12;
 
@@ -102,19 +101,7 @@ function StepAnciennete({ form }) {
             : form.change("absencePeriods", []);
         }}
       />
-      <Field name="hasAbsenceProlonge">
-        {({ input }) => (
-          <AbsencePeriods
-            visible={input.value}
-            name="absencePeriods"
-            onChange={(absencePeriods) => {
-              if (absencePeriods.length === 0) {
-                form.change("hasAbsenceProlonge", false);
-              }
-            }}
-          />
-        )}
-      </Field>
+      <AbsencePeriods name="absencePeriods" />
     </>
   );
 }
@@ -147,7 +134,7 @@ function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
     (absencePeriods || [])
       .filter((period) => Boolean(period.duration))
       .reduce((total, item) => {
-        const motif = motifs.find((motif) => motif.label === item.type);
+        const motif = MOTIFS.find((motif) => motif.label === item.type);
         return total + item.duration * motif.value;
       }, 0) / 12;
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;

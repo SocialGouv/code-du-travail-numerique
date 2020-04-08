@@ -29,8 +29,8 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 1.9rem;
+  height: 4rem;
+  padding: 0 1rem;
   color: #3e486e;
   background: transparent;
   border-color: transparent;
@@ -57,69 +57,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c11[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c15:link,
-.c15:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c15:not([disabled]):hover,
-.c15:not([disabled]):active,
-.c15:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -312,7 +249,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   max-width: 40rem;
 }
 
-.c16 {
+.c14 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -320,17 +257,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   padding-left: 0;
 }
 
-.c12 {
-  margin-left: 1rem;
-}
-
-.c14 {
+.c13 {
   width: 2rem;
   margin-left: 0.4rem;
   color: #f66663;
 }
 
-.c17 {
+.c15 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
@@ -360,7 +293,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.c18 {
+.c16 {
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
@@ -368,12 +301,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 
 @media (max-width:600px) {
   .c11 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
     font-size: 1.4rem;
   }
 }
@@ -416,7 +343,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -535,13 +462,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="c11 c12 c13"
+      class="c11 c12"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c14"
+        class="c13"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -592,13 +519,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="c11 c12 c13"
+      class="c11 c12"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c14"
+        class="c13"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -612,12 +539,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="c15 c16"
+    class="c11 c14"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c17"
+      class="c15"
       fill="none"
       viewBox="0 0 16 16"
     >
@@ -631,7 +558,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="c18"
+    class="c16"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

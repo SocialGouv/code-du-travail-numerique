@@ -17,11 +17,6 @@ exports[`<Result /> should render 1`] = `
   white-space: pre-line;
 }
 
-.c8 {
-  display: block;
-  margin-bottom: 1.6rem;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,6 +44,11 @@ exports[`<Result /> should render 1`] = `
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c8 {
+  display: block;
+  margin-bottom: 1.6rem;
 }
 
 .c7 {

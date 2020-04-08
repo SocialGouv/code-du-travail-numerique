@@ -16,7 +16,7 @@ import {
   TEMPS_PLEIN,
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
-import { motifs } from "../components/AbsencePeriods";
+import { MOTIFS } from "../components/AbsencePeriods";
 import { Question } from "../../common/Question";
 
 function StepSalaires({ form }) {
@@ -41,19 +41,10 @@ function StepSalaires({ form }) {
           }
         }}
       />
+      <SalaireTempsPartiel name="salairePeriods" />
       <Field name="hasTempsPartiel">
         {({ input }) => (
           <>
-            <SalaireTempsPartiel
-              name="salairePeriods"
-              visible={input.value}
-              onChange={(salairePeriods) => {
-                if (salairePeriods.length === 0) {
-                  form.change("hasTempsPartiel", false);
-                }
-              }}
-            />
-
             {input.value === false && (
               <>
                 <YesNoQuestion
@@ -132,7 +123,7 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   const totalAbsence = (absencePeriods || [])
     .filter((period) => Boolean(period.duration))
     .reduce((total, item) => {
-      const motif = motifs.find((motif) => motif.label === item.type);
+      const motif = MOTIFS.find((motif) => motif.label === item.type);
       return total + item.duration * motif.value;
     }, 0);
 
