@@ -490,7 +490,7 @@ exports[`<Footer /> should render 1`] = `
                 Code du travail numérique
               </h3>
               <ul
-                class="sc-fznMnq c17"
+                class="sc-fznAgC c17"
               >
                 <li
                   class="c18"
@@ -563,7 +563,7 @@ exports[`<Footer /> should render 1`] = `
                 Aidez-nous à améliorer cet outil
               </h3>
               <ul
-                class="sc-fznMnq c17"
+                class="sc-fznAgC c17"
               >
                 <li
                   class="c18"
@@ -609,7 +609,7 @@ exports[`<Footer /> should render 1`] = `
                 En collaboration avec
               </h3>
               <ul
-                class="sc-fznMnq c17"
+                class="sc-fznAgC c17"
               >
                 <li
                   class="c18"
