@@ -1,6 +1,5 @@
-import commonjs from "rollup-plugin-commonjs";
-import resolve from "rollup-plugin-node-resolve";
-import replace from "rollup-plugin-replace";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
 import babel from "rollup-plugin-babel";
 
 export default {
@@ -16,16 +15,7 @@ export default {
     },
   ],
   external: ["prop-types", "react", "react-dom", "styled-components"],
-  plugins: [
-    babel(),
-    resolve({
-      mainFields: ["module", "jsnext", "jsnext:main", "main"],
-    }),
-    commonjs(),
-    replace({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
-  ],
+  plugins: [babel(), resolve(), commonjs()],
   watch: {
     include: "src/**",
   },

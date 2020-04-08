@@ -3,7 +3,7 @@ import { darken, getContrast, lighten, rgba } from "polished";
 const WCAG_AA_MINIMAL_CONTRAST = 3;
 const BORDER_BLACK_CONTRAST = 12.62;
 
-const maximiseContrast = color => {
+const maximiseContrast = (color) => {
   const whiteContrast = getContrast(color, "#fff");
   const blackContrast = getContrast(color, "#000");
   if (
@@ -49,7 +49,7 @@ export const blackAndWhiteColors = Object.entries(colors).reduce(
     blackAndWhiteColors[colorName] = maximiseContrast(colorValue);
     return blackAndWhiteColors;
   },
-  { noColors: true },
+  { noColors: true }
 );
 
 /* Rem with a 10px base */

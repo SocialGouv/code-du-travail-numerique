@@ -14,6 +14,12 @@ import * as icons from "./icons";
 export { Accordion } from "./Accordion";
 export { ArrowLink } from "./ArrowLink";
 export { Badge } from "./Badge";
+export { BurgerNav } from "./BurgerNav";
+export {
+  BurgerNavButton,
+  BurgerNavLink,
+  BurgerNavCurrent,
+} from "./BurgerNav/NavItems";
 export { Alert } from "./Alert";
 export { Button } from "./Button";
 export { GlobalStyles } from "./GlobalStyles";
