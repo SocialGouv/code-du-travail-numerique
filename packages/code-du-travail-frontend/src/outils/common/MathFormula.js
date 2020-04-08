@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import MathJax from "react-mathjax-preview";
+import dynamic from "next/dynamic";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
+import("mathjax/es5/tex-svg");
+
 const MathFormula = ({ math }) => {
-  return (
-    <Wrapper>
-      <MathJax
-        script="/static/mathjax/MathJax.js?config=TeX-MML-AM_HTMLorMML"
-        math={"`" + math + "`"}
-      />
-    </Wrapper>
-  );
+  const [isReady, setReady] = useState(false);
+
+  useEffect(() => {
+    if (window.MathJax && window.MathJax.tex2svg) {
+      setReady(true);
+    }
+  }, []);
+  if (isReady) {
+    return (
+      <Wrapper>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: window.MathJax.tex2svg("\\frac{a}{b}").outerHTML,
+          }}
+        />
+      </Wrapper>
+    );
+  }
+  return <div>Lohoooser</div>;
 };
 
 MathFormula.propTypes = {
