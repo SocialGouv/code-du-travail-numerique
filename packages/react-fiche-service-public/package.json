@@ -18,12 +18,12 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@socialgouv/react-ui": "^4.16.0",
+    "@socialgouv/react-ui": "4.x",
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
     "styled-components": "5.x",
-    "react-uid": "^2.2.0"
+    "react-uid": "2.x"
   },
   "dependencies": {
   },
