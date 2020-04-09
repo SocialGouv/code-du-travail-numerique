@@ -246,6 +246,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   position: absolute;
   top: 0;
   right: 0;
+  color: #7994d4;
 }
 
 .c4 {

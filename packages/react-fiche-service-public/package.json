@@ -18,14 +18,14 @@
     "test": "jest"
   },
   "peerDependencies": {
+    "@socialgouv/react-ui": "^4.16.0",
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
-    "styled-components": "5.x"
+    "styled-components": "5.x",
+    "react-uid": "^2.2.0"
   },
   "dependencies": {
-    "@socialgouv/react-ui": "^4.16.0",
-    "react-uid": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

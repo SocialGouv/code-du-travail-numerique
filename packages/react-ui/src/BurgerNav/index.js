@@ -105,7 +105,7 @@ const StyledDialogContent = styled(DialogContent)`
     width: 40vw;
     height: calc(100vh - 2 * ${spacings.base});
     margin: ${spacings.base};
-    padding: 2rem;
+    padding: ${spacings.larger} 0 ${spacings.base};
     overflow-y: auto;
     background: ${({ theme }) => theme.white};
     border-radius: ${box.borderRadius};
@@ -123,10 +123,6 @@ const CloseButton = styled(Button)`
     position: absolute;
     top: 0;
     right: 0;
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    position: absolute;
-    top: ${spacings.xsmall};
-    right: ${spacings.xsmall};
+    color: ${({ theme }) => theme.secondary};
   }
 `;

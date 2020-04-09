@@ -84,6 +84,7 @@ const CloseButton = styled(Button)`
   position: absolute;
   top: 0;
   right: 0;
+  color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.mobile}) {
     position: fixed;
     top: ${spacings.small};
