@@ -2,13 +2,13 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_stage.yml
-    ref: v9.1.1
+    ref: v14.0.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_helm_image_stage.yml
-    ref: v9.1.1
+    ref: v14.0.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
-    ref: v9.1.1
+    ref: v14.0.0
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/quality.yml
