@@ -8,7 +8,7 @@ import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import * as variants from "./components/variants";
 
-export const Accordion = ({ items, variant, ...props }) => {
+export const Accordion = ({ items, noTitle, variant, ...props }) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
@@ -33,6 +33,7 @@ export const Accordion = ({ items, variant, ...props }) => {
                 icon={icon}
                 index={index}
                 isLast={index === items.length - 1}
+                noTitle={noTitle}
               >
                 {getTextFromComponent(title)}
               </AccordionItemButton>
@@ -57,11 +58,13 @@ Accordion.propTypes = {
       title: PropTypes.node.isRequired,
     })
   ).isRequired,
+  noTitle: PropTypes.bool,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
   variant: PropTypes.oneOf(["base", "tile", "hierarchy"]),
 };
 
 Accordion.defaultProps = {
+  noTitle: false,
   preExpanded: [],
   variant: "base",
 };

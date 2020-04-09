@@ -35,15 +35,16 @@ export const ItemPanel = styled(AccordionItemPanel)`
   }
 `;
 
-export const ItemButton = ({ children }) => (
+export const ItemButton = ({ children, noTitle = false }) => (
   <StyledAccordionItemButton>
     <VerticalArrow />
-    <ButtonText>{children}</ButtonText>
+    <ButtonText noTitle={noTitle}>{children}</ButtonText>
   </StyledAccordionItemButton>
 );
 
 ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
+  noTitle: PropTypes.bool,
 };
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`
@@ -60,11 +61,16 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   }
 `;
 
-const ButtonText = styled.div`
+// eslint-disable-next-line no-unused-vars
+const ButtonText = styled(({ noTitle, ...props }) => <div {...props} />)`
   margin: ${spacings.medium} 0 ${spacings.medium} ${spacings.small};
   color: ${({ theme }) => theme.title};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
+  ${({ noTitle }) =>
+    !noTitle &&
+    `
+      font-weight: 600;
+      font-size: ${fonts.sizes.headings.small};
+  `}
   font-family: "Open Sans", sans-serif;
   line-height: ${fonts.lineHeightTitle};
   @media (max-width: ${breakpoints.mobile}) {

@@ -72,8 +72,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c4 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
 }
@@ -134,6 +132,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 .c11 {
   padding: 0.8rem 0;
+  font-weight: normal;
 }
 
 .c0 {
@@ -250,9 +249,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             <div
               class="c6"
             >
-              <h3>
+              <div>
                 Voir les références juridiques concernées
-              </h3>
+              </div>
             </div>
             <div
               class="c7"

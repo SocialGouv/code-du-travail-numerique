@@ -49,6 +49,7 @@ exports[`<ReferenceList /> should render 1`] = `
 
 .c3 {
   padding: 0.8rem 0;
+  font-weight: normal;
 }
 
 <div>

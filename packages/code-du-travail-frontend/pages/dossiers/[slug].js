@@ -82,7 +82,6 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                   </StyledListItem>
                 ))}
               </FlatList>
-              <br />
               <Title id="fiches-pratiques">Pour aller plus loin</Title>
               <ViewMore>
                 {secondaryRefs.map((item) => (
@@ -173,19 +172,21 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             ))}
           </Grid>
           <Title>Les outils suivants peuvent vous intéresser</Title>
-          {externalToolsRefs.map(({ action, icon, title, url }) => (
-            <CallToActionTile
-              key={`${title}${url}`}
-              action={action}
-              custom
-              title={title}
-              icon={icons[icon]}
-              href={url}
-              rel="noopener nofollow"
-              target="_blank"
-              className="no-after"
-            ></CallToActionTile>
-          ))}
+          <Grid>
+            {externalToolsRefs.map(({ action, icon, title, url }) => (
+              <CallToActionTile
+                key={`${title}${url}`}
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
+                href={url}
+                rel="noopener nofollow"
+                target="_blank"
+                className="no-after"
+              ></CallToActionTile>
+            ))}
+          </Grid>
           <Title>Les thèmes suivants peuvent vous intéresser</Title>
           <Grid>
             {themeRefs.map((item) => (
