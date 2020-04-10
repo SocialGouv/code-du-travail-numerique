@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.17.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.16.0...v4.17.0) (2020-04-10)
+
+
+### Features
+
+* **front:** add sub folder to corona dossier ([#2598](https://github.com/SocialGouv/code-du-travail-numerique/issues/2598)) ([097a331](https://github.com/SocialGouv/code-du-travail-numerique/commit/097a331d0ecc22e822c709c17dff3bca1727bcf8))
+* **ui:** add burger nav to UI  ([#2584](https://github.com/SocialGouv/code-du-travail-numerique/issues/2584)) ([7f4e584](https://github.com/SocialGouv/code-du-travail-numerique/commit/7f4e58417bdb825baba34fe117e612cb41ab15d7))
+* **ui:** embed cool features into ui and update readme ([#2583](https://github.com/SocialGouv/code-du-travail-numerique/issues/2583)) ([e97765a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e97765a8b2416e6c17751d50572943c50ad98512))
+
+
+
+
+
 # [4.16.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.15.1...v4.16.0) (2020-04-06)
 
 **Note:** Version bump only for package @socialgouv/react-ui

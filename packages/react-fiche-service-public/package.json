@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.16.0",
+  "version": "4.17.0",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -22,10 +22,8 @@
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
-    "styled-components": "5.x",
-    "react-uid": "2.x"
-  },
-  "dependencies": {
+    "react-uid": "2.x",
+    "styled-components": "5.x"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
