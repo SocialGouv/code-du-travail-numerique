@@ -58,7 +58,7 @@ Create namespace:
 
 .dev_stage: &dev_stage
   environment:
-    name: fabrique-dev
+    name: fabrique-tmp
   except:
     variables:
       # Don't run when deploying in production an existing image
