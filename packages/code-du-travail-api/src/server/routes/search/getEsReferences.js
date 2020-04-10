@@ -27,7 +27,7 @@ const getEsReferences = async (refs = []) => {
   const queries =
     (refs &&
       refs
-        .filter((ref) => isInternalUrl(ref.url))
+        .filter((ref) => isInternalUrl(ref.url) && !ref.skipHydration)
         .map((ref) => getDocumentByUrlQuery(ref.url))
         .filter(Boolean)
         .reduce((state, query) => state.concat(indexQuery, query), [])) ||
@@ -44,16 +44,19 @@ const getEsReferences = async (refs = []) => {
 
   const responses = flatten(response.body.responses.map((r) => r.hits.hits));
 
-  // mix with non ES-results (ex: external)
-  const hits = refs
-    .map((ref) => {
-      if (isInternalUrl(ref.url)) {
-        return responses.shift();
+  // mix with non ES-results (ex: external, or no match)
+  const hits = refs.map((ref) => {
+    if (isInternalUrl(ref.url)) {
+      const [, , slug] = ref.url.split("/");
+      const esReference = responses.find(
+        (response) => response._source.slug === slug
+      );
+      if (esReference) {
+        return { ...esReference };
       }
-      return makeHit(ref);
-    })
-    .filter(Boolean);
-
+    }
+    return makeHit(ref);
+  });
   return hits;
 };
 

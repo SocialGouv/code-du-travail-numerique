@@ -13,7 +13,7 @@ import { animations, breakpoints, spacings } from "../theme";
 import { More } from "../icons";
 import { fadeIn } from "../keyframes";
 
-export const MoreContent = ({ children, title, ...props }) => {
+export const MoreContent = ({ children, title, noLeftPadding, ...props }) => {
   return (
     <StyledAccordion allowZeroExpanded {...props}>
       <>
@@ -24,7 +24,7 @@ export const MoreContent = ({ children, title, ...props }) => {
               <ButtonText>{title}</ButtonText>
             </StyledAccordionItemButton>
           </AccordionItemHeading>
-          <StyledAccordionItemPanel>
+          <StyledAccordionItemPanel noLeftPadding={noLeftPadding}>
             <PanelContent>{children}</PanelContent>
           </StyledAccordionItemPanel>
         </AccordionItem>
@@ -35,11 +35,13 @@ export const MoreContent = ({ children, title, ...props }) => {
 
 MoreContent.propTypes = {
   children: PropTypes.node.isRequired,
+  noLeftPadding: PropTypes.bool,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
 
 MoreContent.defaultProps = {
+  noLeftPadding: false,
   preExpanded: [],
 };
 
@@ -88,8 +90,12 @@ const PanelContent = styled.div`
   }
 `;
 
-export const StyledAccordionItemPanel = styled(AccordionItemPanel)`
+export const StyledAccordionItemPanel = styled(
+  // eslint-disable-next-line no-unused-vars
+  ({ noLeftPadding, ...props }) => <AccordionItemPanel {...props} />
+)`
   padding: ${spacings.small} 0 0 ${spacings.large};
+  ${({ noLeftPadding }) => noLeftPadding && "padding-left: 0;"}
   animation: ${fadeIn} ${animations.transitionTiming} ease-in;
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${spacings.small} 0;

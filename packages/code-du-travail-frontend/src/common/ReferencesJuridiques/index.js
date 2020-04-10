@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Accordion, Heading, Wrapper, theme } from "@socialgouv/react-ui";
+import { Accordion, Wrapper, theme } from "@socialgouv/react-ui";
 import ReferenceList from "./ReferenceList";
 import TYPE_REFERENCE from "./typeReference";
 
@@ -15,9 +15,10 @@ class ReferencesJuridiques extends React.PureComponent {
         {references.length > 2 ? (
           <StyledWrapper variant="light" {...props}>
             <Accordion
+              noTitle
               items={[
                 {
-                  title: <h3>Voir les références juridiques concernées</h3>,
+                  title: <div>Voir les références juridiques concernées</div>,
                   body: <ReferenceList references={references} />,
                 },
               ]}
@@ -25,7 +26,7 @@ class ReferencesJuridiques extends React.PureComponent {
           </StyledWrapper>
         ) : (
           <Wrapper variant="light" {...props}>
-            <Heading as="div">Références juridiques concernées&nbsp;:</Heading>
+            <Div>Références juridiques concernées&nbsp;:</Div>
             <ReferenceList references={references} />
           </Wrapper>
         )}
@@ -51,7 +52,7 @@ ReferencesJuridiques.defaultProps = {
 
 export default ReferencesJuridiques;
 
-const { breakpoints } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledWrapper = styled(Wrapper)`
   padding-top: 0;
@@ -59,5 +60,12 @@ const StyledWrapper = styled(Wrapper)`
   @media (max-width: ${breakpoints.mobile}) {
     padding-top: 0;
     padding-bottom: 0;
+  }
+`;
+
+const Div = styled.div`
+  margin-bottom: ${spacings.medium};
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: ${spacings.base};
   }
 `;

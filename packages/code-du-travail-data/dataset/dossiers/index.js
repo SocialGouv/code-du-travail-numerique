@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 const thematicFiles = [
   {
     slug: "ministere-du-travail-notre-dossier-sur-le-coronavirus",
@@ -32,7 +34,13 @@ Coronavirus et données personnelles :
       {
         type: "main",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
+          "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/ce-que-changent-les-ordonnances-en-droit-du-travail",
+        title:
+          "Coronavirus : ce que changent les ordonnnaces en droit du travail",
+        description:
+          "Le gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus",
+        skipHydration: true,
+        source: SOURCES.THEMATIC_FILES,
       },
       {
         type: "main",
@@ -41,7 +49,7 @@ Coronavirus et données personnelles :
       },
       {
         type: "secondary",
-        url: "/fiche-ministere-travail/activite-partielle",
+        url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
       },
       {
         type: "secondary",

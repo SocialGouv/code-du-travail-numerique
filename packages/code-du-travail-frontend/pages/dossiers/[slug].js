@@ -77,16 +77,15 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
               <Title id="essentiel">L’essentiel</Title>
               <FlatList>
                 {mainRefs.map((item) => (
-                  <StyledListItem key={item.slug}>
+                  <StyledListItem key={item.slug || item.url}>
                     <ListLink item={item} />
                   </StyledListItem>
                 ))}
               </FlatList>
-              <br />
               <Title id="fiches-pratiques">Pour aller plus loin</Title>
               <ViewMore>
                 {secondaryRefs.map((item) => (
-                  <StyledListItem key={item.slug}>
+                  <StyledListItem key={item.slug || item.url}>
                     <ListLink item={item} />
                   </StyledListItem>
                 ))}
@@ -146,7 +145,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
           <Grid>
             {templateRefs.map((item) => (
               <InternalLink
-                key={item.slug}
+                key={`${item.slug}-tile`}
                 source={item.source}
                 slug={item.slug}
               >
@@ -160,7 +159,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             ))}
             {externalRefs.map(({ action, icon, title, url }) => (
               <CallToActionTile
-                key={`${title}${url}`}
+                key={`${title}${url}-tile`}
                 action={action}
                 custom
                 title={title}
@@ -173,24 +172,26 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
             ))}
           </Grid>
           <Title>Les outils suivants peuvent vous intéresser</Title>
-          {externalToolsRefs.map(({ action, icon, title, url }) => (
-            <CallToActionTile
-              key={`${title}${url}`}
-              action={action}
-              custom
-              title={title}
-              icon={icons[icon]}
-              href={url}
-              rel="noopener nofollow"
-              target="_blank"
-              className="no-after"
-            ></CallToActionTile>
-          ))}
+          <Grid>
+            {externalToolsRefs.map(({ action, icon, title, url }) => (
+              <CallToActionTile
+                key={`${title}${url}-tile`}
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
+                href={url}
+                rel="noopener nofollow"
+                target="_blank"
+                className="no-after"
+              ></CallToActionTile>
+            ))}
+          </Grid>
           <Title>Les thèmes suivants peuvent vous intéresser</Title>
           <Grid>
             {themeRefs.map((item) => (
               <InternalLink
-                key={item.slug}
+                key={`${item.slug}-tile`}
                 source={item.source}
                 slug={item.slug}
               >

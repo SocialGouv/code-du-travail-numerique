@@ -2,5 +2,8 @@
   "name": "@cdt/data...dossiers",
   "version": "4.16.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@cdt/sources": "^4.14.0"
+  }
 }

@@ -57,6 +57,15 @@ export const ListLink = ({
     );
   }
 
+  // internal link but not indexeg (hence no slug)
+  if (!slug) {
+    return (
+      <Link href={url} passHref>
+        <Tile {...tileCommonProps} />
+      </Link>
+    );
+  }
+
   let rootSlug = slug;
   let anchor = "";
   if (slug.includes("#")) {

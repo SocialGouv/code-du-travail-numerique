@@ -68,4 +68,5 @@ const { spacings } = theme;
 
 const StyledArrowLink = styled(ArrowLink)`
   padding: ${spacings.xsmall} 0;
+  font-weight: normal;
 `;
