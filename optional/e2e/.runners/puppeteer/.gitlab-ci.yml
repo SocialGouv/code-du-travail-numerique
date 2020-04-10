@@ -25,7 +25,7 @@ E2E Test @optional/e2e.runner.puppeteer:
   stage: Code Quality
   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppeteer:0.29.0
   variables:
-    CODECEPT_BASEURL: "https://master-code-travail.dev.fabrique.social.gouv.fr"
+    CODECEPT_BASEURL: "https://master-code-travail.${KUBE_INGRESS_BASE_DOMAIN}"
   artifacts:
     expire_in: 1 week
     when: always

@@ -44,7 +44,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export K8S_NAMESPACE="cdtn"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
 else
-  export DOMAIN="${BRANCH_HASH}-code-travail.dev.fabrique.social.gouv.fr";
+  export DOMAIN="${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}";
 fi
 
 
