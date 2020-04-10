@@ -40,7 +40,7 @@ HTMLCollection [
 
 <style
     data-styled="active"
-    data-styled-version="5.0.1"
+    data-styled-version="5.1.0"
   >
     h1,h2,h3,h4,h5,h6{margin-top:3.2rem;margin-bottom:2rem;color:#2f3b6c;line-height:1.25;}
     @media (max-width:600px){h1,h2,h3,h4,h5,h6{margin-top:2rem;margin-bottom:1rem;}}

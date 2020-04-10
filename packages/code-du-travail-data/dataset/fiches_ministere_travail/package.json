@@ -11,9 +11,9 @@
     "@cdt/data": "^4.16.0",
     "@cdt/sources": "^4.14.0",
     "google-spreadsheets": "^2.0.0",
-    "jsdom": "^16.2.1",
+    "jsdom": "^16.2.2",
     "ora": "^4.0.3",
-    "p-limit": "^2.2.2",
+    "p-limit": "^2.3.0",
     "superagent": "^5.2.2",
     "talisman": "^1.1.1",
     "unist-util-find": "^1.0.1"
@@ -26,6 +26,6 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest-cli": "^25.1.0"
+    "jest-cli": "^25.3.0"
   }
 }

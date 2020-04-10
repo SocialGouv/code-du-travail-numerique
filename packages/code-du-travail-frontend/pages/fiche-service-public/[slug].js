@@ -67,9 +67,11 @@ class Fiche extends React.Component {
           }
           breadcrumbs={breadcrumbs}
         >
-          {// Without the check, the prop children of the Answer will evaluate to true
-          // even if in the end, <FicheServicePublic /> returns null
-          raw && <FicheServicePublic data={raw.children} />}
+          {
+            // Without the check, the prop children of the Answer will evaluate to true
+            // even if in the end, <FicheServicePublic /> returns null
+            raw && <FicheServicePublic data={raw.children} />
+          }
         </Answer>
       </Layout>
     );

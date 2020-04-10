@@ -119,7 +119,7 @@ exports[`<HeadBandAlert /> should render 1`] = `
               />
               <line
                 x1="12"
-                x2="12"
+                x2="12.01"
                 y1="16"
                 y2="16"
               />
