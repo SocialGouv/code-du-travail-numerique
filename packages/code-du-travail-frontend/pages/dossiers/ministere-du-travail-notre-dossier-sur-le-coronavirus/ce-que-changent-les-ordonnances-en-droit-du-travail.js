@@ -501,10 +501,10 @@ class Fiche extends React.Component {
                 {
                   id: "interessement-participation-1",
                   title:
-                    "Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation",
+                    "Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire prévue à l’article L. 1226-1 du code du travail et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation, article 2",
                   type: TYPE_REFERENCE.external,
                   url:
-                    "https://www.legifrance.gouv.fr/affichTexte.d?cidTexte=JORFTEXT000041755930",
+                    "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930",
                 },
                 {
                   id: "interessement-participation-2",
@@ -651,7 +651,7 @@ class Fiche extends React.Component {
               slug: `/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus`,
             },
           ]}
-          date="13/04/2020"
+          date="10/04/2020"
           dateLabel="Mise à jour le"
           title="Coronavirus : ce que changent les ordonnances en droit du travail"
         >
