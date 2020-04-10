@@ -45,4 +45,5 @@ Notify Success:
 
 Delete useless k8s namespaces:
   <<: *notify_stage
+  environment: fabrique-tmp
   extends: .base_delete_useless_k8s_ns_stage
