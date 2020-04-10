@@ -30,10 +30,7 @@ class Fiche extends React.Component {
                 alt="Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous."
               />
               <Figcaption>
-                <MoreContent
-                  noLeftPadding
-                  title="Version textuelle plus détaillée"
-                >
+                <MoreContent noLeftPadding title="Voir en détail">
                   <Wrapper variant="dark">
                     <p>
                       Le régime applicable aux congés payés continue de
@@ -111,18 +108,6 @@ class Fiche extends React.Component {
                       l’ordonnance du 25 mars 2020. Il ne peut pas imposer la
                       prise de 6 jours de congés payés dans ces conditions.
                     </p>
-                    <p>
-                      Au niveau de la branche, voici la liste des accords
-                      collectifs conclus sur le thème des congés payés en
-                      application de l’ordonnance du 25 mars 2020 :
-                    </p>
-                    <Ul>
-                      <Li>
-                        Métallurgie : Accord du 3 avril 2020 portant sur les
-                        modalités d’organisation du travail pour faire face à
-                        l’épidémie Covid-19 dans la métallurgie.
-                      </Li>
-                    </Ul>
                   </Wrapper>
                 </MoreContent>
               </Figcaption>
@@ -158,13 +143,10 @@ class Fiche extends React.Component {
             <Figure>
               <img
                 src="/static/assets/img/infographies/jours-repos.jpg"
-                alt="Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous."
+                alt="Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous."
               />
               <Figcaption>
-                <MoreContent
-                  noLeftPadding
-                  title="Version textuelle plus détaillée"
-                >
+                <MoreContent noLeftPadding title="Voir en détail">
                   <Wrapper variant="dark">
                     <p>
                       Le régime applicable aux jours de réduction de temps de
@@ -671,7 +653,7 @@ class Fiche extends React.Component {
           ]}
           date="13/04/2020"
           dateLabel="Mise à jour le"
-          title="Coronavirus : ce que changent les ordonnnaces en droit du travail"
+          title="Coronavirus : ce que changent les ordonnances en droit du travail"
         >
           <p>
             Le gouvernement a décidé de prendre plusieurs mesures afin
