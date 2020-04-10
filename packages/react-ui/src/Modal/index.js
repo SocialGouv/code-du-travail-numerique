@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
 import { X } from "react-feather";
+
 import { box, breakpoints, spacings } from "../theme";
 import { Button } from "../Button";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
@@ -83,6 +84,7 @@ const CloseButton = styled(Button)`
   position: absolute;
   top: 0;
   right: 0;
+  color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.mobile}) {
     position: fixed;
     top: ${spacings.small};

@@ -114,6 +114,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   position: absolute;
   top: 0;
   right: 0;
+  color: #7994d4;
 }
 
 @media (max-width:600px) {
@@ -329,6 +330,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   position: absolute;
   top: 0;
   right: 0;
+  color: #7994d4;
 }
 
 .c1 {

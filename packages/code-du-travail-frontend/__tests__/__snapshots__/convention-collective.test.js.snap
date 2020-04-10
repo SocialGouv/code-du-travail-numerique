@@ -13,23 +13,6 @@ exports[`<ConventionCollective /> should render 1`] = `
   color: #3e486e;
 }
 
-.c3 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -91,6 +74,23 @@ exports[`<ConventionCollective /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c3 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c9 {

@@ -91,7 +91,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   height: 3rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -119,27 +119,39 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c10:focus,
-.c10:hover,
-.c10:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c18 {
@@ -329,6 +341,68 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c86 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c86:focus,
+.c86:hover,
+.c86:active {
+  color: #f66663;
+}
+
+.c10 {
+  height: auto;
+  padding: 0;
+}
+
+.c12 {
+  width: 5.4rem;
+  height: 5.4rem;
+  color: #7994d4;
 }
 
 .c22 {
@@ -931,52 +1005,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c11 {
-  position: relative;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 1.6rem;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  border: none;
-}
-
-.c12 {
-  position: relative;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 1.6rem;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  border: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
-  height: 100%;
-}
-
-.c9 > div {
-  height: 100%;
 }
 
 .c2 {
@@ -1162,7 +1193,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: pointer;
 }
 
-.c86 {
+.c87 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1181,7 +1212,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c87 {
+.c88 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1189,7 +1220,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c88 {
+.c89 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1270,8 +1301,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
   }
 }
 
@@ -1302,6 +1339,19 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c75 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c86 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    width: 4.2rem;
+    height: 4.2rem;
   }
 }
 
@@ -1604,40 +1654,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c11 {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    height: 5.4rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    height: 5.4rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    height: auto;
-  }
-}
-
 @media (max-width:600px) {
   .c2 {
     height: 6rem;
@@ -1816,57 +1832,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c88 {
+  .c89 {
     display: none;
   }
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
 }
 
 <div>
@@ -1925,104 +1893,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           <div
             class="c8"
           >
-            <div
-              class="c9"
+            <button
+              class="c9 c10 c11"
             >
-              <div>
-                <div
-                  class="bm-overlay"
-                  style="position: fixed; z-index: 1000; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); opacity: 1; transition: opacity 0.3s;"
+              <svg
+                class="c12"
+                fill="none"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
                 />
-                <div
-                  class="bm-menu-wrap"
-                  id=""
-                  style="position: fixed; z-index: 1100; width: 300px; height: 100%; transition: all 0.5s;"
-                >
-                  <div
-                    class="bm-menu"
-                    style="height: 100%; box-sizing: border-box; overflow: auto;"
-                  >
-                    <nav
-                      class="bm-item-list"
-                      style="height: 100%;"
-                    >
-                      <button
-                        class="c10 c11"
-                      >
-                        Accessibilité
-                      </button>
-                      <a
-                        class="c12 bm-item"
-                        href="/outils"
-                        style="display: block;"
-                        tabindex="0"
-                      >
-                        Boîte à outils
-                      </a>
-                      <a
-                        class="c12 bm-item"
-                        href="/themes"
-                        style="display: block;"
-                        tabindex="0"
-                      >
-                        Thèmes
-                      </a>
-                    </nav>
-                  </div>
-                  <div>
-                    <div
-                      class="bm-cross-button"
-                      style="position: absolute; width: 24px; height: 24px; right: 8px; top: 8px;"
-                    >
-                      <svg
-                        class="bm-cross"
-                        fill="none"
-                        style="width: 100%; height: 100%;"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <button
-                        style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
-                        tabindex="0"
-                      >
-                        Close Menu
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="bm-burger-button"
-                    style="z-index: 1000;"
-                  >
-                    <svg
-                      class="bm-icon"
-                      fill="none"
-                      style="width: 100%; height: 100%;"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                    <button
-                      style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
-                    >
-                      Open Menu
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </svg>
+            </button>
             <a
               class="c13"
               href="/recherche?q="
@@ -2548,7 +2434,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     Code du travail numérique
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
@@ -2621,13 +2507,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     Aidez-nous à améliorer cet outil
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
                     >
                       <button
-                        class="c10"
+                        class="c86"
                       >
                         Contact
                       </button>
@@ -2667,7 +2553,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     En collaboration avec
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
@@ -2711,10 +2597,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </nav>
           </div>
           <div
-            class="c86"
+            class="c87"
           >
             <a
-              class="c87"
+              class="c88"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2723,12 +2609,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2737,12 +2623,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2751,12 +2637,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2765,12 +2651,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2779,12 +2665,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"
@@ -2890,7 +2776,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   height: 3rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2918,27 +2804,39 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c10:focus,
-.c10:hover,
-.c10:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c18 {
@@ -3128,6 +3026,68 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c86 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c86:focus,
+.c86:hover,
+.c86:active {
+  color: #f66663;
+}
+
+.c10 {
+  height: auto;
+  padding: 0;
+}
+
+.c12 {
+  width: 5.4rem;
+  height: 5.4rem;
+  color: #7994d4;
 }
 
 .c22 {
@@ -3730,52 +3690,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c11 {
-  position: relative;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 1.6rem;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  border: none;
-}
-
-.c12 {
-  position: relative;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 1.6rem;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  border: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
-  height: 100%;
-}
-
-.c9 > div {
-  height: 100%;
 }
 
 .c2 {
@@ -3961,7 +3878,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: pointer;
 }
 
-.c86 {
+.c87 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3980,7 +3897,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #e4e8ef;
 }
 
-.c87 {
+.c88 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3988,7 +3905,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c88 {
+.c89 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4069,8 +3986,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
   }
 }
 
@@ -4101,6 +4024,19 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c75 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c86 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    width: 4.2rem;
+    height: 4.2rem;
   }
 }
 
@@ -4403,40 +4339,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c11 {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    height: 5.4rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    height: 5.4rem;
-    padding: 0;
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    height: auto;
-  }
-}
-
 @media (max-width:600px) {
   .c2 {
     height: 6rem;
@@ -4615,57 +4517,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c88 {
+  .c89 {
     display: none;
   }
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (min-width:981px) {
-
 }
 
 <div>
@@ -4724,104 +4578,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           <div
             class="c8"
           >
-            <div
-              class="c9"
+            <button
+              class="c9 c10 c11"
             >
-              <div>
-                <div
-                  class="bm-overlay"
-                  style="position: fixed; z-index: 1000; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); opacity: 1; transition: opacity 0.3s;"
+              <svg
+                class="c12"
+                fill="none"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
                 />
-                <div
-                  class="bm-menu-wrap"
-                  id=""
-                  style="position: fixed; z-index: 1100; width: 300px; height: 100%; transition: all 0.5s;"
-                >
-                  <div
-                    class="bm-menu"
-                    style="height: 100%; box-sizing: border-box; overflow: auto;"
-                  >
-                    <nav
-                      class="bm-item-list"
-                      style="height: 100%;"
-                    >
-                      <button
-                        class="c10 c11"
-                      >
-                        Accessibilité
-                      </button>
-                      <a
-                        class="c12 bm-item"
-                        href="/outils"
-                        style="display: block;"
-                        tabindex="0"
-                      >
-                        Boîte à outils
-                      </a>
-                      <a
-                        class="c12 bm-item"
-                        href="/themes"
-                        style="display: block;"
-                        tabindex="0"
-                      >
-                        Thèmes
-                      </a>
-                    </nav>
-                  </div>
-                  <div>
-                    <div
-                      class="bm-cross-button"
-                      style="position: absolute; width: 24px; height: 24px; right: 8px; top: 8px;"
-                    >
-                      <svg
-                        class="bm-cross"
-                        fill="none"
-                        style="width: 100%; height: 100%;"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          clip-rule="evenodd"
-                          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
-                          fill="currentColor"
-                          fill-rule="evenodd"
-                        />
-                      </svg>
-                      <button
-                        style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
-                        tabindex="0"
-                      >
-                        Close Menu
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="bm-burger-button"
-                    style="z-index: 1000;"
-                  >
-                    <svg
-                      class="bm-icon"
-                      fill="none"
-                      style="width: 100%; height: 100%;"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                    <button
-                      style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
-                    >
-                      Open Menu
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </svg>
+            </button>
             <a
               class="c13"
               href="/recherche?q="
@@ -5347,7 +5119,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     Code du travail numérique
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
@@ -5420,13 +5192,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     Aidez-nous à améliorer cet outil
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
                     >
                       <button
-                        class="c10"
+                        class="c86"
                       >
                         Contact
                       </button>
@@ -5466,7 +5238,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     En collaboration avec
                   </h3>
                   <ul
-                    class="sc-fznMnq c83"
+                    class="sc-fznAgC c83"
                   >
                     <li
                       class="c84"
@@ -5510,10 +5282,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </nav>
           </div>
           <div
-            class="c86"
+            class="c87"
           >
             <a
-              class="c87"
+              class="c88"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5522,12 +5294,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5536,12 +5308,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5550,12 +5322,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5564,12 +5336,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5578,12 +5350,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c88"
+              class="c89"
             >
               |
             </span>
             <a
-              class="c87"
+              class="c88"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

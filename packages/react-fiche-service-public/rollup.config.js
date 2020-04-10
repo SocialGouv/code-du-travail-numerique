@@ -1,6 +1,5 @@
-import commonjs from "rollup-plugin-commonjs";
-import resolve from "rollup-plugin-node-resolve";
-import replace from "rollup-plugin-replace";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
 import babel from "rollup-plugin-babel";
 
 export default {
@@ -15,17 +14,8 @@ export default {
       format: "esm",
     },
   ],
-  external: ["react", "react-dom", "prop-types", "styled-components"],
-  plugins: [
-    babel(),
-    resolve({
-      mainFields: ["module", "jsnext", "jsnext:main", "main"],
-    }),
-    commonjs(),
-    replace({
-      "process.env.NODE_ENV": JSON.stringify("production"),
-    }),
-  ],
+  external: ["prop-types", "react", "react-dom", "styled-components"],
+  plugins: [babel(), resolve(), commonjs()],
   watch: {
     include: "src/**",
   },
