@@ -10,39 +10,76 @@ include:
 
 #
 
-.notify_stage: &notify_stage
+.notify_stage:
+  stage: Notify Finished Deployment
   except:
     variables:
       # Don't run when running e2e tests
       - $E2E_TEST
+  dependencies:
+    - Notify Starting Deployment
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${FRONTEND_URL}
+
+#
+
+.notify_dev:
+  environment:
+    name: fabrique-dev
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't run when running e2e tests
+      - $E2E_TEST
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
+
+.notify_prod:
+  environment:
+    name: prod
+  only:
+    variables:
+      - $PRODUCTION
 
 #
 
 Notify Starting Deployment:
-  <<: *notify_stage
-  extends: .base_notify_pending_stage
+  extends:
+    - .base_notify_pending_stage
+    - .notify_stage
   stage: Deploy
+  dependencies: []
 
-Notify Fail:
-  <<: *notify_stage
-  extends: .base_notify_fail_stage
-  stage: Notify Finished Deployment
-  dependencies:
-    - Notify Starting Deployment
-  before_script:
-    - source ./.gitlab-ci/env.sh
-    - HOST=${FRONTEND_URL}
+#
 
-Notify Success:
-  <<: *notify_stage
-  extends: .base_notify_success_stage
-  stage: Notify Finished Deployment
-  dependencies:
-    - Notify Starting Deployment
-  before_script:
-    - source ./.gitlab-ci/env.sh
-    - HOST=${FRONTEND_URL}
+Notify Fail (dev):
+  extends:
+    - .base_notify_fail_stage
+    - .notify_stage
+    - .notify_dev
+
+Notify Fail (prod):
+  extends:
+    - .base_notify_fail_stage
+    - .notify_stage
+    - .notify_prod
+
+Notify Success (dev):
+  extends:
+    - .base_notify_success_stage
+    - .notify_stage
+    - .notify_dev
+
+Notify Success (prod):
+  extends:
+    - .base_notify_success_stage
+    - .notify_stage
+    - .notify_prod
 
 Delete useless k8s namespaces:
-  <<: *notify_stage
-  extends: .base_delete_useless_k8s_ns_stage
+  extends:
+    - .base_delete_useless_k8s_ns_stage
+    - .notify_stage
