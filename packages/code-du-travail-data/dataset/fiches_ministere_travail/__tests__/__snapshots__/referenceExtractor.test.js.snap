@@ -332,22 +332,22 @@ Object {
         "id": "LEGIARTI000036262496",
       },
       Object {
-        "article": "R. 2313-3",
+        "article": "R2313-3",
         "fmt": "R2313-3",
         "id": "LEGIARTI000039624940",
       },
       Object {
-        "article": "R. 2313-4",
+        "article": "R2313-4",
         "fmt": "R2313-4",
         "id": "LEGIARTI000036414723",
       },
       Object {
-        "article": "R. 2313-5",
+        "article": "R2313-5",
         "fmt": "R2313-5",
         "id": "LEGIARTI000039347715",
       },
       Object {
-        "article": "R. 2313-6",
+        "article": "R2313-6",
         "fmt": "R2313-6",
         "id": "LEGIARTI000039624937",
       },
@@ -368,193 +368,197 @@ Array [
     "LEGITEXT000006072050": Object {
       "articles": Array [
         Object {
-          "article": "R. 2313-3",
-          "fmt": "R2313-3",
-          "id": "LEGIARTI000039624940",
+          "article": "L1251-21",
+          "fmt": "L1251-21",
+          "id": "LEGIARTI000006901274",
         },
         Object {
-          "article": "R. 2313-4",
-          "fmt": "R2313-4",
-          "id": "LEGIARTI000036414723",
+          "article": "L1251-22",
+          "fmt": "L1251-22",
+          "id": "LEGIARTI000006901275",
         },
         Object {
-          "article": "R. 2313-5",
-          "fmt": "R2313-5",
-          "id": "LEGIARTI000039347715",
-        },
-        Object {
-          "article": "R. 2313-6",
-          "fmt": "R2313-6",
-          "id": "LEGIARTI000039624937",
+          "article": "L1251-23",
+          "fmt": "L1251-23",
+          "id": "LEGIARTI000006901276",
         },
       ],
       "name": "code du travail",
-    },
-  },
-  Object {
-    "CODE_UNKNOWN": Object {
-      "articles": Array [
-        Object {
-          "article": "R. 2313-3-2",
-        },
-        Object {
-          "article": "R. 2313-3-3",
-        },
-        Object {
-          "article": "R. 2313-3-4",
-        },
-        Object {
-          "article": "R. 2313-3-5",
-        },
-        Object {
-          "article": "R. 2313-3-6",
-        },
-        Object {
-          "article": "R. 2313-3-7",
-        },
-        Object {
-          "article": "R. 2313-3-8",
-        },
-        Object {
-          "article": "R. 2313-3-9",
-        },
-        Object {
-          "article": "R. 2313-3-10",
-        },
-      ],
-      "name": undefined,
     },
   },
   Object {
     "LEGITEXT000006072050": Object {
       "articles": Array [
         Object {
-          "article": "L 4121-1",
-          "fmt": "L4121-1",
-          "id": "LEGIARTI000035640828",
+          "article": "L1233-34",
+          "fmt": "L1233-34",
+          "id": "LEGIARTI000036762068",
         },
         Object {
-          "article": "L 4121-2",
-          "fmt": "L4121-2",
-          "id": "LEGIARTI000033019913",
+          "article": "L1233-35",
+          "fmt": "L1233-35",
+          "id": "LEGIARTI000036261799",
         },
         Object {
-          "article": "L 4121-3",
-          "fmt": "L4121-3",
-          "id": "LEGIARTI000029336807",
-        },
-        Object {
-          "article": "L 4121-4",
-          "fmt": "L4121-4",
-          "id": "LEGIARTI000006903150",
-        },
-        Object {
-          "article": "L 4121-5",
-          "fmt": "L4121-5",
-          "id": "LEGIARTI000006903151",
+          "article": "L1233-35-1",
+          "fmt": "L1233-35-1",
+          "id": "LEGIARTI000035643013",
         },
       ],
       "name": "code du travail",
-    },
-  },
-  Object {
-    "CODE_UNKNOWN": Object {
-      "articles": Array [
-        Object {
-          "article": "L. 732-10",
-        },
-        Object {
-          "article": "L. 732-11",
-        },
-        Object {
-          "article": "L. 732-12",
-        },
-        Object {
-          "article": "L. 732-12-1",
-        },
-        Object {
-          "article": "L. 732-12-2",
-        },
-      ],
-      "name": undefined,
-    },
-  },
-  Object {
-    "CODE_UNKNOWN": Object {
-      "articles": Array [
-        Object {
-          "article": "L. 613-19-1",
-        },
-        Object {
-          "article": "L. 613-19-2",
-        },
-        Object {
-          "article": "L. 613-19",
-        },
-      ],
-      "name": undefined,
-    },
-  },
-  Object {
-    "CODE_UNKNOWN": Object {
-      "articles": Array [
-        Object {
-          "article": "L. 613-2",
-        },
-        Object {
-          "article": "L. 614",
-        },
-      ],
-      "name": undefined,
     },
   },
   Object {
     "LEGITEXT000006072050": Object {
       "articles": Array [
         Object {
-          "article": "L. 1237-16-1",
+          "article": "L2312-72",
+          "fmt": "L2312-72",
+          "id": "LEGIARTI000035611295",
         },
         Object {
-          "article": "L. 1237-16-2",
+          "article": "L2312-73",
+          "fmt": "L2312-73",
+          "id": "LEGIARTI000035611297",
         },
         Object {
-          "article": "L. 1237-16-3",
+          "article": "L2312-74",
+          "fmt": "L2312-74",
+          "id": "LEGIARTI000035611299",
         },
         Object {
-          "article": "L. 1237-16-4",
+          "article": "L2312-75",
+          "fmt": "L2312-75",
+          "id": "LEGIARTI000035611301",
         },
         Object {
-          "article": "L. 1237-16-5",
+          "article": "L2312-76",
+          "fmt": "L2312-76",
+          "id": "LEGIARTI000035611303",
         },
         Object {
-          "article": "L. 1237-16-6",
-        },
-        Object {
-          "article": "L. 1237-16-7",
-        },
-        Object {
-          "article": "L. 1237-16-8",
-        },
-        Object {
-          "article": "L. 1237-16-9",
-        },
-        Object {
-          "article": "L. 1237-16-10",
-        },
-        Object {
-          "article": "L. 1237-16-11",
-        },
-        Object {
-          "article": "L. 1237-16-12",
-        },
-        Object {
-          "article": "L. 1237-16-13",
-        },
-        Object {
-          "article": "L. 1237-16-14",
+          "article": "L2312-77",
+          "fmt": "L2312-77",
+          "id": "LEGIARTI000035611305",
         },
       ],
       "name": "code du travail",
+    },
+  },
+  Object {
+    "LEGITEXT000006072050": Object {
+      "articles": Array [
+        Object {
+          "article": "D5132-10-1",
+          "fmt": "D5132-10-1",
+          "id": "LEGIARTI000029775717",
+        },
+        Object {
+          "article": "D5132-10-2",
+          "fmt": "D5132-10-2",
+          "id": "LEGIARTI000029775713",
+        },
+        Object {
+          "article": "D5132-10-3",
+          "fmt": "D5132-10-3",
+          "id": "LEGIARTI000029775708",
+        },
+        Object {
+          "article": "D5132-10-4",
+          "fmt": "D5132-10-4",
+          "id": "LEGIARTI000029775703",
+        },
+      ],
+      "name": "code du travail",
+    },
+  },
+  Object {
+    "LEGITEXT000006072050": Object {
+      "articles": Array [
+        Object {
+          "article": "L2315-38",
+          "fmt": "L2315-38",
+          "id": "LEGIARTI000035626459",
+        },
+        Object {
+          "article": "L2315-39",
+          "fmt": "L2315-39",
+          "id": "LEGIARTI000036262434",
+        },
+        Object {
+          "article": "L2315-40",
+          "fmt": "L2315-40",
+          "id": "LEGIARTI000035626463",
+        },
+      ],
+      "name": "code du travail",
+    },
+  },
+  Object {
+    "LEGITEXT000006073189": Object {
+      "articles": Array [
+        Object {
+          "article": "L351-1",
+          "fmt": "L351-1",
+          "id": "LEGIARTI000023035688",
+        },
+        Object {
+          "article": "L351-1-1",
+          "fmt": "L351-1-1",
+          "id": "LEGIARTI000028498678",
+        },
+        Object {
+          "article": "L351-1-2",
+          "fmt": "L351-1-2",
+          "id": "LEGIARTI000025014540",
+        },
+        Object {
+          "article": "L351-1-3",
+          "fmt": "L351-1-3",
+          "id": "LEGIARTI000028498841",
+        },
+        Object {
+          "article": "L351-1-4",
+          "fmt": "L351-1-4",
+          "id": "LEGIARTI000035640851",
+        },
+        Object {
+          "article": "L351-2",
+          "fmt": "L351-2",
+          "id": "LEGIARTI000031686263",
+        },
+        Object {
+          "article": "L351-3",
+          "fmt": "L351-3",
+          "id": "LEGIARTI000028498769",
+        },
+        Object {
+          "article": "L351-3-1",
+          "fmt": "L351-3-1",
+          "id": "LEGIARTI000031667793",
+        },
+        Object {
+          "article": "L351-4",
+          "fmt": "L351-4",
+          "id": "LEGIARTI000037063369",
+        },
+        Object {
+          "article": "L351-4-1",
+          "fmt": "L351-4-1",
+          "id": "LEGIARTI000017845585",
+        },
+        Object {
+          "article": "L351-4-2",
+          "fmt": "L351-4-2",
+          "id": "LEGIARTI000028497884",
+        },
+        Object {
+          "article": "L351-5",
+          "fmt": "L351-5",
+          "id": "LEGIARTI000021537902",
+        },
+      ],
+      "name": "code de la sécurité sociale",
     },
   },
 ]

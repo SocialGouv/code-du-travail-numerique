@@ -27,11 +27,13 @@ const CODE_TRAVAIL = {
   id: "LEGITEXT000006072050",
 };
 
+const CODE_SECU = {
+  name: "code de la sécurité sociale",
+  id: "LEGITEXT000006073189",
+};
+
 const codesFullNames = {
-  [CODE_SS]: {
-    name: "code de la sécurité sociale",
-    id: "LEGITEXT000006073189",
-  },
+  [CODE_SS]: CODE_SECU,
   [CODE_TRA]: CODE_TRAVAIL,
 };
 
@@ -241,4 +243,5 @@ module.exports = {
   extractReferences,
   codesFullNames,
   CODE_TRAVAIL,
+  CODE_SECU,
 };

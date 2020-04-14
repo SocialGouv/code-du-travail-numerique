@@ -6,6 +6,7 @@ actual id in the legi data corpus.
 
 const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
 const find = require("unist-util-find");
+const visit = require("unist-util-visit");
 
 const codes = {};
 Object.values(codesFullNames).forEach(({ id }) => {
@@ -16,9 +17,107 @@ Object.values(codesFullNames).forEach(({ id }) => {
 // duplicated in reference Extractor
 const rangeMarkers = ["à", "à"];
 
+// dumb convert article.data.num as integer for comparison
+// each part up to MAX_DEPTH is padded with PAD_LENGTH
+const PAD_LENGTH = 5; // left pad numbers to X chars
+const MAX_DEPTH = 5; // max number of L432-1-1-1
+
+const leftPad = (num) => {
+  let padded = "" + num;
+  while (padded.length < PAD_LENGTH) {
+    padded = "0" + padded;
+  }
+  return padded;
+};
+
+// transform articles into comparable integers
+const asInt = (num) => {
+  const parts = num
+    .replace(/[^\d-]/g, "")
+    .split("-")
+    .map(leftPad);
+  while (parts.length < MAX_DEPTH) {
+    parts.push(leftPad(0));
+  }
+  const int = parseInt(parts.join(""));
+  return int;
+};
+
+function getLegiDataRange(code, start, end) {
+  // check if num is numerically after start. also check LRD prefix
+  const isAfterStart = (node) =>
+    asInt(node.data.num) >= asInt(start) &&
+    node.data.num.charAt(0) === start.charAt(0);
+
+  // check if num is numerically before end. also check LRD prefix
+  const isBeforeEnd = (node) =>
+    asInt(node.data.num) <= asInt(end) &&
+    node.data.num.charAt(0) === end.charAt(0);
+
+  const articles = [];
+  visit(code, "article", (node) => {
+    if (isAfterStart(node) && isBeforeEnd(node)) {
+      articles.push(node);
+    }
+  });
+  return articles;
+}
+
+function formatStartEnd(startRaw, endRaw) {
+  // we need to identify special case where end ref is relative to start ref (e.g. L. 4733-9 à 11)
+  // if there's nothing in common between end and start, we consider being in this special case
+
+  const [startParts, endParts] = [startRaw, endRaw].map((a) =>
+    a.split("-").map((p) => p.trim())
+  );
+
+  const letter = startParts[0].slice(0, 1);
+
+  const startNums = Array.from(startParts);
+  startNums[0] = startNums[0].replace(/\D/g, "");
+
+  let endNums = Array.from(endParts);
+  endNums[0] = endNums[0].replace(/\D/g, "");
+
+  if (endNums.length == 1 && /^\d+$/.test(endParts[0])) {
+    const endRange = endNums[0];
+    endNums = Array.from(startNums.slice(0, -1));
+    endNums.push(endRange);
+  }
+
+  return [letter + startNums.join("-"), letter + endNums.join("-")];
+}
+
 // in case of a range (like "L. 4733-9 à 4733-11"), we try to identify
 // the articles implicitly included within the range
 function unravelRange(range) {
+  const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
+  const rawParts = range.article.split(mark);
+  const code = range.code != undefined ? codes[range.code.id] : undefined;
+
+  if (rawParts.length == 2 && code) {
+    // objective is to identify starting and ending articles (with the legi data correct format)
+    // then we can do a legi-data lookup
+    const [startFMT, endFMT] = formatStartEnd(rawParts[0], rawParts[1]);
+
+    const unraveled = getLegiDataRange(code, startFMT, endFMT).map((a) => {
+      return { article: a.data.num, code: range.code };
+    });
+
+    if (unraveled.length > 0) {
+      return unraveled;
+    }
+  }
+
+  console.log("Range error for range : " + JSON.stringify(range, null, 2));
+
+  // default in case of error
+  return range.article.split(mark).map((a) => {
+    return { article: a.trim(), code: range.code };
+  });
+}
+
+function deprecUnravelRange(range) {
   // TODO : deal with actual ranges (N to M)
   const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
 
@@ -138,7 +237,7 @@ function formatArticle(article) {
 
 function resolveReference(ref) {
   let toResolve = [ref];
-  if (rangeMarkers.map((a) => ref.article.includes(a))) {
+  if (rangeMarkers.filter((a) => ref.article.includes(a)).length != 0) {
     toResolve = unravelRange(ref);
   }
 
