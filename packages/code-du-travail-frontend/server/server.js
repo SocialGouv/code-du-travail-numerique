@@ -61,14 +61,14 @@ nextApp.prepare().then(() => {
             "'self'",
             "*.travail.gouv.fr",
             "*.data.gouv.fr",
-            "*.social.gouv.fr",
+            "*.fabrique.social.gouv.fr",
           ],
           scriptSrc: [
             "'self'",
             "'unsafe-inline'",
             "https://mon-entreprise.fr",
             "https://www.googletagmanager.com",
-            "*.social.gouv.fr",
+            "*.fabrique.social.gouv.fr",
             "https://cdnjs.cloudflare.com",
           ],
           frameSrc: [
@@ -80,7 +80,7 @@ nextApp.prepare().then(() => {
           imgSrc: [
             "'self'",
             "data:",
-            "*.social.gouv.fr",
+            "*.fabrique.social.gouv.fr",
             "https://travail-emploi.gouv.fr",
             "https://mon-entreprise.fr",
             "https://ad.doubleclick.net",
