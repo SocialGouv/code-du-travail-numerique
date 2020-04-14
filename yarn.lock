@@ -2626,7 +2626,7 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/contributions-data@^1.5.0":
+"@socialgouv/contributions-data@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.8.0.tgz#af63678665f46ebabbaf093846b7b03fcf65a983"
   integrity sha512-1lKUEwx+Co2iJgT8BK5y13SdyDBGtvgwcGUQqGaQnPQ0doj0QvK94VRDadZKfhzCgD3HsmXN/PV9c80IEY0ztg==
