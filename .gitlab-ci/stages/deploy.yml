@@ -92,6 +92,8 @@ Deploy @cdtn/api (dev):
   extends:
     - .deploy_api_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -126,6 +128,8 @@ Deploy @cdtn/frontend (dev):
   extends:
     - .deploy_frontend_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
