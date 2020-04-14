@@ -2,6 +2,7 @@
   "name": "@socialgouv/react-ui",
   "version": "4.17.0",
   "description": "Composants ReactJS",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/react-ui#react-ui-socialgouvreact-ui",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "files": [
@@ -72,7 +73,6 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "svgo": "^1.3.2"
   },
-  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/react-ui",
   "license": "MIT",
   "keywords": [
     "react",
