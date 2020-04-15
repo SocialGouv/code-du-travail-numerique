@@ -37,6 +37,7 @@ Create namespace:
 
 .deploy_stage: &deploy_stage
   stage: "Deploy"
+  dependencies: []
   except:
     variables:
       # Don't run when running e2e tests
@@ -91,6 +92,8 @@ Deploy @cdtn/api (dev):
   extends:
     - .deploy_api_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -125,6 +128,8 @@ Deploy @cdtn/frontend (dev):
   extends:
     - .deploy_frontend_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -209,6 +214,8 @@ Deploy @cdtn/nlp (dev):
   extends:
     - .deploy_nlp_stage
     - .dev_stage
+  dependencies:
+    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set deployment.resources.requests.memory=1Gi
