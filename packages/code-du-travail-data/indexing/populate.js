@@ -105,7 +105,7 @@ async function* cdtnDocumentsGen() {
   yield getFichesSP();
 
   logger.info("=== Fiche MT(split) ===");
-  yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
+  yield require("@cdt/data...fiches_ministere_travail/fiches-mt-split.json").map(
     ({ anchor, description, html, slug, text, title, breadcrumbs }) => ({
       source: SOURCES.SHEET_MT,
       anchor,
@@ -120,7 +120,7 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Themes ===");
-  yield require("../dataset/datafiller/themes.data.json").map(
+  yield require("@cdt/data...datafiller/themes.data.json").map(
     ({ slug, title }) => ({
       source: SOURCES.THEMES,
       title: title,
@@ -133,7 +133,7 @@ async function* cdtnDocumentsGen() {
   yield getCourriers();
 
   logger.info("=== Outils ===");
-  yield require("../dataset/tools")
+  yield require("@cdt/data...tools")
     .filter((tool) => tool.slug !== "simulateur-embauche")
     .map(
       ({
@@ -160,7 +160,7 @@ async function* cdtnDocumentsGen() {
     );
 
   logger.info("=== Outils externes ===");
-  yield require("../dataset/tools/externals.json").map(
+  yield require("@cdt/data...tools/externals.json").map(
     ({ action, description, icon, title, url }) => ({
       action,
       description,
@@ -214,21 +214,21 @@ async function* cdtnDocumentsGen() {
   yield [
     {
       source: SOURCES.HIGHLIGHTS,
-      data: require("../dataset/datafiller/highlights.data.json"),
+      data: require("@cdt/data...datafiller/highlights.data.json"),
     },
   ];
   logger.info("=== glossary ===");
   yield [
     {
       source: SOURCES.GLOSSARY,
-      data: require("../dataset/datafiller/glossary.data.json"),
+      data: require("@cdt/data...datafiller/glossary.data.json"),
     },
   ];
   logger.info("=== PreQualified Request ===");
   yield [
     {
       source: SOURCES.PREQUALIFIED,
-      data: require("../dataset/datafiller/prequalified.data.json"),
+      data: require("@cdt/data...datafiller/prequalified.data.json"),
     },
   ];
 }
