@@ -16,13 +16,13 @@ Build data:
     - "[[ type jq ]] || apk add jq=~1"
 
     - yarn workspaces --json info | jq '.data' -r > /tmp/workspace_info.json
-    - cat /tmp/workspace_info.json
+    - echo "$ cat /tmp/workspace_info.json" && cat /tmp/workspace_info.json
 
     - >-
       cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]'
       | sort -u
       > /tmp/workspace_packages_location
-    - cat /tmp/workspace_packages_location
+    - echo "$ cat /tmp/workspace_packages_location" && cat /tmp/workspace_packages_location
 
     - >-
       cat /tmp/workspace_info.json
@@ -38,14 +38,14 @@ Build data:
         "cat /tmp/workspace_info.json | jq -c '.[{}].location'" \
       | sort -u
       > /tmp/workspace_dependencies_location
-    - cat /tmp/workspace_dependencies_location
+    - echo "$ cat /tmp/workspace_dependencies_location" && cat /tmp/workspace_dependencies_location
 
     - >-
       comm -3
         /tmp/workspace_packages_location
         /tmp/workspace_dependencies_location
       > /tmp/useless_packages
-    - cat /tmp/useless_packages
+    - echo "$ cat /tmp/useless_packages" && cat /tmp/useless_packages
 
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
