@@ -80,10 +80,9 @@ Notify Success (prod):
     - .notify_prod
 
 Delete useless k8s namespaces:
-  stage: Prepare
-  only:
   extends:
     - .base_delete_useless_k8s_ns_stage
+    - .notify_dev
   environment:
     name: fabrique-dev
   variables:
