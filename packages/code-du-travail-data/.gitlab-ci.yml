@@ -25,24 +25,24 @@ Build data:
     - cat /tmp/workspace_packages_location
 
     - >-
-      cat /tmp/workspace_info.json \
-      | jq -c --arg WORKSPACE "$WORKSPACE" '.[$WORKSPACE].workspaceDependencies | .[]' \
-      | sort -u \
+      cat /tmp/workspace_info.json
+      | jq -c --arg WORKSPACE "$WORKSPACE" '.[$WORKSPACE].workspaceDependencies | .[]'
+      | sort -u
       > /tmp/workspace_dependencies
 
 
     - >-
-      cat /tmp/workspace_dependencies \
-      | xargs -L 1 -I {} sh -c \
-        "cat /tmp/workspace_info.json | jq -c '.[\"{}\"].location'" \
-      | sort -u \
+      cat /tmp/workspace_dependencies
+      | xargs -L 1 -I {} sh -c
+        "cat /tmp/workspace_info.json | jq -c '.[\"{}\"].location'"
+      | sort -u
       > /tmp/workspace_dependencies_location
     - cat /tmp/workspace_dependencies_location
 
     - >-
-      comm -3 \
-        /tmp/workspace_packages_location \
-        /tmp/workspace_dependencies_location \
+      comm -3
+        /tmp/workspace_packages_location
+        /tmp/workspace_dependencies_location
       > /tmp/useless_packages
     - cat /tmp/useless_packages
 
