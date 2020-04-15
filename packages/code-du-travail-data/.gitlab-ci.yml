@@ -53,7 +53,7 @@ Build data:
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - cat /tmp/useless_packages | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rf {}
+    - cat /tmp/useless_packages | sed 's/"//g' | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rf {}
     - ls -l packages
 
     - yarn workspaces info
@@ -61,7 +61,7 @@ Build data:
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - cat /tmp/workspace_packages_location |
+    - cat /tmp/workspace_packages_location | sed 's/"//g' |
       xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
       rm {}/package.json ;
       jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
