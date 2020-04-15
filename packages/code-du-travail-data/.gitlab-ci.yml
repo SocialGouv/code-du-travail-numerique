@@ -5,6 +5,10 @@ Build data:
   dependencies: []
   image: node:12.14-alpine3.10
   interruptible: true
+  cache:
+    key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - $CI_PROJECT_DIR/.cache
   variables:
     CONTEXT: code-du-travail-data
   script:
@@ -42,7 +46,8 @@ Build data:
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn --frozen-lockfile --prefer-offline
     #
-    # - yarn workspace @cdt/data dump-dev
+    # - yarn workspace @cdt/data lint
+    # - yarn workspace @cdt/data build
   artifacts:
     expire_in: 1 day
     paths:
