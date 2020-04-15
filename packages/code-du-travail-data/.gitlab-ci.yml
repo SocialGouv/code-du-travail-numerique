@@ -26,6 +26,7 @@ Build data:
 
     - >-
       cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]'
+      | grep -v $(cat /tmp/workspace_context_location)
       | sort -u
       > /tmp/workspace_packages_location
     - echo "$ cat /tmp/workspace_packages_location" && cat /tmp/workspace_packages_location
@@ -52,7 +53,7 @@ Build data:
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - cat /tmp/useless_packages | grep -v $(cat /tmp/workspace_context_location) | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
+    - cat /tmp/useless_packages | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
 
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
