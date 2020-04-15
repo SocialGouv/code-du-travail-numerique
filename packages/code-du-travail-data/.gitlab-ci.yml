@@ -19,6 +19,12 @@ Build data:
     - echo "$ cat /tmp/workspace_info.json" && cat /tmp/workspace_info.json
 
     - >-
+      cat /tmp/workspace_info.json |
+      | jq -c --arg WORKSPACE "${WORKSPACE}" '.[$WORKSPACE].location'
+      > /tmp/workspace_context_location
+    - echo "$ cat /tmp/workspace_context_location" && cat /tmp/workspace_context_location
+
+    - >-
       cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]'
       | sort -u
       > /tmp/workspace_packages_location
@@ -26,7 +32,7 @@ Build data:
 
     - >-
       cat /tmp/workspace_info.json
-      | jq -c --arg WORKSPACE "$WORKSPACE" '.[$WORKSPACE].workspaceDependencies | .[]'
+      | jq -c --arg WORKSPACE "${WORKSPACE}" '.[$WORKSPACE].workspaceDependencies | .[]'
       | sort -u
       > /tmp/workspace_dependencies
     - echo "$ cat /tmp/workspace_dependencies" && cat /tmp/workspace_dependencies
@@ -46,7 +52,7 @@ Build data:
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - cat /tmp/useless_packages | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
+    - cat /tmp/useless_packages | grep -v $(cat /tmp/workspace_context_location) | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
 
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
