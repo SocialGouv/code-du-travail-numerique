@@ -29,7 +29,7 @@ Build data:
       | jq -c --arg WORKSPACE "$WORKSPACE" '.[$WORKSPACE].workspaceDependencies | .[]'
       | sort -u
       > /tmp/workspace_dependencies
-
+    - echo "$ cat /tmp/workspace_dependencies" && cat /tmp/workspace_dependencies
 
     - >-
       cat /tmp/workspace_dependencies
