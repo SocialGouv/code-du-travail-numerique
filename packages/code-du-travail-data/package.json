@@ -3,7 +3,7 @@
   "version": "4.17.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
-  "main": "indexing/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "yarn build:populate && yarn dump-dev",
     "build:populate": "ncc build ./indexing/index.js -o dist/populate",
@@ -29,6 +29,7 @@
   "dependencies": {
     "@cdt/sources": "^4.14.0",
     "@elastic/elasticsearch": "^7.6.1",
+    "@socialgouv/contributions-data": "^1.8.0",
     "@socialgouv/fiches-vdd": "^1.24.0",
     "@socialgouv/kali-data": "^1.13.0",
     "@socialgouv/legi-data": "^1.2.0",

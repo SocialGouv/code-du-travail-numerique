@@ -1,12 +1,17 @@
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
+import find from "unist-util-find";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
-import { parseIdcc } from "../lib";
+import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
+import themes from "../dataset/datafiller/themes.data.json";
+import { createThemer } from "./breadcrumbs";
+
+const getTheme = createThemer(themes);
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -170,14 +175,18 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Contributions ===");
-  yield require("../dataset/contributions/contributions.data.json").map(
-    ({ title, slug, answers, breadcrumbs }) => {
+
+  yield require("@socialgouv/contributions-data/data/contributions.json").map(
+    ({ title, answers }) => {
+      const slug = slugify(title);
+      fixReferences(answers.generic);
+      answers.conventions.forEach(fixReferences);
       return {
         source: SOURCES.CONTRIBUTIONS,
         title,
         slug,
-        breadcrumbs,
-        description: (answers.generic && answers.generic.text) || title,
+        breadcrumbs: getTheme(slug),
+        description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
         excludeFromSearch: false,
@@ -222,6 +231,38 @@ async function* cdtnDocumentsGen() {
       data: require("../dataset/datafiller/prequalified.data.json"),
     },
   ];
+}
+/**
+ * HACK @lionelb
+ * fix references is here only until migration of references in contributions
+ * will be done.
+ * fixReferences will resolve article num.
+ * For article withou num, it will use the parent section's name
+ */
+function fixReferences({ references = [], idcc = "generic" }) {
+  references.forEach((ref) => {
+    if (ref.title.startsWith("KALIARTI")) {
+      const tree = require(`@socialgouv/kali-data/data/${ref.agreement.id}.json`);
+      const parent = find(tree, (node) => {
+        return (
+          node.type === "section" &&
+          node.children.some((node) => node.data.id === ref.title)
+        );
+      });
+      if (parent) {
+        const node = parent.children.find((node) => node.data.id === ref.title);
+        ref.id = ref.title;
+        ref.title = node.data.num
+          ? `Article ${node.data.num}`
+          : parent.data.title;
+        if (!ref.title) {
+          console.error("article with no num", ref.id, ref.agreement.id, idcc);
+        }
+      } else {
+        console.error("can't fix ref for", ref.title, ref.agreement.id, idcc);
+      }
+    }
+  });
 }
 
 export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };

@@ -7,8 +7,8 @@ const { filter } = require("./filter");
 const format = require("./format");
 const { getThemeFiche } = require("./getThemeFiche");
 
-const contributions = require("../contributions/contributions.data.json");
-const extractMdxContentUrl = require("../contributions/extractMdxContentUrl");
+const contributions = require("@socialgouv/contributions-data/data/contributions.json");
+const { extractMdxContentUrl } = require("../../");
 
 const TYPES = ["particuliers", "professionnels", "associations"];
 
