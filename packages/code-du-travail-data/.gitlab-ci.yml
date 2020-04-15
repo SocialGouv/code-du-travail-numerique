@@ -55,6 +55,8 @@ Build data:
     # Only the root package.json dependencies will be installed
     - cat /tmp/useless_packages | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
 
+    - yarn workspaces info
+
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
