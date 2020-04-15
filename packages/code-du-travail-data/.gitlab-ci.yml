@@ -33,7 +33,8 @@ Build data:
 
     - >-
       cat /tmp/workspace_dependencies
-      | xargs -L 1 -I {} sh -c
+      | tr '\n' '\0'
+      | xargs -0 -n1 -I {} sh -c
         "cat /tmp/workspace_info.json | jq -c '.[\"{}\"].location'"
       | sort -u
       > /tmp/workspace_dependencies_location
@@ -49,7 +50,7 @@ Build data:
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - cat /tmp/useless_packages | xargs -I {} rm -rvf {}
+    - cat /tmp/useless_packages | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rvf {}
 
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
