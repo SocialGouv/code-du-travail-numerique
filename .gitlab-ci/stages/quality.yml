@@ -86,6 +86,8 @@ Test @cdtn/api:
   services:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
+      command: [ "bin/elasticsearch", "-Expack.security.enabled=false", "-Ediscovery.type=single-node" ]
+
   variables:
     GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
