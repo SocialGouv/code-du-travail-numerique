@@ -11,14 +11,15 @@ include:
     ref: v9.1.1
   #
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
+  # - /.gitlab-ci/stages/quality.yml
+  # - /.gitlab-ci/stages/register.yml
+  # - /.gitlab-ci/stages/manual.yml
+  # - /.gitlab-ci/stages/scan.yml
+  # - /.gitlab-ci/stages/deploy.yml
+  # - /.gitlab-ci/stages/notify.yml
 
   - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
+  - /packages/code-du-travail-data/.gitlab-ci.yml
 
 stages:
   - "Prepare"
