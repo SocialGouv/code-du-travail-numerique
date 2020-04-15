@@ -50,7 +50,7 @@ Register nlp image:
         fi
       fi
   artifacts:
-    expire_in: 30 mins
+    expire_in: 1 day
     paths:
       - ${CONTEXT}
 #
