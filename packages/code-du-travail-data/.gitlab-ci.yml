@@ -47,10 +47,11 @@ Build data:
     - yarn --frozen-lockfile --prefer-offline
     #
     - yarn workspace @cdt/data lint
-    # - yarn workspace @cdt/data build
+    - yarn workspace @cdt/data build
   after_script:
     # HACK(douglasduteil): remove huge packages from cache
-    # To allow less than a minute caching we remove our biggest packages
+    # To allow less than a minute download/upload caching we remove our biggest
+    # packages :
     # $ npm info @socialgouv/kali-data #.unpackedSize: ~380Mo
     - yarn cache clean @socialgouv/fiches-vdd
     # $ npm info @socialgouv/kali-data #.unpackedSize: ~390Mo
