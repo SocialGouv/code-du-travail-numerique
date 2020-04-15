@@ -30,7 +30,7 @@ Build data:
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn --frozen-lockfile --prefer-offline
     #
-    - yarn workspace @cdt/data dump-dev
+    # - yarn workspace @cdt/data dump-dev
   artifacts:
     expire_in: 1 day
     paths:
