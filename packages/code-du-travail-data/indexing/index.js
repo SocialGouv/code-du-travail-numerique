@@ -1,16 +1,10 @@
 import { Client } from "@elastic/elasticsearch";
-import {
-  DOCUMENTS,
-  THEMES,
-  AGREEMENTS,
-  SUGGESTIONS,
-  MT_SHEETS,
-} from "./esIndexName";
+import { DOCUMENTS, AGREEMENTS, SUGGESTIONS, MT_SHEETS } from "./esIndexName";
 
 import { logger } from "./logger";
 import { documentMapping } from "./document.mapping";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
-import { themesMapping } from "./themes.mapping";
+
 import {
   version,
   createIndex,
@@ -19,14 +13,12 @@ import {
 } from "./es_client.utils";
 import { populateSuggestions } from "./suggestion";
 
-import themes from "../dataset/datafiller/themes.data.json";
 import agreements from "../dataset/datafiller/agreements.data.json";
 import mtSheets from "../dataset/fiches_ministere_travail/fiches-mt.json";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
 const DOCUMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-const THEME_INDEX_NAME = `${ES_INDEX_PREFIX}_${THEMES}`;
 const AGREEMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
 const SHEET_MT_INDEX_NAME = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
 const SUGGEST_INDEX_NAME = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
@@ -94,18 +86,6 @@ async function main() {
     documents: mtSheets,
   });
 
-  // Indexing Themes data
-  await createIndex({
-    client,
-    indexName: `${THEME_INDEX_NAME}-${ts}`,
-    mappings: themesMapping,
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: `${THEME_INDEX_NAME}-${ts}`,
-    documents: themes,
-  });
-
   // Indexing Suggestions
   await populateSuggestions(client, `${SUGGEST_INDEX_NAME}-${ts}`);
 
@@ -113,12 +93,6 @@ async function main() {
   await client.indices.updateAliases({
     body: {
       actions: [
-        {
-          remove: {
-            index: `${THEME_INDEX_NAME}-*`,
-            alias: `${THEME_INDEX_NAME}`,
-          },
-        },
         {
           remove: {
             index: `${AGREEMENT_INDEX_NAME}-*`,
@@ -141,12 +115,6 @@ async function main() {
           remove: {
             index: `${SUGGEST_INDEX_NAME}-*`,
             alias: `${SUGGEST_INDEX_NAME}`,
-          },
-        },
-        {
-          add: {
-            index: `${THEME_INDEX_NAME}-${ts}`,
-            alias: `${THEME_INDEX_NAME}`,
           },
         },
         {
@@ -179,7 +147,6 @@ async function main() {
 
   const patterns = [
     DOCUMENT_INDEX_NAME,
-    THEME_INDEX_NAME,
     AGREEMENT_INDEX_NAME,
     SUGGEST_INDEX_NAME,
     SHEET_MT_INDEX_NAME,

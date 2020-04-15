@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import getConfig from "next/config";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
   Button,
   Container,
@@ -56,15 +57,15 @@ class Theme extends React.Component {
             </FocusRoot>
             {theme.children && theme.children.length > 0 && (
               <StyledContainer narrow noPadding>
-                {theme.children.map(({ slug, title }) => (
+                {theme.children.map(({ slug, label }) => (
                   <Link
                     key={slug}
-                    href="/themes/[slug]"
-                    as={`/themes/${slug}`}
+                    href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
+                    as={slug}
                     passHref
                   >
                     <StyledLink variant="flat" as={Button}>
-                      {title}
+                      {label}
                     </StyledLink>
                   </Link>
                 ))}

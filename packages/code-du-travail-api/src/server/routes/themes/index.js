@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { THEMES } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -7,7 +7,7 @@ const { getRootThemesQuery, getThemeQuery } = require("./search.elastic.js");
 const getEsReferences = require("../search/getEsReferences");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${THEMES}`;
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -19,14 +19,14 @@ const router = new Router({ prefix: API_BASE_URL });
  *
  * @returns {Object} An object containing the matching theme .
  */
-router.get("/themes", async ctx => {
+router.get("/themes", async (ctx) => {
   const body = getRootThemesQuery({});
   const response = await elasticsearchClient.search({
     index,
     body,
   });
   ctx.body = {
-    children: response.body.hits.hits.map(t => t._source),
+    children: response.body.hits.hits.map((t) => t._source),
   };
 });
 
@@ -39,7 +39,7 @@ router.get("/themes", async ctx => {
  * @returns {Object} An object containing the matching theme .
  */
 
-router.get("/themes/:slug", async ctx => {
+router.get("/themes/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getThemeQuery({ slug });
   const response = await elasticsearchClient.search({

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import getConfig from "next/config";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
   Button,
   Container,
@@ -25,16 +26,16 @@ const {
 const SubThemes = ({ children = [] }) => {
   return (
     <div>
-      {children.slice(0, 3).map(({ title }, index) => (
-        <React.Fragment key={title}>
-          {title}
+      {children.slice(0, 3).map(({ label }, index) => (
+        <React.Fragment key={label}>
+          {label}
           {index < 2 ? (
             index < children.length - 1 && (
               <PrimaryColored> &bull;&nbsp;</PrimaryColored>
             )
           ) : (
-            <PrimaryColored>&nbsp;&hellip;</PrimaryColored>
-          )}
+              <PrimaryColored>&nbsp;&hellip;</PrimaryColored>
+            )}
         </React.Fragment>
       ))}
     </div>
@@ -58,14 +59,14 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
         </FocusRoot>
         <Grid>
           {children &&
-            children.map(({ children, icon, slug, title }) => (
+            children.map(({ children, icon, slug, label }) => (
               <Link
                 key={slug}
-                href="/themes/[slug]"
-                as={`/themes/${slug}`}
+                href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
+                as={slug}
                 passHref
               >
-                <Tile icon={icons[icon]} title={title}>
+                <Tile icon={icons[icon]} title={label}>
                   <TileChildren>
                     <SubThemes>{children}</SubThemes>
                     <StyledDiv hasContentAbove={Boolean(children)}>

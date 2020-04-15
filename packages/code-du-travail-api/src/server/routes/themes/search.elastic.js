@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getRootThemesQuery() {
   return {
     _source: ["icon", "children", "title", "slug", "position"],
@@ -7,6 +9,11 @@ function getRootThemesQuery() {
         must_not: {
           exists: {
             field: "breadcrumbs",
+          },
+        },
+        filter: {
+          term: {
+            source: SOURCES.THEMES,
           },
         },
       },
