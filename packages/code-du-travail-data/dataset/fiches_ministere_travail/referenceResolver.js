@@ -7,7 +7,7 @@ actual id in the legi data corpus.
 // const codeTravail = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
 // const codeSecu = require("@socialgouv/legi-data/data/LEGITEXT000006073189.json");
 
-const { codesFullNames } = require("./referenceExtractor");
+const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
 const find = require("unist-util-find");
 const visit = require("unist-util-visit");
 
@@ -17,10 +17,12 @@ Object.values(codesFullNames).forEach(({ id }) => {
   codes[id] = code;
 });
 
-const CODE_UNKNOWN = { id: "UNDEFINED" };
-
 // duplicated in reference Extractor
 const rangeMarkers = ["à", "à"];
+
+const CODE_UNKNOWN = { id: "UNDEFINED" };
+// shall we use "code du travail" by default ?
+const DEFAULT_CODE = CODE_TRAVAIL;
 
 // dumb convert article.data.num as integer for comparison
 // each part up to MAX_DEPTH is padded with PAD_LENGTH
@@ -97,15 +99,20 @@ function formatStartEnd(startRaw, endRaw) {
 function unravelRange(range) {
   const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
   const rawParts = range.article.split(mark);
-  const code = range.code != undefined ? codes[range.code.id] : undefined;
 
-  if (rawParts.length == 2 && code) {
+  const chosenCode = range.code ? range.code : DEFAULT_CODE;
+
+  if (rawParts.length == 2 && chosenCode != CODE_UNKNOWN) {
     // objective is to identify starting and ending articles (with the legi data correct format)
     // then we can do a legi-data lookup
     const [startFMT, endFMT] = formatStartEnd(rawParts[0], rawParts[1]);
 
-    const unraveled = getLegiDataRange(code, startFMT, endFMT).map((a) => {
-      return { article: a.data.num, code: range.code };
+    const unraveled = getLegiDataRange(
+      codes[chosenCode.id],
+      startFMT,
+      endFMT
+    ).map((a) => {
+      return { article: a.data.num, code: chosenCode };
     });
 
     if (unraveled.length > 0) {
@@ -131,14 +138,13 @@ function resolveReference(ref) {
   }
 
   return toResolve.map((a) => {
-    // by default we try to resolve code du travail
-    // const codeId = a.code ? a.code.id : CODE_TRAVAIL.id;
-    const code =
-      a.code && a.code != CODE_UNKNOWN ? codes[a.code.id] : undefined;
-    if (code) {
+    // use default code if no defined
+    const code = a.code == CODE_UNKNOWN ? DEFAULT_CODE : a.code;
+
+    if (code && code != CODE_UNKNOWN) {
       const formattedArticle = formatArticle(a.article);
       const article = find(
-        code,
+        codes[code.id],
         (node) => node.type === "article" && node.data.num === formattedArticle
       );
       if (article) {

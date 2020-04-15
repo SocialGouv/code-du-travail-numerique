@@ -21,6 +21,10 @@ const CODE_PREFIX = "B-COD";
 const CODE_TRA = CODE_PREFIX + "_TRA";
 // code sécurité sociale
 const CODE_SS = CODE_PREFIX + "_SS";
+// code any other
+const CODE_OTHER = CODE_PREFIX + "_O";
+
+const UNRECOGNIZED = "unrecognized";
 
 const CODE_TRAVAIL = {
   name: "code du travail",
@@ -179,7 +183,7 @@ function identifyCodes(tokens, predicitions) {
       } else if (joinedNextTokens.startsWith(codesFullNames[CODE_TRA].name)) {
         return CODE_TRA;
       } else {
-        return NEGATIVE;
+        return CODE_OTHER;
       }
     } else {
       return pred;
@@ -226,13 +230,21 @@ function extractReferences(text) {
         acc.forEach((match) => {
           // if no code yet and in range
           if (!match.code && match.index + range >= index) {
-            match.code = codesFullNames[pred];
+            if (pred in codesFullNames) {
+              match.code = codesFullNames[pred];
+            } else {
+              match.code = UNRECOGNIZED;
+            }
           }
         });
       }
 
       return acc;
     }, [])
+    .filter(({ code }) => {
+      // valid cases are no code or code different than UNRECOGNIZED other codes (rural education...)
+      return !code || (code && code != UNRECOGNIZED);
+    })
     .map(({ token, code }) => {
       return { article: token, code };
     });

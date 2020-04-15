@@ -27,7 +27,7 @@ const testCases = [
       "l’allocation de remplacement pour maternité ou paternité, prévues aux articles L. 613-19 à L.613-19-2 et L. 722-8 à 25 du code de la sécurité sociale, aux articles L. 732-10 à L. 732-12-1 du code rural et à l’article 17 de la loi n° 97-1051 du 18 novembre 1997 d’orientation sur la pêche maritime et les cultures marines",
   },
   {
-    input: `Article D212 du code penal et article R413 du code civil`,
+    input: `Article D212 du code penal et article R413`,
   },
   { input: `Article D212` },
   { input: `Article D-212` },
@@ -80,6 +80,7 @@ const rangeCases = [
   "L. 1233-34 à L. 1233-35-1 du code du travail",
   "L. 2312-72 à 2312-77 du code du travail",
   "D. 5132-9 à D. 5132-10-4 du code du travail",
+  "D. 5132-9 à D. 5132-10-4",
   "L. 2315-38 à 40 du code du travail",
   "L. 351-1 à L. 351-5 du code de la sécurité sociale",
 ];

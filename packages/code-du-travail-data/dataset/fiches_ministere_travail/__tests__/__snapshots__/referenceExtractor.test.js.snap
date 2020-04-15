@@ -37,16 +37,8 @@ Array [
         "name": "code de la sécurité sociale",
       },
     },
-    Object {
-      "article": "L. 732-10 à L. 732-12-1",
-      "code": undefined,
-    },
   ],
   Array [
-    Object {
-      "article": "D212",
-      "code": undefined,
-    },
     Object {
       "article": "R413",
       "code": undefined,
@@ -166,10 +158,6 @@ Array [
     },
   },
   Object {
-    "article": "L. 135-1",
-    "code": undefined,
-  },
-  Object {
     "article": "D. 1142-2",
     "code": Object {
       "id": "LEGITEXT000006072050",
@@ -212,14 +200,6 @@ Array [
     },
   },
   Object {
-    "article": "L. 130-1",
-    "code": undefined,
-  },
-  Object {
-    "article": "R. 130-1",
-    "code": undefined,
-  },
-  Object {
     "article": "D. 8223-2",
     "code": Object {
       "id": "LEGITEXT000006072050",
@@ -246,18 +226,6 @@ Array [
       "id": "LEGITEXT000006072050",
       "name": "code du travail",
     },
-  },
-  Object {
-    "article": "L. 613-19 à L. 613-19-2",
-    "code": undefined,
-  },
-  Object {
-    "article": "L. 722-8 à L. 722-8-3",
-    "code": undefined,
-  },
-  Object {
-    "article": "L. 732-10 à L. 732-12-1",
-    "code": undefined,
   },
   Object {
     "article": "L. 4412-2",
@@ -443,6 +411,33 @@ Array [
           "article": "L2312-77",
           "fmt": "L2312-77",
           "id": "LEGIARTI000035611305",
+        },
+      ],
+      "name": "code du travail",
+    },
+  },
+  Object {
+    "LEGITEXT000006072050": Object {
+      "articles": Array [
+        Object {
+          "article": "D5132-10-1",
+          "fmt": "D5132-10-1",
+          "id": "LEGIARTI000029775717",
+        },
+        Object {
+          "article": "D5132-10-2",
+          "fmt": "D5132-10-2",
+          "id": "LEGIARTI000029775713",
+        },
+        Object {
+          "article": "D5132-10-3",
+          "fmt": "D5132-10-3",
+          "id": "LEGIARTI000029775708",
+        },
+        Object {
+          "article": "D5132-10-4",
+          "fmt": "D5132-10-4",
+          "id": "LEGIARTI000029775703",
         },
       ],
       "name": "code du travail",
