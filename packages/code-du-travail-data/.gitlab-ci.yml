@@ -34,7 +34,7 @@ Build data:
     - >-
       cat /tmp/workspace_dependencies
       | tr '\n' '\0'
-      | xargs -0 -n1 -I {} sh -c
+      | xargs -0 -n1 -I {} sh -c \
         "cat /tmp/workspace_info.json | jq -c '.[\"{}\"].location'"
       | sort -u
       > /tmp/workspace_dependencies_location
