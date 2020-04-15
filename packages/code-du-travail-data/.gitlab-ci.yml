@@ -54,7 +54,6 @@ Build data:
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
     - cat /tmp/useless_packages | sed 's/"//g' | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rf {}
-    - ls -l packages
 
     - yarn workspaces info
 

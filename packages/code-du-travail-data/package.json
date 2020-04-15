@@ -28,6 +28,13 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
     "@cdt/sources": "^4.14.0",
+    "@cdt/data...courrier-type": "^4.14.0",
+    "@cdt/data...datafiller": "^4.14.0",
+    "@cdt/data...dossiers": "^4.14.0",
+    "@cdt/data...fiches_ministere_travail": "^4.14.0",
+    "@cdt/data...fiches_service_public": "^4.14.0",
+    "@cdt/data...stopwords": "^4.14.0",
+    "@cdt/data...synonyms": "^4.14.0",
     "@elastic/elasticsearch": "^7.6.1",
     "@socialgouv/contributions-data": "^1.8.0",
     "@socialgouv/fiches-vdd": "^1.24.0",
