@@ -84,5 +84,7 @@ Delete useless k8s namespaces:
   only:
   extends:
     - .base_delete_useless_k8s_ns_stage
+  environment:
+    name: fabrique-dev
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
