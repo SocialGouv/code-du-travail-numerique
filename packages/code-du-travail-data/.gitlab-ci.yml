@@ -19,7 +19,7 @@ Build data:
     - echo "$ cat /tmp/workspace_info.json" && cat /tmp/workspace_info.json
 
     - >-
-      cat /tmp/workspace_info.json |
+      cat /tmp/workspace_info.json
       | jq -c --arg WORKSPACE "${WORKSPACE}" '.[$WORKSPACE].location'
       > /tmp/workspace_context_location
     - echo "$ cat /tmp/workspace_context_location" && cat /tmp/workspace_context_location
