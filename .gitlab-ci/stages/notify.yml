@@ -82,6 +82,8 @@ Notify Success (prod):
 Delete useless k8s namespaces:
   extends:
     - .base_delete_useless_k8s_ns_stage
-    - .notify_stage
+    - .notify_dev
+  environment:
+    name: fabrique-dev
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
