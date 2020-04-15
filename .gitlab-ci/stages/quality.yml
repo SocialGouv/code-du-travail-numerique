@@ -87,10 +87,11 @@ Test @cdtn/api:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
       command: [ "bin/elasticsearch", "-Expack.security.enabled=false", "-Ediscovery.type=single-node" ]
-
   variables:
     GIT_STRATEGY: none
-    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT  
+    # HACK(douglasduteil): make ES not that memory hungry
+    ES_JAVA_OPTS: "-Xms256m -Xmx256m"
   script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
