@@ -11,28 +11,48 @@ Build data:
       - $CI_PROJECT_DIR/.cache
   variables:
     CONTEXT: code-du-travail-data
+    WORKSPACE: "@cdt/data"
   script:
     - "[[ type jq ]] || apk add jq=~1"
 
-    # HACK(douglasduteil): remove all packages dependencies
-    # To make the installation blazing fast, we remove all packages dependencies
-    # Only the root package.json dependencies will be installed
-    - find packages -maxdepth 1
-      -not -name ${CONTEXT}
-      -not -name sources
-      -type d | tail -n +2 |
-      xargs -I {} rm -rf {}
+    - yarn workspaces --json info | jq '.data' -r > /tmp/workspace_info.json
+    - cat /tmp/workspace_info.json
+
+    - cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]' | sort -u >
+        /tmp/workspace_packages_location
+    - cat /tmp/workspace_packages_location
+
+    - >-
+      cat /tmp/workspace_info.json \
+      | jq -c --arg WORKSPACE "$WORKSPACE" '.[$WORKSPACE].workspaceDependencies | .[]' \
+      | sort -u \
+      > /tmp/workspace_dependencies
+
+
+    - >-
+      cat /tmp/workspace_dependencies \
+      | xargs -L 1 -I {} sh -c \
+        "cat /tmp/workspace_info.json | jq -c '.[\"{}\"].location'" \
+      | sort -u \
+      > /tmp/workspace_dependencies_location
+    - cat /tmp/workspace_dependencies_location
+
+    - >-
+      comm -3 \
+        /tmp/workspace_packages_location \
+        /tmp/workspace_dependencies_location \
+      > /tmp/useless_packages
+    - cat /tmp/useless_packages
 
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
-    - find packages -maxdepth 1 -type d -not -name ${CONTEXT} | tail -n +2 |
-      xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
-      rm {}/package.json ;
-      jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
-      ; } < {}/package.json"
+    - cat /tmp/useless_packages | xargs -I {} rm -rvf {}
 
-    - find packages/${CONTEXT}/dataset -maxdepth 1 -type d | tail -n +2 |
+    # HACK(douglasduteil): remove all packages dependencies
+    # To make the installation blazing fast, we remove all packages dependencies
+    # Only the root package.json dependencies will be installed
+    - cat /tmp/workspace_packages_location |
       xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
       rm {}/package.json ;
       jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
