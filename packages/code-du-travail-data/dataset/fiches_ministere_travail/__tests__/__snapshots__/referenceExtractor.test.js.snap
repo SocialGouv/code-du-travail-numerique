@@ -351,13 +351,16 @@ Object {
         "fmt": "R2313-6",
         "id": "LEGIARTI000039624937",
       },
-      Object {
-        "article": "L. 1251-18",
-        "fmt": "L1251-18",
-        "id": "LEGIARTI000006901269",
-      },
     ],
     "name": "code du travail",
+  },
+  "UNDEFINED": Object {
+    "articles": Array [
+      Object {
+        "article": "L. 1251-18",
+      },
+    ],
+    "name": undefined,
   },
 }
 `;

@@ -14,6 +14,8 @@ Object.values(codesFullNames).forEach(({ id }) => {
   codes[id] = code;
 });
 
+const CODE_UNKNOWN = { id: "UNDEFINED" };
+
 // duplicated in reference Extractor
 const rangeMarkers = ["à", "à"];
 
@@ -21,7 +23,7 @@ const rangeMarkers = ["à", "à"];
 // each part up to MAX_DEPTH is padded with PAD_LENGTH
 const PAD_LENGTH = 5; // left pad numbers to X chars
 const MAX_DEPTH = 5; // max number of L432-1-1-1
-
+// padding numbers : 2 -> "0002"
 const leftPad = (num) => {
   let padded = "" + num;
   while (padded.length < PAD_LENGTH) {
@@ -29,7 +31,6 @@ const leftPad = (num) => {
   }
   return padded;
 };
-
 // transform articles into comparable integers
 const asInt = (num) => {
   const parts = num
@@ -111,124 +112,11 @@ function unravelRange(range) {
 
   console.log("Range error for range : " + JSON.stringify(range, null, 2));
 
-  // default in case of error
+  // default in case of error, note that we explicitly set code to unknown
+  // in order to identify range errors
   return range.article.split(mark).map((a) => {
-    return { article: a.trim(), code: range.code };
+    return { article: a.trim(), code: CODE_UNKNOWN };
   });
-}
-
-function deprecUnravelRange(range) {
-  // TODO : deal with actual ranges (N to M)
-  const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
-
-  // if (mark) {
-  const parts = range.article
-    .split(mark)
-    .map((a) => a.split("-").map((p) => p.trim()));
-
-  // ok cases only if two elements
-  if (parts.length == 2) {
-    const originalStart = Array.from(parts[0]);
-    const originalEnd = Array.from(parts[1]);
-
-    // replace first parts to only keep digit
-    const start = parts[0];
-    start[0] = start[0].replace(/\D/g, "");
-    const startLast = parseInt(start.slice(-1));
-
-    const end = parts[1];
-    end[0] = end[0].replace(/\D/g, "");
-    const endLast = parseInt(end.slice(-1));
-
-    // case 1 : "articles R. 2313-3-2 à R. 2313-3-10"
-    const case1 =
-      start.length == end.length &&
-      // test same first parts ?
-      // next line would be great
-      // start.slice(0, -1) == end.slice(0, -1) &&
-      // but instead, we got this for now
-      JSON.stringify(start.slice(0, -1)) == JSON.stringify(end.slice(0, -1));
-
-    // case 2 : "articles R. 2313-3-2 à 10" but not "articles R. 2313-3-2 à R. 2314"
-    const case2 =
-      start.length > 1 &&
-      end.length == 1 &&
-      startLast < endLast &&
-      /^\d+$/.test(originalEnd);
-
-    // case 3 : "articles R. 2313-3 à 2313-3-19"
-    const case3 =
-      start.length + 1 == end.length &&
-      JSON.stringify(start) == JSON.stringify(end.slice(0, -1));
-
-    // case 4 : "L. 732-10 à L. 732-12-1"
-    const case4 =
-      start.length + 1 == end.length &&
-      JSON.stringify(start) != JSON.stringify(end.slice(0, -1));
-    JSON.stringify(start).slice(0, -1) == JSON.stringify(end.slice(0, -2));
-
-    let partedRanges = [];
-
-    const createRange = (originalParts, size, n) =>
-      [...Array(size).keys()]
-        .map((i) => i + n)
-        .map((n) => {
-          const parts = Array.from(originalParts);
-          parts.push(n);
-          return parts;
-        });
-
-    if (case1 || case2) {
-      const length = endLast - startLast + 1;
-      partedRanges = createRange(originalStart.slice(0, -1), length, startLast);
-    } else if (case3) {
-      partedRanges = createRange(originalStart, endLast, 1);
-      partedRanges.push(originalStart);
-    } else if (case4) {
-      // first order range FO
-      const startFO = startLast;
-      const endFO = parseInt(end.slice(-2));
-      const lengthFO = endFO - startFO + 1;
-      const rangesFO = createRange(
-        originalStart.slice(0, -1),
-        lengthFO,
-        startLast
-      );
-
-      if (endFO < startFO)
-        console.log(
-          `ERROR, non standard case :\n ${JSON.stringify(
-            range.article,
-            null,
-            2
-          )} \n`
-        );
-
-      // second order range SO
-      const startSO = originalEnd.slice(0, -1);
-      const lengthSO = endLast;
-      const rangesSO = createRange(startSO, lengthSO, 1);
-      partedRanges = rangesFO.concat(rangesSO);
-    } else {
-      console.log(
-        `ERROR, cannot parse case :\n ${JSON.stringify(
-          range.article,
-          null,
-          2
-        )} \n`
-      );
-      partedRanges = [originalStart, originalEnd];
-    }
-
-    return partedRanges.map((parts) => {
-      const article = parts.join("-");
-      return { article, code: range.code };
-    });
-  } else {
-    return range.article.split(mark).map((a) => {
-      return { article: a.trim(), code: range.code };
-    });
-  }
 }
 
 function formatArticle(article) {
@@ -243,8 +131,9 @@ function resolveReference(ref) {
 
   return toResolve.map((a) => {
     // by default we try to resolve code du travail
-    const codeId = a.code ? a.code.id : CODE_TRAVAIL.id;
-    const code = codes[codeId];
+    // const codeId = a.code ? a.code.id : CODE_TRAVAIL.id;
+    const code =
+      a.code && a.code != CODE_UNKNOWN ? codes[a.code.id] : undefined;
     if (code) {
       const formattedArticle = formatArticle(a.article);
       const article = find(
@@ -254,10 +143,6 @@ function resolveReference(ref) {
       if (article) {
         a.id = article.data.id;
         a.fmt = formattedArticle;
-        // case we guessed code du travail and found article
-        if (!a.code) {
-          a.code = CODE_TRAVAIL;
-        }
       }
     }
     return a;
@@ -283,7 +168,7 @@ function resolveReferences(refs) {
   // group by code
   const grouped = deduplicated.reduce((acc, art) => {
     const { code, ...rawArticle } = art;
-    const parsedCode = code ? code : { id: "CODE_UNKNOWN" };
+    const parsedCode = code ? code : CODE_UNKNOWN;
 
     if (!Object.keys(acc).includes(parsedCode.id)) {
       acc[parsedCode.id] = { name: parsedCode.name, articles: [] };
