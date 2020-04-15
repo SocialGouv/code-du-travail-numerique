@@ -48,6 +48,10 @@ Build data:
     #
     # - yarn workspace @cdt/data lint
     # - yarn workspace @cdt/data build
+  after_script:
+    - yarn cache clean @socialgouv/fiches-vdd
+    - yarn cache clean @socialgouv/kali-data
+    - yarn cache clean @socialgouv/legi-data
   artifacts:
     expire_in: 1 day
     paths:
