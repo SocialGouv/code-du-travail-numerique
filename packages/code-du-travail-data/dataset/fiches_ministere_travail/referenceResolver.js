@@ -144,6 +144,9 @@ function resolveReference(ref) {
       if (article) {
         a.id = article.data.id;
         a.fmt = formattedArticle;
+      } else {
+        // not found in code
+        a.code = CODE_UNKNOWN;
       }
     }
     return a;
