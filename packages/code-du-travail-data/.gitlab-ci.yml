@@ -18,8 +18,10 @@ Build data:
     - yarn workspaces --json info | jq '.data' -r > /tmp/workspace_info.json
     - cat /tmp/workspace_info.json
 
-    - cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]' | sort -u >
-        /tmp/workspace_packages_location
+    - >-
+      cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]' \
+      | sort -u \
+      > /tmp/workspace_packages_location
     - cat /tmp/workspace_packages_location
 
     - >-
