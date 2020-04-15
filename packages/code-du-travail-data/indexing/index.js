@@ -19,9 +19,9 @@ import {
 } from "./es_client.utils";
 import { populateSuggestions } from "./suggestion";
 
-import themes from "../dataset/datafiller/themes.data.json";
-import agreements from "../dataset/datafiller/agreements.data.json";
-import mtSheets from "../dataset/fiches_ministere_travail/fiches-mt.json";
+import themes from "@cdt/data...datafiller/themes.data.json";
+import agreements from "@cdt/data...datafiller/agreements.data.json";
+import mtSheets from "@cdt/data...fiches_ministere_travail/fiches-mt.json";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 

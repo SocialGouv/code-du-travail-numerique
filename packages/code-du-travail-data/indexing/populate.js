@@ -5,10 +5,10 @@ import { logger } from "./logger";
 import slugify from "../slugify";
 import { SOURCES } from "@cdt/sources";
 import { parseIdcc } from "..";
-import { getCourriers } from "../dataset/courrier-type";
-import { thematicFiles } from "../dataset/dossiers";
-import { getFichesSP } from "../dataset/fiches_service_public";
-import themes from "../dataset/datafiller/themes.data.json";
+import { getCourriers } from "@cdt/data...courrier-type";
+import { thematicFiles } from "@cdt/data...dossiers";
+import { getFichesSP } from "@cdt/data...fiches_service_public";
+import themes from "@cdt/data...datafiller/themes.data.json";
 import { createThemer } from "./breadcrumbs";
 
 const getTheme = createThemer(themes);
