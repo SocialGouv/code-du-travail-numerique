@@ -40,11 +40,7 @@ Build data:
       > /tmp/workspace_dependencies_location
     - echo "$ cat /tmp/workspace_dependencies_location" && cat /tmp/workspace_dependencies_location
 
-    - >-
-      comm -3
-        /tmp/workspace_packages_location
-        /tmp/workspace_dependencies_location
-      > /tmp/useless_packages
+    - comm -3 /tmp/workspace_packages_location /tmp/workspace_dependencies_location > /tmp/useless_packages
     - echo "$ cat /tmp/useless_packages" && cat /tmp/useless_packages
 
     # HACK(douglasduteil): remove all packages dependencies
