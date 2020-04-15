@@ -4,7 +4,10 @@ Given an article (or a range) and its code (code du travail ou securite sociale)
 actual id in the legi data corpus. 
 */
 
-const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
+// const codeTravail = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
+// const codeSecu = require("@socialgouv/legi-data/data/LEGITEXT000006073189.json");
+
+const { codesFullNames } = require("./referenceExtractor");
 const find = require("unist-util-find");
 const visit = require("unist-util-visit");
 
@@ -109,8 +112,6 @@ function unravelRange(range) {
       return unraveled;
     }
   }
-
-  console.log("Range error for range : " + JSON.stringify(range, null, 2));
 
   // default in case of error, note that we explicitly set code to unknown
   // in order to identify range errors

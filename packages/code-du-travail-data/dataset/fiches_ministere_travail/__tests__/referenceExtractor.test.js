@@ -76,7 +76,7 @@ it("should resolve example codes", () => {
 });
 
 const rangeCases = [
-  "L. 1251-21 à L. 1251-23 du code du travail",
+  "L. 1251-21 à L. 1251-23xx du code du travail",
   "L. 1233-34 à L. 1233-35-1 du code du travail",
   "L. 2312-72 à 2312-77 du code du travail",
   "D. 5132-9 à D. 5132-10-4 du code du travail",
