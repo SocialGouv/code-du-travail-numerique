@@ -65,7 +65,6 @@ Build data:
       xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
       rm {}/package.json ;
       jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json;
-      echo "Alter {}/package.json (no dependencies)"
       ; } < {}/package.json"
 
     # NOTE(dougladuteil): remove dependencies and devDependencies
