@@ -92,17 +92,8 @@ export const documentMapping = {
       type: "text",
       analyzer: "french",
     },
-    position: {
-      type: "integer",
-    },
     themes: {
       type: "keyword",
-    },
-    breadcrumbs: {
-      properties: {
-        label: { type: "text" },
-        slug: { type: "keyword" },
-      },
     },
     theme: {
       type: "keyword",

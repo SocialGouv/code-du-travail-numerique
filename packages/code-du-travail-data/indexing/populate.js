@@ -276,4 +276,3 @@ function fixReferences({ references = [], idcc = "generic" }) {
 }
 
 export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };
-
