@@ -1,6 +1,6 @@
 #
 
-Build nlp:
+Build data:
   stage: Prepare
   dependencies: []
   image: node:12.14-alpine3.10
@@ -32,6 +32,6 @@ Build nlp:
     #
     - yarn workspace @cdt/data dump-dev
   artifacts:
-    expire_in: 30 mins
+    expire_in: 1 day
     paths:
-      - packages/${CONTEXT}/data/dump.tf.json
+      - packages/${CONTEXT}/code-du-travail-data/dist
