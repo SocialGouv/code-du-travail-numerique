@@ -28,6 +28,12 @@ Build data:
       jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
       ; } < {}/package.json"
 
+    - find packages/${CONTEXT}/dataset -maxdepth 1 -type d | tail -n +2 |
+      xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
+      rm {}/package.json ;
+      jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
+      ; } < {}/package.json"
+
     # NOTE(dougladuteil): remove dependencies and devDependencies
     # As we only install one package, we do not need the cross packages dependencies
     # like lerna or husky...
