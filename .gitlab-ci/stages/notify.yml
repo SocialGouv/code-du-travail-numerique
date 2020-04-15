@@ -80,8 +80,8 @@ Notify Success (prod):
     - .notify_prod
 
 Delete useless k8s namespaces:
+  stage: Notify Finished Deployment
   extends:
     - .base_delete_useless_k8s_ns_stage
-    - .notify_stage
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
