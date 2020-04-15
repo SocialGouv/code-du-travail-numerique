@@ -5,14 +5,20 @@ Build data:
   dependencies: []
   image: node:12.14-alpine3.10
   interruptible: true
-  cache:
-    key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
-    paths:
-      - $CI_PROJECT_DIR/.cache
   variables:
     CONTEXT: code-du-travail-data
   script:
     - "[[ type jq ]] || apk add jq=~1"
+
+    # HACK(douglasduteil): remove all packages dependencies
+    # To make the installation blazing fast, we remove all packages dependencies
+    # Only the root package.json dependencies will be installed
+    - find packages -maxdepth 1
+      -not -name ${CONTEXT}
+      -not -name sources
+      -type d | tail -n +2 |
+      xargs -I {} rm -rf {}
+
     # HACK(douglasduteil): remove all packages dependencies
     # To make the installation blazing fast, we remove all packages dependencies
     # Only the root package.json dependencies will be installed
@@ -21,12 +27,12 @@ Build data:
       rm {}/package.json ;
       jq 'del(.dependencies) | del(.devDependencies)' > {}/package.json
       ; } < {}/package.json"
-    #
+
     # NOTE(dougladuteil): remove dependencies and devDependencies
     # As we only install one package, we do not need the cross packages dependencies
     # like lerna or husky...
     - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
-    #
+
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn --frozen-lockfile --prefer-offline
     #
