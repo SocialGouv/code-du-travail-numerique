@@ -1,4 +1,4 @@
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 
 export function createThemer(themes) {
   return function getTheme(slug) {

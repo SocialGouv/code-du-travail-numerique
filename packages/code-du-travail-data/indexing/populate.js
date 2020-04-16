@@ -9,6 +9,7 @@ import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
 import { createThemer } from "./breadcrumbs";
+import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 
 const getTheme = createThemer(themes);
@@ -105,18 +106,27 @@ async function* cdtnDocumentsGen() {
   yield getFichesSP();
 
   logger.info("=== Fiche MT(split) ===");
-  yield require("../dataset/fiches_ministere_travail/fiches-mt-split.json").map(
-    ({ anchor, description, html, slug, text, title, breadcrumbs }) => ({
-      source: SOURCES.SHEET_MT,
-      anchor,
-      description,
-      breadcrumbs,
-      html,
-      slug,
-      text,
-      title,
-      excludeFromSearch: false,
-    })
+  const fichesTravail = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
+  fichesTravail.forEach((article) => (article.slug = slugify(article.title)));
+
+  const splittedFiches = fichesTravail
+    .map(splitArticle)
+    .reduce((accumulator, documents) => accumulator.concat(documents), []);
+
+  yield splittedFiches.map(
+    ({ anchor, description, html, slug, text, title }) => {
+      return {
+        source: SOURCES.SHEET_MT,
+        anchor,
+        description,
+        breadcrumbs: getTheme(`/${getRouteBySource(SOURCES.THEMES)}/${slug}`),
+        html,
+        slug,
+        text,
+        title,
+        excludeFromSearch: false,
+      };
+    }
   );
 
   logger.info("=== Themes ===");
@@ -195,7 +205,7 @@ async function* cdtnDocumentsGen() {
         source: SOURCES.CONTRIBUTIONS,
         title,
         slug,
-        breadcrumbs: getTheme(slug),
+        breadcrumbs: getTheme(`/${SOURCES.CONTRIBUTIONS}/${slug}`),
         description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
