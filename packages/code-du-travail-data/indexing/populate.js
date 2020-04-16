@@ -1,15 +1,15 @@
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import crypto from "crypto";
-import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
-import { logger } from "./logger";
-import slugify from "../slugify";
-import { SOURCES } from "@cdt/sources";
+import { selectAll } from "unist-util-select";
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
+import themes from "../dataset/datafiller/themes.data.json";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
-import themes from "../dataset/datafiller/themes.data.json";
+import slugify from "../slugify";
 import { createThemer } from "./breadcrumbs";
+import { logger } from "./logger";
 
 const getTheme = createThemer(themes);
 
@@ -121,12 +121,22 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Themes ===");
   yield require("../dataset/datafiller/themes.data.json").map(
-    ({ slug, title }) => ({
-      source: SOURCES.THEMES,
-      title: title,
-      slug,
-      excludeFromSearch: false,
-    })
+    ({ breadcrumbs, children, icon, position, slug, refs, title }) => {
+      return {
+        source: SOURCES.THEMES,
+        title: title,
+        slug,
+        icon,
+        children: children.map(({ title, slug }) => ({
+          label: title,
+          slug: `/${getRouteBySource(SOURCES.THEMES)}/${slug}`,
+        })),
+        position,
+        breadcrumbs,
+        refs,
+        excludeFromSearch: false,
+      };
+    }
   );
 
   logger.info("=== Courriers ===");

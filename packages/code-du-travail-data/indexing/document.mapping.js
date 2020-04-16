@@ -2,7 +2,32 @@ export const documentMapping = {
   properties: {
     description: { type: "text" },
     metaDescription: { type: "text" },
+    // available for themes
+    children: {
+      properties: {
+        title: { type: "text" },
+        slug: { type: "text" },
+      },
+    },
+    // available for themes
     icon: { type: "keyword" },
+    // available for themes
+    position: { type: "keyword" },
+    // available for themes
+    refs: {
+      properties: {
+        title: { type: "text" },
+        url: { type: "keyword" },
+      },
+    },
+    // available for themes
+    breadcrumbs: {
+      properties: {
+        label: { type: "text" },
+        slug: { type: "keyword" },
+      },
+    },
+    // available for tools
     action: { type: "text" },
     // Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
     source: {
@@ -69,12 +94,6 @@ export const documentMapping = {
     },
     themes: {
       type: "keyword",
-    },
-    breadcrumbs: {
-      properties: {
-        label: { type: "text" },
-        slug: { type: "keyword" },
-      },
     },
     theme: {
       type: "keyword",

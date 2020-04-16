@@ -15,8 +15,6 @@ import {
   AGREEMENTS,
 } from "@cdt/data/indexing/esIndexName";
 
-import themes from "@cdt/data...datafiller/themes.data.json";
-
 const writeFile = promisify(_writeFile);
 
 const ELASTICSEARCH_URL =
@@ -29,6 +27,7 @@ const client = new Client({
 
 const documentsSlugs = [
   "/themes/81-demission",
+  "/themes/8-depart-de-lentreprise",
   "/themes/1-embauche-et-contrat-de-travail",
   "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
   "/fiche-service-public/demission-dun-salarie",
@@ -48,8 +47,6 @@ const documentsSlugs = [
   "/external/mon-compte-formation",
   "/external/index-egapro",
 ];
-
-const themesSlugs = ["8-depart-de-lentreprise", "81-demission"];
 
 const agreementSlugs = [
   "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
@@ -88,13 +85,6 @@ async function updateDocumentsData(slugs) {
   } catch (error) {
     console.error(error.meta || error);
   }
-}
-async function updateThemes(slugs) {
-  const data = themes.filter(({ slug }) => slugs.includes(slug));
-  await writeFile(
-    join(__dirname, "./cdtn_theme.data.json"),
-    JSON.stringify(data, 0, 2)
-  );
 }
 
 async function updateFichesMT(slugs) {
@@ -151,7 +141,6 @@ if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch((error) =>
     console.error("›››" + error)
   );
-  updateThemes(themesSlugs).catch((error) => console.error("›››" + error));
   updateFichesMT(ficheMTSlugs).catch((error) => console.error("›››" + error));
   updateAgreements(agreementSlugs).catch((error) =>
     console.error("›››" + error)

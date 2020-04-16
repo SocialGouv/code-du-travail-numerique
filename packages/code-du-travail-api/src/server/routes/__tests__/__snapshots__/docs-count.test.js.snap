@@ -13,6 +13,10 @@ Object {
         "key": "fiches_service_public",
       },
       Object {
+        "doc_count": 3,
+        "key": "themes",
+      },
+      Object {
         "doc_count": 2,
         "key": "code_du_travail",
       },
@@ -31,10 +35,6 @@ Object {
       Object {
         "doc_count": 2,
         "key": "outils",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "themes",
       },
       Object {
         "doc_count": 1,

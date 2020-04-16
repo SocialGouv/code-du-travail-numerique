@@ -5,32 +5,32 @@ Object {
   "breadcrumbs": null,
   "children": Array [
     Object {
-      "slug": "80-documents-a-remettre-au-salarie",
-      "title": "Documents à remettre au salarié",
+      "label": "Documents à remettre au salarié",
+      "slug": "/themes/80-documents-a-remettre-au-salarie",
     },
     Object {
-      "slug": "81-demission",
-      "title": "Démission",
+      "label": "Démission",
+      "slug": "/themes/81-demission",
     },
     Object {
-      "slug": "82-fin-dun-cdd-ctt",
-      "title": "Fin d'un CDD - CTT",
+      "label": "Fin d'un CDD - CTT",
+      "slug": "/themes/82-fin-dun-cdd-ctt",
     },
     Object {
-      "slug": "83-rupture-conventionnelle",
-      "title": "Rupture conventionnelle",
+      "label": "Rupture conventionnelle",
+      "slug": "/themes/83-rupture-conventionnelle",
     },
     Object {
-      "slug": "84-licenciement",
-      "title": "Licenciement",
+      "label": "Licenciement",
+      "slug": "/themes/84-licenciement",
     },
     Object {
-      "slug": "85-retraite",
-      "title": "Retraite",
+      "label": "Retraite",
+      "slug": "/themes/85-retraite",
     },
     Object {
-      "slug": "86-autres-departs",
-      "title": "Autres départs",
+      "label": "Autres départs",
+      "slug": "/themes/86-autres-departs",
     },
   ],
   "position": 8,
@@ -97,32 +97,48 @@ Object {
     Object {
       "children": Array [
         Object {
-          "slug": "80-documents-a-remettre-au-salarie",
-          "title": "Documents à remettre au salarié",
+          "label": "Embauche",
+          "slug": "/themes/11-embauche",
         },
         Object {
-          "slug": "81-demission",
-          "title": "Démission",
+          "label": "Contrat de travail",
+          "slug": "/themes/12-contrat-de-travail",
+        },
+      ],
+      "icon": "Contract",
+      "position": 1,
+      "slug": "1-embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
         },
         Object {
-          "slug": "82-fin-dun-cdd-ctt",
-          "title": "Fin d'un CDD - CTT",
+          "label": "Démission",
+          "slug": "/themes/81-demission",
         },
         Object {
-          "slug": "83-rupture-conventionnelle",
-          "title": "Rupture conventionnelle",
+          "label": "Fin d'un CDD - CTT",
+          "slug": "/themes/82-fin-dun-cdd-ctt",
         },
         Object {
-          "slug": "84-licenciement",
-          "title": "Licenciement",
+          "label": "Rupture conventionnelle",
+          "slug": "/themes/83-rupture-conventionnelle",
         },
         Object {
-          "slug": "85-retraite",
-          "title": "Retraite",
+          "label": "Licenciement",
+          "slug": "/themes/84-licenciement",
         },
         Object {
-          "slug": "86-autres-departs",
-          "title": "Autres départs",
+          "label": "Retraite",
+          "slug": "/themes/85-retraite",
+        },
+        Object {
+          "label": "Autres départs",
+          "slug": "/themes/86-autres-departs",
         },
       ],
       "icon": "Depart",
