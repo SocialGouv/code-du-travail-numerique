@@ -1,5 +1,5 @@
 #FROM tensorflow/tensorflow:2.0.0-py3
-FROM python:3.8-slim-buster
+FROM python:3.7-slim-buster
 
 ENV PYTHONIOENCODING="UTF-8"
 
