@@ -36,7 +36,7 @@ Coronavirus et données personnelles :
         url:
           "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/ce-que-changent-les-ordonnances-en-droit-du-travail",
         title:
-          "Coronavirus : ce que changent les ordonnnaces en droit du travail",
+          "Coronavirus : ce que changent les ordonnances en droit du travail",
         description:
           "Le gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus",
         skipHydration: true,
