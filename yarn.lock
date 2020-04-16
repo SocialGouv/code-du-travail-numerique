@@ -2608,10 +2608,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@socialgouv/contributions-data@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.9.0.tgz#581005ff793cdd4c9d836d5e9fbe0284d6889e7b"
-  integrity sha512-80hHugou0Fcqcap6PeYIXedOtFuY0DbSevBwKGgUK4YU4XBptEyg/xCXLZkcARPMUhsIGJq85/kD+9kXjrJ5wA==
+"@socialgouv/contributions-data@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.10.0.tgz#fa3362a03156f70635c41806ad49bdd4012df806"
+  integrity sha512-voqBOwhHzIoUSKF0j3w2H3p//xldg+kf0mPrgrNYb0VMsPPdz+b2uyKt9ByFWSNe/ZXmu9Cgry51gs7vn7qSTg==
   dependencies:
     "@socialgouv/kali-data" "^1.3.36"
     node-fetch "^2.6.0"
@@ -2649,20 +2649,20 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-vdd@^1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.24.0.tgz#91ca7078c45d311fa37cc4ee36018aa3214227e0"
-  integrity sha512-TGm/PCRA3hASJGlsqwcAMwiydFzW8PZIeiIEBem8uyzSgPBYpnqWzREy0OthZ8rUnORY5JtAuXaD3fkLH1zT5Q==
+"@socialgouv/fiches-vdd@^1.25.0":
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.25.0.tgz#01ce76cf25625d005518f87cbffc0703328683f7"
+  integrity sha512-Z9TNfOP7WPbbosuqhqTkI8CO7onNTU3ArIl4lm1T0jx5nawp5/9QgRF19j8gcLJ0aYXz5qt3aqBX7GeG9ZSZUQ==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.3"
     unzipper "^0.10.10"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.14.0", "@socialgouv/kali-data@^1.3.36":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.14.0.tgz#8b835cacc3c5d2a79d62223265f548e13d8df541"
-  integrity sha512-qelTeOLK8EWVcJqXVWVTNaTsZhwM3c4/IjR2csVpc1LL2nbx8ESgISIfNGvEKW1vNimZUQx6RgwO3461GEJD3g==
+"@socialgouv/kali-data@^1.15.0", "@socialgouv/kali-data@^1.3.36":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.15.0.tgz#a8cdf16ee9a22ac92500c1bccf197d61f5492580"
+  integrity sha512-nqddtag/j6MgPZU8WvK96J1wsd+mhCQcAzumgXEvzDjlDC6qsboTY+G41Rki8Yw3K1AXzowQuAMGK29C+BY/Bg==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"
