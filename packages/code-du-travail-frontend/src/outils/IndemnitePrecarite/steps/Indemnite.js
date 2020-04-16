@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { theme, Alert } from "@socialgouv/react-ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
+import MathFormula from "../../common/MathFormula";
 import { getIndemnitePrecarite } from "../indemnite";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
@@ -165,7 +165,7 @@ function StepIndemnite({ form }) {
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
         <FormuleWrapper>
-          <MathJax math={"`" + formule + "`"} />
+          <MathFormula math={formule} />
         </FormuleWrapper>
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>

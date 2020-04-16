@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 
+import MathFormula from "../../common/MathFormula";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
@@ -21,7 +21,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
         <FormuleWrapper>
-          <MathJax math={"`" + formula + "`"} />
+          <MathFormula math={formula} />
         </FormuleWrapper>
       </ErrorBoundary>
     </Details>
