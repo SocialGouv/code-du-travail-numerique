@@ -18,17 +18,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin-bottom: 0;
 }
 
-.c7 {
-  margin: 1.6rem 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -60,6 +49,17 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c6 {
   margin: 1.6rem 0;
+}
+
+.c7 {
+  margin: 1.6rem 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:600px) {
@@ -436,17 +436,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   margin-bottom: 0;
 }
 
-.c7 {
-  margin: 1.6rem 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -478,6 +467,17 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c6 {
   margin: 1.6rem 0;
+}
+
+.c7 {
+  margin: 1.6rem 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:600px) {
@@ -857,17 +857,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   margin-bottom: 0;
 }
 
-.c7 {
-  margin: 1.6rem 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -899,6 +888,17 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c6 {
   margin: 1.6rem 0;
+}
+
+.c7 {
+  margin: 1.6rem 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:600px) {
@@ -1285,17 +1285,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   margin-bottom: 0;
 }
 
-.c7 {
-  margin: 1.6rem 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1327,6 +1316,17 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c6 {
   margin: 1.6rem 0;
+}
+
+.c7 {
+  margin: 1.6rem 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:600px) {
@@ -1706,17 +1706,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
-  margin: 1.6rem 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1822,252 +1811,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   </strong>
   <div
     class="c6"
-  >
-    <div
-      class="c7"
-    >
-      <div
-        class="c8"
-      >
-        <div>
-          <span
-            class="katex-display"
-          >
-            <span
-              class="katex"
-            >
-              <span
-                class="katex-mathml"
-              >
-                <math>
-                  <semantics>
-                    <mrow>
-                      <mn>
-                        1
-                      </mn>
-                      <mn>
-                        0
-                      </mn>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        /
-                      </mi>
-                      <mn>
-                        1
-                      </mn>
-                      <mn>
-                        0
-                      </mn>
-                      <mn>
-                        0
-                      </mn>
-                      <mo>
-                        ∗
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      10/100 * "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
-              >
-                <span
-                  class="strut"
-                  style="height:0.75em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:1em;vertical-align:-0.25em;"
-                />
-                <span
-                  class="base"
-                >
-                  <span
-                    class="mord"
-                  >
-                    1
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    0
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    /
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    1
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    0
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    0
-                  </span>
-                  <span
-                    class="mord rule"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ∗
-                  </span>
-                  <span
-                    class="mord rule"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathit"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathit"
-                    style="margin-right:0.05764em;"
-                  >
-                    S
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathit"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    i
-                  </span>
-                  <span
-                    class="mord mathit"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathit"
-                  >
-                    s
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                </span>
-              </span>
-            </span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
+  />
   <h2
     class="c0"
   >

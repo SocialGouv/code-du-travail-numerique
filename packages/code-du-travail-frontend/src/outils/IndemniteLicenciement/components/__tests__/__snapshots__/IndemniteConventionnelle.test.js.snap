@@ -78,7 +78,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   border-radius: 0.6rem;
 }
 
-.c15 {
+.c13 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -88,17 +88,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
-}
-
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c8 {
@@ -164,7 +153,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 @media (max-width:980px) {
-  .c15 {
+  .c13 {
     width: calc(100% * 1);
   }
 }
@@ -266,117 +255,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         </strong>
         <div
           class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c14"
-            >
-              <div>
-                <span
-                  class="katex-display"
-                >
-                  <span
-                    class="katex"
-                  >
-                    <span
-                      class="katex-mathml"
-                    >
-                      <math>
-                        <semantics>
-                          <mrow>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              f
-                            </mi>
-                            <mo>
-                              ∗
-                            </mo>
-                            <mi>
-                              A
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            Sref * A
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="katex-html"
-                    >
-                      <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.05764em;"
-                        >
-                          S
-                        </span>
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.02778em;"
-                        >
-                          r
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          e
-                        </span>
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.10764em;"
-                        >
-                          f
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
-                        >
-                          ∗
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mord mathit"
-                        >
-                          A
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </details>
       <p>
         Source :
@@ -408,7 +287,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         class="c4"
       >
         <div
-          class="c15"
+          class="c13"
         />
         <span
           class="c6"
@@ -455,182 +334,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         </strong>
         <div
           class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c14"
-            >
-              <div>
-                <span
-                  class="katex-display"
-                >
-                  <span
-                    class="katex"
-                  >
-                    <span
-                      class="katex-mathml"
-                    >
-                      <math>
-                        <semantics>
-                          <mrow>
-                            <mn>
-                              1
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              7
-                            </mn>
-                            <mo>
-                              ∗
-                            </mo>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              f
-                            </mi>
-                            <mo>
-                              ∗
-                            </mo>
-                            <mi>
-                              f
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            1337 * Sref * foo
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="katex-html"
-                    >
-                      <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="mord"
-                        >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          7
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
-                        >
-                          ∗
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.05764em;"
-                        >
-                          S
-                        </span>
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.02778em;"
-                        >
-                          r
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          e
-                        </span>
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.10764em;"
-                        >
-                          f
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
-                        >
-                          ∗
-                        </span>
-                        <span
-                          class="mord rule"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mord mathit"
-                          style="margin-right:0.10764em;"
-                        >
-                          f
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          o
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        />
       </details>
     </div>
   </div>
@@ -686,17 +390,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   font-size: 1.8rem;
 }
 
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c8 {
   display: block;
   margin-bottom: 1.6rem;
@@ -737,6 +430,17 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   margin: 0.4rem;
   font-weight: 700;
   font-size: 1.6rem;
+}
+
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width:600px) {
