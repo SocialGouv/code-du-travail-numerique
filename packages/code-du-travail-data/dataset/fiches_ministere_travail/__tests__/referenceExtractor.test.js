@@ -20,7 +20,10 @@ annotatedTokens.map((line) => {
 const testCases = [
   {
     input:
-      "les modalités fixées par les articles L. 2313-8 et R. 2313-3 à R. 2313-6 du code du travail ainsi que le L. 1251-18",
+      "les modalités fixées par les articles L. 2313‑8 et R. 2313-3 à R. 2313-6 du code du travail ainsi que le L. 1251-18",
+  },
+  {
+    input: "L. 1251-23xx du code du travail",
   },
   {
     input:
@@ -71,13 +74,16 @@ it("should find with code for actual real life set", () =>
   expect(extractReferences(tokens.join(" "))).toMatchSnapshot());
 
 it("should resolve example codes", () => {
-  const refs = extractReferences(testCases[0].input);
-  expect(resolveReferences(refs)).toMatchSnapshot();
+  const refs0 = extractReferences(testCases[0].input);
+  expect(resolveReferences(refs0)).toMatchSnapshot();
+
+  const refs1 = extractReferences(testCases[1].input);
+  expect(resolveReferences(refs1)).toMatchSnapshot();
 });
 
 const rangeCases = [
   "L. 1251-21 à L. 1251-23xx du code du travail",
-  "L. 1233-34 à L. 1233-35-1 du code du travail",
+  "L. 1233‑34 à L. 1233-35-1 du code du travail",
   "L. 2312-72 à 2312-77 du code du travail",
   "L. 2312-72 à 2312-77 du code de l'éducation",
   "D. 5132-9 à D. 5132-10-4 du code du travail",

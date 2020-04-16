@@ -4,9 +4,6 @@ Given an article (or a range) and its code (code du travail ou securite sociale)
 actual id in the legi data corpus. 
 */
 
-// const codeTravail = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
-// const codeSecu = require("@socialgouv/legi-data/data/LEGITEXT000006073189.json");
-
 const { codesFullNames, CODE_TRAVAIL } = require("./referenceExtractor");
 const find = require("unist-util-find");
 const visit = require("unist-util-visit");
@@ -74,7 +71,11 @@ function formatStartEnd(startRaw, endRaw) {
   // if there's nothing in common between end and start, we consider being in this special case
 
   const [startParts, endParts] = [startRaw, endRaw].map((a) =>
-    a.split("-").map((p) => p.trim())
+    a
+      .replace(/\u2011/g, "-")
+      .replace()
+      .split("-")
+      .map((p) => p.trim())
   );
 
   const letter = startParts[0].slice(0, 1);
@@ -128,7 +129,12 @@ function unravelRange(range) {
 }
 
 function formatArticle(article) {
-  return article.replace(".", "").replace(" ", "");
+  // remove dot and spaces + remove non digit trailing chars + replace unicode dash ‑ to standard -
+  return article
+    .replace(".", "")
+    .replace(" ", "")
+    .replace(/\D*$/, "")
+    .replace(/\u2011/g, "-");
 }
 
 function resolveReference(ref) {
@@ -139,7 +145,8 @@ function resolveReference(ref) {
 
   return toResolve.map((a) => {
     // use default code if no defined
-    const code = a.code == CODE_UNKNOWN ? DEFAULT_CODE : a.code;
+    const code =
+      (a.code == CODE_UNKNOWN) | (a.code == undefined) ? DEFAULT_CODE : a.code;
 
     if (code && code != CODE_UNKNOWN) {
       const formattedArticle = formatArticle(a.article);
@@ -150,6 +157,7 @@ function resolveReference(ref) {
       if (article) {
         a.id = article.data.id;
         a.fmt = formattedArticle;
+        a.code = code;
       } else {
         // not found in code
         a.code = CODE_UNKNOWN;

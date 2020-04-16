@@ -210,7 +210,7 @@ function extractReferences(text) {
       return { token, index, pred: predictions[index] };
     })
     .reduce((acc, { token, index, pred }) => {
-      // case article we start or merge
+      // case article : we start or merge
       if (pred == ARTICLE) {
         if (acc.length == 0) {
           acc.push({ token, index });

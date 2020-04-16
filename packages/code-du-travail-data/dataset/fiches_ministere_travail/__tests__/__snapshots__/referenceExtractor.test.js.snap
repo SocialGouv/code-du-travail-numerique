@@ -4,7 +4,7 @@ exports[`should extract article tokens in examples 1`] = `
 Array [
   Array [
     Object {
-      "article": "L. 2313-8",
+      "article": "L. 2313‑8",
       "code": Object {
         "id": "LEGITEXT000006072050",
         "name": "code du travail",
@@ -20,6 +20,15 @@ Array [
     Object {
       "article": "L. 1251-18",
       "code": undefined,
+    },
+  ],
+  Array [
+    Object {
+      "article": "L. 1251-23xx",
+      "code": Object {
+        "id": "LEGITEXT000006072050",
+        "name": "code du travail",
+      },
     },
   ],
   Array [
@@ -295,7 +304,7 @@ Object {
   "LEGITEXT000006072050": Object {
     "articles": Array [
       Object {
-        "article": "L. 2313-8",
+        "article": "L. 2313‑8",
         "fmt": "L2313-8",
         "id": "LEGIARTI000036262496",
       },
@@ -319,16 +328,28 @@ Object {
         "fmt": "R2313-6",
         "id": "LEGIARTI000039624937",
       },
+      Object {
+        "article": "L. 1251-18",
+        "fmt": "L1251-18",
+        "id": "LEGIARTI000006901269",
+      },
     ],
     "name": "code du travail",
   },
-  "UNDEFINED": Object {
+}
+`;
+
+exports[`should resolve example codes 2`] = `
+Object {
+  "LEGITEXT000006072050": Object {
     "articles": Array [
       Object {
-        "article": "L. 1251-18",
+        "article": "L. 1251-23xx",
+        "fmt": "L1251-23",
+        "id": "LEGIARTI000006901276",
       },
     ],
-    "name": undefined,
+    "name": "code du travail",
   },
 }
 `;
