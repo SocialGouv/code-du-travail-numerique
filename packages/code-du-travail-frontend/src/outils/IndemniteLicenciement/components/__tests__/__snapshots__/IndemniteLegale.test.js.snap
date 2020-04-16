@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteLegale /> should render 1`] = `
+.c8 {
+  margin: 1.6rem 0;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c3 {
   display: block;
   margin-bottom: 1.6rem;
@@ -99,12 +110,14 @@ exports[`<IndemniteLegale /> should render 1`] = `
       class="c7"
     >
       <div
-        id="react-mathjax-preview"
+        class="c8"
       >
         <div
-          id="react-mathjax-preview-result"
+          class="c9"
         >
-          \`1337% * 3.14\`
+          <div>
+            KaTeX parse error: Expected 'EOF', got '%' at position 5: 1337%̲ * 3.14
+          </div>
         </div>
       </div>
     </div>
