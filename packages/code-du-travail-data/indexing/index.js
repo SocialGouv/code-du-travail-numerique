@@ -1,7 +1,7 @@
 import { Client } from "@elastic/elasticsearch";
 import mtSheets from "@socialgouv/fiches-travail-data/data/fiches-travail.json";
 import agreements from "../dataset/datafiller/agreements.data.json";
-import { slugify } from "../slugify";
+import slugify from "../slugify";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { documentMapping } from "./document.mapping";
 import { AGREEMENTS, DOCUMENTS, MT_SHEETS, SUGGESTIONS } from "./esIndexName";
@@ -80,6 +80,10 @@ async function main() {
   });
   mtSheets.forEach((article) => {
     article.slug = slugify(article.title);
+    article.sections.forEach((section) => {
+      delete section.description;
+      delete section.text;
+    });
   });
   await indexDocumentsBatched({
     indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,

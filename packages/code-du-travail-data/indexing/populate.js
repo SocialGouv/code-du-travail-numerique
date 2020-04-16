@@ -109,9 +109,7 @@ async function* cdtnDocumentsGen() {
   const fichesTravail = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
   fichesTravail.forEach((article) => (article.slug = slugify(article.title)));
 
-  const splittedFiches = fichesTravail
-    .map(splitArticle)
-    .reduce((accumulator, documents) => accumulator.concat(documents), []);
+  const splittedFiches = fichesTravail.flatMap(splitArticle);
 
   yield splittedFiches.map(
     ({ anchor, description, html, slug, text, title }) => {
