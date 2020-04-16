@@ -15,6 +15,9 @@ const UNDEFINED_KEY = "UNDEFINED";
 
 const undefinedReferences = fiches.filter((fiche) => {
   const refErrors = fiche.sections.filter((section) => {
+    if (!section.references) {
+      console.log("no refs in " + fiche.title);
+    }
     return section.references && UNDEFINED_KEY in section.references;
   });
 
@@ -28,8 +31,8 @@ const printMissingRef = (fiche) => {
   fiche.sections.forEach((section) => {
     if (section.references && UNDEFINED_KEY in section.references) {
       console.log(`- ${section.anchor}`);
-      const fmt = section.references[UNDEFINED_KEY].articles.map((ref) =>
-        ref.article.replace(".", "").replace(" ", "").replace(/\D*$/, "")
+      const fmt = section.references[UNDEFINED_KEY].articles.map(
+        (ref) => ref.text
       );
       console.log(`> ${Array.from(new Set(fmt)).join(" / ")}`);
     }

@@ -98,8 +98,8 @@ function formatStartEnd(startRaw, endRaw) {
 // in case of a range (like "L. 4733-9 à 4733-11"), we try to identify
 // the articles implicitly included within the range
 function unravelRange(range) {
-  const mark = rangeMarkers.filter((a) => range.article.includes(a))[0];
-  const rawParts = range.article.split(mark);
+  const mark = rangeMarkers.filter((a) => range.text.includes(a))[0];
+  const rawParts = range.text.split(mark);
 
   const chosenCode = range.code ? range.code : DEFAULT_CODE;
 
@@ -113,7 +113,7 @@ function unravelRange(range) {
       startFMT,
       endFMT
     ).map((a) => {
-      return { article: a.data.num, code: chosenCode };
+      return { fmt: a.data.num, code: chosenCode };
     });
 
     if (unraveled.length > 0) {
@@ -123,8 +123,8 @@ function unravelRange(range) {
 
   // default in case of error, note that we explicitly set code to unknown
   // in order to identify range errors
-  return range.article.split(mark).map((a) => {
-    return { article: a.trim(), code: CODE_UNKNOWN };
+  return range.text.split(mark).map((a) => {
+    return { text: a.trim(), code: CODE_UNKNOWN };
   });
 }
 
@@ -139,7 +139,7 @@ function formatArticle(article) {
 
 function resolveReference(ref) {
   let toResolve = [ref];
-  if (rangeMarkers.filter((a) => ref.article.includes(a)).length != 0) {
+  if (rangeMarkers.filter((a) => ref.text.includes(a)).length != 0) {
     toResolve = unravelRange(ref);
   }
 
@@ -148,15 +148,15 @@ function resolveReference(ref) {
     const code =
       (a.code == CODE_UNKNOWN) | (a.code == undefined) ? DEFAULT_CODE : a.code;
 
+    if (!a.fmt) a.fmt = formatArticle(a.text);
+
     if (code && code != CODE_UNKNOWN) {
-      const formattedArticle = formatArticle(a.article);
       const article = find(
         codes[code.id],
-        (node) => node.type === "article" && node.data.num === formattedArticle
+        (node) => node.type === "article" && node.data.num === a.fmt
       );
       if (article) {
         a.id = article.data.id;
-        a.fmt = formattedArticle;
         a.code = code;
       } else {
         // not found in code
@@ -173,11 +173,11 @@ function resolveReferences(refs) {
   const deduplicated = resolvedRefs.reduce((acc, art) => {
     // drop duplicated references
     const existing = acc
-      .map((a) => [a.article, a.fmt])
+      .map((a) => [a.text, a.fmt])
       .flat()
       .filter((v) => v);
 
-    if (!(existing.includes(art.fmt) || existing.includes(art.article))) {
+    if (!(existing.includes(art.fmt) || existing.includes(art.text))) {
       acc.push(art);
     }
     return acc;

@@ -51,6 +51,13 @@ const getSectionTag = (article) => {
   return h3 || h4 || h5;
 };
 
+const getReferences = (text) => {
+  // first we extract the tokens referencing articles
+  const references = extractReferences(text);
+  // then we try to resolve the actual articles ids using legi-data
+  return resolveReferences(references);
+};
+
 function parseDom(dom, url) {
   const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
@@ -109,6 +116,7 @@ function parseDom(dom, url) {
   }
   if (untitledSection.description) {
     untitledSection.text.trim();
+    untitledSection.references = getReferences(untitledSection.text);
     sections.push(untitledSection);
   }
   // Gets all the titled content
@@ -132,10 +140,7 @@ function parseDom(dom, url) {
         }
         // section.html = addTags(section.html);
 
-        // first we extract the tokens referencing articles
-        const references = extractReferences(section.text);
-        // then we try to resolve the actual articles ids using legi-data
-        section.references = resolveReferences(references);
+        section.references = getReferences(section.text);
         sections.push(section);
       }
     });

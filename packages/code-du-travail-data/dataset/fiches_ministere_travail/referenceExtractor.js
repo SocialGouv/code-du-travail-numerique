@@ -246,7 +246,7 @@ function extractReferences(text) {
       return !code || (code && code != UNRECOGNIZED);
     })
     .map(({ token, code }) => {
-      return { article: token, code };
+      return { text: token, code };
     });
 }
 
