@@ -90,7 +90,7 @@ class Fiche extends React.Component {
                         l’employeur n’a pas l’obligation d’accorder un congé
                         simultané au conjoint ou partenaire lié par un PACS du
                         salarié travaillant dans la même entreprise. Si l’accord
-                        ne prévoit rien, l’article L. 3141-14 du code du travail
+                        ne prévoit rien, l’article L3141-14 du code du travail
                         s’applique, c’est-à-dire que les conjoints et les
                         partenaires liés par un PACS travaillant dans une même
                         entreprise ont droit à un congé simultané.
@@ -113,6 +113,7 @@ class Fiche extends React.Component {
               </Figcaption>
             </Figure>
             <ReferencesJuridiques
+              accordionDisplay={1}
               references={[
                 {
                   id: "conges-1",
@@ -175,14 +176,13 @@ class Fiche extends React.Component {
                     </p>
                     <Ol>
                       <Li>
-                        <strong>Le nombre de jours de repos concernés.</strong>
-                        <br />
-                        Concernant le CET, l’ordonnance vise « les droits
+                        <strong>Le nombre de jours de repos concernés :</strong>{" "}
+                        concernant le CET, l’ordonnance vise « les droits
                         affectés sur le compte épargne-temps ». L’employeur peut
                         convertir les sommes affectées au CET en jours de repos.
                       </Li>
                       <Li>
-                        <strong>Les jours de repos concernés :</strong>
+                        <strong>Les jours de repos concernés :</strong>{" "}
                         l’employeur peut imposer les dates et/ ou modifier les
                         dates déjà posées.
                       </Li>
@@ -270,8 +270,8 @@ class Fiche extends React.Component {
         content: (
           <>
             <p>
-              L’ordonnance du 25 mars aménage les durées maximales de travail
-              prévues par le code du travail jusqu’au 31 décembre 2020.
+              L’ordonnance du 25 mars 2020 aménage les durées maximales de
+              travail prévues par le code du travail jusqu’au 31 décembre 2020.
             </p>
             <p>
               <Strong>Important  :</Strong> cette mesure ne s’applique qu’aux
@@ -303,9 +303,9 @@ class Fiche extends React.Component {
                 <Ul>
                   <Li>
                     <strong>Durée quotidienne maximale de travail :</strong> 12
-                    heures maximum par jour, à condition qu’il puisse bénéficier
-                    d’un repos compensateur égal au dépassement de la durée
-                    maximale de 8 heures (appliquée habituellement).
+                    heures maximum par jour, à condition que le salarié puisse
+                    bénéficier d’un repos compensateur égal au dépassement de la
+                    durée maximale de 8 heures (appliquée habituellement).
                   </Li>
                   <Li>
                     <strong>Durée hebdomadaire de travail :</strong> 44 heures
@@ -351,6 +351,7 @@ class Fiche extends React.Component {
               appliqué sa décision.
             </p>
             <ReferencesJuridiques
+              accordionDisplay={1}
               references={[
                 {
                   id: "durees-maximales-travail-1",
@@ -420,10 +421,11 @@ class Fiche extends React.Component {
               <Strong>Important  :</Strong> Ces mesures s’appliquent dans tous
               les cas, que l’arrêt de travail soit lié à l’épidémie de Covid-19
               (mesure d’isolement, de maintien à domicile, parents d’un enfant
-              de moins de 16 faisant l’objet d’une telle mesure ) soit à tout
+              de moins de 16 faisant l’objet d’une telle mesure ) ou à tout
               autre maladie ou accident.
             </p>
             <ReferencesJuridiques
+              accordionDisplay={1}
               references={[
                 {
                   id: "arrets-maladie-1",
@@ -497,6 +499,7 @@ class Fiche extends React.Component {
               </Li>
             </Ol>
             <ReferencesJuridiques
+              accordionDisplay={1}
               references={[
                 {
                   id: "interessement-participation-1",
@@ -585,6 +588,7 @@ class Fiche extends React.Component {
               coordonnées et disponibilités.
             </p>
             <ReferencesJuridiques
+              accordionDisplay={1}
               references={[
                 {
                   id: "assistant-maternel-1",
@@ -614,7 +618,7 @@ class Fiche extends React.Component {
         content: (
           <>
             <p>
-              Le droit à l’indemnisation chômage est prolongée dans certaines
+              Le droit à l’indemnisation chômage est prolongé dans certaines
               conditions.
             </p>
             <p>
@@ -656,7 +660,7 @@ class Fiche extends React.Component {
           title="Coronavirus : ce que changent les ordonnances en droit du travail"
         >
           <p>
-            Le gouvernement a décidé de prendre plusieurs mesures afin
+            Le Gouvernement a décidé de prendre plusieurs mesures afin
             d’accompagner les entreprises et les salariés pour faire face aux
             conséquences de la crise du coronavirus, notamment pendant la
             période de l’état d’urgence sanitaire. Nous vous decryptons ici les

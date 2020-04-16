@@ -7,12 +7,12 @@ import TYPE_REFERENCE from "./typeReference";
 
 class ReferencesJuridiques extends React.PureComponent {
   render() {
-    const { references, ...props } = this.props;
+    const { references, accordionDisplay, ...props } = this.props;
     if (!references.length) return null;
 
     return (
       <>
-        {references.length > 2 ? (
+        {references.length > accordionDisplay ? (
           <StyledWrapper variant="light" {...props}>
             <Accordion
               noTitle
@@ -44,10 +44,12 @@ ReferencesJuridiques.propTypes = {
       url: PropTypes.string,
     })
   ),
+  accordionDisplay: PropTypes.number,
 };
 
 ReferencesJuridiques.defaultProps = {
   references: [],
+  accordionDisplay: 2,
 };
 
 export default ReferencesJuridiques;
