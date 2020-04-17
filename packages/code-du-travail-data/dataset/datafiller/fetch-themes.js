@@ -34,14 +34,14 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/the
 
 */
 
-const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;
+const getSlug = (row) => `${row.position || 1}-${slugify(row.title)}`;
 
 // for breadcrumbs
 const getParents = (rows, row) => {
   let parent = row.parent;
   const parts = [];
   while (parent) {
-    const node = rows.find(r => r.id === parent);
+    const node = rows.find((r) => r.id === parent);
     if (node) {
       parts.unshift({ ...node, slug: getSlug(node) });
     }
@@ -55,22 +55,22 @@ const getParents = (rows, row) => {
 
 const getChildren = (rows, row) =>
   rows
-    .filter(node => node.parent === row.id)
+    .filter((node) => node.parent === row.id)
     .sort(sortByKey("position"))
-    .map(node => ({ title: node.title, slug: getSlug(node) }));
+    .map((node) => ({ title: node.title, slug: getSlug(node) }));
 
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = async () => {
   const records = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
-    .then(res => res.json())
-    .then(json => json.data);
+    .then((res) => res.json())
+    .then((json) => json.data);
 
   const sortedRows = records
     .map(sortRowRefsByPosition)
     .filter(({ title }) => title.length > 0);
 
-  const treeRows = sortedRows.map(row => {
+  const treeRows = sortedRows.map((row) => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);
     const children = getChildren(sortedRows, row);
     return {
@@ -93,6 +93,6 @@ module.exports = fetchAll;
 
 if (require.main === module) {
   fetchAll()
-    .then(data => console.log(JSON.stringify(data, null, 2)))
+    .then((data) => console.log(JSON.stringify(data, null, 2)))
     .catch(console.error);
 }
