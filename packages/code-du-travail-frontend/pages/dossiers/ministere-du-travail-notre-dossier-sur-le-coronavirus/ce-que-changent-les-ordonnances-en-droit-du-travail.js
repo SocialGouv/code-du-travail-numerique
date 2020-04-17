@@ -2,7 +2,14 @@ import React from "react";
 import { withRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
-import { Accordion, MoreContent, theme, Wrapper } from "@socialgouv/react-ui";
+import {
+  Accordion,
+  Button,
+  icons,
+  MoreContent,
+  theme,
+  Wrapper,
+} from "@socialgouv/react-ui";
 import Answer from "../../../src/common/Answer";
 import { Layout } from "../../../src/layout/Layout";
 import Metas from "../../../src/common/Metas";
@@ -29,6 +36,19 @@ class Fiche extends React.Component {
                 src="/static/assets/img/infographies/conges-payes.jpg"
                 alt="Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous."
               />
+              <DownloadWrapper>
+                <Button
+                  as="a"
+                  className="no-after"
+                  href="/static/assets/img/infographies/conges-payes-info.jpg"
+                  narrow
+                  variant="navLink"
+                  download
+                >
+                  Télécharger l‘infographie
+                  <Download />
+                </Button>
+              </DownloadWrapper>
               <Figcaption>
                 <MoreContent noLeftPadding title="Voir en détail">
                   <Wrapper variant="dark">
@@ -146,6 +166,19 @@ class Fiche extends React.Component {
                 src="/static/assets/img/infographies/jours-repos.jpg"
                 alt="Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous."
               />
+              <DownloadWrapper>
+                <Button
+                  as="a"
+                  className="no-after"
+                  href="/static/assets/img/infographies/jours-repos.jpg"
+                  narrow
+                  variant="navLink"
+                  download
+                >
+                  Télécharger l‘infographie
+                  <Download />
+                </Button>
+              </DownloadWrapper>
               <Figcaption>
                 <MoreContent noLeftPadding title="Voir en détail">
                   <Wrapper variant="dark">
@@ -177,8 +210,8 @@ class Fiche extends React.Component {
                     <Ol>
                       <Li>
                         <strong>Le nombre de jours de repos concernés :</strong>{" "}
-                        concernant le CET, l’ordonnance vise « les droits
-                        affectés sur le compte épargne-temps ». L’employeur peut
+                        concernant le CET, l’ordonnance vise «les droits
+                        affectés sur le compte épargne-temps». L’employeur peut
                         convertir les sommes affectées au CET en jours de repos.
                       </Li>
                       <Li>
@@ -709,4 +742,14 @@ const Li = styled.li`
 
 const Strong = styled.strong`
   color: ${({ theme }) => theme.primary};
+`;
+
+const DownloadWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Download = styled(icons.Download)`
+  width: 2.2rem;
+  margin-left: ${spacings.xsmall};
 `;
