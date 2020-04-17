@@ -58,14 +58,14 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
         </FocusRoot>
         <Grid>
           {children &&
-            children.map(({ children, icon, slug, label }) => (
+            children.map(({ children, icon, slug, title }) => (
               <Link
                 key={slug}
                 href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
                 as={slug}
                 passHref
               >
-                <Tile icon={icons[icon]} title={label}>
+                <Tile icon={icons[icon]} title={title}>
                   <TileChildren>
                     <SubThemes>{children}</SubThemes>
                     <StyledDiv hasContentAbove={Boolean(children)}>
