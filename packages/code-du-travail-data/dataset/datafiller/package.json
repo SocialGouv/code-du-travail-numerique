@@ -15,7 +15,7 @@
     "unist-util-parents": "^1.0.3"
   },
   "scripts": {
-    "start": "yarn fetch:agreements && yarn fetch:glossary && yarn fetch:highlights && yarn fetch:requetes && yarn fetch:themes",
+    "start": "yarn fetch:themes && yarn fetch:agreements && yarn fetch:glossary && yarn fetch:highlights && yarn fetch:requetes",
     "fetch:agreements": "node --http-parser=legacy -r esm fetch-agreements.js > agreements.data.json",
     "fetch:glossary": "node --http-parser=legacy fetch-glossary.js > glossary.data.json",
     "fetch:highlights": "node --http-parser=legacy fetch-highlights.js > highlights.data.json",

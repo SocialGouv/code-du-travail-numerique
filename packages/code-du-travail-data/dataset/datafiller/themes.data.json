@@ -67,21 +67,18 @@
         "url": "/fiche-service-public/maladie-professionnelle-demarches-a-effectuer"
       },
       {
-        "url": "/fiche-service-public/quest-ce-que-la-prestation-complementaire-pour-recours-a-tierce-personne"
-      },
-      {
         "url": "/fiche-service-public/maladie-professionnelle-reprise-du-travail-du-salarie"
       },
       {
         "url": "/fiche-service-public/maladie-professionnelle-indemnisation-en-cas-dincapacite-permanente"
       },
       {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quelles-maladies-quels-accidents-ouvrent-droit-a-l-indemnisation-nbsp",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quelles maladies, quels accidents ouvrent droit à l’indemnisation complémentaire de l’employeur ?"
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Des-controles-sont-ils-possibles",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : des contrôles sont-ils possibles ?"
       },
       {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quels-salaries-ont-droit-a-cette-indemnisation-complementaire-nbsp",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quels salariés ont droit à cette indemnisation complémentaire ?"
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quelles-sont-les-beneficiaires-et-les-conditions-a-remplir",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : quelles sont les bénéficiaires et les conditions à remplir ?"
       },
       {
         "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quand-debute-l-indemnisation-complementaire",
@@ -114,7 +111,8 @@
     "position": 862,
     "refs": [
       {
-        "url": "/fiche-service-public/accord-de-performance-collective"
+        "url": "/fiche-service-public/quest-ce-quun-accord-de-performance-collective",
+        "title": ""
       }
     ],
     "slug": "862-accord-de-performance-collective",
@@ -222,7 +220,8 @@
         "url": "/fiche-service-public/le-contrat-de-travail-peut-il-etre-rompu-pendant-un-conge-sabbatique"
       },
       {
-        "url": "/fiche-service-public/cure-thermale-du-salarie-quelles-sont-les-regles-date-remuneration"
+        "url": "/fiche-service-public/cure-thermale-du-salarie-quelles-sont-les-regles",
+        "title": "Cure thermale du salarié : quelles sont les règles ?"
       },
       {
         "url": "/fiche-service-public/un-salarie-peut-il-beneficier-dun-conge-denseignement-ou-de-recherche",
@@ -251,9 +250,6 @@
       },
       {
         "url": "/fiche-service-public/quest-ce-quun-conge-de-solidarite-internationale"
-      },
-      {
-        "url": "/fiche-service-public/conge-de-representation"
       },
       {
         "url": "/fiche-service-public/conge-de-solidarite-familiale",
@@ -448,10 +444,6 @@
       {
         "url": "/fiche-service-public/quel-est-lemplacement-des-cotisations-dans-le-bulletin-de-paie-clarifie",
         "title": "Quel est l'emplacement des cotisations dans le bulletin de paie clarifié ?"
-      },
-      {
-        "url": "/fiche-service-public/affiliation-et-cotisations-sociales-des-artistes-auteurs",
-        "title": "Affiliation et cotisations sociales des artistes-auteurs"
       },
       {
         "url": "/fiche-service-public/forfait-social",
@@ -759,9 +751,6 @@
     "position": 45,
     "refs": [
       {
-        "url": "/fiche-service-public/compte-epargne-temps-cet"
-      },
-      {
         "url": "/fiche-service-public/compte-epargne-temps-cet-du-salarie",
         "title": "Compte épargne-temps (CET) du salarié"
       },
@@ -813,26 +802,6 @@
     "refs": [
       {
         "url": "/fiche-service-public/quest-ce-que-le-compte-personnel-dactivite-cpa"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-compte-personnel-dactivite#t1-Le-compte-personnel-d-activite-c-est-quoi",
-        "title": "Le Compte Personnel d’Activité : le compte personnel d’activité : c’est quoi ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-compte-personnel-dactivite#t2-Le-compte-personnel-d-activite-pour-qui",
-        "title": "Le Compte Personnel d’Activité : le compte personnel d’activité : pour qui ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-compte-personnel-dactivite#t3-Le-compte-personnel-d-activite-pour-quels-objectifs",
-        "title": "Le Compte Personnel d’Activité : le compte personnel d’activité : pour quels objectifs ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-compte-personnel-dactivite#t4-Le-compte-personnel-d-activite-comment-ca-marche",
-        "title": "Le Compte Personnel d’Activité : le compte personnel d’activité : comment ça marche ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-compte-personnel-dactivite#t5-Le-compte-personnel-d-activite-quels-services-en-ligne-nbsp",
-        "title": "Le Compte Personnel d’Activité : le compte personnel d’activité : quels services en ligne ?"
       }
     ],
     "slug": "523-compte-personnel-dactivite-cpa",
@@ -857,13 +826,15 @@
     "position": 512,
     "refs": [
       {
-        "url": "/fiche-service-public/compte-personnel-de-formation-cpf"
+        "url": "/fiche-service-public/compte-personnel-de-formation-cpf-secteur-prive",
+        "title": "Compte personnel de formation (CPF) - Secteur privé"
       },
       {
         "url": "/fiche-service-public/chomage-compte-personnel-de-formation-cpf-dun-demandeur-demploi"
       },
       {
-        "url": "/fiche-service-public/projet-de-transition-professionnelle-ptp-cpf-de-transition"
+        "url": "/fiche-service-public/cpf-de-transition",
+        "title": "CPF de transition"
       },
       {
         "url": "/fiche-service-public/compte-personnel-de-formation-cpf-secteur-prive",
@@ -1047,7 +1018,8 @@
         "url": "/fiche-service-public/justice-penale-quels-delais-de-prescription"
       },
       {
-        "url": "/fiche-service-public/le-salarie-et-lemployeur-peuvent-ils-regler-un-differend-a-lamiable"
+        "url": "/fiche-service-public/le-salarie-et-lemployeur-peuvent-ils-regler-un-conflit-a-lamiable",
+        "title": "Le salarié et l'employeur peuvent-ils régler un conflit à l'amiable ?"
       },
       {
         "url": "/fiche-service-public/quel-est-le-delai-de-prescription-dune-peine-penale"
@@ -1333,7 +1305,8 @@
         "url": "/fiche-service-public/conge-de-paternite-et-daccueil-en-cas-dhospitalisation-de-lenfant-apres-sa-naissance"
       },
       {
-        "url": "/fiche-service-public/jours-dabsence-pour-la-survenue-du-handicap-dun-enfant-salarie-du-prive"
+        "url": "/fiche-service-public/jours-dabsence-a-lannonce-dun-handicap-chez-lenfant-salarie-du-prive",
+        "title": "Jours d'absence à l'annonce d'un handicap chez l'enfant (salarié du privé)"
       },
       {
         "url": "/fiche-ministere-travail/le-conge-dadoption#Qui-peut-beneficier-d-un-conge-d-adoption",
@@ -1614,7 +1587,8 @@
         "url": "/fiche-service-public/conge-du-salarie-pour-mariage-ou-pacs"
       },
       {
-        "url": "/fiche-service-public/autorisation-dabsence-du-salarie-pour-deces-dun-membre-de-la-famille"
+        "url": "/fiche-service-public/autorisation-dabsence-pour-deces-dun-membre-de-la-famille-salarie-du-prive",
+        "title": "Autorisation d'absence pour décès d'un membre de la famille (salarié du privé)"
       },
       {
         "url": "/fiche-ministere-travail/les-conges-pour-evenements-familiaux#Quelle-est-la-duree-du-conge",
@@ -1960,10 +1934,6 @@
         "url": "/fiche-service-public/quest-ce-quune-clause-de-non-concurrence"
       },
       {
-        "url": "/contribution/quelles-sont-les-conditions-de-la-clause-de-non-concurrence",
-        "title": "Quelles sont les conditions de la clause de non-concurrence ?"
-      },
-      {
         "url": "/fiche-service-public/quest-ce-quune-clause-de-mobilite"
       },
       {
@@ -2021,10 +1991,6 @@
       },
       {
         "url": "/fiche-service-public/un-employeur-peut-il-sopposer-a-ce-quun-salarie-soit-jure-dassises"
-      },
-      {
-        "url": "/fiche-service-public/adhesion-dune-association-a-un-groupement-demployeurs",
-        "title": "Adhésion d'une association à un groupement d'employeurs"
       },
       {
         "url": "/fiche-ministere-travail/la-medaille-dhonneur-du-travail",
@@ -2590,29 +2556,6 @@
     "position": 8,
     "refs": [
       {
-        "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
-        "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?"
-      },
-      {
-        "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-        "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?"
-      },
-      {
-        "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
-        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
-      },
-      {
-        "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
-        "title": " Quelle est la durée de préavis en cas de mise à la retraite ?"
-      },
-      {
-        "url": "/outils/heures-recherche-emploi",
-        "title": "Heures pour recherche d’emploi"
-      },
-      {
-        "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis"
-      },
-      {
         "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail"
       },
       {
@@ -2622,8 +2565,28 @@
         "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes"
       },
       {
+        "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+        "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?"
+      },
+      {
+        "url": "/outils/heures-recherche-emploi",
+        "title": "Heures pour recherche d’emploi"
+      },
+      {
+        "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+        "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?"
+      },
+      {
         "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
         "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?"
+      },
+      {
+        "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
+        "title": "Arrêt maladie pendant le préavis : quelles conséquences ?"
+      },
+      {
+        "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+        "title": " Quelle est la durée de préavis en cas de mise à la retraite ?"
       }
     ],
     "slug": "8-depart-de-lentreprise",
@@ -2932,24 +2895,20 @@
         "title": "La VAE : quel financement pour la VAE ?"
       },
       {
-        "url": "/fiche-ministere-travail/focus-sur-le-cep#t1-Conseil-en-evolution-professionnelle-pour-qui",
-        "title": "Focus sur le CÉP : conseil en évolution professionnelle : pour qui ?"
+        "url": "/fiche-ministere-travail/conseil-en-evolution-professionnelle-cep#Un-conseil-en-evolution-professionnelle-pour-qui",
+        "title": "CÉP : un conseil en évolution professionnelle pour qui ?"
       },
       {
-        "url": "/fiche-ministere-travail/focus-sur-le-cep#t2-Conseil-en-evolution-professionnelle-a-quoi-ca-sert",
-        "title": "Focus sur le CÉP : conseil en évolution professionnelle : à quoi ça sert ?"
+        "url": "/fiche-ministere-travail/conseil-en-evolution-professionnelle-cep#A-quoi-sert-le-conseil-en-evolution-professionnelle",
+        "title": "CÉP : à quoi sert le conseil en évolution professionnelle ?"
       },
       {
-        "url": "/fiche-ministere-travail/focus-sur-le-cep#t3-Conseil-en-evolution-professionnelle-combien-ca-coute",
-        "title": "Focus sur le CÉP : conseil en évolution professionnelle : combien ça coûte ?"
+        "url": "/fiche-ministere-travail/conseil-en-evolution-professionnelle-cep#Comment-est-mis-en-oeuvre-le-conseil-en-evolution-professionnelle-nbsp",
+        "title": "CÉP : comment est mis en oeuvre le conseil en évolution professionnelle ?"
       },
       {
-        "url": "/fiche-ministere-travail/focus-sur-le-cep#t4-Conseil-en-evolution-professionnelle-quand-en-beneficier-nbsp",
-        "title": "Focus sur le CÉP : conseil en évolution professionnelle : quand en bénéficier ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/focus-sur-le-cep#t5-Conseil-en-evolution-professionnelle-a-qui-s-adresser",
-        "title": "Focus sur le CÉP : conseil en évolution professionnelle : à qui s’adresser ?"
+        "url": "/fiche-ministere-travail/conseil-en-evolution-professionnelle-cep#Comment-mobiliser-le-conseil-en-evolution-professionnelle-et-qui-contacter-nbsp",
+        "title": "CÉP : comment mobiliser le conseil en évolution professionnelle et qui contacter ?"
       },
       {
         "url": "/fiche-ministere-travail/conge-individuel-de-formation-cif#Quel-peut-etre-l-objectif-du-CIF",
@@ -3090,8 +3049,8 @@
     "position": 80,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/les-documents-remis-aux-salaries-lors-de-la-rupture-du-contrat-de-travail#Quand-delivrer-le-certificat-de-travail",
-        "title": "Les documents remis aux salariés lors de la rupture du contrat de travail : quand délivrer le certificat de travail ?"
+        "url": "/fiche-ministere-travail/les-documents-remis-aux-salaries-lors-de-la-rupture-du-contrat-de-travail#Quand-delivrer-le-certificat-de-travail-et-quel-doit-etre-son-contenu-nbsp",
+        "title": "Les documents remis aux salariés lors de la rupture du contrat de travail : quand délivrer le certificat de travail et quel doit être son contenu ?"
       },
       {
         "url": "/fiche-service-public/quels-sont-les-documents-remis-au-salarie-a-la-fin-de-son-contrat"
@@ -3104,15 +3063,15 @@
         "title": "Les documents remis aux salariés lors de la rupture du contrat de travail : en quoi consiste le solde de tout compte ?"
       },
       {
-        "url": "/modeles-de-courriers/modele-recu-pour-solde-de-tout-compte",
-        "title": "Modèle: Reçu pour solde de tout compte"
+        "url": "/modeles-de-courriers/recu-pour-solde-de-tout-compte",
+        "title": "Reçu pour solde de tout compte"
       },
       {
         "url": "/fiche-service-public/solde-de-tout-compte"
       },
       {
-        "url": "/modeles-de-courriers/modele-certificat-de-travail",
-        "title": "Modèle : Certificat de travail"
+        "url": "/modeles-de-courriers/certificat-de-travail",
+        "title": "Certificat de travail"
       },
       {
         "url": "/fiche-service-public/certificat-de-travail"
@@ -3160,18 +3119,6 @@
     "refs": [
       {
         "url": "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse"
-      },
-      {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#Le-constat-du-danger",
-        "title": "Danger grave et imminent : le constat du danger"
-      },
-      {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#L-appreciation-de-l-imminence",
-        "title": "Danger grave et imminent : l’appréciation de l’imminence"
-      },
-      {
-        "url": "/fiche-ministere-travail/danger-grave-et-imminent#L-appreciation-de-la-gravite",
-        "title": "Danger grave et imminent : l’appréciation de la gravité"
       }
     ],
     "slug": "612-droit-dalerte-et-de-retrait-des-salaries",
@@ -3331,8 +3278,8 @@
         "title": "Index de l’égalité professionnelle : questions - réponses sur le calcul de l’index"
       },
       {
-        "url": "/fiche-ministere-travail/index-de-legalite-professionnelle-calcul-et-questions-reponses#ACCOMPAGNEMENT-DES-ENTREPRISES",
-        "title": "Index de l’égalité professionnelle : accompagnement des entreprises"
+        "url": "/fiche-ministere-travail/index-de-legalite-professionnelle-calcul-et-questions-reponses#Accompagnement-des-entreprises-pour-leur-calcul-de-l-Index-de-l-egalite-nbsp",
+        "title": "Accompagnement des entreprises pour leur calcul de l’Index de l’égalité professionnelle"
       },
       {
         "url": "/fiche-ministere-travail/la-negociation-collective-en-entreprise-en-faveur-de-legalite-professionnelle",
@@ -3492,10 +3439,6 @@
     "icon": "Contract",
     "position": 1,
     "refs": [
-      {
-        "url": "/contribution/si-un-poste-se-libere-ou-est-cree-dans-lentreprise-lemployeur-doit-il-en-informer-les-salaries-ou-le-leur-proposer-en-priorite",
-        "title": "Si un poste se libère ou est créé dans l’entreprise, l’employeur doit-il en informer les salariés ? Ou le leur proposer en priorité ?"
-      },
       {
         "url": "/fiche-service-public/a-quoi-correspond-le-code-ape",
         "title": "À quoi correspond le code APE ?"
@@ -3745,24 +3688,16 @@
         "url": "/fiche-service-public/secteur-prive-activite-partielle-du-salarie"
       },
       {
-        "url": "/fiche-ministere-travail/activite-partielle#A-quelles-entreprises-s-adresse-l-activite-partielle",
-        "title": "Activité partielle : a quelles entreprises s’adresse l’activité partielle ?"
+        "url": "/fiche-ministere-travail/activite-partielle-chomage-partiel#Qu-est-ce-que-l-activite-partielle-chomage-partiel",
+        "title": "Activité partielle - chômage partiel : qu’est-ce que l’activité partielle (chômage partiel) ?"
       },
       {
-        "url": "/fiche-ministere-travail/activite-partielle#Quand-peut-on-beneficier-de-l-activite-partielle",
-        "title": "Activité partielle : quand peut-on bénéficier de l’activité partielle ?"
+        "url": "/fiche-ministere-travail/activite-partielle-chomage-partiel#En-quoi-consiste-le-dispositif-exceptionnel-d-activite-partielle-nbsp",
+        "title": "Activité partielle - chômage partiel : en quoi consiste le dispositif exceptionnel d’activité partielle ?"
       },
       {
-        "url": "/fiche-ministere-travail/activite-partielle#Quel-est-l-objectif-de-l-activite-partielle",
-        "title": "Activité partielle : quel est l’objectif de l’activité partielle ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/activite-partielle#Comment-est-mise-en-oeuvre-l-activite-partielle",
-        "title": "Activité partielle : comment est mise en œuvre l’activité partielle ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/activite-partielle#L-info-en",
-        "title": "Activité partielle : l’info en +"
+        "url": "/fiche-ministere-travail/activite-partielle-chomage-partiel#Comment-declarer-mon-entreprise-en-activite-partielle",
+        "title": "Activité partielle - chômage partiel : comment déclarer mon entreprise en activité partielle ?"
       },
       {
         "url": "/fiche-service-public/sauvegarde"
@@ -4159,9 +4094,6 @@
         "url": "/fiche-service-public/aide-a-domicile-services-a-la-personne-embauche-dun-salarie"
       },
       {
-        "url": "/fiche-service-public/titres-dembauche-simplifies-tese-tesa-tef"
-      },
-      {
         "url": "/fiche-service-public/contrat-de-travail-et-formalites-dembauche-de-lassistante-maternelle"
       },
       {
@@ -4357,8 +4289,8 @@
     "position": 644,
     "refs": [
       {
-        "url": "/fiche-service-public/comment-etre-reconnu-travailleur-handicape",
-        "title": "Comment être reconnu travailleur handicapé ?"
+        "url": "/fiche-service-public/comment-etre-reconnu-travailleur-handicape-rqth",
+        "title": "Comment être reconnu travailleur handicapé (RQTH) ?"
       },
       {
         "url": "/fiche-service-public/handicap-travail-en-milieu-ordinaire",
@@ -4521,20 +4453,16 @@
         "title": "La protection contre les discriminations : quelles sont les sanctions prévues pour l’auteur de la discrimination ?"
       },
       {
-        "url": "/modeles-de-courriers/signalement-de-faits-pouvant-relever-du-harcelement-moral-sur-mineur-au-travail",
-        "title": "Signalement de faits pouvant relever du harcèlement moral sur mineur au travail"
-      },
-      {
         "url": "/modeles-de-courriers/affichage-obligatoire-relatif-au-harcelement-sexuel",
         "title": "Modèle : Affichage obligatoire relatif au harcèlement sexuel"
       },
       {
-        "url": "/modeles-de-courriers/modele-reponse-a-signalement-de-harcelement-sexuel",
-        "title": "Modèle : Réponse à Signalement de harcèlement sexuel"
+        "url": "/modeles-de-courriers/reponse-a-un-signalement-de-harcelement-sexuel",
+        "title": "Réponse à un signalement de harcèlement sexuel"
       },
       {
-        "url": "/modeles-de-courriers/modele-signalement-de-harcelement-sexuel",
-        "title": "Modèle : Signalement de harcèlement sexuel"
+        "url": "/modeles-de-courriers/signalement-de-harcelement-sexuel",
+        "title": "Signalement de harcèlement sexuel"
       },
       {
         "url": "/modeles-de-courriers/reponse-a-un-signalement-de-harcelement-sexuel",
@@ -4701,18 +4629,6 @@
         "url": "/fiche-service-public/dans-quels-cas-recourir-a-linspecteur-du-travail"
       },
       {
-        "url": "/fiche-ministere-travail/linspection-du-travail#Quelles-sont-les-missions",
-        "title": "L’inspection du travail : quelles sont les missions ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/linspection-du-travail#Quels-sont-les-moyens-d-action",
-        "title": "L’inspection du travail : quels sont les moyens d’action ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/linspection-du-travail#Quels-sont-les-droits-et-obligations-des-agents-de-l-inspection-du-travail-nbsp",
-        "title": "L’inspection du travail : quels sont les droits et obligations des agents de l’inspection du travail ?"
-      },
-      {
         "url": "/fiche-ministere-travail/contestation-et-informations#t1-Recourir-a-l-inspection-du-travail",
         "title": "Contestation et informations : 1. recourir à l’inspection du travail"
       },
@@ -4795,9 +4711,6 @@
       {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-temporaire#Quelles-sont-les-mentions-qui-doivent-figurer-sur-les-contrats-nbsp",
         "title": "Le contrat de travail temporaire : quelles sont les mentions qui doivent figurer sur les contrats ?"
-      },
-      {
-        "url": "/fiche-service-public/que-contient-le-contrat-dinterim"
       },
       {
         "url": "/fiche-ministere-travail/le-contrat-de-travail-temporaire#Quelle-est-la-duree-du-contrat",
@@ -5048,30 +4961,10 @@
     "position": 94,
     "refs": [
       {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-1-Pour-quels-litiges",
-        "title": "Le recours devant les \"Prud’hommes\" : pour quels litiges ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-3-Comment-les-saisir-Dans-quel-delai",
-        "title": "Le recours devant les \"Prud’hommes\" : comment les saisir ? dans quel délai ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-4-Que-faire-en-cas-d-urgence",
-        "title": "Le recours devant les \"Prud’hommes\" : que faire en cas d’urgence ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-5-Comment-se-deroule-la-procedure",
-        "title": "Le recours devant les \"Prud’hommes\" : comment se déroule la procédure ?"
-      },
-      {
         "url": "/fiche-service-public/conseil-de-prudhommes-cph-deroulement-dune-affaire"
       },
       {
         "url": "/fiche-service-public/quels-sont-les-recours-possibles-apres-un-jugement-du-conseil-de-prudhommes"
-      },
-      {
-        "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-recours-devant-les-prudhommes#Question-2-Un-avocat-est-il-obligatoire-Qu-est-ce-qu-un-defenseur-nbsp",
-        "title": "Le recours devant les \"Prud’hommes\" : un avocat est-il obligatoire ? qu’est-ce qu’un défenseur syndical ?"
       },
       {
         "url": "/fiche-service-public/quest-ce-quun-defenseur-syndical",
@@ -5249,10 +5142,6 @@
       {
         "url": "/fiche-ministere-travail/allocation-daide-au-retour-a-lemploi-are#Quelles-sont-les-professions-soumises-a-des-regles-specifiques-nbsp",
         "title": "ARE : quelles sont les professions soumises à des règles spécifiques ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/allocation-daide-au-retour-a-lemploi-are#En-quoi-consiste-le-principe-des-droits-rechargeables",
-        "title": "ARE : en quoi consiste le principe des droits \"rechargeables\" ?"
       },
       {
         "url": "/fiche-ministere-travail/periodes-de-mise-en-situation-en-milieu-professionnel-pmsmp#Qui-peut-beneficier-d-une-PMSMP",
@@ -5591,9 +5480,6 @@
         "url": "/fiche-service-public/evaluation-du-salarie"
       },
       {
-        "url": "/fiche-service-public/lanceur-dalerte-dans-lentreprise-quelles-sont-les-regles"
-      },
-      {
         "url": "/fiche-service-public/un-employeur-peut-il-sinformer-sur-le-permis-de-conduire-de-son-salarie",
         "title": "Un employeur peut-il s'informer sur le permis de conduire de son salarié ?"
       }
@@ -5662,22 +5548,6 @@
         "title": "Simulateur de durée de préavis de licenciement"
       },
       {
-        "url": "/fiche-ministere-travail/la-protection-en-cas-de-licenciement#Quels-sont-les-salaries-proteges",
-        "title": "La protection en cas de licenciement : quels sont les salariés protégés ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-protection-en-cas-de-licenciement#Quelle-est-la-duree-d-application-du-statut-protecteur",
-        "title": "La protection en cas de licenciement : quelle est la durée d’application du statut protecteur ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-protection-en-cas-de-licenciement#Quels-sont-les-moyens-de-recours",
-        "title": "La protection en cas de licenciement : quels sont les moyens de recours ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-protection-en-cas-de-licenciement#Quelle-est-la-protection-en-cas-de-transfert-d-activite",
-        "title": "La protection en cas de licenciement : quelle est la protection en cas de transfert d’activité ?"
-      },
-      {
         "url": "/fiche-ministere-travail/lindemnite-legale-de-licenciement#Comment-calculer-le-salaire-de-reference",
         "title": "L’indemnité légale de licenciement : comment calculer le salaire de référence ?"
       },
@@ -5710,12 +5580,12 @@
         "title": " Quelle est la durée de préavis en cas de licenciement ?"
       },
       {
-        "url": "/contribution/le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
-        "title": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?"
-      },
-      {
         "url": "/fiche-service-public/peut-on-beneficier-dheures-de-recherche-demploi-pendant-le-preavis-de-licenciement",
         "title": "Peut-on bénéficier d'heures de recherche d'emploi pendant le préavis de licenciement ?"
+      },
+      {
+        "url": "/fiche-service-public/comment-calculer-lanciennete-pour-le-montant-de-lindemnite-de-licenciement",
+        "title": ""
       }
     ],
     "slug": "84-licenciement",
@@ -6068,9 +5938,6 @@
         "url": "/fiche-service-public/licenciement-dune-salariee-enceinte-ou-en-conge-de-maternite"
       },
       {
-        "url": "/fiche-service-public/abandon-de-poste-quelles-sont-les-regles-dans-le-secteur-prive"
-      },
-      {
         "url": "/fiche-service-public/un-salarie-peut-il-etre-licencie-a-cause-du-retrait-de-son-permis-de-conduire"
       },
       {
@@ -6078,9 +5945,6 @@
       },
       {
         "url": "/fiche-service-public/licenciement-illegal-le-salarie-doit-il-rembourser-les-indemnites-de-chomage"
-      },
-      {
-        "url": "/fiche-service-public/comment-calculer-lanciennete-en-matiere-dindemnite-de-licenciement"
       },
       {
         "url": "/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi"
@@ -6772,10 +6636,6 @@
         "title": "Temps de pause du salarié dans l'entreprise : quelles sont les règles ?"
       },
       {
-        "url": "/fiche-service-public/pause-dejeuner-quelles-sont-les-regles",
-        "title": "Pause déjeuner : quelles sont les règles ?"
-      },
-      {
         "url": "/fiche-service-public/pause-dejeuner-du-salarie-quelles-sont-les-regles",
         "title": "Pause déjeuner du salarié : quelles sont les règles ?"
       }
@@ -6946,20 +6806,12 @@
     "position": 528,
     "refs": [
       {
-        "url": "/fiche-service-public/exonerations-dimpots-sur-les-benefices-en-zone-franche-urbaine-territoire-entrepreneur-zfu-te",
-        "title": "Exonérations d'impôts sur les bénéfices en zone franche urbaine-territoire entrepreneur (ZFU-TE)"
-      },
-      {
         "url": "/fiche-service-public/allegements-fiscaux-dans-les-quartiers-prioritaires-de-la-ville-qpv",
         "title": "Allègements fiscaux dans les quartiers prioritaires de la ville (QPV)"
       },
       {
         "url": "/fiche-service-public/exonerations-dimpots-en-zone-de-revitalisation-rurale-zrr",
         "title": "Exonérations d'impôts en zone de revitalisation rurale (ZRR)"
-      },
-      {
-        "url": "/fiche-service-public/quel-est-le-regime-dexoneration-de-limpot-sur-les-benefices-dans-les-zfu-te-avant-2015",
-        "title": "Quel est le régime d'exonération de l'impôt sur les bénéfices dans les ZFU-TE avant 2015 ?"
       },
       {
         "url": "/fiche-service-public/exonerations-dans-un-bassin-demploi-a-redynamiser-ber",
@@ -7445,9 +7297,6 @@
         "title": "A quelles informations le CSE a-t-il accès ?"
       },
       {
-        "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-chsct-ou-le-cse"
-      },
-      {
         "url": "/fiche-ministere-travail/les-delegues-du-personnel-missions-et-moyens-daction#Dans-quels-cas-les-delegues-du-personnel-assument-ils-les-missions-des-nbsp",
         "title": "Les délégués du personnel : dans quels cas les délégués du personnel assument-ils les missions des autres institutions représentatives du personnel ?"
       },
@@ -7462,10 +7311,6 @@
       {
         "url": "/fiche-ministere-travail/cse-information-et-consultation#Quel-est-le-processus-de-consultation",
         "title": "CSE : quel est le processus de consultation ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/cse-definition-cadre-et-calendrier-de-mise-en-place#A-quelle-date-va-se-mettre-en-place-le-CSE",
-        "title": "A quelle date va se mettre en place le CSE ?"
       },
       {
         "url": "/fiche-ministere-travail/le-cse-dans-les-entreprises-de-11-a-49-salaries#Comment-mettre-en-place-le-CSE",
@@ -7604,126 +7449,12 @@
         "title": "Conseil d’entreprise : quelles sont les attributions d’un conseil d’entreprise ?"
       },
       {
-        "url": "/fiche-service-public/delegation-unique-du-personnel-dup"
-      },
-      {
-        "url": "/fiche-service-public/instance-unique-des-representants-du-personnel"
-      },
-      {
-        "url": "/fiche-service-public/peut-on-encore-profiter-du-ce-si-on-ne-travaille-plus-dans-lentreprise"
-      },
-      {
-        "url": "/fiche-service-public/comite-dentreprise-ce"
-      },
-      {
-        "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-comite-dentreprise-ce"
-      },
-      {
-        "url": "/fiche-service-public/quels-sont-les-moyens-daction-du-comite-dentreprise-ce"
-      },
-      {
-        "url": "/fiche-service-public/en-quoi-consiste-le-droit-dalerte-du-comite-dentreprise-ce"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#EN-BREF",
-        "title": "Le délégué du personnel en bref : en bref…"
-      },
-      {
         "url": "/fiche-ministere-travail/les-delegues-du-personnel-missions-et-moyens-daction#Quels-sont-les-moyens-des-delegues-du-personnel",
         "title": "Les délégués du personnel : quels sont les moyens des délégués du personnel ?"
       },
       {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#Quelles-entreprises",
-        "title": "Le délégué du personnel en bref : quelles entreprises ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#Les-attributions-des-delegues-du-personnel",
-        "title": "Le délégué du personnel en bref : les attributions des délégués du personnel"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#Les-moyens-alloues-au-delegue-du-personnel",
-        "title": "Le délégué du personnel en bref : les moyens alloués au délégué du personnel"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#Formation-des-delegues-du-personnel-dans-le-domaine-de-la-securite-et-de-la-nbsp",
-        "title": "Le délégué du personnel en bref : formation des délégués du personnel dans le domaine de la sécurité et de la santé"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#Protection-des-delegues-du-personnel",
-        "title": "Le délégué du personnel en bref : protection des délégués du personnel"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-delegue-du-personnel-en-bref#References",
-        "title": "Le délégué du personnel en bref : références"
-      },
-      {
-        "url": "/fiche-service-public/delegue-du-personnel-dp"
-      },
-      {
         "url": "/fiche-ministere-travail/les-delegues-du-personnel-missions-et-moyens-daction#Quelles-sont-les-missions-des-delegues-du-personnel",
         "title": "Les délégués du personnel : quelles sont les missions des délégués du personnel ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-formation-des-delegues-du-personnel-en-sante-et-securite-au-travail#La-formation-des-delegues-du-personnel",
-        "title": "La formation des délégués du personnel en santé et sécurité au travail : la formation des délégués du personnel"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-formation-des-delegues-du-personnel-en-sante-et-securite-au-travail#La-formation-des-chefs-d-entreprise",
-        "title": "La formation des délégués du personnel en santé et sécurité au travail : la formation des chefs d’entreprise"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-formation-des-delegues-du-personnel-en-sante-et-securite-au-travail#D-autres-opportunites-pour-developper-les-competences-des-delegues-du-nbsp",
-        "title": "La formation des délégués du personnel en santé et sécurité au travail : d‘autres opportunités pour développer les compétences des délégués du personnel"
-      },
-      {
-        "url": "/fiche-service-public/comite-dhygiene-de-securite-et-des-conditions-de-travail-chsct"
-      },
-      {
-        "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-chsct"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-comite-dhygiene-de-securite-et-des-conditions-de-travail-chsct#Quel-est-le-role-du-CHSCT",
-        "title": "Quel est le rôle du CHSCT ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-comite-dhygiene-de-securite-et-des-conditions-de-travail-chsct#La-mise-en-place-des-CHSCT",
-        "title": "La mise en place des CHSCT ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-etablissements-assujettis#Sont-assujettis",
-        "title": "Les établissements assujettis : sont assujettis"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-etablissements-assujettis#Ne-sont-pas-assujettis",
-        "title": "Les établissements assujettis : ne sont pas assujettis"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-recours-a-un-expert-externe#Les-conditions-de-designation-le-choix-de-l-expert-et-sa-remuneration",
-        "title": "Le recours à un expert externe : les conditions de désignation, le choix de l’expert et sa rémunération"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-recours-a-un-expert-externe#La-mission-de-l-expert-sa-duree-et-les-conditions-de-sa-realisation",
-        "title": "Le recours à un expert externe : la mission de l’expert, sa durée et les conditions de sa réalisation"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-procedure-de-designation#Le-college-designatif",
-        "title": "La procédure de désignation : le collège désignatif"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-procedure-de-designation#Les-modalites-de-designation",
-        "title": "La procédure de désignation : les modalités de désignation"
-      },
-      {
-        "url": "/fiche-ministere-travail/exemples-dagissements-ou-domissions-constitutifs-du-delit-dentrave#Sur-la-constitution-d-un-CHSCT",
-        "title": "Exemples d’agissements ou d’omissions constitutifs du délit d’entrave : sur la constitution d’un chsct"
-      },
-      {
-        "url": "/fiche-ministere-travail/exemples-dagissements-ou-domissions-constitutifs-du-delit-dentrave#Sur-le-fonctionnement-du-CHSCT",
-        "title": "Exemples d’agissements ou d’omissions constitutifs du délit d’entrave : sur le fonctionnement du chsct"
-      },
-      {
-        "url": "/fiche-ministere-travail/exemples-dagissements-ou-domissions-constitutifs-du-delit-dentrave#Sur-le-fonctionnement-du-CHSCT-a-travers-ses-membres",
-        "title": "Exemples d’agissements ou d’omissions constitutifs du délit d’entrave : sur le fonctionnement du chsct à travers ses membres"
       },
       {
         "url": "/fiche-ministere-travail/certification-des-competences-des-representants-du-personnel-et-des-mandataires-syndicaux#Qui-est-concerne",
@@ -7774,42 +7505,6 @@
         "title": "Élections professionnelles : obligations de l'employeur"
       },
       {
-        "url": "/fiche-ministere-travail/questions-reponses-le-comite-social-et-economique",
-        "title": "Questions-Réponses | Le Comité social et économique"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-missions-du-chsct-exercees-par-le-delegue-du-personnel",
-        "title": "Les missions du CHSCT exercées par le délégué du personnel"
-      },
-      {
-        "url": "/fiche-ministere-travail/calcul-de-leffectif-assujettissant-a-la-mise-en-place-dun-chsct",
-        "title": "Calcul de l’effectif assujettissant à la mise en place d’un CHSCT."
-      },
-      {
-        "url": "/fiche-ministere-travail/chsct-et-entreprises-exterieures",
-        "title": "CHSCT et entreprises extérieures"
-      },
-      {
-        "url": "/fiche-ministere-travail/consultation-exemples-de-decisions-damenagement-important-modifiant-les-conditions-dhygiene-et-de-securite-ou-les-conditions-de-travail-donnant-lieu-a-la-consultation-du-chsct",
-        "title": "Consultation - Exemples de décisions d’aménagement important modifiant les conditions d’hygiène et de sécurité ou les conditions de travail donnant lieu à la consultation du CHSCT"
-      },
-      {
-        "url": "/fiche-ministere-travail/les-moyens-materiels-du-chsct",
-        "title": "Les moyens matériels du CHSCT"
-      },
-      {
-        "url": "/fiche-ministere-travail/visites-dinspection",
-        "title": "Visites d’inspection"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-chsct-et-le-droit-dalerte-particulier",
-        "title": "Le CHSCT et le droit d’alerte particulier"
-      },
-      {
-        "url": "/fiche-service-public/quels-sont-les-moyens-daction-du-comite-social-et-economique-cse",
-        "title": "Quels sont les moyens d'action du comité social et économique (CSE) ?"
-      },
-      {
         "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-cse-ex-chsct",
         "title": "Hygiène et sécurité : quand faut-il consulter le CSE (ex-CHSCT) ?"
       },
@@ -7844,6 +7539,10 @@
       {
         "url": "/fiche-service-public/en-quoi-consiste-le-droit-dalerte-du-comite-social-et-economique-cse",
         "title": "En quoi consiste le droit d'alerte du comité social et économique (CSE) ?"
+      },
+      {
+        "url": "/fiche-service-public/de-quels-moyens-dispose-le-comite-social-et-economique-cse",
+        "title": ""
       },
       {
         "url": "/fiche-ministere-travail/cse-definition-et-cadre-de-mise-en-place",
@@ -7962,19 +7661,10 @@
         "url": "/fiche-service-public/retraite-dans-le-prive-rachat-de-trimestres"
       },
       {
-        "url": "/fiche-service-public/retraite-dans-le-prive-majoration-dassurance-pour-enfant"
-      },
-      {
         "url": "/fiche-service-public/pension-de-retraite-dun-salarie-quel-est-le-montant-maximum"
       },
       {
         "url": "/fiche-service-public/retraite-dans-le-prive-majoration-du-montant-de-la-pension-de-retraite"
-      },
-      {
-        "url": "/fiche-service-public/retraite-du-salarie-duree-dassurance"
-      },
-      {
-        "url": "/fiche-service-public/retraite-du-salarie-calcul-de-la-pension-de-retraite"
       },
       {
         "url": "/fiche-service-public/les-periodes-de-stage-sont-elles-prises-en-compte-pour-la-retraite"
@@ -7989,16 +7679,7 @@
         "url": "/fiche-service-public/assure-polypensionne-comment-est-calcule-le-montant-de-votre-retraite"
       },
       {
-        "url": "/fiche-service-public/retraite-du-salarie-majoration-dassurance-pour-conge-parental-deducation"
-      },
-      {
-        "url": "/fiche-service-public/retraite-du-salarie-majoration-dassurance-pour-enfant-handicape"
-      },
-      {
         "url": "/fiche-service-public/travailler-apres-67-ans-quelles-consequences-pour-la-retraite"
-      },
-      {
-        "url": "/fiche-service-public/un-salarie-peut-il-se-faire-rembourser-ses-cotisations-de-retraite"
       },
       {
         "url": "/fiche-service-public/quest-ce-que-la-liquidation-unique-des-retraites-lura-des-polypensionnes"
@@ -8009,10 +7690,6 @@
       {
         "url": "/contribution/a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
         "title": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?"
-      },
-      {
-        "url": "/fiche-service-public/retraite-dans-le-prive-retraite-complementaire-agirc-arrco",
-        "title": "Retraite dans le privé : retraite complémentaire Agirc-Arrco"
       },
       {
         "url": "/fiche-service-public/combien-de-trimestres-faut-il-avoir-cotise-pour-avoir-sa-retraite-a-taux-plein",
@@ -8053,6 +7730,10 @@
       {
         "url": "/fiche-service-public/duree-dassurance-retraite-du-salarie-du-secteur-prive",
         "title": "Durée d'assurance retraite du salarié du secteur privé"
+      },
+      {
+        "url": "/fiche-service-public/remboursement-des-cotisations-retraite-du-salarie-est-ce-possible",
+        "title": ""
       }
     ],
     "slug": "85-retraite",
@@ -8892,10 +8573,6 @@
         "title": "Valeurs limites d’exposition professionnelle (risques chimiques)"
       },
       {
-        "url": "/fiche-ministere-travail/recours-a-un-expert-en-risques-technologiques",
-        "title": "Recours à un expert en risques technologiques"
-      },
-      {
         "url": "/fiche-ministere-travail/bruit-en-milieu-de-travail",
         "title": "Bruit en milieu de travail"
       }
@@ -8934,31 +8611,8 @@
         "url": "/fiche-service-public/que-risque-un-salarie-qui-ne-respecte-pas-les-consignes-de-securite"
       },
       {
-        "url": "/fiche-service-public/quest-ce-que-la-force-majeure"
-      },
-      {
         "url": "/fiche-service-public/lanceur-dalerte-dans-lentreprise",
         "title": "Lanceur d'alerte dans l'entreprise"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-prevention-des-risques-dans-les-etablissements-a-haut-risque-industriel#Associer-la-sous-traitance-a-la-securite",
-        "title": "La prévention des risques dans les établissements à haut risque industriel : associer la sous-traitance à la sécurité"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-prevention-des-risques-dans-les-etablissements-a-haut-risque-industriel#Former-les-intervenants-exterieurs",
-        "title": "La prévention des risques dans les établissements à haut risque industriel : former les intervenants extérieurs"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-prevention-des-risques-dans-les-etablissements-a-haut-risque-industriel#Renforcer-les-prerogatives-du-CHSCT",
-        "title": "La prévention des risques dans les établissements à haut risque industriel : renforcer les prérogatives du chsct"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-prevention-des-risques-dans-les-etablissements-a-haut-risque-industriel#Les-plans-de-prevention-des-risques-technologiques-PPRT",
-        "title": "La prévention des risques dans les établissements à haut risque industriel : les plans de prévention des risques technologiques (pprt)"
-      },
-      {
-        "url": "/fiche-ministere-travail/la-prevention-des-risques-dans-les-etablissements-a-haut-risque-industriel#Mise-en-place-des-comites-interentreprises-de-sante-et-de-securite-au-nbsp",
-        "title": "La prévention des risques dans les établissements à haut risque industriel : mise en place des comités interentreprises de santé et de sécurité au travail (cisst)"
       },
       {
         "url": "/fiche-ministere-travail/formation-du-coordonnateur-en-matiere-de-securite-et-de-protection-de-la-sante-sps",
@@ -9153,12 +8807,6 @@
         "url": "/fiche-service-public/un-particulier-peut-il-payer-un-auto-entrepreneur-par-cesu-prefinance"
       },
       {
-        "url": "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle"
-      },
-      {
-        "url": "/fiche-service-public/saisie-sur-salaire-les-obligations-de-lemployeur"
-      },
-      {
         "url": "/fiche-ministere-travail/5-questions-reponses-sur-le-versement-du-salaire#t1-Comment-est-fixe-le-salaire-minimum",
         "title": "Le versement du salaire : comment est fixé le salaire minimum ?"
       },
@@ -9293,26 +8941,6 @@
       {
         "url": "/fiche-service-public/saisie-sur-salaire-quelles-sont-les-obligations-de-lemployeur",
         "title": ""
-      },
-      {
-        "url": "/fiche-ministere-travail/le-smic#A-qui-s-applique-le-SMIC",
-        "title": "Le SMIC : à qui s’applique le smic ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-smic#Comment-verifier-que-le-SMIC-est-atteint",
-        "title": "Le SMIC : comment vérifier que le smic est atteint ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-smic#SMIC-et-minimum-garanti-ne-pas-confondre",
-        "title": "Le SMIC : smic et minimum garanti : ne pas confondre"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-smic#Quelles-sanctions-sont-applicables-si-le-SMIC-n-est-pas-atteint-nbsp",
-        "title": "Le SMIC : quelles sanctions sont applicables si le smic n’est pas atteint ?"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-smic#Comment-le-SMIC-est-il-revalorise",
-        "title": "Le SMIC : comment le smic est-il revalorisé ?"
       },
       {
         "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020",
@@ -9524,14 +9152,6 @@
         "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant"
       },
       {
-        "url": "/modeles-de-courriers/attestation-sur-lhonneur-deplacement-derogatoire",
-        "title": "Attestation sur l’honneur : déplacement dérogatoire"
-      },
-      {
-        "url": "/modeles-de-courriers/justificatif-de-lemployeur-de-deplacement-professionnel",
-        "title": "Justificatif de l’employeur de déplacement professionnel"
-      },
-      {
         "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
         "title": "Ministère du travail : notre dossier sur le coronavirus"
       },
@@ -9544,24 +9164,12 @@
         "title": "Peut-on refuser la mutuelle ou la prévoyance de son entreprise ?"
       },
       {
-        "url": "/fiche-service-public/mutuelle-sante-dentreprise-les-obligations-de-lemployeur",
-        "title": "Mutuelle santé d'entreprise : les obligations de l'employeur"
-      },
-      {
         "url": "/fiche-service-public/droit-du-travail-secteur-prive-quest-ce-que-la-force-majeure",
         "title": "Droit du travail (secteur privé) : qu'est-ce que la force majeure ?"
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
         "title": "Coronavirus : Questions/réponses pour les entreprises et les salariés"
-      },
-      {
-        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
-        "title": "Coronavirus : je suis salarié"
-      },
-      {
-        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
-        "title": "Coronavirus : je suis employeur"
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-covid-19-fiches-conseils-metiers-pour-les-salaries-et-les-employeurs",
@@ -9681,14 +9289,7 @@
         "url": "/fiche-service-public/un-salarie-peut-il-etre-dispense-de-la-visite-dinformation-et-de-prevention"
       },
       {
-        "url": "/fiche-service-public/un-salarie-saisonnier-peut-il-etre-dispense-dun-examen-medical-dembauche"
-      },
-      {
         "url": "/fiche-service-public/medecine-du-travail-quest-ce-que-le-suivi-individuel-renforce"
-      },
-      {
-        "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Quel-suivi-pour-les-salaries-affectes-sur-des-postes-a-risque-nbsp",
-        "title": "Le suivi de l’état de santé des salariés : quel suivi pour les salariés affectés sur des postes à risque ?"
       },
       {
         "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Visite-de-prereprise-et-de-reprise-du-travail-dans-quels-cas-nbsp",
@@ -10187,10 +9788,6 @@
       },
       {
         "url": "/fiche-service-public/recrutement-dun-travailleur-etranger-non-europeen"
-      },
-      {
-        "url": "/fiche-service-public/salari-etranger-quest-ce-que-lopposabilite-de-la-situation-de-lemploi",
-        "title": "Salari�� étranger : qu'est-ce que l'opposabilité de la situation de l'emploi ?"
       }
     ],
     "slug": "114-travailleurs-etrangers",

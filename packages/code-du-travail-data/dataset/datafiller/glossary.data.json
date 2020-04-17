@@ -1199,6 +1199,16 @@
     ]
   },
   {
+    "title": "état d'urgence sanitaire",
+    "slug": "etat-durgence-sanitaire",
+    "abbrs": [],
+    "variants": [],
+    "definition": "<p>Conformément à la loi du 23 mars 2020, l’état d’urgence sanitaire a débuté le 24 mars 2020 et doit se terminer le 24 mai 2020. Toutefois, cette date pourrait être retardée.</p>",
+    "refs": [
+      {}
+    ]
+  },
+  {
     "title": "Extrait kbis ",
     "slug": "extrait-kbis",
     "abbrs": [

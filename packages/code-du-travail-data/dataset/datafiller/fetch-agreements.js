@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import kaliData from "@socialgouv/kali-data/data/index.json";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
-import contributions from "../contributions/contributions.data.json";
+import contributions from "@socialgouv/contributions-data/data/contributions.json";
 import remark from "remark";
 import html from "remark-html";
 import slugify from "../../slugify";
@@ -13,19 +13,19 @@ const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/ccns/records?_sort=title`;
-const createSorter = prop => ({ [prop]: a }, { [prop]: b }) => a - b;
+const createSorter = (prop) => ({ [prop]: a }, { [prop]: b }) => a - b;
 
 async function fetchAgreements() {
   const ccnBlockRecords = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
-    .then(res => res.json())
-    .then(json => json.data);
+    .then((res) => res.json())
+    .then((json) => json.data);
 
   return kaliData
     .sort((a, b) => parseInt(a.num, 10) - parseInt(b.num, 10))
-    .map(agreement => {
+    .map((agreement) => {
       const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
       const blocksData = ccnBlockRecords.find(
-        data => data.cid === agreement.id,
+        (data) => data.cid === agreement.id
       );
       return {
         ...getCCNInfo(agreement),
@@ -43,7 +43,7 @@ export { fetchAgreements };
 
 if (require.main === module) {
   fetchAgreements()
-    .then(data => console.log(JSON.stringify(data, null, 2)))
+    .then((data) => console.log(JSON.stringify(data, null, 2)))
     .catch(console.error);
 }
 
@@ -67,8 +67,8 @@ function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
  * Get CCn detailed informations about articles and texts
  */
 function getNbText(agreementTree) {
-  const texteDeBase = find(agreementTree, node =>
-    node.data.title.startsWith("Texte de base"),
+  const texteDeBase = find(agreementTree, (node) =>
+    node.data.title.startsWith("Texte de base")
   );
   if (!texteDeBase) {
     return;
@@ -91,12 +91,12 @@ function getContributionAnswers(agreementNum) {
   return contributions
     .map(({ title, slug, index, answers, breadcrumbs }) => {
       const [answer] = answers.conventions.filter(
-        ({ idcc }) => parseInt(idcc) === parseInt(agreementNum),
+        ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
       );
       const unhandledRegexp = /La convention collective ne prévoit rien sur ce point/i;
       if (answer && !unhandledRegexp.test(answer.markdown)) {
         let rootTheme = null;
-        if (breadcrumbs.length > 0) {
+        if (breadcrumbs && breadcrumbs.length > 0) {
           rootTheme = breadcrumbs[0].label;
         }
 
@@ -125,14 +125,14 @@ function getArticleByBlock(groups, agreementTree) {
     .map(({ id, selection }) => ({
       bloc: id,
       articles: selection
-        .map(articleId => {
+        .map((articleId) => {
           const node = find(
             treeWithParents,
-            node => node.data.id === articleId,
+            (node) => node.data.id === articleId
           );
           if (!node) {
             console.error(
-              `${articleId} not found in idcc ${agreementTree.data.num}`,
+              `${articleId} not found in idcc ${agreementTree.data.num}`
             );
           }
           return node

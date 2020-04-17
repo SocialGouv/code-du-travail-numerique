@@ -3142,18 +3142,18 @@
         "position": 4
       },
       {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quand-debute-l-indemnisation-complementaire",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quand débute l’indemnisation complémentaire ?",
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quelles-sont-les-beneficiaires-et-les-conditions-a-remplir",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : quelles sont les bénéficiaires et les conditions à remplir ?",
         "position": 5
       },
       {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quelles-maladies-quels-accidents-ouvrent-droit-a-l-indemnisation-nbsp",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quelles maladies, quels accidents ouvrent droit à l’indemnisation complémentaire de l’employeur ?",
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quand-debute-l-indemnisation-complementaire",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : quand débute l’indemnisation complémentaire ?",
         "position": 6
       },
       {
-        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Quels-salaries-ont-droit-a-cette-indemnisation-complementaire-nbsp",
-        "title": "L’indemnisation légale des absences pour maladie ou accident : quels salariés ont droit à cette indemnisation complémentaire ?",
+        "url": "/fiche-ministere-travail/lindemnisation-legale-des-absences-pour-maladie-ou-accident#Des-controles-sont-ils-possibles",
+        "title": "L’indemnisation légale des absences pour maladie ou accident : des contrôles sont-ils possibles ?",
         "position": 7
       },
       {
@@ -6118,51 +6118,78 @@
     "refs": [
       {
         "url": "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
-        "title": "Ministère du travail : notre dossier sur le coronavirus"
+        "title": "Ministère du travail : notre dossier sur le coronavirus",
+        "position": 0
       },
       {
-        "url": "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
-        "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant"
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Covid-19-Je-suis-employeur",
+        "title": "Coronavirus : covid 19 : je suis employeur",
+        "position": 1
+      },
+      {
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Covid-19-Je-suis-salarie",
+        "title": "Coronavirus : covid 19 : je suis salarié",
+        "position": 2
       },
       {
         "url": "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)"
+        "title": "Activité partielle : démarches de l'employeur (chômage partiel ou technique)",
+        "position": 3
       },
       {
-        "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
-        "title": "Télétravail dans le secteur privé"
-      },
-      {
-        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
-        "title": "Coronavirus : je suis salarié"
-      },
-      {
-        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
-        "title": "Coronavirus : je suis employeur"
+        "url": "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
+        "title": "Attestation sur l’honneur : arrêt de travail pour la garde d’enfant",
+        "position": 4
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#Pour-resumer",
-        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer"
+        "title": "Coronavirus - COVID-19 et monde du Travail : pour résumer",
+        "position": 5
       },
       {
-        "url": "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
-        "title": "Mesures exceptionnelles de soutien aux intermittents et salariés du secteur culturel dans le cadre de la crise sanitaire"
+        "url": "/fiche-ministere-travail/coronavirus-covid-19-fiches-conseils-metiers-pour-les-salaries-et-les-employeurs",
+        "title": "Coronavirus-COVID-19 - Fiches conseils métiers pour les salariés et les employeurs",
+        "position": 6
+      },
+      {
+        "url": "/external/coronavirus-obligations-de-lemployeur",
+        "title": "Coronavirus : obligations de l’employeur",
+        "position": 7
+      },
+      {
+        "url": "/fiche-service-public/teletravail-dans-le-secteur-prive",
+        "title": "Télétravail dans le secteur privé",
+        "position": 8
+      },
+      {
+        "url": "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse",
+        "title": "Un salarié peut-il refuser de travailler dans une situation dangereuse ?",
+        "position": 9
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-suspension-de-laccueil-dans-les-cfa-et-les-organismes-de-formation-et-continuite-dactivite-a-distance",
-        "title": "CORONAVIRUS : suspension de l’accueil dans les CFA et les organismes de formation et continuité d’activité à distance"
+        "title": "CORONAVIRUS : suspension de l’accueil dans les CFA et les organismes de formation et continuité d’activité à distance",
+        "position": 10
+      },
+      {
+        "url": "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
+        "title": "Mesures exceptionnelles de soutien aux intermittents et salariés du secteur culturel dans le cadre de la crise sanitaire",
+        "position": 11
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-covid-19-et-monde-du-travail#t3-Les-restaurants-d-entreprise-peuvent-rester-ouverts-mais-doivent-etre-nbsp",
-        "title": "Coronavirus - COVID-19 et monde du Travail : 3. les restaurants d’entreprise peuvent rester ouverts, mais doivent être aménagés pour laisser un mètre de distance entre les places à table"
+        "title": "Coronavirus - COVID-19 et monde du Travail : 3. les restaurants d’entreprise peuvent rester ouverts, mais doivent être aménagés pour laisser un mètre de distance entre les places à table",
+        "position": 12
       },
       {
         "url": "/fiche-ministere-travail/conventions-de-fne-formation",
-        "title": "Conventions de FNE-Formation"
+        "title": "Conventions de FNE-Formation",
+        "position": 13
       },
       {
         "url": "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
-        "title": "Coronavirus – COVID-19 | Questions-réponses Mon Compte Formation"
+        "title": "Coronavirus – COVID-19 | Questions-réponses Mon Compte Formation",
+        "position": 14
       }
     ],
     "variants": [
@@ -6205,59 +6232,69 @@
         "position": 2
       },
       {
-        "url": "/fiche-ministere-travail/cse-election-de-la-delegation-du-personnel",
-        "title": "CSE : élection de la délégation du personnel",
+        "url": "/fiche-ministere-travail/cse-election-de-la-delegation-du-personnel#Qui-doit-prendre-l-initiative-d-organiser-les-elections",
+        "title": "CSE : qui doit prendre l’initiative d’organiser les élections ?",
+        "position": 3
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-election-de-la-delegation-du-personnel#Organiser-les-elections-quelles-formalites-accomplir",
+        "title": "CSE : organiser les élections : quelles formalités accomplir ?",
         "position": 4
+      },
+      {
+        "url": "/fiche-ministere-travail/cse-election-de-la-delegation-du-personnel#Comment-se-deroulent-les-deux-tours-de-l-election",
+        "title": "CSE : comment se déroulent les deux tours de l’élection ?",
+        "position": 5
       },
       {
         "url": "/fiche-ministere-travail/cse-information-et-consultation",
         "title": "CSE : information et consultation",
-        "position": 5
+        "position": 6
       },
       {
         "url": "/fiche-ministere-travail/cse-information-et-consultation#Quel-est-le-processus-de-consultation",
         "title": "CSE : quel est le processus de consultation ?",
-        "position": 6
+        "position": 7
       },
       {
         "url": "/fiche-ministere-travail/cse-attributions",
         "title": "CSE : attributions",
-        "position": 7
+        "position": 8
       },
       {
         "url": "/fiche-ministere-travail/cse-fonctionnement-et-moyens-dactions",
         "title": "CSE : fonctionnement et moyens d’actions",
-        "position": 8
+        "position": 9
       },
       {
         "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-cse-ex-chsct",
         "title": "Hygiène et sécurité : quand faut-il consulter le CSE (ex-CHSCT) ?",
-        "position": 11
+        "position": 10
       },
       {
         "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-comite-social-et-economique-cse",
         "title": "Comment se déroulent les réunions du comité social et économique (CSE) ?",
-        "position": 12
+        "position": 11
       },
       {
         "url": "/fiche-ministere-travail/cse-commissions-sante-securite-et-conditions-de-travail-cssct",
         "title": "CSE : commissions santé, sécurité et conditions de travail (CSSCT)",
-        "position": 14
+        "position": 12
       },
       {
         "url": "/fiche-ministere-travail/cse-recours-a-des-experts#A-qui-revient-la-prise-en-charge-du-cout-de-l-expertise",
         "title": "CSE : a qui revient la prise en charge du coût de l’expertise ?",
-        "position": 15
+        "position": 13
       },
       {
         "url": "/fiche-ministere-travail/cse-fonctionnement-et-moyens-dactions#Quelles-sont-les-dispositions-communes-a-toutes-les-entreprises-quelle-que-nbsp",
         "title": "CSE : quelles sont les dispositions communes à toutes les entreprises, quelle que soit leur taille ?",
-        "position": 16
+        "position": 14
       },
       {
         "url": "/fiche-ministere-travail/cse-attributions-du-cse-en-matiere-de-sante-de-securite-et-de-conditions-de-travail#Quelles-sont-les-dispositions-applicables-dans-les-entreprises-de-moins-de-nbsp",
         "title": "CSE : quelles sont les dispositions applicables dans les entreprises de moins de 50 salariés ?",
-        "position": 18
+        "position": 15
       }
     ],
     "variants": [
@@ -7163,8 +7200,8 @@
     "theme": "a91437fb-e493-4e18-8f7d-7ffe8d16ff1f",
     "refs": [
       {
-        "url": "/contribution/le-preavis-de-licenciement-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
-        "title": "Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?",
+        "url": "/contribution/le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+        "title": "Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?",
         "position": 1
       },
       {
@@ -7523,8 +7560,8 @@
         "position": 3
       },
       {
-        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
-        "title": "Coronavirus : je suis salarié",
+        "url": "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Covid-19-Je-suis-salarie",
+        "title": "Coronavirus : covid 19 : je suis salarié",
         "position": 4
       }
     ],
@@ -9415,11 +9452,6 @@
         "url": "/fiche-service-public/un-salarie-peut-il-choisir-la-date-de-son-depart-a-la-retraite",
         "title": "Un salarié peut-il choisir la date de son départ à la retraite ?",
         "position": 7
-      },
-      {
-        "url": "/fiche-service-public/retraite-du-salarie-calcul-de-la-pension-de-retraite",
-        "title": "Retraite du salarié : calcul de la pension de retraite",
-        "position": 8
       }
     ],
     "variants": [
@@ -10682,8 +10714,8 @@
         "position": 1
       },
       {
-        "url": "/fiche-service-public/abandon-de-poste-quelles-sont-les-regles-dans-le-secteur-prive",
-        "title": "Abandon de poste : quelles sont les règles dans le secteur privé ?",
+        "url": "/fiche-service-public/quest-ce-quun-abandon-de-poste-par-un-salarie-dans-le-secteur-prive",
+        "title": "Qu'est-ce qu'un abandon de poste par un salarié dans le secteur privé ?",
         "position": 2
       },
       {
@@ -11022,8 +11054,8 @@
         "position": 4
       },
       {
-        "url": "/fiche-service-public/abandon-de-poste-quelles-sont-les-regles-dans-le-secteur-prive",
-        "title": "Abandon de poste : quelles sont les règles dans le secteur privé ?",
+        "url": "/fiche-service-public/quest-ce-quun-abandon-de-poste-par-un-salarie-dans-le-secteur-prive",
+        "title": "Qu'est-ce qu'un abandon de poste par un salarié dans le secteur privé ?",
         "position": 5
       },
       {
@@ -11974,13 +12006,13 @@
         "position": 4
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#Comment-verifier-que-le-SMIC-est-atteint",
-        "title": "Le SMIC : comment vérifier que le smic est atteint ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#Comment-verifier-que-le-SMIC-est-atteint",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : comment vérifier que le smic est atteint ?",
         "position": 5
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#Comment-le-SMIC-est-il-revalorise",
-        "title": "Le SMIC : comment le smic est-il revalorisé ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#Comment-le-SMIC-est-il-revalorise",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : comment le smic est-il revalorisé ?",
         "position": 6
       }
     ],
@@ -12056,8 +12088,13 @@
     "theme": "9c2a2e39-1897-4323-9163-ffd50fefb814",
     "refs": [
       {
-        "url": "/fiche-service-public/mutuelle-sante-dentreprise-les-obligations-de-lemployeur",
-        "title": "Mutuelle santé d'entreprise : les obligations de l'employeur",
+        "url": "/fiche-service-public/mutuelle-dentreprise-complementaire-sante-obligations-de-lemployeur",
+        "title": "Mutuelle d'entreprise (complémentaire santé) : obligations de l'employeur",
+        "position": 0
+      },
+      {
+        "url": "/fiche-service-public/complementaire-sante-dentreprise-mutuelle-sante",
+        "title": "Complémentaire santé d'entreprise (mutuelle santé)",
         "position": 1
       },
       {
@@ -12160,8 +12197,8 @@
         "position": 5
       },
       {
-        "url": "/fiche-service-public/accord-de-performance-collective",
-        "title": "Accord de performance collective",
+        "url": "/fiche-service-public/quest-ce-quun-accord-de-performance-collective",
+        "title": "Qu'est-ce qu'un accord de performance collective ?",
         "position": 6
       },
       {
@@ -13298,8 +13335,8 @@
         "position": 3
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#Comment-verifier-que-le-SMIC-est-atteint",
-        "title": "Le Smic : comment vérifier que le SMIC est atteint ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#Comment-verifier-que-le-SMIC-est-atteint",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : comment vérifier que le smic est atteint ?",
         "position": 4
       },
       {
@@ -15816,23 +15853,23 @@
         "position": 1
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#A-qui-s-applique-le-SMIC",
-        "title": "Le SMIC : à qui s’applique le SMIC ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#A-qui-s-applique-le-SMIC",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : à qui s’applique le smic ?",
         "position": 2
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#Quelles-sanctions-sont-applicables-si-le-SMIC-n-est-pas-atteint-nbsp",
-        "title": "Le SMIC : quelles sanctions sont applicables si le SMIC n’est pas atteint ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#Quelles-sanctions-sont-applicables-si-le-SMIC-n-est-pas-atteint-nbsp",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : quelles sanctions sont applicables si le smic n’est pas atteint ?",
         "position": 3
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#SMIC-et-minimum-garanti-ne-pas-confondre",
-        "title": "Le SMIC : sMIC et minimum garanti : ne pas confondre",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#SMIC-et-minimum-garanti-ne-pas-confondre",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : smic et minimum garanti : ne pas confondre",
         "position": 4
       },
       {
-        "url": "/fiche-ministere-travail/le-smic#Comment-le-SMIC-est-il-revalorise",
-        "title": "Le SMIC : comment le SMIC est-il revalorisé ?",
+        "url": "/fiche-ministere-travail/le-smic-montants-en-vigueur-a-compter-du-1er-janvier-2020#Comment-le-SMIC-est-il-revalorise",
+        "title": "Le SMIC (montants en vigueur à compter du 1er janvier 2020) : comment le smic est-il revalorisé ?",
         "position": 5
       },
       {
@@ -17058,8 +17095,8 @@
         "position": 11
       },
       {
-        "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#Quel-suivi-pour-les-salaries-affectes-sur-des-postes-a-risque-nbsp",
-        "title": "Le suivi de l’état de santé des salariés : quel suivi pour les salariés affectés sur des postes à risque ?",
+        "url": "/fiche-ministere-travail/le-suivi-de-letat-de-sante-des-salaries#En-quoi-consiste-le-suivi-individuel-renforce-des-salaries-affectes-sur-des-nbsp",
+        "title": "Le suivi de l’état de santé des salariés : en quoi consiste le suivi individuel renforcé des salariés affectés sur des postes à risque ?",
         "position": 12
       },
       {
