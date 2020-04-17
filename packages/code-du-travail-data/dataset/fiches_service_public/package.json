@@ -9,8 +9,8 @@
   "dependencies": {
     "@cdt/sources": "^4.14.0",
     "@socialgouv/contributions-data": "^1.10.0",
-    "@socialgouv/fiches-vdd": "^1.25.0",
-    "@socialgouv/kali-data": "^1.15.0",
+    "@socialgouv/fiches-vdd": "^1.26.0",
+    "@socialgouv/kali-data": "^1.16.0",
     "@socialgouv/legi-data": "^1.2.0",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.12.1",
