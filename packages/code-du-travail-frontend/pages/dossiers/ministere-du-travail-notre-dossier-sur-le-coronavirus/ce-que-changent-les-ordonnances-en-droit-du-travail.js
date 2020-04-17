@@ -45,7 +45,7 @@ class Fiche extends React.Component {
                   variant="navLink"
                   download
                 >
-                  Télécharger l‘infographie (pdf - 4.4MB)
+                  Télécharger l‘infographie (pdf - 2.3MB)
                   <Download />
                 </Button>
               </DownloadWrapper>
@@ -54,9 +54,16 @@ class Fiche extends React.Component {
                   <Wrapper variant="dark">
                     <p>
                       Le régime applicable aux congés payés continue de
-                      s’appliquer normalement. Toutefois, l’ordonnance du 25
-                      mars 2020 permet à l’employeur d’imposer aux salariés la
-                      prise de 6 jours de congés :
+                      s’appliquer normalement. Toutefois, l’ordonnance du{" "}
+                      <a
+                        href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        25 mars 2020
+                      </a>{" "}
+                      permet à l’employeur d’imposer aux salariés la prise de 6
+                      jours de congés :
                     </p>
                     <Ul>
                       <Li>
@@ -120,7 +127,7 @@ class Fiche extends React.Component {
                         ne prévoit rien,{" "}
                         <Link href="/code-du-travail/l3141-14?q=L3141-14%20du%20code%20du%20travail">
                           <a>l’article L3141-14 du code du travail</a>
-                        </Link>
+                        </Link>{" "}
                         s’applique, c’est-à-dire que les conjoints et les
                         partenaires liés par un PACS travaillant dans une même
                         entreprise ont droit à un congé simultané.
@@ -134,7 +141,7 @@ class Fiche extends React.Component {
                     <p>
                       <Strong>Important :</Strong> si aucun accord collectif
                       n’est conclu (que ce soit au niveau de l’entreprise ou de
-                      la branche), l’employeur ne peut pas appliquer
+                      la branche), l’employeur ne peut pas appliquer{" "}
                       <a
                         href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
                         target="_blank"
@@ -192,7 +199,7 @@ class Fiche extends React.Component {
                   variant="navLink"
                   download
                 >
-                  Télécharger l‘infographie (pdf - 4.2MB)
+                  Télécharger l‘infographie (pdf - 1.9MB)
                   <Download />
                 </Button>
               </DownloadWrapper>
@@ -266,7 +273,7 @@ class Fiche extends React.Component {
                     <p>
                       <Strong>Important: </Strong> Ce dispositif est mis en
                       place par décision unilatérale de l’employeur. S’il ne
-                      prend pas de décision dans les conditions prévues par
+                      prend pas de décision dans les conditions prévues par{" "}
                       <a
                         href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
                         target="_blank"
