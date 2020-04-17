@@ -1,11 +1,13 @@
-import fetch from "node-fetch";
-import kaliData from "@socialgouv/kali-data/data/index.json";
-import find from "unist-util-find";
-import parents from "unist-util-parents";
 import contributions from "@socialgouv/contributions-data/data/contributions.json";
+import kaliData from "@socialgouv/kali-data/data/index.json";
+import fetch from "node-fetch";
 import remark from "remark";
 import html from "remark-html";
+import find from "unist-util-find";
+import parents from "unist-util-parents";
+import { createThemer } from "../../indexing/breadcrumbs";
 import slugify from "../../slugify";
+import themes from "./themes.data.json";
 
 const compiler = remark().use(html, { sanitize: true });
 
@@ -14,6 +16,14 @@ const DATAFILLER_URL =
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/ccns/records?_sort=title`;
 const createSorter = (prop) => ({ [prop]: a }, { [prop]: b }) => a - b;
+
+const getTheme = createThemer(themes);
+const contributionsWithTheme = contributions.map((contrib) => {
+  return {
+    ...contrib,
+    breadcrumbs: getTheme(slugify(contrib.title)),
+  };
+});
 
 async function fetchAgreements() {
   const ccnBlockRecords = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
@@ -88,7 +98,7 @@ function getContributionAnswers(agreementNum) {
       category: category,
     };
   };
-  return contributions
+  return contributionsWithTheme
     .map(({ title, slug, index, answers, breadcrumbs }) => {
       const [answer] = answers.conventions.filter(
         ({ idcc }) => parseInt(idcc) === parseInt(agreementNum)
@@ -96,7 +106,7 @@ function getContributionAnswers(agreementNum) {
       const unhandledRegexp = /La convention collective ne prévoit rien sur ce point/i;
       if (answer && !unhandledRegexp.test(answer.markdown)) {
         let rootTheme = null;
-        if (breadcrumbs && breadcrumbs.length > 0) {
+        if (breadcrumbs.length > 0) {
           rootTheme = breadcrumbs[0].label;
         }
 
