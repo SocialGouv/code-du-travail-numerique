@@ -40,12 +40,12 @@ class Fiche extends React.Component {
                 <Button
                   as="a"
                   className="no-after"
-                  href="/static/assets/img/infographies/conges-payes-info.jpg"
+                  href="/static/assets/pdf/infographies/conges-payes.pdf"
                   narrow
                   variant="navLink"
                   download
                 >
-                  Télécharger l‘infographie
+                  Télécharger l‘infographie (pdf - 4.4MB)
                   <Download />
                 </Button>
               </DownloadWrapper>
@@ -65,9 +65,16 @@ class Fiche extends React.Component {
                       </Li>
                       <Li>
                         Et si l’entreprise conclut un accord collectif dans les
-                        conditions prévues par l’ordonnance du 25 mars 2020. En
-                        l’absence d’accord d’entreprise, l’accord de branche sur
-                        ce thème, s’il existe, s’applique.
+                        conditions prévues par{" "}
+                        <a
+                          href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          l’ordonnance du 25 mars 2020
+                        </a>
+                        . En l’absence d’accord d’entreprise, l’accord de
+                        branche sur ce thème, s’il existe, s’applique.
                       </Li>
                     </Ul>
                     <p>
@@ -110,7 +117,10 @@ class Fiche extends React.Component {
                         l’employeur n’a pas l’obligation d’accorder un congé
                         simultané au conjoint ou partenaire lié par un PACS du
                         salarié travaillant dans la même entreprise. Si l’accord
-                        ne prévoit rien, l’article L3141-14 du code du travail
+                        ne prévoit rien,{" "}
+                        <Link href="/code-du-travail/l3141-14?q=L3141-14%20du%20code%20du%20travail">
+                          <a>l’article L3141-14 du code du travail</a>
+                        </Link>
                         s’applique, c’est-à-dire que les conjoints et les
                         partenaires liés par un PACS travaillant dans une même
                         entreprise ont droit à un congé simultané.
@@ -125,8 +135,15 @@ class Fiche extends React.Component {
                       <Strong>Important :</Strong> si aucun accord collectif
                       n’est conclu (que ce soit au niveau de l’entreprise ou de
                       la branche), l’employeur ne peut pas appliquer
-                      l’ordonnance du 25 mars 2020. Il ne peut pas imposer la
-                      prise de 6 jours de congés payés dans ces conditions.
+                      <a
+                        href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        l’ordonnance du 25 mars 2020
+                      </a>
+                      . Il ne peut pas imposer la prise de 6 jours de congés
+                      payés dans ces conditions.
                     </p>
                   </Wrapper>
                 </MoreContent>
@@ -170,12 +187,12 @@ class Fiche extends React.Component {
                 <Button
                   as="a"
                   className="no-after"
-                  href="/static/assets/img/infographies/jours-repos.jpg"
+                  href="/static/assets/pdf/infographies/jours-repos.pdf"
                   narrow
                   variant="navLink"
                   download
                 >
-                  Télécharger l‘infographie
+                  Télécharger l‘infographie (pdf - 4.2MB)
                   <Download />
                 </Button>
               </DownloadWrapper>
@@ -187,8 +204,15 @@ class Fiche extends React.Component {
                       travail (JRTT), jours de repos dans le cadre d’un
                       aménagement du temps de travail ou d’un forfait et le
                       compte épargne-temps continue de s’appliquer normalement.
-                      Toutefois, l’ordonnance du 25 mars 2020 permet à
-                      l’employeur :
+                      Toutefois,{" "}
+                      <a
+                        href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        l’ordonnance du 25 mars 2020
+                      </a>{" "}
+                      permet à l’employeur :
                     </p>
                     <Ul>
                       <Li>
@@ -243,8 +267,14 @@ class Fiche extends React.Component {
                       <Strong>Important: </Strong> Ce dispositif est mis en
                       place par décision unilatérale de l’employeur. S’il ne
                       prend pas de décision dans les conditions prévues par
-                      l’ordonnance du 25 mars 2020, il applique le régime
-                      habituel prévu par accord.
+                      <a
+                        href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        l’ordonnance du 25 mars 2020
+                      </a>
+                      , il applique le régime habituel prévu par accord.
                     </p>
                     <p>
                       Enfin, l’employeur doit en informer le CSE (comité social
@@ -303,8 +333,15 @@ class Fiche extends React.Component {
         content: (
           <>
             <p>
-              L’ordonnance du 25 mars 2020 aménage les durées maximales de
-              travail prévues par le code du travail jusqu’au 31 décembre 2020.
+              <a
+                href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L’ordonnance du 25 mars 2020
+              </a>{" "}
+              aménage les durées maximales de travail prévues par le code du
+              travail jusqu’au 31 décembre 2020.
             </p>
             <p>
               <Strong>Important  :</Strong> cette mesure ne s’applique qu’aux
@@ -359,11 +396,25 @@ class Fiche extends React.Component {
                       semaines consécutives.
                     </strong>{" "}
                     Pour les exploitations, entreprises, établissements et
-                    employeurs mentionnés aux 1° à 4° de l’article L. 722-1 et
-                    aux 2°, 3° et 6° de l’article L. 722-20 du code rural et de
-                    la pêche maritime et ayant une activité de production
-                    agricole, la durée hebdomadaire de travail peut être portée
-                    jusqu’à 48 heures sur une période de 12 mois.
+                    employeurs mentionnés aux 1° à 4° de{" "}
+                    <a
+                      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006071367&idArticle=LEGIARTI000006585193&dateTexte=&categorieLien=cid"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      l’article L. 722-1
+                    </a>{" "}
+                    et aux 2°, 3° et 6° de{" "}
+                    <a
+                      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000024026821&cidTexte=LEGITEXT000006071367"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      l’article L. 722-20 du code rural et de la pêche maritime
+                    </a>{" "}
+                    et ayant une activité de production agricole, la durée
+                    hebdomadaire de travail peut être portée jusqu’à 48 heures
+                    sur une période de 12 mois.
                   </Li>
                 </Ul>
               </Li>
@@ -413,10 +464,16 @@ class Fiche extends React.Component {
         content: (
           <>
             <p>
-              L’ordonnance du 25 mars 2020 assouplit les règles pour bénéficier
-              des indemnités versées au salarié par la sécurité sociale en cas
-              d’arrêt maladie. Ces règles s’appliquent du 26 mars 2020 au 31
-              août 2020.
+              <a
+                href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L’ordonnance du 25 mars 2020
+              </a>{" "}
+              assouplit les règles pour bénéficier des indemnités versées au
+              salarié par la sécurité sociale en cas d’arrêt maladie. Ces règles
+              s’appliquent du 26 mars 2020 au 31 août 2020.
             </p>
             <p>Les salariés n’ont plus à justifier de :</p>
             <Ol>
@@ -510,12 +567,19 @@ class Fiche extends React.Component {
         content: (
           <>
             <p>
-              L’ordonnance du 25 mars 2020 ouvre la possibilité aux entreprises
-              de reporter jusqu’au 31 décembre 2020 le versement des sommes dues
-              aux salariés au titre des dispositifs d’intéressement et de
-              participation qui devait intervenir au cours du 1er semestre
-              (notamment ceux qui devaient intervenir avant le 1er juin, pour
-              les entreprises dont l’exercice est calé sur l’année civile).
+              <a
+                href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L’ordonnance du 25 mars 2020
+              </a>{" "}
+              ouvre la possibilité aux entreprises de reporter jusqu’au 31
+              décembre 2020 le versement des sommes dues aux salariés au titre
+              des dispositifs d’intéressement et de participation qui devait
+              intervenir au cours du 1er semestre (notamment ceux qui devaient
+              intervenir avant le 1er juin, pour les entreprises dont l’exercice
+              est calé sur l’année civile).
             </p>
             <p>En conséquence :</p>
             <Ol>
@@ -611,14 +675,21 @@ class Fiche extends React.Component {
             <p>
               À partir du 26 mars 2020 et jusqu’au 31 décembre 2020, les
               établissements et services accueillant des enfants de moins de 6
-              ans (premier alinéa de l’article L. 2324-1 du code de la santé
-              publique) qui assurent l’accueil des enfants des personnels
-              indispensables à la gestion de la crise sanitaire liée à
-              l’épidémie de covid-19 communiquent leurs disponibilités d’accueil
-              sur un site internet mis à disposition par la Caisse nationale des
-              allocations familiales (CAF). Ce site internet offre aux
-              assistants maternels la possibilité de renseigner leurs nom,
-              coordonnées et disponibilités.
+              ans (premier alinéa de l’article{" "}
+              <a
+                href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072665&idArticle=LEGIARTI000006687615&dateTexte=&categorieLien=cid"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L. 2324-1 du code de la santé publique
+              </a>
+              ) qui assurent l’accueil des enfants des personnels indispensables
+              à la gestion de la crise sanitaire liée à l’épidémie de covid-19
+              communiquent leurs disponibilités d’accueil sur un site internet
+              mis à disposition par la Caisse nationale des allocations
+              familiales (CAF). Ce site internet offre aux assistants maternels
+              la possibilité de renseigner leurs nom, coordonnées et
+              disponibilités.
             </p>
             <ReferencesJuridiques
               accordionDisplay={1}
