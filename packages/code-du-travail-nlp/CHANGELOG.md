@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.17.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.0...v4.17.1) (2020-04-17)
+
+
+### Bug Fixes
+
+* **nlp:** fix  abort missing import ([#2609](https://github.com/SocialGouv/code-du-travail-numerique/issues/2609)) ([f530c6f](https://github.com/SocialGouv/code-du-travail-numerique/commit/f530c6f75dacb21904bfcfc4bf23d3cff991ade0))
+
+
+
+
+
 # [4.17.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.16.0...v4.17.0) (2020-04-10)
 
 **Note:** Version bump only for package @cdt/nlp
