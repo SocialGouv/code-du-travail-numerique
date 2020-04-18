@@ -62,7 +62,7 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
               <Link
                 key={slug}
                 href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
-                as={slug}
+                as={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
                 passHref
               >
                 <Tile icon={icons[icon]} title={title}>
