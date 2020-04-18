@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.17.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.1...v4.17.2) (2020-04-18)
+
+
+### Bug Fixes
+
+* **theme:** add missing route in slug ([#2641](https://github.com/SocialGouv/code-du-travail-numerique/issues/2641)) ([509434d](https://github.com/SocialGouv/code-du-travail-numerique/commit/509434d2580bae2bf6350aeb079d5325723e36a7))
+
+
+
+
+
 ## [4.17.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.0...v4.17.1) (2020-04-17)
 
 
