@@ -30,7 +30,7 @@
     "@cdt/sources": "^4.14.0",
     "@elastic/elasticsearch": "^7.6.1",
     "@socialgouv/contributions-data": "^1.12.0",
-    "@socialgouv/fiches-travail-data": "^1.13.0",
+    "@socialgouv/fiches-travail-data": "^1.27.0",
     "@socialgouv/fiches-vdd": "^1.29.0",
     "@socialgouv/kali-data": "^1.19.0",
     "@socialgouv/legi-data": "^1.2.0",
