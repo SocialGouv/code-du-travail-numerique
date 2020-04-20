@@ -983,11 +983,19 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       </ul>
     </div>
     <p>
-      Deuxieme Etape 
-      <button>
-        Submit
-      </button>
+      Deuxieme Etape
     </p>
+    <label
+      for="cb"
+    >
+      etape facultative
+      <input
+        id="cb"
+        name="fooStep"
+        type="checkbox"
+        value=""
+      />
+    </label>
     <div
       class="c12"
     >
@@ -1458,7 +1466,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
           >
             3
           </span>
-          Name
+          Optional Step
         </li>
       </ul>
     </div>
@@ -2470,11 +2478,19 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       </ul>
     </div>
     <p>
-      Deuxieme Etape 
-      <button>
-        Submit
-      </button>
+      Deuxieme Etape
     </p>
+    <label
+      for="cb"
+    >
+      etape facultative
+      <input
+        id="cb"
+        name="fooStep"
+        type="checkbox"
+        value=""
+      />
+    </label>
     <div
       class="c12"
     >

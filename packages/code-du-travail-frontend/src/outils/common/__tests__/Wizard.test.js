@@ -4,6 +4,7 @@ import { Wizard } from "../Wizard";
 import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Field } from "react-final-form";
 import { matopush } from "../../../piwik";
+import { OnChange } from "react-final-form-listeners";
 
 jest.mock("../../../piwik", () => {
   let events = [];
@@ -20,9 +21,13 @@ const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();
 
 const SecondStep = () => (
-  <p>
-    Deuxieme Etape <button>Submit</button>
-  </p>
+  <>
+    <p>Deuxieme Etape</p>
+    <label htmlFor="cb">
+      etape facultative
+      <Field id="cb" name="fooStep" component="input" type="checkbox" />
+    </label>
+  </>
 );
 const steps = [
   {
@@ -39,11 +44,11 @@ const steps = [
 
 const initialState = { stepIndex: 0, steps };
 
-const AdditionalStep = () => <Field name="firstName" component="input" />;
-const additionalStep = {
-  label: "Name",
+const OptionnalStep = () => <p>etape optionnelle</p>;
+const optionnalStep = {
+  label: "Optional Step",
   name: "additional_step",
-  component: AdditionalStep,
+  component: OptionnalStep,
 };
 const skipableStep = {
   name: "skippable",
@@ -118,7 +123,7 @@ describe("<Wizard />", () => {
     ]);
   });
   it("should handle initialValues", () => {
-    const state = { stepIndex: 0, steps: steps.concat(additionalStep) };
+    const state = { stepIndex: 0, steps: steps.concat(optionnalStep) };
     const { container } = render(
       <Wizard
         title="test"
@@ -156,6 +161,7 @@ describe("<Wizard />", () => {
     button.click();
     expect(getByText("Deuxieme Etape")).toBeTruthy();
   });
+
   it("should skip step backward", () => {
     const [step1, step2] = steps;
 
@@ -170,5 +176,33 @@ describe("<Wizard />", () => {
     const button = getByText(/précédent/i);
     button.click();
     expect(getByText("Premiere Etape")).toBeTruthy();
+  });
+
+  it("should navigate to a dynamic step ", () => {
+    const RulesAdditionalStep = ({ dispatch }) => (
+      <OnChange key="foo-rules" name="fooStep">
+        {(value) => {
+          if (value === true) {
+            dispatch({
+              type: "add_step",
+              payload: { insertAfter: "second_step", step: optionnalStep },
+            });
+          }
+        }}
+      </OnChange>
+    );
+
+    const { getByText, getByLabelText } = render(
+      <Wizard
+        title="test"
+        stepReducer={stepReducer}
+        initialState={initialState}
+        Rules={RulesAdditionalStep}
+      />
+    );
+    getByText(/suivant/i).click(); // step 2
+    getByLabelText("etape facultative").click();
+    getByText(/suivant/i).click(); // additionalStep
+    expect(getByText("etape optionnelle")).toBeTruthy();
   });
 });
