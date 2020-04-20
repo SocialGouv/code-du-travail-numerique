@@ -1,6 +1,14 @@
 import "jest-styled-components";
 import Intl from "intl";
 
+import preloadAll from "jest-next-dynamic";
+// eslint-disable-next-line no-unused-vars
+import MathFormula from "../src/outils/common/MathFormula";
+
+beforeAll(async () => {
+  await preloadAll();
+});
+
 jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
     API_SIRET2IDCC_URL: "siret2idcc.url",
@@ -26,7 +34,7 @@ const fr = new Intl.DateTimeFormat("fr-FR", {
   timeZone: "UTC",
 });
 
-jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function() {
+jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function () {
   return fr.format(this);
 });
 /**

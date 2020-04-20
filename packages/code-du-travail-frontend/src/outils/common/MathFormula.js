@@ -4,18 +4,18 @@ import { BlockMath } from "react-katex";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
-const MathFormula = ({ math }) => {
+const MathFormula = ({ children }) => {
   return (
     <Wrapper>
       <StyledFormula>
-        <BlockMath math={math} />
+        <BlockMath>{children}</BlockMath>
       </StyledFormula>
     </Wrapper>
   );
 };
 
 MathFormula.propTypes = {
-  math: PropTypes.string,
+  children: PropTypes.string,
 };
 
 const { spacings } = theme;

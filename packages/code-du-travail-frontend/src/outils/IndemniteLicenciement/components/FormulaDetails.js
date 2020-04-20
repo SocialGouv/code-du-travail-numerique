@@ -6,9 +6,7 @@ import styled from "styled-components";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
-const MathFormula = dynamic(() => import("../../common/MathFormula"), {
-  ssr: false,
-});
+const MathFormula = dynamic(() => import("../../common/MathFormula"));
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
@@ -25,7 +23,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
         <FormuleWrapper>
-          <MathFormula math={formula} />
+          <MathFormula>{formula}</MathFormula>
         </FormuleWrapper>
       </ErrorBoundary>
     </Details>

@@ -15,9 +15,7 @@ import {
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 
-const MathFormula = dynamic(() => import("../../common/MathFormula"), {
-  ssr: false,
-});
+const MathFormula = dynamic(() => import("../../common/MathFormula"));
 
 function Disclaimer({ situation, idcc }) {
   if (idcc > 0 && situation.idcc > 0) {
@@ -170,7 +168,7 @@ function StepIndemnite({ form }) {
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
         <FormuleWrapper>
-          <MathFormula math={formule} />
+          <MathFormula>{formule}</MathFormula>
         </FormuleWrapper>
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>

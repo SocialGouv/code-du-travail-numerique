@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> should render 1`] = `
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -34,7 +45,7 @@ exports[`<Result /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c13 {
+.c15 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -109,7 +120,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -218,7 +229,159 @@ exports[`<Result /> should render 1`] = `
         </strong>
         <div
           class="c12"
-        />
+        >
+          <div
+            class="c13"
+          >
+            <div
+              class="c14"
+            >
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mn>
+                              1
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              /
+                            </mi>
+                            <mn>
+                              4
+                            </mn>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              A
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            1/4 * Sref * A
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.75em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:1em;vertical-align:-0.25em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          /
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          4
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                        >
+                          A
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </details>
       <p>
         Source :
@@ -250,7 +413,7 @@ exports[`<Result /> should render 1`] = `
         class="c4"
       >
         <div
-          class="c13"
+          class="c15"
         />
         <span
           class="c6"
@@ -311,7 +474,321 @@ exports[`<Result /> should render 1`] = `
         </strong>
         <div
           class="c12"
-        />
+        >
+          <div
+            class="c13"
+          >
+            <div
+              class="c14"
+            >
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mo>
+                              (
+                            </mo>
+                            <mn>
+                              3
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              /
+                            </mi>
+                            <mn>
+                              1
+                            </mn>
+                            <mn>
+                              0
+                            </mn>
+                            <mo>
+                              )
+                            </mo>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mi>
+                              a
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi>
+                              c
+                            </mi>
+                            <mi>
+                              i
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              t
+                            </mi>
+                            <mover
+                              accent="true"
+                            >
+                              <mi>
+                                e
+                              </mi>
+                              <mo>
+                                ˊ
+                              </mo>
+                            </mover>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            (3 / 10) * Sref * "ancienneté" 
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.75em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:1em;vertical-align:-0.25em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mopen"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          3
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          /
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          0
+                        </span>
+                        <span
+                          class="mclose"
+                        >
+                          )
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          a
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          c
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          i
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          t
+                        </span>
+                        <span
+                          class="mord accent"
+                        >
+                          <span
+                            class="vlist-t"
+                          >
+                            <span
+                              class="vlist-r"
+                            >
+                              <span
+                                class="vlist"
+                                style="height:0.69444em;"
+                              >
+                                <span
+                                  style="top:-3em;"
+                                >
+                                  <span
+                                    class="pstrut"
+                                    style="height:3em;"
+                                  />
+                                  <span
+                                    class="mord mathit"
+                                  >
+                                    e
+                                  </span>
+                                </span>
+                                <span
+                                  style="top:-3em;"
+                                >
+                                  <span
+                                    class="pstrut"
+                                    style="height:3em;"
+                                  />
+                                  <span
+                                    class="accent-body"
+                                    style="left:-0.19444em;"
+                                  >
+                                    ˊ
+                                  </span>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </details>
     </div>
   </div>

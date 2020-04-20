@@ -39,6 +39,17 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   text-align: left;
 }
 
+.c12 {
+  margin: 1.6rem 0;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c7 {
   display: block;
   margin-bottom: 1.6rem;
@@ -199,7 +210,159 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       </strong>
       <div
         class="c11"
-      />
+      >
+        <div
+          class="c12"
+        >
+          <div
+            class="c13"
+          >
+            <div>
+              <span
+                class="katex-display"
+              >
+                <span
+                  class="katex"
+                >
+                  <span
+                    class="katex-mathml"
+                  >
+                    <math>
+                      <semantics>
+                        <mrow>
+                          <mn>
+                            1
+                          </mn>
+                          <mi
+                            mathvariant="normal"
+                          >
+                            /
+                          </mi>
+                          <mn>
+                            4
+                          </mn>
+                          <mo>
+                            ∗
+                          </mo>
+                          <mi>
+                            S
+                          </mi>
+                          <mi>
+                            r
+                          </mi>
+                          <mi>
+                            e
+                          </mi>
+                          <mi>
+                            f
+                          </mi>
+                          <mo>
+                            ∗
+                          </mo>
+                          <mi>
+                            A
+                          </mi>
+                        </mrow>
+                        <annotation
+                          encoding="application/x-tex"
+                        >
+                          1/4 * Sref * A
+                        </annotation>
+                      </semantics>
+                    </math>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="katex-html"
+                  >
+                    <span
+                      class="strut"
+                      style="height:0.75em;"
+                    />
+                    <span
+                      class="strut bottom"
+                      style="height:1em;vertical-align:-0.25em;"
+                    />
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="mord"
+                      >
+                        1
+                      </span>
+                      <span
+                        class="mord"
+                      >
+                        /
+                      </span>
+                      <span
+                        class="mord"
+                      >
+                        4
+                      </span>
+                      <span
+                        class="mord rule"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ∗
+                      </span>
+                      <span
+                        class="mord rule"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mord mathit"
+                        style="margin-right:0.05764em;"
+                      >
+                        S
+                      </span>
+                      <span
+                        class="mord mathit"
+                        style="margin-right:0.02778em;"
+                      >
+                        r
+                      </span>
+                      <span
+                        class="mord mathit"
+                      >
+                        e
+                      </span>
+                      <span
+                        class="mord mathit"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mord rule"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ∗
+                      </span>
+                      <span
+                        class="mord rule"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mord mathit"
+                      >
+                        A
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </details>
     <p>
       Source :
