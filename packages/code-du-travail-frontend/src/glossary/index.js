@@ -78,7 +78,7 @@ export default function useGlossary(children, html) {
                 "gi"
               )
           )
-          .concat(item.abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g")));
+          .concat(item.abbrs ? new RegExp(`\\b(${item.abbrs})\\b`, "g") : []);
 
         patterns.forEach((pattern) => {
           // we use an internal ref counter to track pattern replacement
