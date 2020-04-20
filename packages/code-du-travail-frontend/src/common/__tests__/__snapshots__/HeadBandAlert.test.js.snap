@@ -78,6 +78,12 @@ exports[`<HeadBandAlert /> should render 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 <div>
   <div
     class="c0"
