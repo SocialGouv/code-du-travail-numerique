@@ -35,6 +35,9 @@ const Headband = styled.div`
   padding: ${spacings.small};
   color: white;
   background-color: #fb7721;
+  @media print {
+    display: none;
+  }
 `;
 
 const StyledLinkHeadband = styled.a`
