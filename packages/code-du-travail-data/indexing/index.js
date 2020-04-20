@@ -1,7 +1,7 @@
 import { Client } from "@elastic/elasticsearch";
 import mtSheets from "@socialgouv/fiches-travail-data/data/fiches-travail.json";
-import agreements from "../dataset/datafiller/agreements.data.json";
 import slugify from "../slugify";
+import { getAgreementPages } from "./agreement_pages";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { documentMapping } from "./document.mapping";
 import { AGREEMENTS, DOCUMENTS, MT_SHEETS, SUGGESTIONS } from "./esIndexName";
@@ -56,7 +56,7 @@ async function main() {
   await indexDocumentsBatched({
     indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
     client,
-    documents: agreements,
+    documents: getAgreementPages(),
   });
 
   // Indexing documents/search data

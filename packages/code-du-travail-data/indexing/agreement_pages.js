@@ -1,40 +1,32 @@
 import contributions from "@socialgouv/contributions-data/data/contributions.json";
+import agreementsBlocks from "@socialgouv/datafiller-data/data/agreements.json";
+import allThemes from "@socialgouv/datafiller-data/data/themes.json";
 import kaliData from "@socialgouv/kali-data/data/index.json";
-import fetch from "node-fetch";
 import remark from "remark";
 import html from "remark-html";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
-import { createThemer } from "../../indexing/breadcrumbs";
-import slugify from "../../slugify";
-import themes from "./themes.data.json";
+import { createThemer } from "./breadcrumbs";
+import slugify from "../slugify";
 
 const compiler = remark().use(html, { sanitize: true });
+const createSorter = (fn = (a) => a) => (a, b) => fn(a) - fn(b);
+const getBreadcrumbs = createThemer(allThemes);
 
-const DATAFILLER_URL =
-  process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
-
-const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/ccns/records?_sort=title`;
-const createSorter = (prop) => ({ [prop]: a }, { [prop]: b }) => a - b;
-
-const getTheme = createThemer(themes);
 const contributionsWithTheme = contributions.map((contrib) => {
   return {
     ...contrib,
-    breadcrumbs: getTheme(slugify(contrib.title)),
+    breadcrumbs: getBreadcrumbs(slugify(contrib.title)),
   };
 });
 
-async function fetchAgreements() {
-  const ccnBlockRecords = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
-    .then((res) => res.json())
-    .then((json) => json.data);
-
+function getAgreementPages() {
   return kaliData
-    .sort((a, b) => parseInt(a.num, 10) - parseInt(b.num, 10))
+    .sort(createSorter(({ num }) => parseInt(num, 10)))
     .map((agreement) => {
       const agreementTree = require(`@socialgouv/kali-data/data/${agreement.id}.json`);
-      const blocksData = ccnBlockRecords.find(
+      const blocksData = agreementsBlocks.find(
+        // cid = container-id not chronical-id
         (data) => data.cid === agreement.id
       );
       return {
@@ -47,14 +39,6 @@ async function fetchAgreements() {
         answers: getContributionAnswers(agreement.num),
       };
     });
-}
-
-export { fetchAgreements };
-
-if (require.main === module) {
-  fetchAgreements()
-    .then((data) => console.log(JSON.stringify(data, null, 2)))
-    .catch(console.error);
 }
 
 /**
@@ -73,6 +57,7 @@ function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
     num,
   };
 }
+
 /**
  * Get CCn detailed informations about articles and texts
  */
@@ -86,6 +71,7 @@ function getNbText(agreementTree) {
 
   return texteDeBase.children.length;
 }
+
 /**
  * Return contribution answer for a given idcc
  * param {agreementNum} string
@@ -120,9 +106,10 @@ function getContributionAnswers(agreementNum) {
         };
       }
     })
-    .sort(createSorter("index"))
+    .sort(createSorter((a) => a.index))
     .filter(Boolean);
 }
+
 /**
  * @param {id:<String>, selection:<String[]>}
  * @param {Object} agreementTree
@@ -131,7 +118,7 @@ function getArticleByBlock(groups, agreementTree) {
   const treeWithParents = parents(agreementTree);
   return groups
     .filter(({ selection }) => selection.length > 0)
-    .sort(createSorter("id"))
+    .sort(createSorter((a) => a.id))
     .map(({ id, selection }) => ({
       bloc: id,
       articles: selection
@@ -158,3 +145,10 @@ function getArticleByBlock(groups, agreementTree) {
     }))
     .filter(({ articles }) => articles.length > 0);
 }
+
+if (require.main === module) {
+  const data = getAgreementPages();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+export { getAgreementPages };

@@ -89,7 +89,7 @@ Test @cdtn/api:
       command: [ "bin/elasticsearch", "-Expack.security.enabled=false", "-Ediscovery.type=single-node" ]
   variables:
     GIT_STRATEGY: none
-    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT  
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
     # HACK(douglasduteil): make ES not that memory hungry
     ES_JAVA_OPTS: "-Xms256m -Xmx256m"
   script:
@@ -113,7 +113,6 @@ Test @cdtn/data:
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
-    - yarn workspace @cdt/data...datafiller test
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage

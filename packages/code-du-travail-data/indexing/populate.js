@@ -4,7 +4,7 @@ import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
-import themes from "../dataset/datafiller/themes.data.json";
+import themes from "@socialgouv/datafiller-data/data/themes.json";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
@@ -128,24 +128,25 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Themes ===");
-  yield require("../dataset/datafiller/themes.data.json").map(
-    ({ breadcrumbs, children, icon, position, slug, refs, title }) => {
-      return {
-        source: SOURCES.THEMES,
-        title: title,
-        slug,
-        icon,
-        children: children.map(({ title, slug }) => ({
-          label: title,
-          slug: `/${getRouteBySource(SOURCES.THEMES)}/${slug}`,
-        })),
-        position,
-        breadcrumbs,
-        refs,
-        excludeFromSearch: false,
-      };
-    }
-  );
+  yield themes.map(({ breadcrumbs, children, icon, position, refs, title }) => {
+    const toSlug = (label, position) => `${position}-${slugify(label)}`;
+    const toBreadcrumbs = ({ label, position }) => ({
+      label: label,
+      slug: `/${getRouteBySource(SOURCES.THEMES)}/${toSlug(label, position)}`,
+    });
+
+    return {
+      source: SOURCES.THEMES,
+      title: title,
+      slug: toSlug(title, position),
+      icon,
+      children: children.map(toBreadcrumbs),
+      position,
+      breadcrumbs: breadcrumbs.map(toBreadcrumbs),
+      refs,
+      excludeFromSearch: false,
+    };
+  });
 
   logger.info("=== Courriers ===");
   yield getCourriers();
@@ -232,21 +233,21 @@ async function* cdtnDocumentsGen() {
   yield [
     {
       source: SOURCES.HIGHLIGHTS,
-      data: require("../dataset/datafiller/highlights.data.json"),
+      data: require("@socialgouv/datafiller-data/data/hightlights.json"),
     },
   ];
   logger.info("=== glossary ===");
   yield [
     {
       source: SOURCES.GLOSSARY,
-      data: require("../dataset/datafiller/glossary.data.json"),
+      data: require("@socialgouv/datafiller-data/data/glossary.json"),
     },
   ];
   logger.info("=== PreQualified Request ===");
   yield [
     {
       source: SOURCES.PREQUALIFIED,
-      data: require("../dataset/datafiller/prequalified.data.json"),
+      data: require("@socialgouv/datafiller-data/data/requests.json"),
     },
   ];
 }

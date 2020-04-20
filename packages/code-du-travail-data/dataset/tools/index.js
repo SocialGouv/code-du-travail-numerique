@@ -1,30 +1,16 @@
 const { SOURCES, getRouteBySource } = require("@cdt/sources");
-const allThemes = require("@cdt/data...datafiller/themes.data.json");
+const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
+const { createThemer } = require("../../indexing/breadcrumbs");
 const tools = require("./internals.json");
 
-const themes = allThemes.filter((theme) =>
-  theme.refs.some((ref) =>
-    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
-  )
-);
+const getBreadcrumbs = createThemer(allThemes);
 
 const toolsWithBreadCrumbs = tools.map((tool) => {
-  const theme = themes.find((theme) =>
-    theme.refs.some((ref) => ref.url.match(new RegExp(tool.slug)))
-  );
-  let breadcrumbs = [];
-  if (theme) {
-    breadcrumbs = (theme.breadcrumbs || []).concat([
-      {
-        label: theme.title,
-        slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
-      },
-    ]);
-  }
-
   return {
     ...tool,
-    breadcrumbs,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.TOOLS)}/${tool.slug}`
+    ),
   };
 });
 
