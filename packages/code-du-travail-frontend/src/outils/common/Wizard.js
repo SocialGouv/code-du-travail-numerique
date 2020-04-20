@@ -47,7 +47,7 @@ function Wizard({
       "trackEvent",
       "outil",
       `click_previous_${title}`,
-      initialState.steps[nextStepIndex].name,
+      state.steps[nextStepIndex].name,
     ]);
   };
   const nextStep = (values) => {
@@ -58,12 +58,11 @@ function Wizard({
       skipFn = steps[nextStepIndex].skip || (() => false);
     }
     setStepIndex(nextStepIndex);
-
     matopush([
       "trackEvent",
       "outil",
       `view_step_${title}`,
-      initialState.steps[nextStepIndex].name,
+      state.steps[nextStepIndex].name,
     ]);
   };
 
