@@ -1,20 +1,18 @@
 import { Client } from "@elastic/elasticsearch";
-import { DOCUMENTS, AGREEMENTS, SUGGESTIONS, MT_SHEETS } from "./esIndexName";
-
-import { logger } from "./logger";
-import { documentMapping } from "./document.mapping";
-import { conventionCollectiveMapping } from "./convention_collective.mapping";
-
-import {
-  version,
-  createIndex,
-  indexDocumentsBatched,
-  deleteOldIndex,
-} from "./es_client.utils";
-import { populateSuggestions } from "./suggestion";
-
+import mtSheets from "@socialgouv/fiches-travail-data/data/fiches-travail.json";
 import agreements from "../dataset/datafiller/agreements.data.json";
-import mtSheets from "../dataset/fiches_ministere_travail/fiches-mt.json";
+import slugify from "../slugify";
+import { conventionCollectiveMapping } from "./convention_collective.mapping";
+import { documentMapping } from "./document.mapping";
+import { AGREEMENTS, DOCUMENTS, MT_SHEETS, SUGGESTIONS } from "./esIndexName";
+import {
+  createIndex,
+  deleteOldIndex,
+  indexDocumentsBatched,
+  version,
+} from "./es_client.utils";
+import { logger } from "./logger";
+import { populateSuggestions } from "./suggestion";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
@@ -79,6 +77,13 @@ async function main() {
     client,
     indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
     mappings: documentMapping,
+  });
+  mtSheets.forEach((article) => {
+    article.slug = slugify(article.title);
+    article.sections.forEach((section) => {
+      delete section.description;
+      delete section.text;
+    });
   });
   await indexDocumentsBatched({
     indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,

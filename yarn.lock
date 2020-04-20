@@ -2619,6 +2619,16 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
+"@socialgouv/datafiller-data@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.9.0.tgz#7cf8adbd447535700273157b6bf9e2628b5d16c3"
+  integrity sha512-O5rZCIcVpAOKe4Yil7wBOjdcp04tdNcrei6jgtSaTQI0nBULwDiiLQRnevSgqKlOl89jO33zziCOfjnuIXU6mQ==
+  dependencies:
+    node-fetch "^2.6.0"
+    p-pipe "^3.0.0"
+    remark "^12.0.0"
+    remark-html "^11.0.1"
+
 "@socialgouv/dila-api-client@^1.1.0", "@socialgouv/dila-api-client@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/dila-api-client/-/dila-api-client-1.1.1.tgz#ff6bb72a52c3e3ac834fe07fa74daf4edf50e4ac"
@@ -2649,6 +2659,21 @@
     eslint-plugin-import "~2.20.2"
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
+
+"@socialgouv/fiches-travail-data@^1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-1.13.0.tgz#79629a21429173e6d04563ad455c009b5a039f89"
+  integrity sha512-DHVscpU06OqVYM0aDWWT4NRhkLDPRUMcdX2J9mDzbX9UIOoAOenR2uvw4VObzkBI7TrTOU/RGn7EojwXkO23vw==
+  dependencies:
+    "@socialgouv/datafiller-data" "^1.9.0"
+    "@socialgouv/legi-data" "^1.2.0"
+    esm "^3.2.25"
+    jsdom "^16.2.2"
+    p-limit "^2.3.0"
+    superagent "^5.2.2"
+    talisman "^1.1.1"
+    unist-util-find "^1.0.1"
+    unist-util-visit "^2.0.2"
 
 "@socialgouv/fiches-vdd@^1.29.0":
   version "1.29.0"
@@ -18757,7 +18782,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@2.0.2, unist-util-visit@^2.0.0:
+unist-util-visit@2.0.2, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
   integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==

@@ -71,4 +71,4 @@ function transformSectionTitle({ sectionTitle: title, prefixTitle }) {
   return sectionTitle.trim().replace(/^\w/, (value) => value.toUpperCase());
 }
 
-module.exports = { splitArticle };
+export { splitArticle };
