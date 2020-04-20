@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> should render 1`] = `
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -34,7 +45,7 @@ exports[`<Result /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c13 {
+.c15 {
   width: calc(50% * 0.4);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -109,7 +120,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c15 {
     width: calc(100% * 0.4);
   }
 }
@@ -220,12 +231,154 @@ exports[`<Result /> should render 1`] = `
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`1/4 * Sref * A\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mn>
+                              1
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              /
+                            </mi>
+                            <mn>
+                              4
+                            </mn>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              A
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            1/4 * Sref * A
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.75em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:1em;vertical-align:-0.25em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          /
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          4
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                        >
+                          A
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -260,7 +413,7 @@ exports[`<Result /> should render 1`] = `
         class="c4"
       >
         <div
-          class="c13"
+          class="c15"
         />
         <span
           class="c6"
@@ -323,12 +476,178 @@ exports[`<Result /> should render 1`] = `
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`( 1/10 * Sref * 5 )\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mo>
+                              (
+                            </mo>
+                            <mn>
+                              1
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              /
+                            </mi>
+                            <mn>
+                              1
+                            </mn>
+                            <mn>
+                              0
+                            </mn>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ∗
+                            </mo>
+                            <mn>
+                              5
+                            </mn>
+                            <mo>
+                              )
+                            </mo>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            ( 1/10 * Sref * 5 )
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.75em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:1em;vertical-align:-0.25em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mopen"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          /
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          0
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ∗
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          5
+                        </span>
+                        <span
+                          class="mclose"
+                        >
+                          )
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>

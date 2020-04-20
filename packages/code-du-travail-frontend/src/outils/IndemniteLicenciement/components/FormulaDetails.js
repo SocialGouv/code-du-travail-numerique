@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import dynamic from "next/dynamic";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
+
+const MathFormula = dynamic(() => import("../../common/MathFormula"));
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
@@ -21,7 +23,7 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
         <FormuleWrapper>
-          <MathJax math={"`" + formula + "`"} />
+          <MathFormula>{formula}</MathFormula>
         </FormuleWrapper>
       </ErrorBoundary>
     </Details>
