@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { AlertCircle } from "react-feather";
 import { IconStripe, theme } from "@socialgouv/react-ui";
@@ -7,9 +8,9 @@ import styled from "styled-components";
 import { HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
 export const Headband = ({ currentPage }) => {
+  const { asPath } = useRouter();
   if (
-    currentPage &&
-    currentPage.includes(
+    asPath.includes(
       "dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
     )
   ) {

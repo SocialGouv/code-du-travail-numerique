@@ -45,7 +45,6 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
     description = "",
     metaDescription,
     refs,
-    slug,
     title,
   } = dossier;
 
@@ -61,7 +60,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   };
 
   return (
-    <Layout currentPage={`dossiers/${slug}`}>
+    <Layout>
       <Metas
         url={pageUrl}
         title={title}
