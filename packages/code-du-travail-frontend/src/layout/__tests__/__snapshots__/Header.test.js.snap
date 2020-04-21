@@ -139,7 +139,8 @@ exports[`<Header /> should render 1`] = `
 }
 
 .c15 ul {
-  z-index: 1;
+  position: relative;
+  z-index: 3;
 }
 
 .c15 li[role="option"]:nth-child(2n + 1) {
@@ -220,12 +221,10 @@ exports[`<Header /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  height: 9rem;
-  margin-bottom: 6rem;
-  overflow: visible;
+  z-index: 3;
+  height: 8.6rem;
   background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c1 {
@@ -250,7 +249,7 @@ exports[`<Header /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  height: 9rem;
+  height: 100%;
 }
 
 .c3 {
@@ -262,12 +261,14 @@ exports[`<Header /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0.8rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c4 {
   width: 7rem;
+  height: 7rem;
   margin-right: 3.2rem;
 }
 
@@ -353,8 +354,7 @@ exports[`<Header /> should render 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    height: 6rem;
-    margin-bottom: 4rem;
+    height: 6.6rem;
   }
 }
 
@@ -381,12 +381,6 @@ exports[`<Header /> should render 1`] = `
   .c2 {
     max-width: 100%;
     padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    height: 6rem;
   }
 }
 

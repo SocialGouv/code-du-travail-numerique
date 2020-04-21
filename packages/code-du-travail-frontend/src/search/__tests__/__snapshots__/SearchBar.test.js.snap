@@ -65,7 +65,8 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 .c2 ul {
-  z-index: 1;
+  position: relative;
+  z-index: 3;
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {
@@ -281,7 +282,8 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c2 ul {
-  z-index: 1;
+  position: relative;
+  z-index: 3;
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {
