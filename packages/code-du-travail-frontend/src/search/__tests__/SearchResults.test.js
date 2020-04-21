@@ -41,7 +41,7 @@ const items = {
       breadcrumbs: [{ slug: "/themes/theme-root", label: "test root content" }],
     },
     {
-      source: "contribution",
+      source: "contributions",
       title: "Mer il est fou 4!",
       slug: "mer-il-est-fou4",
       description: "description",

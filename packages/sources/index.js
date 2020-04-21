@@ -55,10 +55,10 @@ const labelBySource = {
 const sources = Object.values(SOURCES);
 
 // code_du_travail -> Code du travail
-const getLabelBySource = (src) => labelBySource[src] || "";
+const getLabelBySource = (src) => labelBySource[src];
 
 // code_du_travail -> code-du-travail
-const getRouteBySource = (src) => routeBySource[src] || "";
+const getRouteBySource = (src) => routeBySource[src];
 
 // code-du-travail -> code_du_travail
 const getSourceByRoute = (slug) =>
