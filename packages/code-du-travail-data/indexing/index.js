@@ -1,10 +1,6 @@
 import { Client } from "@elastic/elasticsearch";
-import mtSheets from "@socialgouv/fiches-travail-data/data/fiches-travail.json";
-import slugify from "../slugify";
-import { getAgreementPages } from "./agreement_pages";
-import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { documentMapping } from "./document.mapping";
-import { AGREEMENTS, DOCUMENTS, MT_SHEETS, SUGGESTIONS } from "./esIndexName";
+import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import {
   createIndex,
   deleteOldIndex,
@@ -17,8 +13,6 @@ import { populateSuggestions } from "./suggestion";
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
 const DOCUMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-const AGREEMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
-const SHEET_MT_INDEX_NAME = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
 const SUGGEST_INDEX_NAME = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 
 const ELASTICSEARCH_URL =
@@ -47,18 +41,6 @@ async function main() {
   const ts = Date.now();
   await version({ client });
 
-  // Indexing CCN data
-  await createIndex({
-    client,
-    indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
-    mappings: conventionCollectiveMapping,
-  });
-  await indexDocumentsBatched({
-    indexName: `${AGREEMENT_INDEX_NAME}-${ts}`,
-    client,
-    documents: getAgreementPages(),
-  });
-
   // Indexing documents/search data
   await createIndex({
     client,
@@ -72,25 +54,6 @@ async function main() {
     documents,
   });
 
-  // Indexing entire fiches MT data
-  await createIndex({
-    client,
-    indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
-    mappings: documentMapping,
-  });
-  mtSheets.forEach((article) => {
-    article.slug = slugify(article.title);
-    article.sections.forEach((section) => {
-      delete section.description;
-      delete section.text;
-    });
-  });
-  await indexDocumentsBatched({
-    indexName: `${SHEET_MT_INDEX_NAME}-${ts}`,
-    client,
-    documents: mtSheets,
-  });
-
   // Indexing Suggestions
   await populateSuggestions(client, `${SUGGEST_INDEX_NAME}-${ts}`);
 
@@ -98,18 +61,6 @@ async function main() {
   await client.indices.updateAliases({
     body: {
       actions: [
-        {
-          remove: {
-            index: `${AGREEMENT_INDEX_NAME}-*`,
-            alias: `${AGREEMENT_INDEX_NAME}`,
-          },
-        },
-        {
-          remove: {
-            index: `${SHEET_MT_INDEX_NAME}-*`,
-            alias: `${SHEET_MT_INDEX_NAME}`,
-          },
-        },
         {
           remove: {
             index: `${DOCUMENT_INDEX_NAME}-*`,
@@ -122,18 +73,7 @@ async function main() {
             alias: `${SUGGEST_INDEX_NAME}`,
           },
         },
-        {
-          add: {
-            index: `${AGREEMENT_INDEX_NAME}-${ts}`,
-            alias: `${AGREEMENT_INDEX_NAME}`,
-          },
-        },
-        {
-          add: {
-            index: `${SHEET_MT_INDEX_NAME}-${ts}`,
-            alias: `${SHEET_MT_INDEX_NAME}`,
-          },
-        },
+
         {
           add: {
             index: `${DOCUMENT_INDEX_NAME}-${ts}`,
@@ -150,12 +90,7 @@ async function main() {
     },
   });
 
-  const patterns = [
-    DOCUMENT_INDEX_NAME,
-    AGREEMENT_INDEX_NAME,
-    SUGGEST_INDEX_NAME,
-    SHEET_MT_INDEX_NAME,
-  ];
+  const patterns = [DOCUMENT_INDEX_NAME, SUGGEST_INDEX_NAME];
 
   await deleteOldIndex({ client, patterns, timestamp: ts });
 }

@@ -43,7 +43,6 @@ const getEsReferences = async (refs = []) => {
   });
 
   const responses = flatten(response.body.responses.map((r) => r.hits.hits));
-
   // mix with non ES-results (ex: external, or no match)
   const hits = refs.map((ref) => {
     if (isInternalUrl(ref.url)) {

@@ -6,14 +6,8 @@ import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQ
 import highlightsData from "./highlights.json";
 import glossaryData from "./glossary.json";
 import preQualifiedData from "./prequalified.json";
-import { getSheetMTQuery } from "../src/server/routes/sheets-mt/search.elastic.js";
-import getAgreementBody from "../src/server/routes/conventions/getAgreementBySlug.elastic.js";
 
-import {
-  DOCUMENTS,
-  MT_SHEETS,
-  AGREEMENTS,
-} from "@cdt/data/indexing/esIndexName";
+import { DOCUMENTS } from "@cdt/data/indexing/esIndexName";
 
 const writeFile = promisify(_writeFile);
 
@@ -46,17 +40,9 @@ const documentsSlugs = [
   "/convention-collective/2120-banque",
   "/external/mon-compte-formation",
   "/external/index-egapro",
-];
-
-const agreementSlugs = [
-  "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
-];
-
-const ficheMTSlugs = [
-  "5-questions-reponses-sur-la-sante-au-travail",
-  "5-questions-reponses-sur-le-recours-devant-les-prudhommes",
-  "5-questions-reponses-sur-le-compte-personnel-dactivite",
-  "5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
+  "/page-convention-collective/1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
+  "/page-fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
+  "/page-fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -87,62 +73,8 @@ async function updateDocumentsData(slugs) {
   }
 }
 
-async function updateFichesMT(slugs) {
-  const index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
-  const requests = [];
-  slugs.forEach((slug) => {
-    requests.push({ index });
-    requests.push(getSheetMTQuery({ slug }));
-  });
-  try {
-    const { body } = await client.msearch({ body: requests });
-    const data = [];
-    body.responses.forEach((res) => {
-      if (res.hits.hits.length === 1) {
-        const [item] = res.hits.hits;
-        data.push(item._source);
-      }
-    });
-    await writeFile(
-      join(__dirname, "./fiches_ministere_travail.data.json"),
-      JSON.stringify(data, 0, 2)
-    );
-  } catch (error) {
-    console.error(error.meta || error);
-  }
-}
-
-async function updateAgreements(slugs) {
-  const index = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
-  const requests = [];
-  slugs.forEach((slug) => {
-    requests.push({ index });
-    requests.push(getAgreementBody({ slug }));
-  });
-  try {
-    const { body } = await client.msearch({ body: requests });
-    const data = [];
-    body.responses.forEach((res) => {
-      if (res.hits.hits.length === 1) {
-        const [item] = res.hits.hits;
-        data.push(item._source);
-      }
-    });
-    await writeFile(
-      join(__dirname, "./cdtn_agreement.data.json"),
-      JSON.stringify(data, 0, 2)
-    );
-  } catch (error) {
-    console.error(error.meta || error);
-  }
-}
-
 if (module === require.main) {
   updateDocumentsData(documentsSlugs).catch((error) =>
-    console.error("›››" + error)
-  );
-  updateFichesMT(ficheMTSlugs).catch((error) => console.error("›››" + error));
-  updateAgreements(agreementSlugs).catch((error) =>
     console.error("›››" + error)
   );
 }

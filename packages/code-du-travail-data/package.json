@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "yarn build:populate && yarn dump-dev",
-    "build:populate": "ncc build ./indexing/index.js -o dist/populate",
+    "build:populate": "ncc build ./indexing/index.js -o dist/populate --external @socialgouv/kali-data --external @socialgouv/fiches-travail-data",
     "check-slugs": "node -r esm indexing/slug_checker",
     "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
     "dump-dev": "node -r esm dump.js > ./dist/dump.data.json",
@@ -38,7 +38,6 @@
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "node-fetch": "^2.6.0",
-    "ora": "^4.0.3",
     "p-queue": "^6.3.0",
     "p-retry": "^4.2.0",
     "query-string": "^6.12.1",

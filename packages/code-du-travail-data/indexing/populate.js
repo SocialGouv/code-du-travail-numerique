@@ -8,11 +8,12 @@ import themes from "@socialgouv/datafiller-data/data/themes.json";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
-import { createThemer } from "./breadcrumbs";
+import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
+import { getAgreementPages } from "./agreement_pages";
 
-const getTheme = createThemer(themes);
+const getBreadcrumbs = createThemer(themes);
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -117,7 +118,9 @@ async function* cdtnDocumentsGen() {
         source: SOURCES.SHEET_MT,
         anchor,
         description,
-        breadcrumbs: getTheme(`/${getRouteBySource(SOURCES.THEMES)}/${slug}`),
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
+        ),
         html,
         slug,
         text,
@@ -129,12 +132,6 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Themes ===");
   yield themes.map(({ breadcrumbs, children, icon, position, refs, title }) => {
-    const toSlug = (label, position) => `${position}-${slugify(label)}`;
-    const toBreadcrumbs = ({ label, position }) => ({
-      label: label,
-      slug: `/${getRouteBySource(SOURCES.THEMES)}/${toSlug(label, position)}`,
-    });
-
     return {
       source: SOURCES.THEMES,
       title: title,
@@ -204,7 +201,7 @@ async function* cdtnDocumentsGen() {
         source: SOURCES.CONTRIBUTIONS,
         title,
         slug,
-        breadcrumbs: getTheme(`/${SOURCES.CONTRIBUTIONS}/${slug}`),
+        breadcrumbs: getBreadcrumbs(`/${SOURCES.CONTRIBUTIONS}/${slug}`),
         description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
@@ -250,6 +247,29 @@ async function* cdtnDocumentsGen() {
       data: require("@socialgouv/datafiller-data/data/requests.json"),
     },
   ];
+  logger.info("=== page fiches travail ===");
+  const fichesTravailData = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
+  yield fichesTravailData.map(({ sections, ...content }) => {
+    const slug = slugify(content.title);
+    return {
+      ...content,
+      source: SOURCES.SHEET_MT_PAGE,
+      slug,
+      breadcrumbs: getBreadcrumbs(
+        `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
+      ),
+      // eslint-disable-next-line no-unused-vars
+      sections: sections.map(({ description, text, ...section }) => section),
+    };
+  });
+  logger.info("=== page ccn ===");
+  const ccnData = getAgreementPages();
+  yield ccnData.map(({ ...content }) => {
+    return {
+      ...content,
+      source: SOURCES.CCN_PAGE,
+    };
+  });
 }
 /**
  * HACK @lionelb

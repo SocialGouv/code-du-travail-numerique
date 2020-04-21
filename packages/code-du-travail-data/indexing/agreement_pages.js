@@ -14,9 +14,11 @@ const createSorter = (fn = (a) => a) => (a, b) => fn(a) - fn(b);
 const getBreadcrumbs = createThemer(allThemes);
 
 const contributionsWithTheme = contributions.map((contrib) => {
+  const slug = slugify(contrib.title);
   return {
     ...contrib,
-    breadcrumbs: getBreadcrumbs(slugify(contrib.title)),
+    slug,
+    breadcrumbs: getBreadcrumbs(slug),
   };
 });
 

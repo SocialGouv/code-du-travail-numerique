@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getSheetMTQuery({ slug }) {
   return {
     _source: [
@@ -12,11 +14,14 @@ function getSheetMTQuery({ slug }) {
     ],
     query: {
       bool: {
-        filter: {
-          term: {
-            slug,
+        filter: [
+          {
+            term: { source: SOURCES.SHEET_MT_PAGE },
           },
-        },
+          {
+            term: { slug },
+          },
+        ],
       },
     },
   };

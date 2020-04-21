@@ -1,5 +1,6 @@
 const SOURCES = {
   CCN: "conventions_collectives",
+  CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
   CONTRIBUTIONS: "contributions",
   EXTERNALS: "external",
@@ -7,6 +8,7 @@ const SOURCES = {
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
   SHEET_MT: "fiches_ministere_travail",
+  SHEET_MT_PAGE: "page_fiche_ministere_travail",
   SHEET_SP: "fiches_service_public",
   THEMES: "themes",
   TOOLS: "outils",
@@ -19,6 +21,7 @@ const SOURCES = {
 // mapping elastic search source type -> route name
 const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
+  [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EXTERNALS]: "external",
@@ -26,6 +29,7 @@ const routeBySource = {
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
+  [SOURCES.SHEET_MT_PAGE]: "page-fiche-ministere-travail",
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
@@ -54,7 +58,7 @@ const sources = Object.values(SOURCES);
 const getLabelBySource = (src) => labelBySource[src] || "";
 
 // code_du_travail -> code-du-travail
-const getRouteBySource = (src) => routeBySource[src];
+const getRouteBySource = (src) => routeBySource[src] || "";
 
 // code-du-travail -> code_du_travail
 const getSourceByRoute = (slug) =>

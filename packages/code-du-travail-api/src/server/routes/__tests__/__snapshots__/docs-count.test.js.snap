@@ -37,16 +37,16 @@ Object {
         "key": "outils",
       },
       Object {
-        "doc_count": 1,
-        "key": "glossary",
+        "doc_count": 2,
+        "key": "page_fiche_ministere_travail",
       },
       Object {
         "doc_count": 1,
-        "key": "highlights",
+        "key": "glossary",
       },
     ],
     "doc_count_error_upper_bound": 0,
-    "sum_other_doc_count": 1,
+    "sum_other_doc_count": 3,
   },
 }
 `;
