@@ -20,11 +20,11 @@ class Fiche extends React.Component {
   static async getInitialProps({ asPath }) {
     // beware, this one is undefined when rendered server-side
     const anchor = asPath.split("#")[1];
-    return { anchor };
+    return { anchor, asPath };
   }
 
   render() {
-    const { anchor, pageUrl, ogImage } = this.props;
+    const { anchor, asPath, pageUrl, ogImage } = this.props;
 
     const titledSections = [
       {
@@ -672,7 +672,7 @@ class Fiche extends React.Component {
       body: content,
     }));
     return (
-      <Layout>
+      <Layout currentPage={asPath}>
         <Metas
           url={pageUrl}
           title="Coronavirus : ce que changent les ordonnances en droit du travail - Ministère du travail"

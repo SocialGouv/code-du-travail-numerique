@@ -8,6 +8,9 @@ import { Container, icons, theme } from "@socialgouv/react-ui";
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
 
+export const HEADER_HEIGHT = "8.6rem";
+export const MOBILE_HEADER_HEIGHT = "6.6rem";
+
 const { Search: SearchIcon } = icons;
 
 const printDate = () => {
@@ -15,7 +18,7 @@ const printDate = () => {
   return `le ${currentDate.slice(0, 10)} à ${currentDate.slice(11, 18)}`;
 };
 
-const Header = ({ currentPage = "" }) => {
+export const Header = ({ currentPage = "" }) => {
   const [currentDate, setDate] = useState();
   useEffect(() => {
     setDate(printDate());
@@ -59,29 +62,23 @@ const Header = ({ currentPage = "" }) => {
 
 const { box, breakpoints, spacings } = theme;
 
-const HEADER_HEIGHT = "9rem";
-const HEADER_HEIGHT_MOBILE = "6rem";
-
 const StyledHeader = styled.header`
   ${({ currentPage }) => {
     if (currentPage !== "home") {
       return css`
         position: sticky;
         top: 0;
-        z-index: 2;
-        box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+        z-index: 3;
       `;
     }
   }};
   height: ${HEADER_HEIGHT};
-  margin-bottom: ${({ currentPage }) =>
-    currentPage === "home" ? "7rem" : "6rem"};
-  overflow: visible;
   background-color: ${({ currentPage, theme }) =>
     currentPage === "home" ? "transparent" : theme.white};
+  box-shadow: ${({ currentPage, theme }) =>
+    currentPage !== "home" ? box.shadow.default(theme.secondary) : "none"};
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${HEADER_HEIGHT_MOBILE};
-    margin-bottom: ${spacings.larger};
+    height: ${MOBILE_HEADER_HEIGHT};
   }
   @media print {
     position: relative;
@@ -102,15 +99,13 @@ const StyledContainer = styled(Container)`
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  height: ${HEADER_HEIGHT};
-  @media (max-width: ${breakpoints.mobile}) {
-    height: ${HEADER_HEIGHT_MOBILE};
-  }
+  height: 100%;
 `;
 
 const LogoLink = styled.a`
   display: flex;
   align-items: center;
+  margin: ${spacings.xsmall} 0;
   text-decoration: none;
   @media (max-width: ${breakpoints.mobile}) {
     /* 6.2rem is half logo's width so it gets centered */
@@ -123,6 +118,7 @@ const LogoLink = styled.a`
 
 const Marianne = styled.img`
   width: 7rem;
+  height: 7rem;
   margin-right: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
     flex: 0 0 5rem;
@@ -175,5 +171,3 @@ const SearchBarWrapper = styled.div`
     display: none;
   }
 `;
-
-export default Header;

@@ -44,8 +44,7 @@ const SearchSection = styled(Section)`
   flex-direction: column;
   padding-bottom: 12rem;
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${({ theme }) => (theme.noColors ? "auto" : "75rem")};
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
   }
   @media print {
     display: none;
@@ -115,24 +114,21 @@ const StyledConfigIcon = styled(ConfigIcon)`
 
 const StyledWorkersWrapper = styled.div`
   position: absolute;
-  top: 0;
+  top: 10rem;
   right: 0;
   z-index: -1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 55%;
+  width: 40%;
   height: 100%;
   max-height: 55rem;
   overflow: hidden;
   @media (max-width: ${breakpoints.tablet}) {
-    top: 6rem;
+    width: 50%;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    position: relative;
-    top: -5px;
-    right: auto;
-    width: auto;
+    display: none;
   }
 `;
 

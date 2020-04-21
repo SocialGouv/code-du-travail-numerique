@@ -41,11 +41,12 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
     return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
   }
   const {
-    title,
+    asideContent = "",
     description = "",
     metaDescription,
     refs,
-    asideContent = "",
+    slug,
+    title,
   } = dossier;
 
   const mainRefs = refs.filter(({ type }) => type === "main");
@@ -60,7 +61,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   };
 
   return (
-    <Layout>
+    <Layout currentPage={`dossiers/${slug}`}>
       <Metas
         url={pageUrl}
         title={title}

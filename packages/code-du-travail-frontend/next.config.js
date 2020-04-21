@@ -14,7 +14,7 @@ const withTM = function (config) {
   if (process.env.NODE_ENV === "production") {
     return withTranspileModule(config);
   }
-  return config;
+  return withTranspileModule(config);
 };
 
 const compose = (...fns) => (args) =>

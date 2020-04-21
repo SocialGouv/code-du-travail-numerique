@@ -12,8 +12,9 @@ const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID;
-const MATOMO_URL = process.env.PIWIK_URL;
+const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID || "3";
+const MATOMO_URL =
+  process.env.PIWIK_URL || "https://matomo.fabrique.social.gouv.fr";
 /**
  * Return a date range (matomo api format)
  * getDate return a 6month date range that starts from 2020-01-01
@@ -29,7 +30,7 @@ function getUrl(baseUrl, params) {
   const qs = Object.entries(params).map(([key, value]) => {
     if (Array.isArray(value)) {
       //label: ["A", "B"] => label[]=A&label[]=B
-      return value.map(value => `${key}[]=${value}`).join("&");
+      return value.map((value) => `${key}[]=${value}`).join("&");
     }
     return `${key}=${value}`;
   });
@@ -58,15 +59,15 @@ const methodParams = [
   },
 ];
 
-router.get("/stats", async ctx => {
+router.get("/stats", async (ctx) => {
   if (!MATOMO_SITE_ID && !MATOMO_URL) {
     ctx.throw(500, `There is no matomo`);
     return;
   }
-  const promises = methodParams.map(params =>
-    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params })).then(data =>
-      data.json(),
-    ),
+  const promises = methodParams.map((params) =>
+    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params })).then((data) =>
+      data.json()
+    )
   );
   const {
     body: { aggregations },
@@ -77,8 +78,8 @@ router.get("/stats", async ctx => {
     nbDocuments += doc_count;
   }
   const [nbVisitData, infoData, feedbackData] = await Promise.all(promises);
-  const positiveFeedback = feedbackData.find(f => f.label === "positive");
-  const negativeFeedback = feedbackData.find(f => f.label === "negative");
+  const positiveFeedback = feedbackData.find((f) => f.label === "positive");
+  const negativeFeedback = feedbackData.find((f) => f.label === "negative");
   ctx.body = {
     nbVisits: nbVisitData.value,
     nbPageViews: infoData.nb_pageviews,
