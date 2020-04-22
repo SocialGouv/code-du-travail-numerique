@@ -2,6 +2,9 @@
 
 exports[`version route 1`] = `
 Object {
+  "data": Object {
+    "@socialgouv/package-a": "^0.4.2",
+  },
   "version": "x.y.z",
 }
 `;

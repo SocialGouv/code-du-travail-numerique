@@ -6,6 +6,7 @@ import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQ
 import highlightsData from "./highlights.json";
 import glossaryData from "./glossary.json";
 import preQualifiedData from "./prequalified.json";
+import versions from "./versions.json";
 
 import { DOCUMENTS } from "@cdt/data/indexing/esIndexName";
 
@@ -63,7 +64,7 @@ async function updateDocumentsData(slugs) {
         data.push(item._source);
       }
     }
-    data.push(highlightsData, preQualifiedData, glossaryData);
+    data.push(highlightsData, preQualifiedData, glossaryData, versions);
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
       JSON.stringify(data, 0, 2)

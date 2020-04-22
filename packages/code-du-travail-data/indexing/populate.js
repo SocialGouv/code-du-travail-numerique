@@ -277,6 +277,19 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.CCN_PAGE,
     };
   });
+  logger.info("=== data version ===");
+  const dependencies = require("../package.json").dependencies;
+  yield [
+    {
+      source: SOURCES.VERSIONS,
+      data: Object.entries(dependencies)
+        .filter(([name]) => /$@socialgouv\//.test(name))
+        .reduce(
+          (state, [name, version]) => ({ ...state, [name]: version }),
+          {}
+        ),
+    },
+  ];
 }
 /**
  * HACK @lionelb
