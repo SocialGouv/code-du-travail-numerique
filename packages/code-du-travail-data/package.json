@@ -31,7 +31,7 @@
     "@elastic/elasticsearch": "^7.6.1",
     "@socialgouv/contributions-data": "^1.14.0",
     "@socialgouv/datafiller-data": "^1.11.0",
-    "@socialgouv/fiches-travail-data": "^1.27.0",
+    "@socialgouv/fiches-travail-data": "^3.2.1",
     "@socialgouv/fiches-vdd": "^1.31.0",
     "@socialgouv/kali-data": "^1.21.0",
     "@socialgouv/legi-data": "^1.2.0",

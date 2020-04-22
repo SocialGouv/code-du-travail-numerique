@@ -67,6 +67,9 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
+  const { data: fichesMT } = require("@socialgouv/fiches-travail-data");
+  fichesMT.forEach((article) => (article.slug = slugify(article.title)));
+
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title, shortTitle, url, effectif }) => {
@@ -108,10 +111,7 @@ async function* cdtnDocumentsGen() {
   yield getFichesSP();
 
   logger.info("=== Fiche MT(split) ===");
-  const fichesTravail = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
-  fichesTravail.forEach((article) => (article.slug = slugify(article.title)));
-
-  const splittedFiches = fichesTravail.flatMap(splitArticle);
+  const splittedFiches = fichesMT.flatMap(splitArticle);
 
   yield splittedFiches.map(
     ({ anchor, description, html, slug, text, title }) => {
@@ -256,15 +256,12 @@ async function* cdtnDocumentsGen() {
     },
   ];
   logger.info("=== page fiches travail ===");
-  const fichesTravailData = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
-  yield fichesTravailData.map(({ sections, ...content }) => {
-    const slug = slugify(content.title);
+  yield fichesMT.map(({ sections, ...content }) => {
     return {
       ...content,
       source: SOURCES.SHEET_MT_PAGE,
-      slug,
       breadcrumbs: getBreadcrumbs(
-        `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
+        `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
       ),
       // eslint-disable-next-line no-unused-vars
       sections: sections.map(({ description, text, ...section }) => section),
