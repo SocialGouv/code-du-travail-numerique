@@ -2586,7 +2586,7 @@ exports[`<Answer /> should renders related content 1`] = `
 .c24 {
   position: -webkit-sticky;
   position: sticky;
-  top: 12rem;
+  top: 16rem;
   width: calc(30% - 4rem);
   margin-left: 4rem;
 }

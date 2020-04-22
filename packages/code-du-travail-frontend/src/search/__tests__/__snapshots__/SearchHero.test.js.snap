@@ -71,8 +71,7 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 .c14 ul {
-  position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .c14 li[role="option"]:nth-child(2n + 1) {

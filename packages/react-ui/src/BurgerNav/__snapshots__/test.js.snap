@@ -76,6 +76,10 @@ exports[`BurgerStyles renders 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
   }
@@ -87,11 +91,31 @@ exports[`BurgerStyles renders 1`] = `
   }
 }
 
+@media (max-width:980px) {
+
+}
+
 @media (max-width:600px) {
   .c2 {
     width: 4.2rem;
     height: 4.2rem;
   }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
 }
 
 <div>

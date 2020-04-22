@@ -91,7 +91,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   height: 3rem;
 }
 
-.c9 {
+.c90 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -119,39 +119,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0;
   color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c9:link,
-.c9:visited {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
+.c90:focus,
+.c90:hover,
+.c90:active {
+  color: #f66663;
 }
 
 .c18 {
@@ -343,7 +331,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c90 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -371,27 +359,39 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c90:focus,
-.c90:hover,
-.c90:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c10 {
@@ -963,8 +963,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c17 ul {
-  position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .c17 li[role="option"]:nth-child(2n + 1) {
@@ -1048,7 +1047,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   z-index: 3;
   height: 8.6rem;
   background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c3 {
@@ -1149,22 +1147,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  color: #fff;
+  color: #2f3b6c;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #038761;
+  background-color: #ffe980;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c21:hover,
 .c21:active,
 .c21:focus {
-  color: #fff;
+  color: #2f3b6c;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #fff;
-  text-decoration-color: #fff;
+  -webkit-text-decoration-color: #2f3b6c;
+  text-decoration-color: #2f3b6c;
 }
 
 .c72 {
@@ -1356,14 +1354,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c90 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 0 3rem;
   }
 }
 
@@ -1398,9 +1390,19 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c9 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -1408,6 +1410,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
     width: 4.2rem;
     height: 4.2rem;
   }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -2899,7 +2909,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   height: 3rem;
 }
 
-.c9 {
+.c90 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2927,39 +2937,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0;
   color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c9:link,
-.c9:visited {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
+.c90:focus,
+.c90:hover,
+.c90:active {
+  color: #f66663;
 }
 
 .c18 {
@@ -3151,7 +3149,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c90 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3179,27 +3177,39 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c90:focus,
-.c90:hover,
-.c90:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c10 {
@@ -3771,8 +3781,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c17 ul {
-  position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .c17 li[role="option"]:nth-child(2n + 1) {
@@ -3856,7 +3865,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   z-index: 3;
   height: 8.6rem;
   background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c3 {
@@ -3957,22 +3965,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  color: #fff;
+  color: #2f3b6c;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #038761;
+  background-color: #ffe980;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c21:hover,
 .c21:active,
 .c21:focus {
-  color: #fff;
+  color: #2f3b6c;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #fff;
-  text-decoration-color: #fff;
+  -webkit-text-decoration-color: #2f3b6c;
+  text-decoration-color: #2f3b6c;
 }
 
 .c72 {
@@ -4164,14 +4172,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c90 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 0 3rem;
   }
 }
 
@@ -4206,9 +4208,19 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c9 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -4216,6 +4228,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
     width: 4.2rem;
     height: 4.2rem;
   }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
