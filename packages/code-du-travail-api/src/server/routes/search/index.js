@@ -1,6 +1,6 @@
 const Router = require("koa-router");
 const { SOURCES } = require("@cdt/sources");
-const { DOCUMENTS, THEMES } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -15,7 +15,6 @@ const { logger } = require("../../utils/logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-const themeIndex = `${ES_INDEX_PREFIX}_${THEMES}`;
 
 const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
@@ -107,7 +106,7 @@ router.get("/search", async (ctx) => {
     if (shouldRequestThemes) {
       const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
       searches[THEMES_ES] = [
-        { index: themeIndex }, // we search in themeIndex here to try to match title in breadcrumb
+        { index }, // we search in themeIndex here to try to match title in breadcrumb
         getRelatedThemesBody({
           query,
           size: themeNumber,

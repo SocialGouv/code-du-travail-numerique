@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 /**
  * This query is intended to work on theme index
  * @param  {string} a string to match
@@ -10,24 +12,27 @@ function getRelatedThemesBody({ query, size = 5 }) {
     _source: ["icon", "title", "slug", "url", "source"],
     query: {
       bool: {
-        should: [
-          {
-            match: {
-              title: {
-                query: `${query}`,
-                fuzziness: "auto",
-              },
+        filter: {
+          term: {
+            source: `${SOURCES.THEMES}`,
+          },
+        },
+        must: {
+          match: {
+            title: {
+              query: `${query}`,
+              fuzziness: "auto",
             },
           },
-          {
-            match: {
-              "breadcrumbs.label": {
-                query: `${query}`,
-                fuzziness: "auto",
-              },
+        },
+        should: {
+          match: {
+            "breadcrumbs.label": {
+              query: `${query}`,
+              fuzziness: "auto",
             },
           },
-        ],
+        },
       },
     },
   };
