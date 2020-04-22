@@ -237,7 +237,14 @@ async function* cdtnDocumentsGen() {
   yield [
     {
       source: SOURCES.GLOSSARY,
-      data: require("@socialgouv/datafiller-data/data/glossary.json"),
+      data: require("@socialgouv/datafiller-data/data/glossary.json").map(
+        (item) => {
+          return {
+            ...item,
+            slug: slugify(item.title),
+          };
+        }
+      ),
     },
   ];
   logger.info("=== PreQualified Request ===");
