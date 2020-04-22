@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MentionLegales /> should render 1`] = `
-.c22 {
+.c27 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c36 {
+.c41 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c21 {
+.c26 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c26 {
+.c31 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -29,7 +29,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #fff;
 }
 
-.c26:before {
+.c31:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,15 +43,15 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c26 > *:first-child {
+.c31 > *:first-child {
   margin-top: 0;
 }
 
-.c26 > *:last-child {
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9 {
+.c56 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -79,39 +79,27 @@ exports[`<MentionLegales /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0;
   color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c9:link,
-.c9:visited {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
+.c56:focus,
+.c56:hover,
+.c56:active {
+  color: #f66663;
 }
 
 .c18 {
@@ -177,7 +165,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c40 {
+.c45 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -214,16 +202,16 @@ exports[`<MentionLegales /> should render 1`] = `
   opacity: 1;
 }
 
-.c40:link,
-.c40:visited {
+.c45:link,
+.c45:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c40:not([disabled]):hover,
-.c40:not([disabled]):active,
-.c40:not([disabled]):focus {
+.c45:not([disabled]):hover,
+.c45:not([disabled]):active,
+.c45:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -232,7 +220,7 @@ exports[`<MentionLegales /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c40[disabled] {
+.c45[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -240,7 +228,7 @@ exports[`<MentionLegales /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c51 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -268,27 +256,39 @@ exports[`<MentionLegales /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c51:focus,
-.c51:hover,
-.c51:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c10 {
@@ -302,7 +302,43 @@ exports[`<MentionLegales /> should render 1`] = `
   color: #7994d4;
 }
 
-.c25 {
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c23 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2.4rem;
+}
+
+.c23 svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c24 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c30 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -315,7 +351,7 @@ exports[`<MentionLegales /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c30 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -328,7 +364,7 @@ exports[`<MentionLegales /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c32 {
+.c37 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -338,7 +374,7 @@ exports[`<MentionLegales /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c46 {
+.c51 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -348,28 +384,28 @@ exports[`<MentionLegales /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c23 {
+.c28 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c28 {
+.c33 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c37 {
+.c42 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c24 {
+.c29 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -380,7 +416,7 @@ exports[`<MentionLegales /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c29 {
+.c34 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -392,7 +428,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: left;
 }
 
-.c38 {
+.c43 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -486,11 +522,8 @@ exports[`<MentionLegales /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  height: 9rem;
-  margin-bottom: 6rem;
-  overflow: visible;
+  z-index: 3;
+  height: 8.6rem;
   background-color: #fff;
 }
 
@@ -516,7 +549,7 @@ exports[`<MentionLegales /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  height: 9rem;
+  height: 100%;
 }
 
 .c5 {
@@ -528,12 +561,14 @@ exports[`<MentionLegales /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0.8rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c6 {
   width: 7rem;
+  height: 7rem;
   margin-right: 3.2rem;
 }
 
@@ -576,12 +611,44 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c33 {
+.c21 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8.6rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #2f3b6c;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ffe980;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+}
+
+.c21:hover,
+.c21:active,
+.c21:focus {
+  color: #2f3b6c;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #2f3b6c;
+  text-decoration-color: #2f3b6c;
+}
+
+.c38 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c34 {
+.c39 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -589,7 +656,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c34:before {
+.c39:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -601,13 +668,13 @@ exports[`<MentionLegales /> should render 1`] = `
   content: "";
 }
 
-.c35 {
+.c40 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c39 {
+.c44 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -616,17 +683,17 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c41 {
+.c46 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c42 {
+.c47 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c43 {
+.c48 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -640,32 +707,32 @@ exports[`<MentionLegales /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c45 + .c44 {
+.c50 + .c49 {
   padding-left: 1.6rem;
 }
 
-.c48 {
+.c53 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c47 {
+.c52 {
   font-size: 1.6rem;
 }
 
-.c49 {
+.c54 {
   margin: 0.4rem 0;
 }
 
-.c50 {
+.c55 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c52 {
+.c57 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,7 +751,7 @@ exports[`<MentionLegales /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c53 {
+.c58 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -692,7 +759,7 @@ exports[`<MentionLegales /> should render 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c54 {
+.c59 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -710,29 +777,21 @@ exports[`<MentionLegales /> should render 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 40rem;
+  height: 70rem;
   overflow: hidden;
-  background: #f2f5fa;
+  background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c1:after {
-  position: absolute;
-  bottom: -373px;
-  left: -50%;
-  z-index: -1;
-  width: 200%;
-  height: 40rem;
-  background-color: #fff;
-  border-radius: 100%;
-  content: "";
+.c25 {
+  margin-top: 6rem;
 }
 
-.c27 {
+.c32 {
   display: block;
   margin: 2rem 0;
 }
 
-.c31 {
+.c36 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -741,68 +800,62 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c31 > *:first-child {
+.c36 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c36 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c27 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c22 {
+  .c27 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c41 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c36 {
+  .c41 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c26 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c31 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c26 {
+  .c31 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c56 {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 0 3rem;
   }
 }
 
@@ -813,21 +866,31 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c45 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c45 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c9 {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -837,59 +900,75 @@ exports[`<MentionLegales /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c32 {
-    font-size: 1.6rem;
-  }
+@media (max-width:980px) {
+
 }
 
-@media (max-width:600px) {
-  .c46 {
-    font-size: 1.6rem;
-  }
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
   .c23 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c37 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c51 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c33 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c42 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c29 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c34 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c34 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c43 {
     font-size: 2.2rem;
   }
 }
@@ -912,8 +991,7 @@ exports[`<MentionLegales /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    height: 6rem;
-    margin-bottom: 4rem;
+    height: 6.6rem;
   }
 }
 
@@ -940,12 +1018,6 @@ exports[`<MentionLegales /> should render 1`] = `
   .c4 {
     max-width: 100%;
     padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    height: 6rem;
   }
 }
 
@@ -1015,53 +1087,65 @@ exports[`<MentionLegales /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c21 {
+    top: 6.6rem;
+  }
+}
+
 @media print {
-  .c34 {
+  .c21 {
+    display: none;
+  }
+}
+
+@media print {
+  .c39 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c40 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c44 {
     padding: 0;
   }
 }
 
 @media print {
-  .c39 {
+  .c44 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c47 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c48 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c43 {
+  .c48 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c48 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1069,38 +1153,44 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 + .c44 {
+  .c50 + .c49 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c53 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c52 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c54 {
+  .c59 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c25 {
+    margin-top: 3.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c31 {
+  .c36 {
     padding: 0 5pt;
     border: none;
   }
@@ -1244,12 +1334,61 @@ exports[`<MentionLegales /> should render 1`] = `
         </div>
       </div>
     </header>
-    <main>
+    <a
+      class="c21"
+      href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
+    >
       <div
-        class="c21"
+        class="c22"
       >
         <div
-          class="c22"
+          class="c23"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="8"
+              y2="12"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="16"
+              y2="16"
+            />
+          </svg>
+        </div>
+        <div
+          class="c24"
+        >
+          Coronavirus (Covid-19) : notre dossier dédié
+        </div>
+      </div>
+    </a>
+    <main
+      class="c25"
+    >
+      <div
+        class="c26"
+      >
+        <div
+          class="c27"
         >
           <div
             data-next-focus-root="true"
@@ -1258,20 +1397,20 @@ exports[`<MentionLegales /> should render 1`] = `
             tabindex="-1"
           >
             <header
-              class="c23"
+              class="c28"
             >
               <h1
-                class="c24"
+                class="c29"
               >
                 <div
-                  class="c25"
+                  class="c30"
                 />
                 Mentions légales
               </h1>
             </header>
           </div>
           <div
-            class="c26"
+            class="c31"
           >
             <p>
               Le site est édité par l’
@@ -1284,7 +1423,7 @@ exports[`<MentionLegales /> should render 1`] = `
               situé :
             </p>
             <address
-              class="c27"
+              class="c32"
             >
               Tour Mirabeau
               <br />
@@ -1296,13 +1435,13 @@ exports[`<MentionLegales /> should render 1`] = `
               Tél. : 01 40 56 60 00
             </address>
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Directeur de la publication
               </h2>
@@ -1311,13 +1450,13 @@ exports[`<MentionLegales /> should render 1`] = `
               Yves Struillou, Directeur Général du Travail
             </p>
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Hébergement
               </h2>
@@ -1326,7 +1465,7 @@ exports[`<MentionLegales /> should render 1`] = `
               Ce site est hébergé par Microsoft Azure France (région France centre) :
             </p>
             <address
-              class="c27"
+              class="c32"
             >
               Microsoft France
               <br />
@@ -1335,7 +1474,7 @@ exports[`<MentionLegales /> should render 1`] = `
               92130 ISSY-LES-MOULINEAUX
             </address>
             <div
-              class="c31"
+              class="c36"
             >
               Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
                
@@ -1347,13 +1486,13 @@ exports[`<MentionLegales /> should render 1`] = `
               .
             </div>
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Accessibilité
               </h2>
@@ -1362,7 +1501,7 @@ exports[`<MentionLegales /> should render 1`] = `
               La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
             </p>
             <h3
-              class="c32"
+              class="c37"
             >
               Signaler un dysfonctionnement
             </h3>
@@ -1380,7 +1519,7 @@ exports[`<MentionLegales /> should render 1`] = `
               Si vous n’obtenez pas de réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.
             </p>
             <h3
-              class="c32"
+              class="c37"
             >
               En savoir plus
             </h3>
@@ -1394,13 +1533,13 @@ exports[`<MentionLegales /> should render 1`] = `
               </a>
             </p>
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Sécurité
               </h2>
@@ -1413,40 +1552,40 @@ exports[`<MentionLegales /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c33"
+      class="c38"
     >
       <footer
-        class="c34"
+        class="c39"
       >
         <div
-          class="c21 c35"
+          class="c26 c40"
         >
           <div
-            class="c36"
+            class="c41"
           >
             <header
-              class="c37"
+              class="c42"
             >
               <h3
-                class="c38"
+                class="c43"
               >
                 <div
-                  class="c25"
+                  class="c30"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c39"
+              class="c44"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c40"
+              class="c45"
             >
               Contacter nos services en région
               <svg
-                class="c41"
+                class="c46"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1459,78 +1598,78 @@ exports[`<MentionLegales /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c21 c42"
+          class="c26 c47"
         >
           <nav>
             <div
-              class="c43"
+              class="c48"
             >
               <div
-                class="c44 c45"
+                class="c49 c50"
               >
                 <h3
-                  class="c46 c47"
+                  class="c51 c52"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c48"
+                  class="sc-fznAgC c53"
                 >
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -1539,30 +1678,30 @@ exports[`<MentionLegales /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c44 c45"
+                class="c49 c50"
               >
                 <h3
-                  class="c46 c47"
+                  class="c51 c52"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c48"
+                  class="sc-fznAgC c53"
                 >
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <button
-                      class="c51"
+                      class="c56"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1571,10 +1710,10 @@ exports[`<MentionLegales /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1585,21 +1724,21 @@ exports[`<MentionLegales /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c44 c45"
+                class="c49 c50"
               >
                 <h3
-                  class="c46 c47"
+                  class="c51 c52"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c48"
+                  class="sc-fznAgC c53"
                 >
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1608,10 +1747,10 @@ exports[`<MentionLegales /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="https://incubateur.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1620,10 +1759,10 @@ exports[`<MentionLegales /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c49"
+                    class="c54"
                   >
                     <a
-                      class="c50"
+                      class="c55"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1637,10 +1776,10 @@ exports[`<MentionLegales /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c52"
+          class="c57"
         >
           <a
-            class="c53"
+            class="c58"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1649,12 +1788,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c54"
+            class="c59"
           >
             |
           </span>
           <a
-            class="c53"
+            class="c58"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1663,12 +1802,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c54"
+            class="c59"
           >
             |
           </span>
           <a
-            class="c53"
+            class="c58"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1677,12 +1816,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c54"
+            class="c59"
           >
             |
           </span>
           <a
-            class="c53"
+            class="c58"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1691,12 +1830,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c54"
+            class="c59"
           >
             |
           </span>
           <a
-            class="c53"
+            class="c58"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1705,12 +1844,12 @@ exports[`<MentionLegales /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c54"
+            class="c59"
           >
             |
           </span>
           <a
-            class="c53"
+            class="c58"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

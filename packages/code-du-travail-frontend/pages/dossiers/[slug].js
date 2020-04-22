@@ -41,11 +41,11 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
     return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
   }
   const {
-    title,
+    asideContent = "",
     description = "",
     metaDescription,
     refs,
-    asideContent = "",
+    title,
   } = dossier;
 
   const mainRefs = refs.filter(({ type }) => type === "main");

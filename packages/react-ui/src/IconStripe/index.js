@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { breakpoints, spacings } from "../theme";
 
 const SIZE = "4.2rem";
-const SMALL_SIZE = "3.4rem";
+const SMALL_SIZE = "3rem";
 
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
   <FlexDiv {...props}>

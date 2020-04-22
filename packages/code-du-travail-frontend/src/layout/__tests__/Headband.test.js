@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import HeadBandAlert from "../HeadBandAlert";
+import { Headband } from "../Headband";
 
-describe("<HeadBandAlert />", () => {
+describe("<Headband />", () => {
   test("should render", () => {
-    const { container } = render(<HeadBandAlert />);
+    const { container } = render(<Headband />);
     expect(container).toMatchSnapshot();
   });
 });
