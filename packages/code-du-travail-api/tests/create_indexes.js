@@ -5,26 +5,16 @@ import {
   indexDocumentsBatched,
 } from "@cdt/data/indexing/es_client.utils";
 
-import {
-  DOCUMENTS,
-  AGREEMENTS,
-  SUGGESTIONS,
-  MT_SHEETS,
-} from "@cdt/data/indexing/esIndexName";
+import { DOCUMENTS, SUGGESTIONS } from "@cdt/data/indexing/esIndexName";
 
 import { documentMapping } from "@cdt/data/indexing/document.mapping";
 import documents from "./cdtn_document.data.json";
-import sheetsMT from "./fiches_ministere_travail.data.json";
-import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
-import agreements from "./cdtn_agreement.data.json";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
 import suggestions from "./suggestions_data.json";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn_test";
 
 const documentsIndexName = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-const agreementsIndexName = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
-const mtSheetsIndexName = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
 const suggestionsIndexName = `${ES_INDEX_PREFIX}_${SUGGESTIONS}`;
 
 async function main() {
@@ -42,17 +32,6 @@ async function main() {
 
   await createIndex({
     client,
-    indexName: agreementsIndexName,
-    mappings: conventionCollectiveMapping,
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: agreementsIndexName,
-    documents: agreements,
-  });
-
-  await createIndex({
-    client,
     indexName: suggestionsIndexName,
     mappings: suggestionMapping,
   });
@@ -60,17 +39,6 @@ async function main() {
     client,
     indexName: suggestionsIndexName,
     documents: suggestions,
-  });
-
-  await createIndex({
-    client,
-    indexName: mtSheetsIndexName,
-    mappings: documentMapping,
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: mtSheetsIndexName,
-    documents: sheetsMT,
   });
 }
 

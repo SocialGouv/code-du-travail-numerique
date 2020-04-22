@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import getConfig from "next/config";
-
+import slugify from "@cdt/data/slugify";
 import styled from "styled-components";
 import {
   Container,
@@ -54,7 +54,9 @@ Glossaire.getInitialProps = async () => {
     return { statusCode: responseContainer.status };
   }
   const glossary = await responseContainer.json();
-  return { glossary };
+  return {
+    glossary: glossary.map((word) => ({ ...word, slug: slugify(word.title) })),
+  };
 };
 
 export default Glossaire;

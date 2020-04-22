@@ -13,6 +13,8 @@ const excludeSources = [
   SOURCES.GLOSSARY,
   SOURCES.PREQUALIFIED,
   SOURCES.HIGHLIGHTS,
+  SOURCES.SHEET_MT_PAGE,
+  SOURCES.CCN_PAGE,
 ];
 const queue = new PQueue({ concurrency: 3 });
 

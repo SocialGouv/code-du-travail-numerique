@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { theme } from "@socialgouv/react-ui";
-import glossary from "@cdt/data...datafiller/glossary.data.json";
+import slugify from "@cdt/data/slugify";
 import Tooltip from "@reach/tooltip";
+import glossaryRaw from "@socialgouv/datafiller-data/data/glossary.json";
+import { theme } from "@socialgouv/react-ui";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Html from "../common/Html";
@@ -25,6 +26,11 @@ const StyledTooltip = styled(Tooltip)`
 const Underline = styled.span`
   border-bottom: 1px dotted ${({ theme }) => theme.secondary};
 `;
+
+const glossary = glossaryRaw.map((word) => ({
+  ...word,
+  slug: slugify(word.title),
+}));
 
 const glossaryBySlug = glossary.reduce(
   (state, item) => ({ ...state, [item.slug]: item }),
@@ -72,7 +78,7 @@ export default function useGlossary(children, html) {
                 "gi"
               )
           )
-          .concat(item.abbrs.map((abbr) => new RegExp(`\\b(${abbr})\\b`, "g")));
+          .concat(item.abbrs ? new RegExp(`\\b(${item.abbrs})\\b`, "g") : []);
 
         patterns.forEach((pattern) => {
           // we use an internal ref counter to track pattern replacement

@@ -39,7 +39,7 @@ test("return stats", async () => {
         "negative": 2,
         "positive": 3,
       },
-      "nbDocuments": 22,
+      "nbDocuments": 23,
       "nbPageViews": 10,
       "nbSearches": 4,
       "nbVisits": 20,

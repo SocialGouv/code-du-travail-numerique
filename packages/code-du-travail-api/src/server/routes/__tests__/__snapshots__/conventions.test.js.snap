@@ -101,38 +101,11 @@ Object {
       "references": Array [
         Object {
           "category": "agreement",
-          "title": "Article 10.11",
+          "title": "Article 10.1",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
       ],
       "slug": "quelle-est-la-duree-du-preavis-en-cas-de-demission",
-      "theme": "Départ de l'entreprise",
-    },
-    Object {
-      "answer": "<p>En cas de licenciement, la durée du préavis est égale à :</p>
-<ul>
-<li>De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;</li>
-<li>De 3 mois à 6 mois d'ancienneté : 2 semaines ;</li>
-<li>De 6 mois à 2 ans d'ancienneté : 1 mois ;</li>
-<li>Plus de 2 ans d'ancienneté : 2 mois.</li>
-</ul>
-<p>Le salarié n'a pas droit au préavis en cas de licenciement pour faute grave.</p>
-",
-      "index": 23,
-      "question": "Quelle est la durée de préavis en cas de licenciement ?",
-      "references": Array [
-        Object {
-          "category": "agreement",
-          "title": "Article 10.11",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 10.13",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-      ],
-      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
       "theme": "Départ de l'entreprise",
     },
     Object {
@@ -142,14 +115,14 @@ Object {
       "question": "Quelle est la durée de préavis en cas de départ à la retraite ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
           "category": null,
           "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
+        },
+        Object {
+          "category": "agreement",
+          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
+          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
       ],
       "slug": "quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
@@ -288,12 +261,12 @@ Object {
       "references": Array [
         Object {
           "category": "agreement",
-          "title": "Article 6.121",
+          "title": "Article 6-12",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         Object {
           "category": "agreement",
-          "title": "Article 6.21",
+          "title": "Article 6-21",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
       ],
@@ -446,7 +419,7 @@ Object {
       "references": Array [
         Object {
           "category": "agreement",
-          "title": "Article  5-12",
+          "title": "Article 5-12",
           "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
       ],
@@ -648,10 +621,11 @@ Object {
   "date_publi": "2018-07-01T00:00:00.000Z",
   "id": "KALICONT000005635221",
   "mtime": 1562614614,
-  "nbTextes": 14,
+  "nbTextes": 15,
   "num": 1596,
   "shortTitle": "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
   "slug": "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
+  "source": "page_convention_collective",
   "title": "Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) ",
   "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
 }

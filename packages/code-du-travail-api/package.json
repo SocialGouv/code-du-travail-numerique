@@ -26,7 +26,6 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@cdt/data...courrier-type": "^4.14.0",
-    "@cdt/data...datafiller": "^4.17.1",
     "@cdt/sources": "^4.14.0",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.0.0",

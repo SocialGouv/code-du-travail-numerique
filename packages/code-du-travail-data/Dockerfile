@@ -18,7 +18,6 @@ COPY --from=cdtn-base-image /app/node_modules/@socialgouv/kali-data/data /app/no
 COPY --from=cdtn-base-image /app/node_modules/@socialgouv/fiches-travail-data/data /app/node_modules/@socialgouv/fiches-travail-data/data
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
-COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
 WORKDIR /app

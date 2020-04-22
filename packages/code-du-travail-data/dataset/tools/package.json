@@ -9,7 +9,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@cdt/data...datafiller": "^4.17.1",
-    "@cdt/sources": "^4.14.0"
+    "@cdt/sources": "^4.14.0",
+    "@socialgouv/datafiller-data": "^1.10.0"
   }
 }

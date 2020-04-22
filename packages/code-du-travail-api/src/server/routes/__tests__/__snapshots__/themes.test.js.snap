@@ -2,7 +2,7 @@
 
 exports[`return theme data for slug 8-depart-de-lentreprise 1`] = `
 Object {
-  "breadcrumbs": null,
+  "breadcrumbs": Array [],
   "children": Array [
     Object {
       "label": "Documents à remettre au salarié",
@@ -37,36 +37,6 @@ Object {
   "refs": Array [
     Object {
       "source": "external",
-      "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
-      "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
-    },
-    Object {
-      "source": "external",
-      "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
-      "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-    },
-    Object {
-      "source": "external",
-      "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
-      "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
-    },
-    Object {
-      "source": "external",
-      "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
-      "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
-    },
-    Object {
-      "source": "external",
-      "title": "Heures pour recherche d’emploi",
-      "url": "/outils/heures-recherche-emploi",
-    },
-    Object {
-      "source": "external",
-      "title": "",
-      "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis",
-    },
-    Object {
-      "source": "external",
       "title": "",
       "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
     },
@@ -82,8 +52,33 @@ Object {
     },
     Object {
       "source": "external",
+      "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
+      "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+    },
+    Object {
+      "source": "external",
+      "title": "Heures pour recherche d’emploi",
+      "url": "/outils/heures-recherche-emploi",
+    },
+    Object {
+      "source": "external",
+      "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
+      "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+    },
+    Object {
+      "source": "external",
       "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
       "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+    },
+    Object {
+      "source": "external",
+      "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+      "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
+    },
+    Object {
+      "source": "external",
+      "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
+      "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
     },
   ],
   "slug": "8-depart-de-lentreprise",

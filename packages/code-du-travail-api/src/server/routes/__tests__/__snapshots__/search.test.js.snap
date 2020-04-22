@@ -4,7 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 21.214512,
+      "_score": 22.908672,
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -17,7 +17,7 @@ Object {
     Object {
       "_score": 1.285346,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "8-depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
@@ -38,7 +38,7 @@ Object {
     Object {
       "_score": 1.256601,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
@@ -227,7 +227,7 @@ Object {
     Object {
       "_score": 1.775988,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
@@ -235,7 +235,7 @@ Object {
     Object {
       "_score": 1.7593896,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "8-depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
@@ -266,7 +266,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 9.857731,
+      "_score": 10.527751,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -304,17 +304,26 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 9.451603,
+      "_score": 9.811481,
       "action": "Calculer",
       "algo": "both",
-      "breadcrumbs": Array [],
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
       "description": "Calculez la durée de préavis à respecter en cas de démission",
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 9.180422,
+      "_score": 9.766209,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -354,7 +363,7 @@ Object {
       "title": "Rupture de période d’essai à l'initiative de l'employeur",
     },
     Object {
-      "_score": 8.810692,
+      "_score": 9.466892,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -373,7 +382,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 4.3370214,
+      "_score": 4.910861,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -430,7 +439,7 @@ Object {
     Object {
       "_score": 1.775988,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "1-embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
@@ -438,7 +447,7 @@ Object {
     Object {
       "_score": 1.7593896,
       "algo": "semantic",
-      "breadcrumbs": null,
+      "breadcrumbs": Array [],
       "slug": "8-depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
