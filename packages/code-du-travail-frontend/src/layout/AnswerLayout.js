@@ -24,7 +24,7 @@ export const MainContent = styled.div`
 
 export const AsideContent = styled(Section)`
   position: ${(props) => (props.sticky ? "sticky" : "static")};
-  top: 12rem;
+  top: 16rem;
   width: calc(30% - ${spacings.larger});
   margin-left: ${spacings.larger};
   @media (min-width: ${breakpoints.tablet}) {

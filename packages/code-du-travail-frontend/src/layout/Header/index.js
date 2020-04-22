@@ -60,7 +60,7 @@ export const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { box, breakpoints, spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledHeader = styled.header`
   ${({ currentPage }) => {
@@ -75,8 +75,6 @@ const StyledHeader = styled.header`
   height: ${HEADER_HEIGHT};
   background-color: ${({ currentPage, theme }) =>
     currentPage === "home" ? "transparent" : theme.white};
-  box-shadow: ${({ currentPage, theme }) =>
-    currentPage !== "home" ? box.shadow.default(theme.secondary) : "none"};
   @media (max-width: ${breakpoints.mobile}) {
     height: ${MOBILE_HEADER_HEIGHT};
   }

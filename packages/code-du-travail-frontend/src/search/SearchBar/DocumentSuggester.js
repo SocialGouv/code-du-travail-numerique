@@ -127,8 +127,7 @@ const renderSuggestion = (suggestion, query) => {
 
 const SuggestionsContainer = styled.div`
   ul {
-    position: relative;
-    z-index: 3;
+    z-index: 1;
   }
   li[role="option"]:nth-child(2n + 1) {
     background: ${colors.bgSecondary};

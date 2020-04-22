@@ -12,7 +12,7 @@ import { box, breakpoints, spacings } from "../theme";
 const maxTabletWidth = parseInt(breakpoints.tablet.replace("px", ""), 10);
 
 export const BurgerNav = ({ children, ...props }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -36,7 +36,6 @@ export const BurgerNav = ({ children, ...props }) => {
       window.removeEventListener("resize", onResize);
     };
   });
-
   if (isDesktop) {
     return <Nav {...props}>{children}</Nav>;
   }
@@ -72,6 +71,9 @@ BurgerNav.propTypes = {
 const Nav = styled.nav`
   display: flex;
   height: 100%;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const OpenButton = styled(Button)`

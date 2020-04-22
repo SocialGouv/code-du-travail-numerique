@@ -40,18 +40,19 @@ const StyledLink = styled.a`
   display: flex;
   justify-content: center;
   padding: ${spacings.small};
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => (theme.noColors ? theme.white : theme.title)};
   text-align: center;
   text-decoration: none;
   &:hover,
   &:active,
   &:focus {
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => (theme.noColors ? theme.white : theme.title)};
     text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.white};
+    text-decoration-color: ${({ theme }) =>
+      theme.noColors ? theme.white : theme.title};
   }
   background-color: ${({ theme }) =>
-    theme.noColors ? theme.primary : "#038761"};
+    theme.noColors ? theme.primary : "#ffe980"};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   @media (max-width: ${breakpoints.mobile}) {
     top: ${({ currentPage }) =>
