@@ -2661,10 +2661,10 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-travail-data@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.2.1.tgz#199b2b5a6a268f222f347a854bea28ab648c5288"
-  integrity sha512-wyuRzpn7xcNVfysfdFi7T9Rai9kXXxHoNeAsFPD2DtbwfrgdnkzZZC0OZSQuyJWHi+jdqfy3NMcVv97o1/mJFw==
+"@socialgouv/fiches-travail-data@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.2.2.tgz#dc68802c39900b3cb8622a996658cfa08c0d6553"
+  integrity sha512-2CFYSfhI/wbM327SJW+Sck8Fu6Fq93+wQzjKC8h15u4mlc1Gxwf5q37743t0zc+RZWr+EZKRp9iW+RpWU4M+dg==
   dependencies:
     "@socialgouv/datafiller-data" "^1.11.0"
     "@socialgouv/legi-data" "^1.2.0"
