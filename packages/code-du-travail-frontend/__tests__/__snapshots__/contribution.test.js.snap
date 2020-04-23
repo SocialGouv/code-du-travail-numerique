@@ -1436,18 +1436,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c23 {
-=======
-  .c44 {
-<<<<<<< HEAD
->>>>>>> test(front): update snaps
     width: 3rem;
     height: 3rem;
-=======
-    width: 3.4rem;
-    height: 3.4rem;
->>>>>>> fix(front): wrong snaps
     margin-right: 1rem;
   }
 }
@@ -4247,7 +4238,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c23 {
     width: 3rem;
     height: 3rem;
@@ -4257,16 +4247,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 @media (max-width:600px) {
   .c49 {
-=======
-  .c44 {
-<<<<<<< HEAD
->>>>>>> test(front): update snaps
     width: 3rem;
     height: 3rem;
-=======
-    width: 3.4rem;
-    height: 3.4rem;
->>>>>>> fix(front): wrong snaps
     margin-right: 1rem;
   }
 }

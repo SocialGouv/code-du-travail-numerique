@@ -1978,18 +1978,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c24 {
-=======
-  .c36 {
-<<<<<<< HEAD
->>>>>>> test(front): update snaps
     width: 3rem;
     height: 3rem;
-=======
-    width: 3.4rem;
-    height: 3.4rem;
->>>>>>> fix(front): wrong snaps
     margin-right: 1rem;
   }
 }
