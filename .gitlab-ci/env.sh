@@ -17,7 +17,9 @@ export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 #
 
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
-export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+if [ -z ${ES_INDEX_PREFIX+x} ]; then
+  export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+fi
 
 #
 # For master branch we keep branch name as branch hash
