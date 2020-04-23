@@ -44,17 +44,11 @@ Coronavirus et données personnelles :
       },
       {
         type: "main",
-        url:
-          "/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries",
+        url: "/fiche-ministere-travail/questions-reponses-par-theme",
       },
       {
         type: "secondary",
         url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/coronavirus-covid-19-fiches-conseils-metiers-pour-les-salaries-et-les-employeurs",
       },
       {
         type: "secondary",
@@ -68,7 +62,17 @@ Coronavirus et données personnelles :
       },
       {
         type: "secondary",
+        url:
+          "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs",
+      },
+      {
+        type: "secondary",
         url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
+      },
+      {
+        type: "secondary",
+        url:
+          "/fiche-ministere-travail/securite-et-sante-des-travailleurs-les-obligations-generales-de-lemployeur-et-sa-responsabilite",
       },
       {
         type: "secondary",
@@ -78,7 +82,7 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
-          "/fiche-service-public/securite-et-sante-au-travail-obligations-de-lemployeur",
+          "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle#Elargissement-du-dispositif-FNE-Formation-a-l-ensemble-des-entreprises-qui-nbsp",
       },
       {
         type: "secondary",
@@ -88,32 +92,12 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
-          "/fiche-service-public/un-salarie-peut-il-refuser-de-travailler-dans-une-situation-dangereuse",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-apprentissage",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
-      },
-      {
-        type: "secondary",
-        url:
           "/fiche-ministere-travail/covid-19-situation-des-travailleurs-frontaliers",
       },
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-formation-professionnelle-des-salaries-alternants-et-personnes-en-recherche-demploi",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/coronavirus-covid-19-questions-reponses-mon-compte-formation",
+          "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
       },
       {
         type: "external",
