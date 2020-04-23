@@ -177,11 +177,14 @@ Deploy @cdtn/frontend extra ingress(prod):
 #
 
 Update Elasticsearch Index (manual):
-  <<: *deploy_data
+  extends:
+      - .deploy-data
   environment:
     # name: prod
     name: fabrique-dev
-  when: manual
+  only:
+    refs:
+      - master
   variables:
     # ES_INDEX_PREFIX: cdtn-prod
     ES_INDEX_PREFIX: cdtn-preprod
