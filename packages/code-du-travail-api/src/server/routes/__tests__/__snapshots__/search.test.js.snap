@@ -212,14 +212,8 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.7831118,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-      ],
+      "_score": 2.0540853,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
@@ -424,14 +418,8 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.7831118,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-      ],
+      "_score": 2.0540853,
+      "algo": "fulltext",
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
