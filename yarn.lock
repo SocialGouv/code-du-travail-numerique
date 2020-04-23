@@ -2630,6 +2630,16 @@
     remark "^12.0.0"
     remark-html "^11.0.1"
 
+"@socialgouv/datafiller-data@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.12.0.tgz#8ec49b7e0deb33e5cddaf5f5f62020ee9c9d9abe"
+  integrity sha512-C9kcs7pE1FqvvkZxC0+J471z4z1ajdM5H5UxUfUdkUxQgA+zUPR0qdt8BEhsNlylCsLusdmp1E2ZVLe+GoiHOA==
+  dependencies:
+    node-fetch "^2.6.0"
+    p-pipe "^3.0.0"
+    remark "^12.0.0"
+    remark-html "^11.0.1"
+
 "@socialgouv/dila-api-client@^1.1.0", "@socialgouv/dila-api-client@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/dila-api-client/-/dila-api-client-1.1.1.tgz#ff6bb72a52c3e3ac834fe07fa74daf4edf50e4ac"
