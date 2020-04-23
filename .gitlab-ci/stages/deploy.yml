@@ -180,15 +180,13 @@ Update Elasticsearch Index (manual):
   extends:
       - .deploy-data
   environment:
-    # name: prod
-    name: fabrique-dev
-  # only:
-  #   refs:
-  #     - master
+    name: prod
+  only:
+    refs:
+      - master
   when: manual
   variables:
-    # ES_INDEX_PREFIX: cdtn-prod
-    ES_INDEX_PREFIX: cdtn-preprod
+    ES_INDEX_PREFIX: cdtn-prod
 
 Create Elasticsearch Index (dev):
   <<: *deploy_data
