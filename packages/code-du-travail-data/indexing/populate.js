@@ -276,6 +276,7 @@ async function* cdtnDocumentsGen() {
     };
   });
   logger.info("=== data version ===");
+  logger.info(getVersions());
   yield [
     {
       source: SOURCES.VERSIONS,
