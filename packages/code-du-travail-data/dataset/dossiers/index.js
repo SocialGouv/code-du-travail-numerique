@@ -82,22 +82,12 @@ Coronavirus et données personnelles :
       {
         type: "secondary",
         url:
-          "/fiche-ministere-travail/quelles-mesures-lemployeur-doit-il-prendre-pour-proteger-la-sante-de-ses-salaries",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle",
+          "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle#Elargissement-du-dispositif-FNE-Formation-a-l-ensemble-des-entreprises-qui-nbsp",
       },
       {
         type: "secondary",
         url:
           "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
-      },
-      {
-        type: "secondary",
-        url:
-          "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle",
       },
       {
         type: "secondary",

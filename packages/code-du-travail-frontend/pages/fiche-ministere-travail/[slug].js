@@ -47,7 +47,10 @@ const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
   useEffect(() => {
     setTitledSections(
       buildAccordionSections(
-        sections.map((section) => ({ ...section, html: decode(section.html) }))
+        sections.map((section) => ({
+          ...section,
+          html: decode(section.html),
+        }))
       )
     );
   }, [sections]);

@@ -8,7 +8,7 @@ import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
 import { Breadcrumbs } from "./Breadcrumbs";
-import useGlossary from "../glossary";
+// import useGlossary from "../glossary";
 import {
   AsideContent,
   MainAsideLayout,
@@ -37,7 +37,7 @@ function Answer({
   suptitle,
   title,
 }) {
-  const glossaryItems = useGlossary(children, html);
+  // const glossaryItems = useGlossary(children, html);
   const router = useRouter();
 
   return (
@@ -65,7 +65,7 @@ function Answer({
             </Article>
           )}
           {additionalContent}
-          {glossaryItems}
+          {/* glossaryItems */}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}
