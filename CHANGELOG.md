@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.18.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.0...v4.18.0-alpha.1) (2020-04-23)
+
+
+### Features
+
+* **data:** update datafiller data ([#2659](https://github.com/SocialGouv/code-du-travail-numerique/issues/2659)) ([21b3d59](https://github.com/SocialGouv/code-du-travail-numerique/commit/21b3d59e8d0e23952e4643a4de2eec21fdf5c2f9))
+* **front:** disable GA and remove tarte au citron ([#2568](https://github.com/SocialGouv/code-du-travail-numerique/issues/2568)) ([151be65](https://github.com/SocialGouv/code-du-travail-numerique/commit/151be656d96d458e223c94e0ead7a3e48e2f320f))
+
+
+
+
+
 # [4.18.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.2...v4.18.0-alpha.0) (2020-04-23)
 
 
