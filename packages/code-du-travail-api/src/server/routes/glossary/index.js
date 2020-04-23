@@ -18,7 +18,11 @@ async function _getGlossaryData() {
   return response;
 }
 
-const getGlossary = memoizee(_getGlossaryData, { promise: true });
+const getGlossary = memoizee(_getGlossaryData, {
+  promise: true,
+  maxAge: 1000 * 5 * 60,
+  preFetch: true,
+});
 
 /**
  * Return glossary terms that match a given slug

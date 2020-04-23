@@ -1,17 +1,18 @@
 import { getRouteBySource, SOURCES } from "@cdt/sources";
+import themes from "@socialgouv/datafiller-data/data/themes.json";
 import crypto from "crypto";
 import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
-import themes from "@socialgouv/datafiller-data/data/themes.json";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
+import { getAgreementPages } from "./agreement_pages";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
-import { getAgreementPages } from "./agreement_pages";
+import { getVersions } from "./versions";
 
 const getBreadcrumbs = createThemer(themes);
 
@@ -277,6 +278,13 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.CCN_PAGE,
     };
   });
+  logger.info("=== data version ===");
+  yield [
+    {
+      source: SOURCES.VERSIONS,
+      data: getVersions(),
+    },
+  ];
 }
 /**
  * HACK @lionelb

@@ -16,6 +16,7 @@ const SOURCES = {
   HIGHLIGHTS: "highlights",
   GLOSSARY: "glossary",
   PREQUALIFIED: "prequalified",
+  VERSIONS: "versions",
 };
 
 // mapping elastic search source type -> route name

@@ -48,7 +48,7 @@ async function _getPrequalified() {
 
 const getPrequalified = memoizee(_getPrequalified, {
   promise: true,
-  maxAge: 1000 * 5,
+  maxAge: 1000 * 5 * 60,
   preFetch: true,
 });
 
