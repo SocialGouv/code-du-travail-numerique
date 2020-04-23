@@ -182,9 +182,10 @@ Update Elasticsearch Index (manual):
   environment:
     # name: prod
     name: fabrique-dev
-  only:
-    refs:
-      - master
+  # only:
+  #   refs:
+  #     - master
+  when: manual
   variables:
     # ES_INDEX_PREFIX: cdtn-prod
     ES_INDEX_PREFIX: cdtn-preprod
