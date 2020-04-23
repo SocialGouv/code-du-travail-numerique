@@ -2620,7 +2620,7 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.10.0", "@socialgouv/datafiller-data@^1.11.0":
+"@socialgouv/datafiller-data@^1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.11.0.tgz#b0d37c686441071892a4136a658ba2fdd6fc1825"
   integrity sha512-rt3IXf5GBLRb00EfEzZeJvFE6WeLeiJQsf+qbg7/rxvsTO6eEVNF06ClGFwSQ30mTEdJiz/nDptcd/JmYefktg==
@@ -2661,12 +2661,12 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-travail-data@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-1.27.0.tgz#cf8e6c42cb3558083a50d94fba5f5324d76ba97f"
-  integrity sha512-08uDI0aogo3HUuMSg2jYorBDUviEvBzppaL440yHxqAXD6DjQVql3RabK+eug6Q2+nDe5XLSd29xpefxeY3aGQ==
+"@socialgouv/fiches-travail-data@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.2.2.tgz#dc68802c39900b3cb8622a996658cfa08c0d6553"
+  integrity sha512-2CFYSfhI/wbM327SJW+Sck8Fu6Fq93+wQzjKC8h15u4mlc1Gxwf5q37743t0zc+RZWr+EZKRp9iW+RpWU4M+dg==
   dependencies:
-    "@socialgouv/datafiller-data" "^1.10.0"
+    "@socialgouv/datafiller-data" "^1.11.0"
     "@socialgouv/legi-data" "^1.2.0"
     esm "^3.2.25"
     jsdom "^16.2.2"
