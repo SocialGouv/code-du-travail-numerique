@@ -7,7 +7,7 @@
     "test": "codeceptjs run --features"
   },
   "dependencies": {
-    "codeceptjs": "^2.6.1",
+    "codeceptjs": "^2.6.2",
     "puppeteer": "^3.0.1"
   }
 }
