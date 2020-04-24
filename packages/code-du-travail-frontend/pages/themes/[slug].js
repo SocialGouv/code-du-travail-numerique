@@ -53,10 +53,10 @@ class Theme extends React.Component {
         <Section>
           <Container>
             <FocusRoot>
-              <PageTitle>{theme.title}</PageTitle>
+              <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
             </FocusRoot>
             {theme.children && theme.children.length > 0 && (
-              <StyledContainer narrow noPadding>
+              <StyledContainer>
                 {theme.children.map(({ slug, label }) => (
                   <Link
                     key={slug}
@@ -64,21 +64,21 @@ class Theme extends React.Component {
                     as={slug}
                     passHref
                   >
-                    <StyledLink variant="flat" as={Button}>
-                      {label}
-                    </StyledLink>
+                    <StyledLink as={Button}>{label}</StyledLink>
                   </Link>
                 ))}
               </StyledContainer>
             )}
           </Container>
-          {theme.refs && theme.refs.length > 0 && (
+        </Section>
+        {theme.refs && theme.refs.length > 0 && (
+          <Section>
             <SearchResults
               query={theme.title}
               items={{ documents: theme.refs, articles: [], themes: [] }}
             />
-          )}
-        </Section>
+          </Section>
+        )}
       </Layout>
     );
   }
@@ -86,12 +86,17 @@ class Theme extends React.Component {
 
 export default Theme;
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledContainer = styled(Container)`
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const StyledLink = styled.a`
   margin: ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 1 auto;
+  }
 `;

@@ -23,7 +23,15 @@ function getRootThemesQuery() {
 
 function getThemeQuery({ slug }) {
   return {
-    _source: ["title", "slug", "position", "breadcrumbs", "children", "refs"],
+    _source: [
+      "title",
+      "slug",
+      "position",
+      "breadcrumbs",
+      "children",
+      "description",
+      "refs",
+    ],
     sort: [{ position: { order: "asc" } }],
     query: {
       bool: {
