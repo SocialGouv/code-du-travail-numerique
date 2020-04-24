@@ -1,9 +1,9 @@
 {
   "name": "@cdt/data...dossiers",
-  "version": "4.18.0-alpha.1",
+  "version": "4.18.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@cdt/sources": "^4.18.0-alpha.1"
+    "@cdt/sources": "^4.18.0"
   }
 }

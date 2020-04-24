@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...simulateurs",
-  "version": "4.18.0-alpha.1",
+  "version": "4.18.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
