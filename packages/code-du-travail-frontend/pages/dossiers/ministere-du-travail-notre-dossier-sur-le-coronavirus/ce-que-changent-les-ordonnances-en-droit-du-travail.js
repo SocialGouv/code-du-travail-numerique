@@ -602,7 +602,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776873",
               },
               {
-                id: "prime-exceptionnelle-2",
+                id: "prime-exceptionnelle-3",
                 title:
                   "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 19",
                 type: TYPE_REFERENCE.external,
