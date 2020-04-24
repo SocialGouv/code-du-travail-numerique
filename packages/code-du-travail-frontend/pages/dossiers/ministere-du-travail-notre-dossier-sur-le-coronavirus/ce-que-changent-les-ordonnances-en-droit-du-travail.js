@@ -559,7 +559,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
             La prime de pouvoir d’achat est exonérée de cotisations et
             contributions sociales et d’impôt sur le revenu jusqu’à :
           </p>
-          <ul>
+          <Ul>
             <Li>
               <strong>1000€</strong>, en l’absence d’accord d’intéressement
               applicable dans l’entreprise.
@@ -574,7 +574,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               <strong>2000€</strong> pour les associations et fondations (avec
               ou sans accord d’intéressement).
             </Li>
-          </ul>
+          </Ul>
           <p>
             Enfin, il est toujours possible de moduler le montant de la prime
             entre les salariés selon les critères suivants : la rémunération, le
@@ -584,7 +584,6 @@ const Fiche = ({ pageUrl, ogImage }) => {
             les conditions de travail liées à l’épidémie de covid-19.
           </p>
           <ReferencesJuridiques
-            accordionDisplay={1}
             references={[
               {
                 id: "prime-exceptionnelle-1",
