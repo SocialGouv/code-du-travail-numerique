@@ -186,7 +186,7 @@ Update Elasticsearch Index (manual):
       - master
   when: manual
   variables:
-    ES_INDEX_PREFIX: cdtn-prod
+    PRODUCTION: "true"
 
 Create Elasticsearch Index (dev):
   <<: *deploy_data
