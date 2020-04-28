@@ -139,6 +139,15 @@ Deploy @cdtn/frontend (dev):
     expire_in: 30 mins
     paths:
       - packages/code-du-travail-nlp
+  after_script:
+    - |-
+      source ./.gitlab-ci/env.sh
+      retry=60;
+      while
+        ! curl -sS "${FRONTEND_URL}/api/version" | grep "${COMMIT}" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for frontend to be ready" ; sleep 3 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage

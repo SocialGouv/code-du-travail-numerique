@@ -67,6 +67,8 @@ deployment:
           key: SENTRY_PUBLIC_DSN
     - name: VERSION
       value: "${VERSION}"
+    - name: COMMIT
+      value: "${COMMIT}"
 
   initContainers:
     - name: wait-for-api
