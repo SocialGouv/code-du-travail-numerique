@@ -4,7 +4,7 @@ L'image docker DATA contient un dump des documents ainsi que les vecteurs associ
 
 ## Données
 
-L'ensemble des documents et données utilisés par l'api est stocké dans une base elasticsearch et peut être mis à jour en lançant le script d'indexation sans avoir à re-déployer l'api ou le frontend. Cela à l'exeption de la liste des courriers qui fait toujours parti du dataset et des mots du glossaire qui sont importer dans le frontend pour permettre d'afficher des tooltips dynamiques.
+L'ensemble des documents et données utilisés par l'api est stocké dans une base elasticsearch et peut être mis à jour en lançant le script d'indexation sans avoir à re-déployer l'api ou le frontend. Cela à l'exception de la liste des courriers qui fait toujours parti du dataset et des mots du glossaire qui sont importés dans le frontend pour permettre d'afficher des tooltips dynamiques.
 
 Le processus de mise à jour des données est composé de 2 etapes.
 
