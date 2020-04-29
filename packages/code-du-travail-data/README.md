@@ -10,7 +10,7 @@ Le processus de mise à jour des données est composé de 2 etapes.
 
 ### Exportation
 
-Les données utilisées par le site sont issues de packages de données (@socialgouv/*-data). Ces données sont compilées dans un fichier dans un fichier de dump dans un format pret pour l'indexation. Pour créer ce fichier, on utilise la commande.
+Les données utilisées par le site sont issues de packages de données (@socialgouv/*-data). Ces données sont compilées dans un fichier de dump dans un format pret pour l'indexation. Pour créer ce fichier, on utilise la commande.
 
 ```sh
 $ yarn workspace @cdt/data dump-dev
