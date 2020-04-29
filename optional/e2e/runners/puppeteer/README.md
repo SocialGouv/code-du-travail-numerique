@@ -9,6 +9,9 @@ $ yarn
 
 ## Usage
 
+In order not to get false negative make sure you wait for the page title to appear before you test a page.
+`"j'attends que le titre de page {string} apparaisse"`
+
 ```sh
 # Test the http://localhost:3000
 $ yarn test
@@ -31,14 +34,16 @@ $ export CODECEPT_BASEURL=http://master.code-du-travail-numerique.dev.factory.so
 $ yarn test
 ```
 
+[Check the Puppeteer configuration and method list](https://codecept.io/helpers/Puppeteer)
+
 ## Debug
 
 ```sh
 # To run one test in debug mode
-$ yarn test --steps --verbose --grep "@apropos"
+$ yarn test --steps --verbose --grep "@apropos" -p pauseOnFail
 ```
 
-Another way to debug is by pausing the tests
+Another way to debug is by pausing the tests at some point
 
 ```feature
 @my_test

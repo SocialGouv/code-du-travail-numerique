@@ -4,10 +4,16 @@
   "description": "",
   "main": "codecept.conf.js",
   "scripts": {
+    "lint": "eslint step_definitions/**/*.js",
     "test": "codeceptjs run --features"
   },
   "dependencies": {
     "codeceptjs": "^2.6.2",
     "puppeteer": "^3.0.2"
-  }
+  },
+  "devDependencies": {
+    "@socialgouv/eslint-config-recommended": "^0.19.0",
+    "eslint": "^6.8.0"
+  },
+  "license": "Apache-2.0"
 }

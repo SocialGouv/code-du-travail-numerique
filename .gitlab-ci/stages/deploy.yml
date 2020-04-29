@@ -38,10 +38,6 @@ Create namespace:
 .deploy_stage: &deploy_stage
   stage: "Deploy"
   dependencies: []
-  except:
-    variables:
-      # Don't run when running e2e tests
-      - $E2E_TEST
   services:
     - docker:dind
   variables: &deploy_stage_variables
@@ -64,8 +60,6 @@ Create namespace:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
