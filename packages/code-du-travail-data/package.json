@@ -15,7 +15,9 @@
     "populate": "NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
     "prepush": "yarn lint",
-    "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
+    "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "unist-util-find": "^1.0.1",
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.1",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.316.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -63,5 +66,6 @@
     "collectCoverageFrom": [
       "indexing/**/*.js"
     ]
-  }
+  },
+  "snyk": true
 }
