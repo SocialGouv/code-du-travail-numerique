@@ -202,7 +202,9 @@ async function* cdtnDocumentsGen() {
         source: SOURCES.CONTRIBUTIONS,
         title,
         slug,
-        breadcrumbs: getBreadcrumbs(`/${SOURCES.CONTRIBUTIONS}/${slug}`),
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
+        ),
         description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
         answers,
