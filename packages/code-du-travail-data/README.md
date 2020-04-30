@@ -4,21 +4,37 @@ L'image docker DATA contient un dump des documents ainsi que les vecteurs associ
 
 ## Données
 
-Par defaut, le script d'indexation va chercher les données dans `/packages/code-du-travail-nlp/data/dist/dump.data.json` mais il possible de changer ce chemin avec la variable d'environnement `DUMP_PATH`.
+L'ensemble des documents et données utilisés par l'api est stocké dans une base elasticsearch et peut être mis à jour en lançant le script d'indexation sans avoir à re-déployer l'api ou le frontend. Cela à l'exception de la liste des courriers qui fait toujours parti du dataset et des mots du glossaire qui sont importés dans le frontend pour permettre d'afficher des tooltips dynamiques.
 
-### Génération en local
+Le processus de mise à jour des données est composé de 2 etapes.
 
-Une premiere version du dump (sans les vecteurs) peut être générée via la commande.
+### Exportation
+
+Les données utilisées par le site sont issues de packages de données (@socialgouv/*-data). Ces données sont compilées dans un fichier de dump dans un format pret pour l'indexation. Pour créer ce fichier, on utilise la commande.
 
 ```sh
 $ yarn workspace @cdt/data dump-dev
 ```
 
-Pour réaliser un dump avec les vecteurs semantiques, il est necessaire de spécifier la variable d'environnement `NLP_URL`. Reporter vous au [README.md du projet nlp](../code-du-travail-nlp/README.md) pour voir comment démarrer une instance le service
+Pour chaque document, il possible aussi de rajouter une représentation vectorielle qui servira à la recherche semantique. Pour cela, il faut que la variable d'environnement NLP_URL soit fournie et pointe vers une instance du service NLP. Reportez-vous au [README.md du projet nlp](../code-du-travail-nlp/README.md) pour voir comment démarrer une instance du service.
 
 ```sh
+# Exporter les données vers elacticsearch avec leur representation vectorielle (title_vector)
 $ NLP_URL=http://localhost:5000 yarn workspace @cdt/data dump-dev
 ```
+
+### Importation dans elasticsearh
+
+Une fois le fichier de dump généré, on utilise la commande 
+
+```sh
+$ yarn workspace @cdt/data populate-dev
+```
+pour créer 2 index elasticsearch( un dédié aux documents, l'autre aux suggestions).
+
+
+Par defaut, le script d'import va chercher les données dans `/packages/code-du-travail-data/dist/dump.data.json` mais il possible de changer ce chemin avec la variable d'environnement `DUMP_PATH`.
+
 
 ### Récupération depuis l'image master
 
@@ -33,11 +49,16 @@ docker run \
    >! packages/code-du-travail-data/dist/dump.tf.json
 ```
 
+Les données provenant de packages externes sont désormais mis à jour de manière automatique via le bot renovate qui maintient les versions de nos dépendances à jour, seuls les outils et les modèles nécessitent une mise à jour des deploiement de l'api et du frontend.
+
 ## Related
 
 - [fiches-vdd](https://github.com/SocialGouv/fiches-vdd)
 - [legi-data](https://github.com/SocialGouv/legi-data)
 - [kali-data](https://github.com/SocialGouv/kali-data)
+- [datafiller-data](https://github.com/SocialGouv/datafiller-data)
+- [fiches-travail-data](https://github.com/SocialGouv/fiches-travail-data)
+- [contributions-data](https://github.com/SocialGouv/contributions-data)
 
 ## Schéma
 
