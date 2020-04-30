@@ -49,7 +49,7 @@ docker run \
    >! packages/code-du-travail-data/dist/dump.tf.json
 ```
 
-Les données provenant de packages externes sont désormais mis à jour de manière automatique via le bot renovate qui maintient les versions de nos dépendances à jour, seules les outils et les modèles nécessite une mise a jour des deploiement de l'api et du frontend.
+Les données provenant de packages externes sont désormais mis à jour de manière automatique via le bot renovate qui maintient les versions de nos dépendances à jour, seuls les outils et les modèles nécessitent une mise à jour des deploiement de l'api et du frontend.
 
 ## Related
 
