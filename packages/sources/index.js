@@ -26,6 +26,7 @@ const routeBySource = {
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EXTERNALS]: "external",
+  [SOURCES.GLOSSARY]: "glossaire",
   [SOURCES.IDCC]: "idcc",
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",

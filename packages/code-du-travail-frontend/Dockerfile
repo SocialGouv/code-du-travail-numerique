@@ -9,8 +9,6 @@ WORKDIR /app
 
 USER node
 
-ENV DUMP_PATH "../../code-du-travail-data/dist/dump.data.json"
-
 RUN yarn workspace @cdt/frontend generate-sitemap
 
 ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]

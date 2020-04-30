@@ -5,7 +5,8 @@ import glossary from "@socialgouv/datafiller-data/data/glossary.json";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import slugify from "@cdt/data/slugify";
 
-const DOCUMENT_PATH = process.env.DUMP_PATH || "../data/dump.data.json";
+const DOCUMENT_PATH =
+  process.env.DUMP_PATH || "../../code-du-travail-data/dist/dump.data.json";
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 
 const writeFile = promisify(fs.writeFile);
