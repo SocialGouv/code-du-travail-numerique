@@ -29,7 +29,7 @@
     "@sentry/browser": "^5.15.5",
     "@sentry/node": "^5.15.5",
     "@socialgouv/datafiller-data": "^1.13.0",
-    "@socialgouv/fiches-travail-data": "^3.11.0",
+    "@socialgouv/fiches-travail-data": "^3.8.0",
     "@socialgouv/react-fiche-service-public": "^4.18.0",
     "@socialgouv/react-ui": "^4.18.0",
     "@zeit/next-source-maps": "^0.0.3",
