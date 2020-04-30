@@ -49,14 +49,14 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "@socialgouv/eslint-config-recommended": "^0.20.0",
     "@zeit/ncc": "^0.22.1",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.5.0",
+    "babel-jest": "^25.5.1",
     "eslint": "^6.8.0",
-    "jest": "^25.5.0",
+    "jest": "^25.5.2",
     "prettier": "^2.0.5"
   },
   "jest": {
