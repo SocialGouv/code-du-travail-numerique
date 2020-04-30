@@ -1,13 +1,24 @@
 {
+  "enabled": true,
   "extends": [
-    "github>SocialGouv/renovate-config",
-    "group:allNonMajor"
+    "github>SocialGouv/renovate-config"
   ],
   "packageRules": [
     {
-      "packagePatterns": ["^@socialgouv\/.*\\-data$"],
-      "groupName": "@socialgouv data packages",
+      "packagePatterns": ["^@socialgouv\/.*-data|vdd$"],
+      "groupName": ["@socialgouv data packages"],
       "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["patch", "minor"],
+      "groupName": "non-major devDependencies",
+      "automerge": true
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "updateTypes": ["patch", "minor"],
+      "groupName": "non-major dependencies "
     }
   ]
 }
