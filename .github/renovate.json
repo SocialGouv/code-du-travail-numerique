@@ -5,7 +5,9 @@
   ],
   "packageRules": [
     {
-      "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "packagePatterns": [
+        "^@socialgouv"
+      ],
       "depTypeList": ["dependencies"],
       "groupName": "@socialgouv data packages",
       "automerge": true
