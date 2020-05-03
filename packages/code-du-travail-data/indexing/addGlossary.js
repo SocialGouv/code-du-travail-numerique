@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-const glossary = require("@socialgouv/datafiller-data/data/glossary.json");
+const entries = require("@socialgouv/datafiller-data/data/glossary.json");
 
 const conventionMatchers = [
   "convention collective",
@@ -20,21 +20,37 @@ const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
 export function addGlossary(htmlContent) {
   if (!htmlContent) return "";
 
-  let formatedContent = htmlContent;
-  const uuidToWebComponent = new Map();
+  let uuidHtmlContent = htmlContent;
 
-  glossary.forEach(({ abbrs, title, definition, variants }) => {
-    const patterns = [title, ...variants].map(
-      (term) =>
-        new RegExp(`${wordBoundaryStart}(${term})${wordBoundaryEnd}`, "gi")
+  let glossary = [];
+  entries.forEach(({ abbrs, definition, title, variants }) => {
+    glossary = glossary.concat(
+      [title, ...variants].map((term) => ({
+        definition,
+        pattern: new RegExp(
+          `${wordBoundaryStart}(${term})${wordBoundaryEnd}`,
+          "gi"
+        ),
+        term,
+      }))
     );
     if (abbrs) {
-      patterns.push(new RegExp(`\\b(${abbrs})\\b`, "g"));
+      glossary.push({
+        definition,
+        pattern: new RegExp(`\\b(${abbrs})\\b`, "g"),
+        term: abbrs,
+      });
     }
+  });
 
-    patterns.forEach((pattern) => {
+  const uuidToWebComponent = new Map();
+
+  glossary
+    // we make sure that bigger terms are replaced first
+    .sort((previous, next) => next.term.length - previous.term.length)
+    .forEach(({ definition, pattern }) => {
       // while we loop, we replace the matches with uuid to prevent nested matches
-      formatedContent = formatedContent.replace(pattern, function (
+      uuidHtmlContent = uuidHtmlContent.replace(pattern, function (
         match, // contains the matching term with the word boundaries
         term // contains only the matching term
       ) {
@@ -49,11 +65,10 @@ export function addGlossary(htmlContent) {
         return match.replace(new RegExp(term), uuid);
       });
     });
-  });
 
   // In the end, we replace the uuid with its related component
-  let finalContent = formatedContent;
-  Array.from(uuidToWebComponent).forEach(([uuid, webComponent]) => {
+  let finalContent = uuidHtmlContent;
+  uuidToWebComponent.forEach((webComponent, uuid) => {
     finalContent = finalContent.replace(new RegExp(uuid, "g"), webComponent);
   });
 

@@ -69,9 +69,6 @@ nextApp.prepare().then(() => {
             "https://mon-entreprise.fr",
             "https://www.googletagmanager.com",
             "*.fabrique.social.gouv.fr",
-            "https://cdnjs.cloudflare.com",
-            "https://cdn.jsdelivr.net",
-            "https://unpkg.com",
           ],
           frameSrc: [
             "https://mon-entreprise.fr",
