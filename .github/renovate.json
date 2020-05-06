@@ -6,18 +6,25 @@
   "packageRules": [
     {
       "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "groupName": "@socialgouv data packages",
-      "automerge": true
+      "minor": {
+        "groupName": "@socialgouv data packages",
+        "automerge": true
+      }
     },
     {
       "depTypeList": ["devDependencies"],
-      "groupName": "all non-major devDependencies",
-      "automerge": true
+      "minor": {
+        "groupName": "all non-major devDependencies",
+        "automerge": true
+      }
     },
     {
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
-      "groupName": "all non-major dependencies"
+      "minor": {
+        "groupName": "all non-major dependencies"
+        "automerge": true
+      }
     }
   ]
 }
