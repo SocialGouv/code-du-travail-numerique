@@ -6857,10 +6857,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.12.0, date-fns@^2.9.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.12.0.tgz#01754c8a2f3368fc1119cf4625c3dad8c1845ee6"
-  integrity sha512-qJgn99xxKnFgB1qL4jpxU7Q2t0LOn1p8KMIveef3UZD7kqjT3tpFNNdXJelEHhE+rUgffriXriw/sOSU+cS1Hw==
+date-fns@^2.12.0, date-fns@^2.13.0, date-fns@^2.9.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.13.0.tgz#d7b8a0a2d392e8d88a8024d0a46b980bbfdbd708"
+  integrity sha512-xm0c61mevGF7f0XpCGtDTGpzEFC/1fpLXHbmFpxZZQJuvByIK2ozm6cSYuU+nxFYOPh2EuCfzUwlTEFwKG+h5w==
 
 dateformat@^3.0.0:
   version "3.0.3"
@@ -13890,7 +13890,7 @@ p-queue@^4.0.0:
   dependencies:
     eventemitter3 "^3.1.0"
 
-p-queue@^6.3.0:
+p-queue@^6.3.0, p-queue@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.4.0.tgz#5050b379393ea1814d6f9613a654f687d92c0466"
   integrity sha512-X7ddxxiQ+bLR/CUt3/BVKrGcJDNxBr0pEEFKHHB6vTPWNUhgDv36GpIH18RmGM3YGPpBT+JWGjDDqsVGuF0ERw==
@@ -14332,10 +14332,10 @@ pnp-webpack-plugin@1.5.0:
   dependencies:
     ts-pnp "^1.1.2"
 
-polished@^3.3.1, polished@^3.5.2:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.0.tgz#03eb2871c9bc4785d5199dd751cde7af6de42ff8"
-  integrity sha512-H7tsy9h5JVGXh7BdNzm/v/Q+zIasiwXnYflSmrLd+YpK+8dXKJTKl/kzCtB2kns2N5dyelRvjUtpOKK/nLCanA==
+polished@^3.3.1, polished@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.2.tgz#bae682806da6400596a851ea443178ff6eec1dd2"
+  integrity sha512-V0dyaVJUM5e5wIhLHvZyyE9PhXoI0AlGT6RDww1V/v+STsocLsVGWmi+9OKTL49oaQj85XFDvsWi/uHQJ0rpWg==
   dependencies:
     "@babel/runtime" "^7.9.2"
 
@@ -15230,10 +15230,10 @@ react-accessible-accordion@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.0.1.tgz#8f3b08c712f4d5e526fad4c55c3d70fc3b68cbd5"
   integrity sha512-2OZY6PWVOTYjVRQ5vnzVfvSRvapH1fYHNE6rG0S64cCatf+IOovokZEa4Xzmdl69ebrYO2HU3h8yLlEk9LqwPA==
 
-react-autosuggest@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-10.0.1.tgz#620fab9f203821d407246b74e557cc0605061eda"
-  integrity sha512-Y3vsgN2KKV0pwcKYiIwf2LPzfFxkShebJon9G4yeXE7ToZEY7MDmCNSEI9eKbZzeUAE3mcSpZy5Ho0NTU5NzrA==
+react-autosuggest@10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-10.0.2.tgz#c45cd73a7307026c932cb6a3e19c2fe35bfb6ec4"
+  integrity sha512-ouI0RJDSgM1FBfK0ZmLC3qUqithIwPVTpnC4JQW4DeId3mH2JnZmkNNDKImhcMrxLbSQRpV/DfTLn0uCs4b27w==
   dependencies:
     es6-promise "^4.2.8"
     prop-types "^15.7.2"
