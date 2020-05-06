@@ -17,7 +17,7 @@
     {
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
-      "groupName": "all non-major dependencies",
+      "groupName": "all non-major dependencies"
     }
   ]
 }
