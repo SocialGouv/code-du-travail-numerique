@@ -2617,17 +2617,17 @@
   dependencies:
     type-detect "4.0.8"
 
-"@socialgouv/contributions-data@^1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.20.0.tgz#1700797641bdfd6850efcdde565baa302806893d"
-  integrity sha512-zKN8HmcVzvZjFqMyfIaz+d+eannYRo/66nkLvKcu4Rhr1+qRlVrmhxLZ7ChJGQoQky4f1EnzDqjuhUcl2dCIVw==
+"@socialgouv/contributions-data@^1.23.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.23.0.tgz#4ecbfa7f9e978d3bb8c220f8516f1a5fdefb7c16"
+  integrity sha512-+b1H/HD57FkrIyukPm9GR6FOUJjeV31/gVQEJWe9Vz5CjyOau4fdOTA8+gceR6ODflnWByvT6WTRZcxBxEX9mQ==
   dependencies:
     "@socialgouv/kali-data" "^1.3.36"
     node-fetch "^2.6.0"
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.13.0", "@socialgouv/datafiller-data@^1.14.0":
+"@socialgouv/datafiller-data@^1.14.0":
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.14.0.tgz#64f65e95fafb46d0b33cfa7e647fa14f532ff91c"
   integrity sha512-1EMVQC1syHb0AprntUBXh+puCgBzkVWm87KKH2Gv8OIxDQG/7e6CvDAUjq5hoc9Du6Phj93JqUo2B/hbIoGuuw==
@@ -2668,35 +2668,35 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-travail-data@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.12.0.tgz#37946f4b16f491255649b9a317a796b54c86ff8f"
-  integrity sha512-pccft1WZvlcyljquGoR1zOP7Vpzf9S63hK5Dkg6NqEFwe3BzIGGuYbJcMjjKSp7UcIIUofNorfeKTjacZMFtZA==
+"@socialgouv/fiches-travail-data@^3.19.0":
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.19.0.tgz#cb17579867c1eb33134f438cb8c0ec2400017354"
+  integrity sha512-Mj7xC72VIv7hNKlbvdVt8fzQ1WFXGlPP+yqePaQZJbch6v3ktBVfWoVt3GxTIUXAvVVQIrF/BFAOU9/xZvNGXw==
   dependencies:
-    "@socialgouv/datafiller-data" "^1.13.0"
+    "@socialgouv/datafiller-data" "^1.14.0"
     "@socialgouv/legi-data" "^1.3.0"
     esm "^3.2.25"
     jsdom "^16.2.2"
     p-limit "^2.3.0"
     superagent "^5.2.2"
-    talisman "^1.1.1"
+    talisman "^1.1.2"
     unist-util-find "^1.0.1"
     unist-util-visit "^2.0.2"
 
-"@socialgouv/fiches-vdd@^1.46.0":
-  version "1.46.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.46.0.tgz#2974251ba1f9c10da2c2cdfc1c01af935ba36f7c"
-  integrity sha512-/WOAh9IHStbb13IdAhu/bKXY3Q3Zr27+RWJ3dYfGvxJh1wbbrav5U/TgNEnTPkzFXeyehiFwagjCwzZj6YuVbQ==
+"@socialgouv/fiches-vdd@^1.51.0":
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.51.0.tgz#d59dd23479b10d9f9a7db5710cf2cae0079ff3f0"
+  integrity sha512-6Wi5yx1Uzn0zvyGJCJgaX2F/49Kdw1UdTFNvNGH+qREQ7yHcTRfik+dXogH4Zl7A2Nv7lfdIRn9BVmhGaP3Fjg==
   dependencies:
     node-fetch "^2.6.0"
-    ora "^4.0.3"
-    unzipper "^0.10.10"
+    ora "^4.0.4"
+    unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.28.0", "@socialgouv/kali-data@^1.3.36":
-  version "1.28.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.28.0.tgz#fd087c318ef879c2267a63e98569889bced03ff5"
-  integrity sha512-gFH8Tyh3F+OaAo1EKiL3krRUuObyKdEbHdkbcdnoBCCqRxFXVR/+Akkwc3kbR+AMdPeCrGu8S0+Be/1UwZQOyw==
+"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.33.0":
+  version "1.33.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.33.0.tgz#eda3dea5c79e121549bbb8d30f2feb471a261dba"
+  integrity sha512-fwkD0Nsc0XLh9iSIAEXHQc2oETd9P4zfI93kLChQvAh1TgUOCBUZydD86i6kTRKRdICvkbQ4DpaSxLZOP/NKbQ==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"
@@ -9558,7 +9558,7 @@ html-encoding-sniffer@^2.0.1:
   dependencies:
     whatwg-encoding "^1.0.5"
 
-html-entities@^1.2.0:
+html-entities@^1.2.0, html-entities@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.3.1.tgz#fb9a1a4b5b14c5daba82d3e34c6ae4fe701a0e44"
   integrity sha512-rhE/4Z3hIhzHAUKbW8jVcCyuT5oJCXXqhN/6mXXVCpzTmvJnoH2HL/bt3EZ6p55jbFJBeAe1ZNpL5BugLujxNA==
@@ -12719,10 +12719,10 @@ mkdirp@0.5.3:
   dependencies:
     minimist "^1.2.5"
 
-mnemonist@^0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/mnemonist/-/mnemonist-0.34.0.tgz#94244ba4f8922ee25863d4624b3c6cccfd81b126"
-  integrity sha512-eKQxmumFOJhd7ea/u8zVvj7gA2tD6QFkuDfUIvoT/VIq+yR1VzXpp0tM8QFgeSRig5brIN/3NUE72/wvvyc9ug==
+mnemonist@^0.36.1:
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/mnemonist/-/mnemonist-0.36.1.tgz#9d8aa39e7db23ccb3735861d1081fc3faea4f180"
+  integrity sha512-PXrJJ5MRu++lfoZN1z/DjQhlMrrNgmHKb+DVFqGy/lCn9hMTZwXKC6aaKKwtqd6lwwak3HOonqo3D1fhQzfwaQ==
   dependencies:
     obliterator "^1.6.1"
 
@@ -13629,10 +13629,10 @@ optionator@^0.8.1, optionator@^0.8.3:
     type-check "~0.3.2"
     word-wrap "~1.2.3"
 
-ora@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-4.0.3.tgz#752a1b7b4be4825546a7a3d59256fa523b6b6d05"
-  integrity sha512-fnDebVFyz309A73cqCipVL1fBZewq4vwgSHfxh43vVy31mbyoQ8sCH3Oeaog/owYOs/lLlGVPCISQonTneg6Pg==
+ora@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-4.0.4.tgz#e8da697cc5b6a47266655bf68e0fb588d29a545d"
+  integrity sha512-77iGeVU1cIdRhgFzCK8aw1fbtT1B/iZAvWjS+l/o1x0RShMgxHUZaD2yDpWsNCPwXg9z1ZA78Kbdvr8kBmG/Ww==
   dependencies:
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
@@ -13826,10 +13826,10 @@ p-queue@^4.0.0:
   dependencies:
     eventemitter3 "^3.1.0"
 
-p-queue@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.3.0.tgz#19bfa4485db7e6a0c135049ff6716375880d9c3a"
-  integrity sha512-fg5dJlFpd5+3CgG3/0ogpVZUeJbjiyXFg0nu53hrOYsybqSiDyxyOpad0Rm6tAiGjgztAwkyvhlYHC53OiAJOA==
+p-queue@^6.3.0, p-queue@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.4.0.tgz#5050b379393ea1814d6f9613a654f687d92c0466"
+  integrity sha512-X7ddxxiQ+bLR/CUt3/BVKrGcJDNxBr0pEEFKHHB6vTPWNUhgDv36GpIH18RmGM3YGPpBT+JWGjDDqsVGuF0ERw==
   dependencies:
     eventemitter3 "^4.0.0"
     p-timeout "^3.1.0"
@@ -13928,7 +13928,7 @@ pako@~1.0.5:
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
-pandemonium@^1.0.2:
+pandemonium@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/pandemonium/-/pandemonium-1.5.0.tgz#93f35af555de1420022b341e730215c51c725be3"
   integrity sha512-9PU9fy93rJhZHLMjX+4M1RwZPEYl6g7DdWKGmGNhkgBZR5+tOBVExNZc00kzdEGMxbaAvWdQy9MqGAScGwYlcA==
@@ -14268,12 +14268,12 @@ pnp-webpack-plugin@1.5.0:
   dependencies:
     ts-pnp "^1.1.2"
 
-polished@^3.3.1, polished@^3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-3.5.2.tgz#ca132b8cd68f7ffa95ae9d423f03e7a14fda1062"
-  integrity sha512-vWoRDg3gY5RQBtUfcj9MRN10VCIf4EkdUikGxyXItg2Hnwk+eIVtdBiLajN0ldFeT3Vq4r/QNbjrQdhqBKrTug==
+polished@^3.3.1, polished@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.2.tgz#bae682806da6400596a851ea443178ff6eec1dd2"
+  integrity sha512-V0dyaVJUM5e5wIhLHvZyyE9PhXoI0AlGT6RDww1V/v+STsocLsVGWmi+9OKTL49oaQj85XFDvsWi/uHQJ0rpWg==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
 
 popper.js@^1.14.4, popper.js@^1.14.7:
   version "1.16.1"
@@ -15157,10 +15157,10 @@ react-accessible-accordion@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.0.1.tgz#8f3b08c712f4d5e526fad4c55c3d70fc3b68cbd5"
   integrity sha512-2OZY6PWVOTYjVRQ5vnzVfvSRvapH1fYHNE6rG0S64cCatf+IOovokZEa4Xzmdl69ebrYO2HU3h8yLlEk9LqwPA==
 
-react-autosuggest@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-10.0.1.tgz#620fab9f203821d407246b74e557cc0605061eda"
-  integrity sha512-Y3vsgN2KKV0pwcKYiIwf2LPzfFxkShebJon9G4yeXE7ToZEY7MDmCNSEI9eKbZzeUAE3mcSpZy5Ho0NTU5NzrA==
+react-autosuggest@10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-10.0.2.tgz#c45cd73a7307026c932cb6a3e19c2fe35bfb6ec4"
+  integrity sha512-ouI0RJDSgM1FBfK0ZmLC3qUqithIwPVTpnC4JQW4DeId3mH2JnZmkNNDKImhcMrxLbSQRpV/DfTLn0uCs4b27w==
   dependencies:
     es6-promise "^4.2.8"
     prop-types "^15.7.2"
@@ -17925,17 +17925,17 @@ table@^5.0.0, table@^5.2.3, table@^5.4.6:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-talisman@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/talisman/-/talisman-1.1.1.tgz#b5f2f4e21976697f7c2b1f386f3e0a9dfb4d3293"
-  integrity sha512-huMFHdjI5Q/yiusME4rw9tIa9gITxwQfhjEzzAQ3BzkbJF/9CQ1pXiFJ2OtBcmTnQAEtgSV1ah5VbN6JO5gt7A==
+talisman@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/talisman/-/talisman-1.1.2.tgz#ea6107e5d8d006ed77501e58ee85ec32968daf1f"
+  integrity sha512-CqGgJ04k757yLeoHRaBj8QvAGLeW/ukMKfbUEy9BxMRHM1peYDoYg6k8dVFFzkW4+5s+h+GLWm3oNL3lYlz4Lw==
   dependencies:
-    html-entities "^1.2.0"
+    html-entities "^1.3.1"
     lodash "^4.17.15"
     long "^4.0.0"
-    mnemonist "^0.34.0"
+    mnemonist "^0.36.1"
     obliterator "^1.6.1"
-    pandemonium "^1.0.2"
+    pandemonium "^1.5.0"
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
@@ -18861,10 +18861,10 @@ unzip-response@^2.0.1:
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
   integrity sha1-0vD3N9FrBhXnKmk17QQhRXLVb5c=
 
-unzipper@^0.10.10:
-  version "0.10.10"
-  resolved "https://registry.yarnpkg.com/unzipper/-/unzipper-0.10.10.tgz#d82d41fbdfa1f0731123eb11c2cfc028b45d3d42"
-  integrity sha512-wEgtqtrnJ/9zIBsQb8UIxOhAH1eTHfi7D/xvmrUoMEePeI6u24nq1wigazbIFtHt6ANYXdEVTvc8XYNlTurs7A==
+unzipper@^0.10.11:
+  version "0.10.11"
+  resolved "https://registry.yarnpkg.com/unzipper/-/unzipper-0.10.11.tgz#0b4991446472cbdb92ee7403909f26c2419c782e"
+  integrity sha512-+BrAq2oFqWod5IESRjL3S8baohbevGcVA+teAIOYWM3pDVdseogqbzhhvvmiyQrUNKFUnDMtELW3X8ykbyDCJw==
   dependencies:
     big-integer "^1.6.17"
     binary "~0.3.0"
