@@ -22,7 +22,7 @@
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
       "minor": {
-        "groupName": "all non-major dependencies"
+        "groupName": "all non-major dependencies",
         "automerge": true
       }
     }
