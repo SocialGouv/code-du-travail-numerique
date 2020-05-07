@@ -82,8 +82,9 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
                     </h2>
                   </IconStripe>
                   <ViewMore
-                    elementsDisplayed={4}
-                    CustomContainer={StyledFlatList}
+                    intialSize={6}
+                    stepSize={20}
+                    ListContainer={StyledFlatList}
                     buttonProps={{ variant: "flat", small: true }}
                     label={refs.length > 8 ? "Afficher plus" : "Afficher tout"}
                   >

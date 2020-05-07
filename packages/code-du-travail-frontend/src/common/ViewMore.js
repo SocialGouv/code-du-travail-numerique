@@ -6,27 +6,27 @@ import { Button, FlatList, theme } from "@socialgouv/react-ui";
 const ViewMore = ({
   buttonProps,
   children,
-  CustomContainer,
-  elementsDisplayed,
+  initialSize,
   label,
+  ListContainer,
   onClick,
   query,
+  stepSize,
 }) => {
-  const [totalDisplayed, setTotalDisplayed] = useState(1);
+  const [currentSize, setCurrentSize] = useState(1);
   useEffect(() => {
-    setTotalDisplayed(elementsDisplayed);
-  }, [elementsDisplayed, query]);
+    setCurrentSize(initialSize);
+  }, [initialSize, query]);
   const viewMore = useCallback(() => {
     onClick();
-    setTotalDisplayed(totalDisplayed + elementsDisplayed);
-  }, [elementsDisplayed, totalDisplayed, setTotalDisplayed, onClick]);
-  const isShowMoreVisible = React.Children.count(children) > totalDisplayed;
-  const ChildrenContainer = CustomContainer || StyledFlatList;
+    setCurrentSize(currentSize + stepSize);
+  }, [stepSize, currentSize, onClick]);
+  const isShowMoreVisible = React.Children.count(children) > currentSize;
   return (
     <>
-      <ChildrenContainer>
-        {React.Children.toArray(children).slice(0, totalDisplayed)}
-      </ChildrenContainer>
+      <ListContainer>
+        {React.Children.toArray(children).slice(0, currentSize)}
+      </ListContainer>
       {isShowMoreVisible && (
         <ButtonWrapper>
           <StyledButton {...buttonProps} onClick={viewMore}>
@@ -41,8 +41,9 @@ const ViewMore = ({
 ViewMore.propTypes = {
   buttonProps: PropTypes.object,
   children: PropTypes.node.isRequired,
-  CustomContainer: PropTypes.elementType,
-  elementsDisplayed: PropTypes.number,
+  ListContainer: PropTypes.elementType,
+  initialSize: PropTypes.number,
+  stepSize: PropTypes.number,
   label: PropTypes.string,
   onClick: PropTypes.func,
   query: PropTypes.string,
@@ -50,8 +51,9 @@ ViewMore.propTypes = {
 
 ViewMore.defaultProps = {
   buttonProps: {},
-  CustomContainer: null,
-  elementsDisplayed: 4,
+  ListContainer: StyledFlatList,
+  initialSize: 7,
+  stepSize: 7,
   label: "Voir plus",
   onClick: () => {},
   query: "",
