@@ -119,7 +119,9 @@ export const Results = ({ id, isSearch, items, query }) => {
       {isSearch ? (
         <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
-        <Title id={id}>{"Contenu correspondant"}</Title>
+        <Title isFirst id={id}>
+          {"Contenu correspondant"}
+        </Title>
       )}
       <ViewMore
         elementsDisplayed={7}

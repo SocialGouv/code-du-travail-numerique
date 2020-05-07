@@ -132,19 +132,22 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Themes ===");
-  yield themes.map(({ breadcrumbs, children, icon, position, refs, title }) => {
-    return {
-      source: SOURCES.THEMES,
-      title: title,
-      slug: toSlug(title, position),
-      icon,
-      children: children.map(toBreadcrumbs),
-      position,
-      breadcrumbs: breadcrumbs.map(toBreadcrumbs),
-      refs,
-      excludeFromSearch: false,
-    };
-  });
+  yield themes.map(
+    ({ breadcrumbs, children, icon, introduction, position, refs, title }) => {
+      return {
+        source: SOURCES.THEMES,
+        title: title,
+        slug: toSlug(title, position),
+        icon,
+        description: introduction,
+        children: children.map(toBreadcrumbs),
+        position,
+        breadcrumbs: breadcrumbs.map(toBreadcrumbs),
+        refs,
+        excludeFromSearch: false,
+      };
+    }
+  );
 
   logger.info("=== Courriers ===");
   yield getCourriers();
