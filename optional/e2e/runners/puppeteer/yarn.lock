@@ -507,10 +507,10 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codeceptjs@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-2.6.2.tgz#aba58c7872ef4de01fe04a3e924694f431cef4b5"
-  integrity sha512-wVH+NpL2umtsart++rrNuVY8itsNBEnr+naXbFC3Owkc3RJ4Bhd9L7Re9OJHUIaqxZ8P8pFbLexIicD/cuRXDw==
+codeceptjs@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-2.6.3.tgz#b57c06cc77839b58be8a444db1f6d334c0852f89"
+  integrity sha512-rc7lqJXd1eMNcADb2Dk6X7OINdJsdjAF+y5F/2wLfkM1BguLr/T6x8gs7D1PmiUCl28fmcGeJgHCS4xZ9qrJaA==
   dependencies:
     "@codeceptjs/configure" "^0.4.0"
     allure-js-commons "^1.3.2"
@@ -2183,10 +2183,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-3.0.2.tgz#1d08cdb7c0c2666f5e743221b1cb1946fea493f0"
-  integrity sha512-5jS/POFVDW9fqb76O8o0IBpXOnq+Na8ocGMggYtnjCRBRqmAFvX0csmwgLOHkYnQ/vCBcBPYlOq0Pp60z1850Q==
+puppeteer@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-3.0.3.tgz#91c4ce46b3822b849e096413457fe8ced7d5aeca"
+  integrity sha512-sWtx9XezIwXdXHNelvnyPEmMjXXiCAuUulEONZFqRO3l+w0vP7dNcGDUIf2HLr4HLLi6r9hcUuO62s/W6rkD/w==
   dependencies:
     "@types/mime-types" "^2.1.0"
     debug "^4.1.0"
