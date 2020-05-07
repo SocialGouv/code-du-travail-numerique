@@ -1,6 +1,6 @@
 import { useReducer, useCallback } from "react";
 
-export const rootReducer = (state, action) => {
+const rootReducer = (state, action) => {
   switch (action.type) {
     case "setTitles":
       return { titles: action.payload.map((title) => ({ ...title })) };

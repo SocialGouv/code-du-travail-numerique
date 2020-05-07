@@ -1,4 +1,6 @@
-import { rootReducer } from "./useTOCReducer";
+import { renderHook, act } from "@testing-library/react-hooks";
+
+import { useTOCReducer } from "./useTOCReducer";
 
 describe("TableOfContent reducer", () => {
   const initialState = {
@@ -8,26 +10,38 @@ describe("TableOfContent reducer", () => {
         element: null,
         id: "ok",
       },
+      {
+        active: false,
+        element: null,
+        id: "okok",
+      },
     ],
   };
-  it("setTiltes correctly", () => {
-    const newState = rootReducer(initialState, {
-      type: "setActive",
-      payload: "ok",
-    });
-    expect(newState.titles.length).toBe(1);
-    expect(newState.titles[0].active).toBe(true);
-  });
+
   it("setActive correctly", () => {
+    const { result } = renderHook(() => useTOCReducer(initialState));
+    expect(result.current.titles.length).toBe(2);
+    expect(result.current.titles[0].active).toBe(false);
+    act(() => {
+      result.current.observerCallback([
+        { intersectionRatio: 1, target: { id: "ok" } },
+        { intersectionRatio: 0.5, target: { id: "okok" } },
+      ]);
+    });
+    expect(result.current.titles.length).toBe(2);
+    expect(result.current.titles[0].active).toBe(true);
+    expect(result.current.titles[1].active).toBe(false);
+  });
+  it("setTitles correctly", () => {
+    const { result } = renderHook(() => useTOCReducer(initialState));
     const newTitles = [
       { active: false, element: null, id: "ok-1" },
       { active: true, element: null, id: "ok-2" },
       { active: false, element: null, id: "ok-3" },
     ];
-    const newState = rootReducer(initialState, {
-      type: "setTitles",
-      payload: newTitles,
+    act(() => {
+      result.current.setTitles(newTitles);
     });
-    expect(newState.titles).toEqual(newTitles);
+    expect(result.current.titles).toEqual(newTitles);
   });
 });
