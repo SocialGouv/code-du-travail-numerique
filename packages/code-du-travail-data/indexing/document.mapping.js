@@ -2,6 +2,10 @@ export const documentMapping = {
   properties: {
     description: { type: "text" },
     metaDescription: { type: "text" },
+    // only in thematic files
+    categories: {
+      enabled: false,
+    },
     // available for themes
     children: {
       properties: {

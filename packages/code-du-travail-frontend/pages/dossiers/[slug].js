@@ -1,63 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import { getRouteBySource } from "@cdt/sources";
 import {
   ArrowLink,
   Container,
   FlatList,
-  Grid,
-  Heading,
+  icons,
+  IconStripe,
   PageTitle,
   Section,
-  Tile,
-  Title,
-  icons,
+  Select,
+  TableOfContent,
   theme,
+  Wrapper,
 } from "@socialgouv/react-ui";
 
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
-import {
-  AsideContent,
-  MainAsideLayout,
-  MainContent,
-} from "../../src/layout/AnswerLayout";
 import Metas from "../../src/common/Metas";
-import Mdx from "../../src/common/Mdx";
 import { ViewMore } from "../../src/common/ViewMore";
-
-import { ListLink } from "../../src/search/SearchResults/Results";
-import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 function DossierThematique({ dossier, ogImage, pageUrl }) {
+  const [filter, setFilter] = useState("");
+
   if (!dossier) {
     return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
   }
-  const {
-    asideContent = "",
-    description = "",
-    metaDescription,
-    refs,
-    title,
-  } = dossier;
+  const { description = "", metaDescription, categories, title } = dossier;
 
-  const mainRefs = refs.filter(({ type }) => type === "main");
-  const secondaryRefs = refs.filter(({ type }) => type === "secondary");
-  const themeRefs = refs.filter(({ type }) => type === "theme");
-  const templateRefs = refs.filter(({ type }) => type === "template");
-  const externalRefs = refs.filter(({ type }) => type === "external");
-  const externalToolsRefs = refs.filter(({ type }) => type === "externalTool");
-  const componentMappings = {
-    ul: FlatList,
-    a: LeftArrowLink,
-  };
+  const sortedCategories = categories.sort(
+    (previous, next) => previous.position - next.position
+  );
 
   return (
     <Layout>
@@ -70,136 +49,54 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
       <Section>
         <Container narrow>
           <PageTitle subtitle={description}>{title}</PageTitle>
+          <SelectWrapper>
+            <Select
+              onChange={(event) => {
+                setFilter(event.target.value);
+              }}
+            >
+              <option value="">Tous les contenus</option>
+              {sortedCategories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.shortTitle || category.title}
+                </option>
+              ))}
+            </Select>
+          </SelectWrapper>
         </Container>
-        <MainAsideLayout>
-          <MainContent hasResults>
-            <Container>
-              <Title id="essentiel">L’essentiel</Title>
-              <FlatList>
-                {mainRefs.map((item) => (
-                  <StyledListItem key={item.slug || item.url}>
-                    <ListLink item={item} />
-                  </StyledListItem>
-                ))}
-              </FlatList>
-              <Title id="fiches-pratiques">Pour aller plus loin</Title>
-              <ViewMore>
-                {secondaryRefs.map((item) => (
-                  <StyledListItem key={item.slug || item.url}>
-                    <ListLink item={item} />
-                  </StyledListItem>
-                ))}
-              </ViewMore>
-            </Container>
-          </MainContent>
-          <AsideContent>
-            <Container>
-              <Heading id="liens-utiles">Modèles utiles</Heading>
-              <FlatList>
-                {templateRefs.map(({ source, slug, title }) => (
-                  <li key={slug}>
-                    <InternalLink source={source} slug={slug} passHref>
-                      <LeftArrowLink>{title}</LeftArrowLink>
-                    </InternalLink>
-                  </li>
-                ))}
-                {externalRefs.map(({ title, url }) => (
-                  <li key={`${title}${url}`}>
-                    <LeftArrowLink
-                      href={url}
-                      rel="noopener nofollow"
-                      target="_blank"
-                      className="no-after"
-                    >
+        <MainContainer>
+          <FixedWrapper>
+            <NavTitle>Sommaire</NavTitle>
+            <TableOfContent
+              ids={sortedCategories.map((category) => category.id)}
+            />
+          </FixedWrapper>
+          <Content>
+            {sortedCategories
+              .filter((category) => (filter ? category.id === filter : true))
+              .map(({ icon, id, refs, shortTitle, title }) => (
+                <Wrapper key={id}>
+                  <IconStripe centered icon={icons[icon]}>
+                    <h2 id={id} data-short-title={shortTitle}>
                       {title}
-                    </LeftArrowLink>
-                  </li>
-                ))}
-              </FlatList>
-              <Heading id="liens-utiles">Outils utiles</Heading>
-              <FlatList>
-                {externalToolsRefs.map(({ title, url }) => (
-                  <li key={`${title}${url}`}>
-                    <LeftArrowLink
-                      href={url}
-                      rel="noopener nofollow"
-                      target="_blank"
-                      className="no-after"
-                    >
-                      {title}
-                    </LeftArrowLink>
-                  </li>
-                ))}
-              </FlatList>
-              <Heading>Liens utiles</Heading>
-              <Mdx markdown={asideContent} components={componentMappings} />
-            </Container>
-          </AsideContent>
-        </MainAsideLayout>
-      </Section>
-      <Section decorated variant="light">
-        <Container>
-          <Title id="courriers">
-            Les modèles suivants peuvent vous intéresser
-          </Title>
-          <Grid>
-            {templateRefs.map((item) => (
-              <InternalLink
-                key={`${item.slug}-tile`}
-                source={item.source}
-                slug={item.slug}
-              >
-                <CallToActionTile
-                  action="Consulter"
-                  custom
-                  icon={icons.Document}
-                  title={item.title}
-                />
-              </InternalLink>
-            ))}
-            {externalRefs.map(({ action, icon, title, url }) => (
-              <CallToActionTile
-                key={`${title}${url}-tile`}
-                action={action}
-                custom
-                title={title}
-                icon={icons[icon]}
-                href={url}
-                rel="noopener nofollow"
-                target="_blank"
-                className="no-after"
-              ></CallToActionTile>
-            ))}
-          </Grid>
-          <Title>Les outils suivants peuvent vous intéresser</Title>
-          <Grid>
-            {externalToolsRefs.map(({ action, icon, title, url }) => (
-              <CallToActionTile
-                key={`${title}${url}-tile`}
-                action={action}
-                custom
-                title={title}
-                icon={icons[icon]}
-                href={url}
-                rel="noopener nofollow"
-                target="_blank"
-                className="no-after"
-              ></CallToActionTile>
-            ))}
-          </Grid>
-          <Title>Les thèmes suivants peuvent vous intéresser</Title>
-          <Grid>
-            {themeRefs.map((item) => (
-              <InternalLink
-                key={`${item.slug}-tile`}
-                source={item.source}
-                slug={item.slug}
-              >
-                <Tile title={item.title} striped />
-              </InternalLink>
-            ))}
-          </Grid>
-        </Container>
+                    </h2>
+                  </IconStripe>
+                  <ViewMore
+                    elementsDisplayed={4}
+                    CustomContainer={StyledFlatList}
+                    buttonProps={{ variant: "flat", small: true }}
+                    label={refs.length > 8 ? "Afficher plus" : "Afficher tout"}
+                  >
+                    {refs.map((ref) => (
+                      <Li key={ref.url || ref.externalUrl}>
+                        <DossierLink {...ref} />
+                      </Li>
+                    ))}
+                  </ViewMore>
+                </Wrapper>
+              ))}
+          </Content>
+        </MainContainer>
       </Section>
     </Layout>
   );
@@ -214,35 +111,100 @@ DossierThematique.getInitialProps = async ({ query: { slug } }) => {
   return { dossier };
 };
 
-const { spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
+
+const SelectWrapper = styled.div`
+  display: none;
+  text-align: center;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+`;
+
+const MainContainer = styled(Container)`
+  display: flex;
+  align-items: flex-start;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+`;
+
+const FixedWrapper = styled.div`
+  position: sticky;
+  top: 14rem;
+  z-index: 1;
+  width: calc(30% - ${spacings.larger});
+  margin-right: ${spacings.larger};
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const NavTitle = styled.strong`
+  display: block;
+  margin-bottom: ${spacings.small};
+  font-size: ${fonts.sizes.headings.small};
+`;
+
+const Content = styled.div`
+  width: 75%;
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+  }
+`;
+
+const StyledFlatList = styled(FlatList)`
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    margin-top: ${spacings.small};
+  }
+`;
+
+const Li = styled.li`
+  width: 48%;
+  padding-bottom: ${spacings.small};
+  &:nth-child(even) {
+    margin-left: 4%;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+`;
+
+const DossierLink = ({ url, title }) => {
+  if (!url.includes("http")) {
+    const [, sourceRoute, slug] = url.split("/");
+    let rootSlug;
+    if (slug && slug.includes("#")) {
+      [rootSlug] = slug.split("#");
+    }
+    return (
+      <Link
+        href={`/${sourceRoute}${rootSlug ? "/[slug]" : ""}`}
+        as={url}
+        passHref
+      >
+        <LeftArrowLink>{title}</LeftArrowLink>
+      </Link>
+    );
+  }
+  return (
+    <LeftArrowLink href={url} rel="noopener nofollow" target="_blank">
+      {title}
+    </LeftArrowLink>
+  );
+};
 
 const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   arrowPosition: "left",
   className: "no-after",
 }))`
   word-break: break-word;
-`;
-
-const InternalLink = ({ source, slug, ...props }) => {
-  let rootSlug = slug;
-  let hash;
-  if (slug.includes("#")) {
-    [rootSlug, hash] = slug.split("#");
-  }
-  hash = hash ? `#${hash}` : "";
-  rootSlug = rootSlug ? `/${rootSlug}` : "";
-  const route = getRouteBySource(source);
-  return (
-    <Link
-      href={`/${route}${rootSlug ? "/[slug]" : ""}`}
-      as={`/${route}${rootSlug}${hash}`}
-      {...props}
-    />
-  );
-};
-
-const StyledListItem = styled.li`
-  margin-bottom: ${spacings.medium};
 `;
 
 export default DossierThematique;

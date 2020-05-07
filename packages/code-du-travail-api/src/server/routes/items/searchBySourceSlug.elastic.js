@@ -14,8 +14,8 @@ function getSearchBody({ source, slug }) {
       },
     },
     _source: [
-      "asideContent", // thematic file
       "action", // outils
+      "categories", // thematic files
       "date",
       "dateDebut", // code-du-travail
       "description", // modele de courrier

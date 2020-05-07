@@ -71,7 +71,7 @@ TableOfContent.defaultProps = {
 
 const TableItem = styled.a`
   display: block;
-  padding: ${spacings.small} 0;
+  padding: ${spacings.tiny} 0;
   font-weight: ${({ active }) => (active ? "bold" : "normal")};
   text-decoration: none;
   @media (max-width: ${breakpoints.tablet}) {

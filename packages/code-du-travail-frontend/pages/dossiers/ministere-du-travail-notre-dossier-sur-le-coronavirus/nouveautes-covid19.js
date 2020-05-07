@@ -756,7 +756,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
         ]}
         date="10/04/2020"
         dateLabel="Mise à jour le"
-        title="Coronavirus : ce que changent les ordonnances en droit du travail"
+        title="Nouveautés Covid-19"
       >
         <p>
           Le Gouvernement a décidé de prendre plusieurs mesures afin

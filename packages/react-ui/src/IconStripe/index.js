@@ -28,14 +28,18 @@ const IconWrapper = styled.div`
   width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   margin-right: ${spacings.xmedium};
+  svg {
+    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+  }
   @media (max-width: ${breakpoints.mobile}) {
     width: ${SMALL_SIZE};
     height: ${SMALL_SIZE};
     margin-right: ${spacings.small};
-  }
-  svg {
-    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
-    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    svg {
+      width: ${SMALL_SIZE};
+      height: ${SMALL_SIZE};
+    }
   }
 `;
 
