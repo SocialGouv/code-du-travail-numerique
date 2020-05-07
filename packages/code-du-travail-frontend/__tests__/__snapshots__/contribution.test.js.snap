@@ -1441,6 +1441,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c23 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -1448,6 +1453,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c49 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -4243,6 +4253,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c23 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -4250,6 +4265,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c49 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

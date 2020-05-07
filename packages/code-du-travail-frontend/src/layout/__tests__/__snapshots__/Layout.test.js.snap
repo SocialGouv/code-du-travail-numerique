@@ -768,6 +768,11 @@ exports[`<Layout /> should render 1`] = `
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c23 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {

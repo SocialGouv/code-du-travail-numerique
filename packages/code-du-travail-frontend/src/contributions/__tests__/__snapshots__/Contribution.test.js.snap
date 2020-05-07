@@ -315,6 +315,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -859,6 +864,11 @@ exports[`<Contribution /> should render answer references 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -1405,6 +1415,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -1950,6 +1965,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
     height: 3rem;
     margin-right: 1rem;
   }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -2462,6 +2482,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
