@@ -32,6 +32,7 @@ export { OverflowWrapper } from "./OverflowWrapper";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
 export { Table } from "./Table";
+export { TableOfContent } from "./TableOfContent";
 export { Tabs } from "./Tabs";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
