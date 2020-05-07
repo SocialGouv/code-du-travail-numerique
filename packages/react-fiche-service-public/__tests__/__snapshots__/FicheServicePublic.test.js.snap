@@ -969,7 +969,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           class="c27"
                         >
                           <span
-                            class="sc-fznYue c28"
+                            class="sc-fzonjX c28"
                           >
                             Modèle de document
                           </span>
@@ -1795,7 +1795,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           class="c27"
         >
           <span
-            class="sc-fznYue c28"
+            class="sc-fzonjX c28"
           >
             Modèle de document
           </span>

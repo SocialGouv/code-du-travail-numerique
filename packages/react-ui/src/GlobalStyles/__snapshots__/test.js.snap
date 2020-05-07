@@ -57,8 +57,8 @@ HTMLCollection [
     a:visited{-webkit-text-decoration-color:#7994d4;text-decoration-color:#7994d4;}
     a[target="_blank"]:not(.no-after):after,a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,a[href^="https://"]:not(.no-after):not([href*="social.gouv.fr"]):after{position:relative;top:2px;width:16px;height:23px;margin-left:5px;content:url("/static/assets/icons/external.svg");}
     @media print{a[target="_blank"]:not(.no-after):after,a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,a[href^="https://"]:not(.no-after):not([href*="social.gouv.fr"]):after{margin-left:0;content:" (" attr(href) ") ";}}
-    :target::before{position:relative;z-index:-1;display:block;height:11rem;margin-top:-11rem;visibility:hidden;content:"";pointer-events:none;}
-    @media (max-width:600px){:target::before{height:6rem;margin-top:-6rem;}}
+    :target::before{position:relative;z-index:-1;display:block;height:14rem;margin-top:-14rem;visibility:hidden;content:"";pointer-events:none;}
+    @media (max-width:600px){:target::before{height:12rem;margin-top:-12rem;}}
     ul,ol{display:block;margin:1rem 0;padding:0 0 0 2rem;}
     ul{list-style-type:disc;}
     ul ul{list-style-type:circle;}

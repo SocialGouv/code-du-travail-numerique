@@ -44,14 +44,14 @@ export default createGlobalStyle`
     position: relative;
     z-index: -1;
     display: block;
-    height: 11rem; /* Fixed header's height */
-    margin-top: -11rem; /* Fixed header's negative height */
+    height: 14rem; /* Fixed header's height */
+    margin-top: -14rem; /* Fixed header's negative height */
     visibility: hidden;
     content: "";
     pointer-events: none;
     @media (max-width: ${breakpoints.mobile}) {
-      height: 6rem;
-      margin-top: -6rem;
+      height: 12rem;
+      margin-top: -12rem;
     }
   }
 `;
