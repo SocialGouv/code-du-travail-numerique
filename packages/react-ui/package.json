@@ -62,7 +62,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "rollup": "^2.8.1",
+    "rollup": "^2.8.2",
     "rollup-plugin-babel": "^4.4.0",
     "styled-components": "^5.1.0",
     "stylelint": "^13.3.3",
