@@ -187,7 +187,6 @@ Update Elasticsearch Index (manual):
   only:
     refs:
       - master
-  when: manual
   variables:
     PRODUCTION: "true"
 
