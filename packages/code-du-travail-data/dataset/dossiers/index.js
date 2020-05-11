@@ -24,7 +24,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
+              "/fiche-service-public/remuneration-dun-salarie-en-chomage-partiel-activite-partielle",
             title:
               "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
           },
@@ -156,7 +156,7 @@ const thematicFiles = [
               "Nouveautés Covid-19 : situation des travailleurs frontaliers",
           },
         ],
-        title: "Prévention Covid-19 par secteur ou pas métier",
+        title: "Prévention Covid-19 par secteur ou par métier",
       },
       {
         icon: "Precarity",
@@ -225,7 +225,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
+              "/fiche-service-public/remuneration-dun-salarie-en-chomage-partiel-activite-partielle",
             title:
               "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
           },
@@ -260,7 +260,7 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/embauche-demission-sanctions-licenciement",
             title:
-              "Questions - Réponses : embauche démission sanctions licenciement",
+              "Questions - Réponses : embauche, démission, sanctions, licenciement",
           },
           {
             url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
