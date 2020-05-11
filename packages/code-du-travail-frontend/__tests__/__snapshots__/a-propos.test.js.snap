@@ -324,7 +324,7 @@ exports[`<About /> should render 1`] = `
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
-  margin-right: 2.4rem;
+  margin-right: 2rem;
 }
 
 .c23 svg {
@@ -897,6 +897,11 @@ exports[`<About /> should render 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c23 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

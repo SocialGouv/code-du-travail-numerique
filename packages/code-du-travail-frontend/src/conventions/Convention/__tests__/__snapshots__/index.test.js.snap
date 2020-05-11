@@ -321,14 +321,14 @@ exports[`<Convention /> renders 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c48 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c49 {
@@ -709,6 +709,17 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c18 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 1rem 0 0;
+  }
+}
+
+@media (max-width:600px) {
   .c44 {
     font-size: 1.4rem;
   }
@@ -794,6 +805,11 @@ exports[`<Convention /> renders 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c48 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

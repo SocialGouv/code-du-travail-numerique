@@ -267,7 +267,7 @@ const Hierarchy = ({ hash }) => {
             ),
           },
           {
-            icon: icons.Resignation,
+            icon: icons.Rules,
             title: <h3>Le règlement intérieur de l’entreprise</h3>,
             body: (
               <>

@@ -33,8 +33,14 @@ Object {
       "slug": "/themes/86-autres-departs",
     },
   ],
+  "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,
   "refs": Array [
+    Object {
+      "source": "external",
+      "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+      "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
+    },
     Object {
       "source": "external",
       "title": "",
@@ -42,8 +48,18 @@ Object {
     },
     Object {
       "source": "external",
+      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
+      "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+    },
+    Object {
+      "source": "external",
       "title": "",
       "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
+    },
+    Object {
+      "source": "external",
+      "title": "Heures pour recherche d’emploi",
+      "url": "/outils/heures-recherche-emploi",
     },
     Object {
       "source": "external",
@@ -57,28 +73,8 @@ Object {
     },
     Object {
       "source": "external",
-      "title": "Heures pour recherche d’emploi",
-      "url": "/outils/heures-recherche-emploi",
-    },
-    Object {
-      "source": "external",
       "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
       "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-    },
-    Object {
-      "source": "external",
-      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
-      "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
-    },
-    Object {
-      "source": "external",
-      "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
-      "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
-    },
-    Object {
-      "source": "external",
-      "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
-      "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
     },
   ],
   "slug": "8-depart-de-lentreprise",

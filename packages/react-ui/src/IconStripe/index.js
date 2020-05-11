@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { breakpoints, spacings } from "../theme";
 
-const SIZE = "4.2rem";
+const SIZE = "3.5rem";
 const SMALL_SIZE = "3rem";
 
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
@@ -27,15 +27,19 @@ const IconWrapper = styled.div`
   flex-shrink: 0;
   width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
-  margin-right: ${spacings.xmedium};
+  margin-right: ${spacings.medium};
+  svg {
+    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+  }
   @media (max-width: ${breakpoints.mobile}) {
     width: ${SMALL_SIZE};
     height: ${SMALL_SIZE};
     margin-right: ${spacings.small};
-  }
-  svg {
-    width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
-    height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
+    svg {
+      width: ${SMALL_SIZE};
+      height: ${SMALL_SIZE};
+    }
   }
 `;
 

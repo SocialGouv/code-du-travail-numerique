@@ -230,12 +230,6 @@ exports[`<SearchResults/> should render results 1`] = `
   width: calc(100% / 4 - 2 * 1rem - 1px);
 }
 
-.c2 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c23 {
   position: absolute;
   background-color: #7994d4;
@@ -425,6 +419,13 @@ exports[`<SearchResults/> should render results 1`] = `
   text-align: left;
 }
 
+.c2 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -478,6 +479,14 @@ exports[`<SearchResults/> should render results 1`] = `
   .c18 {
     right: 2rem;
   }
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {
@@ -639,6 +648,14 @@ exports[`<SearchResults/> should render results 1`] = `
   }
 }
 
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
 <div>
   <div
     aria-label="Résultats de recherche"
@@ -651,7 +668,7 @@ exports[`<SearchResults/> should render results 1`] = `
       Résultats de recherche pour “search test”
     </h3>
     <ul
-      class="c2"
+      class="sc-fznAgC c2"
     >
       <li
         class="c3"

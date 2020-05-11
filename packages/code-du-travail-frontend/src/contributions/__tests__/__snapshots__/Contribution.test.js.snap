@@ -70,14 +70,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c5 {
@@ -314,6 +314,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -615,14 +620,14 @@ exports[`<Contribution /> should render answer references 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c5 {
@@ -859,6 +864,11 @@ exports[`<Contribution /> should render answer references 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -1160,14 +1170,14 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c5 {
@@ -1404,6 +1414,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -1705,14 +1720,14 @@ exports[`<Contribution /> should render with both answers 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c5 {
@@ -1949,6 +1964,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -2250,14 +2270,14 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c4 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c5 {
@@ -2462,6 +2482,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c4 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

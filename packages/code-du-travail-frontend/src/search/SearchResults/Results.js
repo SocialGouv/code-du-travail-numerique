@@ -124,7 +124,6 @@ export const Results = ({ id, isSearch, items, query }) => {
         </Title>
       )}
       <ViewMore
-        elementsDisplayed={7}
         label="Plus de résultats"
         onClick={() => {
           matopush(["trackEvent", "nextResultPage", query]);

@@ -27,7 +27,7 @@ const getEsReferences = async (refs = []) => {
   const queries =
     (refs &&
       refs
-        .filter((ref) => isInternalUrl(ref.url) && !ref.skipHydration)
+        .filter((ref) => isInternalUrl(ref.url))
         .map((ref) => getDocumentByUrlQuery(ref.url))
         .filter(Boolean)
         .reduce((state, query) => state.concat(indexQuery, query), [])) ||

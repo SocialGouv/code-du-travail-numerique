@@ -23,7 +23,7 @@ exports[`<Headband /> should render 1`] = `
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
-  margin-right: 2.4rem;
+  margin-right: 2rem;
 }
 
 .c2 svg {
@@ -74,6 +74,11 @@ exports[`<Headband /> should render 1`] = `
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+  }
+
+  .c2 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 

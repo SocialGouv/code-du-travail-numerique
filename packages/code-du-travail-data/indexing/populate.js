@@ -218,17 +218,17 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Dossiers ===");
   yield thematicFiles.map(
-    ({ asideContent, description, metaDescription, refs, slug, title }) => {
+    ({ categories, description, metaDescription, refs, slug, title }) => {
       return {
-        source: SOURCES.THEMATIC_FILES,
-        title,
-        slug,
+        categories,
         description,
-        metaDescription,
-        asideContent,
-        text: `${title}\n${description}`,
-        refs,
         excludeFromSearch: false,
+        metaDescription,
+        refs,
+        slug,
+        source: SOURCES.THEMATIC_FILES,
+        text: `${title}\n${description}`,
+        title,
       };
     }
   );

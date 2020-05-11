@@ -733,6 +733,307 @@ const Fiche = ({ pageUrl, ogImage }) => {
       ),
       title: "Chômage : indemnisation prolongée",
     },
+    {
+      anchor: "delais-cse",
+      content: (
+        <>
+          <p>
+            Afin de favoriser la reprise rapide de l’activité économique dans
+            des conditions protectrices pour les salariés, une ordonnance et
+            deux décrets du 2 mai 2020 ont adaptés la durée des délais d’envoi
+            de l’ordre du jour, de consultation et d’expertise du CSE pour
+            certaines réunions. Du 3 mai au 23 août 2020, l’entreprise
+            appliquera les délais définis par ces textes et non les délais fixés
+            par le code du travail, par un accord collectif ou un accord conclu
+            avec le CSE.
+          </p>
+          <p>
+            <strong>
+              1. Réunions pour lesquelles les conditions de fonctionnement sont
+              adaptées
+            </strong>
+          </p>
+          <p>
+            Les délais sont adaptés pour les réunions{" "}
+            <strong>
+              dont les délais d’envoi de l’ordre du jour ou de consultation
+              commencent entre le 3 mai et 23 août 2020
+            </strong>{" "}
+            et qui ont pour objet :
+          </p>
+          <Ul>
+            <Li>
+              <strong>L’information ou la consultation</strong> du CSE, du CSE
+              central ou du CSE d’établissement.
+            </Li>
+            <Li>
+              Sur les{" "}
+              <strong>
+                décisions de l’employeur qui ont pour objectif de faire face aux
+                conséquences économiques, financières et sociales de la
+                propagation de l’épidémie de covid-19
+              </strong>
+              .
+            </Li>
+          </Ul>
+          <p>
+            Il est précisé que si des procédures de consultation ainsi visées
+            sont en cours le 3 mai 2020, elles peuvent être adaptées. En effet,
+            si les délais de consultation du CSE, CSE central ou CSE
+            d’établissement ont commencé avant le 3 mai et ne sont pas encore
+            terminés à cette date, l’employeur peut :
+          </p>
+          <Ul>
+            <Li>Mettre fin la procédure en cours et ;</Li>
+            <Li>
+              Engager, à compter de cette même date, une nouvelle procédure de
+              consultation avec application des nouveaux délais d’envoi de
+              l’ordre du jour, de consultation et d’expertise.
+            </Li>
+          </Ul>
+          <p>
+            Enfin, ces délais ne s’appliquent pas pour les autres réunions du
+            CSE et notamment celles des procédures suivantes :
+          </p>
+          <Ul>
+            <Li>
+              Le licenciement économique de 10 salariés ou plus dans une même
+              période de 30 jours.
+            </Li>
+            <Li>L’accord de performance collective.</Li>
+            <Li>
+              Les 3 consultations annuelles récurrentes (orientations
+              stratégiques de l’entreprise, situation économique et financière
+              de l’entreprise, politique sociale de l’entreprise, les conditions
+              de travail et l’emploi).
+            </Li>
+          </Ul>
+          <p>
+            Pour toutes ces réunions et procédures, l’employeur applique les
+            délais habituels d’envoi de l’ordre du jour, de consultation et
+            d’expertise.
+          </p>
+          <p>
+            <strong>2. Délai d’envoi de l’ordre du jour</strong>
+          </p>
+          <p>
+            Pour les réunions pour lesquelles les conditions de fonctionnement
+            sont adaptées, le délai d’envoi de l’ordre du jour est égal à :
+          </p>
+          <Ul>
+            <Li>
+              <strong>CSE et CSE d’établissement : 2 jours calendaires</strong>{" "}
+              (au lieu de 3 jours).
+            </Li>
+            <Li>
+              <strong>CSE central : 3 jours calendaires</strong> (au lieu de 8
+              jours).
+            </Li>
+          </Ul>
+          <p>
+            <strong>3. Délai de consultation du CSE</strong>
+          </p>
+          <p>
+            En cas de consultation du <strong>CSE</strong> dans les conditions
+            visées ci-dessus, le délai de consultation est égal à :
+          </p>
+          <Ul>
+            <Li>
+              <strong>
+                En l’absence de recours à un expert : 8 jours calendaires
+              </strong>{" "}
+              (au lieu d’un mois).
+            </Li>
+            <Li>
+              <strong>Avec recours à un expert : 11 jours calendaires</strong>{" "}
+              (au lieu de 2 mois).
+            </Li>
+          </Ul>
+          <p>
+            Ces délais s’appliquent aussi au CSE d’établissement, si l’employeur
+            ne consulte pas en même temps le CSE central.
+          </p>
+          <p>
+            En cas de consultation du <strong>CSE central</strong> et d’au moins
+            un CSE d’établissement, le délai de consultation s’applique au CSE
+            central. Dans ce cas, et dans le cas de la consultation du CSE
+            central uniquement, le délai de consultation est égal à :
+          </p>
+          <Ul>
+            <li>
+              <strong>
+                En l’absence de recours à un expert : 8 jours calendaires
+              </strong>{" "}
+              (au lieu d’un mois) ;
+            </li>
+            <li>
+              <strong>Avec recours à un expert : 12 jours calendaires</strong>{" "}
+              (au lieu de 1 ou 2 mois).
+            </li>
+          </Ul>
+          <p>
+            L’avis du ou des CSE d’établissement est transmis au CSE central{" "}
+            <strong>
+              au moins 1 jour calendaire avant la fin du délai de consultation
+              du CSE central
+            </strong>{" "}
+            (au lieu de 7 jours).
+          </p>
+          <p>
+            Dans tous les cas, si à l’issue de ces délais de consultation, le
+            comité n’exprime pas son avis, il est réputé avoir donné un avis
+            négatif. La procédure de consultation prend fin.
+          </p>
+          <p>
+            <strong>4. Délais d’expertise</strong>
+          </p>
+          <p>
+            Si pendant la procédure de consultation pour les réunions visées
+            ci-dessous, le CSE (ou CSE d’établissement ou CSE central) a recours
+            à un expert, les échanges entre ce dernier et l’employeur respectent
+            les délais suivants :
+          </p>
+          <Ul>
+            <Li>
+              Délai dont dispose l’expert, à compter de sa désignation, pour
+              demander à l’employeur toutes les informations complémentaires
+              qu’il juge nécessaires à la réalisation de sa mission : 24 heures.
+            </Li>
+            <Li>Délai de réponse de l’employeur : 24 heures.</Li>
+          </Ul>
+          <p>
+            En outre, l’expert notifie à l’employeur le coût prévisionnel,
+            l’étendue et la durée d’expertise dans un délai de :
+          </p>
+          <Ul>
+            <Li>48 heures à compter de sa désignation, ou ;</Li>
+            <Li>
+              Si une demande d’information a été adressée à l’employeur, 24
+              heures à compter de sa réponse.
+            </Li>
+          </Ul>
+          <p>
+            L’expert doit remettre son rapport au CSE (ou CSE d’établissement ou
+            CSE central) au minimum 24 heures avant la fin du délai de
+            consultation du comité.
+          </p>
+          <p>
+            Enfin, si l’employeur décide de saisir le juge, il dispose d’un
+            délai de 48 heures à compter de :
+          </p>
+          <Ul>
+            <Li>
+              La délibération du CSE décidant le recours à l’expertise s’il
+              entend contester la nécessité de l’expertise.
+            </Li>
+            <Li>
+              La désignation de l’expert par le CSE s’il entend contester le
+              choix de l’expert.
+            </Li>
+            <Li>
+              La notification à l’employeur du cahier des charges et des
+              informations par l’expert, s’il entend contester le coût
+              prévisionnel, l’étendue ou la durée de l’expertise.
+            </Li>
+            <Li>
+              La notification à l’employeur du coût final de l’expertise s’il
+              entend contester ce coût.
+            </Li>
+          </Ul>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "delais-cse-1",
+                title:
+                  "Rapport au Président de la République relatif à l'ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l'information du comité social et économique afin de faire face à l'épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254",
+              },
+              {
+                id: "delais-cse-2",
+                title:
+                  "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l'information du comité social et économique afin de faire face à l'épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261",
+              },
+              {
+                id: "delais-cse-3",
+                title:
+                  "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l'information du comité social et économique afin de faire face aux conséquences de la propagation de l'épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264",
+              },
+              {
+                id: "delais-cse-4",
+                title:
+                  "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d'application des dispositions du I de l'article 9 de l'ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l'épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280",
+              },
+              {
+                id: "delais-cse-5",
+                title:
+                  "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l'épidémie de covid-19, article 9",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597",
+              },
+              {
+                id: "l2315-30",
+                title: "Article L. 2315-30 du code du travai",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "l2316-17",
+                title: "Article L. 2316-17 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "l2315-86",
+                title: "Article L. 2315-86 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "r2312-6",
+                title: "Article R. 2312-6 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "",
+              },
+              {
+                id: "r2315-45",
+                title: "Article R. 2315-45 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "",
+              },
+              {
+                id: "r2315-46",
+                title: "Article R. 2315-46 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "",
+              },
+              {
+                id: "r2315-47",
+                title: "Article R. 2315-47 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "",
+              },
+              {
+                id: "r2315-49",
+                title: "Article R. 2315-49 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "/code-du-travail/r2315-49",
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Délais du CSE (ordre du jour, consultation, expertise)",
+    },
   ].map(({ anchor, content, title }) => ({
     id: anchor,
     title: <h2>{title}</h2>,
@@ -756,7 +1057,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
         ]}
         date="10/04/2020"
         dateLabel="Mise à jour le"
-        title="Coronavirus : ce que changent les ordonnances en droit du travail"
+        title="Nouveautés Covid-19"
       >
         <p>
           Le Gouvernement a décidé de prendre plusieurs mesures afin

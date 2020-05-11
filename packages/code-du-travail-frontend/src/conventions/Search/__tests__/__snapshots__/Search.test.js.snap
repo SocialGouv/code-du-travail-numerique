@@ -52,12 +52,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   color: #f66663;
 }
 
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -168,6 +162,13 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   font-style: normal;
   line-height: 2;
   cursor: pointer;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
 }
 
 .c6 {
@@ -294,7 +295,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -817,12 +818,6 @@ exports[`<Search /> should show spinner when loading 1`] = `
 `;
 
 exports[`<Search /> when input is IDCC, should search conventions 1`] = `
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -933,6 +928,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   font-style: normal;
   line-height: 2;
   cursor: pointer;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
 }
 
 .c6 {
@@ -998,6 +1000,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c7 {
     font-size: 1.6rem;
   }
@@ -1014,6 +1024,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     padding: 0 1rem;
     padding-right: 2rem;
   }
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {
@@ -1063,7 +1081,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         résultats)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1108,12 +1126,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 `;
 
 exports[`<Search /> when input is a valid IDCC, should show only the perfect match  1`] = `
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -1224,6 +1236,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   font-style: normal;
   line-height: 2;
   cursor: pointer;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
 }
 
 .c6 {
@@ -1344,7 +1363,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1420,12 +1439,6 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 .c12:hover,
 .c12:active {
   color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c7 {
@@ -1538,6 +1551,13 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   font-style: normal;
   line-height: 2;
   cursor: pointer;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
 }
 
 .c6 {
@@ -1668,7 +1688,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1747,12 +1767,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 .c11:hover,
 .c11:active {
   color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c7 {
@@ -1865,6 +1879,13 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   font-style: normal;
   line-height: 2;
   cursor: pointer;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
 }
 
 .c6 {
@@ -2006,7 +2027,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -2038,7 +2059,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
