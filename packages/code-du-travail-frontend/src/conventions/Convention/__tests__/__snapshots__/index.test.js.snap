@@ -321,14 +321,14 @@ exports[`<Convention /> renders 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
-  margin-right: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
 }
 
 .c48 svg {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .c49 {
