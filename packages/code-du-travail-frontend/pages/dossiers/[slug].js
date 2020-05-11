@@ -77,16 +77,16 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
               .map(({ icon, id, refs, shortTitle, title }) => (
                 <Wrapper key={id}>
                   <IconStripe centered icon={icons[icon]}>
-                    <h2 id={id} data-short-title={shortTitle}>
+                    <H2 id={id} data-short-title={shortTitle}>
                       {title}
-                    </h2>
+                    </H2>
                   </IconStripe>
                   <ViewMore
-                    intialSize={6}
+                    initialSize={6}
                     stepSize={20}
-                    ListContainer={StyledFlatList}
+                    listContainer={StyledFlatList}
                     buttonProps={{ variant: "flat", small: true }}
-                    label={refs.length > 8 ? "Afficher plus" : "Afficher tout"}
+                    label="Afficher tout"
                   >
                     {refs.map((ref) => (
                       <Li key={ref.url || ref.externalUrl}>
@@ -152,6 +152,10 @@ const Content = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
+`;
+
+const H2 = styled.h2`
+  margin: ${spacings.large} 0;
 `;
 
 const StyledFlatList = styled(FlatList)`

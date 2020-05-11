@@ -1,7 +1,7 @@
 const thematicFiles = [
   {
     slug: "ministere-du-travail-notre-dossier-sur-le-coronavirus",
-    title: "Ministère du travail : notre dossier sur le coronavirus",
+    title: "Ministère du travail : notre dossier sur le Coronavirus",
     metaDescription:
       "Coronavirus et le travail : télétravail, démarches chômage partiel, santé, sécurité, obligations de l’employeur, congés payés, arrêt de travail pour garder ses enfants, droit de retrait...",
     description:
@@ -37,7 +37,7 @@ const thematicFiles = [
           {
             url:
               "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
-            title: "Nouveautés covid-19 : Congés payés",
+            title: "Nouveautés Covid-19 : congés payés",
           },
 
           {
@@ -55,7 +55,7 @@ const thematicFiles = [
           {
             url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
             title:
-              "Questions - Réponses : Activité partielle - chômage partiel",
+              "Questions - Réponses : activité partielle - chômage partiel",
           },
           {
             url:
@@ -65,7 +65,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partie",
+              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
             title:
               "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
           },
@@ -99,6 +99,11 @@ const thematicFiles = [
           },
           {
             url:
+              "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
+            title: "Protocole national de déconfinement",
+          },
+          {
+            url:
               "/fiche-ministere-travail/quelles-mesures-lemployeur-doit-il-prendre-pour-proteger-la-sante-de-ses-salaries",
             title:
               "Quelles mesures l’employeur doit-il prendre pour protéger la santé de ses salariés",
@@ -107,22 +112,22 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/responsabilite-de-lemployeur-droit-de-retrait",
             title:
-              "Questions - Réponses : Responsabilité de l’employeur et droit de retrait",
+              "Questions - Réponses : responsabilité de l’employeur et droit de retrait",
           },
           {
             url:
               "/fiche-ministere-travail/mesures-de-prevention-dans-lentreprise-contre-le-covid-19-masques",
             title:
-              "Questions - Réponses : Mesures de prévention dans l’entreprise contre le COVID-19 - Masques",
+              "Questions - Réponses : mesures de prévention dans l’entreprise contre le COVID-19",
           },
           {
             url: "/fiche-ministere-travail/services-de-sante-au-travail",
-            title: "Questions - Réponses : Services de santé au travail",
+            title: "Questions - Réponses : services de santé au travail",
           },
           {
             url:
               "/fiche-ministere-travail/mesures-de-prevention-sante-hors-covid-19",
-            title: "Questions - Réponses : Mesures de prévention hors covid",
+            title: "Questions - Réponses : mesures de prévention hors covid",
           },
         ],
         title: "Santé et sécurité au travail",
@@ -134,37 +139,37 @@ const thematicFiles = [
         refs: [
           {
             url:
-              "/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
-            title: "Nouveautés coronavirus : Congés payés",
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
+            title: "Nouveautés Covid-19 : congés payés",
           },
           {
             url:
-              "/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#jours-repos",
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#jours-repos",
             title:
-              "Nouveautés coronavirus : RTT, jours de repos forfait jours, compte épargne-temps ",
+              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps ",
           },
           {
             url:
-              "/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#prime-exceptionnelle",
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#prime-exceptionnelle",
             title:
-              "Nouveautés coronavirus : Prime exceptionnelle de pouvoir d’achat",
+              "Nouveautés Covid-19 : prime exceptionnelle de pouvoir d’achat",
           },
           {
             url:
-              "/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#interessement-participation",
-            title: "Nouveautés coronavirus : Intéressement et participation",
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#interessement-participation",
+            title: "Nouveautés Covid-19 : intéressement et participation",
           },
           {
             url:
-              "/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#durees-maximales-travail",
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#durees-maximales-travail",
             title:
-              "Nouveautés coronavirus : Durées maximales de travail, repos quotidien et dominical",
+              "Nouveautés Covid-19 : durées maximales de travail, repos quotidien et dominical",
           },
           {
             url:
               "/fiche-ministere-travail/adaptation-de-lactivite-conges-mise-a-disposition-de-main-doeuvre",
             title:
-              "Questions - Réponses : Adaptation de l’activité, congés, mise à disposition",
+              "Questions - Réponses : adaptation de l’activité, congés, mise à disposition",
           },
           {
             url:
@@ -195,7 +200,7 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/embauche-demission-sanctions-licenciement",
             title:
-              "Questions - Réponses : Embauche démission sanctions licenciement",
+              "Questions - Réponses : embauche démission sanctions licenciement",
           },
         ],
         title: "Contrat de travail (embauche, télétravail, rupture…)",
@@ -239,23 +244,13 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs##Transports-logistique-0f98",
-            title: "Transports, logistique - Bis",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#BTP-construction-materiaux",
-            title: "BTP, construction, matériaux",
-          },
-          {
-            url:
               "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Autres-services",
             title: "Autres services",
           },
           {
             url:
               "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#assistant-maternel",
-            title: "Nouveautés coronavirus : Assistant(e) maternel(le)",
+            title: "Nouveautés Covid-19 : assistant(e) maternel(le)",
           },
           {
             url:
@@ -272,7 +267,8 @@ const thematicFiles = [
           {
             url:
               "/fiche-ministere-travail/covid-19-situation-des-travailleurs-frontaliers",
-            title: "COVID-19 : situation des travailleurs frontaliers",
+            title:
+              "Nouveautés Covid-19 : situation des travailleurs frontaliers",
           },
         ],
         title: "Focus par secteur ou métier",
@@ -286,23 +282,12 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/garde-denfants-et-personnes-vulnerables",
             title:
-              "Questions - Réponses : Garde d’enfants et personnes vulnérables",
+              "Questions - Réponses : garde d’enfants et personnes vulnérables",
           },
           {
             url:
               "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
             title: "Arrêt maladie : indemnités journalières versées au salarié",
-          },
-          {
-            url: "https://declare.ameli.fr/",
-            title:
-              "Demander un arrêt de travail pour vos salariés contraints de garder leur enfant à domicile",
-          },
-          {
-            url:
-              "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
-            title:
-              "Modèle attestation sur l’honneur : arrêt de travail pour la garde d’enfant",
           },
         ],
         title: "Arrêt maladie et garde d’enfants",
@@ -313,23 +298,24 @@ const thematicFiles = [
         position: 8,
         refs: [
           {
-            url: "Conventions de FNE-Formation",
-            title: "/fiche-ministere-travail/conventions-de-fne-formation",
+            url: "/fiche-ministere-travail/conventions-de-fne-formation",
+            title: "Conventions de FNE-Formation",
           },
           {
-            url: "Questions - Réponses : Formation professionnelle stagiaire",
-            title:
+            url:
               "/fiche-ministere-travail/formation-professionnelle-stagiaires-et-organismes-de-formation",
+            title: "Questions - Réponses : formation professionnelle stagiaire",
           },
           {
-            url: "Questions - Réponses : Apprentissage",
-            title:
+            url:
               "/fiche-ministere-travail/apprentissage-apprentis-et-organismes-de-formation-cfa",
+            title: "Questions - Réponses : apprentissage",
           },
           {
-            url: "Formation professionnelle des salariés en activité partielle",
-            title:
+            url:
               "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle",
+            title:
+              "Formation professionnelle des salariés en activité partielle",
           },
         ],
         title: "Formation professionnelle et apprentissage",
@@ -342,7 +328,12 @@ const thematicFiles = [
         refs: [
           {
             url: "/fiche-ministere-travail/dialogue-social",
-            title: "FAQ - dialogue social",
+            title: "Questions-réponses : dialogue social",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#delais-cse",
+            title: "Nouveautés Covid-19 : délais du CSE",
           },
         ],
         title: "CSE et accord collectif",
@@ -354,7 +345,7 @@ const thematicFiles = [
         refs: [
           {
             url: "/fiche-ministere-travail/indemnisation-chomage",
-            title: "FAQ - Indemnisation chômage",
+            title: "Questions-réponses : indemnisation chômage",
           },
           {
             url:
@@ -375,11 +366,6 @@ const thematicFiles = [
               "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage",
             title:
               "Modèle justificatif de l’employeur de déplacement professionnel",
-          },
-          {
-            url:
-              "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage",
-            title: "Modèle attestation sur l’honneur : déplacement dérogatoire",
           },
           {
             url: "https://www.gouvernement.fr/info-coronavirus",

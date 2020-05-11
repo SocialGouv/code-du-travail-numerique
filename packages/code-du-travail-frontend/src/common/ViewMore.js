@@ -8,7 +8,7 @@ const ViewMore = ({
   children,
   initialSize,
   label,
-  ListContainer,
+  listContainer: ListContainer,
   onClick,
   query,
   stepSize,
@@ -41,22 +41,12 @@ const ViewMore = ({
 ViewMore.propTypes = {
   buttonProps: PropTypes.object,
   children: PropTypes.node.isRequired,
-  ListContainer: PropTypes.elementType,
+  listContainer: PropTypes.elementType,
   initialSize: PropTypes.number,
   stepSize: PropTypes.number,
   label: PropTypes.string,
   onClick: PropTypes.func,
   query: PropTypes.string,
-};
-
-ViewMore.defaultProps = {
-  buttonProps: {},
-  ListContainer: StyledFlatList,
-  initialSize: 7,
-  stepSize: 7,
-  label: "Voir plus",
-  onClick: () => {},
-  query: "",
 };
 
 export { ViewMore };
@@ -81,3 +71,13 @@ const StyledButton = styled(Button)`
     flex: 1 0 auto;
   }
 `;
+
+ViewMore.defaultProps = {
+  buttonProps: {},
+  listContainer: StyledFlatList,
+  initialSize: 7,
+  stepSize: 7,
+  label: "Voir plus",
+  onClick: () => {},
+  query: "",
+};
