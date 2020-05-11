@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { breakpoints, spacings } from "../theme";
 
-const SIZE = "4.2rem";
+const SIZE = "3.5rem";
 const SMALL_SIZE = "3rem";
 
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
@@ -27,7 +27,7 @@ const IconWrapper = styled.div`
   flex-shrink: 0;
   width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
   height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
-  margin-right: ${spacings.xmedium};
+  margin-right: ${spacings.medium};
   svg {
     width: ${({ small }) => (small ? SMALL_SIZE : SIZE)};
     height: ${({ small }) => (small ? SMALL_SIZE : SIZE)};

@@ -20,7 +20,6 @@ import {
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
-import { ViewMore } from "../../src/common/ViewMore";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -74,27 +73,24 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
           <Content>
             {sortedCategories
               .filter((category) => (filter ? category.id === filter : true))
-              .map(({ icon, id, refs, shortTitle, title }) => (
-                <Wrapper key={id}>
+              .map(({ icon, id, refs, shortTitle, title }, index) => (
+                <StyledWrapper
+                  key={id}
+                  {...(index === 0 && { variant: "light" })}
+                >
                   <IconStripe centered icon={icons[icon]}>
                     <H2 id={id} data-short-title={shortTitle}>
                       {title}
                     </H2>
                   </IconStripe>
-                  <ViewMore
-                    initialSize={6}
-                    stepSize={20}
-                    listContainer={StyledFlatList}
-                    buttonProps={{ variant: "flat", small: true }}
-                    label="Afficher tout"
-                  >
+                  <StyledFlatList>
                     {refs.map((ref) => (
                       <Li key={ref.url || ref.externalUrl}>
                         <DossierLink {...ref} />
                       </Li>
                     ))}
-                  </ViewMore>
-                </Wrapper>
+                  </StyledFlatList>
+                </StyledWrapper>
               ))}
           </Content>
         </MainContainer>
@@ -119,6 +115,7 @@ const SelectWrapper = styled.div`
   text-align: center;
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
+    margin-bottom: ${spacings.large};
   }
 `;
 
@@ -154,16 +151,25 @@ const Content = styled.div`
   }
 `;
 
+const StyledWrapper = styled(Wrapper)`
+  margin-bottom: ${spacings.large};
+  padding-top: ${spacings.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.xmedium};
+  }
+`;
+
 const H2 = styled.h2`
-  margin: ${spacings.large} 0;
+  margin: 0;
 `;
 
 const StyledFlatList = styled(FlatList)`
   display: flex;
   flex-wrap: wrap;
+  margin-top: ${spacings.large};
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
-    margin-top: ${spacings.small};
+    margin-top: ${spacings.xmedium};
   }
 `;
 

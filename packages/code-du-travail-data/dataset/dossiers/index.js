@@ -14,9 +14,8 @@ const thematicFiles = [
         refs: [
           {
             url:
-              "/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
-            title:
-              "Modèle attestation sur l’honneur : arrêt de travail pour la garde d’enfant",
+              "/fiche-ministere-travail/questions-reponses-teletravail-et-deconfinement",
+            title: "Questions - Réponses : télétravail et déconfinement",
           },
           {
             url:
@@ -31,15 +30,14 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-            title: "Arrêt maladie : indemnités journalières versées au salarié",
+              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs",
+            title: "Fiches conseils métiers du ministère du travail",
           },
           {
             url:
               "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
             title: "Nouveautés Covid-19 : congés payés",
           },
-
           {
             url: "/fiche-ministere-travail/conventions-de-fne-formation",
             title: "Conventions de FNE-Formation",
@@ -48,48 +46,9 @@ const thematicFiles = [
         title: "Les contenus populaires",
       },
       {
-        icon: "PartialActivity",
-        id: "activite-partielle",
-        position: 2,
-        refs: [
-          {
-            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
-            title:
-              "Questions - Réponses : activité partielle - chômage partiel",
-          },
-          {
-            url:
-              "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-            title:
-              "Activité partielle : démarches de l’employeur (chômage partiel ou technique)",
-          },
-          {
-            url:
-              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
-            title:
-              "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
-          },
-          {
-            url: "https://activitepartielle.emploi.gouv.fr/apart/",
-            title: "Demander l’activité partielle",
-          },
-          {
-            url: "https://www.simulateurap.emploi.gouv.fr/",
-            title: "Simulateur d’activité partielle",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/fiche-activite-partielle-chomage-partiel",
-            title: "Fiche Activité partielle",
-          },
-        ],
-        title: "Activité partielle (chômage partiel)",
-        shortTitle: "Activité partielle",
-      },
-      {
         icon: "Security",
         id: "sante-securite",
-        position: 3,
+        position: 2,
         refs: [
           {
             url:
@@ -133,83 +92,9 @@ const thematicFiles = [
         title: "Santé et sécurité au travail",
       },
       {
-        icon: "Precarity",
-        id: "conge-payes",
-        position: 4,
-        refs: [
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
-            title: "Nouveautés Covid-19 : congés payés",
-          },
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#jours-repos",
-            title:
-              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps ",
-          },
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#prime-exceptionnelle",
-            title:
-              "Nouveautés Covid-19 : prime exceptionnelle de pouvoir d’achat",
-          },
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#interessement-participation",
-            title: "Nouveautés Covid-19 : intéressement et participation",
-          },
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#durees-maximales-travail",
-            title:
-              "Nouveautés Covid-19 : durées maximales de travail, repos quotidien et dominical",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/adaptation-de-lactivite-conges-mise-a-disposition-de-main-doeuvre",
-            title:
-              "Questions - Réponses : adaptation de l’activité, congés, mise à disposition",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
-            title:
-              "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/prime-exceptionnelle-et-epargne-salariale",
-            title:
-              "Questions - Réponses : primes exceptionnelles et épargne salariale",
-          },
-        ],
-        title: "Congés payés, durée du travail et primes",
-        shortTitle: "Congés payés, durée du travail, primes",
-      },
-      {
-        icon: "Contract",
-        id: "contrats",
-        position: 5,
-        refs: [
-          {
-            url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
-            title: "Télétravail dans le secteur privé",
-          },
-          {
-            url:
-              "/fiche-ministere-travail/embauche-demission-sanctions-licenciement",
-            title:
-              "Questions - Réponses : embauche démission sanctions licenciement",
-          },
-        ],
-        title: "Contrat de travail (embauche, télétravail, rupture…)",
-        shortTitle: "Contrat de travail",
-      },
-      {
         icon: "Focus",
         id: "focus",
-        position: 6,
+        position: 3,
         refs: [
           {
             url:
@@ -271,7 +156,125 @@ const thematicFiles = [
               "Nouveautés Covid-19 : situation des travailleurs frontaliers",
           },
         ],
-        title: "Focus par secteur ou métier",
+        title: "Prévention Covid-19 par secteur ou pas métier",
+      },
+      {
+        icon: "Precarity",
+        id: "conge-payes",
+        position: 4,
+        refs: [
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
+            title: "Nouveautés Covid-19 : congés payés",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#jours-repos",
+            title:
+              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps ",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#prime-exceptionnelle",
+            title:
+              "Nouveautés Covid-19 : prime exceptionnelle de pouvoir d’achat",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#interessement-participation",
+            title: "Nouveautés Covid-19 : intéressement et participation",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#durees-maximales-travail",
+            title:
+              "Nouveautés Covid-19 : durées maximales de travail, repos quotidien et dominical",
+          },
+          {
+            url:
+              "/fiche-ministere-travail/adaptation-de-lactivite-conges-mise-a-disposition-de-main-doeuvre",
+            title:
+              "Questions - Réponses : adaptation de l’activité, congés, mise à disposition",
+          },
+          {
+            url:
+              "/fiche-ministere-travail/prime-exceptionnelle-et-epargne-salariale",
+            title:
+              "Questions - Réponses : primes exceptionnelles et épargne salariale",
+          },
+        ],
+        title: "Congés payés, durée du travail et primes",
+        shortTitle: "Congés payés, durée du travail, primes",
+      },
+      {
+        icon: "PartialActivity",
+        id: "activite-partielle",
+        position: 5,
+        refs: [
+          {
+            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
+            title:
+              "Questions - Réponses : activité partielle - chômage partiel",
+          },
+          {
+            url:
+              "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
+            title:
+              "Activité partielle : démarches de l’employeur (chômage partiel ou technique)",
+          },
+          {
+            url:
+              "/fiche-service-public/remuneration-dun-salarie-place-en-activite-partielle-chomage-partiel",
+            title:
+              "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
+          },
+          {
+            url: "https://activitepartielle.emploi.gouv.fr/apart/",
+            title: "Demander l’activité partielle",
+          },
+          {
+            url: "https://www.simulateurap.emploi.gouv.fr/",
+            title: "Simulateur d’activité partielle",
+          },
+          {
+            url:
+              "/fiche-ministere-travail/fiche-activite-partielle-chomage-partiel",
+            title: "Fiche Activité partielle",
+          },
+        ],
+        title: "Activité partielle (chômage partiel)",
+        shortTitle: "Activité partielle",
+      },
+      {
+        icon: "Contract",
+        id: "contrats",
+        position: 6,
+        refs: [
+          {
+            url:
+              "/fiche-ministere-travail/questions-reponses-teletravail-et-deconfinement",
+            title: "Questions - Réponses : télétravail et déconfinement",
+          },
+          {
+            url:
+              "/fiche-ministere-travail/embauche-demission-sanctions-licenciement",
+            title:
+              "Questions - Réponses : embauche démission sanctions licenciement",
+          },
+          {
+            url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
+            title: "Télétravail dans le secteur privé",
+          },
+          {
+            url:
+              "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
+            title:
+              "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
+          },
+        ],
+        title: "Contrat de travail (embauche, télétravail, rupture…)",
+        shortTitle: "Contrat de travail",
       },
       {
         icon: "Health",
@@ -293,13 +296,34 @@ const thematicFiles = [
         title: "Arrêt maladie et garde d’enfants",
       },
       {
+        icon: "Nego",
+        id: "accord-collectif",
+        position: 8,
+        refs: [
+          {
+            url: "/fiche-ministere-travail/dialogue-social",
+            title: "Questions-réponses : dialogue social",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#delais-cse",
+            title: "Nouveautés Covid-19 : délais du CSE",
+          },
+        ],
+        title: "CSE et accord collectif",
+      },
+      {
         icon: "Formation",
         id: "formation",
-        position: 8,
+        position: 9,
         refs: [
           {
             url: "/fiche-ministere-travail/conventions-de-fne-formation",
             title: "Conventions de FNE-Formation",
+          },
+          {
+            url: "/fiche-ministere-travail/fne-formation",
+            title: "Questions - Réponses : FNE-formation",
           },
           {
             url:
@@ -320,23 +344,6 @@ const thematicFiles = [
         ],
         title: "Formation professionnelle et apprentissage",
         shortTitle: "Formation et apprentissage",
-      },
-      {
-        icon: "Agreement",
-        id: "accord-collectif",
-        position: 9,
-        refs: [
-          {
-            url: "/fiche-ministere-travail/dialogue-social",
-            title: "Questions-réponses : dialogue social",
-          },
-          {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#delais-cse",
-            title: "Nouveautés Covid-19 : délais du CSE",
-          },
-        ],
-        title: "CSE et accord collectif",
       },
       {
         icon: "Unemployment",
@@ -361,6 +368,12 @@ const thematicFiles = [
         id: "ressources",
         position: 11,
         refs: [
+          {
+            url:
+              "https://www.prefectures-regions.gouv.fr/ile-de-france/Region-et-institutions/L-action-de-l-Etat/Amenagement-du-territoire-transport-et-environnement/Les-transports-du-quotidien/Deconfinement-les-attestations-pour-se-deplacer-dans-les-transports-en-commun-en-heure-de-pointe",
+            title:
+              "Attestation de déplacement professionnel en transport collectif en Île-de-France",
+          },
           {
             url:
               "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage",
