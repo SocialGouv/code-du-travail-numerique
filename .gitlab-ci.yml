@@ -28,3 +28,11 @@ stages:
   - "Deploy"
   - "Notify Finished Deployment"
   - "E2E testing"
+
+Job de test:
+  stage: "Prepare"
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
+  script:
+    - echo "I'm in"
