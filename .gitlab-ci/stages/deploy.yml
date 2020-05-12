@@ -179,7 +179,7 @@ Deploy @cdtn/frontend extra ingress(prod):
 
 #
 
-Update Elasticsearch Index (manual):
+Update Elasticsearch Index:
   extends:
       - .deploy-data
   environment:
@@ -187,6 +187,8 @@ Update Elasticsearch Index (manual):
   only:
     refs:
       - master
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
   variables:
     PRODUCTION: "true"
 
