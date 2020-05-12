@@ -15,6 +15,7 @@
       "depTypeList": ["devDependencies"],
       "minor": {
         "groupName": "all non-major devDependencies",
+        "schedule": ["at 2:00 pm every 2 day"],
         "automerge": true
       }
     },
@@ -22,6 +23,7 @@
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
       "minor": {
+        "schedule": ["at 2:00 pm every 2 day"],
         "groupName": "all non-major dependencies"
       }
     }
