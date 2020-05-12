@@ -18,15 +18,14 @@ const thematicFiles = [
             title: "Questions - Réponses : télétravail et déconfinement",
           },
           {
-            url:
-              "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-            title: "Démarches de l’employeur (chômage partiel ou technique)",
+            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
+            title: "Activité partielle – chômage partiel",
           },
           {
             url:
-              "/fiche-service-public/remuneration-dun-salarie-en-chomage-partiel-activite-partielle",
+              "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
             title:
-              "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
+              "Protocole national de déconfinement du Ministère du travail",
           },
           {
             url:
@@ -59,7 +58,8 @@ const thematicFiles = [
           {
             url:
               "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
-            title: "Protocole national de déconfinement",
+            title:
+              "Protocole national de déconfinement du Ministère du travail",
           },
           {
             url:
@@ -98,18 +98,18 @@ const thematicFiles = [
         refs: [
           {
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs##Problematiques-communes-a-tous-les-metiers",
+              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Problematiques-communes-a-tous-les-metiers",
             title: "Problématiques communes à tous les métiers",
           },
           {
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs##Agriculture-elevage-agroalimentaire-jardins-et-espaces-verts",
+              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Agriculture-elevage-agroalimentaire-jardins-et-espaces-verts",
             title:
               "Agriculture, élevage, agroalimentaire, jardins et espaces verts",
           },
           {
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs##Commerce-de-detail-restauration-hotellerie",
+              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Commerce-de-detail-restauration-hotellerie",
             title: "Commerce de détail, restauration, hôtellerie",
           },
           {
@@ -124,7 +124,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs##Transports-logistique",
+              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Transports-logistique",
             title: "Transports, logistique",
           },
           {
@@ -373,12 +373,6 @@ const thematicFiles = [
               "https://www.prefectures-regions.gouv.fr/ile-de-france/Region-et-institutions/L-action-de-l-Etat/Amenagement-du-territoire-transport-et-environnement/Les-transports-du-quotidien/Deconfinement-les-attestations-pour-se-deplacer-dans-les-transports-en-commun-en-heure-de-pointe",
             title:
               "Attestation de déplacement professionnel en transport collectif en Île-de-France",
-          },
-          {
-            url:
-              "https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage",
-            title:
-              "Modèle justificatif de l’employeur de déplacement professionnel",
           },
           {
             url: "https://www.gouvernement.fr/info-coronavirus",
