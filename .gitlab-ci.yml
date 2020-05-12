@@ -35,4 +35,4 @@ Job de test:
     variables:
       - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
   script:
-    - echo "I'm in"
+    - echo "I'm out"
