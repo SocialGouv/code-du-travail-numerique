@@ -181,7 +181,8 @@ Deploy @cdtn/frontend extra ingress(prod):
 
 Update Elasticsearch Index:
   extends:
-      - .deploy-data
+    - .deploy-data
+  stage: "Update ES data"
   environment:
     name: prod
   only:
