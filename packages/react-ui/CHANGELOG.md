@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2661](https://github.com/SocialGouv/code-du-travail-numerique/issues/2661)) ([e0afa5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0afa5e8c0c504d65ccd5b7041182141f173b7c7))
+* **deps:** update all non-major dependencies ([#2666](https://github.com/SocialGouv/code-du-travail-numerique/issues/2666)) ([d0b8b6e](https://github.com/SocialGouv/code-du-travail-numerique/commit/d0b8b6e89baf6ca2c3f662d899724a938872a046))
+* **deps:** update all non-major dependencies ([#2669](https://github.com/SocialGouv/code-du-travail-numerique/issues/2669)) ([379f951](https://github.com/SocialGouv/code-du-travail-numerique/commit/379f9519ca466c5e5bd7828553c9bc94af935762))
+* **deps:** update all non-major dependencies ([#2696](https://github.com/SocialGouv/code-du-travail-numerique/issues/2696)) ([4bfd854](https://github.com/SocialGouv/code-du-travail-numerique/commit/4bfd8548635f21522c57c7c658ab71320506496f))
+* **deps:** update all non-major dependencies ([#2702](https://github.com/SocialGouv/code-du-travail-numerique/issues/2702)) ([28e24ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/28e24ac9a3d8d6406ef9274d45e0ca1a1bebd324))
+
+
+### Features
+
+* **chore:** add new dossier layout ([#2691](https://github.com/SocialGouv/code-du-travail-numerique/issues/2691)) ([1e19d44](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e19d4457d5d02684f4226cdb032657ded43b311))
+* **ui:** add TOC component ([#2689](https://github.com/SocialGouv/code-du-travail-numerique/issues/2689)) ([e550f90](https://github.com/SocialGouv/code-du-travail-numerique/commit/e550f90d212f109e1d6a2c8cbf76940fd1288495))
+
+
+
+
+
 # [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
 
 **Note:** Version bump only for package @socialgouv/react-ui

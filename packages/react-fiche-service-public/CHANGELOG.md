@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2666](https://github.com/SocialGouv/code-du-travail-numerique/issues/2666)) ([d0b8b6e](https://github.com/SocialGouv/code-du-travail-numerique/commit/d0b8b6e89baf6ca2c3f662d899724a938872a046))
+* **deps:** update all non-major dependencies ([#2669](https://github.com/SocialGouv/code-du-travail-numerique/issues/2669)) ([379f951](https://github.com/SocialGouv/code-du-travail-numerique/commit/379f9519ca466c5e5bd7828553c9bc94af935762))
+
+
+### Features
+
+* **ui:** add TOC component ([#2689](https://github.com/SocialGouv/code-du-travail-numerique/issues/2689)) ([e550f90](https://github.com/SocialGouv/code-du-travail-numerique/commit/e550f90d212f109e1d6a2c8cbf76940fd1288495))
+
+
+
+
+
 # [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

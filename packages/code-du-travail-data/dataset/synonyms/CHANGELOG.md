@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
+
+
+### Features
+
+* **data:** add covid synonym ([#2664](https://github.com/SocialGouv/code-du-travail-numerique/issues/2664)) ([b48d9ef](https://github.com/SocialGouv/code-du-travail-numerique/commit/b48d9efc945ba9a915da73caee7e6eff8c9d8f3a)), closes [#2611](https://github.com/SocialGouv/code-du-travail-numerique/issues/2611)
+
+
+
+
+
 # [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
 
 **Note:** Version bump only for package @cdt/data...synonyms
