@@ -18,15 +18,14 @@ const thematicFiles = [
             title: "Questions - Réponses : télétravail et déconfinement",
           },
           {
-            url:
-              "/fiche-service-public/activite-partielle-demarches-de-lemployeur-chomage-partiel-ou-technique",
-            title: "Démarches de l’employeur (chômage partiel ou technique)",
+            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
+            title: "Activité partielle – chômage partiel",
           },
           {
             url:
-              "/fiche-service-public/remuneration-dun-salarie-en-chomage-partiel-activite-partielle",
+              "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
             title:
-              "Rémunération d’un salarié placé en activité partielle (chômage partiel)",
+              "Protocole national de déconfinement du Ministère du travail",
           },
           {
             url:
@@ -59,7 +58,8 @@ const thematicFiles = [
           {
             url:
               "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
-            title: "Protocole national de déconfinement",
+            title:
+              "Protocole national de déconfinement du Ministère du travail",
           },
           {
             url:
