@@ -29,7 +29,7 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   const [filter, setFilter] = useState("");
 
   if (!dossier) {
-    return <Answer emptyMessage="Cet dossier thématique n'a pas été trouvé" />;
+    return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
   }
   const { description = "", metaDescription, categories, title } = dossier;
 
