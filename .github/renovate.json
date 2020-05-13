@@ -3,9 +3,11 @@
   "extends": [
     "github>SocialGouv/renovate-config"
   ],
+  "schedule": ["after 10pm and before 5am on every weekday", "every weekend"],
   "packageRules": [
     {
       "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["at any time"],
       "minor": {
         "groupName": "@socialgouv data packages",
         "automerge": true
@@ -15,7 +17,6 @@
       "depTypeList": ["devDependencies"],
       "minor": {
         "groupName": "all non-major devDependencies",
-        "schedule": ["at 2:00 pm every 2 day"],
         "automerge": true
       }
     },
@@ -23,8 +24,8 @@
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
       "minor": {
-        "schedule": ["at 2:00 pm every 2 day"],
-        "groupName": "all non-major dependencies"
+        "groupName": "all non-major dependencies",
+        "automerge": true
       }
     }
   ]
