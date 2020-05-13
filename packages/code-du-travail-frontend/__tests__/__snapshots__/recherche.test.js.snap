@@ -563,6 +563,7 @@ exports[`<Recherche /> should render 1`] = `
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  padding-left: 0;
 }
 
 .c5 {
@@ -570,23 +571,35 @@ exports[`<Recherche /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0.8rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c6 {
-  width: 7rem;
-  height: 7rem;
-  margin-right: 3.2rem;
+  -webkit-flex: 0 0 9.6rem;
+  -ms-flex: 0 0 9.6rem;
+  flex: 0 0 9.6rem;
+  width: 9.6rem;
+  height: 100%;
+  margin-right: 2rem;
+  padding: 0.8rem 0;
+  background-color: white;
 }
 
 .c7 {
-  width: 17rem;
+  -webkit-flex: 0 0 18rem;
+  -ms-flex: 0 0 18rem;
+  flex: 0 0 18rem;
+  width: 18rem;
+  height: 100%;
   color: #f66663;
 }
 
@@ -595,9 +608,9 @@ exports[`<Recherche /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1039,14 +1052,23 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c4 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c5 {
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: calc(50% + 9rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1057,11 +1079,11 @@ exports[`<Recherche /> should render 1`] = `
 
 @media (max-width:600px) {
   .c6 {
-    -webkit-flex: 0 0 5rem;
-    -ms-flex: 0 0 5rem;
-    flex: 0 0 5rem;
-    width: 5rem;
-    height: 5rem;
+    -webkit-flex: 0 0 7.4rem;
+    -ms-flex: 0 0 7.4rem;
+    flex: 0 0 7.4rem;
+    width: 7.4rem;
+    margin-right: 0;
   }
 }
 
@@ -1071,7 +1093,6 @@ exports[`<Recherche /> should render 1`] = `
     -ms-flex: 0 0 12.4rem;
     flex: 0 0 12.4rem;
     width: 12.4rem;
-    height: 5rem;
   }
 }
 
@@ -1221,9 +1242,9 @@ exports[`<Recherche /> should render 1`] = `
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
-            alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
+            alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
             class="c6"
-            src="/static/assets/img/marianne.svg"
+            src="/static/assets/img/ministere-travail.svg"
           />
           <svg
             class="c7"
