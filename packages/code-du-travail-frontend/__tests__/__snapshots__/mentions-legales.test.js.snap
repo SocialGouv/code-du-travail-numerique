@@ -571,22 +571,23 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c6 {
-  -webkit-flex: 0 0 9.6rem;
-  -ms-flex: 0 0 9.6rem;
-  flex: 0 0 9.6rem;
-  width: 9.6rem;
-  height: 100%;
-  margin-right: 2rem;
+  -webkit-flex: 0 0 7.8rem;
+  -ms-flex: 0 0 7.8rem;
+  flex: 0 0 7.8rem;
+  width: 7.8rem;
+  height: calc(100% - 2 * 0.8rem);
+  margin: 0.8rem 2rem 0.8rem 0.8rem;
   padding: 0.8rem 0;
   background-color: white;
 }
 
 .c7 {
-  -webkit-flex: 0 0 18rem;
-  -ms-flex: 0 0 18rem;
-  flex: 0 0 18rem;
-  width: 18rem;
-  height: 100%;
+  -webkit-flex: 0 0 19rem;
+  -ms-flex: 0 0 19rem;
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: calc(100% - 2 * 0.8rem);
+  margin: 0.8rem 0;
   color: #f66663;
 }
 
@@ -1051,7 +1052,7 @@ exports[`<MentionLegales /> should render 1`] = `
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: calc(50% + 9rem);
+    width: calc(50% + 9.5rem);
   }
 }
 
@@ -1067,11 +1068,12 @@ exports[`<MentionLegales /> should render 1`] = `
 
 @media (max-width:600px) {
   .c6 {
-    -webkit-flex: 0 0 7.4rem;
-    -ms-flex: 0 0 7.4rem;
-    flex: 0 0 7.4rem;
-    width: 7.4rem;
+    -webkit-flex: 0 0 5.5rem;
+    -ms-flex: 0 0 5.5rem;
+    flex: 0 0 5.5rem;
+    width: 5.5rem;
     margin-right: 0;
+    padding: 0.4rem 0;
   }
 }
 
