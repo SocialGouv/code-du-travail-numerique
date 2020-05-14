@@ -376,7 +376,7 @@ const thematicFiles = [
           },
           {
             url: "https://www.gouvernement.fr/info-coronavirus",
-            title: "Rester informer sur le Coronavirus",
+            title: "Rester informé sur le Coronavirus",
           },
           {
             url: "https://www.economie.gouv.fr/coronavirus-soutien-entreprises",

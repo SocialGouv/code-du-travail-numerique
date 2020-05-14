@@ -11,5 +11,9 @@ Fonctionnalité: Dossier Coronavirus
 
     Alors je vois "Coronavirus (Covid-19) : notre dossier dédié"
     Quand je clique sur "Coronavirus (Covid-19) : notre dossier dédié"
-    Alors je vois "Ministère du travail : notre dossier sur le Coronavirus"
-    Alors je vois "sommaire"
+    Quand j'attends que le titre de page "Ministère du travail : notre dossier sur le Coronavirus" apparaisse
+    Alors je vois "Sommaire"
+
+    Quand je clique sur "Nouveautés Covid-19 : congés payés"
+    Quand j'attends que le titre de page "Nouveautés Covid-19" apparaisse
+    Alors je vois "Congés payés : imposer ou modifier les congés payés"
