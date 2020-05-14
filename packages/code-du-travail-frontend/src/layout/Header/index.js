@@ -112,7 +112,7 @@ const LogoLink = styled.a`
   @media (max-width: ${breakpoints.tablet}) {
     justify-content: space-between;
     /* 9rem is half logo's width so it gets centered */
-    width: calc(50% + 9rem);
+    width: calc(50% + 9.5rem);
   }
   @media (max-width: ${breakpoints.mobile}) {
     /* 6.2rem is half logo's width so it gets centered */
@@ -122,22 +122,25 @@ const LogoLink = styled.a`
 `;
 
 const MinistereTravail = styled.img`
-  flex: 0 0 9.6rem;
-  width: 9.6rem;
-  height: 100%;
-  margin-right: ${spacings.medium};
+  flex: 0 0 7.8rem;
+  width: 7.8rem;
+  height: calc(100% - 2 * ${spacings.xsmall});
+  margin: ${spacings.xsmall} ${spacings.medium} ${spacings.xsmall}
+    ${spacings.xsmall};
   padding: ${spacings.xsmall} 0;
   background-color: white;
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 7.4rem;
-    width: 7.4rem;
+    flex: 0 0 5.5rem;
+    width: 5.5rem;
     margin-right: 0;
+    padding: ${spacings.tiny} 0;
   }
 `;
 const Logo = styled(icons.Logo)`
-  flex: 0 0 18rem;
-  width: 18rem;
-  height: 100%;
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: calc(100% - 2 * ${spacings.xsmall});
+  margin: ${spacings.xsmall} 0;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
     flex: 0 0 12.4rem;
