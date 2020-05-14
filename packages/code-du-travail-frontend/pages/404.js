@@ -16,7 +16,7 @@ export default function Custom404() {
     <Layout>
       <CenteredContainer>
         <Suptitle>ERREUR 404</Suptitle>
-        <StyledWarning />
+        <StyledOups />
         <H1>Oups, nous ne trouvons pas cette page…</H1>
         <div>
           Vérifiez le lien de la page, il est peut être incorrect. Dans le cas
@@ -47,12 +47,14 @@ const Suptitle = styled.div`
   font-size: ${fonts.sizes.headings.small};
 `;
 
-const StyledWarning = styled(Icons.Warning)`
-  width: 10rem;
+const StyledOups = styled(Icons.Oups)`
+  width: 5.2rem;
+  height: 5.2rem;
+  ${({ theme }) => theme.noColors && "display: none;"}
 `;
 
 const H1 = styled.h1`
-  margin-top: 0;
+  margin-top: ${spacings.base};
   margin-bottom: ${spacings.base};
 `;
 
