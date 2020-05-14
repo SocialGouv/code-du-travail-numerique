@@ -457,6 +457,114 @@ const Fiche = ({ pageUrl, ogImage }) => {
       title: "Durées maximales de travail, repos quotidien et dominical",
     },
     {
+      anchor: "rupture-conventionnelle",
+      content: (
+        <>
+          <p>
+            Pendant l’état d’urgence sanitaire, il est toujours possible de
+            signer des ruptures conventionnelles. Pour rappel, après signature
+            de la convention de rupture, les étapes suivantes s’appliquent :
+          </p>
+          <Ul>
+            <Li>
+              L’employeur et le salarié disposent d’un délai de 15 jours pour se
+              rétracter.
+            </Li>
+            <Li>
+              Ensuite, l’employeur envoie la convention de rupture à l’autorité
+              administrative compétente, qui dispose d’un délai de 15 jours pour
+              l’homologuer. En l’absence de réponse à la fin de ce délai, la
+              convention de rupture est homologuée.
+            </Li>
+          </Ul>
+          <p>
+            La mise en place de l’état d’urgence sanitaire n’a aucun effet sur
+            le délai de rétractation de 15 jours entre le salarié et
+            l’employeur. Celui-ci continue de s’appliquer normalement. Il n’est
+            pas suspendu ni prolongé.
+          </p>
+
+          <p>
+            Concernant le délai d’homologation par l’autorité administrative, il
+            s’applique différemment selon la date de dépôt de la demande
+            d’homologation :
+          </p>
+          <Ul>
+            <Li>
+              Avant le 12 mars 2020 :
+              <Ul>
+                <Li>
+                  Si le délai d’homologation avait pris fin avant le 12 mars
+                  (dépôt du dossier avant le 20 février), la rupture
+                  conventionnelle a produit ses effets. Le contrat de travail
+                  est donc rompu.
+                </Li>
+                <Li>
+                  Si le délai d’homologation était encore en cours le 12 mars
+                  (dépôt du dossier après le 20 février), il a été suspendu. Il
+                  reprend son cours à compter du 26 avril. (Exemple : le 12
+                  mars, le délai s’était écoulé sur 12 jours. Il a été suspendu.
+                  Il reprend à partir du 26 avril pour les 3 jours restants. Il
+                  se termine donc le 29 avril.)
+                </Li>
+              </Ul>
+            </Li>
+            <Li>
+              Du 12 mars et le 25 avril 2020 : si l’employeur a envoyé la
+              rupture conventionnelle à l’autorité administrative pendant cette
+              période, le délai d’homologation était suspendu. Il reprend à
+              compter du 26 avril, pour une durée de 15 jours.
+            </Li>
+
+            <Li>
+              Après le 26 avril 2020 : le délai de 15 jours s’applique
+              normalement. Il n’est pas suspendu.
+            </Li>
+          </Ul>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "rupture-conventionnelle-1",
+                title:
+                  "Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l'épidémie de covid-19, article 2",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800899",
+              },
+              {
+                id: "rupture-conventionnelle-2",
+                title:
+                  "Rapport au Président de la République relatif à l'ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l'épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800867",
+              },
+              {
+                id: "rupture-conventionnelle-3",
+                title:
+                  "Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d'état d'urgence sanitaire liée à l'épidémie de covid-19 dans le domaine du travail et de l'emploi",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041820235",
+              },
+              {
+                id: "l1237-13",
+                title: "Article L. 1237-13 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "l1237-14",
+                title: "Article L. 1237-14 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Rupture conventionnelle",
+    },
+    {
       anchor: "chomage-partiel",
       content: (
         <>

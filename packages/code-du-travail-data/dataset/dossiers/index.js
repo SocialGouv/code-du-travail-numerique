@@ -263,6 +263,11 @@ const thematicFiles = [
               "Questions - Réponses : embauche, démission, sanctions, licenciement",
           },
           {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#rupture-conventionnelle",
+            title: "Nouveautés Covid-19 : rupture conventionnelle",
+          },
+          {
             url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
             title: "Télétravail dans le secteur privé",
           },
