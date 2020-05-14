@@ -18,8 +18,8 @@ export default function CustomError({ message, statusCode }) {
     <>
       <h1>
         {statusCode
-          ? `Nous en sommes navrés, une erreur ${statusCode} est survenue.`
-          : "Nous en sommes navrés, une erreur est survenue."}
+          ? `Nous sommes navrés, une erreur ${statusCode} est survenue.`
+          : "Nous sommes navrés, une erreur est survenue."}
       </h1>
       <p>Notre équipe technique a été informée.</p>
       <Section>

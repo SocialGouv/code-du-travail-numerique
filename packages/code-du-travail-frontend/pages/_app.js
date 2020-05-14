@@ -42,7 +42,7 @@ export default class MyApp extends App {
       }
     }
     // pageUrl and ogImage are only defined on serverside request
-    // maybe this should be done at the page level to allow static optimization at the __app lvl
+    // maybe this should be done at the page level to allow static optimization at the _app lvl
     if (ctx.req) {
       pageProps.pageUrl = `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`;
       pageProps.ogImage = `${ctx.req.protocol}://${ctx.req.headers.host}/static/assets/img/social-preview.png`;
@@ -68,7 +68,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    // Maybe that this should be done at the page level to allow static optimization at the __app lvl
+    // Maybe that this should be done at the page level to allow static optimization at the _app lvl
     // https://nextjs.org/docs/advanced-features/custom-error-page#reusing-the-built-in-error-page
     if (pageProps.statusCode) {
       return (
