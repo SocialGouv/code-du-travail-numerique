@@ -314,6 +314,11 @@ const thematicFiles = [
               "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#delais-cse",
             title: "Nouveautés Covid-19 : délais du CSE",
           },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#accord-collectif",
+            title: "Nouveautés Covid-19 : accord collectif d’entreprise",
+          },
         ],
         title: "CSE et accord collectif",
       },
