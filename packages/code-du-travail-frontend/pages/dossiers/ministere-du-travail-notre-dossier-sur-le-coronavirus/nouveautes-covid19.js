@@ -527,7 +527,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "rupture-conventionnelle-1",
                 title:
-                  "Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l'épidémie de covid-19, article 2",
+                  "Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19, article 2",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800899",
@@ -535,7 +535,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "rupture-conventionnelle-2",
                 title:
-                  "Rapport au Président de la République relatif à l'ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l'épidémie de covid-19",
+                  "Rapport au Président de la République relatif à l’ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800867",
@@ -543,7 +543,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "rupture-conventionnelle-3",
                 title:
-                  "Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d'état d'urgence sanitaire liée à l'épidémie de covid-19 dans le domaine du travail et de l'emploi",
+                  "Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d’état d’urgence sanitaire liée à l’épidémie de covid-19 dans le domaine du travail et de l’emploi",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041820235",
@@ -1054,7 +1054,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "delais-cse-1",
                 title:
-                  "Rapport au Président de la République relatif à l'ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l'information du comité social et économique afin de faire face à l'épidémie de covid-19",
+                  "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254",
@@ -1062,7 +1062,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "delais-cse-2",
                 title:
-                  "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l'information du comité social et économique afin de faire face à l'épidémie de covid-19",
+                  "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261",
@@ -1070,7 +1070,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "delais-cse-3",
                 title:
-                  "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l'information du comité social et économique afin de faire face aux conséquences de la propagation de l'épidémie de covid-19",
+                  "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264",
@@ -1078,7 +1078,7 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "delais-cse-4",
                 title:
-                  "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d'application des dispositions du I de l'article 9 de l'ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l'épidémie de covid-19",
+                  "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280",
@@ -1086,14 +1086,14 @@ const Fiche = ({ pageUrl, ogImage }) => {
               {
                 id: "delais-cse-5",
                 title:
-                  "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l'épidémie de covid-19, article 9",
+                  "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597",
               },
               {
                 id: "l2315-30",
-                title: "Article L. 2315-30 du code du travai",
+                title: "Article L. 2315-30 du code du travail",
                 type: TYPE_REFERENCE.codeDuTravail,
               },
               {
@@ -1141,6 +1141,139 @@ const Fiche = ({ pageUrl, ogImage }) => {
         </>
       ),
       title: "Délais du CSE (ordre du jour, consultation, expertise)",
+    },
+    {
+      anchor: "accord-collectif",
+      content: (
+        <>
+          <p>
+            L’ordonnance du 15 avril 2020 réduit plusieurs délais en matière de
+            négociation et de signature des accords collectifs dont l’objet est
+            exclusivement de faire face aux conséquences économiques,
+            financières et sociales de la propagation de l’épidémie de covid-19
+            ainsi qu’aux conséquences des mesures prises pour limiter cette
+            propagation.
+          </p>
+          <p>
+            <strong>
+              1. Accords collectifs d’entreprise négociés avec des délégués
+              syndicaux
+            </strong>
+          </p>
+          <p>
+            Concernant les accords collectifs d’entreprise négociés avec des
+            délégués syndicaux, l’ordonnance modifie les délais prévus par
+            l’article L. 2232-12 du code du travail. Il est rappelé que
+            lorsqu’un accord a été signé par l’employeur et par des
+            organisations syndicales représentatives ayant recueilli entre 30 %
+            et 50 % des suffrages exprimés en faveur d’organisations
+            représentatives au premier tour des élections du CSE, ces
+            organisations syndicales signataires disposent d’un{" "}
+            <strong>délai d’un mois</strong>à compter de la signature de
+            l’accord pour indiquer qu’elles souhaitent une consultation des
+            salariés pour valider l’accord. Au terme de ce délai, l’employeur
+            peut demander l’organisation de cette consultation, en l’absence
+            d’opposition de l’ensemble de ces organisations. Si, à l’issue d’un{" "}
+            <strong>délai de 8 jours</strong> à compter de cette demande ou de
+            l’initiative de l’employeur, les éventuelles signatures d’autres
+            organisations syndicales représentatives n’ont pas permis
+            d’atteindre le taux de 50 %, la consultation des salariés est
+            organisée.
+          </p>
+          <p>
+            Or, pour les délais qui n’ont pas commencé à courir le 16 avril 2020
+            et jusqu’au terme du mois suivant la fin de l’état d’urgence
+            sanitaire, les délais, pour les accords dont l’objet est
+            exclusivement de faire face aux conséquences économiques,
+            financières et sociales de la propagation de l’épidémie de covid-19
+            ainsi qu’aux conséquences des mesures prises pour limiter cette
+            propagation, sont ainsi réduits:
+          </p>
+          <Ul>
+            <Li>Le délai d’un mois est réduit à 8 jours.</Li>
+            <Li>Le délai de 8 jours est réduit à 5 jours.</Li>
+          </Ul>
+          <p>
+            <strong>
+              2. Accords collectifs négociés dans une entreprise sans délégué
+              syndical
+            </strong>
+          </p>
+          <p>
+            Pour rappel, dans les entreprises sans délégué syndical dont
+            l’effectif habituel est soit inférieur à 11 salariés, soit compris
+            entre 11 et 20 salariés en cas d’absence de membre élu de la
+            délégation du personnel du CSE, l’employeur peut proposer un projet
+            d’accord ou un avenant de révision aux salariés. Il doit ensuite
+            consulter les salariés dans un{" "}
+            <strong>délai minimum de 15 jours</strong>.
+          </p>
+          <p>
+            Or, pour les délais qui n’ont pas commencé à courir le 16 avril 2020
+            et jusqu’au terme du mois suivant la fin de l’état d’urgence
+            sanitaire, le délai de 15 jours est{" "}
+            <strong>réduit à 5 jours</strong>, pour les accords dont l’objet est
+            exclusivement de faire face aux conséquences économiques,
+            financières et sociales de la propagation de l’épidémie de covid-19
+            ainsi qu’aux conséquences des mesures prises pour limiter cette
+            propagation.
+          </p>
+          <p>
+            En outre, dans les entreprises sans délégué syndical dont l’effectif
+            habituel est au moins égal à 50 salariés, l’employeur peut négocier
+            un accord collectif ou un avenant de révision avec un ou des membres
+            titulaires du CSE (mandatés ou non par un syndicat). Les membres du
+            CSE qui acceptent de négocier en informe l’employeur dans un{" "}
+            <strong>délai d’un mois</strong> suivant sa proposition.
+          </p>
+          <p>
+            Or, pour les délais qui n’ont pas commencé à courir le 16 avril 2020
+            et jusqu’au terme du mois suivant la fin de l’état d’urgence
+            sanitaire, le délai d’un mois est <strong>réduit à 8 jours</strong>,
+            pour les accords dont l’objet est exclusivement de faire face aux
+            conséquences économiques, financières et sociales de la propagation
+            de l’épidémie de covid-19 ainsi qu’aux conséquences des mesures
+            prises pour limiter cette propagation.
+          </p>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "accord-collectif-1",
+                title:
+                  "Ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19, article 8",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800927",
+              },
+              {
+                id: "accord-collectif-2",
+                title:
+                  "Rapport au Président de la République relatif à l’ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800918",
+              },
+              {
+                id: "l2232-12",
+                title: "Article L. 2232-12 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "l2232-21",
+                title: "Article L. 2232-21 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+              {
+                id: "l2232-25-1",
+                title: "Article L. 2232-25-1 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Accord collectif d’entreprise",
     },
   ].map(({ anchor, content, title }) => ({
     id: anchor,
