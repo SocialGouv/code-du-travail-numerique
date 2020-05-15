@@ -18,8 +18,8 @@ export default function CustomError({ message, statusCode }) {
     <Layout>
       <CenteredContainer>
         {statusCode && <Suptitle>ERREUR {statusCode}</Suptitle>}
-        <H1>Nous sommes navrés, une erreur est survenue.</H1>
-        <p>Notre équipe technique a été informée.</p>
+        <H1>Désolé, une erreur s’est produite…</H1>
+        <p>Notre équipe technique a été informée et interviendra sous peu.</p>
         <Section>
           <Button variant="primary" as="a" href="/">
             Revenir à la page d’accueil
