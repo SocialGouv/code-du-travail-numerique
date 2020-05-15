@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.20.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.19.0...v4.20.0) (2020-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#2723](https://github.com/SocialGouv/code-du-travail-numerique/issues/2723)) ([c63bc4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/c63bc4f6f0da42b4c074caacd83e1a3022e047da))
+* **front:** broken link ([#2743](https://github.com/SocialGouv/code-du-travail-numerique/issues/2743)) ([8c76361](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c7636131172171bdb9282c44214296087217d05))
+* **front:** ie issue ([#2729](https://github.com/SocialGouv/code-du-travail-numerique/issues/2729)) ([5fa46ed](https://github.com/SocialGouv/code-du-travail-numerique/commit/5fa46ed88aeeca7786183fdad0b971ae35615c5b))
+
+
+### Features
+
+* **front:** 404 ([#2738](https://github.com/SocialGouv/code-du-travail-numerique/issues/2738)) ([a04e9a1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a04e9a1d02c1364c45cc0127f9cf73ad103fdf85))
+* **front:** new header ([#2733](https://github.com/SocialGouv/code-du-travail-numerique/issues/2733)) ([430e95c](https://github.com/SocialGouv/code-du-travail-numerique/commit/430e95cadf1cf35b892b7fcbc71b4b4bcf20c0a6))
+* **front:** new tab in thematic file ([#2736](https://github.com/SocialGouv/code-du-travail-numerique/issues/2736)) ([2cc23a5](https://github.com/SocialGouv/code-du-travail-numerique/commit/2cc23a5b6f7749311deaa552b7f6a60f9bab7446))
+* **front:** new tab in themeatic subfolder ([#2739](https://github.com/SocialGouv/code-du-travail-numerique/issues/2739)) ([7512f8b](https://github.com/SocialGouv/code-du-travail-numerique/commit/7512f8ba7873278889f5be7f16138411c7e97813))
+* **front:** new tabs ([#2741](https://github.com/SocialGouv/code-du-travail-numerique/issues/2741)) ([160345a](https://github.com/SocialGouv/code-du-travail-numerique/commit/160345a8274adb0092f8233722d47fa9db873eac))
+
+
+
+
+
 # [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
 
 
