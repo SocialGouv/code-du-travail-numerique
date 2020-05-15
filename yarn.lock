@@ -2580,25 +2580,25 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/contributions-data@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.25.0.tgz#6d17ab39f11b58bb406c4669ae4b5271a8d3094c"
-  integrity sha512-Uke+ImM0JBkV5HzLCGzuaB4D6ZFLu59EbOdJCuBLZ0eFd61BY8w8i6DA0N2qTUVexDWHBZyMbVVhUfsSxV0EZw==
+"@socialgouv/contributions-data@^1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-1.27.0.tgz#a741e31358c4a532960a7d7eaf5a614b65b2b073"
+  integrity sha512-tGtNDXV2O7nkAbfeV/M9cV0vX0nDLFb+tUhbR+9o9ny26fWxoRwoyayBHo2DNQwMPtU0T4tBHX7EN1o61nJTrg==
   dependencies:
     "@socialgouv/kali-data" "^1.3.36"
     node-fetch "^2.6.0"
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.17.0":
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.17.0.tgz#fcd1119c4de2a2d9c6b16dab202fc8ee62c5a8de"
-  integrity sha512-/HYVN5d42ihDFl/qenztVKWIi3xhZ6AyuX8eZtvuKzyfli0q770VeF/7uOwmeuEPhDWahhKKv3+8pEOGgFDKww==
+"@socialgouv/datafiller-data@^1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.20.0.tgz#96058b2e81cd0877d19a17b26d9bfbfb7688b348"
+  integrity sha512-fSPGfdeccmN2VL2T03jh/veQ24BbI+OgFukDIJjPOqYzshbl5uEU1uj+SI6EgHXjTXcCHKBQfl6TeToh0UYjfw==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.0.0"
     remark "^12.0.0"
-    remark-html "^11.0.1"
+    remark-html "^11.0.2"
 
 "@socialgouv/dila-api-client@^1.1.0", "@socialgouv/dila-api-client@^1.1.1":
   version "1.1.1"
@@ -2631,13 +2631,13 @@
     eslint-plugin-jest "~23.8.2"
     eslint-plugin-prettier "~3.1.2"
 
-"@socialgouv/fiches-travail-data@^3.33.0":
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.33.0.tgz#29c72fa9793e56935575e3015451716aa0c356c6"
-  integrity sha512-MOz2rKGmJl4zvnPxgi1g6vQ3X02XZ2sCW2YAP/Or7FCQp15wBw8iCX5+Z1HhJumtxi+/PrU+iMSgIM8cfAvUHQ==
+"@socialgouv/fiches-travail-data@^3.39.0":
+  version "3.39.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.39.0.tgz#9008359b27d14c2ecc1dc997aa719d142b520024"
+  integrity sha512-LJY8lF7LSO4B2LS39uucolzkSOjUmmP5kBVsAWtgUXoAyERmfICyLbGkq/ZG80rjCPdDHmy16O51KdsVh4qE8g==
   dependencies:
-    "@socialgouv/datafiller-data" "^1.17.0"
-    "@socialgouv/legi-data" "^1.5.0"
+    "@socialgouv/datafiller-data" "^1.20.0"
+    "@socialgouv/legi-data" "^1.6.0"
     esm "^3.2.25"
     jsdom "^16.2.2"
     p-limit "^2.3.0"
@@ -2646,20 +2646,20 @@
     unist-util-find "^1.0.1"
     unist-util-visit "^2.0.2"
 
-"@socialgouv/fiches-vdd@^1.57.0":
-  version "1.57.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.57.0.tgz#1005da29c2d83b91c6908cc30a064ddd33411b1e"
-  integrity sha512-o4SBwft8fjfoxKXTGaFgJQbX4RkgowU1al9hHytghgJOd7+mJ3Mf5dnqPbufDPDxnBosv71uHH6mgRGbXMxBCw==
+"@socialgouv/fiches-vdd@^1.60.0":
+  version "1.60.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.60.0.tgz#3dd2f4c4cf87735192410dc1a8557961dbd64f60"
+  integrity sha512-P1STpwqUpi1MSwQ+pvxBy1EjwmbuXytxfxmM6qiL9bAV38L9ZrqcKft1xCBGVOGcOaRUQ5OQkziFizofriJYYQ==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.38.0":
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.38.0.tgz#e8ddb22a561db72c7fa13f8fbdc38be3bd414f39"
-  integrity sha512-5kCJgmCVIMqkKNVBq79lTHWQycqx2LgCyG8mogRvYpt/V+nr9NiB4gcVt7KRk/x/SpxzYb1UYL3d22yl5Qojow==
+"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.40.0":
+  version "1.40.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.40.0.tgz#c2d4217e5939fcbfff7c0361e12b2dd38aa5d66d"
+  integrity sha512-WLgR4k1HemoAH2t/5/i/jK7eSFEqo2JrzUZq3Ijeoz3TdSGPMjny0tClBlL8DRhzR+ZQ+QNCd0v91amDKxV5Kg==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"
@@ -2669,10 +2669,10 @@
     unist-util-map "^2.0.1"
     unist-util-remove "^2.0.0"
 
-"@socialgouv/legi-data@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.5.0.tgz#ed699fd1210eb603de1b4b746817cb593c7b4fd5"
-  integrity sha512-DoJTZjto2qvnQIJDbzWOMpQ5ubf1FsEnh+fh59lQL2V4WrA+8/HR+kVbufZqrxjJim4P/BjQ6VniKRcBHGvGuQ==
+"@socialgouv/legi-data@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.6.0.tgz#90307de89df5136aebf98a44895b1f93b1de343b"
+  integrity sha512-X8+iG00RiVGMvVb8EtS9iIlMc+FsfpOFdFwlXeHnQzc0XanGylzFx5PakHjh4SL+zzXD4QykLgJ47m5X5MIzHA==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.1"
     debug "^4.1.1"
@@ -12155,7 +12155,7 @@ mdast-util-definitions@^2.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
-mdast-util-to-hast@8.2.0, mdast-util-to-hast@^8.0.0:
+mdast-util-to-hast@8.2.0, mdast-util-to-hast@^8.0.0, mdast-util-to-hast@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-8.2.0.tgz#adf9f824defcd382e53dd7bace4282a45602ac67"
   integrity sha512-WjH/KXtqU66XyTJQ7tg7sjvTw1OQcVV0hKdFh3BgHPwZ96fSBCQ/NitEHsN70Mmnggt+5eUUC7pCnK+2qGQnCA==
@@ -15891,14 +15891,14 @@ remark-footnotes@1.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-1.0.0.tgz#9c7a97f9a89397858a50033373020b1ea2aad011"
   integrity sha512-X9Ncj4cj3/CIvLI2Z9IobHtVi8FVdUrdJkCNaL9kdX8ohfsi18DXHsCVd/A7ssARBdccdDb5ODnt62WuEWaM/g==
 
-remark-html@^11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-11.0.1.tgz#fe12671be9dd67e75dd90dfb4d78c9d42f2e11ec"
-  integrity sha512-bz7tSu9kDbaRNaiqQWrgXITkqJsZXoc2fjau+ms7WA4vflDoB+xMdY0QfNhUpGgmAv4SdDD1m+3BxWRHLizmiQ==
+remark-html@^11.0.1, remark-html@^11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-11.0.2.tgz#76f6f7c8981c736f01cb65f8853dbe5c2e546dfa"
+  integrity sha512-U7qPKZq6Aai+UTpH5YrblLvqvdSUCRA4YmZYRTtbtknm/WUGmNUI0dvThbSuTNSf6TtC8btmbbScWi1wtUIxnw==
   dependencies:
     hast-util-sanitize "^2.0.0"
     hast-util-to-html "^7.0.0"
-    mdast-util-to-hast "^8.0.0"
+    mdast-util-to-hast "^8.2.0"
     xtend "^4.0.1"
 
 remark-mdx@^1.6.1:
