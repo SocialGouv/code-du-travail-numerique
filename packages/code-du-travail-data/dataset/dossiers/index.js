@@ -69,6 +69,12 @@ const thematicFiles = [
           },
           {
             url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#visite-medicale",
+            title:
+              "Nouveautés Covid-19 : report ou annulation de visites médicales",
+          },
+          {
+            url:
               "/fiche-ministere-travail/responsabilite-de-lemployeur-droit-de-retrait",
             title:
               "Questions - Réponses : responsabilité de l’employeur et droit de retrait",
@@ -87,6 +93,11 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/mesures-de-prevention-sante-hors-covid-19",
             title: "Questions - Réponses : mesures de prévention hors covid",
+          },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#services-de-sante",
+            title: "Nouveautés Covid-19 : services de santé au travail",
           },
         ],
         title: "Santé et sécurité au travail",

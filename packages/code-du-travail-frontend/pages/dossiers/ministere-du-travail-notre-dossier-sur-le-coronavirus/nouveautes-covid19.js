@@ -565,6 +565,180 @@ const Fiche = ({ pageUrl, ogImage }) => {
       title: "Rupture conventionnelle",
     },
     {
+      anchor: "visite-medicale",
+
+      content: (
+        <>
+          <p>
+            Les visites médicales normalement prévues entre le 12 mars 2020 et
+            le 31 août 2020 peuvent être reportées ou annulées dans les
+            conditions détaillées ci-dessous.
+          </p>
+          <p>
+            <strong>1. Conditions de report des visites médicales</strong>
+          </p>
+          <p>
+            Sauf exception, le médecin du travail peut reporter, jusqu’au 31
+            décembre 2020, la date des visites et examens médicaux suivants :
+          </p>
+          <Ul>
+            <Li>
+              La visite d’information et de prévention initiale (article
+              R4624-10 du code du travail).
+            </Li>
+            <Li>
+              Le renouvellement de la visite d’information et de prévention
+              (article R4624-16 du code du travail).
+            </Li>
+            <Li>
+              Le renouvellement de l’examen médical d’aptitude et la visite
+              intermédiaire (article R4624-28 du code du travail).
+            </Li>
+          </Ul>
+          <p>
+            Le report de la visite d’information et de prévention initiale
+            n’empêche pas l’embauche des salariés.
+          </p>
+          <p>
+            Les exceptions pour lesquelles aucun report n’est possible sont les
+            suivantes :
+          </p>
+          <Ul>
+            <Li>
+              La visite d’information et de prévention initiale pour les
+              travailleurs handicapés, les travailleurs âgés de moins de 18 ans,
+              les travailleurs titulaires d’une pension d’invalidité, les femmes
+              enceintes, venant d’accoucher ou allaitantes, les travailleurs de
+              nuit (articles R4624-17 à R4624-20 du code du travail) et les
+              travailleurs exposés à des champs électromagnétiques affectés à
+              des postes pour lesquels les valeurs limites d’exposition
+              dépassent les limites prévues par la loi (article R4353-3 du code
+              du travail).
+            </Li>
+            <Li>
+              L’examen médical d’aptitude initial prévu à l’article R4624-24 du
+              code du travail pour les salariés bénéficiant d’un suivi
+              individuel renforcé (exposition à l’amiante, au plomb ou aux
+              agents cancérogènes, risque de chute de hauteur, etc.).
+            </Li>
+            <Li>
+              Le renouvellement de l’examen médical d’aptitude pour les
+              travailleurs exposés à des rayons ionisants classés en catégorie A
+              (article R4451-57 et article R4451-82 du code du travail).
+            </Li>
+          </Ul>
+          <p>
+            Enfin, dans tous les cas où le report de la visite médicale est
+            possible, le médecin du travail peut toujours décider de la
+            maintenir à sa date normale, s’il l’estime indispensable. Il prend
+            sa décision au regard des informations sur l’état de santé du
+            salarié, les risques liés à son poste de travail ou à ses conditions
+            de travail. Pour les salariés en CDD, le médecin du travail tient
+            compte des visites et examens du salarié au cours des 12 derniers
+            mois.
+          </p>
+          <p>
+            <strong>2. Cas particulier de la visite de préreprise</strong>
+          </p>
+          <p>
+            Le médecin du travail n’est pas obligé d’organiser la visite de
+            préreprise, lorsque la reprise du travail doit intervenir avant le
+            31 août 2020. Toutefois, il peut toujours décider de la maintenir,
+            s’il l’estime indispensable. Il prend sa décision au regard des
+            informations sur l’état de santé du salarié, les risques liés à son
+            poste de travail ou à ses conditions de travail. Pour les salariés
+            en CDD, le médecin du travail tient compte des visites et examens du
+            salarié au cours des 12 derniers mois.
+          </p>
+          <p>
+            <strong>3. Cas particulier de la visite de reprise</strong>
+          </p>
+          <p>Les conditions de la visite de reprise sont modifiées.</p>
+          <p>
+            Pour les salariés suivants, le médecin du travail organise l’examen
+            médical avant la reprise effective du travail :
+          </p>
+          <Ul>
+            <Li> Les femmes enceintes, venant d’accoucher ou allaitantes.</Li>
+            <Li> Les salariés handicapés.</Li>
+            <Li> Les salariés titulaires d’une pension d’invalidité.</Li>
+            <Li> Les travailleurs de nuit.</Li>
+            <Li> Les travailleurs âgés de moins de 18 ans.</Li>
+          </Ul>
+          <p>
+            Pour les autres salariés, le médecin du travail peut reporter
+            l’examen après la reprise du travail en respectant les délais
+            suivants :
+          </p>
+          <Ul>
+            <Li>
+              1 mois suivant la reprise du travail, pour les travailleurs
+              faisant l’objet du suivi individuel renforcé en application de
+              l’article R4624-22 du code du travail (exposition à l’amiante, au
+              plomb ou aux agents cancérogènes, risque de chute de hauteur,
+              etc.).
+            </Li>
+            <Li>
+              3 mois suivant la reprise du travail, pour les autres salariés.
+            </Li>
+          </Ul>
+          <p>
+            Lorsque le report de la visite médicale est possible, le médecin du
+            travail peut toujours décider de la maintenir à sa date normale,
+            s’il l’estime indispensable. Il prend sa décision au regard des
+            informations sur l’état de santé du salarié, les risques liés à son
+            poste de travail ou à ses conditions de travail. Pour les salariés
+            en CDD, le médecin du travail tient compte des visites et examens du
+            salarié au cours des 12 derniers mois.
+          </p>
+          <p>
+            <strong>4. Information de l’employeur et du salarié</strong>
+          </p>
+          <p>
+            Si le médecin du travail décide de reporter la visite médicale, le
+            service de santé au travail en informe l’employeur et le salarié, en
+            leur communiquant la date à laquelle la visite est reprogrammée.
+            S’il ne dispose pas des coordonnées du salarié, il invite
+            l’employeur à communiquer à ce dernier ces informations.
+          </p>
+          <p>
+            Si la visite de préreprise n’est pas organisée, le service de santé
+            au travail en informe l’employeur ou le salarié qui l’a demandée.
+          </p>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "visite-medicale-1",
+                title:
+                  "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887",
+              },
+              {
+                id: "visite-medicale-2",
+                title:
+                  "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882",
+              },
+              {
+                id: "visite-medicale-3",
+                title:
+                  "Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669",
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Report ou annulation de visites médicales",
+    },
+    {
       anchor: "chomage-partiel",
       content: (
         <>
@@ -1274,6 +1448,74 @@ const Fiche = ({ pageUrl, ogImage }) => {
         </>
       ),
       title: "Accord collectif d’entreprise",
+    },
+    {
+      anchor: "services-de-sante",
+      content: (
+        <>
+          <p>
+            <strong>
+              Intervention des services de santé au travail dans l’entreprise
+            </strong>
+          </p>
+          <p>
+            Les services de santé au travail, tout en maintenant leur activité
+            au service des entreprises, peuvent reporter ou aménager leurs
+            interventions dans ou auprès de l’entreprise, lorsque ces
+            interventions ne sont pas en rapport avec l’épidémie de covid-19.
+            Toutefois, le médecin du travail peut toujours intervenir dans
+            l’entreprise, s’il estime que l’urgence ou la gravité des risques
+            pour la santé des salariés justifie une intervention sans délai.
+          </p>
+          <p>
+            <strong>
+              Contribution des services de santé au travail à la lutte contre la
+              propagation du covid-19
+            </strong>
+          </p>
+          <p>
+            Au plus tard jusqu’au 31 août 2020, les services de santé au travail
+            participent à la lutte contre la propagation du covid-19, notamment
+            par :
+          </p>
+          <Ol>
+            <Li>
+              La diffusion, à l’attention des employeurs et des salariés, de
+              messages de prévention contre le risque de contagion.
+            </Li>
+            <Li>
+              L’appui aux entreprises dans la définition et la mise en œuvre des
+              mesures de prévention adéquates contre ce risque.
+            </Li>
+            <Li>
+              L’accompagnement des entreprises amenées, par l’effet de la crise
+              sanitaire, à accroître ou adapter leur activité.
+            </Li>
+          </Ol>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "services-de-sante-1",
+                title:
+                  "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, article 1 et 4",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887",
+              },
+              {
+                id: "services-de-sante-2",
+                title:
+                  "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882",
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Services de santé au travail",
     },
   ].map(({ anchor, content, title }) => ({
     id: anchor,
