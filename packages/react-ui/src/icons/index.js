@@ -16,6 +16,7 @@ export { default as International } from "./components/bicolor/International";
 export { default as Laws } from "./components/bicolor/Laws";
 export { default as Logo } from "./components/bicolor/Logo";
 export { default as Nego } from "./components/bicolor/Nego";
+export { default as Oups } from "./components/bicolor/Oups";
 export { default as PartialActivity } from "./components/bicolor/PartialActivity";
 export { default as Populars } from "./components/bicolor/Populars";
 export { default as Precarity } from "./components/bicolor/Precarity";

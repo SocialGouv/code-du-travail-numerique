@@ -6,6 +6,8 @@ const helmet = require("koa-helmet");
 const bodyParser = require("koa-bodyparser");
 const Sentry = require("@sentry/node");
 
+const redirects = require("./redirects.json");
+
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -49,51 +51,57 @@ nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
 
+  const helmetConfiguration = {
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: [
+          "'self'",
+          "*.travail.gouv.fr",
+          "*.data.gouv.fr",
+          "*.fabrique.social.gouv.fr",
+        ],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://mon-entreprise.fr",
+          "https://www.googletagmanager.com",
+          "*.fabrique.social.gouv.fr",
+          "https://cdnjs.cloudflare.com",
+        ],
+        frameSrc: [
+          "https://mon-entreprise.fr",
+          "https://matomo.fabrique.social.gouv.fr",
+        ],
+        frameAncestors: ["'none'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "*.fabrique.social.gouv.fr",
+          "https://travail-emploi.gouv.fr",
+          "https://mon-entreprise.fr",
+          "https://ad.doubleclick.net",
+        ],
+        ...(dev && { reportUri: "/report-violation" }),
+        ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
+      },
+      reportOnly: () => dev,
+    },
+  };
+
   if (dev) {
     // handle local csp reportUri endpoint
     server.use(bodyParser());
+    helmetConfiguration.contentSecurityPolicy.directives.defaultSrc.push(
+      "http://127.0.0.1:*/"
+    );
+    helmetConfiguration.contentSecurityPolicy.directives.scriptSrc.push(
+      "'unsafe-eval'"
+    );
   }
-  server.use(
-    helmet({
-      contentSecurityPolicy: {
-        directives: {
-          defaultSrc: [
-            "'self'",
-            "*.travail.gouv.fr",
-            "*.data.gouv.fr",
-            "*.fabrique.social.gouv.fr",
-          ],
-          scriptSrc: [
-            "'self'",
-            "'unsafe-inline'",
-            "https://mon-entreprise.fr",
-            "https://www.googletagmanager.com",
-            "*.fabrique.social.gouv.fr",
-            "https://cdnjs.cloudflare.com",
-          ],
-          frameSrc: [
-            "https://mon-entreprise.fr",
-            "https://matomo.fabrique.social.gouv.fr",
-          ],
-          frameAncestors: ["'none'"],
-          styleSrc: ["'self'", "'unsafe-inline'"],
-          imgSrc: [
-            "'self'",
-            "data:",
-            "*.fabrique.social.gouv.fr",
-            "https://travail-emploi.gouv.fr",
-            "https://mon-entreprise.fr",
-            "https://ad.doubleclick.net",
-          ],
-          ...(dev && { reportUri: "/report-violation" }),
-          ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
-        },
-        reportOnly: () => dev,
-      },
-    }),
-  );
+  server.use(helmet(helmetConfiguration));
   if (dev) {
-    router.post("/report-violation", ctx => {
+    router.post("/report-violation", (ctx) => {
       if (ctx.request.body) {
         console.log("CSP Violation: ", ctx.request.body);
       } else {
@@ -103,7 +111,7 @@ nextApp.prepare().then(() => {
     });
   }
   if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
       if (!isProdUrl && !isHealthCheckUrl) {
@@ -114,21 +122,29 @@ nextApp.prepare().then(() => {
       await next();
     });
   } else {
-    server.use(async function(ctx, next) {
+    server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();
     });
   }
 
-  router.get("/health", async ctx => {
+  router.get("/health", async (ctx) => {
     ctx.body = { status: "up and running" };
   });
 
-  router.get("/robots.txt", async ctx => {
+  router.get("/robots.txt", async (ctx) => {
     ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
-  router.all("*", async ctx => {
+  redirects.forEach(({ baseUrl, code, redirectUrl }) => {
+    router.get(baseUrl, async (ctx) => {
+      ctx.status = code;
+      ctx.set("Location", redirectUrl);
+      ctx.redirect(redirectUrl);
+    });
+  });
+
+  router.all("*", async (ctx) => {
     await nextHandler(ctx.req, ctx.res);
     ctx.respond = false;
   });
@@ -140,9 +156,9 @@ nextApp.prepare().then(() => {
 
   // centralize error logging
   server.on("error", (err, ctx) => {
-    Sentry.withScope(function(scope) {
+    Sentry.withScope(function (scope) {
       scope.setTag(`koa`, true);
-      scope.addEventProcessor(function(event) {
+      scope.addEventProcessor(function (event) {
         return Sentry.Handlers.parseRequest(event, ctx.request);
       });
       Sentry.captureException(err);
