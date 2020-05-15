@@ -2673,6 +2673,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     >
                       <a
                         class="c88"
+                        href="/integration"
+                      >
+                        Intégrer le Code du travail numérique
+                      </a>
+                    </li>
+                    <li
+                      class="c87"
+                    >
+                      <a
+                        class="c88"
                         href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -5502,6 +5512,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       >
                         Contact
                       </button>
+                    </li>
+                    <li
+                      class="c87"
+                    >
+                      <a
+                        class="c88"
+                        href="/integration"
+                      >
+                        Intégrer le Code du travail numérique
+                      </a>
                     </li>
                     <li
                       class="c87"

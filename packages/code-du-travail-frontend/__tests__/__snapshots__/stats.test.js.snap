@@ -1798,6 +1798,16 @@ exports[`<Stats /> should render 1`] = `
                   >
                     <a
                       class="c56"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
+                  <li
+                    class="c55"
+                  >
+                    <a
+                      class="c56"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"

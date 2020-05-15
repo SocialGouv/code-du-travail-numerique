@@ -82,8 +82,7 @@ nextApp.prepare().then(() => {
           "https://mon-entreprise.fr",
           "https://ad.doubleclick.net",
         ],
-        ...(dev && { reportUri: "/report-violation" }),
-        ...(!dev && SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
+        reportUri: SENTRY_PUBLIC_DSN && getSentryCspUrl(),
       },
       reportOnly: () => dev,
     },
@@ -98,6 +97,7 @@ nextApp.prepare().then(() => {
     helmetConfiguration.contentSecurityPolicy.directives.scriptSrc.push(
       "'unsafe-eval'"
     );
+    helmetConfiguration.reportUri = "/report-violation";
   }
   server.use(helmet(helmetConfiguration));
   if (dev) {

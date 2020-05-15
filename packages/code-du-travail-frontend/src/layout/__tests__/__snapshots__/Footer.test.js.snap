@@ -579,6 +579,16 @@ exports[`<Footer /> should render 1`] = `
                 >
                   <a
                     class="c19"
+                    href="/integration"
+                  >
+                    Intégrer le Code du travail numérique
+                  </a>
+                </li>
+                <li
+                  class="c18"
+                >
+                  <a
+                    class="c19"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"

@@ -114,6 +114,13 @@ const Footer = () => {
                     </ContactModal>
                   </StyledListItem>
                   <StyledListItem>
+                    <Link passHref href="/integration">
+                      <StyledLink>
+                        Intégrer le Code du travail numérique
+                      </StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
                     <StyledLink
                       href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
                       target="_blank"
