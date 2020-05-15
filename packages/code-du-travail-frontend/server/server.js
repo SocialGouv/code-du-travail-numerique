@@ -6,6 +6,8 @@ const helmet = require("koa-helmet");
 const bodyParser = require("koa-bodyparser");
 const Sentry = require("@sentry/node");
 
+const redirects = require("./redirects.json");
+
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -132,6 +134,14 @@ nextApp.prepare().then(() => {
 
   router.get("/robots.txt", async (ctx) => {
     ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
+  });
+
+  redirects.forEach(({ baseUrl, code, redirectUrl }) => {
+    router.get(baseUrl, async (ctx) => {
+      ctx.status = code;
+      ctx.set("Location", redirectUrl);
+      ctx.redirect(redirectUrl);
+    });
   });
 
   router.all("*", async (ctx) => {
