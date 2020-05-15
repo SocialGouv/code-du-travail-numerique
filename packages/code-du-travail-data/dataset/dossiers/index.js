@@ -13,9 +13,8 @@ const thematicFiles = [
         position: 1,
         refs: [
           {
-            url:
-              "/fiche-ministere-travail/questions-reponses-teletravail-et-deconfinement",
-            title: "Questions - Réponses : télétravail et déconfinement",
+            url: "/fiche-ministere-travail/fiche-ministere-travail/teletravail",
+            title: "Questions - Réponses : télétravail",
           },
           {
             url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
@@ -263,9 +262,8 @@ const thematicFiles = [
         position: 6,
         refs: [
           {
-            url:
-              "/fiche-ministere-travail/questions-reponses-teletravail-et-deconfinement",
-            title: "Questions - Réponses : télétravail et déconfinement",
+            url: "/fiche-ministere-travail/fiche-ministere-travail/teletravail",
+            title: "Questions - Réponses : télétravail",
           },
           {
             url:
