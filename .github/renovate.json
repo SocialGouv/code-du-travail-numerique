@@ -14,20 +14,20 @@
     },
     {
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["after 9pm", "before 6am", "every 2 day"],
+      "schedule": ["after 9pm", "before 6am", "on the first of the month", "on the 15th of the month"],
       "updateTypes": ["patch"],
       "groupName": "patch-dependencies",
       "automerge": true
     },
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["after 9pm", "before 6am", "every 2 week"],
+      "schedule": ["after 9pm", "before 6am", "on the first of the month", "on the 15th of the month"],
       "groupName": "dev-dependencies"
     },
     {
       "depTypeList": ["dependencies"],
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["after 9pm", "before 6am", "every 2 week"],
+      "schedule": ["after 9pm", "before 6am", "on the first of the month", "on the 15th of the month"],
       "groupName": "dependencies"
     }
   ]
