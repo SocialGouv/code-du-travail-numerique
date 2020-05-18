@@ -13,7 +13,7 @@ const thematicFiles = [
         position: 1,
         refs: [
           {
-            url: "/fiche-ministere-travail/fiche-ministere-travail/teletravail",
+            url: "/fiche-ministere-travail/teletravail",
             title: "Questions - Réponses : télétravail",
           },
           {
@@ -262,7 +262,7 @@ const thematicFiles = [
         position: 6,
         refs: [
           {
-            url: "/fiche-ministere-travail/fiche-ministere-travail/teletravail",
+            url: "/fiche-ministere-travail/teletravail",
             title: "Questions - Réponses : télétravail",
           },
           {
