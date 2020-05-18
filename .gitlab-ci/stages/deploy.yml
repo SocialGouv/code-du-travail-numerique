@@ -86,8 +86,6 @@ Deploy @cdtn/api (dev):
   extends:
     - .deploy_api_stage
     - .dev_stage
-  dependencies:
-    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -122,26 +120,11 @@ Deploy @cdtn/frontend (dev):
   extends:
     - .deploy_frontend_stage
     - .dev_stage
-  dependencies:
-    - Register nlp image
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.1m
-  artifacts:
-    expire_in: 30 mins
-    paths:
-      - packages/code-du-travail-nlp
-  after_script:
-    - |-
-      source ./.gitlab-ci/env.sh
-      retry=60;
-      while
-        ! curl -sS "${FRONTEND_URL}/api/version" | grep "${COMMIT}" &&
-        [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for frontend to be ready" ; sleep 3 ; done ;
-      [ "$retry" -eq "-1" ] && exit 1
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
@@ -164,7 +147,6 @@ Deploy @cdtn/frontend extra ingress(prod):
 .deploy-data: &deploy_data
   <<: *deploy_stage
   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/kubectl:0.20.0
-  dependencies: []
   variables:
     <<: *deploy_stage_variables
     CONTEXT: data
@@ -213,6 +195,10 @@ Create Elasticsearch Index (prod):
     PORT: ${NLP_PORT}
     CONTEXT: nlp
     VALUES_FILE: ./.k8s/nlp.values.yml
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - packages/code-du-travail-${CONTEXT}
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}
@@ -221,10 +207,6 @@ Create Elasticsearch Index (prod):
       if [[ "${BRANCH_NAME}" != "master" ]] && [[ "${HOST}" == *"master"* ]]; then
         exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
       fi
-  artifacts:
-    expire_in: 30 mins
-    paths:
-      - packages/code-du-travail-${CONTEXT}
 #
 
 Deploy @cdtn/nlp (dev):
