@@ -286,6 +286,11 @@ const thematicFiles = [
             title:
               "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
           },
+          {
+            url:
+              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#entretien-professionnel",
+            title: "Nouveautés Covid-19 : entretien professionnel",
+          },
         ],
         title: "Contrat de travail (embauche, télétravail, rupture…)",
         shortTitle: "Contrat de travail",

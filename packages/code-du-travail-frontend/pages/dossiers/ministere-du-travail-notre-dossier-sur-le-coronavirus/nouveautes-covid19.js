@@ -794,6 +794,20 @@ const Fiche = ({ pageUrl, ogImage }) => {
               décembre 2020.
             </Li>
           </Ol>
+          <p>
+            Important : selon la{" "}
+            <a
+              href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              loi du 11 mai 2020
+            </a>
+            , pour le calcul des primes d’intéressement et de participation, les
+            périodes correspondant à des périodes de mise en quarantaine sont
+            assimilées à des périodes de présence. L’employeur ne peut pas
+            considérer que ces périodes sont des absences du salarié.
+          </p>
           <ReferencesJuridiques
             accordionDisplay={1}
             references={[
@@ -812,6 +826,33 @@ const Fiche = ({ pageUrl, ogImage }) => {
                 type: TYPE_REFERENCE.external,
                 url:
                   "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755922",
+              },
+              {
+                id: "interessement-participation-3",
+                title:
+                  "Loi n° 2020-546 du 11 mai 2020 prorogeant l’état d’urgence sanitaire et complétant ses dispositions",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244",
+              },
+              {
+                id: "interessement-participation-4",
+                title: "Article L. 3131-15 du code de la santé publique",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072665&idArticle=LEGIARTI000041747466",
+              },
+              {
+                id: "l3314-5",
+                title: "Article R. 2315-49 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "/code-du-travail/l3314-5",
+              },
+              {
+                id: "l3324-6",
+                title: "Article R. 2315-49 du code du travail",
+                type: TYPE_REFERENCE.codeDuTravail,
+                url: "/code-du-travail/l3324-6",
               },
             ]}
           />
@@ -1448,6 +1489,53 @@ const Fiche = ({ pageUrl, ogImage }) => {
         </>
       ),
       title: "Accord collectif d’entreprise",
+    },
+    {
+      anchor: "entretien-professionnel",
+      content: (
+        <>
+          <p>
+            Pour rappel, l’employeur doit organiser tous les 6 ans l’entretien
+            professionnel du salarié afin de faire un état des lieux
+            récapitulatif de son parcours professionnel. Cette obligation a été
+            créée par la loi du 5 mars 2014. Il en résulte que pour de nombreux
+            salariés, le terme de cette période de 6 ans est le 7 mars 2020. Une
+            sanction est prévue dans les entreprises d’au moins 50 salariés, si
+            le salarié n’a pas bénéficié des entretiens prévus et d’au moins une
+            formation autre que celle mentionnée à l’article L6321-2 du code du
+            travail. Dans ce cas, l’employeur doit abonder son compte personnel
+            de formation.
+          </p>
+          <p>
+            Toutefois, en raison de l’état d’urgence sanitaire, cet entretien
+            professionnel peut être reporté jusqu’au 31 décembre 2020. En outre,
+            la sanction normalement prévue ne sera pas applicable du 12 mars au
+            31 décembre 2020.
+          </p>
+          <ReferencesJuridiques
+            accordionDisplay={1}
+            references={[
+              {
+                id: "entretien-professionnel-1",
+                title:
+                  "Ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle, article 1",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776899",
+              },
+              {
+                id: "entretien-professionnel-2",
+                title:
+                  "Rapport au Président de la République relatif à l'ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle",
+                type: TYPE_REFERENCE.external,
+                url:
+                  "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776895",
+              },
+            ]}
+          />
+        </>
+      ),
+      title: "Entretien professionnel",
     },
     {
       anchor: "services-de-sante",
