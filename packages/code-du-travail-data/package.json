@@ -28,7 +28,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
     "@cdt/sources": "^4.19.0",
-    "@elastic/elasticsearch": "^7.6.1",
+    "@elastic/elasticsearch": "^7.7.1",
     "@socialgouv/contributions-data": "^1.27.0",
     "@socialgouv/datafiller-data": "^1.20.0",
     "@socialgouv/fiches-travail-data": "^3.39.0",
@@ -42,7 +42,7 @@
     "p-retry": "^4.2.0",
     "query-string": "^6.12.1",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.1",
+    "remark-html": "^11.0.2",
     "unist-util-find": "^1.0.1",
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.1",
