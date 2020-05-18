@@ -13,14 +13,21 @@
       }
     },
     {
+      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["after 9pm", "before 6am", "every 2 day"],
+      "updateTypes": ["patch"],
+      "groupName": "patch-dependencies",
+      "automerge": true
+    },
+    {
       "depTypeList": ["devDependencies"],
-      "schedule": ["after 9pm before 6am", "every 2 week"],
+      "schedule": ["after 9pm", "before 6am", "every 2 week"],
       "groupName": "dev-dependencies"
     },
     {
       "depTypeList": ["dependencies"],
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["after 9pm before 6am", "every 2 week"],
+      "schedule": ["after 9pm", "before 6am", "every 2 week"],
       "groupName": "dependencies"
     }
   ]
