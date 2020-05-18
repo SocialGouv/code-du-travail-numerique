@@ -1771,6 +1771,16 @@ exports[`<Stats /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c55"
+                  >
+                    <a
+                      class="c56"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
@@ -1792,16 +1802,6 @@ exports[`<Stats /> should render 1`] = `
                     >
                       Contact
                     </button>
-                  </li>
-                  <li
-                    class="c55"
-                  >
-                    <a
-                      class="c56"
-                      href="/integration"
-                    >
-                      Intégrer le Code du travail numérique
-                    </a>
                   </li>
                   <li
                     class="c55"

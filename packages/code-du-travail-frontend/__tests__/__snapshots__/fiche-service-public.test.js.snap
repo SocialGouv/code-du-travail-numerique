@@ -1721,6 +1721,16 @@ exports[`<FicheSP /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c56"
+                  >
+                    <a
+                      class="c57"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
@@ -1742,16 +1752,6 @@ exports[`<FicheSP /> should render 1`] = `
                     >
                       Contact
                     </button>
-                  </li>
-                  <li
-                    class="c56"
-                  >
-                    <a
-                      class="c57"
-                      href="/integration"
-                    >
-                      Intégrer le Code du travail numérique
-                    </a>
                   </li>
                   <li
                     class="c56"

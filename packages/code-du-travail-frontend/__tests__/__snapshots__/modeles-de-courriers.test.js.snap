@@ -1826,6 +1826,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c63"
+                  >
+                    <a
+                      class="c64"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
@@ -1847,16 +1857,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     >
                       Contact
                     </button>
-                  </li>
-                  <li
-                    class="c63"
-                  >
-                    <a
-                      class="c64"
-                      href="/integration"
-                    >
-                      Intégrer le Code du travail numérique
-                    </a>
                   </li>
                   <li
                     class="c63"

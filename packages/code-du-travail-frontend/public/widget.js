@@ -1,4 +1,4 @@
-(function addWidget() {
+function addWidget() {
   const target = document.querySelector("#cdtn-widget");
   let iframe = document.getElementById("iframe");
   if (!iframe) {
@@ -77,14 +77,15 @@
     iframe.contentWindow.document.body.innerHTML = widget;
     const root = iframe.contentWindow.document.querySelector("#root");
     let lastHeight = 0;
-    function tick() {
+    function measureHeight() {
       const height = root.getBoundingClientRect().height;
       if (height != lastHeight) {
         lastHeight = height;
         iframe.height = height;
       }
-      requestAnimationFrame(tick);
     }
-    requestAnimationFrame(tick);
+    setTimeout(measureHeight, 0);
   }
-})();
+}
+
+document.addEventListener("DOMContentLoaded", addWidget);

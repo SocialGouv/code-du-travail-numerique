@@ -1346,6 +1346,16 @@ exports[`<Layout /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c44"
+                  >
+                    <a
+                      class="c45"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
@@ -1367,16 +1377,6 @@ exports[`<Layout /> should render 1`] = `
                     >
                       Contact
                     </button>
-                  </li>
-                  <li
-                    class="c44"
-                  >
-                    <a
-                      class="c45"
-                      href="/integration"
-                    >
-                      Intégrer le Code du travail numérique
-                    </a>
                   </li>
                   <li
                     class="c44"
