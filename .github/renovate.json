@@ -15,18 +15,14 @@
     },
     {
       "depTypeList": ["devDependencies"],
-      "minor": {
-        "groupName": "all non-major devDependencies",
-        "automerge": true
-      }
+      "schedule": ["on the first day of the month, after 10pm before 5am"],
+      "groupName": "dev-dependencies"
     },
     {
-      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
       "depTypeList": ["dependencies"],
-      "minor": {
-        "groupName": "all non-major dependencies",
-        "automerge": true
-      }
+      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["on the first day of the month, after 10pm before 5am"],
+      "groupName": "dependencies"
     }
   ]
 }
