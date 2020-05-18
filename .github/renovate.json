@@ -3,7 +3,6 @@
   "extends": [
     "github>SocialGouv/renovate-config"
   ],
-  "schedule": ["after 10pm and before 5am on every weekday", "every weekend"],
   "packageRules": [
     {
       "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
@@ -15,13 +14,13 @@
     },
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["on the first day of the month, after 10pm before 5am"],
+      "schedule": ["after 9pm before 6am", "every 2 week"],
       "groupName": "dev-dependencies"
     },
     {
       "depTypeList": ["dependencies"],
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["on the first day of the month, after 10pm before 5am"],
+      "schedule": ["after 9pm before 6am", "every 2 week"],
       "groupName": "dependencies"
     }
   ]
