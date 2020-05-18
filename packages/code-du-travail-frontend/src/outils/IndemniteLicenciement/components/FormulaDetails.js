@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import dynamic from "next/dynamic";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
+import MathFormula from "../../common/MathFormula";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
-
-const MathFormula = dynamic(() => import("../../common/MathFormula"));
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (

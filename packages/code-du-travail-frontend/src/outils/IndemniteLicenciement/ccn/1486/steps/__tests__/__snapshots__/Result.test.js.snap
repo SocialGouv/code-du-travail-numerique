@@ -35,17 +35,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   text-align: left;
 }
 
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -89,6 +78,17 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c8 {
@@ -901,17 +901,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 `;
 
 exports[`<Result /> renders legal indemnite 1`] = `
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -955,6 +944,17 @@ exports[`<Result /> renders legal indemnite 1`] = `
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c8 {

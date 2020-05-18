@@ -1,21 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { theme, Alert } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
+import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import MathFormula from "../../common/MathFormula";
 import { getIndemnitePrecarite } from "../indemnite";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import {
   filterSituations,
   getSituationsFor,
   getRef,
 } from "../../common/situations.utils";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
-
-const MathFormula = dynamic(() => import("../../common/MathFormula"));
 
 function Disclaimer({ situation, idcc }) {
   if (idcc > 0 && situation.idcc > 0) {
