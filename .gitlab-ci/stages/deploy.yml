@@ -193,12 +193,11 @@ Create Elasticsearch Index (prod):
   variables:
     <<: *deploy_stage_variables
     PORT: ${NLP_PORT}
-    CONTEXT: nlp
     VALUES_FILE: ./.k8s/nlp.values.yml
   artifacts:
-    expire_in: 1 day
+    expire_in: 7 day
     paths:
-      - packages/code-du-travail-${CONTEXT}
+      - packages/code-du-travail-${$CI_COMMIT_REF_SLUG}
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}
