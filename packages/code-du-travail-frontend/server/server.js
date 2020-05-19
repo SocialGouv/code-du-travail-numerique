@@ -69,6 +69,7 @@ nextApp.prepare().then(() => {
           "https://cdnjs.cloudflare.com",
         ],
         frameSrc: [
+          "'self'",
           "https://mon-entreprise.fr",
           "https://matomo.fabrique.social.gouv.fr",
         ],
