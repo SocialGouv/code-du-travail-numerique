@@ -50,7 +50,7 @@ Register nlp image:
   artifacts:
     expire_in: 7 day
     paths:
-      - ${CONTEXT}
+      - ${CI_COMMIT_REF_SLUG}
 #
 
 #
