@@ -86,7 +86,7 @@ function getIndemnite({
     } else {
       indemniteLegale =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
-      formula = `(\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\Times "A2")`;
+      formula = `(\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")`;
     }
   }
   if (inaptitude && indemniteLegale > 0) {

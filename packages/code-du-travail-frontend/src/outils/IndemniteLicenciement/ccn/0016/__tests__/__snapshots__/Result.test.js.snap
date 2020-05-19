@@ -323,13 +323,9 @@ exports[`<Result /> should render 1`] = `
                             <mi>
                               f
                             </mi>
-                            <mstyle
-                              mathcolor="#cc0000"
-                            >
-                              <mtext>
-                                \\Times
-                              </mtext>
-                            </mstyle>
+                            <mo>
+                              ×
+                            </mo>
                             <mi
                               mathvariant="normal"
                             >
@@ -353,7 +349,7 @@ exports[`<Result /> should render 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\Times "A2")
+                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")
                           </annotation>
                         </semantics>
                       </math>
@@ -675,16 +671,18 @@ exports[`<Result /> should render 1`] = `
                           f
                         </span>
                         <span
-                          class="mord text"
-                          style="color:#cc0000;"
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
                         >
-                          <span
-                            class="mord"
-                            style="color:#cc0000;"
-                          >
-                            \\Times
-                          </span>
+                          ×
                         </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
                         <span
                           class="mord"
                         >
@@ -851,19 +849,14 @@ exports[`<Result /> should render 1`] = `
                       <math>
                         <semantics>
                           <mrow>
-                            <mstyle
-                              mathcolor="#cc0000"
-                            >
-                              <mtext>
-                                \\frace
-                              </mtext>
-                            </mstyle>
-                            <mn>
-                              2
-                            </mn>
-                            <mn>
-                              5
-                            </mn>
+                            <mfrac>
+                              <mn>
+                                2
+                              </mn>
+                              <mn>
+                                5
+                              </mn>
+                            </mfrac>
                             <mo>
                               ×
                             </mo>
@@ -1018,7 +1011,7 @@ exports[`<Result /> should render 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            \\frace25 \\times Sref \\times Dc + \\frac3{10} \\times Sref \\times Dt  + "majoration" - "minoration"
+                            \\frac25 \\times Sref \\times Dc + \\frac3{10} \\times Sref \\times Dt  + "majoration" - "minoration"
                           </annotation>
                         </semantics>
                       </math>
@@ -1039,25 +1032,93 @@ exports[`<Result /> should render 1`] = `
                         class="base"
                       >
                         <span
-                          class="mord text"
-                          style="color:#cc0000;"
+                          class="mord"
                         >
                           <span
-                            class="mord"
-                            style="color:#cc0000;"
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
                           >
-                            \\frace
+                            <span
+                              class="vlist-t vlist-t2"
+                            >
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:1.32144em;"
+                                >
+                                  <span
+                                    style="top:-2.314em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      5
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.15em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="stretchy"
+                                      style="height:0.2em;"
+                                    >
+                                      <svg
+                                        height="0.2em"
+                                        preserveAspectRatio="xMinYMin slice"
+                                        viewBox="0 0 400000 200"
+                                        width="400em"
+                                      >
+                                        <path
+                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      2
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
+                                </span>
+                              </span>
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:0.686em;"
+                                />
+                              </span>
+                            </span>
                           </span>
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          2
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          5
+                          <span
+                            class="mclose nulldelimiter"
+                          />
                         </span>
                         <span
                           class="mord rule"

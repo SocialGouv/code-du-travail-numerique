@@ -93,7 +93,7 @@ export function getIndemnite({
         (2 / 5) * salaireRef * (cadreDuration / 12) +
         (3 / 10) * salaireRef * (tamDuration / 12);
 
-      formula = `\\frace25 \\times Sref \\times Dc + \\frac3{10} \\times Sref \\times Dt`;
+      formula = `\\frac25 \\times Sref \\times Dc + \\frac3{10} \\times Sref \\times Dt`;
     } else {
       // 2 <= ancienete < 3
       indemniteConventionnelle = indemnite;

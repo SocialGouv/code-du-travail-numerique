@@ -323,13 +323,9 @@ exports[`<Result /> should render 1`] = `
                             <mi>
                               f
                             </mi>
-                            <mstyle
-                              mathcolor="#cc0000"
-                            >
-                              <mtext>
-                                \\Times
-                              </mtext>
-                            </mstyle>
+                            <mo>
+                              ×
+                            </mo>
                             <mi
                               mathvariant="normal"
                             >
@@ -353,7 +349,7 @@ exports[`<Result /> should render 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\Times "A2")
+                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")
                           </annotation>
                         </semantics>
                       </math>
@@ -675,16 +671,18 @@ exports[`<Result /> should render 1`] = `
                           f
                         </span>
                         <span
-                          class="mord text"
-                          style="color:#cc0000;"
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
                         >
-                          <span
-                            class="mord"
-                            style="color:#cc0000;"
-                          >
-                            \\Times
-                          </span>
+                          ×
                         </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
                         <span
                           class="mord"
                         >
