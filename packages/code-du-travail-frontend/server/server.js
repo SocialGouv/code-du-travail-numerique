@@ -82,7 +82,7 @@ nextApp.prepare().then(() => {
           "https://mon-entreprise.fr",
           "https://ad.doubleclick.net",
         ],
-        reportUri: SENTRY_PUBLIC_DSN && getSentryCspUrl(),
+        ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
       },
       reportOnly: () => dev,
     },

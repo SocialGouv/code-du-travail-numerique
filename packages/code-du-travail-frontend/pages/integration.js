@@ -6,7 +6,6 @@ import {
   Container,
   PageTitle,
   Section,
-  Title,
   Wrapper,
 } from "@socialgouv/react-ui";
 
@@ -31,15 +30,26 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
           </FocusRoot>
           <Wrapper variant="main">
             <p>
-              L’équipe du Code du travail numérique propose un module de
-              recherche à intégrer dans votre site.
+              L’équipe du Code du travail numérique vous propose d’intégrer son
+              moteur de recherche sur votre site grâce à un module (widget).
+            </p>
+            <iframe
+              src="/widget.html"
+              width="100%"
+              height="250px"
+              title="widget - Code du travail numérique "
+              style={{ border: "none" }}
+            ></iframe>
+            <p>
+              Ce module permettra à l’utilisateur de faire une recherche depuis
+              votre site dans la barre de recherche du module. Une fois la
+              recherche lancée, cela ouvrira la page de recherche sur le site du
+              Code du travail numérique.
             </p>
             <p>
-              Ce module permettra de lancer une recherche depuis votre site et
-              d’ouvrir la page de recherche sur le site du Code du travail
-              numérique
+              Comment faire ? Nous vous proposons 2 méthodes pour intégrer ce
+              module à votre site :
             </p>
-            <p>Pour cela, nous vous proposons 2 methodes.</p>
             <Accordion
               preExpanded={["id-js"]}
               items={[
@@ -48,13 +58,27 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                   title: "javascript",
                   body: (
                     <>
-                      <Title>Instalation</Title>
-                      <p>Ajouter le code suivant dans votre page</p>
+                      <p>
+                        L’installation ce passe en 2 temps. Il faut ajouter le
+                        code suivant dans la balise <pre>&lt;body&gt;</pre> de
+                        vos pages :
+                      </p>
                       <Code>
                         <pre style={{ margin: 0, lineHeight: "125%" }}>
-                          {`<div id="cdtn-widget"></div>
-<script src="https://code.travail.gouv.fr/widget.js" async></script>
-`}
+                          {`<script src="https://code.travail.gouv.fr/widget.js" async></script>`}
+                        </pre>
+                      </Code>
+                      <p>
+                        Il faut ensuite determiner là où vous souhaitez afficher
+                        le widget dans vos pages.
+                        <br />
+                        Pour cela, il faut rajouter le code suivant à
+                        l’emplacement ou vous souhaitez voir le widget
+                        s’afficher.
+                      </p>
+                      <Code>
+                        <pre style={{ margin: 0, lineHeight: "125%" }}>
+                          {`<div id="cdtn-widget"></div>`}
                         </pre>
                       </Code>
                     </>
@@ -81,14 +105,14 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                 },
               ]}
             />
-            <p>Ce qui donnera :</p>
-            <iframe
-              src="/widget.html"
-              width="100%"
-              height="250px"
-              title="widget - Code du travail numérique "
-              style={{ border: "none" }}
-            ></iframe>
+
+            <p>
+              En cas de difficultés rencontrées lors de l’intégration, nous vous
+              invitons à ouvrir un{" "}
+              <a href="https://github.com/SocialGouv/code-du-travail-numerique/issues/new">
+                ticket d’erreur
+              </a>
+            </p>
           </Wrapper>
         </Container>
       </Section>
