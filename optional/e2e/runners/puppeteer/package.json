@@ -12,7 +12,7 @@
     "puppeteer": "^3.0.4"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^0.20.0",
+    "@socialgouv/eslint-config-recommended": "^0.22.1",
     "eslint": "^7.0.0"
   },
   "license": "Apache-2.0"

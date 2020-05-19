@@ -44,12 +44,12 @@
   },
   "devDependencies": {
     "@cdt/data": "^4.20.0",
-    "@socialgouv/eslint-config-recommended": "^0.20.0",
-    "@zeit/ncc": "^0.22.1",
+    "@socialgouv/eslint-config-recommended": "^0.22.1",
+    "@zeit/ncc": "^0.22.2",
     "eslint": "^7.0.0",
     "esm": "^3.2.25",
     "jest": "^26.0.1",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.4",
     "superagent": "^5.2.2",
     "supertest": "^4.0.2"
   },
