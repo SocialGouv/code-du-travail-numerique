@@ -21,13 +21,13 @@
     },
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["after 9pm and before 6am on the first day of the month"],
+      "schedule": ["before 6am on the first day of the month"],
       "groupName": "dev-dependencies"
     },
     {
       "depTypeList": ["dependencies"],
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["after 9pm and before 6am on the first day of the month"],
+      "schedule": ["before 6am on the first day of the month"],
       "groupName": "dependencies"
     }
   ]
