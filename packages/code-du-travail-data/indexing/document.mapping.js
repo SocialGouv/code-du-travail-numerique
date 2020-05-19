@@ -6,6 +6,10 @@ export const documentMapping = {
     categories: {
       enabled: false,
     },
+    // only in editored content
+    contents: {
+      enabled: false,
+    },
     // available for themes
     children: {
       properties: {

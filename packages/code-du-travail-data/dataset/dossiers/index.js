@@ -32,8 +32,7 @@ const thematicFiles = [
             title: "Fiches conseils métiers du ministère du travail",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
+            url: "/information/conges-payes-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : congés payés",
           },
           {
@@ -272,8 +271,7 @@ const thematicFiles = [
               "Questions - Réponses : embauche, démission, sanctions, licenciement",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#rupture-conventionnelle",
+            url: "/information/rupture-conventionnelle-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : rupture conventionnelle",
           },
           {

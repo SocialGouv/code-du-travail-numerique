@@ -5,6 +5,7 @@ import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
+import { getEditored } from "../dataset/editored";
 import { thematicFiles } from "../dataset/dossiers";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
@@ -106,6 +107,9 @@ async function* cdtnDocumentsGen() {
       excludeFromSearch: false,
     })
   );
+
+  logger.info("=== Editored content ===");
+  yield getEditored();
 
   logger.info("=== Fiches SP ===");
   yield getFichesSP();

@@ -42,6 +42,8 @@ HTMLCollection [
     data-styled="active"
     data-styled-version="5.1.0"
   >
+    figure{margin:0;}
+    figcaption{margin-top:1.6rem;}
     h1,h2,h3,h4,h5,h6{margin-top:3.2rem;margin-bottom:2rem;color:#2f3b6c;line-height:1.25;}
     @media (max-width:600px){h1,h2,h3,h4,h5,h6{margin-top:2rem;margin-bottom:1rem;}}
     h1,h2{font-weight:normal;font-family:'Merriweather',serif;}

@@ -15,6 +15,7 @@ function getSearchBody({ source, slug }) {
     },
     _source: [
       "action", // outils
+      "breadcrumbs",
       "categories", // thematic files
       "date",
       "dateDebut", // code-du-travail
@@ -40,6 +41,8 @@ function getSearchBody({ source, slug }) {
       "date_publi", // convention-collective
       "answers", // contributions
       "refs", // thematic file
+      "contents", // editored
+      "references", // editored
     ],
   };
 }
