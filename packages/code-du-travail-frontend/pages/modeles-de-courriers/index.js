@@ -93,9 +93,17 @@ function Modeles(props) {
             {Object.values(documents).map(({ title, items }) => (
               <React.Fragment key={title}>
                 <Heading as={HeadingBlue}>{title}</Heading>
-                {items.map((docTemplate) => (
-                  <StyledListItem key={docTemplate.slug}>
-                    <ModeleCourrier modele={docTemplate} />
+                {items.map(({ description, slug, title }) => (
+                  <StyledListItem key={slug}>
+                    <Link
+                      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
+                      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
+                      passHref
+                    >
+                      <Tile wide custom title={title} subtitle={theme.title}>
+                        {summarize(description)}
+                      </Tile>
+                    </Link>
                   </StyledListItem>
                 ))}
               </React.Fragment>
@@ -115,23 +123,6 @@ Modeles.getInitialProps = async function () {
   const data = await response.json();
   return { data };
 };
-
-function ModeleCourrier({ modele }) {
-  const { title, description, breadcrumbs, slug } = modele;
-  const [theme = { title: "Modèle de courrier" }] = breadcrumbs.slice(-1);
-
-  return (
-    <Link
-      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
-      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
-      passHref
-    >
-      <Tile wide custom title={title} subtitle={theme.title}>
-        {summarize(description)}
-      </Tile>
-    </Link>
-  );
-}
 
 const { spacings } = theme;
 

@@ -20,7 +20,7 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} querystring.excludeSources A `excludeSources` querystring param containing the sources (comma separatied list) to exclude from the results
  * @returns {Object} Results.
  */
-router.get("/modeles", async ctx => {
+router.get("/modeles", async (ctx) => {
   const body = getModeleBody();
   const response = await elasticsearchClient.search({ index, body });
   if (response.body.hits.total.value > 0) {

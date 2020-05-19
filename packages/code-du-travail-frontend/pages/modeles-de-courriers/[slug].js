@@ -43,6 +43,7 @@ class ModeleCourrier extends React.Component {
           breadcrumbs,
           date,
           description = "",
+          metaDescription,
           filename,
           filesize,
           html,
@@ -65,6 +66,7 @@ class ModeleCourrier extends React.Component {
           url={pageUrl}
           title={`Modèle de document :  ${title}`}
           description={
+            metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
           image={ogImage}

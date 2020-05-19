@@ -59,7 +59,11 @@ function Answer({
               dateLabel={dateLabel}
               source={source}
             >
-              {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
+              {intro && (
+                <IntroWrapper variant="dark">
+                  <Html>{intro}</Html>
+                </IntroWrapper>
+              )}
               {html && <Html>{html}</Html>}
               {children}
             </Article>
