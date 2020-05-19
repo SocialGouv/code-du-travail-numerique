@@ -21,7 +21,7 @@
     },
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["after 9pm", "before 6am", "on the first of the month"],
+      "schedule": ["after 9pm", "before 6am", "on the first day of the month"],
       "groupName": "dev-dependencies"
     },
     {
