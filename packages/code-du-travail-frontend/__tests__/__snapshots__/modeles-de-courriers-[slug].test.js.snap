@@ -2203,7 +2203,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <div
                   class="c46"
                 >
-                  un description
+                  <div>
+                    un description
+                  </div>
                 </div>
                 <div
                   class="c47"

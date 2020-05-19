@@ -538,7 +538,9 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -1380,7 +1382,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c21"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -1975,7 +1979,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -2960,7 +2966,9 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -3830,7 +3838,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -4426,7 +4436,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -5022,7 +5034,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -5619,7 +5633,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
