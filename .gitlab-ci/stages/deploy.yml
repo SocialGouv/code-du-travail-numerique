@@ -197,7 +197,7 @@ Create Elasticsearch Index (prod):
   artifacts:
     expire_in: 7 day
     paths:
-      - packages/code-du-travail-${$CI_COMMIT_REF_SLUG}
+      - ${$CI_COMMIT_REF_SLUG}
   before_script:
     - source ./.gitlab-ci/env.sh
     - HOST=${NLP_HOST}

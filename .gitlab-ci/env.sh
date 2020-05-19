@@ -56,7 +56,7 @@ export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
 
 export NLP_HOST="nlp-python";
-if [[ -f packages/code-du-travail-nlp/USE_MASTER ]] && [[ "${BRANCH_NAME}" != "master" ]]; then
+if [[ -f ${CI_COMMIT_REF_SLUG}/USE_MASTER ]] && [[ "${BRANCH_NAME}" != "master" ]]; then
   export NLP_HOST="${NLP_HOST}.cdtn-master.svc.cluster.local";
 fi
 
