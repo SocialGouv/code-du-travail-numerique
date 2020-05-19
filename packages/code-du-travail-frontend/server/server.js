@@ -51,56 +51,50 @@ nextApp.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
 
-  const helmetConfiguration = {
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: [
-          "'self'",
-          "*.travail.gouv.fr",
-          "*.data.gouv.fr",
-          "*.fabrique.social.gouv.fr",
-        ],
-        scriptSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          "https://mon-entreprise.fr",
-          "https://www.googletagmanager.com",
-          "*.fabrique.social.gouv.fr",
-          "https://cdnjs.cloudflare.com",
-        ],
-        frameSrc: [
-          "'self'",
-          "https://mon-entreprise.fr",
-          "https://matomo.fabrique.social.gouv.fr",
-        ],
-        frameAncestors: ["'none'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: [
-          "'self'",
-          "data:",
-          "*.fabrique.social.gouv.fr",
-          "https://travail-emploi.gouv.fr",
-          "https://mon-entreprise.fr",
-          "https://ad.doubleclick.net",
-        ],
-        ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
-      },
-      reportOnly: () => dev,
+  const cspConfig = {
+    directives: {
+      defaultSrc: [
+        "'self'",
+        "*.travail.gouv.fr",
+        "*.data.gouv.fr",
+        "*.fabrique.social.gouv.fr",
+      ],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://mon-entreprise.fr",
+        "https://www.googletagmanager.com",
+        "*.fabrique.social.gouv.fr",
+        "https://cdnjs.cloudflare.com",
+      ],
+      frameSrc: [
+        "'self'",
+        "https://mon-entreprise.fr",
+        "https://matomo.fabrique.social.gouv.fr",
+      ],
+      "font-src": ["'self'", "data:", "blob:"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      imgSrc: [
+        "'self'",
+        "data:",
+        "*.fabrique.social.gouv.fr",
+        "https://travail-emploi.gouv.fr",
+        "https://mon-entreprise.fr",
+        "https://ad.doubleclick.net",
+      ],
+      ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
+      ...(dev && { reportUri: "/report-violation" }),
     },
+    reportOnly: () => dev,
   };
-
   if (dev) {
     // handle local csp reportUri endpoint
     server.use(bodyParser());
-    helmetConfiguration.contentSecurityPolicy.directives.defaultSrc.push(
-      "http://127.0.0.1:*/"
-    );
-    helmetConfiguration.contentSecurityPolicy.directives.scriptSrc.push(
-      "'unsafe-eval'"
-    );
-    helmetConfiguration.reportUri = "/report-violation";
+    cspConfig.directives.defaultSrc.push("http://127.0.0.1:*/");
+    cspConfig.directives.scriptSrc.push("'unsafe-eval'");
   }
-  server.use(helmet(helmetConfiguration));
+  server.use(helmet.contentSecurityPolicy(cspConfig));
+
   if (dev) {
     router.post("/report-violation", (ctx) => {
       if (ctx.request.body) {

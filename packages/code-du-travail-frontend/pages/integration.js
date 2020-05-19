@@ -60,7 +60,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                     <>
                       <p>
                         L’installation ce passe en 2 temps. Il faut ajouter le
-                        code suivant dans la balise <pre>&lt;body&gt;</pre> de
+                        code suivant dans la balise <code>&lt;body&gt;</code> de
                         vos pages :
                       </p>
                       <Code>
