@@ -195,8 +195,6 @@ const DossierLink = ({ url, title }) => {
     if (sourceRoute.split("/").length !== 3) {
       [sourceRoute, slug] = sourceRoute.split("/");
     }
-
-    console.log("href is :", `/${sourceRoute}${slug ? "/[slug]" : ""}`);
     return (
       <Link href={`/${sourceRoute}${slug ? "/[slug]" : ""}`} as={url} passHref>
         <LeftArrowLink>{title}</LeftArrowLink>
