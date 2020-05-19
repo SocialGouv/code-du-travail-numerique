@@ -8,8 +8,8 @@
     "test": "codeceptjs run --features"
   },
   "dependencies": {
-    "codeceptjs": "^2.6.4",
-    "puppeteer": "^3.0.4"
+    "codeceptjs": "^2.6.5",
+    "puppeteer": "^3.1.0"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.20.0",
