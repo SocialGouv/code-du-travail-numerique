@@ -32,7 +32,13 @@ const options = {
   ],
 };
 
-const convertFile2Html = ({ filename, title, description, ...rest }) => {
+const convertFile2Html = ({
+  filename,
+  title,
+  description,
+  metaDescription,
+  ...rest
+}) => {
   return mammoth
     .convertToHtml(
       {
@@ -53,6 +59,7 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
         title,
         text: description,
         description,
+        metaDescription,
         ...rest,
         excludeFromSearch: false,
         html:

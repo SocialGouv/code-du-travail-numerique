@@ -282,6 +282,14 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -538,7 +546,9 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -990,6 +1000,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
+.c21 div > *:first-child {
+  margin-top: 0;
+}
+
+.c21 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c10 {
     padding: 0 1rem;
@@ -1380,7 +1398,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c21"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -1719,6 +1739,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -1975,7 +2003,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -2604,6 +2634,14 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -2960,7 +2998,9 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -3574,6 +3614,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -3830,7 +3878,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -4170,6 +4220,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -4426,7 +4484,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -4766,6 +4826,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -5022,7 +5090,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p
@@ -5363,6 +5433,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
+.c12 div > *:first-child {
+  margin-top: 0;
+}
+
+.c12 div > *:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width:600px) {
   .c2 {
     padding: 0 1rem;
@@ -5619,7 +5697,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c12"
             >
-              intro de l'article
+              <div>
+                intro de l'article
+              </div>
             </div>
             <div>
               <p

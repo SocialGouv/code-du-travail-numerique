@@ -39,7 +39,6 @@ function Answer({
 }) {
   // const glossaryItems = useGlossary(children, html);
   const router = useRouter();
-
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
@@ -59,7 +58,11 @@ function Answer({
               dateLabel={dateLabel}
               source={source}
             >
-              {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
+              {intro && (
+                <IntroWrapper variant="dark">
+                  <Html>{intro}</Html>
+                </IntroWrapper>
+              )}
               {html && <Html>{html}</Html>}
               {children}
             </Article>
@@ -99,4 +102,10 @@ const StyledErrorContainer = styled(Container)`
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
+  & div > *:first-child {
+    margin-top: 0;
+  }
+  & div > *:last-child {
+    margin-bottom: 0;
+  }
 `;
