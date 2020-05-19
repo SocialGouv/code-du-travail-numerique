@@ -5151,6 +5151,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c107"
+                  >
+                    <a
+                      class="c108"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div

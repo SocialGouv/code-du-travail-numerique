@@ -2646,6 +2646,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         Statistiques d’utilisation
                       </a>
                     </li>
+                    <li
+                      class="c87"
+                    >
+                      <a
+                        class="c88"
+                        href="/integration"
+                      >
+                        Intégrer le Code du travail numérique
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div
@@ -5479,6 +5489,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         href="/stats"
                       >
                         Statistiques d’utilisation
+                      </a>
+                    </li>
+                    <li
+                      class="c87"
+                    >
+                      <a
+                        class="c88"
+                        href="/integration"
+                      >
+                        Intégrer le Code du travail numérique
                       </a>
                     </li>
                   </ul>

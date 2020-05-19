@@ -1765,6 +1765,16 @@ exports[`<Glossaire /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c54"
+                  >
+                    <a
+                      class="c55"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div

@@ -86,6 +86,13 @@ const Footer = () => {
                       <StyledLink>Statistiques d’utilisation</StyledLink>
                     </Link>
                   </StyledListItem>
+                  <StyledListItem>
+                    <Link passHref href="/integration">
+                      <StyledLink>
+                        Intégrer le Code du travail numérique
+                      </StyledLink>
+                    </Link>
+                  </StyledListItem>
                 </StyledList>
               </Category>
               <Category>

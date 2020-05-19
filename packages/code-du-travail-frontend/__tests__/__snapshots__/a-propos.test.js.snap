@@ -1698,6 +1698,16 @@ exports[`<About /> should render 1`] = `
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c53"
+                  >
+                    <a
+                      class="c54"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
