@@ -63,7 +63,7 @@
     "rehype-raw": "^4.0.2",
     "rehype-react": "^5.0.1",
     "remark-parse": "^8.0.2",
-    "remark-rehype": "^6.0.0",
+    "remark-rehype": "^7.0.0",
     "speakingurl": "14.0.1",
     "styled-components": "^5.1.0",
     "unified": "^9.0.0",
