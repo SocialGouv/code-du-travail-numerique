@@ -893,6 +893,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c46 div > *:first-child {
+  margin-top: 0;
+}
+
+.c46 div > *:last-child {
+  margin-bottom: 0;
+}
+
 .c17 ul {
   z-index: 1;
 }

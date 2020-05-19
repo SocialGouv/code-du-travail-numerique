@@ -69,7 +69,7 @@ const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
         title={title}
         relatedItems={relatedItems}
         emptyMessage="Cette fiche n'a pas été trouvée"
-        intro={intro && <Intro>{intro}</Intro>}
+        intro={intro}
         date={date}
         source={{ name: "Fiche Ministère du travail", url }}
         breadcrumbs={breadcrumbs}
@@ -94,15 +94,6 @@ Fiche.getInitialProps = async ({ query, asPath }) => {
 };
 
 export default withRouter(Fiche);
-
-const Intro = styled(Html)`
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 const TabContent = styled(Html)`
   & > *:first-child {

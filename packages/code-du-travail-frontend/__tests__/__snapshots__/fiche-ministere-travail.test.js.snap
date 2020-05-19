@@ -809,6 +809,14 @@ exports[`<FicheMT /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c48 div > *:first-child {
+  margin-top: 0;
+}
+
+.c48 div > *:last-child {
+  margin-bottom: 0;
+}
+
 .c17 ul {
   z-index: 1;
 }
@@ -2064,7 +2072,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="c48"
                 >
                   <div>
-                    [object Object]
+                    lorem ipsum intro
                   </div>
                 </div>
                 <div
