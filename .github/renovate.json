@@ -17,6 +17,7 @@
       "schedule": ["every weekend"],
       "updateTypes": ["patch"],
       "groupName": "patch-dependencies",
+      "automergeType": "branch",
       "automerge": true
     },
     {
