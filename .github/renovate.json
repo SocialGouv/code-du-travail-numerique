@@ -1,29 +1,34 @@
 {
   "enabled": true,
   "extends": [
-    "github>SocialGouv/renovate-config"
+    "github>SocialGouv/renovate-config/light"
   ],
   "packageRules": [
     {
       "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["at any time"],
       "minor": {
         "groupName": "@socialgouv data packages",
         "automerge": true
       }
     },
     {
-      "depTypeList": ["devDependencies"],
-      "minor": {
-        "groupName": "all non-major devDependencies",
-        "automerge": true
-      }
+      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["every weekend"],
+      "updateTypes": ["patch"],
+      "groupName": "patch-dependencies",
+      "automerge": true
     },
     {
-      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "depTypeList": ["devDependencies"],
+      "schedule": ["after 9pm", "before 6am", "on the first of the month"],
+      "groupName": "dev-dependencies"
+    },
+    {
       "depTypeList": ["dependencies"],
-      "minor": {
-        "groupName": "all non-major dependencies"
-      }
+      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
+      "schedule": ["after 9pm", "before 6am", "on the first day of the month"],
+      "groupName": "dependencies"
     }
   ]
 }

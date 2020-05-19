@@ -99,7 +99,7 @@ Register data image:
       while
         ! wget --spider "http://nlp:${NLP_PORT}/api/ready" &&
         [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 1 ; done ;
+      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
 
 #
