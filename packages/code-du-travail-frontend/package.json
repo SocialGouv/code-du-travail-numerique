@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "4.20.0",
+  "version": "4.21.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -19,10 +19,10 @@
     "generate-sitemap": "node -r esm ./scripts/generate-sitemap"
   },
   "dependencies": {
-    "@cdt/data": "^4.20.0",
+    "@cdt/data": "^4.21.0",
     "@cdt/data...prime-precarite": "^4.18.0",
     "@cdt/data...simulateurs": "^4.18.0",
-    "@cdt/data...tools": "^4.20.0",
+    "@cdt/data...tools": "^4.21.0",
     "@cdt/sources": "^4.19.0",
     "@next/bundle-analyzer": "^9.4.1",
     "@reach/tooltip": "0.10.2",
@@ -30,8 +30,8 @@
     "@sentry/node": "^5.15.5",
     "@socialgouv/datafiller-data": "^1.22.0",
     "@socialgouv/fiches-travail-data": "^3.47.0",
-    "@socialgouv/react-fiche-service-public": "^4.19.0",
-    "@socialgouv/react-ui": "^4.20.0",
+    "@socialgouv/react-fiche-service-public": "^4.21.0",
+    "@socialgouv/react-ui": "^4.21.0",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.14.0",
     "debounce-promise": "^3.1.2",
