@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "extends": [
-    "github>SocialGouv/renovate-config/light"
+    "github>SocialGouv/renovate-config:light"
   ],
   "packageRules": [
     {
@@ -17,17 +17,18 @@
       "schedule": ["every weekend"],
       "updateTypes": ["patch"],
       "groupName": "patch-dependencies",
+      "automergeType": "branch",
       "automerge": true
     },
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["after 9pm", "before 6am", "on the first of the month"],
+      "schedule": ["before 6am on the first day of the month"],
       "groupName": "dev-dependencies"
     },
     {
       "depTypeList": ["dependencies"],
       "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["after 9pm", "before 6am", "on the first day of the month"],
+      "schedule": ["before 6am on the first day of the month"],
       "groupName": "dependencies"
     }
   ]
