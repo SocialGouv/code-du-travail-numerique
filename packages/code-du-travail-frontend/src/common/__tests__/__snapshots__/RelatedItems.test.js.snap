@@ -396,7 +396,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <a
           class="c4"
           href="external.tools"
-          rel="noopener nofollow"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div

@@ -3,7 +3,7 @@ Le régime applicable aux congés payés continue de s’appliquer normalement. 
 * Pour faire face aux conséquences économiques, financières et sociales de la propagation du covid-19.
 * Et si l’entreprise conclut un accord collectif dans les conditions prévues par <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940">l’ordonnance du 25 mars 2020</a>. En l’absence d’accord d’entreprise, l’accord de branche sur ce thème, s’il existe, s’applique.
 
-En effet, depuis le 26 mars 2020, l’entreprise peut négocier un accord collectif qui prévoit :
+En effet, depuis le 26 mars 2020, l’entreprise peut négocier un accord collectif qui prévoit&nbsp;:
 
 1. **Le nombre de jours de congés payés concernés :** il peut s’agir de 6 jours de congés payés acquis maximum.
 
@@ -19,4 +19,4 @@ En effet, depuis le 26 mars 2020, l’entreprise peut négocier un accord collec
 
 Si un tel accord collectif est conclu, il prime sur les autres dispositions concernant les congés payés (accord collectif, etc.) qui lui seraient contraires.
 
-**Important :** si aucun accord collectif n’est conclu (que ce soit au niveau de l’entreprise ou de la branche), l’employeur ne peut pas appliquer <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940">l’ordonnance du 25 mars 2020</a>. Il ne peut pas imposer la prise de 6 jours de congés payés dans ces conditions.
+**Important&nbsp;:** si aucun accord collectif n’est conclu (que ce soit au niveau de l’entreprise ou de la branche), l’employeur ne peut pas appliquer <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940">l’ordonnance du 25 mars 2020</a>. Il ne peut pas imposer la prise de 6 jours de congés payés dans ces conditions.
