@@ -59,7 +59,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                   body: (
                     <>
                       <p>
-                        L’installation ce passe en 2 temps. Il faut ajouter le
+                        L’installation se passe en 2 temps. Il faut ajouter le
                         code suivant dans la balise <code>&lt;body&gt;</code> de
                         vos pages :
                       </p>
@@ -107,8 +107,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
             />
 
             <p>
-              En cas de difficultés rencontrées lors de l’intégration, nous vous
-              invitons à ouvrir un{" "}
+              En cas de difficulté, nous vous invitons à ouvrir un{" "}
               <a href="https://github.com/SocialGouv/code-du-travail-numerique/issues/new">
                 ticket d’erreur
               </a>
