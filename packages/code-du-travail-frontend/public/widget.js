@@ -88,4 +88,4 @@ function addWidget() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", addWidget);
+window.addEventListener("DOMContentLoaded", addWidget);
