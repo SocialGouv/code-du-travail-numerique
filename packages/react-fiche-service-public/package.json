@@ -36,7 +36,7 @@
     "@testing-library/react": "^10.0.4",
     "babel-jest": "^26.0.1",
     "date-fns": "^2.14.0",
-    "eslint": "^7.0.0",
+    "eslint": "^7.1.0",
     "jest": "^26.0.1",
     "jest-styled-components": "^7.0.2",
     "prettier": "^2.0.5",
