@@ -194,6 +194,7 @@ Create Elasticsearch Index (prod):
     <<: *deploy_stage_variables
     PORT: ${NLP_PORT}
     VALUES_FILE: ./.k8s/nlp.values.yml
+    CONTEXT: nlp
   artifacts:
     expire_in: 7 day
     paths:
