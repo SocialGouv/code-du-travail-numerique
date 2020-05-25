@@ -9,11 +9,6 @@ Test on deployed branch:
     variables:
       # Don't run when deploying in production
       - $PRODUCTION
-  artifacts:
-    expire_in: 1 day
-    when: always
-    paths:
-      - optional/e2e/runners/puppeteer/output
 
   environment:
     name: fabrique-dev
@@ -22,10 +17,20 @@ Test on deployed branch:
     paths:
       - optional/e2e/runners/puppeteer/node_modules
       - $CI_PROJECT_DIR/.yarn
+  retry: 2
+
   before_script:
     - source ./.gitlab-ci/env.sh
     - CODECEPT_BASEURL=${FRONTEND_URL}
     - cd ./optional/e2e/runners/puppeteer
+    - |-
+      retry=60;
+      while
+        ! wget -q -O - "$@" "${FRONTEND_URL}/api/version"  | grep "${COMMIT}" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for frontend to be ready" ; sleep 3 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
+
   script:
     - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
     - yarn --frozen-lockfile

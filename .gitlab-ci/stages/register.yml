@@ -42,15 +42,15 @@ Register nlp image:
         docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
         if cmp -s MASTER_LAYERS COMMIT_LAYERS ; then
           echo "No changes detected."
-          touch ${CONTEXT}/USE_MASTER
+          touch "${CONTEXT}/${$CI_COMMIT_REF_SLUG}_USE_MASTER"
         else
           echo "Changes detected."
         fi
       fi
   artifacts:
-    expire_in: 1 day
+    expire_in: 7 day
     paths:
-      - ${CONTEXT}
+      - packages/code-du-travail-nlp
 #
 
 #
