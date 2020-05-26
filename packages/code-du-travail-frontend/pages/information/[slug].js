@@ -18,7 +18,6 @@ import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
-import TYPE_REFERENCE from "../../src/common/ReferencesJuridiques/typeReference";
 
 const {
   publicRuntimeConfig: { API_URL },
