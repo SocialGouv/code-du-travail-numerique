@@ -51,7 +51,7 @@ exports[`<StepResult /> should render no results 1`] = `
     <strong
       class="c1"
     >
-      la convention collective ne prévoit pas d'heures de recherche d'emploi.
+      La convention collective ne prévoit pas d'heures de recherche d'emploi pour le salarié.
     </strong>
     .
   </p>
@@ -169,7 +169,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Rémunération
   </h2>
   <p>
-    Le salaire est maintenu durant ces absences.
+    Le salaire est maintenu.
   </p>
   <h2
     class="c0"
@@ -177,7 +177,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Modalités d’utilisation
   </h2>
   <p>
-    Un accord entre l'employeur et le salarié définit la prise de ces heures dans la journée, ou de façon groupée par demi-journées ou journées consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.
+    La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.
   </p>
   <div
     class="c2"
