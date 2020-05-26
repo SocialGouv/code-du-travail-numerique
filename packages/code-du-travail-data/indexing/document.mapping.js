@@ -6,7 +6,8 @@ export const documentMapping = {
     categories: {
       enabled: false,
     },
-    // only in editored content
+    // available in editorial content
+    folder: { type: "text" },
     contents: {
       enabled: false,
     },

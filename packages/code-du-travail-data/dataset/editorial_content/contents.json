@@ -4,13 +4,12 @@
     "title": "Congés payés : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les congés payés.",
+    "folder": "covid",
     "contents": [
       {
         "type": "graphic",
         "name": "conges-payes",
-        "altText": "Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous.",
-        "size": "2.3MB"
-      }
+        "altText": "Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous."      }
     ],
     "references": [
       {
@@ -35,12 +34,12 @@
     "title": "RTT, jours de repos forfait jours, compte épargne-temps : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les RTT, les jours de repos forfait jours et le compte épargne-temps.",
+    "folder": "covid",
     "contents": [
       {
         "type": "graphic",
         "name": "jours-repos",
-        "altText": "Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous.",
-        "size": "1.9MB"
+        "altText": "Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous."
       }
     ],
     "references":[
@@ -82,6 +81,7 @@
     "title": "Durées maximales de travail, repos quotidien et dominical : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les durées maximales de travail, le repos quotidien et dominical",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -107,6 +107,7 @@
     "title": "Rupture conventionnelle : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la rupture conventionnelle.",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -141,12 +142,12 @@
       {
         "id": "l1237-13",
         "title": "Article L. 1237-13 du code du travail",
-        "type": "codeDuTravail"
+        "type": "code-du-travail"
       },
       {
         "id": "l1237-14",
         "title": "Article L. 1237-14 du code du travail",
-        "type": "codeDuTravail"
+        "type": "code-du-travail"
       }
     ]
   },
@@ -154,6 +155,7 @@
     "title": "Report ou annulation de visites médicales : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le report ou annulation de visites médicales",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -186,6 +188,7 @@
     "title": "Intéressement et participation : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’ntéressement et la participation",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -220,13 +223,13 @@
       {
          "id":"l3314-5",
          "title":"Article R. 2315-49 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":"/code-du-travail/l3314-5"
       },
       {
          "id":"l3324-6",
          "title":"Article R. 2315-49 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":"/code-du-travail/l3324-6"
       }
    ]
@@ -235,6 +238,7 @@
     "title": "Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la prime exceptionnelle de pouvoir d’achat",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -266,6 +270,7 @@
     "title": "Assistant(e) maternel(le) : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’assistant(e) maternel(le)",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -291,6 +296,7 @@
     "title": "Information et consultation du CSE : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le CSE",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -331,46 +337,46 @@
       {
          "id":"l2315-30",
          "title":"Article L. 2315-30 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       },
       {
          "id":"l2316-17",
          "title":"Article L. 2316-17 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       },
       {
          "id":"l2315-86",
          "title":"Article L. 2315-86 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       },
       {
          "id":"r2312-6",
          "title":"Article R. 2312-6 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":""
       },
       {
          "id":"r2315-45",
          "title":"Article R. 2315-45 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":""
       },
       {
          "id":"r2315-46",
          "title":"Article R. 2315-46 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":""
       },
       {
          "id":"r2315-47",
          "title":"Article R. 2315-47 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":""
       },
       {
          "id":"r2315-49",
          "title":"Article R. 2315-49 du code du travail",
-         "type":"codeDuTravail",
+         "type":"code-du-travail",
          "url":"/code-du-travail/r2315-49"
       }
    ]
@@ -379,6 +385,7 @@
     "title": "Accord collectif d'entreprise : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’accord collectif d'entreprise",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -401,17 +408,17 @@
       {
          "id":"l2232-12",
          "title":"Article L. 2232-12 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       },
       {
          "id":"l2232-21",
          "title":"Article L. 2232-21 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       },
       {
          "id":"l2232-25-1",
          "title":"Article L. 2232-25-1 du code du travail",
-         "type":"codeDuTravail"
+         "type":"code-du-travail"
       }
    ]
   },
@@ -419,6 +426,7 @@
     "title": "Entretien professionnel : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’entretien professionnel",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",
@@ -444,6 +452,7 @@
     "title": "Services de santé au travail : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les services de santé au travail",
+    "folder": "covid",
     "contents": [
       {
         "type": "markdown",

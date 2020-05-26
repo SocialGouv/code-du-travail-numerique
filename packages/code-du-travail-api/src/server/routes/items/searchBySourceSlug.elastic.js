@@ -30,19 +30,18 @@ function getSearchBody({ source, slug }) {
       "metaDescription", // dossiers
       "path", // code-du-travail
       "raw", // service-public
-      "references_juridiques", // service-public, ministere-travail
+      "references_juridiques", // service-public, ministere-travail, informations
       "slug", // outils
       "tags", // code-du-travail
       "title",
       "title_vector", // otherwise we can search for related items ?
       "url",
-      "breadcrumbs",
       "idcc",
       "date_publi", // convention-collective
       "answers", // contributions
       "refs", // thematic file
-      "contents", // editored
-      "references", // editored
+      "contents", // editorial_content
+      "folder", // editorial_content
     ],
   };
 }

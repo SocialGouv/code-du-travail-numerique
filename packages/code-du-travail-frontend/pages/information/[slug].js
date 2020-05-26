@@ -58,6 +58,7 @@ const Information = ({
       breadcrumbs,
       contents,
       date,
+      folder,
       description,
       references = [],
       title,
@@ -65,17 +66,17 @@ const Information = ({
     relatedItems,
   } = { _source: {} },
 }) => {
-  const editoredContent = contents.map(
+  const editorialContent = contents.map(
     ({ type, name, altText, size, html }) => {
-      const reactedContent = processor.processSync(html).result;
+      const reactContent = processor.processSync(html).result;
       return type === "graphic" ? (
         <figure key={name}>
-          <img src={`/static/assets/graphics/${name}.jpg`} alt={altText} />
+          <img src={`/docs/${folder}/graphics/${name}.jpg`} alt={altText} />
           <DownloadWrapper>
             <Button
               as="a"
               className="no-after"
-              href={`/static/assets/graphics/${name}.pdf`}
+              href={`/docs/${folder}/graphics/${name}.pdf`}
               narrow
               variant="navLink"
               download
@@ -86,16 +87,15 @@ const Information = ({
           </DownloadWrapper>
           <figcaption>
             <MoreContent noLeftPadding title="Voir en détail">
-              <Wrapper variant="dark">{reactedContent}</Wrapper>
+              <Wrapper variant="dark">{reactContent}</Wrapper>
             </MoreContent>
           </figcaption>
         </figure>
       ) : (
-        <React.Fragment key={name}>{reactedContent}</React.Fragment>
+        <React.Fragment key={name}>{reactContent}</React.Fragment>
       );
     }
   );
-
   return (
     <Layout>
       <Metas
@@ -112,15 +112,9 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
-        <GlobalStylesWrapper>{editoredContent}</GlobalStylesWrapper>
+        <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
         {references.length > 0 && (
-          <ReferencesJuridiques
-            accordionDisplay={1}
-            references={references.map((reference) => ({
-              ...reference,
-              type: TYPE_REFERENCE[reference.type],
-            }))}
-          />
+          <ReferencesJuridiques accordionDisplay={1} references={references} />
         )}
       </Answer>
     </Layout>
@@ -131,12 +125,13 @@ export default Information;
 
 Information.getInitialProps = async ({ query: { slug } }) => {
   const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORED}/${slug}`
+    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
   if (!responseContainer.ok) {
     return { statusCode: responseContainer.status };
   }
   const information = await responseContainer.json();
+
   return { information };
 };
 

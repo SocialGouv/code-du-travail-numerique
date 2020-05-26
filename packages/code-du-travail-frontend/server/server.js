@@ -1,11 +1,13 @@
 // Import prerequisite packages
 const next = require("next");
 const Koa = require("koa");
-const Router = require("koa-router");
-const helmet = require("koa-helmet");
 const bodyParser = require("koa-bodyparser");
+const helmet = require("koa-helmet");
+const mount = require("koa-mount");
+const Router = require("koa-router");
+const send = require("koa-send");
 const Sentry = require("@sentry/node");
-
+const path = require("path");
 const redirects = require("./redirects.json");
 
 /**
@@ -130,6 +132,16 @@ nextApp.prepare().then(() => {
   router.get("/robots.txt", async (ctx) => {
     ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
+
+  const DOCS_DIR = path.join(
+    path.dirname(require.resolve("@cdt/data...editorial_content"))
+  );
+
+  router.use(
+    mount("/docs", async (ctx) => {
+      await send(ctx, ctx.path, { root: DOCS_DIR });
+    })
+  );
 
   redirects.forEach(({ baseUrl, code, redirectUrl }) => {
     router.get(baseUrl, async (ctx) => {
