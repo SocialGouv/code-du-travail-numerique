@@ -73,7 +73,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/information/prescription-d-arrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
+              "/information/prescription-darrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
             title:
               "Nouveauté Covid-19 : prescription d’arrêts du travail par le médecin du travail",
           },
@@ -339,8 +339,8 @@ const thematicFiles = [
             title: "Nouveautés Covid-19 : élections du CSE",
           },
           {
-            url: "/information/reunion-du-cse-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : réunion du CSE",
+            url: "/information/reunions-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : réunions du CSE",
           },
         ],
         title: "CSE et accord collectif",
