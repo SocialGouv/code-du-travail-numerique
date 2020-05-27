@@ -17,7 +17,7 @@ COPY ./yarn.lock /app/yarn.lock
 
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
-COPY ./packages/code-du-travail-data/dataset/dossier/package.json /app/packages/code-du-travail-data/dataset/dossier/package.json
+COPY ./packages/code-du-travail-data/dataset/dossiers/package.json /app/packages/code-du-travail-data/dataset/dossiers/package.json
 COPY ./packages/code-du-travail-data/dataset/editorial_content/package.json /app/packages/code-du-travail-data/dataset/editorial_content/package.json
 COPY ./packages/code-du-travail-data/dataset/fiches_service_public/package.json /app/packages/code-du-travail-data/dataset/fiches_service_public/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
