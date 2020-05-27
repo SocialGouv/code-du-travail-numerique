@@ -91,7 +91,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                       <Code>
                         <pre>
                           {`<iframe
-  src="/widget.html"
+  src="https://code.travail.gouv.fr/widget.html"
   width="100%"
   height="250px"
   title="widget - Code du travail numérique "
