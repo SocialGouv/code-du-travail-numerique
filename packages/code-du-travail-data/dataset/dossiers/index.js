@@ -337,11 +337,11 @@ const thematicFiles = [
           },
           {
             url: "/information/elections-du-cse-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : Élections du CSE",
+            title: "Nouveautés Covid-19 : élections du CSE",
           },
           {
             url: "/information/reunion-du-cse-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : Réunion du CSE",
+            title: "Nouveautés Covid-19 : réunion du CSE",
           },
         ],
         title: "CSE et accord collectif",
