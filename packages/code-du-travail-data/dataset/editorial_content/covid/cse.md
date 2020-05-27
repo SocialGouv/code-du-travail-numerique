@@ -4,13 +4,19 @@ Afin de favoriser la reprise rapide de l’activité économique dans des condit
 
 ![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-1.png)
 [ [Télécharger le fichier](/docs/covid/graphics/cse-synthese-1.pdf) - 1.7 Mo]
+
 ---
+
 ![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-2.png)
 [ [Télécharger le fichier](/docs/covid/graphics/cse-synthese-2.pdf) - 1.8 Mo]
+
 ---
+
 ![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-3.png)
 [ [Télécharger le fichier](/docs/covid/graphics/cse-synthese-3.pdf) - 2.2 Mo]
+
 ---
+
 ![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-4.png)
 [ [Télécharger le fichier](/docs/covid/graphics/cse-synthese-4.pdf) - 1.2 Mo]
 
