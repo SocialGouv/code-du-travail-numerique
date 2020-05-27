@@ -16,4 +16,4 @@ Fonctionnalité: Dossier Coronavirus
 
     Quand je clique sur "Nouveautés Covid-19 : congés payés"
     Quand j'attends que le titre de page "Congés payés : nouveautés Covid-19" apparaisse
-    Alors je vois "Congés payés : imposer ou modifier les congés payés"
+    Alors je vois "Nous vous décryptons ici les différentes mesures concernant les congés payés."
