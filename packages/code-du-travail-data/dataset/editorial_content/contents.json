@@ -249,16 +249,181 @@
     ]
   },
   {
-    "title": "Information et consultation du CSE (inline) : nouveautés Covid-19",
+    "title": "Information et consultation du CSE : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le CSE",
     "folder": "covid",
     "intro": "Afin de favoriser la reprise rapide de l’activité économique dans des conditions protectrices pour les salariés, une ordonnance et deux décrets du 2 mai 2020 ont adaptés la durée des délais d’envoi de l’ordre du jour, de consultation et d’expertise du CSE pour certaines réunions. Du 3 mai au 23 août 2020, l’entreprise appliquera les délais définis par ces textes et non les délais fixés par le code du travail, par un accord collectif ou un accord conclu avec le CSE.",
     "contents": [
       {
+        "type": "graphic",
+        "title": "Infographie: Délais de consultation du CSE",
+        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE. Une version textuelle est disponible en dessous.",
+        "name": "cse-synthese-1",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          }
+        ]
+      },
+      {
+        "type": "graphic",
+        "title": "Infographie: Délais de consultation du CSE central",
+        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central. Une version textuelle est disponible en dessous.",
+        "name": "cse-synthese-2",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          }
+        ]
+      },
+      {
+        "type": "graphic",
+        "title": "Infographie: Délais de consultation du CSE central avec CSE d'établissements",
+        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central avec CSE d'établissements. Une version textuelle est disponible en dessous.",
+        "name": "cse-synthese-3",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          }
+        ]
+      },
+      {
+        "type": "graphic",
+        "title": "Infographie: Contester une expertise",
+        "altText": "Infographie schématisant les changements concernant la contestation une expertise. Une version textuelle est disponible en dessous.",
+        "name": "cse-synthese-4",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          }
+        ]
+      },
+      {
         "type": "markdown",
-        "name": "cse",
-        "references": [
+        "title": "Réunions pour lesquelles les conditions de fonctionnement sont adaptées",
+        "name": "cse-1",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          }
+        ]
+      },
+      {
+        "type": "markdown",
+        "title": "Délai d’envoi de l’ordre du jour",
+        "name": "cse-2",
+        "references":[
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -298,11 +463,80 @@
             "title": "Article L. 2315-86 du code du travail",
             "type": "code-du-travail",
             "id": "l2315-86"
+          }
+        ]
+      },
+      {
+        "type": "markdown",
+        "title": "Délai de consultation",
+        "name": "cse-3",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
           },
           {
             "title": "Article R. 2312-6 du code du travail",
             "type": "code-du-travail",
             "id": "r2312-6"
+          }
+        ]
+      },
+      {
+        "type": "markdown",
+        "title": "Délai d’expertise",
+        "name": "cse-4",
+        "references":[
+          {
+            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842254"
+          },
+          {
+            "title": "Ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842261"
+          },
+          {
+            "title": "Décret n° 2020-508 du 2 mai 2020 adaptant temporairement les délais relatifs à la consultation et l’information du comité social et économique afin de faire face aux conséquences de la propagation de l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842264"
+          },
+          {
+            "title": "Décret n° 2020-509 du 2 mai 2020 fixant les modalités d’application des dispositions du I de l’article 9 de l’ordonnance n° 2020-460 du 22 avril 2020 modifiée portant diverses mesures prises pour faire face à l’épidémie de covid-19",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041842280"
+          },
+          {
+            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 9",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+          },
+          {
+            "title": "Article L. 2315-86 du code du travail",
+            "type": "code-du-travail",
+            "id": "l2315-86"
           },
           {
             "title": "Article R. 2315-45 du code du travail",
@@ -324,60 +558,8 @@
             "type": "code-du-travail",
             "id": "r2315-49"
           }
+
         ]
-      }
-    ]
-  },
-  {
-    "title": "Information et consultation du CSE (split) : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le CSE",
-    "folder": "covid",
-    "intro": "Afin de favoriser la reprise rapide de l’activité économique dans des conditions protectrices pour les salariés, une ordonnance et deux décrets du 2 mai 2020 ont adaptés la durée des délais d’envoi de l’ordre du jour, de consultation et d’expertise du CSE pour certaines réunions. Du 3 mai au 23 août 2020, l’entreprise appliquera les délais définis par ces textes et non les délais fixés par le code du travail, par un accord collectif ou un accord conclu avec le CSE.",
-    "contents": [
-      {
-        "type": "graphics",
-        "title": "Délais de consultation du CSE",
-        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE. Une version textuelle est disponible en dessous.",
-        "name": "cse-synthese-1"
-      },
-      {
-        "type": "graphics",
-        "title": "Délais de consultation du CSE central",
-        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central. Une version textuelle est disponible en dessous.",
-        "name": "cse-synthese-2"
-      },
-      {
-        "type": "graphics",
-        "title": "Délais de consultation du CSE central avec CSE d'établissements",
-        "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central avec CSE d'établissements. Une version textuelle est disponible en dessous.",
-        "name": "cse-synthese-3"
-      },
-      {
-        "type": "graphics",
-        "title": "Contester une expertise",
-        "altText": "Infographie schématisant les changements concernant la contestation une expertise. Une version textuelle est disponible en dessous.",
-        "name": "cse-synthese-4"
-      },
-      {
-        "type": "markdown",
-        "title": "Réunions pour lesquelles les conditions de fonctionnement sont adaptées",
-        "name": "cse-1"
-      },
-      {
-        "type": "markdown",
-        "title": "Délai d’envoi de l’ordre du jour",
-        "name": "cse-2"
-      },
-      {
-        "type": "markdown",
-        "title": "Délai de consultation du CSE",
-        "name": "cse-3"
-      },
-      {
-        "type": "markdown",
-        "title": "Délai d’expertise",
-        "name": "cse-4"
       }
     ]
   },

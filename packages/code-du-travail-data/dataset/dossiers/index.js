@@ -326,12 +326,6 @@ const thematicFiles = [
           },
           {
             url:
-              "/information/information-et-consultation-du-cse-inline-nouveautes-covid-19",
-            title:
-              "Nouveautés Covid-19 : information et consultation du CSE (inline)",
-          },
-          {
-            url:
               "/information/information-et-consultation-du-cse-split-nouveautes-covid-19",
             title:
               "Nouveautés Covid-19 : information et consultation du CSE (split)",
