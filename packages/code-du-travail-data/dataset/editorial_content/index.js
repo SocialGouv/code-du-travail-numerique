@@ -1,15 +1,15 @@
-import { getRouteBySource, SOURCES } from "@cdt/sources";
-import filesize from "filesize";
-import { readFileSync, statSync } from "fs";
-import htmlAstToAnotherHtmlAst from "rehype-raw";
-import htmlAstStringify from "rehype-stringify";
-import markdownToMardownAst from "remark-parse";
-import markdownAstToHtmlAst from "remark-rehype";
-import markdownAstStringify from "remark-stringify";
-import markdownAstStrip from "strip-markdown";
-import unified from "unified";
-import slugify from "../../slugify";
-import covidContents from "./contents.json";
+const { getRouteBySource, SOURCES } = require("@cdt/sources");
+const filesize = require("filesize");
+const { readFileSync, statSync } = require("fs");
+const htmlAstToAnotherHtmlAst = require("rehype-raw");
+const htmlAstStringify = require("rehype-stringify");
+const markdownToMardownAst = require("remark-parse");
+const markdownAstToHtmlAst = require("remark-rehype");
+const markdownAstStringify = require("remark-stringify");
+const markdownAstStrip = require("strip-markdown");
+const unified = require("unified");
+const slugify = require("../../slugify");
+const covidContents = require("./contents.json");
 
 const textProcessor = unified()
   .use(markdownToMardownAst)
@@ -46,7 +46,7 @@ function transformContents(folder, data) {
   );
 }
 
-export function getEditorialContents() {
+function getEditorialContents() {
   return covidContents.map(
     ({
       date,
@@ -84,7 +84,7 @@ export function getEditorialContents() {
     }
   );
 }
-
+module.exports = { getEditorialContents };
 if (module === require.main) {
   console.log(JSON.stringify(getEditorialContents(), null, 2));
 }
