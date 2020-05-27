@@ -8,6 +8,7 @@ import {
   MoreContent,
   theme,
   Wrapper,
+  Accordion,
 } from "@socialgouv/react-ui";
 import { SOURCES } from "@cdt/sources";
 import htmlToHtmlAst from "rehype-parse";
@@ -18,6 +19,7 @@ import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
+import Html from "../../src/common/Html";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -53,48 +55,62 @@ const Information = ({
   pageUrl,
   ogImage,
   information: {
-    _source: {
-      breadcrumbs,
-      contents,
-      date,
-      folder,
-      description,
-      references = [],
-      title,
-    },
+    _source: { breadcrumbs, contents, date, folder, description, title, intro },
     relatedItems,
   } = { _source: {} },
 }) => {
-  const editorialContent = contents.map(
-    ({ type, name, altText, size, html }) => {
+  let editorialContent = contents.map(
+    ({ type, name, altText, size, html, references }) => {
       const reactContent = processor.processSync(html).result;
-      return type === "graphic" ? (
-        <figure key={name}>
-          <img src={`/docs/${folder}/graphics/${name}.jpg`} alt={altText} />
-          <DownloadWrapper>
-            <Button
-              as="a"
-              className="no-after"
-              href={`/docs/${folder}/graphics/${name}.pdf`}
-              narrow
-              variant="navLink"
-              download
-            >
-              Télécharger l‘infographie (pdf - {size})
-              <Download />
-            </Button>
-          </DownloadWrapper>
-          <figcaption>
-            <MoreContent noLeftPadding title="Voir en détail">
-              <Wrapper variant="dark">{reactContent}</Wrapper>
-            </MoreContent>
-          </figcaption>
-        </figure>
-      ) : (
-        <React.Fragment key={name}>{reactContent}</React.Fragment>
+      return (
+        <>
+          {type === "graphic" ? (
+            <figure key={name}>
+              <img src={`/docs/${folder}/graphics/${name}.png`} alt={altText} />
+              <DownloadWrapper>
+                <Button
+                  as="a"
+                  className="no-after"
+                  href={`/docs/${folder}/graphics/${name}.pdf`}
+                  narrow
+                  variant="navLink"
+                  download
+                >
+                  Télécharger l‘infographie (pdf - {size})
+                  <Download />
+                </Button>
+              </DownloadWrapper>
+              <figcaption>
+                <MoreContent noLeftPadding title="Voir en détail">
+                  <Wrapper variant="dark">{reactContent}</Wrapper>
+                </MoreContent>
+              </figcaption>
+            </figure>
+          ) : (
+            <React.Fragment key={name}>{reactContent}</React.Fragment>
+          )}
+          {references.length > 0 && (
+            <ReferencesJuridiques
+              accordionDisplay={1}
+              references={references}
+            />
+          )}
+        </>
       );
     }
   );
+  if (editorialContent.length > 1) {
+    editorialContent = (
+      <Accordion
+        items={contents.map(({ title, name }, index) => ({
+          title,
+          anchor: name,
+          body: editorialContent[index],
+        }))}
+      />
+    );
+  }
+
   return (
     <Layout>
       <Metas
@@ -111,10 +127,8 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
+        {intro && <Html>{intro}</Html>}
         <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
-        {references.length > 0 && (
-          <ReferencesJuridiques accordionDisplay={1} references={references} />
-        )}
       </Answer>
     </Layout>
   );

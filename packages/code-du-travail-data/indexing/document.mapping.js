@@ -7,6 +7,7 @@ export const documentMapping = {
       enabled: false,
     },
     // available in editorial content
+    intro: { type: "text" },
     folder: { type: "text" },
     contents: {
       enabled: false,

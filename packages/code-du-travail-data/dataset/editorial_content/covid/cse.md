@@ -1,5 +1,18 @@
 Afin de favoriser la reprise rapide de l’activité économique dans des conditions protectrices pour les salariés, une ordonnance et deux décrets du 2 mai 2020 ont adaptés la durée des délais d’envoi de l’ordre du jour, de consultation et d’expertise du CSE pour certaines réunions. Du 3 mai au 23 août 2020, l’entreprise appliquera les délais définis par ces textes et non les délais fixés par le code du travail, par un accord collectif ou un accord conclu avec le CSE.
 
+![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-1.png)
+[Télécharger le fichier](/docs/covid/graphics/cse-synthese-1.pdf)
+--- 
+![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-2.png)
+[Télécharger le fichier](/docs/covid/graphics/cse-synthese-2.pdf)
+--- 
+![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-3.png)
+[Télécharger le fichier](/docs/covid/graphics/cse-synthese-3.pdf)
+---
+![Délais de consultation du CSE](/docs/covid/graphics/cse-synthese-4.png)
+[Télécharger le fichier](/docs/covid/graphics/cse-synthese-4.pdf)
+
+
 ## 1. Réunions pour lesquelles les conditions de fonctionnement sont adaptées
 
 Les délais sont adaptés pour les réunions **dont les délais d’envoi de l’ordre du jour ou de consultation commencent entre le 3 mai et 23 août 2020** et qui ont pour objet&nbsp;:

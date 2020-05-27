@@ -30,7 +30,7 @@ function getSearchBody({ source, slug }) {
       "metaDescription", // dossiers
       "path", // code-du-travail
       "raw", // service-public
-      "references_juridiques", // service-public, ministere-travail, informations
+      "references_juridiques", // service-public, ministere-travail
       "slug", // outils
       "tags", // code-du-travail
       "title",

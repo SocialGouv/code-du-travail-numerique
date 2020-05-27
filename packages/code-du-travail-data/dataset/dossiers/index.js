@@ -73,6 +73,12 @@ const thematicFiles = [
           },
           {
             url:
+              "/information/prescription-d-arrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
+            title:
+              "Nouveauté Covid-19 : prescription d’arrêts du travail par le médecin du travail",
+          },
+          {
+            url:
               "/fiche-ministere-travail/responsabilite-de-lemployeur-droit-de-retrait",
             title:
               "Questions - Réponses : responsabilité de l’employeur et droit de retrait",
@@ -320,13 +326,28 @@ const thematicFiles = [
           },
           {
             url:
-              "/information/information-et-consultation-du-cse-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : information et consultation du CSE",
+              "/information/information-et-consultation-du-cse-inline-nouveautes-covid-19",
+            title:
+              "Nouveautés Covid-19 : information et consultation du CSE (inline)",
+          },
+          {
+            url:
+              "/information/information-et-consultation-du-cse-split-nouveautes-covid-19",
+            title:
+              "Nouveautés Covid-19 : information et consultation du CSE (split)",
           },
           {
             url:
               "/information/accord-collectif-dentreprise-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : accord collectif d’entreprise",
+          },
+          {
+            url: "/information/elections-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : Élections du CSE",
+          },
+          {
+            url: "/information/reunion-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : Réunion du CSE",
           },
         ],
         title: "CSE et accord collectif",

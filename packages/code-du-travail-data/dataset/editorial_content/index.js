@@ -48,7 +48,17 @@ function transformContents(folder, data) {
 
 export function getEditorialContents() {
   return covidContents.map(
-    ({ date, description, contents: data, folder, references, title }) => {
+    ({
+      date,
+      description,
+      contents: data,
+      folder,
+      references,
+      title,
+      intro,
+    }) => {
+      const introText = textProcessor.processSync(intro).contents;
+      const introHtml = htmlProcessor.processSync(intro).contents;
       const { text, contents } = transformContents(folder, data);
       return {
         breadcrumbs: [
@@ -62,12 +72,13 @@ export function getEditorialContents() {
         contents,
         folder,
         date,
+        intro: introHtml,
         description,
         excludeFromSearch: false,
         references,
         slug: slugify(title),
         source: SOURCES.EDITORIAL_CONTENT,
-        text,
+        text: introText + text,
         title,
       };
     }
