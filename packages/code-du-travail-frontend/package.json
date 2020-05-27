@@ -16,7 +16,9 @@
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
     "test": "NODE_ENV=test jest",
-    "generate-sitemap": "node -r esm ./scripts/generate-sitemap"
+    "generate-sitemap": "node -r esm ./scripts/generate-sitemap",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@cdt/data": "^4.21.0",
@@ -68,7 +70,8 @@
     "styled-components": "^5.1.0",
     "unified": "^9.0.0",
     "unist-util-find": "^1.0.1",
-    "url-search-params": "^1.1.0"
+    "url-search-params": "^1.1.0",
+    "snyk": "^1.330.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -110,5 +113,6 @@
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
     ]
-  }
+  },
+  "snyk": true
 }
