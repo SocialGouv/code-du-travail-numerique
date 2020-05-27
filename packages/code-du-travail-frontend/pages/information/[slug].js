@@ -60,7 +60,7 @@ const Information = ({
   } = { _source: {} },
 }) => {
   let editorialContent = contents.map(
-    ({ type, name, altText, size, html, references }) => {
+    ({ type, name, altText, size, html, references = [] }) => {
       const reactContent = processor.processSync(html).result;
       return (
         <>
