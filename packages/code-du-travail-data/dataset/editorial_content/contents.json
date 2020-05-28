@@ -257,7 +257,7 @@
     "contents": [
       {
         "type": "graphic",
-        "title": "Infographie: Délais de consultation du CSE",
+        "title": "Infographie : Délais de consultation du CSE",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-1",
         "references":[
@@ -290,7 +290,7 @@
       },
       {
         "type": "graphic",
-        "title": "Infographie: Délais de consultation du CSE central",
+        "title": "Infographie : Délais de consultation du CSE central",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-2",
         "references":[
@@ -323,7 +323,7 @@
       },
       {
         "type": "graphic",
-        "title": "Infographie: Délais de consultation du CSE central avec CSE d'établissements",
+        "title": "Infographie : Délais de consultation du CSE central avec CSE d'établissement",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central avec CSE d'établissements. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-3",
         "references":[
@@ -356,7 +356,7 @@
       },
       {
         "type": "graphic",
-        "title": "Infographie: Contester une expertise",
+        "title": "Infographie : Contester une expertise",
         "altText": "Infographie schématisant les changements concernant la contestation une expertise. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-4",
         "references":[
@@ -651,7 +651,7 @@
     ]
   },
   {
-    "title": "prescription d’arrêts du travail par le médecin du travail : nouveauté Covid-19",
+    "title": "Prescription d’arrêts du travail par le médecin du travail : nouveauté Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les services de santé au travail",
     "folder": "covid",
