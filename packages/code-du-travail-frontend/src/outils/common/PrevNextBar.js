@@ -20,7 +20,13 @@ function PrevNextBar({
             Imprimer le résultat
           </StyledButton>
         )}
-        {nextVisible && (
+        {nextVisible && !previousVisible && (
+          <StyledButton disabled={hasError} variant="primary">
+            Commencer
+            <ArrowIcon />
+          </StyledButton>
+        )}
+        {nextVisible && previousVisible && (
           <StyledButton disabled={hasError} variant="primary">
             Suivant
             <ArrowIcon />
