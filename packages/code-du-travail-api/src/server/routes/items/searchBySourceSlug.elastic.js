@@ -36,13 +36,12 @@ function getSearchBody({ source, slug }) {
       "title",
       "title_vector", // otherwise we can search for related items ?
       "url",
-      "breadcrumbs",
       "idcc",
       "date_publi", // convention-collective
       "answers", // contributions
       "refs", // thematic file
-      "contents", // editored
-      "references", // editored
+      "contents", // editorial_content
+      "folder", // editorial_content
     ],
   };
 }

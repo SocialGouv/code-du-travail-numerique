@@ -33,7 +33,7 @@ const thematicFiles = [
           },
           {
             url: "/information/conges-payes-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : congés payés",
+            title: "Nouveautés Covid-19 : congés payés [Infographie]",
           },
           {
             url: "/fiche-ministere-travail/conventions-de-fne-formation",
@@ -70,6 +70,12 @@ const thematicFiles = [
               "/information/report-ou-annulation-de-visites-medicales-nouveautes-covid-19",
             title:
               "Nouveautés Covid-19 : report ou annulation de visites médicales",
+          },
+          {
+            url:
+              "/information/prescription-darrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
+            title:
+              "Nouveauté Covid-19 : prescription d’arrêts du travail par le médecin du travail",
           },
           {
             url:
@@ -173,13 +179,13 @@ const thematicFiles = [
         refs: [
           {
             url: "/information/conges-payes-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : congés payés",
+            title: "Nouveautés Covid-19 : congés payés [Infographie]",
           },
           {
             url:
               "/information/rtt-jours-de-repos-forfait-jours-compte-epargne-temps-nouveautes-covid-19",
             title:
-              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps ",
+              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps [Infographie]",
           },
           {
             url:
@@ -321,12 +327,21 @@ const thematicFiles = [
           {
             url:
               "/information/information-et-consultation-du-cse-nouveautes-covid-19",
-            title: "Nouveautés Covid-19 : information et consultation du CSE",
+            title:
+              "Nouveautés Covid-19 : information et consultation du CSE [Infographie]",
           },
           {
             url:
               "/information/accord-collectif-dentreprise-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : accord collectif d’entreprise",
+          },
+          {
+            url: "/information/elections-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : élections du CSE",
+          },
+          {
+            url: "/information/reunions-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : réunions du CSE [Infographie]",
           },
         ],
         title: "CSE et accord collectif",

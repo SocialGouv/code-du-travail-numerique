@@ -8,6 +8,7 @@ import {
   MoreContent,
   theme,
   Wrapper,
+  Accordion,
 } from "@socialgouv/react-ui";
 import { SOURCES } from "@cdt/sources";
 import htmlToHtmlAst from "rehype-parse";
@@ -18,7 +19,7 @@ import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
-import TYPE_REFERENCE from "../../src/common/ReferencesJuridiques/typeReference";
+import Html from "../../src/common/Html";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -54,47 +55,61 @@ const Information = ({
   pageUrl,
   ogImage,
   information: {
-    _source: {
-      breadcrumbs,
-      contents,
-      date,
-      description,
-      references = [],
-      title,
-    },
+    _source: { breadcrumbs, contents, date, folder, description, title, intro },
     relatedItems,
   } = { _source: {} },
 }) => {
-  const editoredContent = contents.map(
-    ({ type, name, altText, size, html }) => {
-      const reactedContent = processor.processSync(html).result;
-      return type === "graphic" ? (
-        <figure key={name}>
-          <img src={`/static/assets/graphics/${name}.jpg`} alt={altText} />
-          <DownloadWrapper>
-            <Button
-              as="a"
-              className="no-after"
-              href={`/static/assets/graphics/${name}.pdf`}
-              narrow
-              variant="navLink"
-              download
-            >
-              Télécharger l‘infographie (pdf - {size})
-              <Download />
-            </Button>
-          </DownloadWrapper>
-          <figcaption>
-            <MoreContent noLeftPadding title="Voir en détail">
-              <Wrapper variant="dark">{reactedContent}</Wrapper>
-            </MoreContent>
-          </figcaption>
-        </figure>
-      ) : (
-        <React.Fragment key={name}>{reactedContent}</React.Fragment>
+  let editorialContent = contents.map(
+    ({ type, name, altText, size, html, references = [] }) => {
+      const reactContent = processor.processSync(html).result;
+      return (
+        <>
+          {type === "graphic" ? (
+            <figure key={name}>
+              <img src={`/docs/${folder}/graphics/${name}.png`} alt={altText} />
+              <DownloadWrapper>
+                <Button
+                  as="a"
+                  className="no-after"
+                  href={`/docs/${folder}/graphics/${name}.pdf`}
+                  narrow
+                  variant="navLink"
+                  download
+                >
+                  Télécharger l‘infographie (pdf - {size})
+                  <Download />
+                </Button>
+              </DownloadWrapper>
+              <figcaption>
+                <MoreContent noLeftPadding title="Voir en détail">
+                  <Wrapper variant="dark">{reactContent}</Wrapper>
+                </MoreContent>
+              </figcaption>
+            </figure>
+          ) : (
+            <React.Fragment key={name}>{reactContent}</React.Fragment>
+          )}
+          {references.length > 0 && (
+            <ReferencesJuridiques
+              accordionDisplay={1}
+              references={references}
+            />
+          )}
+        </>
       );
     }
   );
+  if (editorialContent.length > 1) {
+    editorialContent = (
+      <Accordion
+        items={contents.map(({ title, name }, index) => ({
+          title,
+          anchor: name,
+          body: editorialContent[index],
+        }))}
+      />
+    );
+  }
 
   return (
     <Layout>
@@ -112,16 +127,8 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
-        <GlobalStylesWrapper>{editoredContent}</GlobalStylesWrapper>
-        {references.length > 0 && (
-          <ReferencesJuridiques
-            accordionDisplay={1}
-            references={references.map((reference) => ({
-              ...reference,
-              type: TYPE_REFERENCE[reference.type],
-            }))}
-          />
-        )}
+        {intro && <Html>{intro}</Html>}
+        <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
       </Answer>
     </Layout>
   );
@@ -131,12 +138,13 @@ export default Information;
 
 Information.getInitialProps = async ({ query: { slug } }) => {
   const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORED}/${slug}`
+    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
   if (!responseContainer.ok) {
     return { statusCode: responseContainer.status };
   }
   const information = await responseContainer.json();
+
   return { information };
 };
 
