@@ -3,7 +3,7 @@ Du 13 au 31 mai 2020, le médecin du travail peut prescrire des arrêts de trava
 Sont concernés, les salariés :
 
  - Atteints ou suspectés d’être atteints par le covid-19, notamment les cas contacts ;
- - Vulnérables car susceptibles de développer des formes sévères de la maladie au sens du de [l’article 1er](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041849680&categorieLien=id) du [décret n° 2020-521 du 5 mai 2020](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041849680&categorieLien=id) ;
+ - Vulnérables car susceptibles de développer des formes sévères de la maladie au sens du de l’article 1er du [décret n° 2020-521 du 5 mai 2020](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041849680&categorieLien=id) ;
  - Partageant le même domicile qu’une personne vulnérable.
 
 S’agissant des modalités pratiques, pour les salariés atteints ou suspectés d’être atteints par le covid-19, le médecin du travail établit l’arrêt de travail à partir du modèle existant pour les arrêts de travail classiques. Il le transmet sans délai au salarié et à son employeur. Le salarié envoie alors dans les 2 jours, l’avis d’arrêt de travail à l’organisme d’assurance maladie dont il relève.
