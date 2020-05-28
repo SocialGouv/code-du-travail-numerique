@@ -68,6 +68,7 @@ function addWidget() {
             fill="currentColor"></path>
         </svg>
       </button>
+      <input type="hidden" name="source" value="widget" />
     </div>
   </form>
 </div>
