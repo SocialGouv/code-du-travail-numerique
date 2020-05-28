@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.22.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.21.0...v4.22.0-alpha.0) (2020-05-28)
+
+
+### Bug Fixes
+
+* **integration:** full url for iframe ([#2778](https://github.com/SocialGouv/code-du-travail-numerique/issues/2778)) ([9551854](https://github.com/SocialGouv/code-du-travail-numerique/commit/95518547844ac88d01c860118896d3e056b0391a))
+* **widget:** fix widget init code ([#2772](https://github.com/SocialGouv/code-du-travail-numerique/issues/2772)) ([d064694](https://github.com/SocialGouv/code-du-travail-numerique/commit/d064694ae4128b597e5b40122bceffcf6c4898e6))
+* typo + wording ([#2766](https://github.com/SocialGouv/code-du-travail-numerique/issues/2766)) ([aa55e97](https://github.com/SocialGouv/code-du-travail-numerique/commit/aa55e976eaa905f81eafe119ea8c1ccccf570355))
+
+
+### Features
+
+* add source param to widget search ([#2781](https://github.com/SocialGouv/code-du-travail-numerique/issues/2781)) ([19d4afb](https://github.com/SocialGouv/code-du-travail-numerique/commit/19d4afb0b9b5b44738e20785b9882f37c9db7b92))
+* update data ([#2782](https://github.com/SocialGouv/code-du-travail-numerique/issues/2782)) ([6599c2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/6599c2c6d8f08297d9a5a4aeb468fbdc46392941))
+* **chore:** editorial content ([#2769](https://github.com/SocialGouv/code-du-travail-numerique/issues/2769)) ([9dc9ccb](https://github.com/SocialGouv/code-du-travail-numerique/commit/9dc9ccba7298aaf96e727ee5ee77d7a625dc95a9)), closes [#2777](https://github.com/SocialGouv/code-du-travail-numerique/issues/2777)
+
+
+
+
+
 # [4.21.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.20.0...v4.21.0) (2020-05-20)
 
 
