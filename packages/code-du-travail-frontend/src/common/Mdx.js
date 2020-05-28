@@ -1,7 +1,7 @@
 import { createElement } from "react";
+import markdownParser from "remark-parse";
 import raw from "rehype-raw";
 import rehype2react from "rehype-react";
-import markdownParser from "remark-parse";
 import remark2rehype from "remark-rehype";
 import unified from "unified";
 

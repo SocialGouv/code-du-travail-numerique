@@ -3065,7 +3065,7 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c27"
               href="url.extrenal/tool"
-              rel="noopener nofollow"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <div

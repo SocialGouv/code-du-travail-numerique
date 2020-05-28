@@ -2318,7 +2318,7 @@ exports[`<Outils /> should render 1`] = `
                   <a
                     class="c37 no-after"
                     href="https://www.moncompteformation.gouv.fr"
-                    rel="noopener nofollow"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     <div

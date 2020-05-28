@@ -63,7 +63,7 @@ const Outils = ({ pageUrl, ogImage }) => (
             title={monCompteFormation.title}
             icon={icons[monCompteFormation.icon]}
             href={monCompteFormation.url}
-            rel="noopener nofollow"
+            rel="noopener noreferrer"
             target="_blank"
             className="no-after"
           >

@@ -32,9 +32,8 @@ const thematicFiles = [
             title: "Fiches conseils métiers du ministère du travail",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
-            title: "Nouveautés Covid-19 : congés payés",
+            url: "/information/conges-payes-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : congés payés [Infographie]",
           },
           {
             url: "/fiche-ministere-travail/conventions-de-fne-formation",
@@ -68,9 +67,15 @@ const thematicFiles = [
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#visite-medicale",
+              "/information/report-ou-annulation-de-visites-medicales-nouveautes-covid-19",
             title:
               "Nouveautés Covid-19 : report ou annulation de visites médicales",
+          },
+          {
+            url:
+              "/information/prescription-darrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
+            title:
+              "Nouveauté Covid-19 : prescription d’arrêts du travail par le médecin du travail",
           },
           {
             url:
@@ -95,7 +100,7 @@ const thematicFiles = [
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#services-de-sante",
+              "/information/services-de-sante-au-travail-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : services de santé au travail",
           },
         ],
@@ -143,8 +148,7 @@ const thematicFiles = [
             title: "Autres services",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#assistant-maternel",
+            url: "/information/assistant-e-maternel-le-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : assistant(e) maternel(le)",
           },
           {
@@ -174,30 +178,29 @@ const thematicFiles = [
         position: 4,
         refs: [
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#conges",
-            title: "Nouveautés Covid-19 : congés payés",
+            url: "/information/conges-payes-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : congés payés [Infographie]",
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#jours-repos",
+              "/information/rtt-jours-de-repos-forfait-jours-compte-epargne-temps-nouveautes-covid-19",
             title:
-              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps ",
+              "Nouveautés Covid-19 : RTT, jours de repos forfait jours, compte épargne-temps [Infographie]",
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#prime-exceptionnelle",
+              "/information/prime-exceptionnelle-de-pouvoir-dachat-nouveautes-covid-19",
             title:
               "Nouveautés Covid-19 : prime exceptionnelle de pouvoir d’achat",
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#interessement-participation",
+              "/information/interessement-et-participation-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : intéressement et participation",
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#durees-maximales-travail",
+              "/information/durees-maximales-de-travail-repos-quotidien-et-dominical-nouveautes-covid-19",
             title:
               "Nouveautés Covid-19 : durées maximales de travail, repos quotidien et dominical",
           },
@@ -272,8 +275,7 @@ const thematicFiles = [
               "Questions - Réponses : embauche, démission, sanctions, licenciement",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#rupture-conventionnelle",
+            url: "/information/rupture-conventionnelle-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : rupture conventionnelle",
           },
           {
@@ -287,8 +289,7 @@ const thematicFiles = [
               "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
           },
           {
-            url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#entretien-professionnel",
+            url: "/information/entretien-professionnel-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : entretien professionnel",
           },
         ],
@@ -325,13 +326,22 @@ const thematicFiles = [
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#delais-cse",
-            title: "Nouveautés Covid-19 : délais du CSE",
+              "/information/information-et-consultation-du-cse-nouveautes-covid-19",
+            title:
+              "Nouveautés Covid-19 : information et consultation du CSE [Infographie]",
           },
           {
             url:
-              "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19#accord-collectif",
+              "/information/accord-collectif-dentreprise-nouveautes-covid-19",
             title: "Nouveautés Covid-19 : accord collectif d’entreprise",
+          },
+          {
+            url: "/information/elections-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : élections du CSE",
+          },
+          {
+            url: "/information/reunions-du-cse-nouveautes-covid-19",
+            title: "Nouveautés Covid-19 : réunions du CSE [Infographie]",
           },
         ],
         title: "CSE et accord collectif",

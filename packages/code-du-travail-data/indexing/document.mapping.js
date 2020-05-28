@@ -6,6 +6,12 @@ export const documentMapping = {
     categories: {
       enabled: false,
     },
+    // available in editorial content
+    intro: { type: "text" },
+    folder: { type: "text" },
+    contents: {
+      enabled: false,
+    },
     // available for themes
     children: {
       properties: {

@@ -189,12 +189,7 @@ const Li = styled.li`
 
 const DossierLink = ({ url, title }) => {
   if (!url.includes("http")) {
-    let sourceRoute = url.substr(1);
-    let slug = "";
-    // thematic files subfolder ... soon to be removed
-    if (sourceRoute.split("/").length !== 3) {
-      [sourceRoute, slug] = sourceRoute.split("/");
-    }
+    const [, sourceRoute, slug] = url.split("/");
     return (
       <Link href={`/${sourceRoute}${slug ? "/[slug]" : ""}`} as={url} passHref>
         <LeftArrowLink>{title}</LeftArrowLink>
@@ -202,7 +197,7 @@ const DossierLink = ({ url, title }) => {
     );
   }
   return (
-    <LeftArrowLink href={url} rel="noopener nofollow" target="_blank">
+    <LeftArrowLink href={url} rel="noopener noreferrer" target="_blank">
       {title}
     </LeftArrowLink>
   );

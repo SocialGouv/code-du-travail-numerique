@@ -65,7 +65,7 @@ export const RelatedItems = ({ items = [] }) => {
                     custom={false}
                     href={url}
                     icon={icons[icon]}
-                    rel="noopener nofollow"
+                    rel="noopener noreferrer"
                     subtitle={subtitle}
                     target="_blank"
                     title={title}
