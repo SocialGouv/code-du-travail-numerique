@@ -1,22 +1,6 @@
-  {
+{
   "enabled": true,
   "extends": [
-    "github>SocialGouv/renovate-config:light"
-  ],
-  "ignorePresets": ["group:allNonMajor"],
-  "packageRules": [
-    {
-      "packagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "schedule": ["at any time"],
-      "groupName": "@socialgouv data packages",
-      "automerge": true,
-      "updateTypes": ["minor", "patch"]
-    },
-    {
-      "excludePackagePatterns": ["^@socialgouv/.*-(data|vdd)$"],
-      "minor": {
-        "groupName": "all non-major dependencies"
-      }
-    }
+    "github>SocialGouv/renovate-config:socialgouv-data"
   ]
 }
