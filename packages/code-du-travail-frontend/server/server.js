@@ -151,7 +151,7 @@ nextApp.prepare().then(() => {
     });
   });
 
-  router.all("*", async (ctx) => {
+  router.all("(.*)", async (ctx) => {
     await nextHandler(ctx.req, ctx.res);
     ctx.respond = false;
   });
