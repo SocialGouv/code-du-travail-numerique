@@ -5,7 +5,7 @@ import styled from "styled-components";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
-import MathFormula from "../../common/MathFormula";
+import { MathFormula } from "../../common/MathFormula";
 import { getIndemnitePrecarite } from "../indemnite";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 import {
@@ -127,7 +127,7 @@ function StepIndemnite({ form }) {
   const rateValue = parseInt(value) / 100;
   const rateLabel = `${value}/100`;
 
-  const { indemnite, formule, inputs } = getIndemnitePrecarite({
+  const { indemnite, formula, inputs } = getIndemnitePrecarite({
     typeRemuneration,
     salaire,
     salaires,
@@ -165,9 +165,9 @@ function StepIndemnite({ form }) {
       )}
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
-        <FormuleWrapper>
-          <MathFormula>{formule}</MathFormula>
-        </FormuleWrapper>
+        <FormulaWrapper>
+          <MathFormula formula={formula} />
+        </FormulaWrapper>
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>
       {getRef(legalRefs)}
@@ -213,6 +213,6 @@ const List = styled.ul`
 const Item = styled.li`
   font-size: ${fonts.sizes.small};
 `;
-const FormuleWrapper = styled.div`
+const FormulaWrapper = styled.div`
   margin: ${spacings.base} 0;
 `;

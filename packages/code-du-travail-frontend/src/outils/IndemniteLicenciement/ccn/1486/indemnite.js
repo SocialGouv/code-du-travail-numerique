@@ -167,8 +167,8 @@ export function getIndemniteConventionnelle(data) {
   };
 
   const formula = isCeilingReached
-    ? `Pmois \\times Sref`
-    : `(C \\times Sref \\times A${previousIndemnites ? " - I" : ""})`;
+    ? `Pmois * Sref`
+    : `(C * Sref * A${previousIndemnites ? " - I" : ""})`;
 
   return {
     indemniteConventionnelle,

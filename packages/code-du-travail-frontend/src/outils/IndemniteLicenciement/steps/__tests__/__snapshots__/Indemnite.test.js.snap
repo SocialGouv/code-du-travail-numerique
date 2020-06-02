@@ -183,12 +183,16 @@ exports[`<StepIndemnite /> should render 1`] = `
                     <semantics>
                       <mrow>
                         <mfrac>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            4
-                          </mn>
+                          <mrow>
+                            <mn>
+                              1
+                            </mn>
+                          </mrow>
+                          <mrow>
+                            <mn>
+                              4
+                            </mn>
+                          </mrow>
                         </mfrac>
                         <mo>
                           ×
@@ -221,7 +225,7 @@ exports[`<StepIndemnite /> should render 1`] = `
                       <annotation
                         encoding="application/x-tex"
                       >
-                        \\frac14 \\times Sref \\times A \\times 2
+                        \\frac{1}{4} \\times Sref \\times A \\times 2
                       </annotation>
                     </semantics>
                   </math>
@@ -270,7 +274,11 @@ exports[`<StepIndemnite /> should render 1`] = `
                                 <span
                                   class="mord"
                                 >
-                                  4
+                                  <span
+                                    class="mord"
+                                  >
+                                    4
+                                  </span>
                                 </span>
                               </span>
                               <span
@@ -306,7 +314,11 @@ exports[`<StepIndemnite /> should render 1`] = `
                                 <span
                                   class="mord"
                                 >
-                                  1
+                                  <span
+                                    class="mord"
+                                  >
+                                    1
+                                  </span>
                                 </span>
                               </span>
                             </span>

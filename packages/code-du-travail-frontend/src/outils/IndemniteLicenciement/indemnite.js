@@ -72,26 +72,26 @@ function getIndemnite({
   if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 5) * salaireRef * anciennete;
-      formula = `\\frac15 \\times Sref \\times A`;
+      formula = `1 / 5 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 5) * salaireRef * anciennete +
         (2 / 15) * salaireRef * (anciennete - 10);
-      formula = `(\\frac15  \\times Sref \\times 10) + (\\frac25 \\times Sref \\times "A2")`;
+      formula = `(1 / 5  * Sref * 10) + (2 / 5 * Sref * "A2")`;
     }
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 4) * salaireRef * anciennete;
-      formula = `\\frac14 \\times Sref \\times A`;
+      formula = `1 / 4 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
-      formula = `(\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")`;
+      formula = `(1 / 4 * Sref * 10) + (1 / 3 * Sref * "A2")`;
     }
   }
   if (inaptitude && indemniteLegale > 0) {
     indemniteLegale *= 2;
-    formula += " \\times 2";
+    formula += " * 2";
   }
 
   return {

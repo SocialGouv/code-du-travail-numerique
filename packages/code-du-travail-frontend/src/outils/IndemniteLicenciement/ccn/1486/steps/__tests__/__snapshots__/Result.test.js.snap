@@ -304,12 +304,16 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                               (
                             </mo>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
-                              <mn>
-                                4
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  4
+                                </mn>
+                              </mrow>
                             </mfrac>
                             <mo>
                               ×
@@ -345,12 +349,16 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                               (
                             </mo>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
-                              <mn>
-                                3
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  3
+                                </mn>
+                              </mrow>
                             </mfrac>
                             <mo>
                               ×
@@ -393,7 +401,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")
+                            (\\frac{1}{4} \\times Sref \\times 10) + (\\frac{1}{3} \\times Sref \\times "A2")
                           </annotation>
                         </semantics>
                       </math>
@@ -447,7 +455,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      4
+                                      <span
+                                        class="mord"
+                                      >
+                                        4
+                                      </span>
                                     </span>
                                   </span>
                                   <span
@@ -483,7 +495,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>
@@ -618,7 +634,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      3
+                                      <span
+                                        class="mord"
+                                      >
+                                        3
+                                      </span>
                                     </span>
                                   </span>
                                   <span
@@ -654,7 +674,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>
@@ -1302,12 +1326,16 @@ exports[`<Result /> renders legal indemnite 1`] = `
                               (
                             </mo>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
-                              <mn>
-                                4
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  4
+                                </mn>
+                              </mrow>
                             </mfrac>
                             <mo>
                               ×
@@ -1343,12 +1371,16 @@ exports[`<Result /> renders legal indemnite 1`] = `
                               (
                             </mo>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
-                              <mn>
-                                3
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  3
+                                </mn>
+                              </mrow>
                             </mfrac>
                             <mo>
                               ×
@@ -1391,7 +1423,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            (\\frac14 \\times Sref \\times 10) + (\\frac13 \\times Sref \\times "A2")
+                            (\\frac{1}{4} \\times Sref \\times 10) + (\\frac{1}{3} \\times Sref \\times "A2")
                           </annotation>
                         </semantics>
                       </math>
@@ -1445,7 +1477,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      4
+                                      <span
+                                        class="mord"
+                                      >
+                                        4
+                                      </span>
                                     </span>
                                   </span>
                                   <span
@@ -1481,7 +1517,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>
@@ -1616,7 +1656,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      3
+                                      <span
+                                        class="mord"
+                                      >
+                                        3
+                                      </span>
                                     </span>
                                   </span>
                                   <span
@@ -1652,7 +1696,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>

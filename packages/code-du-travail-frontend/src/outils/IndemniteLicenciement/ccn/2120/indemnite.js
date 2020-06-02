@@ -93,18 +93,18 @@ function getIndemnite({
     if (nbSemestreAvant2002 > 0) {
       indemniteConventionnelle =
         (1 / 2) * (13 / 14.5) * salaireRef * nbSemestreAvant2002;
-      formula = `\\frac12 \\times \\frac{13}{14.5} \\times Sref \\times S1 + `;
+      formula = `1 / 2 * 13 /14.5  * Sref * S1 + `;
     }
 
     indemniteConventionnelle += (1 / 5) * salaireRef * nbSemestreApres2002;
-    formula += `\\frac15 \\times Sref \\times S2`;
+    formula += `1 / 5 * Sref * S2`;
   } else if (motif === ECONOMIQUE) {
     if (nbSemestreAvant2002 > 0) {
       indemniteConventionnelle = (1 / 2) * salaireRef * nbSemestreAvant2002;
-      formula = `\\frac12 \\times Sref \\times S1 + `;
+      formula = `1 / 2 * Sref * S1 + `;
     }
     indemniteConventionnelle += (1 / 4) * salaireRef * nbSemestreApres2002;
-    formula += `\\frac14 \\times Sref \\times S2`;
+    formula += `1 / 4 * Sref * S2`;
   }
 
   const isEmbaucheAfter1999 = isAfter(dEntree, new Date("1999-12-31"));
@@ -121,7 +121,7 @@ function getIndemnite({
       plafond[categorie] * (13 / 14.5) * salaireRef
     ) {
       indemniteConventionnelle = plafond[categorie] * (13 / 14.5) * salaireRef;
-      formula = `${plafond[categorie]} \\times \\frac{13}{14.5} \\times Sref)`;
+      formula = `${plafond[categorie]} * 13 / 14.5 * Sref)`;
     }
   } else {
     const plafond = {
@@ -131,7 +131,7 @@ function getIndemnite({
 
     if (indemniteConventionnelle > plafond[motif] * salaireRef) {
       indemniteConventionnelle = plafond[motif] * salaireRef;
-      formula = `${plafond[motif]} \\times Sref)`;
+      formula = `${plafond[motif]} * Sref)`;
     }
   }
 

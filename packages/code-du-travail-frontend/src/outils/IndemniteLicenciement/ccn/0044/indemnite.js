@@ -55,7 +55,7 @@ export function getIndemnite({
     // le salarié a plus de 2ans d'anciennté
     else if (anneeAncienete >= 2) {
       indemniteConventionnelle = (3 / 10) * salaireRef * anciennete;
-      formula = `\\frac3{10} \\times Sref \\times "ancienneté" `;
+      formula = `3 / 10 * Sref * "ancienneté" `;
     }
     // Pour les salarié avec plus de 5ans d'ancienneté
     if (anneeAncienete >= 5) {
@@ -65,19 +65,19 @@ export function getIndemnite({
         formula += ` + Sref`;
         if (isEco && hasOpe) {
           indemniteConventionnelle += salaireRef;
-          formula += ` \\times 2`;
+          formula += ` * 2`;
         }
       }
       // le salarié a plus de 55ans
       else if (age >= 55) {
         indemniteConventionnelle += salaireRef * 2;
-        formula += ` + Sref \\times 2`;
+        formula += ` + Sref * 2`;
       }
     }
     // l'indemnité ne peut exéder 14mois de salaire
     if (indemniteConventionnelle > salaireRef * 14) {
       indemniteConventionnelle = salaireRef * 14;
-      formula = `Sref \\times 14`;
+      formula = `Sref * 14`;
     }
   }
   // le salarié appartient au groupe IV
@@ -94,17 +94,17 @@ export function getIndemnite({
     // le salarié a entre 2 et 10ans d'anciennté
     else if (anneeAncienete >= 2 && anneeAncienete < 10) {
       indemniteConventionnelle = (3 / 10) * salaireRef * anciennete;
-      formula = `\\frac3{10} \\times Sref \\times "ancienneté"`;
+      formula = `3 / 10 * Sref * "ancienneté"`;
     }
     // le salarié a entre 10 et 20ans d'anciennté
     else if (anneeAncienete >= 10 && anneeAncienete < 20) {
       indemniteConventionnelle = (4 / 10) * salaireRef * anciennete;
-      formula = `\\frac4{10} \\times Sref \\times "ancienneté"`;
+      formula = `4 / 10 * Sref * "ancienneté"`;
     }
     // le salarié a plus de 20ans d'anciennté
     else if (anneeAncienete >= 20) {
       indemniteConventionnelle = (5 / 10) * salaireRef * anciennete;
-      formula = `\\frac5{10} \\times  Sref \\times "ancienneté"`;
+      formula = `5 / 10 *  Sref * "ancienneté"`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
     if (anneeAncienete >= 5) {
@@ -114,19 +114,19 @@ export function getIndemnite({
         formula += `+ Sref`;
         if (hasOpe && isEco) {
           indemniteConventionnelle += salaireRef;
-          formula += `\\times 2`;
+          formula += `* 2`;
         }
       }
       // le salarié a entre 50 et 55ans
       else if (age >= 55) {
         indemniteConventionnelle += salaireRef * 2;
-        formula += `+ Sref \\times 2`;
+        formula += `+ Sref * 2`;
       }
     }
     // l'indemnité ne peut exéder 18mois de salaire
     if (indemniteConventionnelle > salaireRef * 18) {
       indemniteConventionnelle = salaireRef * 18;
-      formula = `Sref \\times 18`;
+      formula = `Sref * 18`;
     }
   }
   // le salarié appartient au groupe V
@@ -142,17 +142,17 @@ export function getIndemnite({
     // le salarié a entre 2 et 10ans d'anciennté
     else if (anneeAncienete >= 2 && anneeAncienete < 10) {
       indemniteConventionnelle = (4 / 10) * salaireRef * anciennete;
-      formula = `\\frac25 \\times Sref \\times "ancienneté"`;
+      formula = `2 / 5 * Sref * "ancienneté"`;
     }
     // le salarié a entre 10 et 15ans d'anciennté
     else if (anneeAncienete >= 10 && anneeAncienete < 15) {
       indemniteConventionnelle = (6 / 10) * salaireRef * anciennete;
-      formula = `\\frac35 \\times Sref \\times "ancienneté"`;
+      formula = `3 / 5 * Sref * "ancienneté"`;
     }
     // le salarié a plus de 15ans d'anciennté
     else if (anneeAncienete >= 15) {
       indemniteConventionnelle = (8 / 10) * salaireRef * anciennete;
-      formula = `\\frac45 \\times Sref \\times "ancienneté"`;
+      formula = `4 / 5 * Sref * "ancienneté"`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
     if (anneeAncienete > 6) {
@@ -162,18 +162,18 @@ export function getIndemnite({
         formula += ` + Sref`;
         if (hasOpe && isEco && age >= 50) {
           indemniteConventionnelle += salaireRef;
-          formula += `\\times 2`;
+          formula += `* 2`;
         }
       }
       // le salarié a plus de 55ans
       else if (age >= 55) {
         indemniteConventionnelle += salaireRef * 2;
-        formula += `Sref \\times 2`;
+        formula += `Sref * 2`;
       }
     }
     // l'indemnité ne peut exéder 20mois de salaire
     if (indemniteConventionnelle > salaireRef * 20) {
-      formula = `Sref \\times 20`;
+      formula = `Sref * 20`;
       indemniteConventionnelle = salaireRef * 20;
     }
   }
@@ -185,7 +185,7 @@ export function getIndemnite({
     indemniteConventionnelle < salaireRef * 2
   ) {
     indemniteConventionnelle = salaireRef * 2;
-    formula = `Sref \\times 2`;
+    formula = `Sref * 2`;
   }
 
   return {

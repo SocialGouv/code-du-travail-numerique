@@ -250,12 +250,16 @@ exports[`<Result /> should render 1`] = `
                         <semantics>
                           <mrow>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
-                              <mn>
-                                4
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  4
+                                </mn>
+                              </mrow>
                             </mfrac>
                             <mo>
                               ×
@@ -282,7 +286,7 @@ exports[`<Result /> should render 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            \\frac14 \\times Sref \\times A
+                            \\frac{1}{4} \\times Sref \\times A
                           </annotation>
                         </semantics>
                       </math>
@@ -331,7 +335,11 @@ exports[`<Result /> should render 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      4
+                                      <span
+                                        class="mord"
+                                      >
+                                        4
+                                      </span>
                                     </span>
                                   </span>
                                   <span
@@ -367,7 +375,11 @@ exports[`<Result /> should render 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>
@@ -569,9 +581,11 @@ exports[`<Result /> should render 1`] = `
                               (
                             </mo>
                             <mfrac>
-                              <mn>
-                                1
-                              </mn>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
                               <mrow>
                                 <mn>
                                   1
@@ -609,7 +623,7 @@ exports[`<Result /> should render 1`] = `
                           <annotation
                             encoding="application/x-tex"
                           >
-                            ( \\frac1{10} \\times Sref \\times 5 )
+                            ( \\frac{1}{10} \\times Sref \\times 5 )
                           </annotation>
                         </semantics>
                       </math>
@@ -708,7 +722,11 @@ exports[`<Result /> should render 1`] = `
                                     <span
                                       class="mord"
                                     >
-                                      1
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
                                     </span>
                                   </span>
                                 </span>

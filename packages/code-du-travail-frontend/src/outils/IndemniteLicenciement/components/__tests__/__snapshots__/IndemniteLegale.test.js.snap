@@ -116,7 +116,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
           class="c9"
         >
           <div>
-            KaTeX parse error: Expected 'EOF', got '%' at position 5: 1337%̲ * 3.14
+            KaTeX parse error: Expected 'EOF', got '%' at position 5: 1337%̲ \\times 3.14
           </div>
         </div>
       </div>

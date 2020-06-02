@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
-import MathFormula from "../../common/MathFormula";
+import { MathFormula } from "../../common/MathFormula";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
@@ -20,9 +20,9 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       </ListDetails>
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
-        <FormuleWrapper>
-          <MathFormula>{formula}</MathFormula>
-        </FormuleWrapper>
+        <FormulaWrapper>
+          <MathFormula formula={formula} />
+        </FormulaWrapper>
       </ErrorBoundary>
     </Details>
   );
@@ -61,6 +61,6 @@ const ItemDetails = styled.li`
   font-size: ${fonts.sizes.small};
 `;
 
-const FormuleWrapper = styled.div`
+const FormulaWrapper = styled.div`
   margin: ${spacings.base} 0;
 `;

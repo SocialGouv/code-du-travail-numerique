@@ -12,19 +12,19 @@ function getIndemnitePrecarite({
       const sommeSalaires = sum(salaires.map((s) => s.salaire));
       return {
         indemnite: round(rateValue * sommeSalaires),
-        formule: `${rateLabel} * somme(salaires)`,
+        formula: `${rateLabel} * somme(salaires)`,
         inputs: { "somme des salaires": sommeSalaires },
       };
     }
     case "total": {
       return {
         indemnite: round(rateValue * salaire),
-        formule: `${rateLabel} * "totalSalaires"`,
+        formula: `${rateLabel} * "totalSalaires"`,
         inputs: { "total des salaires": salaire },
       };
     }
     default:
-      return { indemnite: 0, formule: "", inputs: {} };
+      return { indemnite: 0, formula: "", inputs: {} };
   }
 }
 

@@ -2,7 +2,7 @@
 
 exports[`getIndemnite CEI 1`] = `
 Object {
-  "formula": "(C \\\\times Sref \\\\times A)",
+  "formula": "(C * Sref * A)",
   "labels": Object {
     "Ancienneté conventionnelle (A)": 13.08,
     "Coefficient d'indemnité conventionnel (C)": 0.2,
@@ -13,7 +13,7 @@ Object {
 
 exports[`getIndemnite CENI avec ajustement salaire 1`] = `
 Object {
-  "formula": "(C \\\\times Sref \\\\times A)",
+  "formula": "(C * Sref * A)",
   "labels": Object {
     "Ancienneté conventionnelle (A)": 13.08,
     "Coefficient d'indemnité conventionnel (C)": 0.25,
@@ -24,7 +24,7 @@ Object {
 
 exports[`getIndemnite ETAM avec contrats précédents 1`] = `
 Object {
-  "formula": "(C \\\\times Sref \\\\times A - I)",
+  "formula": "(C * Sref * A - I)",
   "labels": Object {
     "Ancienneté conventionnelle (A)": 14.08,
     "Coefficient d'indemnité conventionnel (C)": 0.25,
@@ -36,7 +36,7 @@ Object {
 
 exports[`getIndemnite ETAM avec contrats précédents et ajustement salaire 1`] = `
 Object {
-  "formula": "(C \\\\times Sref \\\\times A - I)",
+  "formula": "(C * Sref * A - I)",
   "labels": Object {
     "Ancienneté conventionnelle (A)": 14.08,
     "Coefficient d'indemnité conventionnel (C)": 0.25,
@@ -48,7 +48,7 @@ Object {
 
 exports[`getIndemnite IC sans contrats précédents 1`] = `
 Object {
-  "formula": "(C \\\\times Sref \\\\times A)",
+  "formula": "(C * Sref * A)",
   "labels": Object {
     "Ancienneté conventionnelle (A)": 13.08,
     "Coefficient d'indemnité conventionnel (C)": 0.33,
