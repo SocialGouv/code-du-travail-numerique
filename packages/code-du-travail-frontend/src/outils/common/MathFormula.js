@@ -7,7 +7,7 @@ import styled from "styled-components";
 export const asciiMathToTex = (ascii) => {
   // multiplications
   let tex = ascii.replace(/\*/g, `\\times`);
-  // Divisions
+  // divisions
   /* eslint-disable no-useless-escape */
   const parenthesisMatcher = `(\\(.+\\))`;
   const nonParenthesisMatcher = `([^()\\s]+)`;
