@@ -58,7 +58,7 @@ export function addGlossary(htmlContent) {
         const webComponent = conventionMatchers.includes(term)
           ? `<webcomponent-tooltip-cc>${term}</webcomponent-tooltip-cc>`
           : `<webcomponent-tooltip content="${encodeURI(
-              definition
+              definition.replace("<p>", "").replace("</p>", "")
             )}">${term}</webcomponent-tooltip>`;
 
         uuidToWebComponent.set(uuid, webComponent);

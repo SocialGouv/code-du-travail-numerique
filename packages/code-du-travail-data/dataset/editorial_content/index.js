@@ -8,7 +8,9 @@ const markdownAstToHtmlAst = require("remark-rehype");
 const markdownAstStringify = require("remark-stringify");
 const markdownAstStrip = require("strip-markdown");
 const unified = require("unified");
+
 const slugify = require("../../slugify");
+const { addGlossary } = require("../../indexing/addGlossary");
 const covidContents = require("./contents.json");
 
 const textProcessor = unified()
@@ -39,7 +41,7 @@ function transformContents(folder, data) {
       }
       return {
         text,
-        contents: contents.concat({ ...content, html }),
+        contents: contents.concat({ ...content, html: addGlossary(html) }),
       };
     },
     { text: "", contents: [] }
@@ -72,7 +74,7 @@ function getEditorialContents() {
         contents,
         folder,
         date,
-        intro: introHtml,
+        intro: addGlossary(introHtml),
         description,
         excludeFromSearch: false,
         references,

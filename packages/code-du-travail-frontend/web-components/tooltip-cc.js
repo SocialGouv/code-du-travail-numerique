@@ -1,9 +1,19 @@
 import { LitElement, html, css } from "lit-element";
-import { isOutOfViewport } from "./utils";
+import { v4 as uuidv4 } from "uuid";
+import { throttledDisplayInViewport } from "./utils";
 
 class WebComponentsTooltipCC extends LitElement {
-  get root() {
-    return this.shadowRoot || this;
+  static get properties() {
+    return {
+      id: { type: String },
+      visible: { type: Boolean },
+    };
+  }
+
+  constructor() {
+    super();
+    this.id = uuidv4();
+    this.visible = false;
   }
 
   static get styles() {
@@ -14,88 +24,89 @@ class WebComponentsTooltipCC extends LitElement {
 
       .tooltip {
         position: relative;
-        box-sizing: border-box;
-        width: auto;
-        height: auto;
-        color: rgb(62, 72, 110);
-        font-size: 16px;
-        font-family: "Open Sans", sans-serif;
-        line-height: 26px;
-        border-bottom-color: rgb(246, 102, 99);
+        border-bottom-color: #4d73b8;
+        border-bottom-color: var(--color-altText);
         border-bottom-width: 1px;
         border-bottom-style: dotted;
-        text-rendering: optimizelegibility;
-        text-size-adjust: 100%;
-        -webkit-font-smoothing: antialiased;
       }
 
       .tooltip .content {
         position: absolute;
-        top: 110%;
-        left: 50%;
         z-index: 1;
+        display: none;
+        box-sizing: border-box;
         width: 300px;
-        margin-left: -150px;
-        padding: 1em 1.5em;
+        padding: 1rem 1.6rem;
         color: #3e486e;
+        color: var(--color-paragraph);
         font-weight: normal;
         font-size: 1.6rem;
-        background: #e4e8ef;
-        border-radius: 0.8rem;
-        box-shadow: 0 1rem 2rem rgba(121, 148, 212, 0.2);
-        visibility: hidden;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.3s;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-decoration: underline;
+        background-color: #e4e8ef;
+        background-color: var(--color-bgTertiary);
+        border: 1px solid #bbcadf;
+        border: 1px solid var(--color-border);
+        border-radius: 0.6rem;
+        box-shadow: 0 1rem 2rem rgba(121, 148, 212, 0.4);
       }
 
-      .tooltip:hover .content {
-        visibility: visible;
-        opacity: 1;
+      @media (max-width: 600px) {
+        .tooltip .content {
+          font-size: 1.4rem;
+        }
+      }
+
+      .tooltip .content.visible {
+        display: block;
       }
     `;
   }
 
-  updatePosition() {
-    const thisRect = this.getBoundingClientRect();
-
-    const target = this.root.querySelector(".content");
-    const targetRect = target.getBoundingClientRect();
-
-    target.style.left =
-      -Math.round((targetRect.width - thisRect.width) / 2) + "px";
-
-    const isOut = isOutOfViewport(target);
-    if (isOut.left) {
-      target.style.left = "0px";
-      target.style.right = "auto";
-    }
-
-    if (isOut.right) {
-      target.style.right = "0px";
-      target.style.left = "auto";
-    }
-
-    if (isOut.bottom) {
-      target.style.top = -Math.round(targetRect.height) + "px";
-    }
-  }
-
   render() {
-    return html`<div tabindex="0" class="tooltip" aria-describedby="definition">
+    return html`<div
+      tabindex="0"
+      class="tooltip"
+      aria-describedby="definition-${this.id}"
+      @focus="${this.show}"
+      @pointerenter="${this.show}"
+      @pointerleave="${this.hide}"
+    >
       <slot></slot>
       <div
-        @click="${this.handleClick}"
-        class="content"
-        id="definition"
+        @blur="${this.hide}"
+        id="definition-${this.id}"
+        class="content${this.visible ? " visible" : ""}"
         role="tooltip"
+        aria-hidden="${!this.visible}"
       >
-        Cliquez pour rechercher votre convention collective
+        <a
+          href="/convention-collective"
+          @click="${this.showModal}"
+          @blur="${this.hide}"
+        >
+          Cliquez ici pour rechercher votre convention collective
+        </a>
       </div>
     </div>`;
   }
 
-  handleClick() {
+  show() {
+    const rootBoundaries = this.getBoundingClientRect();
+    const target = this.shadowRoot.querySelector(".content");
+    throttledDisplayInViewport(target, rootBoundaries);
+    this.visible = true;
+  }
+  hide() {
+    this.visible = false;
+    const target = this.shadowRoot.querySelector(".content");
+    target.style.display = "none";
+  }
+
+  showModal(evt) {
+    evt.preventDefault();
     this.dispatchEvent(
       new CustomEvent("tooltip-cc-event", {
         bubbles: true,

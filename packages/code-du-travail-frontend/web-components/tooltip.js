@@ -1,15 +1,20 @@
 import { LitElement, html, css } from "lit-element";
-import { isOutOfViewport } from "./utils";
+import { v4 as uuidv4 } from "uuid";
+import { throttledDisplayInViewport } from "./utils";
 
 class WebComponentsTooltip extends LitElement {
   static get properties() {
     return {
       content: { type: String },
+      id: { type: String },
+      visible: { type: Boolean },
     };
   }
 
-  get root() {
-    return this.shadowRoot || this;
+  constructor() {
+    super();
+    this.id = uuidv4();
+    this.visible = false;
   }
 
   static get styles() {
@@ -20,98 +25,79 @@ class WebComponentsTooltip extends LitElement {
 
       .tooltip {
         position: relative;
-        display: inline;
-        box-sizing: border-box;
-        width: fit-content;
-        height: auto;
-        color: rgb(62, 72, 110);
-        font-size: 16px;
-        font-family: "Open Sans", sans-serif;
-        line-height: 26px;
-        border-bottom-color: rgb(121, 148, 212);
+        border-bottom-color: #4d73b8;
+        border-bottom-color: var(--color-altText);
         border-bottom-width: 1px;
         border-bottom-style: dotted;
-        text-rendering: optimizelegibility;
-        text-size-adjust: 100%;
-        -webkit-font-smoothing: antialiased;
       }
 
       .tooltip .content {
         position: absolute;
         z-index: 1;
+        display: none;
+        box-sizing: border-box;
         width: 300px;
-        padding: 0em 1.5em;
+        padding: 1rem 1.6rem;
         color: #3e486e;
+        color: var(--color-paragraph);
         font-weight: normal;
         font-size: 1.6rem;
-        background: #e4e8ef;
-        border-radius: 0.8rem;
-        box-shadow: 0 1rem 2rem rgba(121, 148, 212, 0.2);
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        background-color: #e4e8ef;
+        background-color: var(--color-bgTertiary);
+        border: 1px solid #bbcadf;
+        border: 1px solid var(--color-border);
+        border-radius: 0.6rem;
+        box-shadow: 0 1rem 2rem rgba(121, 148, 212, 0.4);
       }
 
-      .tooltip:hover .content {
-        visibility: visible;
-        opacity: 1;
+      @media (max-width: 600px) {
+        .tooltip .content {
+          font-size: 1.4rem;
+        }
+      }
+
+      .tooltip .content.visible {
+        display: block;
       }
     `;
-  }
-
-  updatePosition() {
-    const thisRect = this.getBoundingClientRect();
-
-    const target = this.root.querySelector(".content");
-    const targetRect = target.getBoundingClientRect();
-
-    target.style.left =
-      -Math.round((targetRect.width - thisRect.width) / 2) + "px";
-
-    const isOut = isOutOfViewport(target);
-    if (isOut.left) {
-      target.style.left = "0px";
-      target.style.right = "auto";
-    }
-
-    if (isOut.right) {
-      target.style.right = "0px";
-      target.style.left = "auto";
-    }
-
-    if (isOut.bottom) {
-      target.style.top = -Math.round(targetRect.height) + "px";
-    }
   }
 
   render() {
     return html`<div
       tabindex="0"
       class="tooltip"
-      @mouseenter="${this.handleMouseEnter}"
-      @mouseleave="${this.handleMouseLeave}"
-      aria-describedby="definition"
+      aria-describedby="definition-${this.id}"
+      @focus="${this.show}"
+      @pointerenter="${this.show}"
+      @blur="${this.hide}"
+      @pointerleave="${this.hide}"
     >
       <slot></slot>
+      <div
+        id="definition-${this.id}"
+        class="content${this.visible ? " visible" : ""}"
+        role="tooltip"
+        aria-hidden="${!this.visible}"
+      >
+        ${decodeURI(this.content).trim()}
+      </div>
     </div>`;
   }
 
-  handleMouseEnter() {
-    const rootElement = this.root.querySelector(".tooltip");
-    var tooltipWrap = document.createElement("div");
-    tooltipWrap.id = "definition";
-    tooltipWrap.className = "content";
-    tooltipWrap.role = "tooltip";
-    tooltipWrap.innerHTML = decodeURI(this.content).trim();
-    rootElement.append(tooltipWrap);
-    this.updatePosition();
+  show() {
+    console.log(decodeURI(this.content).trim());
+    const rootBoundaries = this.getBoundingClientRect();
+    const target = this.shadowRoot.querySelector(".content");
+    throttledDisplayInViewport(target, rootBoundaries);
+    this.visible = true;
   }
-  handleMouseLeave() {
-    const rootElement = this.root.querySelector(".tooltip");
-    const [tooltipElement] = rootElement.parentNode.querySelectorAll(
-      ".content"
-    );
-    tooltipElement.remove();
+  hide() {
+    this.visible = false;
+    const target = this.shadowRoot.querySelector(".content");
+    target.style.display = "none";
   }
 }
 

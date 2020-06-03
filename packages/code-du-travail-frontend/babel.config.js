@@ -5,7 +5,7 @@ module.exports = {
       {
         "preset-env": {
           targets: {
-            browsers: ["last 5 version", "IE>=10"],
+            browsers: ["last 5 version", "IE>=11"],
           },
         },
       },
