@@ -46,3 +46,20 @@ __J +11 : Remise du rapport d’expertise.__
 
 __J +12 : dernière réunion et avis du CSE central. Fin de la consultation.__
 12 jours calendaires maximum après l’envoi des documents. 
+
+__*Exemple :*__ 
+
+*Consultation du CSE central avec recours à l’expert et informations complémentaires.* 
+ - *Lundi 8 juin 2020 (Jour J) : Envoi de l’ordre du jour et des informations.*
+ - *Jeudi 11 juin 2020 (J+3) : 1ère réunion du CSE central avec décision de recourir à l’expert.*
+ - *Vendredi 12 juin 2020 (J+4) : Demande d’informations par l’expert.*
+ - *Lundi 15 juin 2020 (J+5) : Réponse de l’employeur à la demande de l’expert.*
+ - *Lundi 15 juin 2020 (J+6) : Notification du coût prévisionnel de l’expertise.*
+ - *Vendredi 19 juin 2020 (J+11) : Remise du rapport de l’expert.*
+ - *Lundi 22 juin 2020 (J+12) : Dernière réunion et avis du CSE central. Fin de la consultation.*
+
+*Règle sur le calcul des délais exprimés en jours.*
+*Si le délai se termine un samedi, un dimanche ou un jour férié, le délai est prolongé jusqu’au 1er jour ouvrable suivant. 
+Exemples :* 
+  - *si le délai se termine le samedi 13 juin, le dernier jour sera le lundi suivant le 15 juin.* 
+  - *si le délai se termine le vendredi 8 mai (jour férié), le dernier jour sera le lundi suivant le 11 mai (samedi et dimanche ne comptant pas).*
