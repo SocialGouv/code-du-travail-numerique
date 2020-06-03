@@ -22,7 +22,7 @@ services:
       - FLASK_DEBUG=1
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.6.2
+    image: docker.elastic.co/kibana/kibana:7.7.1
     ports:
       - 5601:5601
     depends_on:
