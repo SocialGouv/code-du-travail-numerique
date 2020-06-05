@@ -108,7 +108,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c86 {
+.c85 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -116,11 +116,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #fff;
 }
 
-.c86 > *:first-child {
+.c85 > *:first-child {
   margin-top: 0;
 }
 
-.c86 > *:last-child {
+.c85 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -157,24 +157,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c81 {
-  position: relative;
-  z-index: 1;
-}
-
-.c85 {
-  position: relative;
-  z-index: 1;
+.c84 {
   border-top: 1px solid #bbcadf;
 }
 
-.c84 {
+.c83 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c82 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -191,14 +184,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: pointer;
 }
 
-.c82:hover,
-.c82:focus,
-.c82:focus-within,
-.c82[aria-expanded="true"] {
+.c81:hover,
+.c81:focus,
+.c81:focus-within,
+.c81[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c83 {
+.c82 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -260,12 +253,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   user-select: none;
 }
 
-.c90 {
+.c89 {
   position: relative;
   margin-top: 1.6rem;
 }
 
-.c90:after {
+.c89:after {
   position: absolute;
   bottom: -1.4rem;
   left: calc(50% + 8rem / 2);
@@ -386,7 +379,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c91 {
+.c90 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -400,7 +393,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: center;
 }
 
-.c91:before {
+.c90:before {
   position: absolute;
   top: -1.6rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -411,7 +404,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c91:after {
+.c90:after {
   position: absolute;
   top: 4rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -698,7 +691,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c109 {
+.c108 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -743,9 +736,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c109:focus,
-.c109:hover,
-.c109:active {
+.c108:focus,
+.c108:hover,
+.c108:active {
   color: #f66663;
 }
 
@@ -812,7 +805,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c88 {
+.c87 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -853,14 +846,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   overflow: visible;
 }
 
-.c88:focus,
-.c88:hover,
-.c88:active {
+.c87:focus,
+.c87:hover,
+.c87:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c98 {
+.c97 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -897,16 +890,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   opacity: 1;
 }
 
-.c98:link,
-.c98:visited {
+.c97:link,
+.c97:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c98:not([disabled]):hover,
-.c98:not([disabled]):active,
-.c98:not([disabled]):focus {
+.c97:not([disabled]):hover,
+.c97:not([disabled]):active,
+.c97:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -915,7 +908,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c98[disabled] {
+.c97[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -986,7 +979,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c89 {
+.c88 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -995,7 +988,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c9:hover .c89 {
+.c9:hover .c88 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -1110,7 +1103,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c104 {
+.c103 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -1157,7 +1150,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c95 {
+.c94 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -1205,7 +1198,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c96 {
+.c95 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1434,12 +1427,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-decoration-color: #2f3b6c;
 }
 
-.c92 {
+.c91 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c93 {
+.c92 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -1447,7 +1440,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c93:before {
+.c92:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -1459,13 +1452,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c94 {
+.c93 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c97 {
+.c96 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -1474,17 +1467,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c99 {
+.c98 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c100 {
+.c99 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c101 {
+.c100 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -1498,32 +1491,32 @@ exports[`<DroitDuTravail /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c103 + .c102 {
+.c102 + .c101 {
   padding-left: 1.6rem;
 }
 
-.c106 {
+.c105 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c105 {
+.c104 {
   font-size: 1.6rem;
 }
 
-.c107 {
+.c106 {
   margin: 0.4rem 0;
 }
 
-.c108 {
+.c107 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c110 {
+.c109 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1542,7 +1535,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c111 {
+.c110 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1550,7 +1543,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
-.c112 {
+.c111 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1611,7 +1604,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c87 {
+.c86 {
   margin: 1rem 0 0 0;
 }
 
@@ -1726,26 +1719,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c86 {
+  .c85 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c86 {
+  .c85 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c84 {
+  .c83 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c82 {
     font-size: 1.6rem;
   }
 }
@@ -1767,11 +1760,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c89 {
     margin-top: 0.4rem;
   }
 
-  .c90:after {
+  .c89:after {
     left: calc(50% + 4.6rem / 2);
   }
 }
@@ -1809,14 +1802,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c91:before {
+  .c90:before {
     top: -0.4rem;
     height: calc(0.4rem + 5rem);
   }
 
-  .c91,
-  .c91:before,
-  .c91:after {
+  .c90,
+  .c90:before,
+  .c90:after {
     left: calc(3rem / 2 - 0.3rem / 2);
   }
 }
@@ -1931,7 +1924,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c109 {
+  .c108 {
     font-size: 1.4rem;
   }
 }
@@ -1943,19 +1936,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c87 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c97 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c97 {
     padding: 0 3rem;
   }
 }
@@ -2024,7 +2017,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c104 {
+  .c103 {
     font-size: 1.6rem;
   }
 }
@@ -2064,7 +2057,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c95 {
+  .c94 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -2107,7 +2100,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c96 {
+  .c95 {
     font-size: 2.2rem;
   }
 }
@@ -2248,26 +2241,45 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c93 {
+  .c92 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c93 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c96 {
     padding: 0;
   }
 }
 
 @media print {
-  .c97 {
+  .c96 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c99 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c100 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c100 {
     max-width: 100%;
     padding: 0;
   }
@@ -2275,25 +2287,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 @media (max-width:600px) {
   .c100 {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c101 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c101 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c101 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2301,26 +2294,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c103 + .c102 {
+  .c102 + .c101 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c106 {
+  .c105 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c105 {
+  .c104 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c112 {
+  .c111 {
     display: none;
   }
 }
@@ -4201,7 +4194,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     >
                       <div>
                         <div
-                          class="c81"
+                          class=""
                           data-accordion-component="AccordionItem"
                           index="0"
                         >
@@ -4215,7 +4208,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               aria-controls="accordion__panel-11"
                               aria-disabled="false"
                               aria-expanded="false"
-                              class="c82"
+                              class="c81"
                               data-accordion-component="AccordionItemButton"
                               id="accordion__heading-11"
                               role="button"
@@ -4238,7 +4231,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 />
                               </svg>
                               <div
-                                class="c83"
+                                class="c82"
                               >
                                 Les conventions et accords collectifs doivent respecter le Code du travail
                               </div>
@@ -4247,7 +4240,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             aria-hidden="true"
                             aria-labelledby="accordion__heading-11"
-                            class="c84"
+                            class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-11"
@@ -4269,7 +4262,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div>
                         <div
-                          class="c85"
+                          class="c84"
                           data-accordion-component="AccordionItem"
                           index="1"
                         >
@@ -4283,7 +4276,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               aria-controls="accordion__panel-12"
                               aria-disabled="false"
                               aria-expanded="false"
-                              class="c82"
+                              class="c81"
                               data-accordion-component="AccordionItemButton"
                               id="accordion__heading-12"
                               role="button"
@@ -4306,7 +4299,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 />
                               </svg>
                               <div
-                                class="c83"
+                                class="c82"
                               >
                                 Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
                               </div>
@@ -4315,7 +4308,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             aria-hidden="true"
                             aria-labelledby="accordion__heading-12"
-                            class="c84"
+                            class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-12"
@@ -4347,7 +4340,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div>
                         <div
-                          class="c85"
+                          class="c84"
                           data-accordion-component="AccordionItem"
                           index="2"
                         >
@@ -4361,7 +4354,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               aria-controls="accordion__panel-13"
                               aria-disabled="false"
                               aria-expanded="false"
-                              class="c82"
+                              class="c81"
                               data-accordion-component="AccordionItemButton"
                               id="accordion__heading-13"
                               role="button"
@@ -4384,7 +4377,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 />
                               </svg>
                               <div
-                                class="c83"
+                                class="c82"
                               >
                                 En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
                               </div>
@@ -4393,7 +4386,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             aria-hidden="true"
                             aria-labelledby="accordion__heading-13"
-                            class="c84"
+                            class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-13"
@@ -4425,7 +4418,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c86"
+                      class="c85"
                     >
                       <div
                         class="c40"
@@ -4457,12 +4450,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             Attention à certaines règles du Code du travail
                           </h4>
                           <p
-                            class="c87"
+                            class="c86"
                           >
                             Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
                           </p>
                           <p
-                            class="c87"
+                            class="c86"
                           >
                             <i>
                               Exemple : la règle selon laquelle le Conseil des prud’hommes est le seul compétent pour les contentieux liés au travail.
@@ -4600,7 +4593,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention collective de branche. Cela signifie que même si l’accord d’entreprise prévoit des règles différentes, voire plus désavantageuses, que la convention collective de branche, ce sera lui qui s’appliqura au salarié et non la convention collective de branche.
                     </p>
                     <div
-                      class="c86"
+                      class="c85"
                     >
                       <div
                         class="c40"
@@ -4629,11 +4622,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           Ce principe ne s’applique pas dans
                            
                           <button
-                            class="c9 c88"
+                            class="c9 c87"
                           >
                             13 matières
                             <svg
-                              class="c89"
+                              class="c88"
                               fill="none"
                               viewBox="0 0 28 15"
                             >
@@ -4647,11 +4640,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           où la loi reconnaît la primauté à la convention collective de branche et
                            
                           <button
-                            class="c9 c88"
+                            class="c9 c87"
                           >
                             4 matières
                             <svg
-                              class="c89"
+                              class="c88"
                               fill="none"
                               viewBox="0 0 28 15"
                             >
@@ -4915,7 +4908,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c90"
+                class="c89"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -4935,7 +4928,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     tabindex="0"
                   >
                     <div
-                      class="c91"
+                      class="c90"
                     >
                       <div
                         class="c70"
@@ -5028,22 +5021,22 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c92"
+      class="c91"
     >
       <footer
-        class="c93"
+        class="c92"
       >
         <div
-          class="c27 c94"
+          class="c27 c93"
         >
           <div
             class="c28"
           >
             <header
-              class="c95"
+              class="c94"
             >
               <h3
-                class="c96"
+                class="c95"
               >
                 <div
                   class="c31"
@@ -5052,16 +5045,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </h3>
             </header>
             <div
-              class="c97"
+              class="c96"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c9 c98"
+              class="c9 c97"
             >
               Contacter nos services en région
               <svg
-                class="c99"
+                class="c98"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -5074,88 +5067,88 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c27 c100"
+          class="c27 c99"
         >
           <nav>
             <div
-              class="c101"
+              class="c100"
             >
               <div
-                class="c102 c103"
+                class="c101 c102"
               >
                 <h3
-                  class="c104 c105"
+                  class="c103 c104"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c106"
+                  class="sc-fznAgC c105"
                 >
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -5164,30 +5157,30 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c102 c103"
+                class="c101 c102"
               >
                 <h3
-                  class="c104 c105"
+                  class="c103 c104"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c106"
+                  class="sc-fznAgC c105"
                 >
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <button
-                      class="c9 c109"
+                      class="c9 c108"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5196,10 +5189,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5210,21 +5203,21 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c102 c103"
+                class="c101 c102"
               >
                 <h3
-                  class="c104 c105"
+                  class="c103 c104"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c106"
+                  class="sc-fznAgC c105"
                 >
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5233,10 +5226,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="https://incubateur.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5245,10 +5238,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c107"
+                    class="c106"
                   >
                     <a
-                      class="c108"
+                      class="c107"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -5262,10 +5255,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c110"
+          class="c109"
         >
           <a
-            class="c111"
+            class="c110"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5274,12 +5267,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c112"
+            class="c111"
           >
             |
           </span>
           <a
-            class="c111"
+            class="c110"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5288,12 +5281,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c112"
+            class="c111"
           >
             |
           </span>
           <a
-            class="c111"
+            class="c110"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5302,12 +5295,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c112"
+            class="c111"
           >
             |
           </span>
           <a
-            class="c111"
+            class="c110"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5316,12 +5309,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c112"
+            class="c111"
           >
             |
           </span>
           <a
-            class="c111"
+            class="c110"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -5330,12 +5323,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c112"
+            class="c111"
           >
             |
           </span>
           <a
-            class="c111"
+            class="c110"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

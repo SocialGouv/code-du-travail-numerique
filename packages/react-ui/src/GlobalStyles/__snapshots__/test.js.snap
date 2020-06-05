@@ -73,6 +73,7 @@ HTMLCollection [
     @media (max-width:600px){body{font-size:1.4rem;}}
     @media print{body{font-size:10pt;}}
     main{display:block;}
+    :root{--color-primary:#f66663;--color-secondary:#7994d4;--color-heroGradientStart:#d1dffd;--color-white:#fff;--color-bgPrimary:#fff;--color-bgSecondary:#f2f5fa;--color-bgTertiary:#e4e8ef;--color-border:#bbcadf;--color-title:#2f3b6c;--color-paragraph:#3e486e;--color-altText:#4d73b8;--color-placeholder:#9298af;--color-error:#eb5757;--color-validate:#7bd0ac;--color-primaryText:#fff;--color-secondaryText:#fff;}
   </style>,
 ]
 `;
