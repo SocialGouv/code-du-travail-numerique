@@ -88,7 +88,6 @@ class WebComponentsTooltip extends LitElement {
   }
 
   show() {
-    console.log(decodeURI(this.content).trim());
     const rootBoundaries = this.getBoundingClientRect();
     const target = this.shadowRoot.querySelector(".content");
     throttledDisplayInViewport(target, rootBoundaries);
