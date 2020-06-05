@@ -2755,10 +2755,10 @@
     eslint-plugin-jest "~23.13.2"
     eslint-plugin-prettier "~3.1.3"
 
-"@socialgouv/fiches-travail-data@^3.74.0":
-  version "3.74.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.74.0.tgz#9ccf873e9e821e1feb0f55fec7bb0308952c3144"
-  integrity sha512-6RaCtVTflcWMk5H4Jbp76TS/EqabuMC0o7ScD1M4sfCfRAjEXr7Bx0z5IHVs1wzq3TOSrDPKLgCHDiubTa5fVw==
+"@socialgouv/fiches-travail-data@^3.76.0":
+  version "3.76.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.76.0.tgz#43c9c51f5c9993b1d62e061553e01b1476a20dc2"
+  integrity sha512-273N5RlR4ecxCaBrCeqxsM5o25pBgZdbfaPT/Ko5v1e1oUZCgweets/6IFsr0Wd0qZUwi4sg7nWtJPos+FRX+w==
   dependencies:
     "@socialgouv/datafiller-data" "^1.24.0"
     "@socialgouv/legi-data" "^1.10.0"
@@ -2770,20 +2770,20 @@
     unist-util-find "^1.0.1"
     unist-util-visit "^2.0.2"
 
-"@socialgouv/fiches-vdd@^1.79.0":
-  version "1.79.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.79.0.tgz#cb491797963b72fa63cb51122a54f08456fc9d07"
-  integrity sha512-g/HLC6APxsAgPuO0di+GEf3aPSkLDeHhyNT2ZE/xJLPmGtl1IE9Y+LrfoHbico6dgnQ7V4MRUs7GWTMNQWO9xw==
+"@socialgouv/fiches-vdd@^1.81.0":
+  version "1.81.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.81.0.tgz#216e734931cfa46affb6ce8fa9292862c6b14854"
+  integrity sha512-XYoGDCDTJAduUYSS2b/MMZ5yLlHNF2RGqDsmtI+FqPt6yEmuJBDABN2pglElj8p8dmiguZRTSzkATdOozNG2nA==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.57.0":
-  version "1.57.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.57.0.tgz#6cfc168030f55f790c655cd366c4478e3dd574af"
-  integrity sha512-cxpu+3kXX+Y6W+Q/huYy2gl8bu3UiGf/ZG4sy2cYHRHcGIGbGzqFlWBkMsBxMv2QGHryOB3I9+JnYi+SpkkD/g==
+"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.59.0":
+  version "1.59.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.59.0.tgz#07d1618b7cca3b6382825013ae7f094df58f5411"
+  integrity sha512-i2rBsN8ouIniDvBPiljNNsgbsCD8KINq82u279aV50ZUPqKOpfsC1pDGQsXacDxk0CiV8pc5vSZdZBc6xaqYog==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"
