@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0...v4.23.0) (2020-06-05)
+
+
+### Bug Fixes
+
+* **chore:** no more wildcard ([#2798](https://github.com/SocialGouv/code-du-travail-numerique/issues/2798)) ([43b1a04](https://github.com/SocialGouv/code-du-travail-numerique/commit/43b1a046f00a2936c357797d410937095e30bd3d))
+* **mail:** update  docx file ([#2784](https://github.com/SocialGouv/code-du-travail-numerique/issues/2784)) ([b363d2e](https://github.com/SocialGouv/code-du-travail-numerique/commit/b363d2eafd5923de5c61792010ab5edcc147b5ed))
+* **widget:** fix size on ie ([#2787](https://github.com/SocialGouv/code-du-travail-numerique/issues/2787)) ([dea6a6a](https://github.com/SocialGouv/code-du-travail-numerique/commit/dea6a6a136eb8664243a14efb84f485eb5ba96d3))
+
+
+### Features
+
+* **data:** update covid 19 files ([#2802](https://github.com/SocialGouv/code-du-travail-numerique/issues/2802)) ([2b22945](https://github.com/SocialGouv/code-du-travail-numerique/commit/2b2294593aa65d5619a679dd15bc07fcdc2a5f94))
+* **widget:** improve small size ([#2804](https://github.com/SocialGouv/code-du-travail-numerique/issues/2804)) ([be45c49](https://github.com/SocialGouv/code-du-travail-numerique/commit/be45c49414b4a401ac1871e696a1b88a48127313))
+
+
+
+
+
 # [4.22.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0-alpha.0...v4.22.0) (2020-05-28)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
