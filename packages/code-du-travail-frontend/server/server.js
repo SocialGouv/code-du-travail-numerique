@@ -112,8 +112,12 @@ nextApp.prepare().then(() => {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
       if (!isProdUrl && !isHealthCheckUrl) {
+        const productionUrl = `https://${PROD_HOSTNAME}${ctx.originalUrl}`;
+        console.log(
+          `redirects ${ctx.host}${ctx.originalUrl} to production url ${productionUrl}`
+        );
         ctx.status = 301;
-        ctx.redirect(`https://${PROD_HOSTNAME}${ctx.originalUrl}`);
+        ctx.redirect(productionUrl);
         return;
       }
       await next();
@@ -130,7 +134,7 @@ nextApp.prepare().then(() => {
   });
 
   router.get("/robots.txt", async (ctx) => {
-    ctx.respond = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
+    ctx.body = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
   const DOCS_DIR = path.join(
