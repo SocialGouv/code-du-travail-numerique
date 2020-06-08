@@ -18,5 +18,6 @@ COPY --chown=worker:worker ./scripts ./scripts
 
 ENV PATH="/home/worker/.local/bin:${PATH}"
 ENV PYTHONPATH="."
+# ENV NLP_HOST=${NLP_HOST}
 
 ENTRYPOINT ["sh", "scripts/entrypoint.sh"]
