@@ -1,15 +1,18 @@
 import logging
+import os
+import requests
+from requests import RequestException
 import json
 import unicodedata
 import time
 from typing import List
-import tensorflow.compat.v2 as tf
-import tensorflow_hub as hub
-from tensorflow_text import SentencepieceTokenizer
 
 stops_path = "../data/stops.txt"
 
 logger = logging.getLogger("gunicorn.errror")
+
+tf_serve_host = os.environ['NLP_HOST']
+tf_serve_path = "v1/models/sentqam"
 
 
 def add_slash(c):
@@ -20,8 +23,8 @@ def add_slash(c):
 class SemSearch():
 
     def __init__(self, stops_path: str):
-        logger.info("Init Semsearch.. 🦀")
-        start = time.time()
+        self.logger = logging.getLogger("gunicorn.error")
+        self.logger.info("Init Semsearch.. 🦀")
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
@@ -30,15 +33,28 @@ class SemSearch():
         strp = self.__strip_accents
         self.stops = dict.fromkeys(map(strp, stops), "")
 
-        self.__load_graph()
-        logger.info("loading graph 🕸")
-        end = time.time()
-        logger.info("SemSearch ready in {} secondes ✅".format(end-start))
+        self.logger.info("Checking NLP service on " + tf_serve_host)
+        try:
+            r = requests.get(tf_serve_host+tf_serve_path)
 
-    def __load_graph(self):
-        module = hub.load(
-            'https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3')
-        self.model = module
+            if r.status_code != requests.codes.ok:
+                r.raise_for_status()
+            else:
+                self.logger.info("NLP service available")
+        except RequestException:
+            self.logger.error("Cannot access NLP endpoint")
+
+    def __call_nlp(self, payload):
+        full_path = tf_serve_host+tf_serve_path+":predict"
+        try:
+            r = requests.post(full_path,
+                              data=json.dumps(payload))
+            if r.status_code != requests.codes.ok:
+                r.raise_for_status()
+            else:
+                return json.loads(r.text)['outputs']
+        except RequestException:
+            self.logger.error("Cannot access NLP endpoint")
 
     def __strip_accents(self, s: str):
         return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
@@ -56,15 +72,9 @@ class SemSearch():
 
     def __embed_title_content_tensor(self, titles: List[str], contents: List[str]):
         cleaned_titles = [self.__preprocess_query(s) for s in titles]
-
-        tf_titles = tf.constant(cleaned_titles)
-        tf_contents = tf.constant(contents)
-
-        # map document title as Answer and document content as Context in the QA model
-        out = self.model.signatures['response_encoder'](
-            input=tf_titles, context=tf_contents)
-
-        return out["outputs"]
+        payload = {"signature_name": "response_encoder",
+                   "inputs": {"input": cleaned_titles, "context": contents}}
+        return self.__call_nlp(payload)
 
     def embed_title_content_batch(self, titles: List[str], contents: List[str]):
         embedding = self.__embed_title_content_tensor(titles, contents)
@@ -78,11 +88,8 @@ class SemSearch():
 
     def embed_query(self, query: str):
         query = self.__preprocess_query(query)
-        tf_query = tf.constant([query])
-        result = self.model.signatures['question_encoder'](
-            tf_query)['outputs'][0].numpy().tolist()
-
-        return(result)
+        payload = {"signature_name": "question_encoder", "inputs": [query]}
+        return self.__call_nlp(payload)[0]
 
 # _______________ utils to add api route
 

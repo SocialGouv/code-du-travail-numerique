@@ -14,7 +14,8 @@ def load_in_background(nlp, app, stops_path):
 
 def add_search(app, nlp, stops_path):
 
-    thread = threading.Thread(target=load_in_background, args=(nlp, app, stops_path))
+    thread = threading.Thread(
+        target=load_in_background, args=(nlp, app, stops_path))
     # thread.start()
     nlp.queue("search", thread)
 
