@@ -26,7 +26,8 @@ function fetchVector(data) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        titles: [data.title],
+        // TODO we should not allow empty titles here
+        titles: [data.title || ""],
         contexts: [data.text || ""],
       }),
     })
