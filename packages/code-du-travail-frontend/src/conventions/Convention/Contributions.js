@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { useUIDSeed } from "react-uid";
@@ -16,6 +16,7 @@ function getContributionUrl({ slug }) {
 }
 
 function Contributions({ contributions }) {
+  const openedContribPanel = useState([]);
   const UNTHEMED_LABEL = "Autres";
   // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
