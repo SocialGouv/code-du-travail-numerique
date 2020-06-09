@@ -1,4 +1,4 @@
-import * as fetch from "node-fetch";
+import fetch from "node-fetch";
 import semantic_stopwords from "../dataset/stop_words";
 
 // URL of the TF serve deployment
@@ -41,7 +41,7 @@ async function vectorizeDocument(title, content) {
     }
 
     const input = [preprocess(title)];
-    const context = content != "" ? [preprocess(content)] : "";
+    const context = content ? [preprocess(content)] : "";
 
     const body = JSON.stringify({
         signature_name: "response_encoder",
@@ -52,7 +52,7 @@ async function vectorizeDocument(title, content) {
 }
 
 async function vectorizeQuery(query) {
-    if (query == undefined || query == "") {
+    if (!query) {
         throw new Error("Cannot vectorize empty query.");
     }
 
