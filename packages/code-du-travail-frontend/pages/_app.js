@@ -18,8 +18,8 @@ import { A11y } from "../src/a11y";
 import "katex/dist/katex.min.css";
 
 // Get tooltips web-component
-import("../src/web-components/tooltip");
-import("../src/web-components/tooltip-cc");
+import "../src/web-components/tooltip";
+import "../src/web-components/tooltip-cc";
 
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
