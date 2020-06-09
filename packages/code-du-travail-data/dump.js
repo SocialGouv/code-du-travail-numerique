@@ -30,7 +30,7 @@ async function fetchVector(data) {
       })
       .catch((err) => {
         console.error(`error fetching ${data.title}`, err);
-        throw err;
+        return data;
       })
     : data;
 }

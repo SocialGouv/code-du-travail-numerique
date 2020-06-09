@@ -13,8 +13,6 @@ const MAX_RESULTS = 5;
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
-
 async function getRelatedItems({ title, settings, slug }) {
   const sources = [
     SOURCES.TOOLS,
@@ -26,15 +24,12 @@ async function getRelatedItems({ title, settings, slug }) {
   ];
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
-  logger.info(
-    `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
-      title.toLowerCase()
-    )}`
-  );
 
-  const query_vector = await vectorizeQuery(title).catch((error) => {
-    logger.error(error.message);
-  });
+  const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
+    (error) => {
+      logger.error(error.message);
+    }
+  );
 
   if (query_vector) {
     const semBody = getSemBody({
