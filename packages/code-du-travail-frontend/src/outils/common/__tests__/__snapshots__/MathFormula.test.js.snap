@@ -273,21 +273,3 @@ exports[`<MathFormula /> renders 1`] = `
   </div>
 </div>
 `;
-
-exports[`asciiMathToTex gives the correct TeX formula provided a correct ascii input 1`] = `
-"26 + \\\\frac{(this (is) weird)}{(45 (why not))} + 3
-
- \\\\frac{46.7}{65.2} \\\\times 6
-
-47 \\\\times \\\\frac{(this should be)}{okok}
-
-\\\\frac{(\\\\frac{1}{3})}{4} \\\\times 7 \\\\times 8
-
- \\\\frac{4}{(\\\\frac{1}{3})} \\\\times 10
-
-\\\\frac{6}{(sref)}
-
-\\\\frac{6}{3}
-
- no \\\\frac{no}{ok} ok ok "
-`;
