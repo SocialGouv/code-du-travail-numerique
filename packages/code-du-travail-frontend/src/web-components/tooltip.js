@@ -71,9 +71,9 @@ class WebComponentsTooltip extends LitElement {
       class="tooltip"
       aria-describedby="definition-${this.id}"
       @focus="${this.show}"
-      @pointerenter="${this.show}"
+      @mouseenter="${this.show}"
       @blur="${this.hide}"
-      @pointerleave="${this.hide}"
+      @mouseleave="${this.hide}"
     >
       <slot></slot>
       <div
@@ -88,9 +88,8 @@ class WebComponentsTooltip extends LitElement {
   }
 
   show() {
-    const rootBoundaries = this.getBoundingClientRect();
     const target = this.shadowRoot.querySelector(".content");
-    throttledDisplayInViewport(target, rootBoundaries);
+    throttledDisplayInViewport(target, this);
     this.visible = true;
   }
   hide() {

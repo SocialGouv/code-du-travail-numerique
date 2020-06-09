@@ -1,44 +1,30 @@
-export const displayInViewport = (target, rootBoundaries) => {
+export const displayInViewport = (target, root) => {
+  const rootBoundaries = root.getBoundingClientRect();
   const viewportHeight =
     window.innerHeight || document.documentElement.clientHeight;
   const viewportWidth =
     window.innerWidth || document.documentElement.clientWidth;
 
   target.style.display = "block";
-  target.style.top = rootBoundaries.height + "px";
+  target.style.top = root.offsetHeight + "px";
 
-  let targetBounding = target.getBoundingClientRect();
+  const leftShift = -Math.round((target.offsetWidth - root.offsetWidth) / 2);
 
-  target.style.left =
-    -Math.round((targetBounding.width - rootBoundaries.width) / 2) + "px";
+  target.style.left = leftShift + "px";
 
-  targetBounding = target.getBoundingClientRect();
-  // we are overflowing on the right
+  const targetBounding = target.getBoundingClientRect();
   if (targetBounding.right > viewportWidth) {
-    target.style.right = "0px";
-    target.style.left = "auto";
+    target.style.left =
+      leftShift - (targetBounding.right - viewportWidth) - 10 + "px";
   }
-  // we are overflowing on the left
   if (targetBounding.left < 0) {
-    target.style.left = "0px";
-    target.style.right = "auto";
+    target.style.left = leftShift - targetBounding.left + 10 + "px";
   }
-  // we are overflwing to the bottom
   if (targetBounding.bottom > viewportHeight) {
-    target.style.top = -Math.round(targetBounding.height) + "px"; // don't make it go below header
-  }
-  // second pass to make sure the first pass did not
-  // make the tooltip overflow on the opposite side :o
-  targetBounding = target.getBoundingClientRect();
-  if (targetBounding.left < 0) {
-    target.style.right = targetBounding.left - 10 + "px";
-  }
-  if (targetBounding.right > viewportWidth) {
-    target.style.left = viewportWidth - targetBounding.right - 10 + "px";
-  }
-  // don't make it go below header
-  if (target.getBoundingClientRect().top < 120) {
-    target.style.top = rootBoundaries.height + "px";
+    // don't make it go top if it's below header ~= 130 px at max on mobile
+    if (rootBoundaries.top - target.offsetHeight > 130) {
+      target.style.top = -Math.round(target.offsetHeight) + "px";
+    }
   }
 };
 
