@@ -20,25 +20,28 @@ const queue = new PQueue({ concurrency: 3 });
 
 function fetchVector(data) {
   return NLP_URL
-    ? fetch(`${NLP_URL}/api/search?q=${escape(data.title)}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data.text || ""),
+    ? fetch(`${NLP_URL}/api/index`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        titles: [data.title],
+        contexts: [data.text || ""],
+      }),
+    })
+      .then((res) => res.json())
+      .then((title_vector) => {
+        if (title_vector.message) {
+          throw new Error(`error fetching ${data.title}`);
+        }
+        data.title_vector = title_vector[0];
+        return data;
       })
-        .then((res) => res.json())
-        .then((title_vector) => {
-          if (title_vector.message) {
-            throw new Error(`error fetching ${data.title}`);
-          }
-          data.title_vector = title_vector;
-          return data;
-        })
-        .catch((err) => {
-          console.error(`error fetching ${data.title}`, err);
-          throw err;
-        })
+      .catch((err) => {
+        console.error(`error fetching ${data.title}`, err);
+        throw err;
+      })
     : data;
 }
 
