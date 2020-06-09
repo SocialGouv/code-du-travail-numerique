@@ -4,7 +4,10 @@ const withTranspileModule = require("next-transpile-modules")([
   "@cdt/sources",
   "@cdt/data",
   "@socialgouv/fiches-travail-data",
+  "lit-element",
+  "lit-html",
   "parse5",
+  "p-debounce",
   "is-plain-obj",
 ]);
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -21,30 +24,8 @@ const withTM = function (config) {
 const compose = (...fns) => (args) =>
   fns.reduceRight((arg, fn) => fn(arg), args);
 
-const internalNodeModulesRegExp = /(lit-element|lit-html|p-debounce)(?!.*node_modules)/;
-const externalNodeModulesRegExp = /node_modules(?!\/(lit-element|lit-html|p-debounce))/;
-
 const nextConfig = {
-  webpackDevMiddleware: (config) => {
-    config.watchOptions.ignored = [
-      ...config.watchOptions.ignored,
-      externalNodeModulesRegExp,
-    ];
-    return config;
-  },
-  // compile local modules through babel
-  webpack: (config, options) => {
-    config.resolve.symlinks = false;
-    config.externals = config.externals.map((external) => {
-      if (typeof external !== "function") return external;
-      return (ctx, req, cb) =>
-        internalNodeModulesRegExp.test(req) ? cb() : external(ctx, req, cb);
-    });
-    config.module.rules.push({
-      test: /\.+(js)$/,
-      loader: options.defaultLoaders.babel,
-      include: [internalNodeModulesRegExp],
-    });
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.test.js$/,
       loader: "ignore-loader",

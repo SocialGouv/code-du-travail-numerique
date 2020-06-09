@@ -71,12 +71,12 @@ class WebComponentsTooltipCC extends LitElement {
       class="tooltip"
       aria-describedby="definition-${this.id}"
       @focus="${this.show}"
-      @pointerenter="${this.show}"
-      @pointerleave="${this.hide}"
+      @mouseenter="${this.show}"
+      @blur="${this.hide}"
+      @mouseleave="${this.hide}"
     >
       <slot></slot>
       <div
-        @blur="${this.hide}"
         id="definition-${this.id}"
         class="content${this.visible ? " visible" : ""}"
         role="tooltip"
@@ -84,7 +84,7 @@ class WebComponentsTooltipCC extends LitElement {
       >
         <a
           href="/convention-collective"
-          @click="${this.showModal}"
+          @pointerdown="${this.showModal}"
           @blur="${this.hide}"
         >
           Cliquez ici pour rechercher votre convention collective
@@ -94,9 +94,8 @@ class WebComponentsTooltipCC extends LitElement {
   }
 
   show() {
-    const rootBoundaries = this.getBoundingClientRect();
     const target = this.shadowRoot.querySelector(".content");
-    throttledDisplayInViewport(target, rootBoundaries);
+    throttledDisplayInViewport(target, this);
     this.visible = true;
   }
   hide() {

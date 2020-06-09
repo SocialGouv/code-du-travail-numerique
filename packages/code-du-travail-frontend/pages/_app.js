@@ -17,9 +17,11 @@ import { A11y } from "../src/a11y";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
 
-// Get tooltips web-component
-import "../src/web-components/tooltip";
-import "../src/web-components/tooltip-cc";
+if (typeof window !== "undefined") {
+  // Get tooltips web-component
+  import("../src/web-components/tooltip");
+  import("../src/web-components/tooltip-cc");
+}
 
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
