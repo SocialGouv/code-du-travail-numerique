@@ -1,8 +1,8 @@
 const { SOURCES } = require("@cdt/sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const fetchWithTimeout = require("../../utils/fetchWithTimeout");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
@@ -31,9 +31,8 @@ async function getRelatedItems({ title, settings, slug }) {
       title.toLowerCase()
     )}`
   );
-  const query_vector = await fetchWithTimeout(
-    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`
-  ).catch((error) => {
+
+  const query_vector = await vectorizeQuery(title).catch((error) => {
     logger.error(error.message);
   });
 

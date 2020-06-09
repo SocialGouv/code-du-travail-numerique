@@ -1,6 +1,7 @@
 const Router = require("koa-router");
 const { SOURCES } = require("@cdt/sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -85,11 +86,11 @@ router.get("/search", async (ctx) => {
         query
       )}`
     );
-    const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
-    ).catch((error) => {
-      logger.error(error.message);
-    });
+    const query_vector = await vectorizeQuery(query.toLowercase()).catch(
+      (error) => {
+        logger.error(error.message);
+      }
+    );
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [

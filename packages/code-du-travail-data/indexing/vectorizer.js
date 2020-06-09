@@ -2,27 +2,27 @@ import * as fetch from "node-fetch";
 import semantic_stopwords from "../dataset/stop_words";
 
 // URL of the TF serve deployment
-const NLP_HOST = process.env.NLP_HOST || "http://localhost:8501/";
-const tfServeURL = NLP_HOST + "v1/models/sentqam:predict";
+const NLP_URL = process.env.NLP_URL || "http://localhost:8501/";
+const tfServeURL = NLP_URL + "v1/models/sentqam:predict";
 
 function stripAccents(text) {
     // strip accents
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-const stopWords = semantic_stopwords.map(stripAccents);
+const stopWords = new Set(semantic_stopwords.map(stripAccents));
 
 function preprocess(text) {
-    // remove stop words
     const stripped = stripAccents(text);
 
     // 09/06/20 : cheap tokenizer, we should probably use something more solid
     // keep it like this for now to ensure embedding stability despite refactoring
     const split = stripped.split(" ");
 
-    const noSW = split.filter((t) => !stopWords.includes(t.toLowerCase()));
+    // remove stop words
+    const noStopWords = split.filter((t) => !stopWords.has(t.toLowerCase()));
 
-    return noSW.join(" ");
+    return noStopWords.join(" ");
 }
 
 async function callTFServe(body) {
