@@ -55,12 +55,7 @@ fi
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
 
-export NLP_HOST="nlp-python";
-if [[ -f packages/code-du-travail-nlp/${CI_COMMIT_REF_SLUG}_USE_MASTER ]] && [[ "${BRANCH_NAME}" != "master" ]]; then
-  export NLP_HOST="${NLP_HOST}.cdtn-master.svc.cluster.local";
-fi
-
-export NLP_URL="http://${NLP_HOST}:${NLP_PORT}";
+export NLP_URL="https://limits-dev2-serving-ml.dev2.fabrique.social.gouv.fr";
 #
 
 if [[ -n "${PRODUCTION+x}" ]]; then
