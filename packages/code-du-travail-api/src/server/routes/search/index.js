@@ -83,7 +83,6 @@ router.get("/search", async (ctx) => {
         logger.error(error.message);
       }
     );
-    console.log(query_vector);
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
@@ -139,8 +138,6 @@ router.get("/search", async (ctx) => {
   if (!knownQueryResult) {
     const fulltextHits = extractHits(results[DOCUMENTS_ES]);
     const semanticHits = extractHits(results[DOCUMENTS_SEM]);
-
-    console.log(semanticHits);
 
     fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
     semanticHits.forEach((item) => (item._source.algo = "semantic"));
