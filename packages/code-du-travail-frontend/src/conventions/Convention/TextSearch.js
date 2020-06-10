@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styled from "styled-components";
 import {
   Button,
@@ -15,9 +14,8 @@ import { matopush } from "../../piwik";
 
 const { spacings } = theme;
 
-export function TextSearch({ containerId }) {
+export function TextSearch({ containerId, convention }) {
   const [query, setQuery] = useState("");
-  const router = useRouter();
   const formatQuery = useCallback(
     (e) => {
       setQuery(`"${e.target.value}"`);
@@ -25,8 +23,8 @@ export function TextSearch({ containerId }) {
     [setQuery]
   );
   const trackSearch = useCallback(() => {
-    matopush[("trackEvent", "pagecc_searchcc", router.asPath, query)];
-  }, [query, router.asPath]);
+    matopush[("trackEvent", "pagecc_searchcc", convention.shortTitle, query)];
+  }, [query, convention]);
   return (
     <>
       <Title

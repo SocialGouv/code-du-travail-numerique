@@ -12,6 +12,7 @@ import {
 } from "@socialgouv/react-ui";
 
 import { blocs as blocsLabels } from "./blocs.data";
+import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
@@ -19,10 +20,10 @@ function getArticleUrl({ id, containerId }) {
   return `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/?idConteneur=${containerId}`;
 }
 
-function Articles({ blocs, containerId }) {
+function Articles({ blocs, containerId, convention }) {
   const articlesByTheme = blocs.map(({ bloc, articles }) => {
     return {
-      id: `bloc-${bloc}`,
+      id: blocsLabels[bloc].label,
       title: blocsLabels[bloc].label,
       body: (
         <>
@@ -99,7 +100,13 @@ function Articles({ blocs, containerId }) {
           </p>
         </>
       </MoreContent>
-      <Accordion items={articlesByTheme} />
+      <Accordion
+        items={articlesByTheme}
+        onChange={trackAccordionPanelState(
+          convention.shortTitle,
+          "pagecc_clicktheme"
+        )}
+      />
     </React.Fragment>
   );
 }

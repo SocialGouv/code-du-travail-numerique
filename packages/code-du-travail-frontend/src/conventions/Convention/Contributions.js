@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { useUIDSeed } from "react-uid";
@@ -8,6 +8,7 @@ import { SOURCES, getRouteBySource } from "@cdt/sources";
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
 import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
+import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
@@ -15,8 +16,7 @@ function getContributionUrl({ slug }) {
   return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
 }
 
-function Contributions({ contributions }) {
-  const openedContribPanel = useState([]);
+function Contributions({ contributions, convention }) {
   const UNTHEMED_LABEL = "Autres";
   // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
@@ -42,19 +42,25 @@ function Contributions({ contributions }) {
       }
       return a.localeCompare(b);
     })
-    .map((theme) => ({
-      id: theme,
-      title: theme,
-      body: (
-        <Accordion
-          items={contributionsByTheme[theme].map((item) => ({
-            id: item.slug,
-            title: item.question,
-            body: AccordionContent(item),
-          }))}
-        />
-      ),
-    }));
+    .map((theme) => {
+      return {
+        id: theme,
+        title: theme,
+        body: (
+          <Accordion
+            items={contributionsByTheme[theme].map((item) => ({
+              id: item.slug,
+              title: item.question,
+              body: AccordionContent(item),
+            }))}
+            onChange={trackAccordionPanelState(
+              convention.shortTitle,
+              "pagecc_clickcontrib"
+            )}
+          />
+        ),
+      };
+    });
 
   return (
     <>
