@@ -15,6 +15,8 @@ import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { getVersions } from "./versions";
 
+import { addGlossary } from "./addGlossary";
+
 const getBreadcrumbs = createThemer(themes);
 
 function flattenTags(tags = []) {
@@ -205,6 +207,7 @@ async function* cdtnDocumentsGen() {
       const slug = slugify(title);
       fixReferences(answers.generic);
       answers.conventions.forEach(fixReferences);
+
       return {
         source: SOURCES.CONTRIBUTIONS,
         title,
@@ -214,7 +217,13 @@ async function* cdtnDocumentsGen() {
         ),
         description: (answers.generic && answers.generic.description) || title,
         text: (answers.generic && answers.generic.text) || title,
-        answers,
+        answers: {
+          ...answers,
+          generic: {
+            ...answers.generic,
+            markdown: addGlossary(answers.generic.markdown),
+          },
+        },
         excludeFromSearch: false,
       };
     }
@@ -273,7 +282,10 @@ async function* cdtnDocumentsGen() {
         `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
       ),
       // eslint-disable-next-line no-unused-vars
-      sections: sections.map(({ description, text, ...section }) => section),
+      sections: sections.map(({ description, text, ...section }) => ({
+        ...section,
+        html: addGlossary(section.html),
+      })),
     };
   });
   logger.info("=== page ccn ===");
@@ -281,6 +293,10 @@ async function* cdtnDocumentsGen() {
   yield ccnData.map(({ ...content }) => {
     return {
       ...content,
+      answers: content.answers.map((data) => ({
+        ...data,
+        answer: addGlossary(data.answer),
+      })),
       source: SOURCES.CCN_PAGE,
     };
   });

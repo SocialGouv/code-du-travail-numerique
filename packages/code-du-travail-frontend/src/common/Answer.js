@@ -3,12 +3,13 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
 
+import { ConventionModal } from "../../src/conventions/SearchModal";
 import Article from "./Article";
 import { Feedback } from "./Feedback";
 import { RelatedItems } from "./RelatedItems";
 import Html from "./Html";
 import { Breadcrumbs } from "./Breadcrumbs";
-// import useGlossary from "../glossary";
+
 import {
   AsideContent,
   MainAsideLayout,
@@ -37,11 +38,11 @@ function Answer({
   suptitle,
   title,
 }) {
-  // const glossaryItems = useGlossary(children, html);
   const router = useRouter();
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
+      <ConventionModal />
       <MainAsideLayout>
         <MainContent hasResults={relatedItems.length > 0} className={className}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
@@ -68,7 +69,7 @@ function Answer({
             </Article>
           )}
           {additionalContent}
-          {/* glossaryItems */}
+          {html && <Html>{html}</Html>}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}

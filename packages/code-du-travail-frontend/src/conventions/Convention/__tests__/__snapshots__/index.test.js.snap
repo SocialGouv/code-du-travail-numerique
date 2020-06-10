@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Convention /> renders 1`] = `
-.c11 {
+.c10 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -9,15 +9,15 @@ exports[`<Convention /> renders 1`] = `
   background-color: #fff;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9:not(:focus):not(:active) {
+.c8:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -29,7 +29,7 @@ exports[`<Convention /> renders 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c6 {
+.c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -43,31 +43,24 @@ exports[`<Convention /> renders 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c6,
-[aria-selected="true"] .c6 {
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c5 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c4 {
-  position: relative;
-  z-index: 1;
-}
-
-.c20 {
-  position: relative;
-  z-index: 1;
+.c19 {
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
+.c7 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,14 +77,14 @@ exports[`<Convention /> renders 1`] = `
   cursor: pointer;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:focus-within,
-.c5[aria-expanded="true"] {
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c6 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -100,22 +93,22 @@ exports[`<Convention /> renders 1`] = `
   line-height: 1.25;
 }
 
-.c22 {
+.c21 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
 }
 
-.c10 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c16 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -128,14 +121,14 @@ exports[`<Convention /> renders 1`] = `
   text-decoration: none;
 }
 
-.c19 {
+.c18 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c18 {
+.c17 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -149,13 +142,13 @@ exports[`<Convention /> renders 1`] = `
   transition: transform 250ms linear;
 }
 
-.c15:hover .c18 {
+.c14:hover .c17 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c44 {
+.c43 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -192,16 +185,16 @@ exports[`<Convention /> renders 1`] = `
   opacity: 1;
 }
 
-.c44:link,
-.c44:visited {
+.c43:link,
+.c43:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c44:not([disabled]):hover,
-.c44:not([disabled]):active,
-.c44:not([disabled]):focus {
+.c43:not([disabled]):hover,
+.c43:not([disabled]):active,
+.c43:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -210,7 +203,7 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c44[disabled] {
+.c43[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -218,13 +211,13 @@ exports[`<Convention /> renders 1`] = `
   cursor: not-allowed;
 }
 
-.c29 {
+.c28 {
   position: relative;
   overflow: visible;
 }
 
-.c29:before,
-.c29:after {
+.c28:before,
+.c28:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -239,19 +232,19 @@ exports[`<Convention /> renders 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c29:before {
+.c28:before {
   left: -2rem;
 }
 
-.c29:after {
+.c28:after {
   right: -2rem;
 }
 
-.c31 {
+.c30 {
   overflow-x: visible;
 }
 
-.c32 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -278,7 +271,7 @@ exports[`<Convention /> renders 1`] = `
   list-style-type: none;
 }
 
-.c33 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,13 +288,13 @@ exports[`<Convention /> renders 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c14 {
+.c13 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c47 {
+.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -316,7 +309,7 @@ exports[`<Convention /> renders 1`] = `
   justify-content: stretch;
 }
 
-.c48 {
+.c47 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -326,22 +319,22 @@ exports[`<Convention /> renders 1`] = `
   margin-right: 2rem;
 }
 
-.c48 svg {
+.c47 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c49 {
+.c48 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c23 {
+.c22 {
   margin-bottom: 2.4rem;
 }
 
-.c24 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,14 +351,14 @@ exports[`<Convention /> renders 1`] = `
   cursor: pointer;
 }
 
-.c24:hover,
-.c24:focus,
-.c24:focus-within,
-.c24[aria-expanded="true"] {
+.c23:hover,
+.c23:focus,
+.c23:focus-within,
+.c23[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c25 {
+.c24 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -381,26 +374,26 @@ exports[`<Convention /> renders 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c25,
-[aria-selected="true"] .c25 {
+[aria-expanded="true"] .c24,
+[aria-selected="true"] .c24 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c26 {
+.c25 {
   margin: 1rem 0 1rem 1rem;
 }
 
-.c28 > *:first-child {
+.c27 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
-.c27 {
+.c26 {
   padding: 1rem 0 0 3.2rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -419,7 +412,7 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c34 {
+.c33 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -460,9 +453,9 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c34:hover,
-.c34:active,
-.c34:focus {
+.c33:hover,
+.c33:active,
+.c33:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -470,17 +463,17 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-2px);
 }
 
-.c35 {
+.c34 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c36 {
+.c35 {
   padding-right: 1rem;
 }
 
-.c37 {
+.c36 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -492,19 +485,19 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c38 {
+.c37 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c41 {
+.c40 {
   position: relative;
   display: inline-block;
 }
 
-.c43 {
+.c42 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -526,15 +519,15 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c43::-webkit-outer-spin-button,
-.c43::-webkit-inner-spin-button {
+.c42::-webkit-outer-spin-button,
+.c42::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c43::-webkit-calendar-picker-indicator {
+.c42::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -547,43 +540,43 @@ exports[`<Convention /> renders 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c43:invalid {
+.c42:invalid {
   border-color: #eb5757;
 }
 
-.c43::-webkit-input-placeholder {
+.c42::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c43::-moz-placeholder {
+.c42::-moz-placeholder {
   color: #9298af;
 }
 
-.c43:-ms-input-placeholder {
+.c42:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c43::placeholder {
+.c42::placeholder {
   color: #9298af;
 }
 
-.c43:focus {
+.c42:focus {
   border-color: #7994d4;
 }
 
-.c43:focus::-webkit-input-placeholder {
+.c42:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c43:focus::-moz-placeholder {
+.c42:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c43:focus:-ms-input-placeholder {
+.c42:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c43:focus::placeholder {
+.c42:focus::placeholder {
   color: transparent;
 }
 
@@ -612,7 +605,7 @@ exports[`<Convention /> renders 1`] = `
   text-align: left;
 }
 
-.c40 {
+.c39 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -620,15 +613,15 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c42 {
+.c41 {
   width: 100%;
 }
 
-.c42 input {
+.c41 input {
   padding-right: 5rem;
 }
 
-.c45 {
+.c44 {
   position: absolute;
   top: 0;
   right: 0;
@@ -637,21 +630,21 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c39 {
+.c38 {
   margin-bottom: 2.4rem;
 }
 
-.c46 {
+.c45 {
   width: 3rem;
   height: 3rem;
 }
 
-.c17 {
+.c16 {
   padding: 0.8rem 0;
   font-weight: normal;
 }
 
-.c21 {
+.c20 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -661,55 +654,55 @@ exports[`<Convention /> renders 1`] = `
   padding-bottom: 0;
 }
 
-.c21 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c21 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c12 {
   margin-bottom: 2rem;
 }
 
-.c12 {
+.c11 {
   margin-bottom: 2.4rem;
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c10 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c10 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c21 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c17 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -720,38 +713,38 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c43 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c28 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c29:before,
-  .c29:after {
+  .c28:before,
+  .c28:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c30 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c29 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c31 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -762,18 +755,18 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c32 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c33:first-of-type {
+  .c32:first-of-type {
     margin-left: 2rem;
   }
 
-  .c33:last-of-type:after {
+  .c32:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -783,57 +776,57 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c33 {
+  .c32 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c33 {
+  .c32 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c32 {
     width: 80%;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c47 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c48 svg {
+  .c47 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c26 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c33 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c40 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c42 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -865,27 +858,27 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c20 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c20 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c20 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c12 {
     margin-bottom: 1.6rem;
   }
 }
@@ -916,7 +909,7 @@ exports[`<Convention /> renders 1`] = `
       id="Congés et repos"
     >
       <div
-        class="c4"
+        class=""
         data-accordion-component="AccordionItem"
         index="0"
       >
@@ -930,14 +923,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Congés et repos"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Congés et repos"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -953,7 +946,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Congés et repos
             </div>
@@ -962,18 +955,18 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Congés et repos"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Congés et repos"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Congés et repos
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
               class="accordion"
@@ -983,7 +976,7 @@ exports[`<Convention /> renders 1`] = `
                 id="jours-feries-et-ponts-dans-le-secteur-prive"
               >
                 <div
-                  class="c4"
+                  class=""
                   data-accordion-component="AccordionItem"
                   index="0"
                 >
@@ -997,14 +990,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1020,7 +1013,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Jours fériés et ponts dans le secteur privé
                       </div>
@@ -1029,18 +1022,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Jours fériés et ponts dans le secteur privé
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1060,25 +1053,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1088,7 +1081,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 5-11
                               </span>
@@ -1114,7 +1107,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="1"
                 >
@@ -1128,14 +1121,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1151,7 +1144,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
                       </div>
@@ -1160,18 +1153,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1230,25 +1223,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1258,7 +1251,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 6.121
                               </span>
@@ -1266,13 +1259,13 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1282,7 +1275,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 6.21
                               </span>
@@ -1308,7 +1301,7 @@ exports[`<Convention /> renders 1`] = `
                 id="les-conges-pour-evenements-familiaux"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="2"
                 >
@@ -1322,14 +1315,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-les-conges-pour-evenements-familiaux"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1345,7 +1338,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Les congés pour événements familiaux
                       </div>
@@ -1354,18 +1347,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Les congés pour événements familiaux
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1421,25 +1414,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1449,7 +1442,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article  5-12
                               </span>
@@ -1480,7 +1473,7 @@ exports[`<Convention /> renders 1`] = `
       id="Départ de l'entreprise"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="1"
       >
@@ -1494,14 +1487,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Départ de l'entreprise"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Départ de l'entreprise"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -1517,7 +1510,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Départ de l'entreprise
             </div>
@@ -1526,18 +1519,18 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Départ de l'entreprise"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Départ de l'entreprise"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Départ de l'entreprise
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
               class="accordion"
@@ -1547,7 +1540,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
               >
                 <div
-                  class="c4"
+                  class=""
                   data-accordion-component="AccordionItem"
                   index="0"
                 >
@@ -1561,14 +1554,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1584,7 +1577,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Quelle est la durée de préavis en cas de licenciement ?
                       </div>
@@ -1593,18 +1586,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Quelle est la durée de préavis en cas de licenciement ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1645,25 +1638,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1673,7 +1666,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.11
                               </span>
@@ -1681,13 +1674,13 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1697,7 +1690,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.13
                               </span>
@@ -1723,7 +1716,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelle-est-la-duree-du-preavis-en-cas-de-demission"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="1"
                 >
@@ -1737,14 +1730,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1760,7 +1753,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Quelle est la durée du préavis en cas de démission ?
                       </div>
@@ -1769,18 +1762,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Quelle est la durée du préavis en cas de démission ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1806,25 +1799,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1834,7 +1827,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.11
                               </span>
@@ -1860,7 +1853,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="2"
                 >
@@ -1874,14 +1867,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -1897,7 +1890,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Quelle est la durée de préavis en cas de départ à la retraite ?
                       </div>
@@ -1906,18 +1899,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Quelle est la durée de préavis en cas de départ à la retraite ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -1927,25 +1920,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1955,7 +1948,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                               </span>
@@ -1963,13 +1956,13 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -1979,7 +1972,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                               </span>
@@ -2005,7 +1998,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="3"
                 >
@@ -2019,14 +2012,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2042,7 +2035,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Quelle est la durée de préavis en cas de mise à la retraite ?
                       </div>
@@ -2051,18 +2044,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Quelle est la durée de préavis en cas de mise à la retraite ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2072,25 +2065,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2100,7 +2093,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                               </span>
@@ -2108,13 +2101,13 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2124,7 +2117,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
                               </span>
@@ -2150,7 +2143,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="4"
                 >
@@ -2164,14 +2157,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2187,7 +2180,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
                       </div>
@@ -2196,18 +2189,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2217,25 +2210,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2245,7 +2238,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.12
                               </span>
@@ -2271,7 +2264,7 @@ exports[`<Convention /> renders 1`] = `
                 id="le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="5"
                 >
@@ -2285,14 +2278,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2308,7 +2301,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
                       </div>
@@ -2317,18 +2310,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2379,25 +2372,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2407,7 +2400,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.2
                               </span>
@@ -2438,7 +2431,7 @@ exports[`<Convention /> renders 1`] = `
       id="Embauche et contrat de travail"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="2"
       >
@@ -2452,14 +2445,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Embauche et contrat de travail"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Embauche et contrat de travail"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -2475,7 +2468,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Embauche et contrat de travail
             </div>
@@ -2484,18 +2477,18 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Embauche et contrat de travail"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Embauche et contrat de travail"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Embauche et contrat de travail
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
               class="accordion"
@@ -2505,7 +2498,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
               >
                 <div
-                  class="c4"
+                  class=""
                   data-accordion-component="AccordionItem"
                   index="0"
                 >
@@ -2519,14 +2512,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2542,7 +2535,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
                       </div>
@@ -2551,18 +2544,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2580,25 +2573,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2608,7 +2601,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 2-4
                               </span>
@@ -2634,7 +2627,7 @@ exports[`<Convention /> renders 1`] = `
                 id="comment-determiner-lanciennete-du-salarie"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="1"
                 >
@@ -2648,14 +2641,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-comment-determiner-lanciennete-du-salarie"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2671,7 +2664,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Comment déterminer l'ancienneté du salarié ?
                       </div>
@@ -2680,18 +2673,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Comment déterminer l'ancienneté du salarié ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2753,25 +2746,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2781,7 +2774,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 10.4
                               </span>
@@ -2789,13 +2782,13 @@ exports[`<Convention /> renders 1`] = `
                           </li>
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2805,7 +2798,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 11-2
                               </span>
@@ -2831,7 +2824,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="2"
                 >
@@ -2845,14 +2838,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -2868,7 +2861,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
                       </div>
@@ -2877,18 +2870,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -2969,25 +2962,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -2997,7 +2990,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 2-3
                               </span>
@@ -3023,7 +3016,7 @@ exports[`<Convention /> renders 1`] = `
                 id="est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="3"
                 >
@@ -3037,14 +3030,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3060,7 +3053,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
                       </div>
@@ -3069,18 +3062,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3090,25 +3083,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -3118,7 +3111,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 2-3
                               </span>
@@ -3144,7 +3137,7 @@ exports[`<Convention /> renders 1`] = `
                 id="embauche-en-contrat-dextra-cdd-dusage"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="4"
                 >
@@ -3158,14 +3151,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3181,7 +3174,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                          Embauche en contrat d'extra (CDD d'usage)
                       </div>
@@ -3190,18 +3183,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                        Embauche en contrat d'extra (CDD d'usage)
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3237,7 +3230,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-sont-les-conditions-de-cumul-demplois"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="5"
                 >
@@ -3251,14 +3244,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3274,7 +3267,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelles sont les conditions de cumul d'emplois ?
                       </div>
@@ -3283,18 +3276,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelles sont les conditions de cumul d'emplois ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3304,25 +3297,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -3332,7 +3325,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 2-3
                               </span>
@@ -3363,7 +3356,7 @@ exports[`<Convention /> renders 1`] = `
       id="Salaire et Rémunération"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="3"
       >
@@ -3377,14 +3370,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Salaire et Rémunération"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Salaire et Rémunération"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -3400,7 +3393,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Salaire et Rémunération
             </div>
@@ -3409,18 +3402,18 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Salaire et Rémunération"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Salaire et Rémunération"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Salaire et Rémunération
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
               class="accordion"
@@ -3430,7 +3423,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
               >
                 <div
-                  class="c4"
+                  class=""
                   data-accordion-component="AccordionItem"
                   index="0"
                 >
@@ -3444,14 +3437,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3467,7 +3460,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
                       </div>
@@ -3476,18 +3469,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3514,7 +3507,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quelles-sont-les-primes-prevues-par-la-convention-collective"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="1"
                 >
@@ -3528,14 +3521,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3551,7 +3544,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quelles sont les primes prévues par la convention collective ?
                       </div>
@@ -3560,18 +3553,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quelles sont les primes prévues par la convention collective ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3605,25 +3598,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -3633,7 +3626,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 5-25
                               </span>
@@ -3659,7 +3652,7 @@ exports[`<Convention /> renders 1`] = `
                 id="quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="2"
                 >
@@ -3673,14 +3666,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3696,7 +3689,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
                       </div>
@@ -3705,18 +3698,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -3752,25 +3745,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -3780,7 +3773,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 5-24
                               </span>
@@ -3811,7 +3804,7 @@ exports[`<Convention /> renders 1`] = `
       id="Santé, sécurité et conditions de travail"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="4"
       >
@@ -3825,14 +3818,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Santé, sécurité et conditions de travail"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Santé, sécurité et conditions de travail"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -3848,7 +3841,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Santé, sécurité et conditions de travail
             </div>
@@ -3857,18 +3850,18 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Santé, sécurité et conditions de travail"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Santé, sécurité et conditions de travail"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Santé, sécurité et conditions de travail
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
               class="accordion"
@@ -3878,7 +3871,7 @@ exports[`<Convention /> renders 1`] = `
                 id="en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
               >
                 <div
-                  class="c4"
+                  class=""
                   data-accordion-component="AccordionItem"
                   index="0"
                 >
@@ -3892,14 +3885,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3915,7 +3908,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
                       </div>
@@ -3924,18 +3917,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -4198,7 +4191,7 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c21 c12"
+                        class="c20 c11"
                       >
                         <div
                           class="accordion"
@@ -4206,7 +4199,7 @@ exports[`<Convention /> renders 1`] = `
                         >
                           <div>
                             <div
-                              class="c4"
+                              class=""
                               data-accordion-component="AccordionItem"
                               index="0"
                             >
@@ -4220,14 +4213,14 @@ exports[`<Convention /> renders 1`] = `
                                   aria-controls="accordion__panel-24"
                                   aria-disabled="false"
                                   aria-expanded="false"
-                                  class="c5"
+                                  class="c4"
                                   data-accordion-component="AccordionItemButton"
                                   id="accordion__heading-24"
                                   role="button"
                                   tabindex="0"
                                 >
                                   <svg
-                                    class="c6"
+                                    class="c5"
                                     fill="none"
                                     height="24"
                                     stroke="currentColor"
@@ -4243,7 +4236,7 @@ exports[`<Convention /> renders 1`] = `
                                     />
                                   </svg>
                                   <div
-                                    class="c22"
+                                    class="c21"
                                   >
                                     Voir les références juridiques concernées
                                   </div>
@@ -4252,33 +4245,33 @@ exports[`<Convention /> renders 1`] = `
                               <div
                                 aria-hidden="true"
                                 aria-labelledby="accordion__heading-24"
-                                class="c8"
+                                class="c7"
                                 data-accordion-component="AccordionItemPanel"
                                 hidden=""
                                 id="accordion__panel-24"
                               >
                                 <div
-                                  class="c9"
+                                  class="c8"
                                 >
                                   <div>
                                     Voir les références juridiques concernées
                                   </div>
                                 </div>
                                 <div
-                                  class="c10"
+                                  class="c9"
                                 >
                                   <ul
-                                    class="c14"
+                                    class="c13"
                                   >
                                     <li>
                                       <a
-                                        class="c15 c16 c17"
+                                        class="c14 c15 c16"
                                         href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
                                         <svg
-                                          class="c18"
+                                          class="c17"
                                           fill="none"
                                           viewBox="0 0 28 15"
                                         >
@@ -4288,7 +4281,7 @@ exports[`<Convention /> renders 1`] = `
                                           />
                                         </svg>
                                         <span
-                                          class="c19"
+                                          class="c18"
                                         >
                                           IDCC 1596 - Article 6-11
                                         </span>
@@ -4296,13 +4289,13 @@ exports[`<Convention /> renders 1`] = `
                                     </li>
                                     <li>
                                       <a
-                                        class="c15 c16 c17"
+                                        class="c14 c15 c16"
                                         href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
                                         <svg
-                                          class="c18"
+                                          class="c17"
                                           fill="none"
                                           viewBox="0 0 28 15"
                                         >
@@ -4312,7 +4305,7 @@ exports[`<Convention /> renders 1`] = `
                                           />
                                         </svg>
                                         <span
-                                          class="c19"
+                                          class="c18"
                                         >
                                           IDCC 1596 - Article 6-12
                                         </span>
@@ -4320,13 +4313,13 @@ exports[`<Convention /> renders 1`] = `
                                     </li>
                                     <li>
                                       <a
-                                        class="c15 c16 c17"
+                                        class="c14 c15 c16"
                                         href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
                                         <svg
-                                          class="c18"
+                                          class="c17"
                                           fill="none"
                                           viewBox="0 0 28 15"
                                         >
@@ -4336,7 +4329,7 @@ exports[`<Convention /> renders 1`] = `
                                           />
                                         </svg>
                                         <span
-                                          class="c19"
+                                          class="c18"
                                         >
                                           IDCC 1596 - Article 6-13
                                         </span>
@@ -4344,13 +4337,13 @@ exports[`<Convention /> renders 1`] = `
                                     </li>
                                     <li>
                                       <a
-                                        class="c15 c16 c17"
+                                        class="c14 c15 c16"
                                         href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
                                         <svg
-                                          class="c18"
+                                          class="c17"
                                           fill="none"
                                           viewBox="0 0 28 15"
                                         >
@@ -4360,7 +4353,7 @@ exports[`<Convention /> renders 1`] = `
                                           />
                                         </svg>
                                         <span
-                                          class="c19"
+                                          class="c18"
                                         >
                                           IDCC 1596 - Article 6-14
                                         </span>
@@ -4368,13 +4361,13 @@ exports[`<Convention /> renders 1`] = `
                                     </li>
                                     <li>
                                       <a
-                                        class="c15 c16 c17"
+                                        class="c14 c15 c16"
                                         href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
                                         <svg
-                                          class="c18"
+                                          class="c17"
                                           fill="none"
                                           viewBox="0 0 28 15"
                                         >
@@ -4384,7 +4377,7 @@ exports[`<Convention /> renders 1`] = `
                                           />
                                         </svg>
                                         <span
-                                          class="c19"
+                                          class="c18"
                                         >
                                           IDCC 1596 - Article 6-15
                                         </span>
@@ -4415,7 +4408,7 @@ exports[`<Convention /> renders 1`] = `
                 id="en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
               >
                 <div
-                  class="c20"
+                  class="c19"
                   data-accordion-component="AccordionItem"
                   index="1"
                 >
@@ -4429,14 +4422,14 @@ exports[`<Convention /> renders 1`] = `
                       aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                       aria-disabled="false"
                       aria-expanded="false"
-                      class="c5"
+                      class="c4"
                       data-accordion-component="AccordionItemButton"
                       id="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                       role="button"
                       tabindex="0"
                     >
                       <svg
-                        class="c6"
+                        class="c5"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4452,7 +4445,7 @@ exports[`<Convention /> renders 1`] = `
                         />
                       </svg>
                       <div
-                        class="c7"
+                        class="c6"
                       >
                         En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
                       </div>
@@ -4461,18 +4454,18 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     aria-hidden="true"
                     aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                    class="c8"
+                    class="c7"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
                     <div
-                      class="c9"
+                      class="c8"
                     >
                       En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
                     </div>
                     <div
-                      class="c10"
+                      class="c9"
                     >
                       <div>
                         <p>
@@ -4513,25 +4506,25 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c12"
+                        class="c10 c11"
                       >
                         <div
-                          class="c13"
+                          class="c12"
                         >
                           Références juridiques concernées :
                         </div>
                         <ul
-                          class="c14"
+                          class="c13"
                         >
                           <li>
                             <a
-                              class="c15 c16 c17"
+                              class="c14 c15 c16"
                               href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
                               <svg
-                                class="c18"
+                                class="c17"
                                 fill="none"
                                 viewBox="0 0 28 15"
                               >
@@ -4541,7 +4534,7 @@ exports[`<Convention /> renders 1`] = `
                                 />
                               </svg>
                               <span
-                                class="c19"
+                                class="c18"
                               >
                                 IDCC 1596 - Article 6-11
                               </span>
@@ -4587,7 +4580,7 @@ exports[`<Convention /> renders 1`] = `
     </p>
   </header>
   <div
-    class="c23"
+    class="c22"
     data-accordion-component="Accordion"
   >
     <div
@@ -4604,14 +4597,14 @@ exports[`<Convention /> renders 1`] = `
           aria-controls="accordion__panel-26"
           aria-disabled="false"
           aria-expanded="false"
-          class="c24"
+          class="c23"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-26"
           role="button"
           tabindex="0"
         >
           <svg
-            class="c25"
+            class="c24"
             fill="none"
             viewBox="0 0 16 16"
           >
@@ -4623,7 +4616,7 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <div
-            class="c26"
+            class="c25"
           >
             En savoir plus
           </div>
@@ -4631,14 +4624,14 @@ exports[`<Convention /> renders 1`] = `
       </div>
       <div
         aria-labelledby="accordion__heading-26"
-        class="c27"
+        class="c26"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-26"
         role="region"
       >
         <div
-          class="c28"
+          class="c27"
         >
           <p>
             Les thèmes sélectionnés par le ministère du Travail sont les thèmes pour lesquels la convention collective s’applique à votre situation. Cela signifique que même s’il existe un accord d’entreprise sur ces thèmes, celui-ci ne peut prévoir de règles différentes de celles prévues par la convention collective.
@@ -4682,7 +4675,7 @@ exports[`<Convention /> renders 1`] = `
       id="Salaires minima hiérarchiques"
     >
       <div
-        class="c4"
+        class=""
         data-accordion-component="AccordionItem"
         index="0"
       >
@@ -4696,14 +4689,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Salaires minima hiérarchiques"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Salaires minima hiérarchiques"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -4719,7 +4712,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Salaires minima hiérarchiques
             </div>
@@ -4728,139 +4721,139 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Salaires minima hiérarchiques"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Salaires minima hiérarchiques"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Salaires minima hiérarchiques
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
-              class="c29 c30"
+              class="c28 c29"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 <ul
-                  class="c32"
+                  class="c31"
                 >
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 1-4
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Salaires minimaux
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 4-1
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Salaire mensuel
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 4-2
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Déduction des heures non travaillées
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-8
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Barèmes de salaires minimaux
                       </div>
@@ -4877,7 +4870,7 @@ exports[`<Convention /> renders 1`] = `
       id="Durée du travail, répartition et aménagement des horaires"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="1"
       >
@@ -4891,14 +4884,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Durée du travail, répartition et aménagement des horaires"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Durée du travail, répartition et aménagement des horaires"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -4914,7 +4907,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Durée du travail, répartition et aménagement des horaires
             </div>
@@ -4923,371 +4916,371 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Durée du travail, répartition et aménagement des horaires"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Durée du travail, répartition et aménagement des horaires"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Durée du travail, répartition et aménagement des horaires
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
-              class="c29 c30"
+              class="c28 c29"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 <ul
-                  class="c32"
+                  class="c31"
                 >
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-13
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-14
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Heures supplémentaires exceptionnelles
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-15
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Plafonds
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-16
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Définition de la durée du travail
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-17
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Majoration pour heures supplémentaires.
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-18
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Equivalences et dérogations permanentes
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-21
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Semaine de travail en 5 jours
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-22
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Exceptions à la semaine de travail en 5 jours
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-24
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Horaires individualisés
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-25
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Horaires à temps partiel
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-28
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Récupération des heures perdues pour intempéries
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 3-29
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Cas des chefs d'équipe
                       </div>
@@ -5304,7 +5297,7 @@ exports[`<Convention /> renders 1`] = `
       id="Classifications"
     >
       <div
-        class="c20"
+        class="c19"
         data-accordion-component="AccordionItem"
         index="2"
       >
@@ -5318,14 +5311,14 @@ exports[`<Convention /> renders 1`] = `
             aria-controls="accordion__panel-Classifications"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-Classifications"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -5341,7 +5334,7 @@ exports[`<Convention /> renders 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               Classifications
             </div>
@@ -5350,226 +5343,226 @@ exports[`<Convention /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-Classifications"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Classifications"
         >
           <div
-            class="c9"
+            class="c8"
           >
             Classifications
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <div
-              class="c29 c30"
+              class="c28 c29"
             >
               <div
-                class="c31"
+                class="c30"
               >
                 <ul
-                  class="c32"
+                  class="c31"
                 >
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-1
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Préambule
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-2
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Définitions générales des critères et des niveaux
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-3
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Coefficients hiérarchiques
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-4
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Prise en compte des diplômes professionnels bâtiment
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-5
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Polyvalence
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-6
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Evolution de carrière
                       </div>
                     </a>
                   </li>
                   <li
-                    class="c33"
+                    class="c32"
                   >
                     <a
-                      class="c34 no-after"
+                      class="c33 no-after"
                       href="https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c35"
+                        class="c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         >
                           <span
-                            class="sc-fzonjX c37"
+                            class="sc-fzonjX c36"
                           >
                             Article 12-7
                           </span>
                         </div>
                       </div>
                       <div
-                        class="c38"
+                        class="c37"
                       >
                         Suivi de l'application dans l'entreprise
                       </div>
@@ -5602,18 +5595,18 @@ exports[`<Convention /> renders 1`] = `
   </header>
   <form
     action="https://beta.legifrance.gouv.fr/search/kali#kali"
-    class="c39"
+    class="c38"
     target="_blank"
   >
     <div
-      class="c40"
+      class="c39"
     >
       <span
-        class="c41 c42"
+        class="c40 c41"
       >
         <input
           autocomplete="off"
-          class="c43"
+          class="c42"
           id="search-agreement"
           name="rawQuery"
           placeholder="Congés exceptionnels, prime"
@@ -5651,11 +5644,11 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
-        class="c44 c45"
+        class="c43 c44"
         type="submit"
       >
         <svg
-          class="c46"
+          class="c45"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -5668,10 +5661,10 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </form>
   <div
-    class="c47"
+    class="c46"
   >
     <div
-      class="c48"
+      class="c47"
     >
       <svg
         fill="none"
@@ -5689,7 +5682,7 @@ exports[`<Convention /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="c49"
+      class="c48"
     >
       Selon le thème, un accord collectif d’entreprise peut prévoir des règles différentes par rapport à la convention collective.
        

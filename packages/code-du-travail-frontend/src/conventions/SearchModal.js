@@ -1,11 +1,22 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Modal } from "@socialgouv/react-ui";
 
 import ConventionSearch from "./Search";
 
-export const ConventionModal = ({ children: renderProp }) => {
+export const ConventionModal = ({ children: renderProp = null }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
+
+  useEffect(function setupListener() {
+    function handleOpenModal() {
+      setModalVisibility(true);
+    }
+    window.addEventListener("tooltip-cc-event", handleOpenModal);
+
+    return function cleanupListener() {
+      window.removeEventListener("tooltip-cc-event", handleOpenModal);
+    };
+  });
 
   const openModal = useCallback((e) => {
     e.preventDefault();
@@ -18,7 +29,7 @@ export const ConventionModal = ({ children: renderProp }) => {
 
   return (
     <>
-      {renderProp(openModal)}
+      {renderProp && renderProp(openModal)}
       <Modal
         isOpen={isModalVisible}
         onDismiss={closeModal}
@@ -31,5 +42,5 @@ export const ConventionModal = ({ children: renderProp }) => {
 };
 
 ConventionModal.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.func,
 };

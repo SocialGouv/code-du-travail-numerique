@@ -4,7 +4,10 @@ const withTranspileModule = require("next-transpile-modules")([
   "@cdt/sources",
   "@cdt/data",
   "@socialgouv/fiches-travail-data",
+  "lit-element",
+  "lit-html",
   "parse5",
+  "p-debounce",
   "is-plain-obj",
 ]);
 const withBundleAnalyzer = require("@next/bundle-analyzer")({

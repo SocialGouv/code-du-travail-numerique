@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
-.c9:not(:focus):not(:active) {
+.c8:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -13,7 +13,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c6 {
+.c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -27,31 +27,24 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c6,
-[aria-selected="true"] .c6 {
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c5 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c4 {
-  position: relative;
-  z-index: 1;
-}
-
-.c11 {
-  position: relative;
-  z-index: 1;
+.c10 {
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
+.c7 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,14 +61,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   cursor: pointer;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:focus-within,
-.c5[aria-expanded="true"] {
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c6 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -84,11 +77,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   line-height: 1.25;
 }
 
-.c10 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -105,7 +98,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   transform: translateY(-50%);
 }
 
-.c12 {
+.c11 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -139,19 +132,19 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     font-size: 1.6rem;
   }
 }
@@ -197,7 +190,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   >
     <div>
       <div
-        class="c4"
+        class=""
         data-accordion-component="AccordionItem"
         index="0"
       >
@@ -211,14 +204,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-0"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-0"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -234,7 +227,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               titre 1
             </div>
@@ -243,13 +236,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-0"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-0"
         >
           <div
-            class="c9"
+            class="c8"
           >
             <header
               class="c0"
@@ -265,7 +258,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             </header>
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <p>
               paragraphe 1-1
@@ -279,7 +272,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div>
       <div
-        class="c11"
+        class="c10"
         data-accordion-component="AccordionItem"
         index="1"
       >
@@ -293,14 +286,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-1"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-1"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -316,7 +309,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               titre 2
             </div>
@@ -325,13 +318,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-1"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-1"
         >
           <div
-            class="c9"
+            class="c8"
           >
             <header
               class="c0"
@@ -347,7 +340,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             </header>
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <p>
               paragraphe 2-1
@@ -356,7 +349,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               paragraphe 2-2
             </p>
             <h3
-              class="c12"
+              class="c11"
             >
               titre 2-1
             </h3>
@@ -366,7 +359,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div>
       <div
-        class="c11"
+        class="c10"
         data-accordion-component="AccordionItem"
         index="2"
       >
@@ -380,14 +373,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             aria-controls="accordion__panel-2"
             aria-disabled="false"
             aria-expanded="false"
-            class="c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-2"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c6"
+              class="c5"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -403,7 +396,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
               />
             </svg>
             <div
-              class="c7"
+              class="c6"
             >
               titre 3
             </div>
@@ -412,13 +405,13 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-2"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-2"
         >
           <div
-            class="c9"
+            class="c8"
           >
             <header
               class="c0"
@@ -434,7 +427,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             </header>
           </div>
           <div
-            class="c10"
+            class="c9"
           >
             <p>
               paragraphe 3-1
@@ -451,7 +444,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
-.c7:not(:focus):not(:active) {
+.c6:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -463,7 +456,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c4 {
+.c3 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -477,31 +470,24 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c4 {
+[aria-expanded="true"] .c3,
+[aria-selected="true"] .c3 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c2 {
-  position: relative;
-  z-index: 1;
-}
-
-.c9 {
-  position: relative;
-  z-index: 1;
+.c8 {
   border-top: 1px solid #bbcadf;
 }
 
-.c6 {
+.c5 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -518,14 +504,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   cursor: pointer;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c2:hover,
+.c2:focus,
+.c2:focus-within,
+.c2[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c5 {
+.c4 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -534,11 +520,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   line-height: 1.25;
 }
 
-.c8 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -557,13 +543,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     font-size: 1.6rem;
   }
 }
@@ -589,7 +575,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   >
     <div>
       <div
-        class="c2"
+        class=""
         data-accordion-component="AccordionItem"
         index="0"
       >
@@ -603,14 +589,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-3"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c2"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-3"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c3"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -626,7 +612,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="c5"
+              class="c4"
             >
               titre 1
             </div>
@@ -635,13 +621,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-3"
-          class="c6"
+          class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-3"
         >
           <div
-            class="c7"
+            class="c6"
           >
             <h5
               class="c0"
@@ -650,7 +636,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             </h5>
           </div>
           <div
-            class="c8"
+            class="c7"
           >
             <p>
               paragraphe 1-1
@@ -664,7 +650,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div>
       <div
-        class="c9"
+        class="c8"
         data-accordion-component="AccordionItem"
         index="1"
       >
@@ -678,14 +664,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-4"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c2"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-4"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c3"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -701,7 +687,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="c5"
+              class="c4"
             >
               titre 2
             </div>
@@ -710,13 +696,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-4"
-          class="c6"
+          class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-4"
         >
           <div
-            class="c7"
+            class="c6"
           >
             <h5
               class="c0"
@@ -725,7 +711,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             </h5>
           </div>
           <div
-            class="c8"
+            class="c7"
           >
             <p>
               paragraphe 2-1
@@ -744,7 +730,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div>
       <div
-        class="c9"
+        class="c8"
         data-accordion-component="AccordionItem"
         index="2"
       >
@@ -758,14 +744,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             aria-controls="accordion__panel-5"
             aria-disabled="false"
             aria-expanded="false"
-            class="c3"
+            class="c2"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-5"
             role="button"
             tabindex="0"
           >
             <svg
-              class="c4"
+              class="c3"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -781,7 +767,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
               />
             </svg>
             <div
-              class="c5"
+              class="c4"
             >
               titre 3
             </div>
@@ -790,13 +776,13 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-5"
-          class="c6"
+          class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-5"
         >
           <div
-            class="c7"
+            class="c6"
           >
             <h5
               class="c0"
@@ -805,7 +791,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             </h5>
           </div>
           <div
-            class="c8"
+            class="c7"
           >
             <p>
               paragraphe 3-1

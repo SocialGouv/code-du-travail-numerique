@@ -92,7 +92,10 @@ const Information = ({
           {references.length > 0 && (
             <ReferencesJuridiques
               accordionDisplay={1}
-              references={references}
+              references={references.map((reference, index) => ({
+                ...reference,
+                id: reference.id || `${name}-${index}`,
+              }))}
             />
           )}
         </>

@@ -95,7 +95,7 @@ class SearchPage extends React.Component {
                         Consulter les thèmes
                       </StyledLink>
                     </Link>
-                    <ConventionModal key="convention-modal">
+                    <ConventionModal>
                       {(openModal) => (
                         <Button variant="flat" onClick={openModal}>
                           Chercher une convention collective
