@@ -2825,3 +2825,4 @@
 {"entity": "contrat de professionnalisation", "value": 51.44}
 {"entity": "coronavirus", "value": 80.00}
 {"entity": "covid 19", "value": 70.00}
+{"entity": "cong\u00e9s de deuil", "value": 15.00}
