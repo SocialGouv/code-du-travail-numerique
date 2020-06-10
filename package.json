@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "husky": "^4.2.5",
-    "lerna": "^3.22.0"
+    "lerna": "^3.22.1"
   },
   "resolutions": {
     "@babel/core": "^7.10.2",
