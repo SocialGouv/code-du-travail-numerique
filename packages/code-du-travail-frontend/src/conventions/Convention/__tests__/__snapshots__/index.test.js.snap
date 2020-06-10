@@ -4720,13 +4720,8 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-<<<<<<< HEAD
           aria-labelledby="accordion__heading-Salaires minima hiérarchiques"
-          class="c8"
-=======
-          aria-labelledby="accordion__heading-bloc-1"
           class="c7"
->>>>>>> update snaps
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Salaires minima hiérarchiques"
@@ -4920,13 +4915,8 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-<<<<<<< HEAD
           aria-labelledby="accordion__heading-Durée du travail, répartition et aménagement des horaires"
-          class="c8"
-=======
-          aria-labelledby="accordion__heading-bloc-6"
           class="c7"
->>>>>>> update snaps
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Durée du travail, répartition et aménagement des horaires"
@@ -5352,13 +5342,8 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-<<<<<<< HEAD
           aria-labelledby="accordion__heading-Classifications"
-          class="c8"
-=======
-          aria-labelledby="accordion__heading-bloc-2"
           class="c7"
->>>>>>> update snaps
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-Classifications"
