@@ -11,5 +11,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["babel-plugin-styled-components", "dynamic-import-node"],
+  plugins: ["babel-plugin-styled-components"],
 };

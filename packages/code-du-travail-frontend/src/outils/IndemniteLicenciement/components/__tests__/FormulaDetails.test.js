@@ -4,7 +4,7 @@ import { FormulaDetails } from "../FormulaDetails";
 
 describe("<FormulaDetails />", () => {
   it("should render", () => {
-    const formula = "1337% * 3.14";
+    const formula = `1 / 3 * 3.14\\%`;
     const labels = {
       "value 1": "foo",
       "Value 2": 1,

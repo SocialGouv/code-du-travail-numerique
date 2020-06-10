@@ -28,17 +28,17 @@ export function getIndemnite({ salaireRef, anciennete }) {
 
   if (trancheAnciennete.a10) {
     indemniteConventionnelle += (1 / 5) * salaireRef * trancheAnciennete.a10;
-    formula.push(`1/5 * Sref * ${trancheAnciennete.a10}`);
+    formula.push(`1 / 5 * Sref * ${trancheAnciennete.a10}`);
   }
 
   if (trancheAnciennete.a5) {
     indemniteConventionnelle += (1 / 6) * salaireRef * trancheAnciennete.a10;
-    formula.push(`1/6 * Sref * ${trancheAnciennete.a5}`);
+    formula.push(`1 / 6 * Sref * ${trancheAnciennete.a5}`);
   }
 
   if (trancheAnciennete.a2 > 2) {
     indemniteConventionnelle += (1 / 10) * salaireRef * trancheAnciennete.a2;
-    formula.push(`1/10 * Sref * ${trancheAnciennete.a2}`);
+    formula.push(`1 / 10 * Sref * ${trancheAnciennete.a2}`);
   } else {
     error =
       "Aucune indemnité de licenciement n’est prévue en deçà de 2 ans d'ancienneté.";

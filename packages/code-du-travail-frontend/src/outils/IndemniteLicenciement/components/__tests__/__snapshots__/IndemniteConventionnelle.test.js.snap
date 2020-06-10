@@ -45,17 +45,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -99,6 +88,17 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c8 {
@@ -299,7 +299,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                               f
                             </mi>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               A
@@ -308,7 +308,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           <annotation
                             encoding="application/x-tex"
                           >
-                            Sref * A
+                            Sref \\times A
                           </annotation>
                         </semantics>
                       </math>
@@ -358,7 +358,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"
@@ -488,7 +488,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                               7
                             </mn>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               S
@@ -503,7 +503,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                               f
                             </mi>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               f
@@ -518,7 +518,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           <annotation
                             encoding="application/x-tex"
                           >
-                            1337 * Sref * foo
+                            1337 \\times Sref \\times foo
                           </annotation>
                         </semantics>
                       </math>
@@ -565,7 +565,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"
@@ -601,7 +601,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"
@@ -641,17 +641,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
-.c13 {
-  margin: 1.6rem 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -695,6 +684,17 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   margin-left: 1.6rem;
   color: #4d73b8;
   font-size: 1.8rem;
+}
+
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c8 {
@@ -895,7 +895,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                               f
                             </mi>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               A
@@ -904,7 +904,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           <annotation
                             encoding="application/x-tex"
                           >
-                            Sref * A
+                            Sref \\times A
                           </annotation>
                         </semantics>
                       </math>
@@ -954,7 +954,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"
@@ -1084,7 +1084,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                               7
                             </mn>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               S
@@ -1099,7 +1099,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                               f
                             </mi>
                             <mo>
-                              ∗
+                              ×
                             </mo>
                             <mi>
                               f
@@ -1114,7 +1114,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           <annotation
                             encoding="application/x-tex"
                           >
-                            1337 * Sref * foo
+                            1337 \\times Sref \\times foo
                           </annotation>
                         </semantics>
                       </math>
@@ -1161,7 +1161,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"
@@ -1197,7 +1197,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         <span
                           class="mbin"
                         >
-                          ∗
+                          ×
                         </span>
                         <span
                           class="mord rule"

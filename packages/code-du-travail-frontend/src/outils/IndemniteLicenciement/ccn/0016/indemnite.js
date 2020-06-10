@@ -90,10 +90,10 @@ export function getIndemnite({
       // 4/10 * salaire de référence * ancienneté_cadres en années
       // + 3/10 * salaire de référence * ancienneté TAM et employé en années
       indemniteConventionnelle =
-        (4 / 10) * salaireRef * (cadreDuration / 12) +
+        (2 / 5) * salaireRef * (cadreDuration / 12) +
         (3 / 10) * salaireRef * (tamDuration / 12);
 
-      formula = `4/10 * Sref * Dc + 3/10 * Sref * Dt`;
+      formula = `2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt`;
     } else {
       // 2 <= ancienete < 3
       indemniteConventionnelle = indemnite;
