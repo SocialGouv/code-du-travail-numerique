@@ -72,7 +72,6 @@ export function addGlossary(htmlContent) {
             definition.replace("<p>", "").replace("</p>", "")
           )}">${term}</webcomponent-tooltip>`
         : `<webcomponent-tooltip-cc>${term}</webcomponent-tooltip-cc>`;
-
       idToWebComponent.set(id, webComponent);
       return match.replace(new RegExp(term), id);
     });
@@ -81,7 +80,11 @@ export function addGlossary(htmlContent) {
   // In the end, we replace the id with its related component
   let finalContent = idHtmlContent;
   idToWebComponent.forEach((webComponent, id) => {
-    finalContent = finalContent.replace(new RegExp(id, "g"), webComponent);
+    // make sure we don't match larger numbers
+    finalContent = finalContent.replace(
+      new RegExp(`${id}([^1-9])`, "g"),
+      `${webComponent}$1`
+    );
   });
 
   return finalContent;
