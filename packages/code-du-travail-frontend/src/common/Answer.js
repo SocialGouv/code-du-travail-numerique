@@ -42,7 +42,7 @@ function Answer({
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
-      <ConventionModal key="convention-modal" />
+      <ConventionModal />
       <MainAsideLayout>
         <MainContent hasResults={relatedItems.length > 0} className={className}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}

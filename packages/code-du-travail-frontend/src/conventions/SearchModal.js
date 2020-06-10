@@ -4,7 +4,7 @@ import { Modal } from "@socialgouv/react-ui";
 
 import ConventionSearch from "./Search";
 
-export const ConventionModal = ({ children: renderProp }) => {
+export const ConventionModal = ({ children: renderProp = null }) => {
   const [isModalVisible, setModalVisibility] = useState(false);
 
   useEffect(function setupListener() {
@@ -29,7 +29,7 @@ export const ConventionModal = ({ children: renderProp }) => {
 
   return (
     <>
-      {renderProp ? renderProp(openModal) : null}
+      {renderProp && renderProp(openModal)}
       <Modal
         isOpen={isModalVisible}
         onDismiss={closeModal}
