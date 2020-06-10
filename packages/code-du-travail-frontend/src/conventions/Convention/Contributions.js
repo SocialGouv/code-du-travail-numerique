@@ -42,25 +42,23 @@ function Contributions({ contributions, convention }) {
       }
       return a.localeCompare(b);
     })
-    .map((theme) => {
-      return {
-        id: theme,
-        title: theme,
-        body: (
-          <Accordion
-            items={contributionsByTheme[theme].map((item) => ({
-              id: item.slug,
-              title: item.question,
-              body: AccordionContent(item),
-            }))}
-            onChange={trackAccordionPanelState(
-              convention.shortTitle,
-              "pagecc_clickcontrib"
-            )}
-          />
-        ),
-      };
-    });
+    .map((theme) => ({
+      id: theme,
+      title: theme,
+      body: (
+        <Accordion
+          items={contributionsByTheme[theme].map((item) => ({
+            id: item.slug,
+            title: item.question,
+            body: AccordionContent(item),
+          }))}
+          onChange={trackAccordionPanelState(
+            convention.shortTitle,
+            "pagecc_clickcontrib"
+          )}
+        />
+      ),
+    }));
 
   return (
     <>

@@ -4679,7 +4679,7 @@ exports[`<Convention /> renders 1`] = `
     data-accordion-component="Accordion"
   >
     <div
-      id="bloc-1"
+      id="Salaires minima hiérarchiques"
     >
       <div
         class="c4"
@@ -4693,12 +4693,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-bloc-1"
+            aria-controls="accordion__panel-Salaires minima hiérarchiques"
             aria-disabled="false"
             aria-expanded="false"
             class="c5"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-bloc-1"
+            id="accordion__heading-Salaires minima hiérarchiques"
             role="button"
             tabindex="0"
           >
@@ -4727,11 +4727,11 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-bloc-1"
+          aria-labelledby="accordion__heading-Salaires minima hiérarchiques"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-bloc-1"
+          id="accordion__panel-Salaires minima hiérarchiques"
         >
           <div
             class="c9"
@@ -4874,7 +4874,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      id="bloc-6"
+      id="Durée du travail, répartition et aménagement des horaires"
     >
       <div
         class="c20"
@@ -4888,12 +4888,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-bloc-6"
+            aria-controls="accordion__panel-Durée du travail, répartition et aménagement des horaires"
             aria-disabled="false"
             aria-expanded="false"
             class="c5"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-bloc-6"
+            id="accordion__heading-Durée du travail, répartition et aménagement des horaires"
             role="button"
             tabindex="0"
           >
@@ -4922,11 +4922,11 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-bloc-6"
+          aria-labelledby="accordion__heading-Durée du travail, répartition et aménagement des horaires"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-bloc-6"
+          id="accordion__panel-Durée du travail, répartition et aménagement des horaires"
         >
           <div
             class="c9"
@@ -5301,7 +5301,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
     <div
-      id="bloc-2"
+      id="Classifications"
     >
       <div
         class="c20"
@@ -5315,12 +5315,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-bloc-2"
+            aria-controls="accordion__panel-Classifications"
             aria-disabled="false"
             aria-expanded="false"
             class="c5"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-bloc-2"
+            id="accordion__heading-Classifications"
             role="button"
             tabindex="0"
           >
@@ -5349,11 +5349,11 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-bloc-2"
+          aria-labelledby="accordion__heading-Classifications"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-bloc-2"
+          id="accordion__panel-Classifications"
         >
           <div
             class="c9"
