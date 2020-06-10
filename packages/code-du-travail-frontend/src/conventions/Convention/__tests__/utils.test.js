@@ -5,7 +5,7 @@ import { matopush } from "../../../piwik";
 matopush.mockImplementation();
 
 describe("trackAccordionPanelState", () => {
-  it("behaves properly", () => {
+  it("calls matopush only when a panel is opened", () => {
     const conventionName = "double ok";
     const eventName = "ok ok";
     const tracker = trackAccordionPanelState(conventionName, eventName);
