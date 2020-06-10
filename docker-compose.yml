@@ -16,13 +16,6 @@ services:
     depends_on:
       - elasticsearch
 
-  nlp_api:
-    restart: always
-    env_file:
-      - .env
-    ports:
-      - $NLP_PORT:$NLP_PORT
-
 volumes:
   esdata:
     driver: local
