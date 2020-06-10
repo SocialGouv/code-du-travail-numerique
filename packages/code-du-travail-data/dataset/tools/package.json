@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@cdt/sources": "^4.22.0",
-    "@socialgouv/datafiller-data": "^1.24.0"
+    "@socialgouv/datafiller-data": "^1.26.0"
   }
 }

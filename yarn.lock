@@ -2714,10 +2714,10 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.24.0.tgz#48ffed340c1d91c9e6658f3679a218995d70a306"
-  integrity sha512-rnCaQzve+lrb2ieulBzGg340H93+pVn4av5/sRylskRINEomrRSbz+/fBhuk25URhH3PW9vUqihjKBfK5ov3eA==
+"@socialgouv/datafiller-data@^1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.26.0.tgz#77d972fce83a95ec6a127859f2654129fec44288"
+  integrity sha512-LGWoaMMKWp0Dsij+4fWe8Vn7wEobGWQi82mpQ20K2rvloEkDOymTDbhbYAJ6xdAgPZccQwO7rcaTMyWkp6Fasw==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
@@ -2755,35 +2755,35 @@
     eslint-plugin-jest "~23.13.2"
     eslint-plugin-prettier "~3.1.3"
 
-"@socialgouv/fiches-travail-data@^3.76.0":
-  version "3.76.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.76.0.tgz#43c9c51f5c9993b1d62e061553e01b1476a20dc2"
-  integrity sha512-273N5RlR4ecxCaBrCeqxsM5o25pBgZdbfaPT/Ko5v1e1oUZCgweets/6IFsr0Wd0qZUwi4sg7nWtJPos+FRX+w==
+"@socialgouv/fiches-travail-data@^3.89.0":
+  version "3.89.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.89.0.tgz#83f3bee76667fc038a14edb1da7e8c09a01ea3f0"
+  integrity sha512-GEBAhoXuCdKAXiVbDJoTE2O6BDe+3nXp0KvJaVZ2znPHBeSe0Z6mZEVUUUc6pkJW9TBrOey5dURsUpX4bQNi2w==
   dependencies:
-    "@socialgouv/datafiller-data" "^1.24.0"
-    "@socialgouv/legi-data" "^1.10.0"
+    "@socialgouv/datafiller-data" "^1.26.0"
+    "@socialgouv/legi-data" "^1.12.0"
     esm "^3.2.25"
     jsdom "^16.2.2"
-    p-limit "^2.3.0"
+    p-limit "^3.0.1"
     superagent "^5.2.2"
     talisman "^1.1.2"
     unist-util-find "^1.0.1"
     unist-util-visit "^2.0.2"
 
-"@socialgouv/fiches-vdd@^1.81.0":
-  version "1.81.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.81.0.tgz#216e734931cfa46affb6ce8fa9292862c6b14854"
-  integrity sha512-XYoGDCDTJAduUYSS2b/MMZ5yLlHNF2RGqDsmtI+FqPt6yEmuJBDABN2pglElj8p8dmiguZRTSzkATdOozNG2nA==
+"@socialgouv/fiches-vdd@^1.87.0":
+  version "1.87.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.87.0.tgz#14924603c5948db137622cedf9b65b6b191c6bbb"
+  integrity sha512-AVQ+Hx/9f0ChLn8chUoVW94bS+qJS7EkWpBUMRnsEcYHyCLENb1TTLPuOPsnLpicpCgCBV9/iVX3C5j/rmyVew==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.59.0":
-  version "1.59.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.59.0.tgz#07d1618b7cca3b6382825013ae7f094df58f5411"
-  integrity sha512-i2rBsN8ouIniDvBPiljNNsgbsCD8KINq82u279aV50ZUPqKOpfsC1pDGQsXacDxk0CiV8pc5vSZdZBc6xaqYog==
+"@socialgouv/kali-data@^1.3.36", "@socialgouv/kali-data@^1.61.0":
+  version "1.61.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.61.0.tgz#239efb2cce4158d3e724ae67e24de1cb7c22a3ab"
+  integrity sha512-FTmefepihbsPOnUi/r1FVXzvL1CEU1KmBdD4vsj0CcoiiLiwfloUkb07o2eAART/VDzX+vyTEcllQ+wDcHZ6bg==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.0"
     p-pipe "^3.0.0"
@@ -2793,10 +2793,10 @@
     unist-util-map "^2.0.1"
     unist-util-remove "^2.0.0"
 
-"@socialgouv/legi-data@^1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.10.0.tgz#67ac344ea476960ba515e3f45a02c220d84e4fe2"
-  integrity sha512-138D9Xp4t1FgU3AHL7Ul7rSQZd0ctVOAo500y2ZnhAh9eXN2RamQPEqqxIGHfMQ8/Q4yIgiatasDu42+KjYMOw==
+"@socialgouv/legi-data@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.12.0.tgz#518336b63cdafc60a3c35a1cebf202e2dea853da"
+  integrity sha512-/Y7a2LWIYrlBwQgzjoqI1lrSewLbHwdc2247oDFH4ZUeX0Nipk9gg80SlXAzwvaRvRn2hcuvOQodMRbc71NacA==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.1"
     debug "^4.1.1"
@@ -13857,6 +13857,13 @@ p-limit@^2.0.0, p-limit@^2.2.0, p-limit@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
+  dependencies:
+    p-try "^2.0.0"
+
+p-limit@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.0.1.tgz#584784ac0722d1aed09f19f90ed2999af6ce2839"
+  integrity sha512-mw/p92EyOzl2MhauKodw54Rx5ZK4624rNfgNaBguFZkHzyUG9WsDzFF5/yQVEJinbJDdP4jEfMN+uBquiGnaLg==
   dependencies:
     p-try "^2.0.0"
 
