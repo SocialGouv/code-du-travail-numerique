@@ -2,6 +2,8 @@ import { LitElement, html, css } from "lit-element";
 import { v4 as uuidv4 } from "uuid";
 import { throttledDisplayInViewport } from "./utils";
 
+import { matopush } from "../piwik";
+
 class WebComponentsTooltipCC extends LitElement {
   static get properties() {
     return {
@@ -106,6 +108,12 @@ class WebComponentsTooltipCC extends LitElement {
 
   showModal(evt) {
     evt.preventDefault();
+    matopush([
+      "trackEvent",
+      "glossaire_clicktooltip",
+      this.textContent,
+      window.location.pathname,
+    ]);
     this.dispatchEvent(
       new CustomEvent("tooltip-cc-event", {
         bubbles: true,
