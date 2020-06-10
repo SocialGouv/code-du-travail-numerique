@@ -1,5 +1,4 @@
 import { LitElement, html, css } from "lit-element";
-import { v4 as uuidv4 } from "uuid";
 import { throttledDisplayInViewport } from "./utils";
 
 import { matopush } from "../piwik";
@@ -7,14 +6,12 @@ import { matopush } from "../piwik";
 class WebComponentsTooltipCC extends LitElement {
   static get properties() {
     return {
-      id: { type: String },
       visible: { type: Boolean },
     };
   }
 
   constructor() {
     super();
-    this.id = uuidv4();
     this.visible = false;
   }
 
@@ -71,7 +68,7 @@ class WebComponentsTooltipCC extends LitElement {
     return html`<div
       tabindex="0"
       class="tooltip"
-      aria-describedby="definition-${this.id}"
+      aria-describedby="tooltip-searchcc"
       @focus="${this.show}"
       @mouseenter="${this.show}"
       @blur="${this.hide}"
@@ -79,7 +76,7 @@ class WebComponentsTooltipCC extends LitElement {
     >
       <slot></slot>
       <div
-        id="definition-${this.id}"
+        id="tooltip-searchcc"
         class="content${this.visible ? " visible" : ""}"
         role="tooltip"
         aria-hidden="${!this.visible}"
