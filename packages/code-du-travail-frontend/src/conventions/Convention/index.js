@@ -16,15 +16,19 @@ const Convention = ({ convention }) => {
   return (
     <>
       {convention.answers.length > 0 && (
-        <Contributions contributions={convention.answers} />
+        <Contributions
+          contributions={convention.answers}
+          convention={convention}
+        />
       )}
       {convention.articlesByTheme.length > 0 && (
         <Articles
           blocs={convention.articlesByTheme}
           containerId={convention.id}
+          convention={convention}
         />
       )}
-      <TextSearch containerId={convention.id} />
+      <TextSearch containerId={convention.id} convention={convention} />
     </>
   );
 };

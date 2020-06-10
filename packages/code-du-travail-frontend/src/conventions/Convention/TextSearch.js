@@ -10,9 +10,11 @@ import {
   Title,
 } from "@socialgouv/react-ui";
 
+import { matopush } from "../../piwik";
+
 const { spacings } = theme;
 
-export function TextSearch({ containerId }) {
+export function TextSearch({ containerId, convention }) {
   const [query, setQuery] = useState("");
   const formatQuery = useCallback(
     (e) => {
@@ -20,6 +22,9 @@ export function TextSearch({ containerId }) {
     },
     [setQuery]
   );
+  const trackSearch = useCallback(() => {
+    matopush[("trackEvent", "pagecc_searchcc", convention.shortTitle, query)];
+  }, [query, convention]);
   return (
     <>
       <Title
@@ -31,6 +36,7 @@ export function TextSearch({ containerId }) {
       <Form
         target="_blank"
         action="https://beta.legifrance.gouv.fr/search/kali#kali"
+        onSubmit={trackSearch}
       >
         <Box>
           <StyledInput

@@ -8,6 +8,7 @@ import { SOURCES, getRouteBySource } from "@cdt/sources";
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
 import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
+import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
@@ -15,7 +16,7 @@ function getContributionUrl({ slug }) {
   return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
 }
 
-function Contributions({ contributions }) {
+function Contributions({ contributions, convention }) {
   const UNTHEMED_LABEL = "Autres";
   // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
@@ -51,6 +52,10 @@ function Contributions({ contributions }) {
             title: item.question,
             body: AccordionContent(item),
           }))}
+          onChange={trackAccordionPanelState(
+            convention.shortTitle,
+            "pagecc_clickcontrib"
+          )}
         />
       ),
     }));
