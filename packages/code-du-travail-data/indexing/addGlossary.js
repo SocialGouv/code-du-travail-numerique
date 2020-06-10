@@ -42,16 +42,14 @@ export function addGlossary(htmlContent) {
     }
   });
 
-  const idToWebComponent = new Map();
-
   // we make sure that bigger terms are replaced first
-  const sortedGlossary = glossary.sort((previous, next) => {
+  glossary.sort((previous, next) => {
     return next.term.length - previous.term.length;
   });
 
   // we also sure that cc matchers are replaced first
   conventionMatchers.forEach((matcher) => {
-    sortedGlossary.unshift({
+    glossary.unshift({
       definition: false,
       pattern: new RegExp(
         `${wordBoundaryStart}(${matcher})${wordBoundaryEnd}`,
@@ -61,11 +59,12 @@ export function addGlossary(htmlContent) {
     });
   });
 
-  sortedGlossary.forEach(({ definition, pattern }, index) => {
-    // while we loop, we replace the matches with uuid to prevent nested matches
+  const idToWebComponent = new Map();
+
+  glossary.forEach(({ definition, pattern, term }, index) => {
+    // while we loop, we replace the matches with an id to prevent nested matches
     idHtmlContent = idHtmlContent.replace(pattern, function (
-      match, // contains the matching term with the word boundaries
-      term // contains only the matching term
+      match // contains the matching term with the word boundaries
     ) {
       const id = "__tt__" + index;
       const webComponent = definition
@@ -79,7 +78,7 @@ export function addGlossary(htmlContent) {
     });
   });
 
-  // In the end, we replace the uuid with its related component
+  // In the end, we replace the id with its related component
   let finalContent = idHtmlContent;
   idToWebComponent.forEach((webComponent, id) => {
     finalContent = finalContent.replace(new RegExp(id, "g"), webComponent);

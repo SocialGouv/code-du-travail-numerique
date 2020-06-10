@@ -11,7 +11,7 @@ jest.mock("@socialgouv/datafiller-data/data/glossary.json", () => [
   {
     title: "Convention Collective",
     abbrs: "cc",
-    variants: ["convention collective"],
+    variants: [],
     definition: "<p>Cette phrase ne doit pas apparaîte</p>",
   },
 ]);
