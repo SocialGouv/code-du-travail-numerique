@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import * as Sentry from "@sentry/browser";
 import Link from "next/link";
 import {
   Button,
@@ -60,13 +59,12 @@ const selectedTools = [
   tools.find((tool) => tool.slug === "indemnite-licenciement"),
 ];
 
-const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
+const Home = ({ highlights = [], req, themes = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
-      url={pageUrl}
-      title="Code du travail numérique - Ministère du Travail"
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
-      image={ogImage}
+      req={req}
+      title="Code du travail numérique - Ministère du Travail"
     />
     <SearchHero />
     <Section>
@@ -121,26 +119,43 @@ const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
   </Layout>
 );
 
-Home.getInitialProps = async () => {
+// with getStaticProp here we could get tools once with a single api call
+// even if you api falls once and for all later on, this page would be 100% static
+export async function getStaticProps({ req }) {
   let themes = [];
   let highlights = [];
-  try {
-    const [themesResponse, highlightsResponse] = await Promise.all([
-      fetch(`${API_URL}/themes`),
-      fetch(`${API_URL}/highlights/homepage`),
-    ]);
-    if (themesResponse.ok) {
-      themes = await themesResponse.json().then((themes) => themes.children);
-    }
-    if (highlightsResponse.ok) {
-      highlights = await highlightsResponse.json();
-    }
-  } catch (e) {
-    console.error(e);
-    Sentry.captureException(e);
+  const [themesResponse, highlightsResponse] = await Promise.all([
+    fetch(`${API_URL}/themes`),
+    fetch(`${API_URL}/highlights/homepage`),
+  ]);
+  if (themesResponse.ok) {
+    themes = await themesResponse.json().then((themes) => themes.children);
   }
-  return { themes, highlights };
-};
+  if (highlightsResponse.ok) {
+    highlights = await highlightsResponse.json();
+  }
+
+  const getCircularReplacer = () => {
+    const seen = new WeakSet();
+    return (key, value) => {
+      if (typeof value === "object" && value !== null) {
+        if (seen.has(value)) {
+          return;
+        }
+        seen.add(value);
+      }
+      return value;
+    };
+  };
+
+  return {
+    props: {
+      highlights,
+      req: JSON.stringify(req, getCircularReplacer()),
+      themes,
+    },
+  };
+}
 
 export default Home;
 

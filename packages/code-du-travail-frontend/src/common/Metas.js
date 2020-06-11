@@ -1,17 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import absoluteUrl from "next-absolute-url";
+import parseUrl from "parseurl";
 
-export default function Metas({ url, title, description, image }) {
-  const router = useRouter();
-  if (typeof window !== "undefined") {
-    const { asPath: path } = router || { asPath: "POFPOF" };
-    url = url || `${location.protocol}//${location.host}${path}`;
-    image =
-      image ||
-      `${location.protocol}//${location.hostname}/static/assets/img/social-preview.png`;
-  }
+export default function Metas({ description, req, title }) {
+  const { origin } = absoluteUrl(req);
+  const url = `${origin}${
+    req ? parseUrl(req).pathname : window.location.pathname
+  }`;
+  const image = `${origin}/static/assets/img/social-preview.png`;
 
   return (
     <Head>

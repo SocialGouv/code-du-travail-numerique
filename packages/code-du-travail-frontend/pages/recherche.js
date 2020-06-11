@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
-import { withRouter } from "next/router";
 import {
   Alert,
   Button,
@@ -19,26 +18,34 @@ import { fetchSearchResults } from "../src/search/search.service";
 import { SearchResults } from "../src/search/SearchResults";
 import SearchBar from "../src/search/SearchBar";
 import { Layout } from "../src/layout/Layout";
-
 import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
+
+import CustomError from "./_error";
 
 const SEARCH_ID = "search-input";
 
 class SearchPage extends React.Component {
-  static async getInitialProps({ query: { q: query } }) {
-    const items = await fetchSearchResults(query);
-    return { items };
+  static async getInitialProps({ req, query: { q: query } }) {
+    try {
+      // beware, fetchSearchResults can throw an error !
+      const items = await fetchSearchResults(query);
+      return { items, query, req };
+    } catch (err) {
+      return { errorCode: 500 };
+    }
   }
 
   render() {
     const {
-      router,
+      errorCode,
       items = { documents: [], articles: [], themes: [] },
-      pageUrl,
-      ogImage,
+      query,
+      req,
     } = this.props;
-    const { q: query = "" } = router.query;
+    if (errorCode) {
+      <CustomError statusCode={errorCode} />;
+    }
     return (
       <Layout
         currentPage="search"
@@ -48,10 +55,9 @@ class SearchPage extends React.Component {
           <meta name="robots" content="noindex, follow" />
         </Head>
         <Metas
-          url={pageUrl}
+          req={req}
           title={`${query} - Code du travail numérique`}
           description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
-          image={ogImage}
         />
         <Container narrow>
           <label htmlFor={SEARCH_ID}>
@@ -112,7 +118,7 @@ class SearchPage extends React.Component {
     );
   }
 }
-export default withRouter(SearchPage);
+export default SearchPage;
 
 const { breakpoints, spacings } = theme;
 
