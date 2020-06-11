@@ -25,99 +25,95 @@ import CustomError from "./_error";
 
 const SEARCH_ID = "search-input";
 
-class SearchPage extends React.Component {
-  static async getInitialProps({ req, query: { q: query } }) {
-    try {
-      // beware, fetchSearchResults can throw an error !
-      const items = await fetchSearchResults(query);
-      return { items, query, req };
-    } catch (err) {
-      return { errorCode: 500 };
-    }
-  }
-
-  render() {
-    const {
-      errorCode,
-      items = { documents: [], articles: [], themes: [] },
-      query,
-      req,
-    } = this.props;
-    if (errorCode) {
-      <CustomError statusCode={errorCode} />;
-    }
-    return (
-      <Layout
-        currentPage="search"
-        initialTitle={`${query} - Code du travail numérique`}
-      >
-        <Head>
-          <meta name="robots" content="noindex, follow" />
-        </Head>
-        <Metas
-          req={req}
-          title={`${query} - Code du travail numérique`}
-          description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
-        />
-        <Container narrow>
-          <label htmlFor={SEARCH_ID}>
-            <PageTitle>Recherche</PageTitle>
-          </label>
-          <SearchBarWrapper>
-            <SearchBar inputId={SEARCH_ID} hasButton hasSearchIcon />
-          </SearchBarWrapper>
-        </Container>
-        {query &&
-        items.documents.length === 0 &&
-        items.articles.length === 0 &&
-        items.themes.length === 0 ? (
-          <Section>
-            <Container narrow>
-              <Alert>
-                Nous n’avons pas trouvé de résultat pour votre recherche.
-              </Alert>
-            </Container>
-          </Section>
-        ) : (
-          <>
-            <Section>
-              <FocusRoot />
-              <SearchResults items={items} isSearch query={query} />
-            </Section>
-            <Section>
-              <Container>
-                <StyledWrapper variant="light">
-                  <Heading
-                    shift={theme.spacings.xmedium}
-                    variant="primary"
-                    stripped
-                  >
-                    Vous n’avez pas trouvé ce que vous cherchiez ? Essayez
-                    &hellip;
-                  </Heading>
-                  <StyledContent>
-                    <Link href="/themes" passHref>
-                      <StyledLink variant="flat" as={Button}>
-                        Consulter les thèmes
-                      </StyledLink>
-                    </Link>
-                    <ConventionModal>
-                      {(openModal) => (
-                        <Button variant="flat" onClick={openModal}>
-                          Chercher une convention collective
-                        </Button>
-                      )}
-                    </ConventionModal>
-                  </StyledContent>
-                </StyledWrapper>
-              </Container>
-            </Section>
-          </>
-        )}
-      </Layout>
-    );
+export async function getServerSideProps({ query: { q: query } }) {
+  try {
+    // beware, fetchSearchResults can throw an error !
+    const items = await fetchSearchResults(query);
+    return { props: { items, query } };
+  } catch (err) {
+    return { props: { errorCode: 500 } };
   }
 }
+
+const SearchPage = ({
+  errorCode,
+  items = { documents: [], articles: [], themes: [] },
+  query,
+}) => {
+  if (errorCode) {
+    return <CustomError statusCode={errorCode} />;
+  }
+  return (
+    <Layout
+      currentPage="search"
+      initialTitle={`${query} - Code du travail numérique`}
+    >
+      <Head>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
+      <Metas
+        title={`${query} - Code du travail numérique`}
+        pathname="/recherche"
+        description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
+      />
+      <Container narrow>
+        <label htmlFor={SEARCH_ID}>
+          <PageTitle>Recherche</PageTitle>
+        </label>
+        <SearchBarWrapper>
+          <SearchBar inputId={SEARCH_ID} hasButton hasSearchIcon />
+        </SearchBarWrapper>
+      </Container>
+      {query &&
+      items.documents.length === 0 &&
+      items.articles.length === 0 &&
+      items.themes.length === 0 ? (
+        <Section>
+          <Container narrow>
+            <Alert>
+              Nous n’avons pas trouvé de résultat pour votre recherche.
+            </Alert>
+          </Container>
+        </Section>
+      ) : (
+        <>
+          <Section>
+            <FocusRoot />
+            <SearchResults items={items} isSearch query={query} />
+          </Section>
+          <Section>
+            <Container>
+              <StyledWrapper variant="light">
+                <Heading
+                  shift={theme.spacings.xmedium}
+                  variant="primary"
+                  stripped
+                >
+                  Vous n’avez pas trouvé ce que vous cherchiez ? Essayez
+                  &hellip;
+                </Heading>
+                <StyledContent>
+                  <Link href="/themes" passHref>
+                    <StyledLink variant="flat" as={Button}>
+                      Consulter les thèmes
+                    </StyledLink>
+                  </Link>
+                  <ConventionModal>
+                    {(openModal) => (
+                      <Button variant="flat" onClick={openModal}>
+                        Chercher une convention collective
+                      </Button>
+                    )}
+                  </ConventionModal>
+                </StyledContent>
+              </StyledWrapper>
+            </Container>
+          </Section>
+        </>
+      )}
+    </Layout>
+  );
+};
 export default SearchPage;
 
 const { breakpoints, spacings } = theme;
