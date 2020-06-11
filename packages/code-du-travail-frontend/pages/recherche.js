@@ -21,8 +21,6 @@ import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
 
-import CustomError from "./_error";
-
 const SEARCH_ID = "search-input";
 
 export async function getServerSideProps({ query: { q: query } }) {
@@ -40,12 +38,10 @@ const SearchPage = ({
   items = { documents: [], articles: [], themes: [] },
   query,
 }) => {
-  if (errorCode) {
-    return <CustomError statusCode={errorCode} />;
-  }
   return (
     <Layout
       currentPage="search"
+      errorCode={errorCode}
       initialTitle={`${query} - Code du travail numérique`}
     >
       <Head>

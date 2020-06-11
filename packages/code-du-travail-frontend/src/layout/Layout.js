@@ -2,12 +2,21 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from "@socialgouv/react-ui";
 
+import CustomError from "../../pages/_error";
+import Custom404 from "../../pages/404";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import { Header } from "./Header";
 import { Headband } from "./Headband";
 import Footer from "./Footer";
 
-const Layout = ({ children, currentPage }) => {
+const Layout = ({ children, currentPage, errorCode }) => {
+  if (errorCode) {
+    return errorCode === 404 ? (
+      <Custom404 />
+    ) : (
+      <CustomError statusCode={errorCode} />
+    );
+  }
   return (
     <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />

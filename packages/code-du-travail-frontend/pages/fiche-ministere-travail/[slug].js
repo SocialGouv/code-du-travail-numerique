@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { withRouter } from "next/router";
+import React from "react";
+import { useRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
@@ -15,16 +15,17 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const buildAccordionSections = (sections) =>
-  sections
-    .filter((section) => section.anchor)
-    .map(({ anchor, html, title }) => ({
-      id: anchor,
-      title: <h2>{title}</h2>,
-      body: <TabContent>{html}</TabContent>,
-    }));
+export async function getServerSideProps({ query: { slug } }) {
+  const response = await fetch(`${API_URL}/sheets-mt/${slug}`);
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
+  }
 
-const Fiche = ({ anchor, data = { _source: {} }, slug }) => {
+  const data = await response.json();
+  return { props: { data, slug } };
+}
+
+const Fiche = ({ data = { _source: {} }, errorCode, slug }) => {
   const {
     _source: {
       breadcrumbs,
@@ -38,25 +39,21 @@ const Fiche = ({ anchor, data = { _source: {} }, slug }) => {
     relatedItems,
   } = data;
 
-  const [titledSections, setTitledSections] = useState(
-    buildAccordionSections(sections)
-  );
+  const titledSections = sections
+    .filter((section) => section.anchor)
+    .map(({ anchor, html, title }) => ({
+      id: anchor,
+      title: <h2>{title}</h2>,
+      body: <TabContent>{decode(html)}</TabContent>,
+    }));
 
-  useEffect(() => {
-    setTitledSections(
-      buildAccordionSections(
-        sections.map((section) => ({
-          ...section,
-          html: decode(section.html),
-        }))
-      )
-    );
-  }, [sections]);
+  const { asPath } = useRouter();
+  const anchor = asPath.split("#")[1];
 
   // titleless section have the page title but no anchor.
   const untitledSection = sections.find((section) => !section.anchor);
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description={description}
         pathname={`/fiche-ministere-travail/${slug}`}
@@ -78,19 +75,7 @@ const Fiche = ({ anchor, data = { _source: {} }, slug }) => {
   );
 };
 
-Fiche.getInitialProps = async ({ query: { slug }, asPath }) => {
-  // beware, this one is undefined when rendered server-side
-  const anchor = asPath.split("#")[1];
-  const response = await fetch(`${API_URL}/sheets-mt/${slug}`);
-  if (!response.ok) {
-    return { statusCode: response.status };
-  }
-
-  const data = await response.json();
-  return { anchor, data, slug };
-};
-
-export default withRouter(Fiche);
+export default Fiche;
 
 const TabContent = styled(Html)`
   & > *:first-child {
