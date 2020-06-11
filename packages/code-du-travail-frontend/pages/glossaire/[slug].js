@@ -21,14 +21,13 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function Term({ pageUrl, ogImage, term }) {
+function Term({ slug, term }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
-        title={`${term.title} - Code du travail numérique`}
         description={term.definition}
-        image={ogImage}
+        pathname={`/glossaire/${slug}`}
+        title={`${term.title} - Code du travail numérique`}
       />
       <Section>
         <Container narrow>
@@ -84,7 +83,7 @@ Term.getInitialProps = async ({ query: { slug } }) => {
     return { statusCode: responseContainer.status };
   }
   const term = await responseContainer.json();
-  return { term };
+  return { term, slug };
 };
 export default Term;
 

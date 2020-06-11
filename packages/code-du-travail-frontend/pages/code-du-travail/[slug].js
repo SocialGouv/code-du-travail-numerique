@@ -16,17 +16,14 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/code_du_travail/${slug}`);
-
 class Fiche extends React.Component {
-  static async getInitialProps({ query }) {
-    const response = await fetchFiche(query);
+  static async getInitialProps({ query: { slug } }) {
+    const response = await fetch(`${API_URL}/items/code_du_travail/${slug}`);
     if (!response.ok) {
       return { statusCode: response.status };
     }
     const data = await response.json();
-    return { data };
+    return { data, slug };
   }
 
   render() {
@@ -37,18 +34,16 @@ class Fiche extends React.Component {
       } = {
         _source: {},
       },
-      pageUrl,
-      ogImage,
+      slug,
     } = this.props;
 
     const fixedHtml = replaceArticlesRefs(html);
     return (
       <Layout>
         <Metas
-          url={pageUrl}
-          title={title}
           description={description}
-          image={ogImage}
+          pathname={`/code-du-travail/${slug}`}
+          title={title}
         />
         <Answer
           title={title}

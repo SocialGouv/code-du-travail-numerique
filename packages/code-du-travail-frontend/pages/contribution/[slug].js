@@ -12,12 +12,9 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const fetchQuestion = ({ slug }) =>
-  fetch(`${API_URL}/items/contributions/${slug}`);
-
 class PageContribution extends React.Component {
-  static async getInitialProps({ query }) {
-    const response = await fetchQuestion(query);
+  static async getInitialProps({ query: { slug } }) {
+    const response = await fetch(`${API_URL}/items/contributions/${slug}`);
     if (!response.ok) {
       return { statusCode: response.status };
     }
@@ -32,10 +29,10 @@ class PageContribution extends React.Component {
     if (contentUrl) {
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
-      return { data, content };
+      return { data, content, slug };
     }
 
-    return { data };
+    return { data, slug };
   }
 
   render() {
@@ -47,18 +44,16 @@ class PageContribution extends React.Component {
         _source: {},
       },
       content,
-      pageUrl,
-      ogImage,
+      slug,
     } = this.props;
 
     return (
       <div>
         <Layout>
           <Metas
-            url={pageUrl}
-            title={title}
             description={description}
-            image={ogImage}
+            pathname={`/contribution/${slug}`}
+            title={title}
           />
           <Answer
             title={title}

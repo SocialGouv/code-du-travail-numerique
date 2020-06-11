@@ -52,12 +52,11 @@ const processor = unified()
   });
 
 const Information = ({
-  pageUrl,
-  ogImage,
   information: {
     _source: { breadcrumbs, contents, date, folder, description, title, intro },
     relatedItems,
   } = { _source: {} },
+  slug,
 }) => {
   let editorialContent = contents.map(
     ({ type, name, altText, size, html, references = [] }) => {
@@ -117,10 +116,9 @@ const Information = ({
   return (
     <Layout>
       <Metas
-        url={pageUrl}
-        title={title}
         description={description}
-        image={ogImage}
+        pathname={`/information/${slug}`}
+        title={title}
       />
       <Answer
         breadcrumbs={breadcrumbs}
@@ -148,7 +146,7 @@ Information.getInitialProps = async ({ query: { slug } }) => {
   }
   const information = await responseContainer.json();
 
-  return { information };
+  return { information, slug };
 };
 
 const { breakpoints, spacings } = theme;

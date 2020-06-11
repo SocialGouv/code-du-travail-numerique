@@ -24,7 +24,7 @@ class ConventionCollective extends React.Component {
       return { statusCode: responseContainer.status };
     }
     const convention = await responseContainer.json();
-    return { convention };
+    return { convention, slug };
   }
 
   render() {
@@ -33,15 +33,14 @@ class ConventionCollective extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { pageUrl, ogImage, convention } = this.props;
+    const { convention, slug } = this.props;
     const { shortTitle, title } = convention;
     return (
       <Layout>
         <Metas
-          url={pageUrl}
-          title={`Convention collective ${shortTitle}`}
           description={title}
-          image={ogImage}
+          pathname={`/convention-collective/${slug}`}
+          title={`Convention collective ${shortTitle}`}
         />
         <Answer
           breadcrumbs={[

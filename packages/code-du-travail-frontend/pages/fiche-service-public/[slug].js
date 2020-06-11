@@ -13,12 +13,11 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/fiches_service_public/${slug}`);
-
 class Fiche extends React.Component {
-  static async getInitialProps({ query }) {
-    const response = await fetchFiche(query);
+  static async getInitialProps({ query: { slug } }) {
+    const response = await fetch(
+      `${API_URL}/items/fiches_service_public/${slug}`
+    );
     if (!response.ok) {
       return { statusCode: response.status };
     }
@@ -27,11 +26,11 @@ class Fiche extends React.Component {
     if (data._source.raw) {
       data._source.raw = JSON.parse(data._source.raw);
     }
-    return { data };
+    return { data, slug };
   }
 
   render() {
-    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
+    const { data = { _source: {} }, slug } = this.props;
     const {
       _source: {
         breadcrumbs,
@@ -47,10 +46,9 @@ class Fiche extends React.Component {
     return (
       <Layout>
         <Metas
-          url={pageUrl}
-          title={title}
           description={description}
-          image={ogImage}
+          pathname={`/fiche-service-public/${slug}`}
+          title={title}
         />
         <Answer
           title={title}

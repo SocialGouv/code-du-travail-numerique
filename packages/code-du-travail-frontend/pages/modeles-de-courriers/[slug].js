@@ -22,18 +22,17 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const fetchCourrier = ({ slug }) =>
-  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);
-
 class ModeleCourrier extends React.Component {
-  static async getInitialProps({ query }) {
-    const response = await fetchCourrier(query);
+  static async getInitialProps({ query: { slug } }) {
+    const response = await fetch(
+      `${API_URL}/items/modeles_de_courriers/${slug}`
+    );
     if (!response.ok) {
       return { statusCode: response.status };
     }
 
     const data = await response.json();
-    return { data };
+    return { data, slug };
   }
 
   render() {
@@ -52,8 +51,7 @@ class ModeleCourrier extends React.Component {
         relatedItems,
         status,
       } = { _source: {} },
-      pageUrl,
-      ogImage,
+      slug,
     } = this.props;
     if (status === 404) {
       return <Answer emptyMessage="Modèle de document introuvable" />;
@@ -63,13 +61,12 @@ class ModeleCourrier extends React.Component {
     return (
       <Layout>
         <Metas
-          url={pageUrl}
-          title={`Modèle de document :  ${title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
-          image={ogImage}
+          pathname={`/modeles-de-courriers/${slug}`}
+          title={`Modèle de document :  ${title}`}
         />
         <Answer
           title={title}

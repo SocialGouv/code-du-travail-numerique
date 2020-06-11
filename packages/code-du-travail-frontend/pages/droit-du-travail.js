@@ -18,13 +18,12 @@ import Origins from "../src/droit-du-travail/Origins";
 import Hierarchy from "../src/droit-du-travail/Hierarchy";
 import { FocusRoot } from "../src/a11y";
 
-const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
+const DroitDuTravail = () => (
   <Layout>
     <Metas
-      url={pageUrl}
-      title="Le droit du travail - Code du travail numérique"
       description="Qu’est-ce que le droit du travail ?"
-      image={ogImage}
+      pathname="/droit-du-travail"
+      title="Le droit du travail - Code du travail numérique"
     />
     <Section>
       <Container>
@@ -79,17 +78,12 @@ const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
         </Container>
       </Container>
       <Origins />
-      <Hierarchy hash={hash} />
+      <Hierarchy />
     </Section>
   </Layout>
 );
 
 export default DroitDuTravail;
-
-DroitDuTravail.getInitialProps = ({ asPath }) => {
-  const hash = asPath.split("#")[1];
-  return { hash };
-};
 
 const { breakpoints, spacings } = theme;
 

@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import getConfig from "next/config";
 import Head from "next/head";
 
-const CDTN_URL = "https://code.travail.gouv.fr";
+const {
+  publicRuntimeConfig: { FRONTEND_URL },
+} = getConfig();
 
 export default function Metas({ description, pathname = "", title }) {
   return (
@@ -15,9 +18,9 @@ export default function Metas({ description, pathname = "", title }) {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content={`${CDTN_URL}/static/assets/img/social-preview.png`}
+        content={`${FRONTEND_URL}/static/assets/img/social-preview.png`}
       />
-      <meta property="og:url" content={`${CDTN_URL}${pathname}`} />
+      <meta property="og:url" content={`${FRONTEND_URL}${pathname}`} />
       <meta property="og:site_name" content="code du travail numérique" />
       <meta property="og:locale" content="fr" />
     </Head>

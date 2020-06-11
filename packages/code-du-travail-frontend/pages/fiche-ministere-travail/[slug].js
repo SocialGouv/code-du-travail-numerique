@@ -15,8 +15,6 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
-
 const buildAccordionSections = (sections) =>
   sections
     .filter((section) => section.anchor)
@@ -26,7 +24,7 @@ const buildAccordionSections = (sections) =>
       body: <TabContent>{html}</TabContent>,
     }));
 
-const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
+const Fiche = ({ anchor, data = { _source: {} }, slug }) => {
   const {
     _source: {
       breadcrumbs,
@@ -60,10 +58,9 @@ const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
-        title={title}
         description={description}
-        image={ogImage}
+        pathname={`/fiche-ministere-travail/${slug}`}
+        title={title}
       />
       <StyledAnswer
         title={title}
@@ -81,16 +78,16 @@ const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
   );
 };
 
-Fiche.getInitialProps = async ({ query, asPath }) => {
+Fiche.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const response = await fetchSheetMT(query);
+  const response = await fetch(`${API_URL}/sheets-mt/${slug}`);
   if (!response.ok) {
     return { statusCode: response.status };
   }
 
   const data = await response.json();
-  return { data, anchor };
+  return { anchor, data, slug };
 };
 
 export default withRouter(Fiche);

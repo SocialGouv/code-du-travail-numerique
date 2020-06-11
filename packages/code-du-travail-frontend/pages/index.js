@@ -83,7 +83,7 @@ const selectedTools = [
   tools.find((tool) => tool.slug === "indemnite-licenciement"),
 ];
 
-const Home = ({ highlights = [], req, themes = [] }) => (
+const Home = ({ highlights = [], themes = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."

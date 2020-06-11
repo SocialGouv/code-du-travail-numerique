@@ -28,7 +28,7 @@ const subtitle =
   "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail";
 
 function Modeles(props) {
-  const { data = [], pageUrl, ogImage } = props;
+  const { data = [] } = props;
   const themes = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
     const other = {
@@ -65,10 +65,9 @@ function Modeles(props) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
-        title={`${title} - Code du travail numérique`}
         description={subtitle}
-        image={ogImage}
+        pathname="/modeles-de-courriers"
+        title={`${title} - Code du travail numérique`}
       />
       <Section>
         <Container narrow>

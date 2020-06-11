@@ -35,19 +35,19 @@ class Theme extends React.Component {
 
     return {
       theme,
+      slug,
     };
   }
 
   render() {
-    const { theme = {}, pageUrl, ogImage } = this.props;
+    const { theme = {}, slug = "" } = this.props;
 
     return (
       <Layout>
         <Metas
-          url={pageUrl}
-          title={`${theme.title} - Code du travail numérique`}
           description={`Explorez les contenus autour du thème ${theme.title}`}
-          image={ogImage}
+          pathname={`/themes/${slug}`}
+          title={`${theme.title} - Code du travail numérique`}
         />
         <Breadcrumbs items={theme.breadcrumbs} />
         <Section>

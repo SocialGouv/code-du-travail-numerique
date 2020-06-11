@@ -25,7 +25,7 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function DossierThematique({ dossier, ogImage, pageUrl }) {
+function DossierThematique({ dossier, slug }) {
   const [filter, setFilter] = useState("");
 
   if (!dossier) {
@@ -40,10 +40,9 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title={title}
+        pathname={`/dossier/${slug}`}
         description={metaDescription || description || title}
-        image={ogImage}
       />
       <Section>
         <Container narrow>
@@ -105,7 +104,7 @@ DossierThematique.getInitialProps = async ({ query: { slug } }) => {
     return { statusCode: responseContainer.status };
   }
   const dossier = await responseContainer.json();
-  return { dossier };
+  return { dossier, slug };
 };
 
 const { breakpoints, fonts, spacings } = theme;

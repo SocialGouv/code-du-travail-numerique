@@ -22,7 +22,7 @@ const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
 };
 
-function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
+function Outils({ description, icon, slug, title }) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -30,10 +30,9 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
-        title={title}
         description={description}
-        image={ogImage}
+        pathname={`/outils/${slug}`}
+        title={title}
       />
       <Section>
         <Container>

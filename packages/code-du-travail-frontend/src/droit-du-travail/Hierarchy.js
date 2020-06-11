@@ -14,7 +14,7 @@ import {
   Wrapper,
 } from "@socialgouv/react-ui";
 
-const Hierarchy = ({ hash }) => {
+const Hierarchy = () => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
   const [isModal4MatieresOpen, setModal4MatieresOpen] = useState(false);
   return (
@@ -31,7 +31,6 @@ const Hierarchy = ({ hash }) => {
         récapitulant <strong>la hiérarchie des textes entre eux</strong>.
       </p>
       <Accordion
-        preExpanded={[hash]}
         variant="hierarchy"
         items={[
           {
