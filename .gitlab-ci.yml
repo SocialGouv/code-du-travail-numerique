@@ -9,23 +9,39 @@ include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
     ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_create_namespace_stage.yml
+    ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_nodejs_chart_stage.yml
+    ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_hpa_chart_stage.yml
+    ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_notify_github_stage.yml
+    ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_delete_useless_k8s_ns_stage.yml
+    ref: v15.0.0
   #
   - /.gitlab-ci/variables.yml
+  - /.gitlab-ci/stages/prepare.yml
   - /.gitlab-ci/stages/quality.yml
+  - /.gitlab-ci/stages/create-namespace.yml
   - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
-  - /.gitlab-ci/stages/e2e.yml
+  - /.gitlab-ci/stages/manual.yml
 
 stages:
   - "Prepare"
   - "Code Quality"
-  - "Manual Deploy"
-  - "Registration"
-  - "Post Registration"
-  - "Deploy"
-  - "Notify Finished Deployment"
-  - "E2E testing"
-  - "Update ES data"
+  - "Create Namespace"
+  - "Register Data API"
+  - "Deploy Data API"
+  - "Register Frontend"
+  - "Deploy Frontend"
+  - "Finished Deployment"
+  - "E2E Testing"
+  - "Update ES Data"

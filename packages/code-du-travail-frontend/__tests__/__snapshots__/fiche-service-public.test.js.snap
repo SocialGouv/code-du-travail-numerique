@@ -1550,7 +1550,7 @@ exports[`<FicheSP /> should render 1`] = `
             <div
               class="c29"
             >
-              Cette fiche n'a pas été trouvée
+              Contenu introuvable
             </div>
           </div>
           <div

@@ -1550,7 +1550,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
             <div
               class="c29"
             >
-              Article introuvable
+              Contenu introuvable
             </div>
           </div>
           <div

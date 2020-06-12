@@ -1,8 +1,5 @@
-#
-
-.register_stage: &register_stage
+.register_stage:
   extends: .base_register_stage
-  stage: "Registration"
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -13,50 +10,10 @@
 
 #
 
-Register socialgouv/cdtn base image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: .
-    IMAGE_NAME: $CI_REGISTRY_IMAGE
-
-Register elasticsearch image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: ./docker/elasticsearch
-    DOCKER_BUILD_ARGS: ""
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
-
-Register nlp image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: packages/code-du-travail-nlp
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
-  after_script:
-    - >-
-      if [[ "${BRANCH_NAME}" != "master" ]]; then
-        docker pull "${IMAGE_NAME}:${CI_DEFAULT_BRANCH}"
-        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_DEFAULT_BRANCH} > MASTER_LAYERS
-        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
-        if cmp -s MASTER_LAYERS COMMIT_LAYERS ; then
-          echo "No changes detected."
-          touch "${CONTEXT}/${$CI_COMMIT_REF_SLUG}_USE_MASTER"
-        else
-          echo "Changes detected."
-        fi
-      fi
-  artifacts:
-    expire_in: 7 day
-    paths:
-      - packages/code-du-travail-nlp
-#
-
-#
-
 Register api image:
-  <<: *register_stage
+  extends:
+    - .register_stage
+  stage: "Register Data API"
   variables:
     CONTEXT: packages/code-du-travail-api
     DOCKER_BUILD_ARGS: >-
@@ -64,24 +21,16 @@ Register api image:
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
     IMAGE_NAME: $CI_REGISTRY_IMAGE/api
 
-Register frontend image:
-  <<: *register_stage
-  variables:
-    CONTEXT: packages/code-du-travail-frontend
-    DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+#
 
 Register data image:
-  <<: *register_stage
+  extends:
+    - .register_stage
+  stage: "Register Data API"
   services:
     - name: docker:19-dind
     - name: $CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA
       alias: nlp
-  needs:
-    - Register nlp image
-    - Register socialgouv/cdtn base image
 
   variables:
     CONTEXT: packages/code-du-travail-data
@@ -103,3 +52,24 @@ Register data image:
       [ "$retry" -eq "-1" ] && exit 1
 
 #
+
+Register frontend image:
+  extends: .register_stage
+  stage: "Register Frontend"
+  variables:
+    CONTEXT: packages/code-du-travail-frontend
+    DOCKER_BUILD_ARGS: >-
+      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+      --build-arg API_URL=$API_URL
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - echo "API URL ${API_URL}"
+    - |-
+      retry=60;
+      while
+        ! wget -q -O - "$@" "${API_URL}dev.fabrique.social.gouv.fr/api/v1/version"  | grep "${COMMIT}" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for data API to be ready" ; sleep 3 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1

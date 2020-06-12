@@ -25,7 +25,7 @@ export async function getServerSideProps({ query: { slug } }) {
   return { props: { convention, slug } };
 }
 
-const ConventionCollective = ({ convention, errorCode, slug }) => {
+const ConventionCollective = ({ convention = {}, errorCode, slug }) => {
   const { date_publi, num, shortTitle, title, url } = convention;
   return (
     <Layout errorCode={errorCode}>

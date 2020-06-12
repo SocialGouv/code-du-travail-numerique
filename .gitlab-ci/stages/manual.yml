@@ -1,9 +1,30 @@
+Snyk Docker Scan:
+  stage: "Finished Deployment"
+  image: snyk/snyk-cli:docker
+  services:
+    - docker:$DOCKER_VERSION-dind
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+  dependencies: []
+  when: manual
+  needs:
+    - Register api image
+    - Register frontend image
+    - Register nlp image
+    - Register data image
+  before_script:
+    - source .gitlab-ci/env.sh
+  script:
+    - ./scripts/snyk-docker-scan.sh
+
 #
 #
 #
 
 Release:
-  stage: "Deploy"
+  stage: "Finished Deployment"
   image: node:12.14-alpine3.10
   dependencies: []
   when: manual
@@ -31,7 +52,7 @@ Release:
 #
 
 Production:
-  stage: "Deploy"
+  stage: "Finished Deployment"
   image: curlimages/curl:7.67.0
   dependencies: []
   when: manual
