@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.24.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.23.0...v4.24.0) (2020-06-12)
+
+
+### Bug Fixes
+
+* **front:** update formulaes ([#2752](https://github.com/SocialGouv/code-du-travail-numerique/issues/2752)) ([e2c82e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/e2c82e74327a951a50e34b44ab918f34e7263a90))
+* robots.txt ([#2807](https://github.com/SocialGouv/code-du-travail-numerique/issues/2807)) ([76ded32](https://github.com/SocialGouv/code-du-travail-numerique/commit/76ded32eeae5a9efb07e218cae1ad1661f97dd20))
+
+
+### Features
+
+* **chore:** Shiny tooltips from webcomponents to manage glossary entries ! ([#2687](https://github.com/SocialGouv/code-du-travail-numerique/issues/2687)) ([0d4d75a](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d4d75ae292de91c5a9c626ab5e217be556fbd3f))
+* **front:** track CC page ([#2814](https://github.com/SocialGouv/code-du-travail-numerique/issues/2814)) ([879f881](https://github.com/SocialGouv/code-du-travail-numerique/commit/879f881f6315e2c8f05ba50e8eb5f6bc0d6a46d1))
+
+
+
+
+
 # [4.23.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0...v4.23.0) (2020-06-05)
 
 
