@@ -39,11 +39,7 @@ const SearchPage = ({
   query,
 }) => {
   return (
-    <Layout
-      currentPage="search"
-      errorCode={errorCode}
-      initialTitle={`${query} - Code du travail numérique`}
-    >
+    <Layout currentPage="search" errorCode={errorCode}>
       <Head>
         <meta name="robots" content="noindex, follow" />
       </Head>

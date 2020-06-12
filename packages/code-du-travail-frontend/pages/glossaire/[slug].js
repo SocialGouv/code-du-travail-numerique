@@ -21,9 +21,18 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function Term({ slug, term }) {
+export async function getServerSideProps({ query: { slug } }) {
+  const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
+  if (!responseContainer.ok) {
+    return { props: { errorCode: responseContainer.status } };
+  }
+  const term = await responseContainer.json();
+  return { props: { term, slug } };
+}
+
+function Term({ errorCode, slug, term }) {
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description={term.definition}
         pathname={`/glossaire/${slug}`}
@@ -77,14 +86,7 @@ function Term({ slug, term }) {
     </Layout>
   );
 }
-Term.getInitialProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const term = await responseContainer.json();
-  return { term, slug };
-};
+
 export default Term;
 
 const { spacings } = theme;

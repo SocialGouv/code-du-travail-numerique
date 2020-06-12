@@ -51,9 +51,30 @@ const processor = unified()
     Fragment: React.Fragment,
   });
 
+export async function getServerSideProps({ query: { slug } }) {
+  const responseContainer = await fetch(
+    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
+  );
+  if (!responseContainer.ok) {
+    return { props: { errorCode: responseContainer.status } };
+  }
+  const information = await responseContainer.json();
+
+  return { props: { information, slug } };
+}
+
 const Information = ({
+  errorCode,
   information: {
-    _source: { breadcrumbs, contents, date, folder, description, title, intro },
+    _source: {
+      breadcrumbs,
+      contents = [],
+      date,
+      folder,
+      description,
+      title,
+      intro,
+    },
     relatedItems,
   } = { _source: {} },
   slug,
@@ -114,7 +135,7 @@ const Information = ({
   }
 
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description={description}
         pathname={`/information/${slug}`}
@@ -136,18 +157,6 @@ const Information = ({
 };
 
 export default Information;
-
-Information.getInitialProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
-  );
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const information = await responseContainer.json();
-
-  return { information, slug };
-};
 
 const { breakpoints, spacings } = theme;
 

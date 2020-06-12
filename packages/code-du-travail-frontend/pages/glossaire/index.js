@@ -21,13 +21,29 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+export async function getStaticProps() {
+  const responseContainer = await fetch(`${API_URL}/glossary`);
+  if (!responseContainer.ok) {
+    return { props: { errorCode: responseContainer.status } };
+  }
+  const glossary = await responseContainer.json();
+  return {
+    props: {
+      glossary: glossary.map((word) => ({
+        ...word,
+        slug: slugify(word.title),
+      })),
+    },
+  };
+}
+
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
 
-function Glossaire({ glossary }) {
+function Glossaire({ errorCode, glossary }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description="Retrouvez l'ensemble des termes utilisés fréquemment sur le code du travail numérique et leur explication"
         pathname="/glossaire"
@@ -47,16 +63,6 @@ function Glossaire({ glossary }) {
     </Layout>
   );
 }
-Glossaire.getInitialProps = async () => {
-  const responseContainer = await fetch(`${API_URL}/glossary`);
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const glossary = await responseContainer.json();
-  return {
-    glossary: glossary.map((word) => ({ ...word, slug: slugify(word.title) })),
-  };
-};
 
 export default Glossaire;
 

@@ -26,8 +26,6 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-// with getStaticProp here we could get tools once with a single api call
-// even if the api falls once and for all, this page is 100% static
 export async function getStaticProps() {
   let themes = [];
   let highlights = [];
@@ -84,7 +82,7 @@ const selectedTools = [
 ];
 
 const Home = ({ highlights = [], themes = [] }) => (
-  <Layout currentPage="home" initialTitle="Code du travail numérique">
+  <Layout currentPage="home">
     <Metas
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
       title="Code du travail numérique - Ministère du Travail"

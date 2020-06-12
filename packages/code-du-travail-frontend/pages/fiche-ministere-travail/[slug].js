@@ -25,8 +25,8 @@ export async function getServerSideProps({ query: { slug } }) {
   return { props: { data, slug } };
 }
 
-const Fiche = ({ data = { _source: {} }, errorCode, slug }) => {
-  const {
+const Fiche = ({
+  data: {
     _source: {
       breadcrumbs,
       date,
@@ -37,8 +37,10 @@ const Fiche = ({ data = { _source: {} }, errorCode, slug }) => {
       url,
     },
     relatedItems,
-  } = data;
-
+  } = { _source: {} },
+  errorCode,
+  slug,
+}) => {
   const titledSections = sections
     .filter((section) => section.anchor)
     .map(({ anchor, html, title }) => ({
@@ -62,7 +64,6 @@ const Fiche = ({ data = { _source: {} }, errorCode, slug }) => {
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}
-        emptyMessage="Cette fiche n'a pas été trouvée"
         intro={intro}
         date={date}
         source={{ name: "Fiche Ministère du travail", url }}

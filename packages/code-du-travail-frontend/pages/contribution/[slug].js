@@ -12,64 +12,59 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-class PageContribution extends React.Component {
-  static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(`${API_URL}/items/contributions/${slug}`);
-    if (!response.ok) {
-      return { statusCode: response.status };
-    }
-    const data = await response.json();
+export async function getServerSideProps({ query: { slug } }) {
+  const response = await fetch(`${API_URL}/items/contributions/${slug}`);
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
+  }
+  const data = await response.json();
 
-    // Check Content tag exist on markdown
-    const markdown =
-      ((((data || {})._source || {}).answers || {}).generic || {}).markdown ||
-      "";
+  // Check Content tag exist on markdown
+  const markdown =
+    ((((data || {})._source || {}).answers || {}).generic || {}).markdown || "";
 
-    const contentUrl = extractMdxContentUrl(markdown);
-    if (contentUrl) {
-      const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
-      const content = await fetchContent.json();
-      return { data, content, slug };
-    }
-
-    return { data, slug };
+  const contentUrl = extractMdxContentUrl(markdown);
+  if (contentUrl) {
+    const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
+    const content = await fetchContent.json();
+    return { props: { data, content, slug } };
   }
 
-  render() {
-    const {
-      data: {
-        _source: { breadcrumbs, title, answers, description },
-        relatedItems,
-      } = {
-        _source: {},
-      },
-      content,
-      slug,
-    } = this.props;
-
-    return (
-      <div>
-        <Layout>
-          <Metas
-            description={description}
-            pathname={`/contribution/${slug}`}
-            title={title}
-          />
-          <Answer
-            title={title}
-            relatedItems={relatedItems}
-            breadcrumbs={breadcrumbs}
-            emptyMessage="Cette question n'a pas été trouvée"
-          >
-            <Contribution
-              answers={answers}
-              content={(content && content._source) || {}}
-            />
-          </Answer>
-        </Layout>
-      </div>
-    );
-  }
+  return { props: { data, slug } };
 }
+
+const PageContribution = ({
+  data: {
+    _source: { breadcrumbs, title, answers, description },
+    relatedItems,
+  } = {
+    _source: {},
+  },
+  content,
+  errorCode,
+  slug,
+}) => {
+  return (
+    <div>
+      <Layout errorCode={errorCode}>
+        <Metas
+          description={description}
+          pathname={`/contribution/${slug}`}
+          title={title}
+        />
+        <Answer
+          title={title}
+          relatedItems={relatedItems}
+          breadcrumbs={breadcrumbs}
+        >
+          <Contribution
+            answers={answers}
+            content={(content && content._source) || {}}
+          />
+        </Answer>
+      </Layout>
+    </div>
+  );
+};
 
 export default PageContribution;

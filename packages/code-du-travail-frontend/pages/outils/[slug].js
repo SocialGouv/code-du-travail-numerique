@@ -22,7 +22,19 @@ const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
 };
 
-function Outils({ description, icon, slug, title }) {
+export async function getServerSideProps({ query: { slug } }) {
+  const { description, icon, title } = tools.find((tool) => tool.slug === slug);
+  return {
+    props: {
+      description,
+      icon,
+      slug,
+      title,
+    },
+  };
+}
+
+const Outils = ({ description, icon, slug, title }) => {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -43,18 +55,6 @@ function Outils({ description, icon, slug, title }) {
       </Section>
     </Layout>
   );
-}
+};
 
 export default Outils;
-
-Outils.getInitialProps = async ({ query }) => {
-  const { slug } = query;
-  const { description, icon, title } = tools.find((tool) => tool.slug === slug);
-
-  return {
-    description,
-    icon,
-    slug,
-    title,
-  };
-};

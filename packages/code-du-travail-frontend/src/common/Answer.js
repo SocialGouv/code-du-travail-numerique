@@ -29,7 +29,7 @@ function Answer({
   className,
   date,
   dateLabel,
-  emptyMessage = "Aucun résultat",
+  emptyMessage = "Contenu introuvable",
   html = null,
   intro = null,
   relatedItems = [],

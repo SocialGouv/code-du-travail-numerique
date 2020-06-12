@@ -17,7 +17,6 @@ import {
   Wrapper,
 } from "@socialgouv/react-ui";
 
-import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
@@ -25,12 +24,18 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function DossierThematique({ dossier, slug }) {
+export async function getServerSideProps({ query: { slug } }) {
+  const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
+  if (!responseContainer.ok) {
+    return { props: { errorCode: responseContainer.status } };
+  }
+  const dossier = await responseContainer.json();
+  return { props: { dossier, slug } };
+}
+
+function DossierThematique({ dossier, errorCode, slug }) {
   const [filter, setFilter] = useState("");
 
-  if (!dossier) {
-    return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
-  }
   const { description = "", metaDescription, categories, title } = dossier;
 
   const sortedCategories = categories.sort(
@@ -38,7 +43,7 @@ function DossierThematique({ dossier, slug }) {
   );
 
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         title={title}
         pathname={`/dossier/${slug}`}
@@ -97,15 +102,6 @@ function DossierThematique({ dossier, slug }) {
     </Layout>
   );
 }
-
-DossierThematique.getInitialProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const dossier = await responseContainer.json();
-  return { dossier, slug };
-};
 
 const { breakpoints, fonts, spacings } = theme;
 

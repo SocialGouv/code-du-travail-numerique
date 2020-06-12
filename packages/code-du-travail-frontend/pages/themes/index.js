@@ -22,6 +22,15 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+export async function getStaticProps() {
+  const response = await fetch(`${API_URL}/themes`);
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
+  }
+  const { children } = await response.json();
+  return { props: { children } };
+}
+
 const SubThemes = ({ children = [] }) => {
   return (
     <div>
@@ -41,8 +50,8 @@ const SubThemes = ({ children = [] }) => {
   );
 };
 
-const ThemesPage = ({ children = [] }) => (
-  <Layout currentPage="themes">
+const ThemesPage = ({ children = [], errorCode }) => (
+  <Layout currentPage="themes" errorCode={errorCode}>
     <Metas
       description={`Explorez les contenus autour des thèmes`}
       pathname="/themes"
@@ -79,15 +88,6 @@ const ThemesPage = ({ children = [] }) => (
     </Section>
   </Layout>
 );
-
-ThemesPage.getInitialProps = async () => {
-  const response = await fetch(`${API_URL}/themes`);
-  if (!response.ok) {
-    return { statusCode: response.status };
-  }
-  const { children } = await response.json();
-  return { children };
-};
 
 export default ThemesPage;
 

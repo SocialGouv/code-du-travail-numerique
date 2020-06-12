@@ -22,67 +22,65 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-// Theme page
-class Theme extends React.Component {
-  static async getInitialProps({ query: { slug } }) {
-    const searchThemeResponse = await fetch(`${API_URL}/themes/${slug}`);
+export async function getServerSideProps({ query: { slug } }) {
+  const searchThemeResponse = await fetch(`${API_URL}/themes/${slug}`);
 
-    if (!searchThemeResponse.ok) {
-      return { statusCode: searchThemeResponse.status };
-    }
+  if (!searchThemeResponse.ok) {
+    return { props: { errorCode: searchThemeResponse.status } };
+  }
 
-    const theme = await searchThemeResponse.json();
+  const theme = await searchThemeResponse.json();
 
-    return {
+  return {
+    props: {
       theme,
       slug,
-    };
-  }
-
-  render() {
-    const { theme = {}, slug = "" } = this.props;
-
-    return (
-      <Layout>
-        <Metas
-          description={`Explorez les contenus autour du thème ${theme.title}`}
-          pathname={`/themes/${slug}`}
-          title={`${theme.title} - Code du travail numérique`}
-        />
-        <Breadcrumbs items={theme.breadcrumbs} />
-        <Section>
-          <Container>
-            <FocusRoot>
-              <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
-            </FocusRoot>
-            {theme.children && theme.children.length > 0 && (
-              <StyledContainer>
-                {theme.children.map(({ slug, label }) => (
-                  <Link
-                    key={slug}
-                    href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
-                    as={slug}
-                    passHref
-                  >
-                    <StyledLink as={Button}>{label}</StyledLink>
-                  </Link>
-                ))}
-              </StyledContainer>
-            )}
-          </Container>
-        </Section>
-        {theme.refs && theme.refs.length > 0 && (
-          <Section>
-            <SearchResults
-              query={theme.title}
-              items={{ documents: theme.refs, articles: [], themes: [] }}
-            />
-          </Section>
-        )}
-      </Layout>
-    );
-  }
+    },
+  };
 }
+
+const Theme = (props) => {
+  const { errorCode, theme = {}, slug = "" } = props;
+  return (
+    <Layout errorCode={errorCode}>
+      <Metas
+        description={`Explorez les contenus autour du thème ${theme.title}`}
+        pathname={`/themes/${slug}`}
+        title={`${theme.title} - Code du travail numérique`}
+      />
+      <Breadcrumbs items={theme.breadcrumbs} />
+      <Section>
+        <Container>
+          <FocusRoot>
+            <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
+          </FocusRoot>
+          {theme.children && theme.children.length > 0 && (
+            <StyledContainer>
+              {theme.children.map(({ slug, label }) => (
+                <Link
+                  key={slug}
+                  href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
+                  as={slug}
+                  passHref
+                >
+                  <StyledLink as={Button}>{label}</StyledLink>
+                </Link>
+              ))}
+            </StyledContainer>
+          )}
+        </Container>
+      </Section>
+      {theme.refs && theme.refs.length > 0 && (
+        <Section>
+          <SearchResults
+            query={theme.title}
+            items={{ documents: theme.refs, articles: [], themes: [] }}
+          />
+        </Section>
+      )}
+    </Layout>
+  );
+};
 
 export default Theme;
 

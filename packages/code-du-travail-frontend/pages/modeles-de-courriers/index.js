@@ -23,12 +23,20 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+export async function getStaticProps() {
+  const response = await fetch(`${API_URL}/modeles`);
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
+  }
+  const data = await response.json();
+  return { props: { data } };
+}
+
 const title = "Modèles de documents";
 const subtitle =
   "Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail";
 
-function Modeles(props) {
-  const { data = [] } = props;
+const Modeles = ({ data = [], errorCode }) => {
   const themes = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
     const other = {
@@ -63,7 +71,7 @@ function Modeles(props) {
     [modelesByTheme, setDocuments, setSelectedTheme]
   );
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description={subtitle}
         pathname="/modeles-de-courriers"
@@ -112,15 +120,6 @@ function Modeles(props) {
       </Section>
     </Layout>
   );
-}
-
-Modeles.getInitialProps = async function () {
-  const response = await fetch(`${API_URL}/modeles`);
-  if (!response.ok) {
-    return { statusCode: response.status };
-  }
-  const data = await response.json();
-  return { data };
 };
 
 const { spacings } = theme;

@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
@@ -13,67 +12,66 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-class Fiche extends React.Component {
-  static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(
-      `${API_URL}/items/fiches_service_public/${slug}`
-    );
-    if (!response.ok) {
-      return { statusCode: response.status };
-    }
-
-    const data = await response.json();
-    if (data._source.raw) {
-      data._source.raw = JSON.parse(data._source.raw);
-    }
-    return { data, slug };
+export async function getServerSideProps({ query: { slug } }) {
+  const response = await fetch(
+    `${API_URL}/items/fiches_service_public/${slug}`
+  );
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
   }
 
-  render() {
-    const { data = { _source: {} }, slug } = this.props;
-    const {
-      _source: {
-        breadcrumbs,
-        date,
-        description,
-        raw,
-        references_juridiques,
-        title,
-        url,
-      },
-      relatedItems,
-    } = data;
-    return (
-      <Layout>
-        <Metas
-          description={description}
-          pathname={`/fiche-service-public/${slug}`}
-          title={title}
-        />
-        <Answer
-          title={title}
-          relatedItems={relatedItems}
-          emptyMessage="Cette fiche n'a pas été trouvée"
-          date={date}
-          source={{ name: "Fiche service-public.fr", url }}
-          additionalContent={
-            <Section>
-              <Container>
-                <ReferencesJuridiques references={references_juridiques} />
-              </Container>
-            </Section>
-          }
-          breadcrumbs={breadcrumbs}
-        >
-          {
-            // Without the check, the prop children of the Answer will evaluate to true
-            // even if in the end, <FicheServicePublic /> returns null
-            raw && <FicheServicePublic data={raw.children} />
-          }
-        </Answer>
-      </Layout>
-    );
+  const data = await response.json();
+  if (data._source.raw) {
+    data._source.raw = JSON.parse(data._source.raw);
   }
+  return { props: { data, slug } };
 }
 
-export default withRouter(Fiche);
+const Fiche = ({
+  data: {
+    _source: {
+      breadcrumbs,
+      date,
+      description,
+      raw,
+      references_juridiques,
+      title,
+      url,
+    },
+    relatedItems,
+  } = { _source: {} },
+  errorCode,
+  slug,
+}) => {
+  return (
+    <Layout errorCode={errorCode}>
+      <Metas
+        description={description}
+        pathname={`/fiche-service-public/${slug}`}
+        title={title}
+      />
+      <Answer
+        title={title}
+        relatedItems={relatedItems}
+        date={date}
+        source={{ name: "Fiche service-public.fr", url }}
+        additionalContent={
+          <Section>
+            <Container>
+              <ReferencesJuridiques references={references_juridiques} />
+            </Container>
+          </Section>
+        }
+        breadcrumbs={breadcrumbs}
+      >
+        {
+          // Without the check, the prop children of the Answer will evaluate to true
+          // even if in the end, <FicheServicePublic /> returns null
+          raw && <FicheServicePublic data={raw.children} />
+        }
+      </Answer>
+    </Layout>
+  );
+};
+
+export default Fiche;

@@ -20,12 +20,21 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const Stats = ({ data }) => {
+export async function getServerSideProps() {
+  const response = await fetch(`${API_URL}/stats`);
+  if (!response.ok) {
+    return { props: { errorCode: response.status } };
+  }
+  const data = await response.json();
+  return { props: { data } };
+}
+
+const Stats = ({ data, errorCode }) => {
   const launchDate = new Date(Date.UTC(2020, 0, 1));
   const startDate = max([subMonths(startOfDay(new Date()), 6), launchDate]);
 
   return (
-    <Layout>
+    <Layout errorCode={errorCode}>
       <Metas
         description="Statistiques d’utilisation du Code du travail numérique"
         pathname="/stats"
@@ -82,15 +91,6 @@ const Stats = ({ data }) => {
       </Section>
     </Layout>
   );
-};
-
-Stats.getInitialProps = async function () {
-  const response = await fetch(`${API_URL}/stats`);
-  if (!response.ok) {
-    return { statusCode: response.status };
-  }
-  const data = await response.json();
-  return { data };
 };
 
 const Tile = styled(Wrapper)`
