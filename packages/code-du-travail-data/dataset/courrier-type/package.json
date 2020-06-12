@@ -6,7 +6,7 @@
   "main": "index.js",
   "dependencies": {
     "@cdt/sources": "^4.22.0",
-    "@socialgouv/datafiller-data": "^1.26.0",
+    "@socialgouv/datafiller-data": "^1.27.0",
     "mammoth": "^1.4.9"
   }
 }

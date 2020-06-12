@@ -2714,10 +2714,10 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.26.0":
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.26.0.tgz#77d972fce83a95ec6a127859f2654129fec44288"
-  integrity sha512-LGWoaMMKWp0Dsij+4fWe8Vn7wEobGWQi82mpQ20K2rvloEkDOymTDbhbYAJ6xdAgPZccQwO7rcaTMyWkp6Fasw==
+"@socialgouv/datafiller-data@^1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.27.0.tgz#740184222a52ab2971b22f9e6a8408d46e892b68"
+  integrity sha512-nSAcP/ryVuRdsayJhbooqyijpi83YtMj9lj87Vu41CN8WVd+Q0jR5u5ar5DDIJfloNILGIc5p5HDe9XPa4olSg==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
@@ -2755,13 +2755,13 @@
     eslint-plugin-jest "~23.13.2"
     eslint-plugin-prettier "~3.1.3"
 
-"@socialgouv/fiches-travail-data@^3.89.0":
-  version "3.89.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.89.0.tgz#83f3bee76667fc038a14edb1da7e8c09a01ea3f0"
-  integrity sha512-GEBAhoXuCdKAXiVbDJoTE2O6BDe+3nXp0KvJaVZ2znPHBeSe0Z6mZEVUUUc6pkJW9TBrOey5dURsUpX4bQNi2w==
+"@socialgouv/fiches-travail-data@^3.93.0":
+  version "3.93.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.93.0.tgz#61171f4e922cf67f45d93c4821dad7400d619940"
+  integrity sha512-nqyt1u+zBYqgfacaRUO32PI0t3dgXzktTX0yAmmvp+c2lTP2riOECJ8924ZfFCAQEMSq1kRZS+JECRfMMtb//A==
   dependencies:
-    "@socialgouv/datafiller-data" "^1.26.0"
-    "@socialgouv/legi-data" "^1.12.0"
+    "@socialgouv/datafiller-data" "^1.27.0"
+    "@socialgouv/legi-data" "^1.13.0"
     esm "^3.2.25"
     jsdom "^16.2.2"
     p-limit "^3.0.1"
@@ -2770,10 +2770,10 @@
     unist-util-find "^1.0.1"
     unist-util-visit "^2.0.2"
 
-"@socialgouv/fiches-vdd@^1.87.0":
-  version "1.87.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.87.0.tgz#14924603c5948db137622cedf9b65b6b191c6bbb"
-  integrity sha512-AVQ+Hx/9f0ChLn8chUoVW94bS+qJS7EkWpBUMRnsEcYHyCLENb1TTLPuOPsnLpicpCgCBV9/iVX3C5j/rmyVew==
+"@socialgouv/fiches-vdd@^1.92.0":
+  version "1.92.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.92.0.tgz#c016fc7a9dbcbc51875418f2b110ef8af58cdfd7"
+  integrity sha512-79D3XyqZqKaay0hxN2bPKDbZ8ZtfM/2QJGY+pAsA6xXY/9KRk60oeouvgE0ETIwGYRQ6jMewHXNB0Ipqs1WY/w==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
@@ -2793,10 +2793,10 @@
     unist-util-map "^2.0.1"
     unist-util-remove "^2.0.0"
 
-"@socialgouv/legi-data@^1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.12.0.tgz#518336b63cdafc60a3c35a1cebf202e2dea853da"
-  integrity sha512-/Y7a2LWIYrlBwQgzjoqI1lrSewLbHwdc2247oDFH4ZUeX0Nipk9gg80SlXAzwvaRvRn2hcuvOQodMRbc71NacA==
+"@socialgouv/legi-data@^1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.13.0.tgz#fab2434f9b0c6bde961ceedaa42f5d9f0ef2c7f9"
+  integrity sha512-2pgECdlqkvND5E2hMp784rij5GvpJ7nhHDEXbP2QEF8c9TOr3QtYyFjCDRt0Tx66MfsHEJZxCDbioySJokxx3w==
   dependencies:
     "@socialgouv/dila-api-client" "^1.1.1"
     debug "^4.1.1"
@@ -19242,15 +19242,15 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@7.0.3, uuid@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
-  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
-
 uuid@^3.0.0, uuid@^3.0.1, uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
 uuid@~3.1.0:
   version "3.1.0"
