@@ -69,7 +69,6 @@ function Answer({
             </Article>
           )}
           {additionalContent}
-          {html && <Html>{html}</Html>}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}

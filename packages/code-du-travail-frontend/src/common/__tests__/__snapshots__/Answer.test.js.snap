@@ -566,16 +566,6 @@ exports[`<Answer /> should renders 1`] = `
           </div>
         </div>
       </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          Contenu au format 
-          <strong>
-            html
-          </strong>
-        </p>
-      </div>
       <div
         class="c13"
       >
@@ -1428,16 +1418,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           </div>
         </div>
       </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          Contenu au format 
-          <strong>
-            html
-          </strong>
-        </p>
-      </div>
       <div
         class="c22"
       >
@@ -2042,16 +2022,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          Contenu au format 
-          <strong>
-            html
-          </strong>
-        </p>
       </div>
       <div
         class="c13"
@@ -3045,13 +3015,6 @@ exports[`<Answer /> should renders related content 1`] = `
           </div>
         </div>
       </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          annualisation du temps de travail. Annualisation de l'annualisation.
-        </p>
-      </div>
       <div
         class="c13"
       >
@@ -3936,17 +3899,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
           </div>
         </div>
       </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          Contenu au format 
-          <strong>
-            html
-          </strong>
-           contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape
-        </p>
-      </div>
       <div
         class="c13"
       >
@@ -4552,17 +4504,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          Contenu au format 
-          <strong>
-            indemnités
-          </strong>
-          comme code ape
-        </p>
       </div>
       <div
         class="c13"
@@ -5171,18 +5112,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           </div>
         </div>
       </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          <a
-            class="spip_in"
-            href="emploi/accompagnement-des-mutations-economiques/csp"
-          >
-            le contrat de sécurisation professionnelle APE
-          </a>
-        </p>
-      </div>
       <div
         class="c13"
       >
@@ -5784,13 +5713,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <p
-          class="test-content"
-        >
-          annualisation du temps de travail. Annualisation de l'annualisation.
-        </p>
       </div>
       <div
         class="c13"
