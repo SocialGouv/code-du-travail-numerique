@@ -27,8 +27,8 @@
     "styled-components": "5.x"
   },
   "dependencies": {
-    "@reach/dialog": "0.10.3",
-    "polished": "^3.6.4",
+    "@reach/dialog": "0.10.4",
+    "polished": "^3.6.5",
     "react-accessible-accordion": "^3.0.1",
     "react-feather": "^2.0.8",
     "react-tabs": "^3.1.1"
