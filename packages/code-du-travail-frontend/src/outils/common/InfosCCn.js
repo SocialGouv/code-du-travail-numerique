@@ -86,9 +86,7 @@ const StyledConventionSearch = styled(ConventionSearch)`
 `;
 
 const { spacings } = theme;
-const P = styled.p`
-  font-style: italic;
-`;
+
 export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};
