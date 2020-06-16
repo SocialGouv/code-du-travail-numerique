@@ -37,12 +37,12 @@ const Search = ({ onSelectConvention }) => {
   return (
     <>
       <Label htmlFor="convention-search">
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
-        convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre
+        entreprise ou son SIRET.
       </Label>
       <BlockInput
         role="search"
-        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
         value={query}
         type="search"
         name="q"

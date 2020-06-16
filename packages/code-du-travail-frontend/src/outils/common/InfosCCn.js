@@ -60,15 +60,8 @@ function StepInfoCCn({ form, isOptionnal = true }) {
           return (
             <>
               <Question as="p" required={!isOptionnal}>
-                Quelle est la convention collective du salarié ?
+                Quelle est la convention collective applicable au salarié ?
               </Question>
-              {isOptionnal && (
-                <P>
-                  <strong>* optionnel</strong>, si vous ne connaissez pas la
-                  convention collective, vous pouvez passer à l’étape suivante
-                  en cliquant sur le bouton Suivant.
-                </P>
-              )}
               <StyledConventionSearch onSelectConvention={onSelectConvention} />
               <ErrorField name={CONVENTION_NAME} />
             </>
@@ -93,9 +86,7 @@ const StyledConventionSearch = styled(ConventionSearch)`
 `;
 
 const { spacings } = theme;
-const P = styled.p`
-  font-style: italic;
-`;
+
 export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};

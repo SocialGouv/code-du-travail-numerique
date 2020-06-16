@@ -529,7 +529,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
         class="c18 c19"
@@ -538,7 +538,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
           role="search"
           type="search"
           value=""
@@ -1079,7 +1079,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
         class="c18 c19"
@@ -1088,7 +1088,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
           role="search"
           type="search"
           value=""
@@ -1629,7 +1629,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
         class="c18 c19"
@@ -1638,7 +1638,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
           role="search"
           type="search"
           value=""
@@ -2179,7 +2179,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
         class="c18 c19"
@@ -2188,7 +2188,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
           role="search"
           type="search"
           value=""
@@ -2656,7 +2656,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="c14"
         for="convention-search"
       >
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
         class="c15 c16"
@@ -2665,7 +2665,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           class="c17"
           id="convention-search"
           name="q"
-          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
           role="search"
           type="search"
           value=""
