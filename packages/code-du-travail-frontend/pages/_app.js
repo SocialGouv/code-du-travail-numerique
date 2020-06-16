@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import App from "next/app";
 import getConfig from "next/config";
+import dynamic from "next/dynamic";
 import * as Sentry from "@sentry/browser";
 
 import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
@@ -19,8 +20,8 @@ import "katex/dist/katex.min.css";
 
 if (typeof window !== "undefined") {
   // Get tooltips web-component
-  import("../src/web-components/tooltip");
-  import("../src/web-components/tooltip-cc");
+  dynamic(() => import("../src/web-components/tooltip"));
+  dynamic(() => import("../src/web-components/tooltip-cc"));
 }
 
 const {
