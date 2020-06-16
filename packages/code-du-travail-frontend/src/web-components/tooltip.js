@@ -96,4 +96,4 @@ class WebComponentsTooltip extends LitElement {
   }
 }
 
-customElements.define("webcomponent-tooltip", WebComponentsTooltip);
+export { WebComponentsTooltip };
