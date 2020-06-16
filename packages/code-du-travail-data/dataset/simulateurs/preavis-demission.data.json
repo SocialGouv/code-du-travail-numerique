@@ -106,7 +106,7 @@
     },
     {
       "name": "convention collective",
-      "question": "Quelle est la convention collective du salarié ?"
+      "question": "Quelle est la convention collective applicable au salarié ?"
     }
   ],
   "situations": [

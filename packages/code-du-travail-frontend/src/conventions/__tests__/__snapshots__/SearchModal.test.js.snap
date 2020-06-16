@@ -311,7 +311,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               class="c2"
               for="convention-search"
             >
-              Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+              Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
             </label>
             <span
               class="c3 c4"
@@ -320,7 +320,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 class="c5"
                 id="convention-search"
                 name="q"
-                placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+                placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
                 role="search"
                 type="search"
                 value=""

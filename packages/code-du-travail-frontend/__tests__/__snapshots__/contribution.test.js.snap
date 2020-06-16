@@ -2464,7 +2464,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c60"
                         for="convention-search"
                       >
-                        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+                        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
                         class="c61 c62"
@@ -2473,7 +2473,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           class="c63"
                           id="convention-search"
                           name="q"
-                          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+                          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
                           role="search"
                           type="search"
                           value=""
@@ -5309,7 +5309,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c60"
                         for="convention-search"
                       >
-                        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+                        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
                         class="c61 c62"
@@ -5318,7 +5318,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           class="c63"
                           id="convention-search"
                           name="q"
-                          placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+                          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
                           role="search"
                           type="search"
                           value=""
