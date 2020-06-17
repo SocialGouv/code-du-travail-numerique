@@ -36,25 +36,23 @@ const Outils = ({ pageUrl, ogImage }) => (
         </FocusRoot>
         <Grid>
           {DocumentsTile}
-          {tools
-            .filter((tool) => tool.slug !== "simulateur-embauche")
-            .map(({ action, description, icon, slug, title }) => (
-              <Link
-                href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
-                passHref
-                key={slug}
+          {tools.map(({ action, description, icon, slug, title }) => (
+            <Link
+              href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
+              as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
+              passHref
+              key={slug}
+            >
+              <CallToActionTile
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
               >
-                <CallToActionTile
-                  action={action}
-                  custom
-                  title={title}
-                  icon={icons[icon]}
-                >
-                  {description}
-                </CallToActionTile>
-              </Link>
-            ))}
+                {description}
+              </CallToActionTile>
+            </Link>
+          ))}
           {CCTile}
           <CallToActionTile
             key={monCompteFormation.slug}
