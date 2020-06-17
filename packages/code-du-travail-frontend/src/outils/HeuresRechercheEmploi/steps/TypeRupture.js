@@ -4,8 +4,6 @@ import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";
 import {
-  getOptions,
-  filterSituations,
   getSituationsFor,
   formatOption,
   orderCriteria,
