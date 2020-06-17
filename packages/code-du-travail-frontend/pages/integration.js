@@ -35,8 +35,8 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
             </p>
             <iframe
               src="/widget.html"
-              width="250px"
-              height="250px"
+              width="100%"
+              height="300px"
               title="widget - Code du travail numérique "
               style={{ border: "none" }}
             ></iframe>
@@ -47,7 +47,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
               Code du travail numérique.
             </p>
             <p>
-              Comment faire ? Nous vous proposons 2 méthodes pour intégrer ce
+              Comment faire ? Nous vous proposons deux méthodes pour intégrer ce
               module à votre site :
             </p>
             <Accordion
@@ -59,9 +59,9 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                   body: (
                     <>
                       <p>
-                        L’installation se passe en 2 temps. Il faut ajouter le
-                        code suivant dans la balise <code>&lt;body&gt;</code> de
-                        vos pages :
+                        L’installation se passe en deux temps. Il faut ajouter
+                        le code suivant dans la balise <code>&lt;body&gt;</code>{" "}
+                        de vos pages :
                       </p>
                       <Code>
                         <pre style={{ margin: 0, lineHeight: "125%" }}>
@@ -70,10 +70,10 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                       </Code>
                       <p>
                         Il faut ensuite determiner là où vous souhaitez afficher
-                        le widget dans vos pages.
+                        le module dans vos pages.
                         <br />
                         Pour cela, il faut rajouter le code suivant à
-                        l’emplacement ou vous souhaitez voir le widget
+                        l’emplacement ou vous souhaitez voir le module
                         s’afficher.
                       </p>
                       <Code>
@@ -88,18 +88,33 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                   title: "iframe",
                   body: (
                     <>
+                      <p>
+                        Avec l’iframe, il suffit d’ajouter le code suivant à
+                        l’endroit où vous souhaitez voir apparaître le
+                        module&nbsp;:
+                      </p>
                       <Code>
                         <pre>
                           {`<iframe
   src="https://code.travail.gouv.fr/widget.html"
   width="100%"
-  height="250px"
+  height="300px"
   title="widget - Code du travail numérique "
   style="border: none"
 ></iframe>
 `}
                         </pre>
                       </Code>
+                      <p>
+                        En revanche, c’est à vous de décider de la hauteur que
+                        prendra le module. Vous pouvez spécifier la valeur{" "}
+                        <code>height</code> qui vous convient le mieux en
+                        fonction de la largeur du conteneur. (Par exemple, une
+                        hauteur de <code>210px</code> est suffisante si la
+                        largeur du conteneur n’excède pas <code>300px</code>,
+                        mais sera trop petite si la largeur dépasse cette
+                        valeur.
+                      </p>
                     </>
                   ),
                 },
