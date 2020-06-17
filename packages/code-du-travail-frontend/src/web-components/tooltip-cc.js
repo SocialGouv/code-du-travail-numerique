@@ -120,4 +120,4 @@ class WebComponentsTooltipCC extends LitElement {
   }
 }
 
-customElements.define("webcomponent-tooltip-cc", WebComponentsTooltipCC);
+export { WebComponentsTooltipCC };

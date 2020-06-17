@@ -12,10 +12,6 @@ import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
-function getContributionUrl({ slug }) {
-  return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
-}
-
 function Contributions({ contributions, convention }) {
   const UNTHEMED_LABEL = "Autres";
   // group questions by theme
@@ -94,7 +90,10 @@ function AccordionContent({ answer, slug, references }) {
       <strong>
         Pour savoir si la mesure prévue par la convention collective s’applique
         à votre situation, reportez-vous{" "}
-        <Link href={getContributionUrl({ slug })} passHref>
+        <Link
+          href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/[slug]`}
+          as={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}
+        >
           <a>à la réponse complète à cette question</a>
         </Link>
         .
