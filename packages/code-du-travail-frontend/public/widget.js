@@ -45,9 +45,6 @@ function addWidget() {
       }
     }
   </style>
-  <strong style="font-family: Merriweather; font-weight: 300; font-size: 1em;">
-    Code du travail numérique
-  </strong>
   <form target="_blank" action="https://code.travail.gouv.fr/recherche">
     <label for="cdtn-search" style="font-family:Merriweather; font-size:1.125em; display: block; margin: .5em 0 1em">
       Trouvez les réponses à vos questions en droit du travail

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div id="root" style="padding:2em 1.4em; background:#fff; font-size: 1em; line-height:1.625; color: #3e486e; max-width: 31em;">
+  <div id="root" style="padding:2em 1.4em; background: white; font-size: 1em; line-height:1.625; color: #3e486e; max-width: 31em;">
     <style>
       html { font-size:62.5%; }
       html, body {
@@ -24,7 +24,48 @@
         font-style: normal;
       }
 
+      .search-bar {
+        position: relative;
+        width: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        background: white;
+        border-radius:0.6rem;
+        box-shadow: rgba(121, 148, 212, 0.4) 0px 1rem 2rem;
+      }
+
+      #logo {
+        position: absolute;
+        z-index: 0;
+        height: 20px;
+        left: 1em;
+        top: calc(50% - 10px);
+      }
+
+      #cdtn-search {
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 2em 3.5em 2em 5.2em;
+        height: 5em;
+        width:100%;
+        color: #3e486e;
+        font-weight: normal;
+        font-size: 1em;
+        font-style: normal;
+        line-height: 1;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-image: initial;
+        border-style: solid;
+        border-width: 1px;
+        border-radius:0.6rem;
+      }
+
       #button-search {
+        position: relative;
+        z-index: 2;
         opacity: 1;
       }
 
@@ -33,17 +74,11 @@
         transform: translateY(-2px);
       }
 
-      @media (max-width: 33.5em) {
+      @media (max-width: 300px) {
         #logo {
-          height: 16px !important;
-        }
-      }
-      @media (max-width: 250px) {
-        #logo {
-          /* display: none; */
-          height: 14px !important;
-          left: .5em !important;
-          top: calc(50% - 7px) !important;
+          height: 14px;
+          left: .5em;
+          top: calc(50% - 7px);
         }
         strong {
           font-size: 1.2em !important;
@@ -52,7 +87,6 @@
           font-size: 0.8125em;
         }
         label {
-          font-size: 1em !important;
           line-height: 1.2;
         }
         label+div {
@@ -60,7 +94,6 @@
         }
         #cdtn-search {
           height: 3.5em !important;
-          padding: .5em !important;
           padding: 0.3em 3.7em 0.5em 3.7em !important;
         }
         #button-search {
@@ -71,20 +104,24 @@
         }
       }
     </style>
-    <strong style="font-family: Merriweather; font-weight: 300; font-size: 1em;">
-      Code du travail numérique
-    </strong>
     <form target="_blank" action="https://code.travail.gouv.fr/recherche">
       <label for="cdtn-search" style="font-family:Merriweather; font-size:1.125em; display: block; margin: .5em 0 1em">
         Trouvez les réponses à vos questions en droit du travail
       </label>
-      <div
-        style=" display: flex; position: relative; width: 100%; align-items: center; justify-items: flex-start; box-shadow: rgba(121, 148, 212, 0.4) 0px 1rem 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; background: rgb(255, 255, 255); border-radius:0.6rem;">
-        <img id="logo" style="height: 20px; left: 1em;position: absolute; top:calc(50% - 10px)"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAoCAMAAADDs4S7AAAAw1BMVEX///////9wcMFAQKxgYLrv7/j0oKXpQEvwgIcAAJFAQK373+HlIC3hAA/sYGkQEJivr9z2sLS/v+P0n6X4wMPjEB4gIJ/f3/LucHifn9blHy3ykJb97/D5+fnm5ubg4ODz8/Ovr93a2dmcm5vBwcGQkM/t7e2ura27u7vnMDzT09P3v8MwMKWgoNbqUFpvb8F/f8ggIJ4fH55QULSAgMi/v+SPj8/f3/HPz+tQULNfX7rrUFr4v8PPz+r5z9Lzn6X2r7SE0oVPAAAAAnRSTlP/n4UHvp8AAAHaSURBVHgBvdZVgqswGIbhbyCpt6EGp+7u7rL/VZ3AuPwjTeh7gVw9aBLcswfAMP8Y43hXIPjLQlIzw38rwvGhaCz+qxJ/1oSFzyX90lL4orRPGsPnMomsP5rtQHan9yYcfFk0+M8HLQcqH7QIqJI+PEkHVFH9WgR0+btqBe2aDbqi/vfGCapUrlTz2rUaoZXrjWZWu9YitHanW9L/JBnxILuNMnraNRNE/SoGOrRhamSTn8m7xurahLO3pyPQRbOq2hQz+VMzxuYRIU8X33IhRW2Kpdys1jWLA6mZMHJL0CXUtPWmFranw8WytYIbh9qD/E6ztyvhDvubqdwJ5kC2cUCmpk2XciNqHECKzcJi5NR2goMqrfQH2Mt3g1VuRv/eXkUlbeZtd3jK/RNEDnRB9b97x3nNgVMzhk9r5A2o1Eeu/dZwv5Cd3ITFGsBqDaqYqiZ2j7vHuwT4ciI3hvX+nw4eCsdoUe+aa5drsV1KgrMJMTpq1Gy2tjiwnYWn9HJEVRPMcp+me1PbXC5nykP6balqE74a7kV4yremCHsNOb2MVNVOS+8b2bbE80f6HsNAo2YPvV2EPZ1HUvjQWUGjUMqSXbR/k7TlFr3E/qQZkR9bSIvuEvpl14f/nSicEPXggsEAAAAASUVORK5CYII=" />
-        <input name="q" autocomplete="off" type="text" id="cdtn-search" placeholder="période d'essai"
-          aria-label="Votre recherche" aria-describedby="button-search"
-          style="color: #3e486e; font-size: 1rem; box-sizing: border-box; border-radius:0.6rem; padding: 2em 3.5em 2em 5em; height: 5em; width:100%; font-weight: normal; font-size: 1em; font-style: normal; line-height: 1; margin: 0px; -webkit-appearance: none; border-width: 1px; border-style: solid; border-color: transparent; border-image: initial;" />
+      <div class="search-bar">
+        <img
+          id="logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAoCAMAAADDs4S7AAAAw1BMVEX///////9wcMFAQKxgYLrv7/j0oKXpQEvwgIcAAJFAQK373+HlIC3hAA/sYGkQEJivr9z2sLS/v+P0n6X4wMPjEB4gIJ/f3/LucHifn9blHy3ykJb97/D5+fnm5ubg4ODz8/Ovr93a2dmcm5vBwcGQkM/t7e2ura27u7vnMDzT09P3v8MwMKWgoNbqUFpvb8F/f8ggIJ4fH55QULSAgMi/v+SPj8/f3/HPz+tQULNfX7rrUFr4v8PPz+r5z9Lzn6X2r7SE0oVPAAAAAnRSTlP/n4UHvp8AAAHaSURBVHgBvdZVgqswGIbhbyCpt6EGp+7u7rL/VZ3AuPwjTeh7gVw9aBLcswfAMP8Y43hXIPjLQlIzw38rwvGhaCz+qxJ/1oSFzyX90lL4orRPGsPnMomsP5rtQHan9yYcfFk0+M8HLQcqH7QIqJI+PEkHVFH9WgR0+btqBe2aDbqi/vfGCapUrlTz2rUaoZXrjWZWu9YitHanW9L/JBnxILuNMnraNRNE/SoGOrRhamSTn8m7xurahLO3pyPQRbOq2hQz+VMzxuYRIU8X33IhRW2Kpdys1jWLA6mZMHJL0CXUtPWmFranw8WytYIbh9qD/E6ztyvhDvubqdwJ5kC2cUCmpk2XciNqHECKzcJi5NR2goMqrfQH2Mt3g1VuRv/eXkUlbeZtd3jK/RNEDnRB9b97x3nNgVMzhk9r5A2o1Eeu/dZwv5Cd3ITFGsBqDaqYqiZ2j7vHuwT4ciI3hvX+nw4eCsdoUe+aa5drsV1KgrMJMTpq1Gy2tjiwnYWn9HJEVRPMcp+me1PbXC5nykP6balqE74a7kV4yremCHsNOb2MVNVOS+8b2bbE80f6HsNAo2YPvV2EPZ1HUvjQWUGjUMqSXbR/k7TlFr3E/qQZkR9bSIvuEvpl14f/nSicEPXggsEAAAAASUVORK5CYII="
+        />
+        <input
+          name="q"
+          autocomplete="off"
+          type="text"
+          id="cdtn-search"
+          placeholder="période d'essai"
+          aria-label="Votre recherche"
+          aria-describedby="button-search"
+        />
         <button id="button-search"
           style="box-sizing: border-box; position: absolute; height:100%; top: 0px; right: 0px; color: rgb(121, 148, 212); cursor: pointer; -webkit-appearance: none; box-shadow: none; transition: all 100ms ease-out; border: 1px solid transparent; padding: 0px 1rem; background: transparent;">
           <svg fill="none" style="width:3.3em" viewBox="0 0 32 32">

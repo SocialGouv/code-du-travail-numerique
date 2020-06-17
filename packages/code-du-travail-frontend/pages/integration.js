@@ -35,7 +35,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
             </p>
             <iframe
               src="/widget.html"
-              width="100%"
+              width="250px"
               height="250px"
               title="widget - Code du travail numérique "
               style={{ border: "none" }}
