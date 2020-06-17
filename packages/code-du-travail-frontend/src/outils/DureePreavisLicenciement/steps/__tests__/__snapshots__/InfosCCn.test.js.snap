@@ -163,7 +163,9 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
     <div
       class="c2"
       role="alert"
-    />
+    >
+      ccn des 5 mondes
+    </div>
     <button
       aria-label="Fermer"
       class="c3"

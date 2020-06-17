@@ -411,7 +411,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           class="c5"
         >
            
-          1/4
+          1/5
         </span>
       </span>
       <ul
@@ -447,7 +447,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           >
             3
           </span>
-          Informations
+          Type de rupture
         </li>
         <li
           class="c7 c10"
@@ -456,6 +456,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             class="c11"
           >
             4
+          </span>
+          Informations
+        </li>
+        <li
+          class="c7 c10"
+        >
+          <span
+            class="c11"
+          >
+            5
           </span>
           Durée du préavis
         </li>
@@ -471,7 +481,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
       Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. Prévoyez 2 à 5 minutes pour cette simulation.
     </p>
     <p>
-      Cliquez sur commencer pour démarrer la simulation.
+      Cliquez sur Commencer pour démarrer la simulation.
     </p>
     <div
       class="c12"

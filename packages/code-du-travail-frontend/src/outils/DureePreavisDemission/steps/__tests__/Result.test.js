@@ -6,7 +6,7 @@ describe("<StepResult />", () => {
     const { container } = renderForm(StepResult, {
       ccn: { num: 292, title: "Plasturgie" },
       criteria: {
-        "catégorie socio-professionnelle": "42| Collaborateurs",
+        "catégorie professionnelle": "42| Collaborateurs",
         coefficient: "28| 800 à 830 inclus",
       },
     });

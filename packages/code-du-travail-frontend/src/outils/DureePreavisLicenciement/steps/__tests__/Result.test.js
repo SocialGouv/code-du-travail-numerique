@@ -19,7 +19,7 @@ describe("<StepResult />", () => {
       },
       criteria: {
         ancienneté: "3| moins de 1 mois",
-        "catégorie socio-professionnelle": "16| Employés",
+        "catégorie professionnelle": "16| Employés",
       },
       disabledWorker: false,
       seriousMisconduct: false,
@@ -34,6 +34,7 @@ describe("<StepResult />", () => {
       },
       criteria: {
         ancienneté: "30| 1 mois à moins de 2 ans",
+        "catégorie professionnelle": "16| Employés",
         "catégorie socio-professionnelle": "16| Employés",
       },
       disabledWorker: false,
@@ -49,6 +50,7 @@ describe("<StepResult />", () => {
       },
       criteria: {
         ancienneté: "30| 1 mois à moins de 2 ans",
+        "catégorie professionnelle": "16| Employés",
         "catégorie socio-professionnelle": "16| Employés",
       },
       disabledWorker: false,

@@ -6,6 +6,7 @@ const getCells = promisify(GoogleSpreadsheets.cells);
 const csvColumns = {
   type: 1,
   idcc: 2,
+  typeRupture: 14,
   answer: 25,
   answer2: 26,
   answer3: 27,
@@ -24,7 +25,7 @@ const criteriaIndex = [
   11, // temps de travail
   12, // durée de préavis
   13, // delais de prévenance
-  14, // type de rupture
+  // 14, // type de rupture
   15, // conclusion contrat
   16, // logement
   17, // niveau
@@ -39,7 +40,7 @@ const criteriaIndex = [
 
 export async function getQuestions({ spreadsheetKey, worksheet }) {
   const cells = await getDataFromSpreadsheet({ spreadsheetKey, worksheet });
-  return cells.map(extractQuestions).filter(Boolean);
+  return cells.slice(1).map(extractQuestions).filter(Boolean);
 }
 
 export async function getSituations({ spreadsheetKey, worksheet }) {
@@ -47,7 +48,7 @@ export async function getSituations({ spreadsheetKey, worksheet }) {
   const [headerRows, ...valueRows] = Object.values(cells);
 
   const headers = getRowHeaders(headerRows);
-  const rowTransformerWithHeaders = row => transformRow(headers, row);
+  const rowTransformerWithHeaders = (row) => transformRow(headers, row);
   return Object.values(valueRows)
     .map(rowTransformerWithHeaders)
     .filter(Boolean);

@@ -132,7 +132,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   </ul>
   <ul>
     <li>
-      Catégorie socio-professionnelle
+      Catégorie professionnelle
        : 
       <strong>
         Employés
@@ -320,7 +320,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   </ul>
   <ul>
     <li>
-      Catégorie socio-professionnelle
+      Catégorie professionnelle
        : 
       <strong>
         Employés
@@ -506,7 +506,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   </ul>
   <ul>
     <li>
-      Catégorie socio-professionnelle
+      Catégorie professionnelle
        : 
       <strong>
         Employés

@@ -15,7 +15,7 @@ describe("<StepInformations />", () => {
   it("should render coefficient", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 292 },
-      criteria: { "catégorie socio-professionnelle": "42| Collaborateurs" },
+      criteria: { "catégorie professionnelle": "42| Collaborateurs" },
     });
     expect(container).toMatchSnapshot();
   });

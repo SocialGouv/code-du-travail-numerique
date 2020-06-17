@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render no results 1`] = `
-.c2 {
+.c1 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -10,11 +10,11 @@ exports[`<StepResult /> should render no results 1`] = `
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c1 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -27,43 +27,24 @@ exports[`<StepResult /> should render no results 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
     class="c0"
   >
-    Nombre d’heures
+    Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, le nombre d’heures pour recherche d’emploi est estimé à 
-    <strong
-      class="c1"
-    >
-      La convention collective ne prévoit pas d'heures de recherche d'emploi pour le salarié.
-    </strong>
-    .
+    D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.
   </p>
   <div
-    class="c2"
+    class="c1"
   >
-    Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent peut prévoir l’existence, le cadre et une durée différentes des absences pour rechercher un emploi au cours du préavis.
+    Si un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent prévoit des heures d’absence autorisée pour rechercher un emploi pendant le préavis, le salarié en bénéficie si ces mesures sont plus favorables que la convention collective.
   </div>
   <h2
     class="c0"
   >
-    Détails
+    Récapitulatif des éléments saisis
   </h2>
   <ul>
     <li>
@@ -74,17 +55,24 @@ exports[`<StepResult /> should render no results 1`] = `
       </strong>
     </li>
     <li>
-      Période essai
+      Type de rupture du contrat de travail
        : 
       <strong>
-        oui
+        rupture en cours de période d'essai
       </strong>
     </li>
     <li>
-      Catégorie socio-professionnelle
+      Période essai
        : 
       <strong>
-        Employés
+        Le salarié
+      </strong>
+    </li>
+    <li>
+      Catégorie professionnelle
+       : 
+      <strong>
+        Agents de maîtrise et Techniciens
       </strong>
     </li>
   </ul>
@@ -96,12 +84,12 @@ exports[`<StepResult /> should render no results 1`] = `
   <ul>
     <li>
       <a
-        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=68C4D11B1B434910FCC8731A925B638E.tplgfr28s_1?idArticle=KALIARTI000022438632&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id"
+        href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
         rel="noopener noreferrer"
         target="_blank"
-        title="Consultez l’article 15"
+        title="Consultez l’article 33"
       >
-        Article 15
+        Article 33
       </a>
     </li>
   </ul>
@@ -152,10 +140,11 @@ exports[`<StepResult /> should render with duration 1`] = `
   <h2
     class="c0"
   >
-    Nombre d’heures
+    Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, le nombre d’heures pour recherche d’emploi est estimé à 
+    D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
+     
     <strong
       class="c1"
     >
@@ -166,7 +155,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   <h2
     class="c0"
   >
-    Rémunération
+    Rémunération pendant les heures d’absence autorisée
   </h2>
   <p>
     Le salaire est maintenu.
@@ -174,7 +163,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   <h2
     class="c0"
   >
-    Modalités d’utilisation
+    Conditions d’utilisation
   </h2>
   <p>
     La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.
@@ -182,12 +171,12 @@ exports[`<StepResult /> should render with duration 1`] = `
   <div
     class="c2"
   >
-    Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent peut prévoir l’existence, le cadre et une durée différentes des absences pour rechercher un emploi au cours du préavis.
+    Si un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent prévoit des heures d’absence autorisée pour rechercher un emploi pendant le préavis, le salarié en bénéficie si ces mesures sont plus favorables que la convention collective.
   </div>
   <h2
     class="c0"
   >
-    Détails
+    Récapitulatif des éléments saisis
   </h2>
   <ul>
     <li>
@@ -198,24 +187,17 @@ exports[`<StepResult /> should render with duration 1`] = `
       </strong>
     </li>
     <li>
-      Période essai
-       : 
-      <strong>
-        non
-      </strong>
-    </li>
-    <li>
-      Catégorie socio-professionnelle
-       : 
-      <strong>
-        Employés
-      </strong>
-    </li>
-    <li>
-      Type de rupture
+      Type de rupture du contrat de travail
        : 
       <strong>
         démission
+      </strong>
+    </li>
+    <li>
+      Catégorie professionnelle
+       : 
+      <strong>
+        Employés
       </strong>
     </li>
   </ul>
@@ -283,7 +265,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <h2
     class="c0"
   >
-    Nombre d’heures
+    Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
   <p>
     <strong
@@ -295,13 +277,19 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     la convention collective n’a pas été renseignée.
   </p>
   <p>
-    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un « délai raisonnable » pour rechercher un emploi.
+    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
   <div
     class="c2"
   >
-    Une convention collective, un accord d’entreprise ou un usage dans la profession ou l’entreprise peut prévoir et encadrer des absences pour rechercher un emploi au cours du préavis.
+    Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
   </div>
+  <h2
+    class="c0"
+  >
+    Récapitulatif des éléments saisis
+  </h2>
+  <ul />
   <h2
     class="c0"
   >
@@ -366,7 +354,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <h2
     class="c0"
   >
-    Nombre d’heures
+    Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
   <p>
     <strong
@@ -378,12 +366,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     la convention collective n’a pas encore été traitée par nos services.
   </p>
   <p>
-    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un « délai raisonnable » pour rechercher un emploi.
+    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
   <div
     class="c2"
   >
-    Une convention collective, un accord d’entreprise ou un usage dans la profession ou l’entreprise peut prévoir et encadrer des absences pour rechercher un emploi au cours du préavis.
+    Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
     <br />
     Vous pouvez faire une recherche par mots-clés dans
      
@@ -393,6 +381,20 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       votre convention collective
     </a>
   </div>
+  <h2
+    class="c0"
+  >
+    Récapitulatif des éléments saisis
+  </h2>
+  <ul>
+    <li>
+      Convention collective
+       : 
+      <strong>
+        Cordonnerie multiservice
+      </strong>
+    </li>
+  </ul>
   <h2
     class="c0"
   >

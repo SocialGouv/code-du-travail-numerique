@@ -22,7 +22,7 @@ function StepIntro() {
         plupart de ces informations se trouvent sur le contrat de travail ou le
         bulletin de salaire. Prévoyez 2 à 5 minutes pour cette simulation.
       </p>
-      <p>Cliquez sur commencer pour démarrer la simulation.</p>
+      <p>Cliquez sur Commencer pour démarrer la simulation.</p>
     </>
   );
 }

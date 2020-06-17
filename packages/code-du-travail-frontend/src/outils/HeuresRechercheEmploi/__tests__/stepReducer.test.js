@@ -5,6 +5,7 @@ describe("initialSteps", () => {
     expect(initialState.steps.map(({ name }) => ({ name }))).toEqual([
       { name: "intro" },
       { name: "info_cc" },
+      { name: "rupture" },
       { name: "infos" },
       { name: "results" },
     ]);

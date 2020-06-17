@@ -144,7 +144,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie socio-professionnelle"
+      for="input-criteria.catégorie professionnelle"
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
@@ -153,8 +153,8 @@ exports[`<StepInformations /> should render catégorie 1`] = `
     >
       <select
         class="c5"
-        id="input-criteria.catégorie socio-professionnelle"
-        name="criteria.catégorie socio-professionnelle"
+        id="input-criteria.catégorie professionnelle"
+        name="criteria.catégorie professionnelle"
       >
         <option
           disabled=""
@@ -331,7 +331,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   >
     <label
       class="c2"
-      for="input-criteria.catégorie socio-professionnelle"
+      for="input-criteria.catégorie professionnelle"
     >
       Quelle est la catégorie professionnelle du salarié ?
     </label>
@@ -340,8 +340,8 @@ exports[`<StepInformations /> should render coefficient 1`] = `
     >
       <select
         class="c5"
-        id="input-criteria.catégorie socio-professionnelle"
-        name="criteria.catégorie socio-professionnelle"
+        id="input-criteria.catégorie professionnelle"
+        name="criteria.catégorie professionnelle"
       >
         <option
           disabled=""
