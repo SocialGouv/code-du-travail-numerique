@@ -59,9 +59,10 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                   body: (
                     <>
                       <p>
-                        L’installation se passe en deux temps. Il faut ajouter
-                        le code suivant dans la balise <code>&lt;body&gt;</code>{" "}
-                        de vos pages :
+                        L’installation se passe en deux temps.
+                        <br />
+                        Premièrement, ajoutez le code suivant dans la balise{" "}
+                        <code>&lt;body&gt;</code> de votre page&nbsp;:
                       </p>
                       <Code>
                         <pre style={{ margin: 0, lineHeight: "125%" }}>
@@ -69,12 +70,8 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                         </pre>
                       </Code>
                       <p>
-                        Il faut ensuite determiner là où vous souhaitez afficher
-                        le module dans vos pages.
-                        <br />
-                        Pour cela, il faut rajouter le code suivant à
-                        l’emplacement ou vous souhaitez voir le module
-                        s’afficher.
+                        Ensuite, intégrez le code suivant à l’endroit où vous
+                        souhaitez voir le module s’afficher&nbsp;:
                       </p>
                       <Code>
                         <pre style={{ margin: 0, lineHeight: "125%" }}>
@@ -109,11 +106,12 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                         En revanche, c’est à vous de décider de la hauteur que
                         prendra le module. Vous pouvez spécifier la valeur{" "}
                         <code>height</code> qui vous convient le mieux en
-                        fonction de la largeur du conteneur. (Par exemple, une
-                        hauteur de <code>210px</code> est suffisante si la
-                        largeur du conteneur n’excède pas <code>300px</code>,
-                        mais sera trop petite si la largeur dépasse cette
-                        valeur.
+                        fonction de la largeur de la balise parente.
+                        <br />
+                        Par exemple, une hauteur de <code>210px</code> est
+                        suffisante si la largeur de la balise parente n’excède
+                        pas <code>300px</code>, mais sera trop petite si la
+                        largeur dépasse cette valeur.
                       </p>
                     </>
                   ),
