@@ -62,7 +62,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                         L’installation se passe en deux temps.
                         <br />
                         Premièrement, ajoutez le code suivant dans la balise{" "}
-                        <code>&lt;body&gt;</code> de vos pages&nbsp;:
+                        <code>&lt;body&gt;</code> de votre page&nbsp;:
                       </p>
                       <Code>
                         <pre style={{ margin: 0, lineHeight: "125%" }}>
