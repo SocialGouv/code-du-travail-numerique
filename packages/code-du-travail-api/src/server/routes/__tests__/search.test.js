@@ -1,6 +1,6 @@
 const request = require("supertest");
 const Koa = require("koa");
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
 const winston = require("winston");
 const { SOURCES } = require("@cdt/sources");
 const router = require("../search");
@@ -8,13 +8,14 @@ const router = require("../search");
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
 const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
-const demission_vector = require("./demission.vector");
-const r1225_18_vector = require("./r1225-18.vector");
+// const demission_vector = require("./demission.vector");
+// const r1225_18_vector = require("./r1225-18.vector");
 
 const { logger } = require("../../utils/logger");
 logger.level = winston.error;
 
 // mock fetch function to return vector for démission
+/*
 jest.mock("node-fetch");
 fetch.mockImplementation((req) => {
   let data = r1225_18_vector;
@@ -26,6 +27,7 @@ fetch.mockImplementation((req) => {
     json: () => Promise.resolve(data),
   });
 });
+*/
 
 const app = new Koa();
 app.use(router.routes());
