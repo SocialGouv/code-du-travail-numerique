@@ -95,6 +95,7 @@ Object {
   "_type": "_doc",
   "relatedItems": Array [
     Object {
+      "algo": "both",
       "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
       "slug": "demission-dune-assistante-maternelle",
       "source": "fiches_service_public",
@@ -108,24 +109,29 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
+      "action": "Estimer",
+      "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Licenciement",
+          "slug": "/themes/84-licenciement",
+        },
+      ],
+      "description": "Estimez simplement le montant de l’indemnité de licenciement",
+      "slug": "indemnite-licenciement",
+      "source": "outils",
+      "title": "Indemnité de licenciement",
+    },
+    Object {
+      "algo": "both",
       "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
       "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
-    },
-    Object {
-      "action": "Calculer",
-      "description": "Calculez la durée de préavis à respecter en cas de démission",
-      "icon": "Rules",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Préavis de démission",
-    },
-    Object {
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l'initiative de l'employeur",
     },
   ],
 }
