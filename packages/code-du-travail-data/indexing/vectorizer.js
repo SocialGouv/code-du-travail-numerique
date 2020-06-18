@@ -26,6 +26,9 @@ function preprocess(text) {
 }
 
 async function callTFServe(body) {
+  console.log(tfServeURL);
+  console.log(body);
+
   const response = await fetch(tfServeURL, { method: "POST", body });
   if (response.ok) {
     const json = await response.json();
