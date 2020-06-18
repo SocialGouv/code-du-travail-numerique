@@ -1,5 +1,7 @@
-import fetch from "node-fetch";
-import semantic_stopwords from "../dataset/stop_words";
+// import fetch from "node-fetch";
+// import semantic_stopwords from "../dataset/stop_words";
+const fetch = require("node-fetch");
+const semantic_stopwords = require("../dataset/stop_words");
 
 // URL of the TF serve deployment
 const NLP_URL = process.env.NLP_URL || "http://localhost:8501/";
@@ -26,9 +28,6 @@ function preprocess(text) {
 }
 
 async function callTFServe(body) {
-  console.log(tfServeURL);
-  console.log(body);
-
   const response = await fetch(tfServeURL, { method: "POST", body });
   if (response.ok) {
     const json = await response.json();
@@ -68,4 +67,4 @@ async function vectorizeQuery(query) {
   return vectors[0];
 }
 
-export { vectorizeDocument, vectorizeQuery, preprocess };
+module.exports = { vectorizeDocument, vectorizeQuery, preprocess };
