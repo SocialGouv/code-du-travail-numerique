@@ -445,6 +445,12 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       for="input-cdt.ancienneté"
     >
       Quelle est l'ancienneté du salarié ?
+      <span
+        aria-label="champs obligatoire"
+        class="c1"
+      >
+        *
+      </span>
     </label>
     <label
       class="c7"

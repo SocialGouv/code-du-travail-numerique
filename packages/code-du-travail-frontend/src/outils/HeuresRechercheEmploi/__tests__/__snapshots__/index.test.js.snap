@@ -467,7 +467,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           >
             5
           </span>
-          Durée du préavis
+          Résultat
         </li>
       </ul>
     </div>

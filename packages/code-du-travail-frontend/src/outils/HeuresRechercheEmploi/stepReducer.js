@@ -34,7 +34,7 @@ export const initialState = {
     },
     {
       component: StepResult,
-      label: "Durée du préavis",
+      label: "Résultat",
       name: "results",
     },
   ],

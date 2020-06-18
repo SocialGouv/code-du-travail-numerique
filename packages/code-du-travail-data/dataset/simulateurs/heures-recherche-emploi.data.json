@@ -2205,22 +2205,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005775558&cidTexte=KALITEXT000005644543&dateTexte=19890701"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1517,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1517,
       "typeRupture": "1| démission",
@@ -2237,7 +2222,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 1517,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour ",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail  ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence rémunérées sont fixées d'un commun accord ou, à défaut  un jour par l'employeur et le suivant par le salarié. Elles peuvent, d'un commun accord écrit, être groupées en une ou plusieurs fois. ",
       "ref": "Chapitre VI, Article 1",
@@ -2356,22 +2341,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1518,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 4.4 étendu",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
       "typeRupture": "1| démission",
@@ -2393,52 +2363,22 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=90DC79AA1CCEE975F34768978174ECA2.tplgfr27s_1?idArticle=KALIARTI000038525633&cidTexte=KALITEXT000005681198&dateTexte=29981231&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1527,
       "typeRupture": "1| démission",
-      "answer": "2 heures par jour",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
       "ref": "Article 32",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1527,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
-      "ref": "Article 32",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1527,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
-      "ref": "Article 32",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1527,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour proratisées au temps de travail du salarié",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
       "ref": "Article 32",
@@ -2457,13 +2397,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "1| démission",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2471,27 +2410,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "1| démission",
-      "answer": "12 heures de  travail",
+      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2499,27 +2423,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "1| démission",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2527,27 +2436,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "7| plus de 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2555,27 +2449,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "3| licenciement",
-      "answer": "12 heures de  travail",
+      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2583,41 +2462,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
       "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "7| plus de 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "article 10.2",
@@ -2636,13 +2486,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2650,27 +2499,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "3| licenciement",
-      "answer": "12 heures de  travail",
+      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2678,27 +2512,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2706,27 +2525,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "7| plus de 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "1| démission",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2734,27 +2538,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "1| démission",
-      "answer": "12 heures de  travail",
+      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2762,41 +2551,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "7| plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
       "typeRupture": "1| démission",
-      "answer": "25 heures de travail",
-      "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
-      "answer3": null,
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "7| plus de 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2814,56 +2574,26 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1606,
       "typeRupture": "1| démission",
-      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent",
+      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": null,
       "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
       "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idArticle=KALIARTI000005870732&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B7000064E20FA3C0F372DDF9663564A2.tplgfr29s_3?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1606,
-      "typeRupture": "1| démission",
-      "answer": "1 journée ou 2 demi-journées par semaine proratisée en fonction du temps de travail hebdomadaire à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
-      "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective\r\n",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idArticle=KALIARTI000005870732&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id\n\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B7000064E20FA3C0F372DDF9663564A2.tplgfr29s_3?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1606,
       "typeRupture": "3| licenciement",
-      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent",
+      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": null,
       "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
       "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idArticle=KALIARTI000005870732&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B7000064E20FA3C0F372DDF9663564A2.tplgfr29s_3?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1606,
-      "typeRupture": "3| licenciement",
-      "answer": "1 journée ou 2 demi-journées par semaine proratisée en fonction du temps de travail hebdomadaire à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
-      "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective\r\n",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idArticle=KALIARTI000005870732&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id\n\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B7000064E20FA3C0F372DDF9663564A2.tplgfr29s_3?idArticle=KALIARTI000005870734&cidTexte=KALITEXT000005687520&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
@@ -2911,13 +2641,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "1| démission",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2925,27 +2654,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "1| démission",
-      "answer": "12 heures de travail",
+      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2953,27 +2667,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "1| démission",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2981,27 +2680,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "9| un mois et plus "
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "Article 10.2",
@@ -3009,27 +2693,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail",
+      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
       "ref": "Article 10.2",
@@ -3037,41 +2706,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "9| un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
       "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
-      "ref": "Article 10.2",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8A4EAD9E444A1F60CAB37AB20B96CFF4.tplgfr36s_2?idArticle=KALIARTI000005801847&cidTexte=KALITEXT000005658951&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "9| un mois et plus "
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail proratisées au temps de travail du salarié",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
       "ref": "Article 10.2",
@@ -3090,13 +2730,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "1| démission",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3104,27 +2743,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "10| 2 mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "1| démission",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3132,27 +2756,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "10| 2 mois"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "1| démission",
-      "answer": "12 heures de travail",
+      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3160,27 +2769,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "8| un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "1| démission",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3188,27 +2782,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "8| un mois"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "1| 2 jours"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail",
+      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3216,27 +2795,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "1| 2 jours"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "10| 2 mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3244,27 +2808,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "10| 2 mois"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail",
+      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
@@ -3272,45 +2821,16 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "6| 2 semaines"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet",
         "durée du préavis": "8| un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
       "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail",
+      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel",
-        "durée du préavis": "8| un mois"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail proratisées en fonction de la durée hebdomadaire du travail du salarié à temps partiel",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
@@ -3521,9 +3041,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005834153&cidTexte=KALITEXT000005672603&dateTexte=20000311"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2120,
       "typeRupture": "1| démission",
@@ -3534,41 +3052,13 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2120,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 30 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2120,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées par accord entre l'employeur et le salarié. En cas de désaccord, elles sont fixées un jour par l'employeur, un jour par le salarié. Avec l'accord de l'employeur, elles peuvent être regroupées en fin de préavis.",
-      "ref": "Article 30 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2120,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont attribuées proportionnellement au temps de travail. \n\nExemple : un salarié à temps plein 35 heures bénéficie de 2 heures par jour, soit 10 heures par semaine. Un salarié travaillant 28 heures bénéficiera d'un crédit hebdomadaire de 8 heures.\n\nLes heures d'absence sont fixées par accord entre l'employeur et le salarié. \n\nEn cas de désaccord, elles sont fixées un jour par l'employeur, un jour par le salarié. Avec l'accord de l'employeur, elles peuvent être regroupées en fin de préavis.",
       "ref": "Article 30 de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
     },
@@ -3721,22 +3211,7 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2264,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 46",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
       "typeRupture": "1| démission",
@@ -3828,52 +3303,11 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000017941870&cidTexte=KALITEXT000017941844&dateTexte=20050101"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2511,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 4.4.3.5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2511,
-      "typeRupture": "1| démission",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 4.4.3.5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2511,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour ouvrable",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les salariés pourront prendre leurs heures en une seule fois avec l'accord de l'employeur.",
-      "ref": "Article 4.4.3.5",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2511,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures maximum par jour proratisées au temps de travail du salarié",
+      "answer": "2 heures par jour ouvrable. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les salariés pourront prendre leurs heures en une seule fois avec l'accord de l'employeur.",
       "ref": "Article 4.4.3.5",
@@ -3891,52 +3325,22 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2596,
       "typeRupture": "1| démission",
-      "answer": "2 heures par jour",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
       "ref": "Article 7.4.4",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000018563850&cidTexte=KALITEXT000018563760&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2596,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour proratisées en fonction de la durée hebdomadaire du salarié à temps partiel",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
-      "ref": "Article 7.4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000018563850&cidTexte=KALITEXT000018563760&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2596,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
-      "ref": "Article 7.4.4",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=66A29F5D26CA9B3AB9D6CF5888110E5B.tplgfr30s_3?idArticle=KALIARTI000018563850&cidTexte=KALITEXT000018563760&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2596,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour proratisées en fonction de la durée hebdomadaire du salarié à temps partiel",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
       "ref": "Article 7.4.4",
@@ -4020,53 +3424,23 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=11E262EBEBC0E8C3E4AF716770A04391.tplgfr30s_2?idArticle=KALIARTI000018926256&cidTexte=KALITEXT000018926214&dateTexte=20101004&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=11E262EBEBC0E8C3E4AF716770A04391.tplgfr30s_2?idArticle=KALIARTI000023732652&cidTexte=KALITEXT000018926214&dateTexte=29981231&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8DA312A2CD26D5839EA964715E620EBA.tplgfr30s_2?idArticle=KALIARTI000018926306&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2941,
       "typeRupture": "1| démission",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail",
+      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
       "ref": "Article 27",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2941,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": null,
-      "ref": "Article 27",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2941,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail",
+      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
-      "answer3": null,
-      "ref": "Article 26.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2941,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail proratisées au temps de travail du salarié",
-      "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 26.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805633&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
@@ -4083,52 +3457,22 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000025805623&cidTexte=KALITEXT000025805457&dateTexte=20100521"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3043,
       "typeRupture": "1| démission",
-      "answer": "2 heures par jour",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
       "ref": "Article 4.11.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340&dateTexte=20151026"
     },
     {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 3043,
-      "typeRupture": "1| démission",
-      "answer": "2 heures maximum par jour, proratisées au temps de travail du salarié",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
-      "ref": "Article 4.11.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340&dateTexte=20151026"
-    },
-    {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3043,
       "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
-      "ref": "Article 4.11.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340&dateTexte=20151026"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 3043,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures maximum par jour, proratisées au temps de travail du salarié",
+      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
       "ref": "Article 4.11.1",

@@ -25,6 +25,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   useEffect(() => {
     form.batch(() => {
       form.change("criteria", undefined);
+      form.change("typeRupture", undefined);
       form.change(CONVENTION_NAME, storedConvention);
     });
     // eslint-disable-next-line

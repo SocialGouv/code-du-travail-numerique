@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
@@ -19,7 +19,9 @@ const { question: QUESTION_LABEL } = questions.find(
 function StepTypeRupture({ form }) {
   const { values } = form.getState();
   const { ccn } = values;
-  values.criteria = {};
+  useEffect(() => {
+    values.criteria = {};
+  });
   const idcc = ccn ? ccn.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, { idcc });

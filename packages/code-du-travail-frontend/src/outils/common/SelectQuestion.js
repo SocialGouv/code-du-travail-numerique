@@ -23,7 +23,9 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
       {({ input, meta: { error, dirty } }) => {
         return (
           <Wrapper>
-            <Question htmlFor={uid}>{label}</Question>
+            <Question required htmlFor={uid}>
+              {label}
+            </Question>
             {subLabel && <SubLabel>{subLabel}</SubLabel>}
             <StyledSelect {...input} id={uid}>
               <option disabled value="">
