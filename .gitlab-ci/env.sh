@@ -55,7 +55,7 @@ fi
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
 
-export NLP_URL="https://https://serving-ml.prod2.fabrique.social.gouv.fr/";
+export NLP_URL="https://serving-ml.prod2.fabrique.social.gouv.fr/";
 #
 
 if [[ -n "${PRODUCTION+x}" ]]; then
