@@ -68,7 +68,7 @@ Register data image:
 
       retry=60;
       while
-        ! wget --spider "${NLP_URL}" &&
+        ! wget -q --method=GET "${NLP_URL}"v1/models/sentqam &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
