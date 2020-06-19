@@ -27,7 +27,6 @@ include:
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/prepare.yml
-  - /.gitlab-ci/stages/quality.yml
   - /.gitlab-ci/stages/create-namespace.yml
   - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/deploy.yml
@@ -36,7 +35,6 @@ include:
 
 stages:
   - "Prepare"
-  - "Code Quality"
   - "Create Namespace"
   - "Register Data API"
   - "Deploy Data API"

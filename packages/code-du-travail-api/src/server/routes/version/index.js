@@ -34,9 +34,11 @@ router.get("/version", async (ctx) => {
   const version =
     process.env.VERSION || require("../../../../package.json").version;
 
+  const commit = process.env.COMMIT;
+
   const response = await getVersions();
   const { data } = response.body.hits.hits[0]._source;
-  ctx.body = { version, data };
+  ctx.body = { commit, data, version };
 });
 
 module.exports = router;

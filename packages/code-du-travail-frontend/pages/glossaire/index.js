@@ -40,7 +40,7 @@ export async function getStaticProps() {
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
 
-function Glossaire({ errorCode, glossary }) {
+function Glossaire({ errorCode, glossary = [] }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
     <Layout errorCode={errorCode}>

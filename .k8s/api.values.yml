@@ -74,6 +74,8 @@ deployment:
       value: "${PORT}"
     - name: VERSION
       value: "${VERSION}"
+    - name: COMMIT
+      value: "${COMMIT}"
     - name: PIWIK_SITE_ID
       valueFrom:
         secretKeyRef:

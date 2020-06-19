@@ -1,8 +1,7 @@
 #
 
-.register_stage: &prepare_stage
+.register:
   extends: .base_register_stage
-  stage: "Prepare"
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -12,21 +11,24 @@
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
 
 Register socialgouv/cdtn base image:
-  <<: *prepare_stage
+  extends:
+    - .register
+  stage: "Prepare"
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
 
 Register elasticsearch image:
-  <<: *prepare_stage
+  extends:
+    - .register
   stage: "Prepare"
   variables:
     CONTEXT: ./docker/elasticsearch
-    DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
 
 Register nlp image:
-  <<: *prepare_stage
+  extends:
+    - .register
   stage: "Prepare"
   variables:
     CONTEXT: packages/code-du-travail-nlp

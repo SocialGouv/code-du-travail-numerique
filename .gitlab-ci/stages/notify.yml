@@ -68,8 +68,6 @@ Delete useless k8s namespaces:
     - .base_delete_useless_k8s_ns_stage
     - .notify_dev
   stage: Finished Deployment
-  environment:
-    name: fabrique-dev
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
   before_script:

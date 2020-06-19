@@ -1,18 +1,6 @@
-.register_stage:
-  extends: .base_register_stage
-  except:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $PRODUCTION
-      # Don't register a base image for release commit
-      # that only bump version / udpate changelog
-      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
-
-#
-
 Register api image:
   extends:
-    - .register_stage
+    - .register
   stage: "Register Data API"
   variables:
     CONTEXT: packages/code-du-travail-api
@@ -25,7 +13,7 @@ Register api image:
 
 Register data image:
   extends:
-    - .register_stage
+    - .register
   stage: "Register Data API"
   services:
     - name: docker:19-dind
@@ -54,22 +42,23 @@ Register data image:
 #
 
 Register frontend image:
-  extends: .register_stage
+  extends: .register
   stage: "Register Frontend"
+  environment:
+    name: fabrique-dev
   variables:
     CONTEXT: packages/code-du-travail-frontend
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg API_URL=$API_URL
+      --build-arg API_URL=${API_URL}
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
   before_script:
     - source ./.gitlab-ci/env.sh
-    - echo "API URL ${API_URL}"
     - |-
       retry=60;
       while
-        ! wget -q -O - "$@" "${API_URL}dev.fabrique.social.gouv.fr/api/v1/version"  | grep "${COMMIT}" &&
+        ! wget -q -O - "$@" "${API_URL}/api/v1/version"  | grep "${COMMIT}" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for data API to be ready" ; sleep 3 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
