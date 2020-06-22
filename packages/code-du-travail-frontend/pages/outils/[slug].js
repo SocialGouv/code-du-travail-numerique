@@ -31,7 +31,7 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
     <Layout>
       <Metas
         url={pageUrl}
-        title={title}
+        title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
         image={ogImage}
       />

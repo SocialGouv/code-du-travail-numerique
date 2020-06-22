@@ -56,7 +56,7 @@
       "cout embauche CDI"
     ],
     "description":
-      "Estimez le salaire : brut, net, heures supplémentaires, coût total employeur",
+      "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
     "action": "Estimer",
     "date": "14/03/2019"
   },
