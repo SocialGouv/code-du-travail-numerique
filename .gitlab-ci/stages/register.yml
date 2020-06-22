@@ -51,7 +51,7 @@ Register frontend image:
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg API_URL=$([ $PRODUCTION  ] && echo "https://api.code.travail.fabrique.social.gouv.fr" || echo "https://api.${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}")
+      --build-arg API_URL=$([ $PRODUCTION  ] && echo "https://api.code.travail.fabrique.social.gouv.fr" || echo "https://api.${CI_COMMIT_TAG}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}")
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
   before_script:
     - source ./.gitlab-ci/env.sh
