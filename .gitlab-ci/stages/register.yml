@@ -55,6 +55,8 @@ Register frontend image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
   before_script:
     - source ./.gitlab-ci/env.sh
+    - echo "API_URL frontend runner: ${API_URL}"
+    - export API_URL=$API_URL
     - |-
       retry=60;
       while
