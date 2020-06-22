@@ -11,4 +11,5 @@ USER node
 
 RUN yarn workspace @cdt/frontend generate-sitemap
 
+ENV NEXT_TELEMETRY_DISABLED=1
 ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]
