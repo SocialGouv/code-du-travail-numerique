@@ -48,14 +48,16 @@ Register frontend image:
     name: fabrique-dev
   variables:
     CONTEXT: packages/code-du-travail-frontend
-    DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg API_URL=$([ $PRODUCTION  ] && echo "https://api.code.travail.fabrique.social.gouv.fr" || echo "https://api.${CI_COMMIT_TAG}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}")
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+    # DOCKER_BUILD_ARGS: >-
+    #   --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+    #   --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    #   --build-arg API_URL=$([ $PRODUCTION  ] && echo "https://api.code.travail.fabrique.social.gouv.fr" || echo "https://api.${CI_COMMIT_TAG}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}")
+
   before_script:
     - source ./.gitlab-ci/env.sh
     - |-
+      export DOCKER_BUILD_ARGS="--build-arg REGISTRY=$CI_REGISTRY_IMAGE --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA --build-arg API_URL=$API_URL"
       retry=60;
       while
         ! wget -q -O - "$@" "${API_URL}/api/v1/version"  | grep "${COMMIT}" &&
