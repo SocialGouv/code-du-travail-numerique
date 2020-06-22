@@ -24,13 +24,10 @@
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
 
-
-
-
 .deploy_api_stage:
   extends:
+    - .base_deploy_hpa_chart_stage
     - .deploy_stage
-  extends: .base_deploy_hpa_chart_stage
   stage: "Deploy Data API"
   variables:
     <<: *deploy_stage_variables
@@ -58,9 +55,6 @@ Deploy @cdtn/api (prod):
     - .prod_stage
   variables:
     ENABLE_APM: "true"
-
-
-
 
 .deploy_data_stage:
   extends:
@@ -114,14 +108,11 @@ Update Elasticsearch Index:
     variables:
       - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
 
-
-
-
 .deploy_nlp_stage:
   extends:
+    - .base_deploy_nodejs_chart_stage
     - .deploy_stage
   stage: "Deploy Data API"
-  extends: .base_deploy_nodejs_chart_stage
   variables:
     <<: *deploy_stage_variables
     PORT: ${NLP_PORT}
@@ -156,14 +147,13 @@ Deploy @cdtn/nlp (prod):
     - .deploy_nlp_stage
     - .prod_stage
 
-
 #
 
 .deploy_frontend_stage:
   extends:
+    - .base_deploy_hpa_chart_stage
     - .deploy_stage
   stage: "Deploy Frontend"
-  extends: .base_deploy_hpa_chart_stage
   variables:
     <<: *deploy_stage_variables
     PORT: ${FRONTEND_PORT}
@@ -179,6 +169,9 @@ Deploy @cdtn/frontend (dev):
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.1m
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${FRONTEND_HOST}
 
 Deploy @cdtn/frontend (prod):
   extends:
@@ -187,10 +180,10 @@ Deploy @cdtn/frontend (prod):
 
 Deploy @cdtn/frontend extra ingress(prod):
   extends:
+    - .base_docker_kubectl_image_stage
     - .deploy_stage
     - .prod_stage
   stage: "Deploy Frontend"
-  extends: .base_docker_kubectl_image_stage
   script:
     - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
     - cat ./.k8s/ingress-prod.yml | envsubst | kubectl apply -f -
