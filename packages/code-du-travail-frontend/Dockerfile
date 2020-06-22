@@ -12,6 +12,8 @@ WORKDIR /app
 
 USER node
 
+RUN echo ${API_URL}
+RUN echo $API_URL
 RUN yarn workspace @cdt/frontend build-front
 RUN yarn workspace @cdt/frontend generate-sitemap
 
