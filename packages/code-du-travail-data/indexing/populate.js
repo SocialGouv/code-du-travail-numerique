@@ -70,7 +70,7 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  const { data: fichesMT } = require("@socialgouv/fiches-travail-data");
+  const fichesMT = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
   fichesMT.forEach((article) => (article.slug = slugify(article.title)));
 
   logger.info("=== Conventions Collectives ===");
