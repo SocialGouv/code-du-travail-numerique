@@ -5,6 +5,7 @@ const { SOURCES, getRouteBySource } = require("@cdt/sources");
 const slugify = require("../../slugify");
 const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
 const { createThemer } = require("../../indexing/breadcrumbs");
+const { queries } = require("../../indexing/monolog");
 
 const getBreadcrumbs = createThemer(allThemes);
 
@@ -46,8 +47,14 @@ const convertFile2Html = ({
       },
       options
     )
-    .then((result) => {
+    .then(async (result) => {
       const slug = slugify(title);
+      const path = `${getRouteBySource(SOURCES.LETTERS)}/${slug}`;
+      const covisits = await queries
+        .getCovisitLinks(path)
+        .then((covisits) => covisits.links)
+        .catch((err) => console.error(JSON.stringify(err, null, 2)));
+
       return {
         filename,
         breadcrumbs: getBreadcrumbs(
@@ -67,6 +74,7 @@ const convertFile2Html = ({
           result.value
             .replace(/\t/g, " ")
             .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>"),
+        covisits,
       };
     })
     .catch((err) => {

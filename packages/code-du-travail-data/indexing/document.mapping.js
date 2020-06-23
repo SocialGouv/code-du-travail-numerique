@@ -171,5 +171,11 @@ export const documentMapping = {
         },
       },
     },
+    covisits: {
+      properties: {
+        link: { type: "keyword" },
+        count: { type: "integer" },
+      },
+    },
   },
 };
