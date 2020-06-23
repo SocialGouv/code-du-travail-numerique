@@ -16,7 +16,7 @@ Les données utilisées par le site sont issues de packages de données (@social
 $ yarn workspace @cdt/data dump-dev
 ```
 
-Pour chaque document, il possible aussi de rajouter une représentation vectorielle qui servira à la recherche semantique. Pour cela, il faut que la variable d'environnement NLP_URL soit fournie et pointe vers une instance du service NLP. Reportez-vous au [README.md du projet serving-ml](https://github.com/SocialGouv/serving-ml) pour voir comment démarrer une instance locale du service. Une instance est également accessible à cette URL : https://serving-ml.fabrique.social.gouv.fr/ 
+Pour chaque document, il possible aussi de rajouter une représentation vectorielle qui servira à la recherche semantique. Pour cela, il faut que la variable d'environnement NLP_URL soit fournie et pointe vers une instance du service NLP. Reportez-vous au [README.md du projet serving-ml](https://github.com/SocialGouv/serving-ml) pour voir comment démarrer une instance locale du service. Une instance est également accessible à cette URL : https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/ 
 
 ```sh
 # Exporter les données vers elacticsearch avec leur representation vectorielle (title_vector)
