@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Field } from "react-final-form";
 import { icons, Input } from "@socialgouv/react-ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
@@ -86,7 +85,7 @@ function StepSalaires({ form }) {
                                 Prendre en compte les primes et avantages en
                                 nature.
                               </SmallText>
-                              <StyledInput
+                              <Input
                                 {...input}
                                 type="number"
                                 invalid={touched && invalid}
@@ -111,10 +110,6 @@ function StepSalaires({ form }) {
     </>
   );
 }
-
-const StyledInput = styled(Input)`
-  width: 40rem;
-`;
 
 function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   const dEntree = parse(dateEntree);
