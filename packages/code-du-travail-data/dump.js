@@ -4,6 +4,7 @@ import retry from "p-retry";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { logger } from "./indexing/logger";
 import { vectorizeDocument } from "./indexing/vectorizer";
+import { fetchCovisits } from "./indexing/monolog";
 
 logger.silent = true;
 const t0 = Date.now();
@@ -21,17 +22,17 @@ const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
   return NLP_URL
     ? vectorizeDocument(data.title, data.text)
-      .then((title_vector) => {
-        if (title_vector.message) {
-          throw new Error(`error fetching ${data.title}`);
-        }
-        data.title_vector = title_vector;
-        return data;
-      })
-      .catch((err) => {
-        console.error(`error fetching ${data.title}`, err);
-        return data;
-      })
+        .then((title_vector) => {
+          if (title_vector.message) {
+            throw new Error(`error fetching ${data.title}`);
+          }
+          data.title_vector = title_vector;
+          return data;
+        })
+        .catch((err) => {
+          console.error(`error fetching ${data.title}`, err);
+          return data;
+        })
     : data;
 }
 
@@ -42,8 +43,11 @@ const dump = async () => {
   } else {
     console.error(`no nlp`);
   }
-  for await (const docs of cdtnDocumentsGen()) {
-    console.error(`› ${docs[0].source}... ${docs.length} items`);
+  for await (const docsRaw of cdtnDocumentsGen()) {
+    console.error(`› ${docsRaw[0].source}... ${docsRaw.length} items`);
+    // add covisits
+    const docs = await Promise.all(docsRaw.map(fetchCovisits));
+
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {

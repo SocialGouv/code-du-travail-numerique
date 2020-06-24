@@ -42,6 +42,7 @@ function getSearchBody({ source, slug }) {
       "refs", // thematic file
       "contents", // editorial_content
       "folder", // editorial_content
+      "covisits",
     ],
   };
 }

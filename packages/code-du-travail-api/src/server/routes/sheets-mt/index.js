@@ -33,9 +33,18 @@ router.get("/sheets-mt/:slug", async (ctx) => {
 
   const sheetMT = response.body.hits.hits[0];
 
+  // // several items matching for mt sheet, get the one with the covisit
+  // const covisitsMatch = response.body.hits.hits.find(
+  //   (hit) => hit._source.covisits
+  // );
+  // const covisits = covisitsMatch ? covisitsMatch._source.covisits : undefined;
+
+  // console.log(JSON.stringify(sheetMT, null, 2));
+
   const relatedItems = await getRelatedItems({
     slug,
     title: sheetMT._source.title,
+    covisits: sheetMT._source.covisits,
     settings: sheetMT._source.title,
   });
 

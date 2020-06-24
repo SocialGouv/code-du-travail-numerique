@@ -31,7 +31,7 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
           },
           {
             bool: {
-              should: sources.map(source => ({ term: { source } })),
+              should: sources.map((source) => ({ term: { source } })),
             },
           },
         ],

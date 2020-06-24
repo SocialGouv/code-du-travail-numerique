@@ -36,14 +36,17 @@ router.get("/items/:source/:slug", async (ctx) => {
   const {
     _id,
     _source: { title },
+    covisits,
   } = item;
 
   const relatedItems = await getRelatedItems({
     slug,
     title,
+    covisits,
     settings: [{ _id }],
   });
   delete item._source.title_vector;
+
   ctx.body = {
     ...item,
     relatedItems,

@@ -11,6 +11,7 @@ function getSheetMTQuery({ slug }) {
       "slug",
       "title",
       "url",
+      "covisits",
     ],
     query: {
       bool: {
