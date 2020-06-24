@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "@cdt/sources": "^4.22.0",
-    "@socialgouv/contributions-data": "^1.34.0",
-    "@socialgouv/datafiller-data": "^1.30.0",
-    "@socialgouv/fiches-vdd": "^1.106.0",
+    "@socialgouv/contributions-data": "^1.35.0",
+    "@socialgouv/datafiller-data": "^1.31.0",
+    "@socialgouv/fiches-vdd": "^1.110.0",
     "@socialgouv/kali-data": "^1.73.0",
     "@socialgouv/legi-data": "^1.18.0",
     "lodash.uniqby": "^4.7.0",
