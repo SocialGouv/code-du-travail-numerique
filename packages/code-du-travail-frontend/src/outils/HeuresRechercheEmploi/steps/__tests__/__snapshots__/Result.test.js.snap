@@ -39,7 +39,7 @@ exports[`<StepResult /> should render no results 1`] = `
   <div
     class="c1"
   >
-    Si un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent prévoit des heures d’absence autorisée pour rechercher un emploi pendant le préavis, le salarié en bénéficie si ces mesures sont plus favorables que la convention collective.
+    Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent peut prévoir l’existence, le cadre et la durée des absences pour rechercher un emploi au cours du préavis.
   </div>
   <h2
     class="c0"
@@ -51,18 +51,18 @@ exports[`<StepResult /> should render no results 1`] = `
       Convention collective
        : 
       <strong>
-        Entreprises de la publicité et assimilées
+        Entreprises de la publicité et assimilées (idcc 86)
       </strong>
     </li>
     <li>
       Type de rupture du contrat de travail
        : 
       <strong>
-        rupture en cours de période d'essai
+        Rupture de la période d'essai
       </strong>
     </li>
     <li>
-      Période essai
+      Initiative de la rupture de la période d'essai
        : 
       <strong>
         Le salarié
@@ -144,7 +144,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   </h2>
   <p>
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
-     
+    <br />
     <strong
       class="c1"
     >
@@ -166,7 +166,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Conditions d’utilisation
   </h2>
   <p>
-    La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.
+    Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.
   </p>
   <div
     class="c2"
@@ -183,14 +183,14 @@ exports[`<StepResult /> should render with duration 1`] = `
       Convention collective
        : 
       <strong>
-        Entreprises de la publicité et assimilées
+        Entreprises de la publicité et assimilées (idcc 86)
       </strong>
     </li>
     <li>
       Type de rupture du contrat de travail
        : 
       <strong>
-        démission
+        Démission
       </strong>
     </li>
     <li>
@@ -364,14 +364,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </strong>
      : 
     la convention collective n’a pas encore été traitée par nos services.
-  </p>
-  <p>
-    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
-  </p>
-  <div
-    class="c2"
-  >
-    Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
     <br />
     Vous pouvez faire une recherche par mots-clés dans
      
@@ -380,6 +372,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     >
       votre convention collective
     </a>
+  </p>
+  <p>
+    Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
+  </p>
+  <div
+    class="c2"
+  >
+    Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
   </div>
   <h2
     class="c0"
@@ -391,7 +391,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       Convention collective
        : 
       <strong>
-        Cordonnerie multiservice
+        Cordonnerie multiservice (1561)
       </strong>
     </li>
   </ul>

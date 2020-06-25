@@ -472,9 +472,9 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           ...
         </option>
         <option
-          value="15| moins de 6 mois"
+          value="15| Moins de 6 mois"
         >
-          moins de 6 mois
+          Moins de 6 mois
         </option>
         <option
           value="33| 6 mois à moins de 2 ans"
@@ -482,9 +482,9 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           6 mois à moins de 2 ans
         </option>
         <option
-          value="43| plus de 2 ans"
+          value="43| Plus de 2 ans"
         >
-          plus de 2 ans
+          Plus de 2 ans
         </option>
       </select>
       <div

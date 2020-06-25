@@ -52,7 +52,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 >
                   {input.value.shortTitle}
                 </Toast>
-                <p>Cliquez sur suivant pour poursuivre la simulation.</p>
+                <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );

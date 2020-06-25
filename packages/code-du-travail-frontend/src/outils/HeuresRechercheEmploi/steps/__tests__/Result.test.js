@@ -14,11 +14,10 @@ describe("<StepResult />", () => {
   it("should render with duration", () => {
     const { container } = renderForm(StepResult, {
       ccn: ccn86,
-      ccn: ccn86,
       criteria: {
         "catégorie professionnelle": "16| Employés",
       },
-      typeRupture: "1| démission",
+      typeRupture: "1| Démission",
     });
     expect(container).toMatchSnapshot();
   });
@@ -26,12 +25,11 @@ describe("<StepResult />", () => {
   it("should render no results", () => {
     const { container } = renderForm(StepResult, {
       ccn: ccn86,
-      ccn: ccn86,
       criteria: {
         "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
-        "période essai": "2| Le salarié",
+        "initiative de la rupture de la période d'essai": "2| Le salarié",
       },
-      typeRupture: "7| rupture en cours de période d'essai",
+      typeRupture: "7| Rupture de la période d'essai",
     });
     expect(container).toMatchSnapshot();
   });

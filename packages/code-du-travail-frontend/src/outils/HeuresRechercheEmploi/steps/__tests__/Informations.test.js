@@ -9,7 +9,7 @@ describe("<StepInformations />", () => {
   it("should render catégorie professionelle", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 44 },
-      typeRupture: "1| démission",
+      typeRupture: "1| Démission",
     });
     expect(container).toMatchSnapshot();
   });

@@ -13,7 +13,7 @@ import {
 import { Highlight, SectionTitle } from "../../common/stepStyles";
 
 function Duration({ situation }) {
-  if (parseInt(situation.answer, 10) === 0 || !situation.answer) {
+  if (!situation.answer) {
     return (
       <p>
         D’après les éléments saisis, dans votre situation, la convention
@@ -31,7 +31,9 @@ function Duration({ situation }) {
   return (
     <>
       <p>
-        {wording} <Highlight>{situation.answer}</Highlight>.
+        {wording}
+        <br />
+        <Highlight>{situation.answer}</Highlight>.
       </p>
       {situation.answer2 && (
         <>
@@ -52,13 +54,12 @@ function Duration({ situation }) {
 }
 
 function Disclaimer({ duration }) {
-  if (parseInt(duration, 10) === 0) {
+  if (!duration) {
     return (
       <Alert>
-        Si un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise plus récent prévoit des heures d’absence autorisée pour
-        rechercher un emploi pendant le préavis, le salarié en bénéficie si ces
-        mesures sont plus favorables que la convention collective.
+        Un accord d’entreprise ou à défaut un usage dans la profession ou
+        l’entreprise plus récent peut prévoir l’existence, le cadre et la durée
+        des absences pour rechercher un emploi au cours du préavis.
       </Alert>
     );
   } else {
@@ -86,6 +87,18 @@ function NoResult({ idcc, ccn, legalRefs }) {
       </SectionTitle>
       <p>
         <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+        {idcc > 0 && (
+          <>
+            <br />
+            Vous pouvez faire une recherche par mots-clés dans{" "}
+            <Link
+              href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
+              as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
+            >
+              <a>votre convention collective</a>
+            </Link>
+          </>
+        )}
       </p>
       <p>
         Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
@@ -101,22 +114,12 @@ function NoResult({ idcc, ccn, legalRefs }) {
         d’heures d’absence autorisée pour rechercher un emploi pendant le
         préavis. Il peut s’agir du préavis en cas de rupture de la période
         d’essai, de démission ou de licenciement.
-        {idcc > 0 && (
-          <>
-            <br />
-            Vous pouvez faire une recherche par mots-clés dans{" "}
-            <Link
-              href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-              as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
-            >
-              <a>votre convention collective</a>
-            </Link>
-          </>
-        )}
       </Alert>
       <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
       {recapSituation({
-        ...(ccn && { "Convention collective": ccn.shortTitle }),
+        ...(ccn && {
+          "Convention collective": `${ccn.shortTitle} (${idcc})`,
+        }),
       })}
       <SectionTitle>Source</SectionTitle>
       {legalRefs && getRef(legalRefs)}
@@ -158,7 +161,9 @@ export function StepResult({ form }) {
       <Disclaimer duration={situation.answer} />
       <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
       {recapSituation({
-        ...(ccn && { "Convention collective": ccn.shortTitle }),
+        ...(ccn && {
+          "Convention collective": `${ccn.shortTitle} (idcc ${idcc})`,
+        }),
         "Type de rupture du contrat de travail": typeRupture,
         ...situation.criteria,
       })}

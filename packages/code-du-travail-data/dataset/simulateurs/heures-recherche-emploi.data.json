@@ -13,12 +13,12 @@
       "question": "Quelle est la durée d'accueil de l'enfant ?"
     },
     {
-      "name": "période essai",
-      "question": "Qui a pris l'initiative de rompre la période d'essai?"
-    },
-    {
       "name": "catégorie professionnelle",
       "question": "Quelle est la catégorie professionnelle du salarié ?"
+    },
+    {
+      "name": "initiative de la rupture de la période d'essai",
+      "question": "Qui a pris l'initiative de rompre la période d'essai?"
     },
     {
       "name": "personnel de conduite",
@@ -66,7 +66,7 @@
     },
     {
       "name": "groupe",
-      "question": "Dans quel groupe professionnel le salarié se situe-t-il ?"
+      "question": "Quel est le groupe professionnel du salarié ?"
     },
     {
       "name": "coefficient",
@@ -106,7 +106,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 0,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "0",
       "answer2": "Le code du travail ne prévoit pas la possibilité de disposer d'heures à consacrer pour rechercher un emploi.\n\nPour autant, dans les départements du Bas-Rhin, du Haut-Rhin et de la Moselle une disposition de droit local prévue dans le code du travail prévoit que l'employeur accorde au salarié un délai raisonnable pour rechercher un emploi.",
       "answer3": null,
@@ -119,7 +119,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite d'un mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -132,7 +132,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite de 2 mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -145,7 +145,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.\n",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.",
@@ -159,7 +159,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite d'un mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -173,7 +173,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite de 2 mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -186,7 +186,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour dans la limite d'un mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -199,7 +199,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour dans la limite de 2 mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -212,7 +212,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.\n",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.",
@@ -226,7 +226,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour dans la limite d'un mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -240,7 +240,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour dans la limite de 2 mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -251,7 +251,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -264,7 +264,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 29,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois de préavis",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures sont prises en une ou plusieurs fois.",
@@ -277,7 +277,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 29,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois de préavis",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont prises en une ou plusieurs fois.",
@@ -290,7 +290,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 29,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour de travail ou 1 journée entière par semaine de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
@@ -303,7 +303,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 29,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour de travail ou 1 journée entière par semaine de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": null,
@@ -314,7 +314,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 29,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -327,7 +327,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. \nLes heures non utilisées ne seront pas payées",
       "answer3": "Le salarié peut utiliser les heures après en avoir informé la direction.",
@@ -340,7 +340,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures, si le contrat de travail est rompu après la moitié de la période d'essai",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -349,11 +349,12 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "60| Ingénieurs, Cadres"
+        "catégorie professionnelle": "60| Ingénieurs, Cadres",
+        "ancienneté": "5| 1 mois et demi ou moins"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -363,11 +364,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "60| Ingénieurs, Cadres",
-        "ancienneté": "6| plus de 1 mois et demi"
+        "ancienneté": "6| Plus de 1 mois et demi"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures, si le contrat de travail est rompu après un mois et demi",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -380,7 +381,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié s'absente après accord avec la direction. ",
@@ -394,7 +395,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -408,7 +409,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "12 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -421,7 +422,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "un nombre d'heures équivalant à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.",
@@ -432,11 +433,11 @@
       "criteria": {
         "catégorie professionnelle": "28| Techniciens",
         "durée du préavis": "5| 15 jours",
-        "groupe": "3| de I à III"
+        "groupe": "3| De I à III"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures",
       "answer2": "Le salaire est maintenu. ",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -451,7 +452,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures",
       "answer2": "Le salaire est maintenu. ",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -462,11 +463,11 @@
       "criteria": {
         "catégorie professionnelle": "28| Techniciens",
         "durée du préavis": "2| 6 jours",
-        "groupe": "3| de I à III"
+        "groupe": "3| De I à III"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "12 heures",
       "answer2": "Le salaire est maintenu. ",
       "answer3": "Les heures sont choisies par le salarié.",
@@ -476,11 +477,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "28| Techniciens",
-        "groupe": "3| de I à III"
+        "groupe": "3| De I à III"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.",
@@ -494,7 +495,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié peut utiliser ces heures après en avoir informé la direction.",
@@ -507,7 +508,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. \nLes heures non utilisées ne seront pas payées",
       "answer3": "Le salarié peut utiliser les heures après en avoir informé la direction.",
@@ -520,7 +521,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié s'absente après accord avec la direction. ",
@@ -533,7 +534,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "un nombre d'heures équivalant à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.",
@@ -543,11 +544,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "28| Techniciens",
-        "groupe": "3| de I à III"
+        "groupe": "3| De I à III"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié a automatiquement droit à ces heures d'absence. Elles seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures pourront être groupées en partie ou en totalité.",
@@ -561,7 +562,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 44,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement",
       "answer2": "Le salaire est maintenu. Les heures non utilisées ne seront pas payées.",
       "answer3": "Le salarié peut utiliser ces heures après en avoir informé la direction.",
@@ -574,10 +575,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 48",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857333&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
@@ -587,21 +588,21 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 49",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0CDA73A706A07B27D229606239EC6628.tplgfr24s_2?idArticle=KALIARTI000023734748&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
         "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "1 heure par jour lorsque l'employeur décide de la rupture du contrat après le renouvellement de la période d'essai",
       "answer2": null,
       "answer3": "L'employeur et le salarié peuvent décider de cumuler ces heures sur 1 semaine ou sur 1 mois. Ce cumul sera appliqué pour les salariés en forfait jours.",
@@ -614,10 +615,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 67",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857359&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
@@ -627,35 +628,35 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 68",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857360&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "1 heure par jour, lorsque l'employeur décide de la rupture du contrat après le renouvellement de la période d'essai",
       "answer2": null,
-      "answer3": "L'employeur et le salarié peuvent convenir que ces heures soient cumulés sur 1 semaine ou sur 1 mois. Ce cumul sera appliqué pour les salariés en forfait jours.",
+      "answer3": "L'employeur et le salarié peuvent décider ensemble de cumuler ces heures sur 1 semaine ou sur 1 mois. Ce cumul sera appliqué pour les salariés en forfait jours.",
       "ref": "Article 53",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753602&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié",
+        "initiative de la rupture de la période d'essai": "2| Le salarié",
         "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -664,12 +665,12 @@
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié",
+        "initiative de la rupture de la période d'essai": "2| Le salarié",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -683,7 +684,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -693,14 +694,14 @@
     {
       "criteria": {
         "catégorie professionnelle": "16| Employés",
-        "ancienneté": "43| plus de 2 ans"
+        "ancienneté": "43| Plus de 2 ans"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 30",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857304&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
@@ -710,10 +711,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La prise de ces 2 heures dans la journée doit faire l'objet d'un accord entre le salarié et l'employeur. En cas d'absence d'accord, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. En cas d'accord entre l'employeur et le salariés, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en avertir l'employeur, et ne pourra plus s'absenter dans ce cadre.",
+      "answer3": "Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.",
       "ref": "Article 29",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
     },
@@ -723,7 +724,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 86,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -734,8 +735,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 176,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour en cas de démission légitime ouvrant droit à l'allocation chômage",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour en cas de démission légitime donnant droit à l'allocation chômage",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter.",
       "ref": "Article 35",
@@ -745,7 +746,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 176,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées un jour par le salarié, un jour par l'employeur. Si le salarié demande que ces heures se cumulent en fin de préavis, l'employeur devra accepter.",
@@ -756,7 +757,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 176,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -765,100 +766,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "23| Agents de maîtrise",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées un jour par le salarié et le suivant par l'employeur. Mais, l'employeur et le salarié peuvent décider de les bloquer avant la fin du préavis.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "23| Agents de maîtrise",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "23| Agents de maîtrise"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "48| Cadres",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées un jour par le salarié et le suivant par l'employeur. Mais, l'employeur et le salarié peuvent décider de les bloquer avant la fin du préavis.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "48| Cadres",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "23| Agents de maîtrise"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -867,12 +779,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "28| Techniciens"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -881,12 +792,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur.",
@@ -895,56 +805,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "4| Ouvriers",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "4| Ouvriers",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "4| Ouvriers"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "16| Employés"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -953,12 +818,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "4| Ouvriers"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -967,56 +831,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "23| Agents de maîtrise",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées un jour par le salarié et le suivant par l'employeur. Mais, l'employeur et le salarié peuvent décider de les bloquer avant la fin du préavis.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "23| Agents de maîtrise",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "23| Agents de maîtrise"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "23| Agents de maîtrise"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -1025,56 +844,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "48| Cadres",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées un jour par le salarié et le suivant par l'employeur. Mais, l'employeur et le salarié peuvent décider de les bloquer avant la fin du préavis.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "48| Cadres",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "48| Cadres"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées alternativement chaque jour par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties.",
-      "ref": "Annexe III, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "28| Techniciens"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -1083,12 +857,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur.",
@@ -1097,56 +870,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "4| Ouvriers",
-        "ancienneté": "28| au moins 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui",
-        "catégorie professionnelle": "4| Ouvriers",
-        "ancienneté": "29| inférieure à 1 an et demi"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "4| Ouvriers"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "1| démission",
-      "answer": "2 heures",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures sont fixées chaque jour alternativement par le salarié ou l'employeur. Elles peuvent être bloquées par accord entre les parties. Ces dispositions sont identiques pour les ouvriers effectuant des travaux de manutention ou des travaux de nettoyage.",
-      "ref": "Annexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "2| non",
-        "catégorie professionnelle": "4| Ouvriers"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -1155,12 +883,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non",
         "catégorie professionnelle": "16| Employés"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures à raison de 2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Si ses recherches le nécessitent, le salarié peut, en accord avec son employeur, bloquer tout ou partie de ces heures. En l'absence d'accord, les jours et heures où l'absence a lieu sont fixées à tour de rôle par l'employeur et le salarié.",
@@ -1169,11 +896,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non"
+        "agents payés à l'heure": "2| Non"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1182,24 +909,11 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "2| non"
+        "agents payés à l'heure": "1| Oui"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
-      "typeRupture": "7| rupture en cours de période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Annexe III, article 3 \nAnnexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "agents payés à l'heure": "1| oui"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1208,27 +922,14 @@
     },
     {
       "criteria": {
-        "agents payés à l'heure": "1| oui"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 275,
-      "typeRupture": "7| rupture en cours de période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Annexe III, article 3 \nAnnexe I et II, article 3 ",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E4975E168CB1E33C3EC6A8528ED5C4B7.tplgfr38s_2?idArticle=KALIARTI000005792508&cidTexte=KALITEXT000005654789&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792419&cidTexte=KALITEXT000005654781&dateTexte=29990101&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=4A3DB6011AC3DAD663968F2F75FEF87C.tplgfr38s_2?idArticle=KALIARTI000005792466&cidTexte=KALITEXT000005654783&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 292,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord.\r\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
+      "answer3": "Le salarié cadre peut s'absenter, en une ou plusieurs fois en accord avec l'employeur.",
       "ref": "Avenant Cadres, Article 8\r\n",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101"
     },
@@ -1238,10 +939,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 292,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord.\r\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
+      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. Ils peuvent décider de grouper ces heures. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Le salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
       "ref": "Article 15",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
     },
@@ -1251,10 +952,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 292,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord.\r\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
+      "answer3": "Le salarié cadre peut s'absenter, en une ou plusieurs fois en accord avec l'employeur.",
       "ref": "Avenant Cadres, Article 8\r\n",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101"
     },
@@ -1264,10 +965,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 292,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord.\r\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
+      "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. Ils peuvent décider de grouper ces heures. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Le salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
       "ref": "Article 15",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
     },
@@ -1275,7 +976,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 292,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1288,7 +989,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures peuvent être prises en une ou plusieurs fois.",
@@ -1301,7 +1002,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures peuvent être prises en une ou plusieurs fois.",
@@ -1314,7 +1015,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour de travail ou 1 journée de travail par semaine de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
@@ -1327,7 +1028,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour de travail ou 1 journée de travail par semaine de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": null,
@@ -1340,7 +1041,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1353,7 +1054,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 413,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1364,7 +1065,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 573,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1375,7 +1076,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 573,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite de 40 heures pour l'ensemble du préavis",
       "answer2": "Le salaire est maintenu.",
       "answer3": "L'employeur et le salarié décident à tour de rôle de la prise de ces heures au cours de la  journée. L'employeur et le salarié peuvent se mettre d'accord pour regrouper ces heures d'absence en tenant compte des nécessités du service. ",
@@ -1386,7 +1087,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 573,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1395,12 +1096,12 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
-        "délai de prévenance": "9| moins de 2 semaines"
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "délai de prévenance": "9| Moins de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1409,12 +1110,12 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
         "délai de prévenance": "8| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "30 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les absences cessent d'être autorisées, dès que l'intéressé a trouvé un emploi. Les heures peuvent, avec l'accord de l'employeur, être bloquées.",
@@ -1423,12 +1124,12 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
-        "délai de prévenance": "11| un mois"
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "délai de prévenance": "11| Un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "60 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les absences cessent d'être autorisées, dès que l'intéressé a trouvé un emploi. Les heures peuvent, avec l'accord de l'employeur, être bloquées.",
@@ -1437,11 +1138,11 @@
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié"
+        "initiative de la rupture de la période d'essai": "2| Le salarié"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1452,7 +1153,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Si le salarié n'utilise pas, sur la demande de son employeur, tout ou partie de ces heures et si ces heures n'ont pas été bloquées avant l'expiration du préavis en accord avec l'employeur, il percevra à son départ une indemnité correspondant au nombre d'heures inutilisées.",
@@ -1463,7 +1164,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 650,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Si le salarié n'utilise pas, sur la demande de son employeur, tout ou partie de ces heures et si ces heures n'ont pas été bloquées avant l'expiration du préavis en accord avec l'employeur, il percevra à son départ une indemnité correspondant au nombre d'heures inutilisées.",
@@ -1474,7 +1175,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 675,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -1485,7 +1186,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 675,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées un jour par l'employeur et le suivant par le salarié. ",
@@ -1496,7 +1197,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 675,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures par jour après un mois d'essai",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures absences sont fixées d'un commun accord entre l'employeur et le salarié, et peuvent être groupées. A défaut d'accord, ces heures absences sont fixées: un jour par l'employeur, et le suivant  par le salarié. ",
@@ -1509,7 +1210,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 787,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par journée d'ouverture du cabinet",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.",
@@ -1518,11 +1219,11 @@
     },
     {
       "criteria": {
-        "ancienneté": "46| moins de 5 ans"
+        "ancienneté": "46| Moins de 5 ans"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 787,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par journée d'ouverture du cabinet",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.",
@@ -1533,7 +1234,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 787,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par journée d'ouverture du cabinet",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, ces absences sont fixées un jour par l'employeur et le salarié. Le salarié qui a retrouvé un emploi ne peut plus utiliser ces heures.",
@@ -1544,7 +1245,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 787,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1555,7 +1256,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 843,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1566,7 +1267,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 843,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures d'absence par jour pendant la dernière semaine du préavis",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": "Les heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures.",
@@ -1577,7 +1278,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 843,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1588,7 +1289,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1043,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1599,7 +1300,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1043,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour dans la limite de 40 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures sont fixées dans la journée avec l'accord de l'employeur. En l'absence d'accord, elles sont fixées un jour par l'employeur, un jour par le salarié.\nCes heures peuvent être bloquées en une ou plusieurs fois avec l'accord écrit de l'employeur.",
@@ -1610,7 +1311,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1043,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1623,7 +1324,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur.",
@@ -1636,7 +1337,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié peut s'absenter pendant 50 heures par mois, en une ou plusieurs fois en accord avec l'employeur.",
@@ -1646,12 +1347,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "1| temps complet",
+        "durée du travail": "1| Temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "24 heures",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1661,12 +1362,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "1| temps complet",
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du travail": "1| Temps complet",
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "50 heures par mois",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1676,11 +1377,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1690,12 +1391,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "1| temps complet",
+        "durée du travail": "1| Temps complet",
         "durée du préavis": "6| 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "24 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1705,12 +1406,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "1| temps complet",
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du travail": "1| Temps complet",
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1720,11 +1421,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "6| Ouvriers, Employés",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "l'équivalent de 30% de l'horaire hebdomadaire inscrit au contrat de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié peut prendre 2 heures par jour maximum. Si l'employeur et le salarié sont d'accord, les heures d'absence peuvent être cumulées en partie ou en totalité avant la fin du préavis.\n",
@@ -1735,7 +1436,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1090,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1746,7 +1447,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1147,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1757,7 +1458,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1147,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "L'employeur et le salarié peuvent décider ensemble que ces heures seront cumulées en une seule journée de 8 heures tous les 4 jours.\n",
@@ -1768,7 +1469,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1147,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1779,7 +1480,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1266,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1790,7 +1491,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1266,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures doivent être prises en accord entre l'employeur et le salarié. Les parties pourront s'entendre pour bloquer tout ou partie de ces heures avant l'expiration du délai de préavis.",
@@ -1801,7 +1502,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1266,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1812,7 +1513,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1351,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1823,7 +1524,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1351,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ouvré",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les 2 heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider, par écrit, de les regrouper. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié. \nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
@@ -1834,7 +1535,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1351,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1847,8 +1548,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1404,
-      "typeRupture": "1| démission",
-      "answer": "50 heures par mois. Pour le salarié à temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
+      "typeRupture": "1| Démission",
+      "answer": "50 heures par mois. Pour le salarié à Temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les cadres sont autorisés à s'absenter en une ou plusieurs fois. Les conditions des absences sont préalablement fixées par le salarié et l'employeur.",
       "ref": "Article 6.50.1",
@@ -1860,8 +1561,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1404,
-      "typeRupture": "3| licenciement",
-      "answer": "50 heures par mois. Pour le salarié à temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
+      "typeRupture": "3| Licenciement",
+      "answer": "50 heures par mois. Pour le salarié à Temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les cadres sont autorisés à s'absenter en une ou plusieurs fois. Les conditions des absences sont préalablement fixées par le salarié et l'employeur.",
       "ref": "Article 6.50.1",
@@ -1873,8 +1574,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1404,
-      "typeRupture": "1| démission",
-      "answer": "50 heures par mois. Pour le salarié à temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
+      "typeRupture": "1| Démission",
+      "answer": "50 heures par mois. Pour le salarié à Temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures de recherche d'emploi sont réparties à raison de 2 heures par jour de travail. L'employeur fixe les conditions d'absence du salarié.",
       "ref": "Article 3.41.1.1",
@@ -1886,8 +1587,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1404,
-      "typeRupture": "3| licenciement",
-      "answer": "50 heures par mois. Pour le salarié à temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
+      "typeRupture": "3| Licenciement",
+      "answer": "50 heures par mois. Pour le salarié à Temps partiel, la durée de l'absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié est autorisé à s'absenter pour rechercher un emploi dans la limite de 50 heures par mois réparties à raison de 2 heures par jour de travail. Ces heures d'absence peuvent être groupées en tout ou partie avec l'accord de l'employeur. Ces autorisations d'absence prennent fin dès que le salarié a retrouvé un emploi.",
       "ref": "Article 3.41.1.2",
@@ -1897,7 +1598,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1404,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -1905,13 +1606,35 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9EAC3F9CEAFEEF1886BC40B199F0D838.tplgfr28s_1?idArticle=KALIARTI000026356025&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
     },
     {
+      "criteria": {},
+      "type": "heures pour recherche d'emploi",
+      "idcc": 1480,
+      "typeRupture": "1| Démission",
+      "answer": "50 heures par mois, fixées à raison de 2 heures par jour ouvrables",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "Ces heures sont fixées à raison de 2 heures par jour ouvrable, alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures pour recherche d'emploi.",
+      "ref": "Article 46",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C82F1F97F72A0703119C7E8E78BB85F7.tpdila10v_3?idArticle=KALIARTI000005786645&cidTexte=KALITEXT000005652402&dateTexte=20090818"
+    },
+    {
+      "criteria": {},
+      "type": "heures pour recherche d'emploi",
+      "idcc": 1480,
+      "typeRupture": "3| Licenciement",
+      "answer": "50 heures par mois, fixées à raison de 2 heures par jour ouvrables",
+      "answer2": "Le salaire est maintenu.",
+      "answer3": "Ces heures sont fixées à raison de 2 heures par jour ouvrable, alternativement par l'employeur et le journaliste. Toutefois, ce dernier peut, avec l'accord de l'employeur, bloquer tout ou partie de ces heures avant la fin du préavis. Le journaliste professionnel qui a trouvé un emploi ne peut plus utiliser les heures pour recherche d'emploi.",
+      "ref": "Article 46",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C82F1F97F72A0703119C7E8E78BB85F7.tpdila10v_3?idArticle=KALIARTI000005786645&cidTexte=KALITEXT000005652402&dateTexte=20090818"
+    },
+    {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
@@ -1921,12 +1644,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour ouvré proratisées au temps de travail contractuel du salarié",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 10",
@@ -1935,11 +1658,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ouvré",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
@@ -1949,40 +1672,40 @@
     {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour ouvré proratisées au temps de travail contractuel du salarié",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour ouvré proportionnellement au temps de travail contractuel du salarié",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
+      "answer3": "Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance (s'il est effectué), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, 1 jour au gré de l'employeur, 1 jour au gré du salarié.",
       "ref": "Article 10",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AC41A834CDF3780188D24677B986910F.tplgfr41s_3?idArticle=KALIARTI000005840303&cidTexte=KALITEXT000005675211&dateTexte=20170222"
     },
     {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance (s'il est effectué), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, 1 jour au gré de l'employeur, 1 jour au gré du salarié.",
+      "answer3": null,
       "ref": "Article 3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9EAC3F9CEAFEEF1886BC40B199F0D838.tplgfr28s_1?idArticle=KALIARTI000022017236&cidTexte=KALITEXT000005675211&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie professionnelle": "47| Agents de maîtrise et Cadres",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "7| rupture en cours de période d'essai",
-      "answer": "2 heures par jour proratisées au temps de travail contractuel du salarié",
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": "2 heures par jour proportionnellement au temps de travail contractuel du salarié",
       "answer2": null,
       "answer3": "Si le contrat est rompu par l'employeur au cours du renouvellement de la période d'essai, le personnel d'encadrement est autorisé à s'absenter pendant le délai de prévenance (s'il est effectué), chaque jour ouvré pendant 2 heures, afin de rechercher un nouvel emploi jusqu'au moment où celui-ci aura été trouvé, dans la limite de 40 heures. Les heures d'absence sont fixées d'un commun accord entre les parties ou, à défaut, 1 jour au gré de l'employeur, 1 jour au gré du salarié.",
       "ref": "Article 3",
@@ -1991,12 +1714,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "16| Employés",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour ouvré proratisées au temps de travail contractuel du salarié dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour ouvré, proportionnellement au temps de travail contractuel du salarié, dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -2005,11 +1728,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "16| Employés",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
@@ -2019,11 +1742,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "16| Employés",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
@@ -2033,12 +1756,12 @@
     {
       "criteria": {
         "catégorie professionnelle": "16| Employés",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "1| démission",
-      "answer": null,
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour ouvré dans une limite de 40 heures. Pour les salariés de l'arrondissement de Valenciennes, cette limite est portée à 50 heures",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence pour recherche d'emploi sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées un jour par l'employeur et un jour par le salarié. Elles peuvent aussi être regroupées, sur décision prise d'un commun accord entre l'employeur et le salarié.\n\nDès que le salarié a retrouvé un emploi, il doit en informer son employeur et ne peut plus avoir droit à ces heures d'absence.",
       "ref": "Article 16",
@@ -2050,7 +1773,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1483,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2061,7 +1784,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1486,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "6 jours ouvrés par mois",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures de recherche d'emplois sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Les heures d'absence seront fixées moitié au gré de L'employeur et moitié au gré du salarié moyennant avis réciproque. Une attention particulière sera portée aux salariés licenciés pour raison économique.",
@@ -2070,11 +1793,11 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur"
+        "initiative de la rupture de la période d'essai": "1| L'employeur"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1486,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": null,
@@ -2083,11 +1806,11 @@
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié"
+        "initiative de la rupture de la période d'essai": "2| Le salarié"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1486,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
@@ -2098,7 +1821,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1486,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "6 jours ouvrés par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures de recherche d'emplois sont prises chaque mois en une ou plusieurs fois, en principe par demi-journée. Les heures d'absence seront fixées moitié au gré de L'employeur et moitié au gré du salarié moyennant avis réciproque. Une attention particulière sera portée aux salariés licenciés pour raison économique.",
@@ -2109,7 +1832,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1501,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2120,7 +1843,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1501,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour travaillé",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures de recherche d'emploi sont prises par accord entre l'employeur et le salarié. Ils peuvent également décider de bloquer tout ou partie de ces heures avant la fin du préavis.",
@@ -2131,7 +1854,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1501,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2142,7 +1865,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1505,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2153,7 +1876,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1505,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour travaillé",
       "answer2": null,
       "answer3": "Les 2 heures sont fixées un jour par l'employeur et le jour suivant par le salarié. Si l'employeur et le salarié sont d'accord, ces heures peuvent être cumulées. Ce droit d'absence cesse quand le salarié a trouvé un emploi.",
@@ -2164,7 +1887,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1505,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2175,7 +1898,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1516,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour travaillé",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures d'absence seront fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié les fixeront chacun leur tour. Ces heures pour recherche d'emploi peuvent être cumulées en fin de préavis, si l'employeur l'autorise par écrit.",
@@ -2186,7 +1909,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1516,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour travaillé",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence seront fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié les fixeront chacun leur tour. Ces heures pour recherche d'emploi peuvent être cumulées en fin de préavis, si l'employeur l'autorise par écrit.",
@@ -2197,7 +1920,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1516,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2208,7 +1931,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1517,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2216,26 +1939,11 @@
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
     },
     {
-      "criteria": {
-        "durée du travail": "1| temps complet"
-      },
+      "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1517,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail  ",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence rémunérées sont fixées d'un commun accord ou, à défaut  un jour par l'employeur et le suivant par le salarié. Elles peuvent, d'un commun accord écrit, être groupées en une ou plusieurs fois. ",
-      "ref": "Chapitre VI, Article 1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "durée du travail": "2| temps partiel"
-      },
-      "type": "heures pour recherche d'emploi",
-      "idcc": 1517,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour proratisées au temps de travail du salarié",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail  ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence rémunérées sont fixées d'un commun accord ou, à défaut  un jour par l'employeur et le suivant par le salarié. Elles peuvent, d'un commun accord écrit, être groupées en une ou plusieurs fois. ",
       "ref": "Chapitre VI, Article 1",
@@ -2245,7 +1953,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1517,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2254,12 +1962,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
-        "ancienneté": "24| moins de 1 an"
+        "durée du travail": "1| Temps complet",
+        "ancienneté": "24| Moins de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures peuvent être cumulées en fin de préavis après accord entre le salarié et l'employeur.",
@@ -2268,13 +1976,13 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "temps de travail": "1| moins d'un mi-temps",
-        "ancienneté": "24| moins de 1 an"
+        "durée du travail": "2| Temps partiel",
+        "temps de travail": "1| Moins d'un mi-temps",
+        "ancienneté": "24| Moins de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "25 % de la durée quotidienne de travail par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Le salarié peut cumuler ces heures d'absence en fin de préavis sans obtenir l'accord de l'employeur.",
@@ -2283,13 +1991,13 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "temps de travail": "2| plus d'un mi-temps",
-        "ancienneté": "24| moins de 1 an"
+        "durée du travail": "2| Temps partiel",
+        "temps de travail": "2| Plus d'un mi-temps",
+        "ancienneté": "24| Moins de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures peuvent être cumulées en fin de préavis après accord entre le salarié et l'employeur.",
@@ -2298,12 +2006,12 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet",
-        "ancienneté": "27| plus de 1 an"
+        "durée du travail": "1| Temps complet",
+        "ancienneté": "27| Plus de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures peuvent être cumulées en fin de préavis après accord entre le salarié et l'employeur.",
@@ -2312,13 +2020,13 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "temps de travail": "1| moins d'un mi-temps",
-        "ancienneté": "27| plus de 1 an"
+        "durée du travail": "2| Temps partiel",
+        "temps de travail": "1| Moins d'un mi-temps",
+        "ancienneté": "27| Plus de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "25 % de la durée quotidienne de travail par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Le salarié peut cumuler ces heures d'absence en fin de préavis sans obtenir l'accord de l'employeur.",
@@ -2327,13 +2035,13 @@
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel",
-        "temps de travail": "2| plus d'un mi-temps",
-        "ancienneté": "27| plus de 1 an"
+        "durée du travail": "2| Temps partiel",
+        "temps de travail": "2| Plus d'un mi-temps",
+        "ancienneté": "27| Plus de 1 an"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures peuvent être cumulées en fin de préavis après accord entre le salarié et l'employeur.",
@@ -2344,7 +2052,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2355,7 +2063,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1518,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2366,8 +2074,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1527,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
       "ref": "Article 32",
@@ -2377,8 +2085,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1527,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
       "ref": "Article 32",
@@ -2388,7 +2096,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1527,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2401,11 +2109,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2414,24 +2122,24 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "12 heures de  travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2440,11 +2148,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2453,31 +2161,31 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "12 heures de  travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
-      "ref": "article 10.2",
+      "ref": "Article 10.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1C09253F5A9A489FD6DCD7F57C039320.tplgfr33s_1?idArticle=KALIARTI000005776856&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1596,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2490,8 +2198,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2503,8 +2211,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "12 heures de  travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2512,12 +2220,12 @@
     },
     {
       "criteria": {
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2529,8 +2237,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2542,8 +2250,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de  travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "12 heures de  travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2551,12 +2259,12 @@
     },
     {
       "criteria": {
-        "durée du préavis": "7| plus de 2 semaines"
+        "durée du préavis": "7| Plus de 2 semaines"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire n'est pas maintenu. Les heures non utilisés dans ce cadre ne donnent pas lieu à rémunération.",
       "answer3": null,
       "ref": "Article 10.2",
@@ -2566,7 +2274,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1597,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2577,8 +2285,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1606,
-      "typeRupture": "1| démission",
-      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": null,
       "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
       "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective",
@@ -2588,8 +2296,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1606,
-      "typeRupture": "3| licenciement",
-      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "1 journée ou 2 demi-journées par semaine ou un nombre d'heures équivalent. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": null,
       "answer3": "Les absences doivent être fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, l'employeur et le salarié décident à tour de rôle et pour chaque semaine les conditions de ces absences.",
       "ref": "Article 9.1 de la convention collective \nArticle 9.2.1 de la convention collective",
@@ -2599,7 +2307,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1606,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2610,10 +2318,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1672,
-      "typeRupture": "1| démission",
-      "answer": "Des facilités d'absence sont accordées par l'employeur",
+      "typeRupture": "1| Démission",
+      "answer": "le temps et dans les conditions décidées par l'employeur, qui lui accordent des facilités d'absence",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Ces facilités sont accordées au salarié qui n'a pas encore retrouvé un emploi. L'employeur en définit les modalités et la rémunération. ",
+      "answer3": "Les heures d'absence autorisée sont accordées au salarié qui n'a pas encore retrouvé un emploi. L'employeur en définit les modalités et la rémunération. ",
       "ref": "Article 91 b) de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918"
     },
@@ -2621,7 +2329,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1672,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "50 heures par mois maximum",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Ces heures peuvent être groupées en tout ou en partie, avec l'accord de l'employeur. Cette autorisation d'absence prend fin lorsque le salarié a retrouvé un emploi.",
@@ -2632,7 +2340,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1672,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2645,8 +2353,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2658,8 +2366,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "12 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2667,12 +2375,12 @@
     },
     {
       "criteria": {
-        "durée du préavis": "9| un mois et plus "
+        "durée du préavis": "9| Un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.",
       "ref": "Article 10.2",
@@ -2684,8 +2392,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
       "ref": "Article 10.2",
@@ -2697,8 +2405,8 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "12 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
       "ref": "Article 10.2",
@@ -2706,12 +2414,12 @@
     },
     {
       "criteria": {
-        "durée du préavis": "9| un mois et plus "
+        "durée du préavis": "9| Un mois et plus "
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": " Les heures pour rechercher un nouvel emploi sont prises, en principe, par demi-journées ou groupées à la fin du délai de préavis.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.\n",
       "ref": "Article 10.2",
@@ -2721,7 +2429,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1702,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2734,11 +2442,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2747,11 +2455,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2760,24 +2468,24 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "12 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "durée du préavis": "8| un mois"
+        "durée du préavis": "8| Un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "1| démission",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2786,11 +2494,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "4 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "4 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2799,11 +2507,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -2812,79 +2520,79 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "12 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "12 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "durée du préavis": "8| un mois"
+        "durée du préavis": "8| Un mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "3| licenciement",
-      "answer": "25 heures de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "25 heures de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf accord préalable de l'employeur sur un autre mode de répartition.\nAucune indemnité n'est due par l'employeur si les heures pour recherche d'emploi ne sont pas utilisées par l'ouvrier.",
-      "ref": "article 1.1.9a",
+      "answer3": "Les heures pour rechercher un nouvel emploi sont prises groupées, en principe, à la fin du délai de préavis, sauf si l'employeur donne son accord pour une répartition différente.\nL'employeur ne verse pas d'indemnité, si le salarié n'utilise pas les heures pour recherche d'emploi.",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1740,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
-      "ref": "article 1.1.9a",
+      "ref": "Article 1.1.9a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005800997&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1979,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
-      "ref": "article 30.1",
+      "ref": "Article 30.1",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1979,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour, dans la limite d'un nombre d'heures total équivalent au plus à la durée hebdomadaire de travail du salarié.",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour, dans la limite d'un nombre d'heures total équivalent au maximum à la durée hebdomadaire de travail du salarié",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Le droit est accordé, sauf pour les licenciement pour faute grave ou lourde. Ces 2 heures de recherche d'emploi sont prises par accord entre l'employeur et le salarié. Ils peuvent également décider de bloquer tout ou partie de ces heures avant la fin du préavis.\n\nEn l'absence d'accord, les heures d'absence sont fixées un jour par l'employeur, et un jour par le salarié à condition d'être prises en dehors des heures de services des repas à la clientèle.\n\nLe salarié qui a trouvé un emploi ne peut plus utiliser les heures pour recherche d'emploi.",
-      "ref": "article 30.2",
+      "answer3": "Le salarié n'a pas droit aux heures d'absence autorisée pour recherche d'emploi en cas de licenciement pour faute grave ou lourde. Dans les autres cas, les 2 heures de recherche d'emploi sont prises par accord entre l'employeur et le salarié. Ils peuvent également décider de bloquer tout ou partie de ces heures avant la fin du préavis.\n\nEn l'absence d'accord, les heures d'absence sont fixées un jour par l'employeur, et un jour par le salarié à condition d'être prises en dehors des heures de services des repas à la clientèle.\n\nLe salarié qui a trouvé un emploi ne peut plus utiliser les heures pour recherche d'emploi.",
+      "ref": "Article 30.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1979,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
-      "ref": "article 13",
+      "ref": "Article 13",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C33CCCA8A4BDBD476BF7D99A55F73BA4.tplgfr33s_2?idArticle=KALIARTI000005826269&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
         "catégorie professionnelle": "48| Cadres",
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1996,
-      "typeRupture": "2| démission ou licenciement",
-      "answer": "2 heures par jour dans la limite d'un tiers du temps de travail pour un salarié à temps partiel",
+      "typeRupture": "2| Démission ou licenciement",
+      "answer": "2 heures par jour, dans la limite d'un tiers du temps de travail pour un salarié à Temps partiel",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande.",
       "ref": "Article 6 des dispositions particulières pour les cadres\r\n",
@@ -2893,11 +2601,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "48| Cadres",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1996,
-      "typeRupture": "2| démission ou licenciement",
+      "typeRupture": "2| Démission ou licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande.",
@@ -2907,11 +2615,11 @@
     {
       "criteria": {
         "catégorie professionnelle": "38| Non-cadres",
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 1996,
-      "typeRupture": "2| démission ou licenciement",
+      "typeRupture": "2| Démission ou licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Elles sont fixées un jour par l'employeur et un jour par le salarié. L'employeur peut autoriser le regroupement de ces heures d'absence, si le salarié en fait la demande",
@@ -2922,7 +2630,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 1996,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2931,12 +2639,12 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2098,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures maximum par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. ",
@@ -2945,12 +2653,12 @@
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié",
+        "initiative de la rupture de la période d'essai": "2| Le salarié",
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2098,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "2 heures maximum par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. ",
@@ -2963,7 +2671,7 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2098,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -2974,7 +2682,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2098,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures maximum par jour",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. ",
@@ -2985,7 +2693,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2098,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures maximum par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les absences sont fixées un jour par le salarié, un jour par l'employeur. Ces heures d'absences peuvent également être groupées sur demande du salarié, avec l'accord de l'employeur. Les heures non utilisées ne sont pas rémunérées.",
@@ -2998,23 +2706,23 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2111,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour, pendant au plus 10 jours ouvrables pour un temps complet",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour, pendant au maximum 10 jours ouvrables pour un Temps complet",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié, à défaut d'accord entre les parties. L'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant l'expiration du préavis.",
+      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié. Mais l'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant la fin du préavis.",
       "ref": "Article 12a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=234BBFBEADEC9C5B23051C3F70EEA8CF.tplgfr33s_2?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {
-        "ancienneté": "38| moins de 2 ans"
+        "ancienneté": "38| Moins de 2 ans"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2111,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour, pendant au plus 6 jours ouvrables pour un temps complet",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour, pendant au maximum 6 jours ouvrables pour un Temps complet",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié, à défaut d'accord entre les parties. L'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant l'expiration du préavis.",
+      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié. Mais l'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant la fin du préavis.",
       "ref": "Article 12a",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=234BBFBEADEC9C5B23051C3F70EEA8CF.tplgfr33s_2?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
     },
@@ -3022,7 +2730,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2111,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3033,7 +2741,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2111,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3044,7 +2752,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2120,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3055,8 +2763,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2120,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absence sont fixées par accord entre l'employeur et le salarié. En cas de désaccord, elles sont fixées un jour par l'employeur, un jour par le salarié. Avec l'accord de l'employeur, elles peuvent être regroupées en fin de préavis.",
       "ref": "Article 30 de la convention collective",
@@ -3066,7 +2774,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2120,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3077,7 +2785,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2148,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3088,7 +2796,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2148,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Ces heures sont fixées en accord avec l'employeur. En l'absence d'accord, les heures sont fixées un jour par le salarié, un jour par l'employeur.\n\nL'employeur peut autoriser par écrit le salarié à cumuler ces heures de recherche d'emploi en fin de période de préavis si les nécessités du service le permettent et dans la limite de la durée effectuée du préavis",
@@ -3099,7 +2807,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2148,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3112,11 +2820,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2216,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour pendant 1 mois",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": null,
-      "ref": "article 7 de l'annexe III",
+      "answer3": "Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.",
+      "ref": "Article 7 de l'annexe III",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1586D3FFD3D633068920933FE7AEDD82.tplgfr44s_2?idArticle=KALIARTI000023307118&cidTexte=KALITEXT000005642692&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -3125,11 +2833,11 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2216,
-      "typeRupture": "3| licenciement",
-      "answer": "une durée équivalente à la durée du travail hebdomadaire de l'établissement au plus",
+      "typeRupture": "3| Licenciement",
+      "answer": "un nombre d'heures égal, chaque mois, à la durée hebdomadaire de travail dans l'établissement",
       "answer2": "Le salaire est maintenu.",
       "answer3": "La répartition de ces absences se fera en accord avec la direction. Elles pourront être bloquées à la fin de chaque mois.",
-      "ref": "article 7 de l'annexe III",
+      "ref": "Article 7 de l'annexe III",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1586D3FFD3D633068920933FE7AEDD82.tplgfr44s_2?idArticle=KALIARTI000023307118&cidTexte=KALITEXT000005642692&dateTexte=29990101&categorieLien=id"
     },
     {
@@ -3138,10 +2846,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2216,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": "2 heures par jour pendant 1 mois",
       "answer2": "Le salaire n'est pas maintenu.",
-      "answer3": null,
+      "answer3": "Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.",
       "ref": "Article 3.12",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005768963&cidTexte=KALITEXT000005640939&dateTexte=20190314"
     },
@@ -3151,10 +2859,10 @@
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2216,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "2 heures par jour pendant 1 mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": null,
+      "answer3": "Ces heures sont fixées d'un commun accord entre le salarié et l'employeur. A la demande du salarié, elles peuvent être groupées en fin de semaine ou en fin de mois, compte tenu des nécessités du service. En l'absence d'accord entre l'employeur et le salarié, elles sont fixées un jour par le salarié, et le suivant par la direction, en tenant compte dans la mesure du possible des heures d'ouverture des agences de Pôle emploi.",
       "ref": "Article 3.12",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005768963&cidTexte=KALITEXT000005640939&dateTexte=20190314"
     },
@@ -3162,7 +2870,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2216,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3171,12 +2879,12 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
         "ancienneté": "9| 3 mois ou moins"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3185,11 +2893,11 @@
     },
     {
       "criteria": {
-        "période essai": "2| Le salarié"
+        "initiative de la rupture de la période d'essai": "2| Le salarié"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3198,15 +2906,15 @@
     },
     {
       "criteria": {
-        "période essai": "1| L'employeur",
-        "ancienneté": "13| plus de 3 mois"
+        "initiative de la rupture de la période d'essai": "1| L'employeur",
+        "ancienneté": "13| Plus de 3 mois"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "7| rupture en cours de période d'essai",
-      "answer": "2 jours, si le délai de prévenance prévui est executé",
+      "typeRupture": "7| Rupture de la période d'essai",
+      "answer": "2 jours, si le préavis (aussi appelé délai de prévenance) est executé",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Chaque jour correspond à la durée habituelle de travail du salarié.",
+      "answer3": "Chaque jour d'absence correspond à la durée habituelle de travail du salarié.",
       "ref": "Article 43.2",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000020981959&cidTexte=KALITEXT000005658770&dateTexte=20200207"
     },
@@ -3214,7 +2922,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3223,27 +2931,27 @@
     },
     {
       "criteria": {
-        "durée du travail": "1| temps complet"
+        "durée du travail": "1| Temps complet"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "3| licenciement",
-      "answer": "Un crédit équivalent à la durée hebdomadaire de travail dans l'entreprise par mois",
+      "typeRupture": "3| Licenciement",
+      "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail dans l'entreprise",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, selon les modalités fixées d'un commun accord entre les parties.",
+      "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770"
     },
     {
       "criteria": {
-        "durée du travail": "2| temps partiel"
+        "durée du travail": "2| Temps partiel"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 2264,
-      "typeRupture": "3| licenciement",
-      "answer": "Un crédit équivalent à la durée hebdomadaire de travail prévue au contrat de travail par mois",
+      "typeRupture": "3| Licenciement",
+      "answer": "un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire de travail prévue par le contrat de travail",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, selon les modalités fixées d'un commun accord entre les parties.",
+      "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770"
     },
@@ -3251,7 +2959,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2395,
-      "typeRupture": "6| rupture de contrat de travail",
+      "typeRupture": "6| Rupture de contrat de travail",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3262,7 +2970,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2395,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3273,7 +2981,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2420,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3284,7 +2992,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2420,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": " 5 journées ou 10 demi-journées par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les absences peuvent être prises en une ou plusieurs fois, et fixé alternativement par le salarié et l'employeur.",
@@ -3295,10 +3003,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2420,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": " 5 journées ou 10 demi-journées par mois",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Le cadre est autorisé, s'il en fait la demande, à s'absenter pour recherche d'emploi pendant 5 journées ou 10 demi-journées par mois, prises en une ou plusieurs fois. Les autorisations d'absence seront fixées moitié au gré du cadre, moitié au gré de l'entreprise et moyennant information réciproque. Pendant ces absences, la rémunération est maintenue.",
+      "answer3": "Le cadre est autorisé, s'il en fait la demande, à s'absenter pour recherche d'emploi pendant 5 journées ou 10 demi-journées par mois, prises en une ou plusieurs fois. Les autorisations d'absence seront fixées moitié par le cadre, et moitié par l'employeur, moyennant information réciproque. ",
       "ref": "Article 2.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000017941870&cidTexte=KALITEXT000017941844&dateTexte=20050101"
     },
@@ -3306,8 +3014,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2511,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour ouvrable. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour ouvrable. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les salariés pourront prendre leurs heures en une seule fois avec l'accord de l'employeur.",
       "ref": "Article 4.4.3.5",
@@ -3317,7 +3025,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2511,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3328,8 +3036,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2596,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
       "ref": "Article 7.4.4",
@@ -3339,8 +3047,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2596,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "L'employeur et le salarié peuvent décider que les 2 heures journalières pourront être bloquées à des horaires fixes ou qu'elles seront regroupées. En l'absence d'accord, les heures seront fixées un jour par l'employeur et le suivant par le salarié. ",
       "ref": "Article 7.4.4",
@@ -3350,7 +3058,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2596,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3361,7 +3069,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2609,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3372,10 +3080,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2609,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "5 journées ou 10 demi-journées",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les autorisations d'absence seront fixées moitié au gré de l'ETAM, moitié au gré de l'entreprise et moyennant information réciproque. Pendant ces absences la rémunération est maintenue, aucune indemnité n'étant due si ces journées ou demi-journées d'absence ne sont pas utilisées.",
+      "answer3": "Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée. ",
       "ref": "Article 8.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018773771&cidTexte=KALITEXT000018773681&dateTexte=20060712"
     },
@@ -3383,10 +3091,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2609,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "5 journées ou 10 demi-journées",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Les autorisations d'absence seront fixées moitié au gré de l'ETAM, moitié au gré de l'entreprise et moyennant information réciproque. Pendant ces absences la rémunération est maintenue, aucune indemnité n'étant due si ces journées ou demi-journées d'absence ne sont pas utilisées.",
+      "answer3": "Les autorisations d'absence seront fixées moitié par le salarié, et moitié par l'employeur. Chacun devra en informer l'autre partie. L'employeur ne verse pas d'indemnité au salarié s'il n'utilise ces heures d'absence autorisée. ",
       "ref": "Article 2.3\nArticle 8.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018773771&cidTexte=KALITEXT000018773681&dateTexte=20060712\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=40918918FC583E87EE1E942DFFF9D936.tplgfr30s_3?idArticle=KALIARTI000018773723&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id"
     },
@@ -3394,7 +3102,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2614,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3405,10 +3113,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2614,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "5 journées ou 10 demi-journées par mois de préavis",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "La convention collective prévoit que le salarié qui a été licencié peut s'absenter pendant le préavis pour rechercher un emploi, il doit en avoir fait la demande.\n\nCes heures peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur, et après information réciproque.\n\nSi le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.",
+      "answer3": "Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.",
       "ref": "Article 8.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8DA312A2CD26D5839EA964715E620EBA.tplgfr30s_2?idArticle=KALIARTI000018926306&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
     },
@@ -3416,10 +3124,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2614,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": "5 journées ou 10 demi-journées par mois de préavis",
       "answer2": "Le salaire est maintenu.",
-      "answer3": "Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, il doit en avoir fait la demande.\n\nCes heures peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur, et après information réciproque.\n\nSi le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.",
+      "answer3": "Le salarié peut s'absenter pendant le préavis pour rechercher un emploi, s'il le demande. Les heures de recherche d'emploi peuvent être prises en une ou plusieurs fois. Les autorisations d'absence seront fixées pour moitié par le salarié, pour moitié par l'employeur. Chacun en informe l'autre partie. Si le salarié n'utilise pas toutes ses heures d'absence autorisée, l'employeur ne devra pas lui verser d'indemnité.",
       "ref": "Article 2.3 (ancienne et nouvelle mouture)\nArticle 8.3",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=11E262EBEBC0E8C3E4AF716770A04391.tplgfr30s_2?idArticle=KALIARTI000018926256&cidTexte=KALITEXT000018926214&dateTexte=20101004&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=11E262EBEBC0E8C3E4AF716770A04391.tplgfr30s_2?idArticle=KALIARTI000023732652&cidTexte=KALITEXT000018926214&dateTexte=29981231&categorieLien=id\nhttps://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8DA312A2CD26D5839EA964715E620EBA.tplgfr30s_2?idArticle=KALIARTI000018926306&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
     },
@@ -3427,8 +3135,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2941,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": null,
       "ref": "Article 27",
@@ -3438,8 +3146,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2941,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour travaillé ou 1 journée par semaine de travail. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": null,
       "ref": "Article 26.1",
@@ -3449,7 +3157,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 2941,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3460,8 +3168,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3043,
-      "typeRupture": "1| démission",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "1| Démission",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire n'est pas maintenu.",
       "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
       "ref": "Article 4.11.1",
@@ -3471,8 +3179,8 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3043,
-      "typeRupture": "3| licenciement",
-      "answer": "2 heures par jour. Pour le salarié à temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail ",
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour. Pour le salarié à Temps partiel, la durée de l’absence est calculée proportionnellement au temps de travail",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures peuvent être groupées en fin de préavis par accord entre l'employeur et le salarié, ou prises chaque jour une fois au choix du salarié, une fois au choix de l'employeur.",
       "ref": "Article 4.11.1",
@@ -3482,7 +3190,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3043,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3493,7 +3201,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3127,
-      "typeRupture": "1| démission",
+      "typeRupture": "1| Démission",
       "answer": null,
       "answer2": null,
       "answer3": null,
@@ -3504,10 +3212,10 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3127,
-      "typeRupture": "3| licenciement",
+      "typeRupture": "3| Licenciement",
       "answer": "4 heures par semaine",
       "answer2": null,
-      "answer3": "Les 4 heures pourront être prises un jour à la convenance du salarié, ou suivant d'autres modalités d'un commun accord entre l'employeur et le salarié.",
+      "answer3": "Les 4 heures peuvent être prises un jour, comme le souhaite le salarié, ou selon d'autres confitions fixées d'un commun accord entre l'employeur et le salarié.",
       "ref": "Article 1. 1 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E5B5B8F059E9188492430B0C2B630256.tplgfr29s_3?idArticle=KALIARTI000027034201&cidTexte=KALITEXT000026943196&dateTexte=29990101&categorieLien=id"
     },
@@ -3515,7 +3223,7 @@
       "criteria": {},
       "type": "heures pour recherche d'emploi",
       "idcc": 3127,
-      "typeRupture": "7| rupture en cours de période d'essai",
+      "typeRupture": "7| Rupture de la période d'essai",
       "answer": null,
       "answer2": null,
       "answer3": null,

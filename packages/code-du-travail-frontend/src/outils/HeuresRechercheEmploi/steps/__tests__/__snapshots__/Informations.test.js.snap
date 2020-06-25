@@ -441,7 +441,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
       class="c2"
       for="input-criteria.groupe"
     >
-      Dans quel groupe professionnel le salarié se situe-t-il ?
+      Quel est le groupe professionnel du salarié ?
       <span
         aria-label="champs obligatoire"
         class="c3"
@@ -464,9 +464,9 @@ exports[`<StepInformations /> should render groupe 1`] = `
           ...
         </option>
         <option
-          value="3| de I à III"
+          value="3| De I à III"
         >
-          de I à III
+          De I à III
         </option>
         <option
           value="6| IV"

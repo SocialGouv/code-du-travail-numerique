@@ -7,20 +7,22 @@ function StepIntro() {
         Ce simulateur vous permet de savoir si le salarié peut bénéficier
         d’heures d’absence autorisée pendant son préavis pour rechercher un
         emploi. Il peut s’agir du préavis en cas de licenciement, de démission
-        ou de rupture de la période d’essai.
+        ou de rupture de la période d’essai.En cas de rupture de la période
+        d’essai, le prévais est aussi appellé délai de prévenance.
       </p>
       <p>
         Le code du travail ne prévoit pas ce droit (sauf cas particulier du
         droit applicable à l’Alsace Moselle). En revanche, plusieurs conventions
         collectives fixent un nombre d’heures d’absence autorisée pour
-        rechercher un emploi et les conditions d’utilisation.
+        rechercher un emploi et leurs conditions d’utilisation.
       </p>
       <p>
         Afin de réaliser cette simulation, vous aurez besoin de connaître la
         convention collective applicable et, dans certains cas, des informations
         sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La
         plupart de ces informations se trouvent sur le contrat de travail ou le
-        bulletin de salaire. Prévoyez 2 à 5 minutes pour cette simulation.
+        bulletin de salaire. <br />
+        Prévoyez 2 à 5 minutes pour cette simulation.
       </p>
       <p>Cliquez sur Commencer pour démarrer la simulation.</p>
     </>

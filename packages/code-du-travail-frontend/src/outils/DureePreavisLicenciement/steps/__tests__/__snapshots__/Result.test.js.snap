@@ -126,7 +126,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
       Reconnu en tant que travailleur handicapé
        : 
       <strong>
+<<<<<<< HEAD
         Non
+||||||| parent of 95aae0ba1... fix(hre): apply feedback
+        moins de 6 mois
+=======
+        Moins de 6 mois
+>>>>>>> 95aae0ba1... fix(hre): apply feedback
       </strong>
     </li>
   </ul>
@@ -142,7 +148,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
       Ancienneté selon la convention collective
        : 
       <strong>
-        moins de 1 mois
+        Moins de 1 mois
       </strong>
     </li>
     <li>
@@ -500,7 +506,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       Reconnu en tant que travailleur handicapé
        : 
       <strong>
+<<<<<<< HEAD
         Non
+||||||| parent of 95aae0ba1... fix(hre): apply feedback
+        moins de 6 mois
+=======
+        Moins de 6 mois
+>>>>>>> 95aae0ba1... fix(hre): apply feedback
       </strong>
     </li>
   </ul>
@@ -685,7 +697,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       Reconnu en tant que travailleur handicapé
        : 
       <strong>
+<<<<<<< HEAD
         Non
+||||||| parent of 95aae0ba1... fix(hre): apply feedback
+        plus de 2 ans
+=======
+        Plus de 2 ans
+>>>>>>> 95aae0ba1... fix(hre): apply feedback
       </strong>
     </li>
   </ul>
@@ -829,7 +847,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       Reconnu en tant que travailleur handicapé
        : 
       <strong>
+<<<<<<< HEAD
         Non
+||||||| parent of 95aae0ba1... fix(hre): apply feedback
+        plus de 2 ans
+=======
+        Plus de 2 ans
+>>>>>>> 95aae0ba1... fix(hre): apply feedback
       </strong>
     </li>
   </ul>
