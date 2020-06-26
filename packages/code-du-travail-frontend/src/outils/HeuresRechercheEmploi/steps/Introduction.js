@@ -7,8 +7,8 @@ function StepIntro() {
         Ce simulateur vous permet de savoir si le salarié peut bénéficier
         d’heures d’absence autorisée pendant son préavis pour rechercher un
         emploi. Il peut s’agir du préavis en cas de licenciement, de démission
-        ou de rupture de la période d’essai.En cas de rupture de la période
-        d’essai, le prévais est aussi appellé délai de prévenance.
+        ou de rupture de la période d’essai. En cas de rupture de la période
+        d’essai, le préavis est aussi appellé délai de prévenance.
       </p>
       <p>
         Le code du travail ne prévoit pas ce droit (sauf cas particulier du

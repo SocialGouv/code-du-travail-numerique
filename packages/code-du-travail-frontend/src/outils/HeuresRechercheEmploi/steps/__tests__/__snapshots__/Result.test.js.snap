@@ -39,7 +39,7 @@ exports[`<StepResult /> should render no results 1`] = `
   <div
     class="c1"
   >
-    Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent peut prévoir l’existence, le cadre et la durée des absences pour rechercher un emploi au cours du préavis.
+    Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis.
   </div>
   <h2
     class="c0"
@@ -51,7 +51,7 @@ exports[`<StepResult /> should render no results 1`] = `
       Convention collective
        : 
       <strong>
-        Entreprises de la publicité et assimilées (idcc 86)
+        Entreprises de la publicité et assimilées (IDCC 86)
       </strong>
     </li>
     <li>
@@ -183,7 +183,7 @@ exports[`<StepResult /> should render with duration 1`] = `
       Convention collective
        : 
       <strong>
-        Entreprises de la publicité et assimilées (idcc 86)
+        Entreprises de la publicité et assimilées (IDCC 86)
       </strong>
     </li>
     <li>
@@ -391,7 +391,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       Convention collective
        : 
       <strong>
-        Cordonnerie multiservice (1561)
+        Cordonnerie multiservice (IDCC 1561)
       </strong>
     </li>
   </ul>

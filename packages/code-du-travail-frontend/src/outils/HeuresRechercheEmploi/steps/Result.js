@@ -58,8 +58,8 @@ function Disclaimer({ duration }) {
     return (
       <Alert>
         Un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise plus récent peut prévoir l’existence, le cadre et la durée
-        des absences pour rechercher un emploi au cours du préavis.
+        l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence
+        autorisée pour rechercher un emploi pendant le préavis.
       </Alert>
     );
   } else {
@@ -118,7 +118,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
       <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
       {recapSituation({
         ...(ccn && {
-          "Convention collective": `${ccn.shortTitle} (${idcc})`,
+          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
         }),
       })}
       <SectionTitle>Source</SectionTitle>
@@ -162,7 +162,7 @@ export function StepResult({ form }) {
       <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
       {recapSituation({
         ...(ccn && {
-          "Convention collective": `${ccn.shortTitle} (idcc ${idcc})`,
+          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
         }),
         "Type de rupture du contrat de travail": typeRupture,
         ...situation.criteria,
