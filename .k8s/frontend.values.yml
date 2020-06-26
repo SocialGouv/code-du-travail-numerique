@@ -101,8 +101,7 @@ service:
 ingress:
   enabled: true
   annotations:
-    appgw.ingress.kubernetes.io/ssl-redirect: ""
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    certmanager.k8s.io/cluster-issuer: buypass
     kubernetes.io/ingress.class: nginx
     kubernetes.io/tls-acme: "true"
   hosts:
