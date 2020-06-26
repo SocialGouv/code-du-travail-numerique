@@ -22,7 +22,7 @@ include:
 
 .notify_dev:
   environment:
-    name: fabrique-dev
+    name: ${CI_COMMIT_REF_NAME}-dev2
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -78,6 +78,6 @@ Delete useless k8s namespaces:
     - .base_delete_useless_k8s_ns_stage
     - .notify_dev
   environment:
-    name: fabrique-dev
+    name: ${CI_COMMIT_REF_NAME}-dev2
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
