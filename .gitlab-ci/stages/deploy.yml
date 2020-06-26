@@ -93,6 +93,8 @@ Deploy @cdtn/api (dev):
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.3m
+      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=null
+      --set ingress.annotations.kubernetes\.io/tls-acme=null
 
 Deploy @cdtn/api (prod):
   extends:
@@ -127,6 +129,8 @@ Deploy @cdtn/frontend (dev):
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.1m
+      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=null
+      --set ingress.annotations.kubernetes\.io/tls-acme=null
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
