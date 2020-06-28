@@ -25,7 +25,7 @@
     "@cdt/data...tools": "^4.24.0",
     "@cdt/sources": "^4.22.0",
     "@next/bundle-analyzer": "^9.4.4",
-    "@reach/tooltip": "0.10.4",
+    "@reach/tooltip": "0.10.5",
     "@sentry/browser": "^5.16.0",
     "@sentry/node": "^5.16.0",
     "@socialgouv/datafiller-data": "^1.31.0",
