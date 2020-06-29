@@ -10,22 +10,35 @@ include:
     file: /base_docker_kubectl_image_stage.yml
     ref: v9.1.1
   #
-  - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
-  - /.gitlab-ci/stages/e2e.yml
+  # - /.gitlab-ci/variables.yml
+  # - /.gitlab-ci/stages/quality.yml
+  # - /.gitlab-ci/stages/register.yml
+  # - /.gitlab-ci/stages/manual.yml
+  # - /.gitlab-ci/stages/scan.yml
+  # - /.gitlab-ci/stages/deploy.yml
+  # - /.gitlab-ci/stages/notify.yml
+  # - /.gitlab-ci/stages/e2e.yml
 
 stages:
-  - "Prepare"
-  - "Code Quality"
-  - "Manual Deploy"
-  - "Registration"
-  - "Post Registration"
-  - "Deploy"
-  - "Notify Finished Deployment"
-  - "E2E testing"
-  - "Update ES data"
+  # - "Prepare"
+  # - "Code Quality"
+  # - "Manual Deploy"
+  # - "Registration"
+  # - "Post Registration"
+  # - "Deploy"
+  # - "Notify Finished Deployment"
+  # - "E2E testing"
+  # - "Update ES data"
+
+always-run:
+  script: echo 'this should always run'
+
+on-pull-requests:
+  script: echo 'this should run on pull requests'
+  only:
+    - external_pull_requests
+
+except-pull-requests:
+  script: echo 'this should not run on pull requests'
+  except:
+    - external_pull_requests
