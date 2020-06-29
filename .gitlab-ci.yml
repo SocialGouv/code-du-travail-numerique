@@ -40,7 +40,12 @@ always-run:
     - echo "------"
     - git remote
     - git branch
-    - git fetch
+    - git fetch origin
+    - git branch
+    - git checkout ${CI_DEFAULT_BRANCH}
+    - git branch
+    - git checkout -
+    - git branch
     - echo "------"
     - echo "using git diff"
     - git diff --name-only master ${CI_COMMIT_SHA}
