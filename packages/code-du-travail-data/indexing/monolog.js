@@ -7,6 +7,11 @@ const ES_LOGS = process.env.ES_LOGS;
 const ES_LOGS_TOKEN = process.env.ES_LOGS_TOKEN;
 
 if (!ES_LOGS || !ES_LOGS_TOKEN) {
+  console.error(
+    `Missing env variable for accessing Monolog Elastic Search logs : ${
+      ES_LOGS ? "" : "ES_LOGS"
+    } ${ES_LOGS_TOKEN ? "" : "ES_LOGS_TOKEN"}`
+  );
   logger.error(
     `Missing env variable for accessing Monolog Elastic Search logs : ${
       ES_LOGS ? "" : "ES_LOGS"
