@@ -5,7 +5,7 @@
 
 git fetch origin --quiet
 git checkout master
-git chechout -
+git checkout -
 
 files=$(git diff --name-only master ${CI_COMMIT_SHA})
 for pattern in "$@"
