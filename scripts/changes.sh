@@ -1,5 +1,5 @@
 #!/bin/sh
-## cli tools to detect changes between commit branch and master
+## cli tools to detect changes between latest branch commit and master
 # Usage :
 #   sh scripts/changes.sh packages/code-du-travail-data packages/sources
 
