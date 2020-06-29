@@ -31,10 +31,17 @@ stages:
   # - "Update ES data"
 
 always-run:
-  script: echo 'this should always run'
+  script:
+    - echo 'this should always run'
+    - echo "CI_COMMIT_BEFORE_SHA ${CI_COMMIT_BEFORE_SHA}"
+    - echo "using git log"
+    - git log --name-only --pretty=oneline --full-index master..${CI_COMMIT_SHA} | grep -vE '^[0-9a-f]{40} ' | sort | uniq
+    - echo "using git diff"
+    - git diff --start master ${CI_COMMIT_SHA}
 
 on-pull-requests:
-  script: echo 'this should run on pull requests'
+  script:
+    - echo 'this should run on pull requests'
   only:
     - external_pull_requests
 
