@@ -8,7 +8,7 @@ function StepIntro() {
         d’heures d’absence autorisée pendant son préavis pour rechercher un
         emploi. Il peut s’agir du préavis en cas de licenciement, de démission
         ou de rupture de la période d’essai. En cas de rupture de la période
-        d’essai, le préavis est aussi appellé délai de prévenance.
+        d’essai, le préavis est aussi appelé délai de prévenance.
       </p>
       <p>
         Le code du travail ne prévoit pas ce droit (sauf cas particulier du
