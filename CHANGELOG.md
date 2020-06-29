@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
+
+
+### Bug Fixes
+
+* remove nextjs telemetry ([#2841](https://github.com/SocialGouv/code-du-travail-numerique/issues/2841)) ([ed47c2e](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed47c2e2e9b8ba6b77c6c423cccea54ed1e03c0d)), closes [#1441](https://github.com/SocialGouv/code-du-travail-numerique/issues/1441)
+
+
+### Features
+
+* **front:** add cdtn logo to widget ([#2833](https://github.com/SocialGouv/code-du-travail-numerique/issues/2833)) ([878c5e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/878c5e8b2f847d15634f4f5674657d5250027056))
+* **front:** try to see clearer with dynamic imports ([#2829](https://github.com/SocialGouv/code-du-travail-numerique/issues/2829)) ([9a86de2](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a86de2438ba2159b8e01fdce391a192e946f403))
+* **front:** update wording ([#2828](https://github.com/SocialGouv/code-du-travail-numerique/issues/2828)) ([bec49d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/bec49d98325a949e1ac2c1fde55c4f6c81ce13fa))
+* **front:** wording ([#2836](https://github.com/SocialGouv/code-du-travail-numerique/issues/2836)) ([7a41a84](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a41a84d6b21a50c8da338bc113b96361afdebfb))
+* **tools:** add simulateur-emabauche ([#2840](https://github.com/SocialGouv/code-du-travail-numerique/issues/2840)) ([f5a06ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/f5a06adec785138f5c7520dba73a6c08e6a8bfea)), closes [#2821](https://github.com/SocialGouv/code-du-travail-numerique/issues/2821)
+
+
+
+
+
 # [4.24.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.23.0...v4.24.0) (2020-06-12)
 
 
