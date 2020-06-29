@@ -38,9 +38,10 @@ always-run:
     - echo git sandbox
     - git remote
     - git branch
+    - git fetch origin/master
+    - echo matomo url $CI_PIWIK_URL
     - echo "using git diff"
     - git diff --name-only master ${CI_COMMIT_SHA}
-    - echo matomo url $CI_PIWIK_URL
 
 on-pull-requests:
   script:
