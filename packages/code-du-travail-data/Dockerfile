@@ -8,10 +8,6 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 
 ARG NLP_URL
 ENV NLP_URL=$NLP_URL
-ARG ES_LOGS
-ENV ES_LOGS=$ES_LOGS
-ARG ES_LOGS_TOKEN
-ENV ES_LOGS_TOKEN=$ES_LOGS_TOKEN
 
 RUN yarn workspace @cdt/data dump-dev
 

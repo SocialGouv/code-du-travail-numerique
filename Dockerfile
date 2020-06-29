@@ -47,4 +47,9 @@ RUN yarn --frozen-lockfile && yarn cache clean
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
+ARG ES_LOGS
+ENV ES_LOGS=$ES_LOGS
+ARG ES_LOGS_TOKEN
+ENV ES_LOGS_TOKEN=$ES_LOGS_TOKEN
+
 RUN yarn build
