@@ -31,7 +31,9 @@ stages:
   # - "Update ES data"
 
 always-run:
-  image: alpine/git
+  image:
+    name: alpine/git
+    entrypoint: ["sh"]
   script:
     - sh scripts/changes.sh packages/code-du-travail-data
 
