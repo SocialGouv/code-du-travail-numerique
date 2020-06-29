@@ -34,6 +34,8 @@ jobs:
       env:
         - ELASTICSEARCH_LOG_LEVEL=info
         - NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr
+        - ES_LOGS=$ES_LOGS
+        - ES_LOGS_TOKEN=$ES_LOGS_TOKEN
       before_script:
         - docker-compose up -d elasticsearch
 
