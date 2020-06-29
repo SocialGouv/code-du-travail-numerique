@@ -32,14 +32,14 @@ stages:
 
 always-run:
   image: alpine/git
-  GIT_STRATEGY: clone
+  variables:
+    GIT_STRATEGY: clone
   script:
     - echo 'this should always run'
     - echo "CI_COMMIT_BEFORE_SHA ${CI_COMMIT_BEFORE_SHA}"
     - echo git sandbox
     - git remote
     - git branch
-    # - git fetch origin/master
     - echo matomo url $CI_PIWIK_URL
     - echo "using git diff"
     - git diff --name-only master ${CI_COMMIT_SHA}
