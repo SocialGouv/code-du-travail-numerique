@@ -33,7 +33,6 @@ stages:
 always-run:
   image:
     name: alpine/git
-    entrypoint: ["sh"]
   script:
     - sh scripts/changes.sh packages/code-du-travail-data
 
