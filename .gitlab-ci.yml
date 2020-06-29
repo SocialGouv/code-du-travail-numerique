@@ -33,7 +33,7 @@ stages:
 always-run:
   image: alpine/git
   script:
-    - bash scripts/changes.sh packages/code-du-travail-data
+    - sh scripts/changes.sh packages/code-du-travail-data
 
 on-pull-requests:
   script:
