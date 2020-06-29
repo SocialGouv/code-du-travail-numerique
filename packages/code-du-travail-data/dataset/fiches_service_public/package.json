@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@cdt/sources": "^4.22.0",
-    "@socialgouv/contributions-data": "^1.35.0",
+    "@socialgouv/contributions-data": "^1.37.0",
     "@socialgouv/datafiller-data": "^1.31.0",
-    "@socialgouv/fiches-vdd": "^1.110.0",
-    "@socialgouv/kali-data": "^1.73.0",
-    "@socialgouv/legi-data": "^1.18.0",
+    "@socialgouv/fiches-vdd": "^1.114.0",
+    "@socialgouv/kali-data": "^1.76.0",
+    "@socialgouv/legi-data": "^1.21.0",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.12.1",
     "unist-util-find": "^1.0.1"
