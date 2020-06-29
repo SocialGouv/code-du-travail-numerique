@@ -203,5 +203,11 @@ export const documentMapping = {
     url: {
       type: "keyword",
     },
+    covisits: {
+      properties: {
+        link: { type: "keyword" },
+        count: { type: "integer" },
+      },
+    },
   },
 };

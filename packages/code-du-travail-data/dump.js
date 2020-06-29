@@ -4,6 +4,7 @@ import retry from "p-retry";
 
 import { hashFunctionBuilder } from "./indexing/cdtnIds";
 import { logger } from "./indexing/logger";
+import { fetchCovisits } from "./indexing/monolog";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { vectorizeDocument } from "./indexing/vectorizer";
 
@@ -55,16 +56,21 @@ const dump = async () => {
   } else {
     console.error(`no nlp`);
   }
+
   for await (const docsNoIds of cdtnDocumentsGen()) {
+    console.error(`› ${docs[0].source}... ${docs.length} items`);
+
     // add CDTN specific ids to docs
-    const docs = docsNoIds.map((doc) => {
+    const docsIds = docsNoIds.map((doc) => {
       if (!noIdSources.includes(doc.source)) {
         doc.cdtnId = hashFunction(doc);
       }
       return doc;
     });
 
-    console.error(`› ${docs[0].source}... ${docs.length} items`);
+    // add covisits
+    const docs = await Promise.all(docsIds.map(fetchCovisits));
+
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {
