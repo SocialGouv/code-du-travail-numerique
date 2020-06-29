@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 git fetch origin --quiet
 files=$(git diff --name-only master ${CI_COMMIT_SHA})
