@@ -89,6 +89,7 @@ Object {
       },
     ],
     "slug": "demission-dun-salarie",
+    "source": "fiches_service_public",
     "title": "Démission d'un salarié",
     "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
   },
