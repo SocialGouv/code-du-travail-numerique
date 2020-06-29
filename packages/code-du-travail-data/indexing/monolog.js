@@ -1,9 +1,18 @@
 import { Queries } from "@socialgouv/cdtn-monolog";
 import { Client } from "@elastic/elasticsearch";
-const { getRouteBySource, SOURCES } = require("@cdt/sources");
+import { logger } from "./logger";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 
 const ES_LOGS = process.env.ES_LOGS;
 const ES_LOGS_TOKEN = process.env.ES_LOGS_TOKEN;
+
+if (!ES_LOGS || !ES_LOGS_TOKEN) {
+  logger.error(
+    `Missing env variable for accessing Monolog Elastic Search logs : ${
+      ES_LOGS ? "" : "ES_LOGS"
+    } ${ES_LOGS_TOKEN ? "" : "ES_LOGS_TOKEN"}`
+  );
+}
 
 const esClientConfig = {
   node: ES_LOGS,
