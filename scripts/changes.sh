@@ -4,6 +4,9 @@
 #   sh scripts/changes.sh packages/code-du-travail-data packages/sources
 
 git fetch origin --quiet
+git checkout master
+git chechout -
+
 files=$(git diff --name-only master ${CI_COMMIT_SHA})
 for pattern in "$@"
 do
