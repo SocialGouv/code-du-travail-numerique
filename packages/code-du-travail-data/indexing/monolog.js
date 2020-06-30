@@ -18,7 +18,7 @@ if (!ES_LOGS || !ES_LOGS_TOKEN) {
     } ${ES_LOGS_TOKEN ? "" : "ES_LOGS_TOKEN"}`
   );
 } else {
-  console.info(`Accessing Monolog Elastic Search logs on ${ES_LOGS}`);
+  console.error(`Accessing Monolog Elastic Search logs on ${ES_LOGS}`);
 }
 
 const esClientConfig = {
