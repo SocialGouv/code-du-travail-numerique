@@ -31,21 +31,17 @@ stages:
   # - "Update ES data"
 
 changes:
-  image:
-    name: alpine/git
+  image: alpine/git
   script:
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
- artifacts:
-  untracked: true
-  expire_in: 7 day
-  paths:
-    - .
-  name: $CI_COMMIT_REF_SLUG
-
+  artifacts:
+    name: $CI_COMMIT_REF_SLUG
+    untracked: true
+    expire_in: 7 day
+    paths:
+      - .
 
 skipped:
-  dependencies:
-    - changes
   before_script:
     - >-
       if [-f CODE_DU_TRAVAIL_DATA_SKIP]; then
@@ -55,8 +51,6 @@ skipped:
     - echo "register code-du-travail-data"
 
 unskipped:
-  dependencies:
-    - changes
   before_script:
     - >-
       if [-f CODE_DU_TRAVAIL_API_SKIP]; then
