@@ -12,7 +12,7 @@ for pattern in "$@"
 do
   for file in $files
   do
-    echo file
+    echo $file
     if [[ $file == *$pattern* ]]; then
       echo "$file trigger data update !";
       touch $(basename ${pattern}_SKIP | tr '[:lower:]' '[:upper:]' | tr '-' '_' )
