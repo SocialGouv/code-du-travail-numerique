@@ -1,7 +1,7 @@
 #!/bin/sh
-## cli tools to detect changes between latest branch commit and master
+# cli tools to detect changes between latest branch commit and master
 # Usage :
-#   sh scripts/changes.sh packages/code-du-travail-data packages/sources
+#   sh scripts/changes.sh code-du-travail-data packages/sources
 
 git fetch origin --quiet
 git checkout master
@@ -12,9 +12,9 @@ for pattern in "$@"
 do
   for file in $files
   do
-    if [[ file == pattern ]]; then
+    if [[ $file == *$pattern* ]]; then
       echo "$file trigger data update !";
-      export "skip_data_update"
+      touch $(basename ${pattern}_SKIP | tr '[:lower:]' '[:upper:]' | tr '-' '_' )
       exit 0
     fi
   done
