@@ -972,15 +972,33 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   }
 }
 
+@media print {
+  .c65 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c54 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c54 {
+    display: none;
   }
 }
 
@@ -993,6 +1011,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
   }
 }
 
@@ -1324,7 +1348,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 06/01/2009 à 08:40
+        le 06/01/2009 08:40
       </div>
       <div
         class="c4"

@@ -1693,6 +1693,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   }
 }
 
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c15 {
     width: 100%;

@@ -119,6 +119,12 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 }
 
 @media print {
+  .c3 {
+    display: none;
+  }
+}
+
+@media print {
   .c1 {
     display: none;
   }

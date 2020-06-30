@@ -328,6 +328,12 @@ exports[`<Answer /> should renders 1`] = `
   }
 }
 
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c19 {
     padding: 0 3rem;
@@ -1043,6 +1049,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c28 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c28 {
+    display: none;
   }
 }
 
@@ -1782,6 +1794,12 @@ exports[`<Answer /> should renders back to results link 1`] = `
 @media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c19 {
+    display: none;
   }
 }
 
@@ -2691,6 +2709,12 @@ exports[`<Answer /> should renders related content 1`] = `
   }
 }
 
+@media print {
+  .c20 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c20 {
     padding: 0 3rem;
@@ -2700,6 +2724,12 @@ exports[`<Answer /> should renders related content 1`] = `
 @media (max-width:600px) {
   .c36 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c36 {
+    display: none;
   }
 }
 
@@ -3660,6 +3690,12 @@ exports[`<Answer /> should renders tooltip 1`] = `
   }
 }
 
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c19 {
     padding: 0 3rem;
@@ -4263,6 +4299,12 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 @media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c19 {
+    display: none;
   }
 }
 
@@ -4872,6 +4914,12 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   }
 }
 
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c19 {
     padding: 0 3rem;
@@ -5476,6 +5524,12 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 @media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c19 {
+    display: none;
   }
 }
 

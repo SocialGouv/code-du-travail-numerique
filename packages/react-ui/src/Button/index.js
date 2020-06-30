@@ -25,6 +25,9 @@ export const StyledButton = styled.button`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
   }
+  @media print {
+    display: none;
+  }
   ${({ narrow, theme, small, variant }) => {
     if (variant === "link") {
       return css`

@@ -718,6 +718,12 @@ exports[`<Convention /> renders 1`] = `
   }
 }
 
+@media print {
+  .c43 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c28 {
     overflow-x: hidden;

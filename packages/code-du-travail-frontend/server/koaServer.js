@@ -64,6 +64,7 @@ async function getKoaServer({ nextApp }) {
         "'self'",
         "https://mon-entreprise.fr",
         "https://matomo.fabrique.social.gouv.fr",
+        "*.dailymotion.com",
       ],
       "font-src": ["'self'", "data:", "blob:"],
       styleSrc: ["'self'", "'unsafe-inline'"],

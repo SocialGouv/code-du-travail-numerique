@@ -209,6 +209,12 @@ exports[`<Primes /> should add a prime 1`] = `
   }
 }
 
+@media print {
+  .c4 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     width: 100%;
@@ -377,6 +383,12 @@ exports[`<Primes /> should delete a primes 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 
@@ -620,6 +632,12 @@ exports[`<Primes /> should render 1`] = `
 @media (max-width:600px) {
   .c4 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c4 {
+    display: none;
   }
 }
 

@@ -185,6 +185,12 @@ exports[`<Feedback/> should render 1`] = `
   }
 }
 
+@media print {
+  .c7 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c7 {
     padding: 0 3rem;
@@ -467,6 +473,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 }
 
+@media print {
+
+}
+
 @media (max-width:600px) {
 
 }
@@ -474,6 +484,12 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c8 {
+    display: none;
   }
 }
 
@@ -694,6 +710,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media print {
 
 }
 

@@ -305,6 +305,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c8 {
     width: 100%;
