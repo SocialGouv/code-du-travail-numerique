@@ -14,13 +14,6 @@ services:
       args:
         BASE_IMAGE: cdtn_master:local
 
-  nlp_api:
-    build:
-      context: ./packages/code-du-travail-nlp
-    environment:
-      - FLASK_ENV=development
-      - FLASK_DEBUG=1
-
   kibana:
     image: docker.elastic.co/kibana/kibana:7.7.1
     ports:

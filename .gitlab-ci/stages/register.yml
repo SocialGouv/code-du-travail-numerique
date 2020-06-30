@@ -27,32 +27,6 @@ Register elasticsearch image:
     CONTEXT: ./docker/elasticsearch
     DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
-
-Register nlp image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: packages/code-du-travail-nlp
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
-  after_script:
-    - >-
-      if [[ "${BRANCH_NAME}" != "master" ]]; then
-        docker pull "${IMAGE_NAME}:${CI_DEFAULT_BRANCH}"
-        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_DEFAULT_BRANCH} > MASTER_LAYERS
-        docker inspect --format='{{.RootFS}}' ${IMAGE_NAME}:${CI_COMMIT_SHA} > COMMIT_LAYERS
-        if cmp -s MASTER_LAYERS COMMIT_LAYERS ; then
-          echo "No changes detected."
-          touch "${CONTEXT}/${$CI_COMMIT_REF_SLUG}_USE_MASTER"
-        else
-          echo "Changes detected."
-        fi
-      fi
-  artifacts:
-    expire_in: 7 day
-    paths:
-      - packages/code-du-travail-nlp
-#
-
 #
 
 Register api image:
@@ -77,10 +51,7 @@ Register data image:
   <<: *register_stage
   services:
     - name: docker:19-dind
-    - name: $CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA
-      alias: nlp
   needs:
-    - Register nlp image
     - Register socialgouv/cdtn base image
 
   variables:
@@ -88,18 +59,15 @@ Register data image:
     DOCKER_BUILD_ARGS: >-
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-      --build-arg NLP_URL=http://nlp:${NLP_PORT}
+      --build-arg NLP_URL=$NLP_URL
       --network=host
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
   before_script:
-    - |-
-      echo "connecting to http://nlp:${NLP_PORT}";
-
-      retry=60;
-      while
-        ! wget --spider "http://nlp:${NLP_PORT}/api/ready" &&
-        [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
-      [ "$retry" -eq "-1" ] && exit 1
-
-#
+      - |-
+        echo "connecting to ${NLP_URL}";
+        retry=60;
+        while
+          ! wget -q -O - "$@" ${NLP_URL}v1/models/sentqam &&
+          [[ $(( retry-- )) -gt 0 ]];
+        do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
+        [ "$retry" -eq "-1" ] && exit 1

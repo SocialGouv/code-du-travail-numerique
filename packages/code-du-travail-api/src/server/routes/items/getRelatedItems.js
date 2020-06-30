@@ -1,8 +1,8 @@
 const { SOURCES } = require("@cdt/sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const fetchWithTimeout = require("../../utils/fetchWithTimeout");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
@@ -12,8 +12,6 @@ const MAX_RESULTS = 5;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-
-const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 async function getRelatedItems({ title, settings, slug }) {
   const sources = [
@@ -26,16 +24,12 @@ async function getRelatedItems({ title, settings, slug }) {
   ];
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
-  logger.info(
-    `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
-      title.toLowerCase()
-    )}`
+
+  const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
+    (error) => {
+      logger.error(error.message);
+    }
   );
-  const query_vector = await fetchWithTimeout(
-    `${NLP_URL}/api/search?q=${encodeURIComponent(title.toLowerCase())}`
-  ).catch((error) => {
-    logger.error(error.message);
-  });
 
   if (query_vector) {
     const semBody = getSemBody({
