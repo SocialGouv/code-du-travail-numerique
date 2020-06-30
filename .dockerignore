@@ -1,6 +1,5 @@
 *.md
 .git
-**/__pycache__
 **/venv
 **/dist
 **/build
@@ -9,4 +8,3 @@
 **/.docz
 **/coverage
 **/fiches_service_public/data
-**/code-du-travail-nlp/data
