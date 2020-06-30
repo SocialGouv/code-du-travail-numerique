@@ -11,8 +11,8 @@ files=$(git diff --name-only master ${CI_COMMIT_SHA})
 for pattern in "$@"
 do
   for file in $files
-  echo file
   do
+    echo file
     if [[ $file == *$pattern* ]]; then
       echo "$file trigger data update !";
       touch $(basename ${pattern}_SKIP | tr '[:lower:]' '[:upper:]' | tr '-' '_' )
