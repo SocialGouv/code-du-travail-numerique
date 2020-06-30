@@ -44,7 +44,7 @@ changes:
 skipped:
   before_script:
     - >-
-      if [-f CODE_DU_TRAVAIL_DATA_SKIP]; then
+      if [ -f CODE_DU_TRAVAIL_DATA_SKIP ]; then
         exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
       fi
   script:
@@ -53,7 +53,7 @@ skipped:
 unskipped:
   before_script:
     - >-
-      if [-f CODE_DU_TRAVAIL_API_SKIP]; then
+      if [ -f CODE_DU_TRAVAIL_API_SKIP ]; then
         exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
       fi
   script:
