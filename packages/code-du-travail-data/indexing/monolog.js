@@ -40,9 +40,9 @@ export const fetchCovisits = async (doc) => {
   const links = await queries
     .getCovisitLinks(path)
     .then((covisits) => covisits.links)
-    .catch(() => {
+    .catch((err) => {
       // TODO avoid silent and deal with failure properly
-      // console.error(err);
+      console.error(err);
       return undefined;
     });
 
