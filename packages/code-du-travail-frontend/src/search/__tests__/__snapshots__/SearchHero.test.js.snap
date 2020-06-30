@@ -257,6 +257,12 @@ exports[`<SearchHero /> should render 1`] = `
   }
 }
 
+@media print {
+  .c15 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c15 {
     padding: 0 3rem;

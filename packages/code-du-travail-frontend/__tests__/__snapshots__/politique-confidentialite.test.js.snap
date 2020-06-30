@@ -846,15 +846,33 @@ exports[`<CookiePolicy /> should render 1`] = `
   }
 }
 
+@media print {
+  .c54 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c43 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c43 {
+    display: none;
   }
 }
 
@@ -867,6 +885,12 @@ exports[`<CookiePolicy /> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
   }
 }
 
@@ -1192,7 +1216,7 @@ exports[`<CookiePolicy /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 06/01/2009 à 08:40
+        le 06/01/2009 08:40
       </div>
       <div
         class="c4"

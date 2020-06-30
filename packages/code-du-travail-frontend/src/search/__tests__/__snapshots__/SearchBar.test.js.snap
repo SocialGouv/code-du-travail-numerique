@@ -142,6 +142,12 @@ exports[`<SearchBar /> should render 1`] = `
   }
 }
 
+@media print {
+  .c3 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
@@ -355,6 +361,12 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c5 {
+    display: none;
   }
 }
 

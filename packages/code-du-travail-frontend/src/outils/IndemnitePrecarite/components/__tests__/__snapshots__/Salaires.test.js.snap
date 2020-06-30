@@ -236,6 +236,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
   }
 }
 
+@media print {
+  .c8 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c5 {
     width: 100%;
@@ -474,6 +480,12 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 @media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c2 {
+    display: none;
   }
 }
 
@@ -770,6 +782,12 @@ exports[`<Salaires /> should render 1`] = `
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c8 {
+    display: none;
   }
 }
 

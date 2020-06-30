@@ -212,6 +212,12 @@ exports[`<Article /> should render 1`] = `
   }
 }
 
+@media print {
+  .c12 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c6 {
     font-size: 1.6rem;

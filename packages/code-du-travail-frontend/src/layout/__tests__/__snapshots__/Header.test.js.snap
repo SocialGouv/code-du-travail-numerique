@@ -327,15 +327,31 @@ exports[`<Header /> should render 1`] = `
 
 }
 
+@media print {
+
+}
+
 @media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c16 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c7 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c7 {
+    display: none;
   }
 }
 
@@ -495,7 +511,7 @@ exports[`<Header /> should render 1`] = `
       class="c1"
       id="printDate"
     >
-      le 06/01/2009 à 08:40
+      le 06/01/2009 08:40
     </div>
     <div
       class="sc-AxjAm c2"

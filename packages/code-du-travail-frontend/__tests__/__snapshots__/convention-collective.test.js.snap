@@ -237,6 +237,12 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c11 {
     padding: 0 3rem;

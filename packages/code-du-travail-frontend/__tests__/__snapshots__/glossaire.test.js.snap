@@ -860,15 +860,33 @@ exports[`<Glossaire /> should render 1`] = `
   }
 }
 
+@media print {
+  .c56 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c45 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c45 {
+    display: none;
   }
 }
 
@@ -881,6 +899,12 @@ exports[`<Glossaire /> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
   }
 }
 
@@ -1218,7 +1242,7 @@ exports[`<Glossaire /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 06/01/2009 à 08:40
+        le 06/01/2009 08:40
       </div>
       <div
         class="c4"

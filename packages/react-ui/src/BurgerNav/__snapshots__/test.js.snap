@@ -79,9 +79,19 @@ exports[`BurgerStyles renders 1`] = `
 
 }
 
+@media print {
+
+}
+
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 

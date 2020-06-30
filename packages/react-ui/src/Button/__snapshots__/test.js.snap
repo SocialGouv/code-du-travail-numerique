@@ -196,6 +196,12 @@ exports[`<Button /> it renders a Button flat 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -208,9 +214,21 @@ exports[`<Button /> it renders a Button flat 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c2 {
+    display: none;
   }
 }
 
@@ -306,6 +324,12 @@ exports[`<Button /> it renders a Button link 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c1 {
+    display: none;
   }
 }
 
@@ -560,6 +584,12 @@ exports[`<Button /> it renders a Button naked 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -572,9 +602,21 @@ exports[`<Button /> it renders a Button naked 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c2 {
+    display: none;
   }
 }
 
@@ -658,6 +700,12 @@ exports[`<Button /> it renders a Button navLink 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 
@@ -882,6 +930,12 @@ exports[`<Button /> it renders a Button primary 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -894,9 +948,21 @@ exports[`<Button /> it renders a Button primary 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c2 {
+    display: none;
   }
 }
 
@@ -1121,6 +1187,12 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -1133,9 +1205,21 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c2 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c2 {
+    display: none;
   }
 }
 
@@ -1234,6 +1318,12 @@ exports[`<Button /> renders 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -1316,6 +1406,12 @@ exports[`<Button /> renders as a link 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 
@@ -1402,6 +1498,12 @@ exports[`<Button /> renders as div 1`] = `
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
   }
 }
 

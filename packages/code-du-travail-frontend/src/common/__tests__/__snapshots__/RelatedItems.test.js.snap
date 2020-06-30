@@ -319,6 +319,12 @@ exports[`<RelatedItems /> should render 1`] = `
   }
 }
 
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c8 {
     font-size: 1.6rem;

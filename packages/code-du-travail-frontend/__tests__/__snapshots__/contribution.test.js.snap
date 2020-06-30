@@ -1369,15 +1369,33 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   }
 }
 
+@media print {
+  .c89 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c68 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c68 {
+    display: none;
   }
 }
 
@@ -1390,6 +1408,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c78 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c78 {
+    display: none;
   }
 }
 
@@ -1402,6 +1426,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
   }
 }
 
@@ -1965,7 +1995,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           class="c3"
           id="printDate"
         >
-          le 06/01/2009 à 08:40
+          le 06/01/2009 08:40
         </div>
         <div
           class="c4"
@@ -4214,15 +4244,33 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   }
 }
 
+@media print {
+  .c89 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c18 {
     font-size: 1.4rem;
   }
 }
 
+@media print {
+  .c18 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c68 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c68 {
+    display: none;
   }
 }
 
@@ -4235,6 +4283,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c78 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c78 {
+    display: none;
   }
 }
 
@@ -4247,6 +4301,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
   }
 }
 
@@ -4810,7 +4870,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           class="c3"
           id="printDate"
         >
-          le 06/01/2009 à 08:40
+          le 06/01/2009 08:40
         </div>
         <div
           class="c4"

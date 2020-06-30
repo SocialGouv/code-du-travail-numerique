@@ -485,6 +485,10 @@ exports[`<SearchResults/> should render results 1`] = `
 
 }
 
+@media print {
+
+}
+
 @media (max-width:600px) {
 
 }
@@ -492,6 +496,12 @@ exports[`<SearchResults/> should render results 1`] = `
 @media (max-width:600px) {
   .c15 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c15 {
+    display: none;
   }
 }
 

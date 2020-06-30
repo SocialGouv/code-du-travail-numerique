@@ -297,6 +297,12 @@ exports[`<StepPrimes /> should render 1`] = `
   }
 }
 
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c6 {
     width: 100%;
