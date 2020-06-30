@@ -29,8 +29,10 @@ stages:
   # - "Notify Finished Deployment"
   # - "E2E testing"
   # - "Update ES data"
-
+  - changes
+  - tasks
 changes:
+  stage: changes
   image: alpine/git
   script:
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
@@ -42,6 +44,7 @@ changes:
       - .
 
 skipped:
+  stage: tasks
   before_script:
     - >-
       if [ -f CODE_DU_TRAVAIL_DATA_SKIP ]; then
@@ -51,6 +54,7 @@ skipped:
     - echo "register code-du-travail-data"
 
 unskipped:
+  stage: tasks
   before_script:
     - >-
       if [ -f CODE_DU_TRAVAIL_API_SKIP ]; then
