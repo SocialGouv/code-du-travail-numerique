@@ -78,8 +78,8 @@ $ docker run \
 Then you can launch services using docker-compose
 
 ```sh
-# start elasticsearch + nlp_api
-$ docker-compose up elasticsearch nlp_api
+# start elasticsearch 
+$ docker-compose up elasticsearch 
 
 # Launch indexing script : fill ElasticSearch
 $ yarn workspace @cdt/data populate-dev
@@ -91,12 +91,6 @@ yarn workspace @cdt/api dev
 ## Howto
 
 In this section you will find commands that you may need during your work
-
-Build a local NLP image
-
-```
-docker build -t cdtn_nlp:local packages/code-du-travail-nlp
-```
 
 Start a local TF Serve NLP instance
 [Look at this repo](https://github.com/SocialGouv/serving-ml)
@@ -127,7 +121,6 @@ docker run \
 
 You can also read the packages readme
 
-- [Nlp README](./packages/code-du-travail-nlp/README.md)
 - [Data README](./packages/code-du-travail-nlp/README.md)
 - [API README](./packages/code-du-travail-nlp/README.md)
 - [e2e README](./optional/e2e/README.md)

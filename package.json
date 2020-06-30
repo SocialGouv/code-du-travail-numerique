@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run build",
     "build:ui": "yarn workspace @socialgouv/react-ui build && yarn workspace @socialgouv/react-fiche-service-public build",
-    "dev:docker": "docker-compose up elasticsearch nlp_api",
+    "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",

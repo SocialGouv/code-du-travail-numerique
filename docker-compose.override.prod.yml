@@ -28,12 +28,6 @@ services:
     volumes:
       - ./packages/code-du-travail-data/dataset/courrier-type/docx:/code-du-travail-data/dataset/courrier-type/docx
 
-  nlp_api:
-    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/nlp:$CDTN_HASH
-    restart: always
-    environment:
-      - FLASK_ENV=production
-
   data:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$CDTN_HASH
     restart: "no"
