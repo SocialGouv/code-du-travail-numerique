@@ -58,10 +58,6 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     // console.log(covisitedItems);
     return covisitedItems;
   } else {
-    // we only return covisites for testing purpose
-
-    /*
-
     // standard related items :
     const sources = [
       SOURCES.TOOLS,
@@ -104,11 +100,13 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
     const [rootSlug] = slug.split("#");
 
-    return utils
+    // eslint-disable-next-line no-unused-vars
+    const res = utils
       .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
       .map(({ _source }) => _source);
-      */
+
+    // we only return covisites for testing purpose
     return [];
   }
 }
