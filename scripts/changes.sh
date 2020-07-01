@@ -1,4 +1,12 @@
 #!/bin/sh
+set -euxo pipefail
+# -e exits if a command fails
+# -u errors if an variable is referenced before being set
+# -x shows the commands that get run
+# - pipefail the return value of a pipeline is the status of
+#   the last command to exit with a non-zero status,
+#   or zero if no command exited with a non-zero status
+
 # cli tools to detect changes between latest branch commit and master
 # Usage :
 #   sh scripts/changes.sh code-du-travail-data packages/sources
