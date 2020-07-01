@@ -48,6 +48,7 @@ export const fetchCovisits = async (doc) => {
       return undefined;
     });
 
+  console.error(links);
   /*
   if (doc.source == SOURCES.SHEET_MT_PAGE) {
     console.error(links);
