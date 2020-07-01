@@ -10,7 +10,7 @@
     "@cdt/sources": "^4.22.0",
     "filesize": "^6.1.0",
     "rehype-raw": "^4.0.2",
-    "rehype-stringify": "^7.0.0",
+    "rehype-stringify": "^8.0.0",
     "remark-parse": "^8.0.2",
     "remark-rehype": "^7.0.0",
     "remark-stringify": "^8.1.0",
