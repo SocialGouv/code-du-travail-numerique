@@ -249,7 +249,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             aria-labelledby="accordion__heading-0"
             class="c4"
             data-accordion-component="AccordionItemPanel"
-            hidden=""
+            data-hidden="true"
             id="accordion__panel-0"
           >
             <div

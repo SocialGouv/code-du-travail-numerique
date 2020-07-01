@@ -963,7 +963,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Congés et repos"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Congés et repos"
         >
           <div
@@ -1030,7 +1030,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
                     <div
@@ -1161,7 +1161,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
                     <div
@@ -1355,7 +1355,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
                     <div
@@ -1527,7 +1527,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Départ de l'entreprise"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Départ de l'entreprise"
         >
           <div
@@ -1594,7 +1594,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
                     <div
@@ -1770,7 +1770,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
                     <div
@@ -1907,7 +1907,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
                     <div
@@ -2052,7 +2052,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
                     <div
@@ -2197,7 +2197,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
                     <div
@@ -2318,7 +2318,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
                     <div
@@ -2485,7 +2485,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Embauche et contrat de travail"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Embauche et contrat de travail"
         >
           <div
@@ -2552,7 +2552,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
                     <div
@@ -2681,7 +2681,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
                     <div
@@ -2878,7 +2878,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
                     <div
@@ -3070,7 +3070,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
                     <div
@@ -3191,7 +3191,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
                     <div
@@ -3284,7 +3284,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
                     <div
@@ -3410,7 +3410,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Salaire et Rémunération"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Salaire et Rémunération"
         >
           <div
@@ -3477,7 +3477,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
                     <div
@@ -3561,7 +3561,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
                     <div
@@ -3706,7 +3706,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
                     <div
@@ -3858,7 +3858,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Santé, sécurité et conditions de travail"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Santé, sécurité et conditions de travail"
         >
           <div
@@ -3925,7 +3925,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
                     <div
@@ -4253,7 +4253,7 @@ exports[`<Convention /> renders 1`] = `
                                 aria-labelledby="accordion__heading-24"
                                 class="c7"
                                 data-accordion-component="AccordionItemPanel"
-                                hidden=""
+                                data-hidden="true"
                                 id="accordion__panel-24"
                               >
                                 <div
@@ -4462,7 +4462,7 @@ exports[`<Convention /> renders 1`] = `
                     aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                     class="c7"
                     data-accordion-component="AccordionItemPanel"
-                    hidden=""
+                    data-hidden="true"
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
                     <div
@@ -4632,7 +4632,7 @@ exports[`<Convention /> renders 1`] = `
         aria-labelledby="accordion__heading-26"
         class="c26"
         data-accordion-component="AccordionItemPanel"
-        hidden=""
+        data-hidden="true"
         id="accordion__panel-26"
         role="region"
       >
@@ -4729,7 +4729,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Salaires minima hiérarchiques"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Salaires minima hiérarchiques"
         >
           <div
@@ -4924,7 +4924,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Durée du travail, répartition et aménagement des horaires"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Durée du travail, répartition et aménagement des horaires"
         >
           <div
@@ -5351,7 +5351,7 @@ exports[`<Convention /> renders 1`] = `
           aria-labelledby="accordion__heading-Classifications"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-Classifications"
         >
           <div

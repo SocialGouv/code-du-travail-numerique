@@ -238,7 +238,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-labelledby="accordion__heading-0"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-0"
         >
           <div
@@ -320,7 +320,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-labelledby="accordion__heading-1"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-1"
         >
           <div
@@ -407,7 +407,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           aria-labelledby="accordion__heading-2"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-2"
         >
           <div
@@ -623,7 +623,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-labelledby="accordion__heading-3"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-3"
         >
           <div
@@ -698,7 +698,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-labelledby="accordion__heading-4"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-4"
         >
           <div
@@ -778,7 +778,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           aria-labelledby="accordion__heading-5"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          hidden=""
+          data-hidden="true"
           id="accordion__panel-5"
         >
           <div
