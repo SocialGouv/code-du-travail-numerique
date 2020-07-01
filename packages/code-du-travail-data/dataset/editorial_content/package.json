@@ -13,7 +13,7 @@
     "rehype-stringify": "^7.0.0",
     "remark-parse": "^8.0.2",
     "remark-rehype": "^7.0.0",
-    "remark-stringify": "^8.0.0",
+    "remark-stringify": "^8.1.0",
     "strip-markdown": "^3.1.2",
     "unified": "^9.0.0"
   }

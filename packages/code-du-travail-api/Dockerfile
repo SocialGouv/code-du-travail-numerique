@@ -5,7 +5,7 @@ ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE} as cdtn-base-image
 
-FROM node:12.17-alpine3.10
+FROM node:12.18-alpine3.10
 
 COPY ./package.json /app/package.json
 

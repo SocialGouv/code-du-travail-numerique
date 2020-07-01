@@ -2835,7 +2835,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-0"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-0"
                       >
                         <div
@@ -2983,7 +2983,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-1"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-1"
                       >
                         <div
@@ -3173,7 +3173,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-2"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-2"
                       >
                         <div
@@ -3325,7 +3325,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-3"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-3"
                       >
                         <div
@@ -3448,7 +3448,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-4"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-4"
                       >
                         <div
@@ -3568,7 +3568,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-5"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-5"
                       >
                         <div
@@ -3669,7 +3669,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-6"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-6"
                       >
                         <div
@@ -3767,7 +3767,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         aria-labelledby="accordion__heading-7"
                         class="c59"
                         data-accordion-component="AccordionItemPanel"
-                        hidden=""
+                        data-hidden="true"
                         id="accordion__panel-7"
                       >
                         <div
@@ -3971,7 +3971,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-8"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-8"
                 >
                   <div
@@ -4079,7 +4079,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-9"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-9"
                 >
                   <div
@@ -4197,7 +4197,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-10"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-10"
                 >
                   <div
@@ -4272,7 +4272,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-labelledby="accordion__heading-11"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
-                            hidden=""
+                            data-hidden="true"
                             id="accordion__panel-11"
                           >
                             <div
@@ -4340,7 +4340,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-labelledby="accordion__heading-12"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
-                            hidden=""
+                            data-hidden="true"
                             id="accordion__panel-12"
                           >
                             <div
@@ -4418,7 +4418,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             aria-labelledby="accordion__heading-13"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
-                            hidden=""
+                            data-hidden="true"
                             id="accordion__panel-13"
                           >
                             <div
@@ -4598,7 +4598,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-hierarchie"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-hierarchie"
                 >
                   <div
@@ -4818,7 +4818,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-15"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-15"
                 >
                   <div
@@ -4918,7 +4918,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-16"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-16"
                 >
                   <div
@@ -5028,7 +5028,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   aria-labelledby="accordion__heading-17"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
-                  hidden=""
+                  data-hidden="true"
                   id="accordion__panel-17"
                 >
                   <div
