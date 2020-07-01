@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "codeceptjs": "^2.6.6",
-    "puppeteer": "^3.3.0"
+    "puppeteer": "^4.0.1"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.35.0",
