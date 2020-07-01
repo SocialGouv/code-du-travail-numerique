@@ -35,7 +35,6 @@ changes:
   stage: changes
   image: alpine/git
   script:
-    - pwd
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
     - echo $CDTN_PACKAGES
     - >-
