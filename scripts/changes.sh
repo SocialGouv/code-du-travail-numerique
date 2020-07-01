@@ -34,3 +34,6 @@ do
 done
 
 export CDTN_PACKAGES=$build
+
+echo $CDTN_PACKAGES
+echo "-----"

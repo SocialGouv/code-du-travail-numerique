@@ -38,8 +38,8 @@ changes:
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
     - echo $CDTN_PACKAGES
     - >-
-      wget
-        --post-data "ref=${CI_COMMIT_REF_NAME}&token=${CI_JOB_TOKEN}&variables[CDTN_PACKAGES]"
+      wget \
+        --post-data "ref=${CI_COMMIT_REF_NAME}&token=${CI_JOB_TOKEN}&variables[CDTN_PACKAGES]" \
         ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
 
   artifacts:
