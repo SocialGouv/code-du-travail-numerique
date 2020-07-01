@@ -42,10 +42,6 @@ changes:
         --post-data "ref=${CI_COMMIT_REF_NAME}&token=${CI_JOB_TOKEN}&variables[CDTN_PACKAGES]"
         ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
 
-    - curl -X POST \
-     -F token=TOKEN \
-     -F ref=REF_NAME \
-     https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
   artifacts:
     name: $CI_COMMIT_REF_SLUG
     untracked: true
