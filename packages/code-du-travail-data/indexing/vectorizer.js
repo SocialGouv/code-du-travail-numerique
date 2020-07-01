@@ -2,12 +2,15 @@
 // when requiring code-du-travail-data ES module, thus we keep using CommonJS import here
 const fetch = require("node-fetch");
 const semantic_stopwords = require("../dataset/stop_words");
+import { logger } from "./logger";
 
 // URL of the TF serve deployment
 const NLP_URL =
   process.env.NLP_URL ||
   "https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
 const tfServeURL = NLP_URL + "/v1/models/sentqam:predict";
+
+logger.info(`NLP Service at ${NLP_URL}`);
 
 function stripAccents(text) {
   // strip accents

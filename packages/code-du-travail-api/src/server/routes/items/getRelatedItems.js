@@ -24,8 +24,12 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
       .map(({ link }) => {
         const source = getSourceByRoute(link.split("/")[0]);
         const slug = link.split("/")[1];
-        // console.log({ source, slug });
-        return [{ index }, getSearchBody({ slug, source })];
+        if (!(slug && source)) {
+          logger.error(`Unknown covisit : ${link}`);
+          return [];
+        } else {
+          return [{ index }, getSearchBody({ slug, source })];
+        }
       })
       .flat();
 
@@ -38,7 +42,13 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
           .map((r) => r.hits.hits[0])
           // deal with errors
           .filter((r) => r)
-      );
+      )
+      .catch((err) => {
+        logger.error(
+          "Error when querying covisits : " + JSON.stringify(err.meta.body)
+        );
+        return [];
+      });
 
     const covisitedItems = esCovisits
       // do we really want this ?
@@ -48,6 +58,10 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     // console.log(covisitedItems);
     return covisitedItems;
   } else {
+    // we only return covisites for testing purpose
+
+    /*
+
     // standard related items :
     const sources = [
       SOURCES.TOOLS,
@@ -94,6 +108,8 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
       .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
       .map(({ _source }) => _source);
+      */
+    return [];
   }
 }
 
