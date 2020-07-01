@@ -35,6 +35,7 @@ changes:
   stage: changes
   image: alpine/git
   script:
+    - pwd
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
   artifacts:
     name: $CI_COMMIT_REF_SLUG

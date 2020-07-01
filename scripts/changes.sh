@@ -8,12 +8,13 @@ git checkout master
 git checkout -
 files=$(git diff --name-only master ${CI_COMMIT_SHA})
 echo "detect changes between master and ${CI_COMMIT_SHA}"
+echo $files
 for pattern in "$@"
 do
   for file in $files
   do
     echo $file
-   ## Poor man str contain
+    ## Poor man str contain
     case $file in *$pattern*)
       echo "$file trigger data update !";
       touch $(basename ${pattern}_SKIP | tr '[:lower:]' '[:upper:]' | tr '-' '_' )
