@@ -37,6 +37,16 @@ changes:
   script:
     - pwd
     - sh scripts/changes.sh packages/code-du-travail-data packages/code-du-travail-api
+    - echo $CDTN_PACKAGES
+    - >-
+      wget
+        --post-data "ref=${CI_COMMIT_REF_NAME}&token=${CI_JOB_TOKEN}&variables[CDTN_PACKAGES]"
+        ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+    - curl -X POST \
+     -F token=TOKEN \
+     -F ref=REF_NAME \
+     https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
   artifacts:
     name: $CI_COMMIT_REF_SLUG
     untracked: true
@@ -44,22 +54,20 @@ changes:
     paths:
       - .
 
-skipped:
+data:
   stage: tasks
-  before_script:
-    - >-
-      if [ -f CODE_DU_TRAVAIL_DATA_SKIP ]; then
-        exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
-      fi
+  only:
+    variables:
+      - $CDTN_PACKAGES =~ "CODE_DU_TRAVAIL_DATA_BUILD"
+
   script:
     - echo "register code-du-travail-data"
 
-unskipped:
+api:
   stage: tasks
-  before_script:
-    - >-
-      if [ -f CODE_DU_TRAVAIL_API_SKIP ]; then
-        exit "${CI_JOB_SKIP_EXIT_CODE:-0}"
-      fi
+  only:
+    variables:
+      - $CDTN_PACKAGES =~ "CODE_DU_TRAVAIL_API_BUILD"
+
   script:
     - echo "register code-du-travail-api"
