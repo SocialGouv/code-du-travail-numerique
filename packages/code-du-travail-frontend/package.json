@@ -64,7 +64,7 @@
     "react-katex": "2.0.2",
     "react-svg-spinner": "^1.0.4",
     "react-uid": "^2.3.0",
-    "rehype-parse": "^6.0.2",
+    "rehype-parse": "^7.0.1",
     "rehype-raw": "^4.0.2",
     "rehype-react": "^6.0.0",
     "remark-parse": "^8.0.2",
