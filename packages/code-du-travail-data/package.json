@@ -29,7 +29,7 @@
   "dependencies": {
     "@cdt/sources": "^4.22.0",
     "@elastic/elasticsearch": "^7.8.0",
-    "@socialgouv/contributions-data": "^1.38.0",
+    "@socialgouv/contributions-data": "^2.1.0",
     "@socialgouv/datafiller-data": "^1.32.0",
     "@socialgouv/fiches-travail-data": "^3.120.0",
     "@socialgouv/fiches-vdd": "^1.116.0",
