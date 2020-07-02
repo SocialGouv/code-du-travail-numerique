@@ -1,9 +1,9 @@
-import React from "react";
+import { Input, Label, Select, Text, theme } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from "react";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Input, Label, Select, Text, theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";
 import { Error } from "../../common/ErrorField";
@@ -71,10 +71,10 @@ export const AbsencePeriods = ({ name }) => (
                     name={`${name}.duration`}
                     validate={isNumber}
                     subscription={{
-                      value: true,
                       error: true,
-                      touched: true,
                       invalid: true,
+                      touched: true,
+                      value: true,
                     }}
                     render={({ input, meta: { touched, error, invalid } }) => (
                       <>
@@ -102,8 +102,8 @@ export const AbsencePeriods = ({ name }) => (
           <AddButton
             onClick={() =>
               fields.push({
-                type: "Absence pour maladie non professionnelle",
                 duration: null,
+                type: "Absence pour maladie non professionnelle",
               })
             }
           >

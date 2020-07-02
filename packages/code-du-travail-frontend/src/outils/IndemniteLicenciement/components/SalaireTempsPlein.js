@@ -1,9 +1,9 @@
-import React from "react";
+import { icons, Input, theme } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { icons, Input, theme } from "@socialgouv/react-ui";
 
 import { InlineError } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
@@ -56,11 +56,11 @@ function SalaireTempsPlein({ name }) {
                         return isFinite(value) ? parseFloat(value) : null;
                       }}
                       subscription={{
-                        value: true,
-                        error: true,
-                        touched: true,
-                        invalid: true,
                         blur: true,
+                        error: true,
+                        invalid: true,
+                        touched: true,
+                        value: true,
                       }}
                       render={({
                         input,

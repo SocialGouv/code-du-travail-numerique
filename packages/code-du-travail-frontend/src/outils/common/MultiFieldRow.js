@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
 
 const { breakpoints, spacings } = theme;
 

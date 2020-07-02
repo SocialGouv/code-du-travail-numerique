@@ -1,141 +1,141 @@
+import { getIndemnite, getSalaireRef } from "../../../indemnite";
+import { CADRE, OUVRIER, TAM } from "../Categorie";
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel,
 } from "../indemnite";
-import { getIndemnite, getSalaireRef } from "../../../indemnite";
-import { OUVRIER, TAM, CADRE } from "../Categorie";
 
 const initialValues = {
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
-  hasTempsPartiel: false,
-  anciennete: 1,
-  indemnite: 500,
-  categorie: OUVRIER,
   age: "55",
+  anciennete: 1,
+  categorie: OUVRIER,
+  hasTempsPartiel: false,
+  indemnite: 500,
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
 };
 const tests = [
   {
-    title: "2k, 12mois d'ancienneté, 55ans, ouvrier",
     data: {
       ...initialValues,
     },
     result: 0,
+    title: "2k, 12mois d'ancienneté, 55ans, ouvrier",
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
     data: {
       ...initialValues,
       anciennete: 2,
     },
     result: 400,
+    title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
   },
   {
-    title: "2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible",
     data: {
       ...initialValues,
-      anciennete: 2,
       age: 61,
+      anciennete: 2,
       hasRetirementAge: true,
     },
     result: 320,
+    title: "2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible",
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, ouvrier",
     data: {
       ...initialValues,
       anciennete: 3,
     },
     result: 1200,
+    title: "2k, 36mois d'ancienneté, 55ans, ouvrier",
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, TAM",
     data: {
       ...initialValues,
       anciennete: 2,
       categorie: TAM,
     },
     result: 400,
+    title: "2k, 24mois d'ancienneté, 55ans, TAM",
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, TAM",
     data: {
       ...initialValues,
       anciennete: 3,
       categorie: TAM,
     },
     result: 1800,
+    title: "2k, 36mois d'ancienneté, 55ans, TAM",
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, cadre",
     data: {
       ...initialValues,
       anciennete: 2,
       categorie: CADRE,
     },
     result: 500,
+    title: "2k, 24mois d'ancienneté, 55ans, cadre",
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, cadre",
     data: {
       ...initialValues,
       anciennete: 3,
-      tamDuration: 12,
       cadreDuration: 24,
       categorie: "cadre",
+      tamDuration: 12,
     },
     result: 2200,
+    title: "2k, 36mois d'ancienneté, 55ans, cadre",
   },
   {
-    title: "2k, 36mois d'ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialValues,
-      anciennete: 3,
       age: 61,
-      hasRetirementAge: true,
-      tamDuration: 12,
+      anciennete: 3,
       cadreDuration: 24,
       categorie: CADRE,
-    },
-    result: 1760,
-  },
-  {
-    title: "2k, 6ans d'ancienneté, 61ans, cadre, retraite possible",
-    data: {
-      ...initialValues,
-      anciennete: 6,
-      age: 61,
       hasRetirementAge: true,
       tamDuration: 12,
+    },
+    result: 1760,
+    title: "2k, 36mois d'ancienneté, 61ans, cadre, retraite possible",
+  },
+  {
+    data: {
+      ...initialValues,
+      age: 61,
+      anciennete: 6,
       cadreDuration: 60,
       categorie: CADRE,
+      hasRetirementAge: true,
+      tamDuration: 12,
     },
     result: 3680,
+    title: "2k, 6ans d'ancienneté, 61ans, cadre, retraite possible",
   },
   {
-    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialValues,
-      anciennete: 10,
       age: 61,
+      anciennete: 10,
+      cadreDuration: 120,
+      categorie: CADRE,
       hasRetirementAge: true,
       tamDuration: 0,
-      cadreDuration: 120,
-      categorie: CADRE,
     },
     result: 8000,
+    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
   },
   {
-    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialValues,
-      anciennete: 10.3,
       age: 64,
-      hasRetirementAge: true,
-      tamDuration: 5,
+      anciennete: 10.3,
       cadreDuration: 120,
       categorie: CADRE,
+      hasRetirementAge: true,
+      tamDuration: 5,
     },
     result: 5650,
+    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
   },
 ];
 describe("getIndemnite", () => {
@@ -149,8 +149,8 @@ describe("getIndemnite", () => {
       const salaireRefConventionnel = getSalaireRefConventionnel({ ...data });
 
       const res = getIndemniteConventionnelle({
-        salaireRef: salaireRefConventionnel,
         indemnite,
+        salaireRef: salaireRefConventionnel,
         ...data,
       });
       expect(res.indemniteConventionnelle).toBe(result);
@@ -168,8 +168,8 @@ describe("getIndemnite", () => {
     });
 
     const res = getIndemniteConventionnelle({
-      salaireRef: salaireRefConventionnel,
       indemnite,
+      salaireRef: salaireRefConventionnel,
       ...initialValues,
     });
 

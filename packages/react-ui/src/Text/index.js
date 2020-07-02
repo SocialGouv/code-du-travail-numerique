@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+
 import { fonts } from "../theme";
 
 export const Text = styled.span`
@@ -30,8 +31,8 @@ Text.propTypes = {
     "hmedium",
     "hlarge",
   ]),
-  variant: PropTypes.oneOf(["primary", "secondary"]),
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
+  variant: PropTypes.oneOf(["primary", "secondary"]),
 };
 Text.defaultProps = {
   fontSize: "default",

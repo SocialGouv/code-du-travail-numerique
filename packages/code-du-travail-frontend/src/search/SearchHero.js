@@ -1,6 +1,6 @@
+import { Container, icons, Section, theme } from "@socialgouv/react-ui";
 import React from "react";
 import styled from "styled-components";
-import { Container, icons, Section, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "./SearchBar";
 

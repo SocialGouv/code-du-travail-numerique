@@ -1,14 +1,14 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { OnChange } from "react-final-form-listeners";
 
-import {
-  stepPrime,
-  stepSalaires,
-  stepReducer,
-  initialState,
-} from "./stepReducer";
 import { Wizard } from "../common/Wizard";
+import {
+  initialState,
+  stepPrime,
+  stepReducer,
+  stepSalaires,
+} from "./stepReducer";
 
 function CalculateurIndemnite({ icon, title }) {
   /**
@@ -20,10 +20,10 @@ function CalculateurIndemnite({ icon, title }) {
         {(value) =>
           value === false
             ? dispatch({
-                type: "add_step",
                 payload: { insertAfter: stepSalaires.name, step: stepPrime },
+                type: "add_step",
               })
-            : dispatch({ type: "remove_step", payload: stepPrime.name })
+            : dispatch({ payload: stepPrime.name, type: "remove_step" })
         }
       </OnChange>
       <OnChange key="rule-branche" name="branche">
@@ -33,7 +33,7 @@ function CalculateurIndemnite({ icon, title }) {
             const steps = module.steps.filter(({ condition = () => true }) =>
               condition(values)
             );
-            dispatch({ type: "add_branche", payload: steps });
+            dispatch({ payload: steps, type: "add_branche" });
           } else {
             dispatch({ type: "remove_branche" });
           }

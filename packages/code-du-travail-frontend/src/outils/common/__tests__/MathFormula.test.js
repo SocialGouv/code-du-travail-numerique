@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { asciiMathToTex, MathFormula } from "../MathFormula";
 
 const formulae = `26 + (this (is) weird) / (45 (why not)) + 3
@@ -41,7 +42,7 @@ describe("asciiMathToTex", () => {
 describe("<MathFormula />", () => {
   it("renders", () => {
     const { container } = render(
-      <MathFormula formula="1 / 4 * Sref * A * 2"></MathFormula>
+      <MathFormula formula="1 / 4 * Sref * A * 2" />
     );
     expect(container).toMatchSnapshot();
   });

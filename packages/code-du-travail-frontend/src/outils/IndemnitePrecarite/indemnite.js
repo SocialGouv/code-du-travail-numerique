@@ -1,4 +1,4 @@
-import { sum, round } from "../common/math";
+import { round, sum } from "../common/math";
 
 function getIndemnitePrecarite({
   salaire,
@@ -11,20 +11,20 @@ function getIndemnitePrecarite({
     case "mensuel": {
       const sommeSalaires = sum(salaires.map((s) => s.salaire));
       return {
-        indemnite: round(rateValue * sommeSalaires),
         formula: `${rateLabel} * somme(salaires)`,
+        indemnite: round(rateValue * sommeSalaires),
         inputs: { "somme des salaires": sommeSalaires },
       };
     }
     case "total": {
       return {
-        indemnite: round(rateValue * salaire),
         formula: `${rateLabel} * "totalSalaires"`,
+        indemnite: round(rateValue * salaire),
         inputs: { "total des salaires": salaire },
       };
     }
     default:
-      return { indemnite: 0, formula: "", inputs: {} };
+      return { formula: "", indemnite: 0, inputs: {} };
   }
 }
 

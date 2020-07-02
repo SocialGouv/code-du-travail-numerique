@@ -1,14 +1,14 @@
-import { StepInfo } from "./steps/Info";
-import { StepIndemnite } from "./steps/Indemnite";
-import { StepIntro } from "./steps/Introduction";
 import { StepAnciennete } from "./steps/Anciennete";
-import { StepSalaires } from "./steps/Salaires";
+import { StepIndemnite } from "./steps/Indemnite";
+import { StepInfo } from "./steps/Info";
+import { StepIntro } from "./steps/Introduction";
 import { StepPrimes } from "./steps/Primes";
+import { StepSalaires } from "./steps/Salaires";
 
 export const stepSalaires = {
   component: StepSalaires,
-  name: "salaires",
   label: "Salaires",
+  name: "salaires",
 };
 
 export const stepPrime = {
@@ -20,24 +20,24 @@ export const stepPrime = {
 const initialSteps = [
   {
     component: StepIntro,
-    name: "introduction",
     label: "Introduction",
+    name: "introduction",
   },
   {
     component: StepInfo,
-    name: "info_generales",
     label: "Contrat de travail",
+    name: "info_generales",
   },
   {
     component: StepAnciennete,
-    name: "anciennete",
     label: "Ancienneté",
+    name: "anciennete",
   },
   stepSalaires,
   {
     component: StepIndemnite,
-    name: "indemnite_legale",
     label: "Indemnité légale",
+    name: "indemnite_legale",
   },
 ];
 
@@ -84,7 +84,7 @@ export function stepReducer(state, { type, payload }) {
       };
     }
     default:
-      console.warn("action unknow", { type, payload });
+      console.warn("action unknow", { payload, type });
       return state;
   }
 }

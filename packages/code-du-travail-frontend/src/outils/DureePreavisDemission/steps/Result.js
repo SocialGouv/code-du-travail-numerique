@@ -1,18 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import { Toast } from "@socialgouv/react-ui";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
-
-import { SectionTitle, Highlight } from "../../common/stepStyles";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { Toast } from "@socialgouv/react-ui";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
 
 import {
   filterSituations,
+  getRef,
   getSituationsFor,
   recapSituation,
-  getRef,
 } from "../../common/situations.utils";
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 
 function HdnToast({ ccn }) {
   return (

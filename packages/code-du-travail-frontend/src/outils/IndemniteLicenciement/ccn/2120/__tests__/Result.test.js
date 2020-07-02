@@ -1,19 +1,20 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Result } from "../Result";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { Result } from "../Result";
 import { CADRE, ECONOMIQUE } from "../Step";
 
 const initialValues = {
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
-  hasTempsPartiel: false,
+  age: "55",
+  anciennete: 20.667,
+  branche: "2120",
+  categorie: CADRE,
   dateEntree: "1999-01-01",
   dateSortie: "2019-09-01",
-  anciennete: 20.667,
+  hasTempsPartiel: false,
   motif: ECONOMIQUE,
-  categorie: CADRE,
-  branche: "2120",
-  age: "55",
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
 };
 
 describe("<Result />", () => {

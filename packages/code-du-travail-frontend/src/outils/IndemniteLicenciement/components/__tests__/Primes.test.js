@@ -1,8 +1,9 @@
-import React from "react";
 import { render, wait } from "@testing-library/react";
-import { Primes } from "../Primes";
-import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
+import React from "react";
+import { Form } from "react-final-form";
+
+import { Primes } from "../Primes";
 
 describe("<Primes />", () => {
   it("should render", () => {

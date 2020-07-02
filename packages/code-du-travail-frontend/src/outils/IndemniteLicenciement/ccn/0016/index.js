@@ -4,12 +4,12 @@ import { Step } from "./Step";
 export const steps = [
   {
     component: Step,
-    name: "branche_step",
     label: "Informations particulières",
+    name: "branche_step",
   },
   {
     component: Result,
-    name: "branche_result",
     label: "Indemnité conventionnelle",
+    name: "branche_result",
   },
 ];

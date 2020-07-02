@@ -1,8 +1,8 @@
 // https://nextjs.org/docs/advanced-features/custom-error-page
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import { Button, Container, icons, theme } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 import { Layout } from "../../src/layout/Layout";
 

@@ -1,5 +1,5 @@
-import React from "react";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
+import React from "react";
 
 import { Suggester } from "../Suggester";
 

@@ -1,6 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
+import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   ArrowLink,
   Container,
@@ -9,9 +7,11 @@ import {
   icons,
   theme,
 } from "@socialgouv/react-ui";
-import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
-import { matopush } from "../piwik";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
+import { matopush } from "../piwik";
 import { CallToActionTile } from "./tiles/CallToAction";
 
 export const RelatedItems = ({ items = [] }) => {
@@ -57,7 +57,7 @@ export const RelatedItems = ({ items = [] }) => {
                       }
                       title={title}
                       subtitle={getLabelBySource(source)}
-                    ></CallToActionTile>
+                    />
                   </Link>
                 ) : (
                   <CallToActionTile

@@ -1,20 +1,20 @@
+import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
+
+import { fetchResponse } from "../../../../../test/mockFetch";
 import {
-  searchEntrepriseBySiret,
   searchEntrepriseByName,
+  searchEntrepriseBySiret,
 } from "../entreprise.service";
+import {
+  fulltextPayload,
+  siretIdccPayload,
+  siretPayload,
+} from "./entretrise.mock";
+
 const {
   publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
 } = getConfig();
-
-import {
-  fulltextPayload,
-  siretPayload,
-  siretIdccPayload,
-} from "./entretrise.mock";
-
-import fetch from "isomorphic-unfetch";
-import { fetchResponse } from "../../../../../test/mockFetch";
 
 jest.mock("isomorphic-unfetch");
 

@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { CategoriePeriod } from "../CategoriePeriod";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { CategoriePeriod } from "../CategoriePeriod";
 
 describe("<CategoryPeriod />", () => {
   it("should render", () => {

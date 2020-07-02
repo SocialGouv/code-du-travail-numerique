@@ -1,6 +1,7 @@
-import React, { useCallback, useState } from "react";
-import PropTypes from "prop-types";
 import { Modal } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useCallback, useState } from "react";
+
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
 export const ServiceRenseignementModal = ({ children: renderProp }) => {

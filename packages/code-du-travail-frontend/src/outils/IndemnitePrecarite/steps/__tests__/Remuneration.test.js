@@ -1,9 +1,9 @@
-import React from "react";
-import arrayMutators from "final-form-arrays";
-
 import { render } from "@testing-library/react";
-import { StepRemuneration } from "../Remuneration";
+import arrayMutators from "final-form-arrays";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { StepRemuneration } from "../Remuneration";
 
 function renderForm(data) {
   return render(
@@ -21,15 +21,15 @@ function renderForm(data) {
 describe("<StepRemuneration />", () => {
   it("should render one input", () => {
     const { container } = renderForm({
-      typeRemuneration: "total",
       salaire: 3000,
+      typeRemuneration: "total",
     });
     expect(container).toMatchSnapshot();
   });
   it("should render multiple inputs", () => {
     const { container } = renderForm({
-      typeRemuneration: "mensuel",
       salaires: [{ salaire: 2000 }, { salaire: 1500 }],
+      typeRemuneration: "mensuel",
     });
     expect(container).toMatchSnapshot();
   });

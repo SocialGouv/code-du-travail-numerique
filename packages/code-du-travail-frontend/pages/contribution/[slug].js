@@ -1,12 +1,12 @@
-import React from "react";
-import getConfig from "next/config";
+import { extractMdxContentUrl } from "@cdt/data";
 import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import React from "react";
 
 import Answer from "../../src/common/Answer";
-import Contribution from "../../src/contributions/Contribution";
-import { extractMdxContentUrl } from "@cdt/data";
-import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import Contribution from "../../src/contributions/Contribution";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -32,7 +32,7 @@ class PageContribution extends React.Component {
     if (contentUrl) {
       const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const content = await fetchContent.json();
-      return { data, content };
+      return { content, data };
     }
 
     return { data };

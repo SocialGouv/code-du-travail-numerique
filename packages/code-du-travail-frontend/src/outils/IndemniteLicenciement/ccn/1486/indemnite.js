@@ -80,10 +80,10 @@ export function getIndemniteConventionnelle(data) {
   } = data;
   // First of all, compute the new anciennete
   const ancienneteConventionnelle = getAncienneteConventionnelle({
-    brancheCategorie,
     ancienneteLegale,
-    hasBrancheContrat,
+    brancheCategorie,
     brancheContrat,
+    hasBrancheContrat,
   });
 
   let salaireRefConventionnel;
@@ -92,18 +92,18 @@ export function getIndemniteConventionnelle(data) {
     salaireRefConventionnel = round(getSalaireRef(data));
   } else if (hasBrancheNewSalaire) {
     salaireRefConventionnel = getSalaireRefConventionnel({
-      hasTempsPartiel: false,
       hasSameSalaire: hasBrancheNewRegularSalaire,
+      hasTempsPartiel: false,
       salaire: brancheNewRegularSalaire,
       salaires: brancheNewIrregularSalaire,
     });
   } else {
     salaireRefConventionnel = getSalaireRefConventionnel({
       anciennete: ancienneteLegale,
-      salaire,
-      hasTempsPartiel,
-      salairePeriods,
       hasSameSalaire,
+      hasTempsPartiel,
+      salaire,
+      salairePeriods,
       salaires,
     });
   }
@@ -171,8 +171,8 @@ export function getIndemniteConventionnelle(data) {
     : `(C * Sref * A${previousIndemnites ? " - I" : ""})`;
 
   return {
+    error,
     indemniteConventionnelle,
     infoCalculConventionnel: { formula, labels },
-    error,
   };
 }

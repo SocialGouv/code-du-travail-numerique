@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import Contribution from "../Contribution";
 
 beforeEach(() => {
@@ -43,7 +44,6 @@ describe("<Contribution />", () => {
   });
   it("should render with both answers", () => {
     const answers = {
-      generic: { markdown: "hello **generic**" },
       conventions: [
         {
           id: 123,
@@ -51,6 +51,7 @@ describe("<Contribution />", () => {
           markdown: "hello **123**",
         },
       ],
+      generic: { markdown: "hello **generic**" },
     };
     const { container } = render(<Contribution answers={answers} />);
     expect(container).toMatchSnapshot();
@@ -60,16 +61,15 @@ describe("<Contribution />", () => {
       "convention",
       JSON.stringify({
         convention: {
-          title: "preselected convention",
-          shortTitle: "short preselected convention",
-          num: 44,
           id: 123,
+          num: 44,
+          shortTitle: "short preselected convention",
+          title: "preselected convention",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123",
         },
       })
     );
     const answers = {
-      generic: { markdown: "hello **generic**" },
       conventions: [
         {
           id: 123,
@@ -77,6 +77,7 @@ describe("<Contribution />", () => {
           markdown: "hello **123**",
         },
       ],
+      generic: { markdown: "hello **generic**" },
     };
 
     const { container } = render(<Contribution answers={answers} />);
@@ -88,16 +89,15 @@ describe("<Contribution />", () => {
       "convention",
       JSON.stringify({
         convention: {
-          title: "preselected convention",
-          shortTitle: "short preselected convention",
-          num: 9999,
           id: 123,
+          num: 9999,
+          shortTitle: "short preselected convention",
+          title: "preselected convention",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123",
         },
       })
     );
     const answers = {
-      generic: { markdown: "hello **generic**" },
       conventions: [
         {
           id: 123,
@@ -105,6 +105,7 @@ describe("<Contribution />", () => {
           markdown: "hello **123**",
         },
       ],
+      generic: { markdown: "hello **generic**" },
     };
 
     const { container } = render(<Contribution answers={answers} />);
@@ -116,16 +117,15 @@ describe("<Contribution />", () => {
       "convention",
       JSON.stringify({
         convention: {
-          title: "preselected convention",
-          shortTitle: "short preselected convention",
-          num: 44,
           id: 123,
+          num: 44,
+          shortTitle: "short preselected convention",
+          title: "preselected convention",
           url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=123",
         },
       })
     );
     const answers = {
-      generic: { markdown: "hello **generic**" },
       conventions: [
         {
           id: 123,
@@ -138,16 +138,17 @@ describe("<Contribution />", () => {
               url: "http://path/to/ref",
             },
             {
-              id: 422,
-              title: "reference CC 1",
               agreement: {
                 id: 123,
                 url: "http://path/to/agreement",
               },
+              id: 422,
+              title: "reference CC 1",
             },
           ],
         },
       ],
+      generic: { markdown: "hello **generic**" },
     };
 
     const { container } = render(<Contribution answers={answers} />);

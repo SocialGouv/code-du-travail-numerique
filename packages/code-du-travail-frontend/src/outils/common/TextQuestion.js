@@ -1,7 +1,7 @@
+import { Input, InputDate, theme } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { UID } from "react-uid";
-import { Input, InputDate, theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 import { InlineError } from "./ErrorField";
@@ -31,12 +31,12 @@ function TextQuestion({
                 return validate ? validate(value) : required(value);
               }}
               subscription={{
-                value: true,
-                error: true,
-                touched: true,
                 dirty: true,
+                error: true,
                 invalid: true,
                 submitFailed: true,
+                touched: true,
+                value: true,
               }}
               render={({
                 input,

@@ -1,8 +1,8 @@
+import { icons, Input, Label, Select, Text, theme } from "@socialgouv/react-ui";
 import React from "react";
-import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { icons, Input, Label, Select, Text, theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";
 import { Error } from "../../common/ErrorField";
@@ -54,10 +54,10 @@ export const SalaireTempsPartiel = ({ name }) => (
                     name={`${name}.duration`}
                     validate={isNumber}
                     subscription={{
-                      value: true,
                       error: true,
-                      touched: true,
                       invalid: true,
+                      touched: true,
+                      value: true,
                     }}
                     render={({ input, meta: { touched, error, invalid } }) => (
                       <>
@@ -80,10 +80,10 @@ export const SalaireTempsPartiel = ({ name }) => (
                     name={`${name}.salary`}
                     validate={isNumber}
                     subscription={{
-                      value: true,
                       error: true,
-                      touched: true,
                       invalid: true,
+                      touched: true,
+                      value: true,
                     }}
                     render={({ input, meta: { touched, error, invalid } }) => (
                       <>
@@ -112,9 +112,9 @@ export const SalaireTempsPartiel = ({ name }) => (
           <AddButton
             onClick={() =>
               fields.push({
-                type: TEMPS_PARTIEL,
                 duration: null,
                 salary: null,
+                type: TEMPS_PARTIEL,
               })
             }
           >

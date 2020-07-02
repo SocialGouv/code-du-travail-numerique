@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Section } from "../layout/Section";
 import { OverflowWrapper } from ".";
 
@@ -29,7 +30,7 @@ export const base = () => (
     <Section>
       <div style={{ background: "black", padding: "1rem" }}>
         <OverflowWrapper shadowColor="red">
-          <div style={{ minWidth: "1200px", backgroundColor: "red" }}>
+          <div style={{ backgroundColor: "red", minWidth: "1200px" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -45,7 +46,7 @@ export const base = () => (
       <div style={{ background: "black", padding: "1rem" }}>
         <OverflowWrapper shadowColor="white">
           <div
-            style={{ minWidth: "400px", minHeight: "10rem", color: "white" }}
+            style={{ color: "white", minHeight: "10rem", minWidth: "400px" }}
           >
             Resize the window ! Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et

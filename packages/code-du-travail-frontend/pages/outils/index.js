@@ -1,5 +1,6 @@
-import React from "react";
-import Link from "next/link";
+import externalTools from "@cdt/data...tools/externals.json";
+import tools from "@cdt/data...tools/internals.json";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Container,
   Grid,
@@ -7,15 +8,14 @@ import {
   PageTitle,
   Section,
 } from "@socialgouv/react-ui";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
-import tools from "@cdt/data...tools/internals.json";
-import externalTools from "@cdt/data...tools/externals.json";
+import Link from "next/link";
+import React from "react";
 
-import { Layout } from "../../src/layout/Layout";
+import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
+import { Layout } from "../../src/layout/Layout";
 import { CCTile, DocumentsTile } from "../index";
-import { FocusRoot } from "../../src/a11y";
 
 const monCompteFormation = externalTools.find(
   (tools) => tools.title === "Mon compte formation"

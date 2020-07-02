@@ -1,6 +1,7 @@
+import { act, render } from "@testing-library/react";
 import React from "react";
+
 import { useLocalStorage } from "../useLocalStorage";
-import { render, act } from "@testing-library/react";
 
 function renderApp(key, initialValue) {
   function App() {

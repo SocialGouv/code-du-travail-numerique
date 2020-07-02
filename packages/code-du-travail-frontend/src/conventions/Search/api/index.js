@@ -1,11 +1,11 @@
 import { parseIdcc } from "@cdt/data";
 
-import getQueryType from "./getQueryType";
 import { searchConvention } from "./convention.service";
 import {
   searchEntrepriseByName,
   searchEntrepriseBySiret,
 } from "./entreprise.service";
+import getQueryType from "./getQueryType";
 
 // build a result list based on query type
 export const getResults = async (query) => {

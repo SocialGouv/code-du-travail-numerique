@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { TableOfContent } from ".";
 
 describe("<TableOfContent />", () => {
@@ -7,8 +8,8 @@ describe("<TableOfContent />", () => {
   const disconnectMock = jest.fn();
   beforeAll(() => {
     global.IntersectionObserver = () => ({
-      observe: observeMock,
       disconnect: disconnectMock,
+      observe: observeMock,
     });
   });
   beforeEach(() => {

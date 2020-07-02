@@ -1,8 +1,9 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { SalaireTempsPlein } from "../SalaireTempsPlein";
-import { Form } from "react-final-form";
+import { fireEvent, render } from "@testing-library/react";
 import arrayMutators from "final-form-arrays";
+import React from "react";
+import { Form } from "react-final-form";
+
+import { SalaireTempsPlein } from "../SalaireTempsPlein";
 
 describe("<SalaireTempsPlein />", () => {
   it("should render", () => {

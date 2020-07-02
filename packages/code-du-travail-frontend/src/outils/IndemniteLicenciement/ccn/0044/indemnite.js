@@ -30,10 +30,10 @@ export function getIndemnite({
   let indemniteConventionnelle = 0;
   let formula = "-";
   const labels = {
-    "Salaire de référence (Sref)": salaireRef,
-    "Ancienneté totale": round(anciennete),
     "Ancienneté (en année entière)": anneeAncienete,
+    "Ancienneté totale": round(anciennete),
     Groupe: groupe,
+    "Salaire de référence (Sref)": salaireRef,
     ...(age && { Age: age }),
     ...(hasOpe && { "affiliation à une OPE": hasOpe ? "oui" : "non" }),
     ...(hasOpe &&

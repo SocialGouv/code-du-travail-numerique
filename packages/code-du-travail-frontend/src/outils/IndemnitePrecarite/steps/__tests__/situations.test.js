@@ -1,33 +1,33 @@
+import data from "@cdt/data...prime-precarite/precarite.data.json";
+
 import { getSituationsFor } from "../../../common/situations.utils";
 import { isNotYetProcessed, validateSituation } from "../situation";
 
-import data from "@cdt/data...prime-precarite/precarite.data.json";
-
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { idcc: 10, criteria: { cddType: "1| foo", hasCdiProposal: "baz" } },
-  { idcc: 10, criteria: { cddType: "1| foo", hasCdiRenewal: "bar" } },
-  { idcc: 10, criteria: { cddType: "2| baz" } },
+  { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
+  { criteria: { cddType: "1| foo", hasCdiRenewal: "bar" }, idcc: 10 },
+  { criteria: { cddType: "2| baz" }, idcc: 10 },
   {
-    idcc: 20,
+    allowBonus: false,
     criteria: {
       cddType: "3| bar",
     },
-    allowBonus: false,
     endMessage: "nope",
     hasConventionalProvision: true,
+    idcc: 20,
   },
   {
-    idcc: 20,
+    allowBonus: true,
     criteria: {
       cddType: "4| baz",
     },
-    allowBonus: true,
     hasConventionalProvision: true,
+    idcc: 20,
   },
   {
-    idcc: 30,
     criteria: {},
     hasConventionalProvision: null,
+    idcc: 30,
   },
 ]);
 

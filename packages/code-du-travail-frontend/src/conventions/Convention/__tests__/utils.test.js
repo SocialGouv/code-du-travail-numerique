@@ -1,7 +1,7 @@
+import { matopush } from "../../../piwik";
 import { trackAccordionPanelState } from "../utils";
 
 jest.mock("../../../piwik");
-import { matopush } from "../../../piwik";
 matopush.mockImplementation();
 
 describe("trackAccordionPanelState", () => {

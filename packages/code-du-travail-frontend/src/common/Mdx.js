@@ -1,7 +1,7 @@
 import { createElement } from "react";
-import markdownParser from "remark-parse";
 import raw from "rehype-raw";
 import rehype2react from "rehype-react";
+import markdownParser from "remark-parse";
 import remark2rehype from "remark-rehype";
 import unified from "unified";
 
@@ -16,8 +16,8 @@ const Mdx = ({ markdown, components = {} }) => {
     .use(remark2rehype, { allowDangerousHTML: true })
     .use(raw)
     .use(rehype2react, {
-      createElement,
       components,
+      createElement,
     })
     .processSync(wrappedMarkdown).result;
 };

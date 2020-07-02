@@ -1,6 +1,6 @@
+import { theme } from "@socialgouv/react-ui";
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
 export function Question({ required, children, ...otherProps }) {
   return (

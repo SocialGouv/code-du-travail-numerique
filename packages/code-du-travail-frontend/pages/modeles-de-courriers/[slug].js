@@ -1,22 +1,22 @@
-import React from "react";
-import { withRouter } from "next/router";
-import getConfig from "next/config";
-import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
 import {
   Badge,
   Button,
+  icons,
   ScreenReaderOnly,
   Section,
-  Wrapper,
-  icons,
   theme,
+  Wrapper,
 } from "@socialgouv/react-ui";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import { withRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
 
-import Html from "../../src/common/Html";
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
+import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },

@@ -1,24 +1,22 @@
+import data from "@cdt/data...prime-precarite/precarite.data.json";
 import React from "react";
 import { Field } from "react-final-form";
-import data from "@cdt/data...prime-precarite/precarite.data.json";
 
-import { TypeContrat, CONTRACT_TYPE } from "../components/TypeContrat";
 import { SelectQuestion } from "../../common/SelectQuestion";
-
-import { StepCDD } from "./CDD";
-import { StepCTT } from "./CTT";
-
 import {
+  filterSituations,
+  getNextQuestionKey,
   getOptions,
   getPastQuestions,
-  getNextQuestionKey,
-  filterSituations,
   getSituationsFor,
 } from "../../common/situations.utils";
+import { CONTRACT_TYPE, TypeContrat } from "../components/TypeContrat";
+import { StepCDD } from "./CDD";
+import { StepCTT } from "./CTT";
 import {
+  criteriaOrder,
   hasConventionalProvision,
   questions,
-  criteriaOrder,
   validateSituation,
 } from "./situation";
 

@@ -1,16 +1,16 @@
-import React from "react";
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
+import React from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
-import { SectionTitle } from "../../common/stepStyles";
 import {
+  filterSituations,
+  getFormProps,
+  getNextQuestionKey,
   getOptions,
   getPastQuestions,
-  getNextQuestionKey,
-  filterSituations,
   getSituationsFor,
-  getFormProps,
 } from "../../common/situations.utils";
+import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(
@@ -51,8 +51,8 @@ function StepInformations({ form }) {
           onChange={() =>
             form.batch(() => {
               getFormProps({
-                key,
                 criteria,
+                key,
                 pastQuestions,
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })

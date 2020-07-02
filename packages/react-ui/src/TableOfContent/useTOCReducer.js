@@ -1,4 +1,4 @@
-import { useReducer, useCallback } from "react";
+import { useCallback, useReducer } from "react";
 
 const rootReducer = (state, action) => {
   switch (action.type) {
@@ -19,12 +19,12 @@ export const useTOCReducer = (initialState) => {
   const observerCallback = useCallback((entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio === 1) {
-        dispatch({ type: "setActive", payload: entry.target.id });
+        dispatch({ payload: entry.target.id, type: "setActive" });
       }
     });
   }, []);
   const setTitles = useCallback((titles) => {
-    dispatch({ type: "setTitles", payload: titles });
+    dispatch({ payload: titles, type: "setTitles" });
   }, []);
   return { observerCallback, setTitles, titles: state.titles };
 };

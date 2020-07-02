@@ -1,6 +1,8 @@
 import React from "react";
-import { Grid } from ".";
+
 import { Tile } from "../Tile";
+import { Grid } from ".";
+
 export default {
   component: Grid,
   title: "Components|Grid",

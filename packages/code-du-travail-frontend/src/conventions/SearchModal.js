@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { Modal } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useCallback, useEffect, useState } from "react";
 
 import ConventionSearch from "./Search";
 

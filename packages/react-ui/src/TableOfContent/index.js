@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { breakpoints, fonts, spacings } from "../theme";
 import PropTypes from "prop-types";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import { breakpoints, fonts, spacings } from "../theme";
 import { useTOCReducer } from "./useTOCReducer";
 
 const initialState = {
@@ -57,15 +57,15 @@ export const TableOfContent = ({ ids, observerArea, threshold, ...props }) => {
 TableOfContent.propTypes = {
   ids: PropTypes.arrayOf(PropTypes.string),
   observerArea: PropTypes.shape({
-    top: PropTypes.string,
     bottom: PropTypes.string,
+    top: PropTypes.string,
   }),
   threshold: PropTypes.arrayOf(PropTypes.string),
 };
 
 TableOfContent.defaultProps = {
   ids: [],
-  observerArea: { top: "0px", bottom: "70%" },
+  observerArea: { bottom: "70%", top: "0px" },
   threshold: ["1"],
 };
 

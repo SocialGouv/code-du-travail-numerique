@@ -1,7 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-
 import {
   Container,
   PageTitle,
@@ -9,6 +5,9 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/react-ui/";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const Article = ({
   children,
@@ -60,20 +59,27 @@ const Article = ({
 };
 
 Article.propTypes = {
-  /** article title */
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.node,
   /** article content */
   children: PropTypes.node,
+
   date: PropTypes.string,
+
   dateLabel: PropTypes.string,
+
+  /** when user clicks some tag */
+  onTagClick: PropTypes.func,
+
   source: PropTypes.shape({
     name: PropTypes.string,
     url: PropTypes.string,
   }),
+
   style: PropTypes.object,
-  /** when user clicks some tag */
-  onTagClick: PropTypes.func,
+
+  subtitle: PropTypes.node,
+
+  /** article title */
+  title: PropTypes.string.isRequired,
 };
 
 Article.defaultProps = {

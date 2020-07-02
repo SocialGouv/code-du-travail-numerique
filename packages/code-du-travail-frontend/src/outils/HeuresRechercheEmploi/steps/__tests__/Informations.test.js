@@ -1,5 +1,5 @@
-import { StepInformations } from "../Informations";
 import { renderForm } from "../../../../../test/renderForm";
+import { StepInformations } from "../Informations";
 
 describe("<StepInformations />", () => {
   it("should render", () => {
@@ -23,8 +23,8 @@ describe("<StepInformations />", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 44 },
       criteria: {
-        "période essai": "1| oui",
         "catégorie socio-professionnelle": "28| Techniciens",
+        "période essai": "1| oui",
       },
     });
     expect(container).toMatchSnapshot();
@@ -33,9 +33,9 @@ describe("<StepInformations />", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 44 },
       criteria: {
-        "période essai": "1| oui",
         "catégorie socio-professionnelle": "28| Techniciens",
         "durée du préavis": "2| 6 jours",
+        "période essai": "1| oui",
       },
     });
     expect(container).toMatchSnapshot();

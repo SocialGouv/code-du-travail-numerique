@@ -1,11 +1,11 @@
+import { theme } from "@socialgouv/react-ui";
 import React from "react";
 import styled, { css } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
-import { Header } from "./Header";
-import { Headband } from "./Headband";
 import Footer from "./Footer";
+import { Headband } from "./Headband";
+import { Header } from "./Header";
 
 const Layout = ({ children, currentPage }) => {
   return (

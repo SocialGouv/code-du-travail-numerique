@@ -1,75 +1,76 @@
-import React from "react";
-import { SearchResults } from "../SearchResults";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { matopush } from "../../piwik";
+import { SearchResults } from "../SearchResults";
 
 jest.mock("../../piwik", () => ({
   matopush: jest.fn(),
 }));
 
 const items = {
+  articles: [
+    {
+      description: "la description",
+      slug: "L1243-1",
+      source: "code_du_travail",
+      title: "L1243-1",
+    },
+  ],
   documents: [
     {
+      breadcrumbs: [
+        { label: "test content", slug: "/themes/theme-root" },
+        { label: "test theme content", slug: "/themes/theme-test" },
+      ],
+      description: "description",
+      slug: "mer-il-est-fou",
       source: "fiches_service_public",
       title: "Mer il est fou!",
-      slug: "mer-il-est-fou",
-      description: "description",
-      breadcrumbs: [
-        { slug: "/themes/theme-root", label: "test content" },
-        { slug: "/themes/theme-test", label: "test theme content" },
-      ],
     },
     {
+      description: "description",
+      slug: "simulateur-precarite",
       source: "outils",
       title: "simulateur de prime de précarite",
-      slug: "simulateur-precarite",
-      description: "description",
     },
     {
+      description: "description",
+      slug: "simulateur-licenciement-telerc",
       source: "external",
       title: "telerc",
       url:
         "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-      slug: "simulateur-licenciement-telerc",
-      description: "description",
     },
     {
+      breadcrumbs: [{ label: "test root content", slug: "/themes/theme-root" }],
+      description: "description",
+      slug: "mer-il-est-fou2",
       source: "outils",
       title: "Mer il est fou 2!",
-      slug: "mer-il-est-fou2",
-      description: "description",
-      breadcrumbs: [{ slug: "/themes/theme-root", label: "test root content" }],
     },
     {
+      breadcrumbs: [
+        { label: "test content", slug: "/themes/theme-root" },
+        { label: "test theme content", slug: "/themes/theme-test" },
+      ],
+      description: "description",
+      slug: "mer-il-est-fou4",
       source: "contributions",
       title: "Mer il est fou 4!",
-      slug: "mer-il-est-fou4",
-      description: "description",
-      breadcrumbs: [
-        { slug: "/themes/theme-root", label: "test content" },
-        { slug: "/themes/theme-test", label: "test theme content" },
-      ],
-    },
-  ],
-  articles: [
-    {
-      source: "code_du_travail",
-      title: "L1243-1",
-      slug: "L1243-1",
-      description: "la description",
     },
   ],
   themes: [
     {
+      slug: "1-contrat",
       source: "themes",
       title: "Contrat",
-      slug: "1-contrat",
     },
   ],
 };
 const emptyItems = {
-  documents: [],
   articles: [],
+  documents: [],
   themes: [],
 };
 describe("<SearchResults/>", () => {

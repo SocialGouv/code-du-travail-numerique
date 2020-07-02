@@ -1,7 +1,8 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { StepInfo } from "../Info";
 import { Form } from "react-final-form";
+
+import { StepInfo } from "../Info";
 
 function renderForm(data) {
   return render(

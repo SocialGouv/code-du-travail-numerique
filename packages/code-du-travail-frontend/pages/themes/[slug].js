@@ -1,8 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import getConfig from "next/config";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Button,
   Container,
@@ -11,12 +7,16 @@ import {
   theme,
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { SearchResults } from "../../src/search/SearchResults";
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
-import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { FocusRoot } from "../../src/a11y";
+import { Breadcrumbs } from "../../src/common/Breadcrumbs";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
+import { SearchResults } from "../../src/search/SearchResults";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -75,7 +75,7 @@ class Theme extends React.Component {
           <Section>
             <SearchResults
               query={theme.title}
-              items={{ documents: theme.refs, articles: [], themes: [] }}
+              items={{ articles: [], documents: theme.refs, themes: [] }}
             />
           </Section>
         )}

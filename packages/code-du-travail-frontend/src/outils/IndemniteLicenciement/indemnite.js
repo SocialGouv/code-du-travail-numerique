@@ -58,9 +58,9 @@ function getIndemnite({
   const dNotification = parse(dateNotification);
   let formula = "-";
   const labels = {
-    "Salaire de réference (Sref)": round(salaireRef),
-    "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
     "Ancienneté totale (A)": round(anciennete),
+    "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
+    "Salaire de réference (Sref)": round(salaireRef),
     ...(anciennete - 10 > 0 && {
       "Ancienneté au delà de 10ans (A2)": round(anciennete - 10),
     }),
@@ -115,26 +115,26 @@ function getIndemniteFromFinalForm(form) {
   } = state.values;
 
   const salaireRef = getSalaireRef({
-    hasTempsPartiel,
+    anciennete,
     hasSameSalaire,
+    hasTempsPartiel,
+    primes,
     salaire,
     salairePeriods,
     salaires,
-    anciennete,
-    primes,
   });
 
   const { indemniteLegale, infoCalculLegal } = getIndemnite({
-    salaireRef,
-    inaptitude,
     anciennete,
     dateNotification,
+    inaptitude,
+    salaireRef,
   });
 
   return {
-    salaireRefLegal: salaireRef,
     indemniteLegale,
     infoCalculLegal,
+    salaireRefLegal: salaireRef,
   };
 }
 

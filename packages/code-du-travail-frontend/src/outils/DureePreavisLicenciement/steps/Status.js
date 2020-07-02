@@ -1,15 +1,15 @@
-import React from "react";
-import Link from "next/link";
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-
 import { Toast } from "@socialgouv/react-ui";
-import { YesNoQuestion } from "../../common/YesNoQuestion";
+import Link from "next/link";
+import React from "react";
+
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
-  getOptions,
   filterSituations,
+  getOptions,
   getSituationsFor,
 } from "../../common/situations.utils";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(

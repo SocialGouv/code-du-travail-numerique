@@ -19,15 +19,15 @@ export const Stripe = styled.div`
 `;
 
 Stripe.propTypes = {
-  position: PropTypes.oneOf(["top", "left"]),
-  variant: PropTypes.oneOf(["primary", "secondary"]),
-  rounded: PropTypes.bool,
   length: PropTypes.string,
+  position: PropTypes.oneOf(["top", "left"]),
+  rounded: PropTypes.bool,
+  variant: PropTypes.oneOf(["primary", "secondary"]),
 };
 
 Stripe.defaultProps = {
+  length: "7rem",
   position: "top",
   rounder: false,
   variant: "secondary",
-  length: "7rem",
 };

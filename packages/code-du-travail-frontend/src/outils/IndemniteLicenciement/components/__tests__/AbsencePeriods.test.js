@@ -1,8 +1,9 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { AbsencePeriods } from "../AbsencePeriods";
-import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
+import React from "react";
+import { Form } from "react-final-form";
+
+import { AbsencePeriods } from "../AbsencePeriods";
 
 describe("<AbsencePeriods />", () => {
   it("should render", () => {
@@ -10,7 +11,7 @@ describe("<AbsencePeriods />", () => {
     const { container } = render(
       <Form
         mutators={{ ...arrayMutators }}
-        initialValues={{ absences: [{ type: "Grève", duration: 3 }] }}
+        initialValues={{ absences: [{ duration: 3, type: "Grève" }] }}
         onSubmit={onSubmit}
         render={() => <AbsencePeriods name="absences" />}
       />
@@ -23,8 +24,8 @@ describe("<AbsencePeriods />", () => {
       <Form
         initialValues={{
           absences: [
-            { type: "Grève", duration: 3 },
-            { type: "Grève", duration: 3 },
+            { duration: 3, type: "Grève" },
+            { duration: 3, type: "Grève" },
           ],
         }}
         mutators={{ ...arrayMutators }}
@@ -41,7 +42,7 @@ describe("<AbsencePeriods />", () => {
     const { getByText, getAllByText } = render(
       <Form
         mutators={{ ...arrayMutators }}
-        initialValues={{ absences: [{ type: "Grève", duration: 3 }] }}
+        initialValues={{ absences: [{ duration: 3, type: "Grève" }] }}
         onSubmit={onSubmit}
         render={() => <AbsencePeriods name="absences" />}
       />

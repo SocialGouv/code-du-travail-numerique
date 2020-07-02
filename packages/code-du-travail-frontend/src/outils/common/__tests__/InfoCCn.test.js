@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { StepInfoCCnMandatory, StepInfoCCnOptionnal } from "../InfosCCn";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { StepInfoCCnMandatory, StepInfoCCnOptionnal } from "../InfosCCn";
 
 function renderForm(data, Step, submit) {
   return render(

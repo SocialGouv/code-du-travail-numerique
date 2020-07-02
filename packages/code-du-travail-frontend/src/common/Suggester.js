@@ -1,35 +1,35 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import Autosuggest from "react-autosuggest";
 
 export class Suggester extends React.Component {
   static propTypes = {
+    getSuggestionValue: PropTypes.func,
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
-    getSuggestionValue: PropTypes.func,
+    reformatEnteredValue: PropTypes.func,
+    renderMessage: PropTypes.func,
     renderSuggestion: PropTypes.func,
     renderSuggestionsContainer: PropTypes.func,
     theme: PropTypes.object,
-    reformatEnteredValue: PropTypes.func,
-    renderMessage: PropTypes.func,
   };
 
   static defaultProps = {
-    placeholder: "faire une recherche.",
     className: "full-width",
     getSuggestionValue: (value) => value.toString(),
+    placeholder: "faire une recherche.",
+    reformatEnteredValue: (v) => v,
+    renderMessage: () => null,
     renderSuggestion: (suggestion) => <span>{suggestion.toString()}</span>,
     renderSuggestionsContainer: undefined,
     theme: undefined,
-    renderMessage: () => null,
-    reformatEnteredValue: (v) => v,
   };
 
   state = {
+    loading: false,
     query: "",
     suggestions: [],
-    loading: false,
   };
 
   onChange = (event) => {
@@ -45,11 +45,11 @@ export class Suggester extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({ suggestions: null, loading: true });
+    this.setState({ loading: true, suggestions: null });
     this.props.onSearch(value).then((results) =>
       this.setState({
-        suggestions: results,
         loading: false,
+        suggestions: results,
       })
     );
   };
@@ -64,12 +64,12 @@ export class Suggester extends React.Component {
     const { suggestions, query, loading } = this.state;
     const { placeholder, className } = this.props;
     const inputProps = {
-      name: "query",
-      placeholder: placeholder,
-      value: query,
-      type: "search",
-      onChange: this.onChange,
       className,
+      name: "query",
+      onChange: this.onChange,
+      placeholder: placeholder,
+      type: "search",
+      value: query,
     };
 
     return (

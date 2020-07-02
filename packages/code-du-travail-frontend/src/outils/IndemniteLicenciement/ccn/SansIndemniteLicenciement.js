@@ -1,8 +1,8 @@
-import React from "react";
 import { Container, Title } from "@socialgouv/react-ui";
+import React from "react";
 
-import { IndemniteLegale } from "../components/IndemniteLegale";
 import { branches } from "../branches";
+import { IndemniteLegale } from "../components/IndemniteLegale";
 import { getIndemniteFromFinalForm } from "../indemnite";
 
 function Step({ form }) {

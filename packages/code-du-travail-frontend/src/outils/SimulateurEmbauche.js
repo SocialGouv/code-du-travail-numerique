@@ -1,5 +1,5 @@
+import { Alert, Section, Title } from "@socialgouv/react-ui";
 import React from "react";
-import { Title, Alert, Section } from "@socialgouv/react-ui";
 import Spinner from "react-svg-spinner";
 
 class SimulateurEmbauche extends React.PureComponent {
@@ -9,7 +9,7 @@ class SimulateurEmbauche extends React.PureComponent {
   };
 
   onError = (error) => {
-    this.setState({ simulator: "error", error });
+    this.setState({ error, simulator: "error" });
   };
 
   onLoad = () => {
@@ -18,7 +18,7 @@ class SimulateurEmbauche extends React.PureComponent {
       !this.simRef.current ||
       !this.simRef.current.querySelector("#simulateurEmbauche")
     ) {
-      this.setState({ simulator: "error", error: "empty child" });
+      this.setState({ error: "empty child", simulator: "error" });
     }
   };
 

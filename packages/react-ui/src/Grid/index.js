@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 import { Grid as RootGrid } from "./Grid";
 import { GridCell } from "./GridCell";

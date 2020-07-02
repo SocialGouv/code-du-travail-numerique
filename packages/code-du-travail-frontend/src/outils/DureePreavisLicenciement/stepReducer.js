@@ -1,41 +1,42 @@
-import { StepIntro } from "./steps/Introduction";
-import { StepInfoCCn } from "./steps/InfosCCn";
-import { StepResult } from "./steps/Result";
-import { StepInformations } from "./steps/Informations";
-import { StepStatus } from "./steps/Status";
-import { isNotYetProcessed } from "../common/situations.utils";
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+
+import { isNotYetProcessed } from "../common/situations.utils";
+import { StepInformations } from "./steps/Informations";
+import { StepInfoCCn } from "./steps/InfosCCn";
+import { StepIntro } from "./steps/Introduction";
+import { StepResult } from "./steps/Result";
+import { StepStatus } from "./steps/Status";
 
 export const initialState = {
   stepIndex: 0,
   steps: [
     {
       component: StepIntro,
-      name: "intro",
       label: "Introduction",
+      name: "intro",
     },
     {
       component: StepStatus,
-      name: "situation",
       label: "Situation du salarié",
+      name: "situation",
     },
     {
       component: StepInfoCCn,
-      name: "info_cc",
       label: "Convention collective",
+      name: "info_cc",
     },
     {
       component: StepInformations,
-      name: "infos",
       label: "Informations complémentaires",
+      name: "infos",
       skip: (values) =>
         !values.ccn ||
         (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)),
     },
     {
       component: StepResult,
-      name: "results",
       label: "Durée du préavis",
+      name: "results",
     },
   ],
 };

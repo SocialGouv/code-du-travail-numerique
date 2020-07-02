@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import styled from "styled-components";
-import { matopush } from "../../piwik";
 import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
-import { Container, Heading, Tile, Title, theme } from "@socialgouv/react-ui";
+import { Container, Heading, theme, Tile, Title } from "@socialgouv/react-ui";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import { summarize, reportSelectionToMatomo } from "../utils";
-import { ViewMore } from "../../common/ViewMore";
 import { CallToActionTile } from "../../common/tiles/CallToAction";
+import { ViewMore } from "../../common/ViewMore";
+import { matopush } from "../../piwik";
+import { reportSelectionToMatomo, summarize } from "../utils";
 
 export const ListLink = ({
   item: {
@@ -34,13 +34,13 @@ export const ListLink = ({
   }
 
   const tileCommonProps = {
-    wide: true,
+    children: summarize(description),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
-    title,
     subtitle,
-    children: summarize(description),
+    title,
+    wide: true,
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -98,19 +98,19 @@ export const ListLink = ({
   );
 };
 ListLink.propTypes = {
-  showTheme: PropTypes.bool,
-  query: PropTypes.string,
   item: PropTypes.shape({
-    title: PropTypes.string,
-    source: PropTypes.string,
-    slug: PropTypes.string,
     breadcrumbs: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string,
         slug: PropTypes.string,
       })
     ),
+    slug: PropTypes.string,
+    source: PropTypes.string,
+    title: PropTypes.string,
   }),
+  query: PropTypes.string,
+  showTheme: PropTypes.bool,
 };
 
 export const Results = ({ id, isSearch, items, query }) => {

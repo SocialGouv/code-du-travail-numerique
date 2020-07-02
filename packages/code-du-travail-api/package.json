@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@cdt/data": "^4.25.0",
-    "@socialgouv/eslint-config-recommended": "^0.35.0",
+    "@socialgouv/eslint-config-recommended": "^1.6.0",
     "@zeit/ncc": "^0.22.3",
     "eslint": "^7.3.1",
     "esm": "^3.2.25",

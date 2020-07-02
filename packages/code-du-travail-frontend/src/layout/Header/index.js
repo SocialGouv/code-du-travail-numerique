@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { Container, icons, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-
-import { Container, icons, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";

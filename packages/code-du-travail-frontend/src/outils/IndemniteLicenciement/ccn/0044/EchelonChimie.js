@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { Select } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React, { useState } from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
-import { Select } from "@socialgouv/react-ui";
 
-import { coefficients } from "./coefficients";
-import { required } from "../../../common/validators";
-import { Label } from "../../../common/stepStyles";
 import { Question } from "../../../common/Question";
+import { Label } from "../../../common/stepStyles";
+import { required } from "../../../common/validators";
+import { coefficients } from "./coefficients";
 
 const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {

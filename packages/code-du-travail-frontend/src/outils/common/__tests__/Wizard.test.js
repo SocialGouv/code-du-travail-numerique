@@ -1,19 +1,20 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Wizard } from "../Wizard";
-import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
+import React from "react";
 import { Field } from "react-final-form";
-import { matopush } from "../../../piwik";
 import { OnChange } from "react-final-form-listeners";
+
+import { matopush } from "../../../piwik";
+import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
+import { Wizard } from "../Wizard";
 
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: jest.fn().mockImplementation((event) => events.push(event)),
     events,
     flushEvents() {
       events = [];
     },
+    matopush: jest.fn().mockImplementation((event) => events.push(event)),
   };
 });
 
@@ -31,14 +32,14 @@ const SecondStep = () => (
 );
 const steps = [
   {
-    name: "first_step",
-    label: "First Step",
     component: FirstStep,
+    label: "First Step",
+    name: "first_step",
   },
   {
-    name: "second_step",
-    label: "Second Step",
     component: SecondStep,
+    label: "Second Step",
+    name: "second_step",
   },
 ];
 
@@ -46,17 +47,17 @@ const initialState = { stepIndex: 0, steps };
 
 const OptionnalStep = () => <p>etape optionnelle</p>;
 const optionnalStep = {
+  component: OptionnalStep,
   label: "Optional Step",
   name: "additional_step",
-  component: OptionnalStep,
 };
 const skipableStep = {
-  name: "skippable",
-  label: "Skippable Step",
-  skip: () => true,
   component: function Skipable() {
     return <p>skipable component</p>;
   },
+  label: "Skippable Step",
+  name: "skippable",
+  skip: () => true,
 };
 
 describe("<Wizard />", () => {
@@ -184,8 +185,8 @@ describe("<Wizard />", () => {
         {(value) => {
           if (value === true) {
             dispatch({
-              type: "add_step",
               payload: { insertAfter: "second_step", step: optionnalStep },
+              type: "add_step",
             });
           }
         }}

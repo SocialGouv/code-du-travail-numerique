@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import { useUIDSeed } from "react-uid";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Accordion, theme, Title } from "@socialgouv/react-ui";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import Link from "next/link";
+import React from "react";
+import { useUIDSeed } from "react-uid";
+import styled from "styled-components";
 
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
@@ -39,14 +39,12 @@ function Contributions({ contributions, convention }) {
       return a.localeCompare(b);
     })
     .map((theme) => ({
-      id: theme,
-      title: theme,
       body: (
         <Accordion
           items={contributionsByTheme[theme].map((item) => ({
+            body: AccordionContent(item),
             id: item.slug,
             title: item.question,
-            body: AccordionContent(item),
           }))}
           onChange={trackAccordionPanelState(
             convention.shortTitle,
@@ -54,6 +52,8 @@ function Contributions({ contributions, convention }) {
           )}
         />
       ),
+      id: theme,
+      title: theme,
     }));
 
   return (

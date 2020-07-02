@@ -1,9 +1,10 @@
-import React from "react";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
-import SearchBar from "../SearchBar";
-import { fetchSuggestResults } from "../search.service";
-import { matopush } from "../../piwik";
+import React from "react";
 import { act } from "react-dom/test-utils";
+
+import { matopush } from "../../piwik";
+import { fetchSuggestResults } from "../search.service";
+import SearchBar from "../SearchBar";
 
 jest.useFakeTimers();
 

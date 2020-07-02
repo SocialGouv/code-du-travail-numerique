@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Field } from "react-final-form";
 import { Select } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import { Field } from "react-final-form";
 
-import { required } from "../../../common/validators";
 import { Label, SectionTitle } from "../../../common/stepStyles";
+import { required } from "../../../common/validators";
 
 export const OUVRIER = "ouvrier";
 export const TAM = "tam";
 export const CADRE = "cadre";
 
 export const Categories = {
+  [CADRE]: "Cadre",
   [OUVRIER]: "Ouvriers et employés",
   [TAM]: "Techniciens et agents de maîtrise (TAM)",
-  [CADRE]: "Cadre",
 };
 
 function Categorie({ name }) {

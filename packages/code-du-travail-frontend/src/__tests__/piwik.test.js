@@ -8,7 +8,7 @@ describe("initPiwik", () => {
     // we need to add a fake script node so
     // initPiwik can insert piwik tracker code before it
     document.head.appendChild(document.createElement("script"));
-    initPiwik({ siteId: "42", piwikUrl: "YO" });
+    initPiwik({ piwikUrl: "YO", siteId: "42" });
     expect(global._paq).toMatchInlineSnapshot(`
       Array [
         Array [

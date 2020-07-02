@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Alert, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import { SectionTitle, Highlight } from "../../common/stepStyles";
-import { Montant } from "./Montant";
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 import { FormulaDetails } from "./FormulaDetails";
+import { Montant } from "./Montant";
 
 function IndemniteCCn({
   children,
@@ -102,14 +102,14 @@ function IndemniteCCn({
 }
 IndemniteCCn.propTypes = {
   branche: PropTypes.string.isRequired,
+  error: PropTypes.string,
   indemniteConventionnelle: PropTypes.number.isRequired,
   indemniteLegale: PropTypes.number.isRequired,
-  error: PropTypes.string,
-  infoCalculLegal: PropTypes.shape({
+  infoCalculConventionnel: PropTypes.shape({
     formula: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired,
   }).isRequired,
-  infoCalculConventionnel: PropTypes.shape({
+  infoCalculLegal: PropTypes.shape({
     formula: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired,
   }).isRequired,

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
 import {
   BurgerNav as RootBurgerNav,
   BurgerNavButton as NavButton,
-  BurgerNavLink as NavAnchor,
   BurgerNavCurrent as NavCurrent,
+  BurgerNavLink as NavAnchor,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
 

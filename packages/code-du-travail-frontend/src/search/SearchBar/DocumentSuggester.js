@@ -1,30 +1,30 @@
-import React from "react";
+import { theme } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React from "react";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
-
-const { colors } = theme;
 
 import Html from "../../common/Html";
+
+const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool,
+    inputId: PropTypes.string,
     onChange: PropTypes.func.isRequired,
+    onClear: PropTypes.func.isRequired,
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired,
-    onClear: PropTypes.func.isRequired,
     query: PropTypes.string,
-    inputId: PropTypes.string,
     suggestions: PropTypes.array,
   };
 
   static defaultProps = {
-    hasFocus: false,
-    query: "",
-    inputId: "main-search-input",
     excludeSources: "",
+    hasFocus: false,
+    inputId: "main-search-input",
+    query: "",
     suggestions: [],
   };
 
@@ -79,16 +79,16 @@ export class DocumentSuggester extends React.Component {
       suggestions,
     } = this.props;
     const inputProps = {
+      "aria-label": ariaLabel,
+      className,
       id: inputId,
       name: "q",
-      placeholder,
-      title: ariaLabel,
-      "aria-label": ariaLabel,
-      type: "search",
-      className,
-      value: query,
       onChange,
       onKeyPress: this.onKeyPress,
+      placeholder,
+      title: ariaLabel,
+      type: "search",
+      value: query,
     };
     return (
       <Autosuggest
@@ -143,27 +143,27 @@ const suggesterTheme = {
   container: {
     flex: "1 1 auto",
   },
-  suggestionsList: {
-    margin: 0,
-    padding: 0,
-    marginTop: ".5em",
-    paddingTop: "0",
-    border: "1px solid silver",
-    borderRadius: "3px",
-    background: "white",
-    position: "absolute",
-    left: 0,
-    right: 0,
-    boxShadow: "0 10px 10px -10px #b7bcdf",
-  },
   suggestion: {
-    listStyleType: "none",
     borderRadius: "3px",
-    padding: 5,
-    lineHeight: "2rem",
     cursor: "pointer",
+    lineHeight: "2rem",
+    listStyleType: "none",
+    padding: 5,
   },
   suggestionHighlighted: {
     background: colors.bgTertiary,
+  },
+  suggestionsList: {
+    background: "white",
+    border: "1px solid silver",
+    borderRadius: "3px",
+    boxShadow: "0 10px 10px -10px #b7bcdf",
+    left: 0,
+    margin: 0,
+    marginTop: ".5em",
+    padding: 0,
+    paddingTop: "0",
+    position: "absolute",
+    right: 0,
   },
 };

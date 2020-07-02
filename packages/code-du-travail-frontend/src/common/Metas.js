@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import React from "react";
 
 export default function Metas({ url, title, description, image }) {
   const router = useRouter();
@@ -30,8 +30,8 @@ export default function Metas({ url, title, description, image }) {
 }
 
 Metas.propTypes = {
-  title: PropTypes.string,
   description: PropTypes.string,
-  url: PropTypes.string,
   image: PropTypes.string,
+  title: PropTypes.string,
+  url: PropTypes.string,
 };

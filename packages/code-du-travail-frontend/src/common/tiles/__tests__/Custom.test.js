@@ -1,7 +1,8 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import { CallToActionTile } from "../CallToAction";
 import { icons } from "@socialgouv/react-ui/";
+import { render } from "@testing-library/react";
+import React from "react";
+
+import { CallToActionTile } from "../CallToAction";
 
 const tileProps = {
   action: "Bonjour",

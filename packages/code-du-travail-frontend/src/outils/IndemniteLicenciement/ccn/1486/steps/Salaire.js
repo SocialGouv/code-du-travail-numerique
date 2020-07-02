@@ -1,10 +1,10 @@
+import { Input, Table as UITable, theme, Toast } from "@socialgouv/react-ui";
+import { format, subMonths } from "date-fns";
+import frLocale from "date-fns/locale/fr";
 import React from "react";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { subMonths, format } from "date-fns";
-import frLocale from "date-fns/locale/fr";
-import { Input, Table as UITable, Toast, theme } from "@socialgouv/react-ui";
 
 import { parse } from "../../../../common/date";
 import { InlineError } from "../../../../common/ErrorField";
@@ -63,10 +63,10 @@ const RegularNewSalaire = ({ name }) => (
       name={name}
       validate={isNumber}
       subscription={{
-        value: true,
         error: true,
-        touched: true,
         invalid: true,
+        touched: true,
+        value: true,
       }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
@@ -127,10 +127,10 @@ const IrregularNewSalaire = ({ name }) => (
                         return isFinite(value) ? parseFloat(value) : null;
                       }}
                       subscription={{
-                        value: true,
                         error: true,
-                        touched: true,
                         invalid: true,
+                        touched: true,
+                        value: true,
                       }}
                       render={({
                         input,

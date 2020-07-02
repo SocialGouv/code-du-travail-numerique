@@ -1,11 +1,11 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from "react";
 import { AccordionItemHeading } from "react-accessible-accordion";
+import styled from "styled-components";
 
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import { breakpoints } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent";
-import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import * as variants from "./components/variants";
 
 export const Accordion = ({ items, noTitle, variant, ...props }) => {

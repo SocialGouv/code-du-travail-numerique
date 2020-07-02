@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Euro, Search } from "../icons";
 import { Section } from "../layout/Section";
+import { InputCheckbox } from "./Checkbox";
 import { Input } from "./Input";
 import { InputDate } from "./InputDate";
 import { Label } from "./Label";
 import { InputRadio } from "./Radio";
-import { InputCheckbox } from "./Checkbox";
 import { Select } from "./Select";
 import { Textarea } from "./Textarea";
-import { Euro, Search } from "../icons";
 
 export default {
   component: Select,
@@ -37,7 +37,7 @@ export const base = () => (
     <Section>
       <Label htmlFor="select">Select</Label>
       <Select id="select">
-        <option></option>
+        <option />
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>

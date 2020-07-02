@@ -1,9 +1,7 @@
-import React from "react";
-import styled from "styled-components";
 import {
   Container,
-  IconStripe,
   icons,
+  IconStripe,
   InsertTitle,
   PageTitle,
   Section,
@@ -11,12 +9,14 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
-import Metas from "../src/common/Metas";
-import Origins from "../src/droit-du-travail/Origins";
-import Hierarchy from "../src/droit-du-travail/Hierarchy";
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import Hierarchy from "../src/droit-du-travail/Hierarchy";
+import Origins from "../src/droit-du-travail/Origins";
+import { Layout } from "../src/layout/Layout";
 
 const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
   <Layout>

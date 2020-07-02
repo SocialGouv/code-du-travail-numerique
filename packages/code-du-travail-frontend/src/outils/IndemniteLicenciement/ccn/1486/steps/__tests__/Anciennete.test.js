@@ -1,8 +1,9 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
 import { Form } from "react-final-form";
-import { CATEGORIE_KEY } from "../Categorie";
+
 import { Anciennete } from "../Anciennete";
+import { CATEGORIE_KEY } from "../Categorie";
 
 describe("<Anciennete />", () => {
   it("renders AncienneteETAMIC component", () => {

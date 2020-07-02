@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
-import styled from "styled-components";
+import PropTypes from "prop-types";
+import React from "react";
 import { X } from "react-feather";
+import styled from "styled-components";
 
-import { box, breakpoints, spacings } from "../theme";
 import { Button } from "../Button";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
+import { box, breakpoints, spacings } from "../theme";
 
 export const Modal = ({
   children,
@@ -37,10 +37,10 @@ export const Modal = ({
 };
 
 Modal.propTypes = {
+  ContentWrapper: PropTypes.object,
+  children: PropTypes.node.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onDismiss: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
-  ContentWrapper: PropTypes.object,
   title: PropTypes.string,
 };
 

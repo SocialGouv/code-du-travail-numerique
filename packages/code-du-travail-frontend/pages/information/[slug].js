@@ -1,25 +1,25 @@
-import React from "react";
-import getConfig from "next/config";
-import Link from "next/link";
-import styled from "styled-components";
+import { SOURCES } from "@cdt/sources";
 import {
+  Accordion,
   Button,
   icons,
   MoreContent,
   theme,
   Wrapper,
-  Accordion,
 } from "@socialgouv/react-ui";
-import { SOURCES } from "@cdt/sources";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
+import styled from "styled-components";
 import unified from "unified";
 
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
+import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
-import Html from "../../src/common/Html";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -44,11 +44,11 @@ const InfoLink = ({ children, href }) => {
 const processor = unified()
   .use(htmlToHtmlAst, { fragment: true })
   .use(htmlAstToReact, {
-    createElement: React.createElement,
+    Fragment: React.Fragment,
     components: {
       a: InfoLink,
     },
-    Fragment: React.Fragment,
+    createElement: React.createElement,
   });
 
 const Information = ({
@@ -106,9 +106,9 @@ const Information = ({
     editorialContent = (
       <Accordion
         items={contents.map(({ title, name }, index) => ({
-          title,
           anchor: name,
           body: editorialContent[index],
+          title,
         }))}
       />
     );

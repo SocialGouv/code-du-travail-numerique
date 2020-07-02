@@ -1,8 +1,9 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Step } from "../Step";
+import React from "react";
 import { Form } from "react-final-form";
+
 import { CADRE } from "../Categorie";
+import { Step } from "../Step";
 
 describe("<Step />", () => {
   it("should render", () => {

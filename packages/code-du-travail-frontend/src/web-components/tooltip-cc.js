@@ -1,7 +1,7 @@
-import { LitElement, html, css } from "lit-element";
-import { throttledDisplayInViewport } from "./utils";
+import { css, html, LitElement } from "lit-element";
 
 import { matopush } from "../piwik";
+import { throttledDisplayInViewport } from "./utils";
 
 class WebComponentsTooltipCC extends LitElement {
   static get properties() {

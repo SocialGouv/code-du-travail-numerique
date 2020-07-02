@@ -52,6 +52,35 @@ const ordering = {
     ["Conseil de prud'hommes (CPH)", "Autres cas de mise à disposition"],
   ],
 
+  "Contrat de travail > Période d'essai": [
+    [
+      "Définition",
+      "Une clause nécessaire du contrat de travail",
+      "Généralités",
+    ],
+    [
+      "Durée maximale par catégories de salariés",
+      "Exceptions relatives à la durée",
+      "Renouvellements : possibilités et durée",
+    ],
+    [
+      "Délai de prévenance et Rupture par le salarié",
+      "Délai de prévenance et Rupture par l'employeur",
+    ],
+    ["stagiaire"],
+  ],
+
+  "Contrat de travail > Rupture de contrat à durée Indéterminée (CDI)": [
+    [
+      "Principes de la rupture",
+      "Licenciement",
+      "Rupture conventionnelle (individuelle)",
+      "Rupture à l'initiative du salarié",
+      "Rupture d'un commun accord prévue par un accord collectif",
+    ],
+    ["Cas particuliers", "Retraite"],
+  ],
+
   "Durée du travail et congés": [
     ["Durée du travail"],
     ["Congés payés", "Compte épargne temps", "Congés autres"],
@@ -74,35 +103,6 @@ const ordering = {
       "Travail du dimanche",
     ],
     ["Outre - mer"],
-  ],
-
-  "Contrat de travail > Rupture de contrat à durée Indéterminée (CDI)": [
-    [
-      "Principes de la rupture",
-      "Licenciement",
-      "Rupture conventionnelle (individuelle)",
-      "Rupture à l'initiative du salarié",
-      "Rupture d'un commun accord prévue par un accord collectif",
-    ],
-    ["Cas particuliers", "Retraite"],
-  ],
-
-  "Contrat de travail > Période d'essai": [
-    [
-      "Définition",
-      "Une clause nécessaire du contrat de travail",
-      "Généralités",
-    ],
-    [
-      "Durée maximale par catégories de salariés",
-      "Exceptions relatives à la durée",
-      "Renouvellements : possibilités et durée",
-    ],
-    [
-      "Délai de prévenance et Rupture par le salarié",
-      "Délai de prévenance et Rupture par l'employeur",
-    ],
-    ["stagiaire"],
   ],
 };
 

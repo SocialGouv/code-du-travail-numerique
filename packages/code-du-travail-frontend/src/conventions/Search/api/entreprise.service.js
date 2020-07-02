@@ -1,8 +1,8 @@
-import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
-import memoizee from "memoizee";
-import debounce from "debounce-promise";
 import slugify from "@cdt/data/slugify";
+import debounce from "debounce-promise";
+import fetch from "isomorphic-unfetch";
+import memoizee from "memoizee";
+import getConfig from "next/config";
 
 const {
   publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
@@ -56,12 +56,12 @@ const apiEntrepriseSiret = memoizee(
 
 // format results API Sirene. embed the IDCC numbers at runtime
 const formatEtablissement = (result) => ({
-  type: "entreprise",
   id: result.id,
-  siret: result.siret,
   label: `${result.nom_raison_sociale} ${result.code_postal || ""} ${
     result.libelle_commune || ""
   }`,
+  siret: result.siret,
+  type: "entreprise",
 });
 
 // format a set of results from API Sirene

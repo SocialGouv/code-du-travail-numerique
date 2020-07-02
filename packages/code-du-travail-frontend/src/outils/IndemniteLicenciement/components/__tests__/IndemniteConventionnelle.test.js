@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { IndemniteCCn } from "../IndemniteConventionnelle";
 
 // branche,
@@ -19,14 +20,14 @@ describe("<IndemniteCCn />", () => {
         indemniteLegale={42}
         indemniteConventionnelle={2000}
         infoCalculLegal={{
-          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A",
+          labels: { "anciennete (A)": 32, "salaire ref (Sref)": 42 },
         }}
         infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
-            "salaire de ref (Sref)": 1337,
             foo: "bar",
+            "salaire de ref (Sref)": 1337,
           },
         }}
       />
@@ -40,14 +41,14 @@ describe("<IndemniteCCn />", () => {
         indemniteLegale={2500}
         indemniteConventionnelle={1337}
         infoCalculLegal={{
-          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A",
+          labels: { "anciennete (A)": 32, "salaire ref (Sref)": 42 },
         }}
         infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
-            "salaire de ref (Sref)": 1337,
             foo: "bar",
+            "salaire de ref (Sref)": 1337,
           },
         }}
       />
@@ -61,14 +62,14 @@ describe("<IndemniteCCn />", () => {
         indemniteLegale={42}
         indemniteConventionnelle={1200}
         infoCalculLegal={{
-          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A",
+          labels: { "anciennete (A)": 32, "salaire ref (Sref)": 42 },
         }}
         infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
-            "salaire de ref (Sref)": 1337,
             foo: "bar",
+            "salaire de ref (Sref)": 1337,
           },
         }}
         error="lorem ipsum"
