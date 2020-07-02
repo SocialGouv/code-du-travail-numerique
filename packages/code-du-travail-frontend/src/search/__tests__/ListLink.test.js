@@ -38,7 +38,7 @@ describe("ListLink", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectResult",
-      '{"algo":"semantic", "url":"/fiche-service-public/mer-il-est-fou"}',
+      '{"algo":"semantic","url":"/fiche-service-public/mer-il-est-fou"}',
     ]);
   });
 });
