@@ -36,3 +36,15 @@ jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function () {
 require("@reach/utils").checkStyles = jest.fn();
 
 window.scrollTo = jest.fn();
+
+const fixedDate = new Date(Date.UTC(2020, 0, 4));
+// eslint-disable-next-line
+Date = class extends Date {
+  constructor(date) {
+    if (date) {
+      // eslint-disable-next-line
+      return super(date);
+    }
+    return fixedDate;
+  }
+};
