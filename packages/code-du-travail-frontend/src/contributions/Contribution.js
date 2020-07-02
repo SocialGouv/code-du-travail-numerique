@@ -55,11 +55,7 @@ const References = ({ references = [] }) => {
           <ul>
             {agreementRefs.map(({ url, title, index }) => (
               <li key={`agreement_ref${index}`}>
-                {url ? (
-                  <RefLink title={title} url={url} />
-                ) : (
-                  <span>{title}</span>
-                )}
+                <RefLink title={title} url={url} />
               </li>
             ))}
           </ul>
@@ -90,11 +86,7 @@ const References = ({ references = [] }) => {
           <ul>
             {othersRefs.map(({ title, url }, index) => (
               <li key={`otherRef_${index}`}>
-                {url ? (
-                  <RefLink title={title} url={url} />
-                ) : (
-                  <span>{title}</span>
-                )}
+                <RefLink title={title} url={url} />
               </li>
             ))}
           </ul>
