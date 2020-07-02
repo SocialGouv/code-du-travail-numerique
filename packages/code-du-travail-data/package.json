@@ -29,7 +29,7 @@
   "dependencies": {
     "@cdt/sources": "^4.22.0",
     "@elastic/elasticsearch": "^7.8.0",
-    "@socialgouv/contributions-data": "^1.38.0",
+    "@socialgouv/contributions-data": "^2.1.0",
     "@socialgouv/datafiller-data": "^1.32.0",
     "@socialgouv/fiches-travail-data": "^3.120.0",
     "@socialgouv/fiches-vdd": "^1.116.0",
@@ -51,7 +51,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
-    "@socialgouv/eslint-config-recommended": "^0.35.0",
+    "@socialgouv/eslint-config-recommended": "^1.6.0",
     "@zeit/ncc": "^0.22.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
