@@ -193,7 +193,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     <strong
       class="c1"
     >
-      17,444.44
+      17 444,44
        € brut
     </strong>
     .
@@ -224,7 +224,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <span
           class="c6"
         >
-          15,875.00
+          15 875,00
            € brut
         </span>
       </div>
@@ -820,7 +820,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         <span
           class="c6"
         >
-          17,444.44
+          17 444,44
            € brut
         </span>
       </div>
@@ -1215,7 +1215,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
     <strong
       class="c1"
     >
-      15,875.00
+      15 875,00
        € brut
     </strong>
     .
@@ -1246,7 +1246,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <span
           class="c6"
         >
-          15,875.00
+          15 875,00
            € brut
         </span>
       </div>
@@ -1842,7 +1842,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         <span
           class="c6"
         >
-          8,722.22
+          8 722,22
            € brut
         </span>
       </div>

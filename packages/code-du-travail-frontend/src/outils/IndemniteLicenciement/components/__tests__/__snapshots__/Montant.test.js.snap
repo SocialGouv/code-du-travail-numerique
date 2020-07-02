@@ -61,7 +61,7 @@ exports[`<Montant /> renders with ratio 1`] = `
     <span
       class="c2"
     >
-      10.00
+      10,00
        € brut
     </span>
   </div>

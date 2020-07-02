@@ -1357,7 +1357,7 @@ exports[`<Stats /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 06/01/2009 08:40
+        le 04/01/2020 à 00:00:00
       </div>
       <div
         class="c4"
@@ -1665,7 +1665,7 @@ exports[`<Stats /> should render 1`] = `
             <p>
               Statistiques d’utilisation depuis le
                
-              01/01/2020 00:00
+              01/01/2020
             </p>
           </div>
         </div>
