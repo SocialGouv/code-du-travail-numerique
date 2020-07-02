@@ -193,7 +193,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     <strong
       class="c1"
     >
-      2,000.00
+      2 000,00
        € brut
     </strong>
     .
@@ -224,7 +224,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c6"
         >
-          42.00
+          42,00
            € brut
         </span>
       </div>
@@ -413,7 +413,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c6"
         >
-          2,000.00
+          2 000,00
            € brut
         </span>
       </div>
@@ -789,7 +789,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     <strong
       class="c1"
     >
-      2,500.00
+      2 500,00
        € brut
     </strong>
     .
@@ -820,7 +820,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <span
           class="c6"
         >
-          2,500.00
+          2 500,00
            € brut
         </span>
       </div>
@@ -1009,7 +1009,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <span
           class="c6"
         >
-          1,337.00
+          1 337,00
            € brut
         </span>
       </div>

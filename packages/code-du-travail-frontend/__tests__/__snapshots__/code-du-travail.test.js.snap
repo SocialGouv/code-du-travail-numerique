@@ -1394,7 +1394,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 1/4/2020, 12:00:00 AM
+        le 04/01/2020 à 00:00:00
       </div>
       <div
         class="c4"

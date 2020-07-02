@@ -9508,6 +9508,11 @@ fstream@^1.0.0, fstream@^1.0.12, fstream@~1.0.11:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+full-icu@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/full-icu/-/full-icu-1.3.1.tgz#e67fdf58523f1d1e0d9143b1542fe2024c1c8997"
+  integrity sha512-VMtK//85QJomhk3cXOCksNwOYaw1KWnYTS37GYGgyf7A3ajdBoPGhaJuJWAH2S2kq8GZeXkdKn+3Mfmgy11cVw==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -10848,11 +10853,6 @@ interpret@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-2.1.0.tgz#3440c40d660bb66e77a5953cf472f7d160ae45b2"
   integrity sha512-tNVZ/5HHkv5Bhp4zIF7YMXKx43/u74Nnpu9fmooNpf+4tc0ARZypBvHr6Mg6zvlltWuWPn2NeQJS5zpaNyD3RQ==
-
-intl@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/intl/-/intl-1.2.5.tgz#82244a2190c4e419f8371f5aa34daa3420e2abde"
-  integrity sha1-giRKIZDE5Bn4Nx9ao02qNCDiq94=
 
 invariant@^2.2.2, invariant@^2.2.3, invariant@^2.2.4:
   version "2.2.4"

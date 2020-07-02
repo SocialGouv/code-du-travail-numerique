@@ -72,7 +72,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
     <strong
       class="c1"
     >
-      42.00
+      42,00
        € brut.
     </strong>
      
