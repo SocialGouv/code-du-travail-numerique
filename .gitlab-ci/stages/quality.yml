@@ -38,7 +38,7 @@ Lint socialgouv/react-ui:
   <<: *quality_stage
   <<: *master_based_stage
   script:
-    - yarn workspace @socialgouv/react-fiches-service-public lint
+    - yarn workspace @socialgouv/react-fiche-service-public lint
 
 Lint @cdtn/frontend:
   <<: *quality_stage
