@@ -1,9 +1,8 @@
+import { theme, Wrapper } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
 import React from "react";
 import { useUIDSeed } from "react-uid";
-import PropTypes from "prop-types";
 import styled from "styled-components";
-
-import { theme, Wrapper } from "@socialgouv/react-ui";
 
 import { getText, ignoreParagraph } from "../utils";
 import Accordion from "./Accordion";

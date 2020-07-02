@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { Table as UITable } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
 
+import { getText, ignoreParagraph } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
-import { ignoreParagraph, getText } from "../utils";
 
 const ROW_HEADER = "header";
 
