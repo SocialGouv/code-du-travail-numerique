@@ -89,6 +89,7 @@
     "intl": "^1.2.5",
     "jest": "^26.1.0",
     "jest-styled-components": "^7.0.2",
+    "mockdate": "^3.0.2",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "stylelint": "^13.6.1",
