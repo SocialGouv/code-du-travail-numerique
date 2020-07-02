@@ -2700,20 +2700,20 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.120.0.tgz#7fb0bf75d4a643498ba768dab0092d291bbc57a1"
   integrity sha512-SSsIKVsMkWisDdz34opgnK6edA769FDPSWwKEWcSx9LZuXhrv/cnNl3sJpb7uamWBwBNYmEzQLhBQrKJf+uQ1g==
 
-"@socialgouv/fiches-vdd@^1.116.0":
-  version "1.116.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.116.0.tgz#2f7cdfc70dc2107276e04d613f0d07403316f70e"
-  integrity sha512-h0PxQ2vgB3fCVfb1++Z+CJy3D5QYq6SIVAu7pPQLAGZ9+SO5jLeQh00fT6GqXzHnvsr7c5T82/ShizlToZ2/yg==
+"@socialgouv/fiches-vdd@^1.117.0":
+  version "1.117.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.117.0.tgz#1a2e92d25dea9f2512505dacd010cc9a207b7569"
+  integrity sha512-un7iJZHDLq+V/r1U+P324GtIQVI10ujOqUgMm7db77KI7zdHL3NN9z8a2+Z5l7Oqnui/HUDLP6qKSAED4oe9Dw==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.77.0":
-  version "1.77.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.77.0.tgz#c504a38e972f6bc02f4e29d9f5bf63274ad914da"
-  integrity sha512-rgtCbXMTR2n2Lr3K4QKgW4LnwOM21jqEHn2UDL7E4Yz+g4CTJup/BjT4vcw75JCYMjZFBLUixgKEitUI+xmlig==
+"@socialgouv/kali-data@^1.78.0":
+  version "1.78.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.78.0.tgz#272d70c072f318cd393cfd464424e19c83fc6175"
+  integrity sha512-H+C9VlElvzTmOTSYrLC0O4ustFXTHFXQkxeEF54qB8XisLb2dm0j0UmrtRoPKH9s9tUlDCwX2Py0seZNgvMbtw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
