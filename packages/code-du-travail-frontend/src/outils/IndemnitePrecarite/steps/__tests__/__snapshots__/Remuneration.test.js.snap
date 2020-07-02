@@ -249,6 +249,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   max-width: 40rem;
 }
 
+.c16 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
 .c14 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -291,12 +297,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 0.4rem;
-}
-
-.c16 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-style: italic;
 }
 
 @media (max-width:600px) {

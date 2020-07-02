@@ -130,14 +130,14 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
           ...
         </option>
         <option
-          value="foo"
-        >
-          label foo
-        </option>
-        <option
           value="baz"
         >
           label baz
+        </option>
+        <option
+          value="foo"
+        >
+          label foo
         </option>
       </select>
       <div
@@ -303,14 +303,14 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
           ...
         </option>
         <option
-          value="foo"
-        >
-          label foo
-        </option>
-        <option
           value="baz"
         >
           label baz
+        </option>
+        <option
+          value="foo"
+        >
+          label foo
         </option>
       </select>
       <div

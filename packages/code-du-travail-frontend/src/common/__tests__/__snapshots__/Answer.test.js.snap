@@ -163,6 +163,32 @@ exports[`<Answer /> should renders 1`] = `
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -237,32 +263,6 @@ exports[`<Answer /> should renders 1`] = `
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -373,6 +373,31 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -454,31 +479,6 @@ exports[`<Answer /> should renders 1`] = `
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 
@@ -818,6 +818,32 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   padding-left: 4rem;
 }
 
+.c8 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c9 {
+  width: 80%;
+}
+
 .c17 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -833,65 +859,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c20 {
   margin: 3.2rem 0 0 0;
-}
-
-.c23 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c23 > *:first-child {
-  margin-top: 0;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c25 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c30 + .c29 {
-  margin-left: 4rem;
 }
 
 .c0 {
@@ -963,10 +930,12 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   color: #7994d4;
 }
 
-.c8 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c23 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -974,19 +943,50 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
 }
 
-.c9 {
-  width: 80%;
+.c23 > *:first-child {
+  margin-top: 0;
+}
+
+.c23 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c25 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.c30 + .c29 {
+  margin-left: 4rem;
 }
 
 .c21 {
@@ -1116,6 +1116,31 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c8 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c17 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -1142,6 +1167,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c18 {
     display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c3 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.2rem;
+  }
+
+  .c4:not(:last-of-type) {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -1197,62 +1253,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:1180px) {
   .c30 + .c29 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.2rem;
-  }
-
-  .c4:not(:last-of-type) {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c8 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    width: 100%;
   }
 }
 
@@ -1632,6 +1632,32 @@ exports[`<Answer /> should renders back to results link 1`] = `
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1706,32 +1732,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -1842,6 +1842,31 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -1923,31 +1948,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 
@@ -2486,6 +2486,40 @@ exports[`<Answer /> should renders related content 1`] = `
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 70%;
+}
+
+.c23 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 16rem;
+  width: calc(30% - 4rem);
+  margin-left: 4rem;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2599,40 +2633,6 @@ exports[`<Answer /> should renders related content 1`] = `
 .c42 {
   margin: 0 0 1.6rem 0;
   padding: 0;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 70%;
-}
-
-.c23 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 16rem;
-  width: calc(30% - 4rem);
-  margin-left: 4rem;
 }
 
 .c12 {
@@ -2779,6 +2779,50 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:980px) {
+  .c23 {
+    padding-top: 0;
+  }
+}
+
+@media (max-width:1180px) {
+  .c23 {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c23 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -2911,50 +2955,6 @@ exports[`<Answer /> should renders related content 1`] = `
 
   .c26 + .c25 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (min-width:980px) {
-  .c23 {
-    padding-top: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c23 {
-    width: 30%;
-    margin: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c23 {
-    width: 100%;
   }
 }
 
@@ -3525,6 +3525,32 @@ exports[`<Answer /> should renders tooltip 1`] = `
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3599,32 +3625,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -3735,6 +3735,31 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -3816,31 +3841,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 
@@ -4137,6 +4137,32 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4211,32 +4237,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -4347,6 +4347,31 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -4428,31 +4453,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 
@@ -4749,6 +4749,32 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4823,32 +4849,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -4959,6 +4959,31 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -5040,31 +5065,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 
@@ -5362,6 +5362,32 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   padding-left: 4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5436,32 +5462,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c21 + .c20 {
   margin-left: 4rem;
-}
-
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
 }
 
 .c12 {
@@ -5572,6 +5572,31 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -5653,31 +5678,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 @media (max-width:1180px) {
   .c21 + .c20 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 

@@ -42,7 +42,7 @@ describe("flattenTags", () => {
       foo: ["bar", "baz"],
       key: "val",
     };
-    expect(flattenTags(tags)).toEqual(["key:val", "foo:bar", "foo:baz"]);
+    expect(flattenTags(tags)).toEqual(["foo:bar", "foo:baz", "key:val"]);
   });
 });
 
@@ -54,7 +54,7 @@ describe("makeSlug", () => {
       key: "val",
     };
     expect(makeSlug(title, flattenTags(tags).join("-"))).toEqual(
-      "my-title-sxc4it-rq8-sjg"
+      "my-title-ilp-xggkv8obgw"
     );
   });
 });

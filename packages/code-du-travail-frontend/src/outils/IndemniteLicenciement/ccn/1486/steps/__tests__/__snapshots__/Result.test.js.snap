@@ -51,35 +51,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   white-space: pre-line;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 0.9100320789890648);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c15 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
-}
-
 .c13 {
   margin: 1.6rem 0;
 }
@@ -115,6 +86,35 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 0.9100320789890648);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -247,9 +247,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           <li
             class="c11"
           >
-            Salaire de réference (Sref)
+            Ancienneté totale (A)
              : 
-            4500
+            13.08
           </li>
           <li
             class="c11"
@@ -261,9 +261,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           <li
             class="c11"
           >
-            Ancienneté totale (A)
+            Salaire de réference (Sref)
              : 
-            13.08
+            4500
           </li>
           <li
             class="c11"
@@ -1083,35 +1083,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
   white-space: pre-line;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c15 {
-  width: calc(50% * 0.5494311811023621);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
-}
-
 .c13 {
   margin: 1.6rem 0;
 }
@@ -1147,6 +1118,35 @@ exports[`<Result /> renders legal indemnite 1`] = `
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 0.5494311811023621);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -1269,9 +1269,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
           <li
             class="c11"
           >
-            Salaire de réference (Sref)
+            Ancienneté totale (A)
              : 
-            4500
+            13.08
           </li>
           <li
             class="c11"
@@ -1283,9 +1283,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
           <li
             class="c11"
           >
-            Ancienneté totale (A)
+            Salaire de réference (Sref)
              : 
-            13.08
+            4500
           </li>
           <li
             class="c11"

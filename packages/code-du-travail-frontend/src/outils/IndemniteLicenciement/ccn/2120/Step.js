@@ -15,14 +15,17 @@ export const NE_SAIT_PAS = "ne-sais-pas";
 
 export const optionMotifs = {
   [DISCIPLINAIRE]: "Motif disciplinaire",
-  [ECONOMIQUE]: "Motif économique",
   [NON_DISCIPLINAIRE]: "Motif non disciplinaire",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  [ECONOMIQUE]: "Motif économique",
 };
 
 export const optionCategorie = {
-  [CADRE]: "Cadre",
-  [NE_SAIT_PAS]: "Ne sait pas",
   [NON_CADRE]: "Non cadre",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  [CADRE]: "Cadre",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  [NE_SAIT_PAS]: "Ne sait pas",
 };
 
 function Step() {

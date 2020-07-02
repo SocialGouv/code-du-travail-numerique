@@ -10,10 +10,12 @@ import { stepAnciennete, stepSalaire } from "../index";
 export const CATEGORIE_KEY = "brancheCategorie";
 
 const CATEGORIES = {
-  CEI: "Chargé d'enquête intermittent",
-  CENI: "Chargé d'enquête non intermittent",
   ETAM: "Employé, Technicien, Agent de Maîtrise",
   IC: "Ingénieur Cadre",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  CENI: "Chargé d'enquête non intermittent",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  CEI: "Chargé d'enquête intermittent",
 };
 
 export const Categorie = ({ dispatch }) => (

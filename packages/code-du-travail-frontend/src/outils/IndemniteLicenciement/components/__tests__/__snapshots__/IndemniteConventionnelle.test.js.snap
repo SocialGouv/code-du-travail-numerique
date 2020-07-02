@@ -61,35 +61,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   white-space: pre-line;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 0.021);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c15 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
-}
-
 .c13 {
   margin: 1.6rem 0;
 }
@@ -125,6 +96,35 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 0.021);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -247,16 +247,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c11"
           >
-            salaire ref (Sref)
+            anciennete (A)
              : 
-            42
+            32
           </li>
           <li
             class="c11"
           >
-            anciennete (A)
+            salaire ref (Sref)
              : 
-            32
+            42
           </li>
         </ul>
         <strong
@@ -436,16 +436,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c11"
           >
-            salaire de ref (Sref)
+            foo
              : 
-            1337
+            bar
           </li>
           <li
             class="c11"
           >
-            foo
+            salaire de ref (Sref)
              : 
-            bar
+            1337
           </li>
         </ul>
         <strong
@@ -657,35 +657,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   white-space: pre-line;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c15 {
-  width: calc(50% * 0.5348);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
-}
-
 .c13 {
   margin: 1.6rem 0;
 }
@@ -721,6 +692,35 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 0.5348);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -843,16 +843,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <li
             class="c11"
           >
-            salaire ref (Sref)
+            anciennete (A)
              : 
-            42
+            32
           </li>
           <li
             class="c11"
           >
-            anciennete (A)
+            salaire ref (Sref)
              : 
-            32
+            42
           </li>
         </ul>
         <strong
@@ -1032,16 +1032,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <li
             class="c11"
           >
-            salaire de ref (Sref)
+            foo
              : 
-            1337
+            bar
           </li>
           <li
             class="c11"
           >
-            foo
+            salaire de ref (Sref)
              : 
-            bar
+            1337
           </li>
         </ul>
         <strong

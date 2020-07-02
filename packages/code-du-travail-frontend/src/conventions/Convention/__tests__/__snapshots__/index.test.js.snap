@@ -605,6 +605,37 @@ exports[`<Convention /> renders 1`] = `
   text-align: left;
 }
 
+.c16 {
+  padding: 0.8rem 0;
+  font-weight: normal;
+}
+
+.c20 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c20 > *:first-child {
+  margin-top: 0;
+}
+
+.c20 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c12 {
+  margin-bottom: 2rem;
+}
+
+.c11 {
+  margin-bottom: 2.4rem;
+}
+
 .c39 {
   position: relative;
   display: -webkit-box;
@@ -637,37 +668,6 @@ exports[`<Convention /> renders 1`] = `
 .c45 {
   width: 3rem;
   height: 3rem;
-}
-
-.c16 {
-  padding: 0.8rem 0;
-  font-weight: normal;
-}
-
-.c20 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.c20 > *:first-child {
-  margin-top: 0;
-}
-
-.c20 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c12 {
-  margin-bottom: 2rem;
-}
-
-.c11 {
-  margin-bottom: 2.4rem;
 }
 
 @media (max-width:600px) {

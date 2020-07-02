@@ -616,6 +616,32 @@ exports[`<FicheMT /> should render 1`] = `
   text-align: center;
 }
 
+.c34 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c35 {
+  width: 80%;
+}
+
 .c44 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -631,65 +657,6 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c47 {
   margin: 3.2rem 0 0 0;
-}
-
-.c57 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c57 > *:first-child {
-  margin-top: 0;
-}
-
-.c57 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c59 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c61 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c64 + .c63 {
-  margin-left: 4rem;
 }
 
 .c26 {
@@ -761,10 +728,12 @@ exports[`<FicheMT /> should render 1`] = `
   color: #7994d4;
 }
 
-.c34 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c57 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -772,19 +741,50 @@ exports[`<FicheMT /> should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
 }
 
-.c35 {
-  width: 80%;
+.c57 > *:first-child {
+  margin-top: 0;
+}
+
+.c57 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c59 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.c61 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.c64 + .c63 {
+  margin-left: 4rem;
 }
 
 .c48 {
@@ -810,6 +810,130 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c48 div > *:last-child {
   margin-bottom: 0;
+}
+
+.c65 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c66 {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  background-color: #f2f5fa;
+}
+
+.c66:before {
+  position: absolute;
+  top: -27px;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 400px;
+  background-color: #f2f5fa;
+  border-radius: 100%;
+  content: "";
+}
+
+.c67 {
+  position: relative;
+  padding-bottom: 7rem;
+  text-align: center;
+}
+
+.c71 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding: 0;
+  max-width: 74rem;
+  margin-bottom: 2rem;
+}
+
+.c73 {
+  width: 1.5em;
+  margin-left: 1.6rem;
+}
+
+.c74 {
+  padding: 5rem 0;
+  background-color: #e4e8ef;
+}
+
+.c75 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c77 + .c76 {
+  padding-left: 1.6rem;
+}
+
+.c80 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c79 {
+  font-size: 1.6rem;
+}
+
+.c81 {
+  margin: 0.4rem 0;
+}
+
+.c82 {
+  font-weight: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c84 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #e4e8ef;
+}
+
+.c85 {
+  font-weight: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.c86 {
+  margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c17 ul {
@@ -1027,130 +1151,6 @@ exports[`<FicheMT /> should render 1`] = `
   text-decoration: underline;
   -webkit-text-decoration-color: #2f3b6c;
   text-decoration-color: #2f3b6c;
-}
-
-.c65 {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.c66 {
-  position: relative;
-  z-index: 1;
-  margin-top: 4rem;
-  padding-top: 1.6rem;
-  background-color: #f2f5fa;
-}
-
-.c66:before {
-  position: absolute;
-  top: -27px;
-  left: -50%;
-  z-index: -1;
-  width: 200%;
-  height: 400px;
-  background-color: #f2f5fa;
-  border-radius: 100%;
-  content: "";
-}
-
-.c67 {
-  position: relative;
-  padding-bottom: 7rem;
-  text-align: center;
-}
-
-.c71 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
-  margin-bottom: 2rem;
-}
-
-.c73 {
-  width: 1.5em;
-  margin-left: 1.6rem;
-}
-
-.c74 {
-  padding: 5rem 0;
-  background-color: #e4e8ef;
-}
-
-.c75 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c77 + .c76 {
-  padding-left: 1.6rem;
-}
-
-.c80 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c79 {
-  font-size: 1.6rem;
-}
-
-.c81 {
-  margin: 0.4rem 0;
-}
-
-.c82 {
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.c84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #e4e8ef;
-}
-
-.c85 {
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0 1rem 1rem 1rem;
-}
-
-.c86 {
-  margin-bottom: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .c0 {
@@ -1410,6 +1410,31 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c34 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c34 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c35 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
   .c44 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -1436,6 +1461,37 @@ exports[`<FicheMT /> should render 1`] = `
 @media (max-width:600px) {
   .c45 {
     display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c29 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    font-size: 1.2rem;
+  }
+
+  .c30:not(:last-of-type) {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -1495,62 +1551,6 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c29 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c29 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.2rem;
-  }
-
-  .c30:not(:last-of-type) {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c34 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c35 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
   .c48 {
     padding: 1.6rem 1rem;
   }
@@ -1560,6 +1560,84 @@ exports[`<FicheMT /> should render 1`] = `
   .c48 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media print {
+  .c66 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c67 {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c71 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c71 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c74 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c75 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c75 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c75 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c77 + .c76 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c80 {
+    text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c79 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c86 {
+    display: none;
   }
 }
 
@@ -1694,84 +1772,6 @@ exports[`<FicheMT /> should render 1`] = `
 
 @media print {
   .c21 {
-    display: none;
-  }
-}
-
-@media print {
-  .c66 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c67 {
-    padding-top: 0;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c71 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c71 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c74 {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c75 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c75 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c75 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c77 + .c76 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c80 {
-    text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c79 {
-    margin-top: 1rem;
-    text-align: center;
-  }
-}
-
-@media (max-width:980px) {
-  .c86 {
     display: none;
   }
 }

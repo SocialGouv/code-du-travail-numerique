@@ -11,9 +11,10 @@ export const TAM = "tam";
 export const CADRE = "cadre";
 
 export const Categories = {
-  [CADRE]: "Cadre",
   [OUVRIER]: "Ouvriers et employés",
   [TAM]: "Techniciens et agents de maîtrise (TAM)",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
+  [CADRE]: "Cadre",
 };
 
 function Categorie({ name }) {
