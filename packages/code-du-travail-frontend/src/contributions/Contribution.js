@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
+import slugify from "@cdt/data/slugify";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Badge,
   Button,
@@ -15,27 +14,33 @@ import {
   Toast,
   Wrapper,
 } from "@socialgouv/react-ui";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import slugify from "@cdt/data/slugify";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import SearchConvention from "../../src/conventions/Search";
-import rehypeToReact from "./rehypeToReact";
 import Mdx from "../../src/common/Mdx";
+import SearchConvention from "../../src/conventions/Search";
 import { useLocalStorage } from "../lib/useLocalStorage";
+import rehypeToReact from "./rehypeToReact";
 
-const RefLink = ({ title, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
-    {title}
-  </a>
-);
+const RefLink = ({ title, url }) =>
+  url ? (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      {title}
+    </a>
+  ) : (
+    <span>{title}</span>
+  );
 
 const References = ({ references = [] }) => {
-  const agreementRefs = references.filter((ref) => Boolean(ref.agreement));
+  const agreementRefs = references.filter(
+    (ref) => ref.category === "agreement"
+  );
   const laborCodeRef = references.filter(
     (ref) => ref.category === "labor_code"
   );
   const othersRefs = references.filter(
-    (ref) => !ref.agreement && ref.category !== "labor_code"
+    (ref) => !["agreement", "labor_code"].includes(ref.category)
   );
   if (references.length === 0) {
     return null;
@@ -48,16 +53,12 @@ const References = ({ references = [] }) => {
         <>
           <Subtitle>Convention collective</Subtitle>
           <ul>
-            {agreementRefs.map(({ agreement, title, index }) => (
-              <li key={`${index}-${agreement.id}`}>
-                {agreement.url ? (
-                  <RefLink
-                    key={agreement.id}
-                    title={title}
-                    url={agreement.url}
-                  />
+            {agreementRefs.map(({ url, title, index }) => (
+              <li key={`agreement_ref${index}`}>
+                {url ? (
+                  <RefLink title={title} url={url} />
                 ) : (
-                  <div key={agreement.id}>{title}</div>
+                  <span>{title}</span>
                 )}
               </li>
             ))}
@@ -68,8 +69,8 @@ const References = ({ references = [] }) => {
         <>
           <Subtitle>Code du travail</Subtitle>
           <ul>
-            {laborCodeRef.map((ref) => (
-              <li key={ref.title}>
+            {laborCodeRef.map((ref, index) => (
+              <li key={`laborCode_ref${index}`}>
                 <Link
                   href={{
                     pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`,
@@ -87,9 +88,13 @@ const References = ({ references = [] }) => {
         <>
           <Subtitle>Autres sources</Subtitle>
           <ul>
-            {othersRefs.map((ref, index) => (
-              <li key={`external-ref-${ref.id}-${index}`}>
-                <RefLink title={ref.title} url={ref.url} />
+            {othersRefs.map(({ title, url }, index) => (
+              <li key={`otherRef_${index}`}>
+                {url ? (
+                  <RefLink title={title} url={url} />
+                ) : (
+                  <span>{title}</span>
+                )}
               </li>
             ))}
           </ul>
