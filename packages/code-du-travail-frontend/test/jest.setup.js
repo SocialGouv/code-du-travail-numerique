@@ -1,5 +1,4 @@
 import "jest-styled-components";
-import Intl from "intl";
 import MockDate from "mockdate";
 
 MockDate.set("2020-1-4");
