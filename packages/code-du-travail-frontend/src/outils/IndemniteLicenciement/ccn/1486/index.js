@@ -1,27 +1,27 @@
-import { Result } from "./steps/Result";
-import { Categorie } from "./steps/Categorie";
 import { Anciennete } from "./steps/Anciennete";
+import { Categorie } from "./steps/Categorie";
+import { Result } from "./steps/Result";
 import { Salaire } from "./steps/Salaire";
 
 export const stepAnciennete = {
   component: Anciennete,
-  name: "branche_anciennete",
   label: "Ajustement ancienneté",
+  name: "branche_anciennete",
 };
 
 export const stepSalaire = {
   component: Salaire,
-  name: "branche_salaire",
   label: "Ajustement salaire",
+  name: "branche_salaire",
 };
 
 export const steps = [
-  { component: Categorie, name: "branche_category", label: "Catégorie" },
+  { component: Categorie, label: "Catégorie", name: "branche_category" },
   stepAnciennete,
   stepSalaire,
   {
     component: Result,
-    name: "branche_result",
     label: "Indemnité conventionnelle",
+    name: "branche_result",
   },
 ];

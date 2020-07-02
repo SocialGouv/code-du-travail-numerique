@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
+import { Button } from "../Button";
 import { Section } from "../layout/Section";
 import { Title } from "../Titles/Title";
-import { Button } from "../Button";
 import { Modal, ModalContentWrapper } from ".";
 
 export default {
@@ -11,10 +12,10 @@ export default {
 };
 
 const StyledModalContentWrapper = styled(ModalContentWrapper)({
-  width: "50%",
+  backgroundColor: "fuchsia",
   height: "50%",
   textAlign: "center",
-  backgroundColor: "fuchsia",
+  width: "50%",
 });
 class ExampleModal extends React.Component {
   constructor(props) {

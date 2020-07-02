@@ -2,17 +2,17 @@ import { addGlossary } from "../addGlossary";
 
 jest.mock("@socialgouv/datafiller-data/data/glossary.json", () => [
   {
-    title: "Disposition",
     abbrs: "",
-    variants: ["dispositions"],
     definition:
       "<p>Phrase ou ensemble de phrases d'un accord, d'une convention collective, d'une loi.</p>",
+    title: "Disposition",
+    variants: ["dispositions"],
   },
   {
-    title: "Convention Collective",
     abbrs: "cc",
-    variants: [],
     definition: "<p>Cette phrase ne doit pas apparaîte</p>",
+    title: "Convention Collective",
+    variants: [],
   },
 ]);
 

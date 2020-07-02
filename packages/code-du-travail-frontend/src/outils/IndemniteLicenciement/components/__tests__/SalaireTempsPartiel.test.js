@@ -1,8 +1,9 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { SalaireTempsPartiel } from "../SalaireTempsPartiel";
-import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
+import React from "react";
+import { Form } from "react-final-form";
+
+import { SalaireTempsPartiel } from "../SalaireTempsPartiel";
 
 describe("<SalaireTempsPartiel />", () => {
   it("should render", () => {
@@ -12,8 +13,8 @@ describe("<SalaireTempsPartiel />", () => {
         mutators={{ ...arrayMutators }}
         initialValues={{
           periods: [
-            { type: "Temps plein", duration: 12, salary: 2000 },
-            { type: "Temps partiel", duration: 6, salary: 1000 },
+            { duration: 12, salary: 2000, type: "Temps plein" },
+            { duration: 6, salary: 1000, type: "Temps partiel" },
           ],
         }}
         onSubmit={onSubmit}
@@ -28,8 +29,8 @@ describe("<SalaireTempsPartiel />", () => {
       <Form
         initialValues={{
           periods: [
-            { type: "Temps plein", duration: 12, salary: 2000 },
-            { type: "Temps partiel", duration: 6, salary: 1000 },
+            { duration: 12, salary: 2000, type: "Temps plein" },
+            { duration: 6, salary: 1000, type: "Temps partiel" },
           ],
         }}
         mutators={{ ...arrayMutators }}
@@ -48,8 +49,8 @@ describe("<SalaireTempsPartiel />", () => {
         mutators={{ ...arrayMutators }}
         initialValues={{
           periods: [
-            { type: "Temps plein", duration: 12, salary: 2000 },
-            { type: "Temps partiel", duration: 6, salary: 1000 },
+            { duration: 12, salary: 2000, type: "Temps plein" },
+            { duration: 6, salary: 1000, type: "Temps partiel" },
           ],
         }}
         onSubmit={onSubmit}

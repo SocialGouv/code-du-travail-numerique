@@ -1,8 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import getConfig from "next/config";
 import slugify from "@cdt/data/slugify";
-import styled from "styled-components";
 import {
   Container,
   FlatList,
@@ -12,10 +8,14 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
 import { FocusRoot } from "../../src/a11y";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },

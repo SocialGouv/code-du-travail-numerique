@@ -1,13 +1,14 @@
-import { sum, round } from "../../../common/math";
+import { differenceInMonths, isAfter, max, min } from "date-fns";
+
 import { parse } from "../../../common/date";
-import { max, min, isAfter, differenceInMonths } from "date-fns";
+import { round, sum } from "../../../common/math";
 import {
   CADRE,
-  NON_CADRE,
-  NE_SAIT_PAS,
   DISCIPLINAIRE,
-  NON_DISCIPLINAIRE,
   ECONOMIQUE,
+  NE_SAIT_PAS,
+  NON_CADRE,
+  NON_DISCIPLINAIRE,
   optionCategorie,
   optionMotifs,
 } from "./Step";
@@ -51,30 +52,30 @@ function getIndemnite({
   let formula = "";
   let error;
   const labels = {
-    "Salaire de référence (Sref)": round(salaireRef),
-    "Motif du licenciement": optionMotifs[motif],
     Catégorie: optionCategorie[categorie],
+    "Motif du licenciement": optionMotifs[motif],
+    "Salaire de référence (Sref)": round(salaireRef),
   };
   if (anciennete < 1) {
     return {
+      error:
+        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté",
       indemniteConventionnelle,
       infoCalculConventionnel: {
         formula: "-",
         labels,
       },
-      error:
-        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté",
     };
   }
   if (motif === DISCIPLINAIRE) {
     return {
+      error:
+        "La convention collective prévoit le droit à l’indemnité légale en cas de licenciement pour motif disciplinaire, sauf pour faute grave ou lourde",
       indemniteConventionnelle,
       infoCalculConventionnel: {
         formula: "-",
         labels,
       },
-      error:
-        "La convention collective prévoit le droit à l’indemnité légale en cas de licenciement pour motif disciplinaire, sauf pour faute grave ou lourde",
     };
   }
   const year2002 = new Date("2002-01-01");
@@ -112,8 +113,8 @@ function getIndemnite({
   if (isEmbaucheAfter1999) {
     const plafond = {
       [CADRE]: 24,
-      [NON_CADRE]: 18,
       [NE_SAIT_PAS]: 18,
+      [NON_CADRE]: 18,
     };
 
     if (
@@ -136,9 +137,9 @@ function getIndemnite({
   }
 
   return {
+    error,
     indemniteConventionnelle: round(indemniteConventionnelle),
     infoCalculConventionnel: { formula, labels },
-    error,
   };
 }
 export { getSalaireRef, getIndemnite };

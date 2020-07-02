@@ -58,16 +58,16 @@ exports[`<FormulaDetails /> should render 1`] = `
       <li
         class="c4"
       >
-        value 1
+        Value 2
          : 
-        foo
+        1
       </li>
       <li
         class="c4"
       >
-        Value 2
+        value 1
          : 
-        1
+        foo
       </li>
     </ul>
     <strong

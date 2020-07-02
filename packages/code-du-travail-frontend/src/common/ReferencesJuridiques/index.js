@@ -1,7 +1,8 @@
+import { Accordion, theme, Wrapper } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { Accordion, Wrapper, theme } from "@socialgouv/react-ui";
+
 import ReferenceList from "./ReferenceList";
 import TYPE_REFERENCE from "./typeReference";
 
@@ -18,8 +19,8 @@ class ReferencesJuridiques extends React.PureComponent {
               noTitle
               items={[
                 {
-                  title: <div>Voir les références juridiques concernées</div>,
                   body: <ReferenceList references={references} />,
+                  title: <div>Voir les références juridiques concernées</div>,
                 },
               ]}
             />
@@ -36,6 +37,7 @@ class ReferencesJuridiques extends React.PureComponent {
 }
 
 ReferencesJuridiques.propTypes = {
+  accordionDisplay: PropTypes.number,
   references: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -44,12 +46,11 @@ ReferencesJuridiques.propTypes = {
       url: PropTypes.string,
     })
   ),
-  accordionDisplay: PropTypes.number,
 };
 
 ReferencesJuridiques.defaultProps = {
-  references: [],
   accordionDisplay: 2,
+  references: [],
 };
 
 export default ReferencesJuridiques;

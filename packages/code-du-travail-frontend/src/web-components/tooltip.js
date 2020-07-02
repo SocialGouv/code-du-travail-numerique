@@ -1,4 +1,5 @@
-import { LitElement, html, css } from "lit-element";
+import { css, html, LitElement } from "lit-element";
+
 import { throttledDisplayInViewport } from "./utils";
 
 class WebComponentsTooltip extends LitElement {

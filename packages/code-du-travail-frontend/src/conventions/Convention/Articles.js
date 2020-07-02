@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Accordion,
   Grid,
@@ -10,6 +7,9 @@ import {
   Tile,
   Title,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 import { blocs as blocsLabels } from "./blocs.data";
 import { trackAccordionPanelState } from "./utils";
@@ -23,8 +23,6 @@ function getArticleUrl({ id, containerId }) {
 function Articles({ blocs, containerId, convention }) {
   const articlesByTheme = blocs.map(({ bloc, articles }) => {
     return {
-      id: blocsLabels[bloc].label,
-      title: blocsLabels[bloc].label,
       body: (
         <>
           {blocsLabels[bloc].important && (
@@ -46,7 +44,7 @@ function Articles({ blocs, containerId, convention }) {
                 wide
                 target="_blank"
                 rel="nofollow noopener"
-                href={getArticleUrl({ id, containerId })}
+                href={getArticleUrl({ containerId, id })}
                 subtitle={`Article ${title}`}
                 className={"no-after"}
               >
@@ -56,6 +54,8 @@ function Articles({ blocs, containerId, convention }) {
           </Grid>
         </>
       ),
+      id: blocsLabels[bloc].label,
+      title: blocsLabels[bloc].label,
     };
   });
 

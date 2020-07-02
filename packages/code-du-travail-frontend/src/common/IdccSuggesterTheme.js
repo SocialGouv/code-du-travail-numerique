@@ -27,25 +27,25 @@ export const suggesterTheme = {
   container: {
     position: "relative",
   },
+  suggestionHighlighted: {
+    background: "#eee",
+  },
   suggestionsContainerOpen: {
-    maxHeight: "300px",
     border: "1px solid silver",
-    position: "absolute",
-    overflowY: "scroll",
-    left: 0,
-    right: 0,
     borderRadius: "3px",
     borderRopLeftRadius: 0,
     borderTopRightRadius: 0,
-    marginTop: "-3px",
     boxShadow: "0 5px 20px 0 rgba(0, 0, 0, 0.3)",
+    left: 0,
+    marginTop: "-3px",
+    maxHeight: "300px",
+    overflowY: "scroll",
+    position: "absolute",
+    right: 0,
   },
   suggestionsList: {
+    background: "white",
     margin: 0,
     padding: 0,
-    background: "white",
-  },
-  suggestionHighlighted: {
-    background: "#eee",
   },
 };

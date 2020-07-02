@@ -1,7 +1,8 @@
 import React from "react";
+
+import { Check } from "../icons";
 import { Section } from "../layout/Section";
 import { Wrapper } from "../layout/Wrapper";
-import { Check } from "../icons";
 import { Badge } from ".";
 
 export default {
@@ -13,7 +14,7 @@ export const base = () => (
   <>
     <Section>
       <Wrapper
-        style={{ position: "relative", height: "20rem", width: "30rem" }}
+        style={{ height: "20rem", position: "relative", width: "30rem" }}
         variant="light"
       >
         <Badge />
@@ -22,7 +23,7 @@ export const base = () => (
     <Section>
       <Wrapper
         variant="light"
-        style={{ position: "relative", height: "20rem", width: "30rem" }}
+        style={{ height: "20rem", position: "relative", width: "30rem" }}
       >
         <Badge icon={Check} variant="secondary" />
         <p>Configured badge (variant secondary with an other icon)</p>

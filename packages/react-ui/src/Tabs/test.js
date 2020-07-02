@@ -1,15 +1,16 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+
 import { Tabs } from ".";
 
 const items = [
   {
-    tab: "Tab 1",
     panel: "This panel can contain nodes",
+    tab: "Tab 1",
   },
   {
-    tab: "Tab 2",
     panel: "These tabs are not 'controlled'",
+    tab: "Tab 2",
   },
 ];
 

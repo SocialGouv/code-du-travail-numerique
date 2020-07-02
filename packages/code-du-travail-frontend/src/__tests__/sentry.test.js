@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/browser";
+
 import { initializeSentry, notifySentry } from "../sentry";
 
 jest.mock("@sentry/browser", () => ({

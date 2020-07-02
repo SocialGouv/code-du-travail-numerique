@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Button, FlatList, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useCallback, useEffect, useState } from "react";
+import styled from "styled-components";
 
 const ViewMore = ({
   buttonProps,
@@ -41,12 +41,12 @@ const ViewMore = ({
 ViewMore.propTypes = {
   buttonProps: PropTypes.object,
   children: PropTypes.node.isRequired,
-  listContainer: PropTypes.elementType,
   initialSize: PropTypes.number,
-  stepSize: PropTypes.number,
   label: PropTypes.string,
+  listContainer: PropTypes.elementType,
   onClick: PropTypes.func,
   query: PropTypes.string,
+  stepSize: PropTypes.number,
 };
 
 export { ViewMore };
@@ -74,10 +74,10 @@ const StyledButton = styled(Button)`
 
 ViewMore.defaultProps = {
   buttonProps: {},
-  listContainer: StyledFlatList,
   initialSize: 7,
-  stepSize: 7,
   label: "Voir plus",
+  listContainer: StyledFlatList,
   onClick: () => {},
   query: "",
+  stepSize: 7,
 };

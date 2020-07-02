@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
 import { box, spacings } from "../theme";
@@ -18,9 +18,9 @@ export const InputCheckbox = ({ label, name, id, size, ...props }) => (
 );
 
 InputCheckbox.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   size: PropTypes.string,
 };
 

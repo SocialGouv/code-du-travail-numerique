@@ -109,6 +109,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        moins de 6 mois
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -120,13 +127,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        moins de 6 mois
       </strong>
     </li>
   </ul>
@@ -297,6 +297,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        6 mois à moins de 2 ans
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -308,13 +315,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        6 mois à moins de 2 ans
       </strong>
     </li>
   </ul>
@@ -483,6 +483,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        moins de 6 mois
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -494,13 +501,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        moins de 6 mois
       </strong>
     </li>
   </ul>
@@ -668,6 +668,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        plus de 2 ans
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -679,13 +686,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        plus de 2 ans
       </strong>
     </li>
   </ul>
@@ -812,6 +812,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        plus de 2 ans
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -823,13 +830,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        plus de 2 ans
       </strong>
     </li>
   </ul>

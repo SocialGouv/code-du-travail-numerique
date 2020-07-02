@@ -1,8 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import { reportSelectionToMatomo } from "../utils";
 import { getRouteBySource } from "@cdt/sources";
 import { Grid, Tile, Title } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+
+import { reportSelectionToMatomo } from "../utils";
 
 export const Themes = ({ items, query }) => (
   <>

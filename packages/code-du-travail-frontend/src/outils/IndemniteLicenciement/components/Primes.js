@@ -1,10 +1,10 @@
-import React from "react";
+import { icons, Input, theme } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
-import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { icons, Input, theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";
 import { InlineError } from "../../common/ErrorField";
@@ -27,10 +27,10 @@ function Primes({ name, visible = true, onChange }) {
                 name={`${name}.prime`}
                 validate={isNumber}
                 subscription={{
-                  value: true,
                   error: true,
-                  touched: true,
                   invalid: true,
+                  touched: true,
+                  value: true,
                 }}
                 render={({ input, meta: { touched, error, invalid } }) => (
                   <div>

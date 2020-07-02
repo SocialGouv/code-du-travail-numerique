@@ -55,6 +55,21 @@ exports[`<StepCDD /> should render 1`] = `
   display: block;
 }
 
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c1 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -72,21 +87,6 @@ exports[`<StepCDD /> should render 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 @media (max-width:600px) {

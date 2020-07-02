@@ -1,12 +1,13 @@
-import React from "react";
+import { InputRadio } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { InputRadio } from "@socialgouv/react-ui";
-import { RadioContainer } from "./stepStyles";
-import { Question } from "./Question";
-import { requiredBoolean } from "./validators";
+
 import { ErrorField } from "./ErrorField";
+import { Question } from "./Question";
+import { RadioContainer } from "./stepStyles";
+import { requiredBoolean } from "./validators";
 
 function YesNoQuestion({
   name,
@@ -53,8 +54,8 @@ function YesNoQuestion({
   );
 }
 YesNoQuestion.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export { YesNoQuestion };

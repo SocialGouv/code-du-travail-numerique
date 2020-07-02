@@ -1,11 +1,12 @@
-import React from "react";
-import { SelectQuestion } from "../SelectQuestion";
-import { renderForm } from "../../../../test/renderForm";
 import { fireEvent } from "@testing-library/react";
+import React from "react";
+
+import { renderForm } from "../../../../test/renderForm";
+import { SelectQuestion } from "../SelectQuestion";
 
 const values = {
-  foo: "label foo",
   baz: "label baz",
+  foo: "label foo",
 };
 const Component = () => (
   <SelectQuestion label="Une question ?" name="foo" options={values} />

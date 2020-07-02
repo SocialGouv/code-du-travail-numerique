@@ -55,6 +55,21 @@ exports[`<StepStatus /> should render 1`] = `
   display: block;
 }
 
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c1 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -72,21 +87,6 @@ exports[`<StepStatus /> should render 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 @media (max-width:600px) {
@@ -264,25 +264,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   background-color: #e4e8ef;
 }
 
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
-}
-
 .c0 {
   display: block;
   margin-top: 2rem;
@@ -320,6 +301,25 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 
 .c5 {
   margin-bottom: 3.2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
 }
 
 @media (max-width:600px) {
@@ -569,6 +569,21 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   display: block;
 }
 
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c1 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -586,21 +601,6 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 @media (max-width:600px) {

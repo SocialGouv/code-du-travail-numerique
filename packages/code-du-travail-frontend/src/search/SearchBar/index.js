@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { useRouter } from "next/router";
 import { Button, icons, theme } from "@socialgouv/react-ui";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 import { matopush } from "../../piwik";
 import { fetchSuggestResults } from "../search.service";

@@ -1,6 +1,7 @@
-import React from "react";
-import { render } from "@testing-library/react";
 import { Button } from "@socialgouv/react-ui";
+import { render } from "@testing-library/react";
+import React from "react";
+
 import { AccessibilityModal } from "../AccessibilityModal";
 
 describe("<AccessibilityModal />", () => {

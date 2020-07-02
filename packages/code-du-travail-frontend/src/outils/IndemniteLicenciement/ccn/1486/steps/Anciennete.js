@@ -1,7 +1,8 @@
 import React from "react";
-import { CATEGORIE_KEY } from "./Categorie";
-import { AncienneteETAMIC } from "./AncienneteETAMIC";
+
 import { AncienneteCE } from "./AncienneteCE";
+import { AncienneteETAMIC } from "./AncienneteETAMIC";
+import { CATEGORIE_KEY } from "./Categorie";
 
 export const Anciennete = ({ form }) => {
   const categorie = form.getState().values[CATEGORIE_KEY];

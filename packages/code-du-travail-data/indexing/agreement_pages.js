@@ -6,8 +6,9 @@ import remark from "remark";
 import html from "remark-html";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
-import { createThemer } from "./breadcrumbs";
+
 import slugify from "../slugify";
+import { createThemer } from "./breadcrumbs";
 
 const compiler = remark().use(html, { sanitize: true });
 const createSorter = (fn = (a) => a) => (a, b) => fn(a) - fn(b);
@@ -17,8 +18,8 @@ const contributionsWithTheme = contributions.map((contrib) => {
   const slug = slugify(contrib.title);
   return {
     ...contrib,
-    slug,
     breadcrumbs: getBreadcrumbs(slug),
+    slug,
   };
 });
 
@@ -33,12 +34,12 @@ function getAgreementPages() {
       );
       return {
         ...getCCNInfo(agreement),
-        nbTextes: getNbText(agreementTree),
+        answers: getContributionAnswers(agreement.num),
         articlesByTheme:
           blocksData && blocksData.groups
             ? getArticleByBlock(blocksData.groups, agreementTree)
             : [],
-        answers: getContributionAnswers(agreement.num),
+        nbTextes: getNbText(agreementTree),
       };
     });
 }
@@ -49,14 +50,14 @@ function getAgreementPages() {
  */
 function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
   return {
-    id,
-    slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
     date_publi,
+    id,
     mtime,
-    title,
-    shortTitle,
-    url,
     num,
+    shortTitle,
+    slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+    title,
+    url,
   };
 }
 
@@ -81,9 +82,9 @@ function getNbText(agreementTree) {
 function getContributionAnswers(agreementNum) {
   const transformRef = ({ title, url, category, agreement }) => {
     return {
+      category: category,
       title,
       url: url || (agreement && agreement.url),
-      category: category,
     };
   };
   return contributionsWithTheme
@@ -99,12 +100,12 @@ function getContributionAnswers(agreementNum) {
         }
 
         return {
+          answer: compiler.processSync(answer.markdown).contents,
           index,
           question: title.trim(),
-          answer: compiler.processSync(answer.markdown).contents,
-          theme: rootTheme,
           references: answer.references.map(transformRef),
           slug,
+          theme: rootTheme,
         };
       }
     })
@@ -122,7 +123,6 @@ function getArticleByBlock(groups, agreementTree) {
     .filter(({ selection }) => selection.length > 0)
     .sort(createSorter((a) => a.id))
     .map(({ id, selection }) => ({
-      bloc: id,
       articles: selection
         .map((articleId) => {
           const node = find(
@@ -136,14 +136,15 @@ function getArticleByBlock(groups, agreementTree) {
           }
           return node
             ? {
-                title: node.data.num || "non numéroté",
-                id: node.data.id,
                 cid: node.data.cid,
+                id: node.data.id,
                 section: node.parent.data.title,
+                title: node.data.num || "non numéroté",
               }
             : null;
         })
         .filter(Boolean),
+      bloc: id,
     }))
     .filter(({ articles }) => articles.length > 0);
 }

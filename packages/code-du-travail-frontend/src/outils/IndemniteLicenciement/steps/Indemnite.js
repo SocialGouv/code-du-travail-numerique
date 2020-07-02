@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
 import { Toast } from "@socialgouv/react-ui";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
 
-import { getIndemniteFromFinalForm } from "../indemnite";
 import { IndemniteLegale } from "../components/IndemniteLegale";
+import { getIndemniteFromFinalForm } from "../indemnite";
 
 function StepIndemnite({ form }) {
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);

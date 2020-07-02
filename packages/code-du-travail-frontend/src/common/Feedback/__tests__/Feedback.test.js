@@ -1,5 +1,5 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
 
 import { Feedback } from "..";
 
@@ -8,14 +8,15 @@ global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: (event) => events.push(event),
     events,
     flushEvents() {
       events = [];
     },
+    matopush: (event) => events.push(event),
   };
 });
 const { events, flushEvents } = require("../../../piwik");
+
 afterEach(flushEvents);
 
 describe("<Feedback/>", () => {

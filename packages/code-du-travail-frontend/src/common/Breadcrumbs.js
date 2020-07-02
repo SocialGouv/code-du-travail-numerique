@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Link from "next/link";
 import { Container, icons, OverflowWrapper, theme } from "@socialgouv/react-ui";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const { ArrowRight, Home: HomeIcon } = icons;
 

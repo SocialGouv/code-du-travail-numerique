@@ -1,11 +1,11 @@
-import readline from "readline";
-import fs from "fs";
-
 import { Client } from "@elastic/elasticsearch";
+import fs from "fs";
+import readline from "readline";
+
 import {
   createIndex,
-  indexDocumentsBatched,
   deleteOldIndex,
+  indexDocumentsBatched,
 } from "./es_client.utils";
 import { suggestionMapping } from "./suggestion.mapping";
 
@@ -17,13 +17,13 @@ const BUFFER_SIZE = process.env.BUFFER_SIZE || 20000;
 
 async function pushSuggestions({ client, indexName, data }) {
   const mappedSuggestions = data.map((entity) => {
-    return { title: entity.entity, ranking: entity.value };
+    return { ranking: entity.value, title: entity.entity };
   });
 
   await indexDocumentsBatched({
     client,
-    indexName,
     documents: mappedSuggestions,
+    indexName,
     size: BUFFER_SIZE,
   });
 }
@@ -37,8 +37,8 @@ async function populateSuggestions(client, indexName) {
 
   const promiseStream = new Promise((resolve) => {
     const stream = readline.createInterface({
-      input: fs.createReadStream(SUGGEST_FILE),
       console: false,
+      input: fs.createReadStream(SUGGEST_FILE),
     });
 
     let suggestionsBuffer = [];
@@ -50,13 +50,13 @@ async function populateSuggestions(client, indexName) {
         // create an immutable copy of the array
         const suggestions = suggestionsBuffer.slice();
         suggestionsBuffer = [];
-        await pushSuggestions({ client, indexName, data: suggestions });
+        await pushSuggestions({ client, data: suggestions, indexName });
       }
     });
 
     stream.on("close", async function () {
       if (suggestionsBuffer.length > 0) {
-        await pushSuggestions({ client, indexName, data: suggestionsBuffer });
+        await pushSuggestions({ client, data: suggestionsBuffer, indexName });
         resolve();
       }
     });
@@ -81,14 +81,14 @@ async function resetSuggestions() {
       actions: [
         {
           remove: {
-            index: `${SUGGEST_INDEX_NAME}-*`,
             alias: `${SUGGEST_INDEX_NAME}`,
+            index: `${SUGGEST_INDEX_NAME}-*`,
           },
         },
         {
           add: {
-            index: `${SUGGEST_INDEX_NAME}-${ts}`,
             alias: `${SUGGEST_INDEX_NAME}`,
+            index: `${SUGGEST_INDEX_NAME}-${ts}`,
           },
         },
       ],

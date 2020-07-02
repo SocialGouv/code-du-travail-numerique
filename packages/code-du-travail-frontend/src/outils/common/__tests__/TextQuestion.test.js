@@ -1,7 +1,8 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { TextQuestion } from "../TextQuestion";
 import { Form } from "react-final-form";
+
+import { TextQuestion } from "../TextQuestion";
 
 describe("<TextQuestion />", () => {
   it("should render", () => {

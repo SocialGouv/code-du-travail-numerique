@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { Container, Section } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useEffect } from "react";
 
-import { Results } from "./Results";
-import { Law } from "./Law";
-import { Themes } from "./Themes";
 import { matopush } from "../../piwik";
+import { Law } from "./Law";
+import { Results } from "./Results";
+import { Themes } from "./Themes";
 
 const SearchResults = ({
   items: { documents, themes, articles },
@@ -38,31 +38,31 @@ const SearchResults = ({
 SearchResults.propTypes = {
   isSearch: PropTypes.bool,
   items: PropTypes.shape({
+    articles: PropTypes.arrayOf(
+      PropTypes.shape({
+        slug: PropTypes.string,
+        source: PropTypes.string,
+        title: PropTypes.string,
+      })
+    ),
     documents: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string,
-        source: PropTypes.string,
-        slug: PropTypes.string,
         breadcrumbs: PropTypes.arrayOf(
           PropTypes.shape({
             label: PropTypes.string,
             slug: PropTypes.string,
           })
         ),
-      })
-    ),
-    articles: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        source: PropTypes.string,
         slug: PropTypes.string,
+        source: PropTypes.string,
+        title: PropTypes.string,
       })
     ),
     themes: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string,
-        source: PropTypes.string,
         slug: PropTypes.string,
+        source: PropTypes.string,
+        title: PropTypes.string,
       })
     ),
   }),

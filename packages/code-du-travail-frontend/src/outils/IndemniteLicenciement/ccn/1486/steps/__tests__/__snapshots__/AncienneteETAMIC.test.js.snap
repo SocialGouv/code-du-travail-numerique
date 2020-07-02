@@ -271,6 +271,38 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   display: block;
 }
 
+.c4 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c12 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
+.c13 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 40rem;
+}
+
 .c9 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -310,38 +342,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-}
-
-.c4 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c12 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.c5 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
-.c13 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
 }
 
 .c2 {
@@ -664,6 +664,21 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   display: block;
 }
 
+.c4 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -690,21 +705,6 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-}
-
-.c4 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c5 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c2 {

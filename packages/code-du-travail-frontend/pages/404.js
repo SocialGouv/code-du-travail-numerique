@@ -1,8 +1,9 @@
 // https://nextjs.org/docs/advanced-features/custom-error-page
-import React, { useEffect } from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import { Button, Container, icons as Icons, theme } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import styled from "styled-components";
+
 import { Layout } from "../src/layout/Layout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 

@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
+import React from "react";
+import { Form } from "react-final-form";
+
 import { Salaire } from "../Salaire";
 
 describe("<Salaire />", () => {
@@ -38,8 +39,8 @@ describe("<Salaire />", () => {
   it("renders an input field of type number", () => {
     const onSubmit = jest.fn();
     const initialValues = {
-      hasBrancheNewSalaire: true,
       hasBrancheNewRegularSalaire: true,
+      hasBrancheNewSalaire: true,
     };
     const { container } = render(
       <Form
@@ -57,8 +58,6 @@ describe("<Salaire />", () => {
   it("renders a table of fields of type number", () => {
     const onSubmit = jest.fn();
     const initialValues = {
-      hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: false,
       brancheNewIrregularSalaire: [
         {
           label: "juillet 2019",
@@ -69,6 +68,8 @@ describe("<Salaire />", () => {
           salary: null,
         },
       ],
+      hasBrancheNewRegularSalaire: false,
+      hasBrancheNewSalaire: true,
     };
     const { container } = render(
       <Form

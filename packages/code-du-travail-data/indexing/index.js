@@ -1,12 +1,13 @@
 import { Client } from "@elastic/elasticsearch";
+
 import { documentMapping } from "./document.mapping";
-import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
   version,
 } from "./es_client.utils";
+import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { logger } from "./logger";
 import { populateSuggestions } from "./suggestion";
 
@@ -29,8 +30,8 @@ const esClientConfig = {
 switch (process.env.NODE_ENV) {
   case "production":
     esClientConfig.auth = {
-      username: process.env.ELASTICSEARCH_USER || "elastic",
       password: process.env.ELASTICSEARCH_PWD,
+      username: process.env.ELASTICSEARCH_USER || "elastic",
     };
     break;
 }
@@ -49,9 +50,9 @@ async function main() {
   });
   const documents = require(DUMP_PATH);
   await indexDocumentsBatched({
-    indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     client,
     documents,
+    indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
   });
 
   // Indexing Suggestions
@@ -63,27 +64,27 @@ async function main() {
       actions: [
         {
           remove: {
-            index: `${DOCUMENT_INDEX_NAME}-*`,
             alias: `${DOCUMENT_INDEX_NAME}`,
+            index: `${DOCUMENT_INDEX_NAME}-*`,
           },
         },
         {
           remove: {
-            index: `${SUGGEST_INDEX_NAME}-*`,
             alias: `${SUGGEST_INDEX_NAME}`,
+            index: `${SUGGEST_INDEX_NAME}-*`,
           },
         },
 
         {
           add: {
-            index: `${DOCUMENT_INDEX_NAME}-${ts}`,
             alias: `${DOCUMENT_INDEX_NAME}`,
+            index: `${DOCUMENT_INDEX_NAME}-${ts}`,
           },
         },
         {
           add: {
-            index: `${SUGGEST_INDEX_NAME}-${ts}`,
             alias: `${SUGGEST_INDEX_NAME}`,
+            index: `${SUGGEST_INDEX_NAME}-${ts}`,
           },
         },
       ],

@@ -1,21 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import App from "next/app";
-import getConfig from "next/config";
-import * as Sentry from "@sentry/browser";
-
-import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
-
-import CustomError from "./_error";
-import Custom404 from "./404";
-
-import { initPiwik } from "../src/piwik";
-import { initializeSentry, notifySentry } from "../src/sentry";
-
-import { A11y } from "../src/a11y";
-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
+
+import * as Sentry from "@sentry/browser";
+import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
+import App from "next/app";
+import getConfig from "next/config";
+import PropTypes from "prop-types";
+import React from "react";
+
+import { A11y } from "../src/a11y";
+import { initPiwik } from "../src/piwik";
+import { initializeSentry, notifySentry } from "../src/sentry";
+import CustomError from "./_error";
+import Custom404 from "./404";
 
 // Get tooltips web-component
 if (typeof window !== "undefined") {
@@ -62,7 +59,7 @@ export default class MyApp extends App {
       try {
         pageProps = await Component.getInitialProps(ctx);
       } catch (err) {
-        pageProps = { statusCode: 500, message: err.message };
+        pageProps = { message: err.message, statusCode: 500 };
       }
     }
     // pageUrl and ogImage are only defined on serverside request
@@ -76,7 +73,7 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
-    initPiwik({ siteId: PIWIK_SITE_ID, piwikUrl: PIWIK_URL });
+    initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
   }
 
   componentDidCatch(error, errorInfo) {

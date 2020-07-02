@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Accordion, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
@@ -42,8 +42,8 @@ class AccordionWrapper extends React.PureComponent {
           />
         );
         return {
-          title,
           body,
+          title,
         };
       });
 

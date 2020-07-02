@@ -35,14 +35,14 @@ function splitArticle(article) {
         references,
         title: sectionTitle,
       }) => {
-        const title = transformSectionTitle({ sectionTitle, prefixTitle });
+        const title = transformSectionTitle({ prefixTitle, sectionTitle });
         return {
           anchor,
           description,
           html,
+          references,
           slug: `${slug}${anchor ? `#${anchor}` : ""}`,
           text,
-          references,
           title,
         };
       }

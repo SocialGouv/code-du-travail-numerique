@@ -1,18 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import { Toast } from "@socialgouv/react-ui";
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-import { SectionTitle, Highlight } from "../../common/stepStyles";
+import { Toast } from "@socialgouv/react-ui";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
 
 import {
   filterSituations,
+  getRef,
   getSituationsFor,
   recapSituation,
-  getRef,
 } from "../../common/situations.utils";
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 
 const { situations: allSituations } = data;
 
@@ -164,7 +163,7 @@ function StepResult({ form }) {
     refs.push({ ref: situationCC.ref, refUrl: situationCC.refUrl });
   }
 
-  const duration = getResult({ durationCDT, durationCC, disabledWorker });
+  const duration = getResult({ disabledWorker, durationCC, durationCDT });
 
   return (
     <>
@@ -214,11 +213,11 @@ function StepResult({ form }) {
       Éléments saisis&nbsp;:
       <br />
       {recapSituation({
+        "Ancienneté selon le code du travail": seniorityCDT,
         "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",
         "Reconnu en tant que travailleur handicapé": disabledWorker
           ? "Oui"
           : "Non",
-        "Ancienneté selon le code du travail": seniorityCDT,
         ...situationCDTCriteria,
       })}
       {situationCC && (

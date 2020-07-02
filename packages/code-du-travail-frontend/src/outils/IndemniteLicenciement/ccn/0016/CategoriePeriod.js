@@ -1,10 +1,10 @@
+import { Input, theme } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { Input, theme } from "@socialgouv/react-ui";
 
-import { SectionTitle } from "../../../common/stepStyles";
 import { InlineError } from "../../../common/ErrorField";
+import { SectionTitle } from "../../../common/stepStyles";
 import { isNumber } from "../../../common/validators";
 
 function CategoriePeriod() {
@@ -18,10 +18,10 @@ function CategoriePeriod() {
         name="tamDuration"
         validate={isNumber}
         subscription={{
-          value: true,
           error: true,
-          touched: true,
           invalid: true,
+          touched: true,
+          value: true,
         }}
       >
         {({ input, meta: { error, touched, invalid } }) => {
@@ -50,10 +50,10 @@ function CategoriePeriod() {
         name="cadreDuration"
         validate={isNumber}
         subscription={{
-          value: true,
           error: true,
-          touched: true,
           invalid: true,
+          touched: true,
+          value: true,
         }}
       >
         {({ input, meta: { error, touched, invalid } }) => {

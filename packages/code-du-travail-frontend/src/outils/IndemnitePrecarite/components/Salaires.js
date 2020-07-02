@@ -1,11 +1,12 @@
+import { theme } from "@socialgouv/react-ui";
 import React from "react";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
-import { CurrencyField } from "../../common/CurrencyField";
-import { AddButton, DelButton } from "../../common/Buttons";
 import { UID } from "react-uid";
+import styled from "styled-components";
+
+import { AddButton, DelButton } from "../../common/Buttons";
+import { CurrencyField } from "../../common/CurrencyField";
 import { Question } from "../../common/Question";
 
 function Salaires({ name, visible = true, onChange }) {

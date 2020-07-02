@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
-import { MathFormula } from "../../common/MathFormula";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { MathFormula } from "../../common/MathFormula";
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
@@ -32,8 +32,8 @@ export { FormulaDetails };
 
 FormulaDetails.propTypes = {
   infoCalcul: PropTypes.shape({
-    labels: PropTypes.object.isRequired,
     formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired,
   }),
 };
 

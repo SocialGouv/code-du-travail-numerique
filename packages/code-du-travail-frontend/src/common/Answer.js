@@ -1,20 +1,19 @@
-import React from "react";
-import { useRouter } from "next/router";
-import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
+import { useRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
 
 import { ConventionModal } from "../../src/conventions/SearchModal";
-import Article from "./Article";
-import { Feedback } from "./Feedback";
-import { RelatedItems } from "./RelatedItems";
-import Html from "./Html";
-import { Breadcrumbs } from "./Breadcrumbs";
-
 import {
   AsideContent,
   MainAsideLayout,
   MainContent,
 } from "../layout/AnswerLayout";
+import Article from "./Article";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { Feedback } from "./Feedback";
+import Html from "./Html";
+import { RelatedItems } from "./RelatedItems";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>

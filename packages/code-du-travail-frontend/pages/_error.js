@@ -1,7 +1,8 @@
 // https://nextjs.org/docs/advanced-features/custom-error-page
+import { Button, Container, Section, theme } from "@socialgouv/react-ui";
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Button, Container, Section, theme } from "@socialgouv/react-ui";
+
 import { Layout } from "../src/layout/Layout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 
@@ -32,7 +33,7 @@ export default function CustomError({ message, statusCode }) {
 
 CustomError.getInitialProps = async ({ res, err }) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-  return { statusCode, message: err && err.message };
+  return { message: err && err.message, statusCode };
 };
 
 const { fonts, spacings } = theme;

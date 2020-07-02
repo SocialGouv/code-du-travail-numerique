@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
+import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import { X } from "react-feather";
+import styled from "styled-components";
 
 import { Button } from "../Button";
 import { Burger as BurgerIcon } from "../icons";

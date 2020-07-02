@@ -1,30 +1,31 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Result } from "../Result";
+import React from "react";
 import { Form } from "react-final-form";
+
 import { CADRE } from "../Categorie";
+import { Result } from "../Result";
 
 const initialValues = {
-  contrat: "cdi",
-  fauteGrave: false,
-  inaptitude: false,
-  dateEntree: "2009-01-06",
+  absencePeriods: [],
+  age: "64",
   anciennete: 10.58,
+  branche: "0016",
+  cadreDuration: "120",
+  categorie: CADRE,
+  contrat: "cdi",
+  dateEntree: "2009-01-06",
   dateNotification: "2019-06-03",
   dateSortie: "2019-09-02",
+  fauteGrave: false,
   hasAbsenceProlonge: false,
-  absencePeriods: [],
-  hasTempsPartiel: false,
-  salairePeriods: [],
-  hasSameSalaire: true,
-  salaires: [],
-  salaire: "2000",
-  branche: "0016",
-  categorie: CADRE,
-  tamDuration: "5",
-  cadreDuration: "120",
-  age: "64",
   hasRetirementAge: true,
+  hasSameSalaire: true,
+  hasTempsPartiel: false,
+  inaptitude: false,
+  salaire: "2000",
+  salairePeriods: [],
+  salaires: [],
+  tamDuration: "5",
 };
 describe("<Result />", () => {
   it("should render", () => {

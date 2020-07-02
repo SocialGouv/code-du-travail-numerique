@@ -1,5 +1,4 @@
 import { createIndex, indexDocumentsBatched } from "../es_client.utils";
-
 import { populateSuggestions } from "../suggestion";
 
 jest.mock("../es_client.utils");

@@ -1,4 +1,5 @@
 import { getRouteBySource, SOURCES } from "@cdt/sources";
+
 import slugify from "../slugify";
 
 export function toSlug(label, position) {

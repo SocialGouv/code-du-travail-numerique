@@ -28,7 +28,7 @@ function preprocess(text) {
 }
 
 async function callTFServe(body) {
-  const response = await fetch(tfServeURL, { method: "POST", body });
+  const response = await fetch(tfServeURL, { body, method: "POST" });
   if (response.ok) {
     const json = await response.json();
     return json["outputs"];
@@ -46,8 +46,8 @@ async function vectorizeDocument(title, content) {
   const context = content ? [preprocess(content)] : "";
 
   const body = JSON.stringify({
+    inputs: { context, input },
     signature_name: "response_encoder",
-    inputs: { input, context },
   });
   const vectors = await callTFServe(body);
   return vectors[0];
@@ -60,11 +60,11 @@ async function vectorizeQuery(query) {
 
   const inputs = [preprocess(query)];
   const body = JSON.stringify({
-    signature_name: "question_encoder",
     inputs,
+    signature_name: "question_encoder",
   });
   const vectors = await callTFServe(body);
   return vectors[0];
 }
 
-module.exports = { vectorizeDocument, vectorizeQuery, preprocess };
+module.exports = { preprocess, vectorizeDocument, vectorizeQuery };

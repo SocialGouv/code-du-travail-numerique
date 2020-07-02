@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Title as UITitle, Heading, Subtitle } from "@socialgouv/react-ui";
+import { Heading, Subtitle, Title as UITitle } from "@socialgouv/react-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
+import PropTypes from "prop-types";
+import React from "react";
 
 class Title extends React.PureComponent {
   static propTypes = {
-    level: PropTypes.number,
     children: PropTypes.node,
     date: PropTypes.string,
+    level: PropTypes.number,
   };
   render() {
     const { level, children, date } = this.props;

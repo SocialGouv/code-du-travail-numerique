@@ -1,9 +1,9 @@
+import { Select, theme } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { Select, theme } from "@socialgouv/react-ui";
 
-import { SectionTitle, Label } from "../../../common/stepStyles";
+import { Label, SectionTitle } from "../../../common/stepStyles";
 
 export const DISCIPLINAIRE = "disciplinaire";
 export const NON_DISCIPLINAIRE = "non-disciplinaire";
@@ -16,12 +16,15 @@ export const NE_SAIT_PAS = "ne-sais-pas";
 export const optionMotifs = {
   [DISCIPLINAIRE]: "Motif disciplinaire",
   [NON_DISCIPLINAIRE]: "Motif non disciplinaire",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   [ECONOMIQUE]: "Motif économique",
 };
 
 export const optionCategorie = {
   [NON_CADRE]: "Non cadre",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   [CADRE]: "Cadre",
+  // eslint-disable-next-line sort-keys-fix/sort-keys-fix
   [NE_SAIT_PAS]: "Ne sait pas",
 };
 

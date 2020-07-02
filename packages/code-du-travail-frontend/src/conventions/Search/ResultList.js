@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { useUIDSeed } from "react-uid";
 import { Heading, theme, Wrapper } from "@socialgouv/react-ui";
+import React from "react";
+import { useUIDSeed } from "react-uid";
+import styled from "styled-components";
 
 import { ViewMore } from "../../common/ViewMore";
 

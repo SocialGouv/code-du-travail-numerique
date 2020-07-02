@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { TypeContrat } from "../TypeContrat";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { TypeContrat } from "../TypeContrat";
 
 describe("<TypeContrat />", () => {
   it("should render", () => {

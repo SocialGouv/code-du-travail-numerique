@@ -1,7 +1,7 @@
-import React, { useCallback, useState } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Button, Heading, Modal, Wrapper } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
 
 import { ServiceRenseignement } from "./ServiceRenseignement";
 

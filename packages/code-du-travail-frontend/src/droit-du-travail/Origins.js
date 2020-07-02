@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import {
   Accordion,
   Container,
@@ -9,6 +7,8 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
 
 const Origins = () => (
   <Section
@@ -35,8 +35,6 @@ const Origins = () => (
           variant="tile"
           items={[
             {
-              icon: icons.International,
-              title: <h3>Les textes internationaux</h3>,
               body: (
                 <>
                   <p>
@@ -102,10 +100,10 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.International,
+              title: <h3>Les textes internationaux</h3>,
             },
             {
-              icon: icons.Eurotext,
-              title: <h3>Les textes européens</h3>,
               body: (
                 <>
                   <p>
@@ -198,10 +196,10 @@ const Origins = () => (
                   </ul>
                 </>
               ),
+              icon: icons.Eurotext,
+              title: <h3>Les textes européens</h3>,
             },
             {
-              icon: icons.Constitution,
-              title: <h3>La Constitution française</h3>,
               body: (
                 <>
                   <p>
@@ -256,10 +254,10 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.Constitution,
+              title: <h3>La Constitution française</h3>,
             },
             {
-              icon: icons.Laws,
-              title: <h3>Lois, ordonnances, décrets et arrêtés</h3>,
               body: (
                 <>
                   <p>
@@ -302,10 +300,10 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.Laws,
+              title: <h3>Lois, ordonnances, décrets et arrêtés</h3>,
             },
             {
-              icon: icons.Agreement,
-              title: <h3>Les conventions et accords collectifs</h3>,
               body: (
                 <>
                   <p>
@@ -329,10 +327,10 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.Agreement,
+              title: <h3>Les conventions et accords collectifs</h3>,
             },
             {
-              icon: icons.Uses,
-              title: <h3>Les usages et les engagements unilatéraux</h3>,
               body: (
                 <>
                   <p>
@@ -357,10 +355,10 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.Uses,
+              title: <h3>Les usages et les engagements unilatéraux</h3>,
             },
             {
-              icon: icons.Rules,
-              title: <h3>Le règlement intérieur de l’entreprise</h3>,
               body: (
                 <>
                   Le règlement intérieur de l’entreprise est un acte écrit par
@@ -368,10 +366,10 @@ const Origins = () => (
                   santé et la sécurité dans l’entreprise.
                 </>
               ),
+              icon: icons.Rules,
+              title: <h3>Le règlement intérieur de l’entreprise</h3>,
             },
             {
-              icon: icons.Contract,
-              title: <h3>Le contrat de travail</h3>,
               body: (
                 <>
                   <p>
@@ -396,6 +394,8 @@ const Origins = () => (
                   </p>
                 </>
               ),
+              icon: icons.Contract,
+              title: <h3>Le contrat de travail</h3>,
             },
           ]}
         />

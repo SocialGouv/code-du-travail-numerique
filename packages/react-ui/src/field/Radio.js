@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
 import { box } from "../theme";
@@ -12,9 +12,9 @@ export const InputRadio = ({ label, name, id, size, ...props }) => (
 );
 
 InputRadio.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
 };
 

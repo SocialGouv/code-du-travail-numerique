@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { InputRadio } from "@socialgouv/react-ui";
-
+import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
-import { required } from "../../common/validators";
-import { Question } from "../../common/Question";
+
 import { ErrorField } from "../../common/ErrorField";
+import { Question } from "../../common/Question";
+import { required } from "../../common/validators";
 
 export const CONTRACT_TYPE = {
   CDD: "CDD",

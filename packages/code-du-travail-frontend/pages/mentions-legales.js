@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import {
   Container,
   Heading,
@@ -9,10 +7,12 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
-import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 const LegalPage = ({ pageUrl, ogImage }) => {
   return (

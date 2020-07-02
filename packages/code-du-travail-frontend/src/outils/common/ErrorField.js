@@ -1,14 +1,14 @@
-import React from "react";
+import { theme } from "@socialgouv/react-ui";
 import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { theme } from "@socialgouv/react-ui";
 
 function ErrorField({ name }) {
   return (
     <Field
       name={name}
-      subscription={{ error: true, touched: true, submitFailed: true }}
+      subscription={{ error: true, submitFailed: true, touched: true }}
       render={({ meta: { error, submitFailed } }) => {
         if (!submitFailed || !error) {
           return null;

@@ -1,6 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-
 import {
   Accordion,
   Container,
@@ -8,10 +5,12 @@ import {
   Section,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
-import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 export default function IntegrationPage({ pageUrl, ogImage }) {
   return (
@@ -39,7 +38,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
               height="300px"
               title="widget - Code du travail numérique "
               style={{ border: "none" }}
-            ></iframe>
+            />
             <p>
               Ce module permettra à l’utilisateur de faire une recherche depuis
               votre site dans la barre de recherche du module. Une fois la
@@ -54,8 +53,6 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
               preExpanded={["id-js"]}
               items={[
                 {
-                  id: "id-js",
-                  title: "javascript",
                   body: (
                     <>
                       <p>
@@ -65,7 +62,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                         <code>&lt;body&gt;</code> de votre page&nbsp;:
                       </p>
                       <Code>
-                        <pre style={{ margin: 0, lineHeight: "125%" }}>
+                        <pre style={{ lineHeight: "125%", margin: 0 }}>
                           {`<script src="https://code.travail.gouv.fr/widget.js" async></script>`}
                         </pre>
                       </Code>
@@ -74,15 +71,16 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                         souhaitez voir le module s’afficher&nbsp;:
                       </p>
                       <Code>
-                        <pre style={{ margin: 0, lineHeight: "125%" }}>
+                        <pre style={{ lineHeight: "125%", margin: 0 }}>
                           {`<div id="cdtn-widget"></div>`}
                         </pre>
                       </Code>
                     </>
                   ),
+                  id: "id-js",
+                  title: "javascript",
                 },
                 {
-                  title: "iframe",
                   body: (
                     <>
                       <p>
@@ -115,6 +113,7 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
                       </p>
                     </>
                   ),
+                  title: "iframe",
                 },
               ]}
             />

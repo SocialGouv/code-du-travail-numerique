@@ -1,14 +1,13 @@
+import { theme, Toast } from "@socialgouv/react-ui";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Toast, theme } from "@socialgouv/react-ui";
-
 import ConventionSearch from "../../conventions/Search";
-import { required } from "./validators";
+import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
-import { useLocalStorage } from "../../lib/useLocalStorage";
+import { required } from "./validators";
 
 export const CONVENTION_NAME = "ccn";
 

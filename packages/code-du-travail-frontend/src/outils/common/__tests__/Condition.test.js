@@ -1,6 +1,7 @@
 import React from "react";
-import { Condition } from "../Condition";
+
 import { renderForm } from "../../../../test/renderForm";
+import { Condition } from "../Condition";
 
 //eslint-disable-next-line react/display-name
 const componentBuilder = (matchValue) => () => (

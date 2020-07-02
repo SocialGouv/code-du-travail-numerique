@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { BlockMath } from "react-katex";
 import { theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import { BlockMath } from "react-katex";
 import styled from "styled-components";
 
 export const asciiMathToTex = (ascii) => {

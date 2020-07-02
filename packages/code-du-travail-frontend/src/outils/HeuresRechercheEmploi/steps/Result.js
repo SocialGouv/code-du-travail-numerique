@@ -1,16 +1,16 @@
-import React from "react";
-import Link from "next/link";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Alert } from "@socialgouv/react-ui";
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
-import { SectionTitle, Highlight } from "../../common/stepStyles";
+import Link from "next/link";
+import React from "react";
 
 import {
   filterSituations,
+  getRef,
   getSituationsFor,
   recapSituation,
-  getRef,
 } from "../../common/situations.utils";
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 
 function Duration({ situation }) {
   if (parseInt(situation.answer, 10) === 0) {

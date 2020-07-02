@@ -2,11 +2,11 @@ import { getVersions } from "../versions";
 
 jest.mock("../../package.json", () => ({
   dependencies: {
-    foo: "bar",
-    "foo/foo": "bar",
     "@socialgouv/lib-a": "1",
     "@socialgouv/lib-b": "2",
     "@socialgouv/lib-c": "3",
+    foo: "bar",
+    "foo/foo": "bar",
   },
 }));
 

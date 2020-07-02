@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
 import { Container, Section, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const { breakpoints, spacings } = theme;
 

@@ -1,15 +1,16 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import Result from "../Result";
+import React from "react";
 import { Form } from "react-final-form";
 
+import Result from "../Result";
+
 const initialValues = {
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
-  hasTempsPartiel: false,
-  anciennete: 5,
   age: 55,
-  groupe: "I",
+  anciennete: 5,
   branche: "3043",
+  groupe: "I",
+  hasTempsPartiel: false,
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
 };
 
 describe("<Result />", () => {

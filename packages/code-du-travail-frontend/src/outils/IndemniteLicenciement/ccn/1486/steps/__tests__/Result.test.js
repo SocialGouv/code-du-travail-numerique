@@ -1,6 +1,7 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
 import { Form } from "react-final-form";
+
 import { Result } from "../Result";
 
 describe("<Result />", () => {
@@ -8,16 +9,16 @@ describe("<Result />", () => {
     const onSubmit = jest.fn();
     const initialValues = {
       anciennete: 13.083333333333334,
-      hasAbsenceProlonge: false,
-      hasTempsPartiel: false,
-      hasSameSalaire: true,
-      salaire: "4500",
       branche: "1486",
       brancheCategorie: "IC",
-      hasBrancheContrat: false,
-      hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: true,
       brancheNewRegularSalaire: "2000",
+      hasAbsenceProlonge: false,
+      hasBrancheContrat: false,
+      hasBrancheNewRegularSalaire: true,
+      hasBrancheNewSalaire: true,
+      hasSameSalaire: true,
+      hasTempsPartiel: false,
+      salaire: "4500",
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>
@@ -30,16 +31,16 @@ describe("<Result />", () => {
     const onSubmit = jest.fn();
     const initialValues = {
       anciennete: 13.083333333333334,
-      hasAbsenceProlonge: false,
-      hasTempsPartiel: false,
-      hasSameSalaire: true,
-      salaire: "4500",
       branche: "1486",
       brancheCategorie: "IC",
-      hasBrancheContrat: false,
-      hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: true,
       brancheNewRegularSalaire: "4000",
+      hasAbsenceProlonge: false,
+      hasBrancheContrat: false,
+      hasBrancheNewRegularSalaire: true,
+      hasBrancheNewSalaire: true,
+      hasSameSalaire: true,
+      hasTempsPartiel: false,
+      salaire: "4500",
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>

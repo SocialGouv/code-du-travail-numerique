@@ -1,77 +1,74 @@
 import { ERROR_LABEL, getIndemniteConventionnelle } from "../indemnite";
 
 const initialValues = {
-  contrat: "cdi",
-  fauteGrave: false,
-  inaptitude: false,
-  dateEntree: "2006-06-15",
   anciennete: 13.083333333333334,
+  branche: "1486",
+  contrat: "cdi",
+  dateEntree: "2006-06-15",
   dateNotification: "2019-07-18",
   dateSortie: "2019-07-29",
+  fauteGrave: false,
   hasAbsenceProlonge: false,
-  hasTempsPartiel: false,
   hasSameSalaire: true,
-  salaires: [],
+  hasTempsPartiel: false,
+  inaptitude: false,
   salaire: "4500",
-  branche: "1486",
+  salaires: [],
 };
 const tests = [
   {
-    title: "ETAM avec contrats précédents",
     data: {
       ...initialValues,
       brancheCategorie: "ETAM",
-      hasBrancheContrat: true,
       brancheContrat: {
-        indemnite: "200",
-        duration: "12",
         considered: true,
+        duration: "12",
+        indemnite: "200",
       },
+      hasBrancheContrat: true,
     },
     result: 15643.75,
+    title: "ETAM avec contrats précédents",
   },
   {
-    title: "ETAM avec contrats précédents et ajustement salaire",
     data: {
       ...initialValues,
       brancheCategorie: "ETAM",
-      hasBrancheContrat: true,
       brancheContrat: {
-        indemnite: "200",
-        duration: "12",
         considered: true,
+        duration: "12",
+        indemnite: "200",
       },
-      hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: true,
       brancheNewRegularSalaire: "3000",
+      hasBrancheContrat: true,
+      hasBrancheNewRegularSalaire: true,
+      hasBrancheNewSalaire: true,
     },
     result: 10362.5,
+    title: "ETAM avec contrats précédents et ajustement salaire",
   },
   {
-    title: "IC sans contrats précédents",
     data: {
       ...initialValues,
       brancheCategorie: "IC",
       hasBrancheContrat: false,
     },
     result: 19625,
+    title: "IC sans contrats précédents",
   },
   {
-    title: "CEI",
     data: {
       ...initialValues,
       brancheCategorie: "CEI",
       hasBrancheContrat: false,
     },
     result: 11775,
+    title: "CEI",
   },
   {
-    title: "CENI avec ajustement salaire",
     data: {
       ...initialValues,
       brancheCategorie: "CENI",
-      hasBrancheNewSalaire: true,
-      hasBrancheNewRegularSalaire: false,
       brancheNewIrregularSalaire: [
         {
           label: "juillet 2019",
@@ -122,8 +119,11 @@ const tests = [
           salary: 2300,
         },
       ],
+      hasBrancheNewRegularSalaire: false,
+      hasBrancheNewSalaire: true,
     },
     result: 7986.28,
+    title: "CENI avec ajustement salaire",
   },
 ];
 describe("getIndemnite", () => {

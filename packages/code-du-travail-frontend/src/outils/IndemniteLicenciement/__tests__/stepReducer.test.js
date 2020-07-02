@@ -1,4 +1,4 @@
-import { stepPrime, stepReducer, initialState } from "../stepReducer";
+import { initialState, stepPrime, stepReducer } from "../stepReducer";
 
 describe("initialSteps", () => {
   it("should return default steps", () => {
@@ -43,14 +43,14 @@ describe("reducer", () => {
   });
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { type: "setStepIndex", payload: 1 })
-    ).toEqual({ steps: initialState.steps, stepIndex: 1 });
+      stepReducer(initialState, { payload: 1, type: "setStepIndex" })
+    ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
   it("handles add_step after salaires", () => {
     const state = { stepIndex: 0, steps: [{ name: "salaires" }] };
     const newState = stepReducer(state, {
-      type: "add_step",
       payload: { insertAfter: "salaires", step: stepPrime },
+      type: "add_step",
     });
 
     expect(newState.steps.findIndex((step) => step.name === "primes")).toBe(1);
@@ -60,8 +60,8 @@ describe("reducer", () => {
   it("does not add step at all if there is no previous step that matches", () => {
     const state = { stepIndex: 0, steps: [{}, {}] };
     const newState = stepReducer(state, {
-      type: "add_step",
       payload: { insertAfter: "salaires", step: stepPrime },
+      type: "add_step",
     });
 
     expect(
@@ -72,8 +72,8 @@ describe("reducer", () => {
   it("handles remove_step", () => {
     const state = { stepIndex: 0, steps: [{}, stepPrime, {}] };
     const newState = stepReducer(state, {
-      type: "remove_step",
       payload: stepPrime.name,
+      type: "remove_step",
     });
 
     expect(
@@ -84,8 +84,8 @@ describe("reducer", () => {
   it("does not fail when removing unexisting step", () => {
     const state = { stepIndex: 0, steps: [{}] };
     const newState = stepReducer(state, {
-      type: "remove_step",
       payload: { insertAfter: "salaires", stepPrime },
+      type: "remove_step",
     });
 
     expect(
@@ -96,8 +96,8 @@ describe("reducer", () => {
   it("should handle add_branche", () => {
     const state = { stepIndex: 0, steps: [] };
     const newState = stepReducer(state, {
-      type: "add_branche",
       payload: [{ name: "branche_1" }, { name: "branche_2" }],
+      type: "add_branche",
     });
 
     expect(

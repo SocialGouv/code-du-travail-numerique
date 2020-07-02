@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { Articles } from "./Articles";
-import { TextSearch } from "./TextSearch";
 import { Contributions } from "./Contributions";
+import { TextSearch } from "./TextSearch";
 
 const Convention = ({ convention }) => {
   const [, setCcInfo] = useLocalStorage("convention");
 
   useEffect(() => {
     const { slug, id, num, title, shortTitle } = convention;
-    setCcInfo({ id, slug, title, shortTitle, num });
+    setCcInfo({ id, num, shortTitle, slug, title });
   }, [convention, setCcInfo]);
 
   return (

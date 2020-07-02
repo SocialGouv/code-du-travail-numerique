@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { matopush } from "../../piwik";
 import { RelatedItems } from "../RelatedItems";
 
@@ -13,40 +14,40 @@ jest.mock("next/link", () => {
 
 const items = [
   {
-    source: "fiches_service_public",
     slug: "fiche.sp.url",
+    source: "fiches_service_public",
     title: "fiche sp",
   },
   {
-    source: "external",
-    url: "external.tools",
-    title: "externalTool",
     action: "voir",
     icon: "Custom",
+    source: "external",
+    title: "externalTool",
+    url: "external.tools",
   },
   {
+    slug: "modele.url",
     source: "modeles_de_courriers",
     title: "modele de courrier",
-    slug: "modele.url",
   },
   {
-    source: "outils",
-    slug: "outils.url",
-    title: "Simulateur",
     action: "simuler",
     icon: "Depart",
+    slug: "outils.url",
+    source: "outils",
+    title: "Simulateur",
   },
   {
-    source: "contributions",
     slug: "contrib.url",
+    source: "contributions",
     title: "contrib",
   },
   {
-    source: "outils",
-    slug: "outil-2.slug",
-    title: "fiche sp",
-    icon: "Contract",
     action: "tester",
+    icon: "Contract",
+    slug: "outil-2.slug",
+    source: "outils",
+    title: "fiche sp",
   },
 ];
 

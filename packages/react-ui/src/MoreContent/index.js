@@ -1,6 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from "react";
 import {
   Accordion as RootAccordion,
   AccordionItem,
@@ -8,10 +7,11 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import styled from "styled-components";
 
-import { animations, breakpoints, spacings } from "../theme";
 import { More } from "../icons";
 import { fadeIn } from "../keyframes";
+import { animations, breakpoints, spacings } from "../theme";
 
 export const MoreContent = ({ children, title, noLeftPadding, ...props }) => {
   return (

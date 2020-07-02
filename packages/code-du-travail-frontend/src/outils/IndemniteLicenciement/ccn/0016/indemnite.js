@@ -1,5 +1,5 @@
 import { round, sum } from "../../../common/math";
-import { CADRE, TAM, OUVRIER } from "./Categorie";
+import { CADRE, OUVRIER, TAM } from "./Categorie";
 /**
  * calcul de l'indemnite de licenciement conventionnelle
  * TRANSPORTS ROUTIERS ET ACTIVITÉS AUXILIAIRES DU TRANSPORT- IDCC 16
@@ -72,13 +72,13 @@ export function getIndemnite({
       "Aucune indemnité de licenciement n’est prévue en deçà de 2 ans d’ancienneté.";
   } else if (categorie === OUVRIER || categorie === TAM) {
     const bareme2_3 = {
-      [OUVRIER]: { value: 1 / 10, label: "1/10" },
-      [TAM]: { value: 1 / 10, label: "1/10" },
+      [OUVRIER]: { label: "1/10", value: 1 / 10 },
+      [TAM]: { label: "1/10", value: 1 / 10 },
     };
 
     const bareme3plus = {
-      [OUVRIER]: { value: 2 / 10, label: "2/10" },
-      [TAM]: { value: 3 / 10, label: "3/10" },
+      [OUVRIER]: { label: "2/10", value: 2 / 10 },
+      [TAM]: { label: "3/10", value: 3 / 10 },
     };
     const bareme = anciennete >= 3 ? bareme3plus : bareme2_3;
     indemniteConventionnelle =
@@ -121,8 +121,8 @@ export function getIndemnite({
     }
   }
   return {
+    error,
     indemniteConventionnelle: round(indemniteConventionnelle),
     infoCalculConventionnel: { formula, labels },
-    error,
   };
 }

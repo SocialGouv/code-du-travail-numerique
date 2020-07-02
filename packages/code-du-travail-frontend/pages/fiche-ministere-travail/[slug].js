@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { withRouter } from "next/router";
-import getConfig from "next/config";
-import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
 import { decode } from "@socialgouv/fiches-travail-data";
 import { Accordion } from "@socialgouv/react-ui";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import { withRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -21,9 +21,9 @@ const buildAccordionSections = (sections) =>
   sections
     .filter((section) => section.anchor)
     .map(({ anchor, html, title }) => ({
+      body: <TabContent>{html}</TabContent>,
       id: anchor,
       title: <h2>{title}</h2>,
-      body: <TabContent>{html}</TabContent>,
     }));
 
 const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
@@ -90,7 +90,7 @@ Fiche.getInitialProps = async ({ query, asPath }) => {
   }
 
   const data = await response.json();
-  return { data, anchor };
+  return { anchor, data };
 };
 
 export default withRouter(Fiche);

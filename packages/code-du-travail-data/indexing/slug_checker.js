@@ -1,5 +1,5 @@
-import { cdtnDocumentsGen, getDuplicateSlugs } from "./populate";
 import { logger } from "./logger";
+import { cdtnDocumentsGen, getDuplicateSlugs } from "./populate";
 
 const checkDuplicates = async () => {
   const documents = await cdtnDocumentsGen();

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
 import { box, spacings } from "../theme";
 
 export const Alert = styled.div`
@@ -20,8 +21,8 @@ export const Alert = styled.div`
 `;
 
 Alert.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary"]),
   children: PropTypes.node.isRequired,
+  variant: PropTypes.oneOf(["primary", "secondary"]),
 };
 
 Alert.defaultProps = {

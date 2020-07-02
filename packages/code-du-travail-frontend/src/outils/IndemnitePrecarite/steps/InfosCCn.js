@@ -1,8 +1,9 @@
+import { theme, Toast } from "@socialgouv/react-ui";
 import React from "react";
 import styled from "styled-components";
+
 import { StepInfoCCnOptionnal } from "../../common/InfosCCn";
 import { isNotYetProcessed } from "./situation";
-import { Toast, theme } from "@socialgouv/react-ui";
 
 export function StepInfoCCn(props) {
   const { form } = props;

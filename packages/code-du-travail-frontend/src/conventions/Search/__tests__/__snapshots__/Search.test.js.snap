@@ -164,6 +164,21 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   cursor: pointer;
 }
 
+.c12 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13 {
+  font-weight: normal;
+}
+
 .c8 {
   margin: 0;
   padding: 0;
@@ -198,21 +213,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c12 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  font-weight: normal;
 }
 
 .c2 {
@@ -936,6 +936,31 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   cursor: pointer;
 }
 
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13 {
+  display: block;
+  padding: 1.6rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  font-weight: normal;
+}
+
 .c8 {
   margin: 0;
   padding: 0;
@@ -970,31 +995,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  display: block;
-  padding: 1.6rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
 }
 
 .c2 {
@@ -1248,6 +1248,21 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   cursor: pointer;
 }
 
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  font-weight: normal;
+}
+
 .c8 {
   margin: 0;
   padding: 0;
@@ -1282,21 +1297,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
 }
 
 .c2 {
@@ -1563,6 +1563,25 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   cursor: pointer;
 }
 
+.c13 {
+  display: block;
+  padding: 0.8rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14 {
+  font-weight: normal;
+}
+
+.c11 {
+  margin: 0.8rem 0 0 0;
+  font-weight: bold;
+}
+
 .c8 {
   margin: 0;
   padding: 0;
@@ -1597,25 +1616,6 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c13 {
-  display: block;
-  padding: 0.8rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  font-weight: normal;
-}
-
-.c11 {
-  margin: 0.8rem 0 0 0;
-  font-weight: bold;
 }
 
 .c2 {
@@ -1897,6 +1897,36 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   cursor: pointer;
 }
 
+.c12 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15 {
+  display: block;
+  padding: 0.8rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13 {
+  font-weight: normal;
+}
+
+.c14 {
+  margin: 0.8rem 0 0 0;
+  font-weight: bold;
+}
+
 .c8 {
   margin: 0;
   padding: 0;
@@ -1931,36 +1961,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c12 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c15 {
-  display: block;
-  padding: 0.8rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  font-weight: normal;
-}
-
-.c14 {
-  margin: 0.8rem 0 0 0;
-  font-weight: bold;
 }
 
 .c2 {

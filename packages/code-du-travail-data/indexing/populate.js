@@ -3,19 +3,19 @@ import themes from "@socialgouv/datafiller-data/data/themes.json";
 import crypto from "crypto";
 import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
+
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
-import { getEditorialContents } from "../dataset/editorial_content";
 import { thematicFiles } from "../dataset/dossiers";
+import { getEditorialContents } from "../dataset/editorial_content";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import slugify from "../slugify";
+import { addGlossary } from "./addGlossary";
 import { getAgreementPages } from "./agreement_pages";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { getVersions } from "./versions";
-
-import { addGlossary } from "./addGlossary";
 
 const getBreadcrumbs = createThemer(themes);
 
@@ -64,7 +64,7 @@ async function getDuplicateSlugs(allDocuments) {
   }
 
   return slugs
-    .map((slug) => ({ slug, count: slugs.filter((s) => slug === s).length }))
+    .map((slug) => ({ count: slugs.filter((s) => slug === s).length, slug }))
     .filter(({ count }) => count > 1)
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
@@ -77,16 +77,16 @@ async function* cdtnDocumentsGen() {
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title, shortTitle, url, effectif }) => {
       return {
-        source: SOURCES.CCN,
-        id,
-        idcc: parseIdcc(num),
-        title,
-        shortTitle,
-        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
-        text: `IDCC ${num} ${title}`,
-        url,
         effectif,
         excludeFromSearch: false,
+        id,
+        idcc: parseIdcc(num),
+        shortTitle,
+        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+        source: SOURCES.CCN,
+        text: `IDCC ${num} ${title}`,
+        title,
+        url,
       };
     }
   );
@@ -97,16 +97,16 @@ async function* cdtnDocumentsGen() {
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
   ).map(
     ({ data: { id, num, dateDebut, nota, notaHtml, texte, texteHtml } }) => ({
-      source: SOURCES.CDT,
-      title: fixArticleNum(id, num),
-      slug: slugify(fixArticleNum(id, num)),
+      dateDebut,
       description: texte.slice(0, texte.indexOf("…", 150)),
       html: texteHtml,
+      slug: slugify(fixArticleNum(id, num)),
+      source: SOURCES.CDT,
       text: `${texte}\n${nota}`,
-      dateDebut,
+      title: fixArticleNum(id, num),
       ...(nota.length > 0 && { notaHtml }),
-      url: getArticleUrl(id),
       excludeFromSearch: false,
+      url: getArticleUrl(id),
     })
   );
 
@@ -122,17 +122,17 @@ async function* cdtnDocumentsGen() {
   yield splittedFiches.map(
     ({ anchor, description, html, slug, text, title }) => {
       return {
-        source: SOURCES.SHEET_MT,
         anchor,
-        description,
         breadcrumbs: getBreadcrumbs(
           `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
         ),
+        description,
+        excludeFromSearch: false,
         html,
         slug,
+        source: SOURCES.SHEET_MT,
         text,
         title,
-        excludeFromSearch: false,
       };
     }
   );
@@ -141,16 +141,16 @@ async function* cdtnDocumentsGen() {
   yield themes.map(
     ({ breadcrumbs, children, icon, introduction, position, refs, title }) => {
       return {
+        breadcrumbs: breadcrumbs.map(toBreadcrumbs),
+        children: children.map(toBreadcrumbs),
+        description: introduction,
+        excludeFromSearch: false,
+        icon,
+        position,
+        refs,
+        slug: toSlug(title, position),
         source: SOURCES.THEMES,
         title: title,
-        slug: toSlug(title, position),
-        icon,
-        description: introduction,
-        children: children.map(toBreadcrumbs),
-        position,
-        breadcrumbs: breadcrumbs.map(toBreadcrumbs),
-        refs,
-        excludeFromSearch: false,
       };
     }
   );
@@ -176,12 +176,12 @@ async function* cdtnDocumentsGen() {
         breadcrumbs,
         date,
         description,
+        excludeFromSearch: false,
         icon,
         slug,
         source: SOURCES.TOOLS,
         text: questions.join("\n"),
         title,
-        excludeFromSearch: false,
       })
     );
 
@@ -190,13 +190,13 @@ async function* cdtnDocumentsGen() {
     ({ action, description, icon, title, url }) => ({
       action,
       description,
+      excludeFromSearch: false,
       icon,
       slug: slugify(title),
       source: SOURCES.EXTERNALS,
       text: description,
-      url,
       title,
-      excludeFromSearch: false,
+      url,
     })
   );
 
@@ -209,14 +209,6 @@ async function* cdtnDocumentsGen() {
       answers.conventions.forEach(fixReferences);
 
       return {
-        source: SOURCES.CONTRIBUTIONS,
-        title,
-        slug,
-        breadcrumbs: getBreadcrumbs(
-          `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
-        ),
-        description: (answers.generic && answers.generic.description) || title,
-        text: (answers.generic && answers.generic.text) || title,
         answers: {
           ...answers,
           generic: {
@@ -224,7 +216,15 @@ async function* cdtnDocumentsGen() {
             markdown: addGlossary(answers.generic.markdown),
           },
         },
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
+        ),
+        description: (answers.generic && answers.generic.description) || title,
         excludeFromSearch: false,
+        slug,
+        source: SOURCES.CONTRIBUTIONS,
+        text: (answers.generic && answers.generic.text) || title,
+        title,
       };
     }
   );
@@ -248,14 +248,13 @@ async function* cdtnDocumentsGen() {
   logger.info("=== Hightlights ===");
   yield [
     {
-      source: SOURCES.HIGHLIGHTS,
       data: require("@socialgouv/datafiller-data/data/hightlights.json"),
+      source: SOURCES.HIGHLIGHTS,
     },
   ];
   logger.info("=== glossary ===");
   yield [
     {
-      source: SOURCES.GLOSSARY,
       data: require("@socialgouv/datafiller-data/data/glossary.json").map(
         (item) => {
           return {
@@ -264,20 +263,20 @@ async function* cdtnDocumentsGen() {
           };
         }
       ),
+      source: SOURCES.GLOSSARY,
     },
   ];
   logger.info("=== PreQualified Request ===");
   yield [
     {
-      source: SOURCES.PREQUALIFIED,
       data: require("@socialgouv/datafiller-data/data/requests.json"),
+      source: SOURCES.PREQUALIFIED,
     },
   ];
   logger.info("=== page fiches travail ===");
   yield fichesMT.map(({ sections, ...content }) => {
     return {
       ...content,
-      source: SOURCES.SHEET_MT_PAGE,
       breadcrumbs: getBreadcrumbs(
         `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
       ),
@@ -286,6 +285,8 @@ async function* cdtnDocumentsGen() {
         ...section,
         html: addGlossary(section.html),
       })),
+
+      source: SOURCES.SHEET_MT_PAGE,
     };
   });
   logger.info("=== page ccn ===");
@@ -303,8 +304,8 @@ async function* cdtnDocumentsGen() {
   logger.info("=== data version ===");
   yield [
     {
-      source: SOURCES.VERSIONS,
       data: getVersions(),
+      source: SOURCES.VERSIONS,
     },
   ];
 }

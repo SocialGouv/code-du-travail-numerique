@@ -1,8 +1,3 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import getConfig from "next/config";
-import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
 import {
   ArrowLink,
   Container,
@@ -16,10 +11,15 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React, { useState } from "react";
+import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },

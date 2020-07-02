@@ -1,8 +1,11 @@
-import React from "react";
+import "jest-styled-components";
+
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { BurgerNav } from "./index";
 import { BurgerNavButton, BurgerNavCurrent, BurgerNavLink } from "./NavItems";
-import "jest-styled-components";
+
 describe("BurgerStyles", () => {
   it("renders", () => {
     const { container } = render(

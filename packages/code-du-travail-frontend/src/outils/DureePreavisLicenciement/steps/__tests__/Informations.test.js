@@ -1,5 +1,5 @@
-import { StepInformations } from "../Informations";
 import { renderForm } from "../../../../../test/renderForm";
+import { StepInformations } from "../Informations";
 
 describe("<StepInformations />", () => {
   it("should render catégorie", () => {

@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
-
-import styled from "styled-components";
-import { useRouter } from "next/router";
-import Spinner from "react-svg-spinner";
-
 import { Input, Label, theme } from "@socialgouv/react-ui";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import Spinner from "react-svg-spinner";
+import styled from "styled-components";
 
 import { matopush } from "../../piwik";
-import useSearchCC from "./searchHook";
-import { ResultList } from "./ResultList";
 import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
+import { ResultList } from "./ResultList";
+import useSearchCC from "./searchHook";
 
 const Search = ({ onSelectConvention }) => {
   const router = useRouter();

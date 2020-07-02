@@ -1,21 +1,21 @@
-import React from "react";
-import getConfig from "next/config";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Button,
   Container,
+  FlatList,
   Heading,
   icons,
-  FlatList,
   Section,
   theme,
   Title,
 } from "@socialgouv/react-ui";
-
-import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
-import { ContactModal } from "../common/ContactModal";
+import getConfig from "next/config";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
+
+import { ContactModal } from "../common/ContactModal";
+import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { matopush } from "../piwik";
 
 const { DirectionRight: DirectionRightIcon } = icons;

@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Container,
   PageTitle,
@@ -9,9 +6,12 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 const { spacings } = theme;
 
@@ -140,7 +140,7 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
               title="matomo optout"
               style={{ border: 0, width: "100%" }}
               src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=2f3b6c&fontSize=16px&fontFamily=sans-serif"
-            ></iframe>
+            />
             <p>
               Pour aller plus loin, vous pouvez consulter les fiches proposées
               par la Commission Nationale de l’Informatique et des Libertés

@@ -1,7 +1,7 @@
 import React from "react";
-import { getIndemniteFromFinalForm } from "../../indemnite";
 
 import { IndemniteCCn } from "../../components/IndemniteConventionnelle";
+import { getIndemniteFromFinalForm } from "../../indemnite";
 import { getIndemnite, getSalaireRef } from "./indemnite";
 
 export function Result({ form }) {
@@ -23,24 +23,24 @@ export function Result({ form }) {
 
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   const salaireRef = getSalaireRef({
-    hasTempsPartiel,
+    anciennete,
     hasSameSalaire,
+    hasTempsPartiel,
     salaire,
     salairePeriods,
     salaires,
-    anciennete,
   });
   const {
     error,
     indemniteConventionnelle,
     infoCalculConventionnel,
   } = getIndemnite({
-    salaireRef,
-    dateEntree,
-    dateSortie,
     anciennete,
     categorie,
+    dateEntree,
+    dateSortie,
     motif,
+    salaireRef,
   });
   return (
     <IndemniteCCn

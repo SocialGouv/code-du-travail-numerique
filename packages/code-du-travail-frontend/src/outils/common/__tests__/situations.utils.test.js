@@ -1,43 +1,44 @@
+import data from "@cdt/data...prime-precarite/precarite.data.json";
+
 import {
-  getSituationsFor,
   filterSituations,
+  getFormProps,
   getNextQuestionKey,
   getOptions,
   getPastQuestions,
+  getSituationsFor,
   isNotYetProcessed,
   recapSituation,
-  getFormProps,
 } from "../situations.utils";
 
-import data from "@cdt/data...prime-precarite/precarite.data.json";
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
-  { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } },
-  { idcc: "10", criteria: { foo: "2| baz", bar: "baz" } },
-  { idcc: "10", criteria: { foo: "2| baz", bar: "bar" } },
+  { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
   {
-    idcc: "20",
+    allowBonus: false,
     criteria: {
       foo: "3| bar",
     },
-    allowBonus: false,
     endMessage: "nope",
     hasConventionalProvision: true,
+    idcc: "20",
   },
   {
-    idcc: "20",
+    allowBonus: true,
     criteria: {
       foo: "4| baz",
     },
-    allowBonus: true,
     hasConventionalProvision: true,
+    idcc: "20",
   },
   {
-    idcc: "30",
     criteria: {},
     hasConventionalProvision: null,
+    idcc: "30",
   },
 ]);
 
@@ -62,8 +63,8 @@ describe("situations", () => {
     });
     it("should render only situation that match foo", () => {
       expect(filterSituations(data, { foo: "1| foo" })).toEqual([
-        { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
-        { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } },
+        { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
+        { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
       ]);
     });
   });
@@ -147,7 +148,7 @@ describe("situations", () => {
     it("should return anlist keys", () => {
       const key = "bar";
       const initialSituations = getSituationsFor(data, { idcc: "10" });
-      const criteria = { foo: "1| foo", bar: "baz" };
+      const criteria = { bar: "baz", foo: "1| foo" };
       const pastQuestions = getPastQuestions(
         initialSituations,
         criteriaOrder,
@@ -156,8 +157,8 @@ describe("situations", () => {
 
       expect(
         getFormProps({
-          key,
           criteria,
+          key,
           pastQuestions,
         })
       ).toEqual(["foo"]);

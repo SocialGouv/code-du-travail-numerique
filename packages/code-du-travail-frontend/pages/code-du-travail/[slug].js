@@ -1,16 +1,16 @@
-import React from "react";
-import { withRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
+import { Alert } from "@socialgouv/react-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
+import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
-import { Alert } from "@socialgouv/react-ui";
+import { withRouter } from "next/router";
+import React from "react";
 
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
-import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 import Html from "../../src/common/Html";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
+import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 
 const {
   publicRuntimeConfig: { API_URL },

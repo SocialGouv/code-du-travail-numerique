@@ -1,6 +1,3 @@
-import React, { useCallback, useState } from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Button,
   icons,
@@ -9,6 +6,9 @@ import {
   theme,
   Title,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
 
 import { matopush } from "../../piwik";
 

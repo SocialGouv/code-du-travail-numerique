@@ -17,35 +17,6 @@ exports[`<Result /> should render 1`] = `
   white-space: pre-line;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c15 {
-  width: calc(50% * 0.4);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
-}
-
 .c13 {
   margin: 1.6rem 0;
 }
@@ -81,6 +52,35 @@ exports[`<Result /> should render 1`] = `
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 0.4);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -203,9 +203,9 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Salaire de réference (Sref)
+            Ancienneté totale (A)
              : 
-            2000
+            5
           </li>
           <li
             class="c11"
@@ -217,9 +217,9 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Ancienneté totale (A)
+            Salaire de réference (Sref)
              : 
-            5
+            2000
           </li>
         </ul>
         <strong
@@ -524,9 +524,16 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Salaire de référence (Sref)
+            Ancienneté 6 ens 10ans (A2)
              : 
-            2000
+            0
+          </li>
+          <li
+            class="c11"
+          >
+            Ancienneté au delà de 10ans (A3)
+             : 
+            0
           </li>
           <li
             class="c11"
@@ -538,16 +545,9 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Ancienneté 6 ens 10ans (A2)
+            Salaire de référence (Sref)
              : 
-            0
-          </li>
-          <li
-            class="c11"
-          >
-            Ancienneté au delà de 10ans (A3)
-             : 
-            0
+            2000
           </li>
         </ul>
         <strong

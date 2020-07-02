@@ -1,5 +1,3 @@
-import React from "react";
-import styled from "styled-components";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import {
   Accordion,
@@ -8,6 +6,9 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
+
 import Html from "../../src/common/Html";
 
 //Custom MDX component
@@ -15,8 +16,8 @@ const Tab = (props) => (
   <StyledAccordion
     items={[
       {
-        title: <h3>{props.title}</h3>,
         body: props.children,
+        title: <h3>{props.title}</h3>,
       },
     ]}
   />
@@ -51,9 +52,9 @@ const ContentMT = (props) => {
       {sections && (
         <Accordion
           items={sections.map((section) => ({
+            body: <TabContent>{section.html}</TabContent>,
             id: section.anchor,
             title: <h3>{section.title}</h3>,
-            body: <TabContent>{section.html}</TabContent>,
           }))}
         />
       )}
@@ -69,9 +70,9 @@ const rehypeToReact = (content) => {
       <ContentMT {...content} />
     );
   return {
-    tab: Tab,
-    hdn: Hdn,
     content: () => contentComponent,
+    hdn: Hdn,
+    tab: Tab,
   };
 };
 
