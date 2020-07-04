@@ -2697,15 +2697,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.123.0":
-  version "3.123.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.123.0.tgz#5d359239b5952931d6477190959a0aa4a08439d1"
-  integrity sha512-Z649AYbZ0yXp/dRJ/H0j8ItfYAW7/H5t7Y/QJoHrpAF1xdgfOh6Wlvj9hehix1kal3KKaVNmWOnliqMFtVFIQQ==
+"@socialgouv/fiches-travail-data@^3.125.0":
+  version "3.125.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.125.0.tgz#ca8b4f07e163da2cc0d6586f3b03f8717d9a1bfa"
+  integrity sha512-qQI36civMR3BBEGWiTFESK1PwfzEqfeBgRDKi7u4PZd/yQF3IaPaNUb+3eF127EUy5iwYYnr6mUBXu2q4+ztdA==
 
-"@socialgouv/fiches-vdd@^1.118.0":
-  version "1.118.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.118.0.tgz#4e51e925609380e321c23454a88d8c95527463e9"
-  integrity sha512-l4SPLpWEbSXB80iuWnk0no4VOHCDhTQnu5IzgBkkvPfr8dB61PEta5p8zqT+tLI6QBFQ1C5x3ox4mIakejGwag==
+"@socialgouv/fiches-vdd@^1.119.0":
+  version "1.119.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.119.0.tgz#4fa5c8485cc53f5269b2cb545f8a81fb43fa1cf2"
+  integrity sha512-sofBCmA94002r+/iojlNbABo6YfkGymbKlk2pDJyR67OlcIiWTcXUq7RZtuopjlvwIlenQuIZy896PwZsKrqag==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
