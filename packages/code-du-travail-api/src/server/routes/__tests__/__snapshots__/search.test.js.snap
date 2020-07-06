@@ -13,39 +13,7 @@ Object {
     },
   ],
   "documents": Array [],
-  "themes": Array [
-    Object {
-      "_score": 1.285346,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
-      "source": "themes",
-      "title": "Départ de l'entreprise",
-    },
-    Object {
-      "_score": 1.2845286,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-      ],
-      "slug": "81-demission",
-      "source": "themes",
-      "title": "Démission",
-    },
-    Object {
-      "_score": 1.2566009,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
-    },
-  ],
+  "themes": Array [],
 }
 `;
 
@@ -220,24 +188,6 @@ Object {
       "source": "themes",
       "title": "Démission",
     },
-    Object {
-      "_score": 1.775988,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
-    },
-    Object {
-      "_score": 1.7593896,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
-      "source": "themes",
-      "title": "Départ de l'entreprise",
-    },
   ],
 }
 `;
@@ -265,7 +215,7 @@ Object {
   "documents": Array [
     Object {
       "_score": 10.528123,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -283,28 +233,9 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 1.2629504,
-      "action": "Estimer",
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Licenciement",
-          "slug": "/themes/84-licenciement",
-        },
-      ],
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
-    },
-    Object {
       "_score": 9.85156,
       "action": "Calculer",
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -322,7 +253,7 @@ Object {
     },
     Object {
       "_score": 9.766406,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -339,30 +270,8 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 1.2302384,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Embauche et contrat de travail",
-          "slug": "/themes/1-embauche-et-contrat-de-travail",
-        },
-        Object {
-          "label": "Embauche",
-          "slug": "/themes/11-embauche",
-        },
-        Object {
-          "label": "Période d'essai",
-          "slug": "/themes/113-periode-dessai",
-        },
-      ],
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l'initiative de l'employeur",
-    },
-    Object {
       "_score": 9.467385,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -381,7 +290,7 @@ Object {
     },
     Object {
       "_score": 4.910861,
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
@@ -397,28 +306,6 @@ Object {
       "source": "fiches_ministere_travail",
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
-    Object {
-      "_score": 1.1276249,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "slug": "/themes/83-rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "slug": "/themes/831-rupture-conventionnelle-individuelle",
-        },
-      ],
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
   ],
   "themes": Array [
     Object {
@@ -427,24 +314,6 @@ Object {
       "slug": "81-demission",
       "source": "themes",
       "title": "Démission",
-    },
-    Object {
-      "_score": 1.775988,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
-      "source": "themes",
-      "title": "Embauche et contrat de travail",
-    },
-    Object {
-      "_score": 1.7593896,
-      "algo": "semantic",
-      "breadcrumbs": Array [],
-      "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
-      "source": "themes",
-      "title": "Départ de l'entreprise",
     },
   ],
 }

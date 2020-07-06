@@ -14,6 +14,29 @@ const MAX_RESULTS = 5;
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
+function mapSource(reco, source) {
+  return (({
+    action,
+    description,
+    icon,
+    slug,
+    source,
+    subtitle,
+    title,
+    url,
+  }) => ({
+    action,
+    description,
+    icon,
+    slug,
+    source,
+    subtitle,
+    title,
+    url,
+    reco,
+  }))(source);
+}
+
 async function getRelatedItems({ title, settings, slug, covisits }) {
   // console.log(covisits);
   if (covisits) {
@@ -53,7 +76,8 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     const covisitedItems = esCovisits
       // do we really want this ?
       // .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
-      .map(({ _source }) => _source);
+      // we filter fields and add some info about recommandation type for evaluation purpose
+      .map(({ _source }) => mapSource("covisits", _source));
 
     // console.log(covisitedItems);
     return covisitedItems;
@@ -104,7 +128,8 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     const res = utils
       .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
-      .map(({ _source }) => _source);
+      // we filter fields and add some info about recommandation type for evaluation purpose
+      .map(({ _source }) => mapSource("search", _source));
 
     // we only return covisites for testing purpose
     return [];

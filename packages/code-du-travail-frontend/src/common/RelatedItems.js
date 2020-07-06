@@ -67,7 +67,7 @@ export const RelatedItems = ({ items = [] }) => {
             Les articles pouvant vous intéresser&nbsp;:
           </Heading>
           <FlatList>
-            {relatedLinkItems.map(({ slug, source, title }) => {
+            {relatedLinkItems.map(({ slug, source, title, reco }) => {
               let rootSlug = slug;
               let hash;
               if (slug.includes("#")) {
@@ -90,7 +90,10 @@ export const RelatedItems = ({ items = [] }) => {
                         matopush([
                           "trackEvent",
                           "selectRelated",
-                          `${route}${rootSlug}${hash}`,
+                          JSON.stringify({
+                            selection: `${route}${rootSlug}${hash}`,
+                            reco,
+                          }),
                         ])
                       }
                     >
