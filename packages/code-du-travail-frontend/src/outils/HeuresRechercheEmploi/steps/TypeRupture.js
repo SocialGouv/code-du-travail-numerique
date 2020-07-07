@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import React, { useEffect } from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
-import { SectionTitle } from "../../common/stepStyles";
 import {
-  getSituationsFor,
   formatOption,
+  getSituationsFor,
   orderCriteria,
 } from "../../common/situations.utils";
+import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
 
