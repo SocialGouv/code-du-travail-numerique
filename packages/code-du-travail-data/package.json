@@ -47,6 +47,7 @@
     "unist-util-find": "^1.0.1",
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.1",
+    "uuid": "^8.2.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
