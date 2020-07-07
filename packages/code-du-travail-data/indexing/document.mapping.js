@@ -64,6 +64,13 @@ export const documentMapping = {
       enabled: false,
     },
 
+    covisits: {
+      properties: {
+        count: { type: "integer" },
+        link: { type: "keyword" },
+      },
+    },
+
     description: { type: "text" },
 
     effectif: {
@@ -202,12 +209,6 @@ export const documentMapping = {
     // The source URL
     url: {
       type: "keyword",
-    },
-    covisits: {
-      properties: {
-        link: { type: "keyword" },
-        count: { type: "integer" },
-      },
     },
   },
 };

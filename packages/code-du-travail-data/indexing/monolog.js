@@ -1,7 +1,8 @@
-import { Queries } from "@socialgouv/cdtn-monolog";
-import { Client } from "@elastic/elasticsearch";
-import { logger } from "./logger";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { Client } from "@elastic/elasticsearch";
+import { Queries } from "@socialgouv/cdtn-monolog";
+
+import { logger } from "./logger";
 
 const ES_LOGS = process.env.ES_LOGS;
 const ES_LOGS_TOKEN = process.env.ES_LOGS_TOKEN;
@@ -22,8 +23,8 @@ if (!ES_LOGS || !ES_LOGS_TOKEN) {
 }
 
 const esClientConfig = {
-  node: ES_LOGS,
   auth: { apiKey: ES_LOGS_TOKEN },
+  node: ES_LOGS,
 };
 
 const client = new Client(esClientConfig);
