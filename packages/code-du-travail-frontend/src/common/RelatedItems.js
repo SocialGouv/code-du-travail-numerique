@@ -31,35 +31,51 @@ export const RelatedItems = ({ items = [] }) => {
   return (
     <Container>
       <StyledFlatList>
-        {relatedTilesItems.map(({ action, icon, slug, source, title, url }) => (
-          <StyledTileItem key={slug || url}>
-            {source !== SOURCES.EXTERNALS ? (
-              <Link
-                as={`/${getRouteBySource(source)}/${slug}`}
-                href={`/${getRouteBySource(source)}/[slug]`}
-                passHref
-              >
+        {relatedTilesItems.map(
+          ({
+            action,
+            description,
+            icon,
+            slug,
+            source,
+            subtitle,
+            title,
+            url,
+          }) => (
+            <StyledTileItem key={slug || url}>
+              {source !== SOURCES.EXTERNALS ? (
+                <Link
+                  as={`/${getRouteBySource(source)}/${slug}`}
+                  href={`/${getRouteBySource(source)}/[slug]`}
+                  passHref
+                >
+                  <CallToActionTile
+                    action={action || "Consulter"}
+                    custom
+                    icon={
+                      source === SOURCES.LETTERS ? icons.Document : icons[icon]
+                    }
+                    title={title}
+                    subtitle={getLabelBySource(source)}
+                  />
+                </Link>
+              ) : (
                 <CallToActionTile
                   action={action || "Consulter"}
-                  custom
-                  icon={
-                    source === SOURCES.LETTERS ? icons.Document : icons[icon]
-                  }
+                  custom={false}
+                  href={url}
+                  icon={icons[icon]}
+                  rel="noopener noreferrer"
+                  subtitle={subtitle}
+                  target="_blank"
                   title={title}
-                  subtitle={getLabelBySource(source)}
-                />
-              </Link>
-            ) : (
-              <CallToActionTile
-                action={action || "Consulter"}
-                custom
-                icon={source === SOURCES.LETTERS ? icons.Document : icons[icon]}
-                title={title}
-                subtitle={getLabelBySource(source)}
-              ></CallToActionTile>
-            )}
-          </StyledTileItem>
-        ))}
+                >
+                  {description}
+                </CallToActionTile>
+              )}
+            </StyledTileItem>
+          )
+        )}
       </StyledFlatList>
       {relatedLinkItems.length > 0 && (
         <>
