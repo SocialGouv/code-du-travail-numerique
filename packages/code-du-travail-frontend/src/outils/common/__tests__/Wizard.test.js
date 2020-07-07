@@ -71,7 +71,7 @@ describe("<Wizard />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("should navigate to the second step when click on Suivant", () => {
+  it("should navigate to the second step when click on Commencer", () => {
     const { container, getByText } = render(
       <Wizard
         title="test"
@@ -79,7 +79,7 @@ describe("<Wizard />", () => {
         initialState={initialState}
       />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/commencer/i);
     button.click();
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
@@ -89,7 +89,7 @@ describe("<Wizard />", () => {
     ]);
     expect(container).toMatchSnapshot();
   });
-  it("should call Step.validate when click on Suivant", () => {
+  it("should call Step.validate when click on Commencer", () => {
     const { getByText } = render(
       <Wizard
         title="test"
@@ -97,7 +97,7 @@ describe("<Wizard />", () => {
         initialState={initialState}
       />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/Commencer/i);
     button.click();
     expect(FirstStep.validate).toHaveBeenCalled();
   });
@@ -158,7 +158,7 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard title="test" stepReducer={stepReducer} initialState={state} />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/Commencer/i);
     button.click();
     expect(getByText("Deuxieme Etape")).toBeTruthy();
   });
@@ -201,7 +201,7 @@ describe("<Wizard />", () => {
         Rules={RulesAdditionalStep}
       />
     );
-    getByText(/suivant/i).click(); // step 2
+    getByText(/Commencer/i).click(); // step 2
     getByLabelText("etape facultative").click();
     getByText(/suivant/i).click(); // additionalStep
     expect(getByText("etape optionnelle")).toBeTruthy();

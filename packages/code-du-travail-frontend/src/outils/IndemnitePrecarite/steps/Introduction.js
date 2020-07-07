@@ -19,7 +19,7 @@ function StepIntro() {
         contrat de travail (CDD ou contrat de travail temporaire (contrat
         d’intérim), derniers bulletins de salaire, …).
       </p>
-      <p>Pour commencer la simulation, cliquez sur « Suivant ».</p>
+      <p>Cliquez sur commencer pour démarrer la simulation.</p>
     </>
   );
 }

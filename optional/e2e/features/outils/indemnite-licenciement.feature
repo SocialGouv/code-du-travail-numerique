@@ -13,7 +13,7 @@ Scénario:
   Alors je vois "Indemnité de licenciement"
   Alors je vois "permet d’estimer le montant de l’indemnité minimale de licenciement"
 
-  Quand je clique sur "Suivant"
+  Quand je clique sur "Commencer"
 
 
   Alors je vois "Quel est le type du contrat de travail"

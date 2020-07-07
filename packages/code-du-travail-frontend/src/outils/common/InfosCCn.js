@@ -25,6 +25,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   useEffect(() => {
     form.batch(() => {
       form.change("criteria", undefined);
+      form.change("typeRupture", undefined);
       form.change(CONVENTION_NAME, storedConvention);
     });
     // eslint-disable-next-line
@@ -51,7 +52,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 >
                   {input.value.shortTitle}
                 </Toast>
-                <p>Cliquez sur suivant pour poursuivre la simulation.</p>
+                <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );

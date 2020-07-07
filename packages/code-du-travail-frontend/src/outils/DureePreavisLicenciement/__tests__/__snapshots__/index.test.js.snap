@@ -488,7 +488,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
       .
     </p>
     <p>
-      Cliquez sur suivant pour commencer la simulation
+      Cliquez sur commencer pour démarrer la simulation.
     </p>
     <div
       class="c12"
@@ -496,7 +496,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"

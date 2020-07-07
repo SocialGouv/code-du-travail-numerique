@@ -36,12 +36,17 @@ export function getOptions(possibleSituations, nextQuestionKey) {
   );
   return [...new Set(dupValues)]
     .filter(Boolean)
-    .sort((a, b) => {
-      const [, numA] = a.match(/([0-9]+)\|/) || [];
-      const [, numB] = b.match(/([0-9]+)\|/) || [];
-      return numA && numB ? numA - numB : a.localeCompare(b);
-    })
-    .map((a) => [a, a.replace(/([0-9]+\|)?/, "").trim()]);
+    .sort(orderCriteria)
+    .map(formatOption);
+}
+export function orderCriteria(a, b) {
+  const [, numA] = a.match(/([0-9]+)\|/) || [];
+  const [, numB] = b.match(/([0-9]+)\|/) || [];
+  return numA && numB ? numA - numB : a.localeCompare(b);
+}
+
+export function formatOption(a) {
+  return [a, a.replace(/([0-9]+\|)?/, "").trim()];
 }
 
 export function getPastQuestions(

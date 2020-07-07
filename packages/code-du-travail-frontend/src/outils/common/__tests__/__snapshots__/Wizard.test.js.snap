@@ -470,7 +470,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"
@@ -790,16 +790,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-bottom: 1px solid #bbcadf;
 }
 
-.c17 {
-  padding-top: 2rem;
-  border-top: 1px solid #bbcadf;
-}
-
-.c18 {
-  color: #f66663;
-  font-weight: 600;
-}
-
 @media (max-width:600px) {
   .c13 {
     font-size: 1.4rem;
@@ -1037,16 +1027,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         Précédent
       </button>
     </div>
-    <p
-      class="c17"
-    >
-      <span
-        class="c18"
-      >
-        *
-      </span>
-       Champs obligatoires
-    </p>
   </form>
 </div>
 `;
@@ -1511,7 +1491,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"
@@ -1981,7 +1961,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"
@@ -1998,7 +1978,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
 </div>
 `;
 
-exports[`<Wizard /> should navigate to the second step when click on Suivant 1`] = `
+exports[`<Wizard /> should navigate to the second step when click on Commencer 1`] = `
 .c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2301,16 +2281,6 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-bottom: 1px solid #bbcadf;
 }
 
-.c17 {
-  padding-top: 2rem;
-  border-top: 1px solid #bbcadf;
-}
-
-.c18 {
-  color: #f66663;
-  font-weight: 600;
-}
-
 @media (max-width:600px) {
 
 }
@@ -2560,16 +2530,6 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
         Précédent
       </button>
     </div>
-    <p
-      class="c17"
-    >
-      <span
-        class="c18"
-      >
-        *
-      </span>
-       Champs obligatoires
-    </p>
   </form>
 </div>
 `;
@@ -3024,7 +2984,7 @@ exports[`<Wizard /> should render a step 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"

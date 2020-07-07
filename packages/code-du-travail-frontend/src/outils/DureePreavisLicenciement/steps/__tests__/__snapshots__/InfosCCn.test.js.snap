@@ -163,7 +163,9 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
     <div
       class="c2"
       role="alert"
-    />
+    >
+      ccn des 5 mondes
+    </div>
     <button
       aria-label="Fermer"
       class="c3"
@@ -197,7 +199,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
     </button>
   </div>
   <p>
-    Cliquez sur suivant pour poursuivre la simulation.
+    Cliquez sur Suivant pour poursuivre la simulation.
   </p>
   <button
     data-testid="submit-test"

@@ -13,31 +13,39 @@ import {
 import { Highlight, SectionTitle } from "../../common/stepStyles";
 
 function Duration({ situation }) {
-  if (parseInt(situation.answer, 10) === 0) {
+  if (!situation.answer) {
     return (
       <p>
-        La convention collective ne prévoit pas cette possibilité. Il n’est donc
-        pas possible de bénéficier d’heures de recherche d’emploi au regard de
-        la situation renseignée.
+        D’après les éléments saisis, dans votre situation, la convention
+        collective ne prévoit pas d’heures d’absence autorisée pour rechercher
+        un emploi.
       </p>
     );
   }
+
+  const wording = /rupture en cours de période d'essai/i.test(
+    situation.typeRupture
+  )
+    ? "D’après les éléments saisis, durant son préavis (ou délai de prévenance), le salarié peut s’absenter pour rechercher un emploi pendant"
+    : "D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant";
   return (
     <>
       <p>
-        À partir des éléments que vous avez saisis, le nombre d’heures pour
-        recherche d’emploi est estimé à&nbsp;
+        {wording}
+        <br />
         <Highlight>{situation.answer}</Highlight>.
       </p>
       {situation.answer2 && (
         <>
-          <SectionTitle>Rémunération</SectionTitle>
+          <SectionTitle>
+            Rémunération pendant les heures d’absence autorisée
+          </SectionTitle>
           <p>{situation.answer2}</p>
         </>
       )}
       {situation.answer3 && (
         <>
-          <SectionTitle>Modalités d’utilisation</SectionTitle>
+          <SectionTitle>Conditions d’utilisation</SectionTitle>
           <p>{situation.answer3}</p>
         </>
       )}
@@ -46,20 +54,21 @@ function Duration({ situation }) {
 }
 
 function Disclaimer({ duration }) {
-  if (parseInt(duration, 10) === 0) {
+  if (!duration) {
     return (
       <Alert>
         Un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise plus récent peut prévoir l’existence, le cadre et la durée
-        des absences pour rechercher un emploi au cours du préavis.
+        l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence
+        autorisée pour rechercher un emploi pendant le préavis.
       </Alert>
     );
   } else {
     return (
       <Alert>
-        Un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise plus récent peut prévoir l’existence, le cadre et une durée
-        différentes des absences pour rechercher un emploi au cours du préavis.
+        Si un accord d’entreprise ou à défaut un usage dans la profession ou
+        l’entreprise plus récent prévoit des heures d’absence autorisée pour
+        rechercher un emploi pendant le préavis, le salarié en bénéficie si ces
+        mesures sont plus favorables que la convention collective.
       </Alert>
     );
   }
@@ -73,21 +82,11 @@ function NoResult({ idcc, ccn, legalRefs }) {
   }
   return (
     <>
-      <SectionTitle>Nombre d’heures</SectionTitle>
+      <SectionTitle>
+        Nombre d’heures d’absence autorisée pour rechercher un emploi
+      </SectionTitle>
       <p>
         <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
-      </p>
-      <p>
-        Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
-        pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe
-        une exception dans les départements de la Moselle, du Bas-Rhin et du
-        Haut-Rhin où le salarié, qui en fait la demande, a droit à un « délai
-        raisonnable » pour rechercher un emploi.
-      </p>
-      <Alert>
-        Une convention collective, un accord d’entreprise ou un usage dans la
-        profession ou l’entreprise peut prévoir et encadrer des absences pour
-        rechercher un emploi au cours du préavis.
         {idcc > 0 && (
           <>
             <br />
@@ -100,7 +99,28 @@ function NoResult({ idcc, ccn, legalRefs }) {
             </Link>
           </>
         )}
+      </p>
+      <p>
+        Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
+        pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe
+        une exception dans les départements de la Moselle, du Bas-Rhin et du
+        Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai
+        raisonnable pour rechercher un emploi pendant son préavis de
+        licenciement.
+      </p>
+      <Alert>
+        Une convention collective, un accord d’entreprise ou à défaut un usage
+        dans la profession ou l’entreprise peut prévoir que le salarié bénéficie
+        d’heures d’absence autorisée pour rechercher un emploi pendant le
+        préavis. Il peut s’agir du préavis en cas de rupture de la période
+        d’essai, de démission ou de licenciement.
       </Alert>
+      <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
+      {recapSituation({
+        ...(ccn && {
+          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+        }),
+      })}
       <SectionTitle>Source</SectionTitle>
       {legalRefs && getRef(legalRefs)}
     </>
@@ -109,26 +129,42 @@ function NoResult({ idcc, ccn, legalRefs }) {
 
 export function StepResult({ form }) {
   const { values } = form.getState();
-  const { ccn, criteria = {} } = values;
+  const { ccn, criteria = {}, typeRupture } = values;
   const idcc = ccn ? ccn.num : 0;
 
-  const [situationCdt] = getSituationsFor(data.situations, { idcc: 0 });
-  const initialSituations = getSituationsFor(data.situations, { idcc });
+  const [situationCdt] = getSituationsFor(data.situations, {
+    idcc: 0,
+  });
+  const initialSituations = getSituationsFor(data.situations, {
+    idcc,
+    typeRupture,
+  });
   const possibleSituations = filterSituations(initialSituations, criteria);
-
   if (idcc === 0 || possibleSituations.length === 0) {
-    return <NoResult idcc={idcc} ccn={ccn} legalRefs={[situationCdt]} />;
+    return (
+      <NoResult
+        idcc={idcc}
+        ccn={ccn}
+        legalRefs={[situationCdt]}
+        typeRupture={typeRupture}
+      />
+    );
   }
 
   const [situation] = possibleSituations;
   return (
     <>
-      <SectionTitle>Nombre d’heures</SectionTitle>
+      <SectionTitle>
+        Nombre d’heures d’absence autorisée pour rechercher un emploi
+      </SectionTitle>
       <Duration situation={situation} />
       <Disclaimer duration={situation.answer} />
-      <SectionTitle>Détails</SectionTitle>
+      <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
       {recapSituation({
-        ...(ccn && { "Convention collective": ccn.shortTitle }),
+        ...(ccn && {
+          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+        }),
+        "Type de rupture du contrat de travail": typeRupture,
         ...situation.criteria,
       })}
       <SectionTitle>Source</SectionTitle>

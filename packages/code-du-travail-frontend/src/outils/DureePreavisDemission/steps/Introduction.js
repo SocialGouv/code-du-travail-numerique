@@ -19,6 +19,7 @@ function StepIntro() {
         la convention collective en matière de démission. Prévoyez une à deux
         minutes pour cette simulation.
       </p>
+      <p>Cliquez sur commencer pour démarrer la simulation.</p>
     </>
   );
 }

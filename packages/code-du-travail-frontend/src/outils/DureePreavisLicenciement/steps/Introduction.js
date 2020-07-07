@@ -28,7 +28,7 @@ function StepIntro() {
         </Link>
         .
       </p>
-      <p>Cliquez sur suivant pour commencer la simulation</p>
+      <p>Cliquez sur commencer pour démarrer la simulation.</p>
     </>
   );
 }

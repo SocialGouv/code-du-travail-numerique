@@ -19,14 +19,18 @@ const questionsMap = questions.reduce(
 );
 
 const criteriaOrder = questions.map(({ name }) => name);
-
 function StepInformations({ form }) {
   const { values } = form.getState();
-  const { ccn, criteria = {} } = values;
+  const { ccn, typeRupture, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
 
-  const initialSituations = getSituationsFor(allSituations, { idcc });
+  const initialSituations = getSituationsFor(allSituations, {
+    idcc,
+    typeRupture,
+  });
+
   const possibleSituations = filterSituations(initialSituations, criteria);
+
   const nextQuestionKey = getNextQuestionKey(
     possibleSituations,
     criteriaOrder,

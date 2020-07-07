@@ -140,7 +140,7 @@ function Wizard({
                 printVisible={printVisible}
                 previousVisible={previousVisible}
               />
-              {stepIndex > 0 && stepIndex < steps.length && (
+              {stepIndex > 0 && stepIndex < steps.length - 1 && (
                 <Notice>
                   <Mandatory>*</Mandatory> Champs obligatoires
                 </Notice>

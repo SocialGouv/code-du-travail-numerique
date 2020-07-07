@@ -19,7 +19,7 @@ exports[`<StepIntro /> should render 1`] = `
     .
   </p>
   <p>
-    Cliquez sur suivant pour commencer la simulation
+    Cliquez sur commencer pour démarrer la simulation.
   </p>
 </div>
 `;
