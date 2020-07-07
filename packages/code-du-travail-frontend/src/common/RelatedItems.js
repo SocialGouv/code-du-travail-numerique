@@ -107,8 +107,8 @@ export const RelatedItems = ({ items = [] }) => {
                           "trackEvent",
                           "selectRelated",
                           JSON.stringify({
-                            selection: `${route}${rootSlug}${hash}`,
                             reco,
+                            selection: `${route}${rootSlug}${hash}`,
                           }),
                         ])
                       }
