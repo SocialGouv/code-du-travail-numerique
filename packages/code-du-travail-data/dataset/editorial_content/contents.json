@@ -34,7 +34,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "6f7bcb89-84d5-48eb-8f13-6e3eca0a2d5d"
   },
   {
     "title": "RTT, jours de repos forfait jours, compte épargne-temps : nouveautés Covid-19",
@@ -81,7 +82,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "4fb2ba7d-515f-464b-8af7-2d3beef9b10c"
   },
   {
     "title": "Durées maximales de travail, repos quotidien et dominical : nouveautés Covid-19",
@@ -105,7 +107,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "36e2f109-e34a-4e42-9352-724b7061ca92"
   },
   {
     "title": "Rupture conventionnelle : nouveautés Covid-19",
@@ -139,12 +142,13 @@
           },
           {
             "title": "Article L1237-14 du code du travail",
-            "id":"l1237-14",
+            "id": "l1237-14",
             "type": "code-du-travail"
           }
         ]
       }
-    ]
+    ],
+    "id": "b9b44d13-a640-4b4c-802e-a143010c4f0f"
   },
   {
     "title": "Report ou annulation de visites médicales : nouveautés Covid-19",
@@ -201,7 +205,8 @@
         "type": "external",
         "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
       }
-    ]
+    ],
+    "id": "62442d86-0045-4ccc-948c-dab31bbd332b"
   },
   {
     "title": "Intéressement et participation : nouveautés Covid-19",
@@ -278,7 +283,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "be3ba4c0-4540-4c38-9203-65bc732486a0"
   },
   {
     "title": "Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
@@ -307,7 +313,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "7ce44ee7-8c90-4f71-9ecf-10845eea7550"
   },
   {
     "title": "Assistant(e) maternel(le) : nouveautés Covid-19",
@@ -331,7 +338,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "894369e1-2f62-4b3a-98ef-f1ab01f19055"
   },
   {
     "title": "Information et consultation du CSE : nouveautés Covid-19",
@@ -345,7 +353,7 @@
         "title": "Infographie : Délais de consultation du CSE",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-1",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -378,7 +386,7 @@
         "title": "Infographie : Délais de consultation du CSE central",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-2",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -411,7 +419,7 @@
         "title": "Infographie : Délais de consultation du CSE central avec CSE d'établissement",
         "altText": "Infographie schématisant les changements concernant les délais de consultation du CSE central avec CSE d'établissements. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-3",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -444,7 +452,7 @@
         "title": "Infographie : Contester une expertise",
         "altText": "Infographie schématisant les changements concernant la contestation d’une expertise. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-4",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -476,7 +484,7 @@
         "type": "markdown",
         "title": "Réunions pour lesquelles les conditions de fonctionnement sont adaptées",
         "name": "cse-1",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -508,7 +516,7 @@
         "type": "markdown",
         "title": "Délai d’envoi de l’ordre du jour",
         "name": "cse-2",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -555,7 +563,7 @@
         "type": "markdown",
         "title": "Délai de consultation",
         "name": "cse-3",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -592,7 +600,7 @@
         "type": "markdown",
         "title": "Délai d’expertise",
         "name": "cse-4",
-        "references":[
+        "references": [
           {
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-507 du 2 mai 2020 adaptant temporairement les délais applicables pour la consultation et l’information du comité social et économique afin de faire face à l’épidémie de covid-19",
             "type": "external",
@@ -635,7 +643,7 @@
           },
           {
             "title": "Article R. 2315-47 du code du travail",
-            "type": "code-du-travail" ,
+            "type": "code-du-travail",
             "id": "r2315-47"
           },
           {
@@ -643,10 +651,10 @@
             "type": "code-du-travail",
             "id": "r2315-49"
           }
-
         ]
       }
-    ]
+    ],
+    "id": "97262a98-438e-425b-aea6-0c3719895527"
   },
   {
     "title": "Accord collectif d'entreprise : nouveautés Covid-19",
@@ -685,7 +693,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "2ac35b33-d9e2-442b-8ef8-caa030ef71dd"
   },
   {
     "title": "Entretien professionnel : nouveautés Covid-19",
@@ -709,7 +718,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "5e877e77-50f7-4784-980a-1a3decb11f37"
   },
   {
     "title": "Services de santé au travail : nouveautés Covid-19",
@@ -733,7 +743,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "f284c749-caa7-4a18-8803-5554819aee2e"
   },
   {
     "title": "Prescription d’arrêts du travail par le médecin du travail : nouveauté Covid-19",
@@ -767,7 +778,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "3248cb4c-1fcd-4111-9465-b747967609d4"
   },
   {
     "title": "Élections du CSE : nouveautés Covid-19",
@@ -866,7 +878,8 @@
           }
         ]
       }
-    ]
+    ],
+    "id": "873c0ca9-0c01-4846-8f7f-440cc1168441"
   },
   {
     "title": "Réunions du CSE : nouveautés Covid-19",
@@ -923,17 +936,17 @@
         "references": [
           {
             "title": "Ordonnance n° 2020-389 du 1er avril 2020 portant mesures d'urgence relatives aux instances représentatives du personnel, article 6",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=9A512FBCE6C064EF20A8416BF8CEA55B.tplgfr24s_3?cidTexte=JORFTEXT000041776922&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
           },
           {
             "title": "Rapport au Président de la République relatif à l'ordonnance n° 2020-389 du 1er avril 2020 portant mesures d'urgence relatives aux instances représentatives du personnel",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=9A512FBCE6C064EF20A8416BF8CEA55B.tplgfr24s_3?cidTexte=JORFTEXT000041776914&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
           },
           {
             "title": "Décret n° 2020-419 du 10 avril 2020 relatif aux modalités de consultation des instances représentatives du personnel pendant la période de l'état d'urgence sanitaire",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=41CB50CF9539C2FAF4626E57B05CEC2A.tplgfr36s_1?cidTexte=JORFTEXT000041794077&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041793930"
           }
         ]
@@ -946,21 +959,22 @@
         "references": [
           {
             "title": "Ordonnance n° 2020-389 du 1er avril 2020 portant mesures d'urgence relatives aux instances représentatives du personnel, article 6",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=9A512FBCE6C064EF20A8416BF8CEA55B.tplgfr24s_3?cidTexte=JORFTEXT000041776922&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
           },
           {
             "title": "Rapport au Président de la République relatif à l'ordonnance n° 2020-389 du 1er avril 2020 portant mesures d'urgence relatives aux instances représentatives du personnel",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=9A512FBCE6C064EF20A8416BF8CEA55B.tplgfr24s_3?cidTexte=JORFTEXT000041776914&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
           },
           {
             "title": "Décret n° 2020-419 du 10 avril 2020 relatif aux modalités de consultation des instances représentatives du personnel pendant la période de l'état d'urgence sanitaire",
-            "type":"external",
+            "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=41CB50CF9539C2FAF4626E57B05CEC2A.tplgfr36s_1?cidTexte=JORFTEXT000041794077&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041793930"
           }
         ]
       }
-    ]
+    ],
+    "id": "71b682cf-e970-4873-9b82-d8645e929691"
   }
 ]
