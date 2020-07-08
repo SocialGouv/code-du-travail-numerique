@@ -2156,7 +2156,7 @@ exports[`<FicheMT /> should render 1`] = `
                         aria-labelledby="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
                         class="c52"
                         data-accordion-component="AccordionItemPanel"
-                        data-hidden="true"
+                        hidden=""
                         id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
                       >
                         <div

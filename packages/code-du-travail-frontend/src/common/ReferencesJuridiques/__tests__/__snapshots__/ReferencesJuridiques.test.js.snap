@@ -212,12 +212,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             role="heading"
           >
             <div
-              aria-controls="accordion__panel-0"
+              aria-controls="accordion__panel-raa-0"
               aria-disabled="false"
               aria-expanded="false"
               class="c1"
               data-accordion-component="AccordionItemButton"
-              id="accordion__heading-0"
+              id="accordion__heading-raa-0"
               role="button"
               tabindex="0"
             >
@@ -246,11 +246,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </div>
           <div
             aria-hidden="true"
-            aria-labelledby="accordion__heading-0"
+            aria-labelledby="accordion__heading-raa-0"
             class="c4"
             data-accordion-component="AccordionItemPanel"
-            data-hidden="true"
-            id="accordion__panel-0"
+            hidden=""
+            id="accordion__panel-raa-0"
           >
             <div
               class="c5"

@@ -92,12 +92,12 @@ exports[`<Grid /> renders with an More icon 1`] = `
         role="heading"
       >
         <div
-          aria-controls="accordion__panel-0"
+          aria-controls="accordion__panel-raa-0"
           aria-disabled="false"
           aria-expanded="false"
           class="c1"
           data-accordion-component="AccordionItemButton"
-          id="accordion__heading-0"
+          id="accordion__heading-raa-0"
           role="button"
           tabindex="0"
         >
@@ -121,11 +121,11 @@ exports[`<Grid /> renders with an More icon 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-0"
+        aria-labelledby="accordion__heading-raa-0"
         class="c4"
         data-accordion-component="AccordionItemPanel"
-        data-hidden="true"
-        id="accordion__panel-0"
+        hidden=""
+        id="accordion__panel-raa-0"
         role="region"
       >
         <div
