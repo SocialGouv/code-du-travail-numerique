@@ -13,7 +13,6 @@ import { ResultList } from "./ResultList";
 import useSearchCC from "./searchHook";
 
 const trackInput = debounce((query, path, trackingUID) => {
-  console.log("Testing : ", query, path, trackingUID);
   if (query.length > 1) {
     if (status === "success") {
       matopush(["trackEvent", "cc_search", path, `${trackingUID} : ${query}`]);
@@ -36,7 +35,7 @@ const Search = ({ onSelectConvention }) => {
 
   useEffect(() => {
     // we want to connect triggered event that are
-    // related so we only trigger an uuid on mount
+    // related so we only generate an uuid on mount
     setTrackingUID(generateUUID());
   }, []);
 
