@@ -13,66 +13,9 @@ Build data:
     CONTEXT: code-du-travail-data
     WORKSPACE: "@cdt/data"
   script:
-    - "[[ type jq ]] || apk add jq=~1"
-
-    - yarn workspaces --json info | jq '.data' -r > /tmp/workspace_info.json
-    - echo "$ cat /tmp/workspace_info.json" && cat /tmp/workspace_info.json
-
-    - >-
-      cat /tmp/workspace_info.json
-      | jq -c --arg WORKSPACE "${WORKSPACE}" '.[$WORKSPACE].location'
-      > /tmp/workspace_context_location
-    - echo "$ cat /tmp/workspace_context_location" && cat /tmp/workspace_context_location
-
-    - >-
-      cat /tmp/workspace_info.json | jq -c 'map(.location) | .[]'
-      | grep -v $(cat /tmp/workspace_context_location)
-      | sort -u
-      > /tmp/workspace_packages_location
-    - echo "$ cat /tmp/workspace_packages_location" && cat /tmp/workspace_packages_location
-
-    - >-
-      cat /tmp/workspace_info.json
-      | jq -c --arg WORKSPACE "${WORKSPACE}" '.[$WORKSPACE].workspaceDependencies | .[]'
-      | sort -u
-      > /tmp/workspace_dependencies
-    - echo "$ cat /tmp/workspace_dependencies" && cat /tmp/workspace_dependencies
-
-    - >-
-      cat /tmp/workspace_dependencies
-      | tr '\n' '\0'
-      | xargs -0 -n1 -I {} sh -c \
-        "cat /tmp/workspace_info.json | jq -c '.[{}].location'" \
-      | sort -u
-      > /tmp/workspace_dependencies_location
-    - echo "$ cat /tmp/workspace_dependencies_location" && cat /tmp/workspace_dependencies_location
-
-    - comm -3 /tmp/workspace_packages_location /tmp/workspace_dependencies_location > /tmp/useless_packages
-    - echo "$ cat /tmp/useless_packages" && cat /tmp/useless_packages
-
-    # HACK(douglasduteil): remove all packages dependencies
-    # To make the installation blazing fast, we remove all packages dependencies
-    # Only the root package.json dependencies will be installed
-    - cat /tmp/useless_packages | sed 's/"//g' | tr '\n' '\0' | xargs -0 -n1 -I {} rm -rf {}
-
-    - yarn workspaces info
-
-    # HACK(douglasduteil): remove all packages dependencies
-    # To make the installation blazing fast, we remove all packages dependencies
-    # Only the root package.json dependencies will be installed
-    - cat /tmp/workspace_packages_location | sed 's/"//g' |
-      xargs -I {} sh -c "[[ -f "{}/package.json" ]] || exit 0 ; {
-      rm {}/package.json ;
-      jq 'del(.devDependencies)' > {}/package.json
-      ; } < {}/package.json"
-
-    # NOTE(dougladuteil): remove dependencies and devDependencies
-    # As we only install one package, we do not need the cross packages dependencies
-    # like lerna or husky...
-    - "{ rm package.json; jq 'del(.dependencies) | del(.devDependencies)' > package.json; } < package.json"
-
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
-    - yarn --frozen-lockfile --prefer-offline
+    - npx @socialgouv/yarn-workspace-focus-install --cwd packages/${CONTEXT} --
+      --frozen-lockfile --prefer-offline
     #
     - yarn workspace @cdt/data lint
     - yarn workspace @cdt/data build
