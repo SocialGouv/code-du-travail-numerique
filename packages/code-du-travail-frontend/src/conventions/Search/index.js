@@ -34,7 +34,7 @@ const Search = ({ onSelectConvention }) => {
   const [trackingUID, setTrackingUID] = useState("");
 
   useEffect(() => {
-    // we want to connect triggered event that are
+    // we want to connect events that are
     // related so we only generate an uuid on mount
     setTrackingUID(generateUUID());
   }, []);
