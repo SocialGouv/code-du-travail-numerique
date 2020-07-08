@@ -48,7 +48,7 @@ Tile.propTypes = {
   icon: PropTypes.elementType,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   wide: PropTypes.bool,
 };
 
@@ -58,6 +58,7 @@ Tile.defaultProps = {
   icon: null,
   striped: false,
   subtitle: "",
+  title: "",
   wide: false,
 };
 

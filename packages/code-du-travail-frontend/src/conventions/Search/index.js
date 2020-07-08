@@ -1,8 +1,10 @@
 import { Input, Label, theme } from "@socialgouv/react-ui";
+import debounce from "debounce-promise";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
+import { v4 as generateUUID } from "uuid";
 
 import { matopush } from "../../piwik";
 import { CompanyTile } from "./CompanyTile";
@@ -10,27 +12,43 @@ import { ConventionLink } from "./ConventionLink";
 import { ResultList } from "./ResultList";
 import useSearchCC from "./searchHook";
 
+const trackInput = debounce((query, path, trackingUID) => {
+  console.log("Testing : ", query, path, trackingUID);
+  if (query.length > 1) {
+    if (status === "success") {
+      matopush(["trackEvent", "cc_search", path, `${trackingUID} : ${query}`]);
+    }
+    if (status === "empty") {
+      matopush([
+        "trackEvent",
+        "cc_search_empty",
+        path,
+        `${trackingUID} : ${query}`,
+      ]);
+    }
+  }
+}, 2000);
+
 const Search = ({ onSelectConvention }) => {
   const router = useRouter();
   const [query, setQuery] = useState("");
+  const [trackingUID, setTrackingUID] = useState("");
+
+  useEffect(() => {
+    // we want to connect triggered event that are
+    // related so we only trigger an uuid on mount
+    setTrackingUID(generateUUID());
+  }, []);
 
   const onInputChange = (keyEvent) => {
     const value = keyEvent.target.value;
+    trackInput(value, router.asPath, trackingUID);
     setQuery(value);
   };
 
   const [status, { conventions = [], entreprises = [] } = {}] = useSearchCC(
     query
   );
-
-  useEffect(() => {
-    if (status === "success" && query.length > 1) {
-      matopush(["trackEvent", "cc_search", router.asPath, query]);
-    }
-    if (status === "empty" && query.length > 1) {
-      matopush(["trackEvent", "cc_search_empty", router.asPath, query]);
-    }
-  }, [query, router.asPath, status]);
 
   return (
     <>
