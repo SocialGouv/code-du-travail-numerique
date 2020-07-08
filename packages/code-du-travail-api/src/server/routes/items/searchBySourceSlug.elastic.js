@@ -1,18 +1,5 @@
 function getSearchBody({ source, slug }) {
   return {
-    size: 1,
-    query: {
-      bool: {
-        filter: [
-          {
-            term: { source },
-          },
-          {
-            term: { slug },
-          },
-        ],
-      },
-    },
     _source: [
       "action", // outils
       "breadcrumbs",
@@ -40,9 +27,23 @@ function getSearchBody({ source, slug }) {
       "date_publi", // convention-collective
       "answers", // contributions
       "refs", // thematic file
+      "references",
       "contents", // editorial_content
       "folder", // editorial_content
     ],
+    query: {
+      bool: {
+        filter: [
+          {
+            term: { source },
+          },
+          {
+            term: { slug },
+          },
+        ],
+      },
+    },
+    size: 1,
   };
 }
 
