@@ -352,6 +352,12 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         for="input-criteria.cddType"
       >
         Quel est le type de CDD ?
+        <span
+          aria-label="champs obligatoire"
+          class="c1"
+        >
+          *
+        </span>
       </label>
       <div
         class="c6 c7"
@@ -675,6 +681,12 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         for="input-criteria.cddType"
       >
         Quel est le type de CDD ?
+        <span
+          aria-label="champs obligatoire"
+          class="c1"
+        >
+          *
+        </span>
       </label>
       <div
         class="c6 c7"

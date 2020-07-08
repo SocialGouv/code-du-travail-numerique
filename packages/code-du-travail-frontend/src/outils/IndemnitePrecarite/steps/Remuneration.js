@@ -1,10 +1,10 @@
 import React from "react";
-import { TypeRemuneration } from "../components/TypeRemuneration";
 import { Field } from "react-final-form";
-import { CurrencyField } from "../../common/CurrencyField";
 
-import { Salaires } from "../components/Salaires";
+import { CurrencyField } from "../../common/CurrencyField";
 import { SmallText } from "../../common/stepStyles";
+import { Salaires } from "../components/Salaires";
+import { TypeRemuneration } from "../components/TypeRemuneration";
 
 function StepRemuneration({ form }) {
   return (

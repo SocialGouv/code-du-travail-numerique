@@ -1,8 +1,9 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import arrayMutators from "final-form-arrays";
+import React from "react";
 import { Form } from "react-final-form";
-import { StepAnciennete, computeAnciennete } from "../Anciennete";
+
+import { computeAnciennete, StepAnciennete } from "../Anciennete";
 
 function renderForm(data) {
   return render(
@@ -91,18 +92,18 @@ describe("computeAncienneté", () => {
   it("should compute ancienneté with periods of absence", () => {
     expect(
       computeAnciennete({
+        absencePeriods: [{ duration: "6", type: "Congés sans solde" }],
         dateEntree: "2017-04-01",
         dateSortie: "2018-04-01",
-        absencePeriods: [{ type: "Congés sans solde", duration: "6" }],
       })
     ).toEqual(0.5);
   });
   it("should compute ancienneté with periods of absence divided by two for Congé parental", () => {
     expect(
       computeAnciennete({
+        absencePeriods: [{ duration: "6", type: "Congé parental d'éducation" }],
         dateEntree: "2016-04-01",
         dateSortie: "2018-04-01",
-        absencePeriods: [{ type: "Congé parental d'éducation", duration: "6" }],
       })
     ).toEqual(1.75);
   });

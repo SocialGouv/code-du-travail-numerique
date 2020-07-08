@@ -1,12 +1,12 @@
 const Router = require("koa-router");
-const { AGREEMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const getAgreementBody = require("./getAgreementBySlug.elastic");
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${AGREEMENTS}`;
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -20,7 +20,7 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} :type the type of texte requested (either none or "base", "attache", "salaire")
  * @returns {Object} some convention data.
  */
-router.get("/conventions/:slug", async ctx => {
+router.get("/conventions/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getAgreementBody({ slug });
   const response = await elasticsearchClient.search({ index, body });

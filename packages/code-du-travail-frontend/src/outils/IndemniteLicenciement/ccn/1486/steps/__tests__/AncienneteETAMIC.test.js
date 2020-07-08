@@ -1,6 +1,7 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
 import { Form } from "react-final-form";
+
 import { AncienneteETAMIC } from "../AncienneteETAMIC.js";
 
 describe("<AncienneteETAMIC />", () => {
@@ -16,12 +17,12 @@ describe("<AncienneteETAMIC />", () => {
   it("asks to fill duration, indemnité and consideration", () => {
     const onSubmit = jest.fn();
     const initialValues = {
-      hasBrancheContrat: true,
       brancheContrat: {
+        considered: false,
         duration: "3",
         indemnite: "0",
-        considered: false,
       },
+      hasBrancheContrat: true,
     };
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={initialValues}>

@@ -409,6 +409,12 @@ exports[`<Themes /> should render 1`] = `
   }
 }
 
+@media print {
+  .c29 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c29 {
     padding: 0 3rem;

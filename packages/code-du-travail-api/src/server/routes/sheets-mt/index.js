@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { MT_SHEETS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -7,7 +7,7 @@ const { getRelatedItems } = require("../items/getRelatedItems");
 const { getSheetMTQuery } = require("./search.elastic.js");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -20,7 +20,7 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} An object containing the matching sheet-mt .
  */
 
-router.get("/sheets-mt/:slug", async ctx => {
+router.get("/sheets-mt/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getSheetMTQuery({ slug });
   const response = await elasticsearchClient.search({

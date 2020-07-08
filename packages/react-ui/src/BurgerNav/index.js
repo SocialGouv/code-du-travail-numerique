@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
+import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import { X } from "react-feather";
+import styled from "styled-components";
 
 import { Button } from "../Button";
 import { Burger as BurgerIcon } from "../icons";
@@ -12,7 +12,7 @@ import { box, breakpoints, spacings } from "../theme";
 const maxTabletWidth = parseInt(breakpoints.tablet.replace("px", ""), 10);
 
 export const BurgerNav = ({ children, ...props }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
@@ -36,7 +36,6 @@ export const BurgerNav = ({ children, ...props }) => {
       window.removeEventListener("resize", onResize);
     };
   });
-
   if (isDesktop) {
     return <Nav {...props}>{children}</Nav>;
   }
@@ -72,6 +71,9 @@ BurgerNav.propTypes = {
 const Nav = styled.nav`
   display: flex;
   height: 100%;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const OpenButton = styled(Button)`

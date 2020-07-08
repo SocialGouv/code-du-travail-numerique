@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Field } from "react-final-form";
 
 function Condition({ when, is, children }) {
@@ -19,14 +19,14 @@ function Condition({ when, is, children }) {
 }
 
 Condition.propTypes = {
-  when: PropTypes.string.isRequired,
+  children: PropTypes.node,
   is: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.string,
     PropTypes.number,
     PropTypes.func,
   ]).isRequired,
-  children: PropTypes.node,
+  when: PropTypes.string.isRequired,
 };
 
 export { Condition };

@@ -1,12 +1,12 @@
+import { theme, Toast } from "@socialgouv/react-ui";
 import React from "react";
 import styled from "styled-components";
-import { Toast, theme } from "@socialgouv/react-ui";
 
-import { getIndemniteConventionnelle } from "../indemnite";
-import { getIndemniteFromFinalForm } from "../../../indemnite";
 import { round } from "../../../../common/math";
 import { Highlight } from "../../../../common/stepStyles";
 import { IndemniteCCn } from "../../../components/IndemniteConventionnelle";
+import { getIndemniteFromFinalForm } from "../../../indemnite";
+import { getIndemniteConventionnelle } from "../indemnite";
 
 function Result({ form }) {
   const data = form.getState().values;

@@ -1,7 +1,8 @@
 import React from "react";
+
+import { Custom } from "../icons";
 import { Section } from "../layout/Section";
 import { Title } from "../Titles/Title";
-import { Custom } from "../icons";
 import { Accordion } from ".";
 
 export default {
@@ -15,6 +16,7 @@ export const base = () => (
       <Accordion
         items={[
           {
+            body: "this is the single body",
             title: (
               <h5>
                 This is an h5 heading of a single item accordion with a crazy
@@ -22,7 +24,6 @@ export const base = () => (
                 or if it keeps its width
               </h5>
             ),
-            body: "this is the single body",
           },
         ]}
       />
@@ -31,14 +32,14 @@ export const base = () => (
       <Accordion
         items={[
           {
-            title: <h3>This the first h3 heading of a multiple accordion</h3>,
             body: "this is the first body",
+            title: <h3>This the first h3 heading of a multiple accordion</h3>,
           },
           {
+            body: "this is the second body",
             title: (
               <h3>This is the second h3 heading of a multiple accordion</h3>
             ),
-            body: "this is the second body",
           },
         ]}
       />
@@ -48,13 +49,13 @@ export const base = () => (
         preExpanded={["id"]}
         items={[
           {
+            body: "this is the body",
             id: "id",
             title: <Title>This is a pre expanded Title accordion</Title>,
-            body: "this is the body",
           },
           {
-            title: <Title>This bloc could be extended too if needed</Title>,
             body: "this is the body",
+            title: <Title>This bloc could be extended too if needed</Title>,
           },
         ]}
       />
@@ -68,40 +69,40 @@ export const tile = () => (
       variant="tile"
       items={[
         {
+          body: "this is the single body",
           title: <h5>1 - A tile title</h5>,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
           title: <h5>2 - A tile title</h5>,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
+          icon: Custom,
           title: <h5>3 - A tile title with an icon</h5>,
-          icon: Custom,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
+          icon: Custom,
           title: <h5>4 - A tile title with an icon</h5>,
-          icon: Custom,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
           title: <h5>5 - A tile title</h5>,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
+          icon: Custom,
           title: <h5>6 - A tile title with an icon</h5>,
-          icon: Custom,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
+          icon: Custom,
           title: <h5>7 - A tile title with an icon</h5>,
-          icon: Custom,
-          body: "this is the single body",
         },
         {
-          title: <h5>8 - A tile title</h5>,
           body: "this is the single body",
+          title: <h5>8 - A tile title</h5>,
         },
       ]}
     />
@@ -114,7 +115,6 @@ export const Hierarchy = () => (
       variant="hierarchy"
       items={[
         {
-          title: <h5>A hiearchy title</h5>,
           body: (
             <div>
               <p>
@@ -135,14 +135,14 @@ export const Hierarchy = () => (
               </p>
             </div>
           ),
+          title: <h5>A hiearchy title</h5>,
         },
         {
-          title: <h5>A hiearchy title with an icon</h5>,
+          body: "this is the single body",
           icon: Custom,
-          body: "this is the single body",
+          title: <h5>A hiearchy title with an icon</h5>,
         },
         {
-          title: <h5>A hiearchy title</h5>,
           body: (
             <div>
               <p>
@@ -163,38 +163,39 @@ export const Hierarchy = () => (
               </p>
             </div>
           ),
-        },
-        {
           title: <h5>A hiearchy title</h5>,
-          body: "this is the single body",
         },
         {
+          body: "this is the single body",
+          title: <h5>A hiearchy title</h5>,
+        },
+        {
+          body: (
+            <div>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+              <p>
+                The body must be long to check wether the bars on the left keep
+                up with it
+              </p>
+            </div>
+          ),
           icon: Custom,
           title: (
             <h5>
               A hiearchy title, crazy long so we check the render of the last
               left dash on every viewport
             </h5>
-          ),
-          body: (
-            <div>
-              <p>
-                The body must be long to check wether the bars on the left keep
-                up with it
-              </p>
-              <p>
-                The body must be long to check wether the bars on the left keep
-                up with it
-              </p>
-              <p>
-                The body must be long to check wether the bars on the left keep
-                up with it
-              </p>
-              <p>
-                The body must be long to check wether the bars on the left keep
-                up with it
-              </p>
-            </div>
           ),
         },
       ]}

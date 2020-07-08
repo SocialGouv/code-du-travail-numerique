@@ -18,8 +18,6 @@ export const Accordion = RootAccordion;
 export const Item = styled(({ isLast, ...rest }) => (
   <AccordionItem {...rest} />
 ))`
-  position: relative;
-  z-index: 1;
   ${({ index, theme }) =>
     index > 0 &&
     css`

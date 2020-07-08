@@ -1,5 +1,5 @@
+import { analyzer, char_filter, filter, tokenizer } from "./analysis";
 import { logger } from "./logger";
-import { analyzer, filter, char_filter, tokenizer } from "./analysis";
 
 async function createIndex({ client, indexName, mappings }) {
   const { body } = await client.indices.exists({ index: indexName });
@@ -13,22 +13,22 @@ async function createIndex({ client, indexName, mappings }) {
   }
   try {
     await client.indices.create({
-      index: indexName,
       body: {
+        mappings: mappings,
         settings: {
-          number_of_shards: 1,
-          number_of_replicas: 1,
           index: {
             analysis: {
-              filter,
               analyzer,
               char_filter,
+              filter,
               tokenizer,
             },
           },
+          number_of_replicas: 1,
+          number_of_shards: 1,
         },
-        mappings: mappings,
       },
+      index: indexName,
     });
     logger.info(`Index ${indexName} created.`);
   } catch (error) {
@@ -44,7 +44,6 @@ async function version({ client }) {
 async function bulkIndexDocuments({ client, indexName, documents }) {
   try {
     await client.bulk({
-      index: indexName,
       body: documents.reduce(
         (state, doc, i) =>
           state.concat(
@@ -58,6 +57,7 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
           ),
         []
       ),
+      index: indexName,
     });
     logger.info(`Index ${documents.length} documents.`);
   } catch (error) {
@@ -73,7 +73,7 @@ async function indexDocumentsBatched({
 }) {
   logger.info(`Loaded ${documents.length} documents`);
   for (const chunk of chunks(documents, size)) {
-    await bulkIndexDocuments({ client, indexName, documents: chunk });
+    await bulkIndexDocuments({ client, documents: chunk, indexName });
   }
 }
 

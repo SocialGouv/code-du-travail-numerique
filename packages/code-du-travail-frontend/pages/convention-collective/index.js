@@ -1,9 +1,10 @@
-import React from "react";
 import { Container, PageTitle, Section, Wrapper } from "@socialgouv/react-ui";
-import { Layout } from "../../src/layout/Layout";
+import React from "react";
+
+import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import ConventionForm from "../../src/conventions/Search";
-import { FocusRoot } from "../../src/a11y";
+import { Layout } from "../../src/layout/Layout";
 
 const SearchConvention = ({ ogImage, pageUrl }) => (
   <Layout currentPage="about">

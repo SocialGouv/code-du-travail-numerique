@@ -1,8 +1,9 @@
-import React from "react";
-import Link from "next/link";
 import { getRouteBySource } from "@cdt/sources";
 import { Grid, Tile, Title } from "@socialgouv/react-ui";
-import { summarize, reportSelectionToMatomo } from "../utils";
+import Link from "next/link";
+import React from "react";
+
+import { reportSelectionToMatomo, summarize } from "../utils";
 
 export const Law = ({ items, query }) => (
   <>

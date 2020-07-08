@@ -356,6 +356,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 3rem;
@@ -365,6 +371,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 @media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c11 {
+    display: none;
   }
 }
 

@@ -1,10 +1,10 @@
 const Router = require("koa-router");
 const { SOURCES } = require("@cdt/sources");
-const { DOCUMENTS, THEMES } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const fetchWithTimeout = require("../../utils/fetchWithTimeout");
 const getSavedResult = require("./search.getSavedResult");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
@@ -15,9 +15,6 @@ const { logger } = require("../../utils/logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
-const themeIndex = `${ES_INDEX_PREFIX}_${THEMES}`;
-
-const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
@@ -54,6 +51,7 @@ router.get("/search", async (ctx) => {
     SOURCES.CONTRIBUTIONS,
     SOURCES.EXTERNALS,
     SOURCES.THEMATIC_FILES,
+    SOURCES.EDITORIAL_CONTENT,
   ];
   const skipSavedResults =
     ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
@@ -80,16 +78,11 @@ router.get("/search", async (ctx) => {
   const shouldRequestThemes = themes.length < 5;
   const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
   if (!knownQueryResult || shouldRequestThemes) {
-    logger.info(
-      `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
-        query
-      )}`
+    const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
+      (error) => {
+        logger.error(error.message);
+      }
     );
-    const query_vector = await fetchWithTimeout(
-      `${NLP_URL}/api/search?q=${encodeURIComponent(query.toLowerCase())}`
-    ).catch((error) => {
-      logger.error(error.message);
-    });
 
     if (!knownQueryResult) {
       searches[DOCUMENTS_ES] = [
@@ -107,7 +100,7 @@ router.get("/search", async (ctx) => {
     if (shouldRequestThemes) {
       const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
       searches[THEMES_ES] = [
-        { index: themeIndex }, // we search in themeIndex here to try to match title in breadcrumb
+        { index }, // we search in themeIndex here to try to match title in breadcrumb
         getRelatedThemesBody({
           query,
           size: themeNumber,

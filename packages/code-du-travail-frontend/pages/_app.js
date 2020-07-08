@@ -1,19 +1,42 @@
-import React from "react";
-import PropTypes from "prop-types";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "katex/dist/katex.min.css";
+
+import * as Sentry from "@sentry/browser";
+import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
 import App from "next/app";
 import getConfig from "next/config";
-import * as Sentry from "@sentry/browser";
-
-import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
-
-import ErrorPage from "./_error";
-
-import { initPiwik } from "../src/piwik";
-import { initializeSentry } from "../src/sentry";
+import PropTypes from "prop-types";
+import React from "react";
 
 import { A11y } from "../src/a11y";
+import { initPiwik } from "../src/piwik";
+import { initializeSentry, notifySentry } from "../src/sentry";
+import CustomError from "./_error";
+import Custom404 from "./404";
 
-import HeadBandAlert from "../src/common/HeadBandAlert";
+// Get tooltips web-component
+if (typeof window !== "undefined") {
+  import("../src/web-components/tooltip")
+    .then((module) => {
+      customElements.define(
+        "webcomponent-tooltip",
+        module.WebComponentsTooltip
+      );
+    })
+    .catch((err) => {
+      notifySentry(418, err.message || "Failed to load web component");
+    });
+  import("../src/web-components/tooltip-cc")
+    .then((module) => {
+      customElements.define(
+        "webcomponent-tooltip-cc",
+        module.WebComponentsTooltipCC
+      );
+    })
+    .catch((err) => {
+      notifySentry(418, err.message || "Failed to load web component");
+    });
+}
 
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
@@ -36,10 +59,11 @@ export default class MyApp extends App {
       try {
         pageProps = await Component.getInitialProps(ctx);
       } catch (err) {
-        pageProps = { statusCode: 500, message: err.message };
+        pageProps = { message: err.message, statusCode: 500 };
       }
     }
     // pageUrl and ogImage are only defined on serverside request
+    // maybe this should be done at the page level to allow static optimization at the _app lvl
     if (ctx.req) {
       pageProps.pageUrl = `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`;
       pageProps.ogImage = `${ctx.req.protocol}://${ctx.req.headers.host}/static/assets/img/social-preview.png`;
@@ -49,7 +73,7 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
-    initPiwik({ siteId: PIWIK_SITE_ID, piwikUrl: PIWIK_URL });
+    initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
   }
 
   componentDidCatch(error, errorInfo) {
@@ -65,12 +89,18 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    // Maybe that this should be done at the page level to allow static optimization at the _app lvl
+    // https://nextjs.org/docs/advanced-features/custom-error-page#reusing-the-built-in-error-page
     if (pageProps.statusCode) {
       return (
         <ThemeProvider>
           <>
             <GlobalStyles />
-            <ErrorPage statusCode={pageProps.statusCode} />
+            {pageProps.statusCode === 404 ? (
+              <Custom404 />
+            ) : (
+              <CustomError statusCode={pageProps.statusCode} />
+            )}
           </>
         </ThemeProvider>
       );
@@ -81,7 +111,6 @@ export default class MyApp extends App {
           <>
             <GlobalStyles />
             <A11y />
-            <HeadBandAlert />
             <Component {...pageProps} />
           </>
         </ThemeProvider>

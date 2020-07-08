@@ -3,6 +3,134 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.24.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.23.0...v4.24.0) (2020-06-12)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.23.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0...v4.23.0) (2020-06-05)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.22.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0-alpha.0...v4.22.0) (2020-05-28)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.22.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.21.0...v4.22.0-alpha.0) (2020-05-28)
+
+
+### Features
+
+* update data ([#2782](https://github.com/SocialGouv/code-du-travail-numerique/issues/2782)) ([6599c2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/6599c2c6d8f08297d9a5a4aeb468fbdc46392941))
+
+
+
+
+
+# [4.21.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.20.0...v4.21.0) (2020-05-20)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.20.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.19.0...v4.20.0) (2020-05-15)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#2723](https://github.com/SocialGouv/code-du-travail-numerique/issues/2723)) ([c63bc4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/c63bc4f6f0da42b4c074caacd83e1a3022e047da))
+
+
+
+
+
+# [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#2695](https://github.com/SocialGouv/code-du-travail-numerique/issues/2695)) ([9f26c04](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f26c048b0a32ac1d83dc15eb44c8f4d3d0d0cae))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#2710](https://github.com/SocialGouv/code-du-travail-numerique/issues/2710)) ([59106aa](https://github.com/SocialGouv/code-du-travail-numerique/commit/59106aa548b2d3bfadb55be327256daa17c1a8b8))
+* **deps:** update all non-major dependencies ([#2661](https://github.com/SocialGouv/code-du-travail-numerique/issues/2661)) ([e0afa5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0afa5e8c0c504d65ccd5b7041182141f173b7c7))
+* **deps:** update all non-major dependencies ([#2666](https://github.com/SocialGouv/code-du-travail-numerique/issues/2666)) ([d0b8b6e](https://github.com/SocialGouv/code-du-travail-numerique/commit/d0b8b6e89baf6ca2c3f662d899724a938872a046))
+* **deps:** update all non-major dependencies ([#2669](https://github.com/SocialGouv/code-du-travail-numerique/issues/2669)) ([379f951](https://github.com/SocialGouv/code-du-travail-numerique/commit/379f9519ca466c5e5bd7828553c9bc94af935762))
+* **deps:** update non-major dependencies ([#2675](https://github.com/SocialGouv/code-du-travail-numerique/issues/2675)) ([57338c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/57338c2f6906aa1b8f33d911009fedfa9b57dbb2))
+
+
+### Features
+
+* **data:** update social gouv data and minor data change for covid thematic file ([#2721](https://github.com/SocialGouv/code-du-travail-numerique/issues/2721)) ([73090dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/73090ddc3bfb06dd44c2021f1adddba2b402d37b))
+
+
+
+
+
+# [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2654](https://github.com/SocialGouv/code-du-travail-numerique/issues/2654)) ([cbf04ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/cbf04eab88acd484ef30f61bb0177484859588dd))
+
+
+
+
+
+# [4.18.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.0...v4.18.0-alpha.1) (2020-04-23)
+
+**Note:** Version bump only for package @cdt/data...fiches_service_public
+
+
+
+
+
+# [4.18.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.2...v4.18.0-alpha.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2640](https://github.com/SocialGouv/code-du-travail-numerique/issues/2640)) ([1619fa5](https://github.com/SocialGouv/code-du-travail-numerique/commit/1619fa55591c0ec39fd448b8861916fd28c65499))
+* **deps:** update all non-major dependencies ([#2646](https://github.com/SocialGouv/code-du-travail-numerique/issues/2646)) ([e9ed29a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e9ed29a72e8e0db7ff3515a46a31124a2796c49b))
+
+
+
+
+
+## [4.17.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.0...v4.17.1) (2020-04-17)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2616](https://github.com/SocialGouv/code-du-travail-numerique/issues/2616)) ([a384c2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/a384c2bdbaa926a0d81b454b1e7ed27c4ac09385))
+* **deps:** update all non-major dependencies ([#2626](https://github.com/SocialGouv/code-du-travail-numerique/issues/2626)) ([a59bd19](https://github.com/SocialGouv/code-du-travail-numerique/commit/a59bd196e7434bbb77cff64816020da08fb5c483))
+* **deps:** update all non-major dependencies ([#2632](https://github.com/SocialGouv/code-du-travail-numerique/issues/2632)) ([89630ec](https://github.com/SocialGouv/code-du-travail-numerique/commit/89630ecf0a3eff800518d3e202c59ab8453a8985))
+* **deps:** update dependency @socialgouv/contributions-data to ^1.11.0 ([#2637](https://github.com/SocialGouv/code-du-travail-numerique/issues/2637)) ([1377080](https://github.com/SocialGouv/code-du-travail-numerique/commit/1377080eb2bc79ab206cfcfd1da6a6c824357644))
+
+
+
+
+
 # [4.17.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.16.0...v4.17.0) (2020-04-10)
 
 **Note:** Version bump only for package @cdt/data...fiches_service_public

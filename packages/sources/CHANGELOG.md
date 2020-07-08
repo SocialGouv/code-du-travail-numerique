@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.22.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0-alpha.0...v4.22.0) (2020-05-28)
+
+**Note:** Version bump only for package @cdt/sources
+
+
+
+
+
+# [4.22.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.21.0...v4.22.0-alpha.0) (2020-05-28)
+
+
+### Features
+
+* **chore:** editorial content ([#2769](https://github.com/SocialGouv/code-du-travail-numerique/issues/2769)) ([9dc9ccb](https://github.com/SocialGouv/code-du-travail-numerique/commit/9dc9ccba7298aaf96e727ee5ee77d7a625dc95a9)), closes [#2777](https://github.com/SocialGouv/code-du-travail-numerique/issues/2777)
+
+
+
+
+
+# [4.19.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0...v4.19.0) (2020-05-12)
+
+
+### Bug Fixes
+
+* **sitemap:** remove duplicate content ([#2676](https://github.com/SocialGouv/code-du-travail-numerique/issues/2676)) ([3b66c3f](https://github.com/SocialGouv/code-du-travail-numerique/commit/3b66c3fe5baef484014c127dacc599ec69a0808d))
+
+
+
+
+
+# [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
+
+**Note:** Version bump only for package @cdt/sources
+
+
+
+
+
+# [4.18.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.0...v4.18.0-alpha.1) (2020-04-23)
+
+**Note:** Version bump only for package @cdt/sources
+
+
+
+
+
+# [4.18.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.2...v4.18.0-alpha.0) (2020-04-23)
+
+
+### Features
+
+* **api:** add socialgouv data packages version ([#2651](https://github.com/SocialGouv/code-du-travail-numerique/issues/2651)) ([366f5fd](https://github.com/SocialGouv/code-du-travail-numerique/commit/366f5fdaffa05bd8ac3bdb84e6f30676376815bb))
+
+
+
+
+
 # [4.14.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.13.0...v4.14.0) (2020-03-31)
 
 **Note:** Version bump only for package @cdt/sources

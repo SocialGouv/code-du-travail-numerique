@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { ConventionModal } from "../SearchModal";
 
 // Trouvez votre convention collective
@@ -31,7 +32,7 @@ describe("<ConventionModal />", () => {
     const button = getByTestId("bt");
     button.click();
     const input = getByPlaceholderText(
-      /Nom d'entreprise, SIRET, nom de convention collective/i
+      /Nom de la convention collective, de l’entreprise ou SIRET/i
     );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
@@ -54,7 +55,7 @@ describe("<ConventionModal />", () => {
     el.click();
     expect(
       queryByPlaceholderText(
-        /Nom d'entreprise, SIRET, nom de convention collective/i
+        /Nom de la convention collective, de l’entreprise ou SIRET/i
       )
     ).toBeNull();
   });

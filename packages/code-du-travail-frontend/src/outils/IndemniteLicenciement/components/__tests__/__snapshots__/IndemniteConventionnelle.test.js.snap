@@ -61,33 +61,15 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   white-space: pre-line;
 }
 
-.c4 {
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 0.021);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c13 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
 }
 
 .c8 {
@@ -114,6 +96,35 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 0.021);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -153,7 +164,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -182,7 +193,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     <strong
       class="c1"
     >
-      2,000.00
+      2 000,00
        € brut
     </strong>
     .
@@ -213,7 +224,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c6"
         >
-          42.00
+          42,00
            € brut
         </span>
       </div>
@@ -236,16 +247,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c11"
           >
-            salaire ref (Sref)
+            anciennete (A)
              : 
-            42
+            32
           </li>
           <li
             class="c11"
           >
-            anciennete (A)
+            salaire ref (Sref)
              : 
-            32
+            42
           </li>
         </ul>
         <strong
@@ -257,12 +268,112 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`Sref * A\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              A
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            Sref \\times A
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.69444em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                        >
+                          A
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -297,12 +408,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         class="c4"
       >
         <div
-          class="c13"
+          class="c15"
         />
         <span
           class="c6"
         >
-          2,000.00
+          2 000,00
            € brut
         </span>
       </div>
@@ -325,16 +436,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c11"
           >
-            salaire de ref (Sref)
+            foo
              : 
-            1337
+            bar
           </li>
           <li
             class="c11"
           >
-            foo
+            salaire de ref (Sref)
              : 
-            bar
+            1337
           </li>
         </ul>
         <strong
@@ -346,12 +457,177 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`1337 * Sref * foo\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mn>
+                              1
+                            </mn>
+                            <mn>
+                              3
+                            </mn>
+                            <mn>
+                              3
+                            </mn>
+                            <mn>
+                              7
+                            </mn>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              f
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            1337 \\times Sref \\times foo
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.69444em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          3
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          3
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          7
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -381,33 +657,15 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   white-space: pre-line;
 }
 
-.c4 {
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c13 {
-  width: calc(50% * 0.5348);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
 }
 
 .c8 {
@@ -434,6 +692,35 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 0.5348);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -473,7 +760,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c15 {
     width: calc(100% * 0.5348);
   }
 }
@@ -502,7 +789,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     <strong
       class="c1"
     >
-      2,500.00
+      2 500,00
        € brut
     </strong>
     .
@@ -533,7 +820,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <span
           class="c6"
         >
-          2,500.00
+          2 500,00
            € brut
         </span>
       </div>
@@ -556,16 +843,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <li
             class="c11"
           >
-            salaire ref (Sref)
+            anciennete (A)
              : 
-            42
+            32
           </li>
           <li
             class="c11"
           >
-            anciennete (A)
+            salaire ref (Sref)
              : 
-            32
+            42
           </li>
         </ul>
         <strong
@@ -577,12 +864,112 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`Sref * A\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              A
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            Sref \\times A
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.69444em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                        >
+                          A
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -617,12 +1004,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         class="c4"
       >
         <div
-          class="c13"
+          class="c15"
         />
         <span
           class="c6"
         >
-          1,337.00
+          1 337,00
            € brut
         </span>
       </div>
@@ -645,16 +1032,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <li
             class="c11"
           >
-            salaire de ref (Sref)
+            foo
              : 
-            1337
+            bar
           </li>
           <li
             class="c11"
           >
-            foo
+            salaire de ref (Sref)
              : 
-            bar
+            1337
           </li>
         </ul>
         <strong
@@ -666,12 +1053,177 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`1337 * Sref * foo\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mn>
+                              1
+                            </mn>
+                            <mn>
+                              3
+                            </mn>
+                            <mn>
+                              3
+                            </mn>
+                            <mn>
+                              7
+                            </mn>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              f
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            1337 \\times Sref \\times foo
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.69444em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          3
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          3
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          7
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>

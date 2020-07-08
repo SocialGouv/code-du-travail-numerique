@@ -1,11 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { Suggester } from "./Suggester";
+import React from "react";
+
 import {
   renderSuggestionsContainer,
-  Suggestion,
   suggesterTheme,
+  Suggestion,
 } from "./IdccSuggesterTheme";
+import { Suggester } from "./Suggester";
 
 export class IdccSuggester extends React.Component {
   static propTypes = {

@@ -1,9 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
-import { animations, spacings } from "../theme";
 import { DirectionRight } from "../icons";
+import { animations, breakpoints, spacings } from "../theme";
 
 export const ArrowLink = React.forwardRef(
   ({ arrowPosition, children, ...props }, ref) => (
@@ -22,8 +22,8 @@ export const ArrowLink = React.forwardRef(
 ArrowLink.displayName = "ArrowLink";
 
 ArrowLink.propTypes = {
-  children: PropTypes.node.isRequired,
   arrowPosition: PropTypes.oneOf(["left", "right"]),
+  children: PropTypes.node.isRequired,
 };
 
 ArrowLink.defaultProps = {
@@ -57,5 +57,14 @@ const StyledArrowRight = styled(({ arrowPosition, ...props }) => (
   /* stylelint-disable-next-line */
   ${StyledLink}:hover & {
     transform: translateX(4px);
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: ${({ arrowPosition }) =>
+      arrowPosition === "left"
+        ? `0 ${spacings.small} 0 0`
+        : `0 ${spacings.tiny} 0 ${spacings.tiny}`};
   }
 `;

@@ -1,27 +1,26 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import styled from "styled-components";
-import { withRouter } from "next/router";
 import {
   Alert,
   Button,
   Container,
+  Heading,
   PageTitle,
   Section,
-  Heading,
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
+import Head from "next/head";
+import Link from "next/link";
+import { withRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
 
-import { ConventionModal } from "../src/conventions/SearchModal";
-import { fetchSearchResults } from "../src/search/search.service";
-import { SearchResults } from "../src/search/SearchResults";
-import SearchBar from "../src/search/SearchBar";
-import { Layout } from "../src/layout/Layout";
-
-import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import { ConventionModal } from "../src/conventions/SearchModal";
+import { Layout } from "../src/layout/Layout";
+import { fetchSearchResults } from "../src/search/search.service";
+import SearchBar from "../src/search/SearchBar";
+import { SearchResults } from "../src/search/SearchResults";
 
 const SEARCH_ID = "search-input";
 
@@ -34,7 +33,7 @@ class SearchPage extends React.Component {
   render() {
     const {
       router,
-      items = { documents: [], articles: [], themes: [] },
+      items = { articles: [], documents: [], themes: [] },
       pageUrl,
       ogImage,
     } = this.props;
@@ -95,7 +94,7 @@ class SearchPage extends React.Component {
                         Consulter les thèmes
                       </StyledLink>
                     </Link>
-                    <ConventionModal key="convention-modal">
+                    <ConventionModal>
                       {(openModal) => (
                         <Button variant="flat" onClick={openModal}>
                           Chercher une convention collective

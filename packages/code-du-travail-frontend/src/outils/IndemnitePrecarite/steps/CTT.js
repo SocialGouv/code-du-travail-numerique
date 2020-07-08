@@ -1,6 +1,6 @@
+import { Toast } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
-import { Toast } from "@socialgouv/react-ui";
 
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 

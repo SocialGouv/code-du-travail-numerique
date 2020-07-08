@@ -1,6 +1,5 @@
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getPrequalifiedBody = require("./prequalified.elastic");
-// const knownQueries = require("@cdt/data...datafiller/prequalified.data.json");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -49,7 +48,7 @@ async function _getPrequalified() {
 
 const getPrequalified = memoizee(_getPrequalified, {
   promise: true,
-  maxAge: 1000 * 5,
+  maxAge: 1000 * 5 * 60,
   preFetch: true,
 });
 

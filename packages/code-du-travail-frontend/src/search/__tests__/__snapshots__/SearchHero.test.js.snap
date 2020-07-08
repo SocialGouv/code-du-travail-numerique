@@ -199,7 +199,7 @@ exports[`<SearchHero /> should render 1`] = `
 
 .c17 {
   position: absolute;
-  top: 0;
+  top: 10rem;
   right: 0;
   z-index: -1;
   display: -webkit-box;
@@ -214,7 +214,7 @@ exports[`<SearchHero /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 55%;
+  width: 40%;
   height: 100%;
   max-height: 55rem;
   overflow: hidden;
@@ -257,6 +257,12 @@ exports[`<SearchHero /> should render 1`] = `
   }
 }
 
+@media print {
+  .c15 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c15 {
     padding: 0 3rem;
@@ -295,8 +301,7 @@ exports[`<SearchHero /> should render 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    height: 75rem;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -364,16 +369,13 @@ exports[`<SearchHero /> should render 1`] = `
 
 @media (max-width:980px) {
   .c17 {
-    top: 6rem;
+    width: 50%;
   }
 }
 
 @media (max-width:600px) {
   .c17 {
-    position: relative;
-    top: -5px;
-    right: auto;
-    width: auto;
+    display: none;
   }
 }
 

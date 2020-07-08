@@ -1,4 +1,3 @@
-import React from "react";
 import {
   fireEvent,
   render,
@@ -6,11 +5,12 @@ import {
   waitForElement,
 } from "@testing-library/react";
 import fetch from "isomorphic-unfetch";
+import React from "react";
+
+import Search from "../";
 
 jest.mock("isomorphic-unfetch");
 jest.useFakeTimers();
-
-import Search from "../";
 
 jest.mock("../../../piwik", () => ({
   matopush: jest.fn(),
@@ -29,7 +29,7 @@ const mockFetch = (resultsByService) => {
   fetch.mockReset();
   fetch.mockImplementation((url) => {
     const mockFetchResponse = (data) =>
-      Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
+      Promise.resolve({ json: () => Promise.resolve(data), ok: true });
 
     for (const [service, data] of Object.entries(resultsByService)) {
       if (new RegExp(service).test(url)) {
@@ -62,20 +62,20 @@ describe("<Search />", () => {
           hits: [
             {
               _source: {
-                idcc: 275,
                 id: "KALICONT000000000001",
-                title: "titre convention 1",
+                idcc: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
+                title: "titre convention 1",
               },
             },
             {
               _source: {
-                idcc: 276,
                 id: "KALICONT000000000002",
-                title: "titre convention 2",
+                idcc: 276,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
+                title: "titre convention 2",
               },
             },
           ],
@@ -100,20 +100,20 @@ describe("<Search />", () => {
           hits: [
             {
               _source: {
-                idcc: 275,
                 id: "KALICONT000000000001",
-                title: "titre convention 1",
+                idcc: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
+                title: "titre convention 1",
               },
             },
             {
               _source: {
-                idcc: 4567,
                 id: "KALICONT000000000002",
-                title: "titre convention 2",
+                idcc: 4567,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
+                title: "titre convention 2",
               },
             },
           ],
@@ -157,20 +157,20 @@ describe("<Search />", () => {
           hits: [
             {
               _source: {
-                idcc: 275,
                 id: "KALICONT000000000001",
-                title: "titre convention 1",
+                idcc: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
+                title: "titre convention 1",
               },
             },
             {
               _source: {
-                idcc: 4567,
                 id: "KALICONT000000000002",
-                title: "titre convention 2",
+                idcc: 4567,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
+                title: "titre convention 2",
               },
             },
           ],
@@ -191,24 +191,35 @@ describe("<Search />", () => {
     expect(onSelectConvention).toHaveBeenCalledWith({
       id: "KALICONT000000000002",
       num: 4567,
+      shortTitle: "smaller convention 2",
       slug: "slug-convention-2",
       title: "titre convention 2",
-      shortTitle: "smaller convention 2",
     });
   });
 
   it("when searching by text, should use ES, api SIREN and siret2idcc", async () => {
     mockFetch({
+      "api-entreprises.url": {
+        etablissement: [
+          {
+            code_postal: 93100,
+            id: 199308119,
+            libelle_commune: "Commune test",
+            nom_raison_sociale: "Entreprise 1",
+            siret: "44144914700020",
+          },
+        ],
+      },
       "api.url/idcc": {
         hits: {
           hits: [
             {
               _source: {
-                idcc: 275,
                 id: "KALICONT000000000001",
-                title: "titre convention 1",
+                idcc: 275,
                 shortTitle: "titre convention 1",
                 slug: "slug-convention-1",
+                title: "titre convention 1",
               },
             },
           ],
@@ -216,7 +227,6 @@ describe("<Search />", () => {
       },
       "siret2idcc.url": [
         {
-          siret: "44144914700020",
           conventions: [
             {
               active: true,
@@ -225,23 +235,13 @@ describe("<Search />", () => {
               id: "KALICONT000005635886",
               nature: "IDCC",
               num: 843,
-              title: "Convention 1",
               shortTitle: "Short Convention 1",
+              title: "Convention 1",
             },
           ],
+          siret: "44144914700020",
         },
       ],
-      "api-entreprises.url": {
-        etablissement: [
-          {
-            id: 199308119,
-            siret: "44144914700020",
-            nom_raison_sociale: "Entreprise 1",
-            code_postal: 93100,
-            libelle_commune: "Commune test",
-          },
-        ],
-      },
     });
 
     const onSelectConvention = jest.fn();
@@ -262,11 +262,11 @@ describe("<Search />", () => {
           hits: [
             {
               _source: {
-                idcc: 275,
                 id: "KALICONT000000000001",
-                title: "titre convention 1",
+                idcc: 275,
                 shortTitle: "small title 1",
                 slug: "slug-convention-1",
+                title: "titre convention 1",
               },
             },
           ],
@@ -292,16 +292,15 @@ describe("<Search />", () => {
     mockFetch({
       "api-entreprises": {
         etablissement: {
-          id: 199308119,
-          siret: "01234567891011",
-          nom_raison_sociale: "Entreprise 1",
           code_postal: 93100,
+          id: 199308119,
           libelle_commune: "Commune test",
+          nom_raison_sociale: "Entreprise 1",
+          siret: "01234567891011",
         },
       },
       "siret2idcc.url": [
         {
-          siret: "01234567891011",
           conventions: [
             {
               active: true,
@@ -313,6 +312,7 @@ describe("<Search />", () => {
               title: "Convention 1",
             },
           ],
+          siret: "01234567891011",
         },
       ],
     });

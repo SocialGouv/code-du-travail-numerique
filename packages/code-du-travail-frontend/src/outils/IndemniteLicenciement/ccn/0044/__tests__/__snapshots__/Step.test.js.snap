@@ -156,6 +156,21 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   text-align: left;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c9 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -186,21 +201,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c9 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c6 {
@@ -750,6 +750,42 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   text-align: left;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c13 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.c9 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -782,44 +818,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 2rem;
 }
 
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c13 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.c9 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c6 {
   width: 100%;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 2rem;
 }
 
 @media (max-width:600px) {
@@ -1268,6 +1268,15 @@ exports[`<Step /> should render 1`] = `
   text-align: left;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1279,15 +1288,6 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
 }
 
 .c6 {

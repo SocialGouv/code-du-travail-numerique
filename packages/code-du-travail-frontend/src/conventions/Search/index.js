@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
-
-import styled from "styled-components";
-import { useRouter } from "next/router";
-import Spinner from "react-svg-spinner";
-
 import { Input, Label, theme } from "@socialgouv/react-ui";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import Spinner from "react-svg-spinner";
+import styled from "styled-components";
 
 import { matopush } from "../../piwik";
-import useSearchCC from "./searchHook";
-import { ResultList } from "./ResultList";
 import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
+import { ResultList } from "./ResultList";
+import useSearchCC from "./searchHook";
 
 const Search = ({ onSelectConvention }) => {
   const router = useRouter();
@@ -37,12 +35,12 @@ const Search = ({ onSelectConvention }) => {
   return (
     <>
       <Label htmlFor="convention-search">
-        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
-        convention collective.
+        Renseignez le nom de votre convention collective, le nom de votre
+        entreprise ou son SIRET.
       </Label>
       <BlockInput
         role="search"
-        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+        placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
         value={query}
         type="search"
         name="q"

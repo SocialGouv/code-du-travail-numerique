@@ -318,6 +318,12 @@ exports[`<Footer /> should render 1`] = `
   }
 }
 
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c9 {
     padding: 0 3rem;
@@ -327,6 +333,12 @@ exports[`<Footer /> should render 1`] = `
 @media (max-width:600px) {
   .c20 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c20 {
+    display: none;
   }
 }
 
@@ -550,6 +562,16 @@ exports[`<Footer /> should render 1`] = `
                     href="/stats"
                   >
                     Statistiques d’utilisation
+                  </a>
+                </li>
+                <li
+                  class="c18"
+                >
+                  <a
+                    class="c19"
+                    href="/integration"
+                  >
+                    Intégrer le Code du travail numérique
                   </a>
                 </li>
               </ul>

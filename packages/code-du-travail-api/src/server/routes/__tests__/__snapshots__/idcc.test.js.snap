@@ -4,7 +4,7 @@ exports[`return idcc for number 27 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "15",
+      "_id": "16",
       "_index": "cdtn_test_documents",
       "_score": 6.5976005,
       "_source": Object {
@@ -31,9 +31,9 @@ exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "14",
+      "_id": "15",
       "_index": "cdtn_test_documents",
-      "_score": 13.575955,
+      "_score": 13.961927,
       "_source": Object {
         "effectif": 134889,
         "id": "KALICONT000005635886",
@@ -46,9 +46,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "13",
+      "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 12.472594,
+      "_score": 12.858566,
       "_source": Object {
         "effectif": 44699,
         "id": "KALICONT000005635691",
@@ -61,7 +61,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.575955,
+  "max_score": 13.961927,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -73,9 +73,9 @@ exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "14",
+      "_id": "15",
       "_index": "cdtn_test_documents",
-      "_score": 13.430498,
+      "_score": 13.768249,
       "_source": Object {
         "effectif": 134889,
         "id": "KALICONT000005635886",
@@ -88,9 +88,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "13",
+      "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 12.327137,
+      "_score": 12.664887,
       "_source": Object {
         "effectif": 44699,
         "id": "KALICONT000005635691",
@@ -103,7 +103,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.430498,
+  "max_score": 13.768249,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -115,9 +115,9 @@ exports[`return idcc results in correct order for banque 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "16",
+      "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 14.308578,
+      "_score": 14.745724,
       "_source": Object {
         "effectif": 216431,
         "id": "KALICONT000005635780",
@@ -130,9 +130,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "15",
+      "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 7.8896523,
+      "_score": 8.388844,
       "_source": Object {
         "effectif": 219,
         "id": "KALICONT000023973390",
@@ -145,7 +145,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.308578,
+  "max_score": 14.745724,
   "total": Object {
     "relation": "eq",
     "value": 2,

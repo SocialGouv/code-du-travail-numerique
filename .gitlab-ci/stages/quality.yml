@@ -7,8 +7,6 @@
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      # Don't run when running e2e tests
-      - $E2E_TEST
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
@@ -35,6 +33,12 @@ Lint socialgouv/react-ui:
   <<: *master_based_stage
   script:
     - yarn workspace @socialgouv/react-ui lint
+
+Lint socialgouv/react-ui:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/react-fiche-service-public lint
 
 Lint @cdtn/frontend:
   <<: *quality_stage
@@ -89,7 +93,7 @@ Test @cdtn/api:
       command: [ "bin/elasticsearch", "-Expack.security.enabled=false", "-Ediscovery.type=single-node" ]
   variables:
     GIT_STRATEGY: none
-    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT  
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
     # HACK(douglasduteil): make ES not that memory hungry
     ES_JAVA_OPTS: "-Xms256m -Xmx256m"
   script:
@@ -113,7 +117,6 @@ Test @cdtn/data:
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
-    - yarn workspace @cdt/data...datafiller test
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage

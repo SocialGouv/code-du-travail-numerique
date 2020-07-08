@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 const fiches = require("@socialgouv/fiches-vdd");
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES, getRouteBySource } = require("@cdt/sources");
 
 const slugify = require("../../slugify");
 const { filter } = require("./filter");
 const format = require("./format");
-const { getThemeFiche } = require("./getThemeFiche");
 
 const contributions = require("@socialgouv/contributions-data/data/contributions.json");
+const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
+const { createThemer } = require("../../indexing/breadcrumbs");
+
 const { extractMdxContentUrl } = require("../../");
 
 const TYPES = ["particuliers", "professionnels", "associations"];
+
+const getBreadcrumbs = createThemer(allThemes);
 
 /** Fiche SP referenced from a contribution */
 
@@ -30,43 +34,41 @@ const fullFiches = [].concat(
   )
 );
 
-const setTheme = (fiche) => ({
-  ...fiche,
-  ...getThemeFiche(fiche),
-});
-
 const getFichesSP = () =>
   filter(fullFiches)
     .map(format)
-    .map(setTheme)
     .filter(Boolean)
     .map(
       ({
         id,
         title,
         description,
-        breadcrumbs,
         theme,
         text,
         raw,
         date,
         references_juridiques,
         url,
-      }) => ({
-        id,
-        source: SOURCES.SHEET_SP,
-        title,
-        slug: slugify(title),
-        description,
-        breadcrumbs,
-        theme,
-        text,
-        raw,
-        date,
-        references_juridiques,
-        url,
-        excludeFromSearch: contribFicheId.includes(id),
-      })
+      }) => {
+        const slug = slugify(title);
+        return {
+          id,
+          source: SOURCES.SHEET_SP,
+          title,
+          slug,
+          description,
+          breadcrumbs: getBreadcrumbs(
+            `/${getRouteBySource(SOURCES.SHEET_SP)}/${slug}`
+          ),
+          theme,
+          text,
+          raw,
+          date,
+          references_juridiques,
+          url,
+          excludeFromSearch: contribFicheId.includes(id),
+        };
+      }
     );
 
 module.exports = { getFichesSP };

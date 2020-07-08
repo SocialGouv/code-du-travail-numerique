@@ -1,9 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import getConfig from "next/config";
-import fetch from "isomorphic-unfetch";
+import tools from "@cdt/data...tools/internals.json";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import * as Sentry from "@sentry/browser";
-import Link from "next/link";
 import {
   Button,
   Container,
@@ -13,15 +10,18 @@ import {
   Section,
   theme,
 } from "@socialgouv/react-ui";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
-import tools from "@cdt/data...tools/internals.json";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
-import SearchHero from "../src/search/SearchHero";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
-import { Themes } from "../src/home/Themes";
 import { Highlights } from "../src/home/Highlights";
+import { Themes } from "../src/home/Themes";
+import { Layout } from "../src/layout/Layout";
+import SearchHero from "../src/search/SearchHero";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -57,7 +57,7 @@ export const DocumentsTile = (
 
 const selectedTools = [
   tools.find((tool) => tool.slug === "preavis-demission"),
-  tools.find((tool) => tool.slug === "indemnite-licenciement"),
+  tools.find((tool) => tool.slug === "simulateur-embauche"),
 ];
 
 const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
@@ -139,7 +139,7 @@ Home.getInitialProps = async () => {
     console.error(e);
     Sentry.captureException(e);
   }
-  return { themes, highlights };
+  return { highlights, themes };
 };
 
 export default Home;

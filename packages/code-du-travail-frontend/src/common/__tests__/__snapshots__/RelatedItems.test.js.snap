@@ -303,8 +303,25 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c23 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 1rem 0 0;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
   }
 }
 
@@ -385,7 +402,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <a
           class="c4"
           href="external.tools"
-          rel="noopener nofollow"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <div
@@ -523,7 +540,7 @@ exports[`<RelatedItems /> should render 1`] = `
               class="c7"
             >
               <span
-                class="sc-fznYue c18"
+                class="sc-fzonjX c18"
               >
                 Modèles de documents
               </span>

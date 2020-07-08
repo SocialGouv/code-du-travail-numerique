@@ -1,7 +1,8 @@
-import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import { Input } from "./Input";
+import React from "react";
+
 import { InputCheckbox } from "./Checkbox";
+import { Input } from "./Input";
 import { InputDate } from "./InputDate";
 import { InputRadio } from "./Radio";
 import { Select } from "./Select";

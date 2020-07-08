@@ -1,9 +1,11 @@
+import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
-import { ArrowLink, FlatList, theme } from "@socialgouv/react-ui";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+
 import TYPE_REFERENCE from "./typeReference";
+
 const sanitizeCdtSlug = (slug) =>
   slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 

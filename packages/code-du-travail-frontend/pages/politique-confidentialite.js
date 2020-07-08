@@ -1,8 +1,4 @@
-import React, { useCallback } from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
-  Button,
   Container,
   PageTitle,
   Section,
@@ -10,19 +6,16 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 const { spacings } = theme;
 
 const CookiePolicy = ({ pageUrl, ogImage }) => {
-  const openTarteAuCitron = useCallback(() => {
-    if (window && window.tarteaucitron) {
-      window.tarteaucitron.userInterface.openPanel();
-    }
-  }, []);
-
   return (
     <Layout>
       <Metas
@@ -115,14 +108,11 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
             <p>
               Ces cookies permettent au Code du travail numérique d’établir des
               mesures statistiques de fréquentation et d’utilisation du site.
-              Pour ce faire, nous utilisons les services proposés par la suite{" "}
-              <a
-                title="Les paramètres de confidentialité dans Google Analytics"
-                href="https://support.google.com/analytics/answer/9019185?hl=fr&ref_topic=2919631"
-              >
-                Google Analytics
-              </a>{" "}
-              et Matomo.
+              Pour ce faire, nous utilisons les services proposés par{" "}
+              <a title="Page d'accueil de Matomo" href="https://fr.matomo.org/">
+                Matomo
+              </a>
+              .
             </p>
             <p>Il convient d’indiquer que&nbsp;:</p>
             <ul>
@@ -134,16 +124,7 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
                 Les cookies ne permettent pas de suivre la navigation de
                 l’internaute sur d’autres sites.
               </li>
-              <li>
-                Les cookies sont inactifs avant que vous ayez exprimé votre
-                consentement en cliquant sur le bouton «&nbsp;Ok, tout
-                accepter&nbsp; » ou après que vous ayez pris le soin de
-                personnaliser vos préférences.
-              </li>
             </ul>
-            <p>
-              <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
-            </p>
             <p>
               À tout moment, vous pouvez refuser l’utilisation des cookies et
               désactiver le dépôt sur votre ordinateur en utilisant la fonction
@@ -159,8 +140,7 @@ const CookiePolicy = ({ pageUrl, ogImage }) => {
               title="matomo optout"
               style={{ border: 0, width: "100%" }}
               src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=2f3b6c&fontSize=16px&fontFamily=sans-serif"
-            ></iframe>
-
+            />
             <p>
               Pour aller plus loin, vous pouvez consulter les fiches proposées
               par la Commission Nationale de l’Informatique et des Libertés

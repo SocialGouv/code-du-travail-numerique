@@ -1,18 +1,20 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Wizard } from "../Wizard";
-import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
+import React from "react";
 import { Field } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
+
 import { matopush } from "../../../piwik";
+import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
+import { Wizard } from "../Wizard";
 
 jest.mock("../../../piwik", () => {
   let events = [];
   return {
-    matopush: jest.fn().mockImplementation((event) => events.push(event)),
     events,
     flushEvents() {
       events = [];
     },
+    matopush: jest.fn().mockImplementation((event) => events.push(event)),
   };
 });
 
@@ -20,38 +22,42 @@ const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();
 
 const SecondStep = () => (
-  <p>
-    Deuxieme Etape <button>Submit</button>
-  </p>
+  <>
+    <p>Deuxieme Etape</p>
+    <label htmlFor="cb">
+      etape facultative
+      <Field id="cb" name="fooStep" component="input" type="checkbox" />
+    </label>
+  </>
 );
 const steps = [
   {
-    name: "first_step",
-    label: "First Step",
     component: FirstStep,
+    label: "First Step",
+    name: "first_step",
   },
   {
-    name: "second_step",
-    label: "Second Step",
     component: SecondStep,
+    label: "Second Step",
+    name: "second_step",
   },
 ];
 
 const initialState = { stepIndex: 0, steps };
 
-const AdditionalStep = () => <Field name="firstName" component="input" />;
-const additionalStep = {
-  label: "Name",
+const OptionnalStep = () => <p>etape optionnelle</p>;
+const optionnalStep = {
+  component: OptionnalStep,
+  label: "Optional Step",
   name: "additional_step",
-  component: AdditionalStep,
 };
 const skipableStep = {
-  name: "skippable",
-  label: "Skippable Step",
-  skip: () => true,
   component: function Skipable() {
     return <p>skipable component</p>;
   },
+  label: "Skippable Step",
+  name: "skippable",
+  skip: () => true,
 };
 
 describe("<Wizard />", () => {
@@ -65,7 +71,7 @@ describe("<Wizard />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("should navigate to the second step when click on Suivant", () => {
+  it("should navigate to the second step when click on Commencer", () => {
     const { container, getByText } = render(
       <Wizard
         title="test"
@@ -73,7 +79,7 @@ describe("<Wizard />", () => {
         initialState={initialState}
       />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/commencer/i);
     button.click();
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
@@ -83,7 +89,7 @@ describe("<Wizard />", () => {
     ]);
     expect(container).toMatchSnapshot();
   });
-  it("should call Step.validate when click on Suivant", () => {
+  it("should call Step.validate when click on Commencer", () => {
     const { getByText } = render(
       <Wizard
         title="test"
@@ -91,7 +97,7 @@ describe("<Wizard />", () => {
         initialState={initialState}
       />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/Commencer/i);
     button.click();
     expect(FirstStep.validate).toHaveBeenCalled();
   });
@@ -118,7 +124,7 @@ describe("<Wizard />", () => {
     ]);
   });
   it("should handle initialValues", () => {
-    const state = { stepIndex: 0, steps: steps.concat(additionalStep) };
+    const state = { stepIndex: 0, steps: steps.concat(optionnalStep) };
     const { container } = render(
       <Wizard
         title="test"
@@ -152,10 +158,11 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard title="test" stepReducer={stepReducer} initialState={state} />
     );
-    const button = getByText(/suivant/i);
+    const button = getByText(/Commencer/i);
     button.click();
     expect(getByText("Deuxieme Etape")).toBeTruthy();
   });
+
   it("should skip step backward", () => {
     const [step1, step2] = steps;
 
@@ -170,5 +177,33 @@ describe("<Wizard />", () => {
     const button = getByText(/précédent/i);
     button.click();
     expect(getByText("Premiere Etape")).toBeTruthy();
+  });
+
+  it("should navigate to a dynamic step ", () => {
+    const RulesAdditionalStep = ({ dispatch }) => (
+      <OnChange key="foo-rules" name="fooStep">
+        {(value) => {
+          if (value === true) {
+            dispatch({
+              payload: { insertAfter: "second_step", step: optionnalStep },
+              type: "add_step",
+            });
+          }
+        }}
+      </OnChange>
+    );
+
+    const { getByText, getByLabelText } = render(
+      <Wizard
+        title="test"
+        stepReducer={stepReducer}
+        initialState={initialState}
+        Rules={RulesAdditionalStep}
+      />
+    );
+    getByText(/Commencer/i).click(); // step 2
+    getByLabelText("etape facultative").click();
+    getByText(/suivant/i).click(); // additionalStep
+    expect(getByText("etape optionnelle")).toBeTruthy();
   });
 });

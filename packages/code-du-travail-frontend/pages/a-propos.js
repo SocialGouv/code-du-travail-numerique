@@ -1,17 +1,18 @@
-import React from "react";
-import Link from "next/link";
 import {
   Container,
-  PageTitle,
-  Title,
   Heading,
+  PageTitle,
   Section,
   theme,
+  Title,
   Wrapper,
 } from "@socialgouv/react-ui";
-import { Layout } from "../src/layout/Layout";
-import Metas from "../src/common/Metas";
+import Link from "next/link";
+import React from "react";
+
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 const About = ({ ogImage, pageUrl }) => (
   <Layout>

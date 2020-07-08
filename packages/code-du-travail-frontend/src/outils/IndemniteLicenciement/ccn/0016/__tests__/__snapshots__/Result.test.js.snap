@@ -17,33 +17,15 @@ exports[`<Result /> should render 1`] = `
   white-space: pre-line;
 }
 
-.c4 {
+.c13 {
+  margin: 1.6rem 0;
+}
+
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c5 {
-  width: calc(50% * 0.9533911504424778);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c13 {
-  width: calc(50% * 1);
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-}
-
-.c6 {
-  margin-left: 1.6rem;
-  color: #4d73b8;
-  font-size: 1.8rem;
 }
 
 .c8 {
@@ -70,6 +52,35 @@ exports[`<Result /> should render 1`] = `
 
 .c12 {
   margin: 1.6rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  width: calc(50% * 0.9533911504424778);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c15 {
+  width: calc(50% * 1);
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+}
+
+.c6 {
+  margin-left: 1.6rem;
+  color: #4d73b8;
+  font-size: 1.8rem;
 }
 
 .c2 {
@@ -109,7 +120,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -138,7 +149,7 @@ exports[`<Result /> should render 1`] = `
     <strong
       class="c1"
     >
-      5,650.00
+      5 650,00
        € brut
     </strong>
     .
@@ -169,7 +180,7 @@ exports[`<Result /> should render 1`] = `
         <span
           class="c6"
         >
-          5,386.66
+          5 386,66
            € brut
         </span>
       </div>
@@ -192,9 +203,9 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Salaire de réference (Sref)
+            Ancienneté totale (A)
              : 
-            2000
+            10.58
           </li>
           <li
             class="c11"
@@ -206,9 +217,9 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Ancienneté totale (A)
+            Salaire de réference (Sref)
              : 
-            10.58
+            2000
           </li>
           <li
             class="c11"
@@ -227,12 +238,505 @@ exports[`<Result /> should render 1`] = `
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`(1/4 * Sref * 10) + (1/3 * Sref * "A2")\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mo>
+                              (
+                            </mo>
+                            <mfrac>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  4
+                                </mn>
+                              </mrow>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mn>
+                              1
+                            </mn>
+                            <mn>
+                              0
+                            </mn>
+                            <mo>
+                              )
+                            </mo>
+                            <mo>
+                              +
+                            </mo>
+                            <mo>
+                              (
+                            </mo>
+                            <mfrac>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  3
+                                </mn>
+                              </mrow>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mi>
+                              A
+                            </mi>
+                            <mn>
+                              2
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mo>
+                              )
+                            </mo>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            (\\frac{1}{4} \\times Sref \\times 10) + (\\frac{1}{3} \\times Sref \\times "A2")
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:1.32144em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:2.00744em;vertical-align:-0.686em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mopen"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          <span
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
+                          >
+                            <span
+                              class="vlist-t vlist-t2"
+                            >
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:1.32144em;"
+                                >
+                                  <span
+                                    style="top:-2.314em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        4
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.15em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="stretchy"
+                                      style="height:0.2em;"
+                                    >
+                                      <svg
+                                        height="0.2em"
+                                        preserveAspectRatio="xMinYMin slice"
+                                        viewBox="0 0 400000 200"
+                                        width="400em"
+                                      >
+                                        <path
+                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
+                                </span>
+                              </span>
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:0.686em;"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            class="mclose nulldelimiter"
+                          />
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          1
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          0
+                        </span>
+                        <span
+                          class="mclose"
+                        >
+                          )
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mopen"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          <span
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
+                          >
+                            <span
+                              class="vlist-t vlist-t2"
+                            >
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:1.32144em;"
+                                >
+                                  <span
+                                    style="top:-2.314em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        3
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.15em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="stretchy"
+                                      style="height:0.2em;"
+                                    >
+                                      <svg
+                                        height="0.2em"
+                                        preserveAspectRatio="xMinYMin slice"
+                                        viewBox="0 0 400000 200"
+                                        width="400em"
+                                      >
+                                        <path
+                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
+                                </span>
+                              </span>
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:0.686em;"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            class="mclose nulldelimiter"
+                          />
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          A
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          2
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mclose"
+                        >
+                          )
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -267,12 +771,12 @@ exports[`<Result /> should render 1`] = `
         class="c4"
       >
         <div
-          class="c13"
+          class="c15"
         />
         <span
           class="c6"
         >
-          5,650.00
+          5 650,00
            € brut
         </span>
       </div>
@@ -351,12 +855,698 @@ exports[`<Result /> should render 1`] = `
           class="c12"
         >
           <div
-            id="react-mathjax-preview"
+            class="c13"
           >
             <div
-              id="react-mathjax-preview-result"
+              class="c14"
             >
-              \`4/10 * Sref * Dc + 3/10 * Sref * Dt  + "majoration" - "minoration"\`
+              <div>
+                <span
+                  class="katex-display"
+                >
+                  <span
+                    class="katex"
+                  >
+                    <span
+                      class="katex-mathml"
+                    >
+                      <math>
+                        <semantics>
+                          <mrow>
+                            <mfrac>
+                              <mrow>
+                                <mn>
+                                  2
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  5
+                                </mn>
+                              </mrow>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              D
+                            </mi>
+                            <mi>
+                              c
+                            </mi>
+                            <mo>
+                              +
+                            </mo>
+                            <mfrac>
+                              <mrow>
+                                <mn>
+                                  3
+                                </mn>
+                              </mrow>
+                              <mrow>
+                                <mn>
+                                  1
+                                </mn>
+                                <mn>
+                                  0
+                                </mn>
+                              </mrow>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              S
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              e
+                            </mi>
+                            <mi>
+                              f
+                            </mi>
+                            <mo>
+                              ×
+                            </mo>
+                            <mi>
+                              D
+                            </mi>
+                            <mi>
+                              t
+                            </mi>
+                            <mo>
+                              +
+                            </mo>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mi>
+                              m
+                            </mi>
+                            <mi>
+                              a
+                            </mi>
+                            <mi>
+                              j
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              a
+                            </mi>
+                            <mi>
+                              t
+                            </mi>
+                            <mi>
+                              i
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mo>
+                              −
+                            </mo>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                            <mi>
+                              m
+                            </mi>
+                            <mi>
+                              i
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              r
+                            </mi>
+                            <mi>
+                              a
+                            </mi>
+                            <mi>
+                              t
+                            </mi>
+                            <mi>
+                              i
+                            </mi>
+                            <mi>
+                              o
+                            </mi>
+                            <mi>
+                              n
+                            </mi>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              "
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            \\frac{2}{5} \\times Sref \\times Dc + \\frac{3}{10} \\times Sref \\times Dt  + "majoration" - "minoration"
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="katex-html"
+                    >
+                      <span
+                        class="strut"
+                        style="height:1.32144em;"
+                      />
+                      <span
+                        class="strut bottom"
+                        style="height:2.00744em;vertical-align:-0.686em;"
+                      />
+                      <span
+                        class="base"
+                      >
+                        <span
+                          class="mord"
+                        >
+                          <span
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
+                          >
+                            <span
+                              class="vlist-t vlist-t2"
+                            >
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:1.32144em;"
+                                >
+                                  <span
+                                    style="top:-2.314em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        5
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.15em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="stretchy"
+                                      style="height:0.2em;"
+                                    >
+                                      <svg
+                                        height="0.2em"
+                                        preserveAspectRatio="xMinYMin slice"
+                                        viewBox="0 0 400000 200"
+                                        width="400em"
+                                      >
+                                        <path
+                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        2
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
+                                </span>
+                              </span>
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:0.686em;"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            class="mclose nulldelimiter"
+                          />
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          D
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          c
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          <span
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
+                          >
+                            <span
+                              class="vlist-t vlist-t2"
+                            >
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:1.32144em;"
+                                >
+                                  <span
+                                    style="top:-2.314em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
+                                      <span
+                                        class="mord"
+                                      >
+                                        0
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.15em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="stretchy"
+                                      style="height:0.2em;"
+                                    >
+                                      <svg
+                                        height="0.2em"
+                                        preserveAspectRatio="xMinYMin slice"
+                                        viewBox="0 0 400000 200"
+                                        width="400em"
+                                      >
+                                        <path
+                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        3
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
+                                </span>
+                              </span>
+                              <span
+                                class="vlist-r"
+                              >
+                                <span
+                                  class="vlist"
+                                  style="height:0.686em;"
+                                />
+                              </span>
+                            </span>
+                          </span>
+                          <span
+                            class="mclose nulldelimiter"
+                          />
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05764em;"
+                        >
+                          S
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          e
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.10764em;"
+                        >
+                          f
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          D
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          t
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          m
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          a
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.05724em;"
+                        >
+                          j
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          a
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          t
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          i
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          −
+                        </span>
+                        <span
+                          class="mord rule"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          m
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          i
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                          style="margin-right:0.02778em;"
+                        >
+                          r
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          a
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          t
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          i
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          o
+                        </span>
+                        <span
+                          class="mord mathit"
+                        >
+                          n
+                        </span>
+                        <span
+                          class="mord"
+                        >
+                          "
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>

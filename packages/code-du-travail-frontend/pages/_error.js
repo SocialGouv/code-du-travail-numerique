@@ -1,71 +1,54 @@
-import React from "react";
-import Link from "next/link";
+// https://nextjs.org/docs/advanced-features/custom-error-page
+import { Button, Container, Section, theme } from "@socialgouv/react-ui";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Section, theme } from "@socialgouv/react-ui";
+
 import { Layout } from "../src/layout/Layout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 
 initializeSentry();
 
-export default class Error extends React.Component {
-  static async getInitialProps({ res, err }) {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-    return { statusCode, message: err.message };
-  }
-
-  componentDidMount() {
-    const { statusCode, message } = this.props;
+export default function CustomError({ message, statusCode }) {
+  useEffect(() => {
     if (statusCode && statusCode >= 400) {
       notifySentry(statusCode, message);
     }
-  }
+  }, [message, statusCode]);
 
-  render() {
-    const { statusCode } = this.props;
-    return (
-      <Layout>
+  return (
+    <Layout>
+      <CenteredContainer>
+        {statusCode && <Suptitle>ERREUR {statusCode}</Suptitle>}
+        <H1>Désolé, une erreur s’est produite…</H1>
+        <p>Notre équipe technique a été informée et interviendra sous peu.</p>
         <Section>
-          <FlexCenterer>
-            <P>
-              {this.props.statusCode
-                ? `Une erreur ${statusCode} est apparue sur le serveur :/`
-                : "Une erreur est apparue sur le client"}
-              <br />
-            </P>
-            <Smaller>Notre équipe technique a été informée.</Smaller>
-            <P>
-              <Link href="/">
-                <a>Retour à la page d’accueil</a>
-              </Link>
-            </P>
-          </FlexCenterer>
+          <Button variant="primary" as="a" href="/">
+            Revenir à la page d’accueil
+          </Button>
         </Section>
-      </Layout>
-    );
-  }
+      </CenteredContainer>
+    </Layout>
+  );
 }
 
-const { breakpoints, fonts } = theme;
+CustomError.getInitialProps = async ({ res, err }) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
+  return { message: err && err.message, statusCode };
+};
 
-const FlexCenterer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(90vh - 15rem);
-  text-align: center;
-`;
+const { fonts, spacings } = theme;
 
-const P = styled.p`
-  font-size: ${fonts.sizes.headings.large};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.headings.medium};
-  }
-`;
-
-const Smaller = styled.p`
+const Suptitle = styled.div`
+  margin-bottom: ${spacings.base};
+  color: ${({ theme }) => theme.altText};
+  font-weight: bold;
   font-size: ${fonts.sizes.headings.small};
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.default};
-  }
+`;
+
+const H1 = styled.h1`
+  margin-top: 0;
+`;
+
+const CenteredContainer = styled(Container)`
+  text-align: center;
 `;

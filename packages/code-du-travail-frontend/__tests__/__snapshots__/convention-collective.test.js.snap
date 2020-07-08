@@ -118,6 +118,32 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
+.c0 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.c1 {
+  width: 80%;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -177,32 +203,6 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-left: 4rem;
 }
 
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c1 {
-  width: 80%;
-}
-
 .c2 {
   max-width: 124rem;
   margin: 0 auto;
@@ -237,6 +237,12 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c11 {
     padding: 0 3rem;
@@ -253,6 +259,31 @@ exports[`<ConventionCollective /> should render 1`] = `
 @media (max-width:600px) {
   .c7 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 100%;
   }
 }
 
@@ -308,31 +339,6 @@ exports[`<ConventionCollective /> should render 1`] = `
 @media (max-width:1180px) {
   .c13 + .c12 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c1 {
-    width: 100%;
   }
 }
 

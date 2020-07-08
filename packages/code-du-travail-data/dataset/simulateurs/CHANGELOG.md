@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
+
+
+### Features
+
+* **front:** update wording ([#2828](https://github.com/SocialGouv/code-du-travail-numerique/issues/2828)) ([bec49d9](https://github.com/SocialGouv/code-du-travail-numerique/commit/bec49d98325a949e1ac2c1fde55c4f6c81ce13fa))
+
+
+
+
+
+# [4.22.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.22.0-alpha.0...v4.22.0) (2020-05-28)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
+# [4.22.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.21.0...v4.22.0-alpha.0) (2020-05-28)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
+# [4.18.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.1...v4.18.0) (2020-04-24)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
+# [4.18.0-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.18.0-alpha.0...v4.18.0-alpha.1) (2020-04-23)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
+# [4.18.0-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.17.2...v4.18.0-alpha.0) (2020-04-23)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
 # [4.11.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.11.0-alpha.1...v4.11.0) (2020-03-27)
 
 **Note:** Version bump only for package @cdt/data...simulateurs

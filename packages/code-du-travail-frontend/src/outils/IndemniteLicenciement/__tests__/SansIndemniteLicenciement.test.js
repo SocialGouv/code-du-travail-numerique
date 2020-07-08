@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import SansIndemniteLicenciement from "../ccn/SansIndemniteLicenciement";
 
 describe("<SansIndemniteLicenciement />", () => {
@@ -8,21 +9,21 @@ describe("<SansIndemniteLicenciement />", () => {
       getState() {
         return {
           values: {
+            absencePeriods: [],
+            anciennete: 6,
             branche: "1518",
             contrat: "cdi",
-            fauteGrave: false,
-            inaptitude: false,
             dateEntree: "2013-07-02",
-            anciennete: 6,
             dateNotification: "2019-07-02",
             dateSortie: "2019-07-31",
+            fauteGrave: false,
             hasAbsenceProlonge: false,
-            absencePeriods: [],
-            hasTempsPartiel: false,
-            salairePeriods: [],
             hasSameSalaire: true,
-            salaires: [],
+            hasTempsPartiel: false,
+            inaptitude: false,
             salaire: "2390",
+            salairePeriods: [],
+            salaires: [],
           },
         };
       },

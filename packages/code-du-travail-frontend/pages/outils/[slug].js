@@ -1,25 +1,24 @@
-import React, { useEffect } from "react";
 import tools from "@cdt/data...tools/internals.json";
 import { Container, Section, Wrapper } from "@socialgouv/react-ui";
+import React, { useEffect } from "react";
 
-import { Layout } from "../../src/layout/Layout";
-import { matopush } from "../../src/piwik";
 import Metas from "../../src/common/Metas";
-
-import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
-import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
-import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
-import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
+import { Layout } from "../../src/layout/Layout";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
+import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
 import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
+import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
+import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
+import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { matopush } from "../../src/piwik";
 
 const toolsBySlug = {
+  "heures-recherche-emploi": HeuresRechercheEmploi,
   "indemnite-licenciement": CalculateurIndemnite,
-  "preavis-licenciement": DureePreavisLicenciement,
-  "simulateur-embauche": SimulateurEmbauche,
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
-  "heures-recherche-emploi": HeuresRechercheEmploi,
+  "preavis-licenciement": DureePreavisLicenciement,
+  "simulateur-embauche": SimulateurEmbauche,
 };
 
 function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
@@ -31,7 +30,7 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
     <Layout>
       <Metas
         url={pageUrl}
-        title={title}
+        title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
         image={ogImage}
       />

@@ -1,8 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 import { FormulaDetails } from "./FormulaDetails";
-import { SectionTitle, Highlight } from "../../common/stepStyles";
 
 function IndemniteLegale({ indemnite, infoCalcul }) {
   return (

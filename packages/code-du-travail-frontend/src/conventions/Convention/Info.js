@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
-import styled from "styled-components";
+import { formatIdcc } from "@cdt/data";
 import { theme } from "@socialgouv/react-ui";
 import { format, parseISO } from "date-fns";
-import { formatIdcc } from "@cdt/data";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const Detail = ({ label, children }) => (
   <StyledDetail>
@@ -53,9 +53,9 @@ const DetailLabel = styled.div`
 
 Info.propTypes = {
   convention: PropTypes.shape({
-    url: PropTypes.string,
-    idcc: PropTypes.string,
     date_publi: PropTypes.string,
+    idcc: PropTypes.string,
+    url: PropTypes.string,
   }).isRequired,
 };
 

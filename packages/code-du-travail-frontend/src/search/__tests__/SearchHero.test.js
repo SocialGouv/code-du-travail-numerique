@@ -1,7 +1,8 @@
-import React from "react";
-import SearchHero from "../SearchHero";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { fetchSuggestResults } from "../search.service";
+import SearchHero from "../SearchHero";
 
 jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn(),

@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getRootThemesQuery() {
   return {
     _source: ["icon", "children", "title", "slug", "position"],
@@ -9,6 +11,11 @@ function getRootThemesQuery() {
             field: "breadcrumbs",
           },
         },
+        filter: {
+          term: {
+            source: SOURCES.THEMES,
+          },
+        },
       },
     },
   };
@@ -16,7 +23,15 @@ function getRootThemesQuery() {
 
 function getThemeQuery({ slug }) {
   return {
-    _source: ["title", "slug", "position", "breadcrumbs", "children", "refs"],
+    _source: [
+      "title",
+      "slug",
+      "position",
+      "breadcrumbs",
+      "children",
+      "description",
+      "refs",
+    ],
     sort: [{ position: { order: "asc" } }],
     query: {
       bool: {

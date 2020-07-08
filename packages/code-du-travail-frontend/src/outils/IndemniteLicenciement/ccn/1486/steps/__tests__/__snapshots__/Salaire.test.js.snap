@@ -89,6 +89,21 @@ exports[`<Salaire /> renders 1`] = `
   display: block;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c4 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -106,21 +121,6 @@ exports[`<Salaire /> renders 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c1 {
@@ -314,6 +314,21 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   display: block;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c4 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -331,21 +346,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c1 {
@@ -740,6 +740,21 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   display: block;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c4 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -757,21 +772,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c1 {
@@ -1242,6 +1242,21 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   display: block;
 }
 
+.c3 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c4 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1259,21 +1274,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 2rem;
-}
-
-.c3 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c1 {

@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { StepInfoCCn } from "../InfosCCn";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { StepInfoCCn } from "../InfosCCn";
 
 function renderForm(data) {
   return render(
@@ -26,7 +27,10 @@ describe("<StepInfoCCn />", () => {
   it("should render CC infos step", () => {
     localStorage.setItem(
       "convention",
-      JSON.stringify({ convention: { num: 3109 }, label: "ccn des 5 mondes" })
+      JSON.stringify({
+        num: 3109,
+        shortTitle: "ccn des 5 mondes",
+      })
     );
     const { container } = renderForm({
       cdt: { ancienneté: "31| 6 mois à moins de 2 ans" },

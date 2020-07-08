@@ -1,13 +1,13 @@
+import { Input, theme, Toast } from "@socialgouv/react-ui";
 import React from "react";
-import styled from "styled-components";
 import { Field } from "react-final-form";
-import { Input, Toast, theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
 
+import { CurrencyField } from "../../../../common/CurrencyField";
+import { Error } from "../../../../common/ErrorField";
 import { Label, SectionTitle } from "../../../../common/stepStyles";
 import { isNumber } from "../../../../common/validators";
-import { Error } from "../../../../common/ErrorField";
 import { YesNoQuestion } from "../../../../common/YesNoQuestion";
-import { CurrencyField } from "../../../../common/CurrencyField";
 
 export const CONTRAT_KEY = "brancheContrat";
 export const HAS_CONTRAT_KEY = "hasBrancheContrat";
@@ -46,9 +46,9 @@ export const AncienneteETAMIC = ({ form }) => {
         onChange={(HAS_CONTRAT_KEY) => {
           HAS_CONTRAT_KEY
             ? form.change(CONTRAT_KEY, {
+                considered: false,
                 duration: "",
                 indemnite: "0",
-                considered: false,
               })
             : form.change(CONTRAT_KEY, undefined);
         }}
@@ -59,10 +59,10 @@ export const AncienneteETAMIC = ({ form }) => {
             name={`${CONTRAT_KEY}.duration`}
             validate={isNumber}
             subscription={{
-              value: true,
               error: true,
-              touched: true,
               invalid: true,
+              touched: true,
+              value: true,
             }}
             render={({ input, meta: { touched, error, invalid } }) => (
               <>

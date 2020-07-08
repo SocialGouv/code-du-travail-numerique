@@ -2,49 +2,40 @@
 
 exports[`return theme data for slug 8-depart-de-lentreprise 1`] = `
 Object {
-  "breadcrumbs": null,
+  "breadcrumbs": Array [],
   "children": Array [
     Object {
-      "slug": "80-documents-a-remettre-au-salarie",
-      "title": "Documents à remettre au salarié",
+      "label": "Documents à remettre au salarié",
+      "slug": "/themes/80-documents-a-remettre-au-salarie",
     },
     Object {
-      "slug": "81-demission",
-      "title": "Démission",
+      "label": "Démission",
+      "slug": "/themes/81-demission",
     },
     Object {
-      "slug": "82-fin-dun-cdd-ctt",
-      "title": "Fin d'un CDD - CTT",
+      "label": "Fin d'un CDD - CTT",
+      "slug": "/themes/82-fin-dun-cdd-ctt",
     },
     Object {
-      "slug": "83-rupture-conventionnelle",
-      "title": "Rupture conventionnelle",
+      "label": "Rupture conventionnelle",
+      "slug": "/themes/83-rupture-conventionnelle",
     },
     Object {
-      "slug": "84-licenciement",
-      "title": "Licenciement",
+      "label": "Licenciement",
+      "slug": "/themes/84-licenciement",
     },
     Object {
-      "slug": "85-retraite",
-      "title": "Retraite",
+      "label": "Retraite",
+      "slug": "/themes/85-retraite",
     },
     Object {
-      "slug": "86-autres-departs",
-      "title": "Autres départs",
+      "label": "Autres départs",
+      "slug": "/themes/86-autres-departs",
     },
   ],
+  "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,
   "refs": Array [
-    Object {
-      "source": "external",
-      "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
-      "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
-    },
-    Object {
-      "source": "external",
-      "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
-      "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-    },
     Object {
       "source": "external",
       "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
@@ -52,8 +43,18 @@ Object {
     },
     Object {
       "source": "external",
-      "title": " Quelle est la durée de préavis en cas de mise à la retraite ?",
-      "url": "/contribution/quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+      "title": "",
+      "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
+    },
+    Object {
+      "source": "external",
+      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
+      "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+    },
+    Object {
+      "source": "external",
+      "title": "",
+      "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
     },
     Object {
       "source": "external",
@@ -63,27 +64,17 @@ Object {
     Object {
       "source": "external",
       "title": "",
-      "url": "/fiche-service-public/le-salarie-beneficie-t-il-dheures-de-recherche-demploi-pendant-son-preavis",
-    },
-    Object {
-      "source": "external",
-      "title": "",
-      "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
-    },
-    Object {
-      "source": "external",
-      "title": "",
-      "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
-    },
-    Object {
-      "source": "external",
-      "title": "",
       "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes",
     },
     Object {
       "source": "external",
-      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
-      "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+      "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
+      "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+    },
+    Object {
+      "source": "external",
+      "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
+      "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
     },
   ],
   "slug": "8-depart-de-lentreprise",
@@ -97,32 +88,48 @@ Object {
     Object {
       "children": Array [
         Object {
-          "slug": "80-documents-a-remettre-au-salarie",
-          "title": "Documents à remettre au salarié",
+          "label": "Embauche",
+          "slug": "/themes/11-embauche",
         },
         Object {
-          "slug": "81-demission",
-          "title": "Démission",
+          "label": "Contrat de travail",
+          "slug": "/themes/12-contrat-de-travail",
+        },
+      ],
+      "icon": "Contract",
+      "position": 1,
+      "slug": "1-embauche-et-contrat-de-travail",
+      "title": "Embauche et contrat de travail",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
         },
         Object {
-          "slug": "82-fin-dun-cdd-ctt",
-          "title": "Fin d'un CDD - CTT",
+          "label": "Démission",
+          "slug": "/themes/81-demission",
         },
         Object {
-          "slug": "83-rupture-conventionnelle",
-          "title": "Rupture conventionnelle",
+          "label": "Fin d'un CDD - CTT",
+          "slug": "/themes/82-fin-dun-cdd-ctt",
         },
         Object {
-          "slug": "84-licenciement",
-          "title": "Licenciement",
+          "label": "Rupture conventionnelle",
+          "slug": "/themes/83-rupture-conventionnelle",
         },
         Object {
-          "slug": "85-retraite",
-          "title": "Retraite",
+          "label": "Licenciement",
+          "slug": "/themes/84-licenciement",
         },
         Object {
-          "slug": "86-autres-departs",
-          "title": "Autres départs",
+          "label": "Retraite",
+          "slug": "/themes/85-retraite",
+        },
+        Object {
+          "label": "Autres départs",
+          "slug": "/themes/86-autres-departs",
         },
       ],
       "icon": "Depart",

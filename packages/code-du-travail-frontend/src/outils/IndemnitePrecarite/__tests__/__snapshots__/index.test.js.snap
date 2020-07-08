@@ -70,6 +70,30 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   list-style-type: none;
 }
 
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 5rem 0 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
+}
+
 .c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -202,30 +226,6 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 5rem 0 3.2rem 0;
-}
-
-.c16 {
-  width: 3rem;
-  margin-left: 1rem;
-}
-
 .c0 {
   padding: 0 0 0 28rem;
   overflow: visible;
@@ -251,9 +251,39 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
   }
 }
 
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c13 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c15 + .c14 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c12 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c12 {
+    display: none;
   }
 }
 
@@ -334,30 +364,6 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
 
   .c10 + .c7 {
     margin-top: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
   }
 }
 
@@ -475,7 +481,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
       Cette simulation nécessite environ 5 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au contrat de travail (CDD ou contrat de travail temporaire (contrat d’intérim), derniers bulletins de salaire, …).
     </p>
     <p>
-      Pour commencer la simulation, cliquez sur « Suivant ».
+      Cliquez sur commencer pour démarrer la simulation.
     </p>
     <div
       class="c12"
@@ -483,7 +489,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"

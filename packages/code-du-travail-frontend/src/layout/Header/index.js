@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from "react";
+import { Container, icons, theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-
-import { Container, icons, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
+
+export const HEADER_HEIGHT = "8.6rem";
+export const MOBILE_HEADER_HEIGHT = "6.6rem";
 
 const { Search: SearchIcon } = icons;
 
 const printDate = () => {
   const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
-  return `le ${currentDate.slice(0, 10)} à ${currentDate.slice(11, 18)}`;
+  return `le ${currentDate}`;
 };
 
-const Header = ({ currentPage = "" }) => {
+export const Header = ({ currentPage = "" }) => {
   const [currentDate, setDate] = useState();
   useEffect(() => {
     setDate(printDate());
@@ -27,9 +29,9 @@ const Header = ({ currentPage = "" }) => {
       <StyledContainer>
         <Link href="/" passHref>
           <LogoLink title="Code du travail numérique - retour à l'accueil">
-            <Marianne
-              src={"/static/assets/img/marianne.svg"}
-              alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
+            <MinistereTravail
+              src={"/static/assets/img/ministere-travail.svg"}
+              alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
             />
             <Logo />
           </LogoLink>
@@ -57,10 +59,7 @@ const Header = ({ currentPage = "" }) => {
   );
 };
 
-const { box, breakpoints, spacings } = theme;
-
-const HEADER_HEIGHT = "9rem";
-const HEADER_HEIGHT_MOBILE = "6rem";
+const { breakpoints, spacings } = theme;
 
 const StyledHeader = styled.header`
   ${({ currentPage }) => {
@@ -68,20 +67,15 @@ const StyledHeader = styled.header`
       return css`
         position: sticky;
         top: 0;
-        z-index: 2;
-        box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+        z-index: 3;
       `;
     }
   }};
   height: ${HEADER_HEIGHT};
-  margin-bottom: ${({ currentPage }) =>
-    currentPage === "home" ? "7rem" : "6rem"};
-  overflow: visible;
   background-color: ${({ currentPage, theme }) =>
     currentPage === "home" ? "transparent" : theme.white};
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${HEADER_HEIGHT_MOBILE};
-    margin-bottom: ${spacings.larger};
+    height: ${MOBILE_HEADER_HEIGHT};
   }
   @media print {
     position: relative;
@@ -102,47 +96,60 @@ const StyledContainer = styled(Container)`
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  height: ${HEADER_HEIGHT};
+  height: 100%;
+  padding-left: 0;
   @media (max-width: ${breakpoints.mobile}) {
-    height: ${HEADER_HEIGHT_MOBILE};
+    padding-left: 0;
   }
 `;
 
 const LogoLink = styled.a`
   display: flex;
+  flex-grow: 0;
   align-items: center;
   text-decoration: none;
+  @media (max-width: ${breakpoints.tablet}) {
+    justify-content: space-between;
+    /* 9rem is half logo's width so it gets centered */
+    width: calc(50% + 9.5rem);
+  }
   @media (max-width: ${breakpoints.mobile}) {
     /* 6.2rem is half logo's width so it gets centered */
-    flex-grow: 0;
-    flex-shrink: 0;
     justify-content: space-between;
     width: calc(50% + 6.2rem);
   }
 `;
 
-const Marianne = styled.img`
-  width: 7rem;
-  margin-right: ${spacings.large};
+const MinistereTravail = styled.img`
+  flex: 0 0 7.8rem;
+  width: 7.8rem;
+  height: calc(100% - 2 * ${spacings.xsmall});
+  margin: ${spacings.xsmall} ${spacings.medium} ${spacings.xsmall}
+    ${spacings.xsmall};
+  padding: ${spacings.xsmall} 0;
+  background-color: white;
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 5rem;
-    width: 5rem;
-    height: 5rem;
+    flex: 0 0 5.5rem;
+    width: 5.5rem;
+    margin-right: 0;
+    padding: ${spacings.tiny} 0;
   }
 `;
 const Logo = styled(icons.Logo)`
-  width: 17rem;
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: calc(100% - 2 * ${spacings.xsmall});
+  margin: ${spacings.xsmall} 0;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
     flex: 0 0 12.4rem;
     width: 12.4rem;
-    height: 5rem;
   }
 `;
 
 const RightSide = styled.div`
   display: flex;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   align-items: center;
   justify-content: flex-end;
   @media print {
@@ -169,11 +176,9 @@ const StyledLink = styled.a`
 
 const SearchBarWrapper = styled.div`
   order: 3;
-  width: 31rem;
+  width: 30rem;
   margin-left: ${spacings.base};
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
 `;
-
-export default Header;

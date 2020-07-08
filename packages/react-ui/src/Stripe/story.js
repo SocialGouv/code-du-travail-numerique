@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Section } from "../layout/Section";
 import { Wrapper } from "../layout/Wrapper";
 import { Stripe } from ".";
@@ -19,7 +20,7 @@ export const base = () => (
     <Section>
       <Wrapper
         variant="light"
-        style={{ position: "relative", height: "10rem" }}
+        style={{ height: "10rem", position: "relative" }}
       >
         <Stripe position="left" length="100%" variant="primary" rounded />
         <p>

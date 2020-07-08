@@ -1,8 +1,9 @@
 import React from "react";
-import { Categorie, CADRE } from "./Categorie";
-import { CategoriePeriod } from "./CategoriePeriod";
-import { YesNoQuestion } from "../../../common/YesNoQuestion";
+
 import { TextQuestion } from "../../../common/TextQuestion";
+import { YesNoQuestion } from "../../../common/YesNoQuestion";
+import { CADRE, Categorie } from "./Categorie";
+import { CategoriePeriod } from "./CategoriePeriod";
 
 function Step({ form }) {
   const state = form.getState();

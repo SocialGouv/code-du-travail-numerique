@@ -1,21 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import { useUIDSeed } from "react-uid";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Accordion, theme, Title } from "@socialgouv/react-ui";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
+import Link from "next/link";
+import React from "react";
+import { useUIDSeed } from "react-uid";
+import styled from "styled-components";
 
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
 import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
+import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
-function getContributionUrl({ slug }) {
-  return `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`;
-}
-
-function Contributions({ contributions }) {
+function Contributions({ contributions, convention }) {
   const UNTHEMED_LABEL = "Autres";
   // group questions by theme
   const contributionsByTheme = contributions.reduce((state, answer) => {
@@ -42,17 +39,21 @@ function Contributions({ contributions }) {
       return a.localeCompare(b);
     })
     .map((theme) => ({
-      id: theme,
-      title: theme,
       body: (
         <Accordion
           items={contributionsByTheme[theme].map((item) => ({
+            body: AccordionContent(item),
             id: item.slug,
             title: item.question,
-            body: AccordionContent(item),
           }))}
+          onChange={trackAccordionPanelState(
+            convention.shortTitle,
+            "pagecc_clickcontrib"
+          )}
         />
       ),
+      id: theme,
+      title: theme,
     }));
 
   return (
@@ -89,7 +90,10 @@ function AccordionContent({ answer, slug, references }) {
       <strong>
         Pour savoir si la mesure prévue par la convention collective s’applique
         à votre situation, reportez-vous{" "}
-        <Link href={getContributionUrl({ slug })} passHref>
+        <Link
+          href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/[slug]`}
+          as={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}
+        >
           <a>à la réponse complète à cette question</a>
         </Link>
         .

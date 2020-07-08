@@ -1,9 +1,9 @@
-import React from "react";
-import { render } from "@testing-library/react";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { render } from "@testing-library/react";
+import Router from "next/router";
+import React from "react";
 
 import Answer from "../Answer";
-import Router from "next/router";
 
 function renderAnswer(props) {
   return render(
@@ -73,49 +73,49 @@ describe("<Answer />", () => {
         "<p class='test-content'>annualisation du temps de travail. Annualisation de l'annualisation.</p>",
       relatedItems: [
         {
-          source: SOURCES.SHEET_SP,
           slug: `${SLUG_LINK_BASE}1`,
+          source: SOURCES.SHEET_SP,
           title: "related sheet sp title 1",
         },
         {
-          source: SOURCES.SHEET_MT,
           slug: `${SLUG_LINK_BASE}2`,
+          source: SOURCES.SHEET_MT,
           title: "related sheet mt title 1",
         },
         {
-          source: SOURCES.EXTERNALS,
-          url: "url.extrenal/tool",
-          title: "related external title 1",
           action: "extern action",
           icon: "Contract",
+          source: SOURCES.EXTERNALS,
+          title: "related external title 1",
+          url: "url.extrenal/tool",
         },
         {
-          source: SOURCES.SHEET_SP,
           slug: `${SLUG_LINK_BASE}4`,
+          source: SOURCES.SHEET_SP,
           title: "related sheet sp title 2",
         },
         {
-          source: SOURCES.TOOLS,
-          slug: `${SLUG_TOOL_BASE}1`,
-          title: "related tool title 1",
           action: "tools action",
           icon: "Depart",
+          slug: `${SLUG_TOOL_BASE}1`,
+          source: SOURCES.TOOLS,
+          title: "related tool title 1",
         },
         {
-          source: SOURCES.TOOLS,
-          slug: `${SLUG_TOOL_BASE}2`,
-          title: "related tool title 2",
           action: "tools action 2",
           icon: "Depart",
+          slug: `${SLUG_TOOL_BASE}2`,
+          source: SOURCES.TOOLS,
+          title: "related tool title 2",
         },
         {
-          source: SOURCES.LETTERS,
           slug: `${SLUG_LETTER_BASE}1`,
+          source: SOURCES.LETTERS,
           title: "related letter title 1",
         },
         {
-          source: SOURCES.LETTERS,
           slug: `${SLUG_LETTER_BASE}2`,
+          source: SOURCES.LETTERS,
           title: "related letter title 2",
         },
       ],

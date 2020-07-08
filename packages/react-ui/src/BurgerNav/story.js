@@ -3,7 +3,7 @@ import React from "react";
 import { Section } from "../layout/Section";
 import { Wrapper } from "../layout/Wrapper";
 import { BurgerNav } from ".";
-import { BurgerNavButton, BurgerNavLink, BurgerNavCurrent } from "./NavItems";
+import { BurgerNavButton, BurgerNavCurrent, BurgerNavLink } from "./NavItems";
 
 export default {
   component: BurgerNav,
@@ -23,7 +23,7 @@ export const base = () => (
       </p>
     </Section>
     <Section>
-      <Wrapper variant="dark" style={{ padding: 0, height: "10rem" }}>
+      <Wrapper variant="dark" style={{ height: "10rem", padding: 0 }}>
         <BurgerNav>
           <BurgerNavButton>NavButton</BurgerNavButton>
           <BurgerNavLink href="https://www.youtube.com/watch?v=8xTqP58o1iw&feature=youtu.be&t=20">

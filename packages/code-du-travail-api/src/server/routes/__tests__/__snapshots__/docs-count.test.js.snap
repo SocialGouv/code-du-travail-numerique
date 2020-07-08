@@ -13,6 +13,10 @@ Object {
         "key": "fiches_service_public",
       },
       Object {
+        "doc_count": 3,
+        "key": "themes",
+      },
+      Object {
         "doc_count": 2,
         "key": "code_du_travail",
       },
@@ -34,19 +38,15 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "themes",
+        "key": "page_fiche_ministere_travail",
       },
       Object {
         "doc_count": 1,
         "key": "glossary",
       },
-      Object {
-        "doc_count": 1,
-        "key": "highlights",
-      },
     ],
     "doc_count_error_upper_bound": 0,
-    "sum_other_doc_count": 1,
+    "sum_other_doc_count": 4,
   },
 }
 `;

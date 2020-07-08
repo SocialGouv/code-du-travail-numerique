@@ -1,13 +1,13 @@
-import React, { useCallback, useState } from "react";
-import PropTypes from "prop-types";
 import {
   Heading,
   InputCheckbox,
   Modal,
-  Title,
   theme,
+  Title,
   useTheme,
 } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React, { useCallback, useState } from "react";
 
 export const AccessibilityModal = ({ children: renderProp }) => {
   const [isModalVisible, setModalVisibility] = useState(false);

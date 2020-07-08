@@ -105,6 +105,21 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   display: block;
 }
 
+.c4 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c5 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #eb5757;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -131,21 +146,6 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-}
-
-.c4 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c5 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 .c2 {

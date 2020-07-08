@@ -1,8 +1,9 @@
-import React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
-import * as Sentry from "@sentry/browser";
 import "url-search-params";
+
+import * as Sentry from "@sentry/browser";
+import Document, { Head, Main, NextScript } from "next/document";
+import React from "react";
+import { ServerStyleSheet } from "styled-components";
 
 process.on("unhandledRejection", (err) => {
   Sentry.captureException(err);
@@ -50,14 +51,7 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <script src="/static/polyfill.min.js" />
-          <script
-            type="text/javascript"
-            src="/static/tarteaucitron/tarteaucitron.js"
-          ></script>
-          <script
-            type="text/javascript"
-            src="/static/tarteaucitron/initTarteaucitron.js"
-          ></script>
+          <script src="/static/webcomponents-polyfill/loader.js" />
         </Head>
         <body>
           <noscript>

@@ -70,6 +70,15 @@ exports[`<EchelonChimie /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,15 +90,6 @@ exports[`<EchelonChimie /> should render 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
 }
 
 .c3 {
@@ -352,6 +352,15 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   background-color: #e4e8ef;
 }
 
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -363,15 +372,6 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   align-items: center;
   margin-right: 2em;
   padding: 0;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  cursor: default;
 }
 
 .c3 {

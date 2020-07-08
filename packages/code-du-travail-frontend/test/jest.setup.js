@@ -1,5 +1,7 @@
 import "jest-styled-components";
-import Intl from "intl";
+import MockDate from "mockdate";
+
+MockDate.set("2020-1-4");
 
 jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
@@ -11,24 +13,6 @@ jest.mock("next/config", () => () => ({
   },
 }));
 
-/**
- * Mocking Date.now with default date
- */
-jest.spyOn(Date, "now").mockImplementation(() => {
-  return 1231231231230;
-});
-const fr = new Intl.DateTimeFormat("fr-FR", {
-  minute: "2-digit",
-  hour: "2-digit",
-  day: "2-digit",
-  month: "numeric",
-  year: "numeric",
-  timeZone: "UTC",
-});
-
-jest.spyOn(Date.prototype, "toLocaleString").mockImplementation(function() {
-  return fr.format(this);
-});
 /**
  * this removes the reach-ui warning that check modal css import
  */

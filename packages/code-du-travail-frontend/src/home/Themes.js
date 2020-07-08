@@ -1,6 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
 import {
   Button,
   Container,
@@ -12,6 +9,9 @@ import {
   theme,
   Tile,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 export const Themes = ({ themes = [] }) => {
   const enrichedThemes = themes.map(({ icon, slug, title }) => {

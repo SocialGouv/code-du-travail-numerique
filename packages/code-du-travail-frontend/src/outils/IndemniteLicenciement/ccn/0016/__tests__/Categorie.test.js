@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { Categorie } from "../Categorie";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { Categorie } from "../Categorie";
 
 describe("<Categorie />", () => {
   it("should render", () => {

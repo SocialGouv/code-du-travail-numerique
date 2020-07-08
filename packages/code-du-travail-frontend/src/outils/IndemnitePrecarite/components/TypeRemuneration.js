@@ -1,11 +1,11 @@
+import { InputRadio } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { InputRadio } from "@socialgouv/react-ui";
 
 import { ErrorField } from "../../common/ErrorField";
-import { required } from "../../common/validators";
 import { Question } from "../../common/Question";
+import { required } from "../../common/validators";
 
 function TypeRemuneration({ name, onChange }) {
   return (

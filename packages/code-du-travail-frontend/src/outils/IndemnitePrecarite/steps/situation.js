@@ -1,7 +1,8 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
+
 import {
-  getPastQuestions,
   filterSituations,
+  getPastQuestions,
 } from "../../common/situations.utils";
 
 // humanize questions

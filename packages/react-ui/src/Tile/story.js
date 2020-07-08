@@ -1,8 +1,8 @@
-import React from "react";
 import { action } from "@storybook/addon-actions";
+import React from "react";
 
+import { Holidays, Salary, Time } from "../icons";
 import { Section } from "../layout/Section";
-import { Holidays, Time, Salary } from "../icons";
 import { Tile } from ".";
 
 export default {
@@ -13,11 +13,11 @@ export default {
 export const base = () => (
   <div
     style={{
+      alignItems: "stretch",
       display: "flex",
       flexDirection: "column",
-      alignItems: "stretch",
-      width: "270px",
       maxWidth: "100%",
+      width: "270px",
     }}
   >
     <Section>
@@ -65,11 +65,11 @@ export const base = () => (
 export const wide = () => (
   <div
     style={{
+      alignItems: "stretch",
       display: "flex",
       flexDirection: "column",
-      alignItems: "stretch",
-      width: "600px",
       maxWidth: "100%",
+      width: "600px",
     }}
   >
     <Section>

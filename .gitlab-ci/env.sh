@@ -14,10 +14,14 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
+export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/";
+
 #
 
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
-export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+if [ -z ${ES_INDEX_PREFIX+x} ]; then
+  export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+fi
 
 #
 # For master branch we keep branch name as branch hash
@@ -43,6 +47,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export ES_INDEX_PREFIX="cdtn-prod"
   export K8S_NAMESPACE="cdtn"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
+  export NLP_URL="https://serving-ml.fabrique.social.gouv.fr/";
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}";
 fi
@@ -53,12 +58,6 @@ fi
 export API_HOST="api-${DOMAIN}";
 export FRONTEND_HOST="${DOMAIN}";
 
-export NLP_HOST="nlp-python";
-if [[ -f packages/code-du-travail-nlp/USE_MASTER ]] && [[ "${BRANCH_NAME}" != "master" ]]; then
-  export NLP_HOST="${NLP_HOST}.cdtn-master.svc.cluster.local";
-fi
-
-export NLP_URL="http://${NLP_HOST}:${NLP_PORT}";
 #
 
 if [[ -n "${PRODUCTION+x}" ]]; then
@@ -69,7 +68,7 @@ export API_URL="https://${API_HOST}"
 export FRONTEND_URL="https://${FRONTEND_HOST}"
 
 printenv | grep -E \
-  "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID|K8S_NAMESPACE" \
+  "ES_INDEX_PREFIX|BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID|K8S_NAMESPACE" \
   | sort
 printenv | grep -E \
   "API_HOST|API_URL|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \

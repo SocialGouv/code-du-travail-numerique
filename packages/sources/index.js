@@ -1,12 +1,15 @@
 const SOURCES = {
   CCN: "conventions_collectives",
+  CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
   CONTRIBUTIONS: "contributions",
+  EDITORIAL_CONTENT: "information",
   EXTERNALS: "external",
   IDCC: "idcc",
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
   SHEET_MT: "fiches_ministere_travail",
+  SHEET_MT_PAGE: "page_fiche_ministere_travail",
   SHEET_SP: "fiches_service_public",
   THEMES: "themes",
   TOOLS: "outils",
@@ -14,18 +17,23 @@ const SOURCES = {
   HIGHLIGHTS: "highlights",
   GLOSSARY: "glossary",
   PREQUALIFIED: "prequalified",
+  VERSIONS: "versions",
 };
 
 // mapping elastic search source type -> route name
 const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
+  [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EXTERNALS]: "external",
+  [SOURCES.EDITORIAL_CONTENT]: "information",
+  [SOURCES.GLOSSARY]: "glossaire",
   [SOURCES.IDCC]: "idcc",
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
+  [SOURCES.SHEET_MT_PAGE]: "page-fiche-ministere-travail",
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
@@ -37,6 +45,7 @@ const labelBySource = {
   [SOURCES.CCN]: "Legifrance",
   [SOURCES.CDT]: "Code du travail",
   [SOURCES.CONTRIBUTIONS]: "Contributions",
+  [SOURCES.EDITORIAL_CONTENT]: "Information",
   [SOURCES.EXTERNALS]: "Outils externes",
   [SOURCES.IDCC]: "Legifrance",
   [SOURCES.LABOUR_LAW]: "Le droit du travail",
@@ -51,7 +60,7 @@ const labelBySource = {
 const sources = Object.values(SOURCES);
 
 // code_du_travail -> Code du travail
-const getLabelBySource = (src) => labelBySource[src] || "";
+const getLabelBySource = (src) => labelBySource[src];
 
 // code_du_travail -> code-du-travail
 const getRouteBySource = (src) => routeBySource[src];

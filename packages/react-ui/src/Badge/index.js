@@ -1,6 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
+
 import { Config } from "../icons";
 import { box } from "../theme";
 
@@ -13,13 +14,13 @@ export const Badge = ({ icon: Icon, ...props }) => (
 );
 
 Badge.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary"]),
   icon: PropTypes.elementType,
+  variant: PropTypes.oneOf(["primary", "secondary"]),
 };
 
 Badge.defaultProps = {
-  variant: "primary",
   icon: Config,
+  variant: "primary",
 };
 
 const DIMENSION = "5rem";

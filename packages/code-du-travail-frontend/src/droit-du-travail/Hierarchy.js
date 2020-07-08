@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import styled from "styled-components";
 import {
   Accordion,
   Button,
   Container,
   Heading,
-  IconStripe,
   icons,
+  IconStripe,
   InsertTitle,
   Modal,
   theme,
   Title,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Hierarchy = ({ hash }) => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
@@ -35,28 +35,26 @@ const Hierarchy = ({ hash }) => {
         variant="hierarchy"
         items={[
           {
-            icon: icons.International,
-            title: <h3>Les textes internationaux et européens</h3>,
             body: (
               <>
                 Les textes nationaux doivent être conformes aux textes
                 internationaux et européens.
               </>
             ),
+            icon: icons.International,
+            title: <h3>Les textes internationaux et européens</h3>,
           },
           {
-            icon: icons.Constitution,
-            title: <h3>La Constitution</h3>,
             body: (
               <>
                 Tous les textes nationaux doivent être conformes à la
                 Constitution française ainsi qu’au bloc de constitutionnalité.
               </>
             ),
+            icon: icons.Constitution,
+            title: <h3>La Constitution</h3>,
           },
           {
-            icon: icons.Laws,
-            title: <h3>Lois, ordonnances et décrets (Code du travail)</h3>,
             body: (
               <>
                 <Heading as="h4">
@@ -71,12 +69,6 @@ const Hierarchy = ({ hash }) => {
                 <StyledAccordion
                   items={[
                     {
-                      title: (
-                        <h5>
-                          Les conventions et accords collectifs doivent
-                          respecter le Code du travail
-                        </h5>
-                      ),
                       body: (
                         <>
                           Il existe des règles dans le Code du travail que les
@@ -87,15 +79,14 @@ const Hierarchy = ({ hash }) => {
                           avantageux pour le salarié qui s’applique.
                         </>
                       ),
-                    },
-                    {
                       title: (
                         <h5>
-                          Les conventions et accords collectifs peuvent prévoir
-                          des mesures différentes que celles posées par le Code
-                          du travail
+                          Les conventions et accords collectifs doivent
+                          respecter le Code du travail
                         </h5>
                       ),
+                    },
+                    {
                       body: (
                         <>
                           <p>
@@ -121,14 +112,15 @@ const Hierarchy = ({ hash }) => {
                           </i>
                         </>
                       ),
-                    },
-                    {
                       title: (
                         <h5>
-                          En l’absence de convention ou d’accord collectif sur
-                          le sujet, le Code du travail s’applique
+                          Les conventions et accords collectifs peuvent prévoir
+                          des mesures différentes que celles posées par le Code
+                          du travail
                         </h5>
                       ),
+                    },
+                    {
                       body: (
                         <>
                           <p>
@@ -153,6 +145,12 @@ const Hierarchy = ({ hash }) => {
                             </ul>
                           </i>
                         </>
+                      ),
+                      title: (
+                        <h5>
+                          En l’absence de convention ou d’accord collectif sur
+                          le sujet, le Code du travail s’applique
+                        </h5>
                       ),
                     },
                   ]}
@@ -180,11 +178,10 @@ const Hierarchy = ({ hash }) => {
                 </Wrapper>
               </>
             ),
+            icon: icons.Laws,
+            title: <h3>Lois, ordonnances et décrets (Code du travail)</h3>,
           },
           {
-            icon: icons.Agreement,
-            id: "hierarchie",
-            title: <h3>Les conventions et accords collectifs</h3>,
             body: (
               <>
                 <p>
@@ -253,10 +250,11 @@ const Hierarchy = ({ hash }) => {
                 </p>
               </>
             ),
+            icon: icons.Agreement,
+            id: "hierarchie",
+            title: <h3>Les conventions et accords collectifs</h3>,
           },
           {
-            icon: icons.Uses,
-            title: <h3>Les usages et les engagements unilatéraux</h3>,
             body: (
               <>
                 Les usages et les engagements unilatéraux doivent respecter les
@@ -265,10 +263,10 @@ const Hierarchy = ({ hash }) => {
                 s’appliquent.
               </>
             ),
+            icon: icons.Uses,
+            title: <h3>Les usages et les engagements unilatéraux</h3>,
           },
           {
-            icon: icons.Resignation,
-            title: <h3>Le règlement intérieur de l’entreprise</h3>,
             body: (
               <>
                 Le règlement intérieur doit respecter les textes situés en haut.
@@ -276,10 +274,10 @@ const Hierarchy = ({ hash }) => {
                 le texte le plus avantageux pour le salarié qui s’applique.
               </>
             ),
+            icon: icons.Rules,
+            title: <h3>Le règlement intérieur de l’entreprise</h3>,
           },
           {
-            icon: icons.Contract,
-            title: <h3>Le contrat de travail</h3>,
             body: (
               <>
                 Le contrat de travail doit respecter les textes situés en haut.
@@ -287,6 +285,8 @@ const Hierarchy = ({ hash }) => {
                 Dans ce cas, c’est le contrat de travail qui s’applique.
               </>
             ),
+            icon: icons.Contract,
+            title: <h3>Le contrat de travail</h3>,
           },
         ]}
       />

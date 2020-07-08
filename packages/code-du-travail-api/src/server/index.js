@@ -2,8 +2,6 @@ const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
 
-// const corsConf = require('./conf/cors')
-
 const conventionsRoutes = require("./routes/conventions");
 const docsRoutes = require("./routes/docs");
 const docsCountRoutes = require("./routes/docs-count");

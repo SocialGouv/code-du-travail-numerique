@@ -58,9 +58,9 @@ function getIndemnite({
   const dNotification = parse(dateNotification);
   let formula = "-";
   const labels = {
-    "Salaire de réference (Sref)": round(salaireRef),
-    "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
     "Ancienneté totale (A)": round(anciennete),
+    "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
+    "Salaire de réference (Sref)": round(salaireRef),
     ...(anciennete - 10 > 0 && {
       "Ancienneté au delà de 10ans (A2)": round(anciennete - 10),
     }),
@@ -72,21 +72,21 @@ function getIndemnite({
   if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 5) * salaireRef * anciennete;
-      formula = `1/5 * Sref * A`;
+      formula = `1 / 5 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 5) * salaireRef * anciennete +
         (2 / 15) * salaireRef * (anciennete - 10);
-      formula = `(1/5  * Sref * 10) + (2/5 * Sref * "A2")`;
+      formula = `(1 / 5  * Sref * 10) + (2 / 5 * Sref * "A2")`;
     }
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 4) * salaireRef * anciennete;
-      formula = `1/4 * Sref * A`;
+      formula = `1 / 4 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
-      formula = `(1/4 * Sref * 10) + (1/3 * Sref * "A2")`;
+      formula = `(1 / 4 * Sref * 10) + (1 / 3 * Sref * "A2")`;
     }
   }
   if (inaptitude && indemniteLegale > 0) {
@@ -115,26 +115,26 @@ function getIndemniteFromFinalForm(form) {
   } = state.values;
 
   const salaireRef = getSalaireRef({
-    hasTempsPartiel,
+    anciennete,
     hasSameSalaire,
+    hasTempsPartiel,
+    primes,
     salaire,
     salairePeriods,
     salaires,
-    anciennete,
-    primes,
   });
 
   const { indemniteLegale, infoCalculLegal } = getIndemnite({
-    salaireRef,
-    inaptitude,
     anciennete,
     dateNotification,
+    inaptitude,
+    salaireRef,
   });
 
   return {
-    salaireRefLegal: salaireRef,
     indemniteLegale,
     infoCalculLegal,
+    salaireRefLegal: salaireRef,
   };
 }
 

@@ -1,7 +1,8 @@
-import React from "react";
-import { ListLink } from "../SearchResults/Results";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { matopush } from "../../piwik";
+import { ListLink } from "../SearchResults/Results";
 
 jest.mock("../../piwik", () => ({
   matopush: jest.fn(),
@@ -12,15 +13,15 @@ jest.mock("next/link", () => {
 });
 
 const item = {
-  source: "fiches_service_public",
-  title: "Mer il est fou!",
-  slug: "mer-il-est-fou",
-  description: "description",
   algo: "semantic",
   breadcrumbs: [
-    { slug: "/themes/theme-root", label: "test content" },
-    { slug: "/themes/theme-test", label: "test theme content" },
+    { label: "test content", slug: "/themes/theme-root" },
+    { label: "test theme content", slug: "/themes/theme-test" },
   ],
+  description: "description",
+  slug: "mer-il-est-fou",
+  source: "fiches_service_public",
+  title: "Mer il est fou!",
 };
 
 describe("ListLink", () => {
@@ -37,7 +38,7 @@ describe("ListLink", () => {
     expect(matopush).toHaveBeenCalledWith([
       "trackEvent",
       "selectResult",
-      '{"url":"/fiche-service-public/mer-il-est-fou","algo":"semantic"}',
+      '{"algo":"semantic","url":"/fiche-service-public/mer-il-est-fou"}',
     ]);
   });
 });

@@ -1,16 +1,16 @@
-import React from "react";
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import React from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
-import { SectionTitle } from "../../common/stepStyles";
 import {
+  filterSituations,
+  getFormProps,
+  getNextQuestionKey,
   getOptions,
   getPastQuestions,
-  getNextQuestionKey,
-  filterSituations,
   getSituationsFor,
-  getFormProps,
 } from "../../common/situations.utils";
+import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(
@@ -19,14 +19,18 @@ const questionsMap = questions.reduce(
 );
 
 const criteriaOrder = questions.map(({ name }) => name);
-
 function StepInformations({ form }) {
   const { values } = form.getState();
-  const { ccn, criteria = {} } = values;
+  const { ccn, typeRupture, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
 
-  const initialSituations = getSituationsFor(allSituations, { idcc });
+  const initialSituations = getSituationsFor(allSituations, {
+    idcc,
+    typeRupture,
+  });
+
   const possibleSituations = filterSituations(initialSituations, criteria);
+
   const nextQuestionKey = getNextQuestionKey(
     possibleSituations,
     criteriaOrder,
@@ -51,8 +55,8 @@ function StepInformations({ form }) {
           onChange={() =>
             form.batch(() => {
               getFormProps({
-                key,
                 criteria,
+                key,
                 pastQuestions,
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })

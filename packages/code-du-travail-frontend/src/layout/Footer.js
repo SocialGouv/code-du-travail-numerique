@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import getConfig from "next/config";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Button,
   Container,
+  FlatList,
   Heading,
   icons,
-  FlatList,
   Section,
   theme,
   Title,
 } from "@socialgouv/react-ui";
-
-import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
-import { ContactModal } from "../common/ContactModal";
+import getConfig from "next/config";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
+
+import { ContactModal } from "../common/ContactModal";
+import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { matopush } from "../piwik";
 
 const { DirectionRight: DirectionRightIcon } = icons;
@@ -26,12 +26,6 @@ const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 const Footer = () => {
   const router = useRouter();
   const path = router.asPath;
-
-  const [cookieConsent, setCookieConsent] = useState(false);
-  useEffect(() => {
-    const consent = /tarteaucitron=!gtag=true/.test(document.cookie);
-    setCookieConsent(consent);
-  }, [path]);
 
   return (
     <OverflowWrapper>
@@ -90,6 +84,13 @@ const Footer = () => {
                   <StyledListItem>
                     <Link passHref href="/stats">
                       <StyledLink>Statistiques d’utilisation</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <Link passHref href="/integration">
+                      <StyledLink>
+                        Intégrer le Code du travail numérique
+                      </StyledLink>
                     </Link>
                   </StyledListItem>
                 </StyledList>
@@ -237,15 +238,6 @@ const Footer = () => {
             cnil.fr
           </StyledGovLink>
         </GovernmentSection>
-        {cookieConsent && (
-          <img
-            style={{ position: "absolute" }}
-            src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
-            width="1"
-            height="1"
-            alt=""
-          />
-        )}
       </StyledFooter>
     </OverflowWrapper>
   );

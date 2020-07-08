@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Button,
   Container,
@@ -7,7 +6,9 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
+import React, { useState } from "react";
 import styled from "styled-components";
+
 import { matopush } from "../../piwik";
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 

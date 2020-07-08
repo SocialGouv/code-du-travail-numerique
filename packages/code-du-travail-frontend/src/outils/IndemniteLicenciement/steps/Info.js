@@ -1,10 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { TypeContrat } from "../components/TypeContrat";
-import { YesNoQuestion } from "../../common/YesNoQuestion";
-import styled from "styled-components";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Alert } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
+
+import { YesNoQuestion } from "../../common/YesNoQuestion";
+import { TypeContrat } from "../components/TypeContrat";
 
 function validate(values) {
   const errors = {};

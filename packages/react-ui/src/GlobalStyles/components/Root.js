@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { breakpoints, fonts } from "../../theme";
+import { breakpoints, colors, fonts } from "../../theme";
 
 export default createGlobalStyle`
   html {
@@ -31,5 +31,12 @@ export default createGlobalStyle`
   main {
     /* https://stackoverflow.com/questions/35820429/main-element-not-working-in-internet-explorer-11 */
     display: block;
+  }
+  :root {
+    ${({ theme }) =>
+      Object.entries(theme).reduce((accumulator, [key, value]) => {
+        return (accumulator += `--color-${key}: ${value};
+      `);
+      }, "")};
   }
 `;

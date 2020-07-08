@@ -21,8 +21,8 @@ export function initializeSentry() {
   const environment = isPreProduction ? "preproduction" : "production";
 
   Sentry.init({
-    dsn: SENTRY_PUBLIC_DSN,
     debug: isPreProduction,
+    dsn: SENTRY_PUBLIC_DSN,
     environment,
     release: packageVersion,
   });

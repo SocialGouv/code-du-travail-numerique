@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<About /> should render 1`] = `
-.c22 {
+.c27 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c35 {
+.c40 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c21 {
+.c26 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c27 {
+.c32 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -29,7 +29,7 @@ exports[`<About /> should render 1`] = `
   background-color: #fff;
 }
 
-.c27:before {
+.c32:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,15 +43,15 @@ exports[`<About /> should render 1`] = `
   content: "";
 }
 
-.c27 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c9 {
+.c55 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -79,39 +79,27 @@ exports[`<About /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
+  padding: 0;
   color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c9:link,
-.c9:visited {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
+.c55:focus,
+.c55:hover,
+.c55:active {
+  color: #f66663;
 }
 
 .c18 {
@@ -177,7 +165,7 @@ exports[`<About /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c39 {
+.c44 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -214,16 +202,16 @@ exports[`<About /> should render 1`] = `
   opacity: 1;
 }
 
-.c39:link,
-.c39:visited {
+.c44:link,
+.c44:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c39:not([disabled]):hover,
-.c39:not([disabled]):active,
-.c39:not([disabled]):focus {
+.c44:not([disabled]):hover,
+.c44:not([disabled]):active,
+.c44:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -232,7 +220,7 @@ exports[`<About /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c39[disabled] {
+.c44[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -240,7 +228,7 @@ exports[`<About /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c50 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -268,27 +256,39 @@ exports[`<About /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
+  height: 5.2rem;
+  padding: 0 4.4rem;
   color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
 }
 
-.c50:focus,
-.c50:hover,
-.c50:active {
-  color: #f66663;
+.c9:link,
+.c9:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c9[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .c10 {
@@ -302,7 +302,43 @@ exports[`<About /> should render 1`] = `
   color: #7994d4;
 }
 
-.c25 {
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c23 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+.c23 svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c24 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c30 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -315,7 +351,7 @@ exports[`<About /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c30 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -328,7 +364,7 @@ exports[`<About /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c31 {
+.c36 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -338,7 +374,7 @@ exports[`<About /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c45 {
+.c50 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -348,34 +384,34 @@ exports[`<About /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c23 {
+.c28 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c28 {
+.c33 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c36 {
+.c41 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c26 {
+.c31 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c24 {
+.c29 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -386,7 +422,7 @@ exports[`<About /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c29 {
+.c34 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -398,7 +434,7 @@ exports[`<About /> should render 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c42 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -408,6 +444,130 @@ exports[`<About /> should render 1`] = `
   line-height: 1.25;
   padding-top: 1.6rem;
   text-align: center;
+}
+
+.c37 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.c38 {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  background-color: #f2f5fa;
+}
+
+.c38:before {
+  position: absolute;
+  top: -27px;
+  left: -50%;
+  z-index: -1;
+  width: 200%;
+  height: 400px;
+  background-color: #f2f5fa;
+  border-radius: 100%;
+  content: "";
+}
+
+.c39 {
+  position: relative;
+  padding-bottom: 7rem;
+  text-align: center;
+}
+
+.c43 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding: 0;
+  max-width: 74rem;
+  margin-bottom: 2rem;
+}
+
+.c45 {
+  width: 1.5em;
+  margin-left: 1.6rem;
+}
+
+.c46 {
+  padding: 5rem 0;
+  background-color: #e4e8ef;
+}
+
+.c47 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c49 + .c48 {
+  padding-left: 1.6rem;
+}
+
+.c52 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c51 {
+  font-size: 1.6rem;
+}
+
+.c53 {
+  margin: 0.4rem 0;
+}
+
+.c54 {
+  font-weight: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #e4e8ef;
+}
+
+.c57 {
+  font-weight: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.c58 {
+  margin-bottom: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c17 ul {
@@ -492,11 +652,8 @@ exports[`<About /> should render 1`] = `
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  height: 9rem;
-  margin-bottom: 6rem;
-  overflow: visible;
+  z-index: 3;
+  height: 8.6rem;
   background-color: #fff;
 }
 
@@ -522,7 +679,8 @@ exports[`<About /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  height: 9rem;
+  height: 100%;
+  padding-left: 0;
 }
 
 .c5 {
@@ -530,6 +688,10 @@ exports[`<About /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -539,12 +701,23 @@ exports[`<About /> should render 1`] = `
 }
 
 .c6 {
-  width: 7rem;
-  margin-right: 3.2rem;
+  -webkit-flex: 0 0 7.8rem;
+  -ms-flex: 0 0 7.8rem;
+  flex: 0 0 7.8rem;
+  width: 7.8rem;
+  height: calc(100% - 2 * 0.8rem);
+  margin: 0.8rem 2rem 0.8rem 0.8rem;
+  padding: 0.8rem 0;
+  background-color: white;
 }
 
 .c7 {
-  width: 17rem;
+  -webkit-flex: 0 0 19rem;
+  -ms-flex: 0 0 19rem;
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: calc(100% - 2 * 0.8rem);
+  margin: 0.8rem 0;
   color: #f66663;
 }
 
@@ -553,9 +726,9 @@ exports[`<About /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -578,132 +751,40 @@ exports[`<About /> should render 1`] = `
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  width: 31rem;
+  width: 30rem;
   margin-left: 1.6rem;
 }
 
-.c32 {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.c33 {
-  position: relative;
-  z-index: 1;
-  margin-top: 4rem;
-  padding-top: 1.6rem;
-  background-color: #f2f5fa;
-}
-
-.c33:before {
-  position: absolute;
-  top: -27px;
-  left: -50%;
-  z-index: -1;
-  width: 200%;
-  height: 400px;
-  background-color: #f2f5fa;
-  border-radius: 100%;
-  content: "";
-}
-
-.c34 {
-  position: relative;
-  padding-bottom: 7rem;
-  text-align: center;
-}
-
-.c38 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
-  margin-bottom: 2rem;
-}
-
-.c40 {
-  width: 1.5em;
-  margin-left: 1.6rem;
-}
-
-.c41 {
-  padding: 5rem 0;
-  background-color: #e4e8ef;
-}
-
-.c42 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c21 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8.6rem;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c44 + .c43 {
-  padding-left: 1.6rem;
-}
-
-.c47 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c46 {
-  font-size: 1.6rem;
-}
-
-.c48 {
-  margin: 0.4rem 0;
-}
-
-.c49 {
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.c51 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #e4e8ef;
-}
-
-.c52 {
-  font-weight: normal;
+  padding: 1rem;
+  color: #2f3b6c;
+  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
-  margin: 0 1rem 1rem 1rem;
+  background-color: #ffe980;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c53 {
-  margin-bottom: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.c21:hover,
+.c21:active,
+.c21:focus {
+  color: #2f3b6c;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #2f3b6c;
+  text-decoration-color: #2f3b6c;
 }
 
 .c0 {
@@ -716,77 +797,69 @@ exports[`<About /> should render 1`] = `
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 40rem;
+  height: 70rem;
   overflow: hidden;
-  background: #f2f5fa;
+  background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c1:after {
-  position: absolute;
-  bottom: -373px;
-  left: -50%;
-  z-index: -1;
-  width: 200%;
-  height: 40rem;
-  background-color: #fff;
-  border-radius: 100%;
-  content: "";
+.c25 {
+  margin-top: 6rem;
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c27 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c22 {
+  .c27 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c40 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c35 {
+  .c40 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c26 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c32 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c32 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c55 {
     font-size: 1.4rem;
   }
 }
 
-@media (max-width:600px) {
-  .c9 {
-    padding: 0 3rem;
+@media print {
+  .c55 {
+    display: none;
   }
 }
 
@@ -796,22 +869,50 @@ exports[`<About /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c39 {
-    font-size: 1.4rem;
+@media print {
+  .c18 {
+    display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c44 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c44 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c44 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c9 {
     font-size: 1.4rem;
   }
+}
+
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -821,66 +922,165 @@ exports[`<About /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c31 {
-    font-size: 1.6rem;
-  }
+@media (max-width:980px) {
+
 }
 
-@media (max-width:600px) {
-  .c45 {
-    font-size: 1.6rem;
-  }
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
   .c23 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c23 svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c33 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c41 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c31 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c29 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c34 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c34 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c42 {
     font-size: 2.2rem;
+  }
+}
+
+@media print {
+  .c38 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c39 {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c43 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c43 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c47 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c47 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c47 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c49 + .c48 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c52 {
+    text-align: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c51 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c58 {
+    display: none;
   }
 }
 
@@ -902,8 +1102,7 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:600px) {
   .c2 {
-    height: 6rem;
-    margin-bottom: 4rem;
+    height: 6.6rem;
   }
 }
 
@@ -935,19 +1134,22 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:600px) {
   .c4 {
-    height: 6rem;
+    padding-left: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c5 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: calc(50% + 9.5rem);
   }
 }
 
 @media (max-width:600px) {
   .c5 {
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -958,11 +1160,12 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:600px) {
   .c6 {
-    -webkit-flex: 0 0 5rem;
-    -ms-flex: 0 0 5rem;
-    flex: 0 0 5rem;
-    width: 5rem;
-    height: 5rem;
+    -webkit-flex: 0 0 5.5rem;
+    -ms-flex: 0 0 5.5rem;
+    flex: 0 0 5.5rem;
+    width: 5.5rem;
+    margin-right: 0;
+    padding: 0.4rem 0;
   }
 }
 
@@ -972,7 +1175,6 @@ exports[`<About /> should render 1`] = `
     -ms-flex: 0 0 12.4rem;
     flex: 0 0 12.4rem;
     width: 12.4rem;
-    height: 5rem;
   }
 }
 
@@ -1005,81 +1207,21 @@ exports[`<About /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c21 {
+    top: 6.6rem;
+  }
+}
+
 @media print {
-  .c33 {
+  .c21 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
-    padding-top: 0;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c38 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c38 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c41 {
-    padding-bottom: 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c42 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c42 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c42 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c44 + .c43 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c47 {
-    text-align: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c46 {
-    margin-top: 1rem;
-    text-align: center;
-  }
-}
-
-@media (max-width:980px) {
-  .c53 {
-    display: none;
+  .c25 {
+    margin-top: 3.2rem;
   }
 }
 
@@ -1097,7 +1239,7 @@ exports[`<About /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 06/01/2009 à 08:40
+        le 04/01/2020 à 00:00:00
       </div>
       <div
         class="c4"
@@ -1108,9 +1250,9 @@ exports[`<About /> should render 1`] = `
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
-            alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail"
+            alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
             class="c6"
-            src="/static/assets/img/marianne.svg"
+            src="/static/assets/img/ministere-travail.svg"
           />
           <svg
             class="c7"
@@ -1221,12 +1363,61 @@ exports[`<About /> should render 1`] = `
         </div>
       </div>
     </header>
-    <main>
+    <a
+      class="c21"
+      href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
+    >
       <div
-        class="c21"
+        class="c22"
       >
         <div
-          class="c22"
+          class="c23"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="8"
+              y2="12"
+            />
+            <line
+              x1="12"
+              x2="12.01"
+              y1="16"
+              y2="16"
+            />
+          </svg>
+        </div>
+        <div
+          class="c24"
+        >
+          Coronavirus (Covid-19) : notre dossier dédié
+        </div>
+      </div>
+    </a>
+    <main
+      class="c25"
+    >
+      <div
+        class="c26"
+      >
+        <div
+          class="c27"
         >
           <div
             data-next-focus-root="true"
@@ -1235,34 +1426,34 @@ exports[`<About /> should render 1`] = `
             tabindex="-1"
           >
             <header
-              class="c23"
+              class="c28"
             >
               <h1
-                class="c24"
+                class="c29"
               >
                 <div
-                  class="c25"
+                  class="c30"
                 />
                 À propos
               </h1>
               <p
-                class="c26"
+                class="c31"
               >
                 Apprenez-en plus sur notre histoire, notre équipe et nos méthodes
               </p>
             </header>
           </div>
           <div
-            class="c27"
+            class="c32"
           >
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Qu’est-ce que le Code du travail numérique ?
               </h2>
@@ -1278,7 +1469,7 @@ exports[`<About /> should render 1`] = `
                janvier 2020.
             </p>
             <h3
-              class="c31"
+              class="c36"
             >
               Pourquoi le Code du travail numérique ?
             </h3>
@@ -1296,7 +1487,7 @@ exports[`<About /> should render 1`] = `
               </a>
             </p>
             <h3
-              class="c31"
+              class="c36"
             >
               À qui ce service s’adresse-t-il ?
             </h3>
@@ -1311,7 +1502,7 @@ exports[`<About /> should render 1`] = `
               </a>
             </p>
             <h3
-              class="c31"
+              class="c36"
             >
               Que peut-on trouver sur le site ?
             </h3>
@@ -1336,19 +1527,19 @@ exports[`<About /> should render 1`] = `
               </li>
             </ul>
             <header
-              class="c28"
+              class="c33"
             >
               <h2
-                class="c29"
+                class="c34"
               >
                 <div
-                  class="c30"
+                  class="c35"
                 />
                 Qui sommes-nous ?
               </h2>
             </header>
             <h3
-              class="c31"
+              class="c36"
             >
               Notre équipe
             </h3>
@@ -1384,7 +1575,7 @@ exports[`<About /> should render 1`] = `
               .
             </p>
             <h3
-              class="c31"
+              class="c36"
             >
               Nos méthodes
             </h3>
@@ -1408,40 +1599,40 @@ exports[`<About /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c32"
+      class="c37"
     >
       <footer
-        class="c33"
+        class="c38"
       >
         <div
-          class="c21 c34"
+          class="c26 c39"
         >
           <div
-            class="c35"
+            class="c40"
           >
             <header
-              class="c36"
+              class="c41"
             >
               <h3
-                class="c37"
+                class="c42"
               >
                 <div
-                  class="c25"
+                  class="c30"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c38"
+              class="c43"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c39"
+              class="c44"
             >
               Contacter nos services en région
               <svg
-                class="c40"
+                class="c45"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1454,110 +1645,120 @@ exports[`<About /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c21 c41"
+          class="c26 c46"
         >
           <nav>
             <div
-              class="c42"
+              class="c47"
             >
               <div
-                class="c43 c44"
+                class="c48 c49"
               >
                 <h3
-                  class="c45 c46"
+                  class="c50 c51"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c47"
+                  class="sc-fznAgC c52"
                 >
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
+                  <li
+                    class="c53"
+                  >
+                    <a
+                      class="c54"
+                      href="/integration"
+                    >
+                      Intégrer le Code du travail numérique
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div
-                class="c43 c44"
+                class="c48 c49"
               >
                 <h3
-                  class="c45 c46"
+                  class="c50 c51"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c47"
+                  class="sc-fznAgC c52"
                 >
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <button
-                      class="c50"
+                      class="c55"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1566,10 +1767,10 @@ exports[`<About /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1580,21 +1781,21 @@ exports[`<About /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c43 c44"
+                class="c48 c49"
               >
                 <h3
-                  class="c45 c46"
+                  class="c50 c51"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c47"
+                  class="sc-fznAgC c52"
                 >
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1603,10 +1804,10 @@ exports[`<About /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="https://incubateur.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1615,10 +1816,10 @@ exports[`<About /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c48"
+                    class="c53"
                   >
                     <a
-                      class="c49"
+                      class="c54"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1632,10 +1833,10 @@ exports[`<About /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c51"
+          class="c56"
         >
           <a
-            class="c52"
+            class="c57"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1644,12 +1845,12 @@ exports[`<About /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c53"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c52"
+            class="c57"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1658,12 +1859,12 @@ exports[`<About /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c53"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c52"
+            class="c57"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1672,12 +1873,12 @@ exports[`<About /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c53"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c52"
+            class="c57"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1686,12 +1887,12 @@ exports[`<About /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c53"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c52"
+            class="c57"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1700,12 +1901,12 @@ exports[`<About /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c53"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c52"
+            class="c57"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

@@ -1,7 +1,8 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { Field, Form } from "react-final-form";
+
 import { ErrorField } from "../ErrorField";
-import { Form, Field } from "react-final-form";
 
 describe("<ErroField />", () => {
   it("should render error", () => {

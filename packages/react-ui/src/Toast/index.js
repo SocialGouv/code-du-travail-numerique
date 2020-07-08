@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import React, { useEffect } from "react";
 import { X } from "react-feather";
-import { Button } from "../Button";
+import styled, { css } from "styled-components";
 
+import { Button } from "../Button";
+import { fromBottom, fromLeft, fromRight, fromTop } from "../keyframes";
 import { box, spacings } from "../theme";
-import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
 export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
   useEffect(() => {
@@ -37,27 +37,27 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
 };
 
 Toast.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary"]),
-  wide: PropTypes.bool,
-  squared: PropTypes.bool,
-  shadow: PropTypes.bool,
   animate: PropTypes.oneOf([
     "from-top",
     "from-right",
     "from-bottom",
     "from-left",
   ]),
-  timeout: PropTypes.number,
-  onRemove: PropTypes.func,
   children: PropTypes.node.isRequired,
+  onRemove: PropTypes.func,
+  shadow: PropTypes.bool,
+  squared: PropTypes.bool,
+  timeout: PropTypes.number,
+  variant: PropTypes.oneOf(["primary", "secondary"]),
+  wide: PropTypes.bool,
 };
 
 Toast.defaultProps = {
-  wide: false,
-  squared: false,
-  variant: "secondary",
   animate: null,
   onRemove: null,
+  squared: false,
+  variant: "secondary",
+  wide: false,
 };
 
 const StyledToast = styled.div`

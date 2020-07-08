@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Accordion,
   Grid,
@@ -10,8 +7,12 @@ import {
   Tile,
   Title,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 import { blocs as blocsLabels } from "./blocs.data";
+import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
 
@@ -19,11 +20,9 @@ function getArticleUrl({ id, containerId }) {
   return `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/?idConteneur=${containerId}`;
 }
 
-function Articles({ blocs, containerId }) {
+function Articles({ blocs, containerId, convention }) {
   const articlesByTheme = blocs.map(({ bloc, articles }) => {
     return {
-      id: `bloc-${bloc}`,
-      title: blocsLabels[bloc].label,
       body: (
         <>
           {blocsLabels[bloc].important && (
@@ -45,7 +44,7 @@ function Articles({ blocs, containerId }) {
                 wide
                 target="_blank"
                 rel="nofollow noopener"
-                href={getArticleUrl({ id, containerId })}
+                href={getArticleUrl({ containerId, id })}
                 subtitle={`Article ${title}`}
                 className={"no-after"}
               >
@@ -55,6 +54,8 @@ function Articles({ blocs, containerId }) {
           </Grid>
         </>
       ),
+      id: blocsLabels[bloc].label,
+      title: blocsLabels[bloc].label,
     };
   });
 
@@ -99,7 +100,13 @@ function Articles({ blocs, containerId }) {
           </p>
         </>
       </MoreContent>
-      <Accordion items={articlesByTheme} />
+      <Accordion
+        items={articlesByTheme}
+        onChange={trackAccordionPanelState(
+          convention.shortTitle,
+          "pagecc_clicktheme"
+        )}
+      />
     </React.Fragment>
   );
 }

@@ -18,7 +18,7 @@ const StepIntro = () => (
       licenciement (dates d’entrée et de sortie de l’entreprise, courrier de
       licenciement, derniers bulletins de salaire, etc.).
     </p>
-    <p>Pour commencer la simulation cliquez sur &quot;Suivant&quot;.</p>
+    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

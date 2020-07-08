@@ -1,7 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-
 import { Tabs } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
 
 import { getText } from "../utils";
 import { ElementBuilder } from "./ElementBuilder";
@@ -21,16 +20,16 @@ class Tabulator extends React.PureComponent {
 
     const tabsData = data.children.map((tab) => {
       return {
-        tab: (
-          <Title level={headingLevel}>
-            {getText(tab.children.find((child) => child.name === "Titre"))}
-          </Title>
-        ),
         panel: (
           <ElementBuilder
             data={tab.children.filter((el) => el.name !== "Titre")}
             headingLevel={headingLevel + 1}
           />
+        ),
+        tab: (
+          <Title level={headingLevel}>
+            {getText(tab.children.find((child) => child.name === "Titre"))}
+          </Title>
         ),
       };
     });

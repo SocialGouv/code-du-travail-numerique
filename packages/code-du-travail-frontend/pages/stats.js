@@ -1,8 +1,3 @@
-import React from "react";
-import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
-import getConfig from "next/config";
-import { max, startOfDay, subMonths } from "date-fns";
 import {
   Container,
   Grid,
@@ -11,10 +6,15 @@ import {
   Section,
   Wrapper,
 } from "@socialgouv/react-ui";
+import { max, startOfDay, subMonths } from "date-fns";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../src/layout/Layout";
-import Metas from "../src/common/Metas";
 import { FocusRoot } from "../src/a11y";
+import Metas from "../src/common/Metas";
+import { Layout } from "../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -73,9 +73,9 @@ const Stats = ({ data, pageUrl, ogImage }) => {
             <p>
               Statistiques d’utilisation depuis le{" "}
               {startDate.toLocaleString("fr-FR", {
-                year: "numeric",
-                month: "numeric",
                 day: "numeric",
+                month: "numeric",
+                year: "numeric",
               })}
             </p>
           </Wrapper>

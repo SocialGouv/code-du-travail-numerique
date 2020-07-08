@@ -1,7 +1,8 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { TypeRemuneration } from "../TypeRemuneration";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { TypeRemuneration } from "../TypeRemuneration";
 
 describe("<TypeRemuneration />", () => {
   it("should render", () => {

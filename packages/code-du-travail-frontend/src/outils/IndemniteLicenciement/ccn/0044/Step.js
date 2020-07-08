@@ -1,10 +1,10 @@
+import { Title } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
-import { EchelonChimie } from "./EchelonChimie";
-import { Title } from "@socialgouv/react-ui";
 
-import { YesNoQuestion } from "../../../common/YesNoQuestion";
 import { TextQuestion } from "../../../common/TextQuestion";
+import { YesNoQuestion } from "../../../common/YesNoQuestion";
+import { EchelonChimie } from "./EchelonChimie";
 
 function Step() {
   return (

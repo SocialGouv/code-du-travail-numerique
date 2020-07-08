@@ -1,7 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import getConfig from "next/config";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Button,
   Container,
@@ -10,12 +7,16 @@ import {
   theme,
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { SearchResults } from "../../src/search/SearchResults";
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
-import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import { FocusRoot } from "../../src/a11y";
+import { Breadcrumbs } from "../../src/common/Breadcrumbs";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
+import { SearchResults } from "../../src/search/SearchResults";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -52,32 +53,32 @@ class Theme extends React.Component {
         <Section>
           <Container>
             <FocusRoot>
-              <PageTitle>{theme.title}</PageTitle>
+              <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
             </FocusRoot>
             {theme.children && theme.children.length > 0 && (
-              <StyledContainer narrow noPadding>
-                {theme.children.map(({ slug, title }) => (
+              <StyledContainer>
+                {theme.children.map(({ slug, label }) => (
                   <Link
                     key={slug}
-                    href="/themes/[slug]"
-                    as={`/themes/${slug}`}
+                    href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
+                    as={slug}
                     passHref
                   >
-                    <StyledLink variant="flat" as={Button}>
-                      {title}
-                    </StyledLink>
+                    <StyledLink as={Button}>{label}</StyledLink>
                   </Link>
                 ))}
               </StyledContainer>
             )}
           </Container>
-          {theme.refs && theme.refs.length > 0 && (
+        </Section>
+        {theme.refs && theme.refs.length > 0 && (
+          <Section>
             <SearchResults
               query={theme.title}
-              items={{ documents: theme.refs, articles: [], themes: [] }}
+              items={{ articles: [], documents: theme.refs, themes: [] }}
             />
-          )}
-        </Section>
+          </Section>
+        )}
       </Layout>
     );
   }
@@ -85,12 +86,17 @@ class Theme extends React.Component {
 
 export default Theme;
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledContainer = styled(Container)`
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const StyledLink = styled.a`
   margin: ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 1 auto;
+  }
 `;

@@ -1,7 +1,7 @@
-import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
-import memoizee from "memoizee";
 import debounce from "debounce-promise";
+import fetch from "isomorphic-unfetch";
+import memoizee from "memoizee";
+import getConfig from "next/config";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -9,10 +9,10 @@ const {
 
 const formatCCn = ({ idcc: num, id, slug, title, shortTitle }) => ({
   id,
+  num,
+  shortTitle,
   slug,
   title,
-  shortTitle,
-  num,
 });
 
 // memoize search results

@@ -1,136 +1,136 @@
+import { getIndemnite, getSalaireRef } from "../../../indemnite";
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel,
 } from "../indemnite";
-import { getIndemnite, getSalaireRef } from "../../../indemnite";
 import {
   CADRE,
-  NON_CADRE,
-  NE_SAIT_PAS,
   DISCIPLINAIRE,
-  NON_DISCIPLINAIRE,
   ECONOMIQUE,
+  NE_SAIT_PAS,
+  NON_CADRE,
+  NON_DISCIPLINAIRE,
 } from "../Step";
 
 const initialValues = {
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
-  hasTempsPartiel: false,
-  categorie: NE_SAIT_PAS,
-  motif: NON_DISCIPLINAIRE,
-  dateEntree: "2018-10-01",
-  dateSortie: "2019-09-01",
+  age: "55",
   anciennete: 0.91,
   branche: "2120",
-  age: "55",
+  categorie: NE_SAIT_PAS,
+  dateEntree: "2018-10-01",
+  dateSortie: "2019-09-01",
+  hasTempsPartiel: false,
+  motif: NON_DISCIPLINAIRE,
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
 };
 
 const tests = [
   {
-    title: "2k, 12mois d'ancienneté",
     data: {
       ...initialValues,
     },
     result: 0,
+    title: "2k, 12mois d'ancienneté",
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
     data: {
       ...initialValues,
+      anciennete: 10.667,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       motif: DISCIPLINAIRE,
-      anciennete: 10.667,
     },
     result: 0,
+    title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif non disciplinaire",
     data: {
       ...initialValues,
+      anciennete: 10.667,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 10.667,
     },
     result: 7753.84,
+    title: "2k, 10ans et 8mois d'ancienneté, motif non disciplinaire",
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif economique",
     data: {
       ...initialValues,
+      anciennete: 10.667,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 10.667,
       motif: ECONOMIQUE,
     },
     result: 9692.3,
+    title: "2k, 10ans et 8mois d'ancienneté, motif economique",
   },
   {
-    title: "2k, 19ans et 8mois d'ancienneté",
     data: {
       ...initialValues,
+      anciennete: 19.667,
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 19.667,
     },
     result: 16233.42,
+    title: "2k, 19ans et 8mois d'ancienneté",
   },
   {
-    title: "2k, 19ans et 8mois d'ancienneté, motif economique",
     data: {
       ...initialValues,
+      anciennete: 19.667,
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 19.667,
       motif: ECONOMIQUE,
     },
     result: 19846.15,
+    title: "2k, 19ans et 8mois d'ancienneté, motif economique",
   },
   {
-    title: "2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000",
     data: {
       ...initialValues,
-      dateEntree: "1999-01-01",
-      dateSortie: "2019-09-01",
       anciennete: 20.667,
       categorie: CADRE,
+      dateEntree: "1999-01-01",
+      dateSortie: "2019-09-01",
     },
     result: 17888.59,
+    title: "2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000",
   },
   {
-    title:
-      "2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000",
     data: {
       ...initialValues,
+      anciennete: 20.667,
+      categorie: CADRE,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 20.667,
       motif: ECONOMIQUE,
-      categorie: CADRE,
     },
     result: 21692.3,
+    title:
+      "2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000",
   },
   {
-    title: "2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000",
     data: {
       ...initialValues,
-      dateEntree: "1999-01-01",
-      dateSortie: "2019-09-01",
       anciennete: 20.667,
       categorie: NON_CADRE,
-    },
-    result: 17888.59,
-  },
-  {
-    title:
-      "2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000",
-    data: {
-      ...initialValues,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 20.667,
-      categorie: NE_SAIT_PAS,
     },
     result: 17888.59,
+    title: "2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000",
+  },
+  {
+    data: {
+      ...initialValues,
+      anciennete: 20.667,
+      categorie: NE_SAIT_PAS,
+      dateEntree: "1999-01-01",
+      dateSortie: "2019-09-01",
+    },
+    result: 17888.59,
+    title:
+      "2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000",
   },
 ];
 describe("getIndemnite", () => {
@@ -159,8 +159,8 @@ describe("getIndemnite", () => {
     });
 
     const res = getIndemniteConventionnelle({
-      salaireRef: salaireRefConventionnel,
       indemnite,
+      salaireRef: salaireRefConventionnel,
       ...initialValues,
     });
 
@@ -179,12 +179,12 @@ describe("getIndemnite", () => {
     });
 
     const res = getIndemniteConventionnelle({
-      salaireRef: salaireRefConventionnel,
       indemnite,
+      salaireRef: salaireRefConventionnel,
       ...initialValues,
+      anciennete: 10.667,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
-      anciennete: 10.667,
       motif: DISCIPLINAIRE,
     });
 

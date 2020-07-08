@@ -1,7 +1,8 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { StepCTT } from "../CTT";
 import { Form } from "react-final-form";
+
+import { StepCTT } from "../CTT";
 
 function renderForm() {
   return render(

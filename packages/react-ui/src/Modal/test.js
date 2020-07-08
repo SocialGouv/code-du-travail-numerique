@@ -1,6 +1,7 @@
+import { cleanup, render } from "@testing-library/react";
 import React from "react";
 import styled from "styled-components";
-import { render, cleanup } from "@testing-library/react";
+
 import { Modal } from ".";
 
 // HACK(lionelB): trick to prevent @reach-modal warning if styles are not imported

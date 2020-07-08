@@ -3,7 +3,10 @@ const withSourceMaps = require("@zeit/next-source-maps");
 const withTranspileModule = require("next-transpile-modules")([
   "@cdt/sources",
   "@cdt/data",
+  "lit-element",
+  "lit-html",
   "parse5",
+  "p-debounce",
   "is-plain-obj",
 ]);
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -40,6 +43,7 @@ const nextConfig = {
       "https://entreprise.data.gouv.fr/api/sirene/v1",
     API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
+    COMMIT: process.env.COMMIT,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
     SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,

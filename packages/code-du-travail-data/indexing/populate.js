@@ -1,17 +1,23 @@
-import crypto from "crypto";
-import { selectAll } from "unist-util-select";
-import find from "unist-util-find";
-import { logger } from "./logger";
-import slugify from "../slugify";
-import { SOURCES } from "@cdt/sources";
-import { parseIdcc } from "..";
 import { getCourriers } from "@cdt/data...courrier-type";
 import { thematicFiles } from "@cdt/data...dossiers";
+import { getEditorialContents } from "@cdt/data...editorial_content";
 import { getFichesSP } from "@cdt/data...fiches_service_public";
-import themes from "@cdt/data...datafiller/themes.data.json";
-import { createThemer } from "./breadcrumbs";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
+import themes from "@socialgouv/datafiller-data/data/themes.json";
+import crypto from "crypto";
+import find from "unist-util-find";
+import { selectAll } from "unist-util-select";
 
-const getTheme = createThemer(themes);
+import { parseIdcc } from "..";
+import slugify from "../slugify";
+import { addGlossary } from "./addGlossary";
+import { getAgreementPages } from "./agreement_pages";
+import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
+import { splitArticle } from "./fichesTravailSplitter";
+import { logger } from "./logger";
+import { getVersions } from "./versions";
+
+const getBreadcrumbs = createThemer(themes);
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -58,26 +64,29 @@ async function getDuplicateSlugs(allDocuments) {
   }
 
   return slugs
-    .map((slug) => ({ slug, count: slugs.filter((s) => slug === s).length }))
+    .map((slug) => ({ count: slugs.filter((s) => slug === s).length, slug }))
     .filter(({ count }) => count > 1)
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
 
 async function* cdtnDocumentsGen() {
+  const fichesMT = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
+  fichesMT.forEach((article) => (article.slug = slugify(article.title)));
+
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
     ({ id, num, title, shortTitle, url, effectif }) => {
       return {
-        source: SOURCES.CCN,
-        id,
-        idcc: parseIdcc(num),
-        title,
-        shortTitle,
-        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
-        text: `IDCC ${num} ${title}`,
-        url,
         effectif,
         excludeFromSearch: false,
+        id,
+        idcc: parseIdcc(num),
+        shortTitle,
+        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+        source: SOURCES.CCN,
+        text: `IDCC ${num} ${title}`,
+        title,
+        url,
       };
     }
   );
@@ -88,45 +97,62 @@ async function* cdtnDocumentsGen() {
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
   ).map(
     ({ data: { id, num, dateDebut, nota, notaHtml, texte, texteHtml } }) => ({
-      source: SOURCES.CDT,
-      title: fixArticleNum(id, num),
-      slug: slugify(fixArticleNum(id, num)),
+      dateDebut,
       description: texte.slice(0, texte.indexOf("…", 150)),
       html: texteHtml,
+      slug: slugify(fixArticleNum(id, num)),
+      source: SOURCES.CDT,
       text: `${texte}\n${nota}`,
-      dateDebut,
+      title: fixArticleNum(id, num),
       ...(nota.length > 0 && { notaHtml }),
-      url: getArticleUrl(id),
       excludeFromSearch: false,
+      url: getArticleUrl(id),
     })
   );
+
+  logger.info("=== Editorial contents ===");
+  yield getEditorialContents();
 
   logger.info("=== Fiches SP ===");
   yield getFichesSP();
 
   logger.info("=== Fiche MT(split) ===");
-  yield require("@cdt/data...fiches_ministere_travail/fiches-mt-split.json").map(
-    ({ anchor, description, html, slug, text, title, breadcrumbs }) => ({
-      source: SOURCES.SHEET_MT,
-      anchor,
-      description,
-      breadcrumbs,
-      html,
-      slug,
-      text,
-      title,
-      excludeFromSearch: false,
-    })
+  const splittedFiches = fichesMT.flatMap(splitArticle);
+
+  yield splittedFiches.map(
+    ({ anchor, description, html, slug, text, title }) => {
+      return {
+        anchor,
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
+        ),
+        description,
+        excludeFromSearch: false,
+        html,
+        slug,
+        source: SOURCES.SHEET_MT,
+        text,
+        title,
+      };
+    }
   );
 
   logger.info("=== Themes ===");
-  yield require("@cdt/data...datafiller/themes.data.json").map(
-    ({ slug, title }) => ({
-      source: SOURCES.THEMES,
-      title: title,
-      slug,
-      excludeFromSearch: false,
-    })
+  yield themes.map(
+    ({ breadcrumbs, children, icon, introduction, position, refs, title }) => {
+      return {
+        breadcrumbs: breadcrumbs.map(toBreadcrumbs),
+        children: children.map(toBreadcrumbs),
+        description: introduction,
+        excludeFromSearch: false,
+        icon,
+        position,
+        refs,
+        slug: toSlug(title, position),
+        source: SOURCES.THEMES,
+        title: title,
+      };
+    }
   );
 
   logger.info("=== Courriers ===");
@@ -150,12 +176,12 @@ async function* cdtnDocumentsGen() {
         breadcrumbs,
         date,
         description,
+        excludeFromSearch: false,
         icon,
         slug,
         source: SOURCES.TOOLS,
         text: questions.join("\n"),
         title,
-        excludeFromSearch: false,
       })
     );
 
@@ -164,13 +190,13 @@ async function* cdtnDocumentsGen() {
     ({ action, description, icon, title, url }) => ({
       action,
       description,
+      excludeFromSearch: false,
       icon,
       slug: slugify(title),
       source: SOURCES.EXTERNALS,
       text: description,
-      url,
       title,
-      excludeFromSearch: false,
+      url,
     })
   );
 
@@ -181,54 +207,105 @@ async function* cdtnDocumentsGen() {
       const slug = slugify(title);
       fixReferences(answers.generic);
       answers.conventions.forEach(fixReferences);
+
       return {
-        source: SOURCES.CONTRIBUTIONS,
-        title,
-        slug,
-        breadcrumbs: getTheme(slug),
+        answers: {
+          ...answers,
+          generic: {
+            ...answers.generic,
+            markdown: addGlossary(answers.generic.markdown),
+          },
+        },
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
+        ),
         description: (answers.generic && answers.generic.description) || title,
-        text: (answers.generic && answers.generic.text) || title,
-        answers,
         excludeFromSearch: false,
+        slug,
+        source: SOURCES.CONTRIBUTIONS,
+        text: (answers.generic && answers.generic.text) || title,
+        title,
       };
     }
   );
 
   logger.info("=== Dossiers ===");
   yield thematicFiles.map(
-    ({ asideContent, description, metaDescription, refs, slug, title }) => {
+    ({ categories, description, metaDescription, refs, slug, title }) => {
       return {
-        source: SOURCES.THEMATIC_FILES,
-        title,
-        slug,
+        categories,
         description,
-        metaDescription,
-        asideContent,
-        text: `${title}\n${description}`,
-        refs,
         excludeFromSearch: false,
+        metaDescription,
+        refs,
+        slug,
+        source: SOURCES.THEMATIC_FILES,
+        text: `${title}\n${description}`,
+        title,
       };
     }
   );
   logger.info("=== Hightlights ===");
   yield [
     {
+      data: require("@socialgouv/datafiller-data/data/hightlights.json"),
       source: SOURCES.HIGHLIGHTS,
-      data: require("@cdt/data...datafiller/highlights.data.json"),
     },
   ];
   logger.info("=== glossary ===");
   yield [
     {
+      data: require("@socialgouv/datafiller-data/data/glossary.json").map(
+        (item) => {
+          return {
+            ...item,
+            slug: slugify(item.title),
+          };
+        }
+      ),
       source: SOURCES.GLOSSARY,
-      data: require("@cdt/data...datafiller/glossary.data.json"),
     },
   ];
   logger.info("=== PreQualified Request ===");
   yield [
     {
+      data: require("@socialgouv/datafiller-data/data/requests.json"),
       source: SOURCES.PREQUALIFIED,
-      data: require("@cdt/data...datafiller/prequalified.data.json"),
+    },
+  ];
+  logger.info("=== page fiches travail ===");
+  yield fichesMT.map(({ sections, ...content }) => {
+    return {
+      ...content,
+      breadcrumbs: getBreadcrumbs(
+        `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
+      ),
+      // eslint-disable-next-line no-unused-vars
+      sections: sections.map(({ description, text, ...section }) => ({
+        ...section,
+        html: addGlossary(section.html),
+      })),
+
+      source: SOURCES.SHEET_MT_PAGE,
+    };
+  });
+  logger.info("=== page ccn ===");
+  const ccnData = getAgreementPages();
+  yield ccnData.map(({ ...content }) => {
+    return {
+      ...content,
+      answers: content.answers.map((data) => ({
+        ...data,
+        answer: addGlossary(data.answer),
+      })),
+      source: SOURCES.CCN_PAGE,
+    };
+  });
+  logger.info("=== data version ===");
+  yield [
+    {
+      data: getVersions(),
+      source: SOURCES.VERSIONS,
     },
   ];
 }

@@ -1,15 +1,15 @@
-import React from "react";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
+import React from "react";
 
 import { IdccSuggester } from "../IdccSuggester";
 
 const item = {
-  source: "conventions_collectives",
-  slug: "result-slug",
-  title: "item title",
-  url: "item.url",
-  type: "item-type",
   idcc: "IDCC",
+  slug: "result-slug",
+  source: "conventions_collectives",
+  title: "item title",
+  type: "item-type",
+  url: "item.url",
 };
 const results = [{ _source: item }];
 

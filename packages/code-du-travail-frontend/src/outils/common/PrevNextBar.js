@@ -1,7 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Button, icons, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+
 import printResult from "./printResult";
 
 function PrevNextBar({
@@ -19,7 +20,13 @@ function PrevNextBar({
             Imprimer le résultat
           </StyledButton>
         )}
-        {nextVisible && (
+        {nextVisible && !previousVisible && (
+          <StyledButton disabled={hasError} variant="primary">
+            Commencer
+            <ArrowIcon />
+          </StyledButton>
+        )}
+        {nextVisible && previousVisible && (
           <StyledButton disabled={hasError} variant="primary">
             Suivant
             <ArrowIcon />
@@ -35,15 +42,15 @@ function PrevNextBar({
   );
 }
 PrevNextBar.propTypes = {
-  onPrev: PropTypes.func,
   hasError: PropTypes.bool,
   nextVisible: PropTypes.bool,
+  onPrev: PropTypes.func,
   previousVisible: PropTypes.bool,
 };
 PrevNextBar.defaultProps = {
-  onPrev: () => {},
   hasError: false,
   nextVisible: true,
+  onPrev: () => {},
   previousVisible: true,
 };
 

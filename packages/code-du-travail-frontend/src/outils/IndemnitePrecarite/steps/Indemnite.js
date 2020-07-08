@@ -1,18 +1,19 @@
-import React from "react";
-import Link from "next/link";
-import { theme, Alert } from "@socialgouv/react-ui";
-import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 import data from "@cdt/data...prime-precarite/precarite.data.json";
-import { getIndemnitePrecarite } from "../indemnite";
-import { SectionTitle, Highlight } from "../../common/stepStyles";
+import { Alert, theme } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
+
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { MathFormula } from "../../common/MathFormula";
 import {
   filterSituations,
-  getSituationsFor,
   getRef,
+  getSituationsFor,
 } from "../../common/situations.utils";
+import { Highlight, SectionTitle } from "../../common/stepStyles";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
+import { getIndemnitePrecarite } from "../indemnite";
 
 function Disclaimer({ situation, idcc }) {
   if (idcc > 0 && situation.idcc > 0) {
@@ -71,7 +72,7 @@ function extractRefs(refs = []) {
     .flatMap(({ refUrl, refLabel }) => {
       const urls = refUrl.split(/\n/);
       const labels = refLabel.split(/\n/);
-      return urls.map((url, i) => ({ refUrl: url, refLabel: labels[i] }));
+      return urls.map((url, i) => ({ refLabel: labels[i], refUrl: url }));
     });
 
   const refMap = {};
@@ -79,8 +80,8 @@ function extractRefs(refs = []) {
     refMap[refUrl] = refLabel;
   }
   return Object.entries(refMap).map(([refUrl, ref]) => ({
-    refUrl,
     ref,
+    refUrl,
   }));
 }
 
@@ -96,8 +97,8 @@ function StepIndemnite({ form }) {
   } = state.values;
 
   const idcc = ccn ? ccn.num : 0;
-  const [situationCdt] = getSituationsFor(data, { idcc: 0, contractType });
-  const initialSituations = getSituationsFor(data, { idcc, contractType });
+  const [situationCdt] = getSituationsFor(data, { contractType, idcc: 0 });
+  const initialSituations = getSituationsFor(data, { contractType, idcc });
   const situations = filterSituations(initialSituations, criteria);
   let rate = "10%";
   let bonusAltName = "La prime de précarité";
@@ -126,12 +127,12 @@ function StepIndemnite({ form }) {
   const rateValue = parseInt(value) / 100;
   const rateLabel = `${value}/100`;
 
-  const { indemnite, formule, inputs } = getIndemnitePrecarite({
-    typeRemuneration,
+  const { indemnite, formula, inputs } = getIndemnitePrecarite({
+    rateLabel,
+    rateValue,
     salaire,
     salaires,
-    rateValue,
-    rateLabel,
+    typeRemuneration,
   });
 
   const entries = Object.entries({
@@ -164,9 +165,9 @@ function StepIndemnite({ form }) {
       )}
       <Heading>Calcul :</Heading>
       <ErrorBoundary>
-        <FormuleWrapper>
-          <MathJax math={"`" + formule + "`"} />
-        </FormuleWrapper>
+        <FormulaWrapper>
+          <MathFormula formula={formula} />
+        </FormulaWrapper>
       </ErrorBoundary>
       <SectionTitle>Source</SectionTitle>
       {getRef(legalRefs)}
@@ -212,6 +213,6 @@ const List = styled.ul`
 const Item = styled.li`
   font-size: ${fonts.sizes.small};
 `;
-const FormuleWrapper = styled.div`
+const FormulaWrapper = styled.div`
   margin: ${spacings.base} 0;
 `;

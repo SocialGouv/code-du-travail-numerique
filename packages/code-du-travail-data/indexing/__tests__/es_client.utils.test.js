@@ -1,4 +1,4 @@
-import { getIndicesToDelete, range, chunks } from "../es_client.utils";
+import { chunks, getIndicesToDelete, range } from "../es_client.utils";
 
 const testCases = [
   [["cdtn"], 1, [{ index: "bob" }, { index: "dylan" }, { index: "yo" }], []],

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
 import { transparentize } from "polished";
+import PropTypes from "prop-types";
+import React, { useEffect, useRef, useState } from "react";
+import styled, { css } from "styled-components";
 
 import { breakpoints } from "../theme";
 

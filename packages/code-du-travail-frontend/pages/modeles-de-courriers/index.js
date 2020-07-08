@@ -1,23 +1,24 @@
-import React, { useCallback, useState } from "react";
-import getConfig from "next/config";
-import Link from "next/link";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import fetch from "isomorphic-unfetch";
-import styled from "styled-components";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Container,
   FlatList,
-  Tile,
-  PageTitle,
   Heading,
+  PageTitle,
   Section,
   Select,
   theme,
+  Tile,
 } from "@socialgouv/react-ui";
-import { summarize } from "../../src/search/utils";
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
+
 import { FocusRoot } from "../../src/a11y";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
+import { summarize } from "../../src/search/utils";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -32,15 +33,15 @@ function Modeles(props) {
   const themes = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
     const other = {
-      title: "Autres",
       label: "Autres",
       slug: "autres",
+      title: "Autres",
     };
     const [theme = other] = templateDoc.breadcrumbs;
     if (!state[theme.slug]) {
       state[theme.slug] = {
-        title: theme.label,
         items: [],
+        title: theme.label,
       };
       themes.push(theme);
     }
@@ -93,9 +94,17 @@ function Modeles(props) {
             {Object.values(documents).map(({ title, items }) => (
               <React.Fragment key={title}>
                 <Heading as={HeadingBlue}>{title}</Heading>
-                {items.map((docTemplate) => (
-                  <StyledListItem key={docTemplate.slug}>
-                    <ModeleCourrier modele={docTemplate} />
+                {items.map(({ description, slug, title }) => (
+                  <StyledListItem key={slug}>
+                    <Link
+                      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
+                      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
+                      passHref
+                    >
+                      <Tile wide custom title={title} subtitle={theme.title}>
+                        {summarize(description)}
+                      </Tile>
+                    </Link>
                   </StyledListItem>
                 ))}
               </React.Fragment>
@@ -115,23 +124,6 @@ Modeles.getInitialProps = async function () {
   const data = await response.json();
   return { data };
 };
-
-function ModeleCourrier({ modele }) {
-  const { title, description, breadcrumbs, slug } = modele;
-  const [theme = { title: "Modèle de courrier" }] = breadcrumbs.slice(-1);
-
-  return (
-    <Link
-      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
-      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
-      passHref
-    >
-      <Tile wide custom title={title} subtitle={theme.title}>
-        {summarize(description)}
-      </Tile>
-    </Link>
-  );
-}
 
 const { spacings } = theme;
 

@@ -1,7 +1,3 @@
-import React from "react";
-import getConfig from "next/config";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Container,
   FlatList,
@@ -11,11 +7,15 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
-import Html from "../../src/common/Html";
 import { FocusRoot } from "../../src/a11y";
+import Html from "../../src/common/Html";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },

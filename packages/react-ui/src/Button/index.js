@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
-import { DirectionRight } from "../icons";
 import { lighten, rgba } from "polished";
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
 
+import { DirectionRight } from "../icons";
 import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const StyledButton = styled.button`
@@ -24,6 +24,9 @@ export const StyledButton = styled.button`
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
+  }
+  @media print {
+    display: none;
   }
   ${({ narrow, theme, small, variant }) => {
     if (variant === "link") {
@@ -187,9 +190,9 @@ Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node,
+  narrow: PropTypes.bool,
   onClick: PropTypes.func,
   small: PropTypes.bool,
-  narrow: PropTypes.bool,
   variant: PropTypes.oneOf([
     "link",
     "navLink",
@@ -202,8 +205,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   children: "",
-  onClick: () => {},
   narrow: false,
+  onClick: () => {},
   small: false,
   variant: "secondary",
 };

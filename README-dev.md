@@ -38,7 +38,6 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 | [code-du-travail-api](./packages/code-du-travail-api)                 | NodeJS koa API                                     |
 | [code-du-travail-data](./packages/code-du-travail-data)               | Datasets and Elastic indexing scripts and mappings |
 | [code-du-travail-frontend](./packages/code-du-travail-frontend)       | Next.js frontend application                       |
-| [code-du-travail-nlp](./packages/code-du-travail-nlp)                 | TensorFlow API                                     |
 | [react-fiches-service-public](./packages/react-fiches-service-public) | React components for fiches service-public.fr      |
 | [react-ui](./packages/react-ui)                                       | React components and styleguide                    |
 
@@ -79,8 +78,8 @@ $ docker run \
 Then you can launch services using docker-compose
 
 ```sh
-# start elasticsearch + nlp_api
-$ docker-compose up elasticsearch nlp_api
+# start elasticsearch 
+$ docker-compose up elasticsearch 
 
 # Launch indexing script : fill ElasticSearch
 $ yarn workspace @cdt/data populate-dev
@@ -93,23 +92,15 @@ yarn workspace @cdt/api dev
 
 In this section you will find commands that you may need during your work
 
-Build a local NLP image
+Start a local TF Serve NLP instance
+[Look at this repo](https://github.com/SocialGouv/serving-ml)
 
-```
-docker build -t cdtn_nlp:local packages/code-du-travail-nlp
-```
 
-Start a local NLP image
-
-```
-docker run --rm --name cdtn-nlp -p 5000:5000 cdtn_nlp:local
-```
-
-Create a dump with semantic vectors (you will need a NLP service running)
+Create a dump with semantic vectors (you will need a NLP service available)
 (if NLP_URL env is not provide it will create a dump without semantic vectors)
 
 ```
-NLP_URL=http://localhost:5000 yarn workspace @cdt/data dump-dev
+NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/ yarn workspace @cdt/data dump-dev
 ```
 
 Populate elasticsearch index using a local dump
@@ -130,7 +121,6 @@ docker run \
 
 You can also read the packages readme
 
-- [Nlp README](./packages/code-du-travail-nlp/README.md)
 - [Data README](./packages/code-du-travail-nlp/README.md)
 - [API README](./packages/code-du-travail-nlp/README.md)
 - [e2e README](./optional/e2e/README.md)

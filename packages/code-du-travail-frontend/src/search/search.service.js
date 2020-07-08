@@ -1,8 +1,7 @@
-import getConfig from "next/config";
-import memoizee from "memoizee";
 import fetch from "isomorphic-unfetch";
-
-import pDebounce from "../lib/pDebounce";
+import memoizee from "memoizee";
+import getConfig from "next/config";
+import pDebounce from "p-debounce";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -35,14 +34,14 @@ const suggestMin = (query) =>
 
 // memoize search results
 const fetchSearchResultsMemoized = memoizee(fetchSearchResults, {
-  promise: true,
-  length: 1, // ensure memoize work for function with es6 default params
+  length: 1,
+  promise: true, // ensure memoize work for function with es6 default params
 });
 
 // memoize suggestions results
 const fetchSuggestResultsMemoized = memoizee(suggestMin, {
-  promise: true,
-  length: 1, // ensure memoize work for function with es6 default params
+  length: 1,
+  promise: true, // ensure memoize work for function with es6 default params
 });
 
 // debounce memoized suggestions results

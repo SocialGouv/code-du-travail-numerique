@@ -1,9 +1,9 @@
-import React from "react";
-import arrayMutators from "final-form-arrays";
-
 import { render } from "@testing-library/react";
-import { StepSalaires, getSalairesPeriods } from "../Salaires";
+import arrayMutators from "final-form-arrays";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { getSalairesPeriods, StepSalaires } from "../Salaires";
 
 function renderForm(data) {
   return render(
@@ -30,11 +30,11 @@ describe("<StepSalaires />", () => {
   it("should render tempsPartiel", () => {
     const { container } = renderForm({
       hasSameSalaire: true,
-      salairePeriods: [
-        { type: "Temps plein", duration: 24, salary: 2000 },
-        { type: "Temps partiel", duration: 12, salary: 1000 },
-      ],
       hasTempsPartiel: true,
+      salairePeriods: [
+        { duration: 24, salary: 2000, type: "Temps plein" },
+        { duration: 12, salary: 1000, type: "Temps partiel" },
+      ],
     });
     expect(container).toMatchSnapshot();
   });
@@ -45,8 +45,8 @@ describe("<StepSalaires />", () => {
       dateSortie: "2019-07-31",
     });
     const { container } = renderForm({
-      hasTempsPartiel: false,
       hasSameSalaire: false,
+      hasTempsPartiel: false,
       salaires: salairesPeriods,
     });
     expect(container).toMatchSnapshot();

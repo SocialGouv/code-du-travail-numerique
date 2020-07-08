@@ -1,11 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
+
 import { Badge } from "../Badge";
 import { Stripe } from "../Stripe";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
 import { Heading } from "../Titles/Heading";
 import { Subtitle } from "../Titles/Subtitle";
-import { animations, box, breakpoints, fonts, spacings } from "../theme";
 
 export const Tile = React.forwardRef(
   (
@@ -45,8 +46,8 @@ Tile.propTypes = {
   custom: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.elementType,
-  subtitle: PropTypes.string,
   striped: PropTypes.bool,
+  subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
   wide: PropTypes.bool,
 };

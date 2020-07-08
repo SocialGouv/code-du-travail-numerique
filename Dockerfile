@@ -1,4 +1,4 @@
-FROM node:12.14-alpine3.10
+FROM node:12.18-alpine3.10
 
 # NOTE(douglasduteil): add `curl` in the master image
 # `curl` is very useful for later health check tests ;)
@@ -17,10 +17,11 @@ COPY ./yarn.lock /app/yarn.lock
 
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
-COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packages/code-du-travail-data/dataset/datafiller/package.json
-COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json
-COPY ./packages/code-du-travail-data/dataset/simulateurs/package.json /app/packages/code-du-travail-data/dataset/simulateurs/package.json
+COPY ./packages/code-du-travail-data/dataset/dossiers/package.json /app/packages/code-du-travail-data/dataset/dossiers/package.json
+COPY ./packages/code-du-travail-data/dataset/editorial_content/package.json /app/packages/code-du-travail-data/dataset/editorial_content/package.json
+COPY ./packages/code-du-travail-data/dataset/fiches_service_public/package.json /app/packages/code-du-travail-data/dataset/fiches_service_public/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
+COPY ./packages/code-du-travail-data/dataset/simulateurs/package.json /app/packages/code-du-travail-data/dataset/simulateurs/package.json
 COPY ./packages/code-du-travail-data/dataset/stats/package.json /app/packages/code-du-travail-data/dataset/stats/package.json
 COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
 COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json

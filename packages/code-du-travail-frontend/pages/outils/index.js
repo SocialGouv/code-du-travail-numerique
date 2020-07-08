@@ -1,5 +1,6 @@
-import React from "react";
-import Link from "next/link";
+import externalTools from "@cdt/data...tools/externals.json";
+import tools from "@cdt/data...tools/internals.json";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Container,
   Grid,
@@ -7,15 +8,14 @@ import {
   PageTitle,
   Section,
 } from "@socialgouv/react-ui";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
-import tools from "@cdt/data...tools/internals.json";
-import externalTools from "@cdt/data...tools/externals.json";
+import Link from "next/link";
+import React from "react";
 
-import { Layout } from "../../src/layout/Layout";
+import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
+import { Layout } from "../../src/layout/Layout";
 import { CCTile, DocumentsTile } from "../index";
-import { FocusRoot } from "../../src/a11y";
 
 const monCompteFormation = externalTools.find(
   (tools) => tools.title === "Mon compte formation"
@@ -36,25 +36,23 @@ const Outils = ({ pageUrl, ogImage }) => (
         </FocusRoot>
         <Grid>
           {DocumentsTile}
-          {tools
-            .filter((tool) => tool.slug !== "simulateur-embauche")
-            .map(({ action, description, icon, slug, title }) => (
-              <Link
-                href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
-                passHref
-                key={slug}
+          {tools.map(({ action, description, icon, slug, title }) => (
+            <Link
+              href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
+              as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
+              passHref
+              key={slug}
+            >
+              <CallToActionTile
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
               >
-                <CallToActionTile
-                  action={action}
-                  custom
-                  title={title}
-                  icon={icons[icon]}
-                >
-                  {description}
-                </CallToActionTile>
-              </Link>
-            ))}
+                {description}
+              </CallToActionTile>
+            </Link>
+          ))}
           {CCTile}
           <CallToActionTile
             key={monCompteFormation.slug}
@@ -63,7 +61,7 @@ const Outils = ({ pageUrl, ogImage }) => (
             title={monCompteFormation.title}
             icon={icons[monCompteFormation.icon]}
             href={monCompteFormation.url}
-            rel="noopener nofollow"
+            rel="noopener noreferrer"
             target="_blank"
             className="no-after"
           >

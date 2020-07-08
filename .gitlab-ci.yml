@@ -17,7 +17,7 @@ include:
   # - /.gitlab-ci/stages/scan.yml
   # - /.gitlab-ci/stages/deploy.yml
   # - /.gitlab-ci/stages/notify.yml
-
+  # - /.gitlab-ci/stages/e2e.yml
   - /optional/e2e/.runners/puppeteer/.gitlab-ci.yml
   - /packages/code-du-travail-data/.gitlab-ci.yml
 
@@ -29,4 +29,5 @@ stages:
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"
-  - E2E test
+  - "E2E testing"
+  - "Update ES data"

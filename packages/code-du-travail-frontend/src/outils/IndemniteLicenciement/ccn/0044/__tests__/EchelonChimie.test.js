@@ -1,7 +1,8 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { EchelonChimie } from "../EchelonChimie";
 import { Form } from "react-final-form";
+
+import { EchelonChimie } from "../EchelonChimie";
 
 describe("<EchelonChimie />", () => {
   it("should render", () => {

@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Field } from "react-final-form";
 import { Select, theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
+import styled from "styled-components";
 
+import { Error } from "./ErrorField";
 import { Question } from "./Question";
 import { required } from "./validators";
-import { Error } from "./ErrorField";
 
 function SelectQuestion({ name, label, subLabel, options, onChange }) {
   const uid = `input-${name}`;
@@ -18,12 +18,14 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
     <Field
       name={name}
       validate={required}
-      subscription={{ value: true, error: true, dirty: true }}
+      subscription={{ dirty: true, error: true, value: true }}
     >
       {({ input, meta: { error, dirty } }) => {
         return (
           <Wrapper>
-            <Question htmlFor={uid}>{label}</Question>
+            <Question required htmlFor={uid}>
+              {label}
+            </Question>
             {subLabel && <SubLabel>{subLabel}</SubLabel>}
             <StyledSelect {...input} id={uid}>
               <option disabled value="">
@@ -56,11 +58,11 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
 }
 
 SelectQuestion.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  subLabel: PropTypes.string,
-  options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
+  options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  subLabel: PropTypes.string,
 };
 
 export { SelectQuestion };

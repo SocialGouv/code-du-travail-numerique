@@ -3,13 +3,10 @@ const fs = require("fs");
 const data = require("./courriers.json");
 const { SOURCES, getRouteBySource } = require("@cdt/sources");
 const slugify = require("../../slugify");
-const allThemes = require("../datafiller/themes.data.json");
+const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
+const { createThemer } = require("../../indexing/breadcrumbs");
 
-const themes = allThemes.filter((theme) =>
-  theme.refs.some((ref) =>
-    ref.url.startsWith(`/${getRouteBySource(SOURCES.LETTERS)}`)
-  )
-);
+const getBreadcrumbs = createThemer(allThemes);
 
 const DOC_DIR = "docx";
 
@@ -35,7 +32,13 @@ const options = {
   ],
 };
 
-const convertFile2Html = ({ filename, title, description, ...rest }) => {
+const convertFile2Html = ({
+  filename,
+  title,
+  description,
+  metaDescription,
+  ...rest
+}) => {
   return mammoth
     .convertToHtml(
       {
@@ -45,28 +48,18 @@ const convertFile2Html = ({ filename, title, description, ...rest }) => {
     )
     .then((result) => {
       const slug = slugify(title);
-      const theme = themes.find((theme) =>
-        theme.refs.some((ref) => ref.url.match(new RegExp(slug)))
-      );
-      let breadcrumbs = [];
-      if (theme) {
-        breadcrumbs = (theme.breadcrumbs || []).concat([
-          {
-            label: theme.title,
-            slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
-          },
-        ]);
-      }
-
       return {
         filename,
-        breadcrumbs,
+        breadcrumbs: getBreadcrumbs(
+          `/${getRouteBySource(SOURCES.LETTERS)}/${slug}`
+        ),
         source: SOURCES.LETTERS,
         slug,
         filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
         title,
         text: description,
         description,
+        metaDescription,
         ...rest,
         excludeFromSearch: false,
         html:

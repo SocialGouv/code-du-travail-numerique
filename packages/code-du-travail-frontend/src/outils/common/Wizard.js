@@ -1,12 +1,13 @@
-import React, { useReducer, useEffect } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Form } from "react-final-form";
-import arrayMutators from "final-form-arrays";
 import { icons, theme } from "@socialgouv/react-ui";
-import { StepList, STEP_LIST_WIDTH } from "./StepList";
-import { PrevNextBar } from "./PrevNextBar";
+import arrayMutators from "final-form-arrays";
+import PropTypes from "prop-types";
+import React, { useEffect, useReducer } from "react";
+import { Form } from "react-final-form";
+import styled from "styled-components";
+
 import { matopush } from "../../piwik";
+import { PrevNextBar } from "./PrevNextBar";
+import { STEP_LIST_WIDTH, StepList } from "./StepList";
 
 const anchorRef = React.createRef();
 
@@ -22,7 +23,7 @@ function Wizard({
   const { stepIndex, steps } = state;
 
   const setStepIndex = (index) =>
-    dispatch({ type: "setStepIndex", payload: index });
+    dispatch({ payload: index, type: "setStepIndex" });
 
   useEffect(() => {
     const node = anchorRef.current;
@@ -47,7 +48,7 @@ function Wizard({
       "trackEvent",
       "outil",
       `click_previous_${title}`,
-      initialState.steps[nextStepIndex].name,
+      state.steps[nextStepIndex].name,
     ]);
   };
   const nextStep = (values) => {
@@ -58,12 +59,11 @@ function Wizard({
       skipFn = steps[nextStepIndex].skip || (() => false);
     }
     setStepIndex(nextStepIndex);
-
     matopush([
       "trackEvent",
       "outil",
       `view_step_${title}`,
-      initialState.steps[nextStepIndex].name,
+      state.steps[nextStepIndex].name,
     ]);
   };
 
@@ -89,9 +89,9 @@ function Wizard({
     }
   };
   const stepItems = steps.map(({ name, label }) => ({
-    name,
-    label,
     isValid: false,
+    label,
+    name,
   }));
 
   const decorators = steps
@@ -140,7 +140,7 @@ function Wizard({
                 printVisible={printVisible}
                 previousVisible={previousVisible}
               />
-              {stepIndex > 0 && stepIndex < steps.length && (
+              {stepIndex > 0 && stepIndex < steps.length - 1 && (
                 <Notice>
                   <Mandatory>*</Mandatory> Champs obligatoires
                 </Notice>
@@ -161,20 +161,20 @@ function Wizard({
 }
 
 Wizard.propTypes = {
-  stepReducer: PropTypes.func,
+  Rules: PropTypes.func,
   icon: PropTypes.string,
   initialState: PropTypes.shape({
     stepIndex: PropTypes.number,
     steps: PropTypes.arrayOf(
       PropTypes.shape({
         component: PropTypes.func.isRequired,
-        name: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
       })
     ),
   }).isRequired,
   initialValues: PropTypes.object,
-  Rules: PropTypes.func,
+  stepReducer: PropTypes.func,
   title: PropTypes.string.isRequired,
 };
 

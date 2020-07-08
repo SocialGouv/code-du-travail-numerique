@@ -1,10 +1,11 @@
-import { stepReducer, initialState } from "../stepReducer";
+import { initialState, stepReducer } from "../stepReducer";
 
 describe("initialSteps", () => {
   it("should return default steps", () => {
     expect(initialState.steps.map(({ name }) => ({ name }))).toEqual([
       { name: "intro" },
       { name: "info_cc" },
+      { name: "rupture" },
       { name: "infos" },
       { name: "results" },
     ]);
@@ -14,7 +15,7 @@ describe("initialSteps", () => {
   });
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { type: "setStepIndex", payload: 1 })
-    ).toEqual({ steps: initialState.steps, stepIndex: 1 });
+      stepReducer(initialState, { payload: 1, type: "setStepIndex" })
+    ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
 });

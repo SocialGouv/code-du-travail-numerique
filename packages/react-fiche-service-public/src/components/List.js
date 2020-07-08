@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-
 import { theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 import { ElementBuilder } from "./ElementBuilder";
 

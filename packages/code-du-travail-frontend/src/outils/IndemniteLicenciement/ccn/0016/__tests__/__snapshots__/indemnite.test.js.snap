@@ -2,7 +2,7 @@
 
 exports[`getIndemnite 2k, 6ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `
 Object {
-  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  - \\"minoration\\"",
+  "formula": "2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt  - \\"minoration\\"",
   "labels": Object {
     "Catégorie": "cadre",
     "Durée comme cadre, en mois, (Dc)": 60,
@@ -17,7 +17,7 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `
 Object {
-  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt",
+  "formula": "2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt",
   "labels": Object {
     "Catégorie": "cadre",
     "Durée comme cadre, en mois, (Dc)": 120,
@@ -29,7 +29,7 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 2`] = `
 Object {
-  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  + \\"majoration\\" - \\"minoration\\"",
+  "formula": "2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt  + \\"majoration\\" - \\"minoration\\"",
   "labels": Object {
     "Catégorie": "cadre",
     "Durée comme cadre, en mois, (Dc)": 120,
@@ -118,7 +118,7 @@ Object {
 
 exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, cadre 1`] = `
 Object {
-  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt",
+  "formula": "2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt",
   "labels": Object {
     "Catégorie": "cadre",
     "Durée comme cadre, en mois, (Dc)": 24,
@@ -143,7 +143,7 @@ Object {
 
 exports[`getIndemnite 2k, 36mois d'ancienneté, 61ans, cadre, retraite possible 1`] = `
 Object {
-  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  - \\"minoration\\"",
+  "formula": "2 / 5 * Sref * Dc + 3 / 10 * Sref * Dt  - \\"minoration\\"",
   "labels": Object {
     "Catégorie": "cadre",
     "Durée comme cadre, en mois, (Dc)": 24,

@@ -10,10 +10,10 @@ deployment:
   resources:
     limits:
       cpu: 200m
-      memory: 400Mi # 333.4 + 66.6~(20% of 333.4)
+      memory: 560Mi # 400 + 160  ~(40% of 400)
     requests:
       cpu: 200m
-      memory: 400Mi
+      memory: 560Mi
 
   livenessProbe:
     path: /health
@@ -67,6 +67,8 @@ deployment:
           key: SENTRY_PUBLIC_DSN
     - name: VERSION
       value: "${VERSION}"
+    - name: COMMIT
+      value: "${COMMIT}"
 
   initContainers:
     - name: wait-for-api
@@ -91,28 +93,7 @@ deployment:
           [[ $(( retry )) -lt 1 ]] && exit 128;
 
           echo Ready;
-    - name: wait-for-nlp
-      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
-      resources:
-        requests:
-          cpu: 5m
-          memory: 16Mi
-        limits:
-          cpu: 50m
-          memory: 32Mi
-      command:
-        - sh
-        - -c
-        - |
-          retry=120; # 5s * (12 * 10) = 10min
-          while
-            ! curl -sS --fail "${NLP_URL}" &&
-            [[ $(( retry-- )) -gt 0 ]];
-          do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
 
-          [[ $(( retry )) -lt 1 ]] && exit 128;
-
-          echo Ready;
 
 service:
   port: ${PORT}

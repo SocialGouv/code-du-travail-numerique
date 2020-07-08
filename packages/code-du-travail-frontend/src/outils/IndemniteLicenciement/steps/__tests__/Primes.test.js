@@ -1,9 +1,9 @@
-import React from "react";
-import arrayMutators from "final-form-arrays";
-
 import { render } from "@testing-library/react";
-import { StepPrimes } from "../Primes";
+import arrayMutators from "final-form-arrays";
+import React from "react";
 import { Form } from "react-final-form";
+
+import { StepPrimes } from "../Primes";
 
 function renderForm(data) {
   return render(

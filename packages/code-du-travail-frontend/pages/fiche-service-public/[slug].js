@@ -1,13 +1,14 @@
-import React from "react";
-import { withRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import { Container, Section } from "@socialgouv/react-ui";
-import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import { withRouter } from "next/router";
+import React from "react";
+
 import Answer from "../../src/common/Answer";
-import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },

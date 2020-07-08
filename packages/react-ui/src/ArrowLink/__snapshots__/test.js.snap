@@ -41,6 +41,17 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
   transform: translateX(4px);
 }
 
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 0.4rem 0 0.4rem;
+  }
+}
+
 <div>
   <a
     class="c0 c1"
@@ -103,6 +114,17 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 0.4rem 0 0.4rem;
+  }
 }
 
 <div>

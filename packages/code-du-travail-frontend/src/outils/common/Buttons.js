@@ -1,7 +1,6 @@
-import React from "react";
-
-import styled from "styled-components";
 import { Button, icons, theme } from "@socialgouv/react-ui";
+import React from "react";
+import styled from "styled-components";
 
 export function AddButton({ children, ...props }) {
   return (

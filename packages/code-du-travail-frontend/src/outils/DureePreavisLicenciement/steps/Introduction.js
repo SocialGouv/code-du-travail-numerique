@@ -1,5 +1,5 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 
 function StepIntro() {
   return (
@@ -28,7 +28,7 @@ function StepIntro() {
         </Link>
         .
       </p>
-      <p>Cliquez sur suivant pour commencer la simulation</p>
+      <p>Cliquez sur commencer pour démarrer la simulation.</p>
     </>
   );
 }

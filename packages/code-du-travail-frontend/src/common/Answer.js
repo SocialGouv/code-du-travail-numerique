@@ -1,19 +1,19 @@
-import React from "react";
-import { useRouter } from "next/router";
-import styled from "styled-components";
 import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
+import { useRouter } from "next/router";
+import React from "react";
+import styled from "styled-components";
 
-import Article from "./Article";
-import { Feedback } from "./Feedback";
-import { RelatedItems } from "./RelatedItems";
-import Html from "./Html";
-import { Breadcrumbs } from "./Breadcrumbs";
-import useGlossary from "../glossary";
+import { ConventionModal } from "../../src/conventions/SearchModal";
 import {
   AsideContent,
   MainAsideLayout,
   MainContent,
 } from "../layout/AnswerLayout";
+import Article from "./Article";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { Feedback } from "./Feedback";
+import Html from "./Html";
+import { RelatedItems } from "./RelatedItems";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -37,12 +37,11 @@ function Answer({
   suptitle,
   title,
 }) {
-  const glossaryItems = useGlossary(children, html);
   const router = useRouter();
-
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
+      <ConventionModal />
       <MainAsideLayout>
         <MainContent hasResults={relatedItems.length > 0} className={className}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
@@ -59,13 +58,16 @@ function Answer({
               dateLabel={dateLabel}
               source={source}
             >
-              {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
+              {intro && (
+                <IntroWrapper variant="dark">
+                  <Html>{intro}</Html>
+                </IntroWrapper>
+              )}
               {html && <Html>{html}</Html>}
               {children}
             </Article>
           )}
           {additionalContent}
-          {glossaryItems}
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}
@@ -99,4 +101,10 @@ const StyledErrorContainer = styled(Container)`
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
+  & div > *:first-child {
+    margin-top: 0;
+  }
+  & div > *:last-child {
+    margin-bottom: 0;
+  }
 `;

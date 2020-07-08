@@ -1,14 +1,13 @@
+import { theme, Toast } from "@socialgouv/react-ui";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Toast, theme } from "@socialgouv/react-ui";
-
 import ConventionSearch from "../../conventions/Search";
-import { required } from "./validators";
+import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
-import { useLocalStorage } from "../../lib/useLocalStorage";
+import { required } from "./validators";
 
 export const CONVENTION_NAME = "ccn";
 
@@ -26,6 +25,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   useEffect(() => {
     form.batch(() => {
       form.change("criteria", undefined);
+      form.change("typeRupture", undefined);
       form.change(CONVENTION_NAME, storedConvention);
     });
     // eslint-disable-next-line
@@ -52,7 +52,7 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 >
                   {input.value.shortTitle}
                 </Toast>
-                <p>Cliquez sur suivant pour poursuivre la simulation.</p>
+                <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
               </>
             );
@@ -60,15 +60,8 @@ function StepInfoCCn({ form, isOptionnal = true }) {
           return (
             <>
               <Question as="p" required={!isOptionnal}>
-                Quelle est la convention collective du salarié ?
+                Quelle est la convention collective applicable au salarié ?
               </Question>
-              {isOptionnal && (
-                <P>
-                  <strong>* optionnel</strong>, si vous ne connaissez pas la
-                  convention collective, vous pouvez passer à l’étape suivante
-                  en cliquant sur le bouton Suivant.
-                </P>
-              )}
               <StyledConventionSearch onSelectConvention={onSelectConvention} />
               <ErrorField name={CONVENTION_NAME} />
             </>
@@ -93,9 +86,7 @@ const StyledConventionSearch = styled(ConventionSearch)`
 `;
 
 const { spacings } = theme;
-const P = styled.p`
-  font-style: italic;
-`;
+
 export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};

@@ -52,12 +52,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   color: #f66663;
 }
 
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -170,6 +164,28 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   cursor: pointer;
 }
 
+.c12 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13 {
+  font-weight: normal;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -199,21 +215,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   padding-bottom: 0;
 }
 
-.c12 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  font-weight: normal;
-}
-
 .c2 {
   width: 100%;
 }
@@ -225,6 +226,12 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 @media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c11 {
+    display: none;
   }
 }
 
@@ -265,7 +272,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -274,7 +281,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="xxxx"
@@ -294,7 +301,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -444,7 +451,7 @@ exports[`<Search /> should render 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -453,7 +460,7 @@ exports[`<Search /> should render 1`] = `
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value=""
@@ -592,7 +599,7 @@ exports[`<Search /> should show no results when no result 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -601,7 +608,7 @@ exports[`<Search /> should show no results when no result 1`] = `
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="9999"
@@ -746,7 +753,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -755,7 +762,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="8888"
@@ -817,12 +824,6 @@ exports[`<Search /> should show spinner when loading 1`] = `
 `;
 
 exports[`<Search /> when input is IDCC, should search conventions 1`] = `
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -935,6 +936,38 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   cursor: pointer;
 }
 
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13 {
+  display: block;
+  padding: 1.6rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  font-weight: normal;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -964,37 +997,24 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   padding-bottom: 0;
 }
 
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  display: block;
-  padding: 1.6rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
-}
-
 .c2 {
   width: 100%;
 }
 
 .c4 {
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
 }
 
 @media (max-width:600px) {
@@ -1017,6 +1037,14 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
   .c6 {
     padding: 1.6rem 1rem;
   }
@@ -1034,7 +1062,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -1043,7 +1071,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="1234"
@@ -1063,7 +1091,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         résultats)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1108,12 +1136,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 `;
 
 exports[`<Search /> when input is a valid IDCC, should show only the perfect match  1`] = `
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -1226,6 +1248,28 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   cursor: pointer;
 }
 
+.c11 {
+  display: block;
+  padding: 1.6rem 0;
+  padding-top: 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  font-weight: normal;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -1253,21 +1297,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 .c10:last-of-type > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
 }
 
 .c2 {
@@ -1315,7 +1344,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -1324,7 +1353,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="4567"
@@ -1344,7 +1373,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1422,12 +1451,6 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   color: #f66663;
 }
 
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -1540,6 +1563,32 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   cursor: pointer;
 }
 
+.c13 {
+  display: block;
+  padding: 0.8rem 0;
+  color: #7994d4;
+  font-weight: 600;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14 {
+  font-weight: normal;
+}
+
+.c11 {
+  margin: 0.8rem 0 0 0;
+  font-weight: bold;
+}
+
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -1569,25 +1618,6 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   padding-bottom: 0;
 }
 
-.c13 {
-  display: block;
-  padding: 0.8rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  font-weight: normal;
-}
-
-.c11 {
-  margin: 0.8rem 0 0 0;
-  font-weight: bold;
-}
-
 .c2 {
   width: 100%;
 }
@@ -1599,6 +1629,12 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 @media (max-width:600px) {
   .c12 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c12 {
+    display: none;
   }
 }
 
@@ -1639,7 +1675,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -1648,7 +1684,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="01234567891011"
@@ -1668,7 +1704,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -1749,12 +1785,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   color: #f66663;
 }
 
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c7 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
@@ -1867,35 +1897,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   cursor: pointer;
 }
 
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c10 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .c12 {
   display: block;
   padding: 1.6rem 0;
@@ -1926,6 +1927,42 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   font-weight: bold;
 }
 
+.c8 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
+.c6 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 + .c5 {
+  margin-top: 1.6rem;
+}
+
+.c10 + .c9 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c10:last-of-type > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .c2 {
   width: 100%;
 }
@@ -1937,6 +1974,12 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 @media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c11 {
+    display: none;
   }
 }
 
@@ -1977,7 +2020,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
   </label>
   <span
     class="c1 c2"
@@ -1986,7 +2029,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
       class="c3"
       id="convention-search"
       name="q"
-      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
       role="search"
       type="search"
       value="hello"
@@ -2006,7 +2049,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"
@@ -2038,7 +2081,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="c8"
+        class="sc-fznAgC c8"
       >
         <li
           class="c9 c10"

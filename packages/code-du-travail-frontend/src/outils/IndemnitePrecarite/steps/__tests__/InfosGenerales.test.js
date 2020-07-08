@@ -1,8 +1,9 @@
+import { fireEvent, render } from "@testing-library/react";
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { StepInfosGenerales } from "../InfosGenerales";
 import { Form } from "react-final-form";
+
 import { CONTRACT_TYPE } from "../../components/TypeContrat";
+import { StepInfosGenerales } from "../InfosGenerales";
 
 function renderForm(data) {
   return render(

@@ -1,8 +1,12 @@
+const { SOURCES } = require("@cdt/sources");
+
 function getAgreementBody({ slug }) {
   return {
     size: 1,
     query: {
-      term: { slug },
+      bool: {
+        filter: [{ term: { slug } }, { term: { source: SOURCES.CCN_PAGE } }],
+      },
     },
   };
 }

@@ -14,8 +14,9 @@ function getSearchBody({ source, slug }) {
       },
     },
     _source: [
-      "asideContent", // thematic file
       "action", // outils
+      "breadcrumbs",
+      "categories", // thematic files
       "date",
       "dateDebut", // code-du-travail
       "description", // modele de courrier
@@ -35,11 +36,12 @@ function getSearchBody({ source, slug }) {
       "title",
       "title_vector", // otherwise we can search for related items ?
       "url",
-      "breadcrumbs",
       "idcc",
       "date_publi", // convention-collective
       "answers", // contributions
       "refs", // thematic file
+      "contents", // editorial_content
+      "folder", // editorial_content
     ],
   };
 }

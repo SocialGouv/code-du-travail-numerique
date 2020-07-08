@@ -1,5 +1,5 @@
-import { StepStatus } from "../Status";
 import { renderForm } from "../../../../../test/renderForm";
+import { StepStatus } from "../Status";
 
 describe("<StepStatus />", () => {
   it("should render", () => {
@@ -14,8 +14,8 @@ describe("<StepStatus />", () => {
   });
   it("should render coefficient", () => {
     const { container } = renderForm(StepStatus, {
-      seriousMisconduct: false,
       disabledWorker: true,
+      seriousMisconduct: false,
     });
     expect(container).toMatchSnapshot();
   });

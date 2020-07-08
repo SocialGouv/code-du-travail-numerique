@@ -73,11 +73,11 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
       class="c0"
       id="react-autowhatever-1"
       role="listbox"
-      style="max-height: 300px; border: 1px solid silver; position: absolute; overflow-y: scroll; left: 0px; right: 0px; border-radius: 3px; border-top-right-radius: 0; margin-top: -3px; box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);"
+      style="border: 1px solid silver; border-radius: 3px; border-top-right-radius: 0; box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3); left: 0px; margin-top: -3px; max-height: 300px; overflow-y: scroll; position: absolute; right: 0px;"
     >
       <ul
         role="listbox"
-        style="margin: 0px; padding: 0px; background: white;"
+        style="background: white; margin: 0px; padding: 0px;"
       >
         <li
           aria-selected="false"

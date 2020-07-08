@@ -1,14 +1,15 @@
-import React from "react";
 import { render } from "@testing-library/react";
-import { StepIndemnite } from "../Indemnite";
+import React from "react";
 import { Form } from "react-final-form";
 
+import { StepIndemnite } from "../Indemnite";
+
 const initialValues = {
-  hasTempsPartiel: false,
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
   anciennete: 15 / 12,
   dateNotification: "2018-10-22",
+  hasTempsPartiel: false,
   inaptitude: true,
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
 };
 
 describe("<StepIndemnite />", () => {

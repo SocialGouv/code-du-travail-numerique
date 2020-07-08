@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { differenceInMonths, format, isAfter } from "date-fns";
 import createDecorator from "final-form-calculate";
-import { isAfter, differenceInMonths, format } from "date-fns";
+import PropTypes from "prop-types";
+import React from "react";
 
-import { SectionTitle } from "../../common/stepStyles";
-import { isDate } from "../../common/validators";
 import { parse } from "../../common/date";
-import { YesNoQuestion } from "../../common/YesNoQuestion";
-import { TextQuestion } from "../../common/TextQuestion";
 import { ErrorComputedField } from "../../common/ErrorField";
+import { SectionTitle } from "../../common/stepStyles";
+import { TextQuestion } from "../../common/TextQuestion";
+import { isDate } from "../../common/validators";
+import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { AbsencePeriods, MOTIFS } from "../components/AbsencePeriods";
 
 function validate({
@@ -94,8 +94,8 @@ function StepAnciennete({ form }) {
           hasAbsenceProlonge
             ? form.change("absencePeriods", [
                 {
-                  type: "Absence pour maladie non professionnelle",
                   duration: null,
+                  type: "Absence pour maladie non professionnelle",
                 },
               ])
             : form.change("absencePeriods", []);

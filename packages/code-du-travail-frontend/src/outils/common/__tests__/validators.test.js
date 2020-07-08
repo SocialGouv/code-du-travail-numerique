@@ -1,4 +1,4 @@
-import { required, requiredBoolean, isNumber } from "../validators";
+import { isNumber, required, requiredBoolean } from "../validators";
 
 describe("required", () => {
   it("should return undefined if an input value is provided", () => {

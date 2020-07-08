@@ -78,14 +78,14 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
     >
       <ul
         role="listbox"
-        style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
+        style="background: white; border: 1px solid silver; border-radius: 3px; box-shadow: 0 10px 10px -10px #b7bcdf; left: 0px; margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; position: absolute; right: 0px;"
       >
         <li
           aria-selected="false"
           data-suggestion-index="0"
           id="react-autowhatever-1--item-0"
           role="option"
-          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
         >
           <div
             class="c1"
@@ -104,7 +104,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="1"
           id="react-autowhatever-1--item-1"
           role="option"
-          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
         >
           <div
             class="c1"
@@ -124,7 +124,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="2"
           id="react-autowhatever-1--item-2"
           role="option"
-          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
         >
           <div
             class="c1"
@@ -144,7 +144,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           data-suggestion-index="3"
           id="react-autowhatever-1--item-3"
           role="option"
-          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+          style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
         >
           <div
             class="c1"

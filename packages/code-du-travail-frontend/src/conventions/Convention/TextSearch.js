@@ -1,6 +1,3 @@
-import React, { useCallback, useState } from "react";
-import Link from "next/link";
-import styled from "styled-components";
 import {
   Button,
   icons,
@@ -9,10 +6,15 @@ import {
   theme,
   Title,
 } from "@socialgouv/react-ui";
+import Link from "next/link";
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
+
+import { matopush } from "../../piwik";
 
 const { spacings } = theme;
 
-export function TextSearch({ containerId }) {
+export function TextSearch({ containerId, convention }) {
   const [query, setQuery] = useState("");
   const formatQuery = useCallback(
     (e) => {
@@ -20,6 +22,9 @@ export function TextSearch({ containerId }) {
     },
     [setQuery]
   );
+  const trackSearch = useCallback(() => {
+    matopush[("trackEvent", "pagecc_searchcc", convention.shortTitle, query)];
+  }, [query, convention]);
   return (
     <>
       <Title
@@ -31,6 +36,7 @@ export function TextSearch({ containerId }) {
       <Form
         target="_blank"
         action="https://beta.legifrance.gouv.fr/search/kali#kali"
+        onSubmit={trackSearch}
       >
         <Box>
           <StyledInput

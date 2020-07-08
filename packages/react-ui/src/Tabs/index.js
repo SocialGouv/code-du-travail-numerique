@@ -1,12 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
+import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
-import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
 
-import { animations, box, breakpoints, fonts, spacings } from "../theme";
-import { getTextFromComponent } from "../utils/getTextFromComponent";
 import { OverflowWrapper } from "../OverflowWrapper";
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
+import { animations, box, breakpoints, fonts, spacings } from "../theme";
+import { getTextFromComponent } from "../utils/getTextFromComponent";
 
 export const Tabs = (props) => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
@@ -41,15 +41,15 @@ export const Tabs = (props) => {
 };
 
 Tabs.propTypes = {
-  onSelect: PropTypes.func,
-  selectedIndex: PropTypes.number,
-  defaultIndex: PropTypes.number,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      tab: PropTypes.node.isRequired,
       panel: PropTypes.node.isRequired,
+      tab: PropTypes.node.isRequired,
     })
   ).isRequired,
+  defaultIndex: PropTypes.number,
+  onSelect: PropTypes.func,
+  selectedIndex: PropTypes.number,
 };
 
 Tabs.defaultProps = {

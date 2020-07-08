@@ -1,12 +1,12 @@
+import { icons, Input, theme } from "@socialgouv/react-ui";
 import React from "react";
 import { Field } from "react-final-form";
-import styled from "styled-components";
-import { icons, Input, theme } from "@socialgouv/react-ui";
 import { UID } from "react-uid";
+import styled from "styled-components";
 
-import { isNumber } from "./validators";
 import { InlineError } from "./ErrorField";
 import { Question } from "./Question";
+import { isNumber } from "./validators";
 
 function CurrencyField({
   name,
@@ -19,7 +19,7 @@ function CurrencyField({
     <Field
       name={name}
       validate={isNumber}
-      subscription={{ value: true, error: true, touched: true, invalid: true }}
+      subscription={{ error: true, invalid: true, touched: true, value: true }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
         <UID>

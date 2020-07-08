@@ -1,40 +1,67 @@
-import { StepIntro } from "./steps/Introduction";
-import { StepInfoCCnOptionnal } from "../common/InfosCCn";
-import { StepResult } from "./steps/Result";
-import { StepInformations } from "./steps/Informations";
-import { isNotYetProcessed } from "../common/situations.utils";
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+
+import { StepInfoCCnOptionnal } from "../common/InfosCCn";
+import { isNotYetProcessed } from "../common/situations.utils";
+import { StepInformations } from "./steps/Informations";
+import { StepIntro } from "./steps/Introduction";
+import { StepResult } from "./steps/Result";
+import { StepTypeRupture } from "./steps/TypeRupture";
 
 export const initialState = {
   stepIndex: 0,
   steps: [
     {
       component: StepIntro,
-      name: "intro",
       label: "Introduction",
+      name: "intro",
     },
     {
       component: StepInfoCCnOptionnal,
-      name: "info_cc",
       label: "Convention collective",
+      name: "info_cc",
+    },
+    {
+      component: StepTypeRupture,
+      label: "Type de rupture",
+      name: "rupture",
+      skip: skipTypeRupture,
     },
     {
       component: StepInformations,
-      name: "infos",
       label: "Informations",
-      skip: (values) =>
-        !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)) ||
-        data.situations.filter(({ idcc }) => idcc === values.ccn.num).length ===
-          1,
+      name: "infos",
+      skip: skipInformations,
     },
     {
       component: StepResult,
+      label: "Résultat",
       name: "results",
-      label: "Durée du préavis",
     },
   ],
 };
+
+function ccnNotProcessed(values) {
+  return (
+    !values.ccn ||
+    (values.ccn && isNotYetProcessed(data.situations, values.ccn.num))
+  );
+}
+function skipTypeRupture(values) {
+  return (
+    ccnNotProcessed(values) ||
+    data.situations.filter(({ idcc }) => idcc === values?.ccn.num).length <= 1
+  );
+}
+
+function skipInformations(values) {
+  return (
+    ccnNotProcessed(values) ||
+    data.situations.filter(
+      ({ idcc, typeRupture }) =>
+        typeRupture === values?.typeRupture && idcc === values?.ccn.num
+    ).length <= 1
+  );
+}
 
 export function stepReducer(state, { type, payload }) {
   switch (type) {

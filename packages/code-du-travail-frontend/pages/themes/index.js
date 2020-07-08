@@ -1,7 +1,4 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
-import getConfig from "next/config";
+import { getRouteBySource, SOURCES } from "@cdt/sources";
 import {
   Button,
   Container,
@@ -13,10 +10,14 @@ import {
   Tile,
 } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
 import { FocusRoot } from "../../src/a11y";
+import Metas from "../../src/common/Metas";
+import { Layout } from "../../src/layout/Layout";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -25,9 +26,9 @@ const {
 const SubThemes = ({ children = [] }) => {
   return (
     <div>
-      {children.slice(0, 3).map(({ title }, index) => (
-        <React.Fragment key={title}>
-          {title}
+      {children.slice(0, 3).map(({ label }, index) => (
+        <React.Fragment key={label}>
+          {label}
           {index < 2 ? (
             index < children.length - 1 && (
               <PrimaryColored> &bull;&nbsp;</PrimaryColored>
@@ -61,8 +62,8 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
             children.map(({ children, icon, slug, title }) => (
               <Link
                 key={slug}
-                href="/themes/[slug]"
-                as={`/themes/${slug}`}
+                href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
+                as={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
                 passHref
               >
                 <Tile icon={icons[icon]} title={title}>

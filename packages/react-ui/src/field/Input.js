@@ -1,6 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
+
 import { box, breakpoints, fonts, spacings } from "../theme";
 
 export const Input = ({ icon: Icon, className, ...props }) => {
@@ -17,9 +18,9 @@ export const Input = ({ icon: Icon, className, ...props }) => {
 };
 
 Input.propTypes = {
-  name: PropTypes.string.isRequired,
   className: PropTypes.string,
   icon: PropTypes.elementType,
+  name: PropTypes.string.isRequired,
 };
 
 Input.defaultProps = {

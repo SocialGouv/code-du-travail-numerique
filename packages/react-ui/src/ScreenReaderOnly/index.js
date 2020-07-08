@@ -1,10 +1,10 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
 export const ScreenReaderOnly = ({ type, ...props }) => {
   const Component = type === "inline" ? InlineSR : BlockSR;
-  return <Component {...props}></Component>;
+  return <Component {...props} />;
 };
 
 ScreenReaderOnly.propTypes = {

@@ -109,6 +109,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        Moins de 6 mois
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -122,17 +129,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         Non
       </strong>
     </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        moins de 6 mois
-      </strong>
-    </li>
   </ul>
   <ul>
     <li>
-      Catégorie socio-professionnelle
+      Catégorie professionnelle
        : 
       <strong>
         Employés
@@ -142,7 +142,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
       Ancienneté selon la convention collective
        : 
       <strong>
-        moins de 1 mois
+        Moins de 1 mois
       </strong>
     </li>
     <li>
@@ -268,7 +268,15 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       class="c3"
       role="alert"
     >
-      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié que ce que prévoit le code du travail peut être prévue par la loi pour certains cas particuliers, par un accord d’entreprise, le contrat de travail ou les usages.
+      Une durée de préavis de licenciement ou une condition d’ancienneté plus favorable au salarié peut être prévue par une convention collective, un accord de branche, un accord d’entreprise ou le contrat de travail ou les usages.
+      <br />
+      Vous pouvez faire une recherche par mots-clés dans
+       
+      <a
+        href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
+      >
+        votre convention collective
+      </a>
     </div>
   </div>
   <h2
@@ -288,14 +296,19 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     <li>
       Durée conventionnelle:
        
-      <strong>
-        1 mois
-      </strong>
+      La convention collective n'a pas été traitée par nos services.
     </li>
   </ul>
   Éléments saisis :
   <br />
   <ul>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        6 mois à moins de 2 ans
+      </strong>
+    </li>
     <li>
       Licenciement pour faute grave
        : 
@@ -309,63 +322,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <strong>
         Non
       </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        6 mois à moins de 2 ans
-      </strong>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      Catégorie socio-professionnelle
-       : 
-      <strong>
-        Employés
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon la convention collective
-       : 
-      <strong>
-        1 mois à moins de 2 ans
-      </strong>
-    </li>
-    <li>
-      Convention collective
-       : 
-      <strong>
-        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-      </strong>
-    </li>
-  </ul>
-  <h2
-    class="c0"
-  >
-    Source
-  </h2>
-  <ul>
-    <li>
-      <a
-        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’article l.1234-1 du code du travail"
-      >
-        Article L.1234-1 du code du travail
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’annexe ii, article 13"
-      >
-        Annexe II, article 13
-      </a>
     </li>
   </ul>
 </div>
@@ -440,14 +396,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   >
     Durée du préavis
   </h2>
+  <strong
+    class="c1"
+  >
+    Aucun préavis
+  </strong>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à 
-    <strong
-      class="c1"
-    >
-      1 mois
-    </strong>
-    .
+    Le code du travail ne prévoit pas de durée de préavis de licenciement sauf, cas particuliers.
   </p>
   <div
     class="c2"
@@ -456,7 +411,15 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       class="c3"
       role="alert"
     >
-      L’existence ou la durée du préavis de licenciement peut aussi être prévue dans un accord d’entreprise ou à défaut par un usage dans l’entreprise.
+      L’existence et la durée du préavis de licenciement peuvent être prévues dans la convention collective, un accord d’entreprise ou à défaut par un usage dans l’entreprise.
+      <br />
+      Vous pouvez faire une recherche par mots-clés dans
+       
+      <a
+        href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
+      >
+        votre convention collective
+      </a>
     </div>
   </div>
   <h2
@@ -474,14 +437,19 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     <li>
       Durée conventionnelle:
        
-      <strong>
-        1 mois
-      </strong>
+      La convention collective n'a pas été traitée par nos services.
     </li>
   </ul>
   Éléments saisis :
   <br />
   <ul>
+    <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        Moins de 6 mois
+      </strong>
+    </li>
     <li>
       Licenciement pour faute grave
        : 
@@ -495,63 +463,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <strong>
         Non
       </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        moins de 6 mois
-      </strong>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      Catégorie socio-professionnelle
-       : 
-      <strong>
-        Employés
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon la convention collective
-       : 
-      <strong>
-        1 mois à moins de 2 ans
-      </strong>
-    </li>
-    <li>
-      Convention collective
-       : 
-      <strong>
-        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-      </strong>
-    </li>
-  </ul>
-  <h2
-    class="c0"
-  >
-    Source
-  </h2>
-  <ul>
-    <li>
-      <a
-        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’article l.1234-1 du code du travail"
-      >
-        Article L.1234-1 du code du travail
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’annexe ii, article 13"
-      >
-        Annexe II, article 13
-      </a>
     </li>
   </ul>
 </div>
@@ -668,6 +579,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        Plus de 2 ans
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -679,13 +597,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        plus de 2 ans
       </strong>
     </li>
   </ul>
@@ -812,6 +723,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <br />
   <ul>
     <li>
+      Ancienneté selon le code du travail
+       : 
+      <strong>
+        Plus de 2 ans
+      </strong>
+    </li>
+    <li>
       Licenciement pour faute grave
        : 
       <strong>
@@ -823,13 +741,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        : 
       <strong>
         Non
-      </strong>
-    </li>
-    <li>
-      Ancienneté selon le code du travail
-       : 
-      <strong>
-        plus de 2 ans
       </strong>
     </li>
   </ul>

@@ -30,10 +30,10 @@ export function getIndemnite({
   let indemniteConventionnelle = 0;
   let formula = "-";
   const labels = {
-    "Salaire de référence (Sref)": salaireRef,
-    "Ancienneté totale": round(anciennete),
     "Ancienneté (en année entière)": anneeAncienete,
+    "Ancienneté totale": round(anciennete),
     Groupe: groupe,
+    "Salaire de référence (Sref)": salaireRef,
     ...(age && { Age: age }),
     ...(hasOpe && { "affiliation à une OPE": hasOpe ? "oui" : "non" }),
     ...(hasOpe &&
@@ -55,7 +55,7 @@ export function getIndemnite({
     // le salarié a plus de 2ans d'anciennté
     else if (anneeAncienete >= 2) {
       indemniteConventionnelle = (3 / 10) * salaireRef * anciennete;
-      formula = `(3 / 10) * Sref * "ancienneté" `;
+      formula = `3 / 10 * Sref * "ancienneté" `;
     }
     // Pour les salarié avec plus de 5ans d'ancienneté
     if (anneeAncienete >= 5) {
@@ -94,17 +94,17 @@ export function getIndemnite({
     // le salarié a entre 2 et 10ans d'anciennté
     else if (anneeAncienete >= 2 && anneeAncienete < 10) {
       indemniteConventionnelle = (3 / 10) * salaireRef * anciennete;
-      formula = `(3 / 10) * Sref * "ancienneté"`;
+      formula = `3 / 10 * Sref * "ancienneté"`;
     }
     // le salarié a entre 10 et 20ans d'anciennté
     else if (anneeAncienete >= 10 && anneeAncienete < 20) {
       indemniteConventionnelle = (4 / 10) * salaireRef * anciennete;
-      formula = `(4 / 10) * Sref * "ancienneté"`;
+      formula = `4 / 10 * Sref * "ancienneté"`;
     }
     // le salarié a plus de 20ans d'anciennté
     else if (anneeAncienete >= 20) {
       indemniteConventionnelle = (5 / 10) * salaireRef * anciennete;
-      formula = `(5 / 10) *  Sref * "ancienneté"`;
+      formula = `5 / 10 *  Sref * "ancienneté"`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
     if (anneeAncienete >= 5) {
@@ -142,17 +142,17 @@ export function getIndemnite({
     // le salarié a entre 2 et 10ans d'anciennté
     else if (anneeAncienete >= 2 && anneeAncienete < 10) {
       indemniteConventionnelle = (4 / 10) * salaireRef * anciennete;
-      formula = `(4 / 10) * Sref  * "ancienneté"`;
+      formula = `2 / 5 * Sref * "ancienneté"`;
     }
     // le salarié a entre 10 et 15ans d'anciennté
     else if (anneeAncienete >= 10 && anneeAncienete < 15) {
       indemniteConventionnelle = (6 / 10) * salaireRef * anciennete;
-      formula = `(6 / 10) * Sref  * "ancienneté"`;
+      formula = `3 / 5 * Sref * "ancienneté"`;
     }
     // le salarié a plus de 15ans d'anciennté
     else if (anneeAncienete >= 15) {
       indemniteConventionnelle = (8 / 10) * salaireRef * anciennete;
-      formula = `(8 / 10) * Sref  * "ancienneté"`;
+      formula = `4 / 5 * Sref * "ancienneté"`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
     if (anneeAncienete > 6) {

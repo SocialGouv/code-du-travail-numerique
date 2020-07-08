@@ -1,9 +1,9 @@
-import fetch from "node-fetch";
 import { SOURCES } from "@cdt/sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { logger } from "./indexing/logger";
+import { vectorizeDocument } from "./indexing/vectorizer";
 
 logger.silent = true;
 const t0 = Date.now();
@@ -13,30 +13,25 @@ const excludeSources = [
   SOURCES.GLOSSARY,
   SOURCES.PREQUALIFIED,
   SOURCES.HIGHLIGHTS,
+  SOURCES.SHEET_MT_PAGE,
+  SOURCES.CCN_PAGE,
 ];
 const queue = new PQueue({ concurrency: 3 });
 
-function fetchVector(data) {
+async function fetchVector(data) {
   return NLP_URL
-    ? fetch(`${NLP_URL}/api/search?q=${escape(data.title)}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data.text || ""),
+    ? vectorizeDocument(data.title, data.text)
+      .then((title_vector) => {
+        if (title_vector.message) {
+          throw new Error(`error fetching ${data.title}`);
+        }
+        data.title_vector = title_vector;
+        return data;
       })
-        .then((res) => res.json())
-        .then((title_vector) => {
-          if (title_vector.message) {
-            throw new Error(`error fetching ${data.title}`);
-          }
-          data.title_vector = title_vector;
-          return data;
-        })
-        .catch((err) => {
-          console.error(`error fetching ${data.title}`, err);
-          throw err;
-        })
+      .catch((err) => {
+        console.error(`error fetching ${data.title}`, err);
+        return data;
+      })
     : data;
 }
 

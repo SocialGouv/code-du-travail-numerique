@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Field } from "react-final-form";
 import { icons, Input } from "@socialgouv/react-ui";
-import { differenceInMonths, subMonths, format } from "date-fns";
+import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Error } from "../../common/ErrorField";
-import { isNumber } from "../../common/validators";
-import { SmallText } from "../../common/stepStyles";
+import PropTypes from "prop-types";
+import React from "react";
+import { Field } from "react-final-form";
+
 import { parse } from "../../common/date";
+import { Error } from "../../common/ErrorField";
+import { Question } from "../../common/Question";
+import { SmallText } from "../../common/stepStyles";
+import { isNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
+import { MOTIFS } from "../components/AbsencePeriods";
 import {
   SalaireTempsPartiel,
   TEMPS_PARTIEL,
   TEMPS_PLEIN,
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
-import { MOTIFS } from "../components/AbsencePeriods";
-import { Question } from "../../common/Question";
 
 function StepSalaires({ form }) {
   return (
@@ -29,8 +29,8 @@ function StepSalaires({ form }) {
           if (hasTempsPartiel) {
             form.batch(() => {
               form.change("salairePeriods", [
-                { type: TEMPS_PLEIN, duration: null, salary: null },
-                { type: TEMPS_PARTIEL, duration: null, salary: null },
+                { duration: null, salary: null, type: TEMPS_PLEIN },
+                { duration: null, salary: null, type: TEMPS_PARTIEL },
               ]);
               form.change("salaire", null);
               form.change("salaires", []);
@@ -70,10 +70,10 @@ function StepSalaires({ form }) {
                           name="salaire"
                           validate={isNumber}
                           subscription={{
-                            value: true,
                             error: true,
-                            touched: true,
                             invalid: true,
+                            touched: true,
+                            value: true,
                           }}
                         >
                           {({ input, meta: { touched, error, invalid } }) => (
@@ -86,7 +86,7 @@ function StepSalaires({ form }) {
                                 Prendre en compte les primes et avantages en
                                 nature.
                               </SmallText>
-                              <StyledInput
+                              <Input
                                 {...input}
                                 type="number"
                                 invalid={touched && invalid}
@@ -111,10 +111,6 @@ function StepSalaires({ form }) {
     </>
   );
 }
-
-const StyledInput = styled(Input)`
-  width: 40rem;
-`;
 
 function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
   const dEntree = parse(dateEntree);

@@ -70,6 +70,30 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   list-style-type: none;
 }
 
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 5rem 0 3.2rem 0;
+}
+
+.c16 {
+  width: 3rem;
+  margin-left: 1rem;
+}
+
 .c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -202,30 +226,6 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 5rem 0 3.2rem 0;
-}
-
-.c16 {
-  width: 3rem;
-  margin-left: 1rem;
-}
-
 .c0 {
   padding: 0 0 0 28rem;
   overflow: visible;
@@ -251,9 +251,39 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   }
 }
 
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c13 {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c15 + .c14 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c12 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c12 {
+    display: none;
   }
 }
 
@@ -338,30 +368,6 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c0 {
     padding: 0;
   }
@@ -405,7 +411,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           class="c5"
         >
            
-          1/4
+          1/5
         </span>
       </span>
       <ul
@@ -441,7 +447,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           >
             3
           </span>
-          Informations
+          Type de rupture
         </li>
         <li
           class="c7 c10"
@@ -451,21 +457,33 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
           >
             4
           </span>
-          Durée du préavis
+          Informations
+        </li>
+        <li
+          class="c7 c10"
+        >
+          <span
+            class="c11"
+          >
+            5
+          </span>
+          Résultat
         </li>
       </ul>
     </div>
     <p>
-      Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures pour rechercher un emploi pendant son préavis.
+      Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi. Il peut s’agir du préavis en cas de licenciement, de démission ou de rupture de la période d’essai. En cas de rupture de la période d’essai, le préavis est aussi appelé délai de prévenance.
     </p>
     <p>
-      Le code du travail ne prévoit pas ce droit, sauf cas particuliers. En revanche, la majorité des conventions collectives fixe un nombre d’heures d’absences pour rechercher un emploi et les modalités d’utilisation.
+      Le code du travail ne prévoit pas ce droit (sauf cas particulier du droit applicable à l’Alsace Moselle). En revanche, plusieurs conventions collectives fixent un nombre d’heures d’absence autorisée pour rechercher un emploi et leurs conditions d’utilisation.
     </p>
     <p>
-      Afin de réaliser cette simulation, vous aurez besoin d’informations concernant la situation du salarié concerné, comme sa convention collective, sa catégorie, son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. Prévoyez deux à cinq minutes pour cette simulation.
+      Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. 
+      <br />
+      Prévoyez 2 à 5 minutes pour cette simulation.
     </p>
     <p>
-      Cliquez sur suivant pour commencer la simulation.
+      Cliquez sur Commencer pour démarrer la simulation.
     </p>
     <div
       class="c12"
@@ -473,7 +491,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
       <button
         class="c13 c14 c15"
       >
-        Suivant
+        Commencer
         <svg
           class="c16"
           fill="none"

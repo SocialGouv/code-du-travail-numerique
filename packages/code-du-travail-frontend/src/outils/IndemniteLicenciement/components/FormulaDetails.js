@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { theme } from "@socialgouv/react-ui";
+import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { MathFormula } from "../../common/MathFormula";
 
 function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
@@ -20,9 +20,9 @@ function FormulaDetails({ infoCalcul: { labels, formula } }) {
       </ListDetails>
       <ErrorBoundary>
         <HeadingDetails>Formule :</HeadingDetails>
-        <FormuleWrapper>
-          <MathJax math={"`" + formula + "`"} />
-        </FormuleWrapper>
+        <FormulaWrapper>
+          <MathFormula formula={formula} />
+        </FormulaWrapper>
       </ErrorBoundary>
     </Details>
   );
@@ -32,8 +32,8 @@ export { FormulaDetails };
 
 FormulaDetails.propTypes = {
   infoCalcul: PropTypes.shape({
-    labels: PropTypes.object.isRequired,
     formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired,
   }),
 };
 
@@ -61,6 +61,6 @@ const ItemDetails = styled.li`
   font-size: ${fonts.sizes.small};
 `;
 
-const FormuleWrapper = styled.div`
+const FormulaWrapper = styled.div`
   margin: ${spacings.base} 0;
 `;

@@ -1,5 +1,5 @@
-import { StepInformations } from "../Informations";
 import { renderForm } from "../../../../../test/renderForm";
+import { StepInformations } from "../Informations";
 
 describe("<StepInformations />", () => {
   it("should render", () => {
@@ -15,7 +15,7 @@ describe("<StepInformations />", () => {
   it("should render coefficient", () => {
     const { container } = renderForm(StepInformations, {
       ccn: { num: 292 },
-      criteria: { "catégorie socio-professionnelle": "42| Collaborateurs" },
+      criteria: { "catégorie professionnelle": "42| Collaborateurs" },
     });
     expect(container).toMatchSnapshot();
   });

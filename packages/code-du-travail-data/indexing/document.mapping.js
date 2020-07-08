@@ -1,111 +1,205 @@
 export const documentMapping = {
   properties: {
-    description: { type: "text" },
-    metaDescription: { type: "text" },
-    icon: { type: "keyword" },
+    // available for tools
     action: { type: "text" },
-    // Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
-    source: {
-      type: "keyword",
-    },
-    // The local document slug
-    slug: {
-      type: "keyword",
-    },
-    // The source URL
-    url: {
-      type: "keyword",
-    },
-    title_vector: {
-      type: "dense_vector",
-      dims: 512,
-    },
-    title: {
-      type: "text",
-      fields: {
-        article_id: {
-          type: "text",
-          analyzer: "article_id_analyzer",
+
+    answer: {
+      properties: {
+        answer: { type: "text" },
+        question: { type: "text" },
+        references: {
+          properties: {
+            category: { type: "keyword" },
+            url: { type: "keyword" },
+            value: { type: "text" },
+          },
         },
-        french: {
-          type: "text",
-          analyzer: "french_indexing",
-          search_analyzer: "french",
-        },
-        french_with_synonyms: {
-          type: "text",
-          analyzer: "french_with_synonyms",
-        },
+        slug: { type: "keyword" },
+        theme: { type: "text" },
       },
     },
-    text: {
+
+    ape: {
+      analyzer: "idcc_ape",
       type: "text",
-      fields: {
-        french: {
-          type: "text",
-          analyzer: "french",
+    },
+
+    articlesByTheme: {
+      properties: {
+        articles: {
+          properties: {
+            cid: { type: "keyword" },
+            content: { type: "text" },
+            id: { type: "keyword" },
+          },
         },
-        french_with_synonyms: {
-          type: "text",
-          analyzer: "french_with_synonyms",
-        },
+        bloc: { type: "keyword" },
       },
     },
-    // Currently only available for `Fiches service public`.
-    tags: {
-      type: "text",
-      analyzer: "french",
-      fields: {
-        keywords: {
-          type: "text",
-          analyzer: "keyword",
-        },
-      },
-    },
-    // Currently only available for `Code du travail`.
-    path: {
-      type: "text",
-      analyzer: "french",
-    },
-    themes: {
-      type: "keyword",
-    },
+
+    // available for themes
     breadcrumbs: {
       properties: {
         label: { type: "text" },
         slug: { type: "keyword" },
       },
     },
-    theme: {
-      type: "keyword",
+
+    // only in thematic files
+    categories: {
+      enabled: false,
     },
-    shortTitle: {
-      type: "text",
-      fields: {
-        french: {
-          type: "text",
-          analyzer: "french_indexing",
-          search_analyzer: "french",
-        },
+
+    // available for themes
+    children: {
+      properties: {
+        slug: { type: "text" },
+        title: { type: "text" },
       },
     },
+
+    contents: {
+      enabled: false,
+    },
+
+    description: { type: "text" },
+
+    effectif: {
+      type: "rank_feature",
+    },
+
+    excludeFromSearch: {
+      type: "boolean",
+    },
+
+    folder: { type: "text" },
+
+    // available for themes
+    icon: { type: "keyword" },
+
     idcc: {
-      type: "keyword",
       fields: {
         text: {
           type: "text",
         },
       },
+      type: "keyword",
     },
-    effectif: {
-      type: "rank_feature",
+
+    // available in editorial content
+    intro: { type: "text" },
+
+    metaDescription: { type: "text" },
+
+    nbArticles: {
+      properties: {
+        vigueurEtendu: { type: "integer" },
+        vigueurNonEtendu: { type: "integer" },
+      },
     },
-    ape: {
+
+    nbTextes: { type: "integer" },
+
+    // Currently only available for `Code du travail`.
+    path: {
+      analyzer: "french",
       type: "text",
-      analyzer: "idcc_ape",
     },
-    excludeFromSearch: {
-      type: "boolean",
+
+    // available for themes
+    position: { type: "keyword" },
+
+    publishedAt: { type: "date" },
+
+    // available for themes
+    refs: {
+      properties: {
+        title: { type: "text" },
+        url: { type: "keyword" },
+      },
+    },
+
+    shortTitle: {
+      fields: {
+        french: {
+          analyzer: "french_indexing",
+          search_analyzer: "french",
+          type: "text",
+        },
+      },
+      type: "text",
+    },
+
+    // The local document slug
+    slug: {
+      type: "keyword",
+    },
+
+    // Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
+    source: {
+      type: "keyword",
+    },
+
+    // Currently only available for `Fiches service public`.
+    tags: {
+      analyzer: "french",
+      fields: {
+        keywords: {
+          analyzer: "keyword",
+          type: "text",
+        },
+      },
+      type: "text",
+    },
+
+    text: {
+      fields: {
+        french: {
+          analyzer: "french",
+          type: "text",
+        },
+        french_with_synonyms: {
+          analyzer: "french_with_synonyms",
+          type: "text",
+        },
+      },
+      type: "text",
+    },
+
+    theme: {
+      type: "keyword",
+    },
+
+    themes: {
+      type: "keyword",
+    },
+
+    title: {
+      fields: {
+        article_id: {
+          analyzer: "article_id_analyzer",
+          type: "text",
+        },
+        french: {
+          analyzer: "french_indexing",
+          search_analyzer: "french",
+          type: "text",
+        },
+        french_with_synonyms: {
+          analyzer: "french_with_synonyms",
+          type: "text",
+        },
+      },
+      type: "text",
+    },
+
+    title_vector: {
+      dims: 512,
+      type: "dense_vector",
+    },
+    // The source URL
+    url: {
+      type: "keyword",
     },
   },
 };
