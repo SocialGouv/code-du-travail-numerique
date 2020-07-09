@@ -17,6 +17,8 @@ Release:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
   before_script:
+    - npm config set access public
+    - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
     - apk add --no-cache git=~2
     - git checkout ${CI_COMMIT_REF_NAME}
     - git config user.name "${CI_GIT_AUTHOR_NAME}"

@@ -1,6 +1,6 @@
 import externalTools from "@cdt/data...tools/externals.json";
 import tools from "@cdt/data...tools/internals.json";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Container,
   Grid,

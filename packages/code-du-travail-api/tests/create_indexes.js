@@ -1,15 +1,14 @@
-import client from "../src/server/conf/elasticsearch";
+import { documentMapping } from "@cdt/data/indexing/document.mapping";
 import {
-  version,
   createIndex,
   indexDocumentsBatched,
+  version,
 } from "@cdt/data/indexing/es_client.utils";
-
 import { DOCUMENTS, SUGGESTIONS } from "@cdt/data/indexing/esIndexName";
-
-import { documentMapping } from "@cdt/data/indexing/document.mapping";
-import documents from "./cdtn_document.data.json";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
+
+import client from "../src/server/conf/elasticsearch";
+import documents from "./cdtn_document.data.json";
 import suggestions from "./suggestions_data.json";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn_test";
@@ -26,8 +25,8 @@ async function main() {
   });
   await indexDocumentsBatched({
     client,
-    indexName: documentsIndexName,
     documents: documents,
+    indexName: documentsIndexName,
   });
 
   await createIndex({
@@ -37,8 +36,8 @@ async function main() {
   });
   await indexDocumentsBatched({
     client,
-    indexName: suggestionsIndexName,
     documents: suggestions,
+    indexName: suggestionsIndexName,
   });
 }
 

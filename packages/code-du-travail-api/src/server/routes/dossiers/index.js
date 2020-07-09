@@ -1,6 +1,6 @@
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const getItemBySlugBody = require("../items/searchBySourceSlug.elastic");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
@@ -21,8 +21,8 @@ const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 router.get("/dossiers/:slug", async (ctx) => {
   const { slug } = ctx.params;
-  const body = getItemBySlugBody({ source: SOURCES.THEMATIC_FILES, slug });
-  const response = await elasticsearchClient.search({ index, body });
+  const body = getItemBySlugBody({ slug, source: SOURCES.THEMATIC_FILES });
+  const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no thematic files that match ${slug}`);

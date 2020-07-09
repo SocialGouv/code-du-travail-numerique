@@ -1,4 +1,4 @@
-import slugify from "@cdt/data/slugify";
+import slugify from "@socialgouv/cdtn-slugify";
 import debounce from "debounce-promise";
 import fetch from "isomorphic-unfetch";
 import memoizee from "memoizee";

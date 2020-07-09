@@ -4,13 +4,13 @@ const queryString = require("query-string");
 const cdt = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
 const conventions = require("@socialgouv/kali-data/data/index.json");
 
-const slugify = require("../../slugify");
+const slugify = require("@socialgouv/cdtn-slugify");
 
-const isConventionCollective = qs => qs.idConvention;
-const isCodeDuTravail = qs => qs.cidTexte === "LEGITEXT000006072050";
-const isJournalOfficiel = qs => (qs.cidText || "").includes("JORFTEXT");
+const isConventionCollective = (qs) => qs.idConvention;
+const isCodeDuTravail = (qs) => qs.cidTexte === "LEGITEXT000006072050";
+const isJournalOfficiel = (qs) => (qs.cidText || "").includes("JORFTEXT");
 
-const getTextType = qs => {
+const getTextType = (qs) => {
   if (isCodeDuTravail(qs)) {
     return "code-du-travail";
   }
@@ -23,45 +23,45 @@ const getTextType = qs => {
 };
 
 // resolve article.num in LEGI extract
-const getArticleNumFromId = id => {
+const getArticleNumFromId = (id) => {
   const article = find(
     cdt,
-    node => node.type === "article" && node.data.id === id,
+    (node) => node.type === "article" && node.data.id === id
   );
   return article && article.data.num;
 };
 
-const getArticlesFromSection = id => {
-  const section = find(cdt, node => node.data.id === id);
+const getArticlesFromSection = (id) => {
+  const section = find(cdt, (node) => node.data.id === id);
   if (section) {
     return section.children
-      .filter(child => child.type === "article")
-      .map(article => createCDTRef(article.data.num));
+      .filter((child) => child.type === "article")
+      .map((article) => createCDTRef(article.data.num));
   }
   return [];
 };
 
-const createCDTRef = id => ({
-  type: "code-du-travail",
+const createCDTRef = (id) => ({
   id: id.toLowerCase(),
   title: `Article ${id} du code du travail`,
+  type: "code-du-travail",
 });
 
 const createCCRef = (id, slug, title) => ({
-  type: "convention-collective",
   id,
   slug,
   title,
+  type: "convention-collective",
 });
 
 const createJORef = (id, title, url) => ({
-  type: "journal-officiel",
   id,
   title,
+  type: "journal-officiel",
   url,
 });
 
-const parseReference = reference => {
+const parseReference = (reference) => {
   const { URL: url } = reference.attributes;
   const qs = queryString.parse(url.split("?")[1]);
   const type = getTextType(qs);
@@ -80,7 +80,7 @@ const parseReference = reference => {
       break;
     case "convention-collective": {
       const { id, title, num, shortTitle } = conventions.find(
-        convention => convention.id === qs.idConvention,
+        (convention) => convention.id === qs.idConvention
       );
       const slug = slugify(`${num}-${shortTitle}`.substring(0, 80)); // as in populate.js
       return [createCCRef(id, slug, title)];

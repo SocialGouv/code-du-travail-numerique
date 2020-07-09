@@ -1,4 +1,4 @@
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 

@@ -1,4 +1,8 @@
-import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
+import {
+  getLabelBySource,
+  getRouteBySource,
+  SOURCES,
+} from "@socialgouv/cdtn-sources";
 import {
   ArrowLink,
   Container,

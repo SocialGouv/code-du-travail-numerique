@@ -1,4 +1,4 @@
-const { getSourceByRoute } = require("@cdt/sources");
+const { getSourceByRoute } = require("@socialgouv/cdtn-sources");
 
 // get ES document related to given url
 const getDocumentByUrlQuery = (
@@ -20,12 +20,12 @@ const getDocumentByUrlQuery = (
   }
   return {
     _source,
-    size: 1,
     query: {
       bool: {
         filter: [{ term: { slug } }, { term: { source: esSource } }],
       },
     },
+    size: 1,
   };
 };
 

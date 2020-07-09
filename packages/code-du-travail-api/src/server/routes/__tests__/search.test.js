@@ -1,7 +1,7 @@
 const request = require("supertest");
 const Koa = require("koa");
 const winston = require("winston");
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
@@ -9,6 +9,7 @@ const getSemBody = require("../search/search.sem");
 const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
 
 const { logger } = require("../../utils/logger");
+
 logger.level = winston.error;
 
 const app = new Koa();

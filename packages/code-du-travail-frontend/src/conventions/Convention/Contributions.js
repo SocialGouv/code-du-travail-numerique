@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Accordion, theme, Title } from "@socialgouv/react-ui";
 import Link from "next/link";
 import React from "react";

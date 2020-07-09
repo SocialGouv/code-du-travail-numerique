@@ -5,7 +5,8 @@
   "description": "generate courrier-type.json",
   "main": "index.js",
   "dependencies": {
-    "@cdt/sources": "^4.22.0",
+    "@socialgouv/cdtn-slugify": "^4.22.0",
+    "@socialgouv/cdtn-sources": "^4.22.0",
     "@socialgouv/datafiller-data": "^1.33.0",
     "mammoth": "^1.4.9"
   }

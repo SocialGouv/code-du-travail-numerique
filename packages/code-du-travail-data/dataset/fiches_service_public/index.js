@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fiches = require("@socialgouv/fiches-vdd");
-const { SOURCES, getRouteBySource } = require("@cdt/sources");
+const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
 
-const slugify = require("../../slugify");
+const slugify = require("@socialgouv/cdtn-slugify");
 const { filter } = require("./filter");
 const format = require("./format");
 
@@ -52,21 +52,21 @@ const getFichesSP = () =>
       }) => {
         const slug = slugify(title);
         return {
-          id,
-          source: SOURCES.SHEET_SP,
-          title,
-          slug,
-          description,
           breadcrumbs: getBreadcrumbs(
             `/${getRouteBySource(SOURCES.SHEET_SP)}/${slug}`
           ),
-          theme,
-          text,
-          raw,
           date,
-          references_juridiques,
-          url,
+          description,
           excludeFromSearch: contribFicheId.includes(id),
+          id,
+          raw,
+          references_juridiques,
+          slug,
+          source: SOURCES.SHEET_SP,
+          text,
+          theme,
+          title,
+          url,
         };
       }
     );

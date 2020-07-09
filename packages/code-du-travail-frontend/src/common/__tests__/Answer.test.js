@@ -1,4 +1,4 @@
-import { getRouteBySource, SOURCES } from "@cdt/sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { render } from "@testing-library/react";
 import Router from "next/router";
 import React from "react";

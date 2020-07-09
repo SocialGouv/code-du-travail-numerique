@@ -1,6 +1,6 @@
 import tools from "@cdt/data...tools/internals.json";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
 import * as Sentry from "@sentry/browser";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
   Container,

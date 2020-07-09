@@ -1,0 +1,30 @@
+{
+  "name": "@socialgouv/cdtn-slugify",
+  "version": "4.22.0",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/slugify"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**",
+      "!**/data/**"
+    ],
+    "testEnvironment": "node"
+  }
+}

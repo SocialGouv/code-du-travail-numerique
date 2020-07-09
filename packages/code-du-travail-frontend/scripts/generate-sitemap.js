@@ -1,9 +1,9 @@
+import slugify from "@socialgouv/cdtn-slugify";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import glossary from "@socialgouv/datafiller-data/data/glossary.json";
+import { buildSitemaps } from "express-sitemap-xml";
 import fs from "fs";
 import { promisify } from "util";
-import { buildSitemaps } from "express-sitemap-xml";
-import glossary from "@socialgouv/datafiller-data/data/glossary.json";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import slugify from "@cdt/data/slugify";
 
 const DOCUMENT_PATH =
   process.env.DUMP_PATH || "../../code-du-travail-data/dist/dump.data.json";
