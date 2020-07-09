@@ -8,7 +8,6 @@ const { SOURCES } = require("@socialgouv/cdtn-sources");
  */
 function getRelatedThemesBody({ query, size = 5 }) {
   return {
-    size,
     _source: ["icon", "title", "slug", "url", "source"],
     query: {
       bool: {
@@ -20,21 +19,22 @@ function getRelatedThemesBody({ query, size = 5 }) {
         must: {
           match: {
             title: {
-              query: `${query}`,
               fuzziness: "auto",
+              query: `${query}`,
             },
           },
         },
         should: {
           match: {
             "breadcrumbs.label": {
-              query: `${query}`,
               fuzziness: "auto",
+              query: `${query}`,
             },
           },
         },
       },
     },
+    size,
   };
 }
 
