@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
+
+
+### Features
+
+* **data:** add infographies ([#2884](https://github.com/SocialGouv/code-du-travail-numerique/issues/2884)) ([f886be7](https://github.com/SocialGouv/code-du-travail-numerique/commit/f886be7db2133a7be8f272d87dbd53dd499bee83))
+* **search:** replace NLP API to external TF Serve service  ([#2809](https://github.com/SocialGouv/code-du-travail-numerique/issues/2809)) ([bdd00be](https://github.com/SocialGouv/code-du-travail-numerique/commit/bdd00be84c788d104ec68ba16b3b0e1bc2f35a66))
+
+
+
+
+
 # [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
 
 **Note:** Version bump only for package @cdt/api

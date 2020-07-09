@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **front:** allow dailymotion videos and fix wrong date fromat ([#2855](https://github.com/SocialGouv/code-du-travail-numerique/issues/2855)) ([883ed22](https://github.com/SocialGouv/code-du-travail-numerique/commit/883ed2236dade60a9996aa0b29212b1a08fe43be))
+
+
+### Features
+
+* **front:** change cc search tracking ([#2880](https://github.com/SocialGouv/code-du-travail-numerique/issues/2880)) ([c7bf99a](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7bf99a9cdd745b4a2fa48756c4f945dc5481efe))
+* **ui:** auto-fix accordions ([#2882](https://github.com/SocialGouv/code-du-travail-numerique/issues/2882)) ([5608b5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/5608b5be8e98b884191a6d0e5ac2a31358351fa3))
+
+
+
+
+
 # [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
 
 **Note:** Version bump only for package @socialgouv/react-ui

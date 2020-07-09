@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
+
+
+### Features
+
+* **data:** add infographies ([#2884](https://github.com/SocialGouv/code-du-travail-numerique/issues/2884)) ([f886be7](https://github.com/SocialGouv/code-du-travail-numerique/commit/f886be7db2133a7be8f272d87dbd53dd499bee83))
+* **data:** update election CSE ([#2856](https://github.com/SocialGouv/code-du-travail-numerique/issues/2856)) ([404a1c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/404a1c9405b81efc7ecfaa64be0818be3ce2ea1e))
+
+
+
+
+
 # [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
 
 

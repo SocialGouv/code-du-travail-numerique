@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
+
+
+### Features
+
+* **ui:** auto-fix accordions ([#2882](https://github.com/SocialGouv/code-du-travail-numerique/issues/2882)) ([5608b5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/5608b5be8e98b884191a6d0e5ac2a31358351fa3))
+
+
+
+
+
 # [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

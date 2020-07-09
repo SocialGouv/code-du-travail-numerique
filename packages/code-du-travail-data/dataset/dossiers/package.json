@@ -1,9 +1,9 @@
 {
   "name": "@cdt/data...dossiers",
-  "version": "4.23.0",
+  "version": "4.26.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@socialgouv/cdtn-sources": "^4.22.0"
+    "@socialgouv/cdtn-sources": "^4.26.0"
   }
 }

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **front:** allow dailymotion videos and fix wrong date fromat ([#2855](https://github.com/SocialGouv/code-du-travail-numerique/issues/2855)) ([883ed22](https://github.com/SocialGouv/code-du-travail-numerique/commit/883ed2236dade60a9996aa0b29212b1a08fe43be))
+* **front:** date mock ([#2869](https://github.com/SocialGouv/code-du-travail-numerique/issues/2869)) ([fbb5731](https://github.com/SocialGouv/code-du-travail-numerique/commit/fbb57316bb05b75060b5ddc0be431831b544d43e))
+
+
+### Features
+
+* **data:** add infographies ([#2884](https://github.com/SocialGouv/code-du-travail-numerique/issues/2884)) ([f886be7](https://github.com/SocialGouv/code-du-travail-numerique/commit/f886be7db2133a7be8f272d87dbd53dd499bee83))
+* **data:** update election CSE ([#2856](https://github.com/SocialGouv/code-du-travail-numerique/issues/2856)) ([404a1c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/404a1c9405b81efc7ecfaa64be0818be3ce2ea1e))
+* **front:** change cc search tracking ([#2880](https://github.com/SocialGouv/code-du-travail-numerique/issues/2880)) ([c7bf99a](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7bf99a9cdd745b4a2fa48756c4f945dc5481efe))
+* **search:** replace NLP API to external TF Serve service  ([#2809](https://github.com/SocialGouv/code-du-travail-numerique/issues/2809)) ([bdd00be](https://github.com/SocialGouv/code-du-travail-numerique/commit/bdd00be84c788d104ec68ba16b3b0e1bc2f35a66))
+* **tools:** add hre tool ([#2773](https://github.com/SocialGouv/code-du-travail-numerique/issues/2773)) ([9119f10](https://github.com/SocialGouv/code-du-travail-numerique/commit/9119f10042ab3fdd6c9ace806410c1099beb217d)), closes [#2808](https://github.com/SocialGouv/code-du-travail-numerique/issues/2808)
+* **ui:** auto-fix accordions ([#2882](https://github.com/SocialGouv/code-du-travail-numerique/issues/2882)) ([5608b5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/5608b5be8e98b884191a6d0e5ac2a31358351fa3))
+
+
+
+
+
 # [4.25.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.24.0...v4.25.0) (2020-06-29)
 
 
