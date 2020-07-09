@@ -129,25 +129,53 @@
     "folder": "covid",
     "contents": [
       {
+        "type": "graphic",
+        "title": "Infographie : report ou annulation des visites médicales de préreprise et de reprise",
+        "altText": "Infographie schématisant les changements concernant les visites de reprise et de pré-rerpise. Une version textuelle est disponible en dessous.",
+        "name": "visite-medicale-synthese-1"
+      },
+      {
+        "type": "graphic",
+        "title": "Infographie : report des visites dans le cadre du suivi médical",
+        "altText": "Infographie schématisant les changements concernant les visites dans le cadre du suivi médical. Une version textuelle est disponible en dessous.",
+        "name": "visite-medicale-synthese-2"
+      },
+      {
         "type": "markdown",
-        "name": "visite-medicale",
-        "references": [
-          {
-            "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
-          },
-          {
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
-          },
-          {
-            "title": "Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
-          }
-        ]
+        "title": "Conditions de report des visites médicales",
+        "name": "visite-medicale-1"
+      },
+      {
+        "type": "markdown",
+        "title": "Cas particulier de la visite de préreprise",
+        "name": "visite-medicale-2"
+      },
+      {
+        "type": "markdown",
+        "title": "Cas particulier de la visite de reprise",
+        "name": "visite-medicale-3"
+      },
+      {
+        "type": "markdown",
+        "title": "Information de l’employeur et du salarié",
+        "name": "visite-medicale-4"
+      }
+    ],
+    "references": [
+      {
+        "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
+        "type": "external",
+        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
+      },
+      {
+        "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
+        "type": "external",
+        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
+      },
+      {
+        "title": "Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
+        "type": "external",
+        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
       }
     ]
   },
@@ -367,7 +395,7 @@
       {
         "type": "graphic",
         "title": "Infographie : Contester une expertise",
-        "altText": "Infographie schématisant les changements concernant la contestation une expertise. Une version textuelle est disponible en dessous.",
+        "altText": "Infographie schématisant les changements concernant la contestation d’une expertise. Une version textuelle est disponible en dessous.",
         "name": "cse-synthese-4",
         "references":[
           {

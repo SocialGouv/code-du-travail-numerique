@@ -4,6 +4,7 @@ import {
   Button,
   icons,
   MoreContent,
+  Section,
   theme,
   Wrapper,
 } from "@socialgouv/react-ui";
@@ -55,7 +56,16 @@ const Information = ({
   pageUrl,
   ogImage,
   information: {
-    _source: { breadcrumbs, contents, date, folder, description, title, intro },
+    _source: {
+      breadcrumbs,
+      contents,
+      date,
+      description,
+      folder,
+      intro,
+      references = [],
+      title,
+    },
     relatedItems,
   } = { _source: {} },
 }) => {
@@ -132,6 +142,17 @@ const Information = ({
       >
         {intro && <Html>{intro}</Html>}
         <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
+        {references.length > 0 && (
+          <Section>
+            <ReferencesJuridiques
+              accordionDisplay={1}
+              references={references.map((reference, index) => ({
+                ...reference,
+                id: reference.id || `${reference.id}-${index}`,
+              }))}
+            />
+          </Section>
+        )}
       </Answer>
     </Layout>
   );

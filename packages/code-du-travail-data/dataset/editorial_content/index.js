@@ -40,11 +40,11 @@ function transformContents(folder, data) {
         content.size = filesize(size, { round: 1 });
       }
       return {
-        text,
         contents: contents.concat({ ...content, html: addGlossary(html) }),
+        text,
       };
     },
-    { text: "", contents: [] }
+    { contents: [], text: "" }
   );
 }
 
@@ -72,11 +72,11 @@ function getEditorialContents() {
           },
         ],
         contents,
-        folder,
         date,
-        intro: addGlossary(introHtml),
         description,
         excludeFromSearch: false,
+        folder,
+        intro: addGlossary(introHtml),
         references,
         slug: slugify(title),
         source: SOURCES.EDITORIAL_CONTENT,
