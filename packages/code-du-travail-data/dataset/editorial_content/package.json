@@ -1,6 +1,7 @@
 {
   "name": "@cdt/data...editorial_content",
   "version": "4.26.0",
+  "private": true,
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
