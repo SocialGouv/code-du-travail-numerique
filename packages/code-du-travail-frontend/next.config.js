@@ -2,6 +2,7 @@ const withSourceMaps = require("@zeit/next-source-maps");
 
 const withTranspileModule = require("next-transpile-modules")([
   "@socialgouv/cdtn-sources",
+  "@socialgouv/cdtn-slugify",
   "@cdt/data",
   "lit-element",
   "lit-html",
