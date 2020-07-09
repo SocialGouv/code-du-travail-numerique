@@ -1,14 +1,14 @@
+import { DOCUMENTS } from "@cdt/data/indexing/esIndexName";
 import { Client } from "@elastic/elasticsearch";
 import { writeFile as _writeFile } from "fs";
-import { promisify } from "util";
 import { join } from "path";
+import { promisify } from "util";
+
 import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
-import highlightsData from "./highlights.json";
 import glossaryData from "./glossary.json";
+import highlightsData from "./highlights.json";
 import preQualifiedData from "./prequalified.json";
 import versions from "./versions.json";
-
-import { DOCUMENTS } from "@cdt/data/indexing/esIndexName";
 
 const writeFile = promisify(_writeFile);
 
@@ -16,8 +16,8 @@ const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
 const client = new Client({
+  log: [{ levels: ["error", "warning"], type: "stdio" }],
   node: `${ELASTICSEARCH_URL}`,
-  log: [{ type: "stdio", levels: ["error", "warning"] }],
 });
 
 const documentsSlugs = [

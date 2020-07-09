@@ -3,7 +3,6 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
     throw new Error("[getRelatedItemsBody] sources should not be empty");
   }
   return {
-    size,
     _source: [
       "title",
       "source",
@@ -15,14 +14,6 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
     ],
     query: {
       bool: {
-        must: {
-          more_like_this: {
-            fields: ["title", "text"],
-            min_term_freq: 1,
-            max_query_terms: 12,
-            like: settings,
-          },
-        },
         filter: [
           {
             term: {
@@ -31,12 +22,21 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
           },
           {
             bool: {
-              should: sources.map(source => ({ term: { source } })),
+              should: sources.map((source) => ({ term: { source } })),
             },
           },
         ],
+        must: {
+          more_like_this: {
+            fields: ["title", "text"],
+            like: settings,
+            max_query_terms: 12,
+            min_term_freq: 1,
+          },
+        },
       },
     },
+    size,
   };
 }
 
