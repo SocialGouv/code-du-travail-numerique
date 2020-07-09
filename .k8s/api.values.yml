@@ -101,7 +101,7 @@ deployment:
         - |
           retry=120; # 5s * (12 * 10) = 10min
           while
-            ! wget -q -O - "$@" ${NLP_URL}v1/models/sentqam &&
+            ! wget -q -O - "$@" ${NLP_URL}/v1/models/sentqam &&
             [[ $(( retry-- )) -gt 0 ]];
           do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
 

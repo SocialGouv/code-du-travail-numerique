@@ -14,7 +14,7 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
-export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/";
+export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
 
 #
 
@@ -47,7 +47,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export ES_INDEX_PREFIX="cdtn-prod"
   export K8S_NAMESPACE="cdtn"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
-  export NLP_URL="https://serving-ml.fabrique.social.gouv.fr/";
+  export NLP_URL="https://serving-ml.fabrique.social.gouv.fr";
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}";
 fi
