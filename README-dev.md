@@ -119,6 +119,8 @@ docker run \
    >! packages/code-du-travail-data/dist/dump.tf.json
 ```
 
+To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
+
 You can also read the packages readme
 
 - [Data README](./packages/code-du-travail-nlp/README.md)
