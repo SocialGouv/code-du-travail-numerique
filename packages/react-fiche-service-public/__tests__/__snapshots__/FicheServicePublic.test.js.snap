@@ -578,12 +578,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-0"
+                    aria-controls="accordion__panel-raa-0"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-0"
+                    id="accordion__heading-raa-0"
                     role="button"
                     tabindex="0"
                   >
@@ -612,11 +612,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-0"
+                  aria-labelledby="accordion__heading-raa-0"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-0"
+                  hidden=""
+                  id="accordion__panel-raa-0"
                 >
                   <div
                     class="c9"
@@ -659,12 +659,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-1"
+                    aria-controls="accordion__panel-raa-1"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-1"
+                    id="accordion__heading-raa-1"
                     role="button"
                     tabindex="0"
                   >
@@ -693,11 +693,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-1"
+                  aria-labelledby="accordion__heading-raa-1"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-1"
+                  hidden=""
+                  id="accordion__panel-raa-1"
                 >
                   <div
                     class="c9"
@@ -783,12 +783,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-2"
+                    aria-controls="accordion__panel-raa-2"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-2"
+                    id="accordion__heading-raa-2"
                     role="button"
                     tabindex="0"
                   >
@@ -817,11 +817,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-2"
+                  aria-labelledby="accordion__heading-raa-2"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-2"
+                  hidden=""
+                  id="accordion__panel-raa-2"
                 >
                   <div
                     class="c9"
@@ -891,12 +891,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-3"
+                    aria-controls="accordion__panel-raa-3"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-3"
+                    id="accordion__heading-raa-3"
                     role="button"
                     tabindex="0"
                   >
@@ -925,11 +925,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-3"
+                  aria-labelledby="accordion__heading-raa-3"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-3"
+                  hidden=""
+                  id="accordion__panel-raa-3"
                 >
                   <div
                     class="c9"
@@ -1010,12 +1010,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-4"
+                    aria-controls="accordion__panel-raa-4"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-4"
+                    id="accordion__heading-raa-4"
                     role="button"
                     tabindex="0"
                   >
@@ -1044,11 +1044,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-4"
+                  aria-labelledby="accordion__heading-raa-4"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-4"
+                  hidden=""
+                  id="accordion__panel-raa-4"
                 >
                   <div
                     class="c9"
@@ -1310,12 +1310,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   role="heading"
                                 >
                                   <div
-                                    aria-controls="accordion__panel-5"
+                                    aria-controls="accordion__panel-raa-5"
                                     aria-disabled="false"
                                     aria-expanded="false"
                                     class="c15"
                                     data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-5"
+                                    id="accordion__heading-raa-5"
                                     role="button"
                                     tabindex="0"
                                   >
@@ -1344,11 +1344,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  aria-labelledby="accordion__heading-5"
+                                  aria-labelledby="accordion__heading-raa-5"
                                   class="c18"
                                   data-accordion-component="AccordionItemPanel"
-                                  data-hidden="true"
-                                  id="accordion__panel-5"
+                                  hidden=""
+                                  id="accordion__panel-raa-5"
                                 >
                                   <div
                                     class="c9"
@@ -1388,12 +1388,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   role="heading"
                                 >
                                   <div
-                                    aria-controls="accordion__panel-6"
+                                    aria-controls="accordion__panel-raa-6"
                                     aria-disabled="false"
                                     aria-expanded="false"
                                     class="c15"
                                     data-accordion-component="AccordionItemButton"
-                                    id="accordion__heading-6"
+                                    id="accordion__heading-raa-6"
                                     role="button"
                                     tabindex="0"
                                   >
@@ -1422,11 +1422,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  aria-labelledby="accordion__heading-6"
+                                  aria-labelledby="accordion__heading-raa-6"
                                   class="c18"
                                   data-accordion-component="AccordionItemPanel"
-                                  data-hidden="true"
-                                  id="accordion__panel-6"
+                                  hidden=""
+                                  id="accordion__panel-raa-6"
                                 >
                                   <div
                                     class="c9"
@@ -1541,12 +1541,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-7"
+                    aria-controls="accordion__panel-raa-7"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-7"
+                    id="accordion__heading-raa-7"
                     role="button"
                     tabindex="0"
                   >
@@ -1575,11 +1575,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-7"
+                  aria-labelledby="accordion__heading-raa-7"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-7"
+                  hidden=""
+                  id="accordion__panel-raa-7"
                 >
                   <div
                     class="c9"
@@ -1670,12 +1670,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-8"
+                    aria-controls="accordion__panel-raa-8"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c15"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-8"
+                    id="accordion__heading-raa-8"
                     role="button"
                     tabindex="0"
                   >
@@ -1704,11 +1704,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-8"
+                  aria-labelledby="accordion__heading-raa-8"
                   class="c18"
                   data-accordion-component="AccordionItemPanel"
-                  data-hidden="true"
-                  id="accordion__panel-8"
+                  hidden=""
+                  id="accordion__panel-raa-8"
                 >
                   <div
                     class="c9"

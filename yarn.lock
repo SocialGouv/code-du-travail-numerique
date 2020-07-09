@@ -15215,10 +15215,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-accessible-accordion@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.1.0.tgz#ca06b0b09f8f1e39240342a77e4d382f92e3ae0a"
-  integrity sha512-h5K0oZO7Maj2na5NrXz/BHfGy6W8WbfbXeQkTwKdsneI1HNhE3utwGc29yAb+GZ1UlQStf0Rmy1yA2K1qP87xQ==
+react-accessible-accordion@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.3.0.tgz#01dfc9f8f55df259ee775f0145ec86257b05bd71"
+  integrity sha512-84YDraAJM6J/etbvZnC+K4f7UbkidQAO8ZMRzvilcNwK6gfcgNqhiTAvAIdMKZmsrlSwTkKHyqlNDzj3pLuS7Q==
 
 react-autosuggest@10.0.2:
   version "10.0.2"

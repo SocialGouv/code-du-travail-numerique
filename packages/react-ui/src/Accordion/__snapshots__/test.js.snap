@@ -111,12 +111,12 @@ exports[`<Accordion /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-0"
+            aria-controls="accordion__panel-raa-0"
             aria-disabled="false"
             aria-expanded="false"
             class="c0"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-0"
+            id="accordion__heading-raa-0"
             role="button"
             tabindex="0"
           >
@@ -145,11 +145,11 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-0"
+          aria-labelledby="accordion__heading-raa-0"
           class="c3"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-0"
+          hidden=""
+          id="accordion__panel-raa-0"
         >
           <div
             class="c4"
@@ -281,12 +281,12 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-3"
+            aria-controls="accordion__panel-raa-3"
             aria-disabled="false"
             aria-expanded="false"
             class="c0"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-3"
+            id="accordion__heading-raa-3"
             role="button"
             tabindex="0"
           >
@@ -315,11 +315,11 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-3"
+          aria-labelledby="accordion__heading-raa-3"
           class="c3"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-3"
+          hidden=""
+          id="accordion__panel-raa-3"
         >
           <div
             class="c4"
@@ -451,12 +451,12 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-2"
+            aria-controls="accordion__panel-raa-2"
             aria-disabled="false"
             aria-expanded="false"
             class="c0"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-2"
+            id="accordion__heading-raa-2"
             role="button"
             tabindex="0"
           >
@@ -485,11 +485,11 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-2"
+          aria-labelledby="accordion__heading-raa-2"
           class="c3"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-2"
+          hidden=""
+          id="accordion__panel-raa-2"
         >
           <div
             class="c4"
@@ -621,12 +621,12 @@ exports[`<Accordion /> renders as h2 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-1"
+            aria-controls="accordion__panel-raa-1"
             aria-disabled="false"
             aria-expanded="false"
             class="c0"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-1"
+            id="accordion__heading-raa-1"
             role="button"
             tabindex="0"
           >
@@ -655,11 +655,11 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-1"
+          aria-labelledby="accordion__heading-raa-1"
           class="c3"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-1"
+          hidden=""
+          id="accordion__panel-raa-1"
         >
           <div
             class="c4"

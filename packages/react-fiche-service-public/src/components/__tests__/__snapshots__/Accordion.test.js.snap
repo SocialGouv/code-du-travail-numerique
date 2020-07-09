@@ -201,12 +201,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-0"
+            aria-controls="accordion__panel-raa-0"
             aria-disabled="false"
             aria-expanded="false"
             class="c4"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-0"
+            id="accordion__heading-raa-0"
             role="button"
             tabindex="0"
           >
@@ -235,11 +235,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-0"
+          aria-labelledby="accordion__heading-raa-0"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-0"
+          hidden=""
+          id="accordion__panel-raa-0"
         >
           <div
             class="c8"
@@ -283,12 +283,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-1"
+            aria-controls="accordion__panel-raa-1"
             aria-disabled="false"
             aria-expanded="false"
             class="c4"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-1"
+            id="accordion__heading-raa-1"
             role="button"
             tabindex="0"
           >
@@ -317,11 +317,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-1"
+          aria-labelledby="accordion__heading-raa-1"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-1"
+          hidden=""
+          id="accordion__panel-raa-1"
         >
           <div
             class="c8"
@@ -370,12 +370,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-2"
+            aria-controls="accordion__panel-raa-2"
             aria-disabled="false"
             aria-expanded="false"
             class="c4"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-2"
+            id="accordion__heading-raa-2"
             role="button"
             tabindex="0"
           >
@@ -404,11 +404,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-2"
+          aria-labelledby="accordion__heading-raa-2"
           class="c7"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-2"
+          hidden=""
+          id="accordion__panel-raa-2"
         >
           <div
             class="c8"
@@ -586,12 +586,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-3"
+            aria-controls="accordion__panel-raa-3"
             aria-disabled="false"
             aria-expanded="false"
             class="c2"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-3"
+            id="accordion__heading-raa-3"
             role="button"
             tabindex="0"
           >
@@ -620,11 +620,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-3"
+          aria-labelledby="accordion__heading-raa-3"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-3"
+          hidden=""
+          id="accordion__panel-raa-3"
         >
           <div
             class="c6"
@@ -661,12 +661,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-4"
+            aria-controls="accordion__panel-raa-4"
             aria-disabled="false"
             aria-expanded="false"
             class="c2"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-4"
+            id="accordion__heading-raa-4"
             role="button"
             tabindex="0"
           >
@@ -695,11 +695,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-4"
+          aria-labelledby="accordion__heading-raa-4"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-4"
+          hidden=""
+          id="accordion__panel-raa-4"
         >
           <div
             class="c6"
@@ -741,12 +741,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-5"
+            aria-controls="accordion__panel-raa-5"
             aria-disabled="false"
             aria-expanded="false"
             class="c2"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-5"
+            id="accordion__heading-raa-5"
             role="button"
             tabindex="0"
           >
@@ -775,11 +775,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-5"
+          aria-labelledby="accordion__heading-raa-5"
           class="c5"
           data-accordion-component="AccordionItemPanel"
-          data-hidden="true"
-          id="accordion__panel-5"
+          hidden=""
+          id="accordion__panel-raa-5"
         >
           <div
             class="c6"
