@@ -14,17 +14,7 @@ import useSearchCC from "./searchHook";
 
 const trackInput = debounce((query, path, trackingUID) => {
   if (query.length > 1) {
-    if (status === "success") {
-      matopush(["trackEvent", "cc_search", path, `${trackingUID} : ${query}`]);
-    }
-    if (status === "empty") {
-      matopush([
-        "trackEvent",
-        "cc_search_empty",
-        path,
-        `${trackingUID} : ${query}`,
-      ]);
-    }
+    matopush(["trackEvent", "cc_search", path, `${trackingUID} : ${query}`]);
   }
 }, 2000);
 
