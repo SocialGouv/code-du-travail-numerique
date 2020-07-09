@@ -3,6 +3,11 @@
   "version": "4.22.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/slugify"
+  },
   "devDependencies": {
     "jest": "^26.1.0"
   },
