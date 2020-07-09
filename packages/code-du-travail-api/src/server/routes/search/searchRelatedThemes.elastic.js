@@ -1,4 +1,4 @@
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 /**
  * This query is intended to work on theme index

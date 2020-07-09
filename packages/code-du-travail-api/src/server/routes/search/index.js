@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
 
@@ -167,8 +167,8 @@ router.get("/search", async (ctx) => {
   logger.info(`search: ${query} took ${results.took}ms`);
 
   ctx.body = {
-    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
     articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
+    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
     // we add source prop since some result might come from dedicataed themes index
     // wich has no source prop
     themes: themes.map(({ _score, _source }) => ({

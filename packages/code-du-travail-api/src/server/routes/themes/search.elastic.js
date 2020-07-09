@@ -1,4 +1,4 @@
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 function getRootThemesQuery() {
   return {

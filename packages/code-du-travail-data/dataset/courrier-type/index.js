@@ -1,8 +1,8 @@
 const mammoth = require("mammoth");
 const fs = require("fs");
 const data = require("./courriers.json");
-const { SOURCES, getRouteBySource } = require("@cdt/sources");
-const slugify = require("@cdt/slugify");
+const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
+const slugify = require("@socialgouv/cdtn-slugify");
 const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
 const { createThemer } = require("../../indexing/breadcrumbs");
 

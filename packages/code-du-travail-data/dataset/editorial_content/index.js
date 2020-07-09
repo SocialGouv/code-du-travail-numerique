@@ -1,4 +1,4 @@
-const { getRouteBySource, SOURCES } = require("@cdt/sources");
+const { getRouteBySource, SOURCES } = require("@socialgouv/cdtn-sources");
 const filesize = require("filesize");
 const { readFileSync, statSync } = require("fs");
 const htmlAstToAnotherHtmlAst = require("rehype-raw");
@@ -9,7 +9,7 @@ const markdownAstStringify = require("remark-stringify");
 const markdownAstStrip = require("strip-markdown");
 const unified = require("unified");
 
-const slugify = require("@cdt/slugify");
+const slugify = require("@socialgouv/cdtn-slugify");
 const { addGlossary } = require("../../indexing/addGlossary");
 const covidContents = require("./contents.json");
 

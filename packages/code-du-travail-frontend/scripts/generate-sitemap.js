@@ -1,5 +1,5 @@
-import slugify from "@cdt/slugify";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
+import slugify from "@socialgouv/cdtn-slugify";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import glossary from "@socialgouv/datafiller-data/data/glossary.json";
 import { buildSitemaps } from "express-sitemap-xml";
 import fs from "fs";

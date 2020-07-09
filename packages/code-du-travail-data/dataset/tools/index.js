@@ -1,4 +1,4 @@
-const { SOURCES, getRouteBySource } = require("@cdt/sources");
+const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
 const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
 const { createThemer } = require("../../indexing/breadcrumbs");
 const tools = require("./internals.json");

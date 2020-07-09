@@ -1,5 +1,5 @@
 {
-  "name": "@cdt/slugify",
+  "name": "@socialgouv/cdtn-slugify",
   "version": "4.22.0",
   "main": "index.js",
   "license": "MIT",

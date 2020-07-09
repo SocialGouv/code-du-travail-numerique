@@ -1,4 +1,4 @@
-import slugify from "@cdt/slugify";
+import slugify from "@socialgouv/cdtn-slugify";
 import contributions from "@socialgouv/contributions-data/data/contributions.json";
 import agreementsBlocks from "@socialgouv/datafiller-data/data/agreements.json";
 import allThemes from "@socialgouv/datafiller-data/data/themes.json";

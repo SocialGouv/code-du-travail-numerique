@@ -1,5 +1,5 @@
-import slugify from "@cdt/slugify";
-import { getRouteBySource, SOURCES } from "@cdt/sources";
+import slugify from "@socialgouv/cdtn-slugify";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
 import crypto from "crypto";
 import find from "unist-util-find";

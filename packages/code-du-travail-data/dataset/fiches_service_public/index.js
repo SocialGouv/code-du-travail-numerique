@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fiches = require("@socialgouv/fiches-vdd");
-const { SOURCES, getRouteBySource } = require("@cdt/sources");
+const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
 
-const slugify = require("@cdt/slugify");
+const slugify = require("@socialgouv/cdtn-slugify");
 const { filter } = require("./filter");
 const format = require("./format");
 

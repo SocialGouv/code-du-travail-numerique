@@ -1,8 +1,9 @@
-import { SOURCES } from "@cdt/sources";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
-import { cdtnDocumentsGen } from "./indexing/populate";
+
 import { logger } from "./indexing/logger";
+import { cdtnDocumentsGen } from "./indexing/populate";
 import { vectorizeDocument } from "./indexing/vectorizer";
 
 logger.silent = true;
@@ -21,17 +22,17 @@ const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
   return NLP_URL
     ? vectorizeDocument(data.title, data.text)
-      .then((title_vector) => {
-        if (title_vector.message) {
-          throw new Error(`error fetching ${data.title}`);
-        }
-        data.title_vector = title_vector;
-        return data;
-      })
-      .catch((err) => {
-        console.error(`error fetching ${data.title}`, err);
-        return data;
-      })
+        .then((title_vector) => {
+          if (title_vector.message) {
+            throw new Error(`error fetching ${data.title}`);
+          }
+          data.title_vector = title_vector;
+          return data;
+        })
+        .catch((err) => {
+          console.error(`error fetching ${data.title}`, err);
+          return data;
+        })
     : data;
 }
 

@@ -1,4 +1,4 @@
-import { SOURCES } from "@cdt/sources";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Accordion,
   Button,

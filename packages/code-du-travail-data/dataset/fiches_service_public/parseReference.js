@@ -4,7 +4,7 @@ const queryString = require("query-string");
 const cdt = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
 const conventions = require("@socialgouv/kali-data/data/index.json");
 
-const slugify = require("@cdt/slugify");
+const slugify = require("@socialgouv/cdtn-slugify");
 
 const isConventionCollective = (qs) => qs.idConvention;
 const isCodeDuTravail = (qs) => qs.cidTexte === "LEGITEXT000006072050";

@@ -1,4 +1,8 @@
-import { getLabelBySource, getRouteBySource, SOURCES } from "@cdt/sources";
+import {
+  getLabelBySource,
+  getRouteBySource,
+  SOURCES,
+} from "@socialgouv/cdtn-sources";
 import { Container, Heading, theme, Tile, Title } from "@socialgouv/react-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
