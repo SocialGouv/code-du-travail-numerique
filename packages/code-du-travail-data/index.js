@@ -20,6 +20,6 @@ function extractMdxContentUrl(markdown) {
 
 module.exports = {
   extractMdxContentUrl,
-  parseIdcc,
   formatIdcc,
+  parseIdcc,
 };

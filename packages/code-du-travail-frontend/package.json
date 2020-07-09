@@ -23,6 +23,7 @@
     "@cdt/data...prime-precarite": "^4.22.0",
     "@cdt/data...simulateurs": "^4.25.0",
     "@cdt/data...tools": "^4.25.0",
+    "@cdt/slugify": "^4.22.0",
     "@cdt/sources": "^4.22.0",
     "@next/bundle-analyzer": "^9.4.4",
     "@reach/tooltip": "0.10.5",
