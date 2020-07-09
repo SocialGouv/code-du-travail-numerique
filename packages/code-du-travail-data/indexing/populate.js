@@ -1,3 +1,4 @@
+import slugify from "@cdt/slugify";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
 import crypto from "crypto";
@@ -9,7 +10,6 @@ import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
 import { getEditorialContents } from "../dataset/editorial_content";
 import { getFichesSP } from "../dataset/fiches_service_public";
-import slugify from "../slugify";
 import { addGlossary } from "./addGlossary";
 import { getAgreementPages } from "./agreement_pages";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";

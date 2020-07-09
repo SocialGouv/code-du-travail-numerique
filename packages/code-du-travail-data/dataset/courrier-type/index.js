@@ -2,7 +2,7 @@ const mammoth = require("mammoth");
 const fs = require("fs");
 const data = require("./courriers.json");
 const { SOURCES, getRouteBySource } = require("@cdt/sources");
-const slugify = require("../../slugify");
+const slugify = require("@cdt/slugify");
 const allThemes = require("@socialgouv/datafiller-data/data/themes.json");
 const { createThemer } = require("../../indexing/breadcrumbs");
 
@@ -49,17 +49,17 @@ const convertFile2Html = ({
     .then((result) => {
       const slug = slugify(title);
       return {
-        filename,
         breadcrumbs: getBreadcrumbs(
           `/${getRouteBySource(SOURCES.LETTERS)}/${slug}`
         ),
-        source: SOURCES.LETTERS,
-        slug,
-        filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
-        title,
-        text: description,
         description,
+        filename,
+        filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
         metaDescription,
+        slug,
+        source: SOURCES.LETTERS,
+        text: description,
+        title,
         ...rest,
         excludeFromSearch: false,
         html:

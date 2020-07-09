@@ -1,4 +1,4 @@
-import slugify from "@cdt/data/slugify";
+import slugify from "@cdt/slugify";
 import {
   Container,
   FlatList,

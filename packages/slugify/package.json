@@ -1,0 +1,22 @@
+{
+  "name": "@cdt/slugify",
+  "version": "4.22.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**",
+      "!**/data/**"
+    ],
+    "testEnvironment": "node"
+  }
+}

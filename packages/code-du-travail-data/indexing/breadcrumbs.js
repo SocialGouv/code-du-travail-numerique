@@ -1,6 +1,5 @@
+import slugify from "@cdt/slugify";
 import { getRouteBySource, SOURCES } from "@cdt/sources";
-
-import slugify from "../slugify";
 
 export function toSlug(label, position) {
   return `${position}-${slugify(label)}`;

@@ -9,7 +9,7 @@ const markdownAstStringify = require("remark-stringify");
 const markdownAstStrip = require("strip-markdown");
 const unified = require("unified");
 
-const slugify = require("../../slugify");
+const slugify = require("@cdt/slugify");
 const { addGlossary } = require("../../indexing/addGlossary");
 const covidContents = require("./contents.json");
 
@@ -40,11 +40,11 @@ function transformContents(folder, data) {
         content.size = filesize(size, { round: 1 });
       }
       return {
-        text,
         contents: contents.concat({ ...content, html: addGlossary(html) }),
+        text,
       };
     },
-    { text: "", contents: [] }
+    { contents: [], text: "" }
   );
 }
 
@@ -72,11 +72,11 @@ function getEditorialContents() {
           },
         ],
         contents,
-        folder,
         date,
-        intro: addGlossary(introHtml),
         description,
         excludeFromSearch: false,
+        folder,
+        intro: addGlossary(introHtml),
         references,
         slug: slugify(title),
         source: SOURCES.EDITORIAL_CONTENT,
