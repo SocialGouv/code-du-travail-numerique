@@ -73,7 +73,8 @@
     "styled-components": "^5.1.1",
     "unified": "^9.0.0",
     "unist-util-find": "^1.0.1",
-    "url-search-params": "^1.1.0"
+    "url-search-params": "^1.1.0",
+    "uuid": "^8.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
