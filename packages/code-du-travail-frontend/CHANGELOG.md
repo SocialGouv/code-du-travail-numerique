@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.26.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.26.0...v4.26.1) (2020-07-10)
+
+
+### Bug Fixes
+
+* **front:** transpile slugify ([#2888](https://github.com/SocialGouv/code-du-travail-numerique/issues/2888)) ([a7dd9d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/a7dd9d4ccfa0db7304b37f064e73995b46210185))
+
+
+
+
+
 # [4.26.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.25.0...v4.26.0) (2020-07-09)
 
 
