@@ -1,4 +1,4 @@
-import { Toast } from "@socialgouv/react-ui";
+import { Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 

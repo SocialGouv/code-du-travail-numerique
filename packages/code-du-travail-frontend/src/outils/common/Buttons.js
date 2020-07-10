@@ -1,4 +1,4 @@
-import { Button, icons, theme } from "@socialgouv/react-ui";
+import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 

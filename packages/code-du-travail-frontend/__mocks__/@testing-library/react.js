@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
-import { theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 
 const AllTheProviders = ({ children }) => {
   return (

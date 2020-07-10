@@ -1,6 +1,6 @@
 import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
-import { Button, theme } from "@socialgouv/react-ui";
+import { Button, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";

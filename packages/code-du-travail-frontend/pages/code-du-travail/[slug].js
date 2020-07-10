@@ -1,4 +1,4 @@
-import { Alert } from "@socialgouv/react-ui";
+import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import fetch from "isomorphic-unfetch";

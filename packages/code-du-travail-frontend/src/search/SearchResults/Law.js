@@ -1,5 +1,5 @@
 import { getRouteBySource } from "@socialgouv/cdtn-sources";
-import { Grid, Tile, Title } from "@socialgouv/react-ui";
+import { Grid, Tile, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import { Toast } from "@socialgouv/react-ui";
+import { Toast } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";

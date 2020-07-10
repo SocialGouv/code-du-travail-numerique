@@ -1,4 +1,4 @@
-import { Container, icons, OverflowWrapper, theme } from "@socialgouv/react-ui";
+import { Container, icons, OverflowWrapper, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";

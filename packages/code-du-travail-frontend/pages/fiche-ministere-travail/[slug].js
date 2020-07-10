@@ -1,5 +1,5 @@
+import { Accordion } from "@socialgouv/cdtn-ui";
 import { decode } from "@socialgouv/fiches-travail-data";
-import { Accordion } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { withRouter } from "next/router";

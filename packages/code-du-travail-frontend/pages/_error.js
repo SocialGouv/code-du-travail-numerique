@@ -1,5 +1,5 @@
 // https://nextjs.org/docs/advanced-features/custom-error-page
-import { Button, Container, Section, theme } from "@socialgouv/react-ui";
+import { Button, Container, Section, theme } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 

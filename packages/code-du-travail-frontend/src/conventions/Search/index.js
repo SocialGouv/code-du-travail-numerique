@@ -1,4 +1,4 @@
-import { Input, Label, theme } from "@socialgouv/react-ui";
+import { Input, Label, theme } from "@socialgouv/cdtn-ui";
 import debounce from "debounce-promise";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";

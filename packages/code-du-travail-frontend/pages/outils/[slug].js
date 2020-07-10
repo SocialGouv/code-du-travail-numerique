@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import { Container, Section, Wrapper } from "@socialgouv/react-ui";
+import { Container, Section, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 
 import Metas from "../../src/common/Metas";

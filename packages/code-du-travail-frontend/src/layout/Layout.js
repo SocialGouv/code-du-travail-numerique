@@ -1,4 +1,4 @@
-import { theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled, { css } from "styled-components";
 

@@ -2,7 +2,7 @@
 import "katex/dist/katex.min.css";
 
 import * as Sentry from "@sentry/browser";
-import { GlobalStyles, ThemeProvider } from "@socialgouv/react-ui";
+import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
 import PropTypes from "prop-types";

@@ -1,4 +1,4 @@
-import { Input, Table as UITable, theme, Toast } from "@socialgouv/react-ui";
+import { Input, Table as UITable, theme, Toast } from "@socialgouv/cdtn-ui";
 import { format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import React from "react";
