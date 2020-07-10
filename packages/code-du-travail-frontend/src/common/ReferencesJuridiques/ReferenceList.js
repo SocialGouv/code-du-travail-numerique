@@ -1,5 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { ArrowLink, FlatList, theme } from "@soocialgouv/cdtn-ui";
+import { ArrowLink, FlatList, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

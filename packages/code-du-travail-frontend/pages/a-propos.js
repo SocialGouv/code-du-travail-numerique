@@ -6,7 +6,7 @@ import {
   theme,
   Title,
   Wrapper,
-} from "@soocialgouv/cdtn-ui";
+} from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 

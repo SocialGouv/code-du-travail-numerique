@@ -1,4 +1,4 @@
-import { theme, Toast } from "@soocialgouv/cdtn-ui";
+import { theme, Toast } from "@socialgouv/cdtn-ui";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";

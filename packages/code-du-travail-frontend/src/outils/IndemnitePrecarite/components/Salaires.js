@@ -1,4 +1,4 @@
-import { theme } from "@soocialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";

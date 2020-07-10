@@ -8,7 +8,7 @@ import {
   theme,
   Title,
   Wrapper,
-} from "@soocialgouv/cdtn-ui";
+} from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 

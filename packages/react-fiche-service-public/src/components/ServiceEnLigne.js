@@ -1,4 +1,4 @@
-import { theme, Tile } from "@soocialgouv/cdtn-ui";
+import { theme, Tile } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

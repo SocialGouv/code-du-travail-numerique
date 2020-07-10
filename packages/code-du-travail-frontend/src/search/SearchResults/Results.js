@@ -3,7 +3,7 @@ import {
   getRouteBySource,
   SOURCES,
 } from "@socialgouv/cdtn-sources";
-import { Container, Heading, theme, Tile, Title } from "@soocialgouv/cdtn-ui";
+import { Container, Heading, theme, Tile, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";

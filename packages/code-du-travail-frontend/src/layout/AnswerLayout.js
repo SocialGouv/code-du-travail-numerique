@@ -1,4 +1,4 @@
-import { Container, Section, theme } from "@soocialgouv/cdtn-ui";
+import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 

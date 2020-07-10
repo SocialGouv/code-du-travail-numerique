@@ -1,4 +1,4 @@
-import { theme, Wrapper } from "@soocialgouv/cdtn-ui";
+import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import { useUIDSeed } from "react-uid";

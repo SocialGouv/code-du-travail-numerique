@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Toast } from "@soocialgouv/cdtn-ui";
+import { Toast } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";

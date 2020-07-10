@@ -1,4 +1,4 @@
-import { Modal } from "@soocialgouv/cdtn-ui";
+import { Modal } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
 

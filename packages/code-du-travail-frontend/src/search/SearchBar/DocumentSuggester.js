@@ -1,4 +1,4 @@
-import { theme } from "@soocialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import Autosuggest from "react-autosuggest";

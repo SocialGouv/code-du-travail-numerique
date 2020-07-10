@@ -1,4 +1,4 @@
-import { Tabs } from "@soocialgouv/cdtn-ui";
+import { Tabs } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 

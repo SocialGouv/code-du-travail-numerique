@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Alert } from "@soocialgouv/cdtn-ui";
+import { Alert } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 

@@ -1,5 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Accordion, theme, Title } from "@soocialgouv/cdtn-ui";
+import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import { useUIDSeed } from "react-uid";
