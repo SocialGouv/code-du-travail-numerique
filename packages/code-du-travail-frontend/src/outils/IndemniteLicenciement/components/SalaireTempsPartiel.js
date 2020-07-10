@@ -1,11 +1,4 @@
-import {
-  icons,
-  Input,
-  Label,
-  Select,
-  Text,
-  theme,
-} from "@socialgouv/cdtn-react-ui";
+import { icons, Input, Label, Select, Text, theme } from "@soocialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";

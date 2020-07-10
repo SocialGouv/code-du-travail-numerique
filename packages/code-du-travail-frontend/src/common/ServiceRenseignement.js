@@ -1,4 +1,4 @@
-import { Heading, Input, theme } from "@socialgouv/cdtn-react-ui";
+import { Heading, Input, theme } from "@soocialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
 import { UID } from "react-uid";

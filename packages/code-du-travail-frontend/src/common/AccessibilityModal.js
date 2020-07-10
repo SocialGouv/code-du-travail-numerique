@@ -5,7 +5,7 @@ import {
   theme,
   Title,
   useTheme,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
 

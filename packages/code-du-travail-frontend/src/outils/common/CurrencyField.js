@@ -1,4 +1,4 @@
-import { icons, Input, theme } from "@socialgouv/cdtn-react-ui";
+import { icons, Input, theme } from "@soocialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { UID } from "react-uid";

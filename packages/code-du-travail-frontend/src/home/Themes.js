@@ -8,7 +8,7 @@ import {
   Section,
   theme,
   Tile,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

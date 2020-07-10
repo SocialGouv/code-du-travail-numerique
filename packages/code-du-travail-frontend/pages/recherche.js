@@ -7,7 +7,7 @@ import {
   Section,
   theme,
   Wrapper,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";

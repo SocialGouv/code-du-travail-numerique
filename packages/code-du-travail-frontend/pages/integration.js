@@ -4,7 +4,7 @@ import {
   PageTitle,
   Section,
   Wrapper,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 

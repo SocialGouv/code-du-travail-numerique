@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@socialgouv/cdtn-react-ui": "4.x",
+    "@soocialgouv/cdtn-ui": "4.x",
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",

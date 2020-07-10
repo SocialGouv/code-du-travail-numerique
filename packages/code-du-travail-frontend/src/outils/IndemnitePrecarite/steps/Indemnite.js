@@ -1,5 +1,5 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
-import { Alert, theme } from "@socialgouv/cdtn-react-ui";
+import { Alert, theme } from "@soocialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

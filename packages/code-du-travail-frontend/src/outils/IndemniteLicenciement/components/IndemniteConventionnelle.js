@@ -1,4 +1,4 @@
-import { Alert, theme } from "@socialgouv/cdtn-react-ui";
+import { Alert, theme } from "@soocialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

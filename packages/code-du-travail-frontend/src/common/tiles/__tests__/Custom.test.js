@@ -1,4 +1,4 @@
-import { icons } from "@socialgouv/cdtn-react-ui/";
+import { icons } from "@soocialgouv/cdtn-ui/";
 import { render } from "@testing-library/react";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import { InputRadio } from "@socialgouv/cdtn-react-ui";
+import { InputRadio } from "@soocialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import { Field } from "react-final-form";

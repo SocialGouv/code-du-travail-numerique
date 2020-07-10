@@ -1,4 +1,4 @@
-import { Container, Title } from "@socialgouv/cdtn-react-ui";
+import { Container, Title } from "@soocialgouv/cdtn-ui";
 import React from "react";
 
 import { branches } from "../branches";

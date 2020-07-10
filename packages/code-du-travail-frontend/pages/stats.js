@@ -5,7 +5,7 @@ import {
   PageTitle,
   Section,
   Wrapper,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import { max, startOfDay, subMonths } from "date-fns";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";

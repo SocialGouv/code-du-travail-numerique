@@ -1,5 +1,5 @@
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import { Container, Section } from "@socialgouv/cdtn-react-ui";
+import { Container, Section } from "@soocialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { withRouter } from "next/router";

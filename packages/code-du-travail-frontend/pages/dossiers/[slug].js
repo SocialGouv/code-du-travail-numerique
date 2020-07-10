@@ -10,7 +10,7 @@ import {
   TableOfContent,
   theme,
   Wrapper,
-} from "@socialgouv/cdtn-react-ui";
+} from "@soocialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";

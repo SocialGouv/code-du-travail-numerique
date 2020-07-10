@@ -1,4 +1,4 @@
-import { InputRadio } from "@socialgouv/cdtn-react-ui";
+import { InputRadio } from "@soocialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";

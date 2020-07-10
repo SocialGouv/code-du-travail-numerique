@@ -1,4 +1,4 @@
-import { Container, icons, theme } from "@socialgouv/cdtn-react-ui";
+import { Container, icons, theme } from "@soocialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
