@@ -1,5 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Alert } from "@socialgouv/react-ui";
+import { Alert } from "@socialgouv/cdtn-react-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";

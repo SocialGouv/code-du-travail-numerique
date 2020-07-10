@@ -1,4 +1,4 @@
-import { theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/cdtn-react-ui";
 import styled from "styled-components";
 
 const { breakpoints, fonts, colors, spacings } = theme;

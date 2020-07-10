@@ -1,4 +1,4 @@
-import { ScreenReaderOnly } from "@socialgouv/react-ui";
+import { ScreenReaderOnly } from "@socialgouv/cdtn-react-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 

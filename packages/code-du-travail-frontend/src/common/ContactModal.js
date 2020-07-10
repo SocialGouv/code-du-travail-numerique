@@ -1,4 +1,4 @@
-import { Button, Heading, Modal, Wrapper } from "@socialgouv/react-ui";
+import { Button, Heading, Modal, Wrapper } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";

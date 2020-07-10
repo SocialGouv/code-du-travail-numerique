@@ -1,4 +1,4 @@
-import { Accordion, theme, Wrapper } from "@socialgouv/react-ui";
+import { Accordion, theme, Wrapper } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

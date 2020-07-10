@@ -8,7 +8,7 @@ import {
   Section,
   theme,
   Tile,
-} from "@socialgouv/react-ui";
+} from "@socialgouv/cdtn-react-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";

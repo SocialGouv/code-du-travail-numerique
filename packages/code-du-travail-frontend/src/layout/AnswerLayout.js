@@ -1,4 +1,4 @@
-import { Container, Section, theme } from "@socialgouv/react-ui";
+import { Container, Section, theme } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 

@@ -1,4 +1,9 @@
-import { Container, PageTitle, Section, Wrapper } from "@socialgouv/react-ui";
+import {
+  Container,
+  PageTitle,
+  Section,
+  Wrapper,
+} from "@socialgouv/cdtn-react-ui";
 import React from "react";
 
 import { FocusRoot } from "../../src/a11y";

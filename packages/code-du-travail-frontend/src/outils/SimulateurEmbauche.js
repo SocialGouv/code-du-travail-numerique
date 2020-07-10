@@ -1,4 +1,4 @@
-import { Alert, Section, Title } from "@socialgouv/react-ui";
+import { Alert, Section, Title } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
 

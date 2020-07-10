@@ -1,4 +1,4 @@
-import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
+import { Alert, Container, theme, Wrapper } from "@socialgouv/cdtn-react-ui";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";

@@ -1,4 +1,4 @@
-import { Select } from "@socialgouv/react-ui";
+import { Select } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Field } from "react-final-form";

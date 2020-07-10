@@ -1,4 +1,4 @@
-import { Container, Grid, PageTitle, Section } from "@socialgouv/react-ui";
+import { Container, Grid, PageTitle, Section } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 
 import { ListLink } from "../../src/search/SearchResults/Results.js";

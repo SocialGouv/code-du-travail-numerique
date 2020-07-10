@@ -5,7 +5,7 @@ import {
   Section,
   theme,
   Wrapper,
-} from "@socialgouv/react-ui";
+} from "@socialgouv/cdtn-react-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
 

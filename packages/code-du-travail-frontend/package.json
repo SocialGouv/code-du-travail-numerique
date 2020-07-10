@@ -32,7 +32,7 @@
     "@socialgouv/datafiller-data": "^1.34.0",
     "@socialgouv/fiches-travail-data": "^3.128.0",
     "@socialgouv/react-fiche-service-public": "^4.26.0",
-    "@socialgouv/react-ui": "^4.26.0",
+    "@socialgouv/cdtn-react-ui": "^4.26.0",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.14.0",
     "debounce-promise": "^3.1.2",

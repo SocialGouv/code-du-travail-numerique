@@ -1,4 +1,4 @@
-import { Table as UITable } from "@socialgouv/react-ui";
+import { Table as UITable } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React from "react";
 

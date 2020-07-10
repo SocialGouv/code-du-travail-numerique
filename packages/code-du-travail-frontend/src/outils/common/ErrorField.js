@@ -1,4 +1,4 @@
-import { theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import { Field } from "react-final-form";

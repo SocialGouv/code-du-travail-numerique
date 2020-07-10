@@ -1,4 +1,4 @@
-import { icons, Input } from "@socialgouv/react-ui";
+import { icons, Input } from "@socialgouv/cdtn-react-ui";
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import PropTypes from "prop-types";

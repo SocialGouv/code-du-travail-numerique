@@ -1,4 +1,4 @@
-import { Tabs } from "@socialgouv/react-ui";
+import { Tabs } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React from "react";
 

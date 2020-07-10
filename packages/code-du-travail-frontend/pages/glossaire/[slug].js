@@ -6,7 +6,7 @@ import {
   Table,
   theme,
   Wrapper,
-} from "@socialgouv/react-ui";
+} from "@socialgouv/cdtn-react-ui";
 import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";

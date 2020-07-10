@@ -7,7 +7,7 @@ import {
   Section,
   theme,
   Title,
-} from "@socialgouv/react-ui";
+} from "@socialgouv/cdtn-react-ui";
 import getConfig from "next/config";
 import Link from "next/link";
 import { useRouter } from "next/router";

@@ -1,4 +1,4 @@
-import { Heading, Subtitle, Title as UITitle } from "@socialgouv/react-ui";
+import { Heading, Subtitle, Title as UITitle } from "@socialgouv/cdtn-react-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import PropTypes from "prop-types";

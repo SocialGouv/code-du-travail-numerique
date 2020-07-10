@@ -1,4 +1,4 @@
-import { Title } from "@socialgouv/react-ui";
+import { Title } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 

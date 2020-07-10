@@ -1,4 +1,4 @@
-import { Button, icons, theme } from "@socialgouv/react-ui";
+import { Button, icons, theme } from "@socialgouv/cdtn-react-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";

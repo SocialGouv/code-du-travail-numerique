@@ -6,7 +6,7 @@ import {
   Section,
   theme,
   Wrapper,
-} from "@socialgouv/react-ui";
+} from "@socialgouv/cdtn-react-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { withRouter } from "next/router";

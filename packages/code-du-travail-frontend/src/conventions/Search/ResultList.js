@@ -1,4 +1,4 @@
-import { Heading, theme, Wrapper } from "@socialgouv/react-ui";
+import { Heading, theme, Wrapper } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 import { useUIDSeed } from "react-uid";
 import styled from "styled-components";

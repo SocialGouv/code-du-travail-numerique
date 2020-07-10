@@ -1,4 +1,4 @@
-import { Container, Section } from "@socialgouv/react-ui";
+import { Container, Section } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 

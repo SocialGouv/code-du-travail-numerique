@@ -1,5 +1,5 @@
 import { formatIdcc } from "@cdt/data";
-import { theme } from "@socialgouv/react-ui";
+import { theme } from "@socialgouv/cdtn-react-ui";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
 import PropTypes from "prop-types";

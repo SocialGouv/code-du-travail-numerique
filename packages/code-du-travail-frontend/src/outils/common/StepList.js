@@ -1,4 +1,4 @@
-import { FlatList, theme, Wrapper } from "@socialgouv/react-ui";
+import { FlatList, theme, Wrapper } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 import styled from "styled-components";
 

@@ -1,4 +1,4 @@
-import { Input, theme, Toast } from "@socialgouv/react-ui";
+import { Input, theme, Toast } from "@socialgouv/cdtn-react-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";

@@ -1,4 +1,4 @@
-import { Button, FlatList, theme } from "@socialgouv/react-ui";
+import { Button, FlatList, theme } from "@socialgouv/cdtn-react-ui";
 import PropTypes from "prop-types";
 import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
