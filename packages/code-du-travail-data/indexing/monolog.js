@@ -1,6 +1,6 @@
-import { getRouteBySource, SOURCES } from "@cdt/sources";
 import { Client } from "@elastic/elasticsearch";
 import { Queries } from "@socialgouv/cdtn-monolog";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
 import { logger } from "./logger";
 
