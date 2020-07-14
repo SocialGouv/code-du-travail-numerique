@@ -26,14 +26,14 @@
     "styled-components": "5.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
-    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@socialgouv/eslint-config-react": "^1.6.0",
-    "@testing-library/react": "^10.4.4",
+    "@testing-library/react": "^10.4.6",
     "babel-jest": "^26.1.0",
     "date-fns": "^2.14.0",
     "eslint": "^7.3.1",
