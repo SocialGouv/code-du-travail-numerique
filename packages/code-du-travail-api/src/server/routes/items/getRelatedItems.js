@@ -9,15 +9,25 @@ const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
 const { logger } = require("../../utils/logger");
 
-const MAX_RESULTS = 5;
+const MAX_RESULTS = 4;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-// ratio for A/B testing between covisit and search based related items (50%)
-const abRatio = 0.5;
+// ratio for A/B testing between covisit and search based related items (60% to compensate lack of covisits)
+const abRatio = 0.6;
 
-// select certain fields and add recommandation source (covisits or search)
+// standard related items :
+const sources = [
+  SOURCES.TOOLS,
+  SOURCES.SHEET_SP,
+  SOURCES.SHEET_MT,
+  SOURCES.LETTERS,
+  SOURCES.CONTRIBUTIONS,
+  SOURCES.EXTERNALS,
+];
+
+// select certain fields and add recommendation source (covisits or search)
 function mapSource(reco, source) {
   return (({
     action,
@@ -42,14 +52,10 @@ function mapSource(reco, source) {
 }
 
 async function getRelatedItems({ title, settings, slug, covisits }) {
-  // console.log(covisits);
+  const useCovisit = Math.random() < abRatio;
 
-  const useCovisit = Math.random() > abRatio;
-
-  if (covisits & useCovisit) {
+  if (covisits && useCovisit) {
     // covisits as related items
-    // console.log(covisits);
-
     const body = covisits
       .map(({ link }) => {
         const source = getSourceByRoute(link.split("/")[0]);
@@ -81,23 +87,15 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
       });
 
     const covisitedItems = esCovisits
-      // do we really want this ?
-      // .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
+      .filter(({ _source }) => !_source.slug.startsWith(slug.split("#")))
+      // only returning sources of interest
+      .filter(({ _source: { source } }) => sources.includes(source))
       // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }) => mapSource("covisits", _source));
+      .map(({ _source }) => mapSource("covisits", _source))
+      .slice(0, MAX_RESULTS);
 
     return covisitedItems;
   } else {
-    // standard related items :
-    const sources = [
-      SOURCES.TOOLS,
-      SOURCES.SHEET_SP,
-      SOURCES.SHEET_MT,
-      SOURCES.LETTERS,
-      SOURCES.CONTRIBUTIONS,
-      SOURCES.EXTERNALS,
-    ];
-
     const relatedItemBody = getRelatedItemsBody({ settings, sources });
     const requestBodies = [{ index }, relatedItemBody];
 

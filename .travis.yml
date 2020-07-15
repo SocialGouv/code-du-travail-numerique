@@ -33,15 +33,9 @@ jobs:
       name: Main Stage
       env:
         - ELASTICSEARCH_LOG_LEVEL=info
-<<<<<<< HEAD
         - NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr
-        - ES_LOGS=$ES_LOGS
-        - ES_LOGS_TOKEN=$ES_LOGS_TOKEN
-=======
-        - NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/
         - ES_LOGS=${ES_LOGS}
         - ES_LOGS_TOKEN=${ES_LOGS_TOKEN}
->>>>>>> i'm gonna fix you
       before_script:
         - docker-compose up -d elasticsearch
 
