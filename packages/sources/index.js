@@ -1,3 +1,4 @@
+/** @type {cdtnSources.SOURCES} */
 const SOURCES = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
