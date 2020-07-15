@@ -3,7 +3,7 @@ import {
   createIndex,
   indexDocumentsBatched,
   version,
-} from "@cdt/data/indexing/es_client.utils";
+} from "@cdt/data/indexing/esClientUtils";
 import { DOCUMENTS, SUGGESTIONS } from "@cdt/data/indexing/esIndexName";
 import { suggestionMapping } from "@cdt/data/indexing/suggestion.mapping";
 

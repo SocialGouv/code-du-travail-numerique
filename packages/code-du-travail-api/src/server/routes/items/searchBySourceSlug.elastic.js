@@ -30,6 +30,7 @@ function getSearchBody({ source, slug }) {
       "references",
       "contents", // editorial_content
       "folder", // editorial_content
+      "cdtnId",
     ],
     query: {
       bool: {

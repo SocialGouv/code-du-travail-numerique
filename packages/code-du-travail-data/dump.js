@@ -2,7 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 
-import { createHashingSet } from "./cdtnIds";
+import { createHashingSet } from "./indexing/cdtnIds";
 import { logger } from "./indexing/logger";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { vectorizeDocument } from "./indexing/vectorizer";

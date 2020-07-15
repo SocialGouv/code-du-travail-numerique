@@ -11,6 +11,7 @@ const getDocumentByUrlQuery = (
     "url",
     "action",
     "breadcrumbs",
+    "cdtnId",
   ]
 ) => {
   const [, source, slug] = url.split("/");

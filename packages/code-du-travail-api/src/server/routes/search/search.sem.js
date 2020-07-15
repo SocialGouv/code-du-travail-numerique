@@ -3,7 +3,6 @@ function getSemQuery({ query_vector, size, sources = [] }) {
     throw new Error("[getSemQuery] sources should not be empty");
   }
   return {
-    size: size,
     _source: [
       "title",
       "source",
@@ -12,6 +11,7 @@ function getSemQuery({ query_vector, size, sources = [] }) {
       "url",
       "action",
       "breadcrumbs",
+      "cdtnId",
     ],
     query: {
       script_score: {
@@ -32,11 +32,12 @@ function getSemQuery({ query_vector, size, sources = [] }) {
           },
         },
         script: {
-          source: "cosineSimilarity(params.query_vector, 'title_vector') + 1.0",
           params: { query_vector: query_vector },
+          source: "cosineSimilarity(params.query_vector, 'title_vector') + 1.0",
         },
       },
     },
+    size: size,
   };
 }
 
