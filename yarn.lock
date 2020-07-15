@@ -2654,10 +2654,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/contributions-data@^2.7.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.7.0.tgz#4e8024ae2706e9e7b2f8a82a9ab788c5dd1638af"
-  integrity sha512-Ascot04LhZHzsFjr0jB7gyGb1QU7BlCUI+YnhrYUqMCtgFXcdw85uXGOl63wwtpQbZCbO2qMq6ztjT4EkJDMVA==
+"@socialgouv/contributions-data@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.8.0.tgz#b17be86444368c6c49e129699b38b01278f5675d"
+  integrity sha512-44bLfDrYDRnwZijv90fi8eT4WOaf9pfW5sxpRd1U+rlEX0tY2GXf/AlbkPelDLARh7NCQKcPiX+pfat8nB26Yw==
   dependencies:
     esm "^3.2.25"
     node-fetch "^2.6.0"
@@ -2697,15 +2697,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.129.0":
-  version "3.129.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.129.0.tgz#5da53230d2dc13181a35adcdd174cc402b1efd74"
-  integrity sha512-zfg+yJZzLGc3qemEsSJ0BQA+FE9JI4Sbuw3wJi/QZ4n8tHYzDt2Ps9GiSqxMqLWFBtOk7bV7/O4L/hw67IuSsA==
+"@socialgouv/fiches-travail-data@^3.134.0":
+  version "3.134.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.134.0.tgz#46d31b16b00a233cf1a9a2e1c9a10c5344350fe7"
+  integrity sha512-f3IuXBC9/ITLAtdg0lcVR7tIwtHWaA9nhwh3idTu6zTUAHC2Z/WOy0eH7q3gUs3zvXSuOS7Pzas4RQygnWw2AQ==
 
-"@socialgouv/fiches-vdd@^1.123.0":
-  version "1.123.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.123.0.tgz#28e807401543dc32ebb73084dc8ef8125ae0e117"
-  integrity sha512-gDNDBO9kLs7oLn3UO/ALLa9IdkMFba8rdR4tE+ZVRO5zvHS7GjmVCH0OyzDb3h6eByJvGz9xb1AzbaeOp/8e9g==
+"@socialgouv/fiches-vdd@^1.126.0":
+  version "1.126.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.126.0.tgz#5558a82369bab73bfb32f2ecb92356b309c04093"
+  integrity sha512-AG6thWzqWDhEFP42VhzZMRflRlIbesj6MdjNXXJfcC6rn3dx76HmIt2BHEfWl/HYVlMzVLCNWPbtcEcKsFMDOA==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.4"
