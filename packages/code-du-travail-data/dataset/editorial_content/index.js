@@ -77,10 +77,7 @@ function getEditorialContents() {
         description,
         excludeFromSearch: false,
         folder,
-<<<<<<< HEAD
-=======
         id,
->>>>>>> init ids
         intro: addGlossary(introHtml),
         references,
         slug: slugify(title),

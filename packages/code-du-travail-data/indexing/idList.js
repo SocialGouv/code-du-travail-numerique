@@ -1,4 +1,5 @@
-import { SOURCES } from "@cdt/sources";
+import slugify from "@socialgouv/cdtn-slugify";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
 import { selectAll } from "unist-util-select";
 
@@ -6,7 +7,6 @@ import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
 import { getEditorialContents } from "../dataset/editorial_content";
 import { getFichesSP } from "../dataset/fiches_service_public";
-import slugify from "../slugify";
 import { getAgreementPages } from "./agreement_pages";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";

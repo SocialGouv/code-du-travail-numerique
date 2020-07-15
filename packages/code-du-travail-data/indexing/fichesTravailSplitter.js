@@ -37,10 +37,10 @@ function splitArticle(article) {
       }) => {
         const title = transformSectionTitle({ prefixTitle, sectionTitle });
         return {
-          pubId,
           anchor,
           description,
           html,
+          pubId,
           references,
           slug: `${slug}${anchor ? `#${anchor}` : ""}`,
           text,
