@@ -3,7 +3,6 @@ function getSearchBody({ query, size, sources = [] }) {
     throw new Error("[getSearchBody] sources should not be empty");
   }
   return {
-    size: size,
     _source: [
       "title",
       "source",
@@ -12,6 +11,7 @@ function getSearchBody({ query, size, sources = [] }) {
       "url",
       "action",
       "breadcrumbs",
+      "cdtnId",
     ],
     query: {
       bool: {
@@ -26,11 +26,11 @@ function getSearchBody({ query, size, sources = [] }) {
               should: [
                 {
                   multi_match: {
-                    query: query,
-                    fields: ["text.french", "title.french"],
-                    type: "cross_fields",
-                    minimum_should_match: "1<99% 3<75% 6<30%",
                     boost: 0.1,
+                    fields: ["text.french", "title.french"],
+                    minimum_should_match: "1<99% 3<75% 6<30%",
+                    query: query,
+                    type: "cross_fields",
                   },
                 },
                 {
@@ -52,17 +52,17 @@ function getSearchBody({ query, size, sources = [] }) {
           {
             match_phrase: {
               "title.french": {
+                boost: 2,
                 query: `__start__ ${query}`,
                 slop: 1,
-                boost: 2,
               },
             },
           },
           {
             match_phrase: {
               "text.french": {
-                query: query,
                 boost: 1.5,
+                query: query,
               },
             },
           },
@@ -76,30 +76,31 @@ function getSearchBody({ query, size, sources = [] }) {
           {
             match: {
               source: {
-                query: "contributions",
                 boost: 1.2,
+                query: "contributions",
               },
             },
           },
           {
             match: {
               source: {
+                boost: 1.1,
                 query: "outils",
-                boost: 1.1,
               },
             },
           },
           {
             match: {
               source: {
-                query: "modeles_de_courriers",
                 boost: 1.1,
+                query: "modeles_de_courriers",
               },
             },
           },
         ],
       },
     },
+    size: size,
   };
 }
 
