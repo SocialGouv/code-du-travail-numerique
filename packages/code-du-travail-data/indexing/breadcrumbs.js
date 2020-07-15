@@ -14,9 +14,15 @@ export function toBreadcrumbs({ label, position }) {
 
 export function createThemer(themes) {
   return function getTheme(slug) {
-    const theme = themes.find((theme) =>
-      theme.refs.some((ref) => ref.url.match(new RegExp(slug, "i")))
+    const referencedThemes = themes.filter((theme) =>
+      theme.refs.find((ref) => ref.url.match(new RegExp(slug, "i")))
     );
+    const theme = referencedThemes.reduce((majorTheme, currentTheme) => {
+      if (!majorTheme || majorTheme.position > currentTheme) {
+        return currentTheme;
+      }
+      return majorTheme;
+    }, null);
     let breadcrumbs = [];
     if (theme) {
       breadcrumbs = (theme.breadcrumbs || []).map(toBreadcrumbs).concat([
