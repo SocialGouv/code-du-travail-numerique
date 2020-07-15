@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn build:populate && yarn dump-dev",
     "build:populate": "ncc build ./indexing/index.js -o dist/populate --external @socialgouv/kali-data --external @socialgouv/fiches-travail-data",
-    "check-slugs": "node -r esm indexing/slug_checker",
+    "check-slugs": "node -r esm indexing/slugChecker",
     "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
     "dump-dev": "node -r esm dump.js > ./dist/dump.data.json",
     "lint": "eslint ./indexing/*",
