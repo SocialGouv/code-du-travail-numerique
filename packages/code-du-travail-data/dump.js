@@ -2,6 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 
+import { createHashingSet } from "./cdtnIds";
 import { logger } from "./indexing/logger";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { vectorizeDocument } from "./indexing/vectorizer";
@@ -9,6 +10,7 @@ import { vectorizeDocument } from "./indexing/vectorizer";
 logger.silent = true;
 const t0 = Date.now();
 const NLP_URL = process.env.NLP_URL;
+const hashId = createHashingSet();
 const excludeSources = [
   SOURCES.CDT,
   SOURCES.GLOSSARY,
@@ -18,7 +20,6 @@ const excludeSources = [
   SOURCES.CCN_PAGE,
 ];
 const queue = new PQueue({ concurrency: 3 });
-
 async function fetchVector(data) {
   return NLP_URL
     ? vectorizeDocument(data.title, data.text)
@@ -43,7 +44,9 @@ const dump = async () => {
   } else {
     console.error(`no nlp`);
   }
-  for await (const docs of cdtnDocumentsGen()) {
+  for await (const docsNoIds of cdtnDocumentsGen()) {
+    // add CDTN specific ids to docs
+    const docs = docsNoIds.map(hashId);
     console.error(`› ${docs[0].source}... ${docs.length} items`);
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);

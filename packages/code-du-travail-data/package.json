@@ -48,7 +48,8 @@
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.1",
     "uuid": "^8.2.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "xxhashjs": "^0.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

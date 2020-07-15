@@ -37,6 +37,7 @@ const convertFile2Html = ({
   title,
   description,
   metaDescription,
+  id,
   ...rest
 }) => {
   return mammoth
@@ -55,6 +56,7 @@ const convertFile2Html = ({
         description,
         filename,
         filesize: fs.statSync(`${__dirname}/${DOC_DIR}/${filename}`).size,
+        id,
         metaDescription,
         slug,
         source: SOURCES.LETTERS,
