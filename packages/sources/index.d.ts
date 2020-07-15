@@ -1,12 +1,12 @@
 export as namespace cdtnSources
 
-export function getLabelBySourceFn(src:string): string
+export function getLabelBySourceFn(src: string): string
 
 export function getRouteBySourceFn(src: string): string
 
 export function getSourceByRouteFn(slug: string): string
 
-export type SOURCES = {
+export type SOURCES = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
@@ -27,3 +27,5 @@ export type SOURCES = {
   TOOLS: "outils",
   VERSIONS: "versions",
 }
+
+export const SOURCES: SOURCES
