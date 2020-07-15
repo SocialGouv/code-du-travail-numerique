@@ -12,11 +12,13 @@
     "directory": "packages/slugify"
   },
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "typescript": "^3.9.6"
   },
   "scripts": {
     "test": "jest"
   },
+  "types": "index.d.ts",
   "jest": {
     "clearMocks": true,
     "coverageDirectory": "coverage",
@@ -26,5 +28,8 @@
       "!**/data/**"
     ],
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.4"
   }
 }
