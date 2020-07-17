@@ -14,15 +14,16 @@ export function toBreadcrumbs({ label, position }) {
 
 export function createThemer(themes) {
   return function getTheme(slug) {
-    const referencedThemes = themes.filter((theme) =>
-      theme.refs.find((ref) => ref.url.match(new RegExp(slug, "i")))
-    );
-    const theme = referencedThemes.reduce((majorTheme, currentTheme) => {
-      if (!majorTheme || majorTheme.position > currentTheme) {
-        return currentTheme;
-      }
-      return majorTheme;
-    }, null);
+    // we only pick the most important theme
+    const theme = themes
+      .filter((theme) =>
+        theme.refs.find((ref) => ref.url.match(new RegExp(slug, "i")))
+      )
+      .sort((previous, next) => {
+        // currently position also take depth into account
+        // e.g. 7 has a depth of one and 71 a depth of 2 and so on
+        return previous.position - next.position;
+      })[0];
     let breadcrumbs = [];
     if (theme) {
       breadcrumbs = (theme.breadcrumbs || []).map(toBreadcrumbs).concat([
