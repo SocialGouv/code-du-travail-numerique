@@ -10,12 +10,12 @@ const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const makeHit = (data) => ({
   _index: index,
-  _type: "_doc",
   _source: {
     source: "external",
     title: "",
     ...data,
   },
+  _type: "_doc",
 });
 
 const indexQuery = { index };

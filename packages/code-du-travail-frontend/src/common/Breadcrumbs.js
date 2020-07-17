@@ -6,12 +6,12 @@ import styled from "styled-components";
 
 const { ArrowRight, Home: HomeIcon } = icons;
 
-const Breadcrumbs = ({ items = [] }) => {
+const Breadcrumbs = ({ items = [], ...props }) => {
   if (!items || items.length === 0) {
     return null;
   }
   return (
-    <Nav>
+    <Nav {...props}>
       <OverflowWrapper>
         <StyledContainer>
           {[

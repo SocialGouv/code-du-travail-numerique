@@ -1,5 +1,6 @@
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { getRouteBySource, SOURCES } = require("@socialgouv/cdtn-sources");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -22,8 +23,8 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/themes", async (ctx) => {
   const body = getRootThemesQuery({});
   const response = await elasticsearchClient.search({
-    index,
     body,
+    index,
   });
   ctx.body = {
     children: response.body.hits.hits.map((t) => t._source),
@@ -43,20 +44,65 @@ router.get("/themes/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getThemeQuery({ slug });
   const response = await elasticsearchClient.search({
-    index,
     body,
+    index,
   });
   if (response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
 
-  const theme = response.body.hits.hits[0];
-  const refs = await getEsReferences(theme._source.refs);
+  const theme = response.body.hits.hits[0]._source;
+
+  if (theme.children.length) {
+    const childrenResponse = await populateChildren(theme.children);
+    const populatedChildren = childrenResponse.map(
+      (childResponse) =>
+        childResponse.body.hits.hits[0] &&
+        childResponse.body.hits.hits[0]._source
+    );
+    // if no direct ref, fetch first 4 of the children
+    for (const child of populatedChildren) {
+      if (child && !child.refs.length) {
+        const childrenResponse = await populateChildren(child.children);
+        child.refs = childrenResponse.flatMap(
+          (childResponse) =>
+            childResponse.body.hits.hits[0] &&
+            childResponse.body.hits.hits[0]._source &&
+            childResponse.body.hits.hits[0]._source.refs.slice(0, 3)
+        );
+      }
+    }
+
+    theme.refs = await getEsReferences(theme.refs).then((references) =>
+      references.map((reference) => reference._source)
+    );
+    for (const child of populatedChildren) {
+      if (child) {
+        child.refs = await getEsReferences(child.refs).then((references) =>
+          references.map((reference) => reference._source)
+        );
+      }
+    }
+    theme.children = populatedChildren;
+  }
 
   ctx.body = {
-    ...theme._source,
-    refs: refs.map(({ _source }) => _source),
+    ...theme,
   };
 });
 
 module.exports = router;
+
+async function populateChildren(children) {
+  const results = await Promise.all(
+    children.map(({ slug }) => {
+      return elasticsearchClient.search({
+        body: getThemeQuery({
+          slug: slug.replace(`/${getRouteBySource(SOURCES.THEMES)}/`, ""),
+        }),
+        index,
+      });
+    })
+  );
+  return results;
+}

@@ -4,34 +4,209 @@ exports[`return theme data for slug 8-depart-de-lentreprise 1`] = `
 Object {
   "breadcrumbs": Array [],
   "children": Array [
+    null,
     Object {
-      "label": "Documents à remettre au salarié",
-      "slug": "/themes/80-documents-a-remettre-au-salarie",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+      ],
+      "children": Array [],
+      "position": 81,
+      "refs": Array [
+        Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Départ de l'entreprise",
+              "slug": "/themes/8-depart-de-lentreprise",
+            },
+            Object {
+              "label": "Démission",
+              "slug": "/themes/81-demission",
+            },
+          ],
+          "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+          "slug": "demission-dun-salarie",
+          "source": "fiches_service_public",
+          "title": "Démission d'un salarié",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+        },
+        Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Départ de l'entreprise",
+              "slug": "/themes/8-depart-de-lentreprise",
+            },
+            Object {
+              "label": "Démission",
+              "slug": "/themes/81-demission",
+            },
+          ],
+          "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
+          "slug": "la-demission#Comment-presenter-une-demission",
+          "source": "fiches_ministere_travail",
+          "title": "La démission : comment présenter une démission ?",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/le-salarie-peut-il-revenir-sur-sa-demission",
+        },
+        Object {
+          "source": "external",
+          "title": "La démission : quelle est la situation du salarié à la fin du contrat ?",
+          "url": "/fiche-ministere-travail/la-demission#Quelle-est-la-situation-du-salarie-a-la-fin-du-contrat",
+        },
+        Object {
+          "source": "external",
+          "title": "La démission : faut-il respecter un préavis ?",
+          "url": "/fiche-ministere-travail/la-demission#Faut-il-respecter-un-preavis",
+        },
+        Object {
+          "source": "external",
+          "title": " Quelle est la durée du préavis en cas de démission ?",
+          "url": "/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission",
+        },
+        Object {
+          "source": "external",
+          "title": "Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?",
+          "url": "/contribution/le-preavis-de-demission-doit-il-etre-execute-en-totalite-y-compris-si-le-salarie-a-retrouve-un-emploi",
+        },
+        Object {
+          "action": "Calculer",
+          "breadcrumbs": Array [
+            Object {
+              "label": "Départ de l'entreprise",
+              "slug": "/themes/8-depart-de-lentreprise",
+            },
+            Object {
+              "label": "Démission",
+              "slug": "/themes/81-demission",
+            },
+          ],
+          "description": "Calculez la durée de préavis à respecter en cas de démission",
+          "slug": "preavis-demission",
+          "source": "outils",
+          "title": "Préavis de démission",
+        },
+        Object {
+          "source": "external",
+          "title": "La démission : et les heures pour recherche d’emploi ?",
+          "url": "/fiche-ministere-travail/la-demission#Et-les-heures-pour-recherche-d-emploi",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/est-on-dispense-de-preavis-en-cas-de-demission-liee-a-la-mutation-du-conjoint",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
+        },
+        Object {
+          "source": "external",
+          "title": "La démission : le salarié peut-il « démissionner » dans le cadre d’un contrat à durée déterminée ?",
+          "url": "/fiche-ministere-travail/la-demission#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-maternite",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier",
+        },
+        Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Départ de l'entreprise",
+              "slug": "/themes/8-depart-de-lentreprise",
+            },
+            Object {
+              "label": "Démission",
+              "slug": "/themes/81-demission",
+            },
+          ],
+          "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
+          "slug": "demission-dune-assistante-maternelle",
+          "source": "fiches_service_public",
+          "title": "Démission d'une assistante maternelle",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+        },
+        Object {
+          "source": "external",
+          "title": "",
+          "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental",
+        },
+        Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Départ de l'entreprise",
+              "slug": "/themes/8-depart-de-lentreprise",
+            },
+            Object {
+              "label": "Démission",
+              "slug": "/themes/81-demission",
+            },
+          ],
+          "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+          "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+          "source": "fiches_ministere_travail",
+          "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+        },
+        Object {
+          "source": "external",
+          "title": "La démission : le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
+          "url": "/fiche-ministere-travail/la-demission#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
+        },
+        Object {
+          "source": "external",
+          "title": "Le droit aux allocations chômage du salarié démissionnaire : quelles sont les démissions considérées comme légitimes ?",
+          "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire#Quelles-sont-les-demissions-considerees-comme-legitimes",
+        },
+        Object {
+          "source": "external",
+          "title": "Le droit aux allocations chômage du salarié démissionnaire : que se passe-t-il dans les autres cas ?",
+          "url": "/fiche-ministere-travail/le-droit-aux-allocations-chomage-du-salarie-demissionnaire",
+        },
+        Object {
+          "source": "external",
+          "title": "De nouveaux droits pour les salariés démissionnaires",
+          "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries-demissionnaires",
+        },
+        Object {
+          "source": "external",
+          "title": "De nouveaux droits pour les salariés : tous les salariés ayant au moins 5 ans d’ancienneté dans leur entreprise auront droit à l’assurance chômage quand ils démissionnent pour réaliser un projet professionnel.",
+          "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries#Tous-les-salaries-ayant-au-moins-5-ans-d-anciennete-dans-leur-entreprise-nbsp",
+        },
+        Object {
+          "source": "external",
+          "title": "De nouveaux droits pour les salariés : tous les salariés seront gratuitement accompagnés pour élaborer et réaliser leur projet professionnel lorsqu’ils démissionnent.",
+          "url": "/fiche-ministere-travail/de-nouveaux-droits-pour-les-salaries#Tous-les-salaries-seront-gratuitement-accompagnes-pour-elaborer-et-realiser-nbsp",
+        },
+        Object {
+          "source": "external",
+          "title": "Bénéficie-t-on d'heures de recherche d'emploi pendant le préavis de démission ?",
+          "url": "/fiche-service-public/beneficie-t-on-dheures-de-recherche-demploi-pendant-le-preavis-de-demission",
+        },
+      ],
+      "slug": "81-demission",
+      "title": "Démission",
     },
-    Object {
-      "label": "Démission",
-      "slug": "/themes/81-demission",
-    },
-    Object {
-      "label": "Fin d'un CDD - CTT",
-      "slug": "/themes/82-fin-dun-cdd-ctt",
-    },
-    Object {
-      "label": "Rupture conventionnelle",
-      "slug": "/themes/83-rupture-conventionnelle",
-    },
-    Object {
-      "label": "Licenciement",
-      "slug": "/themes/84-licenciement",
-    },
-    Object {
-      "label": "Retraite",
-      "slug": "/themes/85-retraite",
-    },
-    Object {
-      "label": "Autres départs",
-      "slug": "/themes/86-autres-departs",
-    },
+    null,
+    null,
+    null,
+    null,
+    null,
   ],
   "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,

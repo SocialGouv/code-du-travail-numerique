@@ -17,7 +17,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -28,9 +27,6 @@ const {
 function DossierThematique({ dossier }) {
   const [filter, setFilter] = useState("");
 
-  if (!dossier) {
-    return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
-  }
   const { description = "", metaDescription, categories, title } = dossier;
 
   const sortedCategories = categories.sort(
