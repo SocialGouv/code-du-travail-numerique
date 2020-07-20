@@ -243,11 +243,6 @@
             "title": "Article L. 3324-6 du code du travail",
             "type": "code-du-travail",
             "id": "l3324-6"
-          },
-          {
-            "title": "Article R. 3324-22 du code du travail",
-            "type": "code-du-travail",
-            "id": "r3324-22"
           }
         ]
       }, {
@@ -259,6 +254,11 @@
             "title": "Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l'épargne salariale en cas de violences conjugales",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
+          },
+          {
+            "title": "Article R. 3324-22 du code du travail",
+            "type": "code-du-travail",
+            "id": "r3324-22"
           }
         ]
       }, {
