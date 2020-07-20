@@ -2658,14 +2658,14 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.35.0":
-  version "1.35.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.35.0.tgz#3535ed565ef85d05169f799a70c39a2245c72cf1"
-  integrity sha512-7qhzrY1te4+zdz5F+j8rBAdwkKueTC/3Gkgq2EWLMud8EVPHBZtLO2yc0yzA7taZZImvYRhWN//bV3j6S51YpQ==
+"@socialgouv/datafiller-data@^1.38.0":
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.38.0.tgz#ccead73dadb777e649a1c3f737de352e692596e9"
+  integrity sha512-zR+QD1+MFNnKpmcB89Al5BG1gj74YtiRmWbZ7b16wqxx7iFTCFSDxaDGOrwEdfdaUUNxSBhDiff+wRtXBbOrPA==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
-    remark "^12.0.0"
+    remark "^12.0.1"
     remark-html "^11.0.2"
 
 "@socialgouv/eslint-config-react@^1.6.0":
@@ -2691,18 +2691,18 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.134.0":
-  version "3.134.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.134.0.tgz#46d31b16b00a233cf1a9a2e1c9a10c5344350fe7"
-  integrity sha512-f3IuXBC9/ITLAtdg0lcVR7tIwtHWaA9nhwh3idTu6zTUAHC2Z/WOy0eH7q3gUs3zvXSuOS7Pzas4RQygnWw2AQ==
+"@socialgouv/fiches-travail-data@^3.143.0":
+  version "3.143.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.143.0.tgz#63f7314d4cdec2a7f08d1407bb10cf39d1a674a8"
+  integrity sha512-rihq8Fg/eOGa88S/x4XXkQxT72SYPS77p5JsOFRFvutl60BUU4pkZLxAB9IT4d47J0evr9Qr8kzVKilclCdcsQ==
 
-"@socialgouv/fiches-vdd@^1.126.0":
-  version "1.126.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.126.0.tgz#5558a82369bab73bfb32f2ecb92356b309c04093"
-  integrity sha512-AG6thWzqWDhEFP42VhzZMRflRlIbesj6MdjNXXJfcC6rn3dx76HmIt2BHEfWl/HYVlMzVLCNWPbtcEcKsFMDOA==
+"@socialgouv/fiches-vdd@^1.129.0":
+  version "1.129.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.129.0.tgz#f51829b4dbcd69437865921f28e1224b0c9fc9e0"
+  integrity sha512-+adn3mnJzJdrBZMnDS2jmWpk+Pt8suj+cWyF8O/V7fTGCeu9wwXCaaFKpXTaTcrGeRmqULLRLiCRtbmK+pXtfQ==
   dependencies:
     node-fetch "^2.6.0"
-    ora "^4.0.4"
+    ora "^4.0.5"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
@@ -13679,10 +13679,10 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-4.0.4.tgz#e8da697cc5b6a47266655bf68e0fb588d29a545d"
-  integrity sha512-77iGeVU1cIdRhgFzCK8aw1fbtT1B/iZAvWjS+l/o1x0RShMgxHUZaD2yDpWsNCPwXg9z1ZA78Kbdvr8kBmG/Ww==
+ora@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-4.0.5.tgz#7410b5cc2d99fa637fd5099bbb9f02bfbb5a361e"
+  integrity sha512-jCDgm9DqvRcNIAEv2wZPrh7E5PcQiDUnbnWbAfu4NGAE2ZNqPFbDixmWldy1YG2QfLeQhuiu6/h5VRrk6cG50w==
   dependencies:
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
