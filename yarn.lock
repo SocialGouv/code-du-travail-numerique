@@ -2648,10 +2648,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/contributions-data@^2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.8.0.tgz#b17be86444368c6c49e129699b38b01278f5675d"
-  integrity sha512-44bLfDrYDRnwZijv90fi8eT4WOaf9pfW5sxpRd1U+rlEX0tY2GXf/AlbkPelDLARh7NCQKcPiX+pfat8nB26Yw==
+"@socialgouv/contributions-data@^2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.8.3.tgz#74eb0d48846e61c739ac40d8285135187f9d0110"
+  integrity sha512-OGHWeya4XCN4Q9OJR9vqm7Z0fwMLCRxzazzW6D8N9RtIQVpXzaVxEbPobmK82WuZebmqjf5jgqD+vn9jxNzEQg==
   dependencies:
     esm "^3.2.25"
     node-fetch "^2.6.0"
@@ -3405,10 +3405,10 @@
     "@babel/runtime" "^7.5.4"
     "@types/testing-library__react-hooks" "^3.0.0"
 
-"@testing-library/react@^10.4.6":
-  version "10.4.6"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.4.6.tgz#70a7cac35ac8256c22a8cb0c4779e0efefd218c6"
-  integrity sha512-pVcm8v0HxCEzrtasbC2bdhWM0P5X9o8a/xfBugC97uVVTmhVeGHj+5CdE1JYi/i2K+mCyeq5YqzHLW/gB+K12w==
+"@testing-library/react@^10.4.7":
+  version "10.4.7"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.4.7.tgz#fc14847fb70a5e93576b8f7f0d1490ead02a9061"
+  integrity sha512-hUYbum3X2f1ZKusKfPaooKNYqE/GtPiQ+D2HJaJ4pkxeNJQFVUEvAvEh9+3QuLdBeTWkDMNY5NSijc5+pGdM4Q==
   dependencies:
     "@babel/runtime" "^7.10.3"
     "@testing-library/dom" "^7.17.1"
@@ -16003,7 +16003,7 @@ remark-mdx@^1.6.5:
     remark-parse "8.0.2"
     unified "9.0.0"
 
-remark-parse@8.0.2, remark-parse@^8.0.0, remark-parse@^8.0.2:
+remark-parse@8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-8.0.2.tgz#5999bc0b9c2e3edc038800a64ff103d0890b318b"
   integrity sha512-eMI6kMRjsAGpMXXBAywJwiwAse+KNpmt+BK55Oofy4KvBZEqUDj6mWbGLJZrujoPIPPxDXzn3T9baRlpsm2jnQ==
@@ -16061,6 +16061,28 @@ remark-parse@^6.0.0:
     vfile-location "^2.0.0"
     xtend "^4.0.1"
 
+remark-parse@^8.0.0, remark-parse@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-8.0.3.tgz#9c62aa3b35b79a486454c690472906075f40c7e1"
+  integrity sha512-E1K9+QLGgggHxCQtLt++uXltxEprmWzNfg+MxpfHsZlrddKzZ/hZyWHDbK3/Ap8HJQqYJRXP+jHczdL6q6i85Q==
+  dependencies:
+    ccount "^1.0.0"
+    collapse-white-space "^1.0.2"
+    is-alphabetical "^1.0.0"
+    is-decimal "^1.0.0"
+    is-whitespace-character "^1.0.0"
+    is-word-character "^1.0.0"
+    markdown-escapes "^1.0.0"
+    parse-entities "^2.0.0"
+    repeat-string "^1.5.4"
+    state-toggle "^1.0.0"
+    trim "0.0.1"
+    trim-trailing-lines "^1.0.0"
+    unherit "^1.0.4"
+    unist-util-remove-position "^2.0.0"
+    vfile-location "^3.0.0"
+    xtend "^4.0.1"
+
 remark-rehype@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/remark-rehype/-/remark-rehype-7.0.0.tgz#8e106e49806c69b2e9523b76d24965119e2da67b"
@@ -16109,10 +16131,10 @@ remark-stringify@^6.0.0:
     unherit "^1.0.4"
     xtend "^4.0.1"
 
-remark-stringify@^8.0.0, remark-stringify@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-8.1.0.tgz#1e555f4402e445c364fb23d12fc5f5e0337ec8b7"
-  integrity sha512-FSPZv1ds76oAZjurhhuV5qXSUSoz6QRPuwYK38S41sLHwg4oB7ejnmZshj7qwjgYLf93kdz6BOX9j5aidNE7rA==
+remark-stringify@^8.0.0, remark-stringify@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-8.1.1.tgz#e2a9dc7a7bf44e46a155ec78996db896780d8ce5"
+  integrity sha512-q4EyPZT3PcA3Eq7vPpT6bIdokXzFGp9i85igjmhRyXWmPs0Y6/d2FYwUNotKAWyLch7g0ASZJn/KHHcHZQ163A==
   dependencies:
     ccount "^1.0.0"
     is-alphanumeric "^1.0.0"
@@ -16138,10 +16160,10 @@ remark@^10.0.1:
     remark-stringify "^6.0.0"
     unified "^7.0.0"
 
-remark@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/remark/-/remark-12.0.0.tgz#d1c145c07341c9232f93b2f8539d56da15a2548c"
-  integrity sha512-oX4lMIS0csgk8AEbzY0h2jdR0ngiCHOpwwpxjmRa5TqAkeknY+tkhjRJGZqnCmvyuWh55/0SW5WY3R3nn3PH9A==
+remark@^12.0.0, remark@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/remark/-/remark-12.0.1.tgz#f1ddf68db7be71ca2bad0a33cd3678b86b9c709f"
+  integrity sha512-gS7HDonkdIaHmmP/+shCPejCEEW+liMp/t/QwmF0Xt47Rpuhl32lLtDV1uKWvGoq+kxr5jSgg5oAIpGuyULjUw==
   dependencies:
     remark-parse "^8.0.0"
     remark-stringify "^8.0.0"
