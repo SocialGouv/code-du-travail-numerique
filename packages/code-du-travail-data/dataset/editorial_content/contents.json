@@ -1,13 +1,14 @@
 [
   {
     "title": "Congés payés : nouveautés Covid-19",
-    "date": "25/05/20",
+    "date": "20/07/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les congés payés.",
     "folder": "covid",
     "contents": [
       {
         "type": "graphic",
         "name": "conges-payes",
+        "title": "Infographie : Les congés payés",
         "altText": "Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous.",
         "references": [
           {
@@ -21,18 +22,30 @@
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
           }
         ]
+      }, {
+        "type": "markdown",
+        "name": "monetisation",
+        "title": "Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
+        "references": [
+          {
+            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 6",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
+          }
+        ]
       }
     ]
   },
   {
     "title": "RTT, jours de repos forfait jours, compte épargne-temps : nouveautés Covid-19",
-    "date": "25/05/20",
+    "date": "20/07/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les RTT, les jours de repos forfait jours et le compte épargne-temps.",
     "folder": "covid",
     "contents": [
       {
         "type": "graphic",
         "name": "jours-repos",
+        "title": "Infographie : RTT, jours de repos forfait jours, compte épargne-temps",
         "altText": "Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous.",
         "references": [
           {
@@ -54,6 +67,17 @@
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776914"
+          }
+        ]
+      }, {
+        "type": "markdown",
+        "name": "monetisation",
+        "title": "Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
+        "references": [
+          {
+            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 6",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
           }
         ]
       }
@@ -181,13 +205,14 @@
   },
   {
     "title": "Intéressement et participation : nouveautés Covid-19",
-    "date": "25/05/20",
+    "date": "20/07/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’ntéressement et la participation",
     "folder": "covid",
     "contents": [
       {
         "type": "markdown",
-        "name": "interessement-participation",
+        "title": "Report du versement des sommes",
+        "name": "interessement-participation-1",
         "references": [
           {
             "title": "Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire prévue à l’article L. 1226-1 du code du travail et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation, article 2",
@@ -203,11 +228,6 @@
             "title": "Loi n° 2020-546 du 11 mai 2020 prorogeant l’état d’urgence sanitaire et complétant ses dispositions",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244"
-          },
-          {
-            "title": "Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l'épargne salariale en cas de violences conjugales",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
           },
           {
             "title": "Article L. 3131-15 du code de la santé publique",
@@ -228,6 +248,33 @@
             "title": "Article R. 3324-22 du code du travail",
             "type": "code-du-travail",
             "id": "r3324-22"
+          }
+        ]
+      }, {
+        "type": "markdown",
+        "title": "Déblocage anticipé pour les victimes de violences conjugales",
+        "name": "interessement-participation-2",
+        "references": [
+          {
+            "title": "Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l'épargne salariale en cas de violences conjugales",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
+          }
+        ]
+      }, {
+        "type": "markdown",
+        "title": "Mise en place de l’intéressement dans l’entreprise de moins de 11 salariés",
+        "name": "interessement-participation-3",
+        "references": [
+          {
+            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 18",
+            "type": "external",
+            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
+          },
+          {
+            "title": "Article L. 3312-5 du code du travail",
+            "type": "code-du-travail",
+            "id": "l3312-5"
           }
         ]
       }
