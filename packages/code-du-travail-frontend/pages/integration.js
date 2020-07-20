@@ -119,9 +119,10 @@ export default function IntegrationPage({ pageUrl, ogImage }) {
             />
 
             <p>
-              En cas de difficulté, nous vous invitons à ouvrir un{" "}
-              <a href="https://github.com/SocialGouv/code-du-travail-numerique/issues/new">
-                ticket d’erreur
+              En cas de difficulté, nous vous invitons à nous contacter à
+              l’adresse suivante&nbsp;:{" "}
+              <a href="mailto:codedutravailnumerique@travail.gouv.fr">
+                codedutravailnumerique@travail.gouv.fr
               </a>
             </p>
           </Wrapper>
