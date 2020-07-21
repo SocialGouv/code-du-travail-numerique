@@ -1,6 +1,6 @@
 import * as XXH from "xxhashjs";
 
-import { logger } from "./logger";
+// import { logger } from "./logger";
 
 // never change this seed, as ids are regenerated
 // each time but must remain stable
@@ -10,19 +10,19 @@ const H = XXH.h64(0x1e7f);
 const maxIdLength = 10;
 
 // use xxhash to hash source+id
-const hashId = (source, id) =>
+const hashId = (source, id, idLength) =>
   // save 64bits hash as Hexa string up to maxIdLength chars (can be changed later in case of collision)
   // as the xxhash function ensure distribution property
   H.update(source + id)
     .digest()
     .toString(16)
-    .slice(0, maxIdLength);
+    .slice(0, idLength);
 
-const hashingSet = (hashMap) => (obj) => {
+const hashingSet = (hashMap, idLength) => (obj) => {
   const { id, source } = obj;
 
   if (id && source) {
-    const cdtnId = hashId(source, id);
+    const cdtnId = hashId(source, id, idLength);
 
     // alert if already seen (collision)
     // FIXME : process exit in case of collision once we've sorted ids issues
@@ -32,9 +32,12 @@ const hashingSet = (hashMap) => (obj) => {
         source,
       });
       const alreadyIn = JSON.stringify(hashMap.get(cdtnId));
-      logger.error(
+      throw new Error(
         `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       );
+      // console.error(
+      // `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
+      // );
     } else {
       obj.cdtnId = cdtnId;
       hashMap.set(cdtnId, { id, source });
@@ -44,6 +47,6 @@ const hashingSet = (hashMap) => (obj) => {
   return obj;
 };
 
-const createHashingSet = () => hashingSet(new Map());
+const createHashingSet = () => hashingSet(new Map(), maxIdLength);
 
-export { createHashingSet };
+export { createHashingSet, hashingSet };
