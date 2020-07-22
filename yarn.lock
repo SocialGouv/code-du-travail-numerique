@@ -2707,6 +2707,16 @@
     remark "^12.0.1"
     remark-html "^12.0.0"
 
+"@socialgouv/datafiller-data@^1.39.0":
+  version "1.39.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.39.0.tgz#996913894c77dd4f718592a20b368a4b960d02ef"
+  integrity sha512-hRsUiGTOKAIoWGViOoxC6nymiUCnGfCUhVzirmFHgiQlE/uLMgFfx2w/0aaH7F7c//7dLXbWyL5phCqbUYGjww==
+  dependencies:
+    node-fetch "^2.6.0"
+    p-pipe "^3.1.0"
+    remark "^12.0.1"
+    remark-html "^11.0.2"
+
 "@socialgouv/eslint-config-react@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.6.0.tgz#3342505bb264692323f31ab5f71318c9bc486479"

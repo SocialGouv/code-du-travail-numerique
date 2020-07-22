@@ -17,7 +17,9 @@ export function createThemer(themes) {
     // we only pick the most important theme
     const theme = themes
       .filter((theme) =>
-        theme.refs.find((ref) => ref.url.match(new RegExp(slug, "i")))
+        theme.refs.find(
+          (ref) => ref.url && ref.url.match(new RegExp(slug, "i"))
+        )
       )
       .sort((previous, next) => {
         // currently position also take depth into account

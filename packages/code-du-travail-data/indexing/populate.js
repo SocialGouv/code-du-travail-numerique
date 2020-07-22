@@ -140,20 +140,28 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Themes ===");
   yield themes.map(
-    ({ breadcrumbs, children, icon, introduction, position, refs, title }) => {
+    ({
+      id,
+      breadcrumbs,
+      children,
+      icon,
+      introduction,
+      position,
+      refs,
+      title,
+    }) => {
       return {
         breadcrumbs: breadcrumbs.map(toBreadcrumbs),
         children: children.map(toBreadcrumbs),
         description: introduction,
         excludeFromSearch: false,
         icon,
-        // FIXME: temporary
-        id: title,
+        id,
         position,
         refs,
         slug: toSlug(title, position),
         source: SOURCES.THEMES,
-        title: title,
+        title,
       };
     }
   );
