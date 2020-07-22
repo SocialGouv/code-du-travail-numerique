@@ -5,7 +5,6 @@ import crypto from "crypto";
 import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
 
-// eslint-disable-next-line no-unused-vars
 import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
@@ -149,7 +148,7 @@ async function* cdtnDocumentsGen() {
         excludeFromSearch: false,
         icon,
         // FIXME: temporary
-        id: position,
+        id: title,
         position,
         refs,
         slug: toSlug(title, position),

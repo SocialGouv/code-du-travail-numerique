@@ -36,7 +36,7 @@ const hashingSet = (hashMap, idLength) => (obj) => {
         `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       );
       // console.error(
-      // `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
+      //   `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       // );
     } else {
       obj.cdtnId = cdtnId;
