@@ -24,8 +24,8 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/items/:source/:slug", async (ctx) => {
   const { source, slug } = ctx.params;
-  const body = getItemBySlugBody({ source, slug });
-  const response = await elasticsearchClient.search({ index, body });
+  const body = getItemBySlugBody({ slug, source }, true);
+  const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no documents that match ${slug} in ${source}`);
@@ -38,16 +38,15 @@ router.get("/items/:source/:slug", async (ctx) => {
     _source: { title, covisits },
   } = item;
 
-  // console.log(covisits);
-
   const relatedItems = await getRelatedItems({
-    slug,
-    title,
     covisits,
     settings: [{ _id }],
+    slug,
+    title,
   });
 
   delete item._source.title_vector;
+  delete item._source.covisits;
 
   ctx.body = {
     ...item,
@@ -68,9 +67,9 @@ router.get("/items/:id", async (ctx) => {
   const { id } = ctx.params;
 
   const response = await elasticsearchClient.get({
+    id,
     index: index,
     type: "_doc",
-    id,
   });
   delete response.body._source.title_vector;
   ctx.body = { ...response.body };
@@ -93,7 +92,7 @@ router.get("/items", async (ctx) => {
   if (url.match(/travail-emploi.gouv/)) {
     index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
   }
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no document that match ${url}`);

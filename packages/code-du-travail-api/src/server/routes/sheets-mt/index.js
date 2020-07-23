@@ -24,8 +24,8 @@ router.get("/sheets-mt/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getSheetMTQuery({ slug });
   const response = await elasticsearchClient.search({
-    index,
     body,
+    index,
   });
   if (response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no sheet mt that match ${slug}`);
@@ -36,11 +36,13 @@ router.get("/sheets-mt/:slug", async (ctx) => {
   // console.log(JSON.stringify(sheetMT._source, null, 2));
 
   const relatedItems = await getRelatedItems({
-    slug,
-    title: sheetMT._source.title,
     covisits: sheetMT._source.covisits,
     settings: sheetMT._source.title,
+    slug,
+    title: sheetMT._source.title,
   });
+
+  delete sheetMT._source.covisits;
 
   ctx.body = {
     ...sheetMT,
