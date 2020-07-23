@@ -60,6 +60,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "lib/**/*.js"
-    ]
+    ],
+    "modulePathIgnorePatterns": ["__mocking__"]
   }
 }

@@ -9,6 +9,9 @@ const getSemBody = require("../search/search.sem");
 const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
 
 const { logger } = require("../../utils/logger");
+require("./__mocking__/mockNLP");
+
+jest.mock("@cdt/data/indexing/vectorizer");
 
 logger.level = winston.error;
 
