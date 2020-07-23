@@ -32,10 +32,7 @@ const hashingSet = (hashMap, idLength) => (obj) => {
         source,
       });
       const alreadyIn = JSON.stringify(hashMap.get(cdtnId));
-      // throw new Error(
-      // `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
-      // );
-      console.error(
+      throw new Error(
         `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       );
     } else {
