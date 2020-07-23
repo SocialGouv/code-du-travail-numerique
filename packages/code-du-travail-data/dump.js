@@ -33,7 +33,7 @@ const noIdSources = [
 
 const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
-  return NLP_URL
+  return NLP_URL && data.title
     ? vectorizeDocument(data.title, data.text)
         .then((title_vector) => {
           if (title_vector.message) {
@@ -43,7 +43,7 @@ async function fetchVector(data) {
           return data;
         })
         .catch((err) => {
-          console.error(`error fetching ${data.title}`, err);
+          console.error(`error fetching ${data.title}`, err.message);
           return data;
         })
     : data;
@@ -52,9 +52,9 @@ async function fetchVector(data) {
 const dump = async () => {
   let documents = [];
   if (NLP_URL) {
-    console.error(`use ${NLP_URL} to retrieve tf vectors`);
+    console.error(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
   } else {
-    console.error(`no nlp`);
+    console.error(`NLP_URL not defined, semantic search will be disabled.`);
   }
 
   for await (const docsNoIds of cdtnDocumentsGen()) {
