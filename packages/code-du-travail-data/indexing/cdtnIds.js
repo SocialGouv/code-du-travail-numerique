@@ -1,7 +1,5 @@
 import * as XXH from "xxhashjs";
 
-// import { logger } from "./logger";
-
 // never change this seed, as ids are regenerated
 // each time but must remain stable
 const H = XXH.h64(0x1e7f);
@@ -36,7 +34,9 @@ const hashingSet = (hashMap, idLength) => (obj) => {
         `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       );
     } else {
+      // store the id a dedicated cdtnId field
       obj.cdtnId = cdtnId;
+      // save the relation to detect collision later on
       hashMap.set(cdtnId, { id, source });
     }
   }

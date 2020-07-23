@@ -293,8 +293,9 @@ async function* cdtnDocumentsGen() {
   ];
 
   logger.info("=== page fiches travail ===");
-  yield fichesMT.map(({ sections, ...content }) => {
+  yield fichesMT.map(({ sections, pubId, ...content }) => {
     return {
+      id: pubId,
       ...content,
       breadcrumbs: getBreadcrumbs(
         `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
