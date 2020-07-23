@@ -14,8 +14,8 @@ const MAX_RESULTS = 4;
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-// ratio for A/B testing between covisit and search based related items (60% to compensate lack of covisits)
-const abRatio = 0.6;
+// ratio for A/B testing between covisit and search based related items
+const abRatio = 0.5;
 
 // standard related items :
 const sources = [
@@ -51,91 +51,105 @@ function mapSource(reco, source) {
   }))(source);
 }
 
+// rely on covisit links within the item, computed offline from usage logs (Monolog)
+async function getCovisitedItems({ covisits }) {
+  // covisits as related items
+  const body = covisits
+    .map(({ link }) => {
+      const source = getSourceByRoute(link.split("/")[0]);
+      const slug = link.split("/")[1];
+      if (!(slug && source)) {
+        logger.error(`Unknown covisit : ${link}`);
+        return [];
+      } else {
+        return [{ index }, getSearchBody({ slug, source })];
+      }
+    })
+    .flat();
+
+  const esCovisits = await elasticsearchClient
+    .msearch({
+      body,
+    })
+    .then((resp) =>
+      resp.body.responses.map((r) => r.hits.hits[0]).filter((r) => r)
+    )
+    .catch((err) => {
+      logger.error(
+        "Error when querying covisits : " + JSON.stringify(err.meta.body)
+      );
+      return [];
+    });
+
+  const covisitedItems = esCovisits
+    // we filter fields and add some info about recommandation type for evaluation purpose
+    .map(({ _source }) => mapSource("covisits", _source))
+    .slice(0, MAX_RESULTS);
+
+  return covisitedItems;
+}
+
+// use search based on item title : More Like This & Semantic
+async function getSearchBasedItems({ title, settings }) {
+  const relatedItemBody = getRelatedItemsBody({ settings, sources });
+  const requestBodies = [{ index }, relatedItemBody];
+
+  const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
+    (error) => {
+      logger.error(error.message);
+    }
+  );
+
+  if (query_vector) {
+    const semBody = getSemBody({
+      query_vector,
+      // we +1 the size to remove the document source that should match perfectly for the given vector
+      size: MAX_RESULTS + 1,
+      sources,
+    });
+    // we use relatedItem query _source to have the same prop returned
+    // for both request
+    // semBody._source = relatedItemBody._source;
+    requestBodies.push({ index }, semBody);
+  }
+
+  const {
+    body: {
+      responses: [esResponse = {}, semResponse = {}],
+    },
+  } = await elasticsearchClient.msearch({ body: requestBodies });
+
+  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
+  const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
+
+  return (
+    utils
+      .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
+      // we filter fields and add some info about recommandation type for evaluation purpose
+      .map(({ _source }) => mapSource("search", _source))
+  );
+}
+
+// get related items, depending on : covisits present & non empty and A/B testing ratio
 async function getRelatedItems({ title, settings, slug, covisits }) {
   const useCovisit = Math.random() < abRatio;
 
-  if (covisits && useCovisit) {
-    // covisits as related items
-    const body = covisits
-      .map(({ link }) => {
-        const source = getSourceByRoute(link.split("/")[0]);
-        const slug = link.split("/")[1];
-        if (!(slug && source)) {
-          logger.error(`Unknown covisit : ${link}`);
-          return [];
-        } else {
-          return [{ index }, getSearchBody({ slug, source })];
-        }
-      })
-      .flat();
+  const covisitedItems =
+    covisits && useCovisit
+      ? await getCovisitedItems({ covisits, slug })
+      : undefined;
 
-    const esCovisits = await elasticsearchClient
-      .msearch({
-        body,
-      })
-      .then((resp) =>
-        resp.body.responses
-          .map((r) => r.hits.hits[0])
-          // deal with errors
-          .filter((r) => r)
-      )
-      .catch((err) => {
-        logger.error(
-          "Error when querying covisits : " + JSON.stringify(err.meta.body)
-        );
-        return [];
-      });
+  const relatedItems = covisitedItems
+    ? covisitedItems
+    : await getSearchBasedItems({ settings, slug, title });
 
-    const covisitedItems = esCovisits
-      .filter(({ _source }) => !_source.slug.startsWith(slug.split("#")))
+  return (
+    relatedItems
+      // avoid elements already visible within the item as fragments
+      .filter((item) => !item.slug.startsWith(slug.split("#")[0]))
       // only returning sources of interest
-      .filter(({ _source: { source } }) => sources.includes(source))
-      // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }) => mapSource("covisits", _source))
-      .slice(0, MAX_RESULTS);
-
-    return covisitedItems;
-  } else {
-    const relatedItemBody = getRelatedItemsBody({ settings, sources });
-    const requestBodies = [{ index }, relatedItemBody];
-
-    const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
-      (error) => {
-        logger.error(error.message);
-      }
-    );
-
-    if (query_vector) {
-      const semBody = getSemBody({
-        query_vector,
-        // we +1 the size to remove the document source that should match perfectly for the given vector
-        size: MAX_RESULTS + 1,
-        sources,
-      });
-      // we use relatedItem query _source to have the same prop returned
-      // for both request
-      // semBody._source = relatedItemBody._source;
-      requestBodies.push({ index }, semBody);
-    }
-
-    const {
-      body: {
-        responses: [esResponse = {}, semResponse = {}],
-      },
-    } = await elasticsearchClient.msearch({ body: requestBodies });
-
-    const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
-    const { hits: { hits: fullTextHits } = { hits: [] } } = esResponse;
-    const [rootSlug] = slug.split("#");
-
-    return (
-      utils
-        .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
-        .filter(({ _source }) => !_source.slug.startsWith(rootSlug))
-        // we filter fields and add some info about recommandation type for evaluation purpose
-        .map(({ _source }) => mapSource("search", _source))
-    );
-  }
+      .filter(({ source }) => sources.includes(source))
+  );
 }
 
 module.exports = {
