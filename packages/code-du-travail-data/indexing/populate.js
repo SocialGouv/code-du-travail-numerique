@@ -124,7 +124,7 @@ async function* cdtnDocumentsGen() {
       return {
         anchor,
         breadcrumbs: getBreadcrumbs(
-          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug}`
+          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug.replace(/#.*$/, "")}`
         ),
         description,
         excludeFromSearch: false,

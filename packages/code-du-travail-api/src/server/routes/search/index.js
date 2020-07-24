@@ -44,7 +44,7 @@ router.get("/search", async (ctx) => {
   const { q: query } = ctx.query;
 
   const sources = [
-    SOURCES.SHEET_MT,
+    query.togglePageMode === "true" ? SOURCES.SHEET_MT_PAGE : SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
     SOURCES.LETTERS,
     SOURCES.TOOLS,
