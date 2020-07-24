@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.27.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.26.1...v4.27.0) (2020-07-24)
+
+
+### Bug Fixes
+
+* **api:** get MT_SHEET or MT_SHEET_PAGE documents ([#2912](https://github.com/SocialGouv/code-du-travail-numerique/issues/2912)) ([24e61a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/24e61a938496c11088a06ddb2666ccad16ab6605))
+* **data:** distinction bewteen full sheet mt and partial ones ([#2910](https://github.com/SocialGouv/code-du-travail-numerique/issues/2910)) ([f327940](https://github.com/SocialGouv/code-du-travail-numerique/commit/f32794083d5660f828876d1d0ebb0e05dc9d8851))
+
+
+### Features
+
+* mock NLP in tests ([#2909](https://github.com/SocialGouv/code-du-travail-numerique/issues/2909)) ([f0f20fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/f0f20fec242dd7cece31beec9ad6952ed6ca9b30))
+
+
+
+
+
 ## [4.26.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.26.0...v4.26.1) (2020-07-10)
 
 **Note:** Version bump only for package @cdt/api
