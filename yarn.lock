@@ -332,12 +332,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.7.0", "@babel/parser@^7.8.3":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.10.4.tgz#9eedf27e1998d87739fb5028a5120557c06a1a64"
-  integrity sha512-8jHII4hf+YVDsskTF6WuMB3X4Eh+PsUkC2ljq22so5rHvH+T8BzyL94VOdyFLNR8tBSVXOTbNHOKpR4TfRxVtA==
-
-"@babel/parser@^7.10.5":
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.7.0", "@babel/parser@^7.8.3":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.10.5.tgz#e7c6bf5a7deff957cec9f04b551e2762909d826b"
   integrity sha512-wfryxy4bE1UivvQKSQDU4/X6dr+i8bctjUjj8Zyt3DQy7NtPizJXT8M52nqpNKL+nq2PW8lxk4ZqLj0fD4B4hQ==
@@ -1090,22 +1085,7 @@
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.4", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.3":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.10.4.tgz#e642e5395a3b09cc95c8e74a27432b484b697818"
-  integrity sha512-aSy7p5THgSYm4YyxNGz6jZpXf+Ok40QF3aA2LyIONkDHpAcJzDUqlCKXv6peqYUs2gmic849C/t2HKw2a2K20Q==
-  dependencies:
-    "@babel/code-frame" "^7.10.4"
-    "@babel/generator" "^7.10.4"
-    "@babel/helper-function-name" "^7.10.4"
-    "@babel/helper-split-export-declaration" "^7.10.4"
-    "@babel/parser" "^7.10.4"
-    "@babel/types" "^7.10.4"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.13"
-
-"@babel/traverse@^7.10.5":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.4", "@babel/traverse@^7.10.5", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.3":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.10.5.tgz#77ce464f5b258be265af618d8fddf0536f20b564"
   integrity sha512-yc/fyv2gUjPqzTz0WHeRJH2pv7jA9kA7mBX2tXl/x5iOE81uaVPuGPtaYk7wmkx4b67mQ7NqI8rmT2pF47KYKQ==
@@ -1138,16 +1118,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.10.4", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.5":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.10.4.tgz#369517188352e18219981efd156bfdb199fff1ee"
-  integrity sha512-UTCFOxC3FsFHb7lkRMVvgLzaRVamXuAs2Tz4wajva4WxtVY82eZeaUBtC2Zt95FU9TiznuC0Zk35tsim8jeVpg==
-  dependencies:
-    "@babel/helper-validator-identifier" "^7.10.4"
-    lodash "^4.17.13"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.10.5":
+"@babel/types@^7.0.0", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.5":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.10.5.tgz#d88ae7e2fde86bfbfe851d4d81afa70a997b5d15"
   integrity sha512-ixV66KWfCI6GKoA/2H9v6bQdbfXEwwpOdQ8cRvb4F+eyvhlaHxWFMQB4+3d9QFJXZsiiiqVrewNV0DFEQpyT4Q==
@@ -2687,15 +2658,15 @@
     remark "^12.0.0"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.38.0":
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.38.0.tgz#ccead73dadb777e649a1c3f737de352e692596e9"
-  integrity sha512-zR+QD1+MFNnKpmcB89Al5BG1gj74YtiRmWbZ7b16wqxx7iFTCFSDxaDGOrwEdfdaUUNxSBhDiff+wRtXBbOrPA==
+"@socialgouv/datafiller-data@^1.44.0":
+  version "1.44.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.44.0.tgz#f8308566d675a3b48877b3077dfacc372ba85a6d"
+  integrity sha512-oig6UY8zjOyC31lDxPM9yQ1lDVJyfJxgfx1YuwoaM8pV+sAIpRDPUpHrmKM/HHGMJUPMWFNdemfqCIcWPZIwKA==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
     remark "^12.0.1"
-    remark-html "^11.0.2"
+    remark-html "^12.0.0"
 
 "@socialgouv/eslint-config-react@^1.6.0":
   version "1.6.0"
@@ -2720,25 +2691,25 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.143.0":
-  version "3.143.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.143.0.tgz#63f7314d4cdec2a7f08d1407bb10cf39d1a674a8"
-  integrity sha512-rihq8Fg/eOGa88S/x4XXkQxT72SYPS77p5JsOFRFvutl60BUU4pkZLxAB9IT4d47J0evr9Qr8kzVKilclCdcsQ==
+"@socialgouv/fiches-travail-data@^3.152.0":
+  version "3.152.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.152.0.tgz#ad4c7eb632a901d358b7129c3e1ab5e10872f0da"
+  integrity sha512-FndtbvlYgPXhFaAStJMeENpA19YJjpLxn/zsV47LxxwtwLW5B/onqRCOPLnAX9GIDn9dHL3pbg7zpMHMNjk2Lg==
 
-"@socialgouv/fiches-vdd@^1.129.0":
-  version "1.129.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.129.0.tgz#f51829b4dbcd69437865921f28e1224b0c9fc9e0"
-  integrity sha512-+adn3mnJzJdrBZMnDS2jmWpk+Pt8suj+cWyF8O/V7fTGCeu9wwXCaaFKpXTaTcrGeRmqULLRLiCRtbmK+pXtfQ==
+"@socialgouv/fiches-vdd@^1.133.0":
+  version "1.133.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.133.0.tgz#52aba4590a5bfd7119bd782affcb6243b5cb28fe"
+  integrity sha512-dJRl9D2zhLEtLLTS5GjnvRg9njGW6fhlk+FE+E22tyGntMseAs+FmDW1NBgrgIyilceIrkV/hRU8cJKK6jHIxw==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.5"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.79.0":
-  version "1.79.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.79.0.tgz#d786220bceac50a83123cb937cf60011e36c7bd4"
-  integrity sha512-JxXvTcREmlpBHA79FvEaHV8WTZ9YrWWbLKv34lt8CoLcZSMx/DzitD4p13rpB8vyP6yv7ASAaNuyzVqGSAkwFA==
+"@socialgouv/kali-data@^1.80.0":
+  version "1.80.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.80.0.tgz#b2abee09d83dc103c3ecac19c0d8f879904b7e04"
+  integrity sha512-YIHFLidByNIzEh7XhlmOBR1IjSvl4Do5TWWeXj98bK/No8EGbr0GU5hoDuSahbpSEaGkLvm0g4psgCYEMnyrSQ==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
@@ -9469,6 +9440,13 @@ hast-util-sanitize@^2.0.0:
   dependencies:
     xtend "^4.0.0"
 
+hast-util-sanitize@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-sanitize/-/hast-util-sanitize-3.0.0.tgz#4cdc26b2991b3bf90ee74b5c932e14d907549312"
+  integrity sha512-gxsM24ARtuulsrWEj8QtVM6FNeAEHklF/t7TEIWvX1wuQcoAQtJtEUcT8t0os4uxCUqh1epX/gTi8fp8gNKvCA==
+  dependencies:
+    xtend "^4.0.0"
+
 hast-util-to-html@^7.0.0, hast-util-to-html@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-7.1.1.tgz#39818b8bbfcb8eaa87846a120b3875487b27d094"
@@ -12294,7 +12272,7 @@ mdast-util-definitions@^3.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
-mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.1.0:
+mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.0.0, mdast-util-to-hast@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-9.1.0.tgz#6ef121dd3cd3b006bf8650b1b9454da0faf79ffe"
   integrity sha512-Akl2Vi9y9cSdr19/Dfu58PVwifPXuFt1IrHe7l+Crme1KvgUT+5z+cHLVcQVGCiNTZZcdqjnuv9vPkGsqWytWA==
@@ -16044,6 +16022,16 @@ remark-html@^11.0.2:
     hast-util-sanitize "^2.0.0"
     hast-util-to-html "^7.0.0"
     mdast-util-to-hast "^8.2.0"
+    xtend "^4.0.1"
+
+remark-html@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-12.0.0.tgz#f39d2a5e173cce777981cb4171b4ea860313d72a"
+  integrity sha512-M104NMHs48+uswChJkCDXCdabzxAinpHikpt6kS3gmGMyIvPZ5kn53tB9shFsL2O4HUJ9DIEsah1SX1Ve5FXHA==
+  dependencies:
+    hast-util-sanitize "^3.0.0"
+    hast-util-to-html "^7.0.0"
+    mdast-util-to-hast "^9.0.0"
     xtend "^4.0.1"
 
 remark-mdx@^1.6.5:
