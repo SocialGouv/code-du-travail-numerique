@@ -42,8 +42,8 @@ const documentsSlugs = [
   "/external/mon-compte-formation",
   "/external/index-egapro",
   "/page-convention-collective/1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
-  "/page-fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
-  "/page-fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
+  "/fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
+  "/fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
