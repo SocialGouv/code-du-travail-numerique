@@ -6,7 +6,6 @@ const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
-const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
 
 const { logger } = require("../../utils/logger");
 
@@ -18,9 +17,7 @@ app.use(router.routes());
 it("asks same sources wether it is search sem or search elastic and gets a description", () => {
   const searchBody = getSearchBody({ sources: [SOURCES.CDT] });
   const semBody = getSemBody({ sources: [SOURCES.CDT] });
-  const getEsRefBody = getDocumentByUrlQuery("/code-du-travail/slug");
   expect(searchBody._source).toEqual(semBody._source);
-  expect(getEsRefBody._source).toEqual(semBody._source);
   expect(searchBody._source).toContain("description");
 });
 

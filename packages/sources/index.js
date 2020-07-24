@@ -5,18 +5,18 @@ const SOURCES = {
   CONTRIBUTIONS: "contributions",
   EDITORIAL_CONTENT: "information",
   EXTERNALS: "external",
+  GLOSSARY: "glossary",
+  HIGHLIGHTS: "highlights",
   IDCC: "idcc",
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
+  PREQUALIFIED: "prequalified",
   SHEET_MT: "fiches_ministere_travail",
   SHEET_MT_PAGE: "page_fiche_ministere_travail",
   SHEET_SP: "fiches_service_public",
+  THEMATIC_FILES: "dossiers",
   THEMES: "themes",
   TOOLS: "outils",
-  THEMATIC_FILES: "dossiers",
-  HIGHLIGHTS: "highlights",
-  GLOSSARY: "glossary",
-  PREQUALIFIED: "prequalified",
   VERSIONS: "versions",
 };
 
@@ -33,7 +33,7 @@ const routeBySource = {
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
-  [SOURCES.SHEET_MT_PAGE]: "page-fiche-ministere-travail",
+  [SOURCES.SHEET_MT_PAGE]: "fiche-ministere-travail",
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
@@ -57,21 +57,14 @@ const labelBySource = {
   [SOURCES.THEMATIC_FILES]: "Dossiers",
 };
 
-const sources = Object.values(SOURCES);
-
 // code_du_travail -> Code du travail
 const getLabelBySource = (src) => labelBySource[src];
 
 // code_du_travail -> code-du-travail
 const getRouteBySource = (src) => routeBySource[src];
 
-// code-du-travail -> code_du_travail
-const getSourceByRoute = (slug) =>
-  sources.find((key) => routeBySource[key] === slug);
-
 module.exports = {
   SOURCES,
   getLabelBySource,
   getRouteBySource,
-  getSourceByRoute,
 };

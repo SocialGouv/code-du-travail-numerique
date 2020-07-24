@@ -1,7 +1,7 @@
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getDocumentByUrlQuery = require("./getDocumentByUrlQuery");
+const getDocumentBySourceSlug = require("../items/searchBySourceSlug.elastic");
 
 const isInternalUrl = (url) => url.match(/^\//);
 
@@ -10,12 +10,12 @@ const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const makeHit = (data) => ({
   _index: index,
-  _type: "_doc",
   _source: {
     source: "external",
     title: "",
     ...data,
   },
+  _type: "_doc",
 });
 
 const indexQuery = { index };
@@ -28,7 +28,21 @@ const getEsReferences = async (refs = []) => {
     (refs &&
       refs
         .filter((ref) => isInternalUrl(ref.url))
-        .map((ref) => getDocumentByUrlQuery(ref.url))
+        .map((ref) =>
+          getDocumentBySourceSlug({
+            fields: [
+              "title",
+              "source",
+              "slug",
+              "description",
+              "url",
+              "action",
+              "breadcrumbs",
+            ],
+            slug: ref.slug,
+            source: ref.source,
+          })
+        )
         .filter(Boolean)
         .reduce((state, query) => state.concat(indexQuery, query), [])) ||
     [];
