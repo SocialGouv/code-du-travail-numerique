@@ -1,3 +1,4 @@
+/** @type {cdtnSources.SOURCES} */
 const SOURCES = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
@@ -5,18 +6,18 @@ const SOURCES = {
   CONTRIBUTIONS: "contributions",
   EDITORIAL_CONTENT: "information",
   EXTERNALS: "external",
+  GLOSSARY: "glossary",
+  HIGHLIGHTS: "highlights",
   IDCC: "idcc",
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
+  PREQUALIFIED: "prequalified",
   SHEET_MT: "fiches_ministere_travail",
   SHEET_MT_PAGE: "page_fiche_ministere_travail",
   SHEET_SP: "fiches_service_public",
+  THEMATIC_FILES: "dossiers",
   THEMES: "themes",
   TOOLS: "outils",
-  THEMATIC_FILES: "dossiers",
-  HIGHLIGHTS: "highlights",
-  GLOSSARY: "glossary",
-  PREQUALIFIED: "prequalified",
   VERSIONS: "versions",
 };
 
@@ -26,8 +27,8 @@ const routeBySource = {
   [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
-  [SOURCES.EXTERNALS]: "external",
   [SOURCES.EDITORIAL_CONTENT]: "information",
+  [SOURCES.EXTERNALS]: "external",
   [SOURCES.GLOSSARY]: "glossaire",
   [SOURCES.IDCC]: "idcc",
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
@@ -35,9 +36,9 @@ const routeBySource = {
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
   [SOURCES.SHEET_MT_PAGE]: "page-fiche-ministere-travail",
   [SOURCES.SHEET_SP]: "fiche-service-public",
+  [SOURCES.THEMATIC_FILES]: "dossiers",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
-  [SOURCES.THEMATIC_FILES]: "dossiers",
 };
 
 // mapping elastic search source type -> source label
@@ -52,22 +53,25 @@ const labelBySource = {
   [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.SHEET_SP]: "service-public.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
+  [SOURCES.THEMATIC_FILES]: "Dossiers",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
-  [SOURCES.THEMATIC_FILES]: "Dossiers",
 };
 
 const sources = Object.values(SOURCES);
 
 // code_du_travail -> Code du travail
+/** @type {cdtnSources.getLabelBySourceFn} */
 const getLabelBySource = (src) => labelBySource[src];
 
 // code_du_travail -> code-du-travail
+/** @type {cdtnSources.getRouteBySourceFn} */
 const getRouteBySource = (src) => routeBySource[src];
 
 // code-du-travail -> code_du_travail
+/** @type {cdtnSources.getSourceByRouteFn} */
 const getSourceByRoute = (slug) =>
-  sources.find((key) => routeBySource[key] === slug);
+  sources.find((key) => routeBySource[key] === slug) || slug;
 
 module.exports = {
   SOURCES,
