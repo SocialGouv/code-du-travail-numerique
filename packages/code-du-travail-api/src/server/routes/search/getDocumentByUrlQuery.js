@@ -1,4 +1,4 @@
-const { getSourceByRoute } = require("@socialgouv/cdtn-sources");
+const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
 
 // get ES document related to given url
 const getDocumentByUrlQuery = (
@@ -14,9 +14,12 @@ const getDocumentByUrlQuery = (
   ]
 ) => {
   const [, source, slug] = url.split("/");
-  const esSource = getSourceByRoute(source);
+  let esSource = getSourceByRoute(source);
   if (!esSource) {
     return;
+  }
+  if (esSource === SOURCES.SHEET_MT && !slug.includes("#")) {
+    esSource = SOURCES.SHEET_MT_PAGE;
   }
   return {
     _source,

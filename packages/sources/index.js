@@ -34,7 +34,7 @@ const routeBySource = {
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
-  [SOURCES.SHEET_MT_PAGE]: "page-fiche-ministere-travail",
+  [SOURCES.SHEET_MT_PAGE]: "fiche-ministere-travail",
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.THEMATIC_FILES]: "dossiers",
   [SOURCES.THEMES]: "themes",
