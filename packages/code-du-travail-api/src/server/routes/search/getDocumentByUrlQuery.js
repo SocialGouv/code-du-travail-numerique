@@ -18,7 +18,7 @@ const getDocumentByUrlQuery = (
   if (!esSource) {
     return;
   }
-  if (!slug.includes("#") && esSource === SOURCES.SHEET_MT) {
+  if (esSource === SOURCES.SHEET_MT && !slug.includes("#")) {
     esSource = SOURCES.SHEET_MT_PAGE;
   }
   return {
