@@ -1,6 +1,10 @@
 const request = require("supertest");
 const Koa = require("koa");
 const router = require("../sheets-mt");
+require("./__mocking__/mockNLP");
+
+jest.mock("@cdt/data/indexing/vectorizer");
+
 const app = new Koa();
 app.use(router.routes());
 
