@@ -8,22 +8,20 @@ const H = XXH.h64(0x1e7f);
 const maxIdLength = 10;
 
 // use xxhash to hash source+id
-const hashId = (source, id, idLength) =>
+const hashId = (content, idLength) =>
   // save 64bits hash as Hexa string up to maxIdLength chars (can be changed later in case of collision)
   // as the xxhash function ensure distribution property
-  H.update(source + id)
-    .digest()
-    .toString(16)
-    .slice(0, idLength);
+  H.update(content).digest().toString(16).slice(0, idLength);
 
-const hashingSet = (hashMap, idLength) => (obj) => {
-  const { id, source } = obj;
-
+// build a hash function that keep track of processed content to manage collisions
+const hashFunctionBuilder = (hashMap = new Map(), idLength = maxIdLength) => ({
+  id,
+  source,
+}) => {
   if (id && source) {
-    const cdtnId = hashId(source, id, idLength);
+    const cdtnId = hashId(source + id, idLength);
 
     // alert if already seen (collision)
-    // FIXME : process exit in case of collision once we've sorted ids issues
     if (hashMap.has(cdtnId)) {
       const adding = JSON.stringify({
         id,
@@ -34,16 +32,19 @@ const hashingSet = (hashMap, idLength) => (obj) => {
         `ID collision detected : two contents have the same id ${cdtnId}: ${adding} AND ${alreadyIn}`
       );
     } else {
-      // store the id a dedicated cdtnId field
-      obj.cdtnId = cdtnId;
       // save the relation to detect collision later on
       hashMap.set(cdtnId, { id, source });
     }
-  }
 
-  return obj;
+    return cdtnId;
+  } else {
+    throw new Error(
+      `Cannot generate hash if id or source missing : ${JSON.stringify({
+        id,
+        source,
+      })}`
+    );
+  }
 };
 
-const createHashingSet = () => hashingSet(new Map(), maxIdLength);
-
-export { createHashingSet, hashingSet };
+export { hashFunctionBuilder };
