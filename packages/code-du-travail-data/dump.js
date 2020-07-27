@@ -61,7 +61,7 @@ const dump = async () => {
   }
 
   for await (const docsNoIds of cdtnDocumentsGen()) {
-    console.error(`› ${docs[0].source}... ${docs.length} items`);
+    console.error(`› ${docsNoIds[0].source}... ${docsNoIds.length} items`);
 
     // add CDTN specific ids to docs
     const docsIds = docsNoIds.map((doc) => {
