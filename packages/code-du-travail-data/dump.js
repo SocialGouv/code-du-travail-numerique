@@ -21,13 +21,9 @@ const excludeSources = [
   SOURCES.SHEET_MT_PAGE,
   SOURCES.CCN_PAGE,
 ];
-<<<<<<< HEAD
-=======
-
 const nlpQueue = new PQueue({ concurrency: 3 });
 
-const monologQueue = new PQueue({ concurrency: 3 });
->>>>>>> include comments from review
+const monologQueue = new PQueue({ concurrency: 20 });
 
 const hashFunction = hashFunctionBuilder();
 // these sources do not need unique CDTN id
@@ -38,7 +34,6 @@ const noIdSources = [
   SOURCES.VERSIONS,
 ];
 
-const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
   return NLP_URL && data.title && data.text
     ? vectorizeDocument(data.title, data.text)
