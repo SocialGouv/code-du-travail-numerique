@@ -8,7 +8,7 @@ const { SOURCES } = require("@socialgouv/cdtn-sources");
  */
 function getRelatedThemesBody({ query, size = 5 }) {
   return {
-    _source: ["icon", "title", "slug", "url", "source"],
+    _source: ["icon", "title", "slug", "url", "source", "cdtnId"],
     query: {
       bool: {
         filter: {

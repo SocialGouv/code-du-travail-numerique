@@ -50,6 +50,8 @@ export const documentMapping = {
       enabled: false,
     },
 
+    cdtnId: { type: "keyword" },
+
     // available for themes
     children: {
       properties: {

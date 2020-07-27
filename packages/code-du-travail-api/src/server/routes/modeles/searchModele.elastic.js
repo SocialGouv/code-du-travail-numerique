@@ -1,7 +1,13 @@
 function getModeleBody() {
   return {
-    size: 1000,
-    _source: ["title", "slug", "description", "source", "breadcrumbs"],
+    _source: [
+      "title",
+      "slug",
+      "description",
+      "source",
+      "breadcrumbs",
+      "cdtnId",
+    ],
     query: {
       bool: {
         filter: [
@@ -13,6 +19,7 @@ function getModeleBody() {
         ],
       },
     },
+    size: 1000,
   };
 }
 

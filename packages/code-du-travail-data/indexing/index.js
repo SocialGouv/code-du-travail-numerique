@@ -6,7 +6,7 @@ import {
   deleteOldIndex,
   indexDocumentsBatched,
   version,
-} from "./es_client.utils";
+} from "./esClientUtils";
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { logger } from "./logger";
 import { populateSuggestions } from "./suggestion";

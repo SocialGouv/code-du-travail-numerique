@@ -14,7 +14,8 @@
     ],
     "description": "Estimez simplement le montant de l’indemnité de licenciement",
     "action": "Estimer",
-    "date": "18/10/2018"
+    "date": "18/10/2018",
+    "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773"
   },
   {
     "icon": "Rules",
@@ -30,7 +31,8 @@
     ],
     "description": "Calculez la durée de préavis à respecter en cas de démission",
     "action": "Calculer",
-    "date": "24/07/2019"
+    "date": "24/07/2019",
+    "id": "0a7cbd40-fe2f-4c21-9799-88564a45f30a"
   },
   {
     "icon": "Salary",
@@ -55,10 +57,10 @@
       "cout embauche CDD",
       "cout embauche CDI"
     ],
-    "description":
-      "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
+    "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
     "action": "Estimer",
-    "date": "14/03/2019"
+    "date": "14/03/2019",
+    "id": "4718de1b-dda5-47e7-a797-c14e62cf7259"
   },
   {
     "icon": "Precarity",
@@ -77,7 +79,8 @@
     ],
     "description": "Estimez le montant de l’indemnité de fin de CDD ou intérim",
     "action": "Estimer",
-    "date": "14/03/2019"
+    "date": "14/03/2019",
+    "id": "1f092661-e948-4f27-aafd-7f5142f25f46"
   },
   {
     "icon": "Termination",
@@ -90,10 +93,10 @@
       "calculer la durée de son préavis de licenciement",
       "calcul durée préavis licenciement"
     ],
-    "description":
-      "Calculez la durée de préavis à respecter en cas de licenciement",
+    "description": "Calculez la durée de préavis à respecter en cas de licenciement",
     "action": "Calculer",
-    "date": "08/11/2019"
+    "date": "08/11/2019",
+    "id": "fcc43645-9ac1-433d-bd95-0eb44239b864"
   },
   {
     "icon": "Time",
@@ -112,9 +115,9 @@
       "chercher un emploi pendant son préavis",
       "absence 2h pour recherche d'emploi pendant préavis"
     ],
-    "description":
-      "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+    "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
     "action": "Calculer",
-    "date": "08/11/2019"
+    "date": "08/11/2019",
+    "id": "d09665fc-961c-44bf-a399-c34cfedf1d24"
   }
 ]

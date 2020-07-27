@@ -1,7 +1,15 @@
 function getIdccBody({ query }) {
   return {
-    size: 50,
-    _source: ["id", "title", "shortTitle", "url", "idcc", "slug", "effectif"],
+    _source: [
+      "id",
+      "title",
+      "shortTitle",
+      "url",
+      "idcc",
+      "slug",
+      "effectif",
+      "cdtnId",
+    ],
     query: {
       bool: {
         filter: [
@@ -17,9 +25,9 @@ function getIdccBody({ query }) {
               {
                 match: {
                   "shortTitle.french": {
-                    query: `${query}`,
-                    fuzziness: "1",
                     boost: ".9",
+                    fuzziness: "1",
+                    query: `${query}`,
                   },
                 },
               },
@@ -50,6 +58,7 @@ function getIdccBody({ query }) {
         },
       },
     },
+    size: 50,
   };
 }
 module.exports = getIdccBody;

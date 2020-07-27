@@ -1,5 +1,5 @@
 function splitArticle(article) {
-  const { slug, title } = article;
+  const { slug, title, pubId } = article;
   let prefixTitle = title;
   // extract accronyms inside parenthesis
   // Contrat de sécurisation professionnelle (CSP)
@@ -40,6 +40,7 @@ function splitArticle(article) {
           anchor,
           description,
           html,
+          pubId,
           references,
           slug: `${slug}${anchor ? `#${anchor}` : ""}`,
           text,

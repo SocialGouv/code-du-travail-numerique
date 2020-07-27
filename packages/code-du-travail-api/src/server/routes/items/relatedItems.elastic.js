@@ -11,6 +11,7 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
       "url",
       "action",
       "icon",
+      "cdtnId",
     ],
     query: {
       bool: {

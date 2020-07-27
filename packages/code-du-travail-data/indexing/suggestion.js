@@ -6,7 +6,7 @@ import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
-} from "./es_client.utils";
+} from "./esClientUtils";
 import { suggestionMapping } from "./suggestion.mapping";
 
 const ELASTICSEARCH_URL =

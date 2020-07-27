@@ -50,6 +50,9 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
             {
               index: {
                 _index: indexName,
+                // if available, use our cdtnId as the actual Elastic document id
+                ...(doc.cdtnId && { _id: doc.cdtnId }),
+                // unless we're in testing mode where we use position
                 ...(process.env.NODE_ENV === "test" && { _id: i }),
               },
             },

@@ -2,7 +2,7 @@ const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 function getRelatedArticlesBody({ query, size = 5 }) {
   return {
-    _source: ["title", "slug", "url", "source", "description"],
+    _source: ["title", "slug", "url", "source", "description", "cdtnId"],
     query: {
       bool: {
         filter: {

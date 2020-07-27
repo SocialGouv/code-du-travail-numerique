@@ -11,14 +11,13 @@ import { thematicFiles } from "../dataset/dossiers";
 import { getEditorialContents } from "../dataset/editorial_content";
 import { getFichesSP } from "../dataset/fiches_service_public";
 import { addGlossary } from "./addGlossary";
-import { getAgreementPages } from "./agreement_pages";
+import { getAgreementPages } from "./agreementPages";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { getVersions } from "./versions";
 
 const getBreadcrumbs = createThemer(themes);
-
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
     return value instanceof Array
@@ -100,6 +99,7 @@ async function* cdtnDocumentsGen() {
       dateDebut,
       description: texte.slice(0, texte.indexOf("…", 150)),
       html: texteHtml,
+      id,
       slug: slugify(fixArticleNum(id, num)),
       source: SOURCES.CDT,
       text: `${texte}\n${nota}`,
@@ -120,7 +120,7 @@ async function* cdtnDocumentsGen() {
   const splittedFiches = fichesMT.flatMap(splitArticle);
 
   yield splittedFiches.map(
-    ({ anchor, description, html, slug, text, title }) => {
+    ({ anchor, pubId, description, html, slug, text, title }) => {
       return {
         anchor,
         breadcrumbs: getBreadcrumbs(
@@ -129,6 +129,7 @@ async function* cdtnDocumentsGen() {
         description,
         excludeFromSearch: false,
         html,
+        id: pubId + (anchor ? `#${anchor}` : ""),
         slug,
         source: SOURCES.SHEET_MT,
         text,
@@ -139,18 +140,28 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Themes ===");
   yield themes.map(
-    ({ breadcrumbs, children, icon, introduction, position, refs, title }) => {
+    ({
+      id,
+      breadcrumbs,
+      children,
+      icon,
+      introduction,
+      position,
+      refs,
+      title,
+    }) => {
       return {
         breadcrumbs: breadcrumbs.map(toBreadcrumbs),
         children: children.map(toBreadcrumbs),
         description: introduction,
         excludeFromSearch: false,
         icon,
+        id,
         position,
         refs,
         slug: toSlug(title, position),
         source: SOURCES.THEMES,
-        title: title,
+        title,
       };
     }
   );
@@ -168,6 +179,7 @@ async function* cdtnDocumentsGen() {
         date,
         description,
         icon,
+        id,
         questions,
         slug,
         title,
@@ -178,6 +190,7 @@ async function* cdtnDocumentsGen() {
         description,
         excludeFromSearch: false,
         icon,
+        id,
         slug,
         source: SOURCES.TOOLS,
         text: questions.join("\n"),
@@ -187,11 +200,12 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Outils externes ===");
   yield require("../dataset/tools/externals.json").map(
-    ({ action, description, icon, title, url }) => ({
+    ({ action, description, icon, id, title, url }) => ({
       action,
       description,
       excludeFromSearch: false,
       icon,
+      id,
       slug: slugify(title),
       source: SOURCES.EXTERNALS,
       text: description,
@@ -201,9 +215,8 @@ async function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Contributions ===");
-
   yield require("@socialgouv/contributions-data/data/contributions.json").map(
-    ({ title, answers }) => {
+    ({ title, answers, id }) => {
       const slug = slugify(title);
       fixReferences(answers.generic);
       answers.conventions.forEach(fixReferences);
@@ -221,6 +234,7 @@ async function* cdtnDocumentsGen() {
         ),
         description: (answers.generic && answers.generic.description) || title,
         excludeFromSearch: false,
+        id,
         slug,
         source: SOURCES.CONTRIBUTIONS,
         text: (answers.generic && answers.generic.text) || title,
@@ -231,11 +245,12 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Dossiers ===");
   yield thematicFiles.map(
-    ({ categories, description, metaDescription, refs, slug, title }) => {
+    ({ categories, description, metaDescription, refs, slug, title, id }) => {
       return {
         categories,
         description,
         excludeFromSearch: false,
+        id,
         metaDescription,
         refs,
         slug,
@@ -245,6 +260,7 @@ async function* cdtnDocumentsGen() {
       };
     }
   );
+
   logger.info("=== Hightlights ===");
   yield [
     {
@@ -252,6 +268,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.HIGHLIGHTS,
     },
   ];
+
   logger.info("=== glossary ===");
   yield [
     {
@@ -266,6 +283,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.GLOSSARY,
     },
   ];
+
   logger.info("=== PreQualified Request ===");
   yield [
     {
@@ -273,9 +291,11 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.PREQUALIFIED,
     },
   ];
+
   logger.info("=== page fiches travail ===");
-  yield fichesMT.map(({ sections, ...content }) => {
+  yield fichesMT.map(({ sections, pubId, ...content }) => {
     return {
+      id: pubId,
       ...content,
       breadcrumbs: getBreadcrumbs(
         `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
@@ -289,6 +309,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.SHEET_MT_PAGE,
     };
   });
+
   logger.info("=== page ccn ===");
   const ccnData = getAgreementPages();
   yield ccnData.map(({ ...content }) => {
@@ -301,6 +322,7 @@ async function* cdtnDocumentsGen() {
       source: SOURCES.CCN_PAGE,
     };
   });
+
   logger.info("=== data version ===");
   yield [
     {

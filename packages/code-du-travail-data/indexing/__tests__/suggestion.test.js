@@ -1,7 +1,7 @@
-import { createIndex, indexDocumentsBatched } from "../es_client.utils";
+import { createIndex, indexDocumentsBatched } from "../esClientUtils";
 import { populateSuggestions } from "../suggestion";
 
-jest.mock("../es_client.utils");
+jest.mock("../esClientUtils");
 
 const INDEX_NAME = process.env.SUGGEST_INDEX_NAME;
 const BUFFER_SIZE = process.env.BUFFER_SIZE;

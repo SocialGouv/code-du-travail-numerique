@@ -58,6 +58,7 @@ function getEditorialContents() {
       references,
       title,
       intro,
+      id,
     }) => {
       const introText = textProcessor.processSync(intro).contents;
       const introHtml = htmlProcessor.processSync(intro).contents;
@@ -76,6 +77,7 @@ function getEditorialContents() {
         description,
         excludeFromSearch: false,
         folder,
+        id,
         intro: addGlossary(introHtml),
         references,
         slug: slugify(title),
