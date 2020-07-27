@@ -2707,16 +2707,6 @@
     remark "^12.0.1"
     remark-html "^12.0.0"
 
-"@socialgouv/datafiller-data@^1.42.0":
-  version "1.42.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.42.0.tgz#4f10119f378e42bcf8e804eac5cd57307c697338"
-  integrity sha512-6WsAnOgFgciww7Y1wSzkhC3zGMisKsosnrPi2LEjMWbgrMjdWqUPfYsX1c76ght7hZOy5Etcdqsbdrmtd5ftOg==
-  dependencies:
-    node-fetch "^2.6.0"
-    p-pipe "^3.1.0"
-    remark "^12.0.1"
-    remark-html "^12.0.0"
-
 "@socialgouv/eslint-config-react@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.6.0.tgz#3342505bb264692323f31ab5f71318c9bc486479"
@@ -2759,15 +2749,6 @@
   version "1.81.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.81.0.tgz#a1d241e699cf43fff0f4e5a397031d7aeb81cc70"
   integrity sha512-mogSJNWGzgp/HvIp3H7VeEEndtJrFjcKKMBvsgltj9tm25bRPfV562/4Vinrdinv65N5kG3jT85kdMfRsRuM9g==
-  dependencies:
-    unist-util-find "1.0.1"
-    unist-util-flat-filter "1.0.0"
-    unist-util-parents "1.0.3"
-
-"@socialgouv/kali-data@^1.80.0":
-  version "1.80.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.80.0.tgz#b2abee09d83dc103c3ecac19c0d8f879904b7e04"
-  integrity sha512-YIHFLidByNIzEh7XhlmOBR1IjSvl4Do5TWWeXj98bK/No8EGbr0GU5hoDuSahbpSEaGkLvm0g4psgCYEMnyrSQ==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
