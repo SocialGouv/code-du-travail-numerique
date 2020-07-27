@@ -56,8 +56,8 @@ async function getCovisitedItems({ covisits }) {
   // covisits as related items
   const body = covisits
     .map(({ link }) => {
-      const source = getSourceByRoute(link.split("/")[0]);
-      const slug = link.split("/")[1];
+      const [route, slug] = link.split("/")
+      const source = getSourceByRoute(route)
       if (!(slug && source)) {
         logger.error(`Unknown covisit : ${link}`);
         return [];
