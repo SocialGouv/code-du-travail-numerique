@@ -28,44 +28,40 @@ const sources = [
 ];
 
 // select certain fields and add recommendation source (covisits or search)
-function mapSource(reco, source) {
-  return (({
-    action,
-    description,
-    icon,
-    slug,
-    source,
-    subtitle,
-    title,
-    url,
-  }) => ({
-    action,
-    description,
-    icon,
-    reco,
-    slug,
-    source,
-    subtitle,
-    title,
-    url,
-  }))(source);
-}
+const mapSource = (reco) => ({
+  action,
+  description,
+  icon,
+  slug,
+  source,
+  subtitle,
+  title,
+  url,
+}) => ({
+  action,
+  description,
+  icon,
+  reco,
+  slug,
+  source,
+  subtitle,
+  title,
+  url,
+});
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
 async function getCovisitedItems({ covisits }) {
   // covisits as related items
-  const body = covisits
-    .map(({ link }) => {
-      const [route, slug] = link.split("/")
-      const source = getSourceByRoute(route)
-      if (!(slug && source)) {
-        logger.error(`Unknown covisit : ${link}`);
-        return [];
-      } else {
-        return [{ index }, getSearchBody({ slug, source })];
-      }
-    })
-    .flat();
+  const body = covisits.flatMap(({ link }) => {
+    const [route, slug] = link.split("/");
+    const source = getSourceByRoute(route);
+    if (!(slug && source)) {
+      logger.error(`Unknown covisit : ${link}`);
+      return [];
+    } else {
+      return [{ index }, getSearchBody({ slug, source })];
+    }
+  });
 
   const esCovisits = await elasticsearchClient
     .msearch({
@@ -83,7 +79,7 @@ async function getCovisitedItems({ covisits }) {
 
   const covisitedItems = esCovisits
     // we filter fields and add some info about recommandation type for evaluation purpose
-    .map(({ _source }) => mapSource("covisits", _source))
+    .map(({ _source }) => mapSource("covisits")(_source))
     .slice(0, MAX_RESULTS);
 
   return covisitedItems;
@@ -126,7 +122,7 @@ async function getSearchBasedItems({ title, settings }) {
     utils
       .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }) => mapSource("search", _source))
+      .map(({ _source }) => mapSource("search")(_source))
   );
 }
 
@@ -135,13 +131,12 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
   const useCovisit = Math.random() < abRatio;
 
   const covisitedItems =
-    covisits && useCovisit
-      ? await getCovisitedItems({ covisits, slug })
-      : undefined;
+    covisits && useCovisit ? await getCovisitedItems({ covisits, slug }) : [];
 
-  const relatedItems = covisitedItems
-    ? covisitedItems
-    : await getSearchBasedItems({ settings, slug, title });
+  const relatedItems =
+    covisitedItems.length > 0
+      ? covisitedItems
+      : await getSearchBasedItems({ settings, slug, title });
 
   return (
     relatedItems

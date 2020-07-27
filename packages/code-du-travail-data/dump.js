@@ -21,6 +21,13 @@ const excludeSources = [
   SOURCES.SHEET_MT_PAGE,
   SOURCES.CCN_PAGE,
 ];
+<<<<<<< HEAD
+=======
+
+const nlpQueue = new PQueue({ concurrency: 3 });
+
+const monologQueue = new PQueue({ concurrency: 3 });
+>>>>>>> include comments from review
 
 const hashFunction = hashFunctionBuilder();
 // these sources do not need unique CDTN id
@@ -33,7 +40,7 @@ const noIdSources = [
 
 const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
-  return NLP_URL && data.title
+  return NLP_URL && data.title && data.text
     ? vectorizeDocument(data.title, data.text)
         .then((title_vector) => {
           if (title_vector.message) {
@@ -51,6 +58,7 @@ async function fetchVector(data) {
 
 const dump = async () => {
   let documents = [];
+
   if (NLP_URL) {
     console.error(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
   } else {
@@ -68,21 +76,26 @@ const dump = async () => {
       return doc;
     });
 
-    // add covisits
-    const docs = await Promise.all(docsIds.map(fetchCovisits));
+    // add covisits using pQueue (there is a plan to change this : see #2915)
+    const pDocs = docsIds.map((doc) =>
+      monologQueue.add(() => fetchCovisits(doc))
+    );
+    const docs = await Promise.all(pDocs);
+    await monologQueue.onIdle();
 
+    // add NLP vectors
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {
       const pDocs = docs.map((doc) =>
-        queue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
+        nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
       );
 
       const docsWithData = await Promise.all(pDocs);
       documents = documents.concat(docsWithData);
     }
   }
-  await queue.onIdle();
+  await nlpQueue.onIdle();
   //eslint-disable-next-line no-console
   console.log(JSON.stringify(documents, 0, 2));
   console.error(`done in ${(Date.now() - t0) / 1000} s`);
