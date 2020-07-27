@@ -128,23 +128,30 @@ async function getSearchBasedItems({ title, settings }) {
 
 // get related items, depending on : covisits present & non empty and A/B testing ratio
 async function getRelatedItems({ title, settings, slug, covisits }) {
-  const useCovisit = Math.random() < abRatio;
+  const useCovisits = Math.random() < abRatio;
 
   const covisitedItems =
-    covisits && useCovisit ? await getCovisitedItems({ covisits, slug }) : [];
+    covisits && useCovisits ? await getCovisitedItems({ covisits, slug }) : [];
 
-  const relatedItems =
-    covisitedItems.length > 0
-      ? covisitedItems
-      : await getSearchBasedItems({ settings, slug, title });
+  const searchBasedItems =
+    covisitedItems.length < MAX_RESULTS
+      ? await getSearchBasedItems({ settings, slug, title })
+      : [];
 
-  return (
-    relatedItems
-      // avoid elements already visible within the item as fragments
-      .filter((item) => !item.slug.startsWith(slug.split("#")[0]))
-      // only returning sources of interest
-      .filter(({ source }) => sources.includes(source))
-  );
+  const relatedItems = covisitedItems
+    .concat(searchBasedItems)
+    // avoid elements already visible within the item as fragments
+    .filter((item) =>
+      slug.includes("#") ? !item.slug.startsWith(slug.split("#")[0]) : true
+    )
+    // only returning sources of interest
+    .filter(({ source }) => sources.includes(source))
+    // add reduce to drop duplicates using ids
+    .slice(0, MAX_RESULTS);
+
+  console.log(relatedItems);
+
+  return relatedItems;
 }
 
 module.exports = {
