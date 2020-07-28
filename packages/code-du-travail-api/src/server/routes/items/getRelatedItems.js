@@ -133,23 +133,25 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
   const covisitedItems =
     covisits && useCovisits ? await getCovisitedItems({ covisits, slug }) : [];
 
-  const searchBasedItems =
-    covisitedItems.length < MAX_RESULTS
-      ? await getSearchBasedItems({ settings, slug, title })
-      : [];
+  const searchBasedItems = await getSearchBasedItems({ settings, slug, title });
 
-  const relatedItems = covisitedItems
+  const filteredItems = covisitedItems
     .concat(searchBasedItems)
     // avoid elements already visible within the item as fragments
     .filter((item) =>
       slug.includes("#") ? !item.slug.startsWith(slug.split("#")[0]) : true
     )
-    // only returning sources of interest
+    // only return sources of interest
     .filter(({ source }) => sources.includes(source))
-    // TODO : add reduce to drop duplicates using ids
-    .slice(0, MAX_RESULTS);
+    // drop duplicates (between covisits and search) using source/slug
+    .reduce((acc, related) => {
+      const key = related.source + related.slug;
+      if (!acc.has(key)) acc.set(key, related);
+      return acc;
+    }, new Map())
+    .values();
 
-  return relatedItems;
+  return Array.from(filteredItems).slice(0, MAX_RESULTS);
 }
 
 module.exports = {
