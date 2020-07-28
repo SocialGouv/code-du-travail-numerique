@@ -21,65 +21,61 @@ import { CallToActionTile } from "./tiles/CallToAction";
 export const RelatedItems = ({ items = [] }) => {
   const tileSources = [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS];
 
-  const relatedTilesItems = items.filter(({ source }) =>
-    tileSources.includes(source)
-  );
-  const relatedLinkItems = items.filter(
-    ({ source }) => !tileSources.includes(source)
-  );
+  const relatedTilesItems = items
+    .filter(({ source }) => tileSources.includes(source))
+    .slice(0, 2);
+  const relatedLinkItems = items
+    .filter(({ source }) => !tileSources.includes(source))
+    .slice(0, 6);
 
   return (
     <Container>
       <StyledFlatList>
-        {relatedTilesItems
-          .slice(0, 2)
-          .map(
-            ({
-              action,
-              description,
-              icon,
-              slug,
-              source,
-              subtitle,
-              title,
-              url,
-            }) => (
-              <StyledTileItem key={slug || url}>
-                {source !== SOURCES.EXTERNALS ? (
-                  <Link
-                    as={`/${getRouteBySource(source)}/${slug}`}
-                    href={`/${getRouteBySource(source)}/[slug]`}
-                    passHref
-                  >
-                    <CallToActionTile
-                      action={action || "Consulter"}
-                      custom
-                      icon={
-                        source === SOURCES.LETTERS
-                          ? icons.Document
-                          : icons[icon]
-                      }
-                      title={title}
-                      subtitle={getLabelBySource(source)}
-                    />
-                  </Link>
-                ) : (
+        {relatedTilesItems.map(
+          ({
+            action,
+            description,
+            icon,
+            slug,
+            source,
+            subtitle,
+            title,
+            url,
+          }) => (
+            <StyledTileItem key={slug || url}>
+              {source !== SOURCES.EXTERNALS ? (
+                <Link
+                  as={`/${getRouteBySource(source)}/${slug}`}
+                  href={`/${getRouteBySource(source)}/[slug]`}
+                  passHref
+                >
                   <CallToActionTile
                     action={action || "Consulter"}
-                    custom={false}
-                    href={url}
-                    icon={icons[icon]}
-                    rel="noopener noreferrer"
-                    subtitle={subtitle}
-                    target="_blank"
+                    custom
+                    icon={
+                      source === SOURCES.LETTERS ? icons.Document : icons[icon]
+                    }
                     title={title}
-                  >
-                    {description}
-                  </CallToActionTile>
-                )}
-              </StyledTileItem>
-            )
-          )}
+                    subtitle={getLabelBySource(source)}
+                  />
+                </Link>
+              ) : (
+                <CallToActionTile
+                  action={action || "Consulter"}
+                  custom={false}
+                  href={url}
+                  icon={icons[icon]}
+                  rel="noopener noreferrer"
+                  subtitle={subtitle}
+                  target="_blank"
+                  title={title}
+                >
+                  {description}
+                </CallToActionTile>
+              )}
+            </StyledTileItem>
+          )
+        )}
       </StyledFlatList>
       {relatedLinkItems.length > 0 && (
         <>
@@ -87,7 +83,7 @@ export const RelatedItems = ({ items = [] }) => {
             Les articles pouvant vous intéresser&nbsp;:
           </Heading>
           <FlatList>
-            {relatedLinkItems.slice(0, 3).map(({ slug, source, title }) => {
+            {relatedLinkItems.map(({ slug, source, title, reco }) => {
               let rootSlug = slug;
               let hash;
               if (slug.includes("#")) {
@@ -110,7 +106,10 @@ export const RelatedItems = ({ items = [] }) => {
                         matopush([
                           "trackEvent",
                           "selectRelated",
-                          `${route}${rootSlug}${hash}`,
+                          JSON.stringify({
+                            reco,
+                            selection: `${route}${rootSlug}${hash}`,
+                          }),
                         ])
                       }
                     >

@@ -4,6 +4,7 @@ import retry from "p-retry";
 
 import { hashFunctionBuilder } from "./indexing/cdtnIds";
 import { logger } from "./indexing/logger";
+import { fetchCovisits } from "./indexing/monolog";
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { vectorizeDocument } from "./indexing/vectorizer";
 
@@ -20,6 +21,9 @@ const excludeSources = [
   SOURCES.SHEET_MT_PAGE,
   SOURCES.CCN_PAGE,
 ];
+const nlpQueue = new PQueue({ concurrency: 3 });
+
+const monologQueue = new PQueue({ concurrency: 20 });
 
 const hashFunction = hashFunctionBuilder();
 // these sources do not need unique CDTN id
@@ -30,9 +34,8 @@ const noIdSources = [
   SOURCES.VERSIONS,
 ];
 
-const queue = new PQueue({ concurrency: 3 });
 async function fetchVector(data) {
-  return NLP_URL
+  return NLP_URL && data.title && data.text
     ? vectorizeDocument(data.title, data.text)
         .then((title_vector) => {
           if (title_vector.message) {
@@ -42,7 +45,7 @@ async function fetchVector(data) {
           return data;
         })
         .catch((err) => {
-          console.error(`error fetching ${data.title}`, err);
+          console.error(`error fetching ${data.title}`, err.message);
           return data;
         })
     : data;
@@ -50,33 +53,44 @@ async function fetchVector(data) {
 
 const dump = async () => {
   let documents = [];
+
   if (NLP_URL) {
-    console.error(`use ${NLP_URL} to retrieve tf vectors`);
+    console.error(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
   } else {
-    console.error(`no nlp`);
+    console.error(`NLP_URL not defined, semantic search will be disabled.`);
   }
+
   for await (const docsNoIds of cdtnDocumentsGen()) {
+    console.error(`› ${docsNoIds[0].source}... ${docsNoIds.length} items`);
+
     // add CDTN specific ids to docs
-    const docs = docsNoIds.map((doc) => {
+    const docsIds = docsNoIds.map((doc) => {
       if (!noIdSources.includes(doc.source)) {
         doc.cdtnId = hashFunction(doc);
       }
       return doc;
     });
 
-    console.error(`› ${docs[0].source}... ${docs.length} items`);
+    // add covisits using pQueue (there is a plan to change this : see #2915)
+    const pDocs = docsIds.map((doc) =>
+      monologQueue.add(() => fetchCovisits(doc))
+    );
+    const docs = await Promise.all(pDocs);
+    await monologQueue.onIdle();
+
+    // add NLP vectors
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {
       const pDocs = docs.map((doc) =>
-        queue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
+        nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
       );
 
       const docsWithData = await Promise.all(pDocs);
       documents = documents.concat(docsWithData);
     }
   }
-  await queue.onIdle();
+  await nlpQueue.onIdle();
   //eslint-disable-next-line no-console
   console.log(JSON.stringify(documents, 0, 2));
   console.error(`done in ${(Date.now() - t0) / 1000} s`);

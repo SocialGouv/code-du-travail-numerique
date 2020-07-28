@@ -64,6 +64,13 @@ export const documentMapping = {
       enabled: false,
     },
 
+    covisits: {
+      properties: {
+        count: { type: "integer" },
+        link: { type: "keyword" },
+      },
+    },
+
     description: { type: "text" },
 
     effectif: {

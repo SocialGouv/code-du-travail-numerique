@@ -12,6 +12,7 @@ function getSheetMTQuery({ slug }) {
       "title",
       "url",
       "cdtnId",
+      "covisits",
     ],
     query: {
       bool: {

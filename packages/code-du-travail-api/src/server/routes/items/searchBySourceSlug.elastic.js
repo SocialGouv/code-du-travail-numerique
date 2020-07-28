@@ -31,6 +31,8 @@ function getSearchBody({ source, slug }) {
       "contents", // editorial_content
       "folder", // editorial_content
       "cdtnId",
+      "covisits",
+      "source",
     ],
     query: {
       bool: {
