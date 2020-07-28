@@ -146,10 +146,8 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     )
     // only returning sources of interest
     .filter(({ source }) => sources.includes(source))
-    // add reduce to drop duplicates using ids
+    // TODO : add reduce to drop duplicates using ids
     .slice(0, MAX_RESULTS);
-
-  console.log(relatedItems);
 
   return relatedItems;
 }
