@@ -7,8 +7,10 @@ const thematicFiles = [
         position: 1,
         refs: [
           {
-            title: "Questions - Réponses : télétravail",
-            url: "/fiche-ministere-travail/teletravail",
+            title:
+              "Questions - Réponses : garde d’enfants et personnes vulnérables",
+            url:
+              "/fiche-ministere-travail/garde-denfants-et-personnes-vulnerables",
           },
           {
             title: "Activité partielle – chômage partiel",
@@ -21,9 +23,10 @@ const thematicFiles = [
               "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
           },
           {
-            title: "Fiches conseils métiers du ministère du travail",
+            title:
+              "Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
             url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs",
+              "/information/prime-exceptionnelle-de-pouvoir-dachat-nouveautes-covid-19",
           },
           {
             title: "Nouveautés Covid-19 : congés payés [Infographie]",
@@ -39,7 +42,7 @@ const thematicFiles = [
       {
         icon: "Security",
         id: "sante-securite",
-        position: 2,
+        position: 7,
         refs: [
           {
             title:
@@ -64,12 +67,6 @@ const thematicFiles = [
               "Nouveautés Covid-19 : report ou annulation de visites médicales",
             url:
               "/information/report-ou-annulation-de-visites-medicales-nouveautes-covid-19",
-          },
-          {
-            title:
-              "Nouveauté Covid-19 : prescription d’arrêts du travail par le médecin du travail",
-            url:
-              "/information/prescription-darrets-du-travail-par-le-medecin-du-travail-nouveaute-covid-19",
           },
           {
             title:
@@ -99,72 +96,6 @@ const thematicFiles = [
           },
         ],
         title: "Santé et sécurité au travail",
-      },
-      {
-        icon: "Focus",
-        id: "focus",
-        position: 3,
-        refs: [
-          {
-            title: "Problématiques communes à tous les métiers",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Problematiques-communes-a-tous-les-metiers",
-          },
-          {
-            title:
-              "Agriculture, élevage, agroalimentaire, jardins et espaces verts",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Agriculture-elevage-agroalimentaire-jardins-et-espaces-verts",
-          },
-          {
-            title: "Commerce de détail, restauration, hôtellerie",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Commerce-de-detail-restauration-hotellerie",
-          },
-          {
-            title: "Propreté, réparation, maintenance",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Proprete-reparation-maintenance",
-          },
-          {
-            title: "Industrie, production",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Industrie-production",
-          },
-          {
-            title: "Transports, logistique",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Transports-logistique",
-          },
-          {
-            title: "Autres services",
-            url:
-              "/fiche-ministere-travail/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs#Autres-services",
-          },
-          {
-            title: "Nouveautés Covid-19 : assistant(e) maternel(le)",
-            url: "/information/assistant-e-maternel-le-nouveautes-covid-19",
-          },
-          {
-            title:
-              "Questions - Réponses : Employeurs inclusifs  (SIAE, EA, GEIQ, PEC)",
-            url:
-              "/fiche-ministere-travail/employeurs-inclusifs-siae-ea-geiq-pec",
-          },
-          {
-            title:
-              "Mesures exceptionnelles de soutien aux intermittents et salariés du secteur culturel dans le cadre de la crise sanitaire",
-            url:
-              "/fiche-ministere-travail/mesures-exceptionnelles-de-soutien-aux-intermittents-et-salaries-du-secteur-culturel-dans-le-cadre-de-la-crise-sanitaire",
-          },
-          {
-            title:
-              "Nouveautés Covid-19 : situation des travailleurs frontaliers",
-            url:
-              "/fiche-ministere-travail/covid-19-situation-des-travailleurs-frontaliers",
-          },
-        ],
-        title: "Prévention Covid-19 par secteur ou par métier",
       },
       {
         icon: "Precarity",
@@ -217,7 +148,7 @@ const thematicFiles = [
       {
         icon: "PartialActivity",
         id: "activite-partielle",
-        position: 5,
+        position: 3,
         refs: [
           {
             title:
@@ -256,18 +187,8 @@ const thematicFiles = [
       {
         icon: "Contract",
         id: "contrats",
-        position: 6,
+        position: 5,
         refs: [
-          {
-            title: "Questions - Réponses : télétravail",
-            url: "/fiche-ministere-travail/teletravail",
-          },
-          {
-            title:
-              "Questions - Réponses : embauche, démission, sanctions, licenciement",
-            url:
-              "/fiche-ministere-travail/embauche-demission-sanctions-licenciement",
-          },
           {
             title: "Nouveautés Covid-19 : rupture conventionnelle",
             url: "/information/rupture-conventionnelle-nouveautes-covid-19",
@@ -287,13 +208,12 @@ const thematicFiles = [
             url: "/information/entretien-professionnel-nouveautes-covid-19",
           },
         ],
-        shortTitle: "Contrat de travail",
-        title: "Contrat de travail (embauche, télétravail, rupture…)",
+        title: "Contrat de travail",
       },
       {
         icon: "Health",
         id: "arret-maladie",
-        position: 7,
+        position: 2,
         refs: [
           {
             title:
@@ -312,7 +232,7 @@ const thematicFiles = [
       {
         icon: "Nego",
         id: "accord-collectif",
-        position: 8,
+        position: 6,
         refs: [
           {
             title: "Questions-réponses : dialogue social",
@@ -333,17 +253,13 @@ const thematicFiles = [
             title: "Nouveautés Covid-19 : élections du CSE",
             url: "/information/elections-du-cse-nouveautes-covid-19",
           },
-          {
-            title: "Nouveautés Covid-19 : réunions du CSE [Infographie]",
-            url: "/information/reunions-du-cse-nouveautes-covid-19",
-          },
         ],
         title: "CSE et accord collectif",
       },
       {
         icon: "Formation",
         id: "formation",
-        position: 9,
+        position: 8,
         refs: [
           {
             title: "Conventions de FNE-Formation",
@@ -376,17 +292,11 @@ const thematicFiles = [
       {
         icon: "Unemployment",
         id: "chomage",
-        position: 10,
+        position: 9,
         refs: [
           {
             title: "Questions-réponses : indemnisation chômage",
             url: "/fiche-ministere-travail/indemnisation-chomage",
-          },
-          {
-            title:
-              "Allongement exceptionnel de l’indemnisation pour les demandeurs d’emploi en fin de droit",
-            url:
-              "https://www.pole-emploi.fr/actualites/allongement-exceptionnel-de-lind.html",
           },
         ],
         title: "Chômage",
@@ -394,27 +304,21 @@ const thematicFiles = [
       {
         icon: "Resources",
         id: "ressources",
-        position: 11,
+        position: 10,
         refs: [
-          {
-            title:
-              "Attestation de déplacement professionnel en transport collectif en Île-de-France",
-            url:
-              "https://www.prefectures-regions.gouv.fr/ile-de-france/Region-et-institutions/L-action-de-l-Etat/Amenagement-du-territoire-transport-et-environnement/Les-transports-du-quotidien/Deconfinement-les-attestations-pour-se-deplacer-dans-les-transports-en-commun-en-heure-de-pointe",
-          },
           {
             title: "Rester informé sur le Coronavirus",
             url: "https://www.gouvernement.fr/info-coronavirus",
           },
           {
-            title: "Le ministère de l'économie soutient les entreprises",
+            title: "Le ministère de l’économie soutient les entreprises",
             url: "https://www.economie.gouv.fr/coronavirus-soutien-entreprises",
           },
           {
             title:
               "Coronavirus et paiement des cotisations salariales et patronales",
             url:
-              "https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-les.html",
+              "https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-l-1.html",
           },
           {
             title: "Coronavirus et données personnelles",

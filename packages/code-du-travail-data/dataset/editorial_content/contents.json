@@ -317,31 +317,6 @@
     "id": "7ce44ee7-8c90-4f71-9ecf-10845eea7550"
   },
   {
-    "title": "Assistant(e) maternel(le) : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’assistant(e) maternel(le)",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "markdown",
-        "name": "assistant-maternel",
-        "references": [
-          {
-            "title": "Ordonnance n° 2020-310 du 25 mars 2020 portant dispositions temporaires relatives aux assistants maternels et aux disponibilités d’accueil des jeunes enfants",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755748"
-          },
-          {
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-310 du 25 mars 2020 portant dispositions temporaires relatives aux assistants maternels et aux disponibilités d’accueil des jeunes enfants",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755745"
-          }
-        ]
-      }
-    ],
-    "id": "894369e1-2f62-4b3a-98ef-f1ab01f19055"
-  },
-  {
     "title": "Information et consultation du CSE : nouveautés Covid-19",
     "date": "25/05/20",
     "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le CSE",
@@ -745,41 +720,6 @@
       }
     ],
     "id": "f284c749-caa7-4a18-8803-5554819aee2e"
-  },
-  {
-    "title": "Prescription d’arrêts du travail par le médecin du travail : nouveauté Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les services de santé au travail",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "markdown",
-        "name": "arret-de-travail",
-        "references": [
-          {
-            "title": "Décret n° 2020-549 du 11 mai 2020 fixant les conditions temporaires de prescription et de renouvellement des arrêts de travail par le médecin du travail",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=4D3AAA8A8E344766FB1E666EEDF6B65A.tplgfr43s_1?cidTexte=JORFTEXT000041865522&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041865241"
-          },
-          {
-            "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d'exercice des missions des services de santé au travail à l'urgence sanitaire et modifiant le régime des demandes préalables d'autorisation d'activité partielle, article 2",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=CF4D74832A99BE1B21AF25434CD28CC0.tplgfr43s_1?cidTexte=JORFTEXT000041776887&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
-          },
-          {
-            "title": "Rapport au Président de la République relatif à l'ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d'exercice des missions des services de santé au travail à l'urgence sanitaire et modifiant le régime des demandes préalables d'autorisation d'activité partielle",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=CF4D74832A99BE1B21AF25434CD28CC0.tplgfr43s_1?cidTexte=JORFTEXT000041776882&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041776639"
-          },
-          {
-            "title": "Décret n° 2020-521 du 5 mai 2020 définissant les critères permettant d'identifier les salariés vulnérables présentant un risque de développer une forme grave d'infection au virus SARS-CoV-2 et pouvant être placés en activité partielle au titre de l'article 20 de la loi n° 2020-473 du 25 avril 2020 de finances rectificative pour 2020",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041849680&categorieLien=id"
-          }
-        ]
-      }
-    ],
-    "id": "3248cb4c-1fcd-4111-9465-b747967609d4"
   },
   {
     "title": "Élections du CSE : nouveautés Covid-19",
