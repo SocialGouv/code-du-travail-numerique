@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.28.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.27.0...v4.28.0) (2020-07-30)
+
+
+### Features
+
+* **data:** add unique cdtnId field to contents [#2816](https://github.com/SocialGouv/code-du-travail-numerique/issues/2816) ([d7ea2ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/d7ea2ab2d13fa3889a628f44c106896caec39ce1))
+* **related items:** covisits - update "get related items" based on Monolog reports(+ A/B testing) ([f19b780](https://github.com/SocialGouv/code-du-travail-numerique/commit/f19b7803a51ff5907ae16181312d922f8d9ef588)), closes [#2613](https://github.com/SocialGouv/code-du-travail-numerique/issues/2613)
+
+
+
+
+
 # [4.27.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.26.1...v4.27.0) (2020-07-24)
 
 
