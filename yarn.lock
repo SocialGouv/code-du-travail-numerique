@@ -99,16 +99,6 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.10.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.10.4.tgz#e49eeed9fe114b62fa5b181856a43a5e32f5f243"
-  integrity sha512-toLIHUIAgcQygFZRAQcsLQV3CBuX6yOIru1kJk/qqqvcRmZrYe6WavZTSG+bB8MxhnL9YPf+pKQfuiP161q7ng==
-  dependencies:
-    "@babel/types" "^7.10.4"
-    jsesc "^2.5.1"
-    lodash "^4.17.13"
-    source-map "^0.5.0"
-
 "@babel/generator@^7.10.5":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.10.5.tgz#1b903554bc8c583ee8d25f1e8969732e6b829a69"
@@ -342,12 +332,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.7.0", "@babel/parser@^7.8.3":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.10.4.tgz#9eedf27e1998d87739fb5028a5120557c06a1a64"
-  integrity sha512-8jHII4hf+YVDsskTF6WuMB3X4Eh+PsUkC2ljq22so5rHvH+T8BzyL94VOdyFLNR8tBSVXOTbNHOKpR4TfRxVtA==
-
-"@babel/parser@^7.10.5":
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.10.5", "@babel/parser@^7.7.0", "@babel/parser@^7.8.3":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.10.5.tgz#e7c6bf5a7deff957cec9f04b551e2762909d826b"
   integrity sha512-wfryxy4bE1UivvQKSQDU4/X6dr+i8bctjUjj8Zyt3DQy7NtPizJXT8M52nqpNKL+nq2PW8lxk4ZqLj0fD4B4hQ==
@@ -1100,22 +1085,7 @@
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.4", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.3":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.10.4.tgz#e642e5395a3b09cc95c8e74a27432b484b697818"
-  integrity sha512-aSy7p5THgSYm4YyxNGz6jZpXf+Ok40QF3aA2LyIONkDHpAcJzDUqlCKXv6peqYUs2gmic849C/t2HKw2a2K20Q==
-  dependencies:
-    "@babel/code-frame" "^7.10.4"
-    "@babel/generator" "^7.10.4"
-    "@babel/helper-function-name" "^7.10.4"
-    "@babel/helper-split-export-declaration" "^7.10.4"
-    "@babel/parser" "^7.10.4"
-    "@babel/types" "^7.10.4"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.13"
-
-"@babel/traverse@^7.10.5":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.10.4", "@babel/traverse@^7.10.5", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.8.3":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.10.5.tgz#77ce464f5b258be265af618d8fddf0536f20b564"
   integrity sha512-yc/fyv2gUjPqzTz0WHeRJH2pv7jA9kA7mBX2tXl/x5iOE81uaVPuGPtaYk7wmkx4b67mQ7NqI8rmT2pF47KYKQ==
@@ -1148,16 +1118,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.10.4", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.5":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.10.4.tgz#369517188352e18219981efd156bfdb199fff1ee"
-  integrity sha512-UTCFOxC3FsFHb7lkRMVvgLzaRVamXuAs2Tz4wajva4WxtVY82eZeaUBtC2Zt95FU9TiznuC0Zk35tsim8jeVpg==
-  dependencies:
-    "@babel/helper-validator-identifier" "^7.10.4"
-    lodash "^4.17.13"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.10.5":
+"@babel/types@^7.0.0", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.5":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.10.5.tgz#d88ae7e2fde86bfbfe851d4d81afa70a997b5d15"
   integrity sha512-ixV66KWfCI6GKoA/2H9v6bQdbfXEwwpOdQ8cRvb4F+eyvhlaHxWFMQB4+3d9QFJXZsiiiqVrewNV0DFEQpyT4Q==
@@ -2703,20 +2664,20 @@
     esm "^3.2.25"
     winston "^3.3.3"
 
-"@socialgouv/contributions-data@^2.8.3":
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.8.3.tgz#74eb0d48846e61c739ac40d8285135187f9d0110"
-  integrity sha512-OGHWeya4XCN4Q9OJR9vqm7Z0fwMLCRxzazzW6D8N9RtIQVpXzaVxEbPobmK82WuZebmqjf5jgqD+vn9jxNzEQg==
+"@socialgouv/contributions-data@^2.11.0":
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.11.0.tgz#aa24974c8a18688ed4585cf9d7543c3d97f9292e"
+  integrity sha512-Ouyg7mwpVXgBuhRsjAiMqMf1JefErX8XOTCVq1QlEwwBiycEbQjvmz89Vu2rpBITvXijRBYiSND0fG1BowP+Fw==
   dependencies:
     esm "^3.2.25"
     node-fetch "^2.6.0"
-    remark "^12.0.0"
+    remark "^12.0.1"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.45.0":
-  version "1.45.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.45.0.tgz#e7584fa590fcd42222b701632a7981b4107ecc47"
-  integrity sha512-IkXTnHkOpP5SooT4uvWAfsYIgnqxEtTgswhslwrkKP6mwXiSWEJCDidWqxXd/6LMIQDTtWR5NBjCcRdI55h95g==
+"@socialgouv/datafiller-data@^1.47.0":
+  version "1.47.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.47.0.tgz#98044115fbe220362bc77d37d7fe7dd81a512b1c"
+  integrity sha512-sJvfGml4O+/tUwmbp+vuKJPaqqm9pgGuwPYFuh0aO9xI9/5y/ADC5P3mRu+m079WdbWxYT8Jf3SbuSPndq4JcA==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
@@ -2746,25 +2707,25 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.157.0":
-  version "3.157.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.157.0.tgz#dd141124376bdb19f973a15f3b6081dd674c2f87"
-  integrity sha512-rHXlDf6bCIbyrPGv7WX+6cMevrQLW4rcHQAbOFJAVaG/zG/lzgOyLb6Kp6yfR8Y7m+AEcmHqXmupw5vzRd8g9w==
+"@socialgouv/fiches-travail-data@^3.162.0":
+  version "3.162.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.162.0.tgz#6bb5d7515332b498d8690cc6154825269efbaa10"
+  integrity sha512-b3gkSmJyfjtcufz5cGFm0lE7eElmFMlV3ffkZ/tuLANdON4SHNGk1JbIRELPm1brBS/ktYdUTE44hwjl9FM+oA==
 
-"@socialgouv/fiches-vdd@^1.134.0":
-  version "1.134.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.134.0.tgz#81f45a5232b84f91b3ef6d0e114f1e9d11e95c38"
-  integrity sha512-SGg+dwpITp5DFhYDy6egyM16QqBadKKwhwdC5+SClcq/yDZQcz2mCmOxbVor/M6SRAZCKCvjX2Bl52nP3crAWg==
+"@socialgouv/fiches-vdd@^1.137.0":
+  version "1.137.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.137.0.tgz#6cb662db575a4060cb43af857bf6673504a815b4"
+  integrity sha512-X05a8gC0Zf/Itzg9584pq40zajEK2UYHrvGwHSh8qmvf1XhHmBbhVXXDvKgiaZgh6uHfMhX1vqeSLci8VnHUmA==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.5"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.81.0":
-  version "1.81.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.81.0.tgz#a1d241e699cf43fff0f4e5a397031d7aeb81cc70"
-  integrity sha512-mogSJNWGzgp/HvIp3H7VeEEndtJrFjcKKMBvsgltj9tm25bRPfV562/4Vinrdinv65N5kG3jT85kdMfRsRuM9g==
+"@socialgouv/kali-data@^1.83.0":
+  version "1.83.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.83.0.tgz#3107bd6d30ef22e830adeb964385c1fb193f0bb1"
+  integrity sha512-75mORM6yHs1jFrqDZAQIO3eUH/KUjtRXvAxWSMJf4HOs0dWz/SKcW+AFILw4glBK+j70i1JIOS4tdBM0PwSFDw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
