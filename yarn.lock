@@ -2664,20 +2664,20 @@
     esm "^3.2.25"
     winston "^3.3.3"
 
-"@socialgouv/contributions-data@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.11.0.tgz#aa24974c8a18688ed4585cf9d7543c3d97f9292e"
-  integrity sha512-Ouyg7mwpVXgBuhRsjAiMqMf1JefErX8XOTCVq1QlEwwBiycEbQjvmz89Vu2rpBITvXijRBYiSND0fG1BowP+Fw==
+"@socialgouv/contributions-data@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data/-/contributions-data-2.12.0.tgz#35b2f610b3e62c580ffa33802e601b7b67c370a4"
+  integrity sha512-RSyCqLkyGWiMAhEx4HByt1+LNPOpD8vdrdh3W7AR9LyTeeoglVXgCKmBpjvlDUc6yo5XtX0+E5JR/KQdCUy3Sg==
   dependencies:
     esm "^3.2.25"
     node-fetch "^2.6.0"
     remark "^12.0.1"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.47.0":
-  version "1.47.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.47.0.tgz#98044115fbe220362bc77d37d7fe7dd81a512b1c"
-  integrity sha512-sJvfGml4O+/tUwmbp+vuKJPaqqm9pgGuwPYFuh0aO9xI9/5y/ADC5P3mRu+m079WdbWxYT8Jf3SbuSPndq4JcA==
+"@socialgouv/datafiller-data@^1.48.0":
+  version "1.48.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.48.0.tgz#802a9ddfba7e6c7c7a7480d644508d00281bcbf8"
+  integrity sha512-Sbr1NFJmv98WF99AY75yayhVUghvL0cDWKkj9NpOdNID/vBLw+Dy+n2yCWcLxFqzraytGgnXisCW9qCdsOssxw==
   dependencies:
     node-fetch "^2.6.0"
     p-pipe "^3.1.0"
@@ -2707,25 +2707,25 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.162.0":
-  version "3.162.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.162.0.tgz#6bb5d7515332b498d8690cc6154825269efbaa10"
-  integrity sha512-b3gkSmJyfjtcufz5cGFm0lE7eElmFMlV3ffkZ/tuLANdON4SHNGk1JbIRELPm1brBS/ktYdUTE44hwjl9FM+oA==
+"@socialgouv/fiches-travail-data@^3.168.0":
+  version "3.168.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.168.0.tgz#5c8b2b55c9de7d235ee7b82c6869069273d9c3a3"
+  integrity sha512-q1EQcxWU4XevJHdlYBt4OtPaefCgGcAdNeb8xvVigiicO7LbdAenSO6Y5yHGeAcehVGAP2dmkq5iCgBl/5l8sQ==
 
-"@socialgouv/fiches-vdd@^1.137.0":
-  version "1.137.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.137.0.tgz#6cb662db575a4060cb43af857bf6673504a815b4"
-  integrity sha512-X05a8gC0Zf/Itzg9584pq40zajEK2UYHrvGwHSh8qmvf1XhHmBbhVXXDvKgiaZgh6uHfMhX1vqeSLci8VnHUmA==
+"@socialgouv/fiches-vdd@^1.142.0":
+  version "1.142.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.142.0.tgz#a7fba27c1b95b3b8b0ce499483dbe5f8d6a9c731"
+  integrity sha512-R5kNegplW64Mw8TziZfIYnwV+RGJyOt1HYcGWJyVozlzJ4vzFJP+KIQhV8pfwk5YoXJgmY3/A9TlN/DdYFFYzw==
   dependencies:
     node-fetch "^2.6.0"
     ora "^4.0.5"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.83.0":
-  version "1.83.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.83.0.tgz#3107bd6d30ef22e830adeb964385c1fb193f0bb1"
-  integrity sha512-75mORM6yHs1jFrqDZAQIO3eUH/KUjtRXvAxWSMJf4HOs0dWz/SKcW+AFILw4glBK+j70i1JIOS4tdBM0PwSFDw==
+"@socialgouv/kali-data@^1.86.0":
+  version "1.86.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.86.0.tgz#98863d5c1b9a13308cb371b6d28084c8ff4e7e8b"
+  integrity sha512-RxqvIuJAgTbnBiodWfSS34/yJXaWKGDQyaLQGE7Uc6s7HiuinhCnquKRSv9rALPHfyM4R8RWMAxHPCf9ZS72fw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
