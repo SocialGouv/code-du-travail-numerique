@@ -2,7 +2,7 @@ Les conditions de la prime exceptionnelle de pouvoir d’achat (également appel
  
 Ainsi, depuis le 2 avril 2020, toutes les entreprises peuvent verser la prime de pouvoir d’achat. Elles n’ont plus l’obligation de disposer d’un accord d’intéressement.
  
-En outre, la date limite de versement de la prime a été reportée au 31 août 2020. (Auparavant, cette date était fixée au 30 juin 2020.)
+En outre, la date limite de versement de la prime a été reportée au 31 décembre 2020 (date auparavant fixée au 30 juin 2020, puis au 31 août 2020).
  
 La prime de pouvoir d’achat est exonérée de cotisations et contributions sociales et d’impôt sur le revenu jusqu’à&nbsp;:
 

@@ -151,6 +151,16 @@ const thematicFiles = [
         position: 3,
         refs: [
           {
+            title: "Fiche Activité partielle",
+            url:
+              "/fiche-ministere-travail/fiche-activite-partielle-chomage-partiel",
+          },
+          {
+            title: "Fiche Activité partielle de longue durée (APLD)",
+            url:
+              "/fiche-ministere-travail/activite-partielle-de-longue-duree-apld",
+          },
+          {
             title:
               "Questions - Réponses : activité partielle - chômage partiel",
             url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
@@ -174,11 +184,6 @@ const thematicFiles = [
           {
             title: "Simulateur d’activité partielle",
             url: "https://www.simulateurap.emploi.gouv.fr/",
-          },
-          {
-            title: "Fiche Activité partielle",
-            url:
-              "/fiche-ministere-travail/fiche-activite-partielle-chomage-partiel",
           },
         ],
         shortTitle: "Activité partielle",
@@ -285,6 +290,12 @@ const thematicFiles = [
             url:
               "/fiche-ministere-travail/formation-professionnelle-des-salaries-en-activite-partielle",
           },
+          {
+            title:
+              "Aide exceptionnelle aux employeurs qui recrutent en apprentissage",
+            url:
+              "/fiche-ministere-travail/aide-exceptionnelle-aux-employeurs-qui-recrutent-en-apprentissage",
+          },
         ],
         shortTitle: "Formation et apprentissage",
         title: "Formation professionnelle et apprentissage",
@@ -319,6 +330,12 @@ const thematicFiles = [
               "Coronavirus et paiement des cotisations salariales et patronales",
             url:
               "https://www.urssaf.fr/portail/home/actualites/toute-lactualite-employeur/mesures-exceptionnelles-pour-l-1.html",
+          },
+          {
+            title:
+              "Garantie en cas de sauvegarde, de redressement ou de liquidation judiciaire",
+            url:
+              "/fiche-ministere-travail/la-garantie-en-cas-de-sauvegarde-de-redressement-ou-de-liquidation-judiciaire",
           },
           {
             title: "Coronavirus et données personnelles",
