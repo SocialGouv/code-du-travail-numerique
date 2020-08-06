@@ -52,7 +52,7 @@
     "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
     "next": "9.5.1",
-    "next-transpile-modules": "^3.3.0",
+    "next-transpile-modules": "^4.0.2",
     "p-debounce": "^2.1.0",
     "react": "^16.13.1",
     "react-autosuggest": "10.0.2",
