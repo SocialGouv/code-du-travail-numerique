@@ -728,6 +728,11 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
+devtools-protocol@0.0.781568:
+  version "0.0.781568"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.781568.tgz#4cdca90a952d2c77831096ff6cd32695d8715a04"
+  integrity sha512-9Uqnzy6m6zEStluH9iyJ3iHyaQziFnMnLeC8vK0eN6smiJmIx7+yB64d67C2lH/LZra+5cGscJAJsNXO+MdPMg==
+
 diff@3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
@@ -1105,6 +1110,14 @@ find-up@^2.0.0, find-up@^2.1.0:
   integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
   dependencies:
     locate-path "^2.0.0"
+
+find-up@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
+  integrity sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
+  dependencies:
+    locate-path "^5.0.0"
+    path-exists "^4.0.0"
 
 flat-cache@^2.0.1:
   version "2.0.1"
@@ -1631,6 +1644,13 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
+locate-path@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
+  integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
+  dependencies:
+    p-locate "^4.1.0"
+
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
@@ -1753,11 +1773,6 @@ minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
-
-mitt@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/mitt/-/mitt-2.0.1.tgz#9e8a075b4daae82dd91aac155a0ece40ca7cb393"
-  integrity sha512-FhuJY+tYHLnPcBHQhbUFzscD5512HumCPE4URXZUgPi3IvOJi4Xva5IIgy3xX56GqCmw++MAm5UURG6kDBYTdg==
 
 mkdirp-classic@^0.5.2:
   version "0.5.2"
@@ -1983,7 +1998,7 @@ p-limit@^1.1.0:
   dependencies:
     p-try "^1.0.0"
 
-p-limit@^2.0.0:
+p-limit@^2.0.0, p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
@@ -2003,6 +2018,13 @@ p-locate@^3.0.0:
   integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
   dependencies:
     p-limit "^2.0.0"
+
+p-locate@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
+  integrity sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
+  dependencies:
+    p-limit "^2.2.0"
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -2040,6 +2062,11 @@ path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
   integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
+
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
@@ -2084,6 +2111,13 @@ pkg-dir@^2.0.0:
   integrity sha1-9tXREJ4Z1j7fQo4L1X4Sd3YVM0s=
   dependencies:
     find-up "^2.1.0"
+
+pkg-dir@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-4.2.0.tgz#f099133df7ede422e81d1d8448270eeb3e4261f3"
+  integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
+  dependencies:
+    find-up "^4.0.0"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -2148,16 +2182,17 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-4.0.1.tgz#ebc2ee61157ed1aa25be3843fda97807df1d51f5"
-  integrity sha512-LIiSWTRqpTnnm3R2yAoMBx1inSeKwVZy66RFSkgSTDINzheJZPd5z5mMbPM0FkvwWAZ27a+69j5nZf+Fpyhn3Q==
+puppeteer@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-5.2.1.tgz#7f0564f0a5384f352a38c8cc42af875cd87f4ea6"
+  integrity sha512-PZoZG7u+T6N1GFWBQmGVG162Ak5MAy8nYSVpeeQrwJK2oYUlDWpHEJPcd/zopyuEMTv7DiztS1blgny1txR2qw==
   dependencies:
     debug "^4.1.0"
+    devtools-protocol "0.0.781568"
     extract-zip "^2.0.0"
     https-proxy-agent "^4.0.0"
     mime "^2.0.3"
-    mitt "^2.0.1"
+    pkg-dir "^4.2.0"
     progress "^2.0.1"
     proxy-from-env "^1.0.0"
     rimraf "^3.0.2"
