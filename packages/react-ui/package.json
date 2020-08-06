@@ -29,7 +29,7 @@
   "dependencies": {
     "@reach/dialog": "0.10.5",
     "polished": "^3.6.5",
-    "react-accessible-accordion": "^3.3.1",
+    "react-accessible-accordion": "^3.3.3",
     "react-feather": "^2.0.8",
     "react-tabs": "^3.1.1"
   },
@@ -51,7 +51,7 @@
     "@storybook/react": "^5.3.19",
     "@svgr/cli": "^5.4.0",
     "@svgr/core": "^5.4.0",
-    "@testing-library/react": "^10.4.7",
+    "@testing-library/react": "^10.4.8",
     "@testing-library/react-hooks": "3.3.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",

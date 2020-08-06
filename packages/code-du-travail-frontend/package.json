@@ -81,7 +81,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@socialgouv/eslint-config-react": "^1.6.0",
-    "@testing-library/react": "^10.4.7",
+    "@testing-library/react": "^10.4.8",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "babel-plugin-styled-components": "^1.10.7",
