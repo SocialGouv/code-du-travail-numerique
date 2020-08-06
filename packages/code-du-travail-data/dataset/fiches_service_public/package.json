@@ -11,9 +11,9 @@
     "@socialgouv/cdtn-sources": "^4.28.0",
     "@socialgouv/contributions-data": "^2.12.0",
     "@socialgouv/datafiller-data": "^1.51.0",
-    "@socialgouv/fiches-vdd": "^1.142.0",
-    "@socialgouv/kali-data": "^1.86.0",
-    "@socialgouv/legi-data": "^1.23.0",
+    "@socialgouv/fiches-vdd": "^1.143.0",
+    "@socialgouv/kali-data": "^1.87.0",
+    "@socialgouv/legi-data": "^1.24.0",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.13.1",
     "unist-util-find": "^1.0.1"
