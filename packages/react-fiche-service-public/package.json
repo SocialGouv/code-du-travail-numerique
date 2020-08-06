@@ -30,7 +30,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
-    "@rollup/plugin-commonjs": "^13.0.2",
+    "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@socialgouv/eslint-config-react": "^1.6.0",
     "@testing-library/react": "^10.4.8",
