@@ -685,7 +685,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           class="c4"
-          href="/fiche-service-public/mer-il-est-fou?q=search test"
+          href="/fiche-service-public/mer-il-est-fou?q=search%20test"
         >
           <div
             class="c5"
@@ -717,7 +717,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           class="c4"
-          href="/outils/simulateur-precarite?q=search test"
+          href="/outils/simulateur-precarite?q=search%20test"
         >
           <div
             class="c10"
@@ -854,7 +854,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           class="c4"
-          href="/outils/mer-il-est-fou2?q=search test"
+          href="/outils/mer-il-est-fou2?q=search%20test"
         >
           <div
             class="c10"
@@ -934,7 +934,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           class="c4"
-          href="/contribution/mer-il-est-fou4?q=search test"
+          href="/contribution/mer-il-est-fou4?q=search%20test"
         >
           <div
             class="c10"
@@ -1026,7 +1026,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 <a
                   class="c4"
-                  href="/code-du-travail/L1243-1?q=search test"
+                  href="/code-du-travail/L1243-1?q=search%20test"
                 >
                   <div
                     class="c5"
@@ -1078,7 +1078,7 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 <a
                   class="c30"
-                  href="/themes/1-contrat?q=search test"
+                  href="/themes/1-contrat?q=search%20test"
                 >
                   <div
                     class="c5"

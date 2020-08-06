@@ -1616,7 +1616,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             >
               <a
                 class="c40"
-                href="modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
+                href="/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
               >
                 <div
                   class="c41"
@@ -1674,7 +1674,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             >
               <a
                 class="c40"
-                href="modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
+                href="/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
               >
                 <div
                   class="c41"

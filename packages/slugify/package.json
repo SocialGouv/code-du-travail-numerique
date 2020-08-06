@@ -12,7 +12,7 @@
     "directory": "packages/slugify"
   },
   "devDependencies": {
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "typescript": "^3.9.7"
   },
   "scripts": {
