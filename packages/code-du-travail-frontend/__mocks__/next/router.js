@@ -1,25 +1,25 @@
 const route = jest.fn();
 const router = {
   asPath: "mock",
-  route,
   pathname: "mock",
-  query: { q: undefined },
-  push: jest.fn(path => {
+  push: jest.fn((path) => {
     route(path);
     return Promise.resolve();
   }),
+  query: { q: "" },
+  route,
 };
 
 module.exports = {
-  router,
-  mocked: true,
   events: {
-    on() {},
     off() {},
+    on() {},
     trigger() {},
   },
+  mocked: true,
+  router,
   useRouter: () => router,
-  withRouter: component => {
+  withRouter: (component) => {
     component.defaultProps = {
       ...component.defaultProps,
       router,
