@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data",
-  "version": "4.29.1-alpha.0",
+  "version": "4.29.1",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "index.js",
@@ -29,8 +29,8 @@
   "dependencies": {
     "@elastic/elasticsearch": "^7.8.0",
     "@socialgouv/cdtn-monolog": "^1.1.0",
-    "@socialgouv/cdtn-slugify": "^4.29.1-alpha.0",
-    "@socialgouv/cdtn-sources": "^4.29.1-alpha.0",
+    "@socialgouv/cdtn-slugify": "^4.29.1",
+    "@socialgouv/cdtn-sources": "^4.29.1",
     "@socialgouv/contributions-data": "^2.12.0",
     "@socialgouv/datafiller-data": "^1.55.0",
     "@socialgouv/fiches-travail-data": "^3.179.0",
