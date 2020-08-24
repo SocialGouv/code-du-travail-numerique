@@ -11,6 +11,7 @@ const { spacings } = theme;
 
 const isItemOfAccordion = (element) =>
   (element.name === "Chapitre" || element.name === "Cas") &&
+  element.children &&
   element.children.find((child) => child.name === "Titre");
 
 class AccordionWrapper extends React.PureComponent {
