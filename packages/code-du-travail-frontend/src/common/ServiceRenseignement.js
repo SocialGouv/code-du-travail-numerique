@@ -30,7 +30,9 @@ function ServiceRenseignement() {
   const router = useRouter();
   const onDepartmentInput = useCallback(
     (keyEvent) => {
-      const departmentNum = (keyEvent.target.value || "").toLowerCase();
+      const departmentNum = (
+        keyEvent.target.value.replace(/^0+/, "") || ""
+      ).toLowerCase();
       const departmentData = servicesDeRenseignement[departmentNum];
       setDepartementData(departmentData);
     },
@@ -175,8 +177,10 @@ const Pricing = styled.em`
 `;
 
 const StyledInput = styled(Input)`
-  width: 100%;
+  width: 150px;
   margin-top: ${spacings.small};
+  margin-left: ${spacings.small};
+  display: inline-block;
 `;
 
 const Small = styled.small`

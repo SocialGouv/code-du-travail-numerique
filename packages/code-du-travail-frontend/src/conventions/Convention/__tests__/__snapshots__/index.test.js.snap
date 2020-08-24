@@ -4216,12 +4216,12 @@ exports[`<Convention /> renders 1`] = `
                                 role="heading"
                               >
                                 <div
-                                  aria-controls="accordion__panel-raa-24"
+                                  aria-controls="accordion__panel-raa-2"
                                   aria-disabled="false"
                                   aria-expanded="false"
                                   class="c4"
                                   data-accordion-component="AccordionItemButton"
-                                  id="accordion__heading-raa-24"
+                                  id="accordion__heading-raa-2"
                                   role="button"
                                   tabindex="0"
                                 >
@@ -4250,11 +4250,11 @@ exports[`<Convention /> renders 1`] = `
                               </div>
                               <div
                                 aria-hidden="true"
-                                aria-labelledby="accordion__heading-raa-24"
+                                aria-labelledby="accordion__heading-raa-2"
                                 class="c7"
                                 data-accordion-component="AccordionItemPanel"
                                 hidden=""
-                                id="accordion__panel-raa-24"
+                                id="accordion__panel-raa-2"
                               >
                                 <div
                                   class="c8"
@@ -4600,12 +4600,12 @@ exports[`<Convention /> renders 1`] = `
         role="heading"
       >
         <div
-          aria-controls="accordion__panel-raa-26"
+          aria-controls="accordion__panel-raa-3"
           aria-disabled="false"
           aria-expanded="false"
           class="c23"
           data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-26"
+          id="accordion__heading-raa-3"
           role="button"
           tabindex="0"
         >
@@ -4629,11 +4629,11 @@ exports[`<Convention /> renders 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-26"
+        aria-labelledby="accordion__heading-raa-3"
         class="c26"
         data-accordion-component="AccordionItemPanel"
         hidden=""
-        id="accordion__panel-raa-26"
+        id="accordion__panel-raa-3"
         role="region"
       >
         <div
