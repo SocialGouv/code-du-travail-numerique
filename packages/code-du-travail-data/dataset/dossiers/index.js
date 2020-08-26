@@ -187,7 +187,7 @@ const thematicFiles = [
           },
         ],
         shortTitle: "Activité partielle",
-        title: "Activité partielle (chômage partiel)",
+        title: "Activités partielles (chômage partiel et APLD)",
       },
       {
         icon: "Contract",
@@ -242,12 +242,6 @@ const thematicFiles = [
           {
             title: "Questions-réponses : dialogue social",
             url: "/fiche-ministere-travail/dialogue-social",
-          },
-          {
-            title:
-              "Nouveautés Covid-19 : information et consultation du CSE [Infographie]",
-            url:
-              "/information/information-et-consultation-du-cse-nouveautes-covid-19",
           },
           {
             title: "Nouveautés Covid-19 : accord collectif d’entreprise",
