@@ -1,2 +1,1 @@
-import Fiche from "./components/Fiche";
-export default Fiche;
+export { FicheServicePublic } from "./components/Fiche";
