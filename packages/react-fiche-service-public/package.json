@@ -17,6 +17,9 @@
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
+  "dependencies":{
+    "date-fns": "^2.15.0"
+  },
   "peerDependencies": {
     "@socialgouv/cdtn-ui": "4.x",
     "prop-types": "15.x",
@@ -35,7 +38,6 @@
     "@socialgouv/eslint-config-react": "^1.22.0",
     "@testing-library/react": "^10.4.8",
     "babel-jest": "^26.2.2",
-    "date-fns": "^2.15.0",
     "eslint": "^7.6.0",
     "jest": "^26.2.2",
     "jest-styled-components": "^7.0.2",

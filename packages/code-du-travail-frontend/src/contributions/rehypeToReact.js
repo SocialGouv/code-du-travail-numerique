@@ -1,5 +1,5 @@
 import { Accordion, Alert, Heading, theme, Wrapper } from "@socialgouv/cdtn-ui";
-import FicheServicePublic from "@socialgouv/react-fiche-service-public";
+import { FicheServicePublic } from "@socialgouv/react-fiche-service-public";
 import React from "react";
 import styled from "styled-components";
 
