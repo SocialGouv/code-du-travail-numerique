@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.29.1",
+  "version": "4.29.2",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -17,7 +17,7 @@
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
-  "dependencies":{
+  "dependencies": {
     "date-fns": "^2.15.0"
   },
   "peerDependencies": {

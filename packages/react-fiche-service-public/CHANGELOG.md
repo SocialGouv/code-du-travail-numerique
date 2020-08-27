@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.29.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1...v4.29.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* **fiches-service-public:** prevent error with malformed accordions fix [#2946](https://github.com/SocialGouv/code-du-travail-numerique/issues/2946) ([#2950](https://github.com/SocialGouv/code-du-travail-numerique/issues/2950)) ([68be7e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/68be7e9a6f9d542bb4d1c81acc72888289633af2))
+* **rollup:** fix rollup config for fiche-sp components ([#2953](https://github.com/SocialGouv/code-du-travail-numerique/issues/2953)) ([3788115](https://github.com/SocialGouv/code-du-travail-numerique/commit/37881154e88d0d94fe5a69d40f6bb290f823ff0a))
+
+
+
+
+
 ## [4.29.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1-alpha.0...v4.29.1) (2020-08-14)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public

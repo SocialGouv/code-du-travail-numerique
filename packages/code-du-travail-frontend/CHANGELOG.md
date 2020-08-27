@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.29.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1...v4.29.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* **rollup:** fix rollup config for fiche-sp components ([#2953](https://github.com/SocialGouv/code-du-travail-numerique/issues/2953)) ([3788115](https://github.com/SocialGouv/code-du-travail-numerique/commit/37881154e88d0d94fe5a69d40f6bb290f823ff0a))
+
+
+
+
+
 ## [4.29.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1-alpha.0...v4.29.1) (2020-08-14)
 
 **Note:** Version bump only for package @cdt/frontend

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.29.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1...v4.29.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* wording attestation déplacement pro ([#2951](https://github.com/SocialGouv/code-du-travail-numerique/issues/2951)) ([a4d987f](https://github.com/SocialGouv/code-du-travail-numerique/commit/a4d987f31f199e535fceb2890461b31a24b3da0c)), closes [#2774](https://github.com/SocialGouv/code-du-travail-numerique/issues/2774)
+
+
+
+
+
 ## [4.29.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1-alpha.0...v4.29.1) (2020-08-14)
 
 **Note:** Version bump only for package @cdt/data...tools

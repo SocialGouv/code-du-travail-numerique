@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.29.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1...v4.29.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* **dossier:** remove deprecated covid related cse content ([#2954](https://github.com/SocialGouv/code-du-travail-numerique/issues/2954)) ([6bfc36f](https://github.com/SocialGouv/code-du-travail-numerique/commit/6bfc36fbfb5a54d9ee4235b8366dab7f4801a127)), closes [#2948](https://github.com/SocialGouv/code-du-travail-numerique/issues/2948)
+
+
+
+
+
 ## [4.29.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1-alpha.0...v4.29.1) (2020-08-14)
 
 **Note:** Version bump only for package @cdt/data...editorial_content
