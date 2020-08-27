@@ -2739,10 +2739,10 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.195.0":
-  version "3.195.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.195.0.tgz#6250091980925a38c2053374bc47ed6861816a7c"
-  integrity sha512-bXHL9d596eW2nNPUmDnK+d+nKzbhP20CuOT/YcxB1CKIfZfSERc/s1IK3sEbVPY+lEcBEsp38NPz2CXQ7C93BQ==
+"@socialgouv/fiches-travail-data@^3.196.0":
+  version "3.196.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.196.0.tgz#7d84ea95aa7d86c03010b20d9e276d5877acb006"
+  integrity sha512-/i9SwzD3ie2eXmXvTb0HWglYiWT4t0M/GmGawUtfcshOjr5gW/OXfXZ/GQv0PgrkMrQXhwjzc8qAqfOqIfPw7A==
 
 "@socialgouv/fiches-vdd@^1.147.0":
   version "1.147.0"
@@ -2754,19 +2754,19 @@
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.97.0":
-  version "1.97.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.97.0.tgz#c246794480ab22341652dc59d78a7c0b2ef60ebb"
-  integrity sha512-my8JNwJiUvOAEqNra6aTV0UYecEg3dQQFPxuU04DiisfjM7FlbsTA+vHITYOTN3m/30J/iubY/R8XstumLA5Iw==
+"@socialgouv/kali-data@^1.98.0":
+  version "1.98.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.98.0.tgz#3a3661004171e5130989e0927525dff83f3da60e"
+  integrity sha512-2Z4g8RY6bgvqnUZ38UIOAGLSbLWual0RcDI9tBc6rEOTF94smG7qru1g+dXiWryuwjPySaNrPSZhLXJXo4BWxw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
     unist-util-parents "1.0.3"
 
-"@socialgouv/legi-data@^1.29.0":
-  version "1.29.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.29.0.tgz#b1fd95f73fc0c5f3189d70bde53ef721807dfb5a"
-  integrity sha512-lHkmGmJuxisA5l0w2tnzHgCFFuscAkXP43KLdhnFziEUHsuv9Bc2sY6eU86oxpquhCyspDGr/bpR3fxi+8cRrw==
+"@socialgouv/legi-data@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.30.0.tgz#fe0c300c64feae11e083b9aba5d88967ebeb7ae8"
+  integrity sha512-n3dvXJiKk+tDw8yU7EmjTWmJI7mAuo4SnT+SlS1VEJc8nt8iOwAIgX3/HbigcuwNVJNyQPQRAEa7hdpt+0SR7Q==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-parents "1.0.3"
