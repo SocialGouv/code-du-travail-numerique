@@ -34,8 +34,8 @@ const fullFiches = [].concat(
   )
 );
 
-const getFichesSP = () =>
-  filter(fullFiches)
+const getFichesSP = () => {
+  const fiches = filter(fullFiches)
     .map(format)
     .filter(Boolean)
     .map(
@@ -70,5 +70,16 @@ const getFichesSP = () =>
         };
       }
     );
+
+  contribFicheId.forEach((idFiche) => {
+    if (fiches.find(({ id }) => idFiche === id) === undefined) {
+      throw Error(
+        `[FICHE-SP] The ${idFiche} from service-public is embeded in a contribution and was not found`
+      );
+    }
+  });
+
+  return fiches;
+};
 
 module.exports = { getFichesSP };
