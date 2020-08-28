@@ -6,7 +6,7 @@ const tests = [
   {
     title: "renders when type is text",
     data: { type: "text", text: "moonshot" },
-    test: container =>
+    test: (container) =>
       expect(container).toMatchInlineSnapshot(`
         <div>
           moonshot
@@ -20,7 +20,7 @@ const tests = [
       { type: "text", text: "moonshot 0" },
       { type: "text", text: "moonshot 1" },
     ],
-    test: container =>
+    test: (container) =>
       expect(container).toMatchInlineSnapshot(`
         <div>
           moonshot 0
@@ -31,7 +31,7 @@ const tests = [
   {
     title: "does not render anything when data is undefined",
     data: undefined,
-    test: container => expect(container).toMatchInlineSnapshot(`<div />`),
+    test: (container) => expect(container).toMatchInlineSnapshot(`<div />`),
   },
   {
     title: "does not render anything when element name is not recognized",
@@ -45,7 +45,7 @@ const tests = [
         { type: "text", text: "you shall not see this text in snapshot !" },
       ],
     },
-    test: container => expect(container).toMatchInlineSnapshot(`<div />`),
+    test: (container) => expect(container).toMatchInlineSnapshot(`<div />`),
   },
   {
     title: "does render stuff inside a styled block",
@@ -71,61 +71,61 @@ const tests = [
         children: [{ type: "text", text: "stuff 3" }],
       },
     ],
-    test: container =>
+    test: (container) =>
       expect(container).toMatchInlineSnapshot(`
-.c0 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  margin-bottom: 1.6rem;
-}
+        .c0 {
+          padding: 2rem 2.4rem;
+          color: #3e486e;
+          border-radius: 0.6rem;
+          background-color: #f2f5fa;
+          border: 1px solid #f2f5fa;
+          margin-bottom: 1.6rem;
+        }
 
-.c0 > *:first-child {
-  margin-top: 0;
-}
+        .c0 > *:first-child {
+          margin-top: 0;
+        }
 
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
+        .c0 > *:last-child {
+          margin-bottom: 0;
+        }
 
-@media (max-width:600px) {
-  .c0 {
-    padding: 1.6rem 1rem;
-  }
-}
+        @media (max-width:600px) {
+          .c0 {
+            padding: 1.6rem 1rem;
+          }
+        }
 
-@media print {
-  .c0 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
+        @media print {
+          .c0 {
+            padding: 0 5pt;
+            border: none;
+          }
+        }
 
-<div>
-  <div
-    class="sc-AxgMl c0"
-  >
-    stuff 0
-  </div>
-  <div
-    class="sc-AxgMl c0"
-  >
-    stuff 1
-  </div>
-  <div
-    class="sc-AxgMl c0"
-  >
-    stuff 2
-  </div>
-  <div
-    class="sc-AxgMl c0"
-  >
-    stuff 3
-  </div>
-</div>
-`),
+        <div>
+          <div
+            class="c0"
+          >
+            stuff 0
+          </div>
+          <div
+            class="c0"
+          >
+            stuff 1
+          </div>
+          <div
+            class="c0"
+          >
+            stuff 2
+          </div>
+          <div
+            class="c0"
+          >
+            stuff 3
+          </div>
+        </div>
+      `),
   },
   {
     title: "does render several elements",
@@ -176,7 +176,7 @@ const tests = [
         children: [{ type: "text", text: "LienInterne" }],
       },
     ],
-    test: container =>
+    test: (container) =>
       expect(container).toMatchInlineSnapshot(`
         <div>
           Chapitre

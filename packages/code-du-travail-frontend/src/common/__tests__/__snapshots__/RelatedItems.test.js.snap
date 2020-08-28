@@ -540,7 +540,7 @@ exports[`<RelatedItems /> should render 1`] = `
               class="c7"
             >
               <span
-                class="sc-fzonjX c18"
+                class="c18"
               >
                 Modèles de documents
               </span>

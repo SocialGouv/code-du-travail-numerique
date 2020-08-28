@@ -678,7 +678,7 @@ exports[`<SearchResults/> should render results 1`] = `
       Résultats de recherche pour “search test”
     </h3>
     <ul
-      class="sc-fznAgC c2"
+      class="c2"
     >
       <li
         class="c3"
@@ -694,7 +694,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c6"
             >
               <span
-                class="sc-fzonjX c7"
+                class="c7"
               >
                 test theme content
               </span>
@@ -751,7 +751,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c6"
             >
               <span
-                class="sc-fzonjX c7"
+                class="c7"
               >
                 Outils
               </span>
@@ -808,7 +808,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c6"
             >
               <span
-                class="sc-fzonjX c7"
+                class="c7"
               >
                 Outils externes
               </span>
@@ -888,7 +888,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c6"
             >
               <span
-                class="sc-fzonjX c7"
+                class="c7"
               >
                 test root content
               </span>
@@ -968,7 +968,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c6"
             >
               <span
-                class="sc-fzonjX c7"
+                class="c7"
               >
                 test theme content
               </span>

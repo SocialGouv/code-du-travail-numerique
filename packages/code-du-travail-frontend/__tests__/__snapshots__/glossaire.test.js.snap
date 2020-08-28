@@ -1650,7 +1650,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </h2>
               </header>
               <ul
-                class="sc-fznAgC c37"
+                class="c37"
               >
                 <li>
                   <a
@@ -1727,7 +1727,7 @@ exports[`<Glossaire /> should render 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c53"
+                  class="c53"
                 >
                   <li
                     class="c54"
@@ -1810,7 +1810,7 @@ exports[`<Glossaire /> should render 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c53"
+                  class="c53"
                 >
                   <li
                     class="c54"
@@ -1856,7 +1856,7 @@ exports[`<Glossaire /> should render 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c53"
+                  class="c53"
                 >
                   <li
                     class="c54"

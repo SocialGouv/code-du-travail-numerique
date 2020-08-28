@@ -3091,7 +3091,7 @@ exports[`<Home /> should render 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c77"
+                  class="c77"
                 >
                   <li
                     class="c78"
@@ -3174,7 +3174,7 @@ exports[`<Home /> should render 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c77"
+                  class="c77"
                 >
                   <li
                     class="c78"
@@ -3220,7 +3220,7 @@ exports[`<Home /> should render 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c77"
+                  class="c77"
                 >
                   <li
                     class="c78"

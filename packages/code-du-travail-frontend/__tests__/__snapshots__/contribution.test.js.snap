@@ -2614,7 +2614,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     Code du travail numérique
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"
@@ -2697,7 +2697,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     Aidez-nous à améliorer cet outil
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"
@@ -2743,7 +2743,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     En collaboration avec
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"
@@ -5489,7 +5489,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     Code du travail numérique
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"
@@ -5572,7 +5572,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     Aidez-nous à améliorer cet outil
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"
@@ -5618,7 +5618,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     En collaboration avec
                   </h3>
                   <ul
-                    class="sc-fznAgC c86"
+                    class="c86"
                   >
                     <li
                       class="c87"

@@ -723,7 +723,7 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
         class="c2"
       >
         <span
-          class="sc-AxhUy c3"
+          class="c3"
         >
           This is a theme
         </span>
