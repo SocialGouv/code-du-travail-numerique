@@ -8,6 +8,6 @@
     "@socialgouv/cdtn-slugify": "^4.29.1",
     "@socialgouv/cdtn-sources": "^4.29.1",
     "@socialgouv/datafiller-data": "^1.59.0",
-    "mammoth": "^1.4.9"
+    "mammoth": "^1.4.11"
   }
 }
