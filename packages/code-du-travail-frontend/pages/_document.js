@@ -45,10 +45,6 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <script src="/static/polyfill.min.js" />
           <script src="/static/webcomponents-polyfill/loader.js" />

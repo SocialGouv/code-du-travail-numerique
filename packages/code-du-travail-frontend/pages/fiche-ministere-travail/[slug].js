@@ -26,7 +26,7 @@ const buildAccordionSections = (sections) =>
       title: <h2>{title}</h2>,
     }));
 
-const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
+const Fiche = ({ data = { _source: {} }, anchor }) => {
   const {
     _source: {
       breadcrumbs,
@@ -59,12 +59,7 @@ const Fiche = ({ data = { _source: {} }, anchor, pageUrl, ogImage }) => {
   const untitledSection = sections.find((section) => !section.anchor);
   return (
     <Layout>
-      <Metas
-        url={pageUrl}
-        title={title}
-        description={description}
-        image={ogImage}
-      />
+      <Metas title={title} description={description} />
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}

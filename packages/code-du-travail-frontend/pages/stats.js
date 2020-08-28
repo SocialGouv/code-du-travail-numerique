@@ -20,17 +20,15 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const Stats = ({ data, pageUrl, ogImage }) => {
+const Stats = ({ data }) => {
   const launchDate = new Date(Date.UTC(2020, 0, 1));
   const startDate = max([subMonths(startOfDay(new Date()), 6), launchDate]);
 
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title="Statistiques - Code du travail numérique"
         description="Statistiques d’utilisation du Code du travail numérique"
-        image={ogImage}
       />
       <Section>
         <Container>

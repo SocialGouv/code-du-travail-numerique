@@ -21,13 +21,11 @@ const monCompteFormation = externalTools.find(
   (tools) => tools.title === "Mon compte formation"
 );
 
-const Outils = ({ pageUrl, ogImage }) => (
+const Outils = () => (
   <Layout currentPage="tools">
     <Metas
-      url={pageUrl}
       title={`Boîte a outils - Code du travail numérique`}
       description="Trouvez des réponses personnalisées selon votre situation"
-      image={ogImage}
     />
     <Section>
       <Container>

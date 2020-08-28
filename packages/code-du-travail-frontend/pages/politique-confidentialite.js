@@ -15,14 +15,12 @@ import { Layout } from "../src/layout/Layout";
 
 const { spacings } = theme;
 
-const CookiePolicy = ({ pageUrl, ogImage }) => {
+const CookiePolicy = () => {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title="Politique de confidentialité - Code du travail numérique"
         description="Politique de confidentialité du Code du travail numérique"
-        image={ogImage}
       />
       <Section>
         <Container narrow>

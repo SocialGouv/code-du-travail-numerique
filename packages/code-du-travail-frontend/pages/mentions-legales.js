@@ -14,14 +14,12 @@ import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
-const LegalPage = ({ pageUrl, ogImage }) => {
+const LegalPage = () => {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title="Mentions légales - Code du travail numérique"
         description="Mentions légales du Code du travail numérique"
-        image={ogImage}
       />
 
       <Section>

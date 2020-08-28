@@ -14,13 +14,11 @@ import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
-const About = ({ ogImage, pageUrl }) => (
+const About = () => (
   <Layout>
     <Metas
-      url={pageUrl}
       title="À propos - Code du travail numérique"
       description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
-      image={ogImage}
     />
     <Section>
       <Container narrow>

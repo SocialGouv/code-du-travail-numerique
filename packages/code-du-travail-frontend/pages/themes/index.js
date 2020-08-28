@@ -42,13 +42,11 @@ const SubThemes = ({ children = [] }) => {
   );
 };
 
-const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
+const ThemesPage = ({ children = [] }) => (
   <Layout currentPage="themes">
     <Metas
-      url={pageUrl}
       title={`Thèmes - Code du travail numérique`}
       description={`Explorez les contenus autour des thèmes`}
-      image={ogImage}
     />
     <Section>
       <Container>

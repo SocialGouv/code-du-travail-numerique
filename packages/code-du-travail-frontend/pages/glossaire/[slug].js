@@ -21,14 +21,12 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function Term({ pageUrl, ogImage, term }) {
+function Term({ term }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title={`${term.title} - Code du travail numérique`}
         description={term.definition}
-        image={ogImage}
       />
       <Section>
         <Container narrow>

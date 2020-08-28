@@ -37,19 +37,12 @@ class Fiche extends React.Component {
       } = {
         _source: {},
       },
-      pageUrl,
-      ogImage,
     } = this.props;
 
     const fixedHtml = replaceArticlesRefs(html);
     return (
       <Layout>
-        <Metas
-          url={pageUrl}
-          title={title}
-          description={description}
-          image={ogImage}
-        />
+        <Metas title={title} description={description} />
         <Answer
           title={title}
           relatedItems={relatedItems}

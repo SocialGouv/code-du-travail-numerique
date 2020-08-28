@@ -33,15 +33,13 @@ class ConventionCollective extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { pageUrl, ogImage, convention } = this.props;
+    const { convention } = this.props;
     const { shortTitle, title } = convention;
     return (
       <Layout>
         <Metas
-          url={pageUrl}
           title={`Convention collective ${shortTitle}`}
           description={title}
-          image={ogImage}
         />
         <Answer
           breadcrumbs={[

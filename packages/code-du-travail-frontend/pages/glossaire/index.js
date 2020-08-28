@@ -24,15 +24,13 @@ const {
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";
 
-function Glossaire({ pageUrl, ogImage, glossary }) {
+function Glossaire({ glossary }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title="Glossaire - Code du travail numérique"
         description="Retrouvez l'ensemble des termes utilisés fréquemment sur le code du travail numérique et leur explication"
-        image={ogImage}
       />
       <Section>
         <Container narrow>

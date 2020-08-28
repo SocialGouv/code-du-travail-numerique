@@ -5,6 +5,7 @@ import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
+import Head from "next/head";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -62,12 +63,6 @@ export default class MyApp extends App {
         pageProps = { message: err.message, statusCode: 500 };
       }
     }
-    // pageUrl and ogImage are only defined on serverside request
-    // maybe this should be done at the page level to allow static optimization at the _app lvl
-    if (ctx.req) {
-      pageProps.pageUrl = `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`;
-      pageProps.ogImage = `${ctx.req.protocol}://${ctx.req.headers.host}/static/assets/img/social-preview.png`;
-    }
 
     return { pageProps };
   }
@@ -95,6 +90,12 @@ export default class MyApp extends App {
       return (
         <ThemeProvider>
           <>
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, shrink-to-fit=no"
+              />
+            </Head>
             <GlobalStyles />
             {pageProps.statusCode === 404 ? (
               <Custom404 />
@@ -109,6 +110,12 @@ export default class MyApp extends App {
       <React.StrictMode>
         <ThemeProvider>
           <>
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, shrink-to-fit=no"
+              />
+            </Head>
             <GlobalStyles />
             <A11y />
             <Component {...pageProps} />

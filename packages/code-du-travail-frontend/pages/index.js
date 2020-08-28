@@ -60,13 +60,11 @@ const selectedTools = [
   tools.find((tool) => tool.slug === "simulateur-embauche"),
 ];
 
-const Home = ({ pageUrl, ogImage, themes = [], highlights = [] }) => (
+const Home = ({ themes = [], highlights = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
-      url={pageUrl}
       title="Code du travail numérique - Ministère du Travail"
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
-      image={ogImage}
     />
     <SearchHero />
     <Section>

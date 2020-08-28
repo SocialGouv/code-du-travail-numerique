@@ -25,7 +25,7 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function DossierThematique({ dossier, ogImage, pageUrl }) {
+function DossierThematique({ dossier }) {
   const [filter, setFilter] = useState("");
 
   if (!dossier) {
@@ -40,10 +40,8 @@ function DossierThematique({ dossier, ogImage, pageUrl }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title={title}
         description={metaDescription || description || title}
-        image={ogImage}
       />
       <Section>
         <Container narrow>

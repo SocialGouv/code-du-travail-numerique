@@ -52,8 +52,6 @@ class ModeleCourrier extends React.Component {
         relatedItems,
         status,
       } = { _source: {} },
-      pageUrl,
-      ogImage,
     } = this.props;
     if (status === 404) {
       return <Answer emptyMessage="Modèle de document introuvable" />;
@@ -63,13 +61,11 @@ class ModeleCourrier extends React.Component {
     return (
       <Layout>
         <Metas
-          url={pageUrl}
           title={`Modèle de document :  ${title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
-          image={ogImage}
         />
         <Answer
           title={title}
