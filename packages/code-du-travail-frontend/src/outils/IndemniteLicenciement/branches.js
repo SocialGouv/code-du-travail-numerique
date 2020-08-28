@@ -24,6 +24,11 @@ export const branches = [
     value: "0843",
   },
   {
+    label:
+      "Convention collective nationale Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    value: "1090",
+  },
+  {
     label: "Convention collective nationale de la Prévention et sécurité",
     value: "1351",
   },
