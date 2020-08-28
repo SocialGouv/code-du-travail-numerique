@@ -12,14 +12,12 @@ import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
-export default function IntegrationPage({ pageUrl, ogImage }) {
+export default function IntegrationPage() {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title="widget - Code du travail numérique"
         description="Intégrer le Code du travail numérique à votre site"
-        image={ogImage}
       />
 
       <Section>

@@ -32,7 +32,7 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
+    const { data = { _source: {} } } = this.props;
     const {
       _source: {
         breadcrumbs,
@@ -47,12 +47,7 @@ class Fiche extends React.Component {
     } = data;
     return (
       <Layout>
-        <Metas
-          url={pageUrl}
-          title={title}
-          description={description}
-          image={ogImage}
-        />
+        <Metas title={title} description={description} />
         <Answer
           title={title}
           relatedItems={relatedItems}

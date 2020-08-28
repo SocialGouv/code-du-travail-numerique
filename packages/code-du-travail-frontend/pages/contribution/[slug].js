@@ -47,19 +47,12 @@ class PageContribution extends React.Component {
         _source: {},
       },
       content,
-      pageUrl,
-      ogImage,
     } = this.props;
 
     return (
       <div>
         <Layout>
-          <Metas
-            url={pageUrl}
-            title={title}
-            description={description}
-            image={ogImage}
-          />
+          <Metas title={title} description={description} />
           <Answer
             title={title}
             relatedItems={relatedItems}

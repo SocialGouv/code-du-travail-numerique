@@ -21,7 +21,7 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
+function Outils({ description, icon, slug, title }) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -29,10 +29,8 @@ function Outils({ description, icon, ogImage, pageUrl, slug, title }) {
   return (
     <Layout>
       <Metas
-        url={pageUrl}
         title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
-        image={ogImage}
       />
       <Section>
         <Container>

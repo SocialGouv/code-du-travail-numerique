@@ -53,8 +53,6 @@ const processor = unified()
   });
 
 const Information = ({
-  pageUrl,
-  ogImage,
   information: {
     _source: {
       breadcrumbs,
@@ -126,12 +124,7 @@ const Information = ({
 
   return (
     <Layout>
-      <Metas
-        url={pageUrl}
-        title={title}
-        description={description}
-        image={ogImage}
-      />
+      <Metas title={title} description={description} />
       <Answer
         breadcrumbs={breadcrumbs}
         date={date}

@@ -18,13 +18,11 @@ import Hierarchy from "../src/droit-du-travail/Hierarchy";
 import Origins from "../src/droit-du-travail/Origins";
 import { Layout } from "../src/layout/Layout";
 
-const DroitDuTravail = ({ hash, ogImage, pageUrl }) => (
+const DroitDuTravail = ({ hash }) => (
   <Layout>
     <Metas
-      url={pageUrl}
       title="Le droit du travail - Code du travail numérique"
       description="Qu’est-ce que le droit du travail ?"
-      image={ogImage}
     />
     <Section>
       <Container>

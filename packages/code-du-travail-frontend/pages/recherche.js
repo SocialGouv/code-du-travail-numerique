@@ -34,8 +34,6 @@ class SearchPage extends React.Component {
     const {
       router,
       items = { articles: [], documents: [], themes: [] },
-      pageUrl,
-      ogImage,
     } = this.props;
     const { q: query = "" } = router.query;
     return (
@@ -47,10 +45,8 @@ class SearchPage extends React.Component {
           <meta name="robots" content="noindex, follow" />
         </Head>
         <Metas
-          url={pageUrl}
           title={`${query} - Code du travail numérique`}
           description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
-          image={ogImage}
         />
         <Container narrow>
           <label htmlFor={SEARCH_ID}>

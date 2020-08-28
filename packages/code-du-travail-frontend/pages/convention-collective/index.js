@@ -6,13 +6,11 @@ import Metas from "../../src/common/Metas";
 import ConventionForm from "../../src/conventions/Search";
 import { Layout } from "../../src/layout/Layout";
 
-const SearchConvention = ({ ogImage, pageUrl }) => (
+const SearchConvention = () => (
   <Layout currentPage="about">
     <Metas
-      url={pageUrl}
       title="Recherche de convention collective"
       description="Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC."
-      image={ogImage}
     />
     <Section>
       <Container narrow>

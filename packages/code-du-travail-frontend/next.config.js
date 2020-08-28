@@ -36,6 +36,9 @@ const nextConfig = {
       "https://siret2idcc.fabrique.social.gouv.fr/api/v2",
     API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
     COMMIT: process.env.COMMIT,
+    FRONTEND_HOST:
+      `https://${process.env.FRONTEND_HOST}` ||
+      `http://localhost:${process.env.FRONTEND_PORT || 3000}`,
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
