@@ -50,7 +50,7 @@
     "esm": "^3.2.25",
     "jest": "^26.2.2",
     "nodemon": "^2.0.4",
-    "superagent": "^5.3.1",
+    "superagent": "^6.1.0",
     "supertest": "^4.0.2"
   },
   "jest": {
