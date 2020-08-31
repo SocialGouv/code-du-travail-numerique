@@ -38,9 +38,8 @@ exports[`<Headband /> should render 1`] = `
 }
 
 .c0 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 8.6rem;
+  position: absolute;
+  top: 18rem;
   z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,6 +49,7 @@ exports[`<Headband /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
   padding: 1rem;
   color: #2f3b6c;
   text-align: center;
@@ -84,7 +84,7 @@ exports[`<Headband /> should render 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    top: 6.6rem;
+    top: 9rem;
   }
 }
 

@@ -34,11 +34,12 @@ export const Headband = ({ currentPage }) => {
 const { box, breakpoints, spacings } = theme;
 
 const StyledLink = styled.a`
-  position: sticky;
-  top: ${({ currentPage }) => (currentPage === "home" ? "0" : HEADER_HEIGHT)};
+  position: absolute;
+  top: ${HEADER_HEIGHT};
   z-index: 2;
   display: flex;
   justify-content: center;
+  width: 100%;
   padding: ${spacings.small};
   color: ${({ theme }) => (theme.noColors ? theme.white : theme.title)};
   text-align: center;

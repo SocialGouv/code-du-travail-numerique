@@ -7,8 +7,8 @@ import styled, { css } from "styled-components";
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
 
-export const HEADER_HEIGHT = "8.6rem";
-export const MOBILE_HEADER_HEIGHT = "6.6rem";
+export const HEADER_HEIGHT = "18rem";
+export const MOBILE_HEADER_HEIGHT = "9rem";
 
 const { Search: SearchIcon } = icons;
 
@@ -31,7 +31,7 @@ export const Header = ({ currentPage = "" }) => {
           <LogoLink title="Code du travail numérique - retour à l'accueil">
             <MinistereTravail
               src={"/static/assets/img/ministere-travail.svg"}
-              alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
+              alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
             />
             <Logo />
           </LogoLink>
@@ -72,8 +72,7 @@ const StyledHeader = styled.header`
     }
   }};
   height: ${HEADER_HEIGHT};
-  background-color: ${({ currentPage, theme }) =>
-    currentPage === "home" ? "transparent" : theme.white};
+  background-color: ${({ theme }) => theme.white};
   @media (max-width: ${breakpoints.mobile}) {
     height: ${MOBILE_HEADER_HEIGHT};
   }
@@ -97,16 +96,13 @@ const StyledContainer = styled(Container)`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-left: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding-left: 0;
-  }
 `;
 
 const LogoLink = styled.a`
   display: flex;
   flex-grow: 0;
   align-items: center;
+  padding: ${spacings.small} 0;
   text-decoration: none;
   @media (max-width: ${breakpoints.tablet}) {
     justify-content: space-between;
@@ -121,29 +117,19 @@ const LogoLink = styled.a`
 `;
 
 const MinistereTravail = styled.img`
-  flex: 0 0 7.8rem;
-  width: 7.8rem;
-  height: calc(100% - 2 * ${spacings.xsmall});
-  margin: ${spacings.xsmall} ${spacings.medium} ${spacings.xsmall}
-    ${spacings.xsmall};
-  padding: ${spacings.xsmall} 0;
+  width: 18.2rem;
+  height: 15rem;
   background-color: white;
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 5.5rem;
-    width: 5.5rem;
-    margin-right: 0;
-    padding: ${spacings.tiny} 0;
+    height: 7.5rem;
   }
 `;
 const Logo = styled(icons.Logo)`
-  flex: 0 0 19rem;
-  width: 19rem;
-  height: calc(100% - 2 * ${spacings.xsmall});
-  margin: ${spacings.xsmall} 0;
+  height: 7rem;
+  margin-left: 4rem;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 12.4rem;
-    width: 12.4rem;
+    height: 5rem;
   }
 `;
 
@@ -159,7 +145,6 @@ const RightSide = styled.div`
 
 const StyledLink = styled.a`
   display: none;
-  order: 1;
   color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
@@ -173,7 +158,6 @@ const StyledLink = styled.a`
     margin-left: ${spacings.small};
   }
 `;
-
 const SearchBarWrapper = styled.div`
   order: 3;
   width: 30rem;
