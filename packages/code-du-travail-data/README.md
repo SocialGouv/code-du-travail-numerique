@@ -20,7 +20,7 @@ Pour chaque document, il possible aussi de rajouter une représentation vectorie
 
 ```sh
 # Exporter les données vers elacticsearch avec leur representation vectorielle (title_vector)
-$ NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/ yarn workspace @cdt/data dump-dev
+$ NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
 ```
 
 ### Importation dans elasticsearh
