@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Headband } from "./Headband";
-import { Header } from "./Header";
+import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
 const Layout = ({ children, currentPage }) => {
   return (
@@ -27,6 +27,10 @@ const { breakpoints, spacings } = theme;
 
 const BackgroundContainer = styled.div`
   position: relative;
+  padding-top: ${HEADER_HEIGHT};
+  @media (max-width: ${breakpoints.mobile}) {
+    height: ${MOBILE_HEADER_HEIGHT};
+  }
 `;
 
 const BackgroundLayer = styled.div`
