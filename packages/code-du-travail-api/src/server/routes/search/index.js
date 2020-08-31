@@ -209,7 +209,19 @@ async function msearch({ client, searches }) {
   }
 
   const results = keys.reduce((state, key, index) => {
-    state[key] = body.responses[index];
+    const resp = body.responses[index];
+
+    if (resp.error) {
+      logger.error(
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
+          resp.error,
+          null,
+          2
+        )}`
+      );
+    }
+
+    state[key] = resp;
     return state;
   }, {});
 

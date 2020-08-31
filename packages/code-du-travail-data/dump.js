@@ -35,6 +35,8 @@ const noIdSources = [
 ];
 
 async function fetchVector(data) {
+  // ensure title_vector set, otherwise search will fail if any of the docs does not have title_vector
+  data.title_vector = [];
   return NLP_URL && data.title && data.text
     ? vectorizeDocument(data.title, data.text)
         .then((title_vector) => {
