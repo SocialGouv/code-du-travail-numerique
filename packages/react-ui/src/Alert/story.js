@@ -4,7 +4,7 @@ import { Alert } from ".";
 
 export default {
   component: Alert,
-  title: "Components|Alert",
+  title: "Components/Alert",
 };
 
 export const base = () => (

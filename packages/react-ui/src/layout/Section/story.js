@@ -7,7 +7,7 @@ import { Section } from ".";
 
 export default {
   component: Section,
-  title: "Layout|Components/Section",
+  title: 'Layout/Components/Section',
 };
 
 export const base = () => (

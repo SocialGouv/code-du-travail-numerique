@@ -5,7 +5,7 @@ import { Table } from ".";
 
 export default {
   component: Table,
-  title: "Components|Table",
+  title: "Components/Table",
 };
 
 export const base = () => (

@@ -9,7 +9,7 @@ import * as icons from ".";
 
 export default {
   component: icons,
-  title: "Components|Icons",
+  title: "Components/Icons",
 };
 
 export const base = () => {

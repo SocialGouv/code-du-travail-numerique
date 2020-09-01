@@ -1,15 +1,18 @@
-import { action } from "@storybook/addon-actions";
 import React from "react";
 
 import { Title } from "../Titles/Title";
 import { Tabs } from ".";
 
 export default {
+  argTypes: {
+    // naming onCLick not work :/
+    handler: { action: "clicked" },
+  },
   component: Tabs,
-  title: "Components|Tabs",
+  title: "Components/Tabs",
 };
 
-export const base = () => (
+export const base = ({ handler }) => (
   <>
     <Tabs
       data={[
@@ -44,7 +47,7 @@ export const base = () => (
       ]}
     />
     <Tabs
-      onSelect={(index) => action(`Selected index is ${index}`)()}
+      onSelect={(index) => handler(`Selected index is ${index}`)()}
       data={[
         {
           panel: "This panel can contain nodes",
@@ -58,7 +61,7 @@ export const base = () => (
     />
     <Tabs
       selectedIndex={1}
-      onSelect={(index) => action(`Tab change request on index ${index}`)()}
+      onSelect={(index) => handler(`Tab change request on index ${index}`)()}
       data={[
         {
           panel: ":/",

@@ -1,4 +1,3 @@
-import { action } from "@storybook/addon-actions";
 import React from "react";
 import styled from "styled-components";
 
@@ -8,8 +7,12 @@ import { spacings } from "../theme";
 import { Button } from ".";
 
 export default {
+  argTypes: {
+    // naming onCLick not work :/
+    handler: { action: "clicked" },
+  },
   component: Button,
-  title: "Components|Button",
+  title: "Components/Button",
 };
 
 const StyledSearchRight = styled(Search)`
@@ -28,88 +31,79 @@ const StyledMore = styled(More)`
   width: 2.4rem;
 `;
 
-export const base = () =>
+export const base = ({ handler }) =>
   ["primary", "secondary", "flat"].map((variant) => (
     <Section key={variant}>
-      <Button variant={variant} onClick={action("basic button clicked")}>
-        {variant} button
-      </Button>{" "}
-      <Button variant={variant} small onClick={action("small button clicked")}>
+      <Button variant={variant} onClick={() => handler(`${variant} basic`)}>
         {variant} button
       </Button>{" "}
       <Button
         variant={variant}
-        onClick={action("You should not see this")}
-        disabled
+        small
+        onClick={() => handler(`${variant} small`)}
       >
+        {variant} button
+      </Button>{" "}
+      <Button variant={variant} onClick={() => handler("o_O")} disabled>
         {variant} disabled
       </Button>
     </Section>
   ));
 
-export const icons = () => (
+export const icons = ({ handler }) => (
   <>
     <Section>
-      <Button variant="primary" onClick={action("button text + icon clicked")}>
+      <Button variant="primary" onClick={() => handler("button text + icon")}>
         Some text <StyledSearchRight />
       </Button>
     </Section>
     <Section>
-      <Button onClick={action("button icon + text on clicked")}>
+      <Button onClick={() => handler("button icon + text")}>
         <StyledSearchLeft /> Some text
       </Button>
     </Section>
     <Section>
-      <Button small onClick={action("button small text + icon clicked")}>
+      <Button small onClick={() => handler("button small text + icon")}>
         Some text <StyledSearchRight />
       </Button>
     </Section>
     <Section>
-      <Button variant="primary" narrow onClick={action("button Close clicked")}>
+      <Button variant="primary" narrow onClick={() => handler("close")}>
         <StyledClose />
       </Button>
     </Section>
     <Section>
-      <Button variant="naked" narrow onClick={action("button Close clicked")}>
+      <Button variant="naked" narrow onClick={() => handler("close")}>
         <StyledClose />
       </Button>
     </Section>
     <Section>
-      <Button
-        variant="secondary"
-        small
-        onClick={action("Button Maximize clicked")}
-      >
+      <Button variant="secondary" small onClick={() => handler("maximize")}>
         <StyledClose />
       </Button>
     </Section>
     <Section>
-      <Button
-        variant="secondary"
-        narrow
-        small
-        onClick={action("Button More clicked")}
-      >
+      <Button variant="secondary" narrow small onClick={() => handler("more")}>
         <StyledMore />
       </Button>
     </Section>
   </>
 );
 
-export const link = () => (
+export const link = ({ handler }) => (
   <>
     <Section>
-      <Button variant="link" onClick={action("link button clicked")}>
+      <Button variant="link" onClick={() => handler("link")}>
         Button with link variant
       </Button>
     </Section>
     <Section>
-      <Button variant="navLink" onClick={action("link button clicked")}>
+      <Button variant="navLink" onClick={() => handler("navlink")}>
         Button with navLink variant
       </Button>
     </Section>
     <Section>
-      <Button variant="link" onClick={action("link button clicked")} />
+      <Button variant="link" onClick={() => handler("button link")} />
     </Section>
     <Section>
       <Button variant="secondary" as="a" href="https://code.travail.gouv.fr">

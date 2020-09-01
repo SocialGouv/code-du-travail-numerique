@@ -1,15 +1,18 @@
-import { action } from "@storybook/addon-actions";
 import React from "react";
 
 import { Section } from "../layout/Section";
 import { Toast } from ".";
 
 export default {
+  argTypes: {
+    // naming onCLick not work :/
+    handler: { action: "clicked" },
+  },
   component: Toast,
-  title: "Components|Toast",
+  title: "Components/Toast",
 };
 
-export const base = () => (
+export const base = ({ handler }) => (
   <>
     <Section>
       <Toast variant="primary">Here is an primary info.</Toast>
@@ -29,7 +32,7 @@ export const base = () => (
       <Toast squared>Here is a squared toast</Toast>
     </Section>
     <Section>
-      <Toast onRemove={action("remove button clicked")}>
+      <Toast onRemove={() => handler("remove button clicked")}>
         {"Here is a removable info"}
       </Toast>
     </Section>
@@ -37,7 +40,7 @@ export const base = () => (
       <Toast wide>{"Here is a wide info."}</Toast>
     </Section>
     <Section>
-      <Toast onRemove={action("remove button clicked")}>
+      <Toast onRemove={() => handler("remove button clicked")}>
         <div>
           {"This is a crazy long removable toast,"}
           <br />

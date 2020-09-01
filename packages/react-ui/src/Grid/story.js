@@ -5,7 +5,7 @@ import { Grid } from ".";
 
 export default {
   component: Grid,
-  title: "Components|Grid",
+  title: "Components/Grid",
 };
 
 export const base = () => (
