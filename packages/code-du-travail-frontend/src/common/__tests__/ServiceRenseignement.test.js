@@ -6,7 +6,7 @@ import { ServiceRenseignement } from "../ServiceRenseignement";
 jest.mock(
   "../../data/services-de-renseignement.json",
   () => ({
-    "26": {
+    26: {
       url: "link.url",
     },
   }),

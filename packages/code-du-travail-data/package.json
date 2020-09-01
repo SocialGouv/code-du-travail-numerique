@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
-    "@elastic/elasticsearch": "^7.8.0",
+    "@elastic/elasticsearch": "^7.9.0",
     "@socialgouv/cdtn-monolog": "^1.1.2",
     "@socialgouv/cdtn-slugify": "^4.29.1",
     "@socialgouv/cdtn-sources": "^4.29.1",
@@ -55,13 +55,13 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
-    "@socialgouv/eslint-config-recommended": "^1.22.0",
+    "@socialgouv/eslint-config-recommended": "^1.28.0",
     "@zeit/ncc": "^0.22.3",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.2.2",
-    "eslint": "^7.6.0",
-    "jest": "^26.2.2",
-    "prettier": "^2.0.5"
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.8.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
