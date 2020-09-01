@@ -66,7 +66,7 @@ const StyledInput = styled.input`
     display: block;
     width: ${spacings.large};
     height: ${spacings.large};
-    margin-right:-${spacings.medium};
+    margin-right: -${spacings.medium};
     color: rgba(0, 0, 0, 0);
     background-color: ${({ theme }) => theme.placeholder};
     cursor: pointer;
