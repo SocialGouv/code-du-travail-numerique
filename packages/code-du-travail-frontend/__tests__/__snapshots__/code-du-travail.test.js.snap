@@ -1590,7 +1590,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               class="c31"
             >
               <div
-                class="sc-AxgMl c32"
+                class="c32"
               >
                 <h3
                   class="c33 c34"
@@ -1682,7 +1682,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c55"
+                  class="c55"
                 >
                   <li
                     class="c56"
@@ -1765,7 +1765,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c55"
+                  class="c55"
                 >
                   <li
                     class="c56"
@@ -1811,7 +1811,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c55"
+                  class="c55"
                 >
                   <li
                     class="c56"

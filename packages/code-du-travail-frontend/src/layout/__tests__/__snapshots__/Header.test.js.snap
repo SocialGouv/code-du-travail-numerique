@@ -514,7 +514,7 @@ exports[`<Header /> should render 1`] = `
       le 04/01/2020 à 00:00:00
     </div>
     <div
-      class="sc-AxjAm c2"
+      class="c2"
     >
       <a
         class="c3"

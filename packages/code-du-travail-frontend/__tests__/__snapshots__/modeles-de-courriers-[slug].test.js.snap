@@ -2465,7 +2465,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="sc-fznAgC c82"
+                  class="c82"
                 >
                   <li
                     class="c83"
@@ -2548,7 +2548,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="sc-fznAgC c82"
+                  class="c82"
                 >
                   <li
                     class="c83"
@@ -2594,7 +2594,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="sc-fznAgC c82"
+                  class="c82"
                 >
                   <li
                     class="c83"

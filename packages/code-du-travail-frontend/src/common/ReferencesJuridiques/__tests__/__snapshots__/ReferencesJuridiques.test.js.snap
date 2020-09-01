@@ -193,7 +193,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 <div>
   <div
-    class="sc-AxgMl c0"
+    class="c0"
   >
     <div
       class="accordion"

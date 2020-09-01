@@ -398,7 +398,7 @@ exports[`<SearchHero /> should render 1`] = `
     class="c0 c1"
   >
     <div
-      class="sc-AxjAm c2"
+      class="c2"
     >
       <header
         class="c3"

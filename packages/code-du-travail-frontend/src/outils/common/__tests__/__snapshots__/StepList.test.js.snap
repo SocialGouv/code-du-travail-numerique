@@ -221,7 +221,7 @@ exports[`<StepList /> should render 1`] = `
 
 <div>
   <div
-    class="sc-AxgMl c0"
+    class="c0"
   >
     <span
       class="c1"

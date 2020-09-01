@@ -291,7 +291,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
     class="c4"
   >
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -301,7 +301,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
         résultat)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
@@ -1081,7 +1081,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     class="c4"
   >
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -1091,7 +1091,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         résultats)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
@@ -1363,7 +1363,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
     class="c4"
   >
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -1373,7 +1373,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         résultat)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
@@ -1694,7 +1694,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
     class="c4"
   >
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -1704,7 +1704,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
         résultat)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
@@ -2039,7 +2039,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
     class="c4"
   >
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -2049,7 +2049,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
@@ -2071,7 +2071,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
       </ul>
     </div>
     <div
-      class="sc-AxgMl c5 c6"
+      class="c5 c6"
     >
       <h3
         class="c7"
@@ -2081,7 +2081,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
         résultat)
       </h3>
       <ul
-        class="sc-fznAgC c8"
+        class="c8"
       >
         <li
           class="c9 c10"
