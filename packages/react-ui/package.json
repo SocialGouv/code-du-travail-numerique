@@ -42,7 +42,7 @@
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@socialgouv/eslint-config-react": "^1.28.0",
-    "@storybook/addon-a11y": "^5.3.21",
+    "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-actions": "^5.3.21",
     "@storybook/addon-contexts": "^5.3.21",
     "@storybook/addon-storysource": "^5.3.21",
