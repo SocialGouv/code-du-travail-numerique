@@ -44,10 +44,6 @@ jobs:
         - export -f travis_fold travis_nanoseconds travis_time_finish
         #
       script:
-        - travis_fold start "yarn.build"
-        - yarn build --stream
-        - travis_fold end "yarn.build"
-        #
         - travis_fold start "yarn.lint"
         - yarn lint --stream
         - travis_fold end "yarn.lint"
@@ -57,27 +53,3 @@ jobs:
         - travis_fold end "yarn.test"
       after_success:
         - npx codecov
-
-    - <<: *node_stage
-      stage: Release
-      if: env(RELEASE)
-      name: Make a new release 🎉
-      env:
-        - *github_keys
-      script: >-
-        curl -X POST
-        -F token=${GITLAB_TOKEN}
-        -F ref=${TRAVIS_BRANCH}
-        -F "variables[RELEASE]=true"
-        https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
-
-    - stage: Go Prod
-      if: env(PRODUCTION)
-      name: A tag is going to production 🏭
-      env: *gitlab_keys
-      script: >-
-        curl -X POST
-        -F token=${GITLAB_TOKEN}
-        -F ref=${TRAVIS_BRANCH}
-        -F "variables[PRODUCTION]=true"
-        https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
