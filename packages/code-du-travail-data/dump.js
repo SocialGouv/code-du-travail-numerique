@@ -36,22 +36,31 @@ const noIdSources = [
 ];
 
 async function fetchVector(data) {
-  // ensure title_vector set, otherwise search will fail if any of the docs does not have title_vector
-  data.title_vector = Array(512).fill(0);
-  return NLP_URL && data.title && data.text
-    ? vectorizeDocument(data.title, data.text)
+  if (NLP_URL) {
+    if (data.title && data.text) {
+      await vectorizeDocument(data.title, data.text)
         .then((title_vector) => {
           if (title_vector.message) {
             throw new Error(`error fetching ${data.title}`);
           }
           data.title_vector = title_vector;
-          return data;
         })
         .catch((err) => {
           console.error(`error fetching ${data.title}`, err.message);
-          return data;
-        })
-    : data;
+        });
+    } else {
+      // create random title_vector : search will fail if any of the docs
+      // does not have title_vector set : 512 dimension vector, 9 digits between -1 and 1
+      const length = 512;
+      const maxDigits = 9;
+      data.title_vector = Array.from(
+        { length },
+        () => (Math.random() > 0.5 ? 1 : -1) * Math.random().toFixed(maxDigits)
+      );
+    }
+  }
+
+  return data;
 }
 
 const dump = async () => {
