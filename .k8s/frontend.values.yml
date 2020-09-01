@@ -72,7 +72,7 @@ deployment:
 
   initContainers:
     - name: wait-for-api
-      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:0.14.0
+      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
       resources:
         requests:
           cpu: 5m
