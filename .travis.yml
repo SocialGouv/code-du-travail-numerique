@@ -44,6 +44,9 @@ jobs:
         - export -f travis_fold travis_nanoseconds travis_time_finish
         #
       script:
+        - travis_fold start "yarn.build"
+        - yarn build:ui
+        - travis_fold end "yarn.build"
         - travis_fold start "yarn.lint"
         - yarn lint --stream
         - travis_fold end "yarn.lint"
