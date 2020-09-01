@@ -20,6 +20,7 @@ const excludeSources = [
   SOURCES.HIGHLIGHTS,
   SOURCES.SHEET_MT_PAGE,
   SOURCES.CCN_PAGE,
+  SOURCES.VERSIONS,
 ];
 const nlpQueue = new PQueue({ concurrency: 3 });
 
@@ -36,7 +37,7 @@ const noIdSources = [
 
 async function fetchVector(data) {
   // ensure title_vector set, otherwise search will fail if any of the docs does not have title_vector
-  data.title_vector = [];
+  data.title_vector = Array(512).fill(0);
   return NLP_URL && data.title && data.text
     ? vectorizeDocument(data.title, data.text)
         .then((title_vector) => {

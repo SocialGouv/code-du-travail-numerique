@@ -43,7 +43,7 @@ async function version({ client }) {
 
 async function bulkIndexDocuments({ client, indexName, documents }) {
   try {
-    await client.bulk({
+    const resp = await client.bulk({
       body: documents.reduce(
         (state, doc, i) =>
           state.concat(
@@ -62,6 +62,12 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
       ),
       index: indexName,
     });
+    if (resp.body.errors) {
+      const errorDocs = resp.body.items.filter(
+        (item) => item.index.status != 201
+      );
+      logger.error(`Errors during indexation : ${JSON.stringify(errorDocs)}`);
+    }
     logger.info(`Index ${documents.length} documents.`);
   } catch (error) {
     logger.error("index documents", error);
