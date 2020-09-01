@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "date-fns": "^2.15.0"
+    "date-fns": "^2.16.1"
   },
   "peerDependencies": {
     "@socialgouv/cdtn-ui": "4.x",
@@ -35,20 +35,20 @@
     "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
-    "@socialgouv/eslint-config-react": "^1.22.0",
+    "@socialgouv/eslint-config-react": "^1.28.0",
     "@testing-library/react": "^10.4.9",
-    "babel-jest": "^26.2.2",
-    "eslint": "^7.6.0",
-    "jest": "^26.2.2",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.8.0",
+    "jest": "^26.4.2",
     "jest-styled-components": "^7.0.3",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "rollup": "^2.23.1",
+    "rollup": "^2.26.9",
     "rollup-plugin-babel": "^4.4.0",
     "styled-components": "^5.1.1",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
