@@ -6,7 +6,7 @@ import { Tabs } from ".";
 
 export default {
   component: Tabs,
-  title: "Components|Tabs",
+  title: 'Components/Tabs',
 };
 
 export const base = () => (

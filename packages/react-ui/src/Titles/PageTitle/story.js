@@ -6,7 +6,7 @@ import { PageTitle } from ".";
 
 export default {
   component: PageTitle,
-  title: "Titles|Components/PageTitle",
+  title: 'Titles/Components/PageTitle',
 };
 
 export const base = () => (

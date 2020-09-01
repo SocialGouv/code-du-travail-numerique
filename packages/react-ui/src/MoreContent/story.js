@@ -5,7 +5,7 @@ import { MoreContent } from ".";
 
 export default {
   component: MoreContent,
-  title: "Components|MoreContent",
+  title: 'Components/MoreContent',
 };
 
 export const base = () => (

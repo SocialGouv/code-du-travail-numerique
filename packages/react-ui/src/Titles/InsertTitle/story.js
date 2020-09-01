@@ -5,7 +5,7 @@ import { InsertTitle } from ".";
 
 export default {
   component: InsertTitle,
-  title: "Titles|Components/InsertTitle",
+  title: 'Titles/Components/InsertTitle',
 };
 
 export const base = () => (

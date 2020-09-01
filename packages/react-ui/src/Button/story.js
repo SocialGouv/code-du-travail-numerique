@@ -9,7 +9,7 @@ import { Button } from ".";
 
 export default {
   component: Button,
-  title: "Components|Button",
+  title: 'Components/Button',
 };
 
 const StyledSearchRight = styled(Search)`

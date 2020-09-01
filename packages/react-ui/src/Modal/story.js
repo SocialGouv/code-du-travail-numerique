@@ -8,7 +8,7 @@ import { Modal, ModalContentWrapper } from ".";
 
 export default {
   component: Modal,
-  title: "Components|Modal",
+  title: 'Components/Modal',
 };
 
 const StyledModalContentWrapper = styled(ModalContentWrapper)({

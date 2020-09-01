@@ -5,7 +5,7 @@ import { Container } from ".";
 
 export default {
   component: Container,
-  title: "Layout|Components/Container",
+  title: 'Layout/Components/Container',
 };
 
 export const base = () => (

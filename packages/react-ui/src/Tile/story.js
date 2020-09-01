@@ -7,7 +7,7 @@ import { Tile } from ".";
 
 export default {
   component: Tile,
-  title: "Components|Tile",
+  title: 'Components/Tile',
 };
 
 export const base = () => (

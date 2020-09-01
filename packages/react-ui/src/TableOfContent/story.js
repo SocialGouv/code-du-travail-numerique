@@ -7,7 +7,7 @@ import { TableOfContent } from ".";
 
 export default {
   component: TableOfContent,
-  title: "Components|TableOfContent",
+  title: 'Components/TableOfContent',
 };
 
 export const base = () => (

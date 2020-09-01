@@ -6,7 +6,7 @@ import { Title } from ".";
 
 export default {
   component: Title,
-  title: "Titles|Components/Title",
+  title: 'Titles/Components/Title',
 };
 
 export const base = () => (

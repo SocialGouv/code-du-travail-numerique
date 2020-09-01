@@ -7,7 +7,7 @@ import { Wrapper } from ".";
 
 export default {
   component: Wrapper,
-  title: "Layout|Components/Wrapper",
+  title: 'Layout/Components/Wrapper',
 };
 
 export const base = () => (

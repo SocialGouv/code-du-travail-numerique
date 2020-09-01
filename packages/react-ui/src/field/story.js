@@ -13,7 +13,7 @@ import { Textarea } from "./Textarea";
 
 export default {
   component: Select,
-  title: "Field|Components",
+  title: 'Field/Components',
 };
 
 const StyledInput = styled(Input)`
