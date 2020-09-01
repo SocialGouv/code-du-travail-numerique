@@ -7,7 +7,7 @@ import { Badge } from ".";
 
 export default {
   component: Badge,
-  title: 'Components/Badge',
+  title: "Components/Badge",
 };
 
 export const base = () => (

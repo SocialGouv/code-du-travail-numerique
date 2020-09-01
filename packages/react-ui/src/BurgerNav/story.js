@@ -7,7 +7,7 @@ import { BurgerNavButton, BurgerNavCurrent, BurgerNavLink } from "./NavItems";
 
 export default {
   component: BurgerNav,
-  title: 'Components/BurgerNav',
+  title: "Components/BurgerNav",
 };
 
 export const base = () => (

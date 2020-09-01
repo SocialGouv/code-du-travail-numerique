@@ -6,7 +6,7 @@ import { ArrowLink } from ".";
 
 export default {
   component: ArrowLink,
-  title: 'Components/ArrowLink',
+  title: "Components/ArrowLink",
 };
 
 export const base = () => (

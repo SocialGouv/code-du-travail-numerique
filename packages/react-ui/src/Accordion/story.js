@@ -7,7 +7,7 @@ import { Accordion } from ".";
 
 export default {
   component: Accordion,
-  title: 'Components/Accordion',
+  title: "Components/Accordion",
 };
 
 export const base = () => (

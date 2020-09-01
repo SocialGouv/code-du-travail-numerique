@@ -1,4 +1,3 @@
-import { action } from "@storybook/addon-actions";
 import React from "react";
 
 import { Holidays, Salary, Time } from "../icons";
@@ -6,11 +5,15 @@ import { Section } from "../layout/Section";
 import { Tile } from ".";
 
 export default {
+  argTypes: {
+    // naming onCLick not work :/
+    handler: { action: "clicked" },
+  },
   component: Tile,
-  title: 'Components/Tile',
+  title: "Components/Tile",
 };
 
-export const base = () => (
+export const base = ({ handler }) => (
   <div
     style={{
       alignItems: "stretch",
@@ -47,14 +50,14 @@ export const base = () => (
     <Section>
       <Tile
         title="Button tile, no href prop, should have an onClick"
-        onClick={action("button tile clicked")}
+        onClick={() => handler("button tile clicked")}
       />
     </Section>
     <Section>
       <Tile
         title="Button tile"
         icon={Holidays}
-        onClick={action("button tile with icon clicked")}
+        onClick={() => handler("button tile with icon clicked")}
       >
         It should look good ! And everything should be centered
       </Tile>
@@ -62,7 +65,7 @@ export const base = () => (
   </div>
 );
 
-export const wide = () => (
+export const wide = ({ handler }) => (
   <div
     style={{
       alignItems: "stretch",
@@ -103,7 +106,7 @@ export const wide = () => (
     </Section>
     <Section>
       <Tile
-        onClick={action("wide button tile clicked")}
+        onClick={() => handler("wide button tile clicked")}
         wide
         title="Button tile, no href prop, should have an onClick"
       />
