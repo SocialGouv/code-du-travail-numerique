@@ -31,7 +31,7 @@
     "@socialgouv/cdtn-sources": "^4.29.1",
     "@socialgouv/cdtn-ui": "^4.29.1",
     "@socialgouv/datafiller-data": "^1.59.0",
-    "@socialgouv/fiches-travail-data": "^3.196.0",
+    "@socialgouv/fiches-travail-data": "^3.197.0",
     "@socialgouv/react-fiche-service-public": "^4.29.2",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.15.0",
