@@ -100,7 +100,7 @@ Create a dump with semantic vectors (you will need a NLP service available)
 (if NLP_URL env is not provide it will create a dump without semantic vectors)
 
 ```
-NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/ yarn workspace @cdt/data dump-dev
+NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
 ```
 
 Populate elasticsearch index using a local dump
