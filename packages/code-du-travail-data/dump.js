@@ -37,27 +37,19 @@ const noIdSources = [
 
 async function fetchVector(data) {
   if (NLP_URL) {
-    if (data.title && data.text) {
-      await vectorizeDocument(data.title, data.text)
-        .then((title_vector) => {
-          if (title_vector.message) {
-            throw new Error(`error fetching ${data.title}`);
-          }
-          data.title_vector = title_vector;
-        })
-        .catch((err) => {
-          console.error(`error fetching ${data.title}`, err.message);
-        });
-    } else {
-      // create random title_vector : search will fail if any of the docs
-      // does not have title_vector set : 512 dimension vector, 9 digits between -1 and 1
-      const length = 512;
-      const maxDigits = 9;
-      data.title_vector = Array.from(
-        { length },
-        () => (Math.random() > 0.5 ? 1 : -1) * Math.random().toFixed(maxDigits)
-      );
-    }
+    if (!data.title)
+      console.error(`No title for document ${data.source} / ${data.slug}`);
+    const title = data.title || "sans titre";
+    await vectorizeDocument(title, data.text)
+      .then((title_vector) => {
+        if (title_vector.message) {
+          throw new Error(`error fetching ${data.title}`);
+        }
+        data.title_vector = title_vector;
+      })
+      .catch((err) => {
+        console.error(`error fetching ${data.title}`, err.message);
+      });
   }
 
   return data;
