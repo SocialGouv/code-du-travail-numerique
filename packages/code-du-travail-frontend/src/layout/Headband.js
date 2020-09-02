@@ -7,6 +7,8 @@ import styled from "styled-components";
 
 import { HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
+export const HEADBAND_HEIGHT = "5rem";
+
 export const Headband = ({ currentPage }) => {
   const { asPath } = useRouter();
   if (
@@ -40,6 +42,7 @@ const StyledLink = styled.a`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: ${HEADBAND_HEIGHT};
   padding: ${spacings.small};
   color: ${({ theme }) => (theme.noColors ? theme.white : theme.title)};
   text-align: center;
@@ -56,8 +59,7 @@ const StyledLink = styled.a`
     theme.noColors ? theme.primary : "#ffe980"};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   @media (max-width: ${breakpoints.mobile}) {
-    top: ${({ currentPage }) =>
-      currentPage === "home" ? "0" : MOBILE_HEADER_HEIGHT};
+    top: ${MOBILE_HEADER_HEIGHT};
   }
   @media print {
     display: none;

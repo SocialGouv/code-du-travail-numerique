@@ -276,6 +276,7 @@ exports[`<Header /> should render 1`] = `
 
 @media (max-width:600px) {
   .c4 {
+    width: auto;
     height: 7.5rem;
   }
 }
@@ -283,6 +284,7 @@ exports[`<Header /> should render 1`] = `
 @media (max-width:600px) {
   .c5 {
     height: 5rem;
+    margin-left: 2rem;
   }
 }
 

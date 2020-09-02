@@ -50,7 +50,7 @@ export const Header = ({ currentPage = "" }) => {
             <Logo />
           </LogoLink>
         </Link>
-        {isContentPage && overThreshold && (
+        {overThreshold && (
           <SearchBarWrapper>
             <SearchBar />
           </SearchBarWrapper>
@@ -149,6 +149,7 @@ const MinistereTravail = styled.img`
   background-color: white;
 
   @media (max-width: ${breakpoints.mobile}) {
+    width: auto;
     height: 7.5rem;
   }
 `;
@@ -159,6 +160,7 @@ const Logo = styled(icons.Logo)`
 
   @media (max-width: ${breakpoints.mobile}) {
     height: 5rem;
+    margin-left: 2rem;
   }
 `;
 

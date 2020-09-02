@@ -598,6 +598,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 5rem;
   padding: 1rem;
   color: #2f3b6c;
   text-align: center;
@@ -619,7 +620,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 .c0 {
   position: relative;
-  padding-top: 18rem;
+  padding-top: calc(18rem + 5rem);
 }
 
 .c1 {
@@ -958,6 +959,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 @media (max-width:600px) {
   .c6 {
+    width: auto;
     height: 7.5rem;
   }
 }
@@ -965,6 +967,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 @media (max-width:600px) {
   .c7 {
     height: 5rem;
+    margin-left: 2rem;
   }
 }
 
@@ -1005,7 +1008,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 @media (max-width:600px) {
   .c0 {
-    height: 9rem;
+    padding-top: calc(9rem + 5rem);
   }
 }
 
