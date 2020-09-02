@@ -20,6 +20,7 @@ const excludeSources = [
   SOURCES.HIGHLIGHTS,
   SOURCES.SHEET_MT_PAGE,
   SOURCES.CCN_PAGE,
+  SOURCES.VERSIONS,
 ];
 const nlpQueue = new PQueue({ concurrency: 3 });
 
@@ -35,20 +36,23 @@ const noIdSources = [
 ];
 
 async function fetchVector(data) {
-  return NLP_URL && data.title && data.text
-    ? vectorizeDocument(data.title, data.text)
-        .then((title_vector) => {
-          if (title_vector.message) {
-            throw new Error(`error fetching ${data.title}`);
-          }
-          data.title_vector = title_vector;
-          return data;
-        })
-        .catch((err) => {
-          console.error(`error fetching ${data.title}`, err.message);
-          return data;
-        })
-    : data;
+  if (NLP_URL) {
+    if (!data.title)
+      console.error(`No title for document ${data.source} / ${data.slug}`);
+    const title = data.title || "sans titre";
+    await vectorizeDocument(title, data.text)
+      .then((title_vector) => {
+        if (title_vector.message) {
+          throw new Error(`error fetching ${data.title}`);
+        }
+        data.title_vector = title_vector;
+      })
+      .catch((err) => {
+        console.error(`error fetching ${data.title}`, err.message);
+      });
+  }
+
+  return data;
 }
 
 const dump = async () => {

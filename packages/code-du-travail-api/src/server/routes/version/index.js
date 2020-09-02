@@ -13,13 +13,13 @@ const router = new Router({ prefix: API_BASE_URL });
 async function _getVersionsBody() {
   const body = getVersionsBody();
 
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   return response;
 }
 const getVersions = memoizee(_getVersionsBody, {
-  promise: true,
   maxAge: 1000 * 5 * 60,
   preFetch: true,
+  promise: true,
 });
 
 /**
@@ -35,8 +35,13 @@ router.get("/version", async (ctx) => {
     process.env.VERSION || require("../../../../package.json").version;
 
   const response = await getVersions();
-  const { data } = response.body.hits.hits[0]._source;
-  ctx.body = { version, data };
+
+  if (response.body.hits.hits.length == 0) {
+    ctx.throw(500, "Cannot read package versions in Elastic.");
+  } else {
+    const { data } = response.body.hits.hits[0]._source;
+    ctx.body = { data, version };
+  }
 });
 
 module.exports = router;
