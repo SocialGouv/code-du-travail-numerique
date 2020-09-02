@@ -48,7 +48,7 @@ Create namespace:
 
 .prod_stage: &prod_stage
   environment:
-    name: prod
+    name: prod2
   only:
     variables:
       - $PRODUCTION
