@@ -18,9 +18,9 @@ const thematicFiles = [
           },
           {
             title:
-              "Protocole national de déconfinement du Ministère du travail",
+              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
             url:
-              "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
           },
           {
             title:
@@ -247,10 +247,6 @@ const thematicFiles = [
             title: "Nouveautés Covid-19 : accord collectif d’entreprise",
             url:
               "/information/accord-collectif-dentreprise-nouveautes-covid-19",
-          },
-          {
-            title: "Nouveautés Covid-19 : élections du CSE",
-            url: "/information/elections-du-cse-nouveautes-covid-19",
           },
         ],
         title: "CSE et accord collectif",
