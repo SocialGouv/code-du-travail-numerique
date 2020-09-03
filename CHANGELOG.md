@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.30.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.2...v4.30.0) (2020-09-03)
+
+
+### Bug Fixes
+
+* **frontend:** simplify social meta url ([#2958](https://github.com/SocialGouv/code-du-travail-numerique/issues/2958)) ([ec05d85](https://github.com/SocialGouv/code-du-travail-numerique/commit/ec05d85d13ee653176963783a4fc775aded9e0ba)), closes [#2818](https://github.com/SocialGouv/code-du-travail-numerique/issues/2818)
+
+
+### Features
+
+* **data:** update dossier covid ([#2981](https://github.com/SocialGouv/code-du-travail-numerique/issues/2981)) ([99566a8](https://github.com/SocialGouv/code-du-travail-numerique/commit/99566a819242261bd359ac5cd2059ff085e2f97a))
+* **frontend:** add ccn 1090 in idl ([#2957](https://github.com/SocialGouv/code-du-travail-numerique/issues/2957)) ([460533c](https://github.com/SocialGouv/code-du-travail-numerique/commit/460533c573b5fa57d0933d410906ad2a54463b0b)), closes [#886](https://github.com/SocialGouv/code-du-travail-numerique/issues/886)
+* **frontend:** add new official ministry logo ([#2960](https://github.com/SocialGouv/code-du-travail-numerique/issues/2960)) ([cea9dca](https://github.com/SocialGouv/code-du-travail-numerique/commit/cea9dca403ae884fda900e0c08dad5c2df08c1fe))
+* **sdr:** small improvment for [#2153](https://github.com/SocialGouv/code-du-travail-numerique/issues/2153) ([#2952](https://github.com/SocialGouv/code-du-travail-numerique/issues/2952)) ([73c44f7](https://github.com/SocialGouv/code-du-travail-numerique/commit/73c44f7d13a3dbf21263b43e79ac110834a48052))
+
+
+
+
+
 ## [4.29.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1...v4.29.2) (2020-08-27)
 
 

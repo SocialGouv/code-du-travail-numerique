@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.30.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.2...v4.30.0) (2020-09-03)
+
+
+### Features
+
+* **frontend:** add new official ministry logo ([#2960](https://github.com/SocialGouv/code-du-travail-numerique/issues/2960)) ([cea9dca](https://github.com/SocialGouv/code-du-travail-numerique/commit/cea9dca403ae884fda900e0c08dad5c2df08c1fe))
+
+
+
+
+
 ## [4.29.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.29.1-alpha.0...v4.29.1) (2020-08-14)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
