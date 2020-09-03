@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
-import { Headband } from "./Headband";
-import { Header } from "./Header";
+import { Headband, HEADBAND_HEIGHT } from "./Headband";
+import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
 const Layout = ({ children, currentPage }) => {
   return (
@@ -27,6 +27,10 @@ const { breakpoints, spacings } = theme;
 
 const BackgroundContainer = styled.div`
   position: relative;
+  padding-top: calc(${HEADER_HEIGHT} + ${HEADBAND_HEIGHT});
+  @media (max-width: ${breakpoints.mobile}) {
+    padding-top: calc(${MOBILE_HEADER_HEIGHT} + ${HEADBAND_HEIGHT});
+  }
 `;
 
 const BackgroundLayer = styled.div`

@@ -1,16 +1,15 @@
-import { Container, icons, theme } from "@socialgouv/cdtn-ui";
+import { Container, icons, keyframes, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
+import { useWindowScrollPosition } from "../../lib/useScrollLocation";
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
 
-export const HEADER_HEIGHT = "8.6rem";
-export const MOBILE_HEADER_HEIGHT = "6.6rem";
-
-const { Search: SearchIcon } = icons;
+export const HEADER_HEIGHT = "18rem";
+export const MOBILE_HEADER_HEIGHT = "9rem";
 
 const printDate = () => {
   const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
@@ -23,57 +22,81 @@ export const Header = ({ currentPage = "" }) => {
     setDate(printDate());
   }, []);
   const router = useRouter();
+
+  const [scrollInfo, setScrollInfo] = useState({ direction: "down", y: 0 });
+  useWindowScrollPosition(setScrollInfo, [setScrollInfo]);
+  const overThreshold = scrollInfo.y > 200;
+  const floating = scrollInfo.direction === "up";
+  const showFloatingMenu = floating && overThreshold;
+  const isContentPage = currentPage !== "home" && currentPage !== "search";
   return (
-    <StyledHeader currentPage={currentPage}>
+    <StyledHeader
+      overThreshold={overThreshold}
+      floating={floating}
+      showFloatingMenu={showFloatingMenu}
+    >
       <StyledPrintDate id="printDate">{currentDate}</StyledPrintDate>
       <StyledContainer>
         <Link href="/" passHref>
-          <LogoLink title="Code du travail numérique - retour à l'accueil">
+          <LogoLink
+            overThreshold={overThreshold}
+            title="Code du travail numérique - retour à l'accueil"
+          >
             <MinistereTravail
+              overThreshold={overThreshold}
               src={"/static/assets/img/ministere-travail.svg"}
-              alt="symbole de la Marianne, site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
+              alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
             />
             <Logo />
           </LogoLink>
         </Link>
+        {overThreshold && (
+          <SearchBarWrapper>
+            <SearchBar />
+          </SearchBarWrapper>
+        )}
+
         <RightSide>
-          <BurgerNav currentPage={currentPage} />
-          {currentPage !== "home" && currentPage !== "search" && (
-            <>
-              <Link
-                href={{ pathname: "/recherche", query: router.query }}
-                passHref
-              >
-                <StyledLink>
-                  <SearchIcon />
-                </StyledLink>
-              </Link>
-              <SearchBarWrapper>
-                <SearchBar />
-              </SearchBarWrapper>
-            </>
+          {isContentPage && !overThreshold && (
+            <Link
+              href={{ pathname: "/recherche", query: router.query }}
+              passHref
+            >
+              <StyledLink>
+                <icons.Search />
+              </StyledLink>
+            </Link>
           )}
+          <BurgerNav currentPage={currentPage} />
         </RightSide>
       </StyledContainer>
     </StyledHeader>
   );
 };
 
-const { breakpoints, spacings } = theme;
+const { box, breakpoints, spacings } = theme;
 
 const StyledHeader = styled.header`
-  ${({ currentPage }) => {
-    if (currentPage !== "home") {
-      return css`
-        position: sticky;
-        top: 0;
-        z-index: 3;
-      `;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: ${HEADER_HEIGHT};
+  background-color: ${({ theme }) => theme.white};
+
+  ${({ floating, overThreshold }) => {
+    if (overThreshold) {
+      if (floating) {
+        return css`
+          position: fixed;
+          animation: ${keyframes.fromTop} 250ms ease-out;
+          height: ${MOBILE_HEADER_HEIGHT};
+          box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+        `;
+      }
     }
   }};
-  height: ${HEADER_HEIGHT};
-  background-color: ${({ currentPage, theme }) =>
-    currentPage === "home" ? "transparent" : theme.white};
+
   @media (max-width: ${breakpoints.mobile}) {
     height: ${MOBILE_HEADER_HEIGHT};
   }
@@ -97,53 +120,47 @@ const StyledContainer = styled(Container)`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-left: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding-left: 0;
-  }
 `;
 
 const LogoLink = styled.a`
   display: flex;
   flex-grow: 0;
   align-items: center;
+  padding: ${spacings.small} 0;
   text-decoration: none;
   @media (max-width: ${breakpoints.tablet}) {
+    display: ${({ overThreshold }) => (overThreshold ? "none" : "flex")};
     justify-content: space-between;
     /* 9rem is half logo's width so it gets centered */
     width: calc(50% + 9.5rem);
   }
   @media (max-width: ${breakpoints.mobile}) {
-    /* 6.2rem is half logo's width so it gets centered */
+    display: ${({ overThreshold }) => (overThreshold ? "none" : "flex")};
     justify-content: space-between;
+    /* 6.2rem is half logo's width so it gets centered */
     width: calc(50% + 6.2rem);
   }
 `;
 
 const MinistereTravail = styled.img`
-  flex: 0 0 7.8rem;
-  width: 7.8rem;
-  height: calc(100% - 2 * ${spacings.xsmall});
-  margin: ${spacings.xsmall} ${spacings.medium} ${spacings.xsmall}
-    ${spacings.xsmall};
-  padding: ${spacings.xsmall} 0;
+  display: ${({ overThreshold }) => (overThreshold ? "none" : "inline-block")};
+  flex-shrink: 0;
+  width: 18.2rem;
+  height: 15rem;
   background-color: white;
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 5.5rem;
-    width: 5.5rem;
-    margin-right: 0;
-    padding: ${spacings.tiny} 0;
+    width: auto;
+    height: 7.5rem;
   }
 `;
 const Logo = styled(icons.Logo)`
-  flex: 0 0 19rem;
-  width: 19rem;
-  height: calc(100% - 2 * ${spacings.xsmall});
-  margin: ${spacings.xsmall} 0;
+  flex-shrink: 0;
+  height: 7rem;
+  margin-left: 4rem;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 12.4rem;
-    width: 12.4rem;
+    height: 5rem;
+    margin-left: 2rem;
   }
 `;
 
@@ -159,7 +176,6 @@ const RightSide = styled.div`
 
 const StyledLink = styled.a`
   display: none;
-  order: 1;
   color: ${({ theme }) => theme.secondary};
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
@@ -175,10 +191,8 @@ const StyledLink = styled.a`
 `;
 
 const SearchBarWrapper = styled.div`
-  order: 3;
+  display: flex;
+  align-items: center;
   width: 30rem;
   margin-left: ${spacings.base};
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
 `;

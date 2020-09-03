@@ -9,6 +9,25 @@ export const fadeIn = keyframes`
     opacity: 1;
   }
 `;
+export const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+`;
+
+export const toTop = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+`;
 
 export const fromTop = keyframes`
   0% {
