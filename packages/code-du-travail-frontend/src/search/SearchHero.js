@@ -105,7 +105,7 @@ const Span = styled.span`
 `;
 
 const StyledConfigIcon = styled(ConfigIcon)`
-  display: inline;
+  display: inline-block;
   width: 3rem;
   height: 3rem;
   color: ${({ theme }) => theme.primary};
@@ -114,13 +114,13 @@ const StyledConfigIcon = styled(ConfigIcon)`
 
 const StyledWorkersWrapper = styled.div`
   position: absolute;
-  top: 10rem;
+  top: 20rem;
   right: 0;
   z-index: -1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 40%;
+  width: 43%;
   height: 100%;
   max-height: 55rem;
   overflow: hidden;

@@ -1079,12 +1079,18 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c6 {
   display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 18.2rem;
   height: 15rem;
   background-color: white;
 }
 
 .c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -3720,12 +3726,18 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c6 {
   display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 18.2rem;
   height: 15rem;
   background-color: white;
 }
 
 .c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;

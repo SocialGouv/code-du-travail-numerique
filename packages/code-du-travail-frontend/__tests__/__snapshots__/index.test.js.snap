@@ -907,12 +907,18 @@ exports[`<Home /> should render 1`] = `
 
 .c6 {
   display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 18.2rem;
   height: 15rem;
   background-color: white;
 }
 
 .c7 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -1036,7 +1042,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c27 {
-  display: inline;
+  display: inline-block;
   width: 3rem;
   height: 3rem;
   color: #f66663;
@@ -1045,7 +1051,7 @@ exports[`<Home /> should render 1`] = `
 
 .c36 {
   position: absolute;
-  top: 10rem;
+  top: 20rem;
   right: 0;
   z-index: -1;
   display: -webkit-box;
@@ -1060,7 +1066,7 @@ exports[`<Home /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 40%;
+  width: 43%;
   height: 100%;
   max-height: 55rem;
   overflow: hidden;
