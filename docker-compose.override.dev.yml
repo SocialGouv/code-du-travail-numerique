@@ -15,7 +15,7 @@ services:
         BASE_IMAGE: cdtn_master:local
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.9.0
+    image: docker.elastic.co/kibana/kibana:7.9.1
     ports:
       - 5601:5601
     depends_on:
