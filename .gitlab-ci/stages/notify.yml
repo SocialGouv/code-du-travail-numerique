@@ -33,7 +33,7 @@ include:
 
 .notify_prod:
   environment:
-    name: prod
+    name: prod2
   only:
     variables:
       - $PRODUCTION
