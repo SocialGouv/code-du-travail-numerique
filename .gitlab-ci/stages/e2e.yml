@@ -1,4 +1,3 @@
-
 Test on deployed branch:
   stage: E2E testing
   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppeteer:0.29.0
@@ -11,7 +10,7 @@ Test on deployed branch:
       - $PRODUCTION
 
   environment:
-    name: fabrique-dev
+    name: ${CI_COMMIT_REF_NAME}-dev2
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:

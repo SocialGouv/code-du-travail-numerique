@@ -17,6 +17,8 @@ Create namespace:
   extends:
     - .base_create_namespace_stage
     - .dev_stage
+  environment:
+    name: ${CI_COMMIT_REF_NAME}-dev2
   stage: "Post Registration"
   before_script:
     - source ./.gitlab-ci/env.sh
@@ -46,7 +48,7 @@ Create namespace:
 
 .prod_stage: &prod_stage
   environment:
-    name: prod
+    name: prod2
   only:
     variables:
       - $PRODUCTION
@@ -55,7 +57,7 @@ Create namespace:
 
 .dev_stage: &dev_stage
   environment:
-    name: fabrique-dev
+    name: ${CI_COMMIT_REF_NAME}-dev2
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -91,6 +93,8 @@ Deploy @cdtn/api (dev):
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.3m
+      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=null
+      --set ingress.annotations.kubernetes\.io/tls-acme=null
 
 Deploy @cdtn/api (prod):
   extends:
@@ -125,6 +129,8 @@ Deploy @cdtn/frontend (dev):
       --set autoscaling.enabled=false
       --set deployment.resources.requests.memory=256Mi
       --set deployment.resources.requests.cpu=.1m
+      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=null
+      --set ingress.annotations.kubernetes\.io/tls-acme=null
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
