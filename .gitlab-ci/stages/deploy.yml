@@ -22,8 +22,10 @@ Create namespace:
   stage: "Post Registration"
   before_script:
     - source ./.gitlab-ci/env.sh
+    - env
   after_script:
     - source ./.gitlab-ci/env.sh
+    - env
     #
     # Create cdtn secrets
     - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
@@ -188,4 +190,3 @@ Create Elasticsearch Index (dev):
 Create Elasticsearch Index (prod):
   <<: *deploy_data
   <<: *prod_stage
-
