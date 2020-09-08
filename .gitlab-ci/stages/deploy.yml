@@ -18,7 +18,7 @@ Create namespace:
     - .base_create_namespace_stage
     - .dev_stage
   environment:
-    name: ${CI_COMMIT_REF_NAME}-dev2
+    name: renovate/@socialgouv-data-packages-dev2
   stage: "Post Registration"
   before_script:
     - source ./.gitlab-ci/env.sh
