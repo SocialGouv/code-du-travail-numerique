@@ -10,7 +10,7 @@ Test on deployed branch:
       - $PRODUCTION
 
   environment:
-    name: ${CI_COMMIT_REF_NAME}-dev2
+    name: ${CI_COMMIT_REF_SLUG}-dev2
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:

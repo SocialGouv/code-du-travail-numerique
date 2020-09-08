@@ -2819,34 +2819,34 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^3.197.0":
-  version "3.197.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.197.0.tgz#08820bd487a74c767039fd12211a04d3186ac91a"
-  integrity sha512-47yGvRWw2sDd15iqm+/I8n7hDl7cmNjPyMBlBujam/WYoCRVWGm4WROqJIaPzjFR9GyRjdjuSqWlBh1KaOnE7A==
+"@socialgouv/fiches-travail-data@^3.201.0":
+  version "3.201.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.201.0.tgz#8ff82179798bfaeec31020bbd3ef1660321df3ed"
+  integrity sha512-n/+pBbmCRZIcaEvU0bSiX8I9VsHE6jQiGKA/ESIL23dAM9S4ZPNY+Rd3cE2C60ueAUlARLavL44hB2XYMmR9rA==
 
-"@socialgouv/fiches-vdd@^1.147.0":
-  version "1.147.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.147.0.tgz#3faca2cdbd45b4addb7c1754f257098a5a064e68"
-  integrity sha512-dxxABCbz+gV8wPKXDMV+aF+x3s2wZcjsvsTn7zMeIVAuTpYAX+9PmCZZ0VezEL8/3P8OrSmqXko0cf7+hFXBcA==
+"@socialgouv/fiches-vdd@^1.150.0":
+  version "1.150.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.150.0.tgz#df4584411f8d27b5cb19f065bda4ccf551f1be76"
+  integrity sha512-r0/K/OZo66tx/GaC6qfV8d01mvJGUICDKpis4zyotJacAM79z2qk6LSYhvQQ97cB6j5ZyqBrRI2cAC4tQL2cGg==
   dependencies:
-    node-fetch "^2.6.0"
-    ora "^5.0.0"
+    node-fetch "^2.6.1"
+    ora "^5.1.0"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.99.0":
-  version "1.99.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.99.0.tgz#f3a1cf787c8edcd63248b798a7b78bfc9e8c7d11"
-  integrity sha512-JFPEPAP+oOJ1NPnMnO8wC1OsvT5KKxEkyz43mddJqc1ZYV7Lo8I5ZBvNCqDzNYsK2elqtTEgM2I1MUXzTB3THA==
+"@socialgouv/kali-data@^1.104.0":
+  version "1.104.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.104.0.tgz#fe3e667729097885c36d8fcfce23e309a2f873c2"
+  integrity sha512-2YeiLXc1ldJaeGWxx76ioiPXz93ELE2UYp+PjaNCNhCNu5Zx8JFTrKyx30yDdNxF7qwYAc0TjiLCgd7AxdpPVQ==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
     unist-util-parents "1.0.3"
 
-"@socialgouv/legi-data@^1.31.0":
-  version "1.31.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.31.0.tgz#cad4260be790d7d64a2e05a2ee4983d737a1bbf8"
-  integrity sha512-LwsY5oXd6KkFjvvrIB46UF26oeemmsZHsY72F/Yi5fz7vd3iAZkcl35wGRH2IIIt0DLcDKbioQl5hqJ2Y8UeyQ==
+"@socialgouv/legi-data@^1.35.0":
+  version "1.35.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.35.0.tgz#699f1f10be7a05cbe3dd7c097f1c31a8a189bf88"
+  integrity sha512-1u/1MdjzjR/DvRokfUaB7axHjeg/cfQPvkc3Cf3BSansFZIm2albCN6zTxPoLrSHM2sVHktmvBbmSh9kdG+2DA==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-parents "1.0.3"
@@ -13418,10 +13418,15 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@2.6.0, node-fetch@^2.2.0, node-fetch@^2.3.0, node-fetch@^2.5.0, node-fetch@^2.6.0:
+node-fetch@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-fetch@^2.2.0, node-fetch@^2.3.0, node-fetch@^2.5.0, node-fetch@^2.6.0, node-fetch@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-gyp@^5.0.2:
   version "5.1.1"
@@ -14122,10 +14127,10 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-5.0.0.tgz#4f0b34f2994877b49b452a707245ab1e9f6afccb"
-  integrity sha512-s26qdWqke2kjN/wC4dy+IQPBIMWBJlSU/0JZhk30ZDBLelW25rv66yutUWARMigpGPzcXHb+Nac5pNhN/WsARw==
+ora@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-5.1.0.tgz#b188cf8cd2d4d9b13fd25383bc3e5cba352c94f8"
+  integrity sha512-9tXIMPvjZ7hPTbk8DFq1f7Kow/HU/pQYB60JbNq+QnGwcyhWVZaQ4hM9zQDEsPxw/muLpgiHSaumUZxCAmod/w==
   dependencies:
     chalk "^4.1.0"
     cli-cursor "^3.1.0"
