@@ -23,9 +23,11 @@ Create namespace:
   before_script:
     - source ./.gitlab-ci/env.sh
     - env
+    - kubectl config view
   after_script:
     - source ./.gitlab-ci/env.sh
     - env
+    - kubectl config view
     #
     # Create cdtn secrets
     - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
