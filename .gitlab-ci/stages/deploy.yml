@@ -18,7 +18,7 @@ Create namespace:
     - .base_create_namespace_stage
     - .dev_stage
   environment:
-    name: renovate/@socialgouv-data-packages-dev2
+    name: ${CI_COMMIT_REF_SLUG}-dev2
   stage: "Post Registration"
   before_script:
     - source ./.gitlab-ci/env.sh
@@ -63,7 +63,7 @@ Create namespace:
 
 .dev_stage: &dev_stage
   environment:
-    name: ${CI_COMMIT_REF_NAME}-dev2
+    name: ${CI_COMMIT_REF_SLUG}-dev2
   except:
     variables:
       # Don't run when deploying in production an existing image
