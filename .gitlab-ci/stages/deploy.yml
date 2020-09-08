@@ -22,14 +22,8 @@ Create namespace:
   stage: "Post Registration"
   before_script:
     - source ./.gitlab-ci/env.sh
-    - env
-    - kubectl config view
-    - echo $(kubectl config view)
-    - cat ~/.kube/config
   after_script:
     - source ./.gitlab-ci/env.sh
-    - env
-    - kubectl config view
     #
     # Create cdtn secrets
     - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
