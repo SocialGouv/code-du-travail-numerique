@@ -114,8 +114,7 @@ const { box, breakpoints, fonts, spacings } = theme;
 const SearchForm = styled.form`
   position: relative;
   display: flex;
-  margin: 0 auto;
-  padding: 0;
+  flex-grow: 1;
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     height: auto;
