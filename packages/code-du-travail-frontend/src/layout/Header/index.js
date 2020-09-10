@@ -50,8 +50,8 @@ export const Header = ({ currentPage = "" }) => {
             <Logo />
           </LogoLink>
         </Link>
-        {overThreshold && (
-          <SearchBarWrapper>
+        {(overThreshold || isContentPage) && (
+          <SearchBarWrapper overThreshold={overThreshold}>
             <SearchBar />
           </SearchBarWrapper>
         )}
@@ -129,14 +129,12 @@ const LogoLink = styled.a`
   padding: ${spacings.small} 0;
   text-decoration: none;
   @media (max-width: ${breakpoints.tablet}) {
-    display: ${({ overThreshold }) => (overThreshold ? "none" : "flex")};
     justify-content: space-between;
     /* 9rem is half logo's width so it gets centered */
     width: calc(50% + 9.5rem);
   }
   @media (max-width: ${breakpoints.mobile}) {
     display: ${({ overThreshold }) => (overThreshold ? "none" : "flex")};
-    justify-content: space-between;
     /* 6.2rem is half logo's width so it gets centered */
     width: calc(50% + 6.2rem);
   }
@@ -195,4 +193,7 @@ const SearchBarWrapper = styled.div`
   align-items: center;
   width: 30rem;
   margin-left: ${spacings.base};
+  @media (max-width: ${breakpoints.tablet}) {
+    display: ${({ overThreshold }) => (overThreshold ? "flex" : "none")};
+  }
 `;

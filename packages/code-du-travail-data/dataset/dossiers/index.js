@@ -52,9 +52,9 @@ const thematicFiles = [
           },
           {
             title:
-              "Protocole national de déconfinement du Ministère du travail",
+              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
             url:
-              "https://travail-emploi.gouv.fr/actualites/presse/communiques-de-presse/article/protocole-national-de-deconfinement-pour-les-entreprises-pour-assurer-la",
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
           },
           {
             title:
