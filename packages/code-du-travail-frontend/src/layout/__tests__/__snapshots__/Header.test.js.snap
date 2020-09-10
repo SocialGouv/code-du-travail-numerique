@@ -1,7 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c8 {
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.c10:link,
+.c10:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c10:not([disabled]):hover,
+.c10:not([disabled]):active,
+.c10:not([disabled]):focus {
+  opacity: 0.6;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: transparent;
+  border-color: transparent;
+}
+
+.c10[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,16 +101,16 @@ exports[`<Header /> should render 1`] = `
   opacity: 1;
 }
 
-.c8:link,
-.c8:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -56,7 +119,7 @@ exports[`<Header /> should render 1`] = `
   border-color: transparent;
 }
 
-.c8[disabled] {
+.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -64,18 +127,92 @@ exports[`<Header /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c9 {
+.c16 {
   height: auto;
   padding: 0;
 }
 
-.c11 {
+.c18 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c10 {
+.c9 ul {
+  z-index: 1;
+}
+
+.c9 li[role="option"]:nth-child(2n + 1) {
+  background: #f2f5fa;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c12 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5.4rem;
+  margin: 0;
+  padding: 1rem 5.5rem 1rem 1.6rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c8::-moz-placeholder {
+  color: #9298af;
+}
+
+.c8:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c8::placeholder {
+  color: #9298af;
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: #7994d4;
+}
+
+.c17 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -152,7 +289,7 @@ exports[`<Header /> should render 1`] = `
   color: #f66663;
 }
 
-.c6 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,33 +307,58 @@ exports[`<Header /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c7 {
+.c14 {
   display: none;
   color: #7994d4;
 }
 
-@media (max-width:600px) {
-
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30rem;
+  margin-left: 1.6rem;
 }
 
-@media print {
-
-}
-
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c10 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c15 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
     padding: 0 3rem;
   }
 }
@@ -206,7 +368,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c18 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -218,6 +380,22 @@ exports[`<Header /> should render 1`] = `
 
 @media (max-width:980px) {
 
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    height: 5.4rem;
+    padding: 1rem 5.5rem 1rem 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -254,10 +432,6 @@ exports[`<Header /> should render 1`] = `
 
 @media (max-width:980px) {
   .c3 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -272,10 +446,6 @@ exports[`<Header /> should render 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     width: calc(50% + 6.2rem);
   }
 }
@@ -295,13 +465,13 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c13 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c14 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -310,10 +480,16 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c14 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    display: none;
   }
 }
 
@@ -366,8 +542,58 @@ exports[`<Header /> should render 1`] = `
       <div
         class="c6"
       >
-        <a
+        <form
+          action="/recherche"
           class="c7"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="react-autowhatever-1"
+            role="combobox"
+            style="flex: 1 1 auto;"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-controls="react-autowhatever-1"
+              aria-label="recherchez par mots-clés"
+              autocomplete="off"
+              class="c8"
+              id="main-search-input"
+              name="q"
+              placeholder="Rechercher"
+              title="recherchez par mots-clés"
+              type="search"
+              value=""
+            />
+            <div
+              class="c9"
+              id="react-autowhatever-1"
+              role="listbox"
+            />
+          </div>
+          <button
+            class="c10 c11"
+            type="submit"
+          >
+            <svg
+              class="c12"
+              fill="none"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div
+        class="c13"
+      >
+        <a
+          class="c14"
           href="/recherche?q="
         >
           <svg
@@ -381,10 +607,10 @@ exports[`<Header /> should render 1`] = `
           </svg>
         </a>
         <button
-          class="c8 c9 c10"
+          class="c15 c16 c17"
         >
           <svg
-            class="c11"
+            class="c18"
             fill="none"
             viewBox="0 0 32 32"
           >
