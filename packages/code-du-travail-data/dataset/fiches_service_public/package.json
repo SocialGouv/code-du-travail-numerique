@@ -15,7 +15,7 @@
     "@socialgouv/kali-data": "^1.104.0",
     "@socialgouv/legi-data": "^1.35.0",
     "lodash.uniqby": "^4.7.0",
-    "query-string": "^6.13.1",
+    "query-string": "^6.13.2",
     "unist-util-find": "^1.0.1"
   },
   "scripts": {

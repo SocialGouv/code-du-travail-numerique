@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "date-fns": "^2.16.1",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "scripts": {
     "start": "node index.js stats.json"
