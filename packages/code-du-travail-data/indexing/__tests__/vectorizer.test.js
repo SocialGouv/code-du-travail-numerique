@@ -4,28 +4,42 @@ const {
   preprocess,
 } = require("../vectorizer");
 
-test("Should vectorize document", async () => {
-  const vector1 = await vectorizeDocument("titre", "contenu");
-  expect(vector1).toBeDefined();
-  expect(vector1).toMatchSnapshot();
+const timeout = 10000;
 
-  // preprocessing should make those embeddings equal
-  const vector2 = await vectorizeDocument("le titre", "et le contènu");
-  expect(vector2).toEqual(vector1);
-});
+test(
+  "Should vectorize document",
+  async () => {
+    const vector1 = await vectorizeDocument("titre", "contenu");
+    expect(vector1).toBeDefined();
+    expect(vector1).toMatchSnapshot();
 
-test("Should vectorize query", async () => {
-  const vector1 = await vectorizeQuery("requete");
-  expect(vector1).toMatchSnapshot();
-  const vector2 = await vectorizeQuery("la requête");
-  expect(vector2).toEqual(vector1);
-});
+    // preprocessing should make those embeddings equal
+    const vector2 = await vectorizeDocument("le titre", "et le contènu");
+    expect(vector2).toEqual(vector1);
+  },
+  timeout
+);
 
-test("Should fail when no content passed", async () => {
-  await vectorizeQuery().catch((e) =>
-    expect(e).toEqual(new Error("Cannot vectorize empty query."))
-  );
-});
+test(
+  "Should vectorize query",
+  async () => {
+    const vector1 = await vectorizeQuery("requete");
+    expect(vector1).toMatchSnapshot();
+    const vector2 = await vectorizeQuery("la requête");
+    expect(vector2).toEqual(vector1);
+  },
+  timeout
+);
+
+test(
+  "Should fail when no content passed",
+  async () => {
+    await vectorizeQuery().catch((e) =>
+      expect(e).toEqual(new Error("Cannot vectorize empty query."))
+    );
+  },
+  timeout
+);
 
 test("Should preprocess text", async () => {
   expect(preprocess("à la nôtre")).toEqual("");
