@@ -1,16 +1,13 @@
-import { Toast } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
+import { Button, theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
-
 import { Field } from "react-final-form";
-import { Button, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
-import { branches } from "../branches";
 import { Label, SectionTitle } from "../../common/stepStyles";
-import { getIndemniteFromFinalForm } from "../indemnite";
+import { branches } from "../branches";
 import { IndemniteLegale } from "../components/IndemniteLegale";
+import { getIndemniteFromFinalForm } from "../indemnite";
 
 function StepIndemnite({ form }) {
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
@@ -31,7 +28,7 @@ function StepIndemnite({ form }) {
       </p>
       <Field
         name="branche"
-        subscription={{ value: true, error: true, dirty: true }}
+        subscription={{ dirty: true, error: true, value: true }}
       >
         {({ input, meta: { error, dirty } }) => {
           return (
