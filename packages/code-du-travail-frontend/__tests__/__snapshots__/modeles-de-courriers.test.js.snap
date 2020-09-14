@@ -1934,11 +1934,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   >
                     <a
                       class="c64"
-                      href="https://incubateur.social.gouv.fr/"
+                      href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      L’incubateur des ministères sociaux
+                      La fabrique des Ministères sociaux
                     </a>
                   </li>
                   <li
