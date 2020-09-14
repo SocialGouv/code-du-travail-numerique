@@ -39,7 +39,7 @@
     "koa-send": "^5.0.1",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.14",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
