@@ -3,8 +3,14 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { IndemniteLegale } from "../components/IndemniteLegale";
+import { Field } from "react-final-form";
+import { Button, theme } from "@socialgouv/react-ui";
+import styled from "styled-components";
+
+import { branches } from "../branches";
+import { Label, SectionTitle } from "../../common/stepStyles";
 import { getIndemniteFromFinalForm } from "../indemnite";
+import { IndemniteLegale } from "../components/IndemniteLegale";
 
 function StepIndemnite({ form }) {
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
@@ -14,21 +20,50 @@ function StepIndemnite({ form }) {
         indemnite={indemniteLegale}
         infoCalcul={infoCalculLegal}
       />
-      <Toast>
-        Une convention collective, un accord d’entreprise, le contrat de travail
-        ou un usage peuvent prévoir un montant plus favorable pour le salarié.
-      </Toast>
+
+      <SectionTitle>
+        La convention collective peut prévoir un montant plus important
+      </SectionTitle>
       <p>
-        Pour en savoir plus sur l’indemnité de licenciement et son mode de
-        calcul, consultez{" "}
-        <Link
-          href="/fiche-service-public/[slug]"
-          as={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
-        >
-          <a>cet article</a>
-        </Link>
-        .
+        Selon la convention collective applicable, le montant minimum de
+        l’indemnité de licenciement peut être supérieur au montant de
+        l’indemnité légale.
       </p>
+      <Field
+        name="branche"
+        subscription={{ value: true, error: true, dirty: true }}
+      >
+        {({ input, meta: { error, dirty } }) => {
+          return (
+            <>
+              <SelectWrapper>
+                <Label htmlFor="ccn">
+                  Sélectionnez la convention collective pour en savoir plus :
+                </Label>
+                <Select {...input} id="ccn">
+                  <option disabled value="">
+                    Sélectionner
+                  </option>
+                  {branches.map((branche) => (
+                    <option value={branche.value} key={branche.value}>
+                      {branche.label}
+                    </option>
+                  ))}
+                </Select>
+                {input.value && input.value.length > 0 && (
+                  <CancelButton
+                    variant="link"
+                    onClick={() => input.onChange("")}
+                  >
+                    annuler
+                  </CancelButton>
+                )}
+              </SelectWrapper>
+              {error && dirty && <span>{error}</span>}
+            </>
+          );
+        }}
+      </Field>
     </>
   );
 }
@@ -36,3 +71,21 @@ StepIndemnite.propTypes = {
   form: PropTypes.object.isRequired,
 };
 export { StepIndemnite };
+
+const { spacings } = theme;
+
+const SelectWrapper = styled.label`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+`;
+
+const Select = styled.select`
+  flex: 1 1 auto;
+  width: 100%;
+  margin-right: ${spacings.medium};
+`;
+const CancelButton = styled(Button)`
+  margin: ${spacings.medium} 0;
+`;
