@@ -3,6 +3,7 @@ import { parseIdcc } from "@cdt/data";
 import { searchConvention } from "./convention.service";
 import {
   searchEntrepriseByName,
+  searchEntrepriseBySiren,
   searchEntrepriseBySiret,
 } from "./entreprise.service";
 import getQueryType from "./getQueryType";
@@ -25,6 +26,8 @@ export const getResults = async (query) => {
         )
       ),
     ]);
+  } else if (type === "siren") {
+    entreprises = await searchEntrepriseBySiren(query.replace(/[\s .-]/g, ""));
   } else if (type === "siret") {
     entreprises = await searchEntrepriseBySiret(query.replace(/[\s .-]/g, ""));
   } else if (type === "idcc") {

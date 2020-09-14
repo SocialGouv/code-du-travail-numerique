@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
@@ -14,6 +14,7 @@ export const Title = ({
   shift = "",
   subtitle,
   topStripped = false,
+  unstriped = false,
   variant,
   ...props
 }) => (
@@ -23,12 +24,19 @@ export const Title = ({
     shift={shift}
     {...props}
   >
-    <StyledTitle leftStripped={!topStripped} as={as} shift={shift}>
-      <Stripe
-        rounded={variant !== "primary"}
-        variant={variant}
-        {...(!topStripped && { position: "left", length: "100%" })}
-      />
+    <StyledTitle
+      unstriped={unstriped}
+      leftStripped={!topStripped}
+      as={as}
+      shift={shift}
+    >
+      {!unstriped && (
+        <Stripe
+          rounded={variant !== "primary"}
+          variant={variant}
+          {...(!topStripped && { length: "100%", position: "left" })}
+        />
+      )}
       {children}
     </StyledTitle>
     {subtitle && (
@@ -46,6 +54,7 @@ Title.propTypes = {
   shift: PropTypes.string,
   subtitle: PropTypes.node,
   topStripped: PropTypes.bool,
+  unstriped: PropTypes.bool,
   variant: PropTypes.string,
 };
 
@@ -76,7 +85,14 @@ const StyledTitle = styled.h2`
       padding-top: ${spacings.base};
       text-align: center;
     `;
-  }};
+  }}
+  ${({ unstriped }) => {
+    if (unstriped) {
+      return css`
+        padding-left: 0;
+      `;
+    }
+  }}
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.headings.xmedium};
   }

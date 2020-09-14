@@ -318,4 +318,61 @@ describe("<Search />", () => {
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
   });
+
+  it("when searching SIREN, should use API SIREN and siret2idcc", async () => {
+    mockFetch({
+      "api-entreprises": {
+        unite_legale: {
+          denomination: "Entreprise 2",
+          etablissements: [
+            {
+              code_postal: 93100,
+              id: 199308120,
+              libelle_commune: "Commune test 1",
+              siret: "01234567891011",
+            },
+            {
+              code_postal: 93120,
+              etat_administratif: "F",
+              id: 199308121,
+              libelle_commune: "Commune test 2",
+              siret: "01234567891012",
+            },
+          ],
+        },
+      },
+      "siret2idcc.url": [
+        {
+          conventions: [
+            {
+              active: true,
+              date_publi: "1976-04-01T00:00:00.000Z",
+              etat: "VIGUEUR_ETEN",
+              id: "KALICONT000005635886",
+              nature: "IDCC",
+              num: "843",
+              title: "Convention 1",
+            },
+          ],
+          siret: "01234567891011",
+        },
+        {
+          conventions: [],
+          siret: "01234567891012",
+        },
+      ],
+    });
+
+    const onSelectConvention = jest.fn();
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention,
+    });
+    fireEvent.change(getByRole("search"), {
+      target: { value: "012345678" },
+    });
+    jest.runOnlyPendingTimers(); // run debounce timer
+    await wait(); // with for promise to resolve
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -6,13 +6,16 @@ import { Title } from ".";
 
 export default {
   component: Title,
-  title: 'Titles/Components/Title',
+  title: "Titles/Components/Title",
 };
 
 export const base = () => (
   <>
     <Section>
       <Title>This is a basic title (h2)</Title>
+    </Section>
+    <Section>
+      <Title unstriped>This is an unstriped basic title (h2)</Title>
     </Section>
     <Section>
       <Title variant="primary">This is a basic primary title (h2)</Title>
