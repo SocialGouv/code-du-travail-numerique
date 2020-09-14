@@ -113,10 +113,10 @@ const About = () => (
             </a>
             , conçu et développé au sein de{" "}
             <a
-              title="le site de l'incubateur des ministères sociaux"
-              href="https://incubateur.social.gouv.fr/"
+              title="le site de la fabrique des Ministères sociaux"
+              href="https://fabrique.social.gouv.fr/"
             >
-              l’incubateur des ministères sociaux
+              la fabrique des Ministères sociaux
             </a>{" "}
             en partenariat avec la communauté{" "}
             <a title="le site beta.gouv" href="https://beta.gouv.fr/">

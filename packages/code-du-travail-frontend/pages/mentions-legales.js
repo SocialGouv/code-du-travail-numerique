@@ -29,9 +29,9 @@ const LegalPage = () => {
           </FocusRoot>
           <Wrapper variant="main">
             <p>
-              Le site est édité par l’
-              <a href="https://incubateur.social.gouv.fr/">
-                Incubateur des ministères sociaux
+              Le site est édité par la
+              <a href="https://fabrique.social.gouv.fr/">
+                fabrique des Ministères sociaux
               </a>{" "}
               situé :
             </p>

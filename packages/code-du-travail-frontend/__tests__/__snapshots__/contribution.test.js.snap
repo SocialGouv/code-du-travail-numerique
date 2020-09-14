@@ -2760,11 +2760,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     >
                       <a
                         class="c88"
-                        href="https://incubateur.social.gouv.fr/"
+                        href="https://fabrique.social.gouv.fr/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        L’incubateur des ministères sociaux
+                        La fabrique des Ministères sociaux
                       </a>
                     </li>
                     <li
@@ -5633,11 +5633,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     >
                       <a
                         class="c88"
-                        href="https://incubateur.social.gouv.fr/"
+                        href="https://fabrique.social.gouv.fr/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        L’incubateur des ministères sociaux
+                        La fabrique des Ministères sociaux
                       </a>
                     </li>
                     <li

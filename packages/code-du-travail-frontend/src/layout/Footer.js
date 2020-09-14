@@ -168,11 +168,11 @@ const Footer = () => {
                   </StyledListItem>
                   <StyledListItem>
                     <StyledLink
-                      href={"https://incubateur.social.gouv.fr/"}
+                      href={"https://fabrique.social.gouv.fr/"}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      L’incubateur des ministères sociaux
+                      La fabrique des Ministères sociaux
                     </StyledLink>
                   </StyledListItem>
                   <StyledListItem>

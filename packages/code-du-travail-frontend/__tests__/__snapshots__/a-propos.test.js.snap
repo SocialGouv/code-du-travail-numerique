@@ -1556,10 +1556,10 @@ exports[`<About /> should render 1`] = `
               , conçu et développé au sein de
                
               <a
-                href="https://incubateur.social.gouv.fr/"
-                title="le site de l'incubateur des ministères sociaux"
+                href="https://fabrique.social.gouv.fr/"
+                title="le site de la fabrique des Ministères sociaux"
               >
-                l’incubateur des ministères sociaux
+                la fabrique des Ministères sociaux
               </a>
                
               en partenariat avec la communauté
@@ -1806,11 +1806,11 @@ exports[`<About /> should render 1`] = `
                   >
                     <a
                       class="c54"
-                      href="https://incubateur.social.gouv.fr/"
+                      href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      L’incubateur des ministères sociaux
+                      La fabrique des Ministères sociaux
                     </a>
                   </li>
                   <li

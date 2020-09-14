@@ -1463,11 +1463,11 @@ exports[`<MentionLegales /> should render 1`] = `
             class="c31"
           >
             <p>
-              Le site est édité par l’
+              Le site est édité par la
               <a
-                href="https://incubateur.social.gouv.fr/"
+                href="https://fabrique.social.gouv.fr/"
               >
-                Incubateur des ministères sociaux
+                fabrique des Ministères sociaux
               </a>
                
               situé :
@@ -1811,11 +1811,11 @@ exports[`<MentionLegales /> should render 1`] = `
                   >
                     <a
                       class="c55"
-                      href="https://incubateur.social.gouv.fr/"
+                      href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      L’incubateur des ministères sociaux
+                      La fabrique des Ministères sociaux
                     </a>
                   </li>
                   <li
