@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import { Field } from "react-final-form";
-import { Button, theme } from "@socialgouv/react-ui";
+import { Button, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 
 import { branches } from "../branches";
