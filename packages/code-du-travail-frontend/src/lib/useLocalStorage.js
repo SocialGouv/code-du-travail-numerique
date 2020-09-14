@@ -33,8 +33,14 @@ export function useLocalStorage(key, defaultValue, useStorageListener = false) {
   );
 
   useEffect(() => {
-    window.localStorage &&
+    if (!window.localStorage) {
+      return;
+    }
+    try {
       window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error(error);
+    }
     if (useStorageListener) {
       window.addEventListener("storage", onStorage);
       return () => {
