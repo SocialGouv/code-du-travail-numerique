@@ -54,6 +54,57 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   height: 3rem;
 }
 
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c23:focus,
+.c23:hover,
+.c23:active {
+  color: #f66663;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -210,7 +261,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -265,6 +316,21 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   width: 100%;
 }
 
+.c21 {
+  margin-top: 2.4rem;
+}
+
+.c22 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c24 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c11 {
   padding-bottom: 0;
 }
@@ -306,6 +372,18 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   .c12 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
   }
 }
 
@@ -529,7 +607,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
       </label>
       <span
         class="c18 c19"
@@ -538,13 +616,30 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+          placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
           role="search"
           type="search"
           value=""
         />
       </span>
       
+      <p
+        class="c21"
+      >
+        Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+        <span
+          class="c22"
+        >
+          Consultez
+           
+          <button
+            class="c23 c24"
+          >
+            notre aide
+          </button>
+          .
+        </span>
+      </p>
     </div>
   </div>
 </div>
@@ -604,6 +699,57 @@ exports[`<Contribution /> should render answer references 1`] = `
   height: 3rem;
 }
 
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c23:focus,
+.c23:hover,
+.c23:active {
+  color: #f66663;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -760,7 +906,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -815,6 +961,21 @@ exports[`<Contribution /> should render answer references 1`] = `
   width: 100%;
 }
 
+.c21 {
+  margin-top: 2.4rem;
+}
+
+.c22 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c24 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c11 {
   padding-bottom: 0;
 }
@@ -856,6 +1017,18 @@ exports[`<Contribution /> should render answer references 1`] = `
   .c12 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
   }
 }
 
@@ -1079,7 +1252,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
       </label>
       <span
         class="c18 c19"
@@ -1088,13 +1261,30 @@ exports[`<Contribution /> should render answer references 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+          placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
           role="search"
           type="search"
           value=""
         />
       </span>
       
+      <p
+        class="c21"
+      >
+        Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+        <span
+          class="c22"
+        >
+          Consultez
+           
+          <button
+            class="c23 c24"
+          >
+            notre aide
+          </button>
+          .
+        </span>
+      </p>
     </div>
   </div>
 </div>
@@ -1154,6 +1344,57 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   height: 3rem;
 }
 
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c23:focus,
+.c23:hover,
+.c23:active {
+  color: #f66663;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1310,7 +1551,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -1365,6 +1606,21 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   width: 100%;
 }
 
+.c21 {
+  margin-top: 2.4rem;
+}
+
+.c22 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c24 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c11 {
   padding-bottom: 0;
 }
@@ -1406,6 +1662,18 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   .c12 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
   }
 }
 
@@ -1629,7 +1897,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
       </label>
       <span
         class="c18 c19"
@@ -1638,13 +1906,30 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+          placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
           role="search"
           type="search"
           value=""
         />
       </span>
       
+      <p
+        class="c21"
+      >
+        Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+        <span
+          class="c22"
+        >
+          Consultez
+           
+          <button
+            class="c23 c24"
+          >
+            notre aide
+          </button>
+          .
+        </span>
+      </p>
     </div>
   </div>
 </div>
@@ -1704,6 +1989,57 @@ exports[`<Contribution /> should render with both answers 1`] = `
   height: 3rem;
 }
 
+.c23 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c23:focus,
+.c23:hover,
+.c23:active {
+  color: #f66663;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1860,7 +2196,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -1915,6 +2251,21 @@ exports[`<Contribution /> should render with both answers 1`] = `
   width: 100%;
 }
 
+.c21 {
+  margin-top: 2.4rem;
+}
+
+.c22 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c24 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c11 {
   padding-bottom: 0;
 }
@@ -1956,6 +2307,18 @@ exports[`<Contribution /> should render with both answers 1`] = `
   .c12 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
   }
 }
 
@@ -2179,7 +2542,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="c17"
         for="convention-search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
       </label>
       <span
         class="c18 c19"
@@ -2188,13 +2551,30 @@ exports[`<Contribution /> should render with both answers 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+          placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
           role="search"
           type="search"
           value=""
         />
       </span>
       
+      <p
+        class="c21"
+      >
+        Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+        <span
+          class="c22"
+        >
+          Consultez
+           
+          <button
+            class="c23 c24"
+          >
+            notre aide
+          </button>
+          .
+        </span>
+      </p>
     </div>
   </div>
 </div>
@@ -2252,6 +2632,57 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   z-index: 1;
   width: 3rem;
   height: 3rem;
+}
+
+.c20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c20:focus,
+.c20:hover,
+.c20:active {
+  color: #f66663;
 }
 
 .c3 {
@@ -2397,7 +2828,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -2431,6 +2862,21 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c16 {
   width: 100%;
+}
+
+.c18 {
+  margin-top: 2.4rem;
+}
+
+.c19 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c21 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c8 {
@@ -2474,6 +2920,18 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   .c9 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c20 {
+    display: none;
   }
 }
 
@@ -2656,7 +3114,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="c14"
         for="convention-search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
       </label>
       <span
         class="c15 c16"
@@ -2665,13 +3123,30 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           class="c17"
           id="convention-search"
           name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+          placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
           role="search"
           type="search"
           value=""
         />
       </span>
       
+      <p
+        class="c18"
+      >
+        Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+        <span
+          class="c19"
+        >
+          Consultez
+           
+          <button
+            class="c20 c21"
+          >
+            notre aide
+          </button>
+          .
+        </span>
+      </p>
     </div>
   </div>
 </div>

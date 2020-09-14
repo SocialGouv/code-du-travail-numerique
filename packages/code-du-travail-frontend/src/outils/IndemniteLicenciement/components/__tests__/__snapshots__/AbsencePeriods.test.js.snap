@@ -169,7 +169,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -702,7 +702,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
