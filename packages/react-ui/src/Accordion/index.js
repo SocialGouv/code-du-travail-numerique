@@ -23,11 +23,7 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
             props.preExpanded.find((element) => element === id) && (
               <PushBelowHeader />
             )}
-          <AccordionItem
-            uuid={id}
-            index={index}
-            isLast={index === items.length - 1}
-          >
+          <AccordionItem index={index} isLast={index === items.length - 1}>
             <AccordionItemHeading>
               <AccordionItemButton
                 icon={icon}

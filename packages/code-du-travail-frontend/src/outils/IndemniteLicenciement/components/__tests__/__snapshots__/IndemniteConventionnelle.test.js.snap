@@ -283,7 +283,10 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mi>
@@ -318,41 +321,37 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
                         class="base"
                       >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -361,11 +360,19 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.68333em;vertical-align:0em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                         >
                           A
                         </span>
@@ -472,20 +479,14 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mn>
-                              1
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              7
+                              1337
                             </mn>
                             <mo>
                               ×
@@ -528,16 +529,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
                         class="base"
                       >
+                        <span
+                          class="strut"
+                          style="height:0.72777em;vertical-align:-0.08333em;"
+                        />
                         <span
                           class="mord"
                         >
@@ -559,7 +556,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           7
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -568,34 +565,42 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -604,22 +609,30 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           o
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           o
                         </span>
@@ -879,7 +892,10 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mi>
@@ -914,41 +930,37 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
                         class="base"
                       >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -957,11 +969,19 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.68333em;vertical-align:0em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                         >
                           A
                         </span>
@@ -1068,20 +1088,14 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mn>
-                              1
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              3
-                            </mn>
-                            <mn>
-                              7
+                              1337
                             </mn>
                             <mo>
                               ×
@@ -1124,16 +1138,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:0.69444em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                      />
-                      <span
                         class="base"
                       >
+                        <span
+                          class="strut"
+                          style="height:0.72777em;vertical-align:-0.08333em;"
+                        />
                         <span
                           class="mord"
                         >
@@ -1155,7 +1165,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           7
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -1164,34 +1174,42 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -1200,22 +1218,30 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           o
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           o
                         </span>

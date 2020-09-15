@@ -1,4 +1,4 @@
-import { fireEvent, render, waitForElement } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 
 import { Suggester } from "../Suggester";
@@ -22,7 +22,7 @@ describe("<Suggester />", () => {
     const input = getByPlaceholderText(/faire une recherche/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
-    await waitForElement(() => getAllByRole("option"));
+    await waitFor(() => getAllByRole("option"));
     expect(container).toMatchSnapshot();
   });
 
@@ -40,7 +40,7 @@ describe("<Suggester />", () => {
     const input = getByPlaceholderText(/faire une recherche/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
-    await waitForElement(() => getByDisplayValue("tOst"));
+    await waitFor(() => getByDisplayValue("tOst"));
   });
 
   it("should allow displaying a help message", async () => {
@@ -62,7 +62,7 @@ describe("<Suggester />", () => {
     );
     const input = getByPlaceholderText(/faire une recherche/i);
     fireEvent.change(input, { target: { value: "test" } });
-    await waitForElement(() => getByText("test returned 1 results"));
+    await waitFor(() => getByText("test returned 1 results"));
   });
 
   /* eslint-enable */
@@ -76,7 +76,7 @@ describe("<Suggester />", () => {
     const input = getByPlaceholderText(/faire une recherche/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
-    const option = await waitForElement(() => getByRole("option"));
+    const option = await waitFor(() => getByRole("option"));
     option.click();
     expect(onSelect).toHaveBeenCalledWith(item, expect.anything());
   });

@@ -2117,12 +2117,12 @@ exports[`<FicheMT /> should render 1`] = `
                         role="heading"
                       >
                         <div
-                          aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
+                          aria-controls="accordion__panel-raa-0"
                           aria-disabled="false"
                           aria-expanded="false"
                           class="c49"
                           data-accordion-component="AccordionItemButton"
-                          id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
+                          id="accordion__heading-raa-0"
                           role="button"
                           tabindex="0"
                         >
@@ -2151,11 +2151,11 @@ exports[`<FicheMT /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
+                        aria-labelledby="accordion__heading-raa-0"
                         class="c52"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
-                        id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
+                        id="accordion__panel-raa-0"
                       >
                         <div
                           class="c53"

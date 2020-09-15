@@ -45,7 +45,6 @@ describe("/IS_PRODUCTION_DEPLOYMENT=true", () => {
     expect(response.headers["x-robots-tag"]).toBe(undefined);
   });
   it("should redirect to production url", async () => {
-    process.env.NODE_ENV = "not-test"; // allow to trigger the default redirection which is disabled in test mode
     const response = await request(app.callback()).get("/some-url");
     expect(response.status).toBe(301);
     expect(response.headers.location).toEqual(

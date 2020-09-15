@@ -1,23 +1,23 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import React from "react";
 import {
   Accordion as RootAccordion,
-  AccordionItemButton,
   AccordionItem,
+  AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import styled, { css } from "styled-components";
 
-import { animations, box, breakpoints, fonts, spacings } from "../../../theme";
 import { fadeIn } from "../../../keyframes";
+import { animations, box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow";
 
 export const Accordion = RootAccordion;
 
 // eslint-disable-next-line
-export const Item = styled(({ isLast, ...rest }) => (
-  <AccordionItem {...rest} />
-))`
+export const Item = styled(({ isLast, ...rest }) => {
+  return <AccordionItem {...rest} />;
+})`
   ${({ index, theme }) =>
     index > 0 &&
     css`

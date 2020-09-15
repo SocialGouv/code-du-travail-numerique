@@ -4510,12 +4510,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   role="heading"
                 >
                   <div
-                    aria-controls="accordion__panel-hierarchie"
+                    aria-controls="accordion__panel-raa-14"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c68"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-hierarchie"
+                    id="accordion__heading-raa-14"
                     role="button"
                     tabindex="0"
                   >
@@ -4593,11 +4593,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-hierarchie"
+                  aria-labelledby="accordion__heading-raa-14"
                   class="c75"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-hierarchie"
+                  id="accordion__panel-raa-14"
                 >
                   <div
                     class="c60"

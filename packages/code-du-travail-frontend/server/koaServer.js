@@ -52,22 +52,13 @@ async function getKoaServer({ nextApp }) {
         "*.data.gouv.fr",
         "*.fabrique.social.gouv.fr",
       ],
-      scriptSrc: [
-        "'self'",
-        "'unsafe-inline'",
-        "https://mon-entreprise.fr",
-        "https://www.googletagmanager.com",
-        "*.fabrique.social.gouv.fr",
-        "https://cdnjs.cloudflare.com",
-      ],
+      "font-src": ["'self'", "data:", "blob:"],
       frameSrc: [
         "'self'",
         "https://mon-entreprise.fr",
         "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
       ],
-      "font-src": ["'self'", "data:", "blob:"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
       imgSrc: [
         "'self'",
         "data:",
@@ -76,6 +67,15 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.fr",
         "https://ad.doubleclick.net",
       ],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://mon-entreprise.fr",
+        "https://www.googletagmanager.com",
+        "*.fabrique.social.gouv.fr",
+        "https://cdnjs.cloudflare.com",
+      ],
+      styleSrc: ["'self'", "'unsafe-inline'"],
       ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
       ...(dev && { reportUri: "/report-violation" }),
     },
@@ -103,11 +103,13 @@ async function getKoaServer({ nextApp }) {
     server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
       const isHealthCheckUrl = ctx.path === "/health";
-      if (!isProdUrl && !isHealthCheckUrl && process.env.NODE_ENV !== "test") {
+      if (!isProdUrl && !isHealthCheckUrl) {
         const productionUrl = `https://${PROD_HOSTNAME}${ctx.originalUrl}`;
-        console.log(
-          `301 redirect ${ctx.host}${ctx.originalUrl} to production url ${productionUrl}`
-        );
+        if (process.env.NODE_ENV !== "test") {
+          console.log(
+            `301 redirect ${ctx.host}${ctx.originalUrl} to production url ${productionUrl}`
+          );
+        }
         ctx.status = 301;
         ctx.redirect(productionUrl);
         return;

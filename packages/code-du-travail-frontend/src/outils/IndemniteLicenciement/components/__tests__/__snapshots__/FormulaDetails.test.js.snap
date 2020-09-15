@@ -94,37 +94,25 @@ exports[`<FormulaDetails /> should render 1`] = `
                 <span
                   class="katex-mathml"
                 >
-                  <math>
+                  <math
+                    display="block"
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                  >
                     <semantics>
                       <mrow>
                         <mfrac>
-                          <mrow>
-                            <mn>
-                              1
-                            </mn>
-                          </mrow>
-                          <mrow>
-                            <mn>
-                              3
-                            </mn>
-                          </mrow>
+                          <mn>
+                            1
+                          </mn>
+                          <mn>
+                            3
+                          </mn>
                         </mfrac>
                         <mo>
                           ×
                         </mo>
                         <mn>
-                          3
-                        </mn>
-                        <mi
-                          mathvariant="normal"
-                        >
-                          .
-                        </mi>
-                        <mn>
-                          1
-                        </mn>
-                        <mn>
-                          4
+                          3.14
                         </mn>
                         <mi
                           mathvariant="normal"
@@ -145,16 +133,12 @@ exports[`<FormulaDetails /> should render 1`] = `
                   class="katex-html"
                 >
                   <span
-                    class="strut"
-                    style="height:1.32144em;"
-                  />
-                  <span
-                    class="strut bottom"
-                    style="height:2.00744em;vertical-align:-0.686em;"
-                  />
-                  <span
                     class="base"
                   >
+                    <span
+                      class="strut"
+                      style="height:2.00744em;vertical-align:-0.686em;"
+                    />
                     <span
                       class="mord"
                     >
@@ -192,27 +176,16 @@ exports[`<FormulaDetails /> should render 1`] = `
                                 </span>
                               </span>
                               <span
-                                style="top:-3.15em;"
+                                style="top:-3.23em;"
                               >
                                 <span
                                   class="pstrut"
                                   style="height:3em;"
                                 />
                                 <span
-                                  class="stretchy"
-                                  style="height:0.2em;"
-                                >
-                                  <svg
-                                    height="0.2em"
-                                    preserveAspectRatio="xMinYMin slice"
-                                    viewBox="0 0 400000 200"
-                                    width="400em"
-                                  >
-                                    <path
-                                      d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                    />
-                                  </svg>
-                                </span>
+                                  class="frac-line"
+                                  style="border-bottom-width:0.04em;"
+                                />
                               </span>
                               <span
                                 style="top:-3.677em;"
@@ -244,7 +217,9 @@ exports[`<FormulaDetails /> should render 1`] = `
                             <span
                               class="vlist"
                               style="height:0.686em;"
-                            />
+                            >
+                              <span />
+                            </span>
                           </span>
                         </span>
                       </span>
@@ -253,7 +228,7 @@ exports[`<FormulaDetails /> should render 1`] = `
                       />
                     </span>
                     <span
-                      class="mord rule"
+                      class="mspace"
                       style="margin-right:0.2222222222222222em;"
                     />
                     <span
@@ -262,8 +237,16 @@ exports[`<FormulaDetails /> should render 1`] = `
                       ×
                     </span>
                     <span
-                      class="mord rule"
+                      class="mspace"
                       style="margin-right:0.2222222222222222em;"
+                    />
+                  </span>
+                  <span
+                    class="base"
+                  >
+                    <span
+                      class="strut"
+                      style="height:0.80556em;vertical-align:-0.05556em;"
                     />
                     <span
                       class="mord"

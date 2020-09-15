@@ -54,7 +54,6 @@ function Articles({ blocs, containerId, convention }) {
           </Grid>
         </>
       ),
-      id: blocsLabels[bloc].label,
       title: blocsLabels[bloc].label,
     };
   });

@@ -1,4 +1,4 @@
-import { fireEvent, render, waitForElement } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 import { act } from "react-dom/test-utils";
 
@@ -34,7 +34,7 @@ describe("<SearchBar />", () => {
     const input = getByLabelText(/recherchez/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
-    await waitForElement(() => getAllByRole("option"));
+    await waitFor(() => getAllByRole("option"));
     expect(container).toMatchSnapshot();
   });
 
@@ -43,7 +43,7 @@ describe("<SearchBar />", () => {
     const input = getByLabelText(/recherchez/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
-    await waitForElement(() => getAllByRole("option"));
+    await waitFor(() => getAllByRole("option"));
     fireEvent.keyDown(input, { keyCode: 40 }); // foo
     fireEvent.keyDown(input, { keyCode: 40 }); // foobar
     expect(input.value).toBe("foobar");
