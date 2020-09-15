@@ -21,7 +21,7 @@ describe("addGlossary", () => {
     const htmlContent =
       "<p>voici une convention collective et un web component mais aussi dispositions, ceci est un test</p>";
     expect(addGlossary(htmlContent)).toEqual(
-      `<p>voici une <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> et un web component mais aussi <webcomponent-tooltip content="Phrase%20ou%20ensemble%20de%20phrases%20d'un%20accord,%20d'une%20convention%20collective,%20d'une%20loi.">dispositions</webcomponent-tooltip>, ceci est un test</p>`
+      `<p>voici une <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> et un web component mais aussi <webcomponent-tooltip content="Phrase%20ou%20ensemble%20de%20phrases%20d%E2%80%99un%20accord%2C%20d%E2%80%99une%20convention%20collective%2C%20d%E2%80%99une%20loi.">dispositions</webcomponent-tooltip>, ceci est un test</p>`
     );
   });
 });

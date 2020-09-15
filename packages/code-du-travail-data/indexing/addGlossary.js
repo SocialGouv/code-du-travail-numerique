@@ -68,8 +68,8 @@ export function addGlossary(htmlContent) {
     ) {
       const id = "__tt__" + index;
       const webComponent = definition
-        ? `<webcomponent-tooltip content="${encodeURI(
-            definition.replace("<p>", "").replace("</p>", "")
+        ? `<webcomponent-tooltip content="${encodeURIComponent(
+            definition.replace(/'/g, "’").replace("<p>", "").replace("</p>", "")
           )}">${term}</webcomponent-tooltip>`
         : `<webcomponent-tooltip-cc>${term}</webcomponent-tooltip-cc>`;
       idToWebComponent.set(id, webComponent);

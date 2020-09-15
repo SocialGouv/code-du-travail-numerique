@@ -80,7 +80,7 @@ class WebComponentsTooltip extends LitElement {
         role="tooltip"
         aria-hidden="${!this.visible}"
       >
-        ${decodeURI(this.content).trim()}
+        ${decodeURIComponent(this.content).trim()}
       </div>
     </div>`;
   }
