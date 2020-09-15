@@ -16,6 +16,9 @@ const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔ
 const wordBoundaryStart = `(?:^|[^_/\\w${frDiacritics}-])`;
 const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
 
+const startTag = `(?<=>[^><]*)`;
+const endTag = `(?=[^<]*</)`;
+
 export function addGlossary(htmlContent) {
   if (!htmlContent) return "";
 
@@ -27,7 +30,7 @@ export function addGlossary(htmlContent) {
       [title, ...variants].map((term) => ({
         definition,
         pattern: new RegExp(
-          `${wordBoundaryStart}(${term})${wordBoundaryEnd}`,
+          `${startTag}${wordBoundaryStart}(${term})${wordBoundaryEnd}${endTag}`,
           "gi"
         ),
         term,
@@ -36,7 +39,7 @@ export function addGlossary(htmlContent) {
     if (abbrs) {
       glossary.push({
         definition,
-        pattern: new RegExp(`\\b(${abbrs})\\b`, "g"),
+        pattern: new RegExp(`${startTag}\\b(${abbrs})\\b${endTag}`, "g"),
         term: abbrs,
       });
     }
@@ -51,10 +54,7 @@ export function addGlossary(htmlContent) {
   conventionMatchers.forEach((matcher) => {
     glossary.unshift({
       definition: false,
-      pattern: new RegExp(
-        `${wordBoundaryStart}(${matcher})${wordBoundaryEnd}`,
-        "gi"
-      ),
+      pattern: new RegExp(`${startTag}(${matcher})${endTag}`, "gi"),
       term: matcher,
     });
   });
@@ -68,8 +68,8 @@ export function addGlossary(htmlContent) {
     ) {
       const id = "__tt__" + index;
       const webComponent = definition
-        ? `<webcomponent-tooltip content="${encodeURI(
-            definition.replace("<p>", "").replace("</p>", "")
+        ? `<webcomponent-tooltip content="${encodeURIComponent(
+            definition.replace(/'/g, "’").replace("<p>", "").replace("</p>", "")
           )}">${term}</webcomponent-tooltip>`
         : `<webcomponent-tooltip-cc>${term}</webcomponent-tooltip-cc>`;
       idToWebComponent.set(id, webComponent);
