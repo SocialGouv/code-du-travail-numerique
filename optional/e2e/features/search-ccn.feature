@@ -28,5 +28,5 @@ Scénario:
   Quand je scroll à "Renseignez le nom de votre convention collective"
   Quand je renseigne "82161143100015" dans le champ "Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN."
   Quand j'attend que le texte "ENTREPRISES" apparaisse
-  Alors je vois "CODEURS EN LIBERTE 75020 PARIS 20E ARRONDISSEMENT"
+  Alors je vois "CODEURS EN LIBERTE 75020 PARIS 20"
   Alors le lien "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils" pointe sur "/convention-collective/1486-bureaux-detudes-techniques-cabinets-dingenieurs-conseils-et-societes-de"

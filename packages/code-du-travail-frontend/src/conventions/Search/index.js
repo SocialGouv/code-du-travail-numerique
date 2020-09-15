@@ -205,13 +205,13 @@ const HelpModal = ({ children: renderProp }) => {
           La convention collective doit être mentionnée sur la fiche de paie du
           salarié. Elle est généralement écrite en haut à gauche ou en bas à
           gauche de la fiche.
-          <MoreContent title="Voir l’exemple" noLeftPadding>
-            <Img
-              src="/static/assets/img/bulletin-cc.png"
-              alt="Exemple type d’un bulletin de paie avec deux loupes rouges indiquant ou se trouve généralement le nom de la convention collective: en haut à gauche ou en bas à gauche."
-            />
-          </MoreContent>
         </p>
+        <MoreContent title="Voir l’exemple" noLeftPadding>
+          <Img
+            src="/static/assets/img/bulletin-cc.png"
+            alt="Exemple type d’un bulletin de paie avec deux loupes rouges indiquant ou se trouve généralement le nom de la convention collective: en haut à gauche ou en bas à gauche."
+          />
+        </MoreContent>
         <Heading as="h4">
           Vérifiez dans le contrat de travail ou la notice remise par
           l’employeur
