@@ -4,7 +4,6 @@ import {
   Input,
   Label,
   Modal,
-  MoreContent,
   theme,
   Title,
   Wrapper,
@@ -54,11 +53,11 @@ const Search = ({ onSelectConvention }) => {
     <>
       <Label htmlFor="convention-search">
         Renseignez le nom de votre convention collective, le nom de votre
-        entreprise, son SIRET ou son SIREN.
+        entreprise ou son SIRET.
       </Label>
       <BlockInput
         role="search"
-        placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
         value={query}
         type="search"
         name="q"
@@ -121,6 +120,12 @@ const Search = ({ onSelectConvention }) => {
               <HelpButton
                 variant="navLink"
                 onClick={() => {
+                  matopush([
+                    "trackEvent",
+                    "cc_search_help",
+                    router.asPath,
+                    `${trackingUID}`,
+                  ]);
                   openModal();
                 }}
               >
@@ -203,15 +208,9 @@ const HelpModal = ({ children: renderProp }) => {
         <Heading as="h4">Vérifiez dans la fiche de paie</Heading>
         <p>
           La convention collective doit être mentionnée sur la fiche de paie du
-          salarié. Elle est généralement écrite en haut à gauche ou en bas à
-          gauche de la fiche.
+          salarié. Elle est généralement écrite dans les informations présentes
+          en en-tête ou en bas de la fiche.
         </p>
-        <MoreContent title="Voir l’exemple" noLeftPadding>
-          <Img
-            src="/static/assets/img/bulletin-cc.png"
-            alt="Exemple type d’un bulletin de paie avec deux loupes rouges indiquant ou se trouve généralement le nom de la convention collective: en haut à gauche ou en bas à gauche."
-          />
-        </MoreContent>
         <Heading as="h4">
           Vérifiez dans le contrat de travail ou la notice remise par
           l’employeur

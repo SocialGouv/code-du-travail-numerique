@@ -4,12 +4,9 @@ import styled from "styled-components";
 
 import { ConventionLink } from "./ConventionLink";
 
-export const CompanyTile = ({ closed, conventions = [], label, onClick }) => (
+export const CompanyTile = ({ conventions = [], label, onClick }) => (
   <>
-    <Entreprise>
-      {closed && <Primary>FERMEE</Primary>}
-      {label}
-    </Entreprise>
+    <Entreprise>{label}</Entreprise>
     {conventions.length ? (
       conventions.map((convention) => (
         <ConventionLink
@@ -25,7 +22,7 @@ export const CompanyTile = ({ closed, conventions = [], label, onClick }) => (
   </>
 );
 
-const { colors, spacings } = theme;
+const { spacings } = theme;
 
 const Entreprise = styled.div`
   margin: ${spacings.xsmall} 0 0 0;
@@ -34,8 +31,4 @@ const Entreprise = styled.div`
 
 const Div = styled.div`
   margin-bottom: ${spacings.xsmall};
-`;
-
-const Primary = styled.div`
-  color: ${colors.primary};
 `;

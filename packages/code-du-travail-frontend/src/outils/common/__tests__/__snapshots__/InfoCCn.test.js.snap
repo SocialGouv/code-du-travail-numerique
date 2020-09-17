@@ -236,7 +236,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
       class="c2"
       for="convention-search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
     </label>
     <span
       class="c3 c4"
@@ -245,7 +245,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
         class="c5"
         id="convention-search"
         name="q"
-        placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
         role="search"
         type="search"
         value=""
@@ -500,7 +500,7 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
       class="c1"
       for="convention-search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise, son SIRET ou son SIREN.
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
     </label>
     <span
       class="c2 c3"
@@ -509,7 +509,7 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
         class="c4"
         id="convention-search"
         name="q"
-        placeholder="Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
         role="search"
         type="search"
         value=""

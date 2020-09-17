@@ -371,8 +371,7 @@ describe("<Search />", () => {
       target: { value: "012345678" },
     });
     jest.runOnlyPendingTimers(); // run debounce timer
-    await wait(); // with for promise to resolve
-    expect(fetch).toHaveBeenCalledTimes(2);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
   });
 });

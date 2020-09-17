@@ -27,7 +27,7 @@ const apiEntrepriseFullText = memoizee(
     fetch(
       `${API_ENTREPRISE_URL}/v1/full_text/${encodeURIComponent(
         cleanEntrepriseName(query)
-      )}`
+      )}?per_page=50`
     )
       .then((r) => r.json())
       .then(formatFullTextResults)
@@ -50,7 +50,7 @@ const apiEntrepriseSiret = memoizee(
               etablissement.unite_legale.denomination,
               etablissement
             ),
-            conventions: (result.length && result[0].conventions) || [],
+            conventions: (result.length && result.conventions) || [],
           },
         ]);
       }),

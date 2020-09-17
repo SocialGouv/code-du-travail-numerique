@@ -44,6 +44,9 @@ export const getResults = async (query) => {
   }
   return {
     conventions,
-    entreprises,
+    entreprises: entreprises.filter(
+      // we might want to remove this in a near future
+      (entreprise) => !entreprise.closed && entreprise.conventions.length
+    ),
   };
 };

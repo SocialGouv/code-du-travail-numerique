@@ -32,7 +32,7 @@ describe("<ConventionModal />", () => {
     const button = getByTestId("bt");
     button.click();
     const input = getByPlaceholderText(
-      /Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN/i
+      /Nom de la convention collective, de l’entreprise ou son SIRET/i
     );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe("<ConventionModal />", () => {
     el.click();
     expect(
       queryByPlaceholderText(
-        /Nom de la convention collective, de l’entreprise, son SIRET ou son SIREN/i
+        /Nom de la convention collective, de l’entreprise ou son SIRET/i
       )
     ).toBeNull();
   });
