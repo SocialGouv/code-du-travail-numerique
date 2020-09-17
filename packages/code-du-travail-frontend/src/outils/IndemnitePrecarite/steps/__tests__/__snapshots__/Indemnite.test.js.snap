@@ -146,26 +146,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
               <span
                 class="katex-mathml"
               >
-                <math>
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
                   <semantics>
                     <mrow>
                       <mfrac>
-                        <mrow>
-                          <mn>
-                            6
-                          </mn>
-                        </mrow>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
+                        <mn>
+                          6
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
                       </mfrac>
                       <mo>
                         ×
@@ -233,16 +226,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                 class="katex-html"
               >
                 <span
-                  class="strut"
-                  style="height:1.32144em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:2.00744em;vertical-align:-0.686em;"
-                />
-                <span
                   class="base"
                 >
+                  <span
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
                   <span
                     class="mord"
                   >
@@ -290,27 +279,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                               </span>
                             </span>
                             <span
-                              style="top:-3.15em;"
+                              style="top:-3.23em;"
                             >
                               <span
                                 class="pstrut"
                                 style="height:3em;"
                               />
                               <span
-                                class="stretchy"
-                                style="height:0.2em;"
-                              >
-                                <svg
-                                  height="0.2em"
-                                  preserveAspectRatio="xMinYMin slice"
-                                  viewBox="0 0 400000 200"
-                                  width="400em"
-                                >
-                                  <path
-                                    d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                  />
-                                </svg>
-                              </span>
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
                             </span>
                             <span
                               style="top:-3.677em;"
@@ -342,7 +320,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                           <span
                             class="vlist"
                             style="height:0.686em;"
-                          />
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
@@ -351,7 +331,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                     />
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
                   />
                   <span
@@ -360,8 +340,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                     ×
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
                   />
                   <span
                     class="mord"
@@ -369,71 +357,71 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                     "
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     o
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
                     S
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     i
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.02778em;"
                   >
                     r
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     e
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     s
                   </span>
@@ -652,29 +640,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
               <span
                 class="katex-mathml"
               >
-                <math>
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
                   <semantics>
                     <mrow>
                       <mfrac>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
                       </mfrac>
                       <mo>
                         ×
@@ -742,16 +720,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                 class="katex-html"
               >
                 <span
-                  class="strut"
-                  style="height:1.32144em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:2.00744em;vertical-align:-0.686em;"
-                />
-                <span
                   class="base"
                 >
+                  <span
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
                   <span
                     class="mord"
                   >
@@ -799,27 +773,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                               </span>
                             </span>
                             <span
-                              style="top:-3.15em;"
+                              style="top:-3.23em;"
                             >
                               <span
                                 class="pstrut"
                                 style="height:3em;"
                               />
                               <span
-                                class="stretchy"
-                                style="height:0.2em;"
-                              >
-                                <svg
-                                  height="0.2em"
-                                  preserveAspectRatio="xMinYMin slice"
-                                  viewBox="0 0 400000 200"
-                                  width="400em"
-                                >
-                                  <path
-                                    d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                  />
-                                </svg>
-                              </span>
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
                             </span>
                             <span
                               style="top:-3.677em;"
@@ -856,7 +819,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                           <span
                             class="vlist"
                             style="height:0.686em;"
-                          />
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
@@ -865,7 +830,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                     />
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
                   />
                   <span
@@ -874,8 +839,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                     ×
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
                   />
                   <span
                     class="mord"
@@ -883,71 +856,71 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                     "
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     o
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
                     S
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     i
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.02778em;"
                   >
                     r
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     e
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     s
                   </span>
@@ -1153,29 +1126,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
               <span
                 class="katex-mathml"
               >
-                <math>
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
                   <semantics>
                     <mrow>
                       <mfrac>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
                       </mfrac>
                       <mo>
                         ×
@@ -1243,16 +1206,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                 class="katex-html"
               >
                 <span
-                  class="strut"
-                  style="height:1.32144em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:2.00744em;vertical-align:-0.686em;"
-                />
-                <span
                   class="base"
                 >
+                  <span
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
                   <span
                     class="mord"
                   >
@@ -1300,27 +1259,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                               </span>
                             </span>
                             <span
-                              style="top:-3.15em;"
+                              style="top:-3.23em;"
                             >
                               <span
                                 class="pstrut"
                                 style="height:3em;"
                               />
                               <span
-                                class="stretchy"
-                                style="height:0.2em;"
-                              >
-                                <svg
-                                  height="0.2em"
-                                  preserveAspectRatio="xMinYMin slice"
-                                  viewBox="0 0 400000 200"
-                                  width="400em"
-                                >
-                                  <path
-                                    d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                  />
-                                </svg>
-                              </span>
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
                             </span>
                             <span
                               style="top:-3.677em;"
@@ -1357,7 +1305,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                           <span
                             class="vlist"
                             style="height:0.686em;"
-                          />
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
@@ -1366,7 +1316,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                     />
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
                   />
                   <span
@@ -1375,8 +1325,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                     ×
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
                   />
                   <span
                     class="mord"
@@ -1384,71 +1342,71 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                     "
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     o
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
                     S
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     i
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.02778em;"
                   >
                     r
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     e
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     s
                   </span>
@@ -1667,29 +1625,19 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
               <span
                 class="katex-mathml"
               >
-                <math>
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
                   <semantics>
                     <mrow>
                       <mfrac>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
                       </mfrac>
                       <mo>
                         ×
@@ -1757,16 +1705,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                 class="katex-html"
               >
                 <span
-                  class="strut"
-                  style="height:1.32144em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:2.00744em;vertical-align:-0.686em;"
-                />
-                <span
                   class="base"
                 >
+                  <span
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
                   <span
                     class="mord"
                   >
@@ -1814,27 +1758,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                               </span>
                             </span>
                             <span
-                              style="top:-3.15em;"
+                              style="top:-3.23em;"
                             >
                               <span
                                 class="pstrut"
                                 style="height:3em;"
                               />
                               <span
-                                class="stretchy"
-                                style="height:0.2em;"
-                              >
-                                <svg
-                                  height="0.2em"
-                                  preserveAspectRatio="xMinYMin slice"
-                                  viewBox="0 0 400000 200"
-                                  width="400em"
-                                >
-                                  <path
-                                    d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                  />
-                                </svg>
-                              </span>
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
                             </span>
                             <span
                               style="top:-3.677em;"
@@ -1871,7 +1804,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                           <span
                             class="vlist"
                             style="height:0.686em;"
-                          />
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
@@ -1880,7 +1815,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                     />
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
                   />
                   <span
@@ -1889,8 +1824,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                     ×
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
                   />
                   <span
                     class="mord"
@@ -1898,71 +1841,71 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                     "
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     o
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
                     S
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     i
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.02778em;"
                   >
                     r
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     e
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     s
                   </span>
@@ -2171,29 +2114,19 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
               <span
                 class="katex-mathml"
               >
-                <math>
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
                   <semantics>
                     <mrow>
                       <mfrac>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
-                        <mrow>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                          <mn>
-                            0
-                          </mn>
-                        </mrow>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
                       </mfrac>
                       <mo>
                         ×
@@ -2261,16 +2194,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                 class="katex-html"
               >
                 <span
-                  class="strut"
-                  style="height:1.32144em;"
-                />
-                <span
-                  class="strut bottom"
-                  style="height:2.00744em;vertical-align:-0.686em;"
-                />
-                <span
                   class="base"
                 >
+                  <span
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
                   <span
                     class="mord"
                   >
@@ -2318,27 +2247,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                               </span>
                             </span>
                             <span
-                              style="top:-3.15em;"
+                              style="top:-3.23em;"
                             >
                               <span
                                 class="pstrut"
                                 style="height:3em;"
                               />
                               <span
-                                class="stretchy"
-                                style="height:0.2em;"
-                              >
-                                <svg
-                                  height="0.2em"
-                                  preserveAspectRatio="xMinYMin slice"
-                                  viewBox="0 0 400000 200"
-                                  width="400em"
-                                >
-                                  <path
-                                    d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                  />
-                                </svg>
-                              </span>
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
                             </span>
                             <span
                               style="top:-3.677em;"
@@ -2375,7 +2293,9 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                           <span
                             class="vlist"
                             style="height:0.686em;"
-                          />
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
@@ -2384,7 +2304,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                     />
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
                   />
                   <span
@@ -2393,8 +2313,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                     ×
                   </span>
                   <span
-                    class="mord rule"
+                    class="mspace"
                     style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
                   />
                   <span
                     class="mord"
@@ -2402,71 +2330,71 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                     "
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     o
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     t
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
                     S
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.01968em;"
                   >
                     l
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     a
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     i
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                     style="margin-right:0.02778em;"
                   >
                     r
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     e
                   </span>
                   <span
-                    class="mord mathit"
+                    class="mord mathnormal"
                   >
                     s
                   </span>

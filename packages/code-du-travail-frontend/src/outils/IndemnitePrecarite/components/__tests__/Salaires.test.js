@@ -1,4 +1,4 @@
-import { render, wait } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import arrayMutators from "final-form-arrays";
 import React from "react";
 import { Form } from "react-final-form";
@@ -30,7 +30,6 @@ describe("<Salaires />", () => {
     );
     const deleteButton = getByText(/supprimer/i);
     deleteButton.click();
-    await wait(() => {});
     expect(container).toMatchSnapshot();
   });
   it("should add a salaire", async () => {
@@ -44,7 +43,7 @@ describe("<Salaires />", () => {
     );
     const addButton = getByText(/ajouter/i);
     addButton.click();
-    await wait(() => getByText(/supprimer/i));
+    await waitFor(() => getByText(/supprimer/i));
     expect(container).toMatchSnapshot();
   });
 });

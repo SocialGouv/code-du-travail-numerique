@@ -13,7 +13,7 @@ const Mdx = ({ markdown, components = {} }) => {
   );
   return unified()
     .use(markdownParser)
-    .use(remark2rehype, { allowDangerousHTML: true })
+    .use(remark2rehype, { allowDangerousHtml: true })
     .use(raw)
     .use(rehype2react, {
       components,

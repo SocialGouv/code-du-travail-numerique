@@ -117,7 +117,7 @@ export function getIndemnite({
       labels.majoration = majoration;
       labels.minoration = minoration;
       indemniteConventionnelle += majoration - minoration;
-      formula += ` ${majoration > 0 ? ` + "majoration"` : ""} - "minoration"`;
+      formula += ` ${majoration > 0 ? ` + majoration` : ""} - minoration`;
     }
   }
   return {

@@ -43,7 +43,6 @@ function Contributions({ contributions, convention }) {
         <Accordion
           items={contributionsByTheme[theme].map((item) => ({
             body: AccordionContent(item),
-            id: item.slug,
             title: item.question,
           }))}
           onChange={trackAccordionPanelState(
@@ -52,7 +51,6 @@ function Contributions({ contributions, convention }) {
           )}
         />
       ),
-      id: theme,
       title: theme,
     }));
 

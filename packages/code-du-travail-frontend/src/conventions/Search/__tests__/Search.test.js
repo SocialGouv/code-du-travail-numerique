@@ -1,9 +1,4 @@
-import {
-  fireEvent,
-  render,
-  wait,
-  waitForElement,
-} from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import fetch from "isomorphic-unfetch";
 import React from "react";
 
@@ -87,10 +82,9 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "1234" } });
     jest.runAllTimers();
-    await wait();
-    expect(container).toMatchSnapshot();
-    expect(fetch).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=1234");
+    expect(container).toMatchSnapshot();
   });
 
   it("when input is a valid IDCC, should show only the perfect match ", async () => {
@@ -125,10 +119,9 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "4567" } });
     jest.runAllTimers();
-    await wait();
-    expect(container).toMatchSnapshot();
-    expect(fetch).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
+    expect(container).toMatchSnapshot();
   });
 
   it("should show no results when no result", async () => {
@@ -144,7 +137,7 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "9999" } });
     jest.runAllTimers();
-    await waitForElement(() => findByText(/Aucun résultat/i), { container });
+    await waitFor(() => findByText(/Aucun résultat/i), { container });
     expect(container).toMatchSnapshot();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=9999");
@@ -183,8 +176,7 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "42" } });
     jest.runAllTimers();
-    await wait();
-    expect(onSelectConvention).toHaveBeenCalledTimes(0);
+    await waitFor(() => expect(onSelectConvention).toHaveBeenCalledTimes(0));
     const link = getByText("smaller convention 2");
     fireEvent.click(link);
     expect(onSelectConvention).toHaveBeenCalledTimes(1);
@@ -250,8 +242,7 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "hello" } });
     jest.runOnlyPendingTimers(); // run debounce timer
-    await wait(); // with for promise to resolve
-    expect(fetch).toHaveBeenCalledTimes(3);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(3));
     expect(container).toMatchSnapshot();
   });
 
@@ -283,8 +274,7 @@ describe("<Search />", () => {
     });
     fireEvent.change(getByRole("search"), { target: { value: "xxxx" } });
     jest.runOnlyPendingTimers(); // run debounce timer
-    await wait(); // with for promise to resolve
-    expect(fetch).toHaveBeenCalledTimes(2);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
   });
 
@@ -325,8 +315,7 @@ describe("<Search />", () => {
       target: { value: "01234567891011" },
     });
     jest.runOnlyPendingTimers(); // run debounce timer
-    await wait(); // with for promise to resolve
-    expect(fetch).toHaveBeenCalledTimes(2);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
   });
 });

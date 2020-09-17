@@ -1,4 +1,4 @@
-import { render, wait } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import arrayMutators from "final-form-arrays";
 import React from "react";
 import { Form } from "react-final-form";
@@ -18,7 +18,7 @@ describe("<Primes />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("should delete a primes", async () => {
+  it("should delete a prime", async () => {
     const onSubmit = jest.fn();
     const { container, getByText } = render(
       <Form
@@ -30,7 +30,6 @@ describe("<Primes />", () => {
     );
     const deleteButton = getByText(/supprimer/i);
     deleteButton.click();
-    await wait(() => {});
     expect(container).toMatchSnapshot();
   });
   it("should add a prime", async () => {
@@ -44,7 +43,7 @@ describe("<Primes />", () => {
     );
     const addButton = getByText(/ajouter/i);
     addButton.click();
-    await wait(() => getByText(/supprimer/i));
+    await waitFor(() => getByText(/supprimer/i));
     expect(container).toMatchSnapshot();
   });
 });

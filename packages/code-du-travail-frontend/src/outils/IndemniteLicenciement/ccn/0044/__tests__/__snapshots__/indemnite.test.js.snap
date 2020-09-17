@@ -2,10 +2,10 @@
 
 exports[`getIndemnite 2k, 2ans d'ancienneté, groupe IV should return 1200 1`] = `
 Object {
-  "formula": "3 / 10 * Sref * \\"ancienneté\\"",
+  "formula": "3 / 10 * Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 2,
-    "Ancienneté totale": 2,
+    "Ancienneté totale (Anc)": 2,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -14,10 +14,10 @@ Object {
 
 exports[`getIndemnite 2k, 2ans d'ancienneté, groupe V should return 1600 1`] = `
 Object {
-  "formula": "2 / 5 * Sref * \\"ancienneté\\"",
+  "formula": "2 / 5 * Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 2,
-    "Ancienneté totale": 2,
+    "Ancienneté totale (Anc)": 2,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -26,11 +26,11 @@ Object {
 
 exports[`getIndemnite 2k, 5ans d'ancienneté, 51ans should return 5000 1`] = `
 Object {
-  "formula": "3 / 10 * Sref * \\"ancienneté\\"  + Sref",
+  "formula": "3 / 10 * Sref * Anc  + Sref",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 5,
-    "Ancienneté totale": 5,
+    "Ancienneté totale (Anc)": 5,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
   },
@@ -39,11 +39,11 @@ Object {
 
 exports[`getIndemnite 2k, 5ans d'ancienneté, 51ans, licenciement eco, OPE should return 7000 1`] = `
 Object {
-  "formula": "3 / 10 * Sref * \\"ancienneté\\"  + Sref * 2",
+  "formula": "3 / 10 * Sref * Anc  + Sref * 2",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 5,
-    "Ancienneté totale": 5,
+    "Ancienneté totale (Anc)": 5,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -54,11 +54,11 @@ Object {
 
 exports[`getIndemnite 2k, 5ans d'ancienneté, 55ans should return 7000 1`] = `
 Object {
-  "formula": "3 / 10 * Sref * \\"ancienneté\\"  + Sref * 2",
+  "formula": "3 / 10 * Sref * Anc  + Sref * 2",
   "labels": Object {
     "Age": 55,
     "Ancienneté (en année entière)": 5,
-    "Ancienneté totale": 5,
+    "Ancienneté totale (Anc)": 5,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
   },
@@ -67,11 +67,11 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, 51ans, groupe IV should return 10000 1`] = `
 Object {
-  "formula": "4 / 10 * Sref * \\"ancienneté\\"+ Sref",
+  "formula": "4 / 10 * Sref * Anc+ Sref",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -80,11 +80,11 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, 51ans, groupe V should return 14000 1`] = `
 Object {
-  "formula": "3 / 5 * Sref * \\"ancienneté\\" + Sref",
+  "formula": "3 / 5 * Sref * Anc + Sref",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -93,10 +93,10 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, groupe IV should return 8000 1`] = `
 Object {
-  "formula": "4 / 10 * Sref * \\"ancienneté\\"",
+  "formula": "4 / 10 * Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -105,10 +105,10 @@ Object {
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, groupe V should return 12000 1`] = `
 Object {
-  "formula": "3 / 5 * Sref * \\"ancienneté\\"",
+  "formula": "3 / 5 * Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -117,11 +117,11 @@ Object {
 
 exports[`getIndemnite 2k, 10ans, 51ans, groupe IV, licenciement eco, OPE should return 12000 1`] = `
 Object {
-  "formula": "4 / 10 * Sref * \\"ancienneté\\"+ Sref* 2",
+  "formula": "4 / 10 * Sref * Anc+ Sref* 2",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -132,11 +132,11 @@ Object {
 
 exports[`getIndemnite 2k, 10ans, 51ans, groupe V, licenciement eco, OPE should return 16000 1`] = `
 Object {
-  "formula": "3 / 5 * Sref * \\"ancienneté\\" + Sref* 2",
+  "formula": "3 / 5 * Sref * Anc + Sref* 2",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 10,
-    "Ancienneté totale": 10,
+    "Ancienneté totale (Anc)": 10,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -150,7 +150,7 @@ Object {
   "formula": "-",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
   },
@@ -162,7 +162,7 @@ Object {
   "formula": "Sref",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -176,7 +176,7 @@ Object {
   "formula": "-",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -188,7 +188,7 @@ Object {
   "formula": "Sref",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -202,7 +202,7 @@ Object {
   "formula": "-",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -214,7 +214,7 @@ Object {
   "formula": "Sref",
   "labels": Object {
     "Ancienneté (en année entière)": 1,
-    "Ancienneté totale": 1,
+    "Ancienneté totale (Anc)": 1,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -225,11 +225,11 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, 51ans, groupe IV should return 22000 1`] = `
 Object {
-  "formula": "5 / 10 *  Sref * \\"ancienneté\\"+ Sref",
+  "formula": "5 / 10 *  Sref * Anc+ Sref",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -238,11 +238,11 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, 51ans, groupe IV, licenciement eco, OPE should return 24000 1`] = `
 Object {
-  "formula": "5 / 10 *  Sref * \\"ancienneté\\"+ Sref* 2",
+  "formula": "5 / 10 *  Sref * Anc+ Sref* 2",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -253,11 +253,11 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, 51ans, groupe V should return 34000 1`] = `
 Object {
-  "formula": "4 / 5 * Sref * \\"ancienneté\\" + Sref",
+  "formula": "4 / 5 * Sref * Anc + Sref",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -266,11 +266,11 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, 51ans, groupe V, licenciement eco, OPE should return 36000 1`] = `
 Object {
-  "formula": "4 / 5 * Sref * \\"ancienneté\\" + Sref* 2",
+  "formula": "4 / 5 * Sref * Anc + Sref* 2",
   "labels": Object {
     "Age": 51,
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -281,10 +281,10 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, groupe IV should return 20000 1`] = `
 Object {
-  "formula": "5 / 10 *  Sref * \\"ancienneté\\"",
+  "formula": "5 / 10 *  Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
   },
@@ -293,10 +293,10 @@ Object {
 
 exports[`getIndemnite 2k, 20ans d'ancienneté, groupe V should return 32000 1`] = `
 Object {
-  "formula": "4 / 5 * Sref * \\"ancienneté\\"",
+  "formula": "4 / 5 * Sref * Anc",
   "labels": Object {
     "Ancienneté (en année entière)": 20,
-    "Ancienneté totale": 20,
+    "Ancienneté totale (Anc)": 20,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -309,7 +309,7 @@ Object {
   "labels": Object {
     "Age": 55,
     "Ancienneté (en année entière)": 23,
-    "Ancienneté totale": 23,
+    "Ancienneté totale (Anc)": 23,
     "Groupe": "V",
     "Salaire de référence (Sref)": 2000,
   },
@@ -318,10 +318,10 @@ Object {
 
 exports[`getIndemnite 2k, 30mois d'ancienneté should return 1500 1`] = `
 Object {
-  "formula": "3 / 10 * Sref * \\"ancienneté\\" ",
+  "formula": "3 / 10 * Sref * Anc ",
   "labels": Object {
     "Ancienneté (en année entière)": 2,
-    "Ancienneté totale": 2.5,
+    "Ancienneté totale (Anc)": 2.5,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
   },
@@ -334,7 +334,7 @@ Object {
   "labels": Object {
     "Age": 55,
     "Ancienneté (en année entière)": 33,
-    "Ancienneté totale": 33,
+    "Ancienneté totale (Anc)": 33,
     "Groupe": "IV",
     "Salaire de référence (Sref)": 2000,
     "affiliation à une OPE": "oui",
@@ -349,7 +349,7 @@ Object {
   "labels": Object {
     "Age": 55,
     "Ancienneté (en année entière)": 41,
-    "Ancienneté totale": 41,
+    "Ancienneté totale (Anc)": 41,
     "Groupe": "I",
     "Salaire de référence (Sref)": 2000,
   },

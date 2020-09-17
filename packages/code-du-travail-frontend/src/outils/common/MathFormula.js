@@ -1,7 +1,7 @@
+import TeX from "@matejmazur/react-katex";
 import { theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
-import { BlockMath } from "react-katex";
 import styled from "styled-components";
 
 export const asciiMathToTex = (ascii) => {
@@ -26,7 +26,7 @@ export const MathFormula = ({ formula }) => {
   return (
     <Wrapper>
       <StyledFormula>
-        <BlockMath>{asciiMathToTex(formula)}</BlockMath>
+        <TeX block>{asciiMathToTex(formula)}</TeX>
       </StyledFormula>
     </Wrapper>
   );

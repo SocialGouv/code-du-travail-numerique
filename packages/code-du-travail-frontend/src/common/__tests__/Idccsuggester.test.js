@@ -1,4 +1,4 @@
-import { fireEvent, render, waitForElement } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 
 import { IdccSuggester } from "../IdccSuggester";
@@ -29,7 +29,7 @@ describe("<IdccSuggester />", () => {
     const input = getByPlaceholderText(/convention collective/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
-    await waitForElement(() => getAllByRole("option"));
+    await waitFor(() => getAllByRole("option"));
     expect(container).toMatchSnapshot();
   });
 
@@ -42,7 +42,7 @@ describe("<IdccSuggester />", () => {
     const input = getByPlaceholderText(/convention collective/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
-    const option = await waitForElement(() => getByRole("option"));
+    const option = await waitFor(() => getByRole("option"));
     option.click();
     expect(onSelect).toHaveBeenCalledWith(item);
   });

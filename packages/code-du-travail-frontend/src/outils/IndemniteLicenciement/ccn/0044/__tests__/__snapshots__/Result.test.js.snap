@@ -246,20 +246,19 @@ exports[`<Result /> should render 1`] = `
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mfrac>
-                              <mrow>
-                                <mn>
-                                  1
-                                </mn>
-                              </mrow>
-                              <mrow>
-                                <mn>
-                                  4
-                                </mn>
-                              </mrow>
+                              <mn>
+                                1
+                              </mn>
+                              <mn>
+                                4
+                              </mn>
                             </mfrac>
                             <mo>
                               ×
@@ -296,16 +295,12 @@ exports[`<Result /> should render 1`] = `
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:1.32144em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:2.00744em;vertical-align:-0.686em;"
-                      />
-                      <span
                         class="base"
                       >
+                        <span
+                          class="strut"
+                          style="height:2.00744em;vertical-align:-0.686em;"
+                        />
                         <span
                           class="mord"
                         >
@@ -343,27 +338,16 @@ exports[`<Result /> should render 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    style="top:-3.15em;"
+                                    style="top:-3.23em;"
                                   >
                                     <span
                                       class="pstrut"
                                       style="height:3em;"
                                     />
                                     <span
-                                      class="stretchy"
-                                      style="height:0.2em;"
-                                    >
-                                      <svg
-                                        height="0.2em"
-                                        preserveAspectRatio="xMinYMin slice"
-                                        viewBox="0 0 400000 200"
-                                        width="400em"
-                                      >
-                                        <path
-                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                        />
-                                      </svg>
-                                    </span>
+                                      class="frac-line"
+                                      style="border-bottom-width:0.04em;"
+                                    />
                                   </span>
                                   <span
                                     style="top:-3.677em;"
@@ -395,7 +379,9 @@ exports[`<Result /> should render 1`] = `
                                 <span
                                   class="vlist"
                                   style="height:0.686em;"
-                                />
+                                >
+                                  <span />
+                                </span>
                               </span>
                             </span>
                           </span>
@@ -404,7 +390,7 @@ exports[`<Result /> should render 1`] = `
                           />
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -413,34 +399,42 @@ exports[`<Result /> should render 1`] = `
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -449,11 +443,19 @@ exports[`<Result /> should render 1`] = `
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.68333em;vertical-align:0em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                         >
                           A
                         </span>
@@ -531,7 +533,7 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c11"
           >
-            Ancienneté totale
+            Ancienneté totale (Anc)
              : 
             2.5
           </li>
@@ -574,23 +576,19 @@ exports[`<Result /> should render 1`] = `
                     <span
                       class="katex-mathml"
                     >
-                      <math>
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
                         <semantics>
                           <mrow>
                             <mfrac>
-                              <mrow>
-                                <mn>
-                                  3
-                                </mn>
-                              </mrow>
-                              <mrow>
-                                <mn>
-                                  1
-                                </mn>
-                                <mn>
-                                  0
-                                </mn>
-                              </mrow>
+                              <mn>
+                                3
+                              </mn>
+                              <mn>
+                                10
+                              </mn>
                             </mfrac>
                             <mo>
                               ×
@@ -610,13 +608,8 @@ exports[`<Result /> should render 1`] = `
                             <mo>
                               ×
                             </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
                             <mi>
-                              a
+                              A
                             </mi>
                             <mi>
                               n
@@ -624,44 +617,11 @@ exports[`<Result /> should render 1`] = `
                             <mi>
                               c
                             </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              n
-                            </mi>
-                            <mi>
-                              n
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mover
-                              accent="true"
-                            >
-                              <mi>
-                                e
-                              </mi>
-                              <mo>
-                                ˊ
-                              </mo>
-                            </mover>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
                           </mrow>
                           <annotation
                             encoding="application/x-tex"
                           >
-                            \\frac{3}{10} \\times Sref \\times "ancienneté" 
+                            \\frac{3}{10} \\times Sref \\times Anc 
                           </annotation>
                         </semantics>
                       </math>
@@ -671,16 +631,12 @@ exports[`<Result /> should render 1`] = `
                       class="katex-html"
                     >
                       <span
-                        class="strut"
-                        style="height:1.32144em;"
-                      />
-                      <span
-                        class="strut bottom"
-                        style="height:2.00744em;vertical-align:-0.686em;"
-                      />
-                      <span
                         class="base"
                       >
+                        <span
+                          class="strut"
+                          style="height:2.00744em;vertical-align:-0.686em;"
+                        />
                         <span
                           class="mord"
                         >
@@ -723,27 +679,16 @@ exports[`<Result /> should render 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    style="top:-3.15em;"
+                                    style="top:-3.23em;"
                                   >
                                     <span
                                       class="pstrut"
                                       style="height:3em;"
                                     />
                                     <span
-                                      class="stretchy"
-                                      style="height:0.2em;"
-                                    >
-                                      <svg
-                                        height="0.2em"
-                                        preserveAspectRatio="xMinYMin slice"
-                                        viewBox="0 0 400000 200"
-                                        width="400em"
-                                      >
-                                        <path
-                                          d="M0 80H400000 v40H0z M0 80H400000 v40H0z"
-                                        />
-                                      </svg>
-                                    </span>
+                                      class="frac-line"
+                                      style="border-bottom-width:0.04em;"
+                                    />
                                   </span>
                                   <span
                                     style="top:-3.677em;"
@@ -775,7 +720,9 @@ exports[`<Result /> should render 1`] = `
                                 <span
                                   class="vlist"
                                   style="height:0.686em;"
-                                />
+                                >
+                                  <span />
+                                </span>
                               </span>
                             </span>
                           </span>
@@ -784,7 +731,7 @@ exports[`<Result /> should render 1`] = `
                           />
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -793,34 +740,42 @@ exports[`<Result /> should render 1`] = `
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord mathit"
+                          class="strut"
+                          style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                           style="margin-right:0.05764em;"
                         >
                           S
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
                           r
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           e
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                           style="margin-right:0.10764em;"
                         >
                           f
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
                         <span
@@ -829,107 +784,31 @@ exports[`<Result /> should render 1`] = `
                           ×
                         </span>
                         <span
-                          class="mord rule"
+                          class="mspace"
                           style="margin-right:0.2222222222222222em;"
                         />
+                      </span>
+                      <span
+                        class="base"
+                      >
                         <span
-                          class="mord"
+                          class="strut"
+                          style="height:0.68333em;vertical-align:0em;"
+                        />
+                        <span
+                          class="mord mathnormal"
                         >
-                          "
+                          A
                         </span>
                         <span
-                          class="mord mathit"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           n
                         </span>
                         <span
-                          class="mord mathit"
+                          class="mord mathnormal"
                         >
                           c
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          i
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          e
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          n
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          n
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          e
-                        </span>
-                        <span
-                          class="mord mathit"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord accent"
-                        >
-                          <span
-                            class="vlist-t"
-                          >
-                            <span
-                              class="vlist-r"
-                            >
-                              <span
-                                class="vlist"
-                                style="height:0.69444em;"
-                              >
-                                <span
-                                  style="top:-3em;"
-                                >
-                                  <span
-                                    class="pstrut"
-                                    style="height:3em;"
-                                  />
-                                  <span
-                                    class="mord mathit"
-                                  >
-                                    e
-                                  </span>
-                                </span>
-                                <span
-                                  style="top:-3em;"
-                                >
-                                  <span
-                                    class="pstrut"
-                                    style="height:3em;"
-                                  />
-                                  <span
-                                    class="accent-body"
-                                    style="left:-0.19444em;"
-                                  >
-                                    ˊ
-                                  </span>
-                                </span>
-                              </span>
-                            </span>
-                          </span>
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
                         </span>
                       </span>
                     </span>

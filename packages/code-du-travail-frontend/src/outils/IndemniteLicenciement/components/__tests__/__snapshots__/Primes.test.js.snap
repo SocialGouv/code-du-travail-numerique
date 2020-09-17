@@ -302,7 +302,7 @@ exports[`<Primes /> should add a prime 1`] = `
 </div>
 `;
 
-exports[`<Primes /> should delete a primes 1`] = `
+exports[`<Primes /> should delete a prime 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
