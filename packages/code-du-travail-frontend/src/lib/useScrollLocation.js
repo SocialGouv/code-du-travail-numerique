@@ -1,9 +1,9 @@
-import { useLayoutEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-const isBrowser = typeof window === "undefined";
+const isServer = typeof window === "undefined";
 
 function getWindowScrollPosition() {
-  if (isBrowser) {
+  if (isServer) {
     return { x: 0, y: 0 };
   }
   return {
@@ -12,40 +12,38 @@ function getWindowScrollPosition() {
   };
 }
 
-export function useWindowScrollPosition(effect, deps = []) {
-  const positionRef = useRef(getWindowScrollPosition());
+export function useWindowScrollPosition() {
+  const [scrollInfo, setScrollInfo] = useState({ direction: "down", y: 0 });
   const throttleMs = 30;
-  const throttleRef = useRef(null);
 
-  function triggerWindowPositionUpdate() {
-    const currentPosition = getWindowScrollPosition();
-    effect({
-      direction: currentPosition.y >= positionRef.current.y ? "down" : "up",
-      prevX: positionRef.current.x,
-      prevY: positionRef.current.y,
-      x: currentPosition.x,
-      y: currentPosition.y,
-    });
-    positionRef.current = currentPosition;
-    throttleRef.current = null;
-  }
-  const handleScroll = () => {
-    if (throttleMs) {
-      if (throttleRef.current === null) {
-        throttleRef.current = setTimeout(
-          triggerWindowPositionUpdate,
-          throttleMs
-        );
-      }
-    } else {
-      triggerWindowPositionUpdate();
+  const isThrottlingRef = useRef(false);
+  const previousPosition = useRef(getWindowScrollPosition());
+
+  const handleScroll = useCallback(() => {
+    if (!isThrottlingRef.current) {
+      isThrottlingRef.current = true;
+      setTimeout(() => {
+        const currentPosition = getWindowScrollPosition();
+        setScrollInfo({
+          direction:
+            currentPosition.y >= previousPosition.current.y ? "down" : "up",
+          prevX: previousPosition.current.x,
+          prevY: previousPosition.current.y,
+          x: currentPosition.x,
+          y: currentPosition.y,
+        });
+        isThrottlingRef.current = false;
+        previousPosition.current = currentPosition;
+      }, throttleMs);
     }
-  };
+  }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [...deps]);
+  }, [handleScroll]);
+
+  return scrollInfo;
 }

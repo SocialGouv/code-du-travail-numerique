@@ -259,7 +259,3 @@ const HelpModal = ({ children: renderProp }) => {
     </>
   );
 };
-
-const Img = styled.img`
-  max-width: 100%;
-`;
