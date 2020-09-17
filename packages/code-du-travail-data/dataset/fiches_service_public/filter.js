@@ -1,15 +1,15 @@
 const uniqBy = require("lodash.uniqby");
 
-const filter = fiches => {
-  const filteredFiches = fiches.filter(fiche => {
+const filter = (fiches) => {
+  const filteredFiches = fiches.filter((fiche) => {
     const arianeIDs = fiche.children[0].children
-      .find(el => el.name === "FilDAriane")
+      .find((el) => el.name === "FilDAriane")
       .children.reduce((ids, el) => {
         if (el.name === "Niveau") ids.push(el.attributes.ID);
         return ids;
       }, []);
 
-    const matchFilDAriane = id => arianeIDs.includes(id);
+    const matchFilDAriane = (id) => arianeIDs.includes(id);
 
     if (excludeFicheId.some(matchFilDAriane)) {
       return false;
@@ -29,7 +29,7 @@ const filter = fiches => {
     // Par défaut, on exclue
     return false;
   });
-  return uniqBy(filteredFiches, fiche => fiche.children[0].attributes.ID);
+  return uniqBy(filteredFiches, (fiche) => fiche.children[0].attributes.ID);
 };
 
 // Liste fournie par @jrduscher
