@@ -50,7 +50,7 @@ const apiEntrepriseSiret = memoizee(
               etablissement.unite_legale.denomination,
               etablissement
             ),
-            conventions: (result.length && result.conventions) || [],
+            conventions: (result.length && result[0].conventions) || [],
           },
         ]);
       }),
