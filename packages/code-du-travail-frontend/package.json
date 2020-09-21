@@ -93,7 +93,7 @@
     "jest": "^26.4.2",
     "jest-styled-components": "^7.0.3",
     "mockdate": "^3.0.2",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "stylelint": "^13.7.1",
     "stylelint-config-rational-order": "^0.1.2",
