@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
@@ -10,23 +10,23 @@ import { TitleParagraph } from "../common/TitleParagraph";
 export const PageTitle = ({
   as,
   children,
-  leftStripped = false,
+  stripe,
   shift = "",
   subtitle,
   variant,
   ...props
 }) => (
-  <Header pageTitle leftStripped={leftStripped} shift={shift} {...props}>
-    <StyledPageTitle leftStripped={leftStripped} as={as} shift={shift}>
+  <Header pageTitle stripe={stripe} shift={shift} {...props}>
+    <StyledPageTitle stripe={stripe} as={as} shift={shift}>
       <Stripe
         rounded={variant !== "primary"}
         variant={variant}
-        {...(leftStripped && { position: "left", length: "100%" })}
+        {...(stripe === "left" && { length: "100%", position: "left" })}
       />
       {children}
     </StyledPageTitle>
     {subtitle && (
-      <TitleParagraph leftStripped={leftStripped} shift={shift}>
+      <TitleParagraph stripe={stripe} shift={shift}>
         {subtitle}
       </TitleParagraph>
     )}
@@ -37,12 +37,13 @@ PageTitle.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
   shift: PropTypes.string,
-  leftStripped: PropTypes.bool,
+  stripe: PropTypes.oneOf(["left", "top"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
 };
 
 PageTitle.defaultProps = {
+  stripe: "top",
   variant: "secondary",
 };
 
@@ -54,18 +55,18 @@ const StyledPageTitle = styled.h1`
   font-size: ${fonts.sizes.headings.large};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
-  ${({ leftStripped, shift }) => {
-    if (leftStripped) {
+  ${({ stripe, shift }) => {
+    if (stripe === "left") {
       return css`
         padding-left: ${shift ? shift : spacings.large};
         @media (max-width: ${breakpoints.mobile}) {
           padding-left: ${spacings.base};
         }
       `;
-    }
-    return css`
-      padding-top: ${spacings.base};
-    `;
+    } else if (stripe === "top")
+      return css`
+        padding-top: ${spacings.base};
+      `;
   }};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.headings.mobileMedium};

@@ -13,34 +13,23 @@ export const Title = ({
   isFirst,
   shift = "",
   subtitle,
-  topStripped = false,
-  unstriped = false,
+  stripe,
   variant,
   ...props
 }) => (
-  <Header
-    isFirst={isFirst}
-    leftStripped={!topStripped}
-    shift={shift}
-    {...props}
-  >
-    <StyledTitle
-      unstriped={unstriped}
-      leftStripped={!topStripped}
-      as={as}
-      shift={shift}
-    >
-      {!unstriped && (
+  <Header isFirst={isFirst} stripe={stripe} shift={shift} {...props}>
+    <StyledTitle stripe={stripe} as={as} shift={shift}>
+      {stripe !== "none" && (
         <Stripe
           rounded={variant !== "primary"}
           variant={variant}
-          {...(!topStripped && { length: "100%", position: "left" })}
+          {...(stripe === "left" && { length: "100%", position: "left" })}
         />
       )}
       {children}
     </StyledTitle>
     {subtitle && (
-      <TitleParagraph leftStripped={!topStripped} shift={shift}>
+      <TitleParagraph stripe={stripe} shift={shift}>
         {subtitle}
       </TitleParagraph>
     )}
@@ -52,14 +41,14 @@ Title.propTypes = {
   children: PropTypes.node,
   isFirst: PropTypes.bool,
   shift: PropTypes.string,
+  stripe: PropTypes.oneOf(["left", "top", "none"]),
   subtitle: PropTypes.node,
-  topStripped: PropTypes.bool,
-  unstriped: PropTypes.bool,
   variant: PropTypes.string,
 };
 
 Title.defaultProps = {
   isFirst: false,
+  stripe: "left",
   variant: "secondary",
 };
 
@@ -71,8 +60,8 @@ const StyledTitle = styled.h2`
   font-size: ${fonts.sizes.headings.medium};
   font-family: "Merriweather", serif;
   line-height: ${fonts.lineHeightTitle};
-  ${({ leftStripped, shift }) => {
-    if (leftStripped) {
+  ${({ stripe, shift }) => {
+    if (stripe === "left") {
       return css`
         padding-left: ${shift ? shift : spacings.large};
         text-align: left;
@@ -80,16 +69,10 @@ const StyledTitle = styled.h2`
           padding-left: ${spacings.base};
         }
       `;
-    }
-    return css`
-      padding-top: ${spacings.base};
-      text-align: center;
-    `;
-  }}
-  ${({ unstriped }) => {
-    if (unstriped) {
+    } else if (stripe === "top") {
       return css`
-        padding-left: 0;
+        padding-top: ${spacings.base};
+        text-align: center;
       `;
     }
   }}

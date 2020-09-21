@@ -6,7 +6,7 @@ import { PageTitle } from ".";
 
 export default {
   component: PageTitle,
-  title: 'Titles/Components/PageTitle',
+  title: "Titles/Components/PageTitle",
 };
 
 export const base = () => (
@@ -24,20 +24,20 @@ export const base = () => (
     </Section>
     <Section>
       <PageTitle
-        leftStripped
+        stripe="left"
         subtitle="With a subtitle which can be very very long but this is quite an excuse I made up. Because I do loooove to talk. Yup."
       >
-        This is a left stripped page title
+        This is a left striped page title
       </PageTitle>
     </Section>
     <Section>
       <Wrapper variant="dark">
         <PageTitle
-          leftStripped
+          stripe="left"
           shift="2.4rem"
           subtitle="With a subtitle which can be very very long but this is quite an excuse I made up. Because I do loooove to talk. Yup."
         >
-          This is a left stripped shifted page title
+          This is a left striped shifted page title
         </PageTitle>
       </Wrapper>
     </Section>

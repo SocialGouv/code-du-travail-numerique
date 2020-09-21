@@ -26,7 +26,7 @@ const Article = ({
           tabIndex="-1"
           data-next-focus-root
           subtitle={subtitle}
-          leftStripped
+          stripe="left"
           shift={theme.spacings.larger}
         >
           {title}

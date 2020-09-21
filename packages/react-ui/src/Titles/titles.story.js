@@ -27,13 +27,13 @@ export const readme = () => (
       normalize to <code>spacings.small</code>, which is the default padding of
       all layout elements on mobile.
       <Wrapper variant="dark">
-        <Heading stripped shift={spacings.larger}>
+        <Heading striped shift={spacings.larger}>
           This is a badly shifted Heading
         </Heading>
-        <Heading stripped shift={spacings.xmedium}>
+        <Heading striped shift={spacings.xmedium}>
           This is a correctly shifted Heading
         </Heading>
-        <Heading stripped shift={spacings.small}>
+        <Heading striped shift={spacings.small}>
           This is a badly shifted Heading
         </Heading>
       </Wrapper>

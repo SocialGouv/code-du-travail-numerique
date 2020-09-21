@@ -182,7 +182,7 @@ const HelpModal = ({ children: renderProp }) => {
         onDismiss={closeHelpModal}
         title="Aide à la recherche d’une convention collective"
       >
-        <Title unstriped as="h3">
+        <Title stripe="none" as="h3">
           Qu’est-ce qu’une convention collective&nbsp;?
         </Title>
         <p>
@@ -201,7 +201,7 @@ const HelpModal = ({ children: renderProp }) => {
           </strong>
           ).
         </p>
-        <Title unstriped as="h3">
+        <Title stripe="none" as="h3">
           Où trouver le nom de sa convention collective&nbsp;?
         </Title>
 
@@ -231,7 +231,7 @@ const HelpModal = ({ children: renderProp }) => {
           s’il existe).
         </p>
         <Wrapper variant="light">
-          <Heading stripped shift={spacings.xmedium} as="h4">
+          <Heading striped shift={spacings.xmedium} as="h4">
             Vous n’avez pas trouvé votre convention collective&nbsp;?
           </Heading>
           <p>

@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+
 import { breakpoints, spacings } from "../../theme";
 
 export const Header = styled.header`
-  ${({ isFirst, leftStripped, pageTitle, shift }) => {
+  ${({ isFirst, stripe, pageTitle, shift }) => {
     return css`
       margin-top: ${pageTitle || isFirst ? "0" : spacings.large};
       margin-bottom: ${pageTitle ? spacings.larger : spacings.medium};
       margin-left: ${shift ? `-${shift}}` : "auto"};
-      text-align: ${leftStripped ? "left" : "center"};
+      text-align: ${stripe === "top" ? "center" : "left"};
       @media (max-width: ${breakpoints.mobile}) {
         margin-bottom: ${pageTitle ? spacings.large : spacings.small};
         margin-left: ${shift ? `-${spacings.small}}` : "auto"};
@@ -19,14 +20,14 @@ export const Header = styled.header`
 
 Header.propTypes = {
   isFirst: PropTypes.bool,
-  leftStripped: PropTypes.bool,
   pageTitle: PropTypes.bool,
   shift: PropTypes.string,
+  stripe: PropTypes.oneOf(["left", "top", "none"]),
 };
 
 Header.defaultProps = {
   isFirst: false,
-  leftStripped: false,
   pageTitle: false,
   shift: "",
+  stripe: "left",
 };

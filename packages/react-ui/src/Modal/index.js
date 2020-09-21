@@ -1,6 +1,6 @@
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useRef } from "react";
 import { X } from "react-feather";
 import styled from "styled-components";
 
@@ -16,9 +16,15 @@ export const Modal = ({
   title,
   ...props
 }) => {
+  const closeRef = useRef(null);
   const Wrapper = ContentWrapper || StyledDialogContent;
   return (
-    <StyledDialogOverlay isOpen={isOpen} onDismiss={onDismiss} {...props}>
+    <StyledDialogOverlay
+      isOpen={isOpen}
+      initialFocusRef={closeRef}
+      onDismiss={onDismiss}
+      {...props}
+    >
       <Wrapper aria-label={title}>
         {children}
         <CloseButton
@@ -27,6 +33,7 @@ export const Modal = ({
           narrow
           title="fermer la modale"
           onClick={onDismiss}
+          ref={closeRef}
         >
           <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
           <X aria-hidden />

@@ -35,7 +35,7 @@ function Feedback({
         <StyledWrapper variant="light">
           <StyledHeading
             variant="primary"
-            stripped
+            striped
             shift={theme.spacings.xmedium}
           >
             Avez-vous trouvé la réponse à votre question&nbsp;?

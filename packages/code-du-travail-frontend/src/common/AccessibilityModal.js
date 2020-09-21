@@ -30,7 +30,7 @@ export const AccessibilityModal = ({ children: renderProp }) => {
         onDismiss={closeModal}
         title="Accessibilité"
       >
-        <Title topStripped>Accessibilité</Title>
+        <Title stripe="top">Accessibilité</Title>
         <Heading>Couleurs</Heading>
         <InputCheckbox
           label="Passer le site en noir et blanc"

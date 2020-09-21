@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import { Heading } from ".";
 
 describe("<Heading />", () => {
@@ -7,11 +8,11 @@ describe("<Heading />", () => {
     const { container } = render(<Heading>Lorem Ipsum</Heading>);
     expect(container).toMatchSnapshot();
   });
-  it("renders a stripped shifted H4 heading ", () => {
+  it("renders a striped shifted H4 heading ", () => {
     const { container } = render(
-      <Heading stripped shift="2rem" as="h4">
+      <Heading striped shift="2rem" as="h4">
         Lorem Ipsum
-      </Heading>,
+      </Heading>
     );
     expect(container).toMatchSnapshot();
   });
