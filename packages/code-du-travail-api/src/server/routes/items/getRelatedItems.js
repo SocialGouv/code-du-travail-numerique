@@ -138,9 +138,7 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
   const filteredItems = covisitedItems
     .concat(searchBasedItems)
     // avoid elements already visible within the item as fragments
-    .filter((item) =>
-      slug.includes("#") ? !item.slug.startsWith(slug.split("#")[0]) : true
-    )
+    .filter((item) => !slug.startsWith(item.slug.split("#")[0]))
     // only return sources of interest
     .filter(({ source }) => sources.includes(source))
     // drop duplicates (between covisits and search) using source/slug
