@@ -20,16 +20,16 @@ export const base = () => (
       <Heading as="h4">This is a heading (h4)</Heading>
     </Section>
     <Section>
-      <Heading striped>This is a striped heading</Heading>
+      <Heading stripe="left">This is a striped heading</Heading>
     </Section>
     <Section>
-      <Heading variant="primary" striped>
+      <Heading variant="primary" stripe="left">
         This is a striped primary heading
       </Heading>
     </Section>
     <Section>
       <Wrapper variant="light">
-        <Heading striped shift={spacings.xmedium} as="h4">
+        <Heading stripe="left" shift={spacings.xmedium} as="h4">
           This is a striped shifted heading (h4)
         </Heading>
       </Wrapper>

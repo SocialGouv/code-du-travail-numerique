@@ -231,7 +231,7 @@ const HelpModal = ({ children: renderProp }) => {
           s’il existe).
         </p>
         <Wrapper variant="light">
-          <Heading striped shift={spacings.xmedium} as="h4">
+          <Heading stripe="left" shift={spacings.xmedium} as="h4">
             Vous n’avez pas trouvé votre convention collective&nbsp;?
           </Heading>
           <p>

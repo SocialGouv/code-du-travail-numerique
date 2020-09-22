@@ -1,17 +1,5 @@
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
 
-const isServer = typeof window === "undefined";
-
-function getWindowScrollPosition() {
-  if (isServer) {
-    return { x: 0, y: 0 };
-  }
-  return {
-    x: window.scrollX || window.pageXOffset, // support ie11
-    y: window.scrollY || window.pageYOffset, // support ie11
-  };
-}
-
 export function useWindowScrollPosition() {
   const throttleMs = 30;
 
@@ -29,7 +17,10 @@ export function useWindowScrollPosition() {
     }
     isThrottlingRef.current = true;
     setTimeout(() => {
-      const currentPosition = getWindowScrollPosition();
+      const currentPosition = {
+        x: window.scrollX || window.pageXOffset, // support ie11
+        y: window.scrollY || window.pageYOffset, // support ie11
+      };
       setScrollInfo((previousPosition) => ({
         direction: currentPosition.y >= previousPosition.y ? "down" : "up",
         prevX: previousPosition.x,

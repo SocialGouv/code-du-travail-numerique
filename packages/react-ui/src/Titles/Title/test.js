@@ -13,7 +13,7 @@ describe("<Title />", () => {
     expect(container).toMatchSnapshot();
   });
   it("renders a unstriped H2 title", () => {
-    const { container } = render(<Title unstriped>Lorem Ipsum</Title>);
+    const { container } = render(<Title stripe="none">Lorem Ipsum</Title>);
     expect(container).toMatchSnapshot();
   });
 });
