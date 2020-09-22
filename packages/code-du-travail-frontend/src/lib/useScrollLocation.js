@@ -1,51 +1,45 @@
-import { useLayoutEffect, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 
-const isBrowser = typeof window === "undefined";
+import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
 
-function getWindowScrollPosition() {
-  if (isBrowser) {
-    return { x: 0, y: 0 };
-  }
-  return {
-    x: window.scrollX || window.pageXOffset, // support ie11
-    y: window.scrollY || window.pageYOffset, // support ie11
-  };
-}
-
-export function useWindowScrollPosition(effect, deps = []) {
-  const positionRef = useRef(getWindowScrollPosition());
+export function useWindowScrollPosition() {
   const throttleMs = 30;
-  const throttleRef = useRef(null);
 
-  function triggerWindowPositionUpdate() {
-    const currentPosition = getWindowScrollPosition();
-    effect({
-      direction: currentPosition.y >= positionRef.current.y ? "down" : "up",
-      prevX: positionRef.current.x,
-      prevY: positionRef.current.y,
-      x: currentPosition.x,
-      y: currentPosition.y,
-    });
-    positionRef.current = currentPosition;
-    throttleRef.current = null;
-  }
-  const handleScroll = () => {
-    if (throttleMs) {
-      if (throttleRef.current === null) {
-        throttleRef.current = setTimeout(
-          triggerWindowPositionUpdate,
-          throttleMs
-        );
-      }
-    } else {
-      triggerWindowPositionUpdate();
+  const [scrollInfo, setScrollInfo] = useState({
+    direction: "down",
+    x: 0,
+    y: 0,
+  });
+
+  const isThrottlingRef = useRef(false);
+
+  const handleScroll = useCallback(() => {
+    if (isThrottlingRef.current) {
+      return;
     }
-  };
-
-  useLayoutEffect(() => {
+    isThrottlingRef.current = true;
+    setTimeout(() => {
+      const currentPosition = {
+        x: window.scrollX || window.pageXOffset, // support ie11
+        y: window.scrollY || window.pageYOffset, // support ie11
+      };
+      setScrollInfo((previousPosition) => ({
+        direction: currentPosition.y >= previousPosition.y ? "down" : "up",
+        prevX: previousPosition.x,
+        prevY: previousPosition.y,
+        x: currentPosition.x,
+        y: currentPosition.y,
+      }));
+      isThrottlingRef.current = false;
+    }, throttleMs);
+  }, []);
+  // avoid SSR warning
+  useIsomorphicLayoutEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [...deps]);
+  }, [handleScroll]);
+
+  return scrollInfo;
 }

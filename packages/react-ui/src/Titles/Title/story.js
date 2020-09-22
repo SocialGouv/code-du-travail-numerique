@@ -6,13 +6,16 @@ import { Title } from ".";
 
 export default {
   component: Title,
-  title: 'Titles/Components/Title',
+  title: "Titles/Components/Title",
 };
 
 export const base = () => (
   <>
     <Section>
       <Title>This is a basic title (h2)</Title>
+    </Section>
+    <Section>
+      <Title stripe="none">This is an unstriped basic title (h2)</Title>
     </Section>
     <Section>
       <Title variant="primary">This is a basic primary title (h2)</Title>
@@ -33,8 +36,8 @@ export const base = () => (
       </Wrapper>
     </Section>
     <Section>
-      <Title topStripped subtitle="With a basic subtitle">
-        This is a top stripped title (h2)
+      <Title stripe="top" subtitle="With a basic subtitle">
+        This is a top striped title (h2)
       </Title>
     </Section>
   </>

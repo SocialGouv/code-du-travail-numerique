@@ -177,10 +177,10 @@ const Pricing = styled.em`
 `;
 
 const StyledInput = styled(Input)`
+  display: inline-block;
   width: 150px;
   margin-top: ${spacings.small};
   margin-left: ${spacings.small};
-  display: inline-block;
 `;
 
 const Small = styled.small`

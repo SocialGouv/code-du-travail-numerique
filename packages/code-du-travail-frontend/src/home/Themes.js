@@ -31,7 +31,7 @@ export const Themes = ({ themes = [] }) => {
       <ShiftedPageTitleWrapper>
         <PageTitle
           as="h2"
-          leftStripped
+          stripe="left"
           subtitle="Retrouvez tous nos contenus organisés par thèmes"
         >
           Thèmes

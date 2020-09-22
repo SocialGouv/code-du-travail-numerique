@@ -1,16 +1,17 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
+
 import { Stripe } from "../../Stripe";
 import { breakpoints, fonts, spacings } from "../../theme";
 
-export const Heading = ({ children, stripped = false, variant, ...props }) => (
-  <StyledHeading stripped={stripped} {...props}>
-    {stripped && (
+export const Heading = ({ children, stripe, variant, ...props }) => (
+  <StyledHeading stripe={stripe} {...props}>
+    {stripe !== "none" && (
       <Stripe
         rounded={variant !== "primary"}
         variant={variant}
-        position="left"
+        position={stripe}
         length="100%"
       />
     )}
@@ -19,15 +20,16 @@ export const Heading = ({ children, stripped = false, variant, ...props }) => (
 );
 
 Heading.propTypes = {
-  isFirst: PropTypes.bool,
   children: PropTypes.node,
+  isFirst: PropTypes.bool,
   shift: PropTypes.string,
-  stripped: PropTypes.bool,
+  stripe: PropTypes.oneOf(["left", "none"]),
   variant: PropTypes.string,
 };
 
 Heading.defaultProps = {
   isFirst: false,
+  stripe: "none",
   variant: "secondary",
 };
 
@@ -39,10 +41,9 @@ const StyledHeading = styled.h3`
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
-  line-height: ${(stripped) =>
-    stripped ? fonts.lineHeight : fonts.lineHeightTitle};
-  ${({ stripped, shift }) => {
-    if (stripped) {
+  line-height: ${fonts.lineHeight};
+  ${({ stripe, shift }) => {
+    if (stripe === "left") {
       return css`
         margin-left: ${shift ? `-${shift}` : "0"};
         padding-left: ${shift ? shift : spacings.base};

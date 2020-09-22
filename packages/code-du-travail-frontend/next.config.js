@@ -30,7 +30,7 @@ const nextConfig = {
   publicRuntimeConfig: {
     API_ENTREPRISE_URL:
       process.env.API_ENTREPRISE_URL ||
-      "https://entreprise.data.gouv.fr/api/sirene/v1",
+      "https://entreprise.data.gouv.fr/api/sirene",
     API_SIRET2IDCC_URL:
       process.env.API_SIRET2IDCC_URL ||
       "https://siret2idcc.fabrique.social.gouv.fr/api/v2",

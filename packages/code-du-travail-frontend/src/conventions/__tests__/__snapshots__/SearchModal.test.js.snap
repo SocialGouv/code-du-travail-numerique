@@ -11,7 +11,7 @@ exports[`<ConventionModal /> should render 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c8:not(:focus):not(:active) {
+.c12:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -23,7 +23,58 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c6 {
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c8:focus,
+.c8:hover,
+.c8:active {
+  color: #f66663;
+}
+
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -60,16 +111,16 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   opacity: 1;
 }
 
-.c6:link,
-.c6:visited {
+.c10:link,
+.c10:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):active,
-.c6:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):active,
+.c10:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -78,7 +129,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border-color: transparent;
 }
 
-.c6[disabled] {
+.c10[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -110,7 +161,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   outline: none;
 }
 
-.c7 {
+.c11 {
   position: absolute;
   top: 0;
   right: 0;
@@ -215,7 +266,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   font-size: 1.4rem;
   font-family: "Open Sans",sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 }
 
@@ -223,14 +274,41 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   width: 100%;
 }
 
+.c6 {
+  margin-top: 2.4rem;
+}
+
+.c7 {
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.c9 {
+  color: #7994d4;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c10 {
     display: none;
   }
 }
@@ -256,7 +334,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c11 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -326,19 +404,36 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 class="c5"
                 id="convention-search"
                 name="q"
-                placeholder="Nom de la convention collective, de l’entreprise ou SIRET"
+                placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
                 role="search"
                 type="search"
                 value=""
               />
             </span>
             
+            <p
+              class="c6"
+            >
+              Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
+              <span
+                class="c7"
+              >
+                Consultez
+                 
+                <button
+                  class="c8 c9"
+                >
+                  notre aide
+                </button>
+                .
+              </span>
+            </p>
             <button
-              class="c6 c7"
+              class="c10 c11"
               title="fermer la modale"
             >
               <div
-                class="c8"
+                class="c12"
               >
                 fermer la modale
               </div>

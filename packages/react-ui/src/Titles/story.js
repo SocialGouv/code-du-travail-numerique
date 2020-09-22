@@ -10,10 +10,11 @@ import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
 
 export default {
-  title: "Titles|Readme",
+  component: Title,
+  title: "Titles/readme",
 };
 
-export const readme = () => (
+export const notice = () => (
   <>
     <PageTitle>How it works</PageTitle>
     <Section>
@@ -26,17 +27,19 @@ export const readme = () => (
       the value is too important. Note that on mobile, negative margin are
       normalize to <code>spacings.small</code>, which is the default padding of
       all layout elements on mobile.
-      <Wrapper variant="dark">
-        <Heading stripped shift={spacings.larger}>
-          This is a badly shifted Heading
-        </Heading>
-        <Heading stripped shift={spacings.xmedium}>
-          This is a correctly shifted Heading
-        </Heading>
-        <Heading stripped shift={spacings.small}>
-          This is a badly shifted Heading
-        </Heading>
-      </Wrapper>
+      <Section>
+        <Wrapper variant="dark">
+          <Heading stripe="left" shift={spacings.larger}>
+            This is a badly shifted Heading
+          </Heading>
+          <Heading stripe="left" shift={spacings.xmedium}>
+            This is a correctly shifted Heading
+          </Heading>
+          <Heading stripe="left" shift={spacings.small}>
+            This is a badly shifted Heading
+          </Heading>
+        </Wrapper>
+      </Section>
     </Section>
     <Section>
       <p>Unlike humans, titles are not born equal</p>

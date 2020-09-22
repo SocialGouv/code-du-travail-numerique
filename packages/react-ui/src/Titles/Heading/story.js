@@ -1,14 +1,14 @@
 import React from "react";
 
-import { spacings } from "../../theme";
 import { Section } from "../../layout/Section";
 import { Wrapper } from "../../layout/Wrapper";
-import { Heading } from ".";
+import { spacings } from "../../theme";
 import { Subtitle } from "../Subtitle";
+import { Heading } from ".";
 
 export default {
   component: Heading,
-  title: 'Titles/Components/Heading',
+  title: "Titles/Components/Heading",
 };
 
 export const base = () => (
@@ -20,17 +20,17 @@ export const base = () => (
       <Heading as="h4">This is a heading (h4)</Heading>
     </Section>
     <Section>
-      <Heading stripped>This is a stripped heading</Heading>
+      <Heading stripe="left">This is a striped heading</Heading>
     </Section>
     <Section>
-      <Heading variant="primary" stripped>
-        This is a stripped primary heading
+      <Heading variant="primary" stripe="left">
+        This is a striped primary heading
       </Heading>
     </Section>
     <Section>
       <Wrapper variant="light">
-        <Heading stripped shift={spacings.xmedium} as="h4">
-          This is a stripped shifted heading (h4)
+        <Heading stripe="left" shift={spacings.xmedium} as="h4">
+          This is a striped shifted heading (h4)
         </Heading>
       </Wrapper>
     </Section>

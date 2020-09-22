@@ -23,7 +23,7 @@ export const base = () => (
       </MoreContent>
     </Section>
     <Section>
-      <MoreContent title="Without left padding">
+      <MoreContent noLeftPadding title="Without left padding">
         text is not aligned with title but full left
       </MoreContent>
     </Section>

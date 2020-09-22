@@ -6,7 +6,6 @@ import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
 import Head from "next/head";
-import PropTypes from "prop-types";
 import React from "react";
 
 import { A11y } from "../src/a11y";
@@ -46,13 +45,6 @@ const {
 initializeSentry();
 
 export default class MyApp extends App {
-  // HACK @lionelb from https://github.com/zeit/next.js/issues/4687#issuecomment-432608667
-  // This is to fix withRouter() from next/router
-  // IE10 static props hoisting doesn't work
-  static childContextTypes = {
-    headManager: PropTypes.object,
-    router: PropTypes.object,
-  };
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 

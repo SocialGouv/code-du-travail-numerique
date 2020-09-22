@@ -22,9 +22,7 @@ export const Header = ({ currentPage = "" }) => {
     setDate(printDate());
   }, []);
   const router = useRouter();
-
-  const [scrollInfo, setScrollInfo] = useState({ direction: "down", y: 0 });
-  useWindowScrollPosition(setScrollInfo, [setScrollInfo]);
+  const scrollInfo = useWindowScrollPosition();
   const overThreshold = scrollInfo.y > 200;
   const floating = scrollInfo.direction === "up";
   const showFloatingMenu = floating && overThreshold;

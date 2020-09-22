@@ -1,7 +1,7 @@
 import "url-search-params";
 
 import * as Sentry from "@sentry/browser";
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="fr" prefix="og: http://ogp.me/ns#">
+      <Html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
           <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
           <meta charSet="utf-8" />
@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

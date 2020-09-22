@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { fonts, spacings } from "../../theme";
 
 export const Subtitle = styled.span`
@@ -8,6 +9,6 @@ export const Subtitle = styled.span`
   font-weight: 600;
   font-size: ${fonts.sizes.tiny};
   font-family: "Open Sans", sans-serif;
-  line-height: ${fonts.lineHeightTitle};
+  line-height: ${fonts.lineHeight};
   text-transform: uppercase;
 `;

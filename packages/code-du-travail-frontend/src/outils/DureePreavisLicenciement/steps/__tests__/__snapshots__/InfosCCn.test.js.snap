@@ -113,6 +113,14 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 }
 
 @media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
   .c3 {
     font-size: 1.4rem;
   }

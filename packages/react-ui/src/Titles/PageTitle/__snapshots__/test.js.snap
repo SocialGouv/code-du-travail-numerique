@@ -61,7 +61,7 @@ exports[`<PageTitle /> renders a H1 page title  1`] = `
 </div>
 `;
 
-exports[`<PageTitle /> renders a leftStripped shifted H1 page title  1`] = `
+exports[`<PageTitle /> renders a left striped shifted H1 page title  1`] = `
 .c2 {
   position: absolute;
   background-color: #7994d4;

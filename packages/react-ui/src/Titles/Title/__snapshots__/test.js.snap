@@ -135,3 +135,47 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
   </header>
 </div>
 `;
+
+exports[`<Title /> renders a unstriped H2 title 1`] = `
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  text-align: left;
+}
+
+.c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 2.2rem;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <h2
+      class="c1"
+    >
+      Lorem Ipsum
+    </h2>
+  </header>
+</div>
+`;

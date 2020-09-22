@@ -19,6 +19,6 @@ const StyledLabel = styled.label`
   font-size: ${fonts.sizes.small};
   font-family: "Open Sans", sans-serif;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.6;
   cursor: pointer;
 `;

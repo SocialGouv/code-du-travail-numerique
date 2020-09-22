@@ -140,7 +140,7 @@ const Contribution = ({ answers, content }) => {
       )}
       {answers.generic && (
         <section>
-          <Title leftStripped>Que dit le code du travail&nbsp;?</Title>
+          <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
           <Mdx
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}

@@ -79,7 +79,7 @@ class SearchPage extends React.Component {
                   <Heading
                     shift={theme.spacings.xmedium}
                     variant="primary"
-                    stripped
+                    stripe="left"
                   >
                     Vous n’avez pas trouvé ce que vous cherchiez ? Essayez
                     &hellip;

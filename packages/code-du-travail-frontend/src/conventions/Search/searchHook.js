@@ -24,6 +24,8 @@ const useSearchCC = (query) => {
                 setStatus("empty");
               }
               setResults(results);
+            } else {
+              setStatus("empty");
             }
           }
         } catch (e) {
