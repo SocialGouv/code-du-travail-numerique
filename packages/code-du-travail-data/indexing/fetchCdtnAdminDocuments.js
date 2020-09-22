@@ -76,7 +76,7 @@ function toElastic({
 
 async function main() {
   const documents = await getDocumentBySource(SOURCES.LETTERS);
-  console.log(documents);
+  console.log(JSON.stringify(documents, 0, 2));
 }
 
 main().catch(console.error);
