@@ -58,16 +58,19 @@ class ConventionCollective extends React.Component {
           emptyMessage="Cette convention collective n'a pas été trouvée"
           relatedItems={[
             {
+              reco: "static",
               slug: "convention-collective",
               source: SOURCES.SHEET_SP,
               title: "Convention collective",
             },
             {
+              reco: "static",
               slug: "comment-consulter-un-accord-dentreprise",
               source: SOURCES.SHEET_SP,
               title: "Comment consulter un accord d'entreprise ?",
             },
             {
+              reco: "static",
               slug: "#hierarchie",
               source: SOURCES.LABOUR_LAW,
               title:
