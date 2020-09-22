@@ -13,29 +13,32 @@ function getWindowScrollPosition() {
 }
 
 export function useWindowScrollPosition() {
-  const [scrollInfo, setScrollInfo] = useState({ direction: "down", y: 0 });
   const throttleMs = 30;
 
+  const [scrollInfo, setScrollInfo] = useState({
+    direction: "down",
+    x: 0,
+    y: 0,
+  });
+
   const isThrottlingRef = useRef(false);
-  const previousPosition = useRef(getWindowScrollPosition());
 
   const handleScroll = useCallback(() => {
-    if (!isThrottlingRef.current) {
-      isThrottlingRef.current = true;
-      setTimeout(() => {
-        const currentPosition = getWindowScrollPosition();
-        setScrollInfo({
-          direction:
-            currentPosition.y >= previousPosition.current.y ? "down" : "up",
-          prevX: previousPosition.current.x,
-          prevY: previousPosition.current.y,
-          x: currentPosition.x,
-          y: currentPosition.y,
-        });
-        isThrottlingRef.current = false;
-        previousPosition.current = currentPosition;
-      }, throttleMs);
+    if (isThrottlingRef.current) {
+      return;
     }
+    isThrottlingRef.current = true;
+    setTimeout(() => {
+      const currentPosition = getWindowScrollPosition();
+      setScrollInfo((previousPosition) => ({
+        direction: currentPosition.y >= previousPosition.y ? "down" : "up",
+        prevX: previousPosition.x,
+        prevY: previousPosition.y,
+        x: currentPosition.x,
+        y: currentPosition.y,
+      }));
+      isThrottlingRef.current = false;
+    }, throttleMs);
   }, []);
 
   useLayoutEffect(() => {
