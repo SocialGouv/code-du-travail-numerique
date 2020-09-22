@@ -78,9 +78,8 @@ async function* cdtnDocumentsGen() {
       delete section.text;
       return {
         ...section,
-        html: addGlossary(html),
-      };
-    }),
+      }
+    })
   }));
 
   logger.info("=== Fiche MT(split) ===");
