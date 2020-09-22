@@ -79,4 +79,6 @@ async function main() {
   console.log(JSON.stringify(documents, 0, 2));
 }
 
-main().catch(console.error);
+if (module === require.main) {
+  main().catch(console.error);
+}
