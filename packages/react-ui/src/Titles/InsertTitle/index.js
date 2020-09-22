@@ -8,7 +8,7 @@ export const InsertTitle = styled.div`
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
-  line-height: ${fonts.lineHeightTitle};
+  line-height: ${fonts.lineHeight};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }

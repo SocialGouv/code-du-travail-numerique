@@ -271,7 +271,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c7 {
@@ -916,7 +916,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c7 {
@@ -1561,7 +1561,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c7 {
@@ -2206,7 +2206,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c7 {
@@ -2838,7 +2838,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c10 {

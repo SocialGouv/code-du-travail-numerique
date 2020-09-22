@@ -568,7 +568,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: 600;
   font-size: 1.2rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   text-transform: uppercase;
 }
 
@@ -680,7 +680,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c39 {
@@ -3473,7 +3473,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: 600;
   font-size: 1.2rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   text-transform: uppercase;
 }
 
@@ -3585,7 +3585,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
 }
 
 .c39 {

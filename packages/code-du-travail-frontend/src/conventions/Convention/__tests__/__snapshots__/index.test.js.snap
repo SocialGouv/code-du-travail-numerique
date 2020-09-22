@@ -480,7 +480,7 @@ exports[`<Convention /> renders 1`] = `
   font-weight: 600;
   font-size: 1.2rem;
   font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  line-height: 1.625;
   text-transform: uppercase;
   margin-bottom: 0;
 }

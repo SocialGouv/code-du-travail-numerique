@@ -41,8 +41,7 @@ const StyledHeading = styled.h3`
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
-  line-height: ${(stripe) =>
-    stripe === "left" ? fonts.lineHeight : fonts.lineHeightTitle};
+  line-height: ${fonts.lineHeight};
   ${({ stripe, shift }) => {
     if (stripe === "left") {
       return css`

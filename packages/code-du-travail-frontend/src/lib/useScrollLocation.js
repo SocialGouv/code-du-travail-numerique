@@ -1,4 +1,6 @@
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
+
+import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
 
 export function useWindowScrollPosition() {
   const throttleMs = 30;
@@ -31,8 +33,8 @@ export function useWindowScrollPosition() {
       isThrottlingRef.current = false;
     }, throttleMs);
   }, []);
-
-  useLayoutEffect(() => {
+  // avoid SSR warning
+  useIsomorphicLayoutEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
