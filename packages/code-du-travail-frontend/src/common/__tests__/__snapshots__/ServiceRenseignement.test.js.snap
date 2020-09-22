@@ -172,10 +172,10 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 .c5 {
+  display: inline-block;
   width: 150px;
   margin-top: 1rem;
   margin-left: 1rem;
-  display: inline-block;
 }
 
 .c7 {
