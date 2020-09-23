@@ -1,5 +1,8 @@
+import slugify from "@socialgouv/cdtn-slugify";
+
 function splitArticle(article) {
-  const { slug, title, pubId } = article;
+  const { title, pubId } = article;
+  const slug = slugify(title);
   let prefixTitle = title;
   // extract accronyms inside parenthesis
   // Contrat de sécurisation professionnelle (CSP)
