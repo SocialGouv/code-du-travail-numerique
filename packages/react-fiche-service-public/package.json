@@ -41,7 +41,7 @@
     "eslint": "^7.8.0",
     "jest": "^26.4.2",
     "jest-styled-components": "^7.0.3",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
