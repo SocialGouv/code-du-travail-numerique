@@ -1887,7 +1887,7 @@ exports[`<FicheMT /> should render 1`] = `
         >
           <a
             class="c16"
-            href="/recherche?q="
+            href="/recherche"
           >
             <svg
               fill="none"
