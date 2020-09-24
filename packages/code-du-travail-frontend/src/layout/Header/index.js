@@ -22,6 +22,7 @@ export const Header = ({ currentPage = "" }) => {
     setDate(printDate());
   }, []);
   const router = useRouter();
+  const { q } = router.query;
   const scrollInfo = useWindowScrollPosition();
   const overThreshold = scrollInfo.y > 200;
   const floating = scrollInfo.direction === "up";
@@ -57,7 +58,10 @@ export const Header = ({ currentPage = "" }) => {
         <RightSide>
           {isContentPage && !overThreshold && (
             <Link
-              href={{ pathname: "/recherche", query: { q: router.query.q } }}
+              href={{
+                pathname: "/recherche",
+                ...(q && { query: { q } }),
+              }}
               passHref
             >
               <StyledLink>
