@@ -10,7 +10,7 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
+// import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 
 const {
   publicRuntimeConfig: { API_URL },
