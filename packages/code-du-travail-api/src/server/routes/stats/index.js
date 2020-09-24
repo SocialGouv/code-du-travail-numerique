@@ -39,11 +39,11 @@ function getUrl(baseUrl, params) {
 
 // general matomo congif params
 const baseParams = {
+  date: getDate(new Date()),
+  format: "JSON",
   idSite: MATOMO_SITE_ID,
   module: "API",
-  format: "JSON",
   period: "range",
-  date: getDate(new Date()),
 };
 
 const methodParams = [
@@ -54,8 +54,8 @@ const methodParams = [
     method: "Actions.get",
   },
   {
-    method: "Events.getAction",
-    label: ["negative", "positive"], // transform into label[]=
+    label: ["negative", "positive"],
+    method: "Events.getAction", // transform into label[]=
   },
 ];
 
@@ -71,24 +71,28 @@ router.get("/stats", async (ctx) => {
   );
   const {
     body: { aggregations },
-  } = await elasticsearchClient.search({ index, body: docsCountBody });
+  } = await elasticsearchClient.search({ body: docsCountBody, index });
   let nbDocuments = 0;
   const { buckets = [] } = aggregations.sources;
   for (const { doc_count } of buckets) {
     nbDocuments += doc_count;
   }
   const [nbVisitData, infoData, feedbackData] = await Promise.all(promises);
-  const positiveFeedback = feedbackData.find((f) => f.label === "positive");
-  const negativeFeedback = feedbackData.find((f) => f.label === "negative");
+  const positiveFeedback = feedbackData.find((f) => f.label === "positive") || {
+    nb_events: 0,
+  };
+  const negativeFeedback = feedbackData.find((f) => f.label === "negative") || {
+    nb_event: 0,
+  };
   ctx.body = {
-    nbVisits: nbVisitData.value,
-    nbPageViews: infoData.nb_pageviews,
-    nbSearches: infoData.nb_searches,
     feedback: {
-      positive: positiveFeedback.nb_events,
       negative: negativeFeedback.nb_events,
+      positive: positiveFeedback.nb_events,
     },
     nbDocuments,
+    nbPageViews: infoData.nb_pageviews,
+    nbSearches: infoData.nb_searches,
+    nbVisits: nbVisitData.value,
   };
 });
 
