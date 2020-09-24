@@ -57,7 +57,7 @@ export const Header = ({ currentPage = "" }) => {
         <RightSide>
           {isContentPage && !overThreshold && (
             <Link
-              href={{ pathname: "/recherche", query: router.query }}
+              href={{ pathname: "/recherche", query: { q: router.query.q } }}
               passHref
             >
               <StyledLink>
