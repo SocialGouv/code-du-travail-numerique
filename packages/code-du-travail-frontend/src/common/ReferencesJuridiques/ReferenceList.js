@@ -15,7 +15,9 @@ const CodeDuTravailLink = ({ title, slug }) => (
     as={`/${getRouteBySource(SOURCES.CDT)}/${sanitizeCdtSlug(slug)}`}
     passHref
   >
-    <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
+    <StyledArrowLink rel="nofollow" arrowPosition="left">
+      {title}
+    </StyledArrowLink>
   </Link>
 );
 
@@ -25,7 +27,10 @@ const ConventionLink = ({ title, slug }) => (
     as={`/${getRouteBySource(SOURCES.CCN)}/${slug}`}
     passHref
   >
-    <StyledArrowLink arrowPosition="left">{`Convention collective: ${title}`}</StyledArrowLink>
+    <StyledArrowLink
+      rel="nofollow"
+      arrowPosition="left"
+    >{`Convention collective: ${title}`}</StyledArrowLink>
   </Link>
 );
 
@@ -33,7 +38,7 @@ const OtherLink = ({ title, url }) =>
   url ? (
     <StyledArrowLink
       href={url}
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       target="_blank"
       arrowPosition="left"
     >

@@ -127,7 +127,7 @@ exports[`<Theme /> should render 1`] = `
   color: #f66663;
 }
 
-.c41 {
+.c42 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -164,16 +164,16 @@ exports[`<Theme /> should render 1`] = `
   opacity: 1;
 }
 
-.c41:link,
-.c41:visited {
+.c42:link,
+.c42:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c41:not([disabled]):hover,
-.c41:not([disabled]):active,
-.c41:not([disabled]):focus {
+.c42:not([disabled]):hover,
+.c42:not([disabled]):active,
+.c42:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -182,7 +182,7 @@ exports[`<Theme /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c41[disabled] {
+.c42[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -849,7 +849,7 @@ exports[`<Theme /> should render 1`] = `
   justify-content: center;
 }
 
-.c42 {
+.c41 {
   margin: 1rem;
 }
 
@@ -897,19 +897,19 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c42 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c41 {
+  .c42 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c42 {
     padding: 0 3rem;
   }
 }
@@ -1279,7 +1279,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c41 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -1565,36 +1565,36 @@ exports[`<Theme /> should render 1`] = `
           <div
             class="c40"
           >
-            <button
+            <a
               class="c41 c42"
               href="/themes/121-cdi"
             >
               CDI
-            </button>
-            <button
+            </a>
+            <a
               class="c41 c42"
               href="/themes/122-cdd"
             >
               CDD
-            </button>
-            <button
+            </a>
+            <a
               class="c41 c42"
               href="/themes/123-interim"
             >
               Intérim
-            </button>
-            <button
+            </a>
+            <a
               class="c41 c42"
               href="/themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
-            </button>
-            <button
+            </a>
+            <a
               class="c41 c42"
               href="/themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -1629,7 +1629,7 @@ exports[`<Theme /> should render 1`] = `
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c41"
+              class="c42"
             >
               Contacter nos services en région
               <svg

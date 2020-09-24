@@ -2,7 +2,8 @@
 
 exports[`/IS_PRODUCTION_DEPLOYMENT=false should return dev robots.txt 1`] = `
 "User-agent: *
-Disallow: /"
+Disallow: /
+Disallow: /code-du-travail/"
 `;
 
 exports[`/IS_PRODUCTION_DEPLOYMENT=true should return production robots.txt 1`] = `"Redirecting to <a href=\\"https://prod-test-hostname/robots.txt\\">https://prod-test-hostname/robots.txt</a>."`;

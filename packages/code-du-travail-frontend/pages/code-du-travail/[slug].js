@@ -39,7 +39,7 @@ class Fiche extends React.Component {
       },
     } = this.props;
 
-    const fixedHtml = replaceArticlesRefs(html);
+    // const fixedHtml = replaceArticlesRefs(html);
     return (
       <Layout>
         <Metas title={title} description={description} />
@@ -53,7 +53,7 @@ class Fiche extends React.Component {
             })
           }
           emptyMessage="Article introuvable"
-          html={fixedHtml}
+          html={html}
           source={{ name: "Code du travail", url }}
         >
           {notaHtml && (

@@ -269,6 +269,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <a
                     class="c8 c9 c10"
                     href="/code-du-travail/l1244-3"
+                    rel="nofollow"
                   >
                     <svg
                       class="c11"
@@ -291,6 +292,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <a
                     class="c8 c9 c10"
                     href="/code-du-travail/r1244-4"
+                    rel="nofollow"
                   >
                     <svg
                       class="c11"
@@ -323,6 +325,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <a
                     class="c8 c9 c10"
                     href="/convention-collective/ma-convention"
+                    rel="nofollow"
                   >
                     <svg
                       class="c11"

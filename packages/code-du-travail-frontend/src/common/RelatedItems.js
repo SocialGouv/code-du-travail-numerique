@@ -50,6 +50,7 @@ export const RelatedItems = ({ items = [] }) => {
                   passHref
                 >
                   <CallToActionTile
+                    rel="nofollow"
                     action={action || "Consulter"}
                     custom
                     icon={
@@ -65,7 +66,7 @@ export const RelatedItems = ({ items = [] }) => {
                   custom={false}
                   href={url}
                   icon={icons[icon]}
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   subtitle={subtitle}
                   target="_blank"
                   title={title}
@@ -101,6 +102,7 @@ export const RelatedItems = ({ items = [] }) => {
                     passHref
                   >
                     <ArrowLink
+                      rel="nofollow"
                       arrowPosition="left"
                       onClick={() =>
                         matopush([

@@ -62,7 +62,7 @@ class Theme extends React.Component {
                     as={slug}
                     passHref
                   >
-                    <StyledLink as={Button}>{label}</StyledLink>
+                    <Button as={StyledLink}>{label}</Button>
                   </Link>
                 ))}
               </StyledContainer>
