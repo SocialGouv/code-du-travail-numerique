@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.31.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.1-alpha.0...v4.31.0) (2020-09-24)
+
+
+### Bug Fixes
+
+* **data:** add a check ensure service-public content ([#2956](https://github.com/SocialGouv/code-du-travail-numerique/issues/2956)) ([f6e9b6c](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6e9b6cff585020f0e62b0a52da290d6b113f7fb)), closes [#2042](https://github.com/SocialGouv/code-du-travail-numerique/issues/2042)
+* **frontend:** add searchbar on header when not scrolling ([#2989](https://github.com/SocialGouv/code-du-travail-numerique/issues/2989)) ([60b03f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/60b03f24d0f69bdfe43df0abdf0dc83dd2319103))
+* **tooltip:** sanitize tootltip content ([#2997](https://github.com/SocialGouv/code-du-travail-numerique/issues/2997)) ([f4d39d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/f4d39d8a269aeadd3a7be4b8abec193c9ec6d133))
+
+
+### Features
+
+* **data:** add new courriers ([#3005](https://github.com/SocialGouv/code-du-travail-numerique/issues/3005)) ([9113924](https://github.com/SocialGouv/code-du-travail-numerique/commit/9113924be07578b9a61401bc873aaa48c17bbce6))
+* **data:** remove obsolete content ([#3007](https://github.com/SocialGouv/code-du-travail-numerique/issues/3007)) ([944d9ec](https://github.com/SocialGouv/code-du-travail-numerique/commit/944d9ecd7abe7406aedca5e63b5edb59e3eace99))
+
+
+
+
+
 ## [4.30.1-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.0...v4.30.1-alpha.0) (2020-09-07)
 
 **Note:** Version bump only for package @cdt/data

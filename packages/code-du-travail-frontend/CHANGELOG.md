@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.31.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.1-alpha.0...v4.31.0) (2020-09-24)
+
+
+### Bug Fixes
+
+* **front:** logs in tests ([#2998](https://github.com/SocialGouv/code-du-travail-numerique/issues/2998)) ([8d5c534](https://github.com/SocialGouv/code-du-travail-numerique/commit/8d5c53492d9975b0ad0bcc60b664910d36481a93))
+* **tooltip:** sanitize tootltip content ([#2997](https://github.com/SocialGouv/code-du-travail-numerique/issues/2997)) ([f4d39d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/f4d39d8a269aeadd3a7be4b8abec193c9ec6d133))
+* rename incubateur->fabrique ([#2994](https://github.com/SocialGouv/code-du-travail-numerique/issues/2994)) ([ae0dd7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/ae0dd7fbf3b048e1f34102c83a9499b943339989))
+* **frontend:** add searchbar on header when not scrolling ([#2989](https://github.com/SocialGouv/code-du-travail-numerique/issues/2989)) ([60b03f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/60b03f24d0f69bdfe43df0abdf0dc83dd2319103))
+* **frontend:** prevent localstorage error on write ([#2991](https://github.com/SocialGouv/code-du-travail-numerique/issues/2991)) ([c459871](https://github.com/SocialGouv/code-du-travail-numerique/commit/c459871adec6bde0ea8857ad3dd3b0bbefa535b3))
+
+
+### Features
+
+* **frontend:** add help to cc search ([#2990](https://github.com/SocialGouv/code-du-travail-numerique/issues/2990)) ([d473ec6](https://github.com/SocialGouv/code-du-travail-numerique/commit/d473ec68e4e9eb04109c251b54843613ae002f59))
+
+
+
+
+
 ## [4.30.1-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.0...v4.30.1-alpha.0) (2020-09-07)
 
 **Note:** Version bump only for package @cdt/frontend

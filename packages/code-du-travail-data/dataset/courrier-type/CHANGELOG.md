@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.31.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.1-alpha.0...v4.31.0) (2020-09-24)
+
+
+### Features
+
+* **data:** add new courriers ([#3005](https://github.com/SocialGouv/code-du-travail-numerique/issues/3005)) ([9113924](https://github.com/SocialGouv/code-du-travail-numerique/commit/9113924be07578b9a61401bc873aaa48c17bbce6))
+
+
+
+
+
 ## [4.30.1-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.0...v4.30.1-alpha.0) (2020-09-07)
 
 **Note:** Version bump only for package @cdt/data...courrier-type

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.31.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.1-alpha.0...v4.31.0) (2020-09-24)
+
+
+### Bug Fixes
+
+* **frontend:** add searchbar on header when not scrolling ([#2989](https://github.com/SocialGouv/code-du-travail-numerique/issues/2989)) ([60b03f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/60b03f24d0f69bdfe43df0abdf0dc83dd2319103))
+
+
+
+
+
 ## [4.30.1-alpha.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.30.0...v4.30.1-alpha.0) (2020-09-07)
 
 **Note:** Version bump only for package @cdt/data...dossiers
