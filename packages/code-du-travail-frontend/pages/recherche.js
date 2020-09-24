@@ -42,7 +42,7 @@ class SearchPage extends React.Component {
         initialTitle={`${query} - Code du travail numérique`}
       >
         <Head>
-          <meta name="robots" content="noindex, follow" />
+          <meta name="robots" content="noindex, nofollow" />
         </Head>
         <Metas
           title={`${query} - Code du travail numérique`}
