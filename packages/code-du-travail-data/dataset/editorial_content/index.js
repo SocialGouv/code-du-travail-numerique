@@ -90,7 +90,28 @@ function getEditorialContents() {
     }
   );
 }
-module.exports = { getEditorialContents };
+
+function markdownTransform(documents) {
+  return documents.map(({ contents, intro, ...rest }) => ({
+    ...rest,
+    contents: contents.map((content) => {
+      content.html = addGlossary(
+        htmlProcessor.processSync(content.markdown).contents
+      );
+      delete content.markdown;
+      return content;
+    }),
+    intro: addGlossary(htmlProcessor.processSync(intro).contents),
+    text:
+      htmlProcessor.processSync(intro).contents +
+      contents.map(({ markdown }) =>
+        textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
+      ),
+  }));
+}
+
+module.exports = { getEditorialContents, markdownTransform };
+
 if (module === require.main) {
   console.log(JSON.stringify(getEditorialContents(), null, 2));
 }

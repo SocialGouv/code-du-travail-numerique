@@ -32,7 +32,8 @@ async function getDuplicateSlugs(allDocuments) {
 
 async function* cdtnDocumentsGen() {
   logger.info("=== Editorial contents ===");
-  yield getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  const documents = getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  yield markdownTransform(documents);
 
   logger.info("=== Courriers ===");
   yield getDocumentBySource(SOURCES.LETTERS);
