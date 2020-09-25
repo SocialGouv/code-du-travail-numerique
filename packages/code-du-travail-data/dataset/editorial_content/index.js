@@ -92,7 +92,7 @@ function getEditorialContents() {
 }
 
 function markdownTransform(documents) {
-  return documents.map(({ contents, intro, ...rest }) => ({
+  return documents.map(({ contents, ...rest }) => ({
     ...rest,
     contents: contents.map((content) => {
       content.html = addGlossary(
@@ -101,16 +101,13 @@ function markdownTransform(documents) {
       delete content.markdown;
       return content;
     }),
-    intro: addGlossary(htmlProcessor.processSync(intro).contents),
-    text:
-      htmlProcessor.processSync(intro).contents +
-      contents.map(({ markdown }) =>
-        textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
-      ),
+    text: contents.map(({ markdown }) =>
+      textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
+    ),
   }));
 }
 
-module.exports = { getEditorialContents, markdownTransform };
+module.exports = { markdownTransform };
 
 if (module === require.main) {
   console.log(JSON.stringify(getEditorialContents(), null, 2));
