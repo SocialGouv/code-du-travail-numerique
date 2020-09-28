@@ -402,7 +402,7 @@ exports[`<RelatedItems /> should render 1`] = `
         <a
           class="c4"
           href="external.tools"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           target="_blank"
         >
           <div
@@ -488,6 +488,7 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <button
           class="c4"
+          rel="nofollow"
         >
           <div
             class="c16"
@@ -594,6 +595,7 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c21 c22"
+          rel="nofollow"
         >
           <svg
             class="c23"
@@ -617,6 +619,7 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c21 c22"
+          rel="nofollow"
         >
           <svg
             class="c23"

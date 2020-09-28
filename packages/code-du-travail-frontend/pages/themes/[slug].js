@@ -62,7 +62,7 @@ class Theme extends React.Component {
                     as={slug}
                     passHref
                   >
-                    <StyledLink as={Button}>{label}</StyledLink>
+                    <Button as={StyledLink}>{label}</Button>
                   </Link>
                 ))}
               </StyledContainer>
@@ -72,7 +72,6 @@ class Theme extends React.Component {
         {theme.refs && theme.refs.length > 0 && (
           <Section>
             <SearchResults
-              query={theme.title}
               items={{ articles: [], documents: theme.refs, themes: [] }}
             />
           </Section>

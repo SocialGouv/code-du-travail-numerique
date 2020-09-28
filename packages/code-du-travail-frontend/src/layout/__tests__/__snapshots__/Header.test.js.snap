@@ -594,7 +594,7 @@ exports[`<Header /> should render 1`] = `
       >
         <a
           class="c14"
-          href="/recherche?q="
+          href="/recherche"
         >
           <svg
             fill="none"

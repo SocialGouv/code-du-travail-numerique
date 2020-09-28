@@ -25,7 +25,7 @@ import rehypeToReact from "./rehypeToReact";
 
 const RefLink = ({ title, url }) =>
   url ? (
-    <a href={url} target="_blank" rel="noopener noreferrer">
+    <a href={url} target="_blank" rel="noopener noreferrer nofollow">
       {title}
     </a>
   ) : (
@@ -73,7 +73,7 @@ const References = ({ references = [] }) => {
                   }}
                   as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
                 >
-                  <a>{ref.title}</a>
+                  <a rel="nofollow">{ref.title}</a>
                 </Link>
               </li>
             ))}

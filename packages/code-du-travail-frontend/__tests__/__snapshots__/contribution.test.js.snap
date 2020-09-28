@@ -2101,7 +2101,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           >
             <a
               class="c16"
-              href="/recherche?q="
+              href="/recherche"
             >
               <svg
                 fill="none"
@@ -5006,7 +5006,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           >
             <a
               class="c16"
-              href="/recherche?q="
+              href="/recherche"
             >
               <svg
                 fill="none"

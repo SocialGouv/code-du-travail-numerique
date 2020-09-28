@@ -2486,7 +2486,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
         >
           <a
             class="c17"
-            href="/recherche?q="
+            href="/recherche"
           >
             <svg
               fill="none"
