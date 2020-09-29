@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.31.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1-alpha.3...v4.31.1) (2020-09-29)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
 ## [4.31.1-alpha.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1-alpha.2...v4.31.1-alpha.3) (2020-09-29)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public
