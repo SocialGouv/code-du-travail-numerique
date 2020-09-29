@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...editorial_content",
-  "version": "4.31.1-alpha.1",
+  "version": "4.31.1-alpha.2",
   "private": true,
   "main": "index.js",
   "license": "Apache-2.0",
@@ -8,8 +8,8 @@
     "start": "node -r esm index.js "
   },
   "dependencies": {
-    "@socialgouv/cdtn-slugify": "^4.31.1-alpha.1",
-    "@socialgouv/cdtn-sources": "^4.31.1-alpha.1",
+    "@socialgouv/cdtn-slugify": "^4.31.1-alpha.2",
+    "@socialgouv/cdtn-sources": "^4.31.1-alpha.2",
     "filesize": "^6.1.0",
     "rehype-raw": "^4.0.2",
     "rehype-stringify": "^8.0.0",

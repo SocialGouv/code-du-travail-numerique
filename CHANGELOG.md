@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.31.1-alpha.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1-alpha.1...v4.31.1-alpha.2) (2020-09-29)
+
+
+### Bug Fixes
+
+* **ci:** yet another missing env name ([#3016](https://github.com/SocialGouv/code-du-travail-numerique/issues/3016)) ([804c3c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/804c3c7b83724f240d31760a02c437ce942ea28d))
+
+
+
+
+
 ## [4.31.1-alpha.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1-alpha.0...v4.31.1-alpha.1) (2020-09-29)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
