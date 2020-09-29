@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-slugify",
-  "version": "4.31.1-alpha.2",
+  "version": "4.31.1-alpha.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
