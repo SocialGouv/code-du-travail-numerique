@@ -172,7 +172,7 @@ Update Elasticsearch Index:
     - .deploy-data
   stage: "Update ES data"
   environment:
-    name: prod
+    name: prod2
   only:
     refs:
       - master
