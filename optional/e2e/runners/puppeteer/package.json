@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "codeceptjs": "^2.6.11",
-    "puppeteer": "^5.2.1"
+    "puppeteer": "^5.3.1"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^1.28.0",
-    "eslint": "^7.8.0"
+    "@socialgouv/eslint-config-recommended": "^1.36.0",
+    "eslint": "^7.10.0"
   },
   "license": "Apache-2.0"
 }
