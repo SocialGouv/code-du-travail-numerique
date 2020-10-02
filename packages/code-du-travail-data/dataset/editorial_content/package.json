@@ -11,7 +11,7 @@
     "@socialgouv/cdtn-slugify": "^4.31.1",
     "@socialgouv/cdtn-sources": "^4.31.1",
     "filesize": "^6.1.0",
-    "rehype-raw": "^4.0.2",
+    "rehype-raw": "^5.0.0",
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
