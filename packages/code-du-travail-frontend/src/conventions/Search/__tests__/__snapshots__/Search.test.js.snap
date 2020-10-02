@@ -1553,7 +1553,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 </div>
 `;
 
-exports[`<Search /> when input is a valid IDCC, should show only the perfect match  1`] = `
+exports[`<Search /> when input is a valid IDCC, should show only the perfect match 1`] = `
 .c6 {
   padding: 2rem 2.4rem;
   color: #3e486e;

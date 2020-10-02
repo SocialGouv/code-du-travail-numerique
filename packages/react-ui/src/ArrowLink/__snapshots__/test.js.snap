@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ArrowLink /> renders an arrow on the left  1`] = `
+exports[`<ArrowLink /> renders an arrow on the left 1`] = `
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -75,7 +75,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
 </div>
 `;
 
-exports[`<ArrowLink /> renders an arrow on the right  1`] = `
+exports[`<ArrowLink /> renders an arrow on the right 1`] = `
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
