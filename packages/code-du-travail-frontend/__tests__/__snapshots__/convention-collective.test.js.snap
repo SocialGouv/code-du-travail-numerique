@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionCollective /> should render 1`] = `
-.c0 {
+.c3 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c5 {
+.c13 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c6 {
+.c14 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -21,15 +21,15 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fff;
 }
 
-.c6 > *:first-child {
+.c14 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c14 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -66,16 +66,16 @@ exports[`<ConventionCollective /> should render 1`] = `
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c20:link,
+.c20:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):active,
+.c20:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -84,7 +84,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c12[disabled] {
+.c20[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -92,7 +92,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c12 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -101,15 +101,48 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c4 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c10 {
+.c1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c1:before,
+.c1:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c1:before {
+  left: -2rem;
+}
+
+.c1:after {
+  right: -2rem;
+}
+
+.c2 {
+  overflow-x: auto;
+}
+
+.c18 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -122,7 +155,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
+.c16 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -134,7 +167,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c1 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,11 +186,77 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding: 0;
 }
 
-.c2 {
+.c10 {
   width: 80%;
 }
 
+.c0 {
+  margin-bottom: 1rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1rem 0 0;
+  white-space: nowrap;
+}
+
+.c5:first-of-type {
+  padding-left: 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c7 {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  color: #7994d4;
+}
+
+.c8 {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1rem;
+  color: #7994d4;
+}
+
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,7 +274,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c9 {
+.c17 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -184,7 +283,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c11 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,93 +298,130 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin: 0;
 }
 
-.c13 + .c13 {
+.c21 + .c21 {
   margin-left: 4rem;
 }
 
-.c3 {
+.c11 {
   margin: 20%;
   font-size: 3.2rem;
   text-align: center;
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c3 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c0 {
+  .c3 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c13 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c14 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c14 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c20 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c1 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c1:before,
+  .c1:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c16 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c9 {
     padding: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c2 {
+  .c10 {
     width: 100%;
   }
 }
 
+@media (max-width:600px) {
+  .c5 {
+    font-size: 1.2rem;
+  }
+
+  .c5:not(:last-of-type) {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
 @media (max-width:1180px) {
-  .c7 {
+  .c15 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -299,20 +435,20 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c9 {
+  .c17 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c17 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c11 {
+  .c19 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -321,60 +457,119 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c13 + .c13 {
+  .c21 + .c21 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c11 {
     font-size: 2.8rem;
   }
 }
 
 <div>
-  <div
-    class="c0 c1"
+  <nav
+    class="c0"
   >
     <div
-      class="c2"
+      class="c1"
     >
       <div
-        class="c0 c3"
+        class="c2"
       >
         <div
-          class="c4"
+          class="c3 c4"
+        >
+          <div
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/"
+              title="Retour à l'accueil"
+            >
+              <svg
+                class="c7"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
+                  fill="currentColor"
+                />
+              </svg>
+              Accueil
+            </a>
+          </div>
+          <div
+            class="c5"
+          >
+            <svg
+              class="c8"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                fill="currentColor"
+              />
+            </svg>
+             
+            <a
+              class="c6"
+              href="/themes"
+              title="Voir tous les grands thèmes"
+            >
+              Tous les thèmes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="c3 c9"
+  >
+    <div
+      class="c10"
+    >
+      <div
+        class="c3 c11"
+      >
+        <div
+          class="c12"
         >
           Cette convention collective n'a pas été trouvée
         </div>
       </div>
       <div
-        class="c5"
+        class="c13"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <div
-            class="c6 c7"
+            class="c14 c15"
           >
             <h3
-              class="c8 c9"
+              class="c16 c17"
             >
               <div
-                class="c10"
+                class="c18"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c11"
+              class="c19"
             >
               <button
-                class="c12 c13 "
+                class="c20 c21 "
               >
                 Non
               </button>
               <button
-                class="c12 c13 "
+                class="c20 c21 "
               >
                 Oui
               </button>

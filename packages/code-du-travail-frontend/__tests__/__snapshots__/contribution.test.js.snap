@@ -2139,6 +2139,28 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                    
                   <a
                     class="c32"
+                    href="/themes"
+                    title="Voir tous les grands thèmes"
+                  >
+                    Tous les thèmes
+                  </a>
+                </div>
+                <div
+                  class="c31"
+                >
+                  <svg
+                    class="c34"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                   
+                  <a
+                    class="c32"
                     href="/themes/8-depart-de-lentreprise"
                   >
                     Départ de l'entreprise
@@ -4934,6 +4956,28 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       />
                     </svg>
                     Accueil
+                  </a>
+                </div>
+                <div
+                  class="c31"
+                >
+                  <svg
+                    class="c34"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                   
+                  <a
+                    class="c32"
+                    href="/themes"
+                    title="Voir tous les grands thèmes"
+                  >
+                    Tous les thèmes
                   </a>
                 </div>
                 <div

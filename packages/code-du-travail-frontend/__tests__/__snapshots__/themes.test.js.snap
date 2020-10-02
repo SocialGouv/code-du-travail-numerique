@@ -1,22 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Theme /> should render 1`] = `
-<<<<<<< HEAD
-<<<<<<< HEAD
 .c4 {
-=======
-.c58 {
->>>>>>> feat: new temes ui
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-<<<<<<< HEAD
-.c48 {
-=======
-.c56 {
->>>>>>> feat: polishing
+.c37 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 74rem;
+}
+
+.c63 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -24,9 +22,7 @@ exports[`<Theme /> should render 1`] = `
   max-width: 74rem;
 }
 
-=======
->>>>>>> feat: new temes ui
-.c35 {
+.c36 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -95,15 +91,7 @@ exports[`<Theme /> should render 1`] = `
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c60 {
-=======
-.c73 {
->>>>>>> feat: new temes ui
-=======
-.c71 {
->>>>>>> feat: polishing
+.c75 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -148,25 +136,13 @@ exports[`<Theme /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c60:focus,
-.c60:hover,
-.c60:active {
-=======
-.c73:focus,
-.c73:hover,
-.c73:active {
->>>>>>> feat: new temes ui
-=======
-.c71:focus,
-.c71:hover,
-.c71:active {
->>>>>>> feat: polishing
+.c75:focus,
+.c75:hover,
+.c75:active {
   color: #f66663;
 }
 
-.c60 {
+.c65 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -203,16 +179,16 @@ exports[`<Theme /> should render 1`] = `
   opacity: 1;
 }
 
-.c60:link,
-.c60:visited {
+.c65:link,
+.c65:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c60:not([disabled]):hover,
-.c60:not([disabled]):active,
-.c60:not([disabled]):focus {
+.c65:not([disabled]):hover,
+.c65:not([disabled]):active,
+.c65:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -221,7 +197,7 @@ exports[`<Theme /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c60[disabled] {
+.c65[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -303,13 +279,13 @@ exports[`<Theme /> should render 1`] = `
   color: #7994d4;
 }
 
-.c28 {
+.c29 {
   position: relative;
   overflow: hidden;
 }
 
-.c28:before,
-.c28:after {
+.c29:before,
+.c29:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -324,15 +300,15 @@ exports[`<Theme /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c28:before {
+.c29:before {
   left: -2rem;
 }
 
-.c28:after {
+.c29:after {
   right: -2rem;
 }
 
-.c29 {
+.c30 {
   overflow-x: auto;
 }
 
@@ -378,7 +354,7 @@ exports[`<Theme /> should render 1`] = `
   flex: 1 1 auto;
 }
 
-.c39 {
+.c41 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -391,7 +367,7 @@ exports[`<Theme /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c44 {
+.c46 {
   display: block;
   padding: 0.4rem 0;
   font-weight: normal;
@@ -399,7 +375,7 @@ exports[`<Theme /> should render 1`] = `
   text-decoration: none;
 }
 
-.c66 {
+.c70 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -409,7 +385,7 @@ exports[`<Theme /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c47 {
+.c49 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -429,7 +405,7 @@ exports[`<Theme /> should render 1`] = `
   text-align: center;
 }
 
-.c49 {
+.c51 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -439,7 +415,7 @@ exports[`<Theme /> should render 1`] = `
   pointer-events: none;
 }
 
-.c48 {
+.c50 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -460,45 +436,45 @@ exports[`<Theme /> should render 1`] = `
   appearance: none;
 }
 
-.c48::-ms-expand {
+.c50::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c48 *::-ms-backdrop,
-.c48 {
+.c50 *::-ms-backdrop,
+.c50 {
   padding-right: 1.6rem;
 }
 
-.c48:invalid {
+.c50:invalid {
   border-color: #eb5757;
 }
 
-.c48:disabled {
+.c50:disabled {
   background-color: #e4e8ef;
 }
 
-.c37 {
+.c39 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c57 {
+.c61 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c40 {
+.c42 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c38 {
+.c40 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -509,7 +485,7 @@ exports[`<Theme /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c58 {
+.c62 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -525,13 +501,7 @@ exports[`<Theme /> should render 1`] = `
   margin-bottom: 1rem;
 }
 
-.c30 {
-<<<<<<< HEAD
-=======
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
->>>>>>> feat: new temes ui
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -542,7 +512,7 @@ exports[`<Theme /> should render 1`] = `
   align-items: center;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -555,11 +525,11 @@ exports[`<Theme /> should render 1`] = `
   white-space: nowrap;
 }
 
-.c31:first-of-type {
+.c32:first-of-type {
   padding-left: 0;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -572,33 +542,33 @@ exports[`<Theme /> should render 1`] = `
   text-decoration: none;
 }
 
-.c32:focus,
-.c32:hover,
-.c32:active {
+.c33:focus,
+.c33:hover,
+.c33:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c33 {
+.c34 {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
 
-.c34 {
+.c35 {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
 
-.c53 {
+.c58 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c54 {
+.c59 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -606,7 +576,7 @@ exports[`<Theme /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c54:before {
+.c59:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -618,67 +588,27 @@ exports[`<Theme /> should render 1`] = `
   content: "";
 }
 
-.c55 {
+.c60 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c49 {
+.c64 {
   margin-bottom: 2rem;
 }
 
-.c50 {
-=======
-.c61 {
-=======
-.c59 {
->>>>>>> feat: polishing
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
-  margin-bottom: 2rem;
-}
-
-<<<<<<< HEAD
-.c63 {
->>>>>>> feat: new temes ui
-=======
-.c61 {
->>>>>>> feat: polishing
+.c66 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c51 {
-=======
-.c64 {
->>>>>>> feat: new temes ui
-=======
-.c62 {
->>>>>>> feat: polishing
+.c67 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c52 {
-=======
-.c65 {
-=======
-.c63 {
->>>>>>> feat: polishing
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
->>>>>>> feat: new temes ui
+.c68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -689,64 +619,26 @@ exports[`<Theme /> should render 1`] = `
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c53 + .c53 {
+.c69 + .c69 {
   padding-left: 1.6rem;
 }
 
-.c55 {
+.c71 {
   font-size: 1.6rem;
 }
 
-.c58 {
+.c73 {
   margin: 0.4rem 0;
 }
 
-.c59 {
-=======
-.c67 + .c66 {
-=======
-.c65 + .c64 {
->>>>>>> feat: polishing
-  padding-left: 1.6rem;
-}
-
-.c68 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c67 {
-  font-size: 1.6rem;
-}
-
-.c69 {
-  margin: 0.4rem 0;
-}
-
-<<<<<<< HEAD
-.c72 {
->>>>>>> feat: new temes ui
-=======
-.c70 {
->>>>>>> feat: polishing
+.c74 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c61 {
-=======
-.c74 {
->>>>>>> feat: new temes ui
-=======
-.c72 {
->>>>>>> feat: polishing
+.c76 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -765,31 +657,11 @@ exports[`<Theme /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.c62 {
+.c77 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c63 {
-=======
-.c75 {
-=======
-.c73 {
->>>>>>> feat: polishing
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0 1rem 1rem 1rem;
-}
-
-<<<<<<< HEAD
-.c76 {
->>>>>>> feat: new temes ui
-=======
-.c74 {
->>>>>>> feat: polishing
+.c78 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1034,30 +906,19 @@ exports[`<Theme /> should render 1`] = `
   margin-top: 6rem;
 }
 
-<<<<<<< HEAD
-.c40 {
-=======
-.c27 {
+.c28 {
   margin-bottom: 2.4rem;
 }
 
-.c36 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
+.c38 {
   margin-bottom: 8rem;
 }
 
-.c46 {
+.c48 {
   display: none;
 }
 
-.c41 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
->>>>>>> feat: new temes ui
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1072,7 +933,7 @@ exports[`<Theme /> should render 1`] = `
   justify-content: center;
 }
 
-.c42 {
+.c44 {
   position: -webkit-sticky;
   position: sticky;
   top: 14rem;
@@ -1081,30 +942,46 @@ exports[`<Theme /> should render 1`] = `
   margin-right: 4rem;
 }
 
-.c43 {
+.c45 {
   display: block;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
 
-.c45 {
-  width: 75%;
+.c47 {
+  width: 100%;
 }
 
-.c50 {
-  margin-bottom: 4rem;
-  padding-top: 0;
-  padding-bottom: 4rem;
+.c53 {
+  padding: 0;
 }
 
-.c51 {
-  margin: 0;
+.c54 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c52 {
+  margin: 4rem 0;
+  border: 1px solid #bbcadf;
+  border-bottom: none;
+}
+
+.c55 {
   margin: 0;
-  padding: 0;
-  list-style-type: none;
+}
+
+.c57 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1116,52 +993,46 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   .c4 {
-=======
-  .c58 {
->>>>>>> feat: new temes ui
-=======
-  .c56 {
->>>>>>> feat: polishing
     padding: 0 1rem;
   }
 }
 
 @media print {
-<<<<<<< HEAD
-<<<<<<< HEAD
   .c4 {
-=======
-  .c58 {
->>>>>>> feat: new temes ui
-=======
-  .c56 {
->>>>>>> feat: polishing
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-  .c48 {
+  .c37 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c37 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c63 {
     padding: 0;
   }
 }
 
 @media print {
-  .c48 {
+  .c63 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-=======
->>>>>>> feat: new temes ui
-  .c35 {
+  .c36 {
     padding: 2.4rem 0;
   }
 }
@@ -1179,47 +1050,31 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c60 {
-=======
-  .c73 {
->>>>>>> feat: new temes ui
-=======
-  .c71 {
->>>>>>> feat: polishing
+  .c75 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c60 {
-=======
-  .c73 {
->>>>>>> feat: new temes ui
-=======
-  .c71 {
->>>>>>> feat: polishing
+  .c75 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c65 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c60 {
+  .c65 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c65 {
     padding: 0 3rem;
   }
 }
@@ -1258,20 +1113,20 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c28:before,
-  .c28:after {
+  .c29:before,
+  .c29:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     overflow-x: auto;
   }
 }
@@ -1290,89 +1145,73 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c44 {
+  .c46 {
     font-weight: normal;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c46 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c70 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c49 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c39 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c61 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c42 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c40 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c62 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-=======
-  .c30 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c30 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
->>>>>>> feat: new temes ui
-  .c31 {
+  .c32 {
     font-size: 1.2rem;
   }
 
-  .c31:not(:last-of-type) {
+  .c32:not(:last-of-type) {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c35 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -1380,69 +1219,26 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media print {
-  .c54 {
+  .c59 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c60 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c51 {
-    padding-bottom: 4rem;
-=======
-  .c61 {
-=======
-  .c59 {
->>>>>>> feat: polishing
-    padding: 0;
-  }
-}
-
-@media print {
-  .c59 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c62 {
+  .c67 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c63 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c63 {
-    max-width: 100%;
-    padding: 0;
->>>>>>> feat: new temes ui
-  }
-}
-
-@media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c52 {
-=======
-  .c65 {
->>>>>>> feat: new temes ui
-=======
-  .c63 {
->>>>>>> feat: polishing
+  .c68 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1450,50 +1246,26 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c53 + .c53 {
-=======
-  .c67 + .c66 {
->>>>>>> feat: new temes ui
-=======
-  .c65 + .c64 {
->>>>>>> feat: polishing
+  .c69 + .c69 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c57 {
-=======
-  .c70 {
->>>>>>> feat: new temes ui
-=======
-  .c68 {
->>>>>>> feat: polishing
+  .c72 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c71 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .c63 {
-=======
-  .c76 {
->>>>>>> feat: new temes ui
-=======
-  .c74 {
->>>>>>> feat: polishing
+  .c78 {
     display: none;
   }
 }
@@ -1620,75 +1392,46 @@ exports[`<Theme /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-<<<<<<< HEAD
-=======
-  .c36 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c36 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c36 {
+  .c38 {
     margin-bottom: 4rem;
   }
 }
 
 @media (max-width:980px) {
-  .c46 {
+  .c48 {
     display: block;
     margin: 4rem 0;
     text-align: center;
   }
 }
 
-@media (max-width:600px) {
->>>>>>> feat: new temes ui
-  .c41 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c41 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c41 {
+  .c43 {
     display: block;
   }
 }
 
 @media (max-width:980px) {
-  .c42 {
+  .c44 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c45 {
+  .c47 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c53 {
     margin-bottom: 3.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c57 {
     width: 100%;
     margin-top: 2.4rem;
   }
@@ -1883,35 +1626,27 @@ exports[`<Theme /> should render 1`] = `
       class="c26"
     >
       <nav
-<<<<<<< HEAD
-        class="c27"
-=======
-        class="c26 c27"
->>>>>>> feat: new temes ui
+        class="c27 c28"
       >
         <div
-          class="c28"
+          class="c29"
         >
           <div
-            class="c29"
+            class="c30"
           >
             <div
-<<<<<<< HEAD
-              class="c4 c30"
-=======
-              class="c30"
->>>>>>> feat: new temes ui
+              class="c4 c31"
             >
               <div
-                class="c31"
+                class="c32"
               >
                 <a
-                  class="c32"
+                  class="c33"
                   href="/"
                   title="Retour à l'accueil"
                 >
                   <svg
-                    class="c33"
+                    class="c34"
                     fill="none"
                     viewBox="0 0 16 16"
                   >
@@ -1924,10 +1659,10 @@ exports[`<Theme /> should render 1`] = `
                 </a>
               </div>
               <div
-                class="c31"
+                class="c32"
               >
                 <svg
-                  class="c34"
+                  class="c35"
                   fill="none"
                   viewBox="0 0 16 16"
                 >
@@ -1938,7 +1673,29 @@ exports[`<Theme /> should render 1`] = `
                 </svg>
                  
                 <a
-                  class="c32"
+                  class="c33"
+                  href="/themes"
+                  title="Voir tous les grands thèmes"
+                >
+                  Tous les thèmes
+                </a>
+              </div>
+              <div
+                class="c32"
+              >
+                <svg
+                  class="c35"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                    fill="currentColor"
+                  />
+                </svg>
+                 
+                <a
+                  class="c33"
                   href="/themes/1-embauche-et-contrat-de-travail"
                 >
                   Embauche et contrat de travail
@@ -1949,82 +1706,74 @@ exports[`<Theme /> should render 1`] = `
         </div>
       </nav>
       <div
-        class="c35"
+        class="c36"
       >
         <div
-<<<<<<< HEAD
-          class="c4"
-=======
-          class="c36"
->>>>>>> feat: new temes ui
+          class="c37 c38"
         >
           <header
-            class="c37"
+            class="c39"
           >
             <h1
-              class="c38"
+              class="c40"
             >
               <div
-                class="c39"
+                class="c41"
               />
               Contrat de travail
             </h1>
             <p
-              class="c40"
+              class="c42"
             >
               I am a description !
             </p>
           </header>
         </div>
         <div
-          class="c41"
+          class="c4 c43"
         >
           <div
-            class="c42"
+            class="c44"
           >
             <strong
-              class="c43"
+              class="c45"
             >
               Sous-thèmes
             </strong>
             <div>
               <a
-                class="c44"
+                class="c46"
                 href="#/themes/121-cdi"
               />
               <a
-                class="c44"
+                class="c46"
                 href="#/themes/122-cdd"
               />
               <a
-                class="c44"
+                class="c46"
                 href="#/themes/123-interim"
               />
               <a
-                class="c44"
+                class="c46"
                 href="#/themes/124-contrat-dapprentissage"
               />
               <a
-                class="c44"
+                class="c46"
                 href="#/themes/125-contrat-de-professionnalisation"
               />
             </div>
           </div>
           <div
-<<<<<<< HEAD
-            class="c4 c40"
-=======
-            class="c45"
->>>>>>> feat: new temes ui
+            class="c47"
           >
             <div
-              class="c46"
+              class="c48"
             >
               <div
-                class="c47"
+                class="c49"
               >
                 <select
-                  class="c48"
+                  class="c50"
                 >
                   <option
                     value=""
@@ -2039,7 +1788,7 @@ exports[`<Theme /> should render 1`] = `
                 </select>
                 <div
                   aria-hidden="true"
-                  class="c49"
+                  class="c51"
                 >
                   <svg
                     fill="none"
@@ -2067,64 +1816,99 @@ exports[`<Theme /> should render 1`] = `
                 </div>
               </div>
             </div>
+            <hr
+              class="c52"
+            />
             <div
-              class="c35 c50"
+              class="c36 c53"
             >
-              <h2
-                class="c51"
-                data-short-title=""
-                id="/themes/121-cdi"
-              />
+              <div
+                class="c54"
+              >
+                <h2
+                  class="c55"
+                  data-short-title=""
+                  id="/themes/121-cdi"
+                />
+              </div>
               <ul
-                class="c52"
+                class="c56 c57"
               />
             </div>
+            <hr
+              class="c52"
+            />
             <div
-              class="c35 c50"
+              class="c36 c53"
             >
-              <h2
-                class="c51"
-                data-short-title=""
-                id="/themes/122-cdd"
-              />
+              <div
+                class="c54"
+              >
+                <h2
+                  class="c55"
+                  data-short-title=""
+                  id="/themes/122-cdd"
+                />
+              </div>
               <ul
-                class="c52"
+                class="c56 c57"
               />
             </div>
+            <hr
+              class="c52"
+            />
             <div
-              class="c35 c50"
+              class="c36 c53"
             >
-              <h2
-                class="c51"
-                data-short-title=""
-                id="/themes/123-interim"
-              />
+              <div
+                class="c54"
+              >
+                <h2
+                  class="c55"
+                  data-short-title=""
+                  id="/themes/123-interim"
+                />
+              </div>
               <ul
-                class="c52"
+                class="c56 c57"
               />
             </div>
+            <hr
+              class="c52"
+            />
             <div
-              class="c35 c50"
+              class="c36 c53"
             >
-              <h2
-                class="c51"
-                data-short-title=""
-                id="/themes/124-contrat-dapprentissage"
-              />
+              <div
+                class="c54"
+              >
+                <h2
+                  class="c55"
+                  data-short-title=""
+                  id="/themes/124-contrat-dapprentissage"
+                />
+              </div>
               <ul
-                class="c52"
+                class="c56 c57"
               />
             </div>
+            <hr
+              class="c52"
+            />
             <div
-              class="c35 c50"
+              class="c36 c53"
             >
-              <h2
-                class="c51"
-                data-short-title=""
-                id="/themes/125-contrat-de-professionnalisation"
-              />
+              <div
+                class="c54"
+              >
+                <h2
+                  class="c55"
+                  data-short-title=""
+                  id="/themes/125-contrat-de-professionnalisation"
+                />
+              </div>
               <ul
-                class="c52"
+                class="c56 c57"
               />
             </div>
           </div>
@@ -2132,70 +1916,40 @@ exports[`<Theme /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c53"
+      class="c58"
     >
       <footer
-        class="c54"
+        class="c59"
       >
         <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-          class="c35 c45"
+          class="c36 c60"
         >
           <div
             class="c4"
-=======
-          class="c35 c57"
-        >
-          <div
-            class="c58"
->>>>>>> feat: new temes ui
-=======
-          class="c35 c55"
-        >
-          <div
-            class="c56"
->>>>>>> feat: polishing
           >
             <header
-              class="c57"
+              class="c61"
             >
               <h3
-                class="c58"
+                class="c62"
               >
                 <div
-                  class="c39"
+                  class="c41"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-              class="c48 c49"
-=======
-              class="c61"
->>>>>>> feat: new temes ui
-=======
-              class="c59"
->>>>>>> feat: polishing
+              class="c63 c64"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c60"
+              class="c65"
             >
               Contacter nos services en région
               <svg
-<<<<<<< HEAD
-<<<<<<< HEAD
-                class="c50"
-=======
-                class="c63"
->>>>>>> feat: new temes ui
-=======
-                class="c61"
->>>>>>> feat: polishing
+                class="c66"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -2208,209 +1962,88 @@ exports[`<Theme /> should render 1`] = `
           </div>
         </div>
         <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-          class="c35 c51"
+          class="c36 c67"
         >
           <nav>
             <div
-              class="c4 c52"
+              class="c4 c68"
             >
               <div
-                class="c53 "
-=======
-          class="c35 c64"
-=======
-          class="c35 c62"
->>>>>>> feat: polishing
-        >
-          <nav>
-            <div
-              class="c63"
-            >
-              <div
-<<<<<<< HEAD
-                class="c66 c67"
->>>>>>> feat: new temes ui
-=======
-                class="c64 c65"
->>>>>>> feat: polishing
+                class="c69 "
               >
                 <h3
-                  class="c66 c67"
+                  class="c70 c71"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  class="c56 c57"
+                  class="c56 c72"
                 >
                   <li
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                  class="c70"
-=======
-                  class="c68"
->>>>>>> feat: polishing
-                >
-                  <li
-                    class="c69"
-                  >
-                    <a
-<<<<<<< HEAD
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -2419,70 +2052,30 @@ exports[`<Theme /> should render 1`] = `
                 </ul>
               </div>
               <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-                class="c53 "
-=======
-                class="c66 c67"
->>>>>>> feat: new temes ui
-=======
-                class="c64 c65"
->>>>>>> feat: polishing
+                class="c69 "
               >
                 <h3
-                  class="c66 c67"
+                  class="c70 c71"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  class="c56 c57"
+                  class="c56 c72"
                 >
                   <li
-                    class="c58"
+                    class="c73"
                   >
                     <button
-                      class="c60"
-=======
-                  class="c70"
-=======
-                  class="c68"
->>>>>>> feat: polishing
-                >
-                  <li
-                    class="c69"
-                  >
-                    <button
-<<<<<<< HEAD
-                      class="c73"
->>>>>>> feat: new temes ui
-=======
-                      class="c71"
->>>>>>> feat: polishing
+                      class="c75"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2491,24 +2084,10 @@ exports[`<Theme /> should render 1`] = `
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2519,47 +2098,21 @@ exports[`<Theme /> should render 1`] = `
                 </ul>
               </div>
               <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-                class="c53 "
-=======
-                class="c66 c67"
->>>>>>> feat: new temes ui
-=======
-                class="c64 c65"
->>>>>>> feat: polishing
+                class="c69 "
               >
                 <h3
-                  class="c66 c67"
+                  class="c70 c71"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  class="c56 c57"
+                  class="c56 c72"
                 >
                   <li
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                  class="c70"
-=======
-                  class="c68"
->>>>>>> feat: polishing
-                >
-                  <li
-                    class="c69"
-                  >
-                    <a
-<<<<<<< HEAD
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2568,24 +2121,10 @@ exports[`<Theme /> should render 1`] = `
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2594,24 +2133,10 @@ exports[`<Theme /> should render 1`] = `
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    class="c58"
+                    class="c73"
                   >
                     <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-=======
-                    class="c69"
-                  >
-                    <a
-                      class="c70"
->>>>>>> feat: polishing
+                      class="c74"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2625,24 +2150,10 @@ exports[`<Theme /> should render 1`] = `
           </nav>
         </div>
         <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-          class="c61"
+          class="c76"
         >
           <a
-            class="c59 c62"
-=======
-          class="c74"
-        >
-          <a
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-          class="c72"
-        >
-          <a
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2651,28 +2162,12 @@ exports[`<Theme /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c63"
-=======
-            class="c76"
->>>>>>> feat: new temes ui
-=======
-            class="c74"
->>>>>>> feat: polishing
+            class="c78"
           >
             |
           </span>
           <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c59 c62"
-=======
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2681,28 +2176,12 @@ exports[`<Theme /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c63"
-=======
-            class="c76"
->>>>>>> feat: new temes ui
-=======
-            class="c74"
->>>>>>> feat: polishing
+            class="c78"
           >
             |
           </span>
           <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c59 c62"
-=======
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2711,28 +2190,12 @@ exports[`<Theme /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c63"
-=======
-            class="c76"
->>>>>>> feat: new temes ui
-=======
-            class="c74"
->>>>>>> feat: polishing
+            class="c78"
           >
             |
           </span>
           <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c59 c62"
-=======
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2741,28 +2204,12 @@ exports[`<Theme /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c63"
-=======
-            class="c76"
->>>>>>> feat: new temes ui
-=======
-            class="c74"
->>>>>>> feat: polishing
+            class="c78"
           >
             |
           </span>
           <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c59 c62"
-=======
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2771,28 +2218,12 @@ exports[`<Theme /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c63"
-=======
-            class="c76"
->>>>>>> feat: new temes ui
-=======
-            class="c74"
->>>>>>> feat: polishing
+            class="c78"
           >
             |
           </span>
           <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-            class="c59 c62"
-=======
-            class="c75"
->>>>>>> feat: new temes ui
-=======
-            class="c73"
->>>>>>> feat: polishing
+            class="c74 c77"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

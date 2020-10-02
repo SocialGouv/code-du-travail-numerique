@@ -1,11 +1,10 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
+  Accordion,
   ArrowLink,
   Button,
   Container,
   FlatList,
-  icons,
-  IconStripe,
   PageTitle,
   Section,
   Select,
@@ -21,6 +20,7 @@ import styled from "styled-components";
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { ListLink } from "../../src/search/SearchResults/Results";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -28,7 +28,6 @@ const {
 
 function Theme({ theme }) {
   const [filter, setFilter] = useState("");
-  const [isDisplayedAll, setDisplayedAll] = useState(false);
   const {
     breadcrumbs = [],
     description = "",
@@ -44,10 +43,7 @@ function Theme({ theme }) {
 
   const hasChildren = Boolean(children.length);
 
-  const refs = (isDisplayedAll || !hasChildren
-    ? allRefs
-    : allRefs.slice(0, 4)
-  ).filter((ref) => ref.title);
+  const refs = allRefs.filter((ref) => ref.title);
 
   return (
     <Layout>
@@ -71,7 +67,7 @@ function Theme({ theme }) {
               />
             </FixedWrapper>
           )}
-          <Content>
+          <Content fullWidth={children.length > 0}>
             {children.length > 0 && (
               <SelectWrapper>
                 <Select
@@ -91,36 +87,43 @@ function Theme({ theme }) {
             <>
               {refs.length > 0 && (
                 <ContentSection>
-                  {hasChildren && <H2>Informations générales</H2>}
-                  <StyledFlatList>
-                    {refs.map((ref) => (
-                      <Li key={ref.id}>
-                        <ContentLink {...ref} />
-                      </Li>
-                    ))}
-                  </StyledFlatList>
-                  {hasChildren && (
+                  {hasChildren ? (
                     <>
+                      <H2>Informations générales</H2>
+                      <StyledFlatList>
+                        {refs.slice(0, 4).map((ref) => (
+                          <Li key={ref.id}>
+                            <ContentLink {...ref} />
+                          </Li>
+                        ))}
+                      </StyledFlatList>
                       {allRefs.length > 4 && (
-                        <>
-                          {!isDisplayedAll ? (
-                            <SeeMoreButton
-                              variant="navLink"
-                              onClick={() => setDisplayedAll(true)}
-                            >
-                              Plus d’informations générales
-                            </SeeMoreButton>
-                          ) : (
-                            <SeeMoreButton
-                              variant="navLink"
-                              onClick={() => setDisplayedAll(false)}
-                            >
-                              Afficher moins d’informations générales
-                            </SeeMoreButton>
-                          )}
-                        </>
+                        <Accordion
+                          items={[
+                            {
+                              body: (
+                                <StyledFlatList>
+                                  {refs.slice(4).map((ref) => (
+                                    <Li key={ref.id}>
+                                      <ContentLink {...ref} />
+                                    </Li>
+                                  ))}
+                                </StyledFlatList>
+                              ),
+                              title: "Contenus suivants",
+                            },
+                          ]}
+                        />
                       )}
                     </>
+                  ) : (
+                    <FlexTiles>
+                      {refs.map((ref) => (
+                        <FlexTile key={ref.id}>
+                          <ListLink item={ref} showTheme={false} />
+                        </FlexTile>
+                      ))}
+                    </FlexTiles>
                   )}
                 </ContentSection>
               )}
@@ -129,74 +132,70 @@ function Theme({ theme }) {
                 .map(
                   ({
                     id,
-                    icon,
                     slug,
                     refs = [],
                     children: grandChildren = [],
                     shortTitle = "",
                     title,
                   }) => (
-                    <ContentSection key={id}>
-                      {icon ? (
-                        <IconStripe centered icon={icons[icon]}>
+                    <>
+                      <Hr />
+                      <ContentSection key={id}>
+                        <FlexDiv>
                           <H2 id={slug} data-short-title={shortTitle}>
                             {title}
                           </H2>
-                        </IconStripe>
-                      ) : (
-                        <H2 id={slug} data-short-title={shortTitle}>
-                          {title}
-                        </H2>
-                      )}
-                      {grandChildren.length > 0 && (
-                        <SubThemeNav>
-                          {grandChildren.map(({ label, slug }, index) => (
-                            <React.Fragment key={label}>
-                              <Link
-                                href={`/${getRouteBySource(
-                                  SOURCES.THEMES
-                                )}/[slug]`}
-                                as={`${slug}`}
-                                passHref
-                              >
-                                <Button
-                                  as="a"
-                                  className="no-after"
-                                  variant="navLink"
+                          {(grandChildren.length > 0 ||
+                            (!grandChildren.length && refs.length > 4)) && (
+                            <Link
+                              href={`/${getRouteBySource(
+                                SOURCES.THEMES
+                              )}/[slug]`}
+                              as={`/${getRouteBySource(
+                                SOURCES.THEMES
+                              )}/${slug}`}
+                              passHref
+                            >
+                              <SeeAll>VOIR TOUT</SeeAll>
+                            </Link>
+                          )}
+                        </FlexDiv>
+                        {grandChildren.length > 0 && (
+                          <SubThemeNav>
+                            {grandChildren.map(({ label, slug }) => (
+                              <React.Fragment key={label}>
+                                <Link
+                                  href={`/${getRouteBySource(
+                                    SOURCES.THEMES
+                                  )}/[slug]`}
+                                  as={`${slug}`}
+                                  passHref
                                 >
-                                  {label}
-                                </Button>
-                              </Link>
-                              {index < grandChildren.length - 1 && (
-                                <PrimaryColored>&bull;</PrimaryColored>
-                              )}
-                            </React.Fragment>
-                          ))}
-                        </SubThemeNav>
-                      )}
-                      <StyledFlatList>
-                        {refs
-                          .filter((ref) => ref.title)
-                          .slice(0, 4)
-                          .map((ref) => (
-                            <Li key={ref.id}>
-                              <ContentLink {...ref} />
-                            </Li>
-                          ))}
-                      </StyledFlatList>
-                      {(grandChildren.length > 0 ||
-                        (!grandChildren.length && refs.length > 4)) && (
-                        <Link
-                          href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
-                          as={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
-                          passHref
-                        >
-                          <ThemeButton variant="flat" small>
-                            Voir ce thème en détail
-                          </ThemeButton>
-                        </Link>
-                      )}
-                    </ContentSection>
+                                  <Button
+                                    as="a"
+                                    className="no-after"
+                                    variant="flat"
+                                    small
+                                  >
+                                    {label}
+                                  </Button>
+                                </Link>
+                              </React.Fragment>
+                            ))}
+                          </SubThemeNav>
+                        )}
+                        <StyledFlatList>
+                          {refs
+                            .filter((ref) => ref.title)
+                            .slice(0, 4)
+                            .map((ref) => (
+                              <Li key={ref.id}>
+                                <ContentLink {...ref} />
+                              </Li>
+                            ))}
+                        </StyledFlatList>
+                      </ContentSection>
+                    </>
                   )
                 )}
             </>
@@ -265,36 +264,71 @@ const NavTitle = styled.strong`
 `;
 
 const Content = styled.div`
-  width: 75%;
+  width: ${(fullWidth) => (fullWidth ? "100%" : "75%")};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
 `;
 
-const SeeMoreButton = styled(Button)`
-  color: ${colors.secondary};
-`;
-
 const ContentSection = styled(Section)`
-  margin-bottom: ${spacings.larger};
-  padding-top: 0;
-  padding-bottom: ${spacings.larger};
+  padding: 0;
   @media (max-width: ${breakpoints.mobile}) {
     margin-bottom: ${spacings.large};
   }
+`;
+
+const FlexTiles = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${spacings.small};
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+`;
+
+const FlexTile = styled.li`
+  flex: 0 0 calc(50% - ${spacings.small} / 2);
+  & > a {
+    height: 100%;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 0 0 100%;
+  }
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Hr = styled.hr`
+  margin: ${spacings.larger} 0;
+  border: 1px solid ${colors.border};
+  border-bottom: none;
 `;
 
 const H2 = styled.h2`
   margin: 0;
 `;
 
-const SubThemeNav = styled.nav`
-  margin-top: ${spacings.base};
+const SeeAll = styled.a`
+  color: ${colors.secondary};
+  font-size: ${fonts.sizes.small};
+  text-decoration-color: ${colors.secondary};
+  :hover {
+    text-decoration-color: ${colors.primary};
+  }
 `;
 
-const PrimaryColored = styled.span`
-  padding: 0 ${spacings.small};
-  color: ${({ theme }) => theme.primary};
+const SubThemeNav = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${spacings.small};
+  margin-top: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: stretch;
+  }
 `;
 
 const StyledFlatList = styled(FlatList)`
@@ -346,10 +380,6 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   className: "no-after",
 }))`
   word-break: break-word;
-`;
-
-const ThemeButton = styled(Button)`
-  margin-top: ${spacings.base};
 `;
 
 export default Theme;

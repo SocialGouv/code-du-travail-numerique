@@ -7,9 +7,6 @@ import styled from "styled-components";
 const { ArrowRight, Home: HomeIcon } = icons;
 
 const Breadcrumbs = ({ items = [], ...props }) => {
-  if (!items || items.length === 0) {
-    return null;
-  }
   return (
     <Nav {...props}>
       <OverflowWrapper>
@@ -20,6 +17,14 @@ const Breadcrumbs = ({ items = [], ...props }) => {
                 <StyledLink title="Retour à l'accueil">
                   <StyledHomeIcon />
                   Accueil
+                </StyledLink>
+              </Link>
+            </NavItem>,
+            <NavItem key="tous-les-themes">
+              <StyledArrowRight />{" "}
+              <Link href="/themes" passHref>
+                <StyledLink title="Voir tous les grands thèmes">
+                  Tous les thèmes
                 </StyledLink>
               </Link>
             </NavItem>,
