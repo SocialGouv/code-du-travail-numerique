@@ -80,6 +80,7 @@ const tests = [
 
 describe("getIndemnite", () => {
   tests.forEach((test) => {
+    //eslint-disable-next-line jest/valid-title
     it(test.title, () => {
       const salaireRef = getSalaireRefLegal({ ...test.data });
       const { indemnite } = getIndemniteLegale({

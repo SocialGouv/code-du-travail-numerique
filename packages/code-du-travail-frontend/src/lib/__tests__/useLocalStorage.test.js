@@ -18,12 +18,12 @@ function renderApp(key, initialValue) {
   return render(<App />);
 }
 describe("useLocalStorage", () => {
-  it("it should initializes value", () => {
+  it("initializes value", () => {
     const { getByTestId } = renderApp("foo", "hello cdtn");
     const valueElement = getByTestId("value");
     expect(valueElement.innerHTML).toBe("hello cdtn");
   });
-  it("it should updates value", () => {
+  it("updates value", () => {
     const { getByTestId } = renderApp("foo", "bar");
     act(() => {
       getByTestId("button").click();
