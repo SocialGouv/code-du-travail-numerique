@@ -53,35 +53,34 @@ router.get("/themes/:slug", async (ctx) => {
 
   const theme = response.body.hits.hits[0]._source;
 
+  theme.refs = await getEsReferences(theme.refs).then((references) =>
+    references.map((reference) => reference._source)
+  );
+
   if (theme.children.length) {
     const childrenResponse = await populateChildren(theme.children);
     const populatedChildren = childrenResponse.map(
       (childResponse) =>
-        childResponse.body.hits.hits[0] &&
+        childResponse.body.hits &&
+        childResponse.body.hits.hits.length &&
         childResponse.body.hits.hits[0]._source
     );
-    // if no direct ref, fetch first 4 of the children
+    // if no direct ref, fetch first 2 of the children
     for (const child of populatedChildren) {
-      if (child && !child.refs.length) {
+      if (child.refs && !child.refs.length) {
         const childrenResponse = await populateChildren(child.children);
         child.refs = childrenResponse.flatMap(
           (childResponse) =>
-            childResponse.body.hits.hits[0] &&
-            childResponse.body.hits.hits[0]._source &&
-            childResponse.body.hits.hits[0]._source.refs.slice(0, 3)
+            childResponse.body.hits &&
+            childResponse.body.hits.hits.length &&
+            childResponse.body.hits.hits[0]._source.refs.slice(0, 2)
         );
       }
     }
-
-    theme.refs = await getEsReferences(theme.refs).then((references) =>
-      references.map((reference) => reference._source)
-    );
     for (const child of populatedChildren) {
-      if (child) {
-        child.refs = await getEsReferences(child.refs).then((references) =>
-          references.map((reference) => reference._source)
-        );
-      }
+      child.refs = await getEsReferences(child.refs).then((references) =>
+        references.map((reference) => reference._source)
+      );
     }
     theme.children = populatedChildren;
   }

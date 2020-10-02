@@ -2,6 +2,7 @@
 
 exports[`<Theme /> should render 1`] = `
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c4 {
 =======
 .c58 {
@@ -13,6 +14,9 @@ exports[`<Theme /> should render 1`] = `
 
 <<<<<<< HEAD
 .c48 {
+=======
+.c56 {
+>>>>>>> feat: polishing
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -92,10 +96,14 @@ exports[`<Theme /> should render 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c60 {
 =======
 .c73 {
 >>>>>>> feat: new temes ui
+=======
+.c71 {
+>>>>>>> feat: polishing
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -141,6 +149,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c60:focus,
 .c60:hover,
 .c60:active {
@@ -149,73 +158,15 @@ exports[`<Theme /> should render 1`] = `
 .c73:hover,
 .c73:active {
 >>>>>>> feat: new temes ui
+=======
+.c71:focus,
+.c71:hover,
+.c71:active {
+>>>>>>> feat: polishing
   color: #f66663;
 }
 
-.c53 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c53:link,
-.c53:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c53:not([disabled]):hover,
-.c53:not([disabled]):active,
-.c53:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c53[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c62 {
+.c60 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -252,16 +203,16 @@ exports[`<Theme /> should render 1`] = `
   opacity: 1;
 }
 
-.c62:link,
-.c62:visited {
+.c60:link,
+.c60:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c62:not([disabled]):hover,
-.c62:not([disabled]):active,
-.c62:not([disabled]):focus {
+.c60:not([disabled]):hover,
+.c60:not([disabled]):active,
+.c60:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -270,7 +221,7 @@ exports[`<Theme /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c62[disabled] {
+.c60[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -448,7 +399,7 @@ exports[`<Theme /> should render 1`] = `
   text-decoration: none;
 }
 
-.c68 {
+.c66 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -534,7 +485,7 @@ exports[`<Theme /> should render 1`] = `
   text-align: center;
 }
 
-.c59 {
+.c57 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -558,7 +509,7 @@ exports[`<Theme /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c60 {
+.c58 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -642,12 +593,12 @@ exports[`<Theme /> should render 1`] = `
   color: #7994d4;
 }
 
-.c55 {
+.c53 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c56 {
+.c54 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -655,7 +606,7 @@ exports[`<Theme /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c56:before {
+.c54:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -667,12 +618,13 @@ exports[`<Theme /> should render 1`] = `
   content: "";
 }
 
-.c57 {
+.c55 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .c49 {
   margin-bottom: 2rem;
@@ -681,6 +633,9 @@ exports[`<Theme /> should render 1`] = `
 .c50 {
 =======
 .c61 {
+=======
+.c59 {
+>>>>>>> feat: polishing
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -689,25 +644,37 @@ exports[`<Theme /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
+<<<<<<< HEAD
 .c63 {
 >>>>>>> feat: new temes ui
+=======
+.c61 {
+>>>>>>> feat: polishing
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c51 {
 =======
 .c64 {
 >>>>>>> feat: new temes ui
+=======
+.c62 {
+>>>>>>> feat: polishing
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c52 {
 =======
 .c65 {
+=======
+.c63 {
+>>>>>>> feat: polishing
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -722,6 +689,7 @@ exports[`<Theme /> should render 1`] = `
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .c53 + .c53 {
   padding-left: 1.6rem;
@@ -738,25 +706,32 @@ exports[`<Theme /> should render 1`] = `
 .c59 {
 =======
 .c67 + .c66 {
+=======
+.c65 + .c64 {
+>>>>>>> feat: polishing
   padding-left: 1.6rem;
 }
 
-.c70 {
+.c68 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c69 {
+.c67 {
   font-size: 1.6rem;
 }
 
-.c71 {
+.c69 {
   margin: 0.4rem 0;
 }
 
+<<<<<<< HEAD
 .c72 {
 >>>>>>> feat: new temes ui
+=======
+.c70 {
+>>>>>>> feat: polishing
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -764,10 +739,14 @@ exports[`<Theme /> should render 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c61 {
 =======
 .c74 {
 >>>>>>> feat: new temes ui
+=======
+.c72 {
+>>>>>>> feat: polishing
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -787,6 +766,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .c62 {
   margin: 0 1rem 1rem 1rem;
 }
@@ -794,6 +774,9 @@ exports[`<Theme /> should render 1`] = `
 .c63 {
 =======
 .c75 {
+=======
+.c73 {
+>>>>>>> feat: polishing
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -801,8 +784,12 @@ exports[`<Theme /> should render 1`] = `
   margin: 0 1rem 1rem 1rem;
 }
 
+<<<<<<< HEAD
 .c76 {
 >>>>>>> feat: new temes ui
+=======
+.c74 {
+>>>>>>> feat: polishing
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1105,9 +1092,9 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c50 {
-  margin-top: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 0;
+  margin-bottom: 4rem;
+  padding-top: 0;
+  padding-bottom: 4rem;
 }
 
 .c51 {
@@ -1128,26 +1115,30 @@ exports[`<Theme /> should render 1`] = `
   margin-top: 3.2rem;
 }
 
-.c54 {
-  margin-top: 1.6rem;
-}
-
 @media (max-width:600px) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   .c4 {
 =======
   .c58 {
 >>>>>>> feat: new temes ui
+=======
+  .c56 {
+>>>>>>> feat: polishing
     padding: 0 1rem;
   }
 }
 
 @media print {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c4 {
 =======
   .c58 {
 >>>>>>> feat: new temes ui
+=======
+  .c56 {
+>>>>>>> feat: polishing
     max-width: 100%;
     padding: 0;
   }
@@ -1189,50 +1180,46 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:600px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c60 {
 =======
   .c73 {
 >>>>>>> feat: new temes ui
+=======
+  .c71 {
+>>>>>>> feat: polishing
     font-size: 1.4rem;
   }
 }
 
 @media print {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c60 {
 =======
   .c73 {
 >>>>>>> feat: new temes ui
+=======
+  .c71 {
+>>>>>>> feat: polishing
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c60 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c53 {
+  .c60 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c62 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c62 {
+  .c60 {
     padding: 0 3rem;
   }
 }
@@ -1315,7 +1302,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c66 {
     font-size: 1.6rem;
   }
 }
@@ -1334,7 +1321,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c57 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1353,7 +1340,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c58 {
     font-size: 2.2rem;
   }
 }
@@ -1393,13 +1380,13 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media print {
-  .c56 {
+  .c54 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c55 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
@@ -1407,35 +1394,39 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:600px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c51 {
     padding-bottom: 4rem;
 =======
   .c61 {
+=======
+  .c59 {
+>>>>>>> feat: polishing
     padding: 0;
   }
 }
 
 @media print {
-  .c61 {
+  .c59 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c64 {
+  .c62 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c63 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c65 {
+  .c63 {
     max-width: 100%;
     padding: 0;
 >>>>>>> feat: new temes ui
@@ -1444,10 +1435,14 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:600px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c52 {
 =======
   .c65 {
 >>>>>>> feat: new temes ui
+=======
+  .c63 {
+>>>>>>> feat: polishing
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1456,26 +1451,34 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:600px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c53 + .c53 {
 =======
   .c67 + .c66 {
 >>>>>>> feat: new temes ui
+=======
+  .c65 + .c64 {
+>>>>>>> feat: polishing
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c57 {
 =======
   .c70 {
 >>>>>>> feat: new temes ui
+=======
+  .c68 {
+>>>>>>> feat: polishing
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c67 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1483,10 +1486,14 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:980px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .c63 {
 =======
   .c76 {
 >>>>>>> feat: new temes ui
+=======
+  .c74 {
+>>>>>>> feat: polishing
     display: none;
   }
 }
@@ -1630,14 +1637,14 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:980px) {
   .c36 {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 }
 
 @media (max-width:980px) {
   .c46 {
     display: block;
-    margin: 3.2rem 0;
+    margin: 4rem 0;
     text-align: center;
   }
 }
@@ -1676,7 +1683,7 @@ exports[`<Theme /> should render 1`] = `
 
 @media (max-width:600px) {
   .c50 {
-    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
   }
 }
 
@@ -2002,11 +2009,6 @@ exports[`<Theme /> should render 1`] = `
                 href="#/themes/125-contrat-de-professionnalisation"
               />
             </div>
-            <img
-              alt="smile"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE2MyIgdmlld0JveD0iMCAwIDE3MSAxNjMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxlbGxpcHNlIGN4PSI4NS41IiBjeT0iODEuNSIgcng9Ijg1LjUiIHJ5PSI4MS41IiBmaWxsPSIjRkZENjAwIi8+CjxlbGxpcHNlIGN4PSI2MS41IiBjeT0iNjQuNSIgcng9IjE5LjUiIHJ5PSIyMi41IiBmaWxsPSIjNjI2MDYwIi8+CjxlbGxpcHNlIGN4PSI2MS41IiBjeT0iNjQuNSIgcng9IjE5LjUiIHJ5PSIyMi41IiBmaWxsPSIjNjI2MDYwIi8+CjxlbGxpcHNlIGN4PSI2MS41IiBjeT0iNjQuNSIgcng9IjE5LjUiIHJ5PSIyMi41IiBmaWxsPSIjNjI2MDYwIi8+CjxlbGxpcHNlIGN4PSI2MS41IiBjeT0iNjQuNSIgcng9IjE5LjUiIHJ5PSIyMi41IiBmaWxsPSJ3aGl0ZSIvPgo8ZWxsaXBzZSBjeD0iMTE1LjUiIGN5PSI2NC41IiByeD0iMTkuNSIgcnk9IjIyLjUiIGZpbGw9IiM2MjYwNjAiLz4KPGVsbGlwc2UgY3g9IjExNS41IiBjeT0iNjQuNSIgcng9IjE5LjUiIHJ5PSIyMi41IiBmaWxsPSIjNjI2MDYwIi8+CjxlbGxpcHNlIGN4PSIxMTUuNSIgY3k9IjY0LjUiIHJ4PSIxOS41IiByeT0iMjIuNSIgZmlsbD0iIzYyNjA2MCIvPgo8ZWxsaXBzZSBjeD0iMTE1LjUiIGN5PSI2NC41IiByeD0iMTkuNSIgcnk9IjIyLjUiIGZpbGw9IndoaXRlIi8+CjxlbGxpcHNlIGN4PSI2MiIgY3k9IjcxLjUiIHJ4PSI4IiByeT0iNy41IiBmaWxsPSIjMUExOTE5Ii8+CjxlbGxpcHNlIGN4PSIxMTciIGN5PSI3MS41IiByeD0iOCIgcnk9IjcuNSIgZmlsbD0iIzFBMTkxOSIvPgo8cGF0aCBkPSJNODUuOTYzNiAxMTRIMTM1TDEyNS4zNjggMTI1LjA5M0MxMTkuNDgxIDEzMS44NzMgMTEyLjAwOCAxMzcuMDkyIDEwMy42MTYgMTQwLjI4NUwxMDEuODczIDE0MC45NDhDOTEuNjczNSAxNDQuODI4IDgwLjM2MTIgMTQ0LjU2NCA3MC4zNTM4IDE0MC4yMTNDNjMuMTEyOCAxMzcuMDY1IDU2LjczODUgMTMyLjIxNiA1MS43NzIgMTI2LjA3OEw0MiAxMTRIODUuOTYzNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xMzUgMTE0TDEzNi4xMzMgMTE0Ljk4M0MxMzYuNTE4IDExNC41NCAxMzYuNjA5IDExMy45MTIgMTM2LjM2NSAxMTMuMzc4QzEzNi4xMjEgMTEyLjg0MyAxMzUuNTg4IDExMi41IDEzNSAxMTIuNVYxMTRaTTQyIDExNFYxMTIuNUM0MS40MjE5IDExMi41IDQwLjg5NTIgMTEyLjgzMiA0MC42NDYzIDExMy4zNTRDNDAuMzk3MyAxMTMuODc2IDQwLjQ3MDMgMTE0LjQ5NCA0MC44MzM5IDExNC45NDRMNDIgMTE0Wk01MS43NzIgMTI2LjA3OEw1MC42MDU5IDEyNy4wMjFMNTEuNzcyIDEyNi4wNzhaTTEwMS44NzMgMTQwLjk0OEwxMDIuNDA2IDE0Mi4zNUwxMDEuODczIDE0MC45NDhaTTEwMy42MTYgMTQwLjI4NUwxMDMuMDgzIDEzOC44ODNMMTAzLjYxNiAxNDAuMjg1Wk0xMjUuMzY4IDEyNS4wOTNMMTI2LjUgMTI2LjA3N0wxMjUuMzY4IDEyNS4wOTNaTTcwLjM1MzggMTQwLjIxM0w2OS43NTU4IDE0MS41ODlMNzAuMzUzOCAxNDAuMjEzWk0xMzUgMTEyLjVIODUuOTYzNlYxMTUuNUgxMzVWMTEyLjVaTTg1Ljk2MzYgMTEyLjVINDJWMTE1LjVIODUuOTYzNlYxMTIuNVpNNDAuODMzOSAxMTQuOTQ0TDUwLjYwNTkgMTI3LjAyMUw1Mi45MzgyIDEyNS4xMzRMNDMuMTY2MSAxMTMuMDU2TDQwLjgzMzkgMTE0Ljk0NFpNMTAyLjQwNiAxNDIuMzVMMTA0LjE0OSAxNDEuNjg2TDEwMy4wODMgMTM4Ljg4M0wxMDEuMzM5IDEzOS41NDZMMTAyLjQwNiAxNDIuMzVaTTEyNi41IDEyNi4wNzdMMTM2LjEzMyAxMTQuOTgzTDEzMy44NjcgMTEzLjAxN0wxMjQuMjM1IDEyNC4xMUwxMjYuNSAxMjYuMDc3Wk0xMDQuMTQ5IDE0MS42ODZDMTEyLjc3MyAxMzguNDA2IDEyMC40NTEgMTMzLjA0MyAxMjYuNSAxMjYuMDc3TDEyNC4yMzUgMTI0LjExQzExOC41MSAxMzAuNzAzIDExMS4yNDQgMTM1Ljc3OCAxMDMuMDgzIDEzOC44ODNMMTA0LjE0OSAxNDEuNjg2Wk01MC42MDU5IDEyNy4wMjFDNTUuNzI0MiAxMzMuMzQ3IDYyLjI5MzQgMTM4LjM0NCA2OS43NTU4IDE0MS41ODlMNzAuOTUxOSAxMzguODM4QzYzLjkzMjMgMTM1Ljc4NiA1Ny43NTI4IDEzMS4wODUgNTIuOTM4MiAxMjUuMTM0TDUwLjYwNTkgMTI3LjAyMVpNNjkuNzU1OCAxNDEuNTg5QzgwLjEyMjMgMTQ2LjA5NiA5MS44NDA3IDE0Ni4zNjkgMTAyLjQwNiAxNDIuMzVMMTAxLjMzOSAxMzkuNTQ2QzkxLjUwNjMgMTQzLjI4NyA4MC42IDE0My4wMzIgNzAuOTUxOSAxMzguODM4TDY5Ljc1NTggMTQxLjU4OVoiIGZpbGw9IiMxQTE5MTkiLz4KPHBhdGggZD0iTTExNiAxMzQuNjA5QzExNiAxMzkuOTE1IDk5LjY1ODQgMTQyIDg2LjQ0NDQgMTQyQzczLjIzMDUgMTQyIDU5IDEzOS45MTUgNTkgMTM0LjYwOUM1OSAxMjkuMzAyIDczLjIzMDUgMTI1IDg2LjQ0NDQgMTI1Qzk5LjY1ODQgMTI1IDExNiAxMjkuMzAyIDExNiAxMzQuNjA5WiIgZmlsbD0iI0ZGNkFCMiIvPgo8cGF0aCBkPSJNNDEgMTE0VjExMi41QzQwLjQyMTkgMTEyLjUgMzkuODk1MiAxMTIuODMyIDM5LjY0NjMgMTEzLjM1NEMzOS4zOTczIDExMy44NzYgMzkuNDcwMyAxMTQuNDk0IDM5LjgzMzkgMTE0Ljk0NEw0MSAxMTRaTTEzNCAxMTRMMTM1LjEzMyAxMTQuOTgzQzEzNS41MTggMTE0LjU0IDEzNS42MDkgMTEzLjkxMiAxMzUuMzY1IDExMy4zNzhDMTM1LjEyMSAxMTIuODQzIDEzNC41ODggMTEyLjUgMTM0IDExMi41VjExNFpNMTI0LjM2OCAxMjUuMDkzTDEyMy4yMzUgMTI0LjExTDEyNC4zNjggMTI1LjA5M1pNMTM0IDExMi41SDg0Ljk2MzZWMTE1LjVIMTM0VjExMi41Wk04NC45NjM2IDExMi41SDQxVjExNS41SDg0Ljk2MzZWMTEyLjVaTTM5LjgzMzkgMTE0Ljk0NEw0OS42MDU5IDEyNy4wMjFMNTEuOTM4MiAxMjUuMTM0TDQyLjE2NjEgMTEzLjA1NkwzOS44MzM5IDExNC45NDRaTTEwMS40MDYgMTQyLjM1TDEwMy4xNDkgMTQxLjY4NkwxMDIuMDgzIDEzOC44ODNMMTAwLjMzOSAxMzkuNTQ2TDEwMS40MDYgMTQyLjM1Wk0xMjUuNSAxMjYuMDc3TDEzNS4xMzMgMTE0Ljk4M0wxMzIuODY3IDExMy4wMTdMMTIzLjIzNSAxMjQuMTFMMTI1LjUgMTI2LjA3N1pNMTAzLjE0OSAxNDEuNjg2QzExMS43NzMgMTM4LjQwNiAxMTkuNDUxIDEzMy4wNDMgMTI1LjUgMTI2LjA3N0wxMjMuMjM1IDEyNC4xMUMxMTcuNTEgMTMwLjcwMyAxMTAuMjQ0IDEzNS43NzggMTAyLjA4MyAxMzguODgzTDEwMy4xNDkgMTQxLjY4NlpNNDkuNjA1OSAxMjcuMDIxQzU0LjcyNDIgMTMzLjM0NyA2MS4yOTM0IDEzOC4zNDQgNjguNzU1OCAxNDEuNTg5TDY5Ljk1MTkgMTM4LjgzOEM2Mi45MzIzIDEzNS43ODYgNTYuNzUyOCAxMzEuMDg1IDUxLjkzODIgMTI1LjEzNEw0OS42MDU5IDEyNy4wMjFaTTY4Ljc1NTggMTQxLjU4OUM3OS4xMjIzIDE0Ni4wOTYgOTAuODQwNyAxNDYuMzY5IDEwMS40MDYgMTQyLjM1TDEwMC4zMzkgMTM5LjU0NkM5MC41MDYzIDE0My4yODcgNzkuNiAxNDMuMDMyIDY5Ljk1MTkgMTM4LjgzOEw2OC43NTU4IDE0MS41ODlaIiBmaWxsPSIjMUExOTE5Ii8+Cjwvc3ZnPgo="
-              style="margin-top: 4rem;"
-            />
           </div>
           <div
 <<<<<<< HEAD
@@ -2076,12 +2078,6 @@ exports[`<Theme /> should render 1`] = `
               <ul
                 class="c52"
               />
-              <button
-                class="c53 c54"
-                href="/themes//themes/121-cdi"
-              >
-                Voir ce thème en détail
-              </button>
             </div>
             <div
               class="c35 c50"
@@ -2094,12 +2090,6 @@ exports[`<Theme /> should render 1`] = `
               <ul
                 class="c52"
               />
-              <button
-                class="c53 c54"
-                href="/themes//themes/122-cdd"
-              >
-                Voir ce thème en détail
-              </button>
             </div>
             <div
               class="c35 c50"
@@ -2112,12 +2102,6 @@ exports[`<Theme /> should render 1`] = `
               <ul
                 class="c52"
               />
-              <button
-                class="c53 c54"
-                href="/themes//themes/123-interim"
-              >
-                Voir ce thème en détail
-              </button>
             </div>
             <div
               class="c35 c50"
@@ -2130,12 +2114,6 @@ exports[`<Theme /> should render 1`] = `
               <ul
                 class="c52"
               />
-              <button
-                class="c53 c54"
-                href="/themes//themes/124-contrat-dapprentissage"
-              >
-                Voir ce thème en détail
-              </button>
             </div>
             <div
               class="c35 c50"
@@ -2148,24 +2126,19 @@ exports[`<Theme /> should render 1`] = `
               <ul
                 class="c52"
               />
-              <button
-                class="c53 c54"
-                href="/themes//themes/125-contrat-de-professionnalisation"
-              >
-                Voir ce thème en détail
-              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
     <div
-      class="c55"
+      class="c53"
     >
       <footer
-        class="c56"
+        class="c54"
       >
         <div
+<<<<<<< HEAD
 <<<<<<< HEAD
           class="c35 c45"
         >
@@ -2177,12 +2150,18 @@ exports[`<Theme /> should render 1`] = `
           <div
             class="c58"
 >>>>>>> feat: new temes ui
+=======
+          class="c35 c55"
+        >
+          <div
+            class="c56"
+>>>>>>> feat: polishing
           >
             <header
-              class="c59"
+              class="c57"
             >
               <h3
-                class="c60"
+                class="c58"
               >
                 <div
                   class="c39"
@@ -2192,23 +2171,31 @@ exports[`<Theme /> should render 1`] = `
             </header>
             <div
 <<<<<<< HEAD
+<<<<<<< HEAD
               class="c48 c49"
 =======
               class="c61"
 >>>>>>> feat: new temes ui
+=======
+              class="c59"
+>>>>>>> feat: polishing
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c62"
+              class="c60"
             >
               Contacter nos services en région
               <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
                 class="c50"
 =======
                 class="c63"
 >>>>>>> feat: new temes ui
+=======
+                class="c61"
+>>>>>>> feat: polishing
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -2222,6 +2209,7 @@ exports[`<Theme /> should render 1`] = `
         </div>
         <div
 <<<<<<< HEAD
+<<<<<<< HEAD
           class="c35 c51"
         >
           <nav>
@@ -2232,21 +2220,29 @@ exports[`<Theme /> should render 1`] = `
                 class="c53 "
 =======
           class="c35 c64"
+=======
+          class="c35 c62"
+>>>>>>> feat: polishing
         >
           <nav>
             <div
-              class="c65"
+              class="c63"
             >
               <div
+<<<<<<< HEAD
                 class="c66 c67"
 >>>>>>> feat: new temes ui
+=======
+                class="c64 c65"
+>>>>>>> feat: polishing
               >
                 <h3
-                  class="c68 c69"
+                  class="c66 c67"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
+<<<<<<< HEAD
 <<<<<<< HEAD
                   class="c56 c57"
                 >
@@ -2257,13 +2253,20 @@ exports[`<Theme /> should render 1`] = `
                       class="c59"
 =======
                   class="c70"
+=======
+                  class="c68"
+>>>>>>> feat: polishing
                 >
                   <li
-                    class="c71"
+                    class="c69"
                   >
                     <a
+<<<<<<< HEAD
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -2271,6 +2274,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="c58"
                   >
                     <a
@@ -2281,6 +2285,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/glossaire"
                     >
                       Glossaire
@@ -2288,6 +2298,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="c58"
                   >
                     <a
@@ -2298,6 +2309,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/a-propos"
                     >
                       À propos
@@ -2305,6 +2322,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="c58"
                   >
                     <a
@@ -2315,6 +2333,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/mentions-legales"
                     >
                       Mentions légales
@@ -2322,6 +2346,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="c58"
                   >
                     <a
@@ -2332,6 +2357,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
@@ -2339,22 +2370,6 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
-                    class="c58"
-                  >
-                    <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-                      href="/stats"
-                    >
-                      Statistiques d’utilisation
-                    </a>
-                  </li>
-                  <li
 <<<<<<< HEAD
                     class="c58"
                   >
@@ -2366,6 +2381,36 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
+                      href="/stats"
+                    >
+                      Statistiques d’utilisation
+                    </a>
+                  </li>
+                  <li
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    class="c58"
+                  >
+                    <a
+                      class="c59"
+=======
+                    class="c71"
+                  >
+                    <a
+                      class="c72"
+>>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -2375,17 +2420,22 @@ exports[`<Theme /> should render 1`] = `
               </div>
               <div
 <<<<<<< HEAD
+<<<<<<< HEAD
                 class="c53 "
 =======
                 class="c66 c67"
 >>>>>>> feat: new temes ui
+=======
+                class="c64 c65"
+>>>>>>> feat: polishing
               >
                 <h3
-                  class="c68 c69"
+                  class="c66 c67"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
+<<<<<<< HEAD
 <<<<<<< HEAD
                   class="c56 c57"
                 >
@@ -2396,18 +2446,26 @@ exports[`<Theme /> should render 1`] = `
                       class="c60"
 =======
                   class="c70"
+=======
+                  class="c68"
+>>>>>>> feat: polishing
                 >
                   <li
-                    class="c71"
+                    class="c69"
                   >
                     <button
+<<<<<<< HEAD
                       class="c73"
 >>>>>>> feat: new temes ui
+=======
+                      class="c71"
+>>>>>>> feat: polishing
                     >
                       Contact
                     </button>
                   </li>
                   <li
+<<<<<<< HEAD
 <<<<<<< HEAD
                     class="c58"
                   >
@@ -2419,6 +2477,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2428,6 +2492,7 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                     class="c58"
                   >
                     <a
@@ -2438,6 +2503,12 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2449,17 +2520,22 @@ exports[`<Theme /> should render 1`] = `
               </div>
               <div
 <<<<<<< HEAD
+<<<<<<< HEAD
                 class="c53 "
 =======
                 class="c66 c67"
 >>>>>>> feat: new temes ui
+=======
+                class="c64 c65"
+>>>>>>> feat: polishing
               >
                 <h3
-                  class="c68 c69"
+                  class="c66 c67"
                 >
                   En collaboration avec
                 </h3>
                 <ul
+<<<<<<< HEAD
 <<<<<<< HEAD
                   class="c56 c57"
                 >
@@ -2470,13 +2546,20 @@ exports[`<Theme /> should render 1`] = `
                       class="c59"
 =======
                   class="c70"
+=======
+                  class="c68"
+>>>>>>> feat: polishing
                 >
                   <li
-                    class="c71"
+                    class="c69"
                   >
                     <a
+<<<<<<< HEAD
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                      class="c70"
+>>>>>>> feat: polishing
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2486,24 +2569,6 @@ exports[`<Theme /> should render 1`] = `
                   </li>
                   <li
 <<<<<<< HEAD
-                    class="c58"
-                  >
-                    <a
-                      class="c59"
-=======
-                    class="c71"
-                  >
-                    <a
-                      class="c72"
->>>>>>> feat: new temes ui
-                      href="https://fabrique.social.gouv.fr/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      La fabrique des Ministères sociaux
-                    </a>
-                  </li>
-                  <li
 <<<<<<< HEAD
                     class="c58"
                   >
@@ -2515,6 +2580,38 @@ exports[`<Theme /> should render 1`] = `
                     <a
                       class="c72"
 >>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
+                      href="https://fabrique.social.gouv.fr/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      La fabrique des Ministères sociaux
+                    </a>
+                  </li>
+                  <li
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    class="c58"
+                  >
+                    <a
+                      class="c59"
+=======
+                    class="c71"
+                  >
+                    <a
+                      class="c72"
+>>>>>>> feat: new temes ui
+=======
+                    class="c69"
+                  >
+                    <a
+                      class="c70"
+>>>>>>> feat: polishing
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -2529,6 +2626,7 @@ exports[`<Theme /> should render 1`] = `
         </div>
         <div
 <<<<<<< HEAD
+<<<<<<< HEAD
           class="c61"
         >
           <a
@@ -2539,6 +2637,12 @@ exports[`<Theme /> should render 1`] = `
           <a
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+          class="c72"
+        >
+          <a
+            class="c73"
+>>>>>>> feat: polishing
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2548,19 +2652,27 @@ exports[`<Theme /> should render 1`] = `
           <span
             aria-hidden="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c63"
 =======
             class="c76"
 >>>>>>> feat: new temes ui
+=======
+            class="c74"
+>>>>>>> feat: polishing
           >
             |
           </span>
           <a
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c59 c62"
 =======
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+            class="c73"
+>>>>>>> feat: polishing
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2570,19 +2682,27 @@ exports[`<Theme /> should render 1`] = `
           <span
             aria-hidden="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c63"
 =======
             class="c76"
 >>>>>>> feat: new temes ui
+=======
+            class="c74"
+>>>>>>> feat: polishing
           >
             |
           </span>
           <a
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c59 c62"
 =======
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+            class="c73"
+>>>>>>> feat: polishing
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2592,19 +2712,27 @@ exports[`<Theme /> should render 1`] = `
           <span
             aria-hidden="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c63"
 =======
             class="c76"
 >>>>>>> feat: new temes ui
+=======
+            class="c74"
+>>>>>>> feat: polishing
           >
             |
           </span>
           <a
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c59 c62"
 =======
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+            class="c73"
+>>>>>>> feat: polishing
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2614,19 +2742,27 @@ exports[`<Theme /> should render 1`] = `
           <span
             aria-hidden="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c63"
 =======
             class="c76"
 >>>>>>> feat: new temes ui
+=======
+            class="c74"
+>>>>>>> feat: polishing
           >
             |
           </span>
           <a
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c59 c62"
 =======
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+            class="c73"
+>>>>>>> feat: polishing
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -2636,19 +2772,27 @@ exports[`<Theme /> should render 1`] = `
           <span
             aria-hidden="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c63"
 =======
             class="c76"
 >>>>>>> feat: new temes ui
+=======
+            class="c74"
+>>>>>>> feat: polishing
           >
             |
           </span>
           <a
 <<<<<<< HEAD
+<<<<<<< HEAD
             class="c59 c62"
 =======
             class="c75"
 >>>>>>> feat: new temes ui
+=======
+            class="c73"
+>>>>>>> feat: polishing
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"
