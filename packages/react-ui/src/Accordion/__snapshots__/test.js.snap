@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> renders 1`] = `
-.c4:not(:focus):not(:active) {
+.c5:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -13,7 +13,7 @@ exports[`<Accordion /> renders 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c1 {
+.c2 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -28,13 +28,13 @@ exports[`<Accordion /> renders 1`] = `
 }
 
 [aria-expanded="true"] .c1,
-[aria-selected="true"] .c1 {
+[aria-selected="true"] .c2 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c4 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -64,7 +64,7 @@ exports[`<Accordion /> renders 1`] = `
   color: #3e486e;
 }
 
-.c2 {
+.c3 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -73,22 +73,22 @@ exports[`<Accordion /> renders 1`] = `
   line-height: 1.25;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -121,7 +121,7 @@ exports[`<Accordion /> renders 1`] = `
             tabindex="0"
           >
             <svg
-              class="c1"
+              class="c1 c2"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -137,7 +137,7 @@ exports[`<Accordion /> renders 1`] = `
               />
             </svg>
             <div
-              class="c2"
+              class="c3"
             >
               This is the title
             </div>
@@ -146,20 +146,20 @@ exports[`<Accordion /> renders 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-raa-0"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
           <div
-            class="c4"
+            class="c5"
           >
             <h3>
               This is the title
             </h3>
           </div>
           <div
-            class="c5"
+            class="c6"
           >
             this is the body
           </div>
@@ -171,7 +171,7 @@ exports[`<Accordion /> renders 1`] = `
 `;
 
 exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
-.c4:not(:focus):not(:active) {
+.c5:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -183,7 +183,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c1 {
+.c2 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -198,13 +198,13 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
 }
 
 [aria-expanded="true"] .c1,
-[aria-selected="true"] .c1 {
+[aria-selected="true"] .c2 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c4 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -234,7 +234,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   color: #3e486e;
 }
 
-.c2 {
+.c3 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -243,22 +243,22 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
   line-height: 1.25;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -291,7 +291,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             tabindex="0"
           >
             <svg
-              class="c1"
+              class="c1 c2"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -307,7 +307,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="c2"
+              class="c3"
             >
               This is the title
             </div>
@@ -316,20 +316,20 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-raa-3"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-3"
         >
           <div
-            class="c4"
+            class="c5"
           >
             <span>
               This is the title
             </span>
           </div>
           <div
-            class="c5"
+            class="c6"
           >
             this is the body
           </div>
@@ -341,7 +341,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
 `;
 
 exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
-.c4:not(:focus):not(:active) {
+.c5:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -353,7 +353,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c1 {
+.c2 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -368,13 +368,13 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
 }
 
 [aria-expanded="true"] .c1,
-[aria-selected="true"] .c1 {
+[aria-selected="true"] .c2 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c4 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -404,7 +404,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   color: #3e486e;
 }
 
-.c2 {
+.c3 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -413,22 +413,22 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
   line-height: 1.25;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -461,7 +461,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             tabindex="0"
           >
             <svg
-              class="c1"
+              class="c1 c2"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -477,7 +477,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
               />
             </svg>
             <div
-              class="c2"
+              class="c3"
             >
               This is the title
             </div>
@@ -486,20 +486,20 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-raa-2"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-2"
         >
           <div
-            class="c4"
+            class="c5"
           >
             <span>
               This is the title
             </span>
           </div>
           <div
-            class="c5"
+            class="c6"
           >
             this is the body
           </div>
@@ -511,7 +511,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
 `;
 
 exports[`<Accordion /> renders as h2 1`] = `
-.c4:not(:focus):not(:active) {
+.c5:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -523,7 +523,7 @@ exports[`<Accordion /> renders as h2 1`] = `
   clip: rect(0,0,0,0);
 }
 
-.c1 {
+.c2 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -538,13 +538,13 @@ exports[`<Accordion /> renders as h2 1`] = `
 }
 
 [aria-expanded="true"] .c1,
-[aria-selected="true"] .c1 {
+[aria-selected="true"] .c2 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c3 {
+.c4 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -574,7 +574,7 @@ exports[`<Accordion /> renders as h2 1`] = `
   color: #3e486e;
 }
 
-.c2 {
+.c3 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -583,22 +583,22 @@ exports[`<Accordion /> renders as h2 1`] = `
   line-height: 1.25;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -631,7 +631,7 @@ exports[`<Accordion /> renders as h2 1`] = `
             tabindex="0"
           >
             <svg
-              class="c1"
+              class="c1 c2"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -647,7 +647,7 @@ exports[`<Accordion /> renders as h2 1`] = `
               />
             </svg>
             <div
-              class="c2"
+              class="c3"
             >
               This is the title
             </div>
@@ -656,20 +656,20 @@ exports[`<Accordion /> renders as h2 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-raa-1"
-          class="c3"
+          class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-1"
         >
           <div
-            class="c4"
+            class="c5"
           >
             <h2>
               This is the title
             </h2>
           </div>
           <div
-            class="c5"
+            class="c6"
           >
             this is the body
           </div>

@@ -4,11 +4,11 @@ import React from "react";
 import { ArrowLink } from ".";
 
 describe("<ArrowLink />", () => {
-  it("renders an arrow on the right ", () => {
+  it("renders an arrow on the right", () => {
     const { container } = render(<ArrowLink>Lorem Ipsum</ArrowLink>);
     expect(container).toMatchSnapshot();
   });
-  it("renders an arrow on the left ", () => {
+  it("renders an arrow on the left", () => {
     const { container } = render(<ArrowLink left>Lorem Ipsum</ArrowLink>);
     expect(container).toMatchSnapshot();
   });

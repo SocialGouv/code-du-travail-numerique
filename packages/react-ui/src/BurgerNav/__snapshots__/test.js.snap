@@ -120,14 +120,6 @@ exports[`BurgerStyles renders 1`] = `
 
 }
 
-@media (max-width:980px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
 <div>
   <button
     class="c0 c1"

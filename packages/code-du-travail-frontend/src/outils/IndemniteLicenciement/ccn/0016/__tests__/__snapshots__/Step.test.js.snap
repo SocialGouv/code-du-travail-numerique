@@ -482,7 +482,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 </div>
 `;
 
-exports[`<Step /> should ask detail about retirement  1`] = `
+exports[`<Step /> should ask detail about retirement 1`] = `
 .c8 {
   position: relative;
   display: inline-block;

@@ -13,7 +13,23 @@ exports[`<Feedback/> should render 1`] = `
   color: #3e486e;
 }
 
-.c7 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -50,16 +66,16 @@ exports[`<Feedback/> should render 1`] = `
   opacity: 1;
 }
 
-.c7:link,
-.c7:visited {
+.c8:link,
+.c8:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):active,
-.c7:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -68,7 +84,7 @@ exports[`<Feedback/> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c7[disabled] {
+.c8[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -76,7 +92,7 @@ exports[`<Feedback/> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c5 {
+.c6 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -89,7 +105,7 @@ exports[`<Feedback/> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c3 {
+.c4 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -101,12 +117,7 @@ exports[`<Feedback/> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,15 +135,7 @@ exports[`<Feedback/> should render 1`] = `
   justify-content: stretch;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c4 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -141,7 +144,7 @@ exports[`<Feedback/> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,7 +159,7 @@ exports[`<Feedback/> should render 1`] = `
   margin: 0;
 }
 
-.c9 + .c8 {
+.c9 + .c9 {
   margin-left: 4rem;
 }
 
@@ -180,37 +183,6 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -223,8 +195,39 @@ exports[`<Feedback/> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:1180px) {
-  .c2 {
+  .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -238,20 +241,20 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c4 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c7 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -260,7 +263,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c9 + .c8 {
+  .c9 + .c9 {
     margin-left: 0;
   }
 }
@@ -273,26 +276,26 @@ exports[`<Feedback/> should render 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="c2 c3"
       >
         <h3
-          class="c3 c4"
+          class="c4 c5"
         >
           <div
-            class="c5"
+            class="c6"
           />
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c6"
+          class="c7"
         >
           <button
-            class="c7 c8 c9"
+            class="c8 c9 "
           >
             Non
           </button>
           <button
-            class="c7 c8 c9"
+            class="c8 c9 "
           >
             Oui
           </button>
@@ -316,7 +319,23 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   color: #3e486e;
 }
 
-.c8 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -357,14 +376,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c9:focus,
+.c9:hover,
+.c9:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9 {
+.c11 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -373,13 +392,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: transform 250ms linear;
 }
 
-.c7:hover .c9 {
+.c8:hover .c10 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c5 {
+.c6 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -392,7 +411,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateY(-50%);
 }
 
-.c3 {
+.c4 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -404,12 +423,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-left: 2.4rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,15 +441,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   justify-content: stretch;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c4 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -444,7 +450,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c7 {
   -webkit-flex: 1 0 100%;
   -ms-flex: 1 0 100%;
   flex: 1 0 100%;
@@ -470,43 +476,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -519,8 +488,45 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   }
 }
 
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+  .c9 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:1180px) {
-  .c2 {
+  .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -534,13 +540,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c4 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -555,7 +561,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c7 {
     margin-top: 0;
   }
 }
@@ -568,27 +574,27 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="c2 c3"
       >
         <h3
-          class="c3 c4"
+          class="c4 c5"
         >
           <div
-            class="c5"
+            class="c6"
           />
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c6"
+          class="c7"
         >
           Merci pour votre réponse. Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
-            class="c7 c8"
+            class="c8 c9"
           >
             services du ministère du Travail en région
             <svg
-              class="c9"
+              class="c10 c11"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -619,7 +625,23 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   color: #3e486e;
 }
 
-.c5 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -632,7 +654,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   transform: translateY(-50%);
 }
 
-.c3 {
+.c4 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -644,12 +666,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding-left: 2.4rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -667,15 +684,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   justify-content: stretch;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c4 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -684,7 +693,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c7 {
   -webkit-flex: 1 0 100%;
   -ms-flex: 1 0 100%;
   flex: 1 0 100%;
@@ -710,31 +719,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -747,8 +731,33 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   }
 }
 
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+  .c4 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width:1180px) {
-  .c2 {
+  .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -762,13 +771,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c4 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -783,7 +792,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c7 {
     margin-top: 0;
   }
 }
@@ -796,18 +805,18 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       class="c1"
     >
       <div
-        class="c2"
+        class="c2 c3"
       >
         <h3
-          class="c3 c4"
+          class="c4 c5"
         >
           <div
-            class="c5"
+            class="c6"
           />
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c6"
+          class="c7"
         >
           Merci pour votre réponse.
         </p>

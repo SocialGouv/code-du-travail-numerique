@@ -1,26 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Glossaire /> should render 1`] = `
-.c27 {
+.c4 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c28 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c41 {
+.c45 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+  padding: 0;
+  max-width: 74rem;
 }
 
-.c26 {
+.c27 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c32 {
+.c33 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -29,7 +37,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #fff;
 }
 
-.c32:before {
+.c33:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,15 +51,15 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c32 > *:first-child {
+.c33 > *:first-child {
   margin-top: 0;
 }
 
-.c32 > *:last-child {
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -88,16 +96,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c13:link,
+.c13:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c13:not([disabled]):hover,
+.c13:not([disabled]):active,
+.c13:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -106,7 +114,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: transparent;
 }
 
-.c12[disabled] {
+.c13[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -114,7 +122,7 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c56 {
+.c57 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -159,13 +167,13 @@ exports[`<Glossaire /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c56:focus,
-.c56:hover,
-.c56:active {
+.c57:focus,
+.c57:hover,
+.c57:active {
   color: #f66663;
 }
 
-.c45 {
+.c47 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -202,16 +210,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c45:link,
-.c45:visited {
+.c47:link,
+.c47:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c45:not([disabled]):hover,
-.c45:not([disabled]):active,
-.c45:not([disabled]):focus {
+.c47:not([disabled]):hover,
+.c47:not([disabled]):active,
+.c47:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -220,7 +228,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c45[disabled] {
+.c47[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -228,7 +236,7 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c17 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -265,16 +273,16 @@ exports[`<Glossaire /> should render 1`] = `
   opacity: 1;
 }
 
-.c17:link,
-.c17:visited {
+.c18:link,
+.c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c17:not([disabled]):hover,
-.c17:not([disabled]):active,
-.c17:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):active,
+.c18:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -283,7 +291,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: transparent;
 }
 
-.c17[disabled] {
+.c18[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -291,18 +299,24 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c18 {
+.c19 {
   height: auto;
   padding: 0;
 }
 
-.c20 {
+.c21 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c22 {
+.c38 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -317,7 +331,7 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -327,18 +341,18 @@ exports[`<Glossaire /> should render 1`] = `
   margin-right: 2rem;
 }
 
-.c23 svg {
+.c24 svg {
   width: 3rem;
   height: 3rem;
 }
 
-.c24 {
+.c25 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c30 {
+.c31 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -351,7 +365,7 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c36 {
+.c37 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -364,7 +378,7 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c51 {
+.c52 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -374,34 +388,34 @@ exports[`<Glossaire /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c28 {
+.c29 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c34 {
+.c35 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c42 {
+.c43 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c31 {
+.c32 {
   margin-top: 1rem;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-.c29 {
+.c30 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -412,7 +426,7 @@ exports[`<Glossaire /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c35 {
+.c36 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -424,7 +438,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c43 {
+.c44 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -436,12 +450,12 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: center;
 }
 
-.c38 {
+.c40 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c39 {
+.c41 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -449,7 +463,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c39:before {
+.c41:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -461,35 +475,27 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c40 {
+.c42 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c44 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
+.c46 {
   margin-bottom: 2rem;
 }
 
-.c46 {
+.c48 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c47 {
+.c49 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c48 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -500,32 +506,26 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c50 + .c49 {
+.c51 + .c51 {
   padding-left: 1.6rem;
 }
 
 .c53 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c52 {
   font-size: 1.6rem;
 }
 
-.c54 {
+.c55 {
   margin: 0.4rem 0;
 }
 
-.c55 {
+.c56 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c57 {
+.c58 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -544,15 +544,11 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c58 {
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
+.c59 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c59 {
+.c60 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -560,15 +556,15 @@ exports[`<Glossaire /> should render 1`] = `
   user-select: none;
 }
 
-.c11 ul {
+.c12 ul {
   z-index: 1;
 }
 
-.c11 li[role="option"]:nth-child(2n + 1) {
+.c12 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c9 {
+.c10 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -580,12 +576,12 @@ exports[`<Glossaire /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c14 {
+.c15 {
   width: 3rem;
   height: 3rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,23 +605,23 @@ exports[`<Glossaire /> should render 1`] = `
   appearance: none;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c11::placeholder {
   color: #9298af;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   top: 0;
   right: 0;
@@ -634,7 +630,7 @@ exports[`<Glossaire /> should render 1`] = `
   color: #7994d4;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -654,10 +650,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: right;
 }
 
-.c4 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -674,7 +667,7 @@ exports[`<Glossaire /> should render 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -692,7 +685,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-decoration: none;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -702,7 +695,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: white;
 }
 
-.c7 {
+.c8 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -711,7 +704,7 @@ exports[`<Glossaire /> should render 1`] = `
   color: #f66663;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -729,12 +722,12 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c16 {
+.c17 {
   display: none;
   color: #7994d4;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -747,7 +740,7 @@ exports[`<Glossaire /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   top: 18rem;
   z-index: 2;
@@ -770,9 +763,9 @@ exports[`<Glossaire /> should render 1`] = `
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c21:hover,
-.c21:active,
-.c21:focus {
+.c22:hover,
+.c22:active,
+.c22:focus {
   color: #2f3b6c;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -796,124 +789,134 @@ exports[`<Glossaire /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c25 {
+.c26 {
   margin-top: 6rem;
 }
 
-.c33 {
+.c34 {
   display: inline-block;
   padding: 0.4rem;
   font-size: 1.8rem;
 }
 
-.c37 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.c39 {
   margin: 1rem 0;
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c4 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c41 {
+  .c28 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c45 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c45 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c33 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c32 {
+  .c33 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c56 {
+  .c57 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c47 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c45 {
+  .c47 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c47 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     padding: 0 3rem;
   }
 }
@@ -923,7 +926,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -933,127 +936,97 @@ exports[`<Glossaire /> should render 1`] = `
 
 }
 
-@media (max-width:980px) {
-
-}
-
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c23 svg {
+  .c24 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c52 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c35 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c43 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c32 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c36 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c36 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c44 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c41 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c42 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c44 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c47 {
+  .c49 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c48 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c48 {
+  .c50 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1061,32 +1034,32 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 + .c49 {
+  .c51 + .c51 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c53 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c59 {
+  .c60 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1095,7 +1068,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -1120,21 +1093,8 @@ exports[`<Glossaire /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c4 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c5 {
+  .c6 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1144,7 +1104,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1154,27 +1114,27 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: auto;
     height: 7.5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     height: 5rem;
     margin-left: 2rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c16 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c17 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -1183,7 +1143,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
@@ -1191,19 +1151,19 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c22 {
     top: 9rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c22 {
     display: none;
   }
 }
@@ -1215,13 +1175,13 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     margin-top: 3.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     font-size: 1.6rem;
   }
 }
@@ -1243,20 +1203,20 @@ exports[`<Glossaire /> should render 1`] = `
         le 04/01/2020 à 00:00:00
       </div>
       <div
-        class="c4"
+        class="c4 c5"
       >
         <a
-          class="c5"
+          class="c6"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
-            class="c6"
+            class="c7"
             src="/static/assets/img/ministere-travail.svg"
           />
           <svg
-            class="c7"
+            class="c8"
             fill="none"
             viewBox="0 0 657 265"
           >
@@ -1279,11 +1239,11 @@ exports[`<Glossaire /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="c8"
+          class="c9"
         >
           <form
             action="/recherche"
-            class="c9"
+            class="c10"
           >
             <div
               aria-expanded="false"
@@ -1297,7 +1257,7 @@ exports[`<Glossaire /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="c10"
+                class="c11"
                 id="main-search-input"
                 name="q"
                 placeholder="Rechercher"
@@ -1306,17 +1266,17 @@ exports[`<Glossaire /> should render 1`] = `
                 value=""
               />
               <div
-                class="c11"
+                class="c12"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
-              class="c12 c13"
+              class="c13 c14"
               type="submit"
             >
               <svg
-                class="c14"
+                class="c15"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1329,10 +1289,10 @@ exports[`<Glossaire /> should render 1`] = `
           </form>
         </div>
         <div
-          class="c15"
+          class="c16"
         >
           <a
-            class="c16"
+            class="c17"
             href="/recherche"
           >
             <svg
@@ -1346,10 +1306,10 @@ exports[`<Glossaire /> should render 1`] = `
             </svg>
           </a>
           <button
-            class="c17 c18 c19"
+            class="c18 c19 c20"
           >
             <svg
-              class="c20"
+              class="c21"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1365,14 +1325,14 @@ exports[`<Glossaire /> should render 1`] = `
       </div>
     </header>
     <a
-      class="c21"
+      class="c22"
       href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <div
-          class="c23"
+          class="c24"
         >
           <svg
             fill="none"
@@ -1405,20 +1365,20 @@ exports[`<Glossaire /> should render 1`] = `
           </svg>
         </div>
         <div
-          class="c24"
+          class="c25"
         >
           Coronavirus (Covid-19) : notre dossier dédié
         </div>
       </div>
     </a>
     <main
-      class="c25"
+      class="c26"
     >
       <div
-        class="c26"
+        class="c27"
       >
         <div
-          class="c27"
+          class="c28"
         >
           <div
             data-next-focus-root="true"
@@ -1427,29 +1387,29 @@ exports[`<Glossaire /> should render 1`] = `
             tabindex="-1"
           >
             <header
-              class="c28"
+              class="c29"
             >
               <h1
-                class="c29"
+                class="c30"
               >
                 <div
-                  class="c30"
+                  class="c31"
                 />
                 Glossaire
               </h1>
               <p
-                class="c31"
+                class="c32"
               >
                 Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.
               </p>
             </header>
           </div>
           <div
-            class="c32"
+            class="c33"
           >
             <ul>
               <li
-                class="c33"
+                class="c34"
               >
                 <a
                   href="#ancre-A"
@@ -1458,175 +1418,175 @@ exports[`<Glossaire /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   B
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   C
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   D
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   E
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   F
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   G
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   H
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   I
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   J
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   K
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   L
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   M
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   N
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   O
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   P
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   Q
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   R
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   S
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   T
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   U
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   V
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   W
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   X
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   Y
                 </span>
               </li>
               <li
-                class="c33"
+                class="c34"
               >
                 <span>
                   Z
@@ -1635,20 +1595,20 @@ exports[`<Glossaire /> should render 1`] = `
             </ul>
             <div>
               <header
-                class="c34"
+                class="c35"
                 id="ancre-A"
               >
                 <h2
-                  class="c35"
+                  class="c36"
                 >
                   <div
-                    class="c36"
+                    class="c37"
                   />
                   A
                 </h2>
               </header>
               <ul
-                class="c37"
+                class="c38 c39"
               >
                 <li>
                   <a
@@ -1664,40 +1624,40 @@ exports[`<Glossaire /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c38"
+      class="c40"
     >
       <footer
-        class="c39"
+        class="c41"
       >
         <div
-          class="c26 c40"
+          class="c27 c42"
         >
           <div
-            class="c41"
+            class="c4"
           >
             <header
-              class="c42"
+              class="c43"
             >
               <h3
-                class="c43"
+                class="c44"
               >
                 <div
-                  class="c30"
+                  class="c31"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c44"
+              class="c45 c46"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c45"
+              class="c47"
             >
               Contacter nos services en région
               <svg
-                class="c46"
+                class="c48"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1710,88 +1670,88 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c26 c47"
+          class="c27 c49"
         >
           <nav>
             <div
-              class="c48"
+              class="c4 c50"
             >
               <div
-                class="c49 c50"
+                class="c51 "
               >
                 <h3
-                  class="c51 c52"
+                  class="c52 c53"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="c53"
+                  class="c38 c54"
                 >
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -1800,30 +1760,30 @@ exports[`<Glossaire /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c49 c50"
+                class="c51 "
               >
                 <h3
-                  class="c51 c52"
+                  class="c52 c53"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="c53"
+                  class="c38 c54"
                 >
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <button
-                      class="c56"
+                      class="c57"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1832,10 +1792,10 @@ exports[`<Glossaire /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1846,21 +1806,21 @@ exports[`<Glossaire /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c49 c50"
+                class="c51 "
               >
                 <h3
-                  class="c51 c52"
+                  class="c52 c53"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="c53"
+                  class="c38 c54"
                 >
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1869,10 +1829,10 @@ exports[`<Glossaire /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1881,10 +1841,10 @@ exports[`<Glossaire /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c54"
+                    class="c55"
                   >
                     <a
-                      class="c55"
+                      class="c56"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1898,10 +1858,10 @@ exports[`<Glossaire /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c57"
+          class="c58"
         >
           <a
-            class="c58"
+            class="c56 c59"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1910,12 +1870,12 @@ exports[`<Glossaire /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c59"
+            class="c60"
           >
             |
           </span>
           <a
-            class="c58"
+            class="c56 c59"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1924,12 +1884,12 @@ exports[`<Glossaire /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c59"
+            class="c60"
           >
             |
           </span>
           <a
-            class="c58"
+            class="c56 c59"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1938,12 +1898,12 @@ exports[`<Glossaire /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c59"
+            class="c60"
           >
             |
           </span>
           <a
-            class="c58"
+            class="c56 c59"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1952,12 +1912,12 @@ exports[`<Glossaire /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c59"
+            class="c60"
           >
             |
           </span>
           <a
-            class="c58"
+            class="c56 c59"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1966,12 +1926,12 @@ exports[`<Glossaire /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c59"
+            class="c60"
           >
             |
           </span>
           <a
-            class="c58"
+            class="c56 c59"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

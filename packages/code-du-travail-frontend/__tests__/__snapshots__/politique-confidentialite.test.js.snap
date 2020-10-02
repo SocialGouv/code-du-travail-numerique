@@ -1,26 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CookiePolicy /> should render 1`] = `
-.c27 {
+.c4 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c28 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c39 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
+  padding: 0;
+  max-width: 74rem;
 }
 
-.c26 {
+.c27 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c31 {
+.c32 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -29,7 +37,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #fff;
 }
 
-.c31:before {
+.c32:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,15 +51,15 @@ exports[`<CookiePolicy /> should render 1`] = `
   content: "";
 }
 
-.c31 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -88,16 +96,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c13:link,
+.c13:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c13:not([disabled]):hover,
+.c13:not([disabled]):active,
+.c13:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -106,7 +114,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: transparent;
 }
 
-.c12[disabled] {
+.c13[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -114,7 +122,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c54 {
+.c55 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -159,13 +167,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c54:focus,
-.c54:hover,
-.c54:active {
+.c55:focus,
+.c55:hover,
+.c55:active {
   color: #f66663;
 }
 
-.c43 {
+.c44 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -202,16 +210,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   opacity: 1;
 }
 
-.c43:link,
-.c43:visited {
+.c44:link,
+.c44:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c43:not([disabled]):hover,
-.c43:not([disabled]):active,
-.c43:not([disabled]):focus {
+.c44:not([disabled]):hover,
+.c44:not([disabled]):active,
+.c44:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -220,7 +228,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c43[disabled] {
+.c44[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -228,7 +236,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c17 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -265,16 +273,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   opacity: 1;
 }
 
-.c17:link,
-.c17:visited {
+.c18:link,
+.c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c17:not([disabled]):hover,
-.c17:not([disabled]):active,
-.c17:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):active,
+.c18:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -283,7 +291,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: transparent;
 }
 
-.c17[disabled] {
+.c18[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -291,18 +299,24 @@ exports[`<CookiePolicy /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c18 {
+.c19 {
   height: auto;
   padding: 0;
 }
 
-.c20 {
+.c21 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c22 {
+.c51 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -317,7 +331,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -327,18 +341,18 @@ exports[`<CookiePolicy /> should render 1`] = `
   margin-right: 2rem;
 }
 
-.c23 svg {
+.c24 svg {
   width: 3rem;
   height: 3rem;
 }
 
-.c24 {
+.c25 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c30 {
+.c31 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -351,7 +365,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c34 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -374,14 +388,14 @@ exports[`<CookiePolicy /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c28 {
+.c29 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c32 {
+.c33 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -4rem;
@@ -395,7 +409,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: center;
 }
 
-.c29 {
+.c30 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -406,7 +420,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c33 {
+.c34 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -430,12 +444,12 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: center;
 }
 
-.c36 {
+.c37 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c37 {
+.c38 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -443,7 +457,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c37:before {
+.c38:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -455,35 +469,27 @@ exports[`<CookiePolicy /> should render 1`] = `
   content: "";
 }
 
-.c38 {
+.c39 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c42 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
+.c43 {
   margin-bottom: 2rem;
 }
 
-.c44 {
+.c45 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c45 {
+.c46 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c46 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,32 +500,26 @@ exports[`<CookiePolicy /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c48 + .c47 {
+.c48 + .c48 {
   padding-left: 1.6rem;
-}
-
-.c51 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c50 {
   font-size: 1.6rem;
 }
 
-.c52 {
+.c53 {
   margin: 0.4rem 0;
 }
 
-.c53 {
+.c54 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -538,15 +538,11 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c56 {
-  font-weight: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
+.c57 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c57 {
+.c58 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -554,15 +550,15 @@ exports[`<CookiePolicy /> should render 1`] = `
   user-select: none;
 }
 
-.c11 ul {
+.c12 ul {
   z-index: 1;
 }
 
-.c11 li[role="option"]:nth-child(2n + 1) {
+.c12 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c9 {
+.c10 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -574,12 +570,12 @@ exports[`<CookiePolicy /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c14 {
+.c15 {
   width: 3rem;
   height: 3rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -603,23 +599,23 @@ exports[`<CookiePolicy /> should render 1`] = `
   appearance: none;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c11::placeholder {
   color: #9298af;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   top: 0;
   right: 0;
@@ -628,7 +624,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   color: #7994d4;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -648,10 +644,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: right;
 }
 
-.c4 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -668,7 +661,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -686,7 +679,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-decoration: none;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -696,7 +689,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: white;
 }
 
-.c7 {
+.c8 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -705,7 +698,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   color: #f66663;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -723,12 +716,12 @@ exports[`<CookiePolicy /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c16 {
+.c17 {
   display: none;
   color: #7994d4;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -741,7 +734,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   top: 18rem;
   z-index: 2;
@@ -764,9 +757,9 @@ exports[`<CookiePolicy /> should render 1`] = `
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c21:hover,
-.c21:active,
-.c21:focus {
+.c22:hover,
+.c22:active,
+.c22:focus {
   color: #2f3b6c;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -790,116 +783,129 @@ exports[`<CookiePolicy /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c25 {
+.c26 {
   margin-top: 6rem;
 }
 
-.c35 {
+.c36 {
   display: block;
   margin: 2rem 0;
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c4 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c28 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c42 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c42 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c27 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c32 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c31 {
+  .c32 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c54 {
+  .c55 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c44 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c43 {
+  .c44 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c44 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     padding: 0 3rem;
   }
 }
@@ -909,7 +915,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -919,18 +925,14 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 }
 
-@media (max-width:980px) {
-
-}
-
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c23 svg {
+  .c24 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -943,14 +945,14 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c33 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
@@ -964,19 +966,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     font-size: 2.2rem;
   }
 }
@@ -988,52 +990,26 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media print {
-  .c37 {
+  .c38 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c42 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c45 {
+  .c46 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c46 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c46 {
+  .c47 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1041,13 +1017,13 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 + .c47 {
+  .c48 + .c48 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c52 {
     text-align: center;
   }
 }
@@ -1060,13 +1036,13 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c57 {
+  .c58 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1075,7 +1051,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -1100,21 +1076,8 @@ exports[`<CookiePolicy /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c4 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c5 {
+  .c6 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1124,7 +1087,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1134,27 +1097,27 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: auto;
     height: 7.5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     height: 5rem;
     margin-left: 2rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c16 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c17 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -1163,7 +1126,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
@@ -1171,19 +1134,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c22 {
     top: 9rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c22 {
     display: none;
   }
 }
@@ -1195,7 +1158,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     margin-top: 3.2rem;
   }
 }
@@ -1217,20 +1180,20 @@ exports[`<CookiePolicy /> should render 1`] = `
         le 04/01/2020 à 00:00:00
       </div>
       <div
-        class="c4"
+        class="c4 c5"
       >
         <a
-          class="c5"
+          class="c6"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
-            class="c6"
+            class="c7"
             src="/static/assets/img/ministere-travail.svg"
           />
           <svg
-            class="c7"
+            class="c8"
             fill="none"
             viewBox="0 0 657 265"
           >
@@ -1253,11 +1216,11 @@ exports[`<CookiePolicy /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="c8"
+          class="c9"
         >
           <form
             action="/recherche"
-            class="c9"
+            class="c10"
           >
             <div
               aria-expanded="false"
@@ -1271,7 +1234,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="c10"
+                class="c11"
                 id="main-search-input"
                 name="q"
                 placeholder="Rechercher"
@@ -1280,17 +1243,17 @@ exports[`<CookiePolicy /> should render 1`] = `
                 value=""
               />
               <div
-                class="c11"
+                class="c12"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
-              class="c12 c13"
+              class="c13 c14"
               type="submit"
             >
               <svg
-                class="c14"
+                class="c15"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1303,10 +1266,10 @@ exports[`<CookiePolicy /> should render 1`] = `
           </form>
         </div>
         <div
-          class="c15"
+          class="c16"
         >
           <a
-            class="c16"
+            class="c17"
             href="/recherche"
           >
             <svg
@@ -1320,10 +1283,10 @@ exports[`<CookiePolicy /> should render 1`] = `
             </svg>
           </a>
           <button
-            class="c17 c18 c19"
+            class="c18 c19 c20"
           >
             <svg
-              class="c20"
+              class="c21"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1339,14 +1302,14 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </header>
     <a
-      class="c21"
+      class="c22"
       href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <div
-          class="c23"
+          class="c24"
         >
           <svg
             fill="none"
@@ -1379,44 +1342,44 @@ exports[`<CookiePolicy /> should render 1`] = `
           </svg>
         </div>
         <div
-          class="c24"
+          class="c25"
         >
           Coronavirus (Covid-19) : notre dossier dédié
         </div>
       </div>
     </a>
     <main
-      class="c25"
+      class="c26"
     >
       <div
-        class="c26"
+        class="c27"
       >
         <div
-          class="c27"
+          class="c28"
         >
           <header
-            class="c28"
+            class="c29"
           >
             <h1
-              class="c29"
+              class="c30"
             >
               <div
-                class="c30"
+                class="c31"
               />
               Politique de confidentialité
             </h1>
           </header>
           <div
-            class="c31"
+            class="c32"
           >
             <header
-              class="c32"
+              class="c33"
             >
               <h2
-                class="c33"
+                class="c34"
               >
                 <div
-                  class="c34"
+                  class="c35"
                 />
                 Traitement des données à caractère personnel
               </h2>
@@ -1449,7 +1412,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               ou par voie postale :
             </p>
             <address
-              class="c35"
+              class="c36"
             >
               Direction des systèmes d’information
               <br />
@@ -1474,14 +1437,14 @@ exports[`<CookiePolicy /> should render 1`] = `
               .
             </p>
             <header
-              class="c32"
+              class="c33"
               id="cookie"
             >
               <h2
-                class="c33"
+                class="c34"
               >
                 <div
-                  class="c34"
+                  class="c35"
                 />
                 Utilisation de témoins de connexion (« cookies »)
               </h2>
@@ -1549,16 +1512,16 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c36"
+      class="c37"
     >
       <footer
-        class="c37"
+        class="c38"
       >
         <div
-          class="c26 c38"
+          class="c27 c39"
         >
           <div
-            class="c39"
+            class="c4"
           >
             <header
               class="c40"
@@ -1567,22 +1530,22 @@ exports[`<CookiePolicy /> should render 1`] = `
                 class="c41"
               >
                 <div
-                  class="c30"
+                  class="c31"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c42"
+              class="c42 c43"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c43"
+              class="c44"
             >
               Contacter nos services en région
               <svg
-                class="c44"
+                class="c45"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1595,14 +1558,14 @@ exports[`<CookiePolicy /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c26 c45"
+          class="c27 c46"
         >
           <nav>
             <div
-              class="c46"
+              class="c4 c47"
             >
               <div
-                class="c47 c48"
+                class="c48 "
               >
                 <h3
                   class="c49 c50"
@@ -1610,73 +1573,73 @@ exports[`<CookiePolicy /> should render 1`] = `
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="c51"
+                  class="c51 c52"
                 >
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -1685,7 +1648,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c47 c48"
+                class="c48 "
               >
                 <h3
                   class="c49 c50"
@@ -1693,22 +1656,22 @@ exports[`<CookiePolicy /> should render 1`] = `
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="c51"
+                  class="c51 c52"
                 >
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <button
-                      class="c54"
+                      class="c55"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1717,10 +1680,10 @@ exports[`<CookiePolicy /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1731,7 +1694,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c47 c48"
+                class="c48 "
               >
                 <h3
                   class="c49 c50"
@@ -1739,13 +1702,13 @@ exports[`<CookiePolicy /> should render 1`] = `
                   En collaboration avec
                 </h3>
                 <ul
-                  class="c51"
+                  class="c51 c52"
                 >
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1754,10 +1717,10 @@ exports[`<CookiePolicy /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1766,10 +1729,10 @@ exports[`<CookiePolicy /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c52"
+                    class="c53"
                   >
                     <a
-                      class="c53"
+                      class="c54"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1783,10 +1746,10 @@ exports[`<CookiePolicy /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c55"
+          class="c56"
         >
           <a
-            class="c56"
+            class="c54 c57"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1795,12 +1758,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c57"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c56"
+            class="c54 c57"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1809,12 +1772,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c57"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c56"
+            class="c54 c57"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1823,12 +1786,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c57"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c56"
+            class="c54 c57"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1837,12 +1800,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c57"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c56"
+            class="c54 c57"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1851,12 +1814,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c57"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c56"
+            class="c54 c57"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

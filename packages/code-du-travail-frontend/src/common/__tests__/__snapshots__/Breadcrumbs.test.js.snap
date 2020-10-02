@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
+.c3 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .c1 {
   position: relative;
   overflow: hidden;
@@ -38,10 +44,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   margin-bottom: 1rem;
 }
 
-.c3 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,7 +55,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,11 +68,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   white-space: nowrap;
 }
 
-.c4:first-of-type {
+.c5:first-of-type {
   padding-left: 0;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,25 +85,38 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   text-decoration: none;
 }
 
-.c5:focus,
-.c5:hover,
-.c5:active {
+.c6:focus,
+.c6:hover,
+.c6:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6 {
+.c7 {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
 
-.c7 {
+.c8 {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c3 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media (max-width:600px) {
@@ -123,30 +139,17 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c5 {
     font-size: 1.2rem;
   }
 
-  .c4:not(:last-of-type) {
+  .c5:not(:last-of-type) {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -164,18 +167,18 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         class="c2"
       >
         <div
-          class="c3"
+          class="c3 c4"
         >
           <div
-            class="c4"
+            class="c5"
           >
             <a
-              class="c5"
+              class="c6"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
-                class="c6"
+                class="c7"
                 fill="none"
                 viewBox="0 0 16 16"
               >
@@ -188,10 +191,10 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </a>
           </div>
           <div
-            class="c4"
+            class="c5"
           >
             <svg
-              class="c7"
+              class="c8"
               fill="none"
               viewBox="0 0 16 16"
             >
@@ -202,17 +205,17 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="c5"
+              class="c6"
               href="/themes/item-1"
             >
               item 1
             </a>
           </div>
           <div
-            class="c4"
+            class="c5"
           >
             <svg
-              class="c7"
+              class="c8"
               fill="none"
               viewBox="0 0 16 16"
             >
@@ -223,7 +226,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="c5"
+              class="c6"
               href="/themes/item-2"
             >
               item 2

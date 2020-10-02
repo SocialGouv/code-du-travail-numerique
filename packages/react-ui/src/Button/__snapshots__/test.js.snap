@@ -306,7 +306,7 @@ exports[`<Button /> it renders a Button link 1`] = `
   text-decoration: underline;
 }
 
-.c2 {
+.c3 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -341,7 +341,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
-      class="c2"
+      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
     >
@@ -358,7 +358,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
-      class="c2"
+      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
     >
@@ -375,7 +375,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
-      class="c2"
+      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
     >

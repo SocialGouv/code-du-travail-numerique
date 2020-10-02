@@ -179,7 +179,7 @@ describe("<Wizard />", () => {
     expect(getByText("Premiere Etape")).toBeTruthy();
   });
 
-  it("should navigate to a dynamic step ", () => {
+  it("should navigate to a dynamic step", () => {
     const RulesAdditionalStep = ({ dispatch }) => (
       <OnChange key="foo-rules" name="fooStep">
         {(value) => {

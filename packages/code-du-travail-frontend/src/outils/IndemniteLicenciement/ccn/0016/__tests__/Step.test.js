@@ -25,7 +25,7 @@ describe("<Step />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("should ask detail about retirement ", () => {
+  it("should ask detail about retirement", () => {
     const onSubmit = jest.fn();
     const { container } = render(
       <Form onSubmit={onSubmit} initialValues={{ age: 62 }}>

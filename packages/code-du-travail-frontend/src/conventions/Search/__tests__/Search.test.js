@@ -87,7 +87,7 @@ describe("<Search />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("when input is a valid IDCC, should show only the perfect match ", async () => {
+  it("when input is a valid IDCC, should show only the perfect match", async () => {
     mockFetch({
       "api.url/idcc": {
         hits: {
