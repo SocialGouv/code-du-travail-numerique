@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c10 {
+.c2 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,16 +44,16 @@ exports[`<Header /> should render 1`] = `
   opacity: 1;
 }
 
-.c10:link,
-.c10:visited {
+.c11:link,
+.c11:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c11:not([disabled]):hover,
+.c11:not([disabled]):active,
+.c11:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -56,7 +62,7 @@ exports[`<Header /> should render 1`] = `
   border-color: transparent;
 }
 
-.c10[disabled] {
+.c11[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -64,7 +70,7 @@ exports[`<Header /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c15 {
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -101,16 +107,16 @@ exports[`<Header /> should render 1`] = `
   opacity: 1;
 }
 
-.c15:link,
-.c15:visited {
+.c16:link,
+.c16:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c15:not([disabled]):hover,
-.c15:not([disabled]):active,
-.c15:not([disabled]):focus {
+.c16:not([disabled]):hover,
+.c16:not([disabled]):active,
+.c16:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -119,7 +125,7 @@ exports[`<Header /> should render 1`] = `
   border-color: transparent;
 }
 
-.c15[disabled] {
+.c16[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -127,26 +133,26 @@ exports[`<Header /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   height: auto;
   padding: 0;
 }
 
-.c18 {
+.c19 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c9 ul {
+.c10 ul {
   z-index: 1;
 }
 
-.c9 li[role="option"]:nth-child(2n + 1) {
+.c10 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c7 {
+.c8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -158,12 +164,12 @@ exports[`<Header /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c12 {
+.c13 {
   width: 3rem;
   height: 3rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,23 +193,23 @@ exports[`<Header /> should render 1`] = `
   appearance: none;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #9298af;
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c8::placeholder {
+.c9::placeholder {
   color: #9298af;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   top: 0;
   right: 0;
@@ -212,7 +218,7 @@ exports[`<Header /> should render 1`] = `
   color: #7994d4;
 }
 
-.c17 {
+.c18 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -232,10 +238,7 @@ exports[`<Header /> should render 1`] = `
   text-align: right;
 }
 
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -252,7 +255,7 @@ exports[`<Header /> should render 1`] = `
   height: 100%;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -270,7 +273,7 @@ exports[`<Header /> should render 1`] = `
   text-decoration: none;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -280,7 +283,7 @@ exports[`<Header /> should render 1`] = `
   background-color: white;
 }
 
-.c5 {
+.c6 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -289,7 +292,7 @@ exports[`<Header /> should render 1`] = `
   color: #f66663;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -307,12 +310,12 @@ exports[`<Header /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c14 {
+.c15 {
   display: none;
   color: #7994d4;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,13 +329,26 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c11 {
     display: none;
   }
 }
@@ -346,19 +362,19 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c16 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding: 0 3rem;
   }
 }
@@ -368,7 +384,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -378,12 +394,8 @@ exports[`<Header /> should render 1`] = `
 
 }
 
-@media (max-width:980px) {
-
-}
-
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -392,7 +404,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -417,21 +429,8 @@ exports[`<Header /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:980px) {
-  .c3 {
+  .c4 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -441,7 +440,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -451,27 +450,27 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: auto;
     height: 7.5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     height: 5rem;
     margin-left: 2rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -480,7 +479,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
@@ -488,7 +487,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c7 {
     display: none;
   }
 }
@@ -504,20 +503,20 @@ exports[`<Header /> should render 1`] = `
       le 04/01/2020 à 00:00:00
     </div>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <a
-        class="c3"
+        class="c4"
         href="/"
         title="Code du travail numérique - retour à l'accueil"
       >
         <img
           alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
-          class="c4"
+          class="c5"
           src="/static/assets/img/ministere-travail.svg"
         />
         <svg
-          class="c5"
+          class="c6"
           fill="none"
           viewBox="0 0 657 265"
         >
@@ -540,11 +539,11 @@ exports[`<Header /> should render 1`] = `
         </svg>
       </a>
       <div
-        class="c6"
+        class="c7"
       >
         <form
           action="/recherche"
-          class="c7"
+          class="c8"
         >
           <div
             aria-expanded="false"
@@ -558,7 +557,7 @@ exports[`<Header /> should render 1`] = `
               aria-controls="react-autowhatever-1"
               aria-label="recherchez par mots-clés"
               autocomplete="off"
-              class="c8"
+              class="c9"
               id="main-search-input"
               name="q"
               placeholder="Rechercher"
@@ -567,17 +566,17 @@ exports[`<Header /> should render 1`] = `
               value=""
             />
             <div
-              class="c9"
+              class="c10"
               id="react-autowhatever-1"
               role="listbox"
             />
           </div>
           <button
-            class="c10 c11"
+            class="c11 c12"
             type="submit"
           >
             <svg
-              class="c12"
+              class="c13"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -590,10 +589,10 @@ exports[`<Header /> should render 1`] = `
         </form>
       </div>
       <div
-        class="c13"
+        class="c14"
       >
         <a
-          class="c14"
+          class="c15"
           href="/recherche"
         >
           <svg
@@ -607,10 +606,10 @@ exports[`<Header /> should render 1`] = `
           </svg>
         </a>
         <button
-          class="c15 c16 c17"
+          class="c16 c17 c18"
         >
           <svg
-            class="c18"
+            class="c19"
             fill="none"
             viewBox="0 0 32 32"
           >

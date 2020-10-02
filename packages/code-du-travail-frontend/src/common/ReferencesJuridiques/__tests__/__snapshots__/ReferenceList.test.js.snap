@@ -14,14 +14,14 @@ exports[`<ReferenceList /> should render 1`] = `
   text-decoration: none;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -53,7 +53,7 @@ exports[`<ReferenceList /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -74,7 +74,7 @@ exports[`<ReferenceList /> should render 1`] = `
         rel="nofollow"
       >
         <svg
-          class="c4"
+          class="c4 c5"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -84,7 +84,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c5"
+          class="c6"
         >
           Article xxx du code du travail
         </span>
@@ -102,7 +102,7 @@ exports[`<ReferenceList /> should render 1`] = `
         rel="nofollow"
       >
         <svg
-          class="c4"
+          class="c4 c5"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -112,7 +112,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c5"
+          class="c6"
         >
           Convention collective: Article zzz de la CC
         </span>
@@ -125,7 +125,7 @@ exports[`<ReferenceList /> should render 1`] = `
         rel="nofollow"
       >
         <svg
-          class="c4"
+          class="c4 c5"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -135,7 +135,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c5"
+          class="c6"
         >
           Article zzz de la CC
         </span>

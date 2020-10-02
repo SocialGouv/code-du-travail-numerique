@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
-.c10 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c12 {
+.c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -15,11 +15,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   border: 1px solid #f2f5fa;
 }
 
-.c12 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c12 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -105,7 +105,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   color: #f66663;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,7 +116,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   justify-content: stretch;
 }
 
-.c4 {
+.c5 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -126,18 +126,18 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-right: 2rem;
 }
 
-.c4 svg {
+.c5 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -265,7 +265,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -274,7 +274,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   line-height: 1.625;
 }
 
-.c7 {
+.c8 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -288,7 +288,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   text-align: left;
 }
 
-.c8 {
+.c9 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -331,25 +331,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   text-decoration: underline;
 }
 
-.c11 {
+.c12 {
   padding-bottom: 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   margin-bottom: 3.2rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c14 {
@@ -357,19 +344,19 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c2 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c2 {
     padding: 0 5pt;
     border: none;
   }
@@ -388,13 +375,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c4 svg {
+  .c5 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -414,13 +401,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -434,13 +421,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     font-size: 2.2rem;
   }
 }
@@ -458,20 +445,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
@@ -503,13 +477,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </div>
   <div
-    class="c2"
+    class="c2 c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           fill="none"
@@ -544,10 +518,10 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
           Page personnalisable
         </div>
@@ -564,13 +538,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   </div>
   <section>
     <header
-      class="c7"
+      class="c8"
     >
       <h2
-        class="c8"
+        class="c9"
       >
         <div
-          class="c9"
+          class="c10"
         />
         Que dit le code du travail ?
       </h2>
@@ -585,10 +559,10 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </section>
   <div
-    class="c10 c11"
+    class="c11 c12"
   >
     <div
-      class="c12"
+      class="c2"
     >
       <header
         class="c13 c14"
@@ -646,13 +620,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 `;
 
 exports[`<Contribution /> should render answer references 1`] = `
-.c10 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c12 {
+.c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -660,11 +634,11 @@ exports[`<Contribution /> should render answer references 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c12 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c12 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -750,7 +724,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   color: #f66663;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -761,7 +735,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   justify-content: stretch;
 }
 
-.c4 {
+.c5 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -771,18 +745,18 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-right: 2rem;
 }
 
-.c4 svg {
+.c5 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -910,7 +884,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -919,7 +893,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   line-height: 1.625;
 }
 
-.c7 {
+.c8 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -933,7 +907,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c9 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -976,25 +950,12 @@ exports[`<Contribution /> should render answer references 1`] = `
   text-decoration: underline;
 }
 
-.c11 {
+.c12 {
   padding-bottom: 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   margin-bottom: 3.2rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c14 {
@@ -1002,19 +963,19 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c2 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c2 {
     padding: 0 5pt;
     border: none;
   }
@@ -1033,13 +994,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c4 svg {
+  .c5 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1059,13 +1020,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1079,13 +1040,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     font-size: 2.2rem;
   }
 }
@@ -1103,20 +1064,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
@@ -1148,13 +1096,13 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </div>
   <div
-    class="c2"
+    class="c2 c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           fill="none"
@@ -1189,10 +1137,10 @@ exports[`<Contribution /> should render answer references 1`] = `
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
           Page personnalisable
         </div>
@@ -1209,13 +1157,13 @@ exports[`<Contribution /> should render answer references 1`] = `
   </div>
   <section>
     <header
-      class="c7"
+      class="c8"
     >
       <h2
-        class="c8"
+        class="c9"
       >
         <div
-          class="c9"
+          class="c10"
         />
         Que dit le code du travail ?
       </h2>
@@ -1230,10 +1178,10 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </section>
   <div
-    class="c10 c11"
+    class="c11 c12"
   >
     <div
-      class="c12"
+      class="c2"
     >
       <header
         class="c13 c14"
@@ -1291,13 +1239,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 `;
 
 exports[`<Contribution /> should render preselected convention 1`] = `
-.c10 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c12 {
+.c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -1305,11 +1253,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c12 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c12 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1395,7 +1343,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   color: #f66663;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1406,7 +1354,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   justify-content: stretch;
 }
 
-.c4 {
+.c5 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1416,18 +1364,18 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   margin-right: 2rem;
 }
 
-.c4 svg {
+.c5 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1555,7 +1503,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -1564,7 +1512,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   line-height: 1.625;
 }
 
-.c7 {
+.c8 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -1578,7 +1526,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c9 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1621,25 +1569,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   text-decoration: underline;
 }
 
-.c11 {
+.c12 {
   padding-bottom: 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   margin-bottom: 3.2rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c14 {
@@ -1647,19 +1582,19 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c2 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c2 {
     padding: 0 5pt;
     border: none;
   }
@@ -1678,13 +1613,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c4 svg {
+  .c5 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1704,13 +1639,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1724,13 +1659,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     font-size: 2.2rem;
   }
 }
@@ -1748,20 +1683,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
@@ -1793,13 +1715,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </div>
   <div
-    class="c2"
+    class="c2 c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           fill="none"
@@ -1834,10 +1756,10 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
           Page personnalisable
         </div>
@@ -1854,13 +1776,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   </div>
   <section>
     <header
-      class="c7"
+      class="c8"
     >
       <h2
-        class="c8"
+        class="c9"
       >
         <div
-          class="c9"
+          class="c10"
         />
         Que dit le code du travail ?
       </h2>
@@ -1875,10 +1797,10 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </section>
   <div
-    class="c10 c11"
+    class="c11 c12"
   >
     <div
-      class="c12"
+      class="c2"
     >
       <header
         class="c13 c14"
@@ -1936,13 +1858,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 `;
 
 exports[`<Contribution /> should render with both answers 1`] = `
-.c10 {
+.c11 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c12 {
+.c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -1950,11 +1872,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c12 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c12 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -2040,7 +1962,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   color: #f66663;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2051,7 +1973,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   justify-content: stretch;
 }
 
-.c4 {
+.c5 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -2061,18 +1983,18 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-right: 2rem;
 }
 
-.c4 svg {
+.c5 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -2200,7 +2122,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -2209,7 +2131,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   line-height: 1.625;
 }
 
-.c7 {
+.c8 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -2223,7 +2145,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c9 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -2266,25 +2188,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   text-decoration: underline;
 }
 
-.c11 {
+.c12 {
   padding-bottom: 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   margin-bottom: 3.2rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c14 {
@@ -2292,19 +2201,19 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c2 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c2 {
     padding: 0 5pt;
     border: none;
   }
@@ -2323,13 +2232,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c4 svg {
+  .c5 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -2349,13 +2258,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -2369,13 +2278,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     font-size: 2.2rem;
   }
 }
@@ -2393,20 +2302,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
@@ -2438,13 +2334,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </div>
   <div
-    class="c2"
+    class="c2 c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           fill="none"
@@ -2479,10 +2375,10 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
           Page personnalisable
         </div>
@@ -2499,13 +2395,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
   </div>
   <section>
     <header
-      class="c7"
+      class="c8"
     >
       <h2
-        class="c8"
+        class="c9"
       >
         <div
-          class="c9"
+          class="c10"
         />
         Que dit le code du travail ?
       </h2>
@@ -2520,10 +2416,10 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <div
-    class="c10 c11"
+    class="c11 c12"
   >
     <div
-      class="c12"
+      class="c2"
     >
       <header
         class="c13 c14"
@@ -2581,13 +2477,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 `;
 
 exports[`<Contribution /> should render with conventions answer 1`] = `
-.c7 {
+.c8 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c9 {
+.c2 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -2595,11 +2491,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c9 > *:first-child {
+.c2 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -2685,7 +2581,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   color: #f66663;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2696,7 +2592,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   justify-content: stretch;
 }
 
-.c4 {
+.c5 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -2706,12 +2602,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-right: 2rem;
 }
 
-.c4 svg {
+.c5 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -2832,7 +2728,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -2879,25 +2775,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   text-decoration: underline;
 }
 
-.c8 {
+.c9 {
   padding-bottom: 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   margin-bottom: 3.2rem;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c11 {
@@ -2905,19 +2788,19 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c2 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c9 {
+  .c2 {
     padding: 0 5pt;
     border: none;
   }
@@ -2936,13 +2819,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c4 svg {
+  .c5 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -2962,7 +2845,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
@@ -2987,20 +2870,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
@@ -3032,13 +2902,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="c2"
+    class="c2 c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           fill="none"
@@ -3073,10 +2943,10 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
           Page personnalisable
         </div>
@@ -3092,10 +2962,10 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="c7 c8"
+    class="c8 c9"
   >
     <div
-      class="c9"
+      class="c2"
     >
       <header
         class="c10 c11"

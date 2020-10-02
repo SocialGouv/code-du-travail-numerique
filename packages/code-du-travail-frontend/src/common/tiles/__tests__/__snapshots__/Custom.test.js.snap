@@ -80,7 +80,7 @@ exports[`<Article /> should render 1`] = `
   text-decoration: underline;
 }
 
-.c13 {
+.c14 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -314,7 +314,7 @@ exports[`<Article /> should render 1`] = `
           >
             Bonjour
             <svg
-              class="c13"
+              class="c13 c14"
               fill="none"
               viewBox="0 0 28 15"
             >

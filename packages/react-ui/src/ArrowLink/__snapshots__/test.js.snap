@@ -21,7 +21,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
   width: auto;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -42,7 +42,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -62,7 +62,7 @@ exports[`<ArrowLink /> renders an arrow on the left  1`] = `
       Lorem Ipsum
     </span>
     <svg
-      class="c3"
+      class="c3 c4"
       fill="none"
       viewBox="0 0 28 15"
     >
@@ -96,7 +96,7 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
   width: auto;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -117,7 +117,7 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -137,7 +137,7 @@ exports[`<ArrowLink /> renders an arrow on the right  1`] = `
       Lorem Ipsum
     </span>
     <svg
-      class="c3"
+      class="c3 c4"
       fill="none"
       viewBox="0 0 28 15"
     >

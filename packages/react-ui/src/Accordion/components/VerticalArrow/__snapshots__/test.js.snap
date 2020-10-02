@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalArrow /> should render 1`] = `
-.c0 {
+.c1 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -16,7 +16,7 @@ exports[`<VerticalArrow /> should render 1`] = `
 }
 
 [aria-expanded="true"] .c0,
-[aria-selected="true"] .c0 {
+[aria-selected="true"] .c1 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -24,7 +24,7 @@ exports[`<VerticalArrow /> should render 1`] = `
 
 <div>
   <svg
-    class="c0"
+    class="c0 c1"
     fill="none"
     height="24"
     stroke="currentColor"

@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Wizard /> should call navigate the previous step when click on précédent 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,16 +54,16 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -56,7 +72,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-color: #f99593;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -64,13 +80,13 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,12 +110,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin-left: 1rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -115,24 +126,16 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,11 +153,11 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,11 +175,11 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -201,7 +204,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-radius: 49%;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -246,68 +249,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-  .c13 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -320,8 +261,70 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   }
 }
 
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
 @media (max-width:980px) {
-  .c2 {
+  .c15 + .c15 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -341,48 +344,48 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: none;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -416,44 +419,44 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           1/2
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
           aria-live="polite"
-          class="c7 c8"
+          class="c8 c9"
           tabindex="-1"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
           First Step
         </li>
         <li
-          class="c7 c10"
+          class="c8 c11"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
@@ -465,10 +468,10 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       Premiere Etape
     </p>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Commencer
         <svg
@@ -488,7 +491,23 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 `;
 
 exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -525,16 +544,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -543,7 +562,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-color: #a0b3e0;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -614,13 +633,13 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,12 +658,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -660,24 +674,16 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -695,11 +701,11 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -717,11 +723,11 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -746,7 +752,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-radius: 49%;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -791,19 +797,32 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c2 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c2 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     padding: 0 3rem;
   }
 }
@@ -821,13 +840,13 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media (max-width:980px) {
-  .c15 + .c14 {
+  .c15 + .c15 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c12 {
+  .c13 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -839,26 +858,13 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media print {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
 @media (max-width:980px) {
-  .c2 {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -878,48 +884,48 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: none;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -953,32 +959,32 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           2/2
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
-          class="c7 c8"
+          class="c8 c9"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
@@ -986,11 +992,11 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         </li>
         <li
           aria-live="polite"
-          class="c7 c10"
+          class="c8 c11"
           tabindex="-1"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
@@ -1013,15 +1019,15 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       />
     </label>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Imprimer le résultat
       </button>
       <button
-        class="c16 c14 c15"
+        class="c16 c15 "
         type="button"
       >
         Précédent
@@ -1032,7 +1038,23 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 `;
 
 exports[`<Wizard /> should handle initialValues 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1069,16 +1091,16 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1087,7 +1109,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-color: #f99593;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -1095,13 +1117,13 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1125,12 +1147,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   margin-left: 1rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1146,24 +1163,16 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1181,11 +1190,11 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1203,11 +1212,11 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1232,7 +1241,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-radius: 49%;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1277,48 +1286,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -1331,8 +1298,50 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
 @media (max-width:980px) {
-  .c2 {
+  .c15 + .c15 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -1352,48 +1361,48 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: none;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -1427,54 +1436,54 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           1/3
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
           aria-live="polite"
-          class="c7 c8"
+          class="c8 c9"
           tabindex="-1"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
           First Step
         </li>
         <li
-          class="c7 c10"
+          class="c8 c11"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
           Second Step
         </li>
         <li
-          class="c7 c10"
+          class="c8 c11"
         >
           <span
-            class="c11"
+            class="c12"
           >
             3
           </span>
@@ -1486,10 +1495,10 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       Premiere Etape
     </p>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Commencer
         <svg
@@ -1509,7 +1518,23 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 `;
 
 exports[`<Wizard /> should inject rules component 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1546,16 +1571,16 @@ exports[`<Wizard /> should inject rules component 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1564,7 +1589,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-color: #f99593;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -1572,13 +1597,13 @@ exports[`<Wizard /> should inject rules component 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1602,12 +1627,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   margin-left: 1rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1623,24 +1643,16 @@ exports[`<Wizard /> should inject rules component 1`] = `
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1658,11 +1670,11 @@ exports[`<Wizard /> should inject rules component 1`] = `
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1680,11 +1692,11 @@ exports[`<Wizard /> should inject rules component 1`] = `
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1709,7 +1721,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-radius: 49%;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1754,48 +1766,6 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -1808,8 +1778,50 @@ exports[`<Wizard /> should inject rules component 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
 @media (max-width:980px) {
-  .c2 {
+  .c15 + .c15 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -1829,48 +1841,48 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: none;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -1907,44 +1919,44 @@ exports[`<Wizard /> should inject rules component 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           1/2
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
           aria-live="polite"
-          class="c7 c8"
+          class="c8 c9"
           tabindex="-1"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
           First Step
         </li>
         <li
-          class="c7 c10"
+          class="c8 c11"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
@@ -1956,10 +1968,10 @@ exports[`<Wizard /> should inject rules component 1`] = `
       Premiere Etape
     </p>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Commencer
         <svg
@@ -1979,7 +1991,23 @@ exports[`<Wizard /> should inject rules component 1`] = `
 `;
 
 exports[`<Wizard /> should navigate to the second step when click on Commencer 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2016,16 +2044,16 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2034,7 +2062,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   border-color: #a0b3e0;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -2105,13 +2133,13 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2130,12 +2158,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   margin: 5rem 0 3.2rem 0;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2151,24 +2174,16 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2186,11 +2201,11 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2208,11 +2223,11 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2237,7 +2252,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   border-radius: 49%;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2282,6 +2297,19 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media (max-width:600px) {
+  .c2 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c2 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
 
 }
 
@@ -2294,19 +2322,19 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     padding: 0 3rem;
   }
 }
@@ -2324,13 +2352,13 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media (max-width:980px) {
-  .c15 + .c14 {
+  .c15 + .c15 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c12 {
+  .c13 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2342,26 +2370,13 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media print {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
 
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
 @media (max-width:980px) {
-  .c2 {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -2381,48 +2396,48 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: none;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -2456,32 +2471,32 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           2/2
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
-          class="c7 c8"
+          class="c8 c9"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
@@ -2489,11 +2504,11 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         </li>
         <li
           aria-live="polite"
-          class="c7 c10"
+          class="c8 c11"
           tabindex="-1"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
@@ -2516,15 +2531,15 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       />
     </label>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Imprimer le résultat
       </button>
       <button
-        class="c16 c14 c15"
+        class="c16 c15 "
         type="button"
       >
         Précédent
@@ -2535,7 +2550,23 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 `;
 
 exports[`<Wizard /> should render a step 1`] = `
-.c13 {
+.c2 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2572,16 +2603,16 @@ exports[`<Wizard /> should render a step 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -2590,7 +2621,7 @@ exports[`<Wizard /> should render a step 1`] = `
   border-color: #f99593;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -2598,13 +2629,13 @@ exports[`<Wizard /> should render a step 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2628,12 +2659,7 @@ exports[`<Wizard /> should render a step 1`] = `
   margin-left: 1rem;
 }
 
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
+.c3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2649,24 +2675,16 @@ exports[`<Wizard /> should render a step 1`] = `
   padding: 6rem 4rem 4rem 4rem;
 }
 
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c4 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c5 {
+.c6 {
   display: none;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2684,11 +2702,11 @@ exports[`<Wizard /> should render a step 1`] = `
   outline: none;
 }
 
-.c8 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2706,11 +2724,11 @@ exports[`<Wizard /> should render a step 1`] = `
   outline: none;
 }
 
-.c10 + .c7 {
+.c8 + .c8 {
   margin-top: 1.6rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2735,7 +2753,7 @@ exports[`<Wizard /> should render a step 1`] = `
   border-radius: 49%;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2780,48 +2798,6 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c15 + .c14 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c12 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c2 {
     padding: 1.6rem 1rem;
   }
@@ -2834,8 +2810,50 @@ exports[`<Wizard /> should render a step 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    padding: 0 3rem;
+  }
+}
+
 @media (max-width:980px) {
-  .c2 {
+  .c15 + .c15 {
+    margin-top: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -2855,48 +2873,48 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 @media print {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c3 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c4 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c8 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c10 {
+  .c11 {
     display: none;
   }
 
-  .c10 + .c7 {
+  .c8 + .c8 {
     margin-top: 0;
   }
 }
@@ -2930,44 +2948,44 @@ exports[`<Wizard /> should render a step 1`] = `
       test
     </h1>
     <div
-      class="c2"
+      class="c2 c3"
     >
       <span
-        class="c3"
+        class="c4"
       >
         Étape
         <span
-          class="c4"
+          class="c5"
         >
           s
         </span>
         <span
-          class="c5"
+          class="c6"
         >
            
           1/2
         </span>
       </span>
       <ul
-        class="c6"
+        class="c7"
       >
         <li
           aria-live="polite"
-          class="c7 c8"
+          class="c8 c9"
           tabindex="-1"
         >
           <span
-            class="c9"
+            class="c10"
           >
             1
           </span>
           First Step
         </li>
         <li
-          class="c7 c10"
+          class="c8 c11"
         >
           <span
-            class="c11"
+            class="c12"
           >
             2
           </span>
@@ -2979,10 +2997,10 @@ exports[`<Wizard /> should render a step 1`] = `
       Premiere Etape
     </p>
     <div
-      class="c12"
+      class="c13"
     >
       <button
-        class="c13 c14 c15"
+        class="c14 c15 "
       >
         Commencer
         <svg

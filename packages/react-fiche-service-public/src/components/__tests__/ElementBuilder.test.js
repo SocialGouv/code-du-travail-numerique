@@ -79,7 +79,6 @@ const tests = [
           border-radius: 0.6rem;
           background-color: #f2f5fa;
           border: 1px solid #f2f5fa;
-          margin-bottom: 1.6rem;
         }
 
         .c0 > *:first-child {
@@ -88,6 +87,10 @@ const tests = [
 
         .c0 > *:last-child {
           margin-bottom: 0;
+        }
+
+        .c1 {
+          margin-bottom: 1.6rem;
         }
 
         @media (max-width:600px) {
@@ -105,22 +108,22 @@ const tests = [
 
         <div>
           <div
-            class="c0"
+            class="c0 c1"
           >
             stuff 0
           </div>
           <div
-            class="c0"
+            class="c0 c1"
           >
             stuff 1
           </div>
           <div
-            class="c0"
+            class="c0 c1"
           >
             stuff 2
           </div>
           <div
-            class="c0"
+            class="c0 c1"
           >
             stuff 3
           </div>

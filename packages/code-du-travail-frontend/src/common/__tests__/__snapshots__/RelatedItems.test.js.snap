@@ -7,7 +7,7 @@ exports[`<RelatedItems /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c22 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,14 +20,14 @@ exports[`<RelatedItems /> should render 1`] = `
   text-decoration: none;
 }
 
-.c24 {
+.c26 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c23 {
+.c25 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -41,13 +41,13 @@ exports[`<RelatedItems /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c21:hover .c23 {
+.c22:hover .c24 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c16 {
+.c18 {
   position: absolute;
   top: 0;
   right: 0;
@@ -58,7 +58,7 @@ exports[`<RelatedItems /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c16:before {
+.c18:before {
   position: absolute;
   display: block;
   width: 0;
@@ -69,7 +69,7 @@ exports[`<RelatedItems /> should render 1`] = `
   content: "";
 }
 
-.c17 {
+.c19 {
   position: absolute;
   top: 0;
   right: 0;
@@ -78,7 +78,7 @@ exports[`<RelatedItems /> should render 1`] = `
   height: 3rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -119,14 +119,14 @@ exports[`<RelatedItems /> should render 1`] = `
   overflow: visible;
 }
 
-.c14:focus,
-.c14:hover,
-.c14:active {
+.c15:focus,
+.c15:hover,
+.c15:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c15 {
+.c17 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -135,19 +135,19 @@ exports[`<RelatedItems /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c13:hover .c15 {
+.c14:hover .c16 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c19 {
+.c1 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c8 {
+.c9 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -157,7 +157,18 @@ exports[`<RelatedItems /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c4 {
+.c20 {
+  display: block;
+  margin: 0 0 1rem 0;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  text-transform: uppercase;
+}
+
+.c5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -198,9 +209,9 @@ exports[`<RelatedItems /> should render 1`] = `
   appearance: none;
 }
 
-.c4:hover,
-.c4:active,
-.c4:focus {
+.c5:hover,
+.c5:active,
+.c5:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -208,7 +219,7 @@ exports[`<RelatedItems /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c6 {
+.c7 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -218,39 +229,28 @@ exports[`<RelatedItems /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c7 {
+.c8 {
   padding-right: 1rem;
 }
 
-.c18 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.c9 {
+.c10 {
   margin: 0;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,17 +265,11 @@ exports[`<RelatedItems /> should render 1`] = `
   height: 100%;
 }
 
-.c12 {
+.c13 {
   margin-top: 1rem;
 }
 
-.c1 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -284,7 +278,7 @@ exports[`<RelatedItems /> should render 1`] = `
   padding: 0;
 }
 
-.c20 {
+.c21 {
   margin: 0 0 1.6rem 0;
   padding: 0;
 }
@@ -303,7 +297,7 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c25 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -314,32 +308,32 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c14 {
+  .c15 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:980px) {
-  .c1 {
+  .c2 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -348,7 +342,7 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -356,7 +350,7 @@ exports[`<RelatedItems /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c3 {
+  .c4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -371,20 +365,20 @@ exports[`<RelatedItems /> should render 1`] = `
     width: calc((100% - 1.6rem) / 2);
   }
 
-  .c3 + .c2 {
+  .c3 + .c3 {
     margin-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     width: 100%;
   }
 
-  .c3 + .c2 {
+  .c3 + .c3 {
     margin-left: 0;
   }
 }
@@ -394,22 +388,22 @@ exports[`<RelatedItems /> should render 1`] = `
     class="c0"
   >
     <ul
-      class="c1"
+      class="c1 c2"
     >
       <li
-        class="c2 c3"
+        class="c3 c4"
       >
         <a
-          class="c4"
+          class="c5"
           href="external.tools"
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
           <div
-            class="c5"
+            class="c6"
           >
             <div
-              class="c6"
+              class="c7"
             >
               <svg
                 fill="none"
@@ -444,31 +438,31 @@ exports[`<RelatedItems /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               
               <h3
-                class="c8 c9"
+                class="c9 c10"
               >
                 externalTool
               </h3>
             </div>
           </div>
           <div
-            class="c10"
+            class="c11"
           >
             <div
-              class="c11"
+              class="c12"
             >
               <div
-                class="c12"
+                class="c13"
               >
                 <div
-                  class="c13 c14"
+                  class="c14 c15"
                 >
                   voir
                   <svg
-                    class="c15"
+                    class="c16 c17"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -484,17 +478,17 @@ exports[`<RelatedItems /> should render 1`] = `
         </a>
       </li>
       <li
-        class="c2 c3"
+        class="c3 c4"
       >
         <button
-          class="c4"
+          class="c5"
           rel="nofollow"
         >
           <div
-            class="c16"
+            class="c18"
           >
             <div
-              class="c17"
+              class="c19"
             >
               <svg
                 fill="none"
@@ -516,10 +510,10 @@ exports[`<RelatedItems /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c5"
+            class="c6"
           >
             <div
-              class="c6"
+              class="c7"
             >
               <svg
                 fill="none"
@@ -538,35 +532,35 @@ exports[`<RelatedItems /> should render 1`] = `
               </svg>
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <span
-                class="c18"
+                class="c20 "
               >
                 Modèles de documents
               </span>
               <h3
-                class="c8 c9"
+                class="c9 c10"
               >
                 modele de courrier
               </h3>
             </div>
           </div>
           <div
-            class="c10"
+            class="c11"
           >
             <div
-              class="c11"
+              class="c12"
             >
               <div
-                class="c12"
+                class="c13"
               >
                 <div
-                  class="c13 c14"
+                  class="c14 c15"
                 >
                   Consulter
                   <svg
-                    class="c15"
+                    class="c16 c17"
                     fill="none"
                     viewBox="0 0 28 15"
                   >
@@ -583,22 +577,22 @@ exports[`<RelatedItems /> should render 1`] = `
       </li>
     </ul>
     <div
-      class="c8"
+      class="c9"
     >
       Les articles pouvant vous intéresser :
     </div>
     <ul
-      class="c19"
+      class="c1"
     >
       <li
-        class="c20"
+        class="c21"
       >
         <a
-          class="c21 c22"
+          class="c22 c23"
           rel="nofollow"
         >
           <svg
-            class="c23"
+            class="c24 c25"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -608,21 +602,21 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="c24"
+            class="c26"
           >
             fiche sp
           </span>
         </a>
       </li>
       <li
-        class="c20"
+        class="c21"
       >
         <a
-          class="c21 c22"
+          class="c22 c23"
           rel="nofollow"
         >
           <svg
-            class="c23"
+            class="c24 c25"
             fill="none"
             viewBox="0 0 28 15"
           >
@@ -632,7 +626,7 @@ exports[`<RelatedItems /> should render 1`] = `
             />
           </svg>
           <span
-            class="c24"
+            class="c26"
           >
             contrib
           </span>
