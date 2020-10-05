@@ -84,7 +84,7 @@ async function getKoaServer({ nextApp }) {
       ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
       ...(dev && { reportUri: "/report-violation" }),
     },
-    reportOnly: () => dev,
+    reportOnly: dev,
   };
   if (dev) {
     // handle local csp reportUri endpoint
