@@ -1,10 +1,10 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
-  Accordion,
   ArrowLink,
   Button,
   Container,
   FlatList,
+  MoreContent,
   PageTitle,
   Section,
   Select,
@@ -68,22 +68,6 @@ function Theme({ theme }) {
             </FixedWrapper>
           )}
           <Content fullWidth={children.length > 0}>
-            {children.length > 0 && (
-              <SelectWrapper>
-                <Select
-                  onChange={(event) => {
-                    setFilter(event.target.value);
-                  }}
-                >
-                  <option value="">Tous les sous-thèmes</option>
-                  {sortedChildren.map((children) => (
-                    <option key={children.id} value={children.id}>
-                      {children.shortTitle || children.title}
-                    </option>
-                  ))}
-                </Select>
-              </SelectWrapper>
-            )}
             <>
               {refs.length > 0 && (
                 <ContentSection>
@@ -91,29 +75,22 @@ function Theme({ theme }) {
                     <>
                       <H2>Informations générales</H2>
                       <StyledFlatList>
-                        {refs.slice(0, 4).map((ref) => (
+                        {refs.slice(0, 6).map((ref) => (
                           <Li key={ref.id}>
                             <ContentLink {...ref} />
                           </Li>
                         ))}
                       </StyledFlatList>
-                      {allRefs.length > 4 && (
-                        <Accordion
-                          items={[
-                            {
-                              body: (
-                                <StyledFlatList>
-                                  {refs.slice(4).map((ref) => (
-                                    <Li key={ref.id}>
-                                      <ContentLink {...ref} />
-                                    </Li>
-                                  ))}
-                                </StyledFlatList>
-                              ),
-                              title: "Contenus suivants",
-                            },
-                          ]}
-                        />
+                      {allRefs.length > 6 && (
+                        <MoreContent noLeftPadding title="Afficher plus">
+                          <StyledFlatList>
+                            {refs.slice(6).map((ref) => (
+                              <Li key={ref.id}>
+                                <ContentLink {...ref} />
+                              </Li>
+                            ))}
+                          </StyledFlatList>
+                        </MoreContent>
                       )}
                     </>
                   ) : (
@@ -126,6 +103,22 @@ function Theme({ theme }) {
                     </FlexTiles>
                   )}
                 </ContentSection>
+              )}
+              {children.length > 0 && (
+                <SelectWrapper>
+                  <Select
+                    onChange={(event) => {
+                      setFilter(event.target.value);
+                    }}
+                  >
+                    <option value="">Tous les sous-thèmes</option>
+                    {sortedChildren.map((children) => (
+                      <option key={children.id} value={children.id}>
+                        {children.shortTitle || children.title}
+                      </option>
+                    ))}
+                  </Select>
+                </SelectWrapper>
               )}
               {sortedChildren
                 .filter((children) => (filter ? children.id === filter : true))
@@ -163,7 +156,7 @@ function Theme({ theme }) {
                         {grandChildren.length > 0 && (
                           <SubThemeNav>
                             {grandChildren.map(({ label, slug }) => (
-                              <React.Fragment key={label}>
+                              <SubTheme key={label}>
                                 <Link
                                   href={`/${getRouteBySource(
                                     SOURCES.THEMES
@@ -180,7 +173,7 @@ function Theme({ theme }) {
                                     {label}
                                   </Button>
                                 </Link>
-                              </React.Fragment>
+                              </SubTheme>
                             ))}
                           </SubThemeNav>
                         )}
@@ -280,19 +273,20 @@ const ContentSection = styled(Section)`
 const FlexTiles = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: ${spacings.small};
   margin: 0;
   padding: 0;
   list-style-type: none;
 `;
 
 const FlexTile = styled.li`
-  flex: 0 0 calc(50% - ${spacings.small} / 2);
+  flex: 0 0 calc(50% - ${spacings.small} * 2);
+  margin: ${spacings.small};
   & > a {
     height: 100%;
   }
   @media (max-width: ${breakpoints.mobile}) {
     flex: 0 0 100%;
+    margin: ${spacings.xsmall} 0;
   }
 `;
 
@@ -303,7 +297,7 @@ const FlexDiv = styled.div`
 `;
 
 const Hr = styled.hr`
-  margin: ${spacings.larger} 0;
+  margin: ${spacings.larger} 0 5.6rem 0;
   border: 1px solid ${colors.border};
   border-bottom: none;
 `;
@@ -313,6 +307,8 @@ const H2 = styled.h2`
 `;
 
 const SeeAll = styled.a`
+  flex: 0 0 auto;
+  padding-left: ${spacings.small};
   color: ${colors.secondary};
   font-size: ${fonts.sizes.small};
   text-decoration-color: ${colors.secondary};
@@ -324,10 +320,16 @@ const SeeAll = styled.a`
 const SubThemeNav = styled.nav`
   display: flex;
   flex-wrap: wrap;
-  gap: ${spacings.small};
-  margin-top: ${spacings.base};
   @media (max-width: ${breakpoints.mobile}) {
     justify-content: stretch;
+    margin-top: ${spacings.small};
+  }
+`;
+const SubTheme = styled.div`
+  margin-top: ${spacings.base};
+  margin-right: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: ${spacings.small} ${spacings.tiny} 0 ${spacings.tiny};
   }
 `;
 
