@@ -36,7 +36,7 @@
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@socialgouv/eslint-config-react": "^1.36.0",
-    "@testing-library/react": "^10.4.9",
+    "@testing-library/react": "^11.0.4",
     "babel-jest": "^26.3.0",
     "eslint": "^7.10.0",
     "jest": "^26.4.2",
