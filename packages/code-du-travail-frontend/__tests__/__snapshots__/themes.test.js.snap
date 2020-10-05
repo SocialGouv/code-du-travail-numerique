@@ -972,7 +972,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c52 {
-  margin: 4rem 0;
+  margin: 4rem 0 5.6rem 0;
   border: 1px solid #bbcadf;
   border-bottom: none;
 }
