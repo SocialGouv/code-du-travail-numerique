@@ -7,9 +7,10 @@ export default {
   title: "Components/Alert",
 };
 
-export const base = () => (
-  <>
-    <Alert variant="primary">Primary alert</Alert>
-    <Alert variant="secondary">Secondary (default) alert</Alert>
-  </>
-);
+const Template = (args) => <Alert {...args}>Alert</Alert>;
+
+export const Primary = Template.bind({});
+Primary.args = { variant: "primary" };
+
+export const Secondary = Template.bind({});
+Secondary.args = { variant: "secondary" };
