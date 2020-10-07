@@ -13,8 +13,7 @@ Scénario:
   Alors je vois "Recherchez par mots-clés"
   Alors je vois le bouton "Rechercher"
 
-  Alors je vois "4" tuiles sous le texte "Boîte à outils"
-  Alors le lien "Voir tous les outils" pointe sur "outils"
+  Alors je vois "4" tuiles sous le texte "À la une"
 
   Alors je vois "Thèmes"
   Alors je vois "Embauche et contrat de travail"
@@ -28,4 +27,6 @@ Scénario:
   Alors je vois "Conflits au travail et contrôle de la réglementation"
   Alors le lien "Voir tous les thèmes" pointe sur "themes"
 
-  Alors je vois "6" tuiles sous le texte "En ce moment"
+  Alors je vois "4" tuiles sous le texte "Boîte à outils"
+  Alors le lien "Voir tous les outils" pointe sur "outils"
+
