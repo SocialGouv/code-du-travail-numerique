@@ -231,6 +231,7 @@ exports[`<Header /> should render 1`] = `
   width: 100%;
   height: 18rem;
   background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c1 {

@@ -1,42 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Headband /> should render 1`] = `
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c2 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 2rem;
-}
-
-.c2 svg {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c3 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .c0 {
   position: absolute;
   top: 18rem;
@@ -56,7 +20,6 @@ exports[`<Headband /> should render 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ffe980;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
@@ -68,19 +31,6 @@ exports[`<Headband /> should render 1`] = `
   text-decoration: underline;
   -webkit-text-decoration-color: #2f3b6c;
   text-decoration-color: #2f3b6c;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c2 svg {
-    width: 3rem;
-    height: 3rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -98,50 +48,7 @@ exports[`<Headband /> should render 1`] = `
 <div>
   <a
     class="c0"
-    href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="8"
-            y2="12"
-          />
-          <line
-            x1="12"
-            x2="12.01"
-            y1="16"
-            y2="16"
-          />
-        </svg>
-      </div>
-      <div
-        class="c3"
-      >
-        Coronavirus (Covid-19) : notre dossier dédié
-      </div>
-    </div>
-  </a>
+    href="/[id]/[slug]"
+  />
 </div>
 `;
