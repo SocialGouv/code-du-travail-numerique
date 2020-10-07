@@ -1,34 +1,21 @@
-import { IconStripe, theme } from "@socialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { AlertCircle } from "react-feather";
 import styled from "styled-components";
 
 import { HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
 export const HEADBAND_HEIGHT = "5rem";
 
-export const Headband = ({ currentPage }) => {
+export const Headband = ({ href, ...props }) => {
   const { asPath } = useRouter();
-  if (
-    asPath.includes(
-      "dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
-    )
-  ) {
+  if (asPath.includes(href)) {
     return null;
   }
   return (
-    <Link
-      href="/dossiers/[slug]"
-      as="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
-      passHref
-    >
-      <StyledLink currentPage={currentPage}>
-        <IconStripe icon={AlertCircle} small centered>
-          Coronavirus (Covid-19) : notre dossier dédié
-        </IconStripe>
-      </StyledLink>
+    <Link href="/[id]/[slug]" as={href} passHref>
+      <StyledLink {...props} />
     </Link>
   );
 };
@@ -55,8 +42,8 @@ const StyledLink = styled.a`
     text-decoration-color: ${({ theme }) =>
       theme.noColors ? theme.white : theme.title};
   }
-  background-color: ${({ theme }) =>
-    theme.noColors ? theme.primary : "#ffe980"};
+  background-color: ${({ color, theme }) =>
+    theme.noColors ? theme.primary : color};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   @media (max-width: ${breakpoints.mobile}) {
     top: ${MOBILE_HEADER_HEIGHT};

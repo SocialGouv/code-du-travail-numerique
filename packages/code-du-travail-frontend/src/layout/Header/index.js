@@ -85,7 +85,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: ${HEADER_HEIGHT};
   background-color: ${({ theme }) => theme.white};
-
+  box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   ${({ floating, overThreshold }) => {
     if (overThreshold) {
       if (floating) {
@@ -93,7 +93,6 @@ const StyledHeader = styled.header`
           position: fixed;
           animation: ${keyframes.fromTop} 250ms ease-out;
           height: ${MOBILE_HEADER_HEIGHT};
-          box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
         `;
       }
     }
