@@ -170,33 +170,31 @@ async function* cdtnDocumentsGen() {
   yield getCourriers();
 
   logger.info("=== Outils ===");
-  yield require("../dataset/tools")
-    .filter((tool) => tool.slug !== "simulateur-embauche")
-    .map(
-      ({
-        action,
-        breadcrumbs,
-        date,
-        description,
-        icon,
-        id,
-        questions,
-        slug,
-        title,
-      }) => ({
-        action,
-        breadcrumbs,
-        date,
-        description,
-        excludeFromSearch: false,
-        icon,
-        id,
-        slug,
-        source: SOURCES.TOOLS,
-        text: questions.join("\n"),
-        title,
-      })
-    );
+  yield require("../dataset/tools").map(
+    ({
+      action,
+      breadcrumbs,
+      date,
+      description,
+      icon,
+      id,
+      questions,
+      slug,
+      title,
+    }) => ({
+      action,
+      breadcrumbs,
+      date,
+      description,
+      excludeFromSearch: false,
+      icon,
+      id,
+      slug,
+      source: SOURCES.TOOLS,
+      text: questions.join("\n"),
+      title,
+    })
+  );
 
   logger.info("=== Outils externes ===");
   yield require("../dataset/tools/externals.json").map(

@@ -7,11 +7,9 @@ Fonctionnalité: Dossier Coronavirus
 
 
   Scénario:
-    Soit un utilisateur sur la page d'accueil
+    Soit un utilisateur sur la page "dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
 
-    Alors je vois "Coronavirus (Covid-19) : notre dossier dédié"
-    Quand je clique sur "Coronavirus (Covid-19) : notre dossier dédié"
-    Quand j'attends que le titre de page "Ministère du travail : notre dossier sur le Coronavirus" apparaisse
+    Alors je vois "Ministère du travail : notre dossier sur le Coronavirus"
     Alors je vois "Sommaire"
 
     Quand je clique sur "Nouveautés Covid-19 : congés payés"

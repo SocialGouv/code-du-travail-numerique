@@ -422,6 +422,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                  
                 <button
                   class="c8 c9"
+                  type="button"
                 >
                   notre aide
                 </button>

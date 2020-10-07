@@ -7,7 +7,7 @@ exports[`<Stats /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c46 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,13 +15,13 @@ exports[`<Stats /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c27 {
+.c23 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c31 {
+.c27 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -30,7 +30,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: #fff;
 }
 
-.c31:before {
+.c27:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,15 +44,15 @@ exports[`<Stats /> should render 1`] = `
   content: "";
 }
 
-.c31 > *:first-child {
+.c27 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
-.c37 {
+.c33 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,11 +60,11 @@ exports[`<Stats /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c37 > *:first-child {
+.c33 > *:first-child {
   margin-top: 0;
 }
 
-.c37 > *:last-child {
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -131,7 +131,7 @@ exports[`<Stats /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c59 {
+.c55 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -176,13 +176,13 @@ exports[`<Stats /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c59:focus,
-.c59:hover,
-.c59:active {
+.c55:focus,
+.c55:hover,
+.c55:active {
   color: #f66663;
 }
 
-.c48 {
+.c44 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -219,16 +219,16 @@ exports[`<Stats /> should render 1`] = `
   opacity: 1;
 }
 
-.c48:link,
-.c48:visited {
+.c44:link,
+.c44:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c48:not([disabled]):hover,
-.c48:not([disabled]):active,
-.c48:not([disabled]):focus {
+.c44:not([disabled]):hover,
+.c44:not([disabled]):active,
+.c44:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -237,7 +237,7 @@ exports[`<Stats /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c48[disabled] {
+.c44[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -319,13 +319,13 @@ exports[`<Stats /> should render 1`] = `
   color: #7994d4;
 }
 
-.c32 {
+.c28 {
   position: relative;
   overflow: visible;
 }
 
-.c32:before,
-.c32:after {
+.c28:before,
+.c28:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -340,19 +340,19 @@ exports[`<Stats /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c32:before {
+.c28:before {
   left: -2rem;
 }
 
-.c32:after {
+.c28:after {
   right: -2rem;
 }
 
-.c34 {
+.c30 {
   overflow-x: visible;
 }
 
-.c35 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,7 +379,7 @@ exports[`<Stats /> should render 1`] = `
   list-style-type: none;
 }
 
-.c36 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -396,49 +396,13 @@ exports[`<Stats /> should render 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c55 {
+.c51 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c24 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 2rem;
-}
-
-.c24 svg {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c25 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c30 {
+.c26 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -451,7 +415,7 @@ exports[`<Stats /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c39 {
+.c35 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -461,7 +425,7 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c53 {
+.c49 {
   position: relative;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
@@ -471,21 +435,21 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c28 {
+.c24 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c44 {
+.c40 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c29 {
+.c25 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -496,7 +460,7 @@ exports[`<Stats /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c45 {
+.c41 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -508,12 +472,12 @@ exports[`<Stats /> should render 1`] = `
   text-align: center;
 }
 
-.c41 {
+.c37 {
   width: 100%;
   overflow-x: hidden;
 }
 
-.c42 {
+.c38 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -521,7 +485,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c42:before {
+.c38:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -533,27 +497,27 @@ exports[`<Stats /> should render 1`] = `
   content: "";
 }
 
-.c43 {
+.c39 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c47 {
+.c43 {
   margin-bottom: 2rem;
 }
 
-.c49 {
+.c45 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c50 {
+.c46 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c51 {
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -564,26 +528,26 @@ exports[`<Stats /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c52 + .c52 {
+.c48 + .c48 {
   padding-left: 1.6rem;
 }
 
-.c54 {
+.c50 {
   font-size: 1.6rem;
 }
 
-.c57 {
+.c53 {
   margin: 0.4rem 0;
 }
 
-.c58 {
+.c54 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c60 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -602,11 +566,11 @@ exports[`<Stats /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c61 {
+.c57 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c62 {
+.c58 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -701,6 +665,7 @@ exports[`<Stats /> should render 1`] = `
   width: 100%;
   height: 18rem;
   background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
 .c3 {
@@ -798,42 +763,9 @@ exports[`<Stats /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
-.c22 {
-  position: absolute;
-  top: 18rem;
-  z-index: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 5rem;
-  padding: 1rem;
-  color: #2f3b6c;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #ffe980;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-}
-
-.c22:hover,
-.c22:active,
-.c22:focus {
-  color: #2f3b6c;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #2f3b6c;
-  text-decoration-color: #2f3b6c;
-}
-
 .c0 {
   position: relative;
-  padding-top: calc(18rem + 5rem);
+  padding-top: calc(18rem);
 }
 
 .c1 {
@@ -847,11 +779,11 @@ exports[`<Stats /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c26 {
+.c22 {
   margin-top: 6rem;
 }
 
-.c38 {
+.c34 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -867,7 +799,7 @@ exports[`<Stats /> should render 1`] = `
   width: 100%;
 }
 
-.c40 {
+.c36 {
   color: #7994d4;
   font-weight: bold;
   font-size: 5rem;
@@ -888,45 +820,45 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c42 {
     padding: 0;
   }
 }
 
 @media print {
-  .c46 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c23 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c27 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c31 {
+  .c27 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c33 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c37 {
+  .c33 {
     padding: 0 5pt;
     border: none;
   }
@@ -945,31 +877,31 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c55 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c59 {
+  .c55 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c44 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c48 {
+  .c44 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c44 {
     padding: 0 3rem;
   }
 }
@@ -1008,32 +940,32 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c28 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c32:before,
-  .c32:after {
+  .c28:before,
+  .c28:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c30 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c29 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c31 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -1044,18 +976,18 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c32 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c36:first-of-type {
+  .c32:first-of-type {
     margin-left: 2rem;
   }
 
-  .c36:last-of-type:after {
+  .c32:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -1065,95 +997,82 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c36 {
+  .c32 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c36 {
+  .c32 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c32 {
     width: 80%;
   }
 }
 
 @media (max-width:600px) {
+  .c35 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c49 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c24 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c24 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c39 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c53 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c40 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c25 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c41 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c42 {
+  .c38 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c39 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c46 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c47 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1161,26 +1080,26 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c52 + .c52 {
+  .c48 + .c48 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c52 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c50 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c62 {
+  .c58 {
     display: none;
   }
 }
@@ -1284,25 +1203,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
-    top: 9rem;
-  }
-}
-
-@media print {
-  .c22 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c0 {
-    padding-top: calc(9rem + 5rem);
+    padding-top: calc(9rem);
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c22 {
     margin-top: 3.2rem;
   }
 }
@@ -1445,58 +1352,11 @@ exports[`<Stats /> should render 1`] = `
         </div>
       </div>
     </header>
-    <a
+    <main
       class="c22"
-      href="/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
     >
       <div
         class="c23"
-      >
-        <div
-          class="c24"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <line
-              x1="12"
-              x2="12"
-              y1="8"
-              y2="12"
-            />
-            <line
-              x1="12"
-              x2="12.01"
-              y1="16"
-              y2="16"
-            />
-          </svg>
-        </div>
-        <div
-          class="c25"
-        >
-          Coronavirus (Covid-19) : notre dossier dédié
-        </div>
-      </div>
-    </a>
-    <main
-      class="c26"
-    >
-      <div
-        class="c27"
       >
         <div
           class="c4"
@@ -1508,115 +1368,115 @@ exports[`<Stats /> should render 1`] = `
             tabindex="-1"
           >
             <header
-              class="c28"
+              class="c24"
             >
               <h1
-                class="c29"
+                class="c25"
               >
                 <div
-                  class="c30"
+                  class="c26"
                 />
                 Statistiques du Code du travail numérique
               </h1>
             </header>
           </div>
           <div
-            class="c31"
+            class="c27"
           >
             <div
-              class="c32 c33"
+              class="c28 c29"
             >
               <div
-                class="c34"
+                class="c30"
               >
                 <ul
-                  class="c35"
+                  class="c31"
                 >
                   <li
-                    class="c36"
+                    class="c32"
                   >
                     <div
-                      class="c37 c38"
+                      class="c33 c34"
                     >
                       <h3
-                        class="c39"
+                        class="c35"
                       >
                         Contenus référencés
                       </h3>
                       <div
-                        class="c40"
+                        class="c36"
                       >
                         16
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c36"
+                    class="c32"
                   >
                     <div
-                      class="c37 c38"
+                      class="c33 c34"
                     >
                       <h3
-                        class="c39"
+                        class="c35"
                       >
                         Visites
                       </h3>
                       <div
-                        class="c40"
+                        class="c36"
                       >
                         20
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c36"
+                    class="c32"
                   >
                     <div
-                      class="c37 c38"
+                      class="c33 c34"
                     >
                       <h3
-                        class="c39"
+                        class="c35"
                       >
                         Recherches
                       </h3>
                       <div
-                        class="c40"
+                        class="c36"
                       >
                         4
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c36"
+                    class="c32"
                   >
                     <div
-                      class="c37 c38"
+                      class="c33 c34"
                     >
                       <h3
-                        class="c39"
+                        class="c35"
                       >
                         Consultations
                       </h3>
                       <div
-                        class="c40"
+                        class="c36"
                       >
                         10
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c36"
+                    class="c32"
                   >
                     <div
-                      class="c37 c38"
+                      class="c33 c34"
                     >
                       <h3
-                        class="c39"
+                        class="c35"
                       >
                         Taux de satisfaction
                       </h3>
                       <div
-                        class="c40"
+                        class="c36"
                       >
                         60
                         %
@@ -1636,40 +1496,40 @@ exports[`<Stats /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c41"
+      class="c37"
     >
       <footer
-        class="c42"
+        class="c38"
       >
         <div
-          class="c27 c43"
+          class="c23 c39"
         >
           <div
             class="c4"
           >
             <header
-              class="c44"
+              class="c40"
             >
               <h3
-                class="c45"
+                class="c41"
               >
                 <div
-                  class="c30"
+                  class="c26"
                 />
                 Besoin de plus d’informations ?
               </h3>
             </header>
             <div
-              class="c46 c47"
+              class="c42 c43"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c48"
+              class="c44"
             >
               Contacter nos services en région
               <svg
-                class="c49"
+                class="c45"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1682,88 +1542,88 @@ exports[`<Stats /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c27 c50"
+          class="c23 c46"
         >
           <nav>
             <div
-              class="c4 c51"
+              class="c4 c47"
             >
               <div
-                class="c52 "
+                class="c48 "
               >
                 <h3
-                  class="c53 c54"
+                  class="c49 c50"
                 >
                   Code du travail numérique
                 </h3>
                 <ul
-                  class="c55 c56"
+                  class="c51 c52"
                 >
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -1772,30 +1632,30 @@ exports[`<Stats /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c52 "
+                class="c48 "
               >
                 <h3
-                  class="c53 c54"
+                  class="c49 c50"
                 >
                   Aidez-nous à améliorer cet outil
                 </h3>
                 <ul
-                  class="c55 c56"
+                  class="c51 c52"
                 >
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <button
-                      class="c59"
+                      class="c55"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1804,10 +1664,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1818,21 +1678,21 @@ exports[`<Stats /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c52 "
+                class="c48 "
               >
                 <h3
-                  class="c53 c54"
+                  class="c49 c50"
                 >
                   En collaboration avec
                 </h3>
                 <ul
-                  class="c55 c56"
+                  class="c51 c52"
                 >
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1841,10 +1701,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1853,10 +1713,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c57"
+                    class="c53"
                   >
                     <a
-                      class="c58"
+                      class="c54"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1870,10 +1730,10 @@ exports[`<Stats /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c60"
+          class="c56"
         >
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1882,12 +1742,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c62"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1896,12 +1756,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c62"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1910,12 +1770,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c62"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1924,12 +1784,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c62"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1938,12 +1798,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c62"
+            class="c58"
           >
             |
           </span>
           <a
-            class="c58 c61"
+            class="c54 c57"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

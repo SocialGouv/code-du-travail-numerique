@@ -608,6 +608,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
            
           <button
             class="c23 c24"
+            type="button"
           >
             notre aide
           </button>
@@ -1227,6 +1228,7 @@ exports[`<Contribution /> should render answer references 1`] = `
            
           <button
             class="c23 c24"
+            type="button"
           >
             notre aide
           </button>
@@ -1846,6 +1848,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
            
           <button
             class="c23 c24"
+            type="button"
           >
             notre aide
           </button>
@@ -2465,6 +2468,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
            
           <button
             class="c23 c24"
+            type="button"
           >
             notre aide
           </button>
@@ -3011,6 +3015,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
            
           <button
             class="c20 c21"
+            type="button"
           >
             notre aide
           </button>

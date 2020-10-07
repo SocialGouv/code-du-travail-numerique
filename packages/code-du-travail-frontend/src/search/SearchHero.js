@@ -18,31 +18,27 @@ const SearchHero = () => (
         <P>
           Obtenez des réponses aux questions que vous vous posez sur le droit du
           travail.
-          <DesktopOnlyLineBreak /> Les réponses personnalisables selon votre
-          situation sont identifiées par ce symbole&nbsp;:
-          <StyledConfigIcon />
         </P>
       </Header>
       <Label htmlFor={SEARCH_ID}> Recherchez par mots-clés</Label>
       <SearchBarWrapper>
         <SearchBar inputId={SEARCH_ID} hasFocus hasButton />
       </SearchBarWrapper>
+      <StyledWorkersWrapper>
+        <StyledWorkers />
+      </StyledWorkersWrapper>
     </StyledContainer>
-    <StyledWorkersWrapper>
-      <StyledWorkers />
-    </StyledWorkersWrapper>
   </SearchSection>
 );
 
 export default SearchHero;
 
 const { breakpoints, spacings, fonts } = theme;
-const { Config: ConfigIcon } = icons;
 
 const SearchSection = styled(Section)`
   display: flex;
   flex-direction: column;
-  padding-bottom: 12rem;
+  padding-bottom: 10rem;
   @media (max-width: ${breakpoints.mobile}) {
     padding-bottom: 7rem;
   }
@@ -52,6 +48,7 @@ const SearchSection = styled(Section)`
 `;
 
 const StyledContainer = styled(Container)`
+  position: relative;
   flex: 0 0 auto;
   width: 100%;
   padding-left: 12rem;
@@ -84,14 +81,8 @@ const H1 = styled.h1`
 `;
 
 const P = styled.p`
-  margin-top: ${spacings.small};
+  margin-top: ${spacings.xsmall};
   margin-bottom: ${spacings.large};
-`;
-
-const DesktopOnlyLineBreak = styled.br`
-  @media (max-width: ${breakpoints.desktop}) {
-    display: none;
-  }
 `;
 
 const Span = styled.span`
@@ -104,43 +95,26 @@ const Span = styled.span`
   }
 `;
 
-const StyledConfigIcon = styled(ConfigIcon)`
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  color: ${({ theme }) => theme.primary};
-  vertical-align: bottom;
-`;
-
 const StyledWorkersWrapper = styled.div`
   position: absolute;
-  top: 20rem;
-  right: 0;
+  top: -8rem;
+  right: -1rem;
   z-index: -1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 43%;
-  height: 100%;
-  max-height: 55rem;
-  overflow: hidden;
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 50%;
+  width: 47rem;
+  overflow: visible;
+  @media (max-width: ${breakpoints.desktop}) {
+    top: -5rem;
+    right: 3rem;
+    width: 40rem;
   }
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
 `;
 
 const StyledWorkers = styled(icons.WorkersHero)`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
-  flex: 0 1 100%;
-  max-height: 100%;
   overflow: visible;
-  transform: translateX(10%);
-  @media (max-width: ${breakpoints.mobile}) {
-    transform: translateX(-5%);
-  }
 `;
 
 const Label = styled.label`

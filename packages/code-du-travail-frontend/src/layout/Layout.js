@@ -4,7 +4,6 @@ import styled, { css } from "styled-components";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
-import { Headband, HEADBAND_HEIGHT } from "./Headband";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
 const Layout = ({ children, currentPage }) => {
@@ -12,7 +11,6 @@ const Layout = ({ children, currentPage }) => {
     <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
-      <Headband currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
         <StyledMain>{children}</StyledMain>
       </ErrorBoundary>
@@ -27,9 +25,9 @@ const { breakpoints, spacings } = theme;
 
 const BackgroundContainer = styled.div`
   position: relative;
-  padding-top: calc(${HEADER_HEIGHT} + ${HEADBAND_HEIGHT});
+  padding-top: calc(${HEADER_HEIGHT});
   @media (max-width: ${breakpoints.mobile}) {
-    padding-top: calc(${MOBILE_HEADER_HEIGHT} + ${HEADBAND_HEIGHT});
+    padding-top: calc(${MOBILE_HEADER_HEIGHT});
   }
 `;
 

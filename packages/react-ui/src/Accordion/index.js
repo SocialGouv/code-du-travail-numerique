@@ -4,7 +4,6 @@ import { AccordionItemHeading } from "react-accessible-accordion";
 import styled from "styled-components";
 
 import { ScreenReaderOnly } from "../ScreenReaderOnly";
-import { breakpoints } from "../theme";
 import { getTextFromComponent } from "../utils/getTextFromComponent";
 import * as variants from "./components/variants";
 
@@ -19,11 +18,11 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
     <AccordionVariant allowZeroExpanded allowMultipleExpanded {...props}>
       {items.map(({ body, icon, id, title }, index) => (
         <div id={id} key={`${id}-${index}`}>
-          {typeof id !== "undefined" &&
-            props.preExpanded.find((element) => element === id) && (
-              <PushBelowHeader />
-            )}
-          <AccordionItem index={index} isLast={index === items.length - 1}>
+          <AccordionItem
+            index={index}
+            uuid={id}
+            isLast={index === items.length - 1}
+          >
             <AccordionItemHeading>
               <AccordionItemButton
                 icon={icon}
@@ -64,18 +63,6 @@ Accordion.defaultProps = {
   preExpanded: [],
   variant: "base",
 };
-
-// This prevents preOpened item to be hidden behind header
-const PushBelowHeader = styled.div`
-  margin-top: -11rem; /* Fixed header's negative height */
-  padding-top: 11rem; /* Fixed header's height */
-  visibility: hidden;
-  pointer-events: none;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-top: -6rem;
-    padding-top: 6rem;
-  }
-`;
 
 const AccordionItemPanelContent = styled.div`
   & > *:first-child {
