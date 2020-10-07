@@ -8,8 +8,8 @@ export const Highlights = ({ highlights = [] }) => {
   return (
     <Section>
       <Container>
-        <PageTitle as="h2" stripe="left" id="en-ce-moment">
-          En ce moment
+        <PageTitle as="h2" id="a-la-une">
+          À la une
         </PageTitle>
         <Grid columns={2}>
           {highlights.map((highlight) => (

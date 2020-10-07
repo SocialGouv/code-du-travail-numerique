@@ -67,11 +67,16 @@ const Home = ({ themes = [], highlights = [] }) => (
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     />
     <SearchHero />
+    {highlights.length > 0 && (
+      <Highlights highlights={highlights.slice(0, 4)} />
+    )}
+    {themes.length > 0 && <Themes themes={themes} />}
     <Section>
       <Container>
         <PageTitle
           as="h2"
           subtitle="Trouvez des réponses personnalisées selon votre situation"
+          stripe="left"
         >
           Boîte à outils
         </PageTitle>
@@ -112,10 +117,6 @@ const Home = ({ themes = [], highlights = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
-    {themes.length > 0 && <Themes themes={themes} />}
-    {highlights.length > 0 && (
-      <Highlights highlights={highlights.slice(0, 6)} />
-    )}
   </Layout>
 );
 

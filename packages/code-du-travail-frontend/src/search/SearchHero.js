@@ -38,7 +38,7 @@ const { breakpoints, spacings, fonts } = theme;
 const SearchSection = styled(Section)`
   display: flex;
   flex-direction: column;
-  padding-bottom: 12rem;
+  padding-bottom: 10rem;
   @media (max-width: ${breakpoints.mobile}) {
     padding-bottom: 7rem;
   }

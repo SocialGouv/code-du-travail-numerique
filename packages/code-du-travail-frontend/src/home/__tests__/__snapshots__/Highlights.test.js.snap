@@ -94,13 +94,13 @@ exports[`<Highlights /> should render 1`] = `
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .c14 {
@@ -200,7 +200,7 @@ exports[`<Highlights /> should render 1`] = `
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
-  text-align: left;
+  text-align: center;
 }
 
 .c3 {
@@ -211,7 +211,7 @@ exports[`<Highlights /> should render 1`] = `
   font-size: 3.2rem;
   font-family: "Merriweather",serif;
   line-height: 1.25;
-  padding-left: 3.2rem;
+  padding-top: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -330,12 +330,6 @@ exports[`<Highlights /> should render 1`] = `
 
 @media (max-width:600px) {
   .c3 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
     font-size: 2.6rem;
   }
 }
@@ -349,7 +343,7 @@ exports[`<Highlights /> should render 1`] = `
     >
       <header
         class="c2"
-        id="en-ce-moment"
+        id="a-la-une"
       >
         <h2
           class="c3"
@@ -357,7 +351,7 @@ exports[`<Highlights /> should render 1`] = `
           <div
             class="c4"
           />
-          En ce moment
+          À la une
         </h2>
       </header>
       <div
