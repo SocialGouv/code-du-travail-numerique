@@ -6,9 +6,11 @@ export function getRouteBySourceFn(src: SourceRoute): string
 
 export function getSourceByRouteFn(slug: string): SourceValues | null
 
+export const SOURCES:SOURCES
+
 type SourceLabel = Exclude<SourceValues, "highlights" | "page_convention_collective" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
 type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
-
+  
 type SOURCES = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
