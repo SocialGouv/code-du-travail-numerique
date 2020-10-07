@@ -58,7 +58,9 @@ const labelBySource = {
   [SOURCES.TOOLS]: "Outils",
 };
 
-const sources = Object.values(SOURCES);
+const routes = /**@type {[import(".").SourceValues, string][]}*/ (Object.entries(
+  routeBySource
+));
 
 // code_du_travail -> Code du travail
 /** @type {cdtnSources.getLabelBySourceFn} */
@@ -70,8 +72,10 @@ const getRouteBySource = (src) => routeBySource[src];
 
 // code-du-travail -> code_du_travail
 /** @type {cdtnSources.getSourceByRouteFn} */
-const getSourceByRoute = (slug) =>
-  sources.find((key) => routeBySource[key] === slug) || slug;
+const getSourceByRoute = (slug) => {
+  const [source] = routes.find(([, value]) => slug === value) || [];
+  return source ? source : null;
+};
 
 module.exports = {
   SOURCES,

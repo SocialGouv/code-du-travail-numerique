@@ -1,12 +1,15 @@
 export as namespace cdtnSources
 
-export function getLabelBySourceFn(src: string): string
+export function getLabelBySourceFn(src: SourceLabel): string
 
-export function getRouteBySourceFn(src: string): string
+export function getRouteBySourceFn(src: SourceRoute): string
 
-export function getSourceByRouteFn(slug: string): string
+export function getSourceByRouteFn(slug: string): SourceValues | null
 
-export type SOURCES = {
+type SourceLabel = Exclude<SourceValues, "highlights" | "page_convention_collective" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
+type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
+
+type SOURCES = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
@@ -28,4 +31,5 @@ export type SOURCES = {
   VERSIONS: "versions",
 }
 
-export const SOURCES: SOURCES
+type SourceKeys = keyof SOURCES;
+type SourceValues = SOURCES[SourceKeys];
