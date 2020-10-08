@@ -932,7 +932,7 @@ exports[`<Home /> should render 1`] = `
   height: 70rem;
   overflow: hidden;
   background: linear-gradient( #f2f5fa 40rem, #fff );
-  height: 80rem;
+  height: 100rem;
   background: linear-gradient( #d1dffd 40%,#f2f5fa 80%,#fff );
 }
 
@@ -1425,7 +1425,7 @@ exports[`<Home /> should render 1`] = `
 
 @media (max-width:1180px) {
   .c1 {
-    height: 90rem;
+    height: 110rem;
   }
 }
 
