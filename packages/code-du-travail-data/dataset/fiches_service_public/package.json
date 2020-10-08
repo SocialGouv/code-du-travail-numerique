@@ -9,11 +9,11 @@
   "dependencies": {
     "@socialgouv/cdtn-slugify": "^4.31.1",
     "@socialgouv/cdtn-sources": "^4.31.1",
-    "@socialgouv/contributions-data": "^2.18.0",
-    "@socialgouv/datafiller-data": "^1.64.0",
-    "@socialgouv/fiches-vdd": "^1.172.0",
-    "@socialgouv/kali-data": "^1.115.0",
-    "@socialgouv/legi-data": "^1.40.0",
+    "@socialgouv/contributions-data": "^2.19.0",
+    "@socialgouv/datafiller-data": "^1.66.0",
+    "@socialgouv/fiches-vdd": "^1.175.0",
+    "@socialgouv/kali-data": "^1.118.0",
+    "@socialgouv/legi-data": "^1.41.0",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.13.5",
     "unist-util-find": "^1.0.1"
