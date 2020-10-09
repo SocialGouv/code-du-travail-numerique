@@ -1214,6 +1214,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c91 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

@@ -943,6 +943,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c72 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 
@@ -3623,6 +3624,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c72 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

@@ -451,6 +451,7 @@ exports[`<Recherche /> should render 1`] = `
 
 .c34 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 
