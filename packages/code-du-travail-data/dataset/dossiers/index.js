@@ -60,11 +60,11 @@ const thematicFiles = [
         position: 3,
         refs: [
           {
-            title: "Toutes les mesures d'aides : Urssaf",
+            title: "Toutes les mesures d’aides : Urssaf",
             url: "https://mesures-covid19.urssaf.fr/",
           },
           {
-            title: "Toutes les mesures d'aides : Bpifrance",
+            title: "Toutes les mesures d’aides : Bpifrance",
             url:
               "https://www.bpifrance.fr/A-la-une/Actualites/Coronavirus-Bpifrance-active-des-mesures-exceptionnelles-de-soutien-aux-entreprises-49113",
           },
@@ -86,12 +86,32 @@ const thematicFiles = [
           },
           {
             title:
-              "Travailleurs handicapés : services et aides pour sécuriser le dé-confinement et la reprise d'activité des entreprises",
+              "Travailleurs handicapés : services et aides pour sécuriser le dé-confinement et la reprise d’activité des entreprises",
             url:
               "https://www.agefiph.fr/actualites-handicap/les-services-et-aides-financieres-deconfinement-employeurs",
           },
+          {
+            title:
+              "Travailleurs handicapés: Diagnostic soutien à la sortie de crise pour les entrepreneurs",
+            url:
+              "https://www.agefiph.fr/aides-handicap/diagnostic-soutien-la-sortie-de-crise-pour-les-entrepreneurs",
+          },
+
+          {
+            title:
+              "Travailleurs handicapés : Aide au soutien à l’exploitation d’une activité",
+            url:
+              "https://www.agefiph.fr/aides-handicap/aide-au-soutien-lexploitation-dune-activite",
+          },
+
+          {
+            title:
+              "Aide financière pour les périodes de carences des arrêts de travail en soutien aux entrepreneurs",
+            url:
+              "https://www.agefiph.fr/aides-handicap/aide-financiere-pour-les-periodes-de-carences-des-arrets-de-travail-en-soutien-aux",
+          },
         ],
-        title: "Aides exceptionnelles : entreprises",
+        title: "Aides exceptionnelles pour les entreprises",
       },
       {
         icon: "PartialActivity",
@@ -154,7 +174,7 @@ const thematicFiles = [
           },
           {
             title:
-              "Aide à l'embauche d'un jeune en contrat de professionnalisation",
+              "Aide à l’embauche d’un jeune en contrat de professionnalisation",
             url:
               "/fiche-service-public/aide-exceptionnelle-a-lembauche-dun-jeune-en-contrat-de-professionnalisation",
           },
@@ -166,7 +186,7 @@ const thematicFiles = [
           },
           {
             title:
-              "Contrat unique d'insertion (CUI) - Parcours emploi compétences (PEC)",
+              "Contrat unique d’insertion (CUI) - Parcours emploi compétences (PEC)",
             url:
               "/fiche-service-public/contrat-unique-dinsertion-cui-parcours-emploi-competences-pec",
           },
@@ -176,7 +196,7 @@ const thematicFiles = [
               "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/plan-de-relance-apprentissage-entreprises-cfa-decouvrez-les-mesures-du-plan",
           },
         ],
-        title: "Aides exceptionnelles : jeunes",
+        title: "Jeunes : aides à l’embauche",
       },
       {
         icon: "Salary",
@@ -185,7 +205,7 @@ const thematicFiles = [
         refs: [
           {
             title:
-              "Aide pour une personne handicapée en contrat d'apprentissage",
+              "Aide pour une personne handicapée en contrat d’apprentissage",
             url:
               "https://www.agefiph.fr/aides-handicap/aide-exceptionnelle-de-soutien-lemploi-en-contrat-dapprentissage",
           },
@@ -211,8 +231,34 @@ const thematicFiles = [
             url:
               "https://www.agefiph.fr/aides-handicap/aide-exceptionnelle-de-soutien-lemploi-en-contrat-de-preofessionnalisation",
           },
+          {
+            title:
+              "Accompagnement de veille par Cap emploi afin de sécuriser l’emploi des personnes en situation de handicap",
+            url:
+              "https://www.agefiph.fr/aides-handicap/accompagnement-de-veille-par-cap-emploi-afin-de-securiser-lemploi-des-personnes-en",
+          },
+
+          {
+            title:
+              "Aide exceptionnelle pour la mise en oeuvre de la solution de maintien dans l’emploi",
+            url:
+              "https://www.agefiph.fr/aides-handicap/aide-exceptionnelle-pour-la-mise-en-oeuvre-de-la-solution-de-maintien-dans-lemploi",
+          },
+
+          {
+            title:
+              "Maintenir la rémunération et la protection sociale des stagiaires en formation",
+            url:
+              "https://www.agefiph.fr/aides-handicap/maintenir-la-remuneration-et-la-protection-sociale-des-stagiaires-en-formation",
+          },
+
+          {
+            title: "Aide exceptionnelle au parcours de formation",
+            url:
+              "https://www.agefiph.fr/aides-handicap/aide-exceptionnelle-au-parcours-de-formation",
+          },
         ],
-        title: "Aides exceptionnelles : travailleurs handicapés",
+        title: "Travailleurs handicapés : aides exceptionnelles",
       },
       {
         icon: "Precarity",
