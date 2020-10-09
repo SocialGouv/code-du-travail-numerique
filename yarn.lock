@@ -2718,10 +2718,10 @@
     remark "^12.0.1"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.66.0":
-  version "1.66.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.66.0.tgz#3c24aaa7997980cd01163e1f226dde211639315f"
-  integrity sha512-SjZ8QQYdML46wKIQkBNWtNMnpxhv684jaTSmHFKJWcm7s9/27gfy5Y86QVfgkJqoSTof6uKFhzxVri8wQb2kDA==
+"@socialgouv/datafiller-data@^1.67.0":
+  version "1.67.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.67.0.tgz#27333759e40d2a89f89473e9cb98a5856eb01a28"
+  integrity sha512-x+6GKFQ0MlAY+8ae7rl8QeHx/jSNdEqHuvoI4Dh7dTSeqkEsnHhqwadfr1WOAQM3d6wBH7RqAs6DGvTbAGPeOw==
   dependencies:
     node-fetch "^2.6.1"
     p-pipe "^3.1.0"
@@ -2756,20 +2756,20 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.221.0.tgz#bf1877a442b172ccb167f8972f3f4a603dfd13c3"
   integrity sha512-Zu3R4ERMenMYxDZmKbkz2xSCHKXQ7whlBUwzH5O1q5/LaYjPekOIggdXSPLtf0hEOOzrCnFc7cmdz6llyMqFEQ==
 
-"@socialgouv/fiches-vdd@^1.175.0":
-  version "1.175.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.175.0.tgz#4b73ea99c21585b58d711788eb52f58c9ad57b86"
-  integrity sha512-HAkdg6IWAxsDWsV07QFnBH62Rvvv9QW2d4ujb5a7CdD25OQImRbLP73K7Os+ITfT7csZeUS2e6lz82K4Bb+EWA==
+"@socialgouv/fiches-vdd@^1.176.0":
+  version "1.176.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.176.0.tgz#93b125cfcbe1d760c2dc3121f043604107f55cd2"
+  integrity sha512-nY6W0LzYsUjO5wJvWzEvfzZP9ihUAoOUzPe9oeQcDCmYd/HcyRRj6eXBJnzUCKJkNOrEWgu2f13pWuRrI7YL8w==
   dependencies:
     node-fetch "^2.6.1"
     ora "^5.1.0"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^1.118.0":
-  version "1.118.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.118.0.tgz#912b61c79c883bef9f067307107670aaccccbc66"
-  integrity sha512-l01D/N/NZv9UBRQz11V8HM9L/4cRP1pd4+Ph0ULl+XKAmiHK1EtLYy/2dpELXlXpidCSQ8jVz5gWA3Du4YmjJA==
+"@socialgouv/kali-data@^1.119.0":
+  version "1.119.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.119.0.tgz#f84d7479310f0fedd62d66c765ad2fb99b1018ee"
+  integrity sha512-rbqGJdiaZiwezkvZ2fsGOkj937B0heVCO2NgQuUVOK3YJIiaXqodMTpI6DRYjbdHfrpB9DJapnbTGVppUA77Gw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
