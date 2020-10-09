@@ -29,7 +29,7 @@ export const ListLink = ({
   query,
 }) => {
   let subtitle = "";
-  if (showTheme && source !== SOURCES.THEMES) {
+  if (showTheme) {
     if (breadcrumbs.length > 0) {
       subtitle = breadcrumbs[breadcrumbs.length - 1].label;
     } else {

@@ -622,6 +622,7 @@ exports[`<Outils /> should render 1`] = `
 
 .c47 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

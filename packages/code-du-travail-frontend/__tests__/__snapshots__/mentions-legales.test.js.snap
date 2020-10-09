@@ -436,6 +436,7 @@ exports[`<MentionLegales /> should render 1`] = `
 
 .c36 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

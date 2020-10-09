@@ -535,6 +535,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c45 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

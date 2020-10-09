@@ -249,6 +249,7 @@ const { breakpoints, fonts, spacings } = theme;
 
 const OverflowWrapper = styled.div`
   width: 100%;
+  padding-top: ${spacings.larger};
   overflow-x: hidden;
 `;
 

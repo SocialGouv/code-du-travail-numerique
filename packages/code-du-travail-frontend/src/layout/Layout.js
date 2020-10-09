@@ -48,14 +48,14 @@ const BackgroundLayer = styled.div`
   ${({ currentPage, theme }) =>
     currentPage === "home" &&
     css`
-      height: 80rem;
+      height: 100rem;
       background: linear-gradient(
         ${theme.heroGradientStart} 40%,
         ${theme.bgSecondary} 80%,
         ${theme.white}
       );
       @media (max-width: ${breakpoints.desktop}) {
-        height: 90rem;
+        height: 110rem;
       }
       @media (max-width: ${breakpoints.mobile}) {
         height: 80rem;

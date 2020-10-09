@@ -445,6 +445,7 @@ exports[`<Theme /> should render 1`] = `
 
 .c39 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 

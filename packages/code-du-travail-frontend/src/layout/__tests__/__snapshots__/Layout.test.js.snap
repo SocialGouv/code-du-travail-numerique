@@ -322,6 +322,7 @@ exports[`<Layout /> should render 1`] = `
 
 .c23 {
   width: 100%;
+  padding-top: 4rem;
   overflow-x: hidden;
 }
 
