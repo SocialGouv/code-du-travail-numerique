@@ -1,14 +1,14 @@
 {
   "name": "@cdt/data...fiches_service_public",
-  "version": "4.31.1",
+  "version": "4.32.0",
   "private": true,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "@socialgouv/cdtn-slugify": "^4.31.1",
-    "@socialgouv/cdtn-sources": "^4.31.1",
+    "@socialgouv/cdtn-slugify": "^4.32.0",
+    "@socialgouv/cdtn-sources": "^4.32.0",
     "@socialgouv/contributions-data": "^2.19.0",
     "@socialgouv/datafiller-data": "^1.69.0",
     "@socialgouv/fiches-vdd": "^1.177.0",
