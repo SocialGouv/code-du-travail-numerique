@@ -63,15 +63,15 @@ const routes = /**@type {[import(".").SourceValues, string][]}*/ (Object.entries
 ));
 
 // code_du_travail -> Code du travail
-/** @type {cdtnSources.getLabelBySourceFn} */
+/** @type {cdtnSources.getLabelBySource} */
 const getLabelBySource = (src) => labelBySource[src];
 
 // code_du_travail -> code-du-travail
-/** @type {cdtnSources.getRouteBySourceFn} */
+/** @type {cdtnSources.getRouteBySource} */
 const getRouteBySource = (src) => routeBySource[src];
 
 // code-du-travail -> code_du_travail
-/** @type {cdtnSources.getSourceByRouteFn} */
+/** @type {cdtnSources.getSourceByRoute} */
 const getSourceByRoute = (slug) => {
   const [source] = routes.find(([, value]) => slug === value) || [];
   return source ? source : null;
