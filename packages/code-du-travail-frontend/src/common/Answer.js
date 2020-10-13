@@ -116,8 +116,8 @@ const IntroWrapper = styled(Wrapper)`
 
 const ShareContainer = styled(Container)`
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   margin-top: ${spacings.small};
   margin-bottom: ${spacings.base};
   font-weight: bold;

@@ -7,13 +7,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c5 {
+.c12 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c6 {
+.c13 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -21,15 +21,15 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fff;
 }
 
-.c6 > *:first-child {
+.c13 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -66,16 +66,16 @@ exports[`<ConventionCollective /> should render 1`] = `
   opacity: 1;
 }
 
-.c12:link,
-.c12:visited {
+.c19:link,
+.c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -84,7 +84,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c12[disabled] {
+.c19[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -109,7 +109,11 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
+  position: relative;
+}
+
+.c17 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -122,7 +126,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
+.c15 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -157,7 +161,92 @@ exports[`<ConventionCollective /> should render 1`] = `
   width: 80%;
 }
 
+.c6 {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 1rem;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.c7:hover,
+.c7:focus {
+  color: #f66663;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 1rem;
+  color: #7994d4;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #f66663;
+}
+
+.c8 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+}
+
+.c9 {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,7 +264,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c9 {
+.c16 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -184,7 +273,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c11 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,7 +288,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin: 0;
 }
 
-.c13 + .c13 {
+.c20 + .c20 {
   margin-left: 4rem;
 }
 
@@ -207,6 +296,24 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin: 20%;
   font-size: 3.2rem;
   text-align: center;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+  font-weight: bold;
 }
 
 @media (max-width:600px) {
@@ -223,51 +330,51 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c12 {
     padding: 2.4rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c13 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c13 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c19 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c19 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c15 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c15 {
     font-size: 1.6rem;
   }
 }
@@ -285,7 +392,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c7 {
+  .c14 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -299,20 +406,20 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c9 {
+  .c16 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c16 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c11 {
+  .c18 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -321,7 +428,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c13 + .c13 {
+  .c20 + .c20 {
     margin-left: 0;
   }
 }
@@ -329,6 +436,15 @@ exports[`<ConventionCollective /> should render 1`] = `
 @media (max-width:600px) {
   .c3 {
     font-size: 2.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -349,32 +465,141 @@ exports[`<ConventionCollective /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c5"
+        class="c0 c5"
+      >
+        Partagez ce contenu : 
+        <div
+          class="c6"
+        >
+          <button
+            class="c7 no-after"
+            spacing="left"
+            title="Partager sur Facebook"
+            type="button"
+          >
+            <div
+              class="c8"
+            >
+              <svg
+                class="c9"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </button>
+          <a
+            class="c10"
+            href="mailto:?body=http://localhost/"
+            spacing="left"
+            title="Envoyer par email"
+          >
+            <div
+              class="c8"
+            >
+              <svg
+                class="c9"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </a>
+          <button
+            class="c7"
+            spacing="left"
+            title="Partager sur LinkedIn"
+          >
+            <div
+              class="c8"
+            >
+              <svg
+                class="c9"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="c11"
+          >
+            <button
+              class="c7"
+              spacing="left"
+              title="Plus d’options"
+            >
+              <div
+                class="c8"
+              >
+                <svg
+                  class="c9"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c12"
       >
         <div
           class="c0"
         >
           <div
-            class="c6 c7"
+            class="c13 c14"
           >
             <h3
-              class="c8 c9"
+              class="c15 c16"
             >
               <div
-                class="c10"
+                class="c17"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c11"
+              class="c18"
             >
               <button
-                class="c12 c13 "
+                class="c19 c20 "
               >
                 Non
               </button>
               <button
-                class="c12 c13 "
+                class="c19 c20 "
               >
                 Oui
               </button>
