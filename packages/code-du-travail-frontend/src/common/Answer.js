@@ -14,6 +14,7 @@ import { Breadcrumbs } from "./Breadcrumbs";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";
+import { Share } from "./Share";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -68,6 +69,10 @@ function Answer({
             </Article>
           )}
           {additionalContent}
+          <ShareContainer>
+            Partagez ce contenu&nbsp;:&nbsp;
+            <Share />
+          </ShareContainer>
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}
@@ -106,5 +111,17 @@ const IntroWrapper = styled(Wrapper)`
   }
   & div > *:last-child {
     margin-bottom: 0;
+  }
+`;
+
+const ShareContainer = styled(Container)`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: ${spacings.small};
+  margin-bottom: ${spacings.base};
+  font-weight: bold;
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: flex-start;
   }
 `;
