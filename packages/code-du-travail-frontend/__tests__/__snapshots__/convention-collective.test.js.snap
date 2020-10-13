@@ -162,8 +162,6 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,6 +389,18 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width:1180px) {
   .c14 {
     -webkit-flex-direction: column;
@@ -494,7 +504,7 @@ exports[`<ConventionCollective /> should render 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >

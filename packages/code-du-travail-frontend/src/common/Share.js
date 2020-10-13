@@ -2,6 +2,8 @@ import { Dropdown, icons, theme, utils } from "@socialgouv/cdtn-ui/";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 
+import { matopush } from "../piwik";
+
 const { copyToClipboard } = utils;
 
 export const Share = () => {
@@ -20,24 +22,32 @@ export const Share = () => {
         type="button"
         className="no-after"
         title="Partager sur Facebook"
-        onClick={() =>
+        onClick={() => {
+          matopush(["trackEvent", "clic_share", currentPageUrl, "facebook"]);
           window.open(
             `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
               currentPageUrl
+            )}&quote=${encodeURI(
+              "Code du travail numérique : un contenu à lire"
             )}`,
             "facebook_popup",
             "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
-          )
-        }
+          );
+        }}
       >
         <Circle>
           <StyledIcon as={icons.ShareFacebook} />
         </Circle>
       </StyledButton>
       <StyledLink
-        href={`mailto:?body=${currentPageUrl}`}
+        href={`mailto:?subject=${encodeURI(
+          "Code du travail numérique : un contenu à lire"
+        )}&body=${currentPageUrl}`}
         spacing="left"
         title="Envoyer par email"
+        onClick={() => {
+          matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
+        }}
       >
         <Circle>
           <StyledIcon as={icons.Mail} />
@@ -46,15 +56,16 @@ export const Share = () => {
       <StyledButton
         spacing="left"
         title="Partager sur LinkedIn"
-        onClick={() =>
+        onClick={() => {
+          matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
           window.open(
-            `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-              currentPageUrl
-            )}`,
+            `https://www.linkedin.com/shareArticle?mini=true&title=${encodeURI(
+              "Code du travail numérique"
+            )}&url=${encodeURIComponent(currentPageUrl)}`,
             "linkedin_popup",
             "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
-          )
-        }
+          );
+        }}
       >
         <Circle>
           <StyledIcon as={icons.ShareLinkedin} />
@@ -66,10 +77,18 @@ export const Share = () => {
             spacing="left"
             title="Plus d’options"
             onClick={async () => {
+              matopush([
+                "trackEvent",
+                "clic_share",
+                currentPageUrl,
+                "plus d’options",
+              ]);
               setUrlCopied(false);
               if (window.navigator.share) {
                 try {
-                  await window.navigator.share({ url: currentPageUrl });
+                  await window.navigator.share({
+                    text: `Code du travail numérique : ${currentPageUrl}`,
+                  });
                 } catch (error) {
                   showDropdown();
                 }
@@ -89,25 +108,27 @@ export const Share = () => {
         <StyledButton
           spacing="top"
           title="Partager sur Twitter"
-          onClick={() =>
+          onClick={() => {
+            matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
             window.open(
-              `https://twitter.com/intent/tweet/?url=${encodeURIComponent(
-                currentPageUrl
-              )}`,
+              `https://twitter.com/intent/tweet/?text=${encodeURI(
+                "Code du travail numérique : "
+              )}${encodeURIComponent(currentPageUrl)}`,
               "twitter_popup",
               "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
-            )
-          }
+            );
+          }}
         >
           <Circle>
             <StyledIcon as={icons.ShareTwitter} />
           </Circle>
-          <ActionLabel>Partager sur Twitter</ActionLabel>
+          <ActionLabel>Partager&nbsp;sur&nbsp;Twitter</ActionLabel>
         </StyledButton>
         <StyledButton
           spacing="top"
           title="Copier le lien"
           onClick={() => {
+            matopush(["trackEvent", "clic_share", currentPageUrl, "copier"]);
             copyToClipboard({
               // if we don't provide the input, focusOut will
               // close the dropdown
@@ -122,35 +143,41 @@ export const Share = () => {
           </Circle>
           <ActionLabel
             aria-live={isUrlCopied ? "off" : "assertive"}
-            aria-labelledby={isUrlCopied ? "Lien copié !" : "Copier le lien"}
+            aria-labelledby={
+              isUrlCopied ? "Lien copié !" : "Copier&nbsp;le&nbsp;lien"
+            }
           >
             {isUrlCopied ? "Lien copié !" : "Copier le lien"}
           </ActionLabel>
         </StyledButton>
         <HiddenInput tabIndex="-1" ref={hiddenInputRef} />
-        <StyledLink
+        <StyledButton
           spacing="top"
           title="Envoyer par Whatsapp"
-          href={`https://wa.me/?text=${encodeURIComponent(currentPageUrl)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-after"
+          onClick={() => {
+            matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
+            window.open(
+              `https://wa.me/?text=${encodeURI(
+                "Code du travail numérique : "
+              )}${encodeURIComponent(currentPageUrl)}`,
+              "whatsapp_popup",
+              "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
+            );
+          }}
         >
           <Circle>
             <StyledIcon as={icons.ShareWhatsapp} />
           </Circle>
-          <ActionLabel>Envoyer par Whatsapp</ActionLabel>
-        </StyledLink>
+          <ActionLabel>Envoyer&nbsp;par&nbsp;Whatsapp</ActionLabel>
+        </StyledButton>
       </Dropdown>
     </Flex>
   );
 };
 
-const { fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const Flex = styled.div`
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
 `;
@@ -174,6 +201,9 @@ const commonActionStyles = css`
   :hover,
   :focus {
     color: ${({ theme }) => theme.primary};
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.small};
   }
 `;
 
@@ -205,7 +235,7 @@ const Center = styled.div`
 `;
 
 const ActionLabel = styled.div`
-  margin: 0 ${spacings.small};
+  margin-left: ${spacings.small};
 `;
 
 const HiddenInput = styled.input`

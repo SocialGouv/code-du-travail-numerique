@@ -654,8 +654,6 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 .c37 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1522,6 +1520,18 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c38 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c41 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c36 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -2040,7 +2050,7 @@ exports[`<FicheMT /> should render 1`] = `
                     </button>
                     <a
                       class="c41"
-                      href="mailto:?body=http://localhost/"
+                      href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                       spacing="left"
                       title="Envoyer par email"
                     >
@@ -2337,7 +2347,7 @@ exports[`<FicheMT /> should render 1`] = `
               </button>
               <a
                 class="c41"
-                href="mailto:?body=http://localhost/"
+                href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                 spacing="left"
                 title="Envoyer par email"
               >

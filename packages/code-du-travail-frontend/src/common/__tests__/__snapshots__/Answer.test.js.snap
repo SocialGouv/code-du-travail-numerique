@@ -223,8 +223,6 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -556,6 +554,18 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -696,7 +706,7 @@ exports[`<Answer /> should renders 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -869,7 +879,7 @@ exports[`<Answer /> should renders 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -1254,8 +1264,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 .c14 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1678,6 +1686,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c13 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -1915,7 +1935,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 </button>
                 <a
                   class="c18"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -2093,7 +2113,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           </button>
           <a
             class="c18"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -2434,8 +2454,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2767,6 +2785,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -2907,7 +2937,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -3080,7 +3110,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -3672,8 +3702,6 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4093,6 +4121,18 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -4284,7 +4324,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -4454,7 +4494,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -5077,8 +5117,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5410,6 +5448,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -5550,7 +5600,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -5724,7 +5774,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -6065,8 +6115,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6398,6 +6446,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -6538,7 +6598,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -6712,7 +6772,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -7053,8 +7113,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7386,6 +7444,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -7526,7 +7596,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -7701,7 +7771,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >
@@ -8042,8 +8112,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 .c6 {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8375,6 +8443,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
   .c5 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -8515,7 +8595,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -8685,7 +8765,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           </button>
           <a
             class="c10"
-            href="mailto:?body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
             spacing="left"
             title="Envoyer par email"
           >

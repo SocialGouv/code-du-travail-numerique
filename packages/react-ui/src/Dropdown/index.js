@@ -4,7 +4,7 @@ import styled from "styled-components";
 import useOnClickOutside from "use-onclickoutside";
 
 import { box, colors, spacings } from "../theme";
-import { throttledDisplayInViewport } from "../utils";
+import { displayInViewport } from "../utils";
 
 export const Dropdown = ({ labelledBy, opener, ...props }) => {
   const [isDropdownDisplayed, setDropdownOpen] = useState(false);
@@ -35,7 +35,7 @@ export const Dropdown = ({ labelledBy, opener, ...props }) => {
       // everytime the ref exists and changes
       if (node) {
         node.addEventListener("focusout", onFocusOut);
-        throttledDisplayInViewport(node, dropdownWrapperRef.current);
+        displayInViewport(node, dropdownWrapperRef.current);
       }
     },
     [onFocusOut]
@@ -69,7 +69,6 @@ const DropdownWrapper = styled.div`
 const RootDropdown = styled.div`
   position: absolute;
   z-index: 3;
-  width: 26rem;
   margin: ${spacings.small};
   padding: ${spacings.small};
   background-color: ${colors.white};
