@@ -1,9 +1,10 @@
 // Do we really need this one ?
 const queryString = require("query-string");
-const { getCode } = require("@socialgouv/legi-data");
+const { getCode, getIndexedArticle } = require("@socialgouv/legi-data");
 const { getAgreements } = require("@socialgouv/kali-data");
-const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const slugify = require("@socialgouv/cdtn-slugify");
+const find = require("unist-util-find");
 
 const cdt = getCode("LEGITEXT000006072050");
 const agreements = getAgreements();
@@ -25,69 +26,75 @@ const getTextType = (qs) => {
   return "";
 };
 
+function fixArticleNum(id, num = "") {
+  if (num.match(/^annexe\s/i) && !num.includes("article")) {
+    return `${num} ${id}`;
+  }
+  return num;
+}
+
 const createCDTRef = (node) => ({
-  id: node.data.id,
-  title: node.data.num,
+  slug: slugify(fixArticleNum(node.data.id, node.data.num)),
+  title: fixArticleNum(node.data.id, node.data.num),
   type: SOURCES.CDT,
-  url: `https://www.legifrance.gouv.fr/codes/id/${node.data.id}`,
 });
 
-const parseReference = (reference) => {
-  const { URL: url } = reference.attributes;
-  const qs = queryString.parse(url.split("?")[1]);
-  const type = getTextType(qs);
-  switch (type) {
-    case "code-du-travail":
-      if (qs.idArticle) {
-        // resolve related article num from CDT structure
-        const article = find(cdt, (node) => node.data.id === qs.idArticle);
-        if (!article) {
-          return [];
+const parseReferences = (references) => {
+  return references.flatMap((reference) => {
+    const { URL: url } = reference.attributes;
+    const qs = queryString.parse(url.split("?")[1]);
+    const type = getTextType(qs);
+    switch (type) {
+      case "code-du-travail":
+        if (qs.idArticle) {
+          // resolve related article num from CDT structure
+          const article = getIndexedArticle(qs.idArticle);
+          if (!article) {
+            return [];
+          }
+          return [createCDTRef(article)];
         }
-        return [createCDTRef(article)];
-      }
-      if (qs.idSectionTA) {
-        const section = find(cdt, (node) => node.data.id === qs.idSectionTA);
-        if (!section) {
-          return [];
+        if (qs.idSectionTA) {
+          const section = find(cdt, (node) => node.data.id === qs.idSectionTA);
+          if (!section) {
+            return [];
+          }
+          return section.children
+            .filter((child) => child.type === "article")
+            .map((article) => createCDTRef(article));
         }
-        return section.children
-          .filter((child) => child.type === "article")
-          .map((article) => createCDTRef(article));
-      }
-      return [];
-
-    case "convention-collective": {
-      const convention = agreements.find(
-        (convention) => convention.id === qs.idConvention
-      );
-      if (!convention) {
         return [];
+
+      case "convention-collective": {
+        const convention = agreements.find(
+          (convention) => convention.id === qs.idConvention
+        );
+        if (!convention) {
+          return [];
+        }
+        const { num, shortTitle } = convention;
+
+        return [
+          {
+            slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+            title: shortTitle,
+            type: SOURCES.CCN,
+          },
+        ];
       }
-      const { num, shortTitle } = convention;
 
-      return [
-        {
-          id: convention.id,
-          title: `${num} ${shortTitle}`,
-          type: SOURCES.CCN,
-          url: convention.url,
-        },
-      ];
+      case "journal-officiel":
+        return [
+          {
+            title: reference.children[0].children[0].text,
+            type: SOURCES.EXTERNALS,
+            url,
+          },
+        ];
+      default:
+        return [];
     }
-
-    case "journal-officiel":
-      return [
-        {
-          id: qs.cidTexte,
-          title: reference.children[0].children[0].text,
-          type: "external",
-          url,
-        },
-      ];
-    default:
-      return [];
-  }
+  });
 };
 
-module.exports = parseReference;
+module.exports = parseReferences;
