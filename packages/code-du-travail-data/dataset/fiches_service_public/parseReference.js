@@ -1,6 +1,9 @@
 // Do we really need this one ?
 const queryString = require("query-string");
-const { getCode, getIndexedArticle } = require("@socialgouv/legi-data");
+const {
+  getCode,
+  getArticleWithParentSections,
+} = require("@socialgouv/legi-data");
 const { getAgreements } = require("@socialgouv/kali-data");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const slugify = require("@socialgouv/cdtn-slugify");
@@ -48,11 +51,13 @@ const parseReferences = (references) => {
       case "code-du-travail":
         if (qs.idArticle) {
           // resolve related article num from CDT structure
-          const article = getIndexedArticle(qs.idArticle);
-          if (!article) {
+          try {
+            const article = getArticleWithParentSections(qs.idArticle);
+            return [createCDTRef(article)];
+          } catch (error) {
+            console.error(`[fiche-sp] Article not found ${qs.idArticle}`);
             return [];
           }
-          return [createCDTRef(article)];
         }
         if (qs.idSectionTA) {
           const section = find(cdt, (node) => node.data.id === qs.idSectionTA);
