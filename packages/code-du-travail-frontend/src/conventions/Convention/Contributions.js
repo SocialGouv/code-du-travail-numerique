@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
-import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
 import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
@@ -79,8 +78,8 @@ function AccordionContent({ answer, slug, references }) {
             title: reference.title,
             type:
               reference.category === "labour_code"
-                ? TYPE_REFERENCE.codeDuTravail
-                : TYPE_REFERENCE.external,
+                ? SOURCES.CDT
+                : SOURCES.EXTERNALS,
             url: reference.url,
           }))}
         />

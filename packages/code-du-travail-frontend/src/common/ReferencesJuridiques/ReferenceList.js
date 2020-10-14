@@ -4,15 +4,13 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import TYPE_REFERENCE from "./typeReference";
-
 const sanitizeCdtSlug = (slug) =>
   slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 
-const CodeDuTravailLink = ({ title, slug }) => (
+const InternalLink = ({ title, slug }) => (
   <Link
     href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
-    as={`/${getRouteBySource(SOURCES.CDT)}/${sanitizeCdtSlug(slug)}`}
+    as={`/${getRouteBySource(SOURCES.CDT)}/${slug}`}
     passHref
   >
     <StyledArrowLink rel="nofollow" arrowPosition="left">
@@ -21,20 +19,7 @@ const CodeDuTravailLink = ({ title, slug }) => (
   </Link>
 );
 
-const ConventionLink = ({ title, slug }) => (
-  <Link
-    href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-    as={`/${getRouteBySource(SOURCES.CCN)}/${slug}`}
-    passHref
-  >
-    <StyledArrowLink
-      rel="nofollow"
-      arrowPosition="left"
-    >{`Convention collective: ${title}`}</StyledArrowLink>
-  </Link>
-);
-
-const OtherLink = ({ title, url }) =>
+const ExternalLink = ({ title, url }) =>
   url ? (
     <StyledArrowLink
       href={url}
@@ -50,12 +35,24 @@ const OtherLink = ({ title, url }) =>
 
 const getLink = (reference) => {
   switch (reference.type) {
-    case TYPE_REFERENCE.codeDuTravail:
-      return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
-    case TYPE_REFERENCE.conventionCollective:
-      return <ConventionLink title={reference.title} slug={reference.slug} />;
+    case SOURCES.CDT:
+      return (
+        <InternalLink
+          title={reference.title}
+          slug={sanitizeCdtSlug(reference.id)}
+        />
+      );
+    case SOURCES.CCN:
+      return (
+        <InternalLink
+          title={`Convention collective: ${reference.title}`}
+          slug={reference.id}
+        />
+      );
+    case SOURCES.EXTERNAL:
+      return <ExternalLink title={reference.title} url={reference.url} />;
     default:
-      return <OtherLink title={reference.title} url={reference.url} />;
+      return null;
   }
 };
 

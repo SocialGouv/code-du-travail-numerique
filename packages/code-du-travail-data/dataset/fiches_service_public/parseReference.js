@@ -1,10 +1,12 @@
 // Do we really need this one ?
-const find = require("unist-util-find");
 const queryString = require("query-string");
-const cdt = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
-const conventions = require("@socialgouv/kali-data/data/index.json");
-
+const { getCode } = require("@socialgouv/legi-data");
+const { getAgreements } = require("@socialgouv/kali-data");
+const { SOURCES, getRouteBySource } = require("@socialgouv/cdtn-sources");
 const slugify = require("@socialgouv/cdtn-slugify");
+
+const cdt = getCode("LEGITEXT000006072050");
+const agreements = getAgreements();
 
 const isConventionCollective = (qs) => qs.idConvention;
 const isCodeDuTravail = (qs) => qs.cidTexte === "LEGITEXT000006072050";
@@ -20,45 +22,14 @@ const getTextType = (qs) => {
   if (isJournalOfficiel(qs)) {
     return "journal-officiel";
   }
+  return "";
 };
 
-// resolve article.num in LEGI extract
-const getArticleNumFromId = (id) => {
-  const article = find(
-    cdt,
-    (node) => node.type === "article" && node.data.id === id
-  );
-  return article && article.data.num;
-};
-
-const getArticlesFromSection = (id) => {
-  const section = find(cdt, (node) => node.data.id === id);
-  if (section) {
-    return section.children
-      .filter((child) => child.type === "article")
-      .map((article) => createCDTRef(article.data.num));
-  }
-  return [];
-};
-
-const createCDTRef = (id) => ({
-  id: id.toLowerCase(),
-  title: `Article ${id} du code du travail`,
-  type: "code-du-travail",
-});
-
-const createCCRef = (id, slug, title) => ({
-  id,
-  slug,
-  title,
-  type: "convention-collective",
-});
-
-const createJORef = (id, title, url) => ({
-  id,
-  title,
-  type: "journal-officiel",
-  url,
+const createCDTRef = (node) => ({
+  id: node.data.id.toLowerCase(),
+  title: `Article ${node.data.id} du code du travail`,
+  type: SOURCES.CDT,
+  url: `https://www.legifrance.gouv.fr/codes/id/${node.data.id}`,
 });
 
 const parseReference = (reference) => {
@@ -69,25 +40,52 @@ const parseReference = (reference) => {
     case "code-du-travail":
       if (qs.idArticle) {
         // resolve related article num from CDT structure
-        const articleNum = getArticleNumFromId(qs.idArticle);
-        if (!articleNum) return [];
-        return [createCDTRef(articleNum)];
+        const article = find(cdt, (node) => node.data.id === qs.idArticle);
+        if (!article) {
+          return [];
+        }
+        return [createCDTRef(article)];
       }
       if (qs.idSectionTA) {
-        // resolve related articles from CDT structure
-        return getArticlesFromSection(qs.idSectionTA);
+        const section = find(cdt, (node) => node.data.id === qs.idSectionTA);
+        if (!section) {
+          return [];
+        }
+        return section.children
+          .filter((child) => child.type === "article")
+          .map((article) => createCDTRef(article));
       }
-      break;
+      return [];
+
     case "convention-collective": {
-      const { id, title, num, shortTitle } = conventions.find(
+      const convention = agreements.find(
         (convention) => convention.id === qs.idConvention
       );
-      const slug = slugify(`${num}-${shortTitle}`.substring(0, 80)); // as in populate.js
-      return [createCCRef(id, slug, title)];
+      if (!convention) {
+        return [];
+      }
+      const { num, shortTitle } = convention;
+
+      return [
+        {
+          id: convention.id,
+          title: `${shortTitle}`,
+          type: SOURCES.CCN,
+          url: `${getRouteBySource(SOURCES.CCN)}/${slugify(
+            `${num}-${shortTitle}`.substring(0, 80)
+          )}`,
+        },
+      ];
     }
+
     case "journal-officiel":
       return [
-        createJORef(qs.cidTexte, reference.children[0].children[0].text, url),
+        {
+          id: qs.cidTexte,
+          title: reference.children[0].children[0].text,
+          type: "external",
+          url,
+        },
       ];
     default:
       return [];

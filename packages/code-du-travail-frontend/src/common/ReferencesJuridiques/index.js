@@ -1,10 +1,10 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Accordion, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import ReferenceList from "./ReferenceList";
-import TYPE_REFERENCE from "./typeReference";
 
 class ReferencesJuridiques extends React.PureComponent {
   render() {
@@ -42,7 +42,8 @@ ReferencesJuridiques.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
+      type: PropTypes.oneOf([SOURCES.CDT, SOURCES.CCN, SOURCES.EXTERNAL])
+        .isRequired,
       url: PropTypes.string,
     })
   ),
