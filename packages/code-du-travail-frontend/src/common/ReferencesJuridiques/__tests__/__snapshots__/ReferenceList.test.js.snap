@@ -93,7 +93,7 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         class="c1 c2 c3"
-        href="https://article.jo"
+        href="https://article.jo/yyy"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
@@ -117,7 +117,7 @@ exports[`<ReferenceList /> should render 1`] = `
     <li>
       <a
         class="c1 c2 c3"
-        href="https://legifrance/ccn"
+        href="https://legifrance/ccn-metallurgie"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
@@ -134,7 +134,7 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Article XX de la CCN metal
+          CCN metallurgie
         </span>
       </a>
     </li>
@@ -157,7 +157,7 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Convention collective: 123 automobile
+          Convention collective: automobile
         </span>
       </a>
     </li>
@@ -180,7 +180,7 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Article L*1234-3 du Code du travail
+          Article L1234-3 du Code du travail
         </span>
       </a>
     </li>

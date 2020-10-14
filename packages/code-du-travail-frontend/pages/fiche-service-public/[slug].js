@@ -39,7 +39,7 @@ class Fiche extends React.Component {
         date,
         description,
         raw,
-        references_juridiques,
+        referencedTexts,
         title,
         url,
       },
@@ -57,7 +57,7 @@ class Fiche extends React.Component {
           additionalContent={
             <Section>
               <Container>
-                <ReferencesJuridiques references={references_juridiques} />
+                <ReferencesJuridiques references={referencedTexts} />
               </Container>
             </Section>
           }

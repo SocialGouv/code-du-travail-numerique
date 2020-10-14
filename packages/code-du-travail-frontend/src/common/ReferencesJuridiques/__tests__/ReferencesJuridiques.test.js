@@ -5,35 +5,30 @@ import ReferencesJuridiques from "../index";
 
 const references = [
   {
-    id: "KALIARTI1234",
+    slug: "l1244-3",
     title: "L1244-3",
     type: "code_du_travail",
-    url: "https://article.cdt/l1244-3",
   },
   {
-    id: "KALIARTI9876",
-    title: "r*1244-4",
+    slug: "r1244-4",
+    title: "R1244-4",
     type: "code_du_travail",
-    url: "https://article.cdt/l1244-4",
   },
   {
-    id: "JOREFTEXT123",
     title: "Article L3121-44 du JO",
     type: "external",
-    url: "https://article.jo",
+    url: "https://article.jo/L3121-44",
   },
   // the two below are not linked to any bloc
   {
-    id: "xxx",
-    title: "Article xxx du JPO",
+    title: "Article foo du JPO",
     type: "external",
-    url: "https://article.jo",
+    url: "https://article.jo/foo",
   },
   {
-    id: "yyy",
-    title: "Article yyy de la CC",
+    title: "Convention foo",
     type: "external",
-    url: "https://ma-convention-collective",
+    url: "https://ma-convention-collective/ccc-foo",
   },
 ];
 

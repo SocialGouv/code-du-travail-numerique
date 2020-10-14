@@ -40,10 +40,9 @@ ReferencesJuridiques.propTypes = {
   accordionDisplay: PropTypes.number,
   references: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      slug: PropTypes.string,
       title: PropTypes.string.isRequired,
-      type: PropTypes.oneOf([SOURCES.CDT, SOURCES.CCN, SOURCES.EXTERNALS])
-        .isRequired,
+      type: PropTypes.oneOf(Object.values(SOURCES)).isRequired,
       url: PropTypes.string,
     })
   ),

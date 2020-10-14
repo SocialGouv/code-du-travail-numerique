@@ -41,13 +41,13 @@ export const agreement = {
       question: " Quelle est la durée de préavis en cas de licenciement ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -62,7 +62,7 @@ export const agreement = {
       question: " Quelle est la durée du préavis en cas de démission ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -77,7 +77,7 @@ export const agreement = {
       question: "Jours fériés et ponts dans le secteur privé",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 5-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -93,7 +93,7 @@ export const agreement = {
         " Quelle est la durée de préavis en cas de départ à la retraite ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title:
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
@@ -117,7 +117,7 @@ export const agreement = {
         "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 2-4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -134,13 +134,13 @@ export const agreement = {
         "Quelles sont les conditions d’indemnisation pendant le congé de maternité ? ",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6.121",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6.21",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -156,13 +156,13 @@ export const agreement = {
       question: "Comment déterminer l'ancienneté du salarié ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.4",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 11-2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -178,7 +178,7 @@ export const agreement = {
         " Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -202,7 +202,7 @@ export const agreement = {
             "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
         },
         {
-          category: "agreement",
+          category: "external",
           title:
             "IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
           url:
@@ -219,7 +219,7 @@ export const agreement = {
         "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -235,7 +235,7 @@ export const agreement = {
       question: "Les congés pour événements familiaux",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article  5-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -261,31 +261,31 @@ export const agreement = {
         "En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-12",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-13",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-14",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
         },
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-15",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -302,7 +302,7 @@ export const agreement = {
         "Quelles sont les primes prévues par la convention collective ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 5-25",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -318,7 +318,7 @@ export const agreement = {
         "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -334,7 +334,7 @@ export const agreement = {
         "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 10.2",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -358,7 +358,7 @@ export const agreement = {
       question: "Quelles sont les conditions de cumul d'emplois ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 2-3",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -374,7 +374,7 @@ export const agreement = {
         "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 5-24",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
@@ -391,7 +391,7 @@ export const agreement = {
         "En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?",
       references: [
         {
-          category: "agreement",
+          category: "external",
           title: "IDCC 1596 - Article 6-11",
           url:
             "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",

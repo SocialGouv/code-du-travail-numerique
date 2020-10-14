@@ -1,12 +1,9 @@
-import slugify from "@socialgouv/cdtn-slugify";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { ArrowLink, FlatList, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
+import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
-
-const sanitizeCdtSlug = (slug) =>
-  slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 
 const InternalLink = ({ title, type, slug }) => (
   <Link
@@ -39,7 +36,7 @@ const getLink = (reference) => {
     case SOURCES.CDT:
       return (
         <InternalLink
-          slug={slugify(sanitizeCdtSlug(reference.title))}
+          slug={`${reference.slug}`}
           title={`Article ${reference.title} du Code du travail`}
           type={reference.type}
         />
@@ -47,7 +44,7 @@ const getLink = (reference) => {
     case SOURCES.CCN:
       return (
         <InternalLink
-          slug={slugify(`${reference.title}`).substring(0, 80)}
+          slug={reference.slug}
           title={`Convention collective: ${reference.title}`}
           type={reference.type}
         />
@@ -60,11 +57,17 @@ const getLink = (reference) => {
 };
 
 const ReferenceList = ({ references }) => {
+  const seedId = useUIDSeed();
   return (
     <FlatList>
-      {references.map((reference) => (
-        <li key={`${reference.id}`}>{getLink(reference)}</li>
-      ))}
+      {references.flatMap((reference) => {
+        if (
+          [SOURCES.CCN, SOURCES.CDT, SOURCES.EXTERNALS].includes(reference.type)
+        ) {
+          return [<li key={seedId(reference)}>{getLink(reference)}</li>];
+        }
+        return [];
+      })}
     </FlatList>
   );
 };

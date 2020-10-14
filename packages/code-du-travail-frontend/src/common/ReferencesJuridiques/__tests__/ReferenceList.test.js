@@ -5,34 +5,29 @@ import ReferenceList from "../ReferenceList";
 
 const references = [
   {
-    id: "KALIARTI23234",
+    slug: "l2323-4",
     title: "L2323-4",
     type: "code_du_travail",
-    url: "https://article.cdt/KALIARTI23234",
   },
   {
-    id: "yyy",
     title: "Article yyy du JO",
     type: "external",
-    url: "https://article.jo",
+    url: "https://article.jo/yyy",
   },
   {
-    id: "KALIARTI",
-    title: "Article XX de la CCN metal",
+    title: "CCN metallurgie",
     type: "external",
-    url: "https://legifrance/ccn",
+    url: "https://legifrance/ccn-metallurgie",
   },
   {
-    id: "KALICONT123",
-    title: "123 automobile",
+    slug: "123-automobile",
+    title: "automobile",
     type: "conventions_collectives",
-    url: "https://ma-convention-collective",
   },
   {
-    id: "LEGIARTI1234-3",
-    title: "L*1234-3",
+    slug: "l1234-3",
+    title: "L1234-3",
     type: "code_du_travail",
-    url: "https://url.com",
   },
 ];
 

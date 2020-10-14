@@ -310,14 +310,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Article r*1244-4 du Code du travail
+                      Article R1244-4 du Code du travail
                     </span>
                   </a>
                 </li>
                 <li>
                   <a
                     class="c10 c11 c12"
-                    href="https://article.jo"
+                    href="https://article.jo/L3121-44"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
@@ -341,7 +341,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 <li>
                   <a
                     class="c10 c11 c12"
-                    href="https://article.jo"
+                    href="https://article.jo/foo"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
@@ -358,14 +358,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Article xxx du JPO
+                      Article foo du JPO
                     </span>
                   </a>
                 </li>
                 <li>
                   <a
                     class="c10 c11 c12"
-                    href="https://ma-convention-collective"
+                    href="https://ma-convention-collective/ccc-foo"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
@@ -382,7 +382,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Article yyy de la CC
+                      Convention foo
                     </span>
                   </a>
                 </li>
