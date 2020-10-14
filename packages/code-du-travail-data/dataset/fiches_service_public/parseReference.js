@@ -26,8 +26,8 @@ const getTextType = (qs) => {
 };
 
 const createCDTRef = (node) => ({
-  id: node.data.id.toLowerCase(),
-  title: `Article ${node.data.id} du code du travail`,
+  id: node.data.id,
+  title: node.data.num,
   type: SOURCES.CDT,
   url: `https://www.legifrance.gouv.fr/codes/id/${node.data.id}`,
 });
@@ -69,11 +69,9 @@ const parseReference = (reference) => {
       return [
         {
           id: convention.id,
-          title: `${shortTitle}`,
+          title: `${num} ${shortTitle}`,
           type: SOURCES.CCN,
-          url: `${getRouteBySource(SOURCES.CCN)}/${slugify(
-            `${num}-${shortTitle}`.substring(0, 80)
-          )}`,
+          url: convention.url,
         },
       ];
     }

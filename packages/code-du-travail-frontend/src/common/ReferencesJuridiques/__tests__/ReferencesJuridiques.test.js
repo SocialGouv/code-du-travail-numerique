@@ -2,35 +2,38 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import ReferencesJuridiques from "../index";
-import TYPE_REFERENCE from "../typeReference";
 
 const references = [
   {
-    id: "l1244-3",
-    title: "Article L1244-3 du code du travail",
-    type: TYPE_REFERENCE.codeDuTravail,
+    id: "KALIARTI1234",
+    title: "L1244-3",
+    type: "code_du_travail",
+    url: "https://article.cdt/l1244-3",
   },
   {
-    id: "r*1244-4",
-    title: "Article L1244-4 du code du travail",
-    type: TYPE_REFERENCE.codeDuTravail,
+    id: "KALIARTI9876",
+    title: "r*1244-4",
+    type: "code_du_travail",
+    url: "https://article.cdt/l1244-4",
   },
   {
-    id: "l3121-44",
+    id: "JOREFTEXT123",
     title: "Article L3121-44 du JO",
-    type: TYPE_REFERENCE.journalOfficiel,
+    type: "external",
+    url: "https://article.jo",
   },
   // the two below are not linked to any bloc
   {
     id: "xxx",
     title: "Article xxx du JPO",
-    type: TYPE_REFERENCE.journalOfficiel,
+    type: "external",
+    url: "https://article.jo",
   },
   {
     id: "yyy",
-    slug: "ma-convention",
     title: "Article yyy de la CC",
-    type: TYPE_REFERENCE.conventionCollective,
+    type: "external",
+    url: "https://ma-convention-collective",
   },
 ];
 

@@ -2,29 +2,37 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import ReferenceList from "../ReferenceList";
-import TYPE_REFERENCE from "../typeReference";
 
 const references = [
   {
-    id: "L2323-4",
-    title: "Article xxx du code du travail",
-    type: TYPE_REFERENCE.codeDuTravail,
+    id: "KALIARTI23234",
+    title: "L2323-4",
+    type: "code_du_travail",
+    url: "https://article.cdt/KALIARTI23234",
   },
   {
     id: "yyy",
     title: "Article yyy du JO",
-    type: TYPE_REFERENCE.journalOfficiel,
+    type: "external",
+    url: "https://article.jo",
   },
   {
-    id: "zzz",
-    slug: "ma-convention-collective",
-    title: "Article zzz de la CC",
-    type: TYPE_REFERENCE.conventionCollective,
+    id: "KALIARTI",
+    title: "Article XX de la CCN metal",
+    type: "external",
+    url: "https://legifrance/ccn",
   },
   {
-    id: "R * 3321-2",
-    title: "Article zzz de la CC",
-    type: TYPE_REFERENCE.codeDuTravail,
+    id: "KALICONT123",
+    title: "123 automobile",
+    type: "conventions_collectives",
+    url: "https://ma-convention-collective",
+  },
+  {
+    id: "LEGIARTI1234-3",
+    title: "L*1234-3",
+    type: "code_du_travail",
+    url: "https://url.com",
   },
 ];
 

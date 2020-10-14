@@ -42,7 +42,7 @@ ReferencesJuridiques.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      type: PropTypes.oneOf([SOURCES.CDT, SOURCES.CCN, SOURCES.EXTERNAL])
+      type: PropTypes.oneOf([SOURCES.CDT, SOURCES.CCN, SOURCES.EXTERNALS])
         .isRequired,
       url: PropTypes.string,
     })

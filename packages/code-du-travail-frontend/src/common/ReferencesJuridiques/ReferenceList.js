@@ -1,3 +1,4 @@
+import slugify from "@socialgouv/cdtn-slugify";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { ArrowLink, FlatList, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -7,10 +8,10 @@ import styled from "styled-components";
 const sanitizeCdtSlug = (slug) =>
   slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
 
-const InternalLink = ({ title, slug }) => (
+const InternalLink = ({ title, type, slug }) => (
   <Link
-    href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
-    as={`/${getRouteBySource(SOURCES.CDT)}/${slug}`}
+    href={`/${getRouteBySource(type)}/[slug]`}
+    as={`/${getRouteBySource(type)}/${slug}`}
     passHref
   >
     <StyledArrowLink rel="nofollow" arrowPosition="left">
@@ -38,18 +39,20 @@ const getLink = (reference) => {
     case SOURCES.CDT:
       return (
         <InternalLink
-          title={reference.title}
-          slug={sanitizeCdtSlug(reference.id)}
+          slug={slugify(sanitizeCdtSlug(reference.title))}
+          title={`Article ${reference.title} du Code du travail`}
+          type={reference.type}
         />
       );
     case SOURCES.CCN:
       return (
         <InternalLink
+          slug={slugify(`${reference.title}`).substring(0, 80)}
           title={`Convention collective: ${reference.title}`}
-          slug={reference.id}
+          type={reference.type}
         />
       );
-    case SOURCES.EXTERNAL:
+    case SOURCES.EXTERNALS:
       return <ExternalLink title={reference.title} url={reference.url} />;
     default:
       return null;

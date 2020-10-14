@@ -287,7 +287,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Article L1244-3 du code du travail
+                      Article L1244-3 du Code du travail
                     </span>
                   </a>
                 </li>
@@ -310,25 +310,16 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Article L1244-4 du code du travail
+                      Article r*1244-4 du Code du travail
                     </span>
                   </a>
                 </li>
                 <li>
-                  <div>
-                    Article L3121-44 du JO
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    Article xxx du JPO
-                  </div>
-                </li>
-                <li>
                   <a
                     class="c10 c11 c12"
-                    href="/convention-collective/ma-convention"
-                    rel="nofollow"
+                    href="https://article.jo"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
                   >
                     <svg
                       class="c13 c14"
@@ -343,7 +334,55 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     <span
                       class="c15"
                     >
-                      Convention collective: Article yyy de la CC
+                      Article L3121-44 du JO
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="c10 c11 c12"
+                    href="https://article.jo"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <svg
+                      class="c13 c14"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span
+                      class="c15"
+                    >
+                      Article xxx du JPO
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="c10 c11 c12"
+                    href="https://ma-convention-collective"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <svg
+                      class="c13 c14"
+                      fill="none"
+                      viewBox="0 0 28 15"
+                    >
+                      <path
+                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span
+                      class="c15"
+                    >
+                      Article yyy de la CC
                     </span>
                   </a>
                 </li>
