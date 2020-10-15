@@ -5,7 +5,7 @@ function getIdccBody({ query }) {
       "title",
       "shortTitle",
       "url",
-      "idcc",
+      "num",
       "slug",
       "effectif",
       "cdtnId",
@@ -33,7 +33,7 @@ function getIdccBody({ query }) {
               },
               {
                 match_phrase_prefix: {
-                  "idcc.text": {
+                  "num.text": {
                     query: `${query}`,
                   },
                 },

@@ -1,7 +1,6 @@
 /** @type {cdtnSources.SOURCES} */
 const SOURCES = {
   CCN: "conventions_collectives",
-  CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
   CONTRIBUTIONS: "contributions",
   EDITORIAL_CONTENT: "information",
@@ -25,7 +24,6 @@ const SOURCES = {
 /** @type {{[key in cdtnSources.SourceRoute]: cdtnSources.RouteValues}} */
 const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
-  [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EDITORIAL_CONTENT]: "information",

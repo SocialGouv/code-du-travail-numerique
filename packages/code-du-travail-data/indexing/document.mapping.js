@@ -86,15 +86,6 @@ export const documentMapping = {
     // available for themes
     icon: { type: "keyword" },
 
-    idcc: {
-      fields: {
-        text: {
-          type: "text",
-        },
-      },
-      type: "keyword",
-    },
-
     // available in editorial content
     intro: { type: "text" },
 
@@ -108,6 +99,15 @@ export const documentMapping = {
     },
 
     nbTextes: { type: "integer" },
+
+    num: {
+      fields: {
+        text: {
+          type: "text",
+        },
+      },
+      type: "keyword",
+    },
 
     // Currently only available for `Code du travail`.
     path: {

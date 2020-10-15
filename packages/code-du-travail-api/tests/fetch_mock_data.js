@@ -41,7 +41,6 @@ const documentsSlugs = [
   "/convention-collective/2120-banque",
   "/external/mon-compte-formation",
   "/external/index-egapro",
-  "/page-convention-collective/1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
   "/fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
   "/fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
 ];

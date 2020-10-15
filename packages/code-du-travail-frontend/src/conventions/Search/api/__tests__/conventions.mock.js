@@ -560,7 +560,6 @@ export const agreement = {
   date_publi: "2018-07-01T00:00:00.000Z",
   id: "KALICONT000005635221",
   mtime: 1562614614,
-  nbTextes: 36,
   num: 1596,
   shortTitle: "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
   slug: "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",

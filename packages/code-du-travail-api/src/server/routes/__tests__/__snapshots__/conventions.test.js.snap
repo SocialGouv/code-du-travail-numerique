@@ -1,72 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`returns an agreement document 1`] = `
+exports[`returns the agreement document from idcc 843 1`] = `
 Object {
   "answers": Array [
     Object {
-      "answer": "<p>La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.</p>
-<p><strong>Pour les salariés en CDI</strong>, la durée maximale de la période d'essai est égale à 3 semaines (pas de renouvellement possible).</p>
+      "answer": "<p>Pour <strong>le personnel de fabrication, le personnel de vente et le personnel de services</strong>, la durée de la période d'essai a été fixée par une <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> conclue avant le 26 juin 2008 : </p>
+<ul>
+<li>La durée maximale de la période d'essai est égale à 30 jours.</li>
+</ul>
+<p>Pour <strong>les cadres en CDI</strong>, la durée de la période d'essai a été fixée par un avenant* conclu après le 26 juin 2008. </p>
+<ul>
+<li>La durée de la période d'essai est égale à 4 mois, renouvelable une fois pour une durée de 4 mois maximum.</li>
+</ul>
+<p>*<em>L'avenant a été conclu le 20 juillet 2010.</em></p>
 ",
       "index": 3,
       "question": "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 2-4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 17",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873126/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
       "theme": "Embauche et contrat de travail",
     },
     Object {
-      "answer": "<p>L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.</p>
+      "answer": "<p>Pour <strong>le personnel de fabrication, le personnel de vente et le personnel de services</strong>, la période d'essai ne peut pas être renouvelée.</p>
+<p>Pour <strong>les cadres en CDI</strong>, la période d'essai peut être renouvelée une fois pour une durée de 4 mois maximum. La possibilité de renouveler la période d'essai doit être prévue par le contrat de travail. L'employeur et le salarié doivent donner leur accord au renouvellement par écrit (avenant au contrat de travail, etc.), avant la fin de la période d'essai initiale.</p>
+",
+      "index": 4,
+      "question": "La période d’essai peut-elle être renouvelée ?",
+      "references": Array [
+        Object {
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 17",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873126/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "la-periode-dessai-peut-elle-etre-renouvelee",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>L'employeur confirme au salarié son embauche par écrit (lettre d'engagement ou contrat de travail pour les cadres), si à la fin de la période d'essai, l'engagement devient définitif.</p>
 ",
       "index": 7,
       "question": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 2-3",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873128/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
       "theme": "Embauche et contrat de travail",
     },
     Object {
-      "answer": "<p>L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :</p>
+      "answer": "<p>Le contrat de travail ou la lettre d'engagement prévoit : </p>
 <ul>
-<li>Le nom, la raison sociale et l'adresse de l'entreprise, </li>
-<li>Le numéro de code APE de l'entreprise et le numéro d'inscription à l'URSSAF ou à la mutualité sociale agricole ;</li>
-<li>Le nom du salarié ;</li>
-<li>La date d'embauchage du salarié ;</li>
-<li>L'emploi du salarié, sa qualification et son coefficient hiérarchique ;</li>
-<li>La durée de la période d'essai ;</li>
-<li>Le montant de son salaire mensuel correspondant à un horaire hebdomadaire de travail de 39 heures (soit un salaire mensuel calculé sur une base de 169 heures) et son taux de salaire horaire ;</li>
-<li>L'horaire de travail hebdomadaire de référence choisi dans l'entreprise ou l'établissement et le montant de son salaire mensuel effectif correspondant ;</li>
-<li>Le montant de la déduction pour 1 heure de travail non effectuée ;</li>
-<li>L'engagement du salarié, pendant la durée du contrat, de ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail ;</li>
-<li>Le cas échéant, les avantages en nature et les conditions particulières, telles que le chantier sur lequel l'intéressé est embauché ;</li>
-<li>La convention collective applicable ;</li>
-<li>Le nom des caisses de prévoyance et de retraite complémentaire où sont versées les cotisations.</li>
+<li>La date d'entrée du salarié dans l' entreprise ;</li>
+<li>Sa date d'engagement définitif ;</li>
+<li>L'emploi exercé et son coefficient ;</li>
+<li>La durée de la période d'essai et, le cas échéant, son renouvellement.</li>
 </ul>
 ",
       "index": 8,
       "question": "Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 2-3",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873128/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement",
       "theme": "Embauche et contrat de travail",
     },
     Object {
-      "answer": "<p>La convention collective ne prévoit pas le recours au contrat d'usage.</p>
-<p>La liste des secteurs d'activité prévue par la loi (article D1242-1 du code du travail) permettant le recours à un CDD d'usage vise le secteur du bâtiment et des travaux publics pour les chantiers <strong>à l'étranger</strong>. En France, l'entreprise ne peut pas embaucher de salarié en CDD d'usage.</p>
+      "answer": "<p>L'activité des sociétés de la branche ne figure pas dans la liste des secteurs d'activité prévue par la loi (article D. 1242-1 du code du travail) permettant le recours à un CDD d'usage. La <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> ne comporte aucune disposition à ce sujet. L'entreprise ne peut pas embaucher des salariés en CDD d'usage.</p>
 ",
       "index": 15,
       "question": "Embauche en contrat d'extra (CDD d'usage)",
@@ -75,34 +108,32 @@ Object {
       "theme": "Embauche et contrat de travail",
     },
     Object {
-      "answer": "<p>Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.</p>
-",
-      "index": 19,
-      "question": "Quelles sont les conditions de cumul d'emplois ?",
-      "references": Array [
-        Object {
-          "category": "agreement",
-          "title": "Article 2-3",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-      ],
-      "slug": "quelles-sont-les-conditions-de-cumul-demplois",
-      "theme": "Temps de travail",
-    },
-    Object {
       "answer": "<p>En cas de démission, la durée du préavis est égale à :</p>
 <ul>
-<li>De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;</li>
-<li>Après 3 mois d'ancienneté : 2 semaines.</li>
+<li>
+<p>Personnel de fabrication, personnel de vente et personnel de services : </p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ; </li>
+<li>Plus de 6 mois d'ancienneté : 2 semaines ;</li>
+</ul>
+</li>
+<li>
+<p>Cadres : 2 mois.</p>
+</li>
 </ul>
 ",
       "index": 20,
       "question": "Quelle est la durée du préavis en cas de démission ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 10.1",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 6",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678849/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelle-est-la-duree-du-preavis-en-cas-de-demission",
@@ -111,359 +142,206 @@ Object {
     Object {
       "answer": "<p>En cas de licenciement, la durée du préavis est égale à :</p>
 <ul>
-<li>De la fin de la période d'essai jusqu'à 3 mois d'ancienneté : 2 jours ;</li>
-<li>De 3 mois à 6 mois d'ancienneté : 2 semaines ;</li>
-<li>De 6 mois à 2 ans d'ancienneté : 1 mois ;</li>
-<li>Plus de 2 ans d'ancienneté : 2 mois.</li>
+<li>
+<p>Personnel de fabrication, personnel de vente et personnel de services : </p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ; </li>
+<li>Plus de 6 mois et moins de 2 ans d'ancienneté : 1 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 2 mois ;</li>
 </ul>
-<p>Le salarié n'a pas droit au préavis en cas de licenciement pour faute grave.</p>
+</li>
+<li>
+<p>Cadres : </p>
+<ul>
+<li>Moins de 2 ans d'ancienneté : 1,5 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 3 mois.</li>
+</ul>
+</li>
+</ul>
 ",
       "index": 23,
       "question": "Quelle est la durée de préavis en cas de licenciement ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 10.1",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Annexe : Statut du personnel d'encadrement, article 6",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678849/?idConteneur=KALICONT000005635886",
         },
         Object {
-          "category": "agreement",
-          "title": "Article 10.2",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
       "theme": "Départ de l'entreprise",
     },
     Object {
-      "answer": "<p>En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.</p>
+      "answer": "<p>En cas de départ à la retraite, la durée du préavis est égale à :</p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ; </li>
+<li>Plus de 6 mois et moins de 2 ans d'ancienneté : 1 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 6 mois.</li>
+</ul>
 ",
       "index": 26,
       "question": "Quelle est la durée de préavis en cas de départ à la retraite ?",
       "references": Array [
         Object {
-          "category": null,
-          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 34.2",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite",
       "theme": "Départ de l'entreprise",
     },
     Object {
-      "answer": "<p>En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.</p>
+      "answer": "<p>En cas de mise à la retraite, la durée du préavis est égale à :</p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ; </li>
+<li>Plus de 6 mois et moins de 2 ans d'ancienneté : 1 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 6 mois.</li>
+</ul>
 ",
       "index": 29,
       "question": "Quelle est la durée de préavis en cas de mise à la retraite ?",
       "references": Array [
         Object {
-          "category": null,
-          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=C6E78561AB60D1D67B3304C0EFE9B4DF.tplgfr30s_3?idSectionTA=KALISCTA000005706582&cidTexte=KALITEXT000005662348&idConvention=KALICONT000005635120",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 34.2",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
       "theme": "Départ de l'entreprise",
     },
     Object {
-      "answer": "<p>Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :</p>
-<ul>
-<li>En cas de préavis de 2 jours : 4 heures ;</li>
-<li>En cas de préavis de 2 semaines : 12 heures ;</li>
-<li>En cas de préavis égal ou supérieur à 1 mois : 25 heures.</li>
-</ul>
-<p>Les ouvriers à temps partiel bénéficient de ces heures d'absence autorisée proportionnellement à leur temps de travail. </p>
-<p>Les heures pour rechercher un nouvel emploi sont, en principe, prises groupées à la fin du délai de préavis. </p>
-<p>En cas de licenciement, ces heures sont rémunérées.</p>
-<p>L'employeur ne doit pas payer d'indemnité au salarié, si ce dernier n'utilise pas ces heures pour recherche d'emploi.</p>
+      "answer": "<p>En cas de licenciement, le salarié a droit à 2 heures d'absence par jour pendant la dernière semaine du préavis, pour rechercher un emploi. Seules les heures utilisées sont rémunérées.</p>
+<p>Ces 2 heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures. </p>
+<p>La <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> ne prévoit pas un tel dispositif en cas de démission.</p>
 ",
       "index": 35,
       "question": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 10.2",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
       "theme": "Départ de l'entreprise",
     },
     Object {
-      "answer": "<p>Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.</p>
-",
-      "index": 36,
-      "question": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
-      "references": Array [
-        Object {
-          "category": "agreement",
-          "title": "Article 10.12",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-      ],
-      "slug": "quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
-      "theme": "Départ de l'entreprise",
-    },
-    Object {
-      "answer": "<p>L'ancienneté du salarié tient compte de :</p>
+      "answer": "<p>La <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> prévoit une prime d'ancienneté, aussi appelée prime de \\"fin d'année\\".</p>
+<p>Les salariés qui ont au moins 1 an d'ancienneté ont droit à une prime de fin d'année, à condition d'être occupés par l'entreprise le 31 décembre. Le montant de la prime est fixé en pourcentage du montant du salaire brut payé au salarié du 1er janvier au 31 décembre. Ce pourcentage est égal à 3,84 %. </p>
+<p>La prime doit être payée au plus tard le 15 janvier. </p>
+<p>Exceptionnellement, les salariés suivants qui ne sont pas occupés par l'entreprise le 31 décembre ont également droit à la prime :</p>
 <ul>
-<li>La présence continue de l'ouvrier dans l'entreprise depuis la date du dernier embauchage ;</li>
-<li>Les périodes de suspension du contrat de travail ;</li>
-<li>La durée des contrats de travail antérieurs, à l'exclusion de ceux qui ont été rompus pour faute grave.</li>
+<li>Salariés qui ont fait l'objet d'un <webcomponent-tooltip content=\\"Licenciement%20fond%C3%A9%20sur%20un%20motif%20non%20li%C3%A9%20%C3%A0%20la%20personne%20du%20salari%C3%A9%20mais%20li%C3%A9%20%C3%A0%20l%E2%80%99activit%C3%A9%20de%20l%E2%80%99entreprise%20ou%20%C3%A0%20sa%20situation%20%C3%A9conomique.%20Il%20peut%20%C3%AAtre%20justifi%C3%A9%20soit%20par%20des%20difficult%C3%A9s%20%C3%A9conomiques%20de%20l%E2%80%99entreprise%2C%20soit%20par%20des%20mutations%20technologiques%2C%20soit%20par%20une%20r%C3%A9organisation%20de%20l%E2%80%99entreprise%20n%C3%A9cessaire%20%C3%A0%20la%20sauvegarde%20de%20sa%20comp%C3%A9titivit%C3%A9%2C%20soit%20par%20une%20cessation%20d%E2%80%99activit%C3%A9%20de%20l%E2%80%99entreprise.%20\\">licenciement économique</webcomponent-tooltip> en cours d'année ;</li>
+<li>Salariés qui ont quitté volontairement ou non l'entreprise pour bénéficier de leurs droits à la retraite ou à une préretraite. </li>
 </ul>
-<p>Pour le calcul de l'indemnité de licenciement, l'ancienneté tient compte des périodes suivantes :</p>
-<ul>
-<li>Le temps pendant lequel l'ouvrier a travaillé en une ou plusieurs fois pour l'entreprise, le cas échéant déduction faite de la durée des contrats de travail antérieurs dont la résiliation lui est imputable ;</li>
-<li>La durée des interruptions pour maladie, accident, maternité ;</li>
-<li>Les congés payés annuels ou autorisations d'absences exceptionnelles pour événements familiaux prévues par la convention collective ;</li>
-<li>La durée des interruptions pour mobilisation ou faits de guerre et périodes militaires obligatoires.</li>
-</ul>
-",
-      "index": 38,
-      "question": "Comment déterminer l'ancienneté du salarié ?",
-      "references": Array [
-        Object {
-          "category": "agreement",
-          "title": "Article 10.4",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 11-2",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-      ],
-      "slug": "comment-determiner-lanciennete-du-salarie",
-      "theme": "Embauche et contrat de travail",
-    },
-    Object {
-      "answer": "<p>La convention collective ne prévoit pas de prime d'ancienneté.</p>
-<p>Elle prévoit des congés pour ancienneté d'une durée de :</p>
-<ul>
-<li>2 jours pour 20 d'années de services, continus ou non, dans la même entreprise ;</li>
-<li>4 jours pour 25 d'années de services, continus ou non, dans la même entreprise ;</li>
-<li>6 jours pour 30 d'années de services, continus ou non, dans la même entreprise.</li>
-</ul>
+<p>Dans ce cas, elle est calculée proportionnellement à leur temps de présence dans l'entreprise. </p>
+<p>Cette prime ne se cumule pas avec les avantages de même nature déjà accordés en fin d'année (par exemple : 13e mois partiel, étrennes, etc.).</p>
 ",
       "index": 39,
       "question": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 5-24",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 42",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000021799679/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
       "theme": "Salaire et Rémunération",
     },
     Object {
-      "answer": "<p>En cas de départ à la retraite, le salarié a droit à une indemnité appelée \\"indemnité de fin de carrière\\" qui correspond à l’indemnité légale de départ à la retraite prévue par le code du travail ou l’indemnité conventionnelle. Cette indemnité est versée dans les conditions suivantes.</p>
-<h4>1. Conditions permettant au salarié de bénéficier de l'indemnité de fin de carrière</h4>
-<p>Pour bénéficier de l’indemnité de fin de carrière, les salariés doivent terminer leur carrière dans l'une des situations suivantes :</p>
+      "answer": "<p>Le salarié a droit à une <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> de départ à la retraite égale à :</p>
 <ul>
-<li>Comme ouvriers dans une entreprise du bâtiment ou des travaux publics,</li>
-<li>Avoir bénéficié, de manière continue depuis leur dernière période d’emploi en tant qu’ouvrier dans une entreprise du bâtiment ou des travaux publics d’indemnités journalières ou de rentes d’invalidité (au titre des articles 20 et 21 de l'annexe de l'accord de 1968),</li>
-<li>Avoir bénéficié, de manière continue depuis leur dernière période d’emploi en tant qu’ouvrier dans une entreprise du bâtiment ou des travaux publics d'indemnisation au titre du régime d’assurance chômage. (En cas d’indemnisation au titre du régime d’assurance chômage, la durée d’affiliation prise en compte pour le calcul de l’indemnité est arrêtée à la date de rupture du dernier contrat de travail.)</li>
+<li>1 mois de salaire après 10 ans d'ancienneté ;</li>
+<li>1,5 mois de salaire après 15 ans d'ancienneté ;</li>
+<li>2 mois de salaire après 20 ans d'ancienneté ;</li>
+<li>2,5 mois de salaire après 25 ans d'ancienneté ;</li>
+<li>3 mois de salaire après 30 ans d'ancienneté ;</li>
+<li>3,5 mois de salaire après 35 ans d'ancienneté ;</li>
+<li>4 mois de salaire après 40 ans d'ancienneté.</li>
 </ul>
-<p>Une reprise d’activité de courte durée dans un secteur en dehors du bâtiment ou des travaux publics n'empêche pas le bénéfice de l’indemnité de fin de carrière si :</p>
+<p>Le salaire de référence pour le calcul de l'<webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> est la formule la plus avantageuse pour le salarié entre :</p>
 <ul>
-<li>La durée de reprise d’activité ne dépasse pas 90 jours au total, à compter de sa dernière affiliation au Régime National de Prévoyance des Ouvriers au sein d’une entreprise du bâtiment ou des travaux publics, et ;</li>
-<li>L’ouvrier justifie d’une durée totale d'affiliation de 30 ans et plus au Régime National de Prévoyance des Ouvriers.</li>
+<li>Le 1/12ème de la rémunération des 12 derniers mois précédant le départ en retraite ou, </li>
+<li>Le 1/3 des 3 derniers mois. Dans ce cas, toute prime ou gratification de caractère annuel ou exceptionnel versée pendant cette période est prise en compte proportionnellement.</li>
 </ul>
-<p>Enfin, dans le cas particulier de la fin de carrière en longue maladie ou en invalidité, l’ouvrier a droit à une indemnité de fin de carrière s’il a, de manière continue depuis sa dernière période d’emploi dans une entreprise du bâtiment ou des travaux publics, perçu des prestations d’indemnités journalières ou de rentes d’invalidité.</p>
-<h4>2. Montant de l'indemnité de fin de carrière</h4>
-<p>L'ouvrier a le droit au montant le plus favorable entre l'indemnité de départ à la retraite prévue par le code du travail ou l'indemnité conventionnelle suivante :</p>
-<ul>
-<li>300 SR (Salaire de Référence) pour une durée continue de 10 années d'affiliation avant le départ à la retraite ;</li>
-<li>700 SR pour une durée totale d’affiliation comprise entre 20 et 25 ans, dont au moins une période d'activité après 50 ans ;</li>
-<li>1 050 SR pour une durée totale d'affiliation comprise entre 25 et 30 ans, dont au moins une période d'activité après 50 ans ;</li>
-<li>1 400 SR pour une durée totale d'affiliation de 30 ans et plus, dont au moins une période d'activité après 50 ans.</li>
-</ul>
-<p>(Pour information, la valeur du SR était fixée à 5,56 € au 1er juillet 2017.)</p>
-<p>Pour les salariés à temps partiel, le montant de l’indemnité conventionnelle est calculé proportionnellement au temps de travail.</p>
-<h4>3. Cas de la fin de carrière indemnisée au titre du régime d’assurance chômage</h4>
-<p>L’ouvrier a droit à une indemnité de fin de carrière s’il a,
-de manière continue depuis sa dernière période d’emploi dans une entreprise du bâtiment ou des travaux publics, bénéficié d’une indemnisation chômage.</p>
-<p>Le montant de cette indemnité est égal à celui défini ci-dessus, après déduction du montant de l’indemnité de licenciement (légale ou conventionnelle) ou de rupture conventionnelle que le salarié a perçue à l’occasion de sa dernière période d’emploi. Dans ce cas, s'il justifie d’une durée totale d'affiliation de 30 ans ou plus au Régime National de Prévoyance des Ouvriers, l'indemnité ne peut pas être inférieure à 300 SR.</p>
-<p>L’ouvrier a également droit à une indemnité de fin de carrière lorsqu’il liquide ses droits à retraite immédiatement après son licenciement (ou suite à rupture conventionnelle) d’une entreprise du Bâtiment ou des Travaux Publics.</p>
+<p>Enfin, le salarié qui a quitté la profession âgé d'au moins 55 ans et qui n'a pas été licencié suite à une inaptitude médicalement constatée, recevra une <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> spéciale de départ à la retraite égale à la différence entre le montant de l'<webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> de départ en retraite et le montant de l'éventuelle <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> de licenciement payée par son dernier employeur en boulangerie. Cette <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> spéciale de départ en retraite est versée au salarié par l'organisme de prévoyance.</p>
 ",
       "index": 42,
       "question": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Accord collectif national du 31 juillet 1968 instituant le Régime National de Prévoyance des Ouvriers du Bâtiment et des Travaux Publics révisé par l’avenant n° 59 du 20 mars 2018, article 22",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 34.3",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
       "theme": "Départ de l'entreprise",
     },
     Object {
-      "answer": "<p>Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.</p>
-<p>Pour en bénéficier, les salariées doivent avoir une ancienneté appréciée dans les conditions suivantes :</p>
+      "answer": "<p>Le salarié a droit à un maintien de salaire pendant son <webcomponent-tooltip content=\\"P%C3%A9riode%20de%20suspension%20du%20contrat%20de%20travail%20en%20raison%20d%E2%80%99une%20maladie%20ou%20d%E2%80%99un%20accident%20du%20travail%20d%E2%80%99origine%20professionnelle%20ou%20non%20professionnelle.%20L%E2%80%99arr%C3%AAt%20de%20travail%20est%20justifi%C3%A9e%20par%20une%20prescription%20m%C3%A9dicale.%20\\">arrêt de travail</webcomponent-tooltip> pour maladie dans les conditions suivantes.</p>
+<h4>1. Conditions du droit au maintien de salaire</h4>
+<p>Pour avoir droit au maintien de salaire pendant son <webcomponent-tooltip content=\\"P%C3%A9riode%20de%20suspension%20du%20contrat%20de%20travail%20en%20raison%20d%E2%80%99une%20maladie%20ou%20d%E2%80%99un%20accident%20du%20travail%20d%E2%80%99origine%20professionnelle%20ou%20non%20professionnelle.%20L%E2%80%99arr%C3%AAt%20de%20travail%20est%20justifi%C3%A9e%20par%20une%20prescription%20m%C3%A9dicale.%20\\">arrêt de travail</webcomponent-tooltip>, le salarié doit avoir au moins 1 an d'ancienneté dans la profession. En cas de maladie professionnelle, d'accident du travail ou de trajet, aucune condition d'ancienneté ne s'applique.</p>
+<p>Le salarié doit être pris en charge par la sécurité sociale. </p>
+<h4>2. Durée et montant du maintien de salaire</h4>
+<p>Le salarié a droit au maintien de 90 % du salaire brut moyen des 3 derniers mois précédant l'<webcomponent-tooltip content=\\"P%C3%A9riode%20de%20suspension%20du%20contrat%20de%20travail%20en%20raison%20d%E2%80%99une%20maladie%20ou%20d%E2%80%99un%20accident%20du%20travail%20d%E2%80%99origine%20professionnelle%20ou%20non%20professionnelle.%20L%E2%80%99arr%C3%AAt%20de%20travail%20est%20justifi%C3%A9e%20par%20une%20prescription%20m%C3%A9dicale.%20\\">arrêt de travail</webcomponent-tooltip>, à l'exclusion des primes exceptionnelles et des <webcomponent-tooltip content=\\"Somme%20d%E2%80%99argent%20vers%C3%A9e%20par%20l%E2%80%99employeur%20%C3%A0%20ses%20salari%C3%A9s%20en%20compl%C3%A9ment%20du%20salaire%20de%20base.\\">gratifications</webcomponent-tooltip>, et après déduction des indemnités journalières brutes versées par la sécurité sociale et un régime de prévoyance. </p>
+<p>Le salarié ne peut pas recevoir plus que 100 % du salaire net qu'il aurait perçu s'il avait travaillé.</p>
+<p>La durée du maintien de salaire est égale à :</p>
 <ul>
 <li>
-<p>Pour les salariées âgées de moins de 25 ans et pour les apprenties sous contrat : 1 mois d'ancienneté dans l'entreprise ;</p>
+<p>En cas d'accident du travail, accident de trajet, maladie professionnelle : 180 jours, à partir du 1er jour d'indemnisation par la sécurité sociale ;</p>
 </li>
 <li>
-<p>Pour les ouvrières âgées d'au moins 25 ans :</p>
-<ul>
-<li>soit 3 mois d'ancienneté dans l'entreprise ;</li>
-<li>soit 1 mois d'ancienneté dans l'entreprise, si elles ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.</li>
-</ul>
-</li>
-</ul>
-",
-      "index": 43,
-      "question": "Quelles sont les conditions d’indemnisation pendant le congé de maternité ?",
-      "references": Array [
-        Object {
-          "category": "agreement",
-          "title": "Article 6-12",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 6-21",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-      ],
-      "slug": "quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite",
-      "theme": "Congés et repos",
-    },
-    Object {
-      "answer": "<p>Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.</p>
-<h4>1. Conditions pour bénéficier du maintien de salaire</h4>
-<p>Pour bénéficier du maintien de salaire, l'ouvrier doit avoir une ancienneté d'au moins :</p>
-<ul>
-<li>Pour les jeunes ouvriers âgés de moins de 25 ans et pour les apprentis sous contrat : 1 mois d'ancienneté dans l'entreprise ;</li>
-<li>Pour les ouvriers âgés d'au moins 25 ans :<ul>
-<li>Soit 3 mois d'ancienneté dans l'entreprise ;</li>
-<li>Soit 1 mois d'ancienneté dans l'entreprise, s'ils ont au moins acquis 750 points de retraite CNRO (calculés selon les dispositions prévues au règlement de cette institution), dans les 10 dernières années précédant le jour où se produit l'arrêt de travail.</li>
-</ul></li>
-</ul>
-<p>Pour le calcul de l'ancienneté, il faut tenir compte du temps de présence du salarié dans l'entreprise depuis la date du dernier embauchage et des périodes de suspension du contrat de travail.</p>
-<p>Les conditions d'ancienneté ne sont pas exigées en cas d'absence pour maladie supérieure à 30 jours, due à un accident du travail ou une maladie professionnelle.</p>
-<p>Pour pouvoir bénéficier de l'indemnisation, l'ouvrier doit :</p>
-<ul>
-<li>Avoir justifié de son absence par la production du certificat médical ;</li>
-<li>Justifier qu'il est pris en charge par la sécurité sociale ou la mutualité sociale agricole.</li>
-</ul>
-<p>L'indemnisation est subordonnée à la possibilité pour l'employeur de faire vérifier la réalité de l'arrêt maladie de l'ouvrier.</p>
-<h4>2. Montant et durée du maintien de salaire</h4>
-<p>L'indemnité est versée après un délai de 3 jours d'arrêt de travail, sauf :</p>
-<ul>
-<li>En cas d'arrêt suite à un accident du travail ou maladie professionnelle ;</li>
-<li>En cas d'arrêt de travail supérieur à 30 jours suite à un accident de trajet. </li>
-</ul>
-<p>En cas d'accident ou de maladie non professionnel, le salarié a droit au maintien de :</p>
-<ul>
-<li>100 % du salaire pendant 45 jours (du 4e au 48e jour inclus d'arrêt de travail), puis;</li>
-<li>75 % du salaire du 49e au 90e jour inclus d'arrêt de travail.</li>
-</ul>
-<p>En cas d'accident du travail ou de maladie professionnelle, le salarié a droit au maintien de :</p>
-<ul>
-<li>
-<p>Arrêt maladie inférieur ou égal à 30 jours :</p>
-<ul>
-<li>90 % du salaire du 1er au 15e jour inclus d'arrêt de travail, puis ;</li>
-<li>100 % du salaire du 16e au 30e jour inclus d'arrêt de travail.</li>
-</ul>
+<p>En cas d'accident de la vie privée ayant entraîné un arrêt de plus de 45 jours et maladie reconnue par la sécurité sociale comme une affection de longue durée (A.L.D) : 180 jours, à partir du 4ème jour d'<webcomponent-tooltip content=\\"P%C3%A9riode%20de%20suspension%20du%20contrat%20de%20travail%20en%20raison%20d%E2%80%99une%20maladie%20ou%20d%E2%80%99un%20accident%20du%20travail%20d%E2%80%99origine%20professionnelle%20ou%20non%20professionnelle.%20L%E2%80%99arr%C3%AAt%20de%20travail%20est%20justifi%C3%A9e%20par%20une%20prescription%20m%C3%A9dicale.%20\\">arrêt de travail</webcomponent-tooltip>.</p>
 </li>
 <li>
-<p>Arrêt maladie supérieur à 30 jours :</p>
-<ul>
-<li>100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.</li>
-</ul>
+<p>En cas d'accident de la vie privée ayant entraîné un arrêt de moins de 45 jours et maladie non reconnue par la sécurité sociale comme une affection de longue durée (<webcomponent-tooltip content=\\"Maladie%20grave%20et%2Fou%20chronique%20ouvrant%20droit%20%C3%A0%20une%20prise%20en%20charge%20%C3%A0%20100%25%20par%20l%E2%80%99assurance%20maladie.%20Exemples%20%3A%20diab%C3%A8te%2C%20cancer%2C%20mucoviscidose%2C%20infection%20par%20le%20virus%20de%20l%E2%80%99immunod%C3%A9ficience%20humaine%20(VIH)%2C%20etc.\\">ALD</webcomponent-tooltip>) : 180 jours, à partir du 8ème jour d'<webcomponent-tooltip content=\\"P%C3%A9riode%20de%20suspension%20du%20contrat%20de%20travail%20en%20raison%20d%E2%80%99une%20maladie%20ou%20d%E2%80%99un%20accident%20du%20travail%20d%E2%80%99origine%20professionnelle%20ou%20non%20professionnelle.%20L%E2%80%99arr%C3%AAt%20de%20travail%20est%20justifi%C3%A9e%20par%20une%20prescription%20m%C3%A9dicale.%20\\">arrêt de travail</webcomponent-tooltip>.</p>
 </li>
 </ul>
-<p>En cas d'accident de trajet couvert par la législation de la sécurité sociale relative aux accidents du travail, le salarié a droit au maintien de : </p>
-<ul>
-<li>
-<p>Arrêt maladie inférieur ou égal à 30 jours :</p>
-<ul>
-<li>100 % du salaire du 4e au 30e jour inclus d'arrêt de travail ; </li>
-</ul>
-</li>
-<li>
-<p>Arrêt maladie supérieur à 30 jours :</p>
-<ul>
-<li>100 % du salaire du 1er au 90e jour inclus d'arrêt de travail.</li>
-</ul>
-</li>
-</ul>
-<p>Si un ouvrier est en arrêt maladie, à plusieurs reprises au cours d'une même année civile, la durée totale d'indemnisation ne peut dépasser au total celle des périodes fixées ci-dessus. Ainsi,la durée de maintien de salarié ne peut pas dépasser 90 jours au cours d'une même année civile.</p>
-<p>Lorsqu'un ouvrier est licencié pendant un arrêt de travail pour maladie ou accident non professionnels, pour nécessité de remplacement, il doit percevoir les indemnités complémentaires dans les conditions prévues ci-dessus, jusqu'à son rétablissement ou, au plus tard, jusqu'à l'expiration de la durée d'indemnisation.</p>
-<p>Les entreprises du bâtiment restant en dehors du régime professionnel mis en place en matière d'indemnisation des arrêts de travail pour maladie ou accident, professionnels ou non, inférieurs à 90 jours doivent verser elles-mêmes à leurs ouvriers remplissant les conditions prévues ci-dessus le montant des indemnités complémentaires aux indemnités journalières de la sécurité sociale.</p>
+<p>Si plusieurs absences pour maladie, ou accident donnent droit à un maintien de salaire au cours d'une année civile, la durée d'indemnisation ne peut pas dépasser 180 jours d'indemnisation.</p>
 ",
       "index": 45,
       "question": "En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 6-11",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 6-12",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 6-13",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 6-14",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
-        },
-        Object {
-          "category": "agreement",
-          "title": "Article 6-15",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 37",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582628/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
       "theme": "Santé, sécurité et conditions de travail",
     },
     Object {
-      "answer": "<p>En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. </p>
-<p>Dans les autres cas, l'employeur peut licencier l'ouvrier en arrêt maladie si il est obligé de le remplacer avant la date présumée de son retour. Ce licenciement ne peut intervenir que si la durée totale de l'absence de l'ouvrier est supérieure à 90 jours au cours de la même année civile.</p>
-<p>Dans ce cas, l'ouvrier bénéficie d'une priorité de réembauchage pendant un délai qui ne peut pas dépasser :</p>
+      "answer": "<p>En cas de maladie, l'employeur ne peut pas licencier, pour une période de 6 mois, le salarié :</p>
 <ul>
-<li>Soit 3 mois après la fin de l'incapacité résultant de la maladie ou de l'accident ;</li>
-<li>Soit la fin du chantier pour lequel il a été embauché, si celle-ci survient avant l'expiration de ces 3 mois.</li>
+<li>Qui a au moins 2 ans d'ancienneté , </li>
+<li>A condition qu'aucune incapacité constatée par le médecin compétent ne l'empêche d'occuper son emploi à son retour.</li>
 </ul>
-<p>L'ouvrier qui veut bénéficier de cette priorité doit en informer par écrit le chef d'entreprise ou son représentant en indiquant l'adresse à laquelle il sera possible de le joindre. Le chef d'entreprise ou son représentant doit avertir l'ouvrier dès qu'un emploi correspondant à ses aptitudes sera disponible.</p>
 ",
       "index": 47,
       "question": "En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 6-11",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 36",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873166/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi",
       "theme": "Santé, sécurité et conditions de travail",
     },
     Object {
-      "answer": "<p>La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.</p>
+      "answer": "<p>La <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.</p>
 ",
       "index": 48,
       "question": "Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?",
@@ -472,64 +350,94 @@ de manière continue depuis sa dernière période d’emploi dans une entreprise
       "theme": "Salaire et Rémunération",
     },
     Object {
-      "answer": "<p>Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :</p>
+      "answer": "<p>Les salariés ont droit, sur justification, aux congés payés exceptionnels, pour les événements familiaux suivants :</p>
 <ul>
-<li>Mariage du salarié : 4 jours ;</li>
-<li>Mariage d'un de ses enfants : 1 jour ;</li>
-<li>Naissance survenue à son foyer ou arrivée d'un enfant placé en vue de son adoption : 3 jours. Ces jours d'absence ne peuvent pas se cumuler avec le congé de maternité ;</li>
-<li>Obsèques de son conjoint : 3 jours ;</li>
-<li>Obsèques d'un de ses enfants : 3 jours ;</li>
-<li>Obsèques de son père, de sa mère : 3 jours ;</li>
-<li>Obsèques d'un de ses grands-parents ou beaux-parents, d'un de ses frères ou beaux-frères, d'une de ses sœurs ou belles-sœurs, d'un de ses petits-enfants : 1 jour.</li>
+<li>Mariage du salarié : 6 jours ;</li>
+<li>Conclusion par le salarié d'un PACS : 6 jours ;</li>
+<li>Naissance d'un enfant du salarié ou arrivée d'un enfant placé en vue de son adoption au foyer du salarié : 3 jours ;</li>
+<li>Annonce de la survenue d'un handicap chez un enfant : 2 jours ;</li>
+<li>Mariage d'un enfant du salarié : 1 jour ;</li>
+<li>Décès d'un enfant du salarié : 5 jours ;</li>
+<li>Décès du conjoint, du partenaire lié par un Pacs, du concubin, du père, de la mère, du beau-père, de la belle-mère, d'une sœur ou d'un frère : 3 jours ;</li>
+<li>Décès d'un grand-parent du salarié : 1 jour.</li>
 </ul>
-<p>Ces absences s'ajoutent aux congés payés.</p>
+<p>A l'exception du mariage du salarié ou d'un PACS, le salarié a droit à un jour d'absence supplémentaire, si l'événement intervient à au moins 300 km du domicile du salarié. Cette distance correspond au trajet aller par l'itinéraire le plus court.</p>
+<p>Ces jours d'absence sont accordés sans condition d'ancienneté.</p>
+<p>Ils sont assimilés à des jours de travail effectif pour la détermination de la durée du congé annuel.</p>
 ",
       "index": 50,
       "question": "Les congés pour événements familiaux",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 5-12",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 31",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038353717/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "les-conges-pour-evenements-familiaux",
       "theme": "Congés et repos",
     },
     Object {
-      "answer": "<p>La principale prime prévue par la convention collective est la <strong>prime de vacances</strong>.</p>
-<p>Elle est versée, en plus de l'indemnité de congé, à l'ouvrier ayant au moins 1675 heures de travail au cours de l'année de référence dans une ou plusieurs entreprises du bâtiment ou des travaux publics. </p>
-<p>Les ouvriers qui n'auront pas atteint, en raison d'arrêt maladie, ce total de 1675 heures au cours de l'année de référence, bénéficient également de la prime de vacances.</p>
-<p>Le taux de la prime de vacances est égal à 30 % de l'indemnité de congé payés correspondant aux 24 jours ouvrables.</p>
-<p>La prime de vacances est versée à l'ouvrier en même temps que son indemnité de congé. Elle ne se cumule pas avec les versements qui auraient le même objet.</p>
+      "answer": "<p>Les principales primes prévues par la <webcomponent-tooltip-cc>convention collective</webcomponent-tooltip-cc> sont les suivantes :</p>
+<ul>
+<li>
+<p><strong>Indemnité de \\"chou blanc\\"</strong> : tout salarié qui vient pour travailler à l'heure convenue du début du travail, aura droit, s'il se trouve décommandé à ce moment précis, à une <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> de 8 heures de salaire horaire minimum professionnel national dite <webcomponent-tooltip content=\\"Sommes%20vers%C3%A9es%20en%20compensation%20ou%20en%20r%C3%A9paration%20de%20quelque%20chose.\\">indemnité</webcomponent-tooltip> de \\"chou blanc\\".</p>
+</li>
+<li>
+<p><a href=\\"https://code.travail.gouv.fr/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant\\"><strong>Prime d'ancienneté</strong>,</a>aussi appelée prime de fin d'année.</p>
+</li>
+</ul>
 ",
       "index": 51,
       "question": "Quelles sont les primes prévues par la convention collective ?",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 5-25",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 18",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873127/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "external",
+          "title": "Article 42",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000021799679/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "quelles-sont-les-primes-prevues-par-la-convention-collective",
       "theme": "Salaire et Rémunération",
     },
     Object {
-      "answer": "<p>Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.</p>
-<p>Toutefois, aucune rémunération n'est versée (pour les jours fériés non travaillés) aux ouvriers qui ne peuvent pas justifier avoir accompli, dans une ou plusieurs entreprises du bâtiment, 200 heures de travail au minimum au cours des 2 mois qui précèdent le jour férié visé.</p>
-<p>Le chômage des jours fériés ne peut pas donner lieu à récupération.</p>
+      "answer": "<p>Le 1er mai est régi par la loi. </p>
+<p>Si l'un des 10 autres <webcomponent-tooltip content=\\"Jours%20de%20f%C3%AAtes%20religieuses%2C%20la%C3%AFques%2C%20de%20comm%C3%A9moration%20ou%20f%C3%AAte%20nationale%20pr%C3%A9vus%20par%20la%20loi%20%3A%201er%20janvier%2C%20lundi%20de%20P%C3%A2ques%2C%201er%20mai%2C%208%20mai%2C%20Ascension%2C%20lundi%20de%20Pentec%C3%B4te%2C%2014%20juillet%2C%20Assomption%20(15%20ao%C3%BBt)%2C%20Toussaint%2C%2011%20novembre%2C%2025%20d%C3%A9cembre.%20Il%20existe%20%C3%A9galement%20des%20jours%20f%C3%A9ri%C3%A9s%20locaux..%20Les%20jours%20f%C3%A9ri%C3%A9s%20peuvent%20%C3%AAtre%20travaill%C3%A9s%20ou%20non.%20Seul%20le%201er%20mai%20est%20obligatoirement%20non%20travaill%C3%A9%20sauf%20exception.%20\\">jours fériés</webcomponent-tooltip> n'est pas travaillé, la rémunération ne peut pas être diminuée.</p>
+<p>Si le salarié travaille un jour férié, le salaire reçu pour cette journée de travail sera doublé. </p>
+<p>Si un jour férié légal est inclus dans une période de congés payés, la période de ce congé sera prolongée d'une journée. La rémunération du salarié sera maintenue pendant cette prolongation.</p>
 ",
       "index": 52,
       "question": "Jours fériés et ponts dans le secteur privé",
       "references": Array [
         Object {
-          "category": "agreement",
-          "title": "Article 5-11",
-          "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+          "category": "external",
+          "title": "Article 27",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873145/?idConteneur=KALICONT000005635886",
         },
       ],
       "slug": "jours-feries-et-ponts-dans-le-secteur-prive",
+      "theme": "Congés et repos",
+    },
+    Object {
+      "answer": "<p>Le salarié qui travaille le dimanche a droit à une majoration de 20%. </p>
+<p>Cette majoration est calculée sur le produit du salaire de base par le nombre d'heures effectuées le dimanche.</p>
+<p>Si le salarié n'est pas rémunéré à l'heure, le salaire horaire de référence est le salaire horaire minimum national de sa catégorie.</p>
+",
+      "index": 53,
+      "question": "Travail du dimanche : quelle contrepartie ?",
+      "references": Array [
+        Object {
+          "category": "external",
+          "title": "Article 28",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873146/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "travail-du-dimanche-quelle-contrepartie",
       "theme": "Congés et repos",
     },
   ],
@@ -537,28 +445,34 @@ de manière continue depuis sa dernière période d’emploi dans une entreprise
     Object {
       "articles": Array [
         Object {
-          "cid": "KALIARTI000005778263",
-          "id": "KALIARTI000005778263",
-          "section": "Salaires minimaux",
-          "title": "1-4",
+          "cid": "KALIARTI000005873115",
+          "id": "KALIARTI000023263120",
+          "section": "Salaire horaire minimum professionnel",
+          "title": "10 (1)",
         },
         Object {
-          "cid": "KALIARTI000005778297",
-          "id": "KALIARTI000005778297",
-          "section": "Salaire mensuel",
-          "title": "4-1",
+          "cid": "KALIARTI000005873119",
+          "id": "KALIARTI000005873119",
+          "section": "Salariés non rémunérés à l'heure",
+          "title": "11",
         },
         Object {
-          "cid": "KALIARTI000005778298",
-          "id": "KALIARTI000005778298",
-          "section": "Déduction des heures non travaillées",
-          "title": "4-2",
+          "cid": "KALIARTI000005873120",
+          "id": "KALIARTI000005873120",
+          "section": "Application différée du salaire horaire minimum professionnel",
+          "title": "12",
         },
         Object {
-          "cid": "KALIARTI000005778376",
-          "id": "KALIARTI000005778377",
-          "section": "Barèmes de salaires minimaux",
-          "title": "12-8",
+          "cid": "KALIARTI000005873121",
+          "id": "KALIARTI000005873121",
+          "section": "Révision du salaire horaire minimum professionnel",
+          "title": "13 (1)",
+        },
+        Object {
+          "cid": "KALIARTI000005873122",
+          "id": "KALIARTI000005873122",
+          "section": "Révision des salaires résultant des barèmes départementaux ou interdépartementaux ou régionaux",
+          "title": "14 (1)",
         },
       ],
       "bloc": "1",
@@ -566,46 +480,10 @@ de manière continue depuis sa dernière période d’emploi dans une entreprise
     Object {
       "articles": Array [
         Object {
-          "cid": "KALIARTI000005778366",
-          "id": "KALIARTI000005778366",
-          "section": "Préambule",
-          "title": "12-1",
-        },
-        Object {
-          "cid": "KALIARTI000005778367",
-          "id": "KALIARTI000005778367",
-          "section": "Définitions générales des critères et des niveaux",
-          "title": "12-2",
-        },
-        Object {
-          "cid": "KALIARTI000005778368",
-          "id": "KALIARTI000005778368",
-          "section": "Coefficients hiérarchiques",
-          "title": "12-3",
-        },
-        Object {
-          "cid": "KALIARTI000005778369",
-          "id": "KALIARTI000005778369",
-          "section": "Prise en compte des diplômes professionnels bâtiment",
-          "title": "12-4",
-        },
-        Object {
-          "cid": "KALIARTI000005778370",
-          "id": "KALIARTI000005778370",
-          "section": "Polyvalence",
-          "title": "12-5",
-        },
-        Object {
-          "cid": "KALIARTI000005778374",
-          "id": "KALIARTI000005778374",
-          "section": "Evolution de carrière",
-          "title": "12-6",
-        },
-        Object {
-          "cid": "KALIARTI000005778375",
-          "id": "KALIARTI000005778375",
-          "section": "Suivi de l'application dans l'entreprise",
-          "title": "12-7",
+          "cid": "KALIARTI000005873107",
+          "id": "KALIARTI000026570014",
+          "section": "Classification",
+          "title": "9",
         },
       ],
       "bloc": "2",
@@ -613,90 +491,565 @@ de manière continue depuis sa dernière période d’emploi dans une entreprise
     Object {
       "articles": Array [
         Object {
-          "cid": "KALIARTI000005778276",
-          "id": "KALIARTI000005778277",
-          "section": "Contingent d'heures supplémentaires non soumis à autorisation",
-          "title": "3-13",
+          "cid": "KALIARTI000005873130",
+          "id": "KALIARTI000030490180",
+          "section": "Durée du travail",
+          "title": "21",
         },
         Object {
-          "cid": "KALIARTI000005778278",
-          "id": "KALIARTI000005778278",
-          "section": "Heures supplémentaires exceptionnelles",
-          "title": "3-14",
+          "cid": "KALIARTI000005873132",
+          "id": "KALIARTI000005873133",
+          "section": "Heures supplémentaires",
+          "title": "22",
         },
         Object {
-          "cid": "KALIARTI000005778279",
-          "id": "KALIARTI000005778279",
-          "section": "Plafonds",
-          "title": "3-15",
-        },
-        Object {
-          "cid": "KALIARTI000005778280",
-          "id": "KALIARTI000005778280",
-          "section": "Définition de la durée du travail",
-          "title": "3-16",
-        },
-        Object {
-          "cid": "KALIARTI000005778281",
-          "id": "KALIARTI000005778282",
-          "section": "Majoration pour heures supplémentaires.",
-          "title": "3-17",
-        },
-        Object {
-          "cid": "KALIARTI000005778283",
-          "id": "KALIARTI000005778283",
-          "section": "Equivalences et dérogations permanentes",
-          "title": "3-18",
-        },
-        Object {
-          "cid": "KALIARTI000005778285",
-          "id": "KALIARTI000005778285",
-          "section": "Semaine de travail en 5 jours",
-          "title": "3-21",
-        },
-        Object {
-          "cid": "KALIARTI000005778286",
-          "id": "KALIARTI000005778286",
-          "section": "Exceptions à la semaine de travail en 5 jours",
-          "title": "3-22",
-        },
-        Object {
-          "cid": "KALIARTI000005778288",
-          "id": "KALIARTI000005778288",
-          "section": "Horaires individualisés",
-          "title": "3-24",
-        },
-        Object {
-          "cid": "KALIARTI000005778289",
-          "id": "KALIARTI000005778289",
-          "section": "Horaires à temps partiel",
-          "title": "3-25",
-        },
-        Object {
-          "cid": "KALIARTI000005778294",
-          "id": "KALIARTI000005778294",
-          "section": "Récupération des heures perdues pour intempéries",
-          "title": "3-28",
-        },
-        Object {
-          "cid": "KALIARTI000005778295",
-          "id": "KALIARTI000005778295",
-          "section": "Cas des chefs d'équipe",
-          "title": "3-29",
+          "cid": "KALIARTI000005873134",
+          "id": "KALIARTI000005873137",
+          "section": "Travail de nuit",
+          "title": "23 (1)",
         },
       ],
       "bloc": "6",
     },
+    Object {
+      "articles": Array [
+        Object {
+          "cid": "KALIARTI000005873126",
+          "id": "KALIARTI000005873126",
+          "section": "Période d'essai",
+          "title": "17",
+        },
+      ],
+      "bloc": "10",
+    },
   ],
-  "date_publi": "2018-07-01T00:00:00.000Z",
-  "id": "KALICONT000005635221",
-  "mtime": 1562614614,
-  "nbTextes": 15,
-  "num": 1596,
-  "shortTitle": "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
-  "slug": "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",
-  "source": "page_convention_collective",
-  "title": "Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018) ",
-  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221",
+  "cdtnId": "647c224c9b",
+  "date_publi": "1976-04-01T00:00:00.000Z",
+  "effectif": 134889,
+  "excludeFromSearch": false,
+  "id": "KALICONT000005635886",
+  "mtime": 1561491771,
+  "nbTextes": 51,
+  "num": 843,
+  "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
+  "slug": "843-boulangerie-patisserie-entreprises-artisanales",
+  "source": "conventions_collectives",
+  "text": "IDCC 843 Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+  "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+  "title_vector": Array [
+    -0.0206103474,
+    -0.0648072436,
+    -0.0712917522,
+    -0.0293718781,
+    -0.0830794871,
+    -0.0388290808,
+    -0.0265660156,
+    0.00886058249,
+    0.0543446392,
+    -0.0657976121,
+    -0.0368641615,
+    0.00272521749,
+    -0.0772939175,
+    -0.0165649,
+    0.0843258,
+    0.0639925823,
+    0.00145726372,
+    0.0290101934,
+    0.0401947424,
+    0.0116125355,
+    -0.0442418791,
+    0.0243504122,
+    -0.0163521562,
+    0.0472383276,
+    0.0684706122,
+    0.0408487432,
+    -0.0800066367,
+    -0.0407558642,
+    0.0672355443,
+    0.000130696921,
+    0.0388082042,
+    -0.0448631644,
+    0.0403925292,
+    -0.0330095403,
+    0.0214039646,
+    0.00290876185,
+    -0.0438563228,
+    0.0638395175,
+    -0.0774656907,
+    -0.00382061256,
+    -0.0731961727,
+    -0.007860424,
+    0.071130991,
+    -0.034856759,
+    0.0712276399,
+    -0.0337931216,
+    0.00850270409,
+    0.0371936746,
+    0.0730203241,
+    -0.069680132,
+    0.0522588268,
+    0.031507019,
+    -0.00922426861,
+    0.0373101234,
+    0.0383496769,
+    0.041766,
+    -0.00152213289,
+    -0.0452160276,
+    0.0688053668,
+    -0.0383840315,
+    0.081491366,
+    -0.0580695681,
+    -0.0183871258,
+    0.00159126427,
+    -0.021889694,
+    0.0528047979,
+    -0.0404958092,
+    -0.0282124802,
+    0.0241143182,
+    0.0223738868,
+    -0.0315851867,
+    0.0650776327,
+    0.0171819292,
+    -0.0640804842,
+    0.00302532781,
+    0.0498182215,
+    -0.068501845,
+    -0.029546557,
+    -0.0861009881,
+    -0.0802968815,
+    -0.0288096089,
+    -0.0749382377,
+    0.0243927017,
+    -0.0411058106,
+    -0.0287067536,
+    -0.0194222257,
+    -0.0608119629,
+    0.0558066554,
+    0.0352196731,
+    -0.021127196,
+    -0.0252396017,
+    0.0315998532,
+    0.0176469311,
+    -0.0351361856,
+    -0.03606949,
+    -0.0821300671,
+    0.0494637303,
+    0.00756983645,
+    -0.0532412417,
+    0.0498873964,
+    0.0182388462,
+    -0.0623158738,
+    -0.0285389442,
+    -0.0259066373,
+    0.00217290828,
+    -0.0816509128,
+    -0.0286895912,
+    -0.0054325331,
+    -0.0480170287,
+    -0.0490012169,
+    -0.00476562558,
+    -0.00142069941,
+    0.0243028067,
+    -0.0141006075,
+    0.0206270665,
+    0.00407154858,
+    0.0316488743,
+    0.00893528759,
+    -0.0547122806,
+    0.0549820326,
+    0.0164910164,
+    0.0505969599,
+    0.00586257549,
+    -0.0322271101,
+    0.0463581607,
+    0.0308873635,
+    0.0578086227,
+    -0.0414777435,
+    -0.0318169966,
+    0.0412792861,
+    0.0669716075,
+    -0.0159980264,
+    -0.0481417328,
+    0.0890378,
+    -0.0519665,
+    0.0160308089,
+    -0.0310578179,
+    0.0401091389,
+    -0.0537460186,
+    0.0125640212,
+    0.0443301201,
+    -0.00260453485,
+    0.077466175,
+    0.0499626808,
+    -0.0149961431,
+    0.0659942105,
+    0.00483312597,
+    -0.00975057855,
+    -0.067793034,
+    -0.0758857,
+    0.0212538783,
+    0.0284717865,
+    -0.00119200314,
+    -0.0509284,
+    0.0550130941,
+    0.00131404935,
+    0.0313173942,
+    -0.0118786087,
+    -0.06422396,
+    -0.0833175108,
+    0.0139192445,
+    -0.0414394736,
+    0.00398161449,
+    0.0648995638,
+    0.0117550157,
+    -0.0758962929,
+    0.00728495279,
+    0.0375492498,
+    0.0320925266,
+    -0.0272679608,
+    -0.0614539,
+    -0.0516496487,
+    -0.0211831946,
+    -0.00468335068,
+    0.0041706427,
+    0.023506036,
+    -0.0537133329,
+    -0.0201764163,
+    -0.0836787745,
+    0.023811223,
+    -0.00428939844,
+    -0.0224735681,
+    -0.0789614841,
+    -0.0322172195,
+    0.0689324662,
+    0.0521713048,
+    0.000325668487,
+    -0.0483262464,
+    -0.0163782984,
+    0.0263837874,
+    -0.0484856181,
+    0.0164031405,
+    0.0126535362,
+    0.0423109643,
+    -0.0457759164,
+    -0.0478795171,
+    0.0505169146,
+    0.0740087777,
+    0.0812411085,
+    0.06854105,
+    0.0433128364,
+    0.0218932871,
+    -0.00828651,
+    0.0147778243,
+    0.0865426,
+    0.0168512333,
+    -0.0754165649,
+    -0.0371043421,
+    0.0690641403,
+    -0.0662132204,
+    -0.0393523872,
+    0.018528739,
+    -0.0328511633,
+    0.0514071435,
+    -0.000592198747,
+    -0.057228826,
+    0.000999429147,
+    -0.0728931427,
+    -0.0471586771,
+    0.0307561718,
+    0.0636441,
+    0.0365546,
+    0.0105189672,
+    0.0415237471,
+    0.0196084864,
+    0.0605785,
+    0.0375638753,
+    0.0670771375,
+    0.050269071,
+    -0.0130758788,
+    0.0568804555,
+    0.0349227563,
+    -0.0182732493,
+    -0.0517180748,
+    -0.0540330745,
+    -0.0160052106,
+    -0.0162729807,
+    -0.0052058883,
+    -0.0607028864,
+    -0.00863333512,
+    0.000563206035,
+    -0.0860833,
+    -0.0201332513,
+    -0.036234,
+    0.0554787517,
+    -0.052220542,
+    -0.00337367272,
+    0.00899997912,
+    0.0244785901,
+    -0.00435027201,
+    -0.034193,
+    0.0112929083,
+    -0.0368058383,
+    0.0294433199,
+    -0.037299145,
+    0.0441206545,
+    0.0483398847,
+    -0.00905837677,
+    -0.028778024,
+    -0.085007146,
+    0.0198504291,
+    -0.0108308457,
+    -0.0139528476,
+    0.00565573201,
+    -0.0399215035,
+    -0.0241438095,
+    -0.0420203768,
+    0.00230787485,
+    -0.00176144706,
+    0.0266537648,
+    0.037849661,
+    0.0741970539,
+    -0.0435942784,
+    -0.0285921469,
+    -0.000611237367,
+    -0.0267403666,
+    0.0300932638,
+    0.0661693737,
+    -0.0404354,
+    0.0322213694,
+    0.0653068051,
+    0.0275731441,
+    0.0167107061,
+    0.0776617453,
+    0.0599085502,
+    -0.0246187449,
+    -0.0619918928,
+    -0.0673928,
+    -0.0281807,
+    0.0196555685,
+    -0.0266405232,
+    0.0340277106,
+    0.06488,
+    -0.00711540179,
+    0.0823041871,
+    -0.0668595508,
+    0.021439584,
+    0.080535464,
+    0.0073197945,
+    0.0096044708,
+    0.00239866576,
+    -0.0280941091,
+    0.00073588267,
+    0.0117428871,
+    -0.0084753586,
+    -0.0505556092,
+    0.0494445413,
+    -0.0220552702,
+    0.00936195068,
+    -0.0152436234,
+    0.0222413111,
+    -0.0444422513,
+    -0.0405958518,
+    0.0166619532,
+    0.0628860667,
+    0.0485437289,
+    -0.0717500523,
+    -0.00953717902,
+    -0.0379416719,
+    0.00878854468,
+    0.00426735729,
+    -0.00484575611,
+    -0.0182194412,
+    0.0454375409,
+    0.0404963456,
+    -0.0257492214,
+    -0.0100121628,
+    -0.0418875217,
+    -0.000433798792,
+    -0.00228130142,
+    -0.04095928,
+    -0.00151532912,
+    -0.0715345219,
+    0.0397806391,
+    -0.0571243465,
+    0.00170651253,
+    0.0138284694,
+    0.00862129778,
+    0.0803249255,
+    -0.0476897135,
+    -0.0458803587,
+    0.0440731831,
+    -0.00898099411,
+    -0.00687847938,
+    0.0802257061,
+    -0.0229094941,
+    -0.0340121426,
+    -0.0203468222,
+    -0.00219141156,
+    -0.0251283534,
+    -0.084317036,
+    0.00042052989,
+    0.0500194393,
+    0.0212172046,
+    -0.00440378767,
+    -0.0719649866,
+    0.0169614125,
+    -0.033269532,
+    -0.00188188755,
+    0.0606773272,
+    -0.0472689867,
+    -0.0210873131,
+    -0.0713470429,
+    0.0322029367,
+    0.0633319765,
+    0.0011902363,
+    -0.0126880538,
+    0.0562533773,
+    -0.0527455,
+    -0.0298288,
+    0.0407601148,
+    -0.0104501983,
+    0.0467971563,
+    -0.0248761568,
+    0.07450708,
+    -0.00763840694,
+    -0.0480618887,
+    -0.0656035542,
+    -0.0329366513,
+    -0.0409633443,
+    0.0507986136,
+    0.0573326424,
+    0.0189225543,
+    0.0216131508,
+    0.0449859388,
+    -0.0335824676,
+    -0.0467652045,
+    0.0274760444,
+    -0.00727567123,
+    -0.0362224914,
+    -0.0658054,
+    0.0385895111,
+    0.0142565379,
+    0.0305101089,
+    -0.0503102131,
+    -0.0721812472,
+    -0.02556004,
+    -0.0449190177,
+    0.0150028858,
+    0.00650461763,
+    0.0768952519,
+    0.0154065806,
+    -0.0357150733,
+    -0.0100331036,
+    0.0504845232,
+    0.0140114175,
+    0.0658635497,
+    -0.0176754314,
+    -0.00243842555,
+    -0.00959324837,
+    0.0823050886,
+    -0.0573539175,
+    -0.0766106,
+    0.0295206,
+    -0.0183558613,
+    0.0544864573,
+    0.0606082901,
+    -0.00908348709,
+    -0.0667502,
+    0.0792469084,
+    0.00845992,
+    0.0384860337,
+    0.016708307,
+    0.0485670306,
+    0.0232119374,
+    -0.0682552904,
+    -0.0582320876,
+    -0.0629358962,
+    -0.0794342756,
+    -0.0746397078,
+    0.066097483,
+    -0.0641094819,
+    0.0367642939,
+    -0.0356021635,
+    -0.00620079,
+    0.0823266134,
+    0.00369981839,
+    0.0602284186,
+    0.0431393422,
+    0.0318341143,
+    -0.00432865834,
+    -0.0105248801,
+    -0.052814424,
+    -0.0732269287,
+    -0.00436480436,
+    0.00564533425,
+    0.0643646941,
+    0.00456917565,
+    -0.0692649782,
+    -0.0391269326,
+    -0.0138838012,
+    -0.0446648449,
+    -0.0386445411,
+    -0.0505916812,
+    -0.0486565977,
+    -0.00621534372,
+    0.0364284106,
+    -0.00462671369,
+    -0.0490468778,
+    -0.069421187,
+    0.0309291612,
+    -0.0426652096,
+    -0.00899783429,
+    -0.000494284846,
+    0.06874,
+    0.00629505049,
+    -0.0250546485,
+    0.0633724183,
+    0.0291004702,
+    -0.0522636138,
+    -0.0356313586,
+    0.0359160975,
+    0.00774721289,
+    -0.0509344526,
+    0.0119942678,
+    0.0685481355,
+    -0.0327161,
+    0.0223193858,
+    0.00996400137,
+    -0.036807321,
+    0.0564111546,
+    0.0811657533,
+    0.0129966717,
+    -0.0692918822,
+    -0.0560406968,
+    0.0322537869,
+    0.0635985807,
+    0.0706295818,
+    -0.0435206033,
+    0.0474403612,
+    0.000105611063,
+    -0.00467739068,
+    0.0575119592,
+    -0.05685018,
+    0.0361363627,
+    -0.0454656258,
+    -0.0715254247,
+    0.0859318227,
+    0.00123528554,
+    0.0612293631,
+    0.0213808343,
+    -0.0418567508,
+    -0.054354,
+    0.0000122772963,
+    0.0761192888,
+    0.0179834384,
+    -0.0295960046,
+    0.00771047687,
+    -0.0832807,
+    -0.0028424894,
+    0.00308403978,
+    0.0204570144,
+  ],
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
 }
 `;

@@ -21,8 +21,8 @@ Object {
       "slug": "/themes/83-rupture-conventionnelle",
     },
     Object {
-      "label": "Licenciement",
-      "slug": "/themes/84-licenciement",
+      "label": "Licenciement : droits des salariés et procédures",
+      "slug": "/themes/84-licenciement-droits-des-salaries-et-procedures",
     },
     Object {
       "label": "Retraite",
@@ -36,6 +36,11 @@ Object {
   "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,
   "refs": Array [
+    Object {
+      "source": "external",
+      "title": "",
+      "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
+    },
     Object {
       "source": "external",
       "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
@@ -75,6 +80,11 @@ Object {
       "source": "external",
       "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
       "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+    },
+    Object {
+      "source": "external",
+      "title": "",
+      "url": "/fiche-service-public/salarie-sans-papiers-quelles-regles-pour-la-rupture-du-contrat-de-travail",
     },
   ],
   "slug": "8-depart-de-lentreprise",
@@ -120,8 +130,8 @@ Object {
           "slug": "/themes/83-rupture-conventionnelle",
         },
         Object {
-          "label": "Licenciement",
-          "slug": "/themes/84-licenciement",
+          "label": "Licenciement : droits des salariés et procédures",
+          "slug": "/themes/84-licenciement-droits-des-salaries-et-procedures",
         },
         Object {
           "label": "Retraite",

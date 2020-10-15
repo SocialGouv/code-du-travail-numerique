@@ -5,7 +5,6 @@ import crypto from "crypto";
 import find from "unist-util-find";
 import { selectAll } from "unist-util-select";
 
-import { parseIdcc } from "..";
 import { getCourriers } from "../dataset/courrier-type";
 import { thematicFiles } from "../dataset/dossiers";
 import { getEditorialContents } from "../dataset/editorial_content";
@@ -71,24 +70,6 @@ async function getDuplicateSlugs(allDocuments) {
 async function* cdtnDocumentsGen() {
   const fichesMT = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
   fichesMT.forEach((article) => (article.slug = slugify(article.title)));
-
-  logger.info("=== Conventions Collectives ===");
-  yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title, shortTitle, url, effectif }) => {
-      return {
-        effectif,
-        excludeFromSearch: false,
-        id,
-        idcc: parseIdcc(num),
-        shortTitle,
-        slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
-        source: SOURCES.CCN,
-        text: `IDCC ${num} ${title}`,
-        title,
-        url,
-      };
-    }
-  );
 
   logger.info("=== Code du travail ===");
   yield selectAll(
@@ -317,7 +298,8 @@ async function* cdtnDocumentsGen() {
         ...data,
         answer: addGlossary(data.answer),
       })),
-      source: SOURCES.CCN_PAGE,
+      excludeFromSearch: false,
+      source: SOURCES.CCN,
     };
   });
 
