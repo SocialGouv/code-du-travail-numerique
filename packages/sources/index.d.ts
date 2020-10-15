@@ -1,17 +1,15 @@
-export as namespace cdtnSources
-
 export function getLabelBySource(src: SourceLabel): string
 
 export function getRouteBySource(src: SourceRoute): RouteValues
 
-export function getSourceByRoute(slug: string): SourceValues | null
+export function getSourceByRoute(slug: RouteValues): SourceRoute
 
-export const SOURCES:SOURCES
+export as namespace cdtnSources
 
-type SourceLabel = Exclude<SourceValues, "highlights" | "page_convention_collective" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
-type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
+const SOURCES: Sources
 
-type SOURCES = {
+
+type Sources = {
   CCN: "conventions_collectives",
   CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
@@ -52,6 +50,9 @@ type Routes = {
   [SOURCES.TOOLS]: "outils",
 }
 
-type SourceKeys = keyof SOURCES;
-type SourceValues = SOURCES[SourceKeys];
+type SourceKeys = keyof Sources;
+type SourceValues = Sources[SourceKeys];
+type RouteKeys = keyof Routes;
 type RouteValues = Routes[SourceRoute];
+type SourceLabel = Exclude<SourceValues, "highlights" | "page_convention_collective" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
+type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >

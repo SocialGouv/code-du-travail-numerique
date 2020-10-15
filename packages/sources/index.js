@@ -22,6 +22,7 @@ const SOURCES = {
 };
 
 // mapping elastic search source type -> route name
+/** @type {{[key in cdtnSources.SourceRoute]: cdtnSources.RouteValues}} */
 const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
   [SOURCES.CCN_PAGE]: "page-convention-collective",
@@ -58,7 +59,7 @@ const labelBySource = {
   [SOURCES.TOOLS]: "Outils",
 };
 
-const routes = /**@type {[import(".").SourceValues, string][]}*/ (Object.entries(
+const routes = /**@type {[import(".").SourceRoute, string][]}*/ (Object.entries(
   routeBySource
 ));
 
@@ -73,8 +74,10 @@ const getRouteBySource = (src) => routeBySource[src];
 // code-du-travail -> code_du_travail
 /** @type {cdtnSources.getSourceByRoute} */
 const getSourceByRoute = (slug) => {
-  const [source] = routes.find(([, value]) => slug === value) || [];
-  return source ? source : null;
+  const [src] = routes.flatMap(([source, route]) =>
+    route === slug ? [source] : []
+  );
+  return src;
 };
 
 module.exports = {

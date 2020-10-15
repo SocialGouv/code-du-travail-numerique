@@ -8,6 +8,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "lib": ["es2019"],
     "module": "commonjs",
   }
 }
