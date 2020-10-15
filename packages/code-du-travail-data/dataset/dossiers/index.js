@@ -411,8 +411,9 @@ const thematicFiles = [
         position: 11,
         refs: [
           {
-            title: "Conventions de FNE-Formation",
-            url: "/fiche-ministere-travail/conventions-de-fne-formation",
+            title: "Dispositif de FNE-Formation",
+            url:
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formationn",
           },
           {
             title: "Questions - Réponses : FNE-formation",
