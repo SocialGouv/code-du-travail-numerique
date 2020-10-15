@@ -25,7 +25,8 @@ describe("<Dropdown />", () => {
   });
   it("renders the dropdown when clicking the button", () => {
     const buttonLabel = "Click me";
-    const { getByText, container } = render(
+    const contentLabel = "Something that will show on click";
+    const { getByText, queryByText } = render(
       <Dropdown
         opener={(openDropdown) => (
           <Button
@@ -37,11 +38,11 @@ describe("<Dropdown />", () => {
           </Button>
         )}
       >
-        Something that will show on click
+        {contentLabel}
       </Dropdown>
     );
     const openButton = getByText(buttonLabel);
     openButton.click();
-    expect(container).toMatchSnapshot();
+    expect(queryByText(contentLabel)).toBeTruthy();
   });
 });

@@ -4,20 +4,21 @@ import React from "react";
 import { MoreContent } from ".";
 
 describe("<Grid />", () => {
-  const label = "Would you like to know more ?";
+  const actionLabel = "Would you like to know more ?";
+  const contentLabel = "Here’s some more";
   it("renders with an More icon", () => {
     const { container } = render(
-      <MoreContent title={label}>Here’s some more</MoreContent>
+      <MoreContent title={actionLabel}>{contentLabel}</MoreContent>
     );
     expect(container).toMatchSnapshot();
   });
   it("unfolds when clicked", () => {
-    const { getByText, container } = render(
-      <MoreContent title={label}>Here’s some more</MoreContent>
+    const { getByText, queryByText } = render(
+      <MoreContent title={actionLabel}>{contentLabel}</MoreContent>
     );
 
-    const unfoldButton = getByText(label);
+    const unfoldButton = getByText(actionLabel);
     unfoldButton.click();
-    expect(container).toMatchSnapshot();
+    expect(queryByText(contentLabel)).toBeTruthy();
   });
 });
