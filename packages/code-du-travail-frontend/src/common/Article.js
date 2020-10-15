@@ -25,7 +25,7 @@ const Article = ({
       <Wrapper variant="main" data-main-content>
         <Flex>
           <ShareContainer>
-            <Share />
+            <Share title={title} />
           </ShareContainer>
           {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
           <StyledPageTitle

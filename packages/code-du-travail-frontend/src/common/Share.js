@@ -6,7 +6,10 @@ import { matopush } from "../piwik";
 
 const { copyToClipboard } = utils;
 
-export const Share = () => {
+const POPUP_OPTIONS =
+  "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600";
+
+export const Share = ({ title }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
@@ -27,11 +30,9 @@ export const Share = () => {
           window.open(
             `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
               currentPageUrl
-            )}&quote=${encodeURI(
-              "Code du travail numérique : un contenu à lire"
-            )}`,
+            )}&quote=${encodeURIComponent(title)}`,
             "facebook_popup",
-            "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
+            POPUP_OPTIONS
           );
         }}
       >
@@ -40,9 +41,9 @@ export const Share = () => {
         </Circle>
       </StyledButton>
       <StyledLink
-        href={`mailto:?subject=${encodeURI(
+        href={`mailto:?subject=${encodeURIComponent(
           "Code du travail numérique : un contenu à lire"
-        )}&body=${currentPageUrl}`}
+        )}&body=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
         spacing="left"
         title="Envoyer par email"
         onClick={() => {
@@ -59,11 +60,11 @@ export const Share = () => {
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
           window.open(
-            `https://www.linkedin.com/shareArticle?mini=true&title=${encodeURI(
-              "Code du travail numérique"
+            `https://www.linkedin.com/shareArticle?mini=true&title=${encodeURIComponent(
+              title
             )}&url=${encodeURIComponent(currentPageUrl)}`,
             "linkedin_popup",
-            "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
+            POPUP_OPTIONS
           );
         }}
       >
@@ -87,7 +88,7 @@ export const Share = () => {
               if (window.navigator.share) {
                 try {
                   await window.navigator.share({
-                    text: `Code du travail numérique : ${currentPageUrl}`,
+                    text: `${title} : ${currentPageUrl}`,
                   });
                 } catch (error) {
                   showDropdown();
@@ -111,11 +112,11 @@ export const Share = () => {
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
             window.open(
-              `https://twitter.com/intent/tweet/?text=${encodeURI(
-                "Code du travail numérique : "
-              )}${encodeURIComponent(currentPageUrl)}`,
+              `https://twitter.com/intent/tweet/?text=${encodeURIComponent(
+                `${title} : ${currentPageUrl}`
+              )}`,
               "twitter_popup",
-              "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
+              POPUP_OPTIONS
             );
           }}
         >
@@ -157,11 +158,11 @@ export const Share = () => {
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
             window.open(
-              `https://wa.me/?text=${encodeURI(
-                "Code du travail numérique : "
-              )}${encodeURIComponent(currentPageUrl)}`,
+              `https://wa.me/?text=${encodeURIComponent(
+                `${title} : ${currentPageUrl}`
+              )}`,
               "whatsapp_popup",
-              "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600"
+              POPUP_OPTIONS
             );
           }}
         >

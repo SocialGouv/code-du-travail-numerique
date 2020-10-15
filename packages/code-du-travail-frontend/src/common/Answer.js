@@ -71,7 +71,7 @@ function Answer({
           {additionalContent}
           <ShareContainer>
             Partagez ce contenu&nbsp;:&nbsp;
-            <Share />
+            <Share title={title} />
           </ShareContainer>
           <Feedback
             query={router.query.q}

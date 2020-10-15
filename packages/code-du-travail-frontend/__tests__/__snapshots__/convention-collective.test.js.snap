@@ -504,7 +504,7 @@ exports[`<ConventionCollective /> should render 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
+            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=undefined%20%3A%20http%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >

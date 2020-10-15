@@ -2262,7 +2262,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </button>
                       <a
                         class="c40"
-                        href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
+                        href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F%20%3A%20http%3A%2F%2Flocalhost%2F"
                         spacing="left"
                         title="Envoyer par email"
                       >
@@ -2644,7 +2644,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </button>
                 <a
                   class="c40"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F%20%3A%20http%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -5345,7 +5345,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </button>
                       <a
                         class="c40"
-                        href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
+                        href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F%20%3A%20http%3A%2F%2Flocalhost%2F"
                         spacing="left"
                         title="Envoyer par email"
                       >
@@ -5727,7 +5727,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </button>
                 <a
                   class="c40"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20:%20un%20contenu%20%C3%A0%20lire&body=http://localhost/"
+                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F%20%3A%20http%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
