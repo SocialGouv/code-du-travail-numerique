@@ -72,6 +72,7 @@ class ModeleCourrier extends React.Component {
           relatedItems={relatedItems}
           emptyMessage="Modèle de document introuvable"
           intro={description}
+          metaDescription={metaDescription}
           date={date}
           breadcrumbs={breadcrumbs}
         >

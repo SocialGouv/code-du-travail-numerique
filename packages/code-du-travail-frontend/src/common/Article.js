@@ -19,13 +19,14 @@ const Article = ({
   subtitle,
   suptitle,
   title,
+  metaDescription,
 }) => {
   return (
     <Container>
       <Wrapper variant="main" data-main-content>
         <Flex>
           <ShareContainer>
-            <Share title={title} />
+            <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
           <StyledPageTitle
@@ -77,6 +78,8 @@ Article.propTypes = {
 
   dateLabel: PropTypes.string,
 
+  metaDescription: PropTypes.string,
+
   /** when user clicks some tag */
   onTagClick: PropTypes.func,
 
@@ -88,13 +91,13 @@ Article.propTypes = {
   style: PropTypes.object,
 
   subtitle: PropTypes.node,
-
   /** article title */
   title: PropTypes.string.isRequired,
 };
 
 Article.defaultProps = {
   dateLabel: "Mis à jour le",
+  metaDescription: "",
   subtitle: null,
 };
 

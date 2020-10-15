@@ -32,6 +32,7 @@ function Answer({
   emptyMessage = "Aucun résultat",
   html = null,
   intro = null,
+  metaDescription = "",
   relatedItems = [],
   source,
   subtitle,
@@ -55,6 +56,7 @@ function Answer({
               }
               subtitle={subtitle}
               title={title}
+              metaDescription={metaDescription}
               date={date}
               dateLabel={dateLabel}
               source={source}
@@ -71,7 +73,7 @@ function Answer({
           {additionalContent}
           <ShareContainer>
             Partagez ce contenu&nbsp;:&nbsp;
-            <Share title={title} />
+            <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           <Feedback
             query={router.query.q}

@@ -9,7 +9,7 @@ const { copyToClipboard } = utils;
 const POPUP_OPTIONS =
   "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600";
 
-export const Share = ({ title }) => {
+export const Share = ({ title, metaDescription }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
@@ -42,8 +42,10 @@ export const Share = ({ title }) => {
       </StyledButton>
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
-          "Code du travail numérique : un contenu à lire"
-        )}&body=${encodeURIComponent(`${title} : ${currentPageUrl}`)}`}
+          `A lire sur le code du travail numérique : ${title}`
+        )}&body=${`${encodeURIComponent(
+          `${metaDescription}\n\n${currentPageUrl}`
+        )}`}`}
         spacing="left"
         title="Envoyer par email"
         onClick={() => {
