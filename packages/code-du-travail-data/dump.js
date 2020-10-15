@@ -22,7 +22,7 @@ const excludeSources = [
   SOURCES.CCN_PAGE,
   SOURCES.VERSIONS,
 ];
-const nlpQueue = new PQueue({ concurrency: 10 });
+const nlpQueue = new PQueue({ concurrency: 5 });
 
 const monologQueue = new PQueue({ concurrency: 20 });
 
@@ -52,7 +52,7 @@ async function fetchVector(data) {
       });
   }
 
-  return data;
+  return Promise.resolve(data);
 }
 
 const dump = async () => {
