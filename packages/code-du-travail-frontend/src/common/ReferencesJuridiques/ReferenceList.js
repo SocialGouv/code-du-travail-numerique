@@ -2,17 +2,13 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { ArrowLink, FlatList, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
+import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
-import TYPE_REFERENCE from "./typeReference";
-
-const sanitizeCdtSlug = (slug) =>
-  slug.replace(/[^LRD\d-]+/gi, "").toLowerCase();
-
-const CodeDuTravailLink = ({ title, slug }) => (
+const InternalLink = ({ title, type, slug }) => (
   <Link
-    href={`/${getRouteBySource(SOURCES.CDT)}/[slug]`}
-    as={`/${getRouteBySource(SOURCES.CDT)}/${sanitizeCdtSlug(slug)}`}
+    href={`/${getRouteBySource(type)}/[slug]`}
+    as={`/${getRouteBySource(type)}/${slug}`}
     passHref
   >
     <StyledArrowLink rel="nofollow" arrowPosition="left">
@@ -21,20 +17,7 @@ const CodeDuTravailLink = ({ title, slug }) => (
   </Link>
 );
 
-const ConventionLink = ({ title, slug }) => (
-  <Link
-    href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-    as={`/${getRouteBySource(SOURCES.CCN)}/${slug}`}
-    passHref
-  >
-    <StyledArrowLink
-      rel="nofollow"
-      arrowPosition="left"
-    >{`Convention collective: ${title}`}</StyledArrowLink>
-  </Link>
-);
-
-const OtherLink = ({ title, url }) =>
+const ExternalLink = ({ title, url }) =>
   url ? (
     <StyledArrowLink
       href={url}
@@ -50,21 +33,41 @@ const OtherLink = ({ title, url }) =>
 
 const getLink = (reference) => {
   switch (reference.type) {
-    case TYPE_REFERENCE.codeDuTravail:
-      return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
-    case TYPE_REFERENCE.conventionCollective:
-      return <ConventionLink title={reference.title} slug={reference.slug} />;
+    case SOURCES.CDT:
+      return (
+        <InternalLink
+          slug={`${reference.slug}`}
+          title={`Article ${reference.title} du Code du travail`}
+          type={reference.type}
+        />
+      );
+    case SOURCES.CCN:
+      return (
+        <InternalLink
+          slug={reference.slug}
+          title={`Convention collective: ${reference.title}`}
+          type={reference.type}
+        />
+      );
+    case SOURCES.EXTERNALS:
+      return <ExternalLink title={reference.title} url={reference.url} />;
     default:
-      return <OtherLink title={reference.title} url={reference.url} />;
+      return null;
   }
 };
 
 const ReferenceList = ({ references }) => {
+  const seedId = useUIDSeed();
   return (
     <FlatList>
-      {references.map((reference) => (
-        <li key={`${reference.id}`}>{getLink(reference)}</li>
-      ))}
+      {references.flatMap((reference) => {
+        if (
+          [SOURCES.CCN, SOURCES.CDT, SOURCES.EXTERNALS].includes(reference.type)
+        ) {
+          return [<li key={seedId(reference)}>{getLink(reference)}</li>];
+        }
+        return [];
+      })}
     </FlatList>
   );
 };

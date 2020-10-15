@@ -47,7 +47,7 @@ const getFichesSP = () => {
         text,
         raw,
         date,
-        references_juridiques,
+        referencedTexts,
         url,
       }) => {
         const slug = slugify(title);
@@ -60,7 +60,7 @@ const getFichesSP = () => {
           excludeFromSearch: contribFicheId.includes(id),
           id,
           raw,
-          references_juridiques,
+          referencedTexts,
           slug,
           source: SOURCES.SHEET_SP,
           text,

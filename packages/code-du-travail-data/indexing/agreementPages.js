@@ -1,4 +1,5 @@
 import slugify from "@socialgouv/cdtn-slugify";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import contributions from "@socialgouv/contributions-data/data/contributions.json";
 import agreementsBlocks from "@socialgouv/datafiller-data/data/agreements.json";
 import allThemes from "@socialgouv/datafiller-data/data/themes.json";
@@ -80,9 +81,9 @@ function getNbText(agreementTree) {
  * param {agreementNum} string
  */
 function getContributionAnswers(agreementNum) {
-  const transformRef = ({ title, url, category, agreement }) => {
+  const transformRef = ({ title, url, agreement }) => {
     return {
-      category: category,
+      category: SOURCES.EXTERNALS,
       title,
       url: url || (agreement && agreement.url),
     };

@@ -2,12 +2,10 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Accordion, theme, Title } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
-import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
 import Html from "../../common/Html";
 import ReferencesJuridiques from "../../common/ReferencesJuridiques";
-import TYPE_REFERENCE from "../../common/ReferencesJuridiques/typeReference";
 import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
@@ -68,19 +66,17 @@ function Contributions({ contributions, convention }) {
 }
 
 function AccordionContent({ answer, slug, references }) {
-  const seedId = useUIDSeed();
   return (
     <>
       <Html>{answer}</Html>
       {references && (
         <StyledReferencesJuridiques
           references={references.map((reference) => ({
-            id: seedId(reference),
             title: reference.title,
             type:
               reference.category === "labour_code"
-                ? TYPE_REFERENCE.codeDuTravail
-                : TYPE_REFERENCE.external,
+                ? SOURCES.CDT
+                : SOURCES.EXTERNALS,
             url: reference.url,
           }))}
         />

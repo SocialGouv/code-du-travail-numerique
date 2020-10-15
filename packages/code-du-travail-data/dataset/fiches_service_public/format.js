@@ -1,4 +1,4 @@
-const parseReference = require("./parseReference");
+const parseReferences = require("./parseReference");
 
 const getChild = (element, name) =>
   element.children.find((el) => el.name === name);
@@ -41,21 +41,21 @@ const format = (fiche) => {
   const listeSituations = getText(getChild(publication, "ListeSituations"));
   const text = intro + " " + texte + " " + listeSituations;
 
-  const references_juridiques = publication.children
-    .filter((el) => el.name === "Reference")
-    .map(parseReference)
-    .reduce((acc, val) => acc.concat(val), []) // flatten the array
-    .filter(Boolean);
+  const references = publication.children.filter(
+    (el) => el.name === "Reference"
+  );
+
+  const referencedTexts = parseReferences(references);
 
   return {
     date,
+    description,
     id,
     raw: JSON.stringify(publication),
+    referencedTexts,
     text,
-    type,
-    references_juridiques,
     title,
-    description,
+    type,
     url,
   };
 };

@@ -2,29 +2,32 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import ReferenceList from "../ReferenceList";
-import TYPE_REFERENCE from "../typeReference";
 
 const references = [
   {
-    id: "L2323-4",
-    title: "Article xxx du code du travail",
-    type: TYPE_REFERENCE.codeDuTravail,
+    slug: "l2323-4",
+    title: "L2323-4",
+    type: "code_du_travail",
   },
   {
-    id: "yyy",
     title: "Article yyy du JO",
-    type: TYPE_REFERENCE.journalOfficiel,
+    type: "external",
+    url: "https://article.jo/yyy",
   },
   {
-    id: "zzz",
-    slug: "ma-convention-collective",
-    title: "Article zzz de la CC",
-    type: TYPE_REFERENCE.conventionCollective,
+    title: "CCN metallurgie",
+    type: "external",
+    url: "https://legifrance/ccn-metallurgie",
   },
   {
-    id: "R * 3321-2",
-    title: "Article zzz de la CC",
-    type: TYPE_REFERENCE.codeDuTravail,
+    slug: "123-automobile",
+    title: "automobile",
+    type: "conventions_collectives",
+  },
+  {
+    slug: "l1234-3",
+    title: "L1234-3",
+    type: "code_du_travail",
   },
 ];
 

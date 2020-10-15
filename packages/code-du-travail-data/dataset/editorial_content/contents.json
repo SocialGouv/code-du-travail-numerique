@@ -12,11 +12,13 @@
         "altText": "Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous.",
         "references": [
           {
+            "id": "JORFTEXT000041755940",
             "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, article 1",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
           },
           {
+            "id": "JORFTEXT000041755934",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
@@ -28,6 +30,7 @@
         "title": "Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
         "references": [
           {
+            "id": "JORFTEXT000042007059",
             "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 6",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
@@ -50,21 +53,25 @@
         "altText": "Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous.",
         "references": [
           {
+            "id": "JORFTEXT000041755940",
             "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 2 à 5",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
           },
           {
+            "id": "JORFTEXT000041755934",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
           },
           {
+            "id": "JORFTEXT000041776922",
             "title": "Ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel, article 7",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776922"
           },
           {
+            "id": "JORFTEXT000041776914",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776914"
@@ -96,11 +103,13 @@
         "name": "durees-maximales-travail",
         "references": [
           {
+            "id": "JORFTEXT000041755940",
             "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 6 et 7",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
           },
           {
+            "id": "JORFTEXT000041755934",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
@@ -121,16 +130,19 @@
         "name": "rupture-conventionnelle",
         "references": [
           {
+            "id": "JORFTEXT000041800899",
             "title": "Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19, article 2",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800899"
           },
           {
+            "id": "JORFTEXT000041800867",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800867"
           },
           {
+            "id": "JORFTEXT000041820235",
             "title": "Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d’état d’urgence sanitaire liée à l’épidémie de covid-19 dans le domaine du travail et de l’emploi",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041820235"
@@ -138,12 +150,14 @@
           {
             "title": "Article L1237-13 du code du travail",
             "id": "l1237-13",
-            "type": "code-du-travail"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071182"
           },
           {
             "title": "Article L1237-14 du code du travail",
             "id": "l1237-14",
-            "type": "code-du-travail"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071180"
           }
         ]
       }
@@ -191,16 +205,19 @@
     ],
     "references": [
       {
+        "id": "JORFTEXT000041776887",
         "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
         "type": "external",
         "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
       },
       {
+        "id": "JORFTEXT000041776882",
         "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
         "type": "external",
         "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
       },
       {
+        "id": "JORFTEXT000041789669",
         "title": "Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
         "type": "external",
         "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
@@ -220,34 +237,40 @@
         "name": "interessement-participation-1",
         "references": [
           {
+            "id": "JORFTEXT000041755930",
             "title": "Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire prévue à l’article L. 1226-1 du code du travail et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation, article 2",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930"
           },
           {
+            "id": "JORFTEXT000041755922",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755922"
           },
           {
+            "id": "JORFTEXT000041865244",
             "title": "Loi n° 2020-546 du 11 mai 2020 prorogeant l’état d’urgence sanitaire et complétant ses dispositions",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244"
           },
           {
+            "id": "LEGIARTI000041747466",
             "title": "Article L. 3131-15 du code de la santé publique",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072665&idArticle=LEGIARTI000041747466"
           },
           {
+            "id": "l3314-5",
             "title": "Article L. 3314-5 du code du travail",
-            "type": "code-du-travail",
-            "id": "l3314-5"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041979663"
           },
           {
+            "id": "l3324-6",
             "title": "Article L. 3324-6 du code du travail",
-            "type": "code-du-travail",
-            "id": "l3324-6"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000038613233"
           }
         ]
       }, {
@@ -256,14 +279,16 @@
         "name": "interessement-participation-2",
         "references": [
           {
+            "id": "JORFTEXT000041964070",
             "title": "Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l'épargne salariale en cas de violences conjugales",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
           },
           {
+            "id": "r3324-22",
             "title": "Article R. 3324-22 du code du travail",
-            "type": "code-du-travail",
-            "id": "r3324-22"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041973737"
           }
         ]
       }, {
@@ -277,9 +302,10 @@
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
           },
           {
+            "id": "l3312-5",
             "title": "Article L. 3312-5 du code du travail",
-            "type": "code-du-travail",
-            "id": "l3312-5"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000042012392"
           }
         ]
       }
@@ -297,21 +323,25 @@
         "name": "prime-exceptionnelle",
         "references": [
           {
+            "id": "JORFTEXT000041776879",
             "title": "Ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776879"
           },
           {
+            "id": "JORFTEXT000041776873",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776873"
           },
           {
+            "id": "JORFTEXT000041814597",
             "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 19",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
           },
           {
+            "id": "JORFTEXT000042176557",
             "title": "Loi n° 2020-935 du 30 juillet 2020 de finances rectificative pour 2020, article 3",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042176557"
@@ -332,29 +362,34 @@
         "name": "accord-collectif",
         "references": [
           {
+            "id": "JORFTEXT000041800927",
             "title": "Ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19, article 8",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800927"
           },
           {
+            "id": "JORFTEXT000041800918",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800918"
           },
           {
+            "id": "l2232-12",
             "title": "Article L. 2232-12 du code du travail",
-            "type": "code-du-travail",
-            "id": "l2232-12"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035652760"
           },
           {
+            "id": "l2232-21",
             "title": "Article L. 2232-21 du code du travail",
-            "type": "code-du-travail",
-            "id": "l2232-21"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000036761872"
           },
           {
+            "id": "l2232-25-1",
             "title": "Article L. 2232-25-1 du code du travail",
-            "type": "code-du-travail",
-            "id": "l2232-25-1"
+            "type": "code_du_travail",
+            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035616760"
           }
         ]
       }
@@ -372,11 +407,13 @@
         "name": "entretien-professionnel",
         "references": [
           {
+            "id": "JORFTEXT000041776899",
             "title": "Ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle, article 1",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776899"
           },
           {
+            "id": "JORFTEXT000041776895",
             "title": "Rapport au Président de la République relatif à l'ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776895"
@@ -397,11 +434,13 @@
         "name": "services-de-sante",
         "references": [
           {
+            "id": "JORFTEXT000041776887",
             "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, article 1 et 4",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
           },
           {
+            "id": "JORFTEXT000041776882",
             "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
             "type": "external",
             "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"

@@ -86,19 +86,62 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Article xxx du code du travail
+          Article L2323-4 du Code du travail
         </span>
       </a>
     </li>
     <li>
-      <div>
-        Article yyy du JO
-      </div>
+      <a
+        class="c1 c2 c3"
+        href="https://article.jo/yyy"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+      >
+        <svg
+          class="c4 c5"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="c6"
+        >
+          Article yyy du JO
+        </span>
+      </a>
     </li>
     <li>
       <a
         class="c1 c2 c3"
-        href="/convention-collective/ma-convention-collective"
+        href="https://legifrance/ccn-metallurgie"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+      >
+        <svg
+          class="c4 c5"
+          fill="none"
+          viewBox="0 0 28 15"
+        >
+          <path
+            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="c6"
+        >
+          CCN metallurgie
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="c1 c2 c3"
+        href="/convention-collective/123-automobile"
         rel="nofollow"
       >
         <svg
@@ -114,14 +157,14 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Convention collective: Article zzz de la CC
+          Convention collective: automobile
         </span>
       </a>
     </li>
     <li>
       <a
         class="c1 c2 c3"
-        href="/code-du-travail/r3321-2"
+        href="/code-du-travail/l1234-3"
         rel="nofollow"
       >
         <svg
@@ -137,7 +180,7 @@ exports[`<ReferenceList /> should render 1`] = `
         <span
           class="c6"
         >
-          Article zzz de la CC
+          Article L1234-3 du Code du travail
         </span>
       </a>
     </li>

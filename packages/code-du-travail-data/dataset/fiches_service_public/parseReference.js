@@ -1,10 +1,16 @@
 // Do we really need this one ?
-const find = require("unist-util-find");
 const queryString = require("query-string");
-const cdt = require("@socialgouv/legi-data/data/LEGITEXT000006072050.json");
-const conventions = require("@socialgouv/kali-data/data/index.json");
-
+const {
+  getCode,
+  getArticleWithParentSections,
+} = require("@socialgouv/legi-data");
+const { getAgreements } = require("@socialgouv/kali-data");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const slugify = require("@socialgouv/cdtn-slugify");
+const find = require("unist-util-find");
+
+const cdt = getCode("LEGITEXT000006072050");
+const agreements = getAgreements();
 
 const isConventionCollective = (qs) => qs.idConvention;
 const isCodeDuTravail = (qs) => qs.cidTexte === "LEGITEXT000006072050";
@@ -20,78 +26,80 @@ const getTextType = (qs) => {
   if (isJournalOfficiel(qs)) {
     return "journal-officiel";
   }
+  return "";
 };
 
-// resolve article.num in LEGI extract
-const getArticleNumFromId = (id) => {
-  const article = find(
-    cdt,
-    (node) => node.type === "article" && node.data.id === id
-  );
-  return article && article.data.num;
-};
-
-const getArticlesFromSection = (id) => {
-  const section = find(cdt, (node) => node.data.id === id);
-  if (section) {
-    return section.children
-      .filter((child) => child.type === "article")
-      .map((article) => createCDTRef(article.data.num));
+function fixArticleNum(id, num = "") {
+  if (num.match(/^annexe\s/i) && !num.includes("article")) {
+    return `${num} ${id}`;
   }
-  return [];
-};
+  return num;
+}
 
-const createCDTRef = (id) => ({
-  id: id.toLowerCase(),
-  title: `Article ${id} du code du travail`,
-  type: "code-du-travail",
+const createCDTRef = (node) => ({
+  slug: slugify(fixArticleNum(node.data.id, node.data.num)),
+  title: fixArticleNum(node.data.id, node.data.num),
+  type: SOURCES.CDT,
 });
 
-const createCCRef = (id, slug, title) => ({
-  id,
-  slug,
-  title,
-  type: "convention-collective",
-});
+const parseReferences = (references) => {
+  return references.flatMap((reference) => {
+    const { URL: url } = reference.attributes;
+    const qs = queryString.parse(url.split("?")[1]);
+    const type = getTextType(qs);
+    switch (type) {
+      case "code-du-travail":
+        if (qs.idArticle) {
+          // resolve related article num from CDT structure
+          try {
+            const article = getArticleWithParentSections(qs.idArticle);
+            return [createCDTRef(article)];
+          } catch (error) {
+            console.error(`[fiche-sp] Article not found ${qs.idArticle}`);
+            return [];
+          }
+        }
+        if (qs.idSectionTA) {
+          const section = find(cdt, (node) => node.data.id === qs.idSectionTA);
+          if (!section) {
+            return [];
+          }
+          return section.children
+            .filter((child) => child.type === "article")
+            .map((article) => createCDTRef(article));
+        }
+        return [];
 
-const createJORef = (id, title, url) => ({
-  id,
-  title,
-  type: "journal-officiel",
-  url,
-});
+      case "convention-collective": {
+        const convention = agreements.find(
+          (convention) => convention.id === qs.idConvention
+        );
+        if (!convention) {
+          return [];
+        }
+        const { num, shortTitle } = convention;
 
-const parseReference = (reference) => {
-  const { URL: url } = reference.attributes;
-  const qs = queryString.parse(url.split("?")[1]);
-  const type = getTextType(qs);
-  switch (type) {
-    case "code-du-travail":
-      if (qs.idArticle) {
-        // resolve related article num from CDT structure
-        const articleNum = getArticleNumFromId(qs.idArticle);
-        if (!articleNum) return [];
-        return [createCDTRef(articleNum)];
+        return [
+          {
+            slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+            title: shortTitle,
+            type: SOURCES.CCN,
+          },
+        ];
       }
-      if (qs.idSectionTA) {
-        // resolve related articles from CDT structure
-        return getArticlesFromSection(qs.idSectionTA);
-      }
-      break;
-    case "convention-collective": {
-      const { id, title, num, shortTitle } = conventions.find(
-        (convention) => convention.id === qs.idConvention
-      );
-      const slug = slugify(`${num}-${shortTitle}`.substring(0, 80)); // as in populate.js
-      return [createCCRef(id, slug, title)];
+
+      case "journal-officiel":
+        return [
+          {
+            title: reference.children[0].children[0].text,
+            type: SOURCES.EXTERNALS,
+            url,
+          },
+        ];
+      default:
+        return [];
     }
-    case "journal-officiel":
-      return [
-        createJORef(qs.cidTexte, reference.children[0].children[0].text, url),
-      ];
-    default:
-      return [];
-  }
+  });
 };
 
-module.exports = parseReference;
+module.exports = parseReferences;
