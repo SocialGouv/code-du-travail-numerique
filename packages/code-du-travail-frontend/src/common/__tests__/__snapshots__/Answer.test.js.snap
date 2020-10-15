@@ -706,7 +706,7 @@ exports[`<Answer /> should renders 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -879,7 +879,7 @@ exports[`<Answer /> should renders 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -1935,7 +1935,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 </button>
                 <a
                   class="c18"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -2113,7 +2113,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           </button>
           <a
             class="c18"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -2937,7 +2937,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -3110,7 +3110,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -4324,7 +4324,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -4494,7 +4494,7 @@ exports[`<Answer /> should renders related content 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -5600,7 +5600,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -5774,7 +5774,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -6598,7 +6598,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -6772,7 +6772,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -7596,7 +7596,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -7771,7 +7771,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
@@ -8595,7 +8595,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 </button>
                 <a
                   class="c10"
-                  href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   spacing="left"
                   title="Envoyer par email"
                 >
@@ -8765,7 +8765,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           </button>
           <a
             class="c10"
-            href="mailto:?subject=Code%20du%20travail%20num%C3%A9rique%20%3A%20un%20contenu%20%C3%A0%20lire&body=Article%20du%20code%20%3A%20http%3A%2F%2Flocalhost%2F"
+            href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             spacing="left"
             title="Envoyer par email"
           >
