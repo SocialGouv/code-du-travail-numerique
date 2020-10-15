@@ -43,16 +43,12 @@ const thematicFiles = [
         position: 2,
         refs: [
           {
-            title: "Personnes vulnérables : le nouveau dispositif",
-            url: "https://www.service-public.fr/particuliers/actualites/A14242",
-          },
-          {
             title: "Arrêt maladie : indemnités journalières versées au salarié",
             url:
               "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
           },
         ],
-        title: "Arrêt maladie et garde d’enfants",
+        title: "Arrêt maladie",
       },
       {
         icon: "Salary",
