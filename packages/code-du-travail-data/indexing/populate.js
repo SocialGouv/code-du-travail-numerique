@@ -31,22 +31,58 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  // logger.info("=== Editorial contents ===");
-  // const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
-  // console.error(documents);
-  // yield markdownTransform(documents);
+  logger.info("=== Editorial contents ===");
+  const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  yield markdownTransform(documents).map((doc) => ({
+    ...doc,
+    /**
+     * @TODO: this will needs to be changed for other editorial content
+     */
+    breadcrumbs: [
+      {
+        label: "Dossier Coronavirus-Covid 19",
+        slug: `/${getRouteBySource(
+          SOURCES.THEMATIC_FILES
+        )}/ministere-du-travail-notre-dossier-sur-le-coronavirus`,
+      },
+    ],
+  }));
 
-  // logger.info("=== Courriers ===");
-  // yield getDocumentBySource(SOURCES.LETTERS);
+  logger.info("=== Courriers ===");
+  const courriers = await getDocumentBySource(SOURCES.LETTERS);
+  yield courriers.map((courrier) => ({
+    ...courrier,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.LETTERS)}/${courrier.slug}`
+    ),
+  }));
 
-  // logger.info("=== Outils ===");
-  // yield getDocumentBySource(SOURCES.TOOLS);
+  logger.info("=== Outils ===");
+  const outils = await getDocumentBySource(SOURCES.TOOLS);
+  yield outils.map((outil) => ({
+    ...outil,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.TOOLS)}/${outil.slug}`
+    ),
+  }));
 
-  // logger.info("=== Outils externes ===");
-  // yield getDocumentBySource(SOURCES.EXTERNALS);
+  logger.info("=== Outils externes ===");
+  const externalTools = await getDocumentBySource(SOURCES.EXTERNALS);
+  yield externalTools.map((externalTool) => ({
+    ...externalTool,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.EXTERNALS)}/${externalTool.slug}`
+    ),
+  }));
 
-  // logger.info("=== Dossiers ===");
-  // yield getDocumentBySource(SOURCES.THEMATIC_FILES);
+  logger.info("=== Dossiers ===");
+  const dossiers = await getDocumentBySource(SOURCES.THEMATIC_FILES);
+  yield dossiers.map((dossier) => ({
+    ...dossier,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.THEMATIC_FILES)}/${dossier.slug}`
+    ),
+  }));
 
   logger.info("=== Code du travail ===");
   yield getDocumentBySource(SOURCES.CDT);
@@ -60,25 +96,47 @@ async function* cdtnDocumentsGen() {
         ...data,
         answer: addGlossary(data.answer),
       })),
-      excludeFromSearch: false,
       source: SOURCES.CCN,
     };
   });
 
   logger.info("=== Contributions ===");
-  yield getDocumentBySource(SOURCES.CONTRIBUTIONS);
+  const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
+  yield contributions.map(({ slug, answers, ...contribution }) => ({
+    ...contribution,
+    answers: {
+      ...answers,
+      generic: {
+        ...answers.generic,
+        markdown: addGlossary(answers.generic.markdown),
+      },
+    },
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
+    ),
+  }));
 
   logger.info("=== Fiches SP ===");
-  yield getDocumentBySource(SOURCES.SHEET_SP);
+  const fiches = await getDocumentBySource(SOURCES.SHEET_SP);
+  yield fiches.map((fiche) => ({
+    ...fiche,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.SHEET_SP)}/${fiche.slug}`
+    ),
+  }));
 
   logger.info("=== page fiches travail ===");
   const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
   yield fichesMT.map(({ sections, ...infos }) => ({
     ...infos,
-    sections: sections.map((html, ...section) => {
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.SHEET_MT_PAGE)}/${infos.slug}`
+    ),
+    sections: sections.map(({ html, ...section }) => {
       delete section.description;
       delete section.text;
       return {
+        html: addGlossary(html),
         ...section,
       };
     }),
@@ -86,24 +144,14 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Fiche MT(split) ===");
   const splittedFiches = fichesMT.flatMap(splitArticle);
-  yield splittedFiches.map(
-    ({ anchor, pubId, description, html, slug, text, title }) => {
-      return {
-        anchor,
-        breadcrumbs: getBreadcrumbs(
-          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug.replace(/#.*$/, "")}`
-        ),
-        description,
-        excludeFromSearch: false,
-        html,
-        id: pubId + (anchor ? `#${anchor}` : ""),
-        slug,
-        source: SOURCES.SHEET_MT,
-        text,
-        title,
-      };
-    }
-  );
+  console.log();
+  yield splittedFiches.map((fiche) => ({
+    ...fiche,
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug.replace(/#.*$/, "")}`
+    ),
+    source: SOURCES.SHEET_MT,
+  }));
 
   logger.info("=== Themes ===");
   yield themes.map(
