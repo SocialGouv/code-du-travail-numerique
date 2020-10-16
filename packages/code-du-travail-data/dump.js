@@ -22,7 +22,7 @@ const excludeSources = [
   SOURCES.CCN_PAGE,
   SOURCES.VERSIONS,
 ];
-const nlpQueue = new PQueue({ concurrency: 3 });
+const nlpQueue = new PQueue({ concurrency: 5 });
 
 const monologQueue = new PQueue({ concurrency: 20 });
 
@@ -52,7 +52,7 @@ async function fetchVector(data) {
       });
   }
 
-  return data;
+  return Promise.resolve(data);
 }
 
 const dump = async () => {
@@ -81,20 +81,22 @@ const dump = async () => {
     );
     const docs = await Promise.all(pDocs);
     await monologQueue.onIdle();
-
+    console.error("›› monolog done");
     // add NLP vectors
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {
+      console.error("›› fetched ", docs[0].source);
       const pDocs = docs.map((doc) =>
         nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
       );
-
       const docsWithData = await Promise.all(pDocs);
+      await nlpQueue.onIdle();
+      console.error("›› fetched vector");
       documents = documents.concat(docsWithData);
     }
   }
-  await nlpQueue.onIdle();
+  console.error("done");
   //eslint-disable-next-line no-console
   console.log(JSON.stringify(documents, 0, 2));
   console.error(`done in ${(Date.now() - t0) / 1000} s`);

@@ -1,14 +1,12 @@
 /** @type {cdtnSources.SOURCES} */
 const SOURCES = {
   CCN: "conventions_collectives",
-  CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
   CONTRIBUTIONS: "contributions",
   EDITORIAL_CONTENT: "information",
   EXTERNALS: "external",
   GLOSSARY: "glossary",
   HIGHLIGHTS: "highlights",
-  IDCC: "idcc",
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
   PREQUALIFIED: "prequalified",
@@ -25,13 +23,11 @@ const SOURCES = {
 /** @type {{[key in cdtnSources.SourceRoute]: cdtnSources.RouteValues}} */
 const routeBySource = {
   [SOURCES.CCN]: "convention-collective",
-  [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EDITORIAL_CONTENT]: "information",
   [SOURCES.EXTERNALS]: "external",
   [SOURCES.GLOSSARY]: "glossaire",
-  [SOURCES.IDCC]: "idcc",
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
@@ -49,7 +45,6 @@ const labelBySource = {
   [SOURCES.CONTRIBUTIONS]: "Contributions",
   [SOURCES.EDITORIAL_CONTENT]: "Information",
   [SOURCES.EXTERNALS]: "Outils externes",
-  [SOURCES.IDCC]: "Legifrance",
   [SOURCES.LABOUR_LAW]: "Le droit du travail",
   [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.SHEET_SP]: "service-public.fr",

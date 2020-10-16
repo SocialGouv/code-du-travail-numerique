@@ -4,7 +4,7 @@ export const idccPayload = {
       {
         _source: {
           id: "KALICONT000005635886",
-          idcc: 843,
+          num: 843,
           shortTitle: "Boulangerie-pâtisserie (entreprises artisanales)",
           slug: "843-boulangerie-patisserie-entreprises-artisanales",
           source: "conventions_collectives",
@@ -21,7 +21,7 @@ export const idccPayload = {
 };
 export const convention = {
   id: "KALICONT000005635691",
-  idcc: 1747,
+  num: 1747,
   shortTitle: "Activités industrielles de boulangerie et pâtisserie",
   slug: "1747-activites-industrielles-de-boulangerie-et-patisserie",
   source: "conventions_collectives",
@@ -560,7 +560,6 @@ export const agreement = {
   date_publi: "2018-07-01T00:00:00.000Z",
   id: "KALICONT000005635221",
   mtime: 1562614614,
-  nbTextes: 36,
   num: 1596,
   shortTitle: "Bâtiment Ouvriers (entreprises occupant jusqu'à 10 salariés)",
   slug: "1596-batiment-ouvriers-entreprises-occupant-jusqua-10-salaries",

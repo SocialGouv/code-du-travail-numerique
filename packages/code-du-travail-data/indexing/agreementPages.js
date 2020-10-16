@@ -40,7 +40,6 @@ function getAgreementPages() {
           blocksData && blocksData.groups
             ? getArticleByBlock(blocksData.groups, agreementTree)
             : [],
-        nbTextes: getNbText(agreementTree),
       };
     });
 }
@@ -49,31 +48,28 @@ function getAgreementPages() {
  * Get CCn geenral information
  * @param {Object} agreement
  */
-function getCCNInfo({ id, num, date_publi, mtime, title, shortTitle, url }) {
+function getCCNInfo({
+  effectif,
+  id,
+  num,
+  date_publi,
+  mtime,
+  title,
+  shortTitle,
+  url,
+}) {
   return {
     date_publi,
+    effectif,
     id,
     mtime,
     num,
     shortTitle,
     slug: slugify(`${num}-${shortTitle}`.substring(0, 80)),
+    text: `IDCC ${num} ${title}`,
     title,
     url,
   };
-}
-
-/**
- * Get CCn detailed informations about articles and texts
- */
-function getNbText(agreementTree) {
-  const texteDeBase = find(agreementTree, (node) =>
-    node.data.title.startsWith("Texte de base")
-  );
-  if (!texteDeBase) {
-    return;
-  }
-
-  return texteDeBase.children.length;
 }
 
 /**

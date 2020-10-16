@@ -8,9 +8,10 @@ Object {
       "_index": "cdtn_test_documents",
       "_score": 6.5976005,
       "_source": Object {
+        "cdtnId": "ceb38cca3c",
         "effectif": 219,
         "id": "KALICONT000023973390",
-        "idcc": 2701,
+        "num": 2701,
         "shortTitle": "Banque : personnel des banques de la Guyane",
         "slug": "2701-banque-personnel-des-banques-de-la-guyane",
         "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
@@ -33,11 +34,12 @@ Object {
     Object {
       "_id": "15",
       "_index": "cdtn_test_documents",
-      "_score": 13.961927,
+      "_score": 13.643704,
       "_source": Object {
+        "cdtnId": "647c224c9b",
         "effectif": 134889,
         "id": "KALICONT000005635886",
-        "idcc": 843,
+        "num": 843,
         "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
         "slug": "843-boulangerie-patisserie-entreprises-artisanales",
         "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
@@ -48,11 +50,12 @@ Object {
     Object {
       "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 12.858566,
+      "_score": 12.540343,
       "_source": Object {
+        "cdtnId": "16752da066",
         "effectif": 44699,
         "id": "KALICONT000005635691",
-        "idcc": 1747,
+        "num": 1747,
         "shortTitle": "Activités industrielles de boulangerie et pâtisserie",
         "slug": "1747-activites-industrielles-de-boulangerie-et-patisserie",
         "title": "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
@@ -61,7 +64,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.961927,
+  "max_score": 13.643704,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -75,11 +78,12 @@ Object {
     Object {
       "_id": "15",
       "_index": "cdtn_test_documents",
-      "_score": 13.768249,
+      "_score": 13.498247,
       "_source": Object {
+        "cdtnId": "647c224c9b",
         "effectif": 134889,
         "id": "KALICONT000005635886",
-        "idcc": 843,
+        "num": 843,
         "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
         "slug": "843-boulangerie-patisserie-entreprises-artisanales",
         "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
@@ -90,11 +94,12 @@ Object {
     Object {
       "_id": "14",
       "_index": "cdtn_test_documents",
-      "_score": 12.664887,
+      "_score": 12.394886,
       "_source": Object {
+        "cdtnId": "16752da066",
         "effectif": 44699,
         "id": "KALICONT000005635691",
-        "idcc": 1747,
+        "num": 1747,
         "shortTitle": "Activités industrielles de boulangerie et pâtisserie",
         "slug": "1747-activites-industrielles-de-boulangerie-et-patisserie",
         "title": "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
@@ -103,7 +108,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.768249,
+  "max_score": 13.498247,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -117,11 +122,12 @@ Object {
     Object {
       "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 14.745724,
+      "_score": 14.379156,
       "_source": Object {
+        "cdtnId": "a25dfc974f",
         "effectif": 216431,
         "id": "KALICONT000005635780",
-        "idcc": 2120,
+        "num": 2120,
         "shortTitle": "Banque",
         "slug": "2120-banque",
         "title": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.",
@@ -132,11 +138,12 @@ Object {
     Object {
       "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 8.388844,
+      "_score": 7.9892683,
       "_source": Object {
+        "cdtnId": "ceb38cca3c",
         "effectif": 219,
         "id": "KALICONT000023973390",
-        "idcc": 2701,
+        "num": 2701,
         "shortTitle": "Banque : personnel des banques de la Guyane",
         "slug": "2701-banque-personnel-des-banques-de-la-guyane",
         "title": "Convention collective du travail du personnel des banques de la Guyane du 18 décembre 2007",
@@ -145,7 +152,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.745724,
+  "max_score": 14.379156,
   "total": Object {
     "relation": "eq",
     "value": 2,

@@ -7,7 +7,7 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const formatCCn = ({ idcc: num, id, slug, title, shortTitle }) => ({
+const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
   id,
   num,
   shortTitle,

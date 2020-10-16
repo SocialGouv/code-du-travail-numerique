@@ -11,7 +11,6 @@ const SOURCES: Sources
 
 type Sources = {
   CCN: "conventions_collectives",
-  CCN_PAGE: "page_convention_collective",
   CDT: "code_du_travail",
   CONTRIBUTIONS: "contributions",
   EDITORIAL_CONTENT: "information",
@@ -33,7 +32,6 @@ type Sources = {
 
 type Routes = {
   [SOURCES.CCN]: "convention-collective",
-  [SOURCES.CCN_PAGE]: "page-convention-collective",
   [SOURCES.CDT]: "code-du-travail",
   [SOURCES.CONTRIBUTIONS]: "contribution",
   [SOURCES.EDITORIAL_CONTENT]: "information",
@@ -54,5 +52,5 @@ type SourceKeys = keyof Sources;
 type SourceValues = Sources[SourceKeys];
 type RouteKeys = keyof Routes;
 type RouteValues = Routes[SourceRoute];
-type SourceLabel = Exclude<SourceValues, "highlights" | "page_convention_collective" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
+type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
 type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >

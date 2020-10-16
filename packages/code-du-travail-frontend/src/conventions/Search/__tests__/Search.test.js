@@ -58,7 +58,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000001",
-                idcc: 275,
+                num: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
                 title: "titre convention 1",
@@ -67,7 +67,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000002",
-                idcc: 276,
+                num: 276,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
                 title: "titre convention 2",
@@ -95,7 +95,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000001",
-                idcc: 275,
+                num: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
                 title: "titre convention 1",
@@ -104,7 +104,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000002",
-                idcc: 4567,
+                num: 4567,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
                 title: "titre convention 2",
@@ -151,7 +151,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000001",
-                idcc: 275,
+                num: 275,
                 shortTitle: "small titre",
                 slug: "slug-convention-1",
                 title: "titre convention 1",
@@ -160,7 +160,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000002",
-                idcc: 4567,
+                num: 4567,
                 shortTitle: "smaller convention 2",
                 slug: "slug-convention-2",
                 title: "titre convention 2",
@@ -208,7 +208,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000001",
-                idcc: 275,
+                num: 275,
                 shortTitle: "titre convention 1",
                 slug: "slug-convention-1",
                 title: "titre convention 1",
@@ -254,7 +254,7 @@ describe("<Search />", () => {
             {
               _source: {
                 id: "KALICONT000000000001",
-                idcc: 275,
+                num: 275,
                 shortTitle: "small title 1",
                 slug: "slug-convention-1",
                 title: "titre convention 1",
