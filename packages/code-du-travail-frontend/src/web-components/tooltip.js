@@ -1,6 +1,7 @@
+import { utils } from "@socialgouv/cdtn-ui/";
 import { css, html, LitElement } from "lit-element";
 
-import { throttledDisplayInViewport } from "./utils";
+const { throttledDisplayInViewport } = utils;
 
 class WebComponentsTooltip extends LitElement {
   static get properties() {

@@ -14,6 +14,7 @@ import { Breadcrumbs } from "./Breadcrumbs";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";
+import { Share } from "./Share";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
@@ -31,6 +32,7 @@ function Answer({
   emptyMessage = "Aucun résultat",
   html = null,
   intro = null,
+  metaDescription = "",
   relatedItems = [],
   source,
   subtitle,
@@ -54,6 +56,7 @@ function Answer({
               }
               subtitle={subtitle}
               title={title}
+              metaDescription={metaDescription}
               date={date}
               dateLabel={dateLabel}
               source={source}
@@ -68,6 +71,10 @@ function Answer({
             </Article>
           )}
           {additionalContent}
+          <ShareContainer>
+            Partagez ce contenu&nbsp;:&nbsp;
+            <Share title={title} metaDescription={metaDescription} />
+          </ShareContainer>
           <Feedback
             query={router.query.q}
             sourceType={source && source.name}
@@ -106,5 +113,17 @@ const IntroWrapper = styled(Wrapper)`
   }
   & div > *:last-child {
     margin-bottom: 0;
+  }
+`;
+
+const ShareContainer = styled(Container)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: ${spacings.small};
+  margin-bottom: ${spacings.base};
+  font-weight: bold;
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: flex-start;
   }
 `;

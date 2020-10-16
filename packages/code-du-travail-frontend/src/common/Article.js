@@ -9,6 +9,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
+import { Share } from "./Share";
+
 const Article = ({
   children,
   date,
@@ -17,41 +19,51 @@ const Article = ({
   subtitle,
   suptitle,
   title,
+  metaDescription,
 }) => {
   return (
     <Container>
       <Wrapper variant="main" data-main-content>
-        {suptitle && <Suptitle>{suptitle}</Suptitle>}
-        <StyledPageTitle
-          tabIndex="-1"
-          data-next-focus-root
-          subtitle={subtitle}
-          stripe="left"
-          shift={theme.spacings.larger}
-        >
-          {title}
-        </StyledPageTitle>
-        <Meta>
-          {source &&
-            (source.url ? (
+        <Flex>
+          <ShareContainer>
+            <Share title={title} metaDescription={metaDescription} />
+          </ShareContainer>
+          {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
+          <StyledPageTitle
+            tabIndex="-1"
+            data-next-focus-root
+            subtitle={subtitle}
+            stripe="left"
+            shift={theme.spacings.larger}
+          >
+            {title}
+          </StyledPageTitle>
+          <Meta>
+            {source &&
+              (source.url ? (
+                <Span>
+                  Source:{" "}
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {source.name}
+                  </a>
+                </Span>
+              ) : (
+                <Span>Source: {source.name}</Span>
+              ))}
+            {source && date && (
+              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+            )}
+            {date && (
               <Span>
-                Source:{" "}
-                <a href={source.url} target="_blank" rel="noopener noreferrer">
-                  {source.name}
-                </a>
+                {dateLabel}&nbsp;:&nbsp;{date}
               </Span>
-            ) : (
-              <Span>Source: {source.name}</Span>
-            ))}
-          {source && date && (
-            <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-          )}
-          {date && (
-            <Span>
-              {dateLabel}&nbsp;:&nbsp;{date}
-            </Span>
-          )}
-        </Meta>
+            )}
+          </Meta>
+        </Flex>
         <Content>{children}</Content>
       </Wrapper>
     </Container>
@@ -66,6 +78,8 @@ Article.propTypes = {
 
   dateLabel: PropTypes.string,
 
+  metaDescription: PropTypes.string,
+
   /** when user clicks some tag */
   onTagClick: PropTypes.func,
 
@@ -77,13 +91,13 @@ Article.propTypes = {
   style: PropTypes.object,
 
   subtitle: PropTypes.node,
-
   /** article title */
   title: PropTypes.string.isRequired,
 };
 
 Article.defaultProps = {
   dateLabel: "Mis à jour le",
+  metaDescription: "",
   subtitle: null,
 };
 
@@ -91,18 +105,43 @@ export default Article;
 
 const { breakpoints, fonts, spacings } = theme;
 
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ShareContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  order: 1;
+  margin-bottom: ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: flex-start;
+    order: 5;
+    margin-top: ${spacings.small};
+    margin-bottom: 0;
+  }
+`;
+
+const OrderedSuptitle = styled(Suptitle)`
+  order: 2;
+`;
+
+const StyledPageTitle = styled(PageTitle)`
+  order: 3;
+  margin-bottom: ${spacings.small};
+  outline: none;
+`;
+
 const Meta = styled.div`
   display: flex;
+  order: 4;
   font-size: ${fonts.sizes.small};
   @media (max-width: ${breakpoints.mobile}) {
     flex-flow: column;
     align-items: flex-start;
   }
-`;
-
-const StyledPageTitle = styled(PageTitle)`
-  margin-bottom: ${spacings.small};
-  outline: none;
 `;
 
 const Content = styled.div`

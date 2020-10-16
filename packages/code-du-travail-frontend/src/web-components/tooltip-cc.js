@@ -1,7 +1,9 @@
+import { utils } from "@socialgouv/cdtn-ui/";
 import { css, html, LitElement } from "lit-element";
 
 import { matopush } from "../piwik";
-import { throttledDisplayInViewport } from "./utils";
+
+const { throttledDisplayInViewport } = utils;
 
 class WebComponentsTooltipCC extends LitElement {
   static get properties() {

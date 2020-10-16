@@ -1,9 +1,9 @@
 export const displayInViewport = (target, root) => {
   const rootBoundaries = root.getBoundingClientRect();
   const viewportHeight =
-    window.innerHeight || document.documentElement.clientHeight;
+    document.documentElement.clientHeight || window.innerHeight;
   const viewportWidth =
-    window.innerWidth || document.documentElement.clientWidth;
+    document.documentElement.clientWidth || window.innerWidth;
 
   target.style.display = "block";
   target.style.top = root.offsetHeight + "px";
@@ -21,8 +21,7 @@ export const displayInViewport = (target, root) => {
     target.style.left = leftShift - targetBounding.left + 10 + "px";
   }
   if (targetBounding.bottom > viewportHeight) {
-    // don't make it go top if it's below header ~= 130 px at max on mobile
-    if (rootBoundaries.top - target.offsetHeight > 130) {
+    if (rootBoundaries.top - target.offsetHeight > 0) {
       target.style.top = -Math.round(target.offsetHeight) + "px";
     }
   }

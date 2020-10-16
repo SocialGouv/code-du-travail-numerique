@@ -20,10 +20,10 @@ export const BurgerNav = ({ currentPage }) => (
       </AccessibilityModal>
       {currentPage !== "tools" ? (
         <Link href="/outils" passHref>
-          <NavAnchor>Boîte à outils</NavAnchor>
+          <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
         </Link>
       ) : (
-        <NavCurrent>Boîte à outils</NavCurrent>
+        <NavCurrent>Boîte&nbsp;à&nbsp;outils</NavCurrent>
       )}
       {currentPage !== "themes" ? (
         <Link href="/themes" passHref>

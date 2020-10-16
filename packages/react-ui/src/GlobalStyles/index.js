@@ -1,5 +1,6 @@
 import React from "react";
 
+import Buttons from "./components/Buttons";
 import Figures from "./components/Figures";
 import Headings from "./components/Headings";
 import Links from "./components/Links";
@@ -10,6 +11,7 @@ import Root from "./components/Root";
 
 export const GlobalStyles = () => (
   <>
+    <Buttons />
     <Figures />
     <Headings />
     <Links />

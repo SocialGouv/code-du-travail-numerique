@@ -2484,14 +2484,6 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@reach/auto-id@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.11.2.tgz#c66a905c5401d1ac3da8d26165b8d27d6e778fa6"
-  integrity sha512-YZ21b0Kb88wJ0t7QjSznWOYskARQMnmXY9Y2XZ5RyYcZ2krT4s3+ghghpfaPs6BKcrZDonZCrU65OFDJPa1jAw==
-  dependencies:
-    "@reach/utils" "0.11.2"
-    tslib "^2.0.0"
-
 "@reach/dialog@0.11.2":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.11.2.tgz#44d99b4918cb211d4458f7cce3bee01c27c9c8ed"
@@ -2504,27 +2496,12 @@
     react-remove-scroll "^2.3.0"
     tslib "^2.0.0"
 
-"@reach/observe-rect@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@reach/observe-rect/-/observe-rect-1.2.0.tgz#d7a6013b8aafcc64c778a0ccb83355a11204d3b2"
-  integrity sha512-Ba7HmkFgfQxZqqaeIWWkNK0rEhpxVQHIoVyW1YDSkGsGIXzcaW4deC8B0pZrNSSyLTdIk7y+5olKt5+g0GmFIQ==
-
 "@reach/portal@0.11.2":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.11.2.tgz#19a671be9ff010a345892b81e710cb6e4d9f9762"
   integrity sha512-/53A/rY5oX2Y7D5TpvsP+V5cSd+4MPY6f21mAmVn4DCVwpkCFOlJ059ZL7ixS85M0Jz48YQnnvBJUqwkxqUG/g==
   dependencies:
     "@reach/utils" "0.11.2"
-    tslib "^2.0.0"
-
-"@reach/rect@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@reach/rect/-/rect-0.11.2.tgz#bc92f97f87e81d1307054fd41c40874d3fbf5491"
-  integrity sha512-eoUWayAADi1ITtrc+8jN9NsBTUkfpORkOs5bQb4RnR6UA/3zlxo5VPuxWgWAG0BCohZlqsxg7NpvckNAyaiAAQ==
-  dependencies:
-    "@reach/observe-rect" "1.2.0"
-    "@reach/utils" "0.11.2"
-    prop-types "^15.7.2"
     tslib "^2.0.0"
 
 "@reach/router@^1.3.3":
@@ -2537,19 +2514,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@reach/tooltip@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@reach/tooltip/-/tooltip-0.11.2.tgz#db5c11fa72995801baac157db46f5bb6cacd494b"
-  integrity sha512-aTi3aLkRZMHrNiHt84vnyTWNj84rPdGYkxAfaFpxgkaKpos3XmaOPiR+n/3YzQUoJXISuw8mZezcrDtsSpr3aA==
-  dependencies:
-    "@reach/auto-id" "0.11.2"
-    "@reach/portal" "0.11.2"
-    "@reach/rect" "0.11.2"
-    "@reach/utils" "0.11.2"
-    "@reach/visually-hidden" "0.11.1"
-    prop-types "^15.7.2"
-    tslib "^2.0.0"
-
 "@reach/utils@0.11.2":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.11.2.tgz#be1f03650db56fd67a16d3fc70e5262cdb139cec"
@@ -2558,13 +2522,6 @@
     "@types/warning" "^3.0.0"
     tslib "^2.0.0"
     warning "^4.0.3"
-
-"@reach/visually-hidden@0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.11.1.tgz#3d7a5742acf18372f35b9e216680edd8073f35e3"
-  integrity sha512-TZZNSttor2jG6ZPGI35s/8G0FNSz49QrJIhAZbnUqHyPf3+jtNqAC0dOWW8Nuk+mApDDDVYd2KZ9P2vnzllNnQ==
-  dependencies:
-    tslib "^2.0.0"
 
 "@rollup/plugin-commonjs@^15.1.0":
   version "15.1.0"
@@ -4469,6 +4426,11 @@ archy@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/archy/-/archy-1.0.0.tgz#f9c8c13757cc1dd7bc379ac77b2c62a5c2868c40"
   integrity sha1-+cjBN1fMHde8N5rHeyxipcKGjEA=
+
+are-passive-events-supported@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/are-passive-events-supported/-/are-passive-events-supported-1.1.1.tgz#3db180a1753a2186a2de50a32cded3ac0979f5dc"
+  integrity sha512-5wnvlvB/dTbfrCvJ027Y4L4gW/6Mwoy1uFSavney0YO++GU+0e/flnjiBBwH+1kh7xNCgCOGvmJC3s32joYbww==
 
 are-we-there-yet@~1.1.2:
   version "1.1.5"
@@ -19057,6 +19019,14 @@ use-latest@^1.0.0:
   integrity sha512-gF04d0ZMV3AMB8Q7HtfkAWe+oq1tFXP6dZKwBHQF5nVXtGsh2oAYeeqma5ZzxtlpOcW8Ro/tLcfmEodjDeqtuw==
   dependencies:
     use-isomorphic-layout-effect "^1.0.0"
+
+use-onclickoutside@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/use-onclickoutside/-/use-onclickoutside-0.3.1.tgz#fdd723a6a499046b6bc761e4a03af432eee5917b"
+  integrity sha512-aahvbW5+G0XJfzj31FJeLsvc6qdKbzeTsQ8EtkHHq5qTg6bm/qkJeKLcgrpnYeHDDbd7uyhImLGdkbM9BRzOHQ==
+  dependencies:
+    are-passive-events-supported "^1.1.0"
+    use-latest "^1.0.0"
 
 use-sidecar@^1.0.1:
   version "1.0.2"
