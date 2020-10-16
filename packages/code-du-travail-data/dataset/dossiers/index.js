@@ -34,7 +34,7 @@ const thematicFiles = [
           {
             title: "Dispositif de FNE-Formation",
             url:
-              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formationn",
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formation",
           },
         ],
         title: "Les contenus populaires",
@@ -415,7 +415,7 @@ const thematicFiles = [
           {
             title: "Dispositif de FNE-Formation",
             url:
-              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formationn",
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formation",
           },
           {
             title: "Questions - Réponses : formation professionnelle stagiaire",
