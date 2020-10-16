@@ -7,18 +7,19 @@ const thematicFiles = [
         position: 1,
         refs: [
           {
-            title: "Personnes vulnérables : le nouveau dispositif",
-            url: "https://www.service-public.fr/particuliers/actualites/A14242",
+            title:
+              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+            url:
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/protocole-national-sante-securite-salaries",
           },
           {
             title: "Activité partielle – chômage partiel",
             url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
           },
           {
-            title:
-              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+            title: "Aide à l’embauche des jeunes de moins de 26 ans",
             url:
-              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
+              "/fiche-service-public/aide-a-lembauche-dun-jeune-de-moins-de-26-ans",
           },
           {
             title:
@@ -31,8 +32,9 @@ const thematicFiles = [
             url: "/information/conges-payes-nouveautes-covid-19",
           },
           {
-            title: "Conventions de FNE-Formation",
-            url: "/fiche-ministere-travail/conventions-de-fne-formation",
+            title: "Dispositif de FNE-Formation",
+            url:
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formation",
           },
         ],
         title: "Les contenus populaires",
@@ -43,16 +45,12 @@ const thematicFiles = [
         position: 2,
         refs: [
           {
-            title: "Personnes vulnérables : le nouveau dispositif",
-            url: "https://www.service-public.fr/particuliers/actualites/A14242",
-          },
-          {
             title: "Arrêt maladie : indemnités journalières versées au salarié",
             url:
               "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
           },
         ],
-        title: "Arrêt maladie et garde d’enfants",
+        title: "Arrêt maladie",
       },
       {
         icon: "Salary",
@@ -366,7 +364,7 @@ const thematicFiles = [
             title:
               "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
             url:
-              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/protocole-national-sante-securite-salaries",
           },
           {
             title:
@@ -415,12 +413,9 @@ const thematicFiles = [
         position: 11,
         refs: [
           {
-            title: "Conventions de FNE-Formation",
-            url: "/fiche-ministere-travail/conventions-de-fne-formation",
-          },
-          {
-            title: "Questions - Réponses : FNE-formation",
-            url: "/fiche-ministere-travail/fne-formation",
+            title: "Dispositif de FNE-Formation",
+            url:
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formation",
           },
           {
             title: "Questions - Réponses : formation professionnelle stagiaire",
