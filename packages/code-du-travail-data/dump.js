@@ -26,15 +26,6 @@ const nlpQueue = new PQueue({ concurrency: 5 });
 
 const monologQueue = new PQueue({ concurrency: 20 });
 
-const hashFunction = hashFunctionBuilder();
-// these sources do not need unique CDTN id
-const noIdSources = [
-  SOURCES.HIGHLIGHTS,
-  SOURCES.GLOSSARY,
-  SOURCES.PREQUALIFIED,
-  SOURCES.VERSIONS,
-];
-
 async function fetchVector(data) {
   if (NLP_URL) {
     if (!data.title)
@@ -64,16 +55,8 @@ const dump = async () => {
     console.error(`NLP_URL not defined, semantic search will be disabled.`);
   }
 
-  for await (const docsNoIds of cdtnDocumentsGen()) {
-    console.error(`› ${docsNoIds[0].source}... ${docsNoIds.length} items`);
-
-    // add CDTN specific ids to docs
-    const docsIds = docsNoIds.map((doc) => {
-      if (!noIdSources.includes(doc.source)) {
-        doc.cdtnId = hashFunction(doc);
-      }
-      return doc;
-    });
+  for await (const docsIds of cdtnDocumentsGen()) {
+    console.error(`› ${docsIds[0].source}... ${docsIds.length} items`);
 
     // add covisits using pQueue (there is a plan to change this : see #2915)
     const pDocs = docsIds.map((doc) =>
@@ -81,22 +64,18 @@ const dump = async () => {
     );
     const docs = await Promise.all(pDocs);
     await monologQueue.onIdle();
-    console.error("›› monolog done");
     // add NLP vectors
     if (excludeSources.includes(docs[0].source)) {
       documents = documents.concat(docs);
     } else {
-      console.error("›› fetched ", docs[0].source);
       const pDocs = docs.map((doc) =>
         nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
       );
       const docsWithData = await Promise.all(pDocs);
       await nlpQueue.onIdle();
-      console.error("›› fetched vector");
       documents = documents.concat(docsWithData);
     }
   }
-  console.error("done");
   //eslint-disable-next-line no-console
   console.log(JSON.stringify(documents, 0, 2));
   console.error(`done in ${(Date.now() - t0) / 1000} s`);

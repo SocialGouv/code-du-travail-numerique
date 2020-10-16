@@ -2,6 +2,7 @@ import slugify from "@socialgouv/cdtn-slugify";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
 
+import { markdownTransform } from "../dataset/editorial_content";
 import { addGlossary } from "./addGlossary";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { getDocumentBySource } from "./fetchCdtnAdminDocuments";
@@ -10,7 +11,6 @@ import { logger } from "./logger";
 import { getVersions } from "./versions";
 
 const getBreadcrumbs = createThemer(themes);
-
 
 /**
  * Find duplicate slugs
@@ -31,27 +31,28 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  logger.info("=== Editorial contents ===");
-  const documents = getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
-  yield markdownTransform(documents);
+  // logger.info("=== Editorial contents ===");
+  // const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  // console.error(documents);
+  // yield markdownTransform(documents);
 
-  logger.info("=== Courriers ===");
-  yield getDocumentBySource(SOURCES.LETTERS);
+  // logger.info("=== Courriers ===");
+  // yield getDocumentBySource(SOURCES.LETTERS);
 
-  logger.info("=== Outils ===");
-  yield getDocumentBySource(SOURCES.TOOLS);
+  // logger.info("=== Outils ===");
+  // yield getDocumentBySource(SOURCES.TOOLS);
 
-  logger.info("=== Outils externes ===");
-  yield getDocumentBySource(SOURCES.EXTERNALS);
+  // logger.info("=== Outils externes ===");
+  // yield getDocumentBySource(SOURCES.EXTERNALS);
 
-  logger.info("=== Dossiers ===");
-  yield getDocumentBySource(SOURCES.THEMATIC_FILES);
+  // logger.info("=== Dossiers ===");
+  // yield getDocumentBySource(SOURCES.THEMATIC_FILES);
 
   logger.info("=== Code du travail ===");
   yield getDocumentBySource(SOURCES.CDT);
 
   logger.info("=== Conventions Collectives ===");
-  const ccnData = getDocumentBySource(SOURCES.CCN);
+  const ccnData = await getDocumentBySource(SOURCES.CCN);
   yield ccnData.map(({ ...content }) => {
     return {
       ...content,
@@ -62,7 +63,7 @@ async function* cdtnDocumentsGen() {
       excludeFromSearch: false,
       source: SOURCES.CCN,
     };
-  }););
+  });
 
   logger.info("=== Contributions ===");
   yield getDocumentBySource(SOURCES.CONTRIBUTIONS);
@@ -71,7 +72,7 @@ async function* cdtnDocumentsGen() {
   yield getDocumentBySource(SOURCES.SHEET_SP);
 
   logger.info("=== page fiches travail ===");
-  const fichesMT = getDocumentBySource(SOURCES.SHEET_MT_PAGE);
+  const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
   yield fichesMT.map(({ sections, ...infos }) => ({
     ...infos,
     sections: sections.map((html, ...section) => {
@@ -79,8 +80,8 @@ async function* cdtnDocumentsGen() {
       delete section.text;
       return {
         ...section,
-      }
-    })
+      };
+    }),
   }));
 
   logger.info("=== Fiche MT(split) ===");
@@ -171,6 +172,5 @@ async function* cdtnDocumentsGen() {
     },
   ];
 }
-
 
 export { getDuplicateSlugs, cdtnDocumentsGen };

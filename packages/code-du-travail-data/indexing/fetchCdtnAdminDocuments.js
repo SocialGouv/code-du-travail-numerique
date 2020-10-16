@@ -1,6 +1,7 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import allThemes from "@socialgouv/datafiller-data/data/themes.json";
 import fetch from "node-fetch";
+import PQueue from "p-queue";
 
 import { createThemer } from "./breadcrumbs";
 
@@ -18,13 +19,18 @@ const fixBreadcrumbs = (source) => {
   }
   return [];
 };
-const CDTN_ADMIN_ENDPOINT =
-  process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:3000/api/graphql";
 
-const gqlRequestBySource = (source) =>
+const LIMIT = 50;
+const CDTN_ADMIN_ENDPOINT =
+  process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
+
+const gqlRequestBySource = (source, limit = LIMIT, offset = 0) =>
   JSON.stringify({
     query: `{
-  documents(where: {source: {_eq: "${source}"}}){
+  documents(
+    limit: ${limit}
+    offset: ${offset}
+    where: {source: {_eq: "${source}"}}) {
     id:initial_id
     cdtnId:cdtn_id
     title
@@ -39,13 +45,40 @@ const gqlRequestBySource = (source) =>
 }`,
   });
 
-export function getDocumentBySource(source) {
-  return fetch(CDTN_ADMIN_ENDPOINT, {
-    body: gqlRequestBySource(source),
+const gqlAgreggateDocumentBySource = (source) =>
+  JSON.stringify({
+    query: `{
+  documents_aggregate(where: {source: {_eq: "${source}"}}){
+    aggregate {
+      count
+    }
+  }
+}`,
+  });
+
+export async function getDocumentBySource(source) {
+  const nbDocResult = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: gqlAgreggateDocumentBySource(source),
     method: "POST",
-  })
-    .then((r) => r.json())
-    .then(({ data }) => data.documents.map(toElastic));
+  }).then((r) => r.json());
+
+  const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
+  const queue = new PQueue({ concurrency: 5 });
+
+  const pDocuments = Array.from(
+    { length: Math.ceil(nbDoc / LIMIT) },
+    (_, i) => i
+  ).map((index) => {
+    return queue.add(() =>
+      fetch(CDTN_ADMIN_ENDPOINT, {
+        body: gqlRequestBySource(source, LIMIT, index * LIMIT),
+        method: "POST",
+      })
+        .then((r) => r.json())
+        .then(({ data }) => data.documents)
+    );
+  });
+  return (await Promise.all(pDocuments)).flatMap((docs) => docs.map(toElastic));
 }
 
 function toElastic({
