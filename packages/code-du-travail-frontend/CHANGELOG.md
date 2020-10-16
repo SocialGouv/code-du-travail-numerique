@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.32.0...v4.33.0) (2020-10-16)
+
+
+### Features
+
+* **frontend:** add share buttons ([#3046](https://github.com/SocialGouv/code-du-travail-numerique/issues/3046)) ([2bfe444](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bfe4441e7db490d1dd9cbdc3d0dad8fea328c8b))
+
+
+
+
+
 # [4.32.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1...v4.32.0) (2020-10-12)
 
 
