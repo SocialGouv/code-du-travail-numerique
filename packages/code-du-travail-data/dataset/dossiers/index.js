@@ -32,8 +32,9 @@ const thematicFiles = [
             url: "/information/conges-payes-nouveautes-covid-19",
           },
           {
-            title: "Conventions de FNE-Formation",
-            url: "/fiche-ministere-travail/conventions-de-fne-formation",
+            title: "Dispositif de FNE-Formation",
+            url:
+              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formationn",
           },
         ],
         title: "Les contenus populaires",
