@@ -7,18 +7,19 @@ const thematicFiles = [
         position: 1,
         refs: [
           {
-            title: "Personnes vulnérables : le nouveau dispositif",
-            url: "https://www.service-public.fr/particuliers/actualites/A14242",
+            title:
+              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+            url:
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
           },
           {
             title: "Activité partielle – chômage partiel",
             url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
           },
           {
-            title:
-              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+            title: "Aide à l’embauche des jeunes de moins de 26 ans",
             url:
-              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/reprise-de-l-activite/protocole-national-sante-securite-salaries",
+              "/fiche-service-public/aide-a-lembauche-dun-jeune-de-moins-de-26-ans",
           },
           {
             title:
@@ -414,10 +415,6 @@ const thematicFiles = [
             title: "Dispositif de FNE-Formation",
             url:
               "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formationn",
-          },
-          {
-            title: "Questions - Réponses : FNE-formation",
-            url: "/fiche-ministere-travail/fne-formation",
           },
           {
             title: "Questions - Réponses : formation professionnelle stagiaire",
