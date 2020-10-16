@@ -90,7 +90,12 @@ Test @cdtn/api:
   services:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
-      command: [ "bin/elasticsearch", "-Expack.security.enabled=false", "-Ediscovery.type=single-node" ]
+      command:
+        [
+          "bin/elasticsearch",
+          "-Expack.security.enabled=false",
+          "-Ediscovery.type=single-node",
+        ]
   variables:
     GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
@@ -111,12 +116,12 @@ Test @cdtn/api:
     #
     - yarn workspace @cdt/api test --coverage
 
-Test @cdtn/data:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/data test
-    - yarn workspace @cdt/data check-slugs
+# Test @cdtn/data:
+#   <<: *quality_stage
+#   <<: *master_based_stage
+#   script:
+#     - yarn workspace @cdt/data test
+#     - yarn workspace @cdt/data check-slugs
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage
