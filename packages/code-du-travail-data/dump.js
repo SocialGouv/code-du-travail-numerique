@@ -2,7 +2,6 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 
-import { hashFunctionBuilder } from "./indexing/cdtnIds";
 import { logger } from "./indexing/logger";
 import { fetchCovisits } from "./indexing/monolog";
 import { cdtnDocumentsGen } from "./indexing/populate";
