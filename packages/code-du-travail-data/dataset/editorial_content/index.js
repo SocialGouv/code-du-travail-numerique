@@ -101,9 +101,14 @@ function markdownTransform(documents) {
       delete content.markdown;
       return content;
     }),
-    text: contents.map(({ markdown }) =>
-      textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
-    ),
+    intro: addGlossary(htmlProcessor.processSync(rest.intro).contents),
+    text:
+      textProcessor.processSync(rest.intro) +
+      contents
+        .map(({ markdown }) =>
+          textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
+        )
+        .join(""),
   }));
 }
 
