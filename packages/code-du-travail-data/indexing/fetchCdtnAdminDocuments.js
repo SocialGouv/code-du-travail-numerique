@@ -69,6 +69,7 @@ export async function getDocumentBySource(source) {
     { length: Math.ceil(nbDoc / LIMIT) },
     (_, i) => i
   ).map((index) => {
+    console.log(`fetch ${source} : ${index * LIMIT} / ${nbDoc} `);
     return queue.add(() =>
       fetch(CDTN_ADMIN_ENDPOINT, {
         body: gqlRequestBySource(source, LIMIT, index * LIMIT),
