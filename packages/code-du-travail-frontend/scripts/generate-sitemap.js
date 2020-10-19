@@ -16,11 +16,18 @@ const glossaryPages = [getRouteBySource(SOURCES.GLOSSARY)].concat(
     ({ title }) => `${getRouteBySource(SOURCES.GLOSSARY)}/${slugify(title)}`
   )
 );
-const staticPages = ["a-propos", "droit-du-travail", "mentions-legales"];
+const staticPages = [
+  "a-propos",
+  "droit-du-travail",
+  "mentions-legales",
+  "politique-confidentialite",
+  "integration",
+];
 const documentPages = require(DOCUMENT_PATH)
   .filter(
     ({ slug, source }) =>
-      Boolean(slug) && ![SOURCES.CCN_PAGE, SOURCES.SHEET_MT].includes(source)
+      Boolean(slug) &&
+      ![SOURCES.EXTERNALS, SOURCES.CDT, SOURCES.SHEET_MT].includes(source)
   )
   .map(({ source, slug }) =>
     source === SOURCES.SHEET_MT_PAGE
