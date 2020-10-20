@@ -1,22 +1,16 @@
 import { replaceArticlesRefs } from "../replaceArticlesRefs";
 
-const cases = [
-  "L2213-2",
-  "L. 1242-2",
-  "l'Article L2213-2",
-  "article R. * 3231-2.",
-  "article R-3231-2",
-];
-
 describe("replaceArticlesRefs", () => {
-  test("Should NOT replace raw L2213-2 in text", () => {
-    const html = `Some content with link to L2213-2`;
-    expect(replaceArticlesRefs(html)).toMatchSnapshot();
+  test("Should add domain to relative link with starting /", () => {
+    const html = `<p></p>Un décret en Conseil d'Etat détermine les modalités d'application des <a data-title="1" href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&amp;idArticle=LEGIARTI000006900875&amp;dateTexte=&amp;categorieLien=cid" title="Code du travail - art. L1224-1 (V)">articles L. 1224-1 et L. 1224-2</a>.<p></p>`;
+    expect(replaceArticlesRefs("https://legifrance.gouv.fr", html)).toMatch(
+      `<p></p>Un décret en Conseil d'Etat détermine les modalités d'application des <a data-title="1" href="https://legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&amp;idArticle=LEGIARTI000006900875&amp;dateTexte=&amp;categorieLien=cid" title="Code du travail - art. L1224-1 (V)" rel="nofollow noopener" target="_blank">articles L. 1224-1 et L. 1224-2</a>.<p></p>`
+    );
   });
-  cases.forEach((t) => {
-    test(`Should replace ${t} links in HTML`, () => {
-      const html = `Some content and a link to <a href="#whatever">${t}</a> and some other one <a href="#whatelse">${t}</a> and other stuff.`;
-      expect(replaceArticlesRefs(html)).toMatchSnapshot();
-    });
+  test("Should add domain to relative link missing /", () => {
+    const html = `<p></p>Un décret en Conseil d'Etat détermine les modalités d'application des <a data-title="1" href="affichCodeArticle.do?cidTexte=LEGITEXT000006072050&amp;idArticle=LEGIARTI000006900875&amp;dateTexte=&amp;categorieLien=cid" title="Code du travail - art. L1224-1 (V)">articles L. 1224-1 et L. 1224-2</a>.<p></p>`;
+    expect(replaceArticlesRefs("https://legifrance.gouv.fr", html)).toMatch(
+      `<p></p>Un décret en Conseil d'Etat détermine les modalités d'application des <a data-title="1" href="https://legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&amp;idArticle=LEGIARTI000006900875&amp;dateTexte=&amp;categorieLien=cid" title="Code du travail - art. L1224-1 (V)" rel="nofollow noopener" target="_blank">articles L. 1224-1 et L. 1224-2</a>.<p></p>`
+    );
   });
 });
