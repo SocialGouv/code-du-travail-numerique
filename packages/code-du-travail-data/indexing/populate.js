@@ -48,7 +48,7 @@ async function* cdtnDocumentsGen() {
   yield await getDocumentBySource(SOURCES.THEMATIC_FILES);
 
   logger.info("=== Code du travail ===");
-  yield getDocumentBySource(SOURCES.CDT);
+  yield await getDocumentBySource(SOURCES.CDT);
 
   logger.info("=== Conventions Collectives ===");
   const ccnData = await getDocumentBySource(SOURCES.CCN);
