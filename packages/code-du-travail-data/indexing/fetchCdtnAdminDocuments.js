@@ -24,10 +24,11 @@ const LIMIT = 50;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
-const gqlRequestBySource = (source, limit = LIMIT, offset = 0) =>
+const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
   JSON.stringify({
     query: `{
   documents(
+    order_by: {cdtn_id: asc},
     limit: ${limit}
     offset: ${offset}
     where: {source: {_eq: "${source}"}}) {
@@ -69,14 +70,14 @@ export async function getDocumentBySource(source) {
     { length: Math.ceil(nbDoc / LIMIT) },
     (_, i) => i
   ).map((index) => {
-    return queue.add(() =>
-      fetch(CDTN_ADMIN_ENDPOINT, {
-        body: gqlRequestBySource(source, LIMIT, index * LIMIT),
+    return queue.add(() => {
+      return fetch(CDTN_ADMIN_ENDPOINT, {
+        body: gqlRequestBySource(source, index * LIMIT, LIMIT),
         method: "POST",
       })
         .then((r) => r.json())
-        .then(({ data }) => data.documents)
-    );
+        .then(({ data }) => data.documents);
+    });
   });
   return (await Promise.all(pDocuments)).flatMap((docs) => docs.map(toElastic));
 }
