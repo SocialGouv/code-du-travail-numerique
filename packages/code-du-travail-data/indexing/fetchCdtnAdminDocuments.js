@@ -79,7 +79,9 @@ export async function getDocumentBySource(source) {
         .then(({ data }) => data.documents);
     });
   });
-  return (await Promise.all(pDocuments)).flatMap((docs) => docs.map(toElastic));
+  const docs = await Promise.all(pDocuments);
+  const documents = docs.flatMap((docs) => docs.map(toElastic));
+  return documents;
 }
 
 function toElastic({
