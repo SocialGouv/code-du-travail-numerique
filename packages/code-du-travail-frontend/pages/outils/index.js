@@ -15,7 +15,7 @@ import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { CCTile, DocumentsTile } from "../index";
+import { DocumentsTile } from "../index";
 
 const monCompteFormation = externalTools.find(
   (tools) => tools.title === "Mon compte formation"
