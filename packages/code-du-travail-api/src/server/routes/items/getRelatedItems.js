@@ -123,7 +123,7 @@ async function getSearchBasedItems({ title, settings }) {
   );
 }
 
-// get related items, depending on : covisits present & non empty and A/B testing ratio
+// get related items, depending on : covisits present & non empty
 async function getRelatedItems({ title, settings, slug, covisits }) {
   const covisitedItems = await getCovisitedItems({ covisits, slug });
 
