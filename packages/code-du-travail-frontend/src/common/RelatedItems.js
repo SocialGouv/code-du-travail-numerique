@@ -28,6 +28,17 @@ export const RelatedItems = ({ items = [] }) => {
     .filter(({ source }) => !tileSources.includes(source))
     .slice(0, 6);
 
+  const matoSelectRelated = (reco, selection) => {
+    matopush([
+      "trackEvent",
+      "selectRelated",
+      JSON.stringify({
+        reco,
+        selection,
+      }),
+    ]);
+  };
+
   return (
     <Container>
       <StyledFlatList>
@@ -41,6 +52,7 @@ export const RelatedItems = ({ items = [] }) => {
             subtitle,
             title,
             url,
+            reco,
           }) => (
             <StyledTileItem key={slug || url}>
               {source !== SOURCES.EXTERNALS ? (
@@ -58,6 +70,12 @@ export const RelatedItems = ({ items = [] }) => {
                     }
                     title={title}
                     subtitle={getLabelBySource(source)}
+                    onClick={() =>
+                      matoSelectRelated(
+                        reco,
+                        `/${getRouteBySource(source)}/${slug}`
+                      )
+                    }
                   />
                 </Link>
               ) : (
@@ -70,6 +88,7 @@ export const RelatedItems = ({ items = [] }) => {
                   subtitle={subtitle}
                   target="_blank"
                   title={title}
+                  onClick={() => matoSelectRelated(reco, url)}
                 >
                   {description}
                 </CallToActionTile>
@@ -105,14 +124,7 @@ export const RelatedItems = ({ items = [] }) => {
                       rel="nofollow"
                       arrowPosition="left"
                       onClick={() =>
-                        matopush([
-                          "trackEvent",
-                          "selectRelated",
-                          JSON.stringify({
-                            reco,
-                            selection: `${route}${rootSlug}${hash}`,
-                          }),
-                        ])
+                        matoSelectRelated(reco, `${route}${rootSlug}${hash}`)
                       }
                     >
                       {title}
