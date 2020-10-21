@@ -125,7 +125,9 @@ async function getSearchBasedItems({ title, settings }) {
 
 // get related items, depending on : covisits present & non empty
 async function getRelatedItems({ title, settings, slug, covisits }) {
-  const covisitedItems = await getCovisitedItems({ covisits, slug });
+  const covisitedItems = covisits
+    ? await getCovisitedItems({ covisits, slug })
+    : [];
 
   const searchBasedItems = await getSearchBasedItems({ settings, slug, title });
 
