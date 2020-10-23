@@ -50,19 +50,6 @@ async function* cdtnDocumentsGen() {
   logger.info("=== Code du travail ===");
   yield await getDocumentBySource(SOURCES.CDT);
 
-  logger.info("=== Conventions Collectives ===");
-  const ccnData = await getDocumentBySource(SOURCES.CCN);
-  yield ccnData.map(({ ...content }) => {
-    return {
-      ...content,
-      answers: content.answers.map((data) => ({
-        ...data,
-        answer: addGlossary(data.answer),
-      })),
-      source: SOURCES.CCN,
-    };
-  });
-
   logger.info("=== Contributions ===");
   const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
   yield contributions.map(({ answers, ...contribution }) => ({
@@ -75,6 +62,27 @@ async function* cdtnDocumentsGen() {
       },
     },
   }));
+
+  logger.info("=== Conventions Collectives ===");
+  const ccnData = await getDocumentBySource(SOURCES.CCN);
+  yield ccnData.map(({ ...content }) => {
+    return {
+      ...content,
+      answers: content.answers.map((data) => {
+        const contrib = contributions.find(({ index }) => data.index === index);
+        if (!contrib) {
+          throw "unknonw contribution";
+        }
+        const [theme] = contrib.breadcrumbs;
+        return {
+          ...data,
+          answer: addGlossary(data.answer),
+          theme,
+        };
+      }),
+      source: SOURCES.CCN,
+    };
+  });
 
   logger.info("=== Fiches SP ===");
   yield await getDocumentBySource(SOURCES.SHEET_SP);
