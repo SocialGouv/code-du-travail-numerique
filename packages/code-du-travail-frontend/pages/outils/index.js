@@ -15,7 +15,7 @@ import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { CCTile, DocumentsTile } from "../index";
+import { DocumentsTile } from "../index";
 
 const monCompteFormation = externalTools.find(
   (tools) => tools.title === "Mon compte formation"
@@ -34,24 +34,29 @@ const Outils = () => (
         </FocusRoot>
         <Grid>
           {DocumentsTile}
-          {tools.map(({ action, description, icon, slug, title }) => (
-            <Link
-              href={`/${getRouteBySource(SOURCES.TOOLS)}/[slug]`}
-              as={`/${getRouteBySource(SOURCES.TOOLS)}/${slug}`}
-              passHref
-              key={slug}
-            >
-              <CallToActionTile
-                action={action}
-                custom
-                title={title}
-                icon={icons[icon]}
-              >
-                {description}
-              </CallToActionTile>
-            </Link>
-          ))}
-          {CCTile}
+          {tools.map(({ action, description, icon, slug, title }) => {
+            const linkProps = {
+              passHref: true,
+            };
+            if (slug === "convention-collective") {
+              linkProps.href = `/${getRouteBySource(SOURCES.CCN)}`;
+            } else {
+              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
+              linkProps.as = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+            }
+            return (
+              <Link {...linkProps} passHref key={slug}>
+                <CallToActionTile
+                  action={action}
+                  custom
+                  title={title}
+                  icon={icons[icon]}
+                >
+                  {description}
+                </CallToActionTile>
+              </Link>
+            );
+          })}
           <CallToActionTile
             key={monCompteFormation.slug}
             action={monCompteFormation.action}

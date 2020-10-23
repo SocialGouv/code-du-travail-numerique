@@ -27,20 +27,6 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-export const CCTile = (
-  <Link href={`/${getRouteBySource(SOURCES.CCN)}`} passHref>
-    <CallToActionTile
-      action="Consulter"
-      custom
-      icon={icons.Nego}
-      title="Convention collective"
-    >
-      Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro
-      IDCC
-    </CallToActionTile>
-  </Link>
-);
-
 export const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
     <CallToActionTile
@@ -56,6 +42,7 @@ export const DocumentsTile = (
 );
 
 const selectedTools = [
+  tools.find((tool) => tool.slug === "convention-collective"),
   tools.find((tool) => tool.slug === "preavis-demission"),
   tools.find((tool) => tool.slug === "simulateur-embauche"),
 ];
@@ -81,7 +68,6 @@ const Home = ({ themes = [], highlights = [] }) => (
           Boîte à outils
         </PageTitle>
         <Grid>
-          {CCTile}
           {selectedTools.map(
             ({ action, description, href, icon, slug, title }) => {
               const linkProps = {
@@ -89,8 +75,12 @@ const Home = ({ themes = [], highlights = [] }) => (
                 passHref: true,
               };
               if (!href) {
-                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
-                linkProps.as = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+                if (slug === "convention-collective") {
+                  linkProps.href = `/${getRouteBySource(SOURCES.CCN)}`;
+                } else {
+                  linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
+                  linkProps.as = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+                }
               }
               return (
                 <Link {...linkProps} key={slug || href}>

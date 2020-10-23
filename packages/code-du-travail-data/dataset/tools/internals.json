@@ -119,5 +119,23 @@
     "action": "Calculer",
     "date": "08/11/2019",
     "id": "d09665fc-961c-44bf-a399-c34cfedf1d24"
+  },
+  {
+    "icon": "Nego",
+    "title": "Convention collective",
+    "slug": "convention-collective",
+    "questions": [
+       "trouver ma convention collective",
+      "convention collective métallurgie",
+      "convention collective syntec",
+      "convention collective btp",
+      "convention collective batiment",
+      "convention collective commerce",
+      "convention collective chimie"
+    ],
+    "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
+    "action": "Consulter",
+    "date": "01/01/2020",
+    "id": "c249bd2a-6f33-4176-ad09-166bb8e5747b"
   }
 ]
