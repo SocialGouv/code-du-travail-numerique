@@ -10,7 +10,7 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-// import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
+import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -39,7 +39,7 @@ class Fiche extends React.Component {
       },
     } = this.props;
 
-    // const fixedHtml = replaceArticlesRefs(html);
+    const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
     return (
       <Layout>
         <Metas title={title} description={description} />
@@ -53,7 +53,7 @@ class Fiche extends React.Component {
             })
           }
           emptyMessage="Article introuvable"
-          html={html}
+          html={fixedHtml}
           source={{ name: "Code du travail", url }}
         >
           {notaHtml && (

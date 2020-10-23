@@ -1,14 +1,12 @@
-// assume we only have code-du-travail articles
+/**
+ * prefix relative link with a given domain
+ */
 
-// match basic article references
-const RE_ARTICLE_NUM = /<a[^>]+>(((l' *)?article )?([LRD])[\s-.*]*([\d-]+))[\s.]*<\/a>/gim;
-//(?:article )?
+const RE_ARTICLE_NUM = /href=["']((?<!https:\/\/)[^'"]+)["']/g;
 
-// fix single articles reference
-export const replaceArticlesRefs = (html) =>
-  (html &&
-    html.replace(RE_ARTICLE_NUM, (all, text, prefix1, prefix2, type, num) => {
-      const slug = type.trim().toLowerCase() + num.trim().toLowerCase();
-      return `<a href="/code-du-travail/${slug}">${text}</a>`;
-    })) ||
-  "";
+export const replaceArticlesRefs = (domain, html = "") =>
+  html.replace(RE_ARTICLE_NUM, (_, href) => {
+    return `href='${domain}${
+      href.startsWith("/") ? "" : "/"
+    }${href}' rel='nofollow noopener' target='_blank'`;
+  });
