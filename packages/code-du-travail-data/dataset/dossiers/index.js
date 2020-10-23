@@ -49,8 +49,12 @@ const thematicFiles = [
             url:
               "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
           },
+          {
+            title: "Personnes vulnérables",
+            url: "https://www.service-public.fr/particuliers/actualites/A14380",
+          },
         ],
-        title: "Arrêt maladie",
+        title: "Arrêt maladie et personnes vulnérables",
       },
       {
         icon: "Salary",
