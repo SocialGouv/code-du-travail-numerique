@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.34.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.33.0...v4.34.0) (2020-10-23)
+
+
+### Bug Fixes
+
+* **frontend:** prefix code-du-trvail relatives link  ([#3060](https://github.com/SocialGouv/code-du-travail-numerique/issues/3060)) ([8f12410](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f12410e4ead7e80f629044ccb08fc2380507e2d)), closes [#3059](https://github.com/SocialGouv/code-du-travail-numerique/issues/3059)
+* **frontend:** site-map ([#3055](https://github.com/SocialGouv/code-du-travail-numerique/issues/3055)) ([90597d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/90597d8c666f433dc77b400a02366822e26257d2))
+
+
+### Features
+
+* **ccn:** allow ccn tool to be searchable ([#3062](https://github.com/SocialGouv/code-du-travail-numerique/issues/3062)) ([942b9cd](https://github.com/SocialGouv/code-du-travail-numerique/commit/942b9cdd08295b68713f582f0a7f1a8169c9e5d8))
+
+
+
+
+
 # [4.33.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.32.0...v4.33.0) (2020-10-16)
 
 
