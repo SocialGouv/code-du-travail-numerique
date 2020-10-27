@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useMemo } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import { blackAndWhiteColors, colors } from "./theme";
@@ -12,20 +12,28 @@ const ThemeContext = React.createContext({
 
 const isBlackAndWhiteTheme = () => {
   if (typeof window !== "undefined") {
-    return (
-      window.localStorage &&
-      Boolean(
-        window.localStorage.getItem(BLACK_AND_WHITE_STORAGE_KEY) === "true"
-      )
-    );
+    try {
+      return (
+        window.localStorage &&
+        Boolean(
+          window.localStorage.getItem(BLACK_AND_WHITE_STORAGE_KEY) === "true"
+        )
+      );
+    } catch (error) {
+      return false;
+    }
   }
   return false;
 };
 
 const setBlackAndWhiteTheme = (value) => {
   if (typeof window !== "undefined") {
-    window.localStorage &&
-      window.localStorage.setItem(BLACK_AND_WHITE_STORAGE_KEY, value);
+    try {
+      window.localStorage &&
+        window.localStorage.setItem(BLACK_AND_WHITE_STORAGE_KEY, value);
+    } catch (error) {
+      console.error(error);
+    }
   }
 };
 
@@ -42,12 +50,12 @@ export const ThemeProvider = (props) => {
     () => ({
       currentTheme,
       toggleTheme: () => {
-        if (currentTheme === colors) {
-          setCurrentTheme(blackAndWhiteColors);
-          setBlackAndWhiteTheme("true");
-        } else {
+        if (currentTheme.noColors) {
           setCurrentTheme(colors);
           setBlackAndWhiteTheme("false");
+        } else {
+          setCurrentTheme(blackAndWhiteColors);
+          setBlackAndWhiteTheme("true");
         }
       },
     }),
