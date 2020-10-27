@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "jest": "^26.4.2",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.5"
   },
   "scripts": {
     "test": "jest"
@@ -30,6 +30,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@types/jest": "^26.0.14"
+    "@types/jest": "^26.0.15"
   }
 }

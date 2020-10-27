@@ -624,10 +624,10 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codeceptjs@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-3.0.0.tgz#0eaecebcc058e97e762a10a283bafec8464449ea"
-  integrity sha512-oM3arWPZYdIIVfEhB5C69OKKRMtQlAP/V4ZQEJaRMSbSWSA8OKmTOJTsvcZ6J63N2dH2y5Wdn4T6RSk4X4e8bw==
+codeceptjs@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-3.0.1.tgz#b710dd5912b73e90f57586de7c07b758b5b3ddc6"
+  integrity sha512-R4Leg7If1u6474FgLEehb5b0Q8XyGEAOh7lyjb613shtRTO1dXuK3mUR9BcQGmyXR0GXS9rQfqSplbzGnaitcQ==
   dependencies:
     "@codeceptjs/configure" "^0.4.1"
     "@codeceptjs/helper" "^1.0.1"
@@ -651,8 +651,8 @@ codeceptjs@^3.0.0:
     lodash.clonedeep "^4.5.0"
     lodash.merge "^4.6.2"
     mkdirp "^1.0.4"
-    mocha "^8.0.1"
-    mocha-junit-reporter "^1.23.1"
+    mocha "8.1.3"
+    mocha-junit-reporter "1.23.1"
     ms "^2.1.2"
     parse-function "^5.6.4"
     promise-retry "^1.1.1"
@@ -2075,10 +2075,10 @@ mkdirp@^1.0.4, mkdirp@~1.0.3:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
-mocha-junit-reporter@^1.23.1:
-  version "1.23.3"
-  resolved "https://registry.yarnpkg.com/mocha-junit-reporter/-/mocha-junit-reporter-1.23.3.tgz#941e219dd759ed732f8641e165918aa8b167c981"
-  integrity sha512-ed8LqbRj1RxZfjt/oC9t12sfrWsjZ3gNnbhV1nuj9R/Jb5/P3Xb4duv2eCfCDMYH+fEu0mqca7m4wsiVjsxsvA==
+mocha-junit-reporter@1.23.1:
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/mocha-junit-reporter/-/mocha-junit-reporter-1.23.1.tgz#ba11519c0b967f404e4123dd69bc4ba022ab0f12"
+  integrity sha512-qeDvKlZyAH2YJE1vhryvjUQ06t2hcnwwu4k5Ddwn0GQINhgEYFhlGM0DwYCVUHq5cuo32qAW6HDsTHt7zz99Ng==
   dependencies:
     debug "^2.2.0"
     md5 "^2.1.0"
@@ -2086,7 +2086,7 @@ mocha-junit-reporter@^1.23.1:
     strip-ansi "^4.0.0"
     xml "^1.0.0"
 
-mocha@^8.0.1:
+mocha@8.1.3:
   version "8.1.3"
   resolved "https://registry.yarnpkg.com/mocha/-/mocha-8.1.3.tgz#5e93f873e35dfdd69617ea75f9c68c2ca61c2ac5"
   integrity sha512-ZbaYib4hT4PpF4bdSO2DohooKXIn4lDeiYqB+vTmCdr6l2woW0b6H3pf5x4sM5nwQMru9RvjjHYWVGltR50ZBw==
