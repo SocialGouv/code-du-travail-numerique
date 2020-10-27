@@ -4,7 +4,7 @@ exports[`return idcc for number 27 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "16",
+      "_id": "18",
       "_index": "cdtn_test_documents",
       "_score": 6.5976005,
       "_source": Object {
@@ -32,9 +32,9 @@ exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "15",
+      "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 13.643704,
+      "_score": 13.652786,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -48,9 +48,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "14",
+      "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 12.540343,
+      "_score": 12.549425,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -64,7 +64,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.643704,
+  "max_score": 13.652786,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -76,9 +76,9 @@ exports[`return idcc results for pati 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "15",
+      "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 13.498247,
+      "_score": 13.507329,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -92,9 +92,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "14",
+      "_id": "16",
       "_index": "cdtn_test_documents",
-      "_score": 12.394886,
+      "_score": 12.403968,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -108,7 +108,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.498247,
+  "max_score": 13.507329,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -120,9 +120,9 @@ exports[`return idcc results in correct order for banque 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "17",
+      "_id": "19",
       "_index": "cdtn_test_documents",
-      "_score": 14.379156,
+      "_score": 14.389322,
       "_source": Object {
         "cdtnId": "a25dfc974f",
         "effectif": 216431,
@@ -136,9 +136,9 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "16",
+      "_id": "18",
       "_index": "cdtn_test_documents",
-      "_score": 7.9892683,
+      "_score": 8.013259,
       "_source": Object {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -152,7 +152,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.379156,
+  "max_score": 14.389322,
   "total": Object {
     "relation": "eq",
     "value": 2,

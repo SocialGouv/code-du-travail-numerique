@@ -58,3 +58,10 @@ it("returns article results when searching article R1225-18", async () => {
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
 });
+it("returns unique documents from prequalified data (same slug but different source)", async () => {
+  const response = await request(app.callback()).get(
+    `/api/v1/search?q=certificat de travail`
+  );
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchSnapshot();
+});

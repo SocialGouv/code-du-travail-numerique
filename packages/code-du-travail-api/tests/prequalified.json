@@ -149,6 +149,25 @@
         "cse entreprise",
         "Quels sont les IRP ?"
       ]
+    },
+    {
+      "title": "certificat de travail",
+      "variants": [
+        "certificat de travail",
+        "attestation de travail"
+      ],
+      "refs": [
+        {
+          "url": "/modeles-de-courriers/certificat-de-travail",
+          "title": "Certificat de travail",
+          "position": 1
+        },
+        {
+          "url": "/fiche-service-public/certificat-de-travail",
+          "title": "/fiche-service-public/certificat-de-travail",
+          "position": 2
+        }
+      ]
     }
   ]
 }
