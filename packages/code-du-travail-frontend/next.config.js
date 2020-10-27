@@ -25,8 +25,10 @@ const compose = (...fns) => (args) =>
   fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
+  devIndicators: {
+    autoPrerender: false,
+  },
   poweredByHeader: false,
-
   publicRuntimeConfig: {
     API_ENTREPRISE_URL:
       process.env.API_ENTREPRISE_URL ||
