@@ -77,7 +77,7 @@ async function* cdtnDocumentsGen() {
         return {
           ...data,
           answer: addGlossary(data.answer),
-          theme,
+          theme: theme.label,
         };
       }),
       source: SOURCES.CCN,
