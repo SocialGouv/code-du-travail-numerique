@@ -45,7 +45,6 @@ const getEsReferences = async (refs = []) => {
 
   const responses = flatten(response.body.responses.map((r) => r.hits.hits));
   // mix with non ES-results (ex: external, or no match)
-  console.log(JSON.stringify(response, null, 2));
   const hits = refs.map((ref) => {
     if (isInternalUrl(ref.url)) {
       const [, source, slug] = ref.url.split("/");
