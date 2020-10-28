@@ -4,7 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.027174,
+      "_score": 22.463118,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -67,7 +67,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.3568797,
+      "_score": 3.2706828,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -223,7 +223,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.9655137,
+      "_score": 2.086031,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -258,7 +258,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 3.3568797,
+      "_score": 3.2706828,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -267,7 +267,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.236758,
+      "_score": 3.1512175,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -278,7 +278,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 10.192503,
+      "_score": 10.342741,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -317,7 +317,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 9.705809,
+      "_score": 9.756558,
       "action": "Calculer",
       "algo": "both",
       "breadcrumbs": Array [
@@ -337,7 +337,7 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 8.885381,
+      "_score": 9.012548,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -357,7 +357,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 4.621893,
+      "_score": 4.7730412,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -374,6 +374,26 @@ Object {
       "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       "source": "fiches_ministere_travail",
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+    },
+    Object {
+      "_score": 2.8901207,
+      "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
       "_score": 1.2841135,
@@ -441,10 +461,29 @@ Object {
       "source": "modeles_de_courriers",
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
+    Object {
+      "_score": 1.1512249,
+      "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "19837df114",
+      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+      "slug": "certificat-de-travail",
+      "source": "modeles_de_courriers",
+      "title": "Certificat de travail",
+    },
   ],
   "themes": Array [
     Object {
-      "_score": 1.9655137,
+      "_score": 2.086031,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -467,6 +506,97 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "e4982f0aa9",
       "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
+      "slug": "8-depart-de-lentreprise",
+      "source": "themes",
+      "title": "Départ de l'entreprise",
+    },
+  ],
+}
+`;
+
+exports[`returns unique documents from prequalified data (same slug but different source) 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "_score": 0.92252207,
+      "cdtnId": "ea03713a82",
+      "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
+      "slug": "l1237-1",
+      "source": "code_du_travail",
+      "title": "L1237-1",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
+    },
+  ],
+  "documents": Array [
+    Object {
+      "_score": 0,
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "19837df114",
+      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+      "slug": "certificat-de-travail",
+      "source": "modeles_de_courriers",
+      "title": "Certificat de travail",
+    },
+    Object {
+      "_score": 0,
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "slug": "/themes/80-documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
+    },
+  ],
+  "themes": Array [
+    Object {
+      "_score": 2.462335,
+      "algo": "fulltext",
+      "cdtnId": "5594695039",
+      "icon": "Contract",
+      "slug": "1-embauche-et-contrat-de-travail",
+      "source": "themes",
+      "title": "Embauche et contrat de travail",
+    },
+    Object {
+      "_score": 1.0536091,
+      "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+      ],
+      "cdtnId": "a9ccf1d613",
+      "slug": "81-demission",
+      "source": "themes",
+      "title": "Démission",
+    },
+    Object {
+      "_score": 0.8156441,
+      "algo": "fulltext",
+      "cdtnId": "e4982f0aa9",
+      "icon": "Depart",
       "slug": "8-depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
