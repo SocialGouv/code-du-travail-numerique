@@ -52,5 +52,5 @@ type SourceKeys = keyof Sources;
 type SourceValues = Sources[SourceKeys];
 type RouteKeys = keyof Routes;
 type RouteValues = Routes[SourceRoute];
-type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
+type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "versions" >
 type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
