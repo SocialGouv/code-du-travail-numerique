@@ -36,21 +36,24 @@ function Contributions({ contributions, convention }) {
       }
       return a.localeCompare(b);
     })
-    .map((theme) => ({
-      body: (
-        <Accordion
-          items={contributionsByTheme[theme].map((item) => ({
-            body: AccordionContent(item),
-            title: item.question,
-          }))}
-          onChange={trackAccordionPanelState(
-            convention.shortTitle,
-            "pagecc_clickcontrib"
-          )}
-        />
-      ),
-      title: theme,
-    }));
+    .map((theme) => {
+      return {
+        body: (
+          <Accordion
+            items={contributionsByTheme[theme].map((item) => ({
+              body: AccordionContent(item),
+              id: item.slug,
+              title: item.question,
+            }))}
+            onChange={trackAccordionPanelState(
+              convention.shortTitle,
+              "pagecc_clickcontrib"
+            )}
+          />
+        ),
+        title: theme,
+      };
+    });
 
   return (
     <>
