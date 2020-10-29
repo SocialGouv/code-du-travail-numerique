@@ -1,8 +1,8 @@
-const { getSourceByRoute } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getDocumentByUrlQuery = require("./getDocumentByUrlQuery");
+const { getDataFromUrl } = require("./utils");
 
 const isInternalUrl = (url) => url.match(/^\//);
 
@@ -47,11 +47,10 @@ const getEsReferences = async (refs = []) => {
   // mix with non ES-results (ex: external, or no match)
   const hits = refs.map((ref) => {
     if (isInternalUrl(ref.url)) {
-      const [, source, slug] = ref.url.split("/");
+      const { slug, source } = getDataFromUrl(ref.url);
       const esReference = responses.find(
         (response) =>
-          response._source.slug === slug &&
-          response._source.source === getSourceByRoute(source)
+          response._source.slug === slug && response._source.source === source
       );
       if (esReference) {
         return esReference;
