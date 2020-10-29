@@ -54,5 +54,13 @@
     "icon": "Formation",
     "action": "Consulter",
     "id": "30b4832d-7584-44de-9b93-2ae5ce9dc57c"
+  },
+  {
+    "title": "Délais à respecter pour une rupture conventionnelle : rétractation et homologation",
+    "description": "Outil de simulation des délais de rétractation et d'homologation à respecter pour une rupture conventionnelle, avec prise en compte des samedis, dimanches ou jours fériés.",
+    "url": "https://www.telerc.travail.gouv.fr/simulateur/calendrier",
+    "icon": "Calculator",
+    "action": "Calculer",
+    "id": "fd67e72c-8512-42b2-ac2f-503f55fd3634"
   }
 ]
