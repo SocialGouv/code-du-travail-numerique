@@ -13,7 +13,7 @@
     "filesize": "^6.1.0",
     "rehype-raw": "^5.0.0",
     "rehype-stringify": "^8.0.0",
-    "remark-parse": "^8.0.3",
+    "remark-parse": "^9.0.0",
     "remark-rehype": "^7.0.0",
     "remark-stringify": "^8.1.1",
     "strip-markdown": "^3.1.2",
