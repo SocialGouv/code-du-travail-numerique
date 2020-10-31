@@ -52,7 +52,7 @@
     "lit-element": "2.4.0",
     "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
-    "next": "9.5.5",
+    "next": "10.0.0",
     "next-transpile-modules": "^4.1.0",
     "p-debounce": "^2.1.0",
     "react": "^16.13.1",
