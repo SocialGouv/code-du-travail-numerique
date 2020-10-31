@@ -62,7 +62,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-test-renderer": "16.x",
+    "react-test-renderer": "17.x",
     "rollup": "^2.28.2",
     "rollup-plugin-babel": "^4.4.0",
     "styled-components": "^5.2.0",
