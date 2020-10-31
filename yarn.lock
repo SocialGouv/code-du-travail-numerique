@@ -17506,6 +17506,11 @@ strip-markdown@^3.1.2:
   resolved "https://registry.yarnpkg.com/strip-markdown/-/strip-markdown-3.1.2.tgz#172f6f89f9a98896e65a65422e0507f2bbac1667"
   integrity sha512-NjwW6CEefesmHQPs7lof/lgnSriqUnRNOWpnrNPq9A7/yOCdnhaB7DcxlhYuN7WiiRUe349aitAsTQ/ajM9Dmw==
 
+strip-markdown@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/strip-markdown/-/strip-markdown-4.0.0.tgz#1f48aeb5ce81b646487d9f8fbdc18f8bf1416ba2"
+  integrity sha512-jwoS5zwHNFjergQjg4RFzmdS4n5WOd5DXDIwRY0jye9ALYMscLWfwZVBMt4P/va5aRmm7Dlj6O4NjMuaD7609Q==
+
 strong-log-transformer@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/strong-log-transformer/-/strong-log-transformer-2.1.0.tgz#0f5ed78d325e0421ac6f90f7f10e691d6ae3ae10"
