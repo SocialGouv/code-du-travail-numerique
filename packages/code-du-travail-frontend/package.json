@@ -55,7 +55,7 @@
     "next": "9.5.5",
     "next-transpile-modules": "^4.1.0",
     "p-debounce": "^2.1.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-autosuggest": "10.0.3",
     "react-delay": "^0.1.0",
     "react-dom": "^16.13.1",
