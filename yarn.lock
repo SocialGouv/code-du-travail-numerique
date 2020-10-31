@@ -12442,6 +12442,13 @@ mdast-util-definitions@^3.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
+mdast-util-definitions@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz#c5c1a84db799173b4dcf7643cda999e440c24db2"
+  integrity sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ==
+  dependencies:
+    unist-util-visit "^2.0.0"
+
 mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.0.0, mdast-util-to-hast@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-9.1.0.tgz#6ef121dd3cd3b006bf8650b1b9454da0faf79ffe"
@@ -12454,6 +12461,20 @@ mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.0.0, mdast-util-to-hast@^9.1.0:
     mdast-util-definitions "^3.0.0"
     mdurl "^1.0.0"
     trim-lines "^1.0.0"
+    unist-builder "^2.0.0"
+    unist-util-generated "^1.0.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
+
+mdast-util-to-hast@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-10.0.0.tgz#744dfe7907bac0263398a68af5aba16d104a9a08"
+  integrity sha512-dRyAC5S4eDcIOdkz4jg0wXbUdlf+5YFu7KppJNHOsMaD7ql5bKIqVcvXYYkcrKjzUkfX8JsKFVMthsU8OWxQ+w==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    mdast-util-definitions "^4.0.0"
+    mdurl "^1.0.0"
     unist-builder "^2.0.0"
     unist-util-generated "^1.0.0"
     unist-util-position "^3.0.0"
@@ -15921,6 +15942,15 @@ remark-html@^12.0.0:
     hast-util-to-html "^7.0.0"
     mdast-util-to-hast "^9.0.0"
     xtend "^4.0.1"
+
+remark-html@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-13.0.1.tgz#d5b2d8be01203e61fc37403167ca7584879ad675"
+  integrity sha512-K5KQCXWVz+harnyC+UVM/J9eJWCgjYRqFeZoZf2NgP0iFbuuw/RgMZv3MA34b/OEpGnstl3oiOUtZzD3tJ+CBw==
+  dependencies:
+    hast-util-sanitize "^3.0.0"
+    hast-util-to-html "^7.0.0"
+    mdast-util-to-hast "^10.0.0"
 
 remark-mdx@1.6.16:
   version "1.6.16"
