@@ -23,7 +23,7 @@
   "peerDependencies": {
     "prop-types": "15.x",
     "react": "16.x",
-    "react-dom": "16.x",
+    "react-dom": "17.x",
     "styled-components": "5.x"
   },
   "dependencies": {
@@ -61,7 +61,7 @@
     "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^17.0.1",
     "react-test-renderer": "16.x",
     "rollup": "^2.28.2",
     "rollup-plugin-babel": "^4.4.0",
