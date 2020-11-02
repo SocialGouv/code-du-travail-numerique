@@ -13,7 +13,8 @@ const ViewMore = ({
   query,
   stepSize,
 }) => {
-  const [currentSize, setCurrentSize] = useState(1);
+  const childSize = React.Children.count(children);
+  const [currentSize, setCurrentSize] = useState(childSize);
   useEffect(() => {
     setCurrentSize(initialSize);
   }, [initialSize, query]);
@@ -21,7 +22,7 @@ const ViewMore = ({
     onClick();
     setCurrentSize(currentSize + stepSize);
   }, [stepSize, currentSize, onClick]);
-  const isShowMoreVisible = React.Children.count(children) > currentSize;
+  const isShowMoreVisible = childSize > currentSize;
   return (
     <>
       <ListContainer>
