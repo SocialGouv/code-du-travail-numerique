@@ -47,7 +47,7 @@
     "react-dom": "^17.0.1",
     "rollup": "^2.33.1",
     "rollup-plugin-babel": "^4.4.0",
-    "styled-components": "^5.2.0",
+    "styled-components": "^5.2.1",
     "stylelint": "^13.7.2",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
