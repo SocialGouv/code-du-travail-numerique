@@ -54,3 +54,24 @@ Production:
       --form token="${CI_JOB_TOKEN}"
       --form variables[PRODUCTION]="true"
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+Preview:
+  stage: "Prepare"
+  image:  node:12.14-alpine3.10
+  dependencies: []
+  when: manual
+  environment:
+    name: preview-dev2
+  variables:
+    ES_INDEX_PREFIX: cdtn-preprod
+    ELASTICSEARCH_USER: $ELASTICSEARCH_USER
+    ELASTICSEARCH_PWD: $ELASTICSEARCH_PWD
+    ELASTICSEARCH_URL: $ELASTICSEARCH_URL
+    ES_LOGS: $ES_LOGS
+    ES_LOGS_TOKEN: $ES_LOGS_TOKEN
+    NLP_URL: $NLP_URL
+    CDTN_ADMIN_ENDPOINT: https://lionelb-feat-docu-x5f3qv-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
+  before_script:
+    - yarn
+  script:
+    - yarn workspace @cdt/data ingest
