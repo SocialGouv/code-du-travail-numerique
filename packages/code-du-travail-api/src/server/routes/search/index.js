@@ -44,7 +44,7 @@ router.get("/search", async (ctx) => {
   const { q: query } = ctx.query;
 
   const sources = [
-    query.togglePageMode === "true" ? SOURCES.SHEET_MT_PAGE : SOURCES.SHEET_MT,
+    SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
     SOURCES.LETTERS,
     SOURCES.TOOLS,
@@ -62,8 +62,9 @@ router.get("/search", async (ctx) => {
   let themes = [];
   if (knownQueryResult) {
     knownQueryResult.forEach((item) => (item._source.algo = "pre-qualified"));
-    documents = knownQueryResult.filter(({ _source: { source } }) =>
-      sources.includes(source)
+    documents = knownQueryResult.filter(
+      ({ _source: { source } }) =>
+        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
     );
     articles = knownQueryResult.filter(
       ({ _source: { source } }) => source === SOURCES.CDT

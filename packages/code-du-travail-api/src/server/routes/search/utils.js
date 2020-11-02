@@ -51,6 +51,9 @@ const mergePipe = (a, b, max_result) => {
 const getDataFromUrl = (url) => {
   const [, sourceRoute, slug] = url.split("/");
   let source = getSourceByRoute(sourceRoute);
+  // Beware, "/fiche-ministere-travail/la-demission" matches both
+  // the split introduction and the full page. We always refer to the full page
+  // to avoid bugs (because this page could have no introduction).
   if (source === SOURCES.SHEET_MT && !slug.includes("#")) {
     source = SOURCES.SHEET_MT_PAGE;
   }
