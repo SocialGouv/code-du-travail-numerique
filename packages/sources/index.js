@@ -49,6 +49,7 @@ const labelBySource = {
   [SOURCES.LETTERS]: "Modèles de documents",
   [SOURCES.SHEET_SP]: "service-public.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
+  [SOURCES.SHEET_MT_PAGE]: "Ministère du Travail",
   [SOURCES.THEMATIC_FILES]: "Dossiers",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",

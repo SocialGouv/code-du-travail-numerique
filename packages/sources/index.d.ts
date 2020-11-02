@@ -17,7 +17,6 @@ type Sources = {
   EXTERNALS: "external",
   GLOSSARY: "glossary",
   HIGHLIGHTS: "highlights",
-  IDCC: "idcc",
   LABOUR_LAW: "droit_du_travail",
   LETTERS: "modeles_de_courriers",
   PREQUALIFIED: "prequalified",
@@ -37,7 +36,6 @@ type Routes = {
   [SOURCES.EDITORIAL_CONTENT]: "information",
   [SOURCES.EXTERNALS]: "external",
   [SOURCES.GLOSSARY]: "glossaire",
-  [SOURCES.IDCC]: "idcc",
   [SOURCES.LABOUR_LAW]: "droit-du-travail",
   [SOURCES.LETTERS]: "modeles-de-courriers",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
@@ -52,5 +50,5 @@ type SourceKeys = keyof Sources;
 type SourceValues = Sources[SourceKeys];
 type RouteKeys = keyof Routes;
 type RouteValues = Routes[SourceRoute];
-type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "page_fiche_ministere_travail"| "versions" >
+type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "versions" >
 type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
