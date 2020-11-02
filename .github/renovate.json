@@ -2,5 +2,37 @@
   "enabled": true,
   "extends": [
     "github>SocialGouv/renovate-config:socialgouv-data"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [ "next" ],
+      "groupName": "@vercel/next",
+      "updateTypes": ["major"]
+    },
+    {
+      "packagePatterns": [ "^react", "react-dom", "react-test-renderer" ],
+      "groupName": "react",
+      "updateTypes": ["major"]
+    },
+    {
+      "packagePatterns": [ "remark", "strip-markdown" ],
+      "groupName": "remark",
+      "updateTypes": ["major"]
+    },
+    {
+      "packagePatterns": [ "@rollup" ],
+      "groupName": "@rollup",
+      "updateTypes": ["major"]
+    },
+    {
+      "packagePatterns": [ "reach" ],
+      "groupName": "@reach",
+      "updateTypes": ["major"]
+    },
+    {
+      "packagePatterns": [ "final-form" ],
+      "groupName": "final-form",
+      "updateTypes": ["major"]
+    }
   ]
 }
