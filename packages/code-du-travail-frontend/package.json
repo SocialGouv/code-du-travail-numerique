@@ -100,7 +100,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0",
-    "supertest": "^5.0.0"
+    "supertest": "^6.0.0"
   },
   "jest": {
     "testMatch": [
