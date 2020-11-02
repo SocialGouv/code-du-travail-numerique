@@ -485,18 +485,6 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -659,14 +647,6 @@ exports[`<SearchResults/> should render results 1`] = `
   .c24 {
     font-size: 2.2rem;
   }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
 }
 
 <div>

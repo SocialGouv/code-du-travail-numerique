@@ -1424,18 +1424,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
   .c7 {
     font-size: 1.6rem;
   }
@@ -1452,14 +1440,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
     padding: 0 1rem;
     padding-right: 2rem;
   }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
 }
 
 <div>
