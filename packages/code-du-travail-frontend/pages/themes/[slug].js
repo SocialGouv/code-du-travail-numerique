@@ -24,10 +24,31 @@ const {
 
 // Theme page
 class Theme extends React.Component {
-  static async getInitialProps({ query: { slug } }) {
+  static async getInitialProps({ query: { slug }, res }) {
     const searchThemeResponse = await fetch(`${API_URL}/themes/${slug}`);
 
     if (!searchThemeResponse.ok) {
+      console.log(
+        "response status is :",
+        searchThemeResponse.status,
+        typeof searchThemeResponse.status
+      );
+      if (res) {
+        if (searchThemeResponse.status === 404) {
+          /* Not ready yet, not handling 404 status
+        // https://github.com/vercel/next.js/discussions/14890
+        return {
+          unstable_redirect: {
+            destination: "/404",
+            permanent: true,
+          },
+        };
+        */
+          // monkeypatching approach, works fine though:
+          res.writeHead(404, { Location: "/" });
+          res.end();
+        }
+      }
       return { statusCode: searchThemeResponse.status };
     }
 

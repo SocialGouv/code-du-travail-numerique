@@ -80,7 +80,7 @@ const ThemesPage = ({ children = [] }) => (
   </Layout>
 );
 
-ThemesPage.getInitialProps = async () => {
+ThemesPage.getServerSideProps = async () => {
   const response = await fetch(`${API_URL}/themes`);
   if (!response.ok) {
     return { statusCode: response.status };
