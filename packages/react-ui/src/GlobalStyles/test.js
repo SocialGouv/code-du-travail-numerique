@@ -8,7 +8,7 @@ import { GlobalStyles } from "./index";
 describe("GlobalStyles", () => {
   it("generates styles", () => {
     render(<GlobalStyles />);
-    const burgerStyles = document.head.getElementsByTagName("style");
-    expect(burgerStyles).toMatchSnapshot();
+    const styles = document.head.getElementsByTagName("style");
+    expect(styles).toMatchSnapshot();
   });
 });
