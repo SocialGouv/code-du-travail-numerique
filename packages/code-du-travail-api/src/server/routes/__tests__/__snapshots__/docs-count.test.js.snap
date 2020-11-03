@@ -18,6 +18,10 @@ Object {
       },
       Object {
         "doc_count": 3,
+        "key": "page_fiche_ministere_travail",
+      },
+      Object {
+        "doc_count": 3,
         "key": "themes",
       },
       Object {
@@ -35,10 +39,6 @@ Object {
       Object {
         "doc_count": 2,
         "key": "outils",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "page_fiche_ministere_travail",
       },
       Object {
         "doc_count": 1,

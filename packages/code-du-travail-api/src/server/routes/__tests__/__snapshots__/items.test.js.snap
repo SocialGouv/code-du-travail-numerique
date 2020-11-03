@@ -2,10 +2,10 @@
 
 exports[`return item from its id 1`] = `
 Object {
-  "_id": "8",
+  "_id": "9",
   "_index": "cdtn_test_documents",
   "_primary_term": 1,
-  "_seq_no": 8,
+  "_seq_no": 9,
   "_source": Object {
     "anchor": "L-absence-prolongee-du-salarie-est-elle-une-demission",
     "breadcrumbs": Array [

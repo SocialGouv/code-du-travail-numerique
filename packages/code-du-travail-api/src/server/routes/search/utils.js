@@ -1,3 +1,5 @@
+const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
+
 // merge by one of each
 
 const merge = (res1, res2, max_result) => {
@@ -30,7 +32,7 @@ const removeDuplicate = (arr, predicate = predicateFn) =>
 const mergeDuplicate = (arr, predicate = predicateFn) => {
   return arr.flatMap((a, index) => {
     const prevItem = arr.find(
-      (item, i) => predicate(item) === predicate(a) && i < index,
+      (item, i) => predicate(item) === predicate(a) && i < index
     );
     if (prevItem) {
       prevItem._source.algo = "both";
@@ -46,6 +48,22 @@ const mergePipe = (a, b, max_result) => {
   return mergeDuplicate(res).slice(0, max_result);
 };
 
+const getDataFromUrl = (url) => {
+  const [, sourceRoute, slug] = url.split("/");
+  let source = getSourceByRoute(sourceRoute);
+  // Beware, "/fiche-ministere-travail/la-demission" matches both
+  // the split introduction and the full page. We always refer to the full page
+  // to avoid bugs (because this page could have no introduction).
+  if (source === SOURCES.SHEET_MT && !slug.includes("#")) {
+    source = SOURCES.SHEET_MT_PAGE;
+  }
+  return {
+    slug,
+    source,
+  };
+};
+
 exports.merge = merge;
 exports.removeDuplicate = removeDuplicate;
 exports.mergePipe = mergePipe;
+exports.getDataFromUrl = getDataFromUrl;

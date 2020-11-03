@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { DOCUMENTS, MT_SHEETS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -8,7 +8,7 @@ const getDocumentByUrlBody = require("./searchByUrl.elastic");
 const { getRelatedItems } = require("./getRelatedItems");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-let index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -87,11 +87,6 @@ router.get("/items/:id", async (ctx) => {
 router.get("/items", async (ctx) => {
   const { url } = ctx.query;
   const body = getDocumentByUrlBody({ url });
-  // for travail-gouv url we need to search in MT_SHEET index since
-  // there is no URL in fiche_mt_split.json
-  if (url.match(/travail-emploi.gouv/)) {
-    index = `${ES_INDEX_PREFIX}_${MT_SHEETS}`;
-  }
   const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {

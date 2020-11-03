@@ -4,7 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.463118,
+      "_score": 22.628408,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -96,6 +96,26 @@ Object {
       "source": "fiches_service_public",
       "title": "Démission d'un salarié",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+    },
+    Object {
+      "_score": 0,
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l'entreprise",
+          "slug": "/themes/8-depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "slug": "/themes/81-demission",
+        },
+      ],
+      "cdtnId": "5d4a0ee541",
+      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
+      "slug": "la-demission",
+      "source": "page_fiche_ministere_travail",
+      "title": "La démission",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission",
     },
     Object {
       "_score": 0,
@@ -223,7 +243,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.086031,
+      "_score": 1.920247,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -278,7 +298,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 10.342741,
+      "_score": 9.907198,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -317,7 +337,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 9.756558,
+      "_score": 9.653719,
       "action": "Calculer",
       "algo": "both",
       "breadcrumbs": Array [
@@ -337,7 +357,7 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 9.012548,
+      "_score": 8.605516,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -357,7 +377,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 4.7730412,
+      "_score": 4.4587755,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -483,7 +503,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.086031,
+      "_score": 1.920247,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -570,7 +590,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.462335,
+      "_score": 2.5288277,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -593,7 +613,7 @@ Object {
       "title": "Démission",
     },
     Object {
-      "_score": 0.8156441,
+      "_score": 0.8618989,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",

@@ -20,6 +20,10 @@ const client = new Client({
   node: `${ELASTICSEARCH_URL}`,
 });
 
+/*
+ * Make sure you have at least two documents with the same slug here to test a corner case (certificat-de-travail)
+ * Also make sure that you have a fiche-ministere-travail without a "#" to ensure that url resolution works fine
+ */
 const documentsSlugs = [
   "/themes/81-demission",
   "/themes/8-depart-de-lentreprise",
@@ -28,6 +32,7 @@ const documentsSlugs = [
   "/fiche-service-public/demission-dun-salarie",
   "/fiche-service-public/demission-dune-assistante-maternelle",
   "/fiche-service-public/certificat-de-travail",
+  "/fiche-ministere-travail/la-demission",
   "/fiche-ministere-travail/la-demission#Comment-presenter-une-demission",
   "/fiche-ministere-travail/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
   "/code-du-travail/r1225-18",

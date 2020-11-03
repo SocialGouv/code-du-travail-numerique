@@ -9,7 +9,7 @@ const app = new Koa();
 app.use(router.routes());
 
 test("return item from its id", async () => {
-  const response = await request(app.callback()).get(`/api/v1/items/8`);
+  const response = await request(app.callback()).get(`/api/v1/items/9`);
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
 });
