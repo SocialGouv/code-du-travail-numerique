@@ -25,7 +25,7 @@ const preprocess = (q) => {
 
 async function _getPrequalified() {
   const body = getPrequalifiedBody();
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value === 0) {
     return null;
   }
@@ -41,22 +41,22 @@ async function _getPrequalified() {
   }, {});
 
   return {
-    knownQueriesSet,
     allVariants: Object.keys(knownQueriesSet),
+    knownQueriesSet,
   };
 }
 
 const getPrequalified = memoizee(_getPrequalified, {
-  promise: true,
   maxAge: 1000 * 5 * 60,
   preFetch: true,
+  promise: true,
 });
 
 const fuzzOptions = {
-  scorer: fuzz.ratio,
   full_process: false,
-  unsorted: false,
   limit: 2,
+  scorer: fuzz.ratio,
+  unsorted: false,
 };
 
 const testFuzzyAllowed = (query, match) => {
@@ -101,7 +101,7 @@ const getSavedResult = async (query) => {
   const { knownQueriesSet, allVariants } = await getPrequalified();
 
   const knownQuery =
-    query.length > 3 && testMatch({ query, knownQueriesSet, allVariants });
+    query.length > 3 && testMatch({ allVariants, knownQueriesSet, query });
 
   if (knownQuery && knownQuery.refs) {
     // get ES results for a known query

@@ -135,7 +135,7 @@ export const Results = ({ id, isSearch, items, query }) => {
         query={query}
       >
         {items.map((item) => (
-          <StyledListItem key={item.slug}>
+          <StyledListItem key={`${item.source}-${item.slug}`}>
             <ListLink item={item} showTheme={Boolean(isSearch)} query={query} />
           </StyledListItem>
         ))}
