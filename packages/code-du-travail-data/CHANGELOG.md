@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.35.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.34.0...v4.35.0) (2020-11-03)
+
+
+### Features
+
+* **data:** add new external tool ([#3079](https://github.com/SocialGouv/code-du-travail-numerique/issues/3079)) ([f6c0b9b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6c0b9b1aea34f25eea1706d1bd0e38fb5bf3133))
+
+
+
+
+
 # [4.34.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.33.0...v4.34.0) (2020-10-23)
 
 

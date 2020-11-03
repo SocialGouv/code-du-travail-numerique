@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.35.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.34.0...v4.35.0) (2020-11-03)
+
+
+### Bug Fixes
+
+* **api:** issue where same slug causes duplicate content ([#3072](https://github.com/SocialGouv/code-du-travail-numerique/issues/3072)) ([d9abc39](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9abc39e73be0e71885803335d3b25e57198d4f6))
+* **api:** use same logic to avoid bugs and reduce complexity ([#3081](https://github.com/SocialGouv/code-du-travail-numerique/issues/3081)) ([44bbc41](https://github.com/SocialGouv/code-du-travail-numerique/commit/44bbc416317664abb821e91f90064ec6b1af9d05))
+* **frontend:** change viewmore default size ([#3103](https://github.com/SocialGouv/code-du-travail-numerique/issues/3103)) ([3bbf309](https://github.com/SocialGouv/code-du-travail-numerique/commit/3bbf3090ec769ee844c6f4c5eca967e5decef8bc))
+* **frontend:** remove unsuported IE regexp features ([#3071](https://github.com/SocialGouv/code-du-travail-numerique/issues/3071)) ([9491372](https://github.com/SocialGouv/code-du-travail-numerique/commit/9491372951a807d8e0683889d6f777193fdc6807))
+* **frontend:** wrong id for matomo tracking ([#3077](https://github.com/SocialGouv/code-du-travail-numerique/issues/3077)) ([d90bb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/d90bb15b8fe9f4edc28d3edd5ca7b2b82919f3ab))
+* **sources:** put back usefull sources ([#3080](https://github.com/SocialGouv/code-du-travail-numerique/issues/3080)) ([8c4bf77](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c4bf77639afe6eed512f71071e7a78ceec6fd52))
+
+
+### Features
+
+* **data:** add new external tool ([#3079](https://github.com/SocialGouv/code-du-travail-numerique/issues/3079)) ([f6c0b9b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6c0b9b1aea34f25eea1706d1bd0e38fb5bf3133))
+* **ui:** manage localstorage when third party cookies are disabled in chrome ([#3074](https://github.com/SocialGouv/code-du-travail-numerique/issues/3074)) ([912e402](https://github.com/SocialGouv/code-du-travail-numerique/commit/912e4022520725f79fb0e8d4937ad1bff1f9d640))
+
+
+
+
+
 # [4.34.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.33.0...v4.34.0) (2020-10-23)
 
 

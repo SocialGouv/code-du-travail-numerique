@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.35.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.34.0...v4.35.0) (2020-11-03)
+
+
+### Bug Fixes
+
+* **frontend:** change viewmore default size ([#3103](https://github.com/SocialGouv/code-du-travail-numerique/issues/3103)) ([3bbf309](https://github.com/SocialGouv/code-du-travail-numerique/commit/3bbf3090ec769ee844c6f4c5eca967e5decef8bc))
+* **frontend:** remove unsuported IE regexp features ([#3071](https://github.com/SocialGouv/code-du-travail-numerique/issues/3071)) ([9491372](https://github.com/SocialGouv/code-du-travail-numerique/commit/9491372951a807d8e0683889d6f777193fdc6807))
+* **frontend:** wrong id for matomo tracking ([#3077](https://github.com/SocialGouv/code-du-travail-numerique/issues/3077)) ([d90bb15](https://github.com/SocialGouv/code-du-travail-numerique/commit/d90bb15b8fe9f4edc28d3edd5ca7b2b82919f3ab))
+
+
+### Features
+
+* **ui:** manage localstorage when third party cookies are disabled in chrome ([#3074](https://github.com/SocialGouv/code-du-travail-numerique/issues/3074)) ([912e402](https://github.com/SocialGouv/code-du-travail-numerique/commit/912e4022520725f79fb0e8d4937ad1bff1f9d640))
+
+
+
+
+
 # [4.34.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.33.0...v4.34.0) (2020-10-23)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.35.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.34.0...v4.35.0) (2020-11-03)
+
+
+### Features
+
+* **ui:** manage localstorage when third party cookies are disabled in chrome ([#3074](https://github.com/SocialGouv/code-du-travail-numerique/issues/3074)) ([912e402](https://github.com/SocialGouv/code-du-travail-numerique/commit/912e4022520725f79fb0e8d4937ad1bff1f9d640))
+
+
+
+
+
 # [4.33.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.32.0...v4.33.0) (2020-10-16)
 
 
