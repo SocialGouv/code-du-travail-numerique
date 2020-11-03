@@ -2759,15 +2759,15 @@
     remark "^12.0.1"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^1.78.0":
-  version "1.78.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.78.0.tgz#cd797dc4d73a62dee8259fa6e9e69a87e4b2cb73"
-  integrity sha512-XNKOjO1Da2Hqghd37hEfaye4xjYTgVcopHRYFIuIWNItT1hZeVGjhyYbQNhTi7EXxt9IncuL13RcNqj0wCC/eg==
+"@socialgouv/datafiller-data@^1.79.0":
+  version "1.79.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-1.79.0.tgz#8c22570f65cf5327c33b158b089d0e360f5403d1"
+  integrity sha512-FYMKzBR2ZPDzIplgjcYhUrWRC/ww7bLrFYX+pNtr+C5aPP/LKa3FCvLM/lpdot3Nv9HHajuQu5QRx+WveQuwdA==
   dependencies:
     node-fetch "^2.6.1"
     p-pipe "^3.1.0"
     remark "^12.0.1"
-    remark-html "^12.0.0"
+    remark-html "^13.0.1"
 
 "@socialgouv/eslint-config-react@^1.46.0":
   version "1.46.0"
@@ -2797,10 +2797,10 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-3.221.0.tgz#bf1877a442b172ccb167f8972f3f4a603dfd13c3"
   integrity sha512-Zu3R4ERMenMYxDZmKbkz2xSCHKXQ7whlBUwzH5O1q5/LaYjPekOIggdXSPLtf0hEOOzrCnFc7cmdz6llyMqFEQ==
 
-"@socialgouv/fiches-vdd@^1.195.0":
-  version "1.195.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.195.0.tgz#5a440c80767f99e38b21d4772bd546abde3c442a"
-  integrity sha512-Udw/+1WLg7rUeYFtpIzcmV3RI1hBBcz9ffcih4mxptInXHC+810RwIiUv0m85fnN1KM+TWRaKEOcxtx3WLYOEg==
+"@socialgouv/fiches-vdd@^1.196.0":
+  version "1.196.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-1.196.0.tgz#f7900a7baafcc9c9ddfaba828300c4f60b99a985"
+  integrity sha512-GQJYyO/1vOeLj84KJ1vsELn1J4GLMHMPCTfvh5GW3iJPcnEvcku02AWf5PPzDt+/RvAby4dYrcs07tev9+bRMQ==
   dependencies:
     node-fetch "^2.6.1"
     ora "^5.1.0"
@@ -2816,10 +2816,10 @@
     unist-util-flat-filter "1.0.0"
     unist-util-parents "1.0.3"
 
-"@socialgouv/legi-data@^1.44.0":
-  version "1.44.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.44.0.tgz#1cc4c94645ffe480eb7bd1594913ceb3cfbaa3d8"
-  integrity sha512-RgGLqfmzZBaIC9lzYILD76MJU+xs6lrxOi3EUkJ0Xz76CJ+ujvg4MJMyk3moHtsktJKJs7UE4qzyUW71oeiAKw==
+"@socialgouv/legi-data@^1.45.0":
+  version "1.45.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.45.0.tgz#b86e74b7348aa5f1b1738c52678a4d4a4ec625f4"
+  integrity sha512-4E36EWdfuV3r4IYwfoKlV+eg4uEcZWJokl/kdV88S/ATfXlmRLwcSAAkAPlq9Wmx5JE94U9OZXlYdPnX5r0PXA==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-parents "1.0.3"
@@ -12539,6 +12539,13 @@ mdast-util-definitions@^3.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
+mdast-util-definitions@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz#c5c1a84db799173b4dcf7643cda999e440c24db2"
+  integrity sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ==
+  dependencies:
+    unist-util-visit "^2.0.0"
+
 mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.0.0, mdast-util-to-hast@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-9.1.0.tgz#6ef121dd3cd3b006bf8650b1b9454da0faf79ffe"
@@ -12551,6 +12558,20 @@ mdast-util-to-hast@9.1.0, mdast-util-to-hast@^9.0.0, mdast-util-to-hast@^9.1.0:
     mdast-util-definitions "^3.0.0"
     mdurl "^1.0.0"
     trim-lines "^1.0.0"
+    unist-builder "^2.0.0"
+    unist-util-generated "^1.0.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^2.0.0"
+
+mdast-util-to-hast@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-10.0.0.tgz#744dfe7907bac0263398a68af5aba16d104a9a08"
+  integrity sha512-dRyAC5S4eDcIOdkz4jg0wXbUdlf+5YFu7KppJNHOsMaD7ql5bKIqVcvXYYkcrKjzUkfX8JsKFVMthsU8OWxQ+w==
+  dependencies:
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
+    mdast-util-definitions "^4.0.0"
+    mdurl "^1.0.0"
     unist-builder "^2.0.0"
     unist-util-generated "^1.0.0"
     unist-util-position "^3.0.0"
@@ -16030,6 +16051,15 @@ remark-html@^12.0.0:
     hast-util-to-html "^7.0.0"
     mdast-util-to-hast "^9.0.0"
     xtend "^4.0.1"
+
+remark-html@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-13.0.1.tgz#d5b2d8be01203e61fc37403167ca7584879ad675"
+  integrity sha512-K5KQCXWVz+harnyC+UVM/J9eJWCgjYRqFeZoZf2NgP0iFbuuw/RgMZv3MA34b/OEpGnstl3oiOUtZzD3tJ+CBw==
+  dependencies:
+    hast-util-sanitize "^3.0.0"
+    hast-util-to-html "^7.0.0"
+    mdast-util-to-hast "^10.0.0"
 
 remark-mdx@1.6.16:
   version "1.6.16"

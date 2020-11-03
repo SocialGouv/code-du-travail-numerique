@@ -10,10 +10,10 @@
     "@socialgouv/cdtn-slugify": "^4.32.0",
     "@socialgouv/cdtn-sources": "^4.33.0",
     "@socialgouv/contributions-data": "^2.20.0",
-    "@socialgouv/datafiller-data": "^1.78.0",
-    "@socialgouv/fiches-vdd": "^1.195.0",
+    "@socialgouv/datafiller-data": "^1.79.0",
+    "@socialgouv/fiches-vdd": "^1.196.0",
     "@socialgouv/kali-data": "^1.128.0",
-    "@socialgouv/legi-data": "^1.44.0",
+    "@socialgouv/legi-data": "^1.45.0",
     "lodash.uniqby": "^4.7.0",
     "query-string": "^6.13.6",
     "unist-util-find": "^1.0.1"
