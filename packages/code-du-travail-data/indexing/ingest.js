@@ -44,6 +44,10 @@ switch (process.env.NODE_ENV) {
 
 const client = new Client(esClientConfig);
 
+logger.info(
+  `connecting to ${ELASTICSEARCH_URL} with user ${ELASTICSEARCH_USER}`
+);
+
 export async function addVector(data) {
   if (NLP_URL) {
     if (!data.title) {
@@ -83,9 +87,9 @@ async function main() {
   const monologQueue = new PQueue({ concurrency: 20 });
 
   if (NLP_URL) {
-    logger.error(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
+    logger.debug(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
   } else {
-    logger.error(`NLP_URL not defined, semantic search will be disabled.`);
+    logger.debug(`NLP_URL not defined, semantic search will be disabled.`);
   }
 
   await version({ client });
@@ -98,7 +102,7 @@ async function main() {
   });
   const t0 = Date.now();
   for await (const docsIds of cdtnDocumentsGen()) {
-    logger.error(`› ${docsIds[0].source}... ${docsIds.length} items`);
+    logger.info(`› ${docsIds[0].source}... ${docsIds.length} items`);
 
     // add covisits using pQueue (there is a plan to change this : see #2915)
     const pDocs = docsIds.map((doc) =>
@@ -127,7 +131,7 @@ async function main() {
     }
   }
 
-  logger.error(`done in ${(Date.now() - t0) / 1000} s`);
+  logger.info(`done in ${(Date.now() - t0) / 1000} s`);
 
   // Indexing Suggestions
   await populateSuggestions(client, `${SUGGEST_INDEX_NAME}-${ts}`);
@@ -172,11 +176,11 @@ async function main() {
 
 main().catch((response) => {
   if (response.body) {
-    logger.error(response.meta.statusCode);
-    logger.error(response.name);
-    logger.error(response.meta.meta.request);
+    logger.error({ statusCode: response.meta.statusCode });
+    logger.error({ name: response.name });
+    logger.error({ request: response.meta.meta.request });
   } else {
-    logger.error(response);
+    logger.error({ response });
   }
   process.exit(-1);
 });
