@@ -27,8 +27,6 @@ const ELASTICSEARCH_URL =
 
 const NLP_URL = process.env.NLP_URL;
 
-logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
-
 const esClientConfig = {
   auth: {
     password: process.env.ELASTICSEARCH_PWD,
@@ -38,8 +36,6 @@ const esClientConfig = {
 };
 
 const client = new Client(esClientConfig);
-
-logger.info(`connecting to ES with user ${process.env.ELASTICSEARCH_USER}`);
 
 export async function addVector(data) {
   if (NLP_URL) {
@@ -78,6 +74,8 @@ async function main() {
   const nlpQueue = new PQueue({ concurrency: 5 });
 
   const monologQueue = new PQueue({ concurrency: 20 });
+
+  logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
   if (NLP_URL) {
     logger.debug(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
@@ -172,8 +170,7 @@ main().catch((response) => {
     logger.error({ statusCode: response.meta.statusCode });
     logger.error({ name: response.name });
     logger.error({ request: response.meta.meta.request });
-  } else {
-    logger.error({ response });
   }
+  logger.error({ response });
   process.exit(-1);
 });
