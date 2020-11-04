@@ -5024,7 +5024,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 <span
                   class="c42"
                 >
-                  Sondage
+                  Questionnaire
                 </span>
                 <div
                   class="c43"

@@ -785,7 +785,7 @@ exports[`<RelatedItems /> should render 1`] = `
             <span
               class="c10"
             >
-              Sondage
+              Questionnaire
             </span>
             <div
               class="c11"
