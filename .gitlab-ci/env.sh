@@ -34,7 +34,7 @@ fi
 
 if [[ -n "${COMMIT_TAG}" ]]; then
   # For versions we replace the version number v2.3.1 to v2-3-1
-  export BRANCH_HASH=$( printf "${COMMIT_TAG}" | sed "s/\./-/g" );
+  export BRANCH_HASH="cdtn-preprod";
   export IMAGE_TAG=$(printf "${COMMIT_TAG}" | sed "s/^v//")
   export ES_INDEX_PREFIX="cdtn-preprod"
   export K8S_NAMESPACE="cdtn-preprod"
