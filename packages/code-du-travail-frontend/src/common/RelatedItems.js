@@ -1,14 +1,9 @@
-import {
-  getLabelBySource,
-  getRouteBySource,
-  SOURCES,
-} from "@socialgouv/cdtn-sources";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   ArrowLink,
   Container,
   FlatList,
   Heading,
-  icons,
   theme,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -16,150 +11,78 @@ import React from "react";
 import styled from "styled-components";
 
 import { matopush } from "../piwik";
-import { CallToActionTile } from "./tiles/CallToAction";
+
+const matoSelectRelated = (reco, selection) => {
+  matopush([
+    "trackEvent",
+    "selectRelated",
+    JSON.stringify({
+      reco,
+      selection,
+    }),
+  ]);
+};
 
 export const RelatedItems = ({ items = [] }) => {
-  const tileSources = [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS];
+  const isArticleSource = (source) =>
+    ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
-  const relatedTilesItems = items
-    .filter(({ source }) => tileSources.includes(source))
+  const relatedOtherItems = items
+    .filter(({ source }) => !isArticleSource(source))
     .slice(0, 2);
-  const relatedLinkItems = items
-    .filter(({ source }) => !tileSources.includes(source))
+  const relatedArticleItems = items
+    .filter(({ source }) => isArticleSource(source))
     .slice(0, 6);
+
+  const relatedGroups = [
+    { items: relatedOtherItems, title: "Modèles et outils liés" },
+    { items: relatedArticleItems, title: "Articles liés" },
+  ];
 
   return (
     <Container>
-      <StyledFlatList>
-        {relatedTilesItems.map(
-          ({
-            action,
-            description,
-            icon,
-            slug,
-            source,
-            subtitle,
-            title,
-            url,
-          }) => (
-            <StyledTileItem key={slug || url}>
-              {source !== SOURCES.EXTERNALS ? (
-                <Link
-                  as={`/${getRouteBySource(source)}/${slug}`}
-                  href={`/${getRouteBySource(source)}/[slug]`}
-                  passHref
-                >
-                  <CallToActionTile
-                    rel="nofollow"
-                    action={action || "Consulter"}
-                    custom
-                    icon={
-                      source === SOURCES.LETTERS ? icons.Document : icons[icon]
-                    }
-                    title={title}
-                    subtitle={getLabelBySource(source)}
-                  />
-                </Link>
-              ) : (
-                <CallToActionTile
-                  action={action || "Consulter"}
-                  custom={false}
-                  href={url}
-                  icon={icons[icon]}
-                  rel="noopener noreferrer nofollow"
-                  subtitle={subtitle}
-                  target="_blank"
-                  title={title}
-                >
-                  {description}
-                </CallToActionTile>
-              )}
-            </StyledTileItem>
-          )
-        )}
-      </StyledFlatList>
-      {relatedLinkItems.length > 0 && (
-        <>
-          <Heading as="div">
-            Les articles pouvant vous intéresser&nbsp;:
-          </Heading>
-          <FlatList>
-            {relatedLinkItems.map(({ slug, source, title, reco }) => {
-              let rootSlug = slug;
-              let hash;
-              if (slug.includes("#")) {
-                [rootSlug, hash] = slug.split("#");
-              }
-              hash = hash ? `#${hash}` : "";
-              rootSlug = rootSlug ? `/${rootSlug}` : "";
-              const route = getRouteBySource(source);
+      {relatedGroups.map(
+        ({ title, items }) =>
+          items.length > 0 && (
+            <React.Fragment key={title}>
+              <Heading as="div">{title}&nbsp;:</Heading>
+              <FlatList>
+                {items.map(({ slug, source, title, reco, url }) => {
+                  // if source is external we use url otherwise we assemble the route
+                  const href =
+                    source != SOURCES.EXTERNALS
+                      ? `/${getRouteBySource(source)}/${slug}`
+                      : url;
 
-              return (
-                <StyledLinkItem key={slug}>
-                  <Link
-                    href={`/${route}${rootSlug ? "/[slug]" : ""}`}
-                    as={`/${route}${rootSlug}${hash}`}
-                    passHref
-                  >
-                    <ArrowLink
-                      rel="nofollow"
-                      arrowPosition="left"
-                      onClick={() =>
-                        matopush([
-                          "trackEvent",
-                          "selectRelated",
-                          JSON.stringify({
-                            reco,
-                            selection: `${route}${rootSlug}${hash}`,
-                          }),
-                        ])
-                      }
-                    >
-                      {title}
-                    </ArrowLink>
-                  </Link>
-                </StyledLinkItem>
-              );
-            })}
-          </FlatList>
-        </>
+                  return (
+                    <StyledLinkItem key={href}>
+                      <Link href={href} passHref>
+                        <ArrowLink
+                          rel="nofollow"
+                          arrowPosition="left"
+                          onClick={() =>
+                            matoSelectRelated(
+                              reco,
+                              // legacy : we do not include the leading '/' in the the selection
+                              source != SOURCES.EXTERNALS ? href.slice(1) : href
+                            )
+                          }
+                        >
+                          {title}
+                        </ArrowLink>
+                      </Link>
+                    </StyledLinkItem>
+                  );
+                })}
+              </FlatList>
+            </React.Fragment>
+          )
       )}
     </Container>
   );
 };
 
-const { breakpoints, spacings } = theme;
-
-const StyledFlatList = styled(FlatList)`
-  @media (max-width: ${breakpoints.tablet}) {
-    display: flex;
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
-  }
-`;
-
-const StyledTileItem = styled.li`
-  display: flex;
-  margin: 0 0 ${spacings.base} 0;
-  padding: 0;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: flex;
-    flex: 1 0 auto;
-    justify-content: stretch;
-    width: calc((100% - ${spacings.base}) / 2);
-    & + & {
-      margin-left: ${spacings.base};
-    }
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    flex: 1 0 auto;
-    width: 100%;
-    & + & {
-      margin-left: 0;
-    }
-  }
-`;
+const { spacings } = theme;
 
 const StyledLinkItem = styled.li`
   margin: 0 0 ${spacings.base} 0;

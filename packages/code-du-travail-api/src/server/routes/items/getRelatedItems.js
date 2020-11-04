@@ -14,9 +14,6 @@ const MAX_RESULTS = 4;
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
-// ratio for A/B testing between covisit and search based related items
-const abRatio = 0.5;
-
 // standard related items :
 const sources = [
   SOURCES.TOOLS,
@@ -126,12 +123,11 @@ async function getSearchBasedItems({ title, settings }) {
   );
 }
 
-// get related items, depending on : covisits present & non empty and A/B testing ratio
+// get related items, depending on : covisits present & non empty
 async function getRelatedItems({ title, settings, slug, covisits }) {
-  const useCovisits = Math.random() < abRatio;
-
-  const covisitedItems =
-    covisits && useCovisits ? await getCovisitedItems({ covisits, slug }) : [];
+  const covisitedItems = covisits
+    ? await getCovisitedItems({ covisits, slug })
+    : [];
 
   const searchBasedItems = await getSearchBasedItems({ settings, slug, title });
 
