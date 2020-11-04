@@ -1463,6 +1463,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -1521,6 +1522,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c23 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -4969,6 +4972,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="c13 c108"
                     >
                       Contact
+                    </button>
+                  </li>
+                  <li
+                    class="c106"
+                  >
+                    <button
+                      class="c13 c108"
+                    >
+                      Répondez à notre questionnaire
                     </button>
                   </li>
                   <li

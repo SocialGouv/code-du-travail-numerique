@@ -65,6 +65,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 }
 
 .c1 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

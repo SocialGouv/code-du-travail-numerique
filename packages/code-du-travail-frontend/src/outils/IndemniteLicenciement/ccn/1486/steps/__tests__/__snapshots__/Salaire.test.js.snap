@@ -2,6 +2,7 @@
 
 exports[`<Salaire /> renders 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -227,6 +228,7 @@ exports[`<Salaire /> renders 1`] = `
 
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -565,6 +567,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1067,6 +1070,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 exports[`<Salaire /> renders an input field of type number 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

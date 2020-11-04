@@ -1338,6 +1338,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -1396,6 +1397,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c22 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -2914,6 +2917,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c72"
                       >
                         Contact
+                      </button>
+                    </li>
+                    <li
+                      class="c99"
+                    >
+                      <button
+                        class="c72"
+                      >
+                        Répondez à notre questionnaire
                       </button>
                     </li>
                     <li
@@ -4421,6 +4433,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -4479,6 +4492,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c22 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -5997,6 +6012,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c72"
                       >
                         Contact
+                      </button>
+                    </li>
+                    <li
+                      class="c99"
+                    >
+                      <button
+                        class="c72"
+                      >
+                        Répondez à notre questionnaire
                       </button>
                     </li>
                     <li

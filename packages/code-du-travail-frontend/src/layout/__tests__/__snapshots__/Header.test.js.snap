@@ -288,6 +288,7 @@ exports[`<Header /> should render 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
