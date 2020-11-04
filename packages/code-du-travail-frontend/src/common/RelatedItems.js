@@ -48,35 +48,25 @@ export const RelatedItems = ({ items = [] }) => {
               <Heading as="div">{title}&nbsp;:</Heading>
               <FlatList>
                 {items.map(({ slug, source, title, reco, url }) => {
-                  let href;
-                  let selection;
-
-                  // if source is external we only use url
-                  // otherwise we deal with route, slug and hash
-                  if (source != SOURCES.EXTERNALS) {
-                    let rootSlug = slug;
-                    let hash;
-                    if (slug.includes("#")) {
-                      [rootSlug, hash] = slug.split("#");
-                    }
-                    hash = hash ? `#${hash}` : "";
-                    rootSlug = rootSlug ? `/${rootSlug}` : "";
-                    const route = getRouteBySource(source);
-
-                    href = `/${route}${rootSlug ? `/${slug}` : ""}`;
-                    selection = `${route}${rootSlug}${hash}`;
-                  } else {
-                    href = url;
-                    selection = url;
-                  }
+                  // if source is external we use url otherwise we assemble the route
+                  const href =
+                    source != SOURCES.EXTERNALS
+                      ? `/${getRouteBySource(source)}/${slug}`
+                      : url;
 
                   return (
-                    <StyledLinkItem key={slug || url}>
-                      <Link href={href} as={selection} passHref>
+                    <StyledLinkItem key={href}>
+                      <Link href={href} passHref>
                         <ArrowLink
                           rel="nofollow"
                           arrowPosition="left"
-                          onClick={() => matoSelectRelated(reco, selection)}
+                          onClick={() =>
+                            matoSelectRelated(
+                              reco,
+                              // legacy : we do not include the leading '/' in the the selection
+                              source != SOURCES.EXTERNALS ? href.slice(1) : href
+                            )
+                          }
                         >
                           {title}
                         </ArrowLink>
