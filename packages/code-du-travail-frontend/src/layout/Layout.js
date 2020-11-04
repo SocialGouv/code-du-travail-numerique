@@ -64,6 +64,8 @@ const BackgroundLayer = styled.div`
 `;
 
 const StyledMain = styled.main`
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.large};

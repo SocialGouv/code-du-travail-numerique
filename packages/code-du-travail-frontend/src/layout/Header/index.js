@@ -154,6 +154,7 @@ const MinistereTravail = styled.img`
 `;
 const Logo = styled(icons.Logo)`
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: ${({ theme }) => theme.primary};
