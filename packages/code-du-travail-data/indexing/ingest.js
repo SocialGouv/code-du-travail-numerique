@@ -75,7 +75,7 @@ async function main() {
 
   const monologQueue = new PQueue({ concurrency: 20 });
 
-  logger.info(`ElasticSearch pwd at ${process.env.ELASTICSEARCH_PWD}`);
+  console.info(`ElasticSearch pwd at ${process.env.ELASTICSEARCH_PWD}`);
 
   if (NLP_URL) {
     logger.debug(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
