@@ -24,13 +24,14 @@ const matoSelectRelated = (reco, selection) => {
 };
 
 export const RelatedItems = ({ items = [] }) => {
-  const nonArticleSources = [SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS];
+  const isArticleSource = (source) =>
+    ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
   const relatedOtherItems = items
-    .filter(({ source }) => nonArticleSources.includes(source))
+    .filter(({ source }) => !isArticleSource(source))
     .slice(0, 2);
   const relatedArticleItems = items
-    .filter(({ source }) => !nonArticleSources.includes(source))
+    .filter(({ source }) => isArticleSource(source))
     .slice(0, 6);
 
   const relatedGroups = [
@@ -71,7 +72,7 @@ export const RelatedItems = ({ items = [] }) => {
 
                   return (
                     <StyledLinkItem key={slug || url}>
-                      <Link href={href} passHref>
+                      <Link href={href} as={selection} passHref>
                         <ArrowLink
                           rel="nofollow"
                           arrowPosition="left"
