@@ -77,9 +77,9 @@ Preview:
     CDTN_ADMIN_ENDPOINT: https://lionelb-feat-docu-x5f3qv-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
   before_script:
     - echo $ELASTICSEARCH_PWD
-    - echo $ELASTICSEARCH_PWD2
-    - echo $ELASTICSEARCH_PWD3
-    - echo $ELASTICSEARCH_PWD4
-    - echo $ELASTICSEARCH_PWD5
+    - echo $ELASTICSEARCH_PWD_2
+    - echo $ELASTICSEARCH_PWD_3
+    - echo $ELASTICSEARCH_PWD_4
+    - echo $ELASTICSEARCH_PWD_5
   script:
     - yarn workspace @cdt/data ingest
