@@ -20,7 +20,7 @@ const fixBreadcrumbs = (source) => {
   return [];
 };
 
-const LIMIT = 50;
+const LIMIT = 100;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
@@ -64,7 +64,7 @@ export async function getDocumentBySource(source) {
   }).then((r) => r.json());
 
   const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
-  const queue = new PQueue({ concurrency: 5 });
+  const queue = new PQueue({ concurrency: 10 });
 
   const pDocuments = Array.from(
     { length: Math.ceil(nbDoc / LIMIT) },

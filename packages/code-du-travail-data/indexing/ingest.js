@@ -75,7 +75,7 @@ async function main() {
 
   const monologQueue = new PQueue({ concurrency: 20 });
 
-  console.info(`ElasticSearch pwd at ${process.env.ELASTICSEARCH_URL}`);
+  console.info(`using cdtn elasticsearch ${process.env.ELASTICSEARCH_URL}`);
 
   if (NLP_URL) {
     logger.debug(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
@@ -91,6 +91,7 @@ async function main() {
     indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     mappings: documentMapping,
   });
+
   const t0 = Date.now();
   for await (const docsIds of cdtnDocumentsGen()) {
     logger.info(`› ${docsIds[0].source}... ${docsIds.length} items`);
@@ -99,27 +100,23 @@ async function main() {
     const pDocs = docsIds.map((doc) =>
       monologQueue.add(() => fetchCovisits(doc))
     );
-    const docs = await Promise.all(pDocs);
-
+    let documents = await Promise.all(pDocs);
+    await monologQueue.onIdle();
     // add NLP vectors
-    if (excludeSources.includes(docs[0].source)) {
-      await indexDocumentsBatched({
-        client,
-        docs,
-        indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
-      });
-    } else {
-      const pDocs = docs.map((doc) =>
+    if (!excludeSources.includes(documents[0].source)) {
+      const pDocs = documents.map((doc) =>
         nlpQueue.add(() => retry(() => addVector(doc), { retries: 3 }))
       );
-      const documents = await Promise.all(pDocs);
-
-      await indexDocumentsBatched({
-        client,
-        documents,
-        indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
-      });
+      documents = await Promise.all(pDocs);
+      await nlpQueue.onIdle();
+    } else {
+      console.log("no vector");
     }
+    await indexDocumentsBatched({
+      client,
+      documents,
+      indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
+    });
   }
 
   logger.info(`done in ${(Date.now() - t0) / 1000} s`);
@@ -170,7 +167,9 @@ main().catch((response) => {
     logger.error({ statusCode: response.meta.statusCode });
     logger.error({ name: response.name });
     logger.error({ request: response.meta.meta.request });
+    logger.error({ body: response.body });
+  } else {
+    logger.error(response);
   }
-  logger.error({ response });
   process.exit(-1);
 });
