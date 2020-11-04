@@ -59,7 +59,7 @@ Preview:
   stage: "Prepare"
   image:  node:12.14-alpine3.10
   dependencies: []
-  when: manual
+  # when: manual
   environment:
     name: preview-dev2
   variables:
@@ -71,7 +71,20 @@ Preview:
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
     NLP_URL: "$NLP_URL"
     CDTN_ADMIN_ENDPOINT: https://lionelb-feat-docu-x5f3qv-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: ${CI_JOB_NAME}
+    paths:
+      - .cache
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - node_modules
+
   before_script:
-    - yarn
+    - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
+    - yarn install --frozen-lockfile --prefer-offline
   script:
     - yarn workspace @cdt/data ingest
