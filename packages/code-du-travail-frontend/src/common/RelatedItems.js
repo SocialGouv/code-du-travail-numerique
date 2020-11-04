@@ -43,35 +43,39 @@ export const RelatedItems = ({ items = [] }) => {
       {relatedGroups.map(
         ({ title, items }) =>
           items.length > 0 && (
-            <>
+            <React.Fragment key={title}>
               <Heading as="div">{title}&nbsp;:</Heading>
               <FlatList>
-                {items.map(({ slug, source, title, reco }) => {
-                  let rootSlug = slug;
-                  let hash;
-                  if (slug.includes("#")) {
-                    [rootSlug, hash] = slug.split("#");
+                {items.map(({ slug, source, title, reco, url }) => {
+                  let href;
+                  let selection;
+
+                  // if source is external we only use url
+                  // otherwise we deal with route, slug and hash
+                  if (source != SOURCES.EXTERNALS) {
+                    let rootSlug = slug;
+                    let hash;
+                    if (slug.includes("#")) {
+                      [rootSlug, hash] = slug.split("#");
+                    }
+                    hash = hash ? `#${hash}` : "";
+                    rootSlug = rootSlug ? `/${rootSlug}` : "";
+                    const route = getRouteBySource(source);
+
+                    href = `/${route}${rootSlug ? `/${slug}` : ""}`;
+                    selection = `${route}${rootSlug}${hash}`;
+                  } else {
+                    href = url;
+                    selection = url;
                   }
-                  hash = hash ? `#${hash}` : "";
-                  rootSlug = rootSlug ? `/${rootSlug}` : "";
-                  const route = getRouteBySource(source);
 
                   return (
-                    <StyledLinkItem key={slug}>
-                      <Link
-                        href={`/${route}${rootSlug ? "/[slug]" : ""}`}
-                        as={`/${route}${rootSlug}${hash}`}
-                        passHref
-                      >
+                    <StyledLinkItem key={slug || url}>
+                      <Link href={href} passHref>
                         <ArrowLink
                           rel="nofollow"
                           arrowPosition="left"
-                          onClick={() =>
-                            matoSelectRelated(
-                              reco,
-                              `${route}${rootSlug}${hash}`
-                            )
-                          }
+                          onClick={() => matoSelectRelated(reco, selection)}
                         >
                           {title}
                         </ArrowLink>
@@ -80,7 +84,7 @@ export const RelatedItems = ({ items = [] }) => {
                   );
                 })}
               </FlatList>
-            </>
+            </React.Fragment>
           )
       )}
     </Container>
