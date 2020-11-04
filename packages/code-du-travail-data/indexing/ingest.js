@@ -30,23 +30,16 @@ const NLP_URL = process.env.NLP_URL;
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
 const esClientConfig = {
+  auth: {
+    password: process.env.ELASTICSEARCH_PWD,
+    username: process.env.ELASTICSEARCH_USER || "elastic",
+  },
   node: `${ELASTICSEARCH_URL}`,
 };
 
-switch (process.env.NODE_ENV) {
-  case "production":
-    esClientConfig.auth = {
-      password: process.env.ELASTICSEARCH_PWD,
-      username: process.env.ELASTICSEARCH_USER || "elastic",
-    };
-    break;
-}
-
 const client = new Client(esClientConfig);
 
-logger.info(
-  `connecting to ${ELASTICSEARCH_URL} with user ${ELASTICSEARCH_USER}`
-);
+logger.info(`connecting to ES with user ${process.env.ELASTICSEARCH_USER}`);
 
 export async function addVector(data) {
   if (NLP_URL) {
