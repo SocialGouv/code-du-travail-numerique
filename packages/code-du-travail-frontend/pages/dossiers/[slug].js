@@ -187,9 +187,8 @@ const Li = styled.li`
 
 const DossierLink = ({ url, title }) => {
   if (!url.includes("http")) {
-    const [, sourceRoute, slug] = url.split("/");
     return (
-      <Link href={`/${sourceRoute}${slug ? "/[slug]" : ""}`} as={url} passHref>
+      <Link href={url} passHref>
         <LeftArrowLink>{title}</LeftArrowLink>
       </Link>
     );

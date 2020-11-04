@@ -14,7 +14,7 @@ export const Headband = ({ href, ...props }) => {
     return null;
   }
   return (
-    <Link href="/[id]/[slug]" as={href} passHref>
+    <Link href={href || ""} passHref>
       <StyledLink {...props} />
     </Link>
   );

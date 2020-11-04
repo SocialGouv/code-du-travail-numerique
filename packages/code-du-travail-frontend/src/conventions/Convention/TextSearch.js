@@ -61,7 +61,7 @@ export function TextSearch({ containerId, convention }) {
       <IconStripe centered icon={icons.Warning}>
         Selon le thème, un accord collectif d’entreprise peut prévoir des règles
         différentes par rapport à la convention collective.{" "}
-        <Link href="/droit-du-travail" as="/droit-du-travail#hierarchie">
+        <Link href="/droit-du-travail#hierarchie">
           <a>En savoir plus</a>
         </Link>
         .

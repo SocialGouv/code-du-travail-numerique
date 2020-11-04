@@ -88,11 +88,7 @@ export const ListLink = ({
 
   return (
     <Link
-      href={{
-        pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { ...(query && { q: query }), slug: rootSlug },
-      }}
-      as={`/${getRouteBySource(source)}/${rootSlug}${
+      href={`/${getRouteBySource(source)}/${rootSlug}${
         query ? `?q=${query}` : ""
       }${anchor ? `#${anchor}` : ""}`}
       passHref

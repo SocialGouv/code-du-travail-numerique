@@ -25,10 +25,7 @@ function validate({ seriousMisconduct }) {
         Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas
         d’obligation de respecter un préavis.Vous pouvez trouver plus
         d’informations sur le préavis de licenciement sur{" "}
-        <Link
-          href="/fiche-service-public/[slug]"
-          as={`/fiche-service-public/preavis-de-licenciement`}
-        >
+        <Link href={`/fiche-service-public/preavis-de-licenciement`}>
           <a>cette fiche</a>
         </Link>
         .

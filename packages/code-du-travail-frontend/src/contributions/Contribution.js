@@ -68,10 +68,9 @@ const References = ({ references = [] }) => {
             {laborCodeRef.map((ref, index) => (
               <li key={`laborCode_ref${index}`}>
                 <Link
-                  href={{
-                    pathname: `/${getRouteBySource(SOURCES.CDT)}/[slug]`,
-                  }}
-                  as={`/${getRouteBySource(SOURCES.CDT)}/${slugify(ref.title)}`}
+                  href={`/${getRouteBySource(SOURCES.CDT)}/${slugify(
+                    ref.title
+                  )}`}
                 >
                   <a rel="nofollow">{ref.title}</a>
                 </Link>

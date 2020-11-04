@@ -38,12 +38,7 @@ const Outils = () => (
             const linkProps = {
               passHref: true,
             };
-            if (slug === "convention-collective") {
-              linkProps.href = `/${getRouteBySource(SOURCES.CCN)}`;
-            } else {
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/[slug]`;
-              linkProps.as = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-            }
+            linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
             return (
               <Link {...linkProps} passHref key={slug}>
                 <CallToActionTile

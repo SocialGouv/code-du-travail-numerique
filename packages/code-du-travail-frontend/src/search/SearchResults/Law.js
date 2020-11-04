@@ -12,11 +12,7 @@ export const Law = ({ items, query }) => (
       {items.map(({ algo, description, slug, source, title, url }) => (
         <Link
           key={slug}
-          href={{
-            pathname: `${getRouteBySource(source)}/[slug]`,
-            query: query ? { q: query } : null,
-          }}
-          as={`/${getRouteBySource(source)}/${slug}${
+          href={`/${getRouteBySource(source)}/${slug}${
             query ? `?q=${query}` : ""
           }`}
           passHref

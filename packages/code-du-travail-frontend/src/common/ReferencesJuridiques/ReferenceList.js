@@ -6,11 +6,7 @@ import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
 const InternalLink = ({ title, type, slug }) => (
-  <Link
-    href={`/${getRouteBySource(type)}/[slug]`}
-    as={`/${getRouteBySource(type)}/${slug}`}
-    passHref
-  >
+  <Link href={`/${getRouteBySource(type)}/${slug}`} passHref>
     <StyledArrowLink rel="nofollow" arrowPosition="left">
       {title}
     </StyledArrowLink>

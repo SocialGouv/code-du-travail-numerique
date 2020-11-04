@@ -22,8 +22,7 @@ function StepIndemnite({ form }) {
         Pour en savoir plus sur l’indemnité de licenciement et son mode de
         calcul, consultez{" "}
         <Link
-          href="/fiche-service-public/[slug]"
-          as={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
+          href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
         >
           <a>cet article</a>
         </Link>

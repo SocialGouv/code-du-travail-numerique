@@ -92,7 +92,7 @@ function Glossary({ letters }) {
         <StyledList>
           {terms.map(({ title, slug }) => (
             <li key={slug}>
-              <Link href="/glossaire/[slug]" as={`/glossaire/${slug}`}>
+              <Link href={`/glossaire/${slug}`}>
                 <a>{title}</a>
               </Link>
             </li>

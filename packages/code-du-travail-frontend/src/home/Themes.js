@@ -1,3 +1,4 @@
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
   Container,
@@ -17,7 +18,11 @@ export const Themes = ({ themes = [] }) => {
   const enrichedThemes = themes.map(({ icon, slug, title }) => {
     return (
       <GridCell key={slug}>
-        <Link key={slug} href="/themes/[slug]" as={`/themes/${slug}`} passHref>
+        <Link
+          key={slug}
+          href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
+          passHref
+        >
           <Tile title={title} icon={icons[icon]} />
         </Link>
       </GridCell>
