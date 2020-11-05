@@ -7,7 +7,7 @@ Fonctionnalité: Recherche de convention collective
   Je veux pouvoir consulter la page des conventions collectives et effectuer des recherches
 
 Scénario:
-  Soit un utilisateur sur la page "convention-collective"
+  Soit un utilisateur sur la page "/outils/convention-collective"
 
   Quand je renseigne "boulangerie" dans le champ "Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET."
   Quand j'attend que le texte "CONVENTIONS COLLECTIVES" apparaisse

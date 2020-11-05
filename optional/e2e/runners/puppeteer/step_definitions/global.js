@@ -9,7 +9,7 @@ Soit("un utilisateur sur la page d'accueil", () => {
 });
 
 Soit("un utilisateur sur la page {string}", (page) => {
-  I.amOnPage(`/${page}`);
+  I.amOnPage(`${page}`);
 });
 
 //

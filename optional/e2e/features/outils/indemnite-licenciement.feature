@@ -7,7 +7,7 @@ Fonctionnalité: Outil - Indemnité de licenciement
   Je veux pouvoir utiliser le calculateur d'indemnité de licenciement
 
 Scénario:
-  Soit un utilisateur sur la page "outils/indemnite-licenciement"
+  Soit un utilisateur sur la page "/outils/indemnite-licenciement"
 
   Alors je vois "Étapes"
   Alors je vois "Indemnité de licenciement"
