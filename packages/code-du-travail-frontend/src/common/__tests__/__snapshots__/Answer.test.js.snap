@@ -3304,23 +3304,7 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
-<<<<<<< HEAD
 .c37 {
-=======
-.c39:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-}
-
-.c65 {
->>>>>>> test(front): update snaps
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3333,22 +3317,14 @@ exports[`<Answer /> should renders related content 1`] = `
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .c40 {
-=======
-.c68 {
->>>>>>> test(front): update snaps
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-<<<<<<< HEAD
 .c39 {
-=======
-.c67 {
->>>>>>> test(front): update snaps
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -3362,52 +3338,13 @@ exports[`<Answer /> should renders related content 1`] = `
   transition: transform 250ms linear;
 }
 
-<<<<<<< HEAD
 .c36:hover .c38 {
-=======
-.c64:hover .c66 {
->>>>>>> test(front): update snaps
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-<<<<<<< HEAD
 .c30 {
-=======
-.c61 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c61:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c62 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c31 {
->>>>>>> test(front): update snaps
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3470,203 +3407,11 @@ exports[`<Answer /> should renders related content 1`] = `
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
-=======
-.c37 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c37:link,
-.c37:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c37:not([disabled]):hover,
-.c37:not([disabled]):active,
-.c37:not([disabled]):focus {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c37[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c44 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-}
-
-.c44:link,
-.c44:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c44:not([disabled]):hover,
-.c44:not([disabled]):active,
-.c44:not([disabled]):focus {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c44[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c58 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c58:focus,
-.c58:hover,
-.c58:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c60 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c30:hover .c59 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
->>>>>>> test(front): update snaps
 .c11 {
   position: relative;
 }
 
-.c45 {
+.c34 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -3710,11 +3455,7 @@ exports[`<Answer /> should renders related content 1`] = `
   padding-left: 2.4rem;
 }
 
-<<<<<<< HEAD
 .c33 {
-=======
-.c53 {
->>>>>>> test(front): update snaps
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -3724,137 +3465,6 @@ exports[`<Answer /> should renders related content 1`] = `
   line-height: 1.625;
 }
 
-<<<<<<< HEAD
-=======
-.c42 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.c49 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c49:hover,
-.c49:active,
-.c49:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c51 {
-  display: block;
-  width: 7.2rem;
-  height: 7.2rem;
-  margin: 0 auto 1.6rem;
-  padding: 1.4rem;
-  background-color: #f2f5fa;
-  border-radius: 50%;
-}
-
-.c50 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c52 {
-  padding-right: 1rem;
-}
-
-.c54 {
-  margin: 0;
-}
-
-.c55 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin-top: 1rem;
-}
-
-.c35 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 48px;
-  color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-animation: cRzqUi 500ms ease-out;
-  animation: cRzqUi 500ms ease-out;
-}
-
-.c36 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
-}
-
->>>>>>> test(front): update snaps
 .c12 {
   margin-top: 0;
   margin-bottom: 4rem;
@@ -4085,69 +3695,9 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-left: 4rem;
 }
 
-<<<<<<< HEAD
 .c35 {
-=======
-.c56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.c57 {
-  margin-top: 1rem;
-}
-
-.c48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0 0 1.6rem 0;
   padding: 0;
-}
-
-.c63 {
->>>>>>> test(front): update snaps
-  margin: 0 0 1.6rem 0;
-  padding: 0;
-}
-
-.c34 {
-  margin-bottom: 4rem;
-}
-
-.c41 {
-  padding: 1.6rem 0;
-  text-align: center;
-}
-
-.c38 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  color: #7994d4;
-}
-
-.c40 {
-  width: 2rem;
-  height: 2rem;
-}
-
-.c43 {
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-  font-size: 1.7rem;
 }
 
 .c21 {
@@ -4239,11 +3789,7 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c39 {
-=======
-  .c67 {
->>>>>>> test(front): update snaps
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -4272,45 +3818,6 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-=======
-  .c37 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c37 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c44 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c44 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c58 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c58 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
->>>>>>> test(front): update snaps
   .c26 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -4324,32 +3831,12 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
   .c33 {
-=======
-  .c53 {
->>>>>>> test(front): update snaps
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-<<<<<<< HEAD
-=======
-  .c49 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c35 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
->>>>>>> test(front): update snaps
   .c12 {
     margin-bottom: 3.2rem;
     margin-left: -1rem;
@@ -4492,93 +3979,8 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:1180px) {
-<<<<<<< HEAD
   .c31 + .c31 {
-=======
-  .c32 + .c32 {
     margin-left: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c46 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (max-width:600px) {
-  .c46 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:980px) {
-  .c48 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    -webkit-box-pack: stretch;
-    -webkit-justify-content: stretch;
-    -ms-flex-pack: stretch;
-    justify-content: stretch;
-    width: calc((100% - 1.6rem) / 2);
-  }
-
-  .c47 + .c47 {
-    margin-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c48 {
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    width: 100%;
-  }
-
-  .c47 + .c47 {
->>>>>>> test(front): update snaps
-    margin-left: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c34 {
-    position: fixed;
-    right: 27%;
-    bottom: 1rem;
-    left: 27%;
-    z-index: 1;
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    right: 1rem;
-    left: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c41 {
-    padding: 0.8rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
-    padding-right: 2.4rem;
   }
 }
 
@@ -4928,7 +4330,6 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c0"
       >
         <div
-<<<<<<< HEAD
           class="c33"
         >
           Modèles et outils liés
@@ -4985,286 +4386,28 @@ exports[`<Answer /> should renders related content 1`] = `
               >
                 related tool title 1
               </span>
-=======
-          class="c34"
-        >
-          <div
-            class="c35"
-          >
-            <div
-              class="c36"
-              role="alert"
-            >
-              <button
-                class="c30 c37 c38"
-                title="ne pas répondre aux questions"
-              >
-                <div
-                  class="c39"
-                >
-                  fermer la modale
-                </div>
-                <svg
-                  aria-hidden="true"
-                  class="c40"
-                  fill="none"
-                  viewBox="0 0 32 32"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-              <div
-                class="c41"
-              >
-                <span
-                  class="c42"
-                >
-                  Questionnaire
-                </span>
-                <div
-                  class="c43"
-                >
-                  Aidez-nous à améliorer le site
-                </div>
-                <button
-                  class="c30 c44"
-                >
-                  Commencer
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul
-          class="c45 c46"
-        >
-          <li
-            class="c47 c48"
-          >
-            <a
-              class="c49"
-              href="url.extrenal/tool"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-            >
-              <div
-                class="c50"
-              >
-                <div
-                  class="c51"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
-                      fill="#FF7067"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c52"
-                >
-                  
-                  <h3
-                    class="c53 c54"
-                  >
-                    related external title 1
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c55"
-              >
-                <div
-                  class="c56"
-                >
-                  <div
-                    class="c57"
-                  >
-                    <div
-                      class="c30 c58"
-                    >
-                      extern action
-                      <svg
-                        class="c59 c60"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li
-            class="c47 c48"
-          >
-            <a
-              class="c49"
-              href="/outils/TOOL_1"
-              rel="nofollow"
-            >
-              <div
-                class="c61"
-              >
-                <div
-                  class="c62"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 32 32"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
-                      fill="currentColor"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="c50"
-              >
-                <div
-                  class="c51"
-                >
-                  <svg
-                    fill="none"
-                    viewBox="0 0 52 52"
-                  >
-                    <path
-                      d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
-                      fill="#FF7067"
-                    />
-                    <path
-                      d="M29.112 4c-.312-.015-.495.131-.698.361-.201.228-.215.563-.214.871L28.195 27 17.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.257 1.257 0 00-.157.62V27L4.8 17a1.176 1.176 0 00-1.205.002c-.182.11-.334.267-.438.456a1.258 1.258 0 00-.157.62l.151 30.652c0 .327.127.64.352.871.225.231.53.361.848.361h35.427c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872V46H39v2H5V20l11.157 9.602a1.177 1.177 0 001.204-.003c.183-.109.334-.266.439-.455a1.26 1.26 0 00.156-.62L18 20.5l10.2 9.102a1.177 1.177 0 001.205-.003c.182-.109.334-.266.438-.455a1.25 1.25 0 00.157-.62V6h9v29h1.978V5.232c0-.327-.127-.64-.352-.871a1.185 1.185 0 00-.848-.36H29.112z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      d="M35 37v-2.809c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.6a1.173 1.173 0 00-.113 0 1.19 1.19 0 00-.776.398 1.251 1.251 0 00-.311.833v8.624c0 .327.127.64.352.871.224.231.53.361.848.361H27V42h-1v-7h7v2h2z"
-                      fill="#4E6896"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.287 32.96a1.189 1.189 0 00-.776.398 1.25 1.25 0 00-.311.833v8.624c0 .327.126.64.351.871.226.231.53.361.849.361h8.4c.318 0 .623-.13.848-.36a1.25 1.25 0 00.352-.872v-8.624c0-.327-.127-.64-.352-.871a1.184 1.184 0 00-.848-.36h-8.4a1.173 1.173 0 00-.113 0zM11 35h7v7h-7v-7z"
-                      fill="#4E6896"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="c52"
-                >
-                  <span
-                    class="c42 "
-                  >
-                    Outils
-                  </span>
-                  <h3
-                    class="c53 c54"
-                  >
-                    related tool title 1
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="c55"
-              >
-                <div
-                  class="c56"
-                >
-                  <div
-                    class="c57"
-                  >
-                    <div
-                      class="c30 c58"
-                    >
-                      tools action
-                      <svg
-                        class="c59 c60"
-                        fill="none"
-                        viewBox="0 0 28 15"
-                      >
-                        <path
-                          d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
->>>>>>> test(front): update snaps
             </a>
           </li>
         </ul>
         <div
-<<<<<<< HEAD
           class="c33"
-=======
-          class="c53"
->>>>>>> test(front): update snaps
         >
           Articles liés
            :
         </div>
         <ul
-          class="c45"
+          class="c34"
         >
           <li
-<<<<<<< HEAD
             class="c35"
           >
             <a
               class="c36 c37"
-=======
-            class="c63"
-          >
-            <a
-              class="c64 c65"
->>>>>>> test(front): update snaps
               href="/fiche-service-public/LINK_1"
               rel="nofollow"
             >
               <svg
-<<<<<<< HEAD
                 class="c38 c39"
-=======
-                class="c66 c67"
->>>>>>> test(front): update snaps
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -5274,37 +4417,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-<<<<<<< HEAD
                 class="c40"
-=======
-                class="c68"
->>>>>>> test(front): update snaps
               >
                 related sheet sp title 1
               </span>
             </a>
           </li>
           <li
-<<<<<<< HEAD
             class="c35"
           >
             <a
               class="c36 c37"
-=======
-            class="c63"
-          >
-            <a
-              class="c64 c65"
->>>>>>> test(front): update snaps
               href="/fiche-ministere-travail/LINK_2"
               rel="nofollow"
             >
               <svg
-<<<<<<< HEAD
                 class="c38 c39"
-=======
-                class="c66 c67"
->>>>>>> test(front): update snaps
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -5314,37 +4442,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-<<<<<<< HEAD
                 class="c40"
-=======
-                class="c68"
->>>>>>> test(front): update snaps
               >
                 related sheet mt title 1
               </span>
             </a>
           </li>
           <li
-<<<<<<< HEAD
             class="c35"
           >
             <a
               class="c36 c37"
-=======
-            class="c63"
-          >
-            <a
-              class="c64 c65"
->>>>>>> test(front): update snaps
               href="/fiche-service-public/LINK_4"
               rel="nofollow"
             >
               <svg
-<<<<<<< HEAD
                 class="c38 c39"
-=======
-                class="c66 c67"
->>>>>>> test(front): update snaps
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -5354,11 +4467,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <span
-<<<<<<< HEAD
                 class="c40"
-=======
-                class="c68"
->>>>>>> test(front): update snaps
               >
                 related sheet sp title 2
               </span>

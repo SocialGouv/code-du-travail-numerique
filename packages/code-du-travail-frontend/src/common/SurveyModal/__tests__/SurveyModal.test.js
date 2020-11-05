@@ -26,7 +26,9 @@ describe("<SurveyModal />", () => {
         )}
       </SurveyModal>
     );
-    jest.runAllTimers();
+    act(() => {
+      jest.runAllTimers();
+    });
     expect(container).toMatchSnapshot();
     const openBtn = getByText(BUTTON_LABEL);
     openBtn.click();

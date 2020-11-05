@@ -2,6 +2,7 @@ import { Button, Input, InputCheckbox, theme } from "@socialgouv/cdtn-ui";
 import React, { useCallback } from "react";
 import styled from "styled-components";
 
+import { matopush } from "../../../piwik";
 import { ActionBar } from "../components/ActionBar";
 import { ProgressBar } from "../components/ProgressBar";
 import { Question } from "../components/Question";
@@ -97,6 +98,12 @@ export const ImprovementsStep = ({
             dispatch({ payload: "final", type: "goTo" });
             setPromptVisible(false);
             setSurveyDisabled(true);
+            matopush([
+              "trackEvent",
+              "survey",
+              "submit",
+              JSON.stringify(state, null, 2),
+            ]);
           }}
         >
           Terminer

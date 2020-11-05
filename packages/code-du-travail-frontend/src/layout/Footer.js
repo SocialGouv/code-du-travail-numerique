@@ -127,6 +127,11 @@ const Footer = () => {
                         <Button
                           variant="navLink"
                           onClick={() => {
+                            matopush([
+                              "trackEvent",
+                              "survey",
+                              "open from footer",
+                            ]);
                             setModalVisible(true);
                           }}
                         >

@@ -5,6 +5,9 @@ import {
   Container,
   FlatList,
   Heading,
+  icons,
+  ScreenReaderOnly,
+  Subtitle,
   theme,
   Toast,
 } from "@socialgouv/cdtn-ui";
@@ -75,6 +78,11 @@ export const RelatedItems = ({ items = [] }) => {
                   <Button
                     small
                     onClick={() => {
+                      matopush([
+                        "trackEvent",
+                        "survey",
+                        "open from related items",
+                      ]);
                       setModalVisible(true);
                     }}
                   >
@@ -127,7 +135,7 @@ export const RelatedItems = ({ items = [] }) => {
   );
 };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledLinkItem = styled.li`
   margin: 0 0 ${spacings.base} 0;
