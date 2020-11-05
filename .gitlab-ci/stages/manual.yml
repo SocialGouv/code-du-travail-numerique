@@ -86,6 +86,8 @@ Update Prod index:
       - node_modules
 
   before_script:
+    - echo "$ELASTICSEARCH_URL"
+    - echo "$ELASTICSEARCH_DATA_TOKEN"
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
   script:

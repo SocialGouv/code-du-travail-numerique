@@ -72,12 +72,12 @@ async function main() {
 
   const monologQueue = new PQueue({ concurrency: 20 });
 
-  console.info(`using cdtn elasticsearch ${process.env.ELASTICSEARCH_URL}`);
+  logger.info(`using cdtn elasticsearch ${process.env.ELASTICSEARCH_URL}`);
 
   if (NLP_URL) {
-    logger.debug(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
+    logger.info(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
   } else {
-    logger.debug(`NLP_URL not defined, semantic search will be disabled.`);
+    logger.info(`NLP_URL not defined, semantic search will be disabled.`);
   }
 
   await version({ client });
