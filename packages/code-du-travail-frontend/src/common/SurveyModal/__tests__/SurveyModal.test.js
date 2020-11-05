@@ -2,7 +2,7 @@ import { Button } from "@socialgouv/cdtn-ui";
 import { act, render, waitFor } from "@testing-library/react";
 import React from "react";
 
-import { SurveyModal } from "../SurveyModal";
+import { SurveyModal } from "..";
 
 jest.useFakeTimers();
 beforeEach(() => {
