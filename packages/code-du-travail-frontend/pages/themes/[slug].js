@@ -1,4 +1,3 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
   Container,
@@ -56,12 +55,7 @@ class Theme extends React.Component {
             {theme.children && theme.children.length > 0 && (
               <StyledContainer>
                 {theme.children.map(({ slug, label }) => (
-                  <Link
-                    key={slug}
-                    href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
-                    as={slug}
-                    passHref
-                  >
+                  <Link key={slug} href={slug} passHref>
                     <Button as={StyledLink}>{label}</Button>
                   </Link>
                 ))}

@@ -7,7 +7,7 @@ Fonctionnalité: Dossier Coronavirus
 
 
   Scénario:
-    Soit un utilisateur sur la page "dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
+    Soit un utilisateur sur la page "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
 
     Alors je vois "Ministère du travail : notre dossier sur le Coronavirus"
     Alors je vois "Sommaire"

@@ -20,10 +20,7 @@ function StepIntro() {
       <p>
         Vous pouvez trouver plus d’informations sur le préavis de licenciement
         sur{" "}
-        <Link
-          href="/fiche-service-public/[slug]"
-          as={`/fiche-service-public/preavis-de-licenciement`}
-        >
+        <Link href={`/fiche-service-public/preavis-de-licenciement`}>
           <a>cette fiche</a>
         </Link>
         .

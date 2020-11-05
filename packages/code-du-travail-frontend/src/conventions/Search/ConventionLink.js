@@ -33,11 +33,10 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
     </StyledLink>
   ) : (
     <Link
-      as={`/convention-collective/${getConventionSlug({
+      href={`/convention-collective/${getConventionSlug({
         num,
         shortTitle,
       })}`}
-      href="/convention-collective/[slug]"
       passHref
     >
       <StyledLink {...commonProps}>

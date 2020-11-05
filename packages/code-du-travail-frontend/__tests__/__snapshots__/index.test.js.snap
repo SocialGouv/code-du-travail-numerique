@@ -2386,7 +2386,7 @@ exports[`<Home /> should render 1`] = `
                 >
                   <a
                     class="c43"
-                    href="/convention-collective"
+                    href="/outils/convention-collective"
                   >
                     <div
                       class="c44"

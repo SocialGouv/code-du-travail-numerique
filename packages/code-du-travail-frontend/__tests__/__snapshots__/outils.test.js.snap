@@ -2268,7 +2268,7 @@ exports[`<Outils /> should render 1`] = `
                 >
                   <a
                     class="c33"
-                    href="/convention-collective"
+                    href="/outils/convention-collective"
                   >
                     <div
                       class="c34"

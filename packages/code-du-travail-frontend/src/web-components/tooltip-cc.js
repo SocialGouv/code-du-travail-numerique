@@ -84,7 +84,7 @@ class WebComponentsTooltipCC extends LitElement {
         aria-hidden="${!this.visible}"
       >
         <a
-          href="/convention-collective"
+          href="/outils/convention-collective"
           @pointerdown="${this.showModal}"
           @blur="${this.hide}"
         >

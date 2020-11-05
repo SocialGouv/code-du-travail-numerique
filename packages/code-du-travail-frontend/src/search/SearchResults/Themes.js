@@ -12,11 +12,7 @@ export const Themes = ({ items, query }) => (
       {items.map(({ slug, title, source, url, algo }) => (
         <Link
           key={slug}
-          href={{
-            pathname: `${getRouteBySource(source)}/[slug]`,
-            query: query ? { q: query } : null,
-          }}
-          as={`/${getRouteBySource(source)}/${slug}${
+          href={`/${getRouteBySource(source)}/${slug}${
             query ? `?q=${query}` : ""
           }`}
           passHref

@@ -27,10 +27,7 @@ function DisclaimerToast({ durationCC, durationCDT, ccn }) {
             <>
               <br />
               Vous pouvez faire une recherche par mots-clés dans{" "}
-              <Link
-                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
-              >
+              <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
                 <a>votre convention collective</a>
               </Link>
             </>
@@ -48,10 +45,7 @@ function DisclaimerToast({ durationCC, durationCDT, ccn }) {
             <>
               <br />
               Vous pouvez faire une recherche par mots-clés dans{" "}
-              <Link
-                href={`/${getRouteBySource(SOURCES.CCN)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}
-              >
+              <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
                 <a>votre convention collective</a>
               </Link>
             </>

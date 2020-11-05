@@ -87,10 +87,7 @@ function AccordionContent({ answer, slug, references }) {
       <strong>
         Pour savoir si la mesure prévue par la convention collective s’applique
         à votre situation, reportez-vous{" "}
-        <Link
-          href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/[slug]`}
-          as={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}
-        >
+        <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`}>
           <a>à la réponse complète à cette question</a>
         </Link>
         .

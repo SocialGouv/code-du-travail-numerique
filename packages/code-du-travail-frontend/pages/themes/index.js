@@ -60,8 +60,7 @@ const ThemesPage = ({ children = [] }) => (
             children.map(({ children, icon, slug, title }) => (
               <Link
                 key={slug}
-                href={`/${getRouteBySource(SOURCES.THEMES)}/[slug]`}
-                as={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
+                href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
                 passHref
               >
                 <Tile icon={icons[icon]} title={title}>

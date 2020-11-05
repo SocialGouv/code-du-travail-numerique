@@ -175,8 +175,9 @@ function StepIndemnite({ form }) {
         En savoir plus sur la prime de précarité d’un{" "}
         {contractType === CONTRACT_TYPE.CDD ? (
           <Link
-            href="/fiche-service-public/[slug]"
-            as={"/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"}
+            href={
+              "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+            }
           >
             <a target="_blank" rel="noopener noreferrer">
               salarié en CDD
@@ -184,8 +185,7 @@ function StepIndemnite({ form }) {
           </Link>
         ) : (
           <Link
-            href="/fiche-service-public/[slug]"
-            as={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
+            href={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
           >
             <a target="_blank" rel="noopener noreferrer">
               salarié en contrat de travail temporaire (contrat d’intérim)

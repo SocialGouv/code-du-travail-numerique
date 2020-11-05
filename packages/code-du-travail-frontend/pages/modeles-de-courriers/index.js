@@ -95,8 +95,7 @@ function Modeles(props) {
                 {items.map(({ description, slug, title }) => (
                   <StyledListItem key={slug}>
                     <Link
-                      href={`${getRouteBySource(SOURCES.LETTERS)}/[slug]`}
-                      as={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
+                      href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
                       passHref
                     >
                       <Tile wide custom title={title} subtitle={theme.title}>

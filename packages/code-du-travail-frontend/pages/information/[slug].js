@@ -28,9 +28,8 @@ const {
 
 const InfoLink = ({ children, href }) => {
   if (!href.includes("http")) {
-    const [, sourceRoute, slug] = href.split("/");
     return (
-      <Link href={`/${sourceRoute}${slug ? "/[slug]" : ""}`} as={href} passHref>
+      <Link href={href} passHref>
         <a>{children}</a>
       </Link>
     );
