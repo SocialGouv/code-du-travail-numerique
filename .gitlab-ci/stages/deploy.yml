@@ -166,20 +166,20 @@ Deploy @cdtn/frontend extra ingress(prod):
     - cat ./.k8s/data.job.yml | envsubst | kubectl apply -f -
 
 #
-
-Update Elasticsearch Index:
-  extends:
-    - .deploy-data
-  stage: "Update ES data"
-  environment:
-    name: prod2
-  only:
-    refs:
-      - master
-    variables:
-      - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
-  variables:
-    PRODUCTION: "true"
+# Temporary disabled
+# Update Elasticsearch Index:
+#   extends:
+#     - .deploy-data
+#   stage: "Update ES data"
+#   environment:
+#     name: prod2
+#   only:
+#     refs:
+#       - master
+#     variables:
+#       - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
+#   variables:
+#     PRODUCTION: "true"
 
 Create Elasticsearch Index (dev):
   <<: *deploy_data

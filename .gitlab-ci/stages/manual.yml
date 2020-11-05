@@ -61,7 +61,7 @@ Update Prod index:
   dependencies: []
   when: manual
   environment:
-    name: dev2
+    name: preview-dev2
   # only:
   #   refs:
   #     - master
