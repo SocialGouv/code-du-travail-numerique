@@ -62,9 +62,9 @@ Update Prod index:
   when: manual
   environment:
     name: dev2
-  only:
-    refs:
-      - master
+  # only:
+  #   refs:
+  #     - master
   variables:
     ES_INDEX_PREFIX: cdtn-preprod
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
