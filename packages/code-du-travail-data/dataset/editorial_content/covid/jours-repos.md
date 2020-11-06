@@ -14,6 +14,6 @@ Dans ce cas, depuis le 26 mars 2020, l’employeur peut prendre une décision un
 
 Si l’employeur prend une telle décision, cette dernière prime sur les autres stipulations conventionnelles concernant les JRTT, jours de repos dans le cadre d’un aménagement du temps de travail ou d’un forfait ou le compte épargne-temps (accord collectif, etc.) qui lui seraient contraires.
 
-**Important&nbsp;:** Ce dispositif est mis en place par décision unilatérale de l’employeur. S’il ne prend pas de décision dans les conditions prévues par <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940">l’ordonnance du 25 mars 2020</a>, il applique le régime habituel prévu par accord.
+**Important&nbsp;:** Ce dispositif est mis en place par décision unilatérale de l’employeur. S’il ne prend pas de décision dans les conditions prévues par <a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940" rel="noopener noreferrer" target="_blank">l’ordonnance du 25 mars 2020</a>, il applique le régime habituel prévu par accord.
 
 Enfin, l’employeur doit en informer le CSE (comité social et économique), par tout moyen, dès qu’il prend sa décision. Le CSE rend son avis dans le délai d’un mois à compter de cette information. Cet avis peut intervenir après que l’employeur a appliqué sa décision.

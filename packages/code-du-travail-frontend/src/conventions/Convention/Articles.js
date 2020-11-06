@@ -46,7 +46,7 @@ function Articles({ blocs, containerId, convention }) {
                 rel="nofollow noopener"
                 href={getArticleUrl({ containerId, id })}
                 subtitle={`Article ${title}`}
-                className={"no-after"}
+                className="no-after"
               >
                 {section}
               </Tile>

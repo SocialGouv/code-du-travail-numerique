@@ -1,0 +1,4 @@
+* **Utiliser les autres moyens de protection individuelle** quand les gestes barrières et les mesures de protection collective sont impossibles.
+* **Les visières et les lunettes protègent le visage et/ou les yeux.** Elles peuvent être utilisées en complément du masque quand plusieurs personnes sont proches sans qu’un dispositif de séparation ne soit possible. Elles doivent être nettoyées par un produit virucide après chaque utilisation.
+* **Sur-blouses et charlottes** sont utiles quand il y a un risque de contact avec des surfaces ou objets contaminés.
+* **Les gants ne sont pas recommandés** pour se protéger de la Covid-19. Préférer le lavage régulier des mains. Si les gants sont nécessaires pour se protéger d’un autre risque, ne pas porter ses mains gantées au visage. Laver ou jeter les gants utilisés.

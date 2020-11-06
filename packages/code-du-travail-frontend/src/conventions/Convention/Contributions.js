@@ -5,7 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Html from "../../common/Html";
-import ReferencesJuridiques from "../../common/ReferencesJuridiques";
+import References from "../../common/References";
 import { trackAccordionPanelState } from "./utils";
 
 const { spacings } = theme;
@@ -73,7 +73,7 @@ function AccordionContent({ answer, slug, references }) {
     <>
       <Html>{answer}</Html>
       {references && (
-        <StyledReferencesJuridiques
+        <StyledReferences
           references={references.map((reference) => ({
             title: reference.title,
             type:
@@ -98,6 +98,6 @@ function AccordionContent({ answer, slug, references }) {
 
 export { Contributions };
 
-const StyledReferencesJuridiques = styled(ReferencesJuridiques)`
+const StyledReferences = styled(References)`
   margin-bottom: ${spacings.xmedium};
 `;

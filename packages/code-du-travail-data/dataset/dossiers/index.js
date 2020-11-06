@@ -8,33 +8,34 @@ const thematicFiles = [
         refs: [
           {
             title:
-              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+              "Covid-19 : Les mesures de protection en entreprise (Protocole national)",
             url:
-              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/protocole-national-sante-securite-salaries",
-          },
-          {
-            title: "Activité partielle – chômage partiel",
-            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
-          },
-          {
-            title: "Aide à l’embauche des jeunes de moins de 26 ans",
-            url:
-              "/fiche-service-public/aide-a-lembauche-dun-jeune-de-moins-de-26-ans",
+              "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national",
           },
           {
             title:
-              "Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
+              "Covid-19 : évaluer le risque sanitaire (document d'évaluation des risques) [Infographie]",
             url:
-              "/information/prime-exceptionnelle-de-pouvoir-dachat-nouveautes-covid-19",
+              "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national",
           },
           {
-            title: "Nouveautés Covid-19 : congés payés [Infographie]",
-            url: "/information/conges-payes-nouveautes-covid-19",
+            title:
+              "Covid-19 : cas positif, cas contact, cluster dans l'entreprise, que faire ?",
+            url:
+              "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national",
           },
           {
-            title: "Dispositif de FNE-Formation",
+            title: "Activité partielle - chômage partiel",
+            url: "/fiche-ministere-travail/activite-partielle-chomage-partiel",
+          },
+          {
+            title: "Questions-réponses : télétravail",
+            url: "/fiche-ministere-travail/teletravail",
+          },
+          {
+            title: "Aide à l'embauche d'un jeune",
             url:
-              "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/fne-formation",
+              "/fiche-service-public/aide-a-lembauche-dun-jeune-de-moins-de-26-ans",
           },
         ],
         title: "Les contenus populaires",
@@ -52,6 +53,10 @@ const thematicFiles = [
           {
             title: "Personnes vulnérables",
             url: "https://www.service-public.fr/particuliers/actualites/A14380",
+          },
+          {
+            title: "Cas contact : demander un arrêt maladie en ligne",
+            url: "https://declare.ameli.fr/cas-contact/conditions",
           },
         ],
         title: "Arrêt maladie et personnes vulnérables",
@@ -160,9 +165,137 @@ const thematicFiles = [
         title: "Activités partielles (chômage partiel et APLD)",
       },
       {
+        icon: "Security",
+        id: "sante-securite",
+        position: 5,
+        refs: [
+          {
+            title:
+              "Covid-19 : évaluer le risque sanitaire (document d'évaluation des risques) [Infographie]",
+            url:
+              "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national",
+          },
+          {
+            title:
+              "Covid-19 : Les mesures de protection en entreprise (Protocole national)",
+            url:
+              "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national",
+          },
+          {
+            title:
+              "Une personne symptomatique dans l'entreprise, que faire ? (Infographie)",
+            url:
+              "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national#symptomes-que-faire",
+          },
+          {
+            title: "Cas positif dans l'entreprise, que faire ? (Infographie)",
+            url:
+              "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national#positif-que-faire",
+          },
+          {
+            title:
+              "Un cluster (3 personnes positives sur 7 jours) dans l'entreprise, que faire ? (Infographie)",
+            url:
+              "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national#cluster-que-faire",
+          },
+          {
+            title:
+              "Covid-19 : organisation et fonctionnement des restaurants d'entreprise",
+            url:
+              "https://travail-emploi.gouv.fr/IMG/pdf/fiches_covid_restaurants_d_entreprise_vok.pdf",
+          },
+          {
+            title: "Covid-19 : gestion des cas contacts entreprise",
+            url:
+              "https://travail-emploi.gouv.fr/IMG/pdf/mtei_fiches_covid_gestion_cas_contact_3_11_2020_ok.pdf",
+          },
+          {
+            title:
+              "Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité",
+            url:
+              "/fiche-ministere-travail/securite-et-sante-des-travailleurs-les-obligations-generales-de-lemployeur-et-sa-responsabilite",
+          },
+          {
+            title:
+              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
+            url:
+              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/protocole-national-sante-securite-salaries",
+          },
+          {
+            title:
+              "Quelles mesures l’employeur doit-il prendre pour protéger la santé de ses salariés",
+            url:
+              "/fiche-ministere-travail/quelles-mesures-lemployeur-doit-il-prendre-pour-proteger-la-sante-de-ses-salaries",
+          },
+          {
+            title:
+              "Nouveautés Covid-19 : report ou annulation de visites médicales",
+            url:
+              "/information/report-ou-annulation-de-visites-medicales-nouveautes-covid-19",
+          },
+          {
+            title:
+              "Questions - Réponses : responsabilité de l’employeur et droit de retrait",
+            url:
+              "/fiche-ministere-travail/responsabilite-de-lemployeur-droit-de-retrait",
+          },
+          {
+            title:
+              "Questions - Réponses : mesures de prévention dans l’entreprise contre le COVID-19",
+            url:
+              "/fiche-ministere-travail/mesures-de-prevention-dans-lentreprise-contre-le-covid-19-masques",
+          },
+          {
+            title: "Questions - Réponses : services de santé au travail",
+            url: "/fiche-ministere-travail/services-de-sante-au-travail",
+          },
+          {
+            title: "Questions - Réponses : mesures de prévention hors covid",
+            url:
+              "/fiche-ministere-travail/mesures-de-prevention-sante-hors-covid-19",
+          },
+          {
+            title: "Nouveautés Covid-19 : services de santé au travail",
+            url:
+              "/information/services-de-sante-au-travail-nouveautes-covid-19",
+          },
+        ],
+        title: "Santé et sécurité au travail",
+      },
+      {
+        icon: "Contract",
+        id: "contrats",
+        position: 6,
+        refs: [
+          {
+            title: "Questions-réponses : télétravail",
+            url: "/fiche-ministere-travail/teletravail",
+          },
+          {
+            title: "Télétravail dans le secteur privé",
+            url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
+          },
+          {
+            title: "Nouveautés Covid-19 : rupture conventionnelle",
+            url: "/information/rupture-conventionnelle-nouveautes-covid-19",
+          },
+          {
+            title:
+              "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
+            url:
+              "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
+          },
+          {
+            title: "Nouveautés Covid-19 : entretien professionnel",
+            url: "/information/entretien-professionnel-nouveautes-covid-19",
+          },
+        ],
+        title: "Télétravail et contrat de travail",
+      },
+      {
         icon: "Salary",
         id: "aides-jeunes",
-        position: 5,
+        position: 7,
         refs: [
           {
             title: "Aide à l’embauche des jeunes de moins de 26 ans",
@@ -203,7 +336,7 @@ const thematicFiles = [
       {
         icon: "Salary",
         id: "aides-travailleurs-handicapés",
-        position: 6,
+        position: 8,
         refs: [
           {
             title:
@@ -265,7 +398,7 @@ const thematicFiles = [
       {
         icon: "Precarity",
         id: "conge-payes",
-        position: 7,
+        position: 9,
         refs: [
           {
             title: "Nouveautés Covid-19 : congés payés [Infographie]",
@@ -311,35 +444,9 @@ const thematicFiles = [
         title: "Congés payés, durée du travail et primes",
       },
       {
-        icon: "Contract",
-        id: "contrats",
-        position: 8,
-        refs: [
-          {
-            title: "Nouveautés Covid-19 : rupture conventionnelle",
-            url: "/information/rupture-conventionnelle-nouveautes-covid-19",
-          },
-          {
-            title: "Télétravail dans le secteur privé",
-            url: "/fiche-service-public/teletravail-dans-le-secteur-prive",
-          },
-          {
-            title:
-              "Mise à disposition temporaire de salariés volontaires entre deux entreprises",
-            url:
-              "/fiche-ministere-travail/mise-a-disposition-temporaire-de-salaries-volontaires-entre-deux-entreprises",
-          },
-          {
-            title: "Nouveautés Covid-19 : entretien professionnel",
-            url: "/information/entretien-professionnel-nouveautes-covid-19",
-          },
-        ],
-        title: "Contrat de travail",
-      },
-      {
         icon: "Nego",
         id: "accord-collectif",
-        position: 9,
+        position: 10,
         refs: [
           {
             title: "Questions-réponses : dialogue social",
@@ -352,64 +459,6 @@ const thematicFiles = [
           },
         ],
         title: "CSE et accord collectif",
-      },
-      {
-        icon: "Security",
-        id: "sante-securite",
-        position: 10,
-        refs: [
-          {
-            title:
-              "Sécurité et santé des travailleurs : les obligations générales de l’employeur et sa responsabilité",
-            url:
-              "/fiche-ministere-travail/securite-et-sante-des-travailleurs-les-obligations-generales-de-lemployeur-et-sa-responsabilite",
-          },
-          {
-            title:
-              "Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19",
-            url:
-              "https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs-les-emplois-les-savoir-faire-et-les-competences/proteger-les-travailleurs/protocole-national-sante-securite-salaries",
-          },
-          {
-            title:
-              "Quelles mesures l’employeur doit-il prendre pour protéger la santé de ses salariés",
-            url:
-              "/fiche-ministere-travail/quelles-mesures-lemployeur-doit-il-prendre-pour-proteger-la-sante-de-ses-salaries",
-          },
-          {
-            title:
-              "Nouveautés Covid-19 : report ou annulation de visites médicales",
-            url:
-              "/information/report-ou-annulation-de-visites-medicales-nouveautes-covid-19",
-          },
-          {
-            title:
-              "Questions - Réponses : responsabilité de l’employeur et droit de retrait",
-            url:
-              "/fiche-ministere-travail/responsabilite-de-lemployeur-droit-de-retrait",
-          },
-          {
-            title:
-              "Questions - Réponses : mesures de prévention dans l’entreprise contre le COVID-19",
-            url:
-              "/fiche-ministere-travail/mesures-de-prevention-dans-lentreprise-contre-le-covid-19-masques",
-          },
-          {
-            title: "Questions - Réponses : services de santé au travail",
-            url: "/fiche-ministere-travail/services-de-sante-au-travail",
-          },
-          {
-            title: "Questions - Réponses : mesures de prévention hors covid",
-            url:
-              "/fiche-ministere-travail/mesures-de-prevention-sante-hors-covid-19",
-          },
-          {
-            title: "Nouveautés Covid-19 : services de santé au travail",
-            url:
-              "/information/services-de-sante-au-travail-nouveautes-covid-19",
-          },
-        ],
-        title: "Santé et sécurité au travail",
       },
       {
         icon: "Formation",

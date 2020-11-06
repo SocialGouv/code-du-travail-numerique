@@ -1,0 +1,1 @@
+L’employeur doit rédiger, avec le concours du service de santé au travail de l’entreprise, une procédure de prise en charge rapide des personnes symptomatiques. Cette procédure est l’adaptation au sein de l’entreprise, à minima, des obligations présentées <a href="/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national">ici</a>.
