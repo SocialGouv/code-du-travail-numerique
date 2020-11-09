@@ -2,6 +2,7 @@
 
 exports[`<StepResult /> should render CC answer 1`] = `
 .c2 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -150,6 +151,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 exports[`<StepResult /> should render with no cc 1`] = `
 .c2 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -261,6 +263,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
 
 exports[`<StepResult /> should render with unhandled cc 1`] = `
 .c2 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

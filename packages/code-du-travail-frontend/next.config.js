@@ -14,13 +14,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const withTM = function (config) {
-  if (process.env.NODE_ENV === "production") {
-    return withTranspileModule(config);
-  }
-  return config;
-};
-
 const compose = (...fns) => (args) =>
   fns.reduceRight((arg, fn) => fn(arg), args);
 
@@ -60,5 +53,5 @@ const nextConfig = {
 module.exports = compose(
   withSourceMaps,
   withBundleAnalyzer,
-  withTM
+  withTranspileModule
 )(nextConfig);

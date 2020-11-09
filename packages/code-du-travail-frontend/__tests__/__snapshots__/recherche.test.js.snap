@@ -698,6 +698,7 @@ exports[`<Recherche /> should render 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -738,6 +739,8 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c14 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -1466,6 +1469,15 @@ exports[`<Recherche /> should render 1`] = `
                       class="c52"
                     >
                       Contact
+                    </button>
+                  </li>
+                  <li
+                    class="c50"
+                  >
+                    <button
+                      class="c52"
+                    >
+                      Répondez à notre questionnaire
                     </button>
                   </li>
                   <li

@@ -1276,6 +1276,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -1334,6 +1335,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 .c22 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -2703,6 +2706,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       class="c93"
                     >
                       Contact
+                    </button>
+                  </li>
+                  <li
+                    class="c91"
+                  >
+                    <button
+                      class="c93"
+                    >
+                      Répondez à notre questionnaire
                     </button>
                   </li>
                   <li

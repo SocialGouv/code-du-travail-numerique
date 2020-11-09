@@ -896,6 +896,7 @@ exports[`<Home /> should render 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 17.4rem;
   height: 7rem;
   margin-left: 4rem;
   color: #f66663;
@@ -938,6 +939,8 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c15 {
+  position: relative;
+  z-index: 2;
   margin-top: 6rem;
 }
 
@@ -989,6 +992,7 @@ exports[`<Home /> should render 1`] = `
   right: -1rem;
   z-index: -1;
   width: 47rem;
+  height: 39.2rem;
   overflow: visible;
 }
 
@@ -1496,6 +1500,7 @@ exports[`<Home /> should render 1`] = `
     top: -5rem;
     right: 3rem;
     width: 40rem;
+    height: 33.4rem;
   }
 }
 
@@ -2951,6 +2956,15 @@ exports[`<Home /> should render 1`] = `
                       class="c10 c78"
                     >
                       Contact
+                    </button>
+                  </li>
+                  <li
+                    class="c76"
+                  >
+                    <button
+                      class="c10 c78"
+                    >
+                      Répondez à notre questionnaire
                     </button>
                   </li>
                   <li

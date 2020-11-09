@@ -151,6 +151,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 .c1 {
   position: relative;
   width: 50vw;
+  max-width: 74rem;
   max-height: calc(100vh - 2 * 10vh);
   margin: 10vh auto;
   padding: 2rem;

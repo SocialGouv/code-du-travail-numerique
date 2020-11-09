@@ -101,11 +101,13 @@ const StyledWorkersWrapper = styled.div`
   right: -1rem;
   z-index: -1;
   width: 47rem;
+  height: 39.2rem;
   overflow: visible;
   @media (max-width: ${breakpoints.desktop}) {
     top: -5rem;
     right: 3rem;
     width: 40rem;
+    height: 33.4rem;
   }
   @media (max-width: ${breakpoints.tablet}) {
     display: none;

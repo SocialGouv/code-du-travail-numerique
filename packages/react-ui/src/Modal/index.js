@@ -64,6 +64,7 @@ const StyledDialogOverlay = styled(DialogOverlay)`
 const StyledDialogContent = styled(DialogContent)`
   position: relative;
   width: 50vw;
+  max-width: 74rem;
   max-height: calc(100vh - 2 * 10vh);
   margin: 10vh auto;
   padding: 2rem;

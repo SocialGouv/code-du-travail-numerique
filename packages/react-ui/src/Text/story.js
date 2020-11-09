@@ -5,7 +5,7 @@ import { Text } from ".";
 
 export default {
   component: Text,
-  title: "Components|Text",
+  title: "Components/Text",
 };
 
 export const base = () => (

@@ -61,6 +61,7 @@ Toast.defaultProps = {
 };
 
 const StyledToast = styled.div`
+  position: relative;
   display: inline-flex;
   justify-content: space-between;
   width: ${(props) => (props.wide ? "100%" : "auto")};

@@ -18,6 +18,7 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 .c1 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

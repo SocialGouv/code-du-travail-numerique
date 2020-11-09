@@ -2,6 +2,7 @@
 
 exports[`<StepIndemnite /> should render 1`] = `
 .c10 {
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

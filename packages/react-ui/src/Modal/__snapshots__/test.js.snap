@@ -100,6 +100,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 .c1 {
   position: relative;
   width: 50vw;
+  max-width: 74rem;
   max-height: calc(100vh - 2 * 10vh);
   margin: 10vh auto;
   padding: 2rem;

@@ -583,6 +583,15 @@ exports[`<Footer /> should render 1`] = `
                 <li
                   class="c19"
                 >
+                  <button
+                    class="c21"
+                  >
+                    Répondez à notre questionnaire
+                  </button>
+                </li>
+                <li
+                  class="c19"
+                >
                   <a
                     class="c20"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"

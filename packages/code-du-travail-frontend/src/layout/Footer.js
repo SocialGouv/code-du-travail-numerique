@@ -16,6 +16,7 @@ import styled from "styled-components";
 
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
+import { SurveyModal } from "../common/SurveyModal";
 import { matopush } from "../piwik";
 
 const { DirectionRight: DirectionRightIcon } = icons;
@@ -119,6 +120,25 @@ const Footer = () => {
                         </Button>
                       )}
                     </ContactModal>
+                  </StyledListItem>
+                  <StyledListItem>
+                    <SurveyModal>
+                      {({ setModalVisible }) => (
+                        <Button
+                          variant="navLink"
+                          onClick={() => {
+                            matopush([
+                              "trackEvent",
+                              "survey",
+                              "open from footer",
+                            ]);
+                            setModalVisible(true);
+                          }}
+                        >
+                          Répondez à notre questionnaire
+                        </Button>
+                      )}
+                    </SurveyModal>
                   </StyledListItem>
                   <StyledListItem>
                     <StyledLink
