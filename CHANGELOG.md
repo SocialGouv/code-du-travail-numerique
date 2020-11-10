@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.36.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.35.0...v4.36.0) (2020-11-10)
+
+
+### Features
+
+* **frontend:** survey ([#3110](https://github.com/SocialGouv/code-du-travail-numerique/issues/3110)) ([7a3e290](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a3e2908ef00f65b595cdb7da543d953eead5667))
+* **related items:** remove covisite A/B testing + add log on non article related selection + remove tiles  ([#3065](https://github.com/SocialGouv/code-du-travail-numerique/issues/3065)) ([de0c522](https://github.com/SocialGouv/code-du-travail-numerique/commit/de0c5228b1c96f0e8bda56785f599a262f7ba080))
+
+
+
+
+
 # [4.35.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.34.0...v4.35.0) (2020-11-03)
 
 
