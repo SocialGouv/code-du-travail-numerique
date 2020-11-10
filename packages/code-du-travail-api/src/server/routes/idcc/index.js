@@ -25,7 +25,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/idcc", async (ctx) => {
   const body = getIdccBody({ query: ctx.request.query.q });
 
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   ctx.body = { ...response.body };
 });
 

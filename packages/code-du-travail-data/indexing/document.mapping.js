@@ -153,6 +153,18 @@ export const documentMapping = {
       type: "keyword",
     },
 
+    // used for CC search
+    synonyms: {
+      fields: {
+        french: {
+          analyzer: "french_indexing",
+          search_analyzer: "french",
+          type: "text",
+        },
+      },
+      type: "text",
+    },
+
     // Currently only available for `Fiches service public`.
     tags: {
       analyzer: "french",
