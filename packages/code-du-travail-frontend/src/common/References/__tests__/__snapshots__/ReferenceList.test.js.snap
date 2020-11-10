@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferenceList /> should render 1`] = `
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,14 +14,14 @@ exports[`<ReferenceList /> should render 1`] = `
   text-decoration: none;
 }
 
-.c6 {
+.c7 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c5 {
+.c6 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -35,7 +35,7 @@ exports[`<ReferenceList /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c1:hover .c4 {
+.c2:hover .c5 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -47,13 +47,17 @@ exports[`<ReferenceList /> should render 1`] = `
   list-style-type: none;
 }
 
-.c3 {
+.c4 {
   padding: 0.8rem 0;
   font-weight: normal;
 }
 
+.c1 {
+  padding-left: 0;
+}
+
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -65,16 +69,16 @@ exports[`<ReferenceList /> should render 1`] = `
 
 <div>
   <ul
-    class="c0"
+    class="c0 c1"
   >
     <li>
       <a
-        class="c1 c2 c3"
+        class="c2 c3 c4"
         href="/code-du-travail/l2323-4"
         rel="nofollow"
       >
         <svg
-          class="c4 c5"
+          class="c5 c6"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -84,7 +88,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c7"
         >
           Article L2323-4 du Code du travail
         </span>
@@ -92,13 +96,13 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="c1 c2 c3"
+        class="c2 c3 c4 no-after"
         href="https://article.jo/yyy"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
         <svg
-          class="c4 c5"
+          class="c5 c6"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -108,7 +112,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c7"
         >
           Article yyy du JO
         </span>
@@ -116,13 +120,13 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="c1 c2 c3"
+        class="c2 c3 c4 no-after"
         href="https://legifrance/ccn-metallurgie"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
         <svg
-          class="c4 c5"
+          class="c5 c6"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -132,7 +136,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c7"
         >
           CCN metallurgie
         </span>
@@ -140,12 +144,12 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="c1 c2 c3"
+        class="c2 c3 c4"
         href="/convention-collective/123-automobile"
         rel="nofollow"
       >
         <svg
-          class="c4 c5"
+          class="c5 c6"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -155,7 +159,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c7"
         >
           Convention collective: automobile
         </span>
@@ -163,12 +167,12 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="c1 c2 c3"
+        class="c2 c3 c4"
         href="/code-du-travail/l1234-3"
         rel="nofollow"
       >
         <svg
-          class="c4 c5"
+          class="c5 c6"
           fill="none"
           viewBox="0 0 28 15"
         >
@@ -178,7 +182,7 @@ exports[`<ReferenceList /> should render 1`] = `
           />
         </svg>
         <span
-          class="c6"
+          class="c7"
         >
           Article L1234-3 du Code du travail
         </span>

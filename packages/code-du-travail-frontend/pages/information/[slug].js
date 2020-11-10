@@ -17,9 +17,8 @@ import styled from "styled-components";
 import unified from "unified";
 
 import Answer from "../../src/common/Answer";
-import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
-import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
+import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 
 const {
@@ -52,12 +51,13 @@ const processor = unified()
   });
 
 const Information = ({
+  anchor,
   information: {
     _source: {
       breadcrumbs,
       contents,
       date,
-      description,
+      metaDescription,
       folder,
       intro,
       references = [],
@@ -96,14 +96,18 @@ const Information = ({
           ) : (
             <React.Fragment key={name}>{reactContent}</React.Fragment>
           )}
-          {references.length > 0 && (
-            <ReferencesJuridiques
-              accordionDisplay={1}
-              references={references.map((reference, index) => ({
-                ...reference,
-                id: reference.id || `${name}-${index}`,
-              }))}
-            />
+          {references.map(
+            ({ label, links }) =>
+              links.length > 0 && (
+                <StyledReferences
+                  label={label}
+                  accordionDisplay={1}
+                  references={links.map((reference, index) => ({
+                    ...reference,
+                    id: reference.id || `${name}-${index}`,
+                  }))}
+                />
+              )
           )}
         </>
       );
@@ -112,9 +116,10 @@ const Information = ({
   if (editorialContent.length > 1) {
     editorialContent = (
       <Accordion
+        preExpanded={[anchor]}
         items={contents.map(({ title, name }, index) => ({
-          anchor: name,
           body: editorialContent[index],
+          id: name,
           title,
         }))}
       />
@@ -123,27 +128,30 @@ const Information = ({
 
   return (
     <Layout>
-      <Metas title={title} description={description} />
+      <Metas title={title} description={metaDescription} />
       <Answer
         breadcrumbs={breadcrumbs}
         date={date}
         dateLabel="Mise à jour le"
-        intro={description}
+        intro={intro}
         relatedItems={relatedItems}
         title={title}
       >
-        {intro && <Html>{intro}</Html>}
         <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
-        {references.length > 0 && (
-          <Section>
-            <ReferencesJuridiques
-              accordionDisplay={1}
-              references={references.map((reference, index) => ({
-                ...reference,
-                id: reference.id || `${reference.id}-${index}`,
-              }))}
-            />
-          </Section>
+        {references.map(
+          ({ label, links }) =>
+            links.length > 0 && (
+              <Section>
+                <References
+                  label={label}
+                  accordionDisplay={1}
+                  references={links.map((reference, index) => ({
+                    ...reference,
+                    id: reference.id || `${name}-${index}`,
+                  }))}
+                />
+              </Section>
+            )
         )}
       </Answer>
     </Layout>
@@ -152,7 +160,9 @@ const Information = ({
 
 export default Information;
 
-Information.getInitialProps = async ({ query: { slug } }) => {
+Information.getInitialProps = async ({ query: { slug }, asPath }) => {
+  // beware, this one is undefined when rendered server-side
+  const anchor = asPath.split("#")[1];
   const responseContainer = await fetch(
     `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
@@ -161,7 +171,7 @@ Information.getInitialProps = async ({ query: { slug } }) => {
   }
   const information = await responseContainer.json();
 
-  return { information };
+  return { anchor, information };
 };
 
 const { breakpoints, spacings } = theme;
@@ -191,4 +201,8 @@ const DownloadWrapper = styled.div`
 const Download = styled(icons.Download)`
   width: 2.2rem;
   margin-left: ${spacings.xsmall};
+`;
+
+const StyledReferences = styled(References)`
+  margin-top: ${spacings.xmedium};
 `;

@@ -7,7 +7,7 @@ import React from "react";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
-import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
+import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 
 const {
@@ -57,7 +57,7 @@ class Fiche extends React.Component {
           additionalContent={
             <Section>
               <Container>
-                <ReferencesJuridiques references={referencedTexts} />
+                <References references={referencedTexts} />
               </Container>
             </Section>
           }

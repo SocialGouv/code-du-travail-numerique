@@ -16,6 +16,7 @@ const InternalLink = ({ title, type, slug }) => (
 const ExternalLink = ({ title, url }) =>
   url ? (
     <StyledArrowLink
+      className="no-after"
       href={url}
       rel="noopener noreferrer nofollow"
       target="_blank"
@@ -55,7 +56,7 @@ const getLink = (reference) => {
 const ReferenceList = ({ references }) => {
   const seedId = useUIDSeed();
   return (
-    <FlatList>
+    <StyledFlatList>
       {references.flatMap((reference) => {
         if (
           [SOURCES.CCN, SOURCES.CDT, SOURCES.EXTERNALS].includes(reference.type)
@@ -64,7 +65,7 @@ const ReferenceList = ({ references }) => {
         }
         return [];
       })}
-    </FlatList>
+    </StyledFlatList>
   );
 };
 
@@ -75,4 +76,8 @@ const { spacings } = theme;
 const StyledArrowLink = styled(ArrowLink)`
   padding: ${spacings.xsmall} 0;
   font-weight: normal;
+`;
+
+const StyledFlatList = styled(FlatList)`
+  padding-left: 0;
 `;

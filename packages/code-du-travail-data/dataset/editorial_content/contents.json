@@ -1,453 +1,831 @@
 [
   {
-    "title": "Congés payés : nouveautés Covid-19",
-    "date": "20/07/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les congés payés.",
-    "folder": "covid",
-    "contents": [
+    "title":"Congés payés : nouveautés Covid-19",
+    "date":"20/07/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les congés payés.",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "graphic",
-        "name": "conges-payes",
-        "title": "Infographie : Les congés payés",
-        "altText": "Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous.",
-        "references": [
+        "type":"graphic",
+        "name":"conges-payes",
+        "title":"Infographie : Les congés payés",
+        "altText":"Infographie schématisant les changements concernant les congés payés. Une version textuelle est disponible en dessous.",
+        "references":[
           {
-            "id": "JORFTEXT000041755940",
-            "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, article 1",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
-          },
-          {
-            "id": "JORFTEXT000041755934",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
+            "links":[
+              {
+                "id":"JORFTEXT000041755940",
+                "title":"Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, article 1",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+              },
+              {
+                "id":"JORFTEXT000041755934",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
+              }
+            ]
           }
         ]
-      }, {
-        "type": "markdown",
-        "name": "monetisation",
-        "title": "Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
-        "references": [
-          {
-            "id": "JORFTEXT000042007059",
-            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 6",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
-          }
-        ]
-      }
-    ],
-    "id": "6f7bcb89-84d5-48eb-8f13-6e3eca0a2d5d"
-  },
-  {
-    "title": "RTT, jours de repos forfait jours, compte épargne-temps : nouveautés Covid-19",
-    "date": "20/07/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les RTT, les jours de repos forfait jours et le compte épargne-temps.",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "graphic",
-        "name": "jours-repos",
-        "title": "Infographie : RTT, jours de repos forfait jours, compte épargne-temps",
-        "altText": "Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous.",
-        "references": [
-          {
-            "id": "JORFTEXT000041755940",
-            "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 2 à 5",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
-          },
-          {
-            "id": "JORFTEXT000041755934",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
-          },
-          {
-            "id": "JORFTEXT000041776922",
-            "title": "Ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel, article 7",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776922"
-          },
-          {
-            "id": "JORFTEXT000041776914",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776914"
-          }
-        ]
-      }, {
-        "type": "markdown",
-        "name": "monetisation",
-        "title": "Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
-        "references": [
-          {
-            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 6",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
-          }
-        ]
-      }
-    ],
-    "id": "4fb2ba7d-515f-464b-8af7-2d3beef9b10c"
-  },
-  {
-    "title": "Durées maximales de travail, repos quotidien et dominical : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les durées maximales de travail, le repos quotidien et dominical",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "markdown",
-        "name": "durees-maximales-travail",
-        "references": [
-          {
-            "id": "JORFTEXT000041755940",
-            "title": "Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 6 et 7",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
-          },
-          {
-            "id": "JORFTEXT000041755934",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
-          }
-        ]
-      }
-    ],
-    "id": "36e2f109-e34a-4e42-9352-724b7061ca92"
-  },
-  {
-    "title": "Rupture conventionnelle : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la rupture conventionnelle.",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "markdown",
-        "name": "rupture-conventionnelle",
-        "references": [
-          {
-            "id": "JORFTEXT000041800899",
-            "title": "Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19, article 2",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800899"
-          },
-          {
-            "id": "JORFTEXT000041800867",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800867"
-          },
-          {
-            "id": "JORFTEXT000041820235",
-            "title": "Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d’état d’urgence sanitaire liée à l’épidémie de covid-19 dans le domaine du travail et de l’emploi",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041820235"
-          },
-          {
-            "title": "Article L1237-13 du code du travail",
-            "id": "l1237-13",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071182"
-          },
-          {
-            "title": "Article L1237-14 du code du travail",
-            "id": "l1237-14",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071180"
-          }
-        ]
-      }
-    ],
-    "id": "b9b44d13-a640-4b4c-802e-a143010c4f0f"
-  },
-  {
-    "title": "Report ou annulation de visites médicales : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le report ou annulation de visites médicales",
-    "folder": "covid",
-    "contents": [
-      {
-        "type": "graphic",
-        "title": "Infographie : report ou annulation des visites médicales de préreprise et de reprise",
-        "altText": "Infographie schématisant les changements concernant les visites de reprise et de pré-rerpise. Une version textuelle est disponible en dessous.",
-        "name": "visite-medicale-synthese-1"
       },
       {
-        "type": "graphic",
-        "title": "Infographie : report des visites dans le cadre du suivi médical",
-        "altText": "Infographie schématisant les changements concernant les visites dans le cadre du suivi médical. Une version textuelle est disponible en dessous.",
-        "name": "visite-medicale-synthese-2"
-      },
-      {
-        "type": "markdown",
-        "title": "Conditions de report des visites médicales",
-        "name": "visite-medicale-1"
-      },
-      {
-        "type": "markdown",
-        "title": "Cas particulier de la visite de préreprise",
-        "name": "visite-medicale-2"
-      },
-      {
-        "type": "markdown",
-        "title": "Cas particulier de la visite de reprise",
-        "name": "visite-medicale-3"
-      },
-      {
-        "type": "markdown",
-        "title": "Information de l’employeur et du salarié",
-        "name": "visite-medicale-4"
+        "type":"markdown",
+        "name":"monetisation",
+        "title":"Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
+        "references":[
+          {
+            "links":[
+              {
+                "id":"JORFTEXT000042007059",
+                "title":"Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d’autres mesures urgentes ainsi qu’au retrait du Royaume-Uni de l’Union européenne, article 6",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
+              }
+            ]
+          }
+        ]
       }
     ],
-    "references": [
-      {
-        "id": "JORFTEXT000041776887",
-        "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
-        "type": "external",
-        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
-      },
-      {
-        "id": "JORFTEXT000041776882",
-        "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
-        "type": "external",
-        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
-      },
-      {
-        "id": "JORFTEXT000041789669",
-        "title": "Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
-        "type": "external",
-        "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
-      }
-    ],
-    "id": "62442d86-0045-4ccc-948c-dab31bbd332b"
+    "id":"6f7bcb89-84d5-48eb-8f13-6e3eca0a2d5d"
   },
   {
-    "title": "Intéressement et participation : nouveautés Covid-19",
-    "date": "20/07/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’ntéressement et la participation",
-    "folder": "covid",
-    "contents": [
+    "title":"RTT, jours de repos forfait jours, compte épargne-temps : nouveautés Covid-19",
+    "date":"20/07/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les RTT, les jours de repos forfait jours et le compte épargne-temps.",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "markdown",
-        "title": "Report du versement des sommes",
-        "name": "interessement-participation-1",
-        "references": [
+        "type":"graphic",
+        "name":"jours-repos",
+        "title":"Infographie : RTT, jours de repos forfait jours, compte épargne-temps",
+        "altText":"Infographie schématisant les changements concernant les jours RTT, jours repos forfait jours et compte épargne-temps. Une version textuelle est disponible en dessous.",
+        "references":[
           {
-            "id": "JORFTEXT000041755930",
-            "title": "Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire prévue à l’article L. 1226-1 du code du travail et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation, article 2",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930"
-          },
-          {
-            "id": "JORFTEXT000041755922",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755922"
-          },
-          {
-            "id": "JORFTEXT000041865244",
-            "title": "Loi n° 2020-546 du 11 mai 2020 prorogeant l’état d’urgence sanitaire et complétant ses dispositions",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244"
-          },
-          {
-            "id": "LEGIARTI000041747466",
-            "title": "Article L. 3131-15 du code de la santé publique",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072665&idArticle=LEGIARTI000041747466"
-          },
-          {
-            "id": "l3314-5",
-            "title": "Article L. 3314-5 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041979663"
-          },
-          {
-            "id": "l3324-6",
-            "title": "Article L. 3324-6 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000038613233"
+            "links":[
+              {
+                "id":"JORFTEXT000041755940",
+                "title":"Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 2 à 5",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+              },
+              {
+                "id":"JORFTEXT000041755934",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
+              },
+              {
+                "id":"JORFTEXT000041776922",
+                "title":"Ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel, article 7",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776922"
+              },
+              {
+                "id":"JORFTEXT000041776914",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-389 du 1er avril 2020 portant mesures d’urgence relatives aux instances représentatives du personnel",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776914"
+              }
+            ]
           }
         ]
-      }, {
-        "type": "markdown",
-        "title": "Déblocage anticipé pour les victimes de violences conjugales",
-        "name": "interessement-participation-2",
-        "references": [
+      },
+      {
+        "type":"markdown",
+        "name":"monetisation",
+        "title":"Monétisation par solidarité et automonétisation de jours de repos conventionnels ou de congés payés",
+        "references":[
           {
-            "id": "JORFTEXT000041964070",
-            "title": "Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l'épargne salariale en cas de violences conjugales",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
-          },
-          {
-            "id": "r3324-22",
-            "title": "Article R. 3324-22 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041973737"
-          }
-        ]
-      }, {
-        "type": "markdown",
-        "title": "Mise en place de l’intéressement dans l’entreprise de moins de 11 salariés",
-        "name": "interessement-participation-3",
-        "references": [
-          {
-            "title": "Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne, article 18",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
-          },
-          {
-            "id": "l3312-5",
-            "title": "Article L. 3312-5 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000042012392"
+            "links":[
+              {
+                "title":"Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d’autres mesures urgentes ainsi qu’au retrait du Royaume-Uni de l’Union européenne, article 6",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
+              }
+            ]
           }
         ]
       }
     ],
-    "id": "be3ba4c0-4540-4c38-9203-65bc732486a0"
+    "id":"4fb2ba7d-515f-464b-8af7-2d3beef9b10c"
   },
   {
-    "title": "Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la prime exceptionnelle de pouvoir d’achat",
-    "folder": "covid",
-    "contents": [
+    "title":"Durées maximales de travail, repos quotidien et dominical : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les durées maximales de travail, le repos quotidien et dominical",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "markdown",
-        "name": "prime-exceptionnelle",
-        "references": [
+        "type":"markdown",
+        "name":"durees-maximales-travail",
+        "references":[
           {
-            "id": "JORFTEXT000041776879",
-            "title": "Ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776879"
-          },
-          {
-            "id": "JORFTEXT000041776873",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776873"
-          },
-          {
-            "id": "JORFTEXT000041814597",
-            "title": "Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 19",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
-          },
-          {
-            "id": "JORFTEXT000042176557",
-            "title": "Loi n° 2020-935 du 30 juillet 2020 de finances rectificative pour 2020, article 3",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042176557"
+            "links":[
+              {
+                "id":"JORFTEXT000041755940",
+                "title":"Ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos, articles 6 et 7",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755940"
+              },
+              {
+                "id":"JORFTEXT000041755934",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-323 du 25 mars 2020 portant mesures d’urgence en matière de congés payés, de durée du travail et de jours de repos",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755934"
+              }
+            ]
           }
         ]
       }
     ],
-    "id": "7ce44ee7-8c90-4f71-9ecf-10845eea7550"
+    "id":"36e2f109-e34a-4e42-9352-724b7061ca92"
   },
   {
-    "title": "Accord collectif d'entreprise : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’accord collectif d'entreprise",
-    "folder": "covid",
-    "contents": [
+    "title":"Rupture conventionnelle : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la rupture conventionnelle.",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "markdown",
-        "name": "accord-collectif",
-        "references": [
+        "type":"markdown",
+        "name":"rupture-conventionnelle",
+        "references":[
           {
-            "id": "JORFTEXT000041800927",
-            "title": "Ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19, article 8",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800927"
-          },
-          {
-            "id": "JORFTEXT000041800918",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800918"
-          },
-          {
-            "id": "l2232-12",
-            "title": "Article L. 2232-12 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035652760"
-          },
-          {
-            "id": "l2232-21",
-            "title": "Article L. 2232-21 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000036761872"
-          },
-          {
-            "id": "l2232-25-1",
-            "title": "Article L. 2232-25-1 du code du travail",
-            "type": "code_du_travail",
-            "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035616760"
+            "links":[
+              {
+                "id":"JORFTEXT000041800899",
+                "title":"Ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19, article 2",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800899"
+              },
+              {
+                "id":"JORFTEXT000041800867",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-427 du 15 avril 2020 portant diverses dispositions en matière de délais pour faire face à l’épidémie de covid-19",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800867"
+              },
+              {
+                "id":"JORFTEXT000041820235",
+                "title":"Décret n° 2020-471 du 24 avril 2020 portant dérogation au principe de suspension des délais pendant la période d’état d’urgence sanitaire liée à l’épidémie de covid-19 dans le domaine du travail et de l’emploi",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041820235"
+              },
+              {
+                "title":"Article L1237-13 du code du travail",
+                "id":"l1237-13",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071182"
+              },
+              {
+                "title":"Article L1237-14 du code du travail",
+                "id":"l1237-14",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000019071180"
+              }
+            ]
           }
         ]
       }
     ],
-    "id": "2ac35b33-d9e2-442b-8ef8-caa030ef71dd"
+    "id":"b9b44d13-a640-4b4c-802e-a143010c4f0f"
   },
   {
-    "title": "Entretien professionnel : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’entretien professionnel",
-    "folder": "covid",
-    "contents": [
+    "title":"Report ou annulation de visites médicales : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant le report ou annulation de visites médicales",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "markdown",
-        "name": "entretien-professionnel",
-        "references": [
+        "type":"graphic",
+        "title":"Infographie : report ou annulation des visites médicales de préreprise et de reprise",
+        "altText":"Infographie schématisant les changements concernant les visites de reprise et de pré-rerpise. Une version textuelle est disponible en dessous.",
+        "name":"visite-medicale-synthese-1"
+      },
+      {
+        "type":"graphic",
+        "title":"Infographie : report des visites dans le cadre du suivi médical",
+        "altText":"Infographie schématisant les changements concernant les visites dans le cadre du suivi médical. Une version textuelle est disponible en dessous.",
+        "name":"visite-medicale-synthese-2"
+      },
+      {
+        "type":"markdown",
+        "title":"Conditions de report des visites médicales",
+        "name":"visite-medicale-1"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas particulier de la visite de préreprise",
+        "name":"visite-medicale-2"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas particulier de la visite de reprise",
+        "name":"visite-medicale-3"
+      },
+      {
+        "type":"markdown",
+        "title":"Information de l’employeur et du salarié",
+        "name":"visite-medicale-4"
+      }
+    ],
+    "references":[
+      {
+        "links":[
           {
-            "id": "JORFTEXT000041776899",
-            "title": "Ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle, article 1",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776899"
+            "id":"JORFTEXT000041776887",
+            "title":"Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, articles 3 et 5",
+            "type":"external",
+            "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
           },
           {
-            "id": "JORFTEXT000041776895",
-            "title": "Rapport au Président de la République relatif à l'ordonnance n° 2020-387 du 1er avril 2020 portant mesures d'urgence en matière de formation professionnelle",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776895"
+            "id":"JORFTEXT000041776882",
+            "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
+            "type":"external",
+            "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
+          },
+          {
+            "id":"JORFTEXT000041789669",
+            "title":"Décret n° 2020-410 du 8 avril 2020 adaptant temporairement les délais de réalisation des visites et examens médicaux par les services de santé au travail à l’urgence sanitaire",
+            "type":"external",
+            "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041789669"
           }
         ]
       }
     ],
-    "id": "5e877e77-50f7-4784-980a-1a3decb11f37"
+    "id":"62442d86-0045-4ccc-948c-dab31bbd332b"
   },
   {
-    "title": "Services de santé au travail : nouveautés Covid-19",
-    "date": "25/05/20",
-    "description": "Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les services de santé au travail",
-    "folder": "covid",
-    "contents": [
+    "title":"Intéressement et participation : nouveautés Covid-19",
+    "date":"20/07/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’ntéressement et la participation",
+    "folder":"covid",
+    "contents":[
       {
-        "type": "markdown",
-        "name": "services-de-sante",
-        "references": [
+        "type":"markdown",
+        "title":"Report du versement des sommes",
+        "name":"interessement-participation-1",
+        "references":[
           {
-            "id": "JORFTEXT000041776887",
-            "title": "Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, article 1 et 4",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
-          },
+            "links":[
+              {
+                "id":"JORFTEXT000041755930",
+                "title":"Ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire prévue à l’article L. 1226-1 du code du travail et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation, article 2",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755930"
+              },
+              {
+                "id":"JORFTEXT000041755922",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-322 du 25 mars 2020 adaptant temporairement les conditions et modalités d’attribution de l’indemnité complémentaire et modifiant, à titre exceptionnel, les dates limites et les modalités de versement des sommes versées au titre de l’intéressement et de la participation",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041755922"
+              },
+              {
+                "id":"JORFTEXT000041865244",
+                "title":"Loi n° 2020-546 du 11 mai 2020 prorogeant l’état d’urgence sanitaire et complétant ses dispositions",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041865244"
+              },
+              {
+                "id":"LEGIARTI000041747466",
+                "title":"Article L. 3131-15 du code de la santé publique",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072665&idArticle=LEGIARTI000041747466"
+              },
+              {
+                "id":"l3314-5",
+                "title":"Article L. 3314-5 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041979663"
+              },
+              {
+                "id":"l3324-6",
+                "title":"Article L. 3324-6 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000038613233"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"markdown",
+        "title":"Déblocage anticipé pour les victimes de violences conjugales",
+        "name":"interessement-participation-2",
+        "references":[
           {
-            "id": "JORFTEXT000041776882",
-            "title": "Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
-            "type": "external",
-            "url": "https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
+            "links":[
+              {
+                "id":"JORFTEXT000041964070",
+                "title":"Décret n° 2020-683 du 4 juin 2020 autorisant le déblocage anticipé de l’épargne salariale en cas de violences conjugales",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041964070&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000041963680"
+              },
+              {
+                "id":"r3324-22",
+                "title":"Article R. 3324-22 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000041973737"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"markdown",
+        "title":"Mise en place de l’intéressement dans l’entreprise de moins de 11 salariés",
+        "name":"interessement-participation-3",
+        "references":[
+          {
+            "links":[
+              {
+                "title":"Loi n° 2020-734 du 17 juin 2020 relative à diverses dispositions liées à la crise sanitaire, à d’autres mesures urgentes ainsi qu’au retrait du Royaume-Uni de l’Union européenne, article 18",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042007059"
+              },
+              {
+                "id":"l3312-5",
+                "title":"Article L. 3312-5 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000042012392"
+              }
+            ]
           }
         ]
       }
     ],
-    "id": "f284c749-caa7-4a18-8803-5554819aee2e"
+    "id":"be3ba4c0-4540-4c38-9203-65bc732486a0"
+  },
+  {
+    "title":"Prime exceptionnelle de pouvoir d’achat : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant la prime exceptionnelle de pouvoir d’achat",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"markdown",
+        "name":"prime-exceptionnelle",
+        "references":[
+          {
+            "links":[
+              {
+                "id":"JORFTEXT000041776879",
+                "title":"Ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776879"
+              },
+              {
+                "id":"JORFTEXT000041776873",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-385 du 1er avril 2020 modifiant la date limite et les conditions de versement de la prime exceptionnelle de pouvoir d’achat",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776873"
+              },
+              {
+                "id":"JORFTEXT000041814597",
+                "title":"Ordonnance n° 2020-460 du 22 avril 2020 portant diverses mesures prises pour faire face à l’épidémie de covid-19, article 19",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041814597"
+              },
+              {
+                "id":"JORFTEXT000042176557",
+                "title":"Loi n° 2020-935 du 30 juillet 2020 de finances rectificative pour 2020, article 3",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000042176557"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id":"7ce44ee7-8c90-4f71-9ecf-10845eea7550"
+  },
+  {
+    "title":"Accord collectif d’entreprise : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’accord collectif d’entreprise",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"markdown",
+        "name":"accord-collectif",
+        "references":[
+          {
+            "links":[
+              {
+                "id":"JORFTEXT000041800927",
+                "title":"Ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19, article 8",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800927"
+              },
+              {
+                "id":"JORFTEXT000041800918",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-428 du 15 avril 2020 portant diverses dispositions sociales pour faire face à l’épidémie de covid-19",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041800918"
+              },
+              {
+                "id":"l2232-12",
+                "title":"Article L. 2232-12 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035652760"
+              },
+              {
+                "id":"l2232-21",
+                "title":"Article L. 2232-21 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000036761872"
+              },
+              {
+                "id":"l2232-25-1",
+                "title":"Article L. 2232-25-1 du code du travail",
+                "type":"code_du_travail",
+                "url":"https://www.legifrance.gouv.fr/codes/id/LEGIARTI000035616760"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id":"2ac35b33-d9e2-442b-8ef8-caa030ef71dd"
+  },
+  {
+    "title":"Entretien professionnel : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant l’entretien professionnel",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"markdown",
+        "name":"entretien-professionnel",
+        "references":[
+          {
+            "links":[
+              {
+                "id":"JORFTEXT000041776899",
+                "title":"Ordonnance n° 2020-387 du 1er avril 2020 portant mesures d’urgence en matière de formation professionnelle, article 1",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776899"
+              },
+              {
+                "id":"JORFTEXT000041776895",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-387 du 1er avril 2020 portant mesures d’urgence en matière de formation professionnelle",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776895"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id":"5e877e77-50f7-4784-980a-1a3decb11f37"
+  },
+  {
+    "title":"Services de santé au travail : nouveautés Covid-19",
+    "date":"25/05/20",
+    "intro":"Le Gouvernement a décidé de prendre plusieurs mesures afin d’accompagner les entreprises et les salariés pour faire face aux conséquences de la crise du coronavirus, notamment pendant la période de l’état d’urgence sanitaire. Nous vous décryptons ici les différentes mesures concernant les services de santé au travail",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"markdown",
+        "name":"services-de-sante",
+        "references":[
+          {
+            "links":[
+              {
+                "id":"JORFTEXT000041776887",
+                "title":"Ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle, article 1 et 4",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776887"
+              },
+              {
+                "id":"JORFTEXT000041776882",
+                "title":"Rapport au Président de la République relatif à l’ordonnance n° 2020-386 du 1er avril 2020 adaptant les conditions d’exercice des missions des services de santé au travail à l’urgence sanitaire et modifiant le régime des demandes préalables d’autorisation d’activité partielle",
+                "type":"external",
+                "url":"https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000041776882"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id":"f284c749-caa7-4a18-8803-5554819aee2e"
+  },
+  {
+    "title":"Covid-19 : intégrer le risque sanitaire dans l’entreprise (Protocole national)",
+    "date":"8/11/20",
+    "intro":"<p>L’employeur est responsable de la santé et de la sécurité de toute personne travaillant dans l’entreprise. A ce titre, face à l’épidémie de Covid-19, il doit adapter les mesures de prévention des risques professionnels dans l’entreprise pour intégrer le risque de contamination.</p><strong>Quelles sont ces obligations&nbsp;?</strong><p><small>Cette page a été rédigée à partir du Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19 ainsi que du guide employeur associé.</small></p>",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"graphic",
+        "title":"1. Evaluer le risque sanitaire et l’intégrer au document unique d’évaluation des risques (Infographie)",
+        "altText":"Infographie schématisant l’évaluation du risque sanitaire et son intégration au document d’évaluation des risques. Une version textuelle est disponible en dessous.",
+        "name":"evaluer-et-integrer-le-risque-sanitaire",
+        "references":[
+          {
+            "label":"Liens utiles",
+            "links":[
+              {
+                "id":"evaluer-et-integrer-le-risque-sanitaire-1",
+                "title":"Contacter sa caisse d’assurance maladie",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise"
+              },
+              {
+                "id":"evaluer-et-integrer-le-risque-sanitaire-2",
+                "title":"Contacter l’association régionale pour l’amélioration des conditions de travail",
+                "type":"external",
+                "url":"https://www.anact.fr/lanact/en-region"
+              },
+              {
+                "id":"evaluer-et-integrer-le-risque-sanitaire-3",
+                "title":"Outil en ligne gratuit « Plan d’actions Covid-19 »",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise/covid-19/plan-daction-covid-un-outil-en-ligne-gratuit-pour-proteger-ses-salaries"
+              },
+              {
+                "id":"evaluer-et-integrer-le-risque-sanitaire-4",
+                "title":"Renseignements sur la rédaction du document unique d’évaluation des risques",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise/votre-entreprise/outils-gestion-prevention-risques-professionnels/duer"
+              },
+              {
+                "id":"evaluer-et-integrer-le-risque-sanitaire-5",
+                "title":"Questions- réponses sur le document unique d’évaluation des risques",
+                "type":"external",
+                "url":"http://www.inrs.fr/media.html?refINRS=ED%20887"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"markdown",
+        "title":"2. Rédiger une procédure de prise en charge des personnes symptomatiques",
+        "name":"procedure-de-prise-en-charge"
+      },
+      {
+        "type":"markdown",
+        "title":"3. Veiller à la désignation d’un référent Covid-19",
+        "name":"designation-referent-covid"
+      },
+      {
+        "type":"graphic",
+        "title":"4. Informer les salariés, prestataires et intervenants extérieurs",
+        "altText":"Infographie récapitulant les informations à fournir. Une version textuelle est disponible en dessous.",
+        "name":"informer-les-salaries-du-risque-sanitaire",
+        "references":[
+          {
+            "label":"Liens utiles",
+            "links":[
+              {
+                "id":"informer-les-salaries-du-risque-sanitaire-1",
+                "title":"Des supports d’information à utiliser sur santepubliquefrance.fr",
+                "type":"external",
+                "url":"https://www.santepubliquefrance.fr/dossiers/coronavirus-covid-19/coronavirus-outils-de-prevention-destines-aux-professionnels-de-sante-et-au-grand-public"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"markdown",
+        "title":"5. Cas particuliers : travailleurs détachés, intérimaires, saisonniers, contrats courts",
+        "name":"evaluation-risque-cas-particuliers"
+      },
+      {
+        "type":"markdown",
+        "title":"Le protocole national pour assurer la santé et la sécurité des salariés en détail",
+        "name":"detail-protocole-national"
+      }
+    ],
+    "id":"ab36c964-748a-4bd0-8e24-420bcde6378f"
+  },
+  {
+    "title":"Covid-19 : Les mesures de protection en entreprise (Protocole national)",
+    "date":"9/11/20",
+    "intro":"<p>L’employeur doit mettre en place des mesures d’hygiène, organisationnelles et de protection collective dans le but de veiller au respect des gestes barrières.</p><strong>Quelles sont les mesures de protection&nbsp;?</strong><p><small>Cette page a été rédigée à partir du Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19 ainsi que du guide employeur associé.</small></p>",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"markdown",
+        "title":"Généralisation du télétravail et réorganisation systématique des horaires",
+        "name":"teletravail"
+      },
+      {
+        "type":"markdown",
+        "title":"Les gestes barrières et la distanciation sociale",
+        "name":"gestes-barriere-distanciation-sociale"
+      },
+      {
+        "type":"markdown",
+        "title":"Les masques",
+        "name":"masques"
+      },
+      {
+        "type":"markdown",
+        "title":"Le nettoyage, l’aération et la ventilation",
+        "name":"nettoyage-aeration-ventilation"
+      },
+      {
+        "type":"markdown",
+        "title":"Les autres mesures de protection obligatoires : visières, séparations, gants…",
+        "name":"autres-mesures-de-protection"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas des restaurants d’entreprise",
+        "name":"restaurant-entreprise"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas des personnes à risques de forme grave de Covid",
+        "name":"personnes-a-risque"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas des personnes en situation de handicap",
+        "name":"situation-handicap"
+      },
+      {
+        "type":"markdown",
+        "title":"Mesures complémentaires possibles",
+        "name":"mesures-complementaires"
+      },
+      {
+        "type":"markdown",
+        "title":"Cas des tests de température",
+        "name":"tests-temperature"
+      },
+      {
+        "type":"graphic",
+        "title":"Points de vigilance à avoir en tête",
+        "altText":"Infographie des points de vigilance à avoir en tête. Une version textuelle est disponible en dessous.",
+        "name":"points-de-vigilance"
+      },
+      {
+        "type":"markdown",
+        "title":"Le protocole national pour assurer la santé et la sécurité des salariés en détail",
+        "name":"detail-protocole-national"
+      }
+    ],
+    "id":"8efb97f1-25ef-408d-8ab4-f0d4a6d22709"
+  },
+  {
+    "title":"Covid-19 : réagir en cas de contamination dans l’entreprise (Protocole national)",
+    "date":"9/11/20",
+    "metaDescription": "Tous les acteurs de l’entreprise sont invités à coopérer avec les autorités sanitaires pour faciliter la recherche de personnes contacts et lutter contre la progression de l’épidémie. Découvrez ci-dessous les obligations de l’employeur en cas de contamination dans l’entreprise.",
+    "description": "Tous les acteurs de l’entreprise sont invités à coopérer avec les autorités sanitaires pour faciliter la recherche de personnes contacts et lutter contre la progression de l’épidémie. Découvrez ci-dessous les obligations de l’employeur en cas de contamination dans l’entreprise.",
+    "intro":"<p>Tous les acteurs de l’entreprise sont invités à coopérer avec les autorités sanitaires pour faciliter la recherche de personnes contacts et lutter contre la progression de l’épidémie.</p><strong>Découvrez ci-dessous les obligations de l’employeur en cas de contamination dans l’entreprise.</strong><p><small>Cette page a été rédigée à partir du Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19 ainsi que du guide employeur associé.</small></p>",
+    "folder":"covid",
+    "contents":[
+      {
+        "type":"graphic",
+        "title":"Une personne est symptômatique dans l’entreprise : que faire ? (Infographie)",
+        "altText":"Infographie schématisant la procédure à suivre en cas de personne symptômatique dans l’entreprise. Une version textuelle est disponible en dessous.",
+        "name":"symptomes-que-faire",
+        "references":[
+          {
+            "label":"Liens utiles",
+            "links":[
+              {
+                "id":"symptomes-que-faire-1",
+                "title":"J’ai des premiers symptômes, que faire ? sur ameli.fr",
+                "type":"external",
+                "url":"https://www.ameli.fr/assure/covid-19/tester-alerter-proteger-comprendre-la-strategie-pour-stopper-lepidemie/contact-tracing-arreter-les-chaines-de-transmission"
+              },
+              {
+                "id":"symptomes-que-faire-2",
+                "title":"Trouver la liste du service de santé au travail sur direccte.gouv.fr",
+                "type":"external",
+                "url":"http://direccte.gouv.fr/"
+              },
+              {
+                "id":"symptomes-que-faire-3",
+                "title":"Fiches métiers et guides des branches sur travail-emploi.gouv.fr",
+                "type":"external",
+                "url":"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs/article/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs"
+              },
+              {
+                "id":"symptomes-que-faire-4",
+                "title":"Conseils et outils proposés par l’Assurance maladie - Risques professionnels",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise/covid-19/les-solutions-et-actions-mener-face-aux-risques-sanitaires-et-professionnels"
+              },
+              {
+                "id":"symptomes-que-faire-5",
+                "title":"Conseils et outils proposés par l’INRS",
+                "type":"external",
+                "url":"http://www.inrs.fr/risques/COVID19-prevention-entreprise/ce-qu-il-faut-retenir.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"graphic",
+        "title":"Une personne est testée positive à la Covid-19 dans l’entreprise : que faire ? (Infographie)",
+        "altText":"Infographie schématisant la procédure à suivre en cas de cas positif dans l’entreprise. Une version textuelle est disponible en dessous.",
+        "name":"positif-que-faire",
+        "references":[
+          {
+            "label":"Liens utiles",
+            "links":[
+              {
+                "id":"positif-que-faire-1",
+                "title":"Cas contact : procédure présentée par l’Assurance maladie",
+                "type":"external",
+                "url":"https://www.ameli.fr/assure/covid-19/en-cas-de-contact-avec-une-personne-malade-du-covid-19/en-cas-de-contact-avec-une-personne-malade-de-la-covid-19"
+              },
+              {
+                "id":"positif-que-faire-2",
+                "title":"Cas contact : informations sur l’arrêt de travail",
+                "type":"external",
+                "url":"https://www.ameli.fr/assure/covid-19/arret-de-travail/covid-19-dispositif-dindemnisation-des-interruptions-de-travail"
+              },
+              {
+                "id":"positif-que-faire-3",
+                "title":"Cas contact : demander un arrêt de travail en ligne",
+                "type":"external",
+                "url":"https://declare.ameli.fr/cas-contact/conditions"
+              },
+              {
+                "id":"positif-que-faire-4",
+                "title":"Fiches métiers et guides des branches sur travail-emploi.gouv.fr",
+                "type":"external",
+                "url":"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs/article/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs"
+              },
+              {
+                "id":"positif-que-faire-5",
+                "title":"Conseils et outils proposés par l’Assurance maladie - Risques professionnels",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise/covid-19/les-solutions-et-actions-mener-face-aux-risques-sanitaires-et-professionnels"
+              },
+              {
+                "id":"positif-que-faire-6",
+                "title":"Conseils et outils proposés par l’INRS",
+                "type":"external",
+                "url":"http://www.inrs.fr/risques/COVID19-prevention-entreprise/ce-qu-il-faut-retenir.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"graphic",
+        "title":"Plus de 3 contaminations sur 7 jours (“cluster”) dans l’entreprise : que faire ? (Infographie)",
+        "altText":"Infographie schématisant la procédure à suivre en cas de cluster dans l’entreprise. Une version textuelle est disponible en dessous.",
+        "name":"cluster-que-faire",
+        "references":[
+          {
+            "label":"Liens utiles",
+            "links":[
+              {
+                "id":"cluster-que-faire-1",
+                "title":"Trouver et contacter son agence régionale de santé",
+                "type":"external",
+                "url":"https://www.ars.sante.fr/"
+              },
+              {
+                "id":"cluster-que-faire-2",
+                "title":"Trouver et contacter son inspection du travail",
+                "type":"external",
+                "url":"http://direccte.gouv.fr/"
+              },
+              {
+                "id":"cluster-que-faire-3",
+                "title":"Fiches métiers et guides des branches sur travail-emploi.gouv.fr",
+                "type":"external",
+                "url":"https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/proteger-les-travailleurs/article/fiches-conseils-metiers-et-guides-pour-les-salaries-et-les-employeurs"
+              },
+              {
+                "id":"cluster-que-faire-4",
+                "title":"Conseils et outils proposés par l’Assurance maladie - Risques professionnels",
+                "type":"external",
+                "url":"https://www.ameli.fr/entreprise/covid-19/les-solutions-et-actions-mener-face-aux-risques-sanitaires-et-professionnels"
+              },
+              {
+                "id":"cluster-que-faire-5",
+                "title":"Conseils et outils proposés par l’INRS",
+                "type":"external",
+                "url":"http://www.inrs.fr/risques/COVID19-prevention-entreprise/ce-qu-il-faut-retenir.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"graphic",
+        "title":"Points de vigilance à avoir en tête",
+        "altText":"Infographie des points de vigilance à avoir en tête. Une version textuelle est disponible en dessous.",
+        "name":"points-de-vigilance"
+      },
+      {
+        "type":"markdown",
+        "title":"Le protocole national pour assurer la santé et la sécurité des salariés en détail",
+        "name":"detail-protocole-national"
+      }
+    ],
+    "id":"c502524c-0e2b-4ac8-a876-c1ca71be9769"
   }
 ]

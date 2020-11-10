@@ -6,9 +6,9 @@ import styled from "styled-components";
 
 import ReferenceList from "./ReferenceList";
 
-class ReferencesJuridiques extends React.PureComponent {
+class References extends React.PureComponent {
   render() {
-    const { references, accordionDisplay, ...props } = this.props;
+    const { label, references, accordionDisplay, ...props } = this.props;
     if (!references.length) return null;
 
     return (
@@ -20,14 +20,14 @@ class ReferencesJuridiques extends React.PureComponent {
               items={[
                 {
                   body: <ReferenceList references={references} />,
-                  title: <div>Voir les références juridiques concernées</div>,
+                  title: <div>{label}</div>,
                 },
               ]}
             />
           </StyledWrapper>
         ) : (
           <Wrapper variant="light" {...props}>
-            <Div>Références juridiques concernées&nbsp;:</Div>
+            <Div>{label}</Div>
             <ReferenceList references={references} />
           </Wrapper>
         )}
@@ -36,8 +36,9 @@ class ReferencesJuridiques extends React.PureComponent {
   }
 }
 
-ReferencesJuridiques.propTypes = {
+References.propTypes = {
   accordionDisplay: PropTypes.number,
+  label: PropTypes.string,
   references: PropTypes.arrayOf(
     PropTypes.shape({
       slug: PropTypes.string,
@@ -48,12 +49,13 @@ ReferencesJuridiques.propTypes = {
   ),
 };
 
-ReferencesJuridiques.defaultProps = {
+References.defaultProps = {
   accordionDisplay: 2,
+  label: "Références juridiques concernées :",
   references: [],
 };
 
-export default ReferencesJuridiques;
+export default References;
 
 const { breakpoints, spacings } = theme;
 

@@ -95,7 +95,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -108,14 +108,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   text-decoration: none;
 }
 
-.c15 {
+.c16 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -129,7 +129,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c10:hover .c13 {
+.c11:hover .c14 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -141,9 +141,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   list-style-type: none;
 }
 
-.c12 {
+.c13 {
   padding: 0.8rem 0;
   font-weight: normal;
+}
+
+.c10 {
+  padding-left: 0;
 }
 
 .c1 {
@@ -177,7 +181,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -243,7 +247,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <div
                 class="c5"
               >
-                Voir les références juridiques concernées
+                Références juridiques concernées :
               </div>
             </div>
           </div>
@@ -259,23 +263,23 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               class="c7"
             >
               <div>
-                Voir les références juridiques concernées
+                Références juridiques concernées :
               </div>
             </div>
             <div
               class="c8"
             >
               <ul
-                class="c9"
+                class="c9 c10"
               >
                 <li>
                   <a
-                    class="c10 c11 c12"
+                    class="c11 c12 c13"
                     href="/code-du-travail/l1244-3"
                     rel="nofollow"
                   >
                     <svg
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -285,7 +289,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c15"
+                      class="c16"
                     >
                       Article L1244-3 du Code du travail
                     </span>
@@ -293,12 +297,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c10 c11 c12"
+                    class="c11 c12 c13"
                     href="/code-du-travail/r1244-4"
                     rel="nofollow"
                   >
                     <svg
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -308,7 +312,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c15"
+                      class="c16"
                     >
                       Article R1244-4 du Code du travail
                     </span>
@@ -316,13 +320,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c10 c11 c12"
+                    class="c11 c12 c13 no-after"
                     href="https://article.jo/L3121-44"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
                     <svg
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -332,7 +336,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c15"
+                      class="c16"
                     >
                       Article L3121-44 du JO
                     </span>
@@ -340,13 +344,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c10 c11 c12"
+                    class="c11 c12 c13 no-after"
                     href="https://article.jo/foo"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
                     <svg
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -356,7 +360,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c15"
+                      class="c16"
                     >
                       Article foo du JPO
                     </span>
@@ -364,13 +368,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c10 c11 c12"
+                    class="c11 c12 c13 no-after"
                     href="https://ma-convention-collective/ccc-foo"
                     rel="noopener noreferrer nofollow"
                     target="_blank"
                   >
                     <svg
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
                     >
@@ -380,7 +384,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       />
                     </svg>
                     <span
-                      class="c15"
+                      class="c16"
                     >
                       Convention foo
                     </span>
