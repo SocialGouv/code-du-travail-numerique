@@ -4,29 +4,12 @@ const helmet = require("koa-helmet");
 const mount = require("koa-mount");
 const Router = require("koa-router");
 const send = require("koa-send");
-const Sentry = require("@sentry/node");
 const path = require("path");
-const redirects = require("./redirects.json");
 
 const IS_PRODUCTION_DEPLOYMENT =
   process.env.IS_PRODUCTION_DEPLOYMENT === "true";
-const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
-const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
-const PACKAGE_VERSION = process.env.VERSION || "";
-
-function getSentryCspUrl() {
-  // NOTE(douglasduteil): is pre production if we can find the version in the url
-  // All "http://<version>-code-travail.dev.frabrique.social.gouv.fr" are preprod
-  // "http://code.travail.gouv.fr" is prod
-
-  const isPreProduction =
-    PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
-  const environment = isPreProduction ? "preproduction" : "production";
-
-  return `${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
-}
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -146,35 +129,6 @@ async function getKoaServer({ nextApp }) {
       await send(ctx, ctx.path, { root: DOCS_DIR });
     })
   );
-
-  redirects.forEach(({ baseUrl, code, redirectUrl }) => {
-    router.get(baseUrl, async (ctx) => {
-      ctx.status = code;
-      ctx.set("Location", redirectUrl);
-      ctx.redirect(redirectUrl);
-    });
-  });
-
-  router.all("(.*)", async (ctx) => {
-    await nextHandler(ctx.req, ctx.res);
-    ctx.respond = false;
-  });
-
-  server.use(async (ctx, next) => {
-    ctx.status = 200;
-    await next();
-  });
-
-  // centralize error logging
-  server.on("error", (err, ctx) => {
-    Sentry.withScope(function (scope) {
-      scope.setTag(`koa`, true);
-      scope.addEventProcessor(function (event) {
-        return Sentry.Handlers.parseRequest(event, ctx.request);
-      });
-      Sentry.captureException(err);
-    });
-  });
 
   server.use(router.routes());
   return server;

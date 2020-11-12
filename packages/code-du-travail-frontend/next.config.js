@@ -10,6 +10,24 @@ const withTranspileModule = require("next-transpile-modules")([
   "p-debounce",
   "is-plain-obj",
 ]);
+
+const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
+const PACKAGE_VERSION = process.env.VERSION || "";
+const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
+const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
+
+function getSentryCspUrl() {
+  // NOTE(douglasduteil): is pre production if we can find the version in the url
+  // All "http://<version>-code-travail.dev.frabrique.social.gouv.fr" are preprod
+  // "http://code.travail.gouv.fr" is prod
+
+  const isPreProduction =
+    PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
+  const environment = isPreProduction ? "preproduction" : "production";
+
+  return `${SENTRY_PUBLIC_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+}
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
