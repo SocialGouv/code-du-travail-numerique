@@ -12,6 +12,6 @@ Fonctionnalité: Dossier Coronavirus
     Alors je vois "Ministère du travail : notre dossier sur le Coronavirus"
     Alors je vois "Sommaire"
 
-    Quand je clique sur "Nouveautés Covid-19 : congés payés"
-    Quand j'attends que le titre de page "Congés payés : nouveautés Covid-19" apparaisse
-    Alors je vois "Nous vous décryptons ici les différentes mesures concernant les congés payés."
+    Quand je clique sur "Covid-19 : Les mesures de protection"
+    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise (Protocole national)" apparaisse
+    Alors je vois "Généralisation du télétravail"
