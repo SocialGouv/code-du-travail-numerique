@@ -2759,10 +2759,10 @@
     remark "^12.0.1"
     strip-markdown "^3.1.2"
 
-"@socialgouv/datafiller-data@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.2.0.tgz#ada28764d8dc854d655d2272cf277ee600e9ba5c"
-  integrity sha512-7Q/dyrRGTcLSWycABGblo6Sj1HFJw6cE7ClAt2qRaTpwgoPeAFTR6BqIKAV2S6vd4j0jueqiChXGQOLMe110QA==
+"@socialgouv/datafiller-data@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.3.0.tgz#069093f21264d597255aa93d5a3146c46b060e12"
+  integrity sha512-AeS4lmsxOsP1CQ+aSDaWnWJ4vqdD3QVlrP9xlJGTdgm/M5McTDJzCcUvJhuc6b7qIK4Ujqv9lQvzc2SGaQvEmw==
   dependencies:
     node-fetch "^2.6.1"
     p-pipe "^3.1.0"

@@ -10,7 +10,7 @@
     "@socialgouv/cdtn-slugify": "^4.35.0",
     "@socialgouv/cdtn-sources": "^4.35.0",
     "@socialgouv/contributions-data": "^3.0.0",
-    "@socialgouv/datafiller-data": "^2.2.0",
+    "@socialgouv/datafiller-data": "^2.3.0",
     "@socialgouv/fiches-vdd": "^2.5.0",
     "@socialgouv/kali-data": "^2.3.0",
     "@socialgouv/legi-data": "^2.0.1",

@@ -30,7 +30,7 @@
     "@socialgouv/cdtn-slugify": "^4.35.0",
     "@socialgouv/cdtn-sources": "^4.35.0",
     "@socialgouv/cdtn-ui": "^4.36.0",
-    "@socialgouv/datafiller-data": "^2.2.0",
+    "@socialgouv/datafiller-data": "^2.3.0",
     "@socialgouv/fiches-travail-data": "^4.2.0",
     "@socialgouv/react-fiche-service-public": "^4.36.0",
     "@zeit/next-source-maps": "^0.0.3",
