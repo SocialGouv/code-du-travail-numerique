@@ -20,7 +20,7 @@ const fixBreadcrumbs = (source) => {
   return [];
 };
 
-const LIMIT = 300;
+const LIMIT = 200;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
