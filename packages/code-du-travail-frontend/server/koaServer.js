@@ -13,22 +13,7 @@ const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
 
 const dev = process.env.NODE_ENV !== "production";
 
-const robotsDev = [
-  "User-agent: *",
-  "Disallow: /",
-  "Disallow: /code-du-travail/",
-].join("\n");
-const robotsProd = [
-  "User-agent: *",
-  "Disallow: /assets/",
-  "Disallow: /images/",
-  "Disallow: /code-du-travail/",
-  "",
-  `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`,
-].join("\n");
-
-async function getKoaServer({ nextApp }) {
-  const nextHandler = nextApp.getRequestHandler();
+async function getKoaServer() {
   const server = new Koa();
   const router = new Router();
 
@@ -77,16 +62,6 @@ async function getKoaServer({ nextApp }) {
   }
   server.use(helmet.contentSecurityPolicy(cspConfig));
 
-  if (dev) {
-    router.post("/report-violation", (ctx) => {
-      if (ctx.request.body) {
-        console.log("CSP Violation: ", ctx.request.body);
-      } else {
-        console.log("CSP Violation: No data received!");
-      }
-      ctx.status = 204;
-    });
-  }
   if (IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
@@ -113,11 +88,6 @@ async function getKoaServer({ nextApp }) {
 
   router.get("/health", async (ctx) => {
     ctx.body = { status: "up and running" };
-  });
-
-  router.get("/robots.txt", async (ctx) => {
-    ctx.type = "text/plain";
-    ctx.body = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
   const DOCS_DIR = path.join(

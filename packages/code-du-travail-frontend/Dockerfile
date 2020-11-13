@@ -10,6 +10,7 @@ WORKDIR /app
 USER node
 
 RUN yarn workspace @cdt/frontend generate-sitemap
+RUN yarn workspace @cdt/frontend generate-robots
 
 ENV NEXT_TELEMETRY_DISABLED=1
 ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]

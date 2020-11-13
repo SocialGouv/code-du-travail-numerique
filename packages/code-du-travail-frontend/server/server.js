@@ -1,6 +1,5 @@
 // Import prerequisite packages
 const next = require("next");
-const { getKoaServer } = require("./koaServer");
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -15,16 +14,7 @@ const PACKAGE_VERSION = process.env.VERSION || "";
 
 const dev = process.env.NODE_ENV !== "production";
 
-// Initialize NextJs instance and expose request handler
-const nextApp = next({ dev });
-
-nextApp.prepare().then(async () => {
-  const server = await getKoaServer({
-    nextApp,
-  });
-
-  server.listen(PORT, () => {
-    console.log(`
+console.log(`
   › Ready on ${FRONTEND_HOST}
 
   Environment:
@@ -35,9 +25,3 @@ nextApp.prepare().then(async () => {
   - sentry: ${SENTRY_PUBLIC_DSN},
 
 `);
-  });
-
-  this.server = server;
-});
-
-module.exports = nextApp;

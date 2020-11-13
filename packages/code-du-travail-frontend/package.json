@@ -16,6 +16,7 @@
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
     "test": "NODE_ICU_DATA=./../../node_modules/full-icu NODE_ENV=test jest",
+    "generate-robots": "node -r esm ./scripts/generate-robots",
     "generate-sitemap": "node -r esm ./scripts/generate-sitemap"
   },
   "dependencies": {
