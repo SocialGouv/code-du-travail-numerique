@@ -101,7 +101,7 @@ Deploy @cdtn/api (prod):
     - .deploy_api_stage
     - .prod_stage
   variables:
-    ENABLE_APM: "true"
+    ENABLE_APM: "false"
 #
 #
 #
