@@ -62,6 +62,7 @@ Update Prod index:
   when: manual
   environment:
     name: preview-dev2
+    # name: prod2
   # only:
   #   refs:
   #     - master
@@ -71,7 +72,6 @@ Update Prod index:
     ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
     ES_LOGS: "$ES_LOGS"
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
-    # NLP_URL: $NLP_URL
     CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
   cache:
     key:
