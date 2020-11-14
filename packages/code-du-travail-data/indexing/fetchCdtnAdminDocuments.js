@@ -31,7 +31,7 @@ const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
     order_by: {cdtn_id: asc},
     limit: ${limit}
     offset: ${offset}
-    where: {source: {_eq: "${source}"}, is_available: {_eq: true}}) {
+    where: {source: {_eq: "${source}"},  {is_available: {_eq: false} }) {
     id:initial_id
     cdtnId:cdtn_id
     title
