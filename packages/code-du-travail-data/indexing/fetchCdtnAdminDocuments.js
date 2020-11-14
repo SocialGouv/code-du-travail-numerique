@@ -31,7 +31,7 @@ const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
     order_by: {cdtn_id: asc},
     limit: ${limit}
     offset: ${offset}
-    where: {source: {_eq: "${source}"},  {is_available: {_eq: false} }) {
+    where: {source: {_eq: "${source}"},  is_available: {_eq: true} }) {
     id:initial_id
     cdtnId:cdtn_id
     title
@@ -71,16 +71,26 @@ export async function getDocumentBySource(source) {
     (_, i) => i
   ).map((index) => {
     return queue.add(() => {
+      console.log(gqlRequestBySource(source, index * LIMIT, LIMIT));
       return fetch(CDTN_ADMIN_ENDPOINT, {
         body: gqlRequestBySource(source, index * LIMIT, LIMIT),
         method: "POST",
       })
         .then((r) => r.json())
-        .then(({ data }) => data.documents);
+        .then((result) => {
+          if (result.errors) {
+            console.error(result.errors);
+            throw result.errors[0];
+          }
+          console.log({ result });
+
+          return result.data.documents;
+        });
     });
   });
   const docs = await Promise.all(pDocuments);
   const documents = docs.flatMap((docs) => docs.map(toElastic));
+  console.log(documents);
   return documents;
 }
 
