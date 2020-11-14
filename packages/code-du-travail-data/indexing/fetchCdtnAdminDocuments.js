@@ -20,7 +20,7 @@ const fixBreadcrumbs = (source) => {
   return [];
 };
 
-const LIMIT = 200;
+const LIMIT = 300;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
@@ -31,7 +31,7 @@ const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
     order_by: {cdtn_id: asc},
     limit: ${limit}
     offset: ${offset}
-    where: {source: {_eq: "${source}"}, is_available: true}) {
+    where: {source: {_eq: "${source}"}, is_available: {_eq: true}}) {
     id:initial_id
     cdtnId:cdtn_id
     title
