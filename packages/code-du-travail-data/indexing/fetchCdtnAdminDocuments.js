@@ -49,7 +49,7 @@ const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
 const gqlAgreggateDocumentBySource = (source) =>
   JSON.stringify({
     query: `{
-  documents_aggregate(where: {source: {_eq: "${source}"}}){
+  documents_aggregate(where: {is_available:{_eq: true}, source: {_eq: "${source}"}}){
     aggregate {
       count
     }
@@ -62,7 +62,6 @@ export async function getDocumentBySource(source) {
     body: gqlAgreggateDocumentBySource(source),
     method: "POST",
   }).then((r) => r.json());
-
   const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
   const queue = new PQueue({ concurrency: 10 });
 
@@ -71,7 +70,6 @@ export async function getDocumentBySource(source) {
     (_, i) => i
   ).map((index) => {
     return queue.add(() => {
-      console.log(gqlRequestBySource(source, index * LIMIT, LIMIT));
       return fetch(CDTN_ADMIN_ENDPOINT, {
         body: gqlRequestBySource(source, index * LIMIT, LIMIT),
         method: "POST",
@@ -82,15 +80,12 @@ export async function getDocumentBySource(source) {
             console.error(result.errors);
             throw result.errors[0];
           }
-          console.log({ result });
-
           return result.data.documents;
         });
     });
   });
   const docs = await Promise.all(pDocuments);
   const documents = docs.flatMap((docs) => docs.map(toElastic));
-  console.log(documents);
   return documents;
 }
 

@@ -106,8 +106,6 @@ async function main() {
       );
       documents = await Promise.all(pDocs);
       await nlpQueue.onIdle();
-    } else {
-      console.log("no vector");
     }
     await indexDocumentsBatched({
       client,
