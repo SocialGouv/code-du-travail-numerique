@@ -2792,25 +2792,25 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.7.0.tgz#b3245f1c57435ca7ec6bed4f11724b6cad70f765"
-  integrity sha512-6806p80HzrFzmMMKTkdGYnlbcZ9rpmYvzr0YCum7xenDntf/dlQq3uUl4PedNGLAFU9ir4fdmklS9a2kFgLCUg==
+"@socialgouv/fiches-travail-data@^4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.9.0.tgz#27c8f417b673241eedc6e6047894b459e4f17917"
+  integrity sha512-snZWivBCIBkYdc5r3ZmSiiHchfHC807I3pJzxsEBncaLDdGOWY8zi/0d8zEy4D6t4hDBHkSTP5uwAlKm57lbhg==
 
-"@socialgouv/fiches-vdd@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-2.6.0.tgz#1020731777e5b3a935f7fc18fd4d623376e6c109"
-  integrity sha512-nJYDpcue5T18hE4NbTbLdXr+HvE9xT8KwKL6GYq0pQ5RlIkqnrR+x6hjqKTDe6rrEj7fAAXCU+dJAcXwHoqv5A==
+"@socialgouv/fiches-vdd@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-vdd/-/fiches-vdd-2.8.0.tgz#5d320d657c70b8f8f4c130922057d1f99d9318bc"
+  integrity sha512-aaQU2BmXFf5pujvvOdByjE7O+ry8rrf3VOiaDBWSjVGPFRHyXfHUIPjrIwoIj/ywrmjZx/oqbkPtsT7BxCN8RA==
   dependencies:
     node-fetch "^2.6.1"
     ora "^5.1.0"
     unzipper "^0.10.11"
     xml-js "^1.6.11"
 
-"@socialgouv/kali-data@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.4.0.tgz#c9a0c957a7a57802d0e108e272eb69a3d923fc05"
-  integrity sha512-ojOespRv/43InC9pCOJ7nWhM72V+dX3ohEptW+TCN+02Y7M1jFzVujVIIk+gKavGtx1j/dXmFlLFSFIuTI3uqw==
+"@socialgouv/kali-data@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.5.0.tgz#f60366c07df85a9f36b428be72dfa0b064a15c30"
+  integrity sha512-PVvwYEFwS3xxstcvUF3gFr1H/y6nlxnywj60DGFvbK8ADDDFw1aiRnsDiXPKhp0WU6TgLqd3zzjpd5pxUMbQXQ==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
