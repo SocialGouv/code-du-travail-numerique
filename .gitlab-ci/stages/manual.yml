@@ -61,13 +61,12 @@ Update Prod index:
   dependencies: []
   when: manual
   environment:
-    name: preview-dev2
-    # name: prod2
-  # only:
-  #   refs:
-  #     - master
+    name: prod2
+  only:
+    refs:
+      - master
   variables:
-    ES_INDEX_PREFIX: cdtn-preprod
+    ES_INDEX_PREFIX: cdtn-prod
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
     ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
     ES_LOGS: "$ES_LOGS"
