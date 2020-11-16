@@ -22,10 +22,9 @@ include:
 stages:
   - "Prepare"
   - "Code Quality"
-  - "Manual Deploy"
   - "Registration"
   - "Post Registration"
   - "Deploy"
   - "Notify Finished Deployment"
   - "E2E testing"
-  - "Update ES data"
+  # - "Update ES data"

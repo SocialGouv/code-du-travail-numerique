@@ -14,6 +14,7 @@
     "populate-dev": "node -r esm indexing/index.js",
     "populate": "NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
+    "ingest": "node -r esm indexing/ingest",
     "prepush": "yarn lint",
     "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
   },

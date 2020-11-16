@@ -33,7 +33,6 @@ router.get("/sheets-mt/:slug", async (ctx) => {
 
   const sheetMT = response.body.hits.hits[0];
 
-
   const relatedItems = await getRelatedItems({
     covisits: sheetMT._source.covisits,
     settings: sheetMT._source.title,

@@ -54,3 +54,40 @@ Production:
       --form token="${CI_JOB_TOKEN}"
       --form variables[PRODUCTION]="true"
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
+
+Update Prod index:
+  stage: "Prepare"
+  image:  node:12.14-alpine3.10
+  dependencies: []
+  when: manual
+  environment:
+    name: prod2
+  only:
+    refs:
+      - master
+  variables:
+    ES_INDEX_PREFIX: cdtn-prod
+    ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
+    ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
+    ES_LOGS: "$ES_LOGS"
+    ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
+    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: ${CI_JOB_NAME}
+    paths:
+      - .cache
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - node_modules
+
+  before_script:
+    - echo "$ELASTICSEARCH_URL"
+    - echo "$ELASTICSEARCH_DATA_TOKEN"
+    - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
+    - yarn install --frozen-lockfile --prefer-offline
+  script:
+    - yarn workspace @cdt/data ingest

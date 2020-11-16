@@ -1,53 +1,16 @@
 import slugify from "@socialgouv/cdtn-slugify";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
-import crypto from "crypto";
-import find from "unist-util-find";
-import { selectAll } from "unist-util-select";
 
-import { getCourriers } from "../dataset/courrier-type";
-import { thematicFiles } from "../dataset/dossiers";
-import { getEditorialContents } from "../dataset/editorial_content";
-import { getFichesSP } from "../dataset/fiches_service_public";
+import { markdownTransform } from "../dataset/editorial_content";
 import { addGlossary } from "./addGlossary";
-import { getAgreementPages } from "./agreementPages";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
+import { getDocumentBySource } from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { getVersions } from "./versions";
 
 const getBreadcrumbs = createThemer(themes);
-function flattenTags(tags = []) {
-  return Object.entries(tags).reduce((state, [key, value]) => {
-    return value instanceof Array
-      ? state.concat(value.map((value) => `${key}:${value}`))
-      : state.concat(`${key}:${value}`);
-  }, []);
-}
-
-function makeSlug(text, seed) {
-  const shasum = crypto.createHash("sha1");
-  const value = shasum.update(text + seed);
-  return slugify(
-    `${text}-${Buffer.from(value.digest().slice(0, 10))
-      .toString("base64")
-      // we replace + / with urlsafe char to mimic python urlsafe_b64encode
-      // since it was used originally
-      .replace(/\+/g, "-")
-      .replace(/\//g, "_")}}`
-  );
-}
-
-function getArticleUrl(id) {
-  return `https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=${id}&cidTexte=LEGITEXT000006072050`;
-}
-
-function fixArticleNum(id, num) {
-  if (num.match(/^annexe\s/i) && !num.includes("article")) {
-    return `${num} ${id}`;
-  }
-  return num;
-}
 
 /**
  * Find duplicate slugs
@@ -68,56 +31,90 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  const fichesMT = require("@socialgouv/fiches-travail-data/data/fiches-travail.json");
-  fichesMT.forEach((article) => (article.slug = slugify(article.title)));
+  logger.info("=== Editorial contents ===");
+  const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  yield markdownTransform(documents);
+
+  logger.info("=== Courriers ===");
+  yield await getDocumentBySource(SOURCES.LETTERS);
+
+  logger.info("=== Outils ===");
+  yield await getDocumentBySource(SOURCES.TOOLS);
+
+  logger.info("=== Outils externes ===");
+  yield getDocumentBySource(SOURCES.EXTERNALS);
+
+  logger.info("=== Dossiers ===");
+  yield await getDocumentBySource(SOURCES.THEMATIC_FILES);
 
   logger.info("=== Code du travail ===");
-  yield selectAll(
-    "article",
-    require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
-  ).map(
-    ({ data: { id, num, dateDebut, nota, notaHtml, texte, texteHtml } }) => ({
-      dateDebut,
-      description: texte.slice(0, texte.indexOf("…", 150)),
-      html: texteHtml,
-      id,
-      slug: slugify(fixArticleNum(id, num)),
-      source: SOURCES.CDT,
-      text: `${texte}\n${nota}`,
-      title: fixArticleNum(id, num),
-      ...(nota.length > 0 && { notaHtml }),
-      excludeFromSearch: false,
-      url: getArticleUrl(id),
-    })
-  );
+  yield await getDocumentBySource(SOURCES.CDT);
 
-  logger.info("=== Editorial contents ===");
-  yield getEditorialContents();
+  logger.info("=== Contributions ===");
+  const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
+  yield contributions.map(({ answers, ...contribution }) => ({
+    ...contribution,
+    answers: {
+      ...answers,
+      generic: {
+        ...answers.generic,
+        markdown: addGlossary(answers.generic.markdown),
+      },
+    },
+  }));
+
+  logger.info("=== Conventions Collectives ===");
+  const ccnData = await getDocumentBySource(SOURCES.CCN);
+  yield ccnData.map(({ ...content }) => {
+    return {
+      ...content,
+      answers: content.answers.map((data) => {
+        const contrib = contributions.find(({ index }) => data.index === index);
+        if (!contrib) {
+          throw "unknonw contribution";
+        }
+        const [theme] = contrib.breadcrumbs;
+        return {
+          ...data,
+          answer: addGlossary(data.answer),
+          theme: theme.label,
+        };
+      }),
+      source: SOURCES.CCN,
+    };
+  });
 
   logger.info("=== Fiches SP ===");
-  yield getFichesSP();
+  yield await getDocumentBySource(SOURCES.SHEET_SP);
+
+  logger.info("=== page fiches travail ===");
+  const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
+  yield fichesMT.map(({ sections, ...infos }) => ({
+    ...infos,
+    // fix breadcrumbs
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.SHEET_MT)}/${infos.slug}`
+    ),
+    sections: sections.map(({ html, ...section }) => {
+      delete section.description;
+      delete section.text;
+      return {
+        ...section,
+        html: addGlossary(html),
+      };
+    }),
+  }));
 
   logger.info("=== Fiche MT(split) ===");
   const splittedFiches = fichesMT.flatMap(splitArticle);
-
-  yield splittedFiches.map(
-    ({ anchor, pubId, description, html, slug, text, title }) => {
-      return {
-        anchor,
-        breadcrumbs: getBreadcrumbs(
-          `/${getRouteBySource(SOURCES.SHEET_MT)}/${slug.replace(/#.*$/, "")}`
-        ),
-        description,
-        excludeFromSearch: false,
-        html,
-        id: pubId + (anchor ? `#${anchor}` : ""),
-        slug,
-        source: SOURCES.SHEET_MT,
-        text,
-        title,
-      };
-    }
-  );
+  yield splittedFiches.map((fiche) => ({
+    ...fiche,
+    // fix breadcrumbs generation
+    breadcrumbs: getBreadcrumbs(
+      `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug.replace(/#.*$/, "")}`
+    ),
+    source: SOURCES.SHEET_MT,
+  }));
 
   logger.info("=== Themes ===");
   yield themes.map(
@@ -142,99 +139,6 @@ async function* cdtnDocumentsGen() {
         refs,
         slug: toSlug(title, position),
         source: SOURCES.THEMES,
-        title,
-      };
-    }
-  );
-
-  logger.info("=== Courriers ===");
-  yield getCourriers();
-
-  logger.info("=== Outils ===");
-  yield require("../dataset/tools").map(
-    ({
-      action,
-      breadcrumbs,
-      date,
-      description,
-      icon,
-      id,
-      questions,
-      slug,
-      title,
-    }) => ({
-      action,
-      breadcrumbs,
-      date,
-      description,
-      excludeFromSearch: false,
-      icon,
-      id,
-      slug,
-      source: SOURCES.TOOLS,
-      text: questions.join("\n"),
-      title,
-    })
-  );
-
-  logger.info("=== Outils externes ===");
-  yield require("../dataset/tools/externals.json").map(
-    ({ action, description, icon, id, title, url }) => ({
-      action,
-      description,
-      excludeFromSearch: false,
-      icon,
-      id,
-      slug: slugify(title),
-      source: SOURCES.EXTERNALS,
-      text: description,
-      title,
-      url,
-    })
-  );
-
-  logger.info("=== Contributions ===");
-  yield require("@socialgouv/contributions-data/data/contributions.json").map(
-    ({ title, answers, id }) => {
-      const slug = slugify(title);
-      fixReferences(answers.generic);
-      answers.conventions.forEach(fixReferences);
-
-      return {
-        answers: {
-          ...answers,
-          generic: {
-            ...answers.generic,
-            markdown: addGlossary(answers.generic.markdown),
-          },
-        },
-        breadcrumbs: getBreadcrumbs(
-          `/${getRouteBySource(SOURCES.CONTRIBUTIONS)}/${slug}`
-        ),
-        description: (answers.generic && answers.generic.description) || title,
-        excludeFromSearch: false,
-        id,
-        slug,
-        source: SOURCES.CONTRIBUTIONS,
-        text: (answers.generic && answers.generic.text) || title,
-        title,
-      };
-    }
-  );
-
-  logger.info("=== Dossiers ===");
-  yield thematicFiles.map(
-    ({ categories, description, metaDescription, refs, slug, title, id }) => {
-      return {
-        categories,
-        description,
-        excludeFromSearch: false,
-        id,
-        metaDescription,
-        refs,
-        slug,
-        source: SOURCES.THEMATIC_FILES,
-        text: `${title}\n${description}`,
         title,
       };
     }
@@ -271,38 +175,6 @@ async function* cdtnDocumentsGen() {
     },
   ];
 
-  logger.info("=== page fiches travail ===");
-  yield fichesMT.map(({ sections, pubId, ...content }) => {
-    return {
-      id: pubId,
-      ...content,
-      breadcrumbs: getBreadcrumbs(
-        `/${getRouteBySource(SOURCES.SHEET_MT)}/${content.slug}`
-      ),
-      // eslint-disable-next-line no-unused-vars
-      sections: sections.map(({ description, text, ...section }) => ({
-        ...section,
-        html: addGlossary(section.html),
-      })),
-
-      source: SOURCES.SHEET_MT_PAGE,
-    };
-  });
-
-  logger.info("=== page ccn ===");
-  const ccnData = getAgreementPages();
-  yield ccnData.map(({ ...content }) => {
-    return {
-      ...content,
-      answers: content.answers.map((data) => ({
-        ...data,
-        answer: addGlossary(data.answer),
-      })),
-      excludeFromSearch: false,
-      source: SOURCES.CCN,
-    };
-  });
-
   logger.info("=== data version ===");
   yield [
     {
@@ -311,37 +183,5 @@ async function* cdtnDocumentsGen() {
     },
   ];
 }
-/**
- * HACK @lionelb
- * fix references is here only until migration of references in contributions
- * will be done.
- * fixReferences will resolve article num.
- * For article withou num, it will use the parent section's name
- */
-function fixReferences({ references = [], idcc = "generic" }) {
-  references.forEach((ref) => {
-    if (ref.title.startsWith("KALIARTI")) {
-      const tree = require(`@socialgouv/kali-data/data/${ref.agreement.id}.json`);
-      const parent = find(tree, (node) => {
-        return (
-          node.type === "section" &&
-          node.children.some((node) => node.data.id === ref.title)
-        );
-      });
-      if (parent) {
-        const node = parent.children.find((node) => node.data.id === ref.title);
-        ref.id = ref.title;
-        ref.title = node.data.num
-          ? `Article ${node.data.num}`
-          : parent.data.title;
-        if (!ref.title) {
-          console.error("article with no num", ref.id, ref.agreement.id, idcc);
-        }
-      } else {
-        console.error("can't fix ref for", ref.title, ref.agreement.id, idcc);
-      }
-    }
-  });
-}
 
-export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };
+export { getDuplicateSlugs, cdtnDocumentsGen };
