@@ -44,8 +44,8 @@ class ModeleCourrier extends React.Component {
           date,
           description = "",
           metaDescription,
-          filename,
           filesize,
+          fileUrl,
           html,
           title,
         },
@@ -56,6 +56,7 @@ class ModeleCourrier extends React.Component {
     if (status === 404) {
       return <Answer emptyMessage="Modèle de document introuvable" />;
     }
+    const [filename] = fileUrl.match(/[^/]+$/);
     const [, extension] = filename.split(/\.([a-z]{2,4})$/);
     const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
     return (
@@ -83,7 +84,7 @@ class ModeleCourrier extends React.Component {
                 <Button
                   as="a"
                   className="no-after"
-                  href={`${API_URL}/docs/${filename}`}
+                  href={fileUrl}
                   narrow
                   variant="primary"
                 >
@@ -112,7 +113,7 @@ class ModeleCourrier extends React.Component {
             <Button
               as="a"
               className="no-after"
-              href={`${API_URL}/docs/${filename}`}
+              href={fileUrl}
               variant="primary"
             >
               Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;

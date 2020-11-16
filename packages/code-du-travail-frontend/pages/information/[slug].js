@@ -58,7 +58,6 @@ const Information = ({
       contents,
       date,
       metaDescription,
-      folder,
       intro,
       references = [],
       title,
@@ -67,18 +66,18 @@ const Information = ({
   } = { _source: {} },
 }) => {
   let editorialContent = contents.map(
-    ({ type, name, altText, size, html, references = [] }) => {
+    ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
       const reactContent = processor.processSync(html).result;
       return (
         <>
           {type === "graphic" ? (
             <figure key={name}>
-              <img src={`/docs/${folder}/graphics/${name}.png`} alt={altText} />
+              <img src={imgUrl} alt={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"
                   className="no-after"
-                  href={`/docs/${folder}/graphics/${name}.pdf`}
+                  href={fileUrl}
                   narrow
                   variant="navLink"
                   download
