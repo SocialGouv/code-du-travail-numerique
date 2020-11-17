@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 import { matopush } from "../../piwik";
 
-// following data/populate.js slug rules
+// following @cdt/data/indexing/cdtnDocuments.js slug rules
 const getConventionSlug = (convention) =>
   slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 

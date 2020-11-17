@@ -1,4 +1,4 @@
-import { getDuplicateSlugs } from "../populate";
+import { getDuplicateSlugs } from "../cdtnDocuments";
 
 describe("getDuplicateSlug", () => {
   test("should return an empty array if there is no duplicate slug", async () => {
