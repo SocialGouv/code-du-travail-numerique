@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...courrier-type",
-  "version": "4.35.0",
+  "version": "4.37.0",
   "private": true,
   "description": "generate courrier-type.json",
   "main": "index.js",

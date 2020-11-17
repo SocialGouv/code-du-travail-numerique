@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.37.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.36.0...v4.37.0) (2020-11-17)
+
+
+### Features
+
+* replace local document hosting with distant storage ([#3138](https://github.com/SocialGouv/code-du-travail-numerique/issues/3138)) ([f43b199](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43b199b91bf4f70bf6ff27b1092f9e6c73013de))
+* **data:** use cdtn-admin to fetch documents ([#3004](https://github.com/SocialGouv/code-du-travail-numerique/issues/3004)) ([67ee1f0](https://github.com/SocialGouv/code-du-travail-numerique/commit/67ee1f086aff805052c2a8205c90bce4254b42b3))
+
+
+
+
+
 # [4.36.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.35.0...v4.36.0) (2020-11-10)
 
 
