@@ -6,9 +6,10 @@ function getSearchBody({ source, slug }) {
       "categories", // thematic files
       "date",
       "dateDebut", // code-du-travail
-      "description", // modele de courrier
-      "filename", // modele de courrier
-      "filesize", // modele de courrier
+      "description", // modele de courrier,
+      "filesize", // modele de courrier, informations
+      "fileUrl", // modele de courrier, informations
+      "imgUrl",
       "intro",
       "html",
       "icon", // outils

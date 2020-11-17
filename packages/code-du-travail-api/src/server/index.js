@@ -3,7 +3,6 @@ const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
 
 const conventionsRoutes = require("./routes/conventions");
-const docsRoutes = require("./routes/docs");
 const docsCountRoutes = require("./routes/docs-count");
 const highlightRoutes = require("./routes/highlights");
 const idccRoutes = require("./routes/idcc");
@@ -52,7 +51,6 @@ app.use(async (ctx, next) => {
 app.use(bodyParser());
 
 app.use(conventionsRoutes.routes());
-app.use(docsRoutes);
 app.use(docsCountRoutes.routes());
 app.use(highlightRoutes.routes());
 app.use(idccRoutes.routes());
