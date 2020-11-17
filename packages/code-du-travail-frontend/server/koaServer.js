@@ -68,6 +68,7 @@ async function getKoaServer({ nextApp }) {
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.fr",
         "https://ad.doubleclick.net",
+        "https://cdtnadminprod.blob.core.windows.net",
       ],
       scriptSrc: [
         "'self'",
