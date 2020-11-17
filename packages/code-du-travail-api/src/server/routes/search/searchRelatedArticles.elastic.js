@@ -5,11 +5,10 @@ function getRelatedArticlesBody({ query, size = 5 }) {
     _source: ["title", "slug", "url", "source", "description", "cdtnId"],
     query: {
       bool: {
-        filter: {
-          term: {
-            source: `${SOURCES.CDT}`,
-          },
-        },
+        filter: [
+          { term: { source: `${SOURCES.CDT}` } },
+          { term: { isPublished: true } },
+        ],
         must: {
           bool: {
             should: [

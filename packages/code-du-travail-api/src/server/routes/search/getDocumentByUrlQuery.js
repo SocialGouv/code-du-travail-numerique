@@ -20,7 +20,11 @@ const getDocumentByUrlQuery = (
     _source,
     query: {
       bool: {
-        filter: [{ term: { slug } }, { term: { source } }],
+        filter: [
+          { term: { slug } },
+          { term: { source } },
+          { term: { isPublished: true } },
+        ],
       },
     },
     size: 1,

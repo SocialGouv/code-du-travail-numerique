@@ -3,21 +3,20 @@ const { SOURCES } = require("@socialgouv/cdtn-sources");
 function getRootThemesQuery() {
   return {
     _source: ["icon", "children", "title", "slug", "position"],
-    sort: [{ position: { order: "asc" } }],
     query: {
       bool: {
+        filter: [
+          { term: { source: SOURCES.THEMES } },
+          { term: { isPublished: true } },
+        ],
         must_not: {
           exists: {
             field: "breadcrumbs",
           },
         },
-        filter: {
-          term: {
-            source: SOURCES.THEMES,
-          },
-        },
       },
     },
+    sort: [{ position: { order: "asc" } }],
   };
 }
 
@@ -32,16 +31,12 @@ function getThemeQuery({ slug }) {
       "description",
       "refs",
     ],
-    sort: [{ position: { order: "asc" } }],
     query: {
       bool: {
-        filter: {
-          term: {
-            slug,
-          },
-        },
+        filter: [{ term: { slug } }, { term: { isPublished: true } }],
       },
     },
+    sort: [{ position: { order: "asc" } }],
   };
 }
 

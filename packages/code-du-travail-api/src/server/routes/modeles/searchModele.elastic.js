@@ -11,11 +11,8 @@ function getModeleBody() {
     query: {
       bool: {
         filter: [
-          {
-            term: {
-              source: "modeles_de_courriers",
-            },
-          },
+          { term: { source: "modeles_de_courriers" } },
+          { term: { isPublished: true } },
         ],
       },
     },
