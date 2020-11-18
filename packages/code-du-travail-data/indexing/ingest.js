@@ -3,6 +3,7 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 
+import { cdtnDocumentsGen } from "./cdtnDocuments";
 import { documentMapping } from "./document.mapping";
 import {
   createIndex,
@@ -13,7 +14,6 @@ import {
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { logger } from "./logger";
 import { fetchCovisits } from "./monolog";
-import { cdtnDocumentsGen } from "./populate";
 import { populateSuggestions } from "./suggestion";
 import { vectorizeDocument } from "./vectorizer";
 

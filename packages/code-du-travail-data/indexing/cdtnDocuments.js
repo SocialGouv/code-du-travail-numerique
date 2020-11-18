@@ -2,12 +2,12 @@ import slugify from "@socialgouv/cdtn-slugify";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
 
-import { markdownTransform } from "../dataset/editorial_content";
 import { addGlossary } from "./addGlossary";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import { getDocumentBySource } from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
+import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 
 const getBreadcrumbs = createThemer(themes);

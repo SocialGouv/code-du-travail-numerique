@@ -1,1 +1,0 @@
-Le rôle du référent Covid-19 est de veiller à la mise en œuvre des mesures de prévention et à l’information des salariés et toute personne travaillant dans son entreprise (stagiaire, intérimaire…). Dans les petites entreprises, l’employeur peut être ce référent.
