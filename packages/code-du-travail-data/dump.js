@@ -46,7 +46,7 @@ async function fetchVector(data) {
 }
 
 const dump = async () => {
-  let documents = [];
+  let allDocuments = [];
 
   if (NLP_URL) {
     console.error(`Using NLP service to retrieve tf vectors on ${NLP_URL}`);
@@ -54,29 +54,34 @@ const dump = async () => {
     console.error(`NLP_URL not defined, semantic search will be disabled.`);
   }
 
-  for await (const docsIds of cdtnDocumentsGen()) {
-    console.error(`› ${docsIds[0].source}... ${docsIds.length} items`);
-
-    // add covisits using pQueue (there is a plan to change this : see #2915)
-    const pDocs = docsIds.map((doc) =>
-      monologQueue.add(() => fetchCovisits(doc))
+  for await (const { source, documents } of cdtnDocumentsGen()) {
+    console.error(
+      `› dump ${documents.length} documents generated for ${source}`
     );
-    const docs = await Promise.all(pDocs);
-    await monologQueue.onIdle();
-    // add NLP vectors
-    if (excludeSources.includes(docs[0].source)) {
-      documents = documents.concat(docs);
+    if (documents.length === 0) {
+      // skip if not docs
     } else {
-      const pDocs = docs.map((doc) =>
-        nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
+      // add covisits using pQueue (there is a plan to change this : see #2915)
+      const pDocs = documents.map((doc) =>
+        monologQueue.add(() => fetchCovisits(doc))
       );
-      const docsWithData = await Promise.all(pDocs);
-      await nlpQueue.onIdle();
-      documents = documents.concat(docsWithData);
+      const docs = await Promise.all(pDocs);
+      await monologQueue.onIdle();
+      // add NLP vectors
+      if (excludeSources.includes(docs[0].source)) {
+        allDocuments = allDocuments.concat(docs);
+      } else {
+        const pDocs = docs.map((doc) =>
+          nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
+        );
+        const docsWithData = await Promise.all(pDocs);
+        await nlpQueue.onIdle();
+        allDocuments = allDocuments.concat(docsWithData);
+      }
     }
   }
   //eslint-disable-next-line no-console
-  console.log(JSON.stringify(documents, 0, 2));
+  console.log(JSON.stringify(allDocuments, 0, 2));
   console.error(`done in ${(Date.now() - t0) / 1000} s`);
 };
 

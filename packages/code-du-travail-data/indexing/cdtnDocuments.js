@@ -1,14 +1,20 @@
+// eslint-disable-next-line simple-import-sort/sort
 import slugify from "@socialgouv/cdtn-slugify";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import themes from "@socialgouv/datafiller-data/data/themes.json";
+
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
 import { addGlossary } from "./addGlossary";
 import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
-import { getDocumentBySource } from "./fetchCdtnAdminDocuments";
+import {
+  getDocumentBySource,
+  getAllKaliBlocks,
+} from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
+import { getArticlesByTheme } from "./kali";
 
 const getBreadcrumbs = createThemer(themes);
 
@@ -33,156 +39,211 @@ async function getDuplicateSlugs(allDocuments) {
 async function* cdtnDocumentsGen() {
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
-  yield markdownTransform(documents);
+  yield {
+    source: SOURCES.EDITORIAL_CONTENT,
+    documents: markdownTransform(documents),
+  };
 
   logger.info("=== Courriers ===");
-  yield await getDocumentBySource(SOURCES.LETTERS);
+  yield {
+    source: SOURCES.LETTERS,
+    documents: await getDocumentBySource(SOURCES.LETTERS),
+  };
 
   logger.info("=== Outils ===");
-  yield await getDocumentBySource(SOURCES.TOOLS);
+  yield {
+    source: SOURCES.TOOLS,
+    documents: await getDocumentBySource(SOURCES.TOOLS),
+  };
 
   logger.info("=== Outils externes ===");
-  yield getDocumentBySource(SOURCES.EXTERNALS);
+  yield {
+    source: SOURCES.EXTERNALS,
+    documents: await getDocumentBySource(SOURCES.EXTERNALS),
+  };
 
   logger.info("=== Dossiers ===");
-  yield await getDocumentBySource(SOURCES.THEMATIC_FILES);
+  yield {
+    source: SOURCES.THEMATIC_FILES,
+    documents: await getDocumentBySource(SOURCES.THEMATIC_FILES),
+  };
 
   logger.info("=== Code du travail ===");
-  yield await getDocumentBySource(SOURCES.CDT);
+  yield {
+    source: SOURCES.CDT,
+    documents: await getDocumentBySource(SOURCES.CDT),
+  };
 
   logger.info("=== Contributions ===");
   const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
-  yield contributions.map(({ answers, ...contribution }) => ({
-    ...contribution,
-    answers: {
-      ...answers,
-      generic: {
-        ...answers.generic,
-        markdown: addGlossary(answers.generic.markdown),
+  yield {
+    source: SOURCES.CONTRIBUTIONS,
+    documents: contributions.map(({ answers, ...contribution }) => ({
+      ...contribution,
+      answers: {
+        ...answers,
+        generic: {
+          ...answers.generic,
+          markdown: addGlossary(answers.generic.markdown),
+        },
       },
-    },
-  }));
+    })),
+  };
 
   logger.info("=== Conventions Collectives ===");
   const ccnData = await getDocumentBySource(SOURCES.CCN);
-  yield ccnData.map(({ ...content }) => {
-    return {
-      ...content,
-      answers: content.answers.map((data) => {
-        const contrib = contributions.find(({ index }) => data.index === index);
-        if (!contrib) {
-          throw "unknonw contribution";
-        }
-        const [theme] = contrib.breadcrumbs;
-        return {
-          ...data,
-          answer: addGlossary(data.answer),
-          theme: theme.label,
-        };
-      }),
-      source: SOURCES.CCN,
-    };
-  });
+  const allKaliBlocks = await getAllKaliBlocks();
+  yield {
+    source: SOURCES.CCN,
+    documents: ccnData.map(({ ...content }) => {
+      return {
+        ...content,
+        answers: content.answers.map((data) => {
+          const contrib = contributions.find(
+            ({ index }) => data.index === index
+          );
+          if (!contrib) {
+            throw "unknown contribution";
+          }
+          const [theme] = contrib.breadcrumbs;
+          return {
+            ...data,
+            answer: addGlossary(data.answer),
+            theme: theme.label,
+          };
+        }),
+        source: SOURCES.CCN,
+        articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
+      };
+    }),
+  };
 
   logger.info("=== Fiches SP ===");
-  yield await getDocumentBySource(SOURCES.SHEET_SP);
+  yield {
+    source: SOURCES.SHEET_SP,
+    documents: await getDocumentBySource(SOURCES.SHEET_SP),
+  };
 
   logger.info("=== page fiches travail ===");
   const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
-  yield fichesMT.map(({ sections, ...infos }) => ({
-    ...infos,
-    // fix breadcrumbs
-    breadcrumbs: getBreadcrumbs(
-      `/${getRouteBySource(SOURCES.SHEET_MT)}/${infos.slug}`
-    ),
-    sections: sections.map(({ html, ...section }) => {
-      delete section.description;
-      delete section.text;
-      return {
-        ...section,
-        html: addGlossary(html),
-      };
-    }),
-  }));
+  yield {
+    source: SOURCES.SHEET_MT_PAGE,
+    documents: fichesMT.map(({ sections, ...infos }) => ({
+      ...infos,
+      // fix breadcrumbs
+      breadcrumbs: getBreadcrumbs(
+        `/${getRouteBySource(SOURCES.SHEET_MT)}/${infos.slug}`
+      ),
+      sections: sections.map(({ html, ...section }) => {
+        delete section.description;
+        delete section.text;
+        return {
+          ...section,
+          html: addGlossary(html),
+        };
+      }),
+    })),
+  };
 
   logger.info("=== Fiche MT(split) ===");
   const splittedFiches = fichesMT.flatMap(splitArticle);
-  yield splittedFiches.map((fiche) => ({
-    ...fiche,
-    // fix breadcrumbs generation
-    breadcrumbs: getBreadcrumbs(
-      `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug.replace(/#.*$/, "")}`
-    ),
+  yield {
     source: SOURCES.SHEET_MT,
-  }));
+    documents: splittedFiches.map((fiche) => ({
+      ...fiche,
+      // fix breadcrumbs generation
+      breadcrumbs: getBreadcrumbs(
+        `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug.replace(
+          /#.*$/,
+          ""
+        )}`
+      ),
+      source: SOURCES.SHEET_MT,
+    })),
+  };
 
   logger.info("=== Themes ===");
-  yield themes.map(
-    ({
-      id,
-      breadcrumbs,
-      children,
-      icon,
-      introduction,
-      position,
-      refs,
-      title,
-    }) => {
-      return {
-        breadcrumbs: breadcrumbs.map(toBreadcrumbs),
-        children: children.map(toBreadcrumbs),
-        description: introduction,
-        excludeFromSearch: false,
-        icon,
+  yield {
+    source: SOURCES.THEMES,
+    documents: themes.map(
+      ({
         id,
-        isPublished: true,
+        breadcrumbs,
+        children,
+        icon,
+        introduction,
         position,
         refs,
-        slug: toSlug(title, position),
-        source: SOURCES.THEMES,
         title,
-      };
-    }
-  );
+      }) => {
+        return {
+          breadcrumbs: breadcrumbs.map(toBreadcrumbs),
+          children: children.map(toBreadcrumbs),
+          description: introduction,
+          excludeFromSearch: false,
+          icon,
+          id,
+          isPublished: true,
+          position,
+          refs,
+          slug: toSlug(title, position),
+          source: SOURCES.THEMES,
+          title,
+        };
+      }
+    ),
+  };
 
-  logger.info("=== Hightlights ===");
-  yield [
-    {
-      data: require("@socialgouv/datafiller-data/data/hightlights.json"),
-      source: SOURCES.HIGHLIGHTS,
-    },
-  ];
+  logger.info("=== Highlights ===");
+  yield {
+    source: SOURCES.HIGHLIGHTS,
+    documents: [
+      {
+        data: require("@socialgouv/datafiller-data/data/hightlights.json"),
+        source: SOURCES.HIGHLIGHTS,
+      },
+    ],
+  };
 
   logger.info("=== glossary ===");
-  yield [
-    {
-      data: require("@socialgouv/datafiller-data/data/glossary.json").map(
-        (item) => {
-          return {
-            ...item,
-            slug: slugify(item.title),
-          };
-        }
-      ),
-      source: SOURCES.GLOSSARY,
-    },
-  ];
+  yield {
+    source: SOURCES.GLOSSARY,
+    documents: [
+      {
+        data: require("@socialgouv/datafiller-data/data/glossary.json").map(
+          (item) => {
+            return {
+              ...item,
+              slug: slugify(item.title),
+            };
+          }
+        ),
+        source: SOURCES.GLOSSARY,
+      },
+    ],
+  };
 
   logger.info("=== PreQualified Request ===");
-  yield [
-    {
-      data: require("@socialgouv/datafiller-data/data/requests.json"),
-      source: SOURCES.PREQUALIFIED,
-    },
-  ];
+  yield {
+    source: SOURCES.PREQUALIFIED,
+    documents: [
+      {
+        data: require("@socialgouv/datafiller-data/data/requests.json"),
+        source: SOURCES.PREQUALIFIED,
+      },
+    ],
+  };
 
   logger.info("=== data version ===");
-  yield [
-    {
-      data: getVersions(),
-      source: SOURCES.VERSIONS,
-    },
-  ];
+  yield {
+    source: SOURCES.VERSIONS,
+    documents: [
+      {
+        data: getVersions(),
+        source: SOURCES.VERSIONS,
+      },
+    ],
+  };
 }
 
 export { getDuplicateSlugs, cdtnDocumentsGen };
