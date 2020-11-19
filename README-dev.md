@@ -99,8 +99,16 @@ Start a local TF Serve NLP instance
 Create a dump with semantic vectors (you will need a NLP service available)
 (if NLP_URL env is not provide it will create a dump without semantic vectors)
 
-```
-NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
+```sh
+# Dump only documents
+CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
+mas
+# Dump with semantic vectors
+CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
+
+# For dev purpose,you can generate a fast Dump 
+# without semantic vectors nor glossary words.
+DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
 ```
 
 Populate elasticsearch index using a local dump

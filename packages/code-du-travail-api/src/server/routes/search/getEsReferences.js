@@ -21,8 +21,6 @@ const makeHit = (data) => ({
 
 const indexQuery = { index };
 
-const flatten = (arr) => arr.reduce((a, c) => [...a, ...c], []);
-
 // for a set of given urls, fetch related ES documents
 const getEsReferences = async (refs = []) => {
   const queries =
@@ -43,9 +41,15 @@ const getEsReferences = async (refs = []) => {
     body: [...queries],
   });
 
-  const responses = flatten(response.body.responses.map((r) => r.hits.hits));
+  const responses = response.body.responses.flatMap((r) => {
+    if (r.hits.total.value === 0) {
+      return [];
+    }
+    return r.hits.hits;
+  });
+
   // mix with non ES-results (ex: external, or no match)
-  const hits = refs.map((ref) => {
+  const hits = refs.flatMap((ref) => {
     if (isInternalUrl(ref.url)) {
       const { slug, source } = getDataFromUrl(ref.url);
       const esReference = responses.find(
@@ -53,6 +57,10 @@ const getEsReferences = async (refs = []) => {
           response._source.slug === slug && response._source.source === source
       );
       if (esReference) {
+        if (!esReference._source.isPublished) {
+          return [];
+        }
+        delete esReference._source.isPublished;
         return esReference;
       }
     }

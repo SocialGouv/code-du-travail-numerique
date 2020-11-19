@@ -34,7 +34,7 @@ Object {
     Object {
       "_id": "18",
       "_index": "cdtn_test_documents",
-      "_score": 13.6510105,
+      "_score": 13.633122,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -50,7 +50,7 @@ Object {
     Object {
       "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 12.547649,
+      "_score": 12.529761,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -64,7 +64,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.6510105,
+  "max_score": 13.633122,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -78,7 +78,7 @@ Object {
     Object {
       "_id": "18",
       "_index": "cdtn_test_documents",
-      "_score": 13.505553,
+      "_score": 13.487665,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -94,7 +94,7 @@ Object {
     Object {
       "_id": "17",
       "_index": "cdtn_test_documents",
-      "_score": 12.402192,
+      "_score": 12.384304,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -108,7 +108,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 13.505553,
+  "max_score": 13.487665,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -122,7 +122,7 @@ Object {
     Object {
       "_id": "20",
       "_index": "cdtn_test_documents",
-      "_score": 14.38792,
+      "_score": 14.369663,
       "_source": Object {
         "cdtnId": "a25dfc974f",
         "effectif": 216431,
@@ -138,7 +138,7 @@ Object {
     Object {
       "_id": "19",
       "_index": "cdtn_test_documents",
-      "_score": 8.017454,
+      "_score": 7.9969215,
       "_source": Object {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -152,7 +152,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.38792,
+  "max_score": 14.369663,
   "total": Object {
     "relation": "eq",
     "value": 2,

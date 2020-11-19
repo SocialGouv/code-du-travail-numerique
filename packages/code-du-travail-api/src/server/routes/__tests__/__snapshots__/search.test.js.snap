@@ -4,7 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.628408,
+      "_score": 22.492731,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -67,7 +67,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.2706828,
+      "_score": 3.4340444,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -243,7 +243,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.920247,
+      "_score": 1.9145181,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -278,7 +278,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 3.2706828,
+      "_score": 3.4340444,
       "cdtnId": "50195f324b",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -287,7 +287,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.1512175,
+      "_score": 3.303259,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -298,7 +298,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 9.907198,
+      "_score": 10.075111,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -337,7 +337,7 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 9.653719,
+      "_score": 9.511839,
       "action": "Calculer",
       "algo": "both",
       "breadcrumbs": Array [
@@ -357,7 +357,7 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 8.605516,
+      "_score": 8.701545,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -377,7 +377,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 4.4587755,
+      "_score": 4.4205713,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -396,7 +396,7 @@ Object {
       "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
     },
     Object {
-      "_score": 2.8901207,
+      "_score": 2.9481337,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -503,7 +503,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.920247,
+      "_score": 1.9145181,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "81-demission",
@@ -538,7 +538,7 @@ exports[`returns unique documents from prequalified data (same slug but differen
 Object {
   "articles": Array [
     Object {
-      "_score": 0.92252207,
+      "_score": 1.0100994,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -590,7 +590,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.5288277,
+      "_score": 2.5882375,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -613,7 +613,7 @@ Object {
       "title": "Démission",
     },
     Object {
-      "_score": 0.8618989,
+      "_score": 0.9558022,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",

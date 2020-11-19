@@ -23,7 +23,12 @@ it("asks same sources wether it is search sem or search elastic and gets a descr
   const semBody = getSemBody({ sources: [SOURCES.CDT] });
   const getEsRefBody = getDocumentByUrlQuery("/code-du-travail/slug");
   expect(searchBody._source).toEqual(semBody._source);
-  expect(getEsRefBody._source).toEqual(semBody._source);
+
+  // getEsRefBody need to ask isPublished in order to remove unpublish items
+  // the field isPublished, is removed from _source result objects
+  expect(getEsRefBody._source.filter((f) => f !== "isPublished")).toEqual(
+    semBody._source
+  );
   expect(searchBody._source).toContain("description");
 });
 
