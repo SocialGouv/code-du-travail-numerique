@@ -19,7 +19,15 @@ const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
 const startTag = `(?<=>[^><]*)`;
 const endTag = `(?=[^<]*</)`;
 
+/**
+ * addGlossary is a heavy operation that is only neede while dumping for ES
+ */
+const DISABLE_GLOSSARY = process.env.DISABLE_GLOSSARY || false;
 export function addGlossary(htmlContent) {
+  if (DISABLE_GLOSSARY) {
+    return htmlContent;
+  }
+
   if (!htmlContent) return "";
 
   let idHtmlContent = htmlContent;
