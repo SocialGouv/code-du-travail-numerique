@@ -32,7 +32,7 @@
     "@socialgouv/cdtn-monolog": "^1.1.2",
     "@socialgouv/cdtn-slugify": "^4.35.0",
     "@socialgouv/cdtn-sources": "^4.35.0",
-    "@socialgouv/datafiller-data": "^2.4.0",
+    "@socialgouv/datafiller-data": "^2.6.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "node-fetch": "^2.6.1",
