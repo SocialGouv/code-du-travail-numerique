@@ -72,6 +72,7 @@ Update Prod index:
     ES_LOGS: "$ES_LOGS"
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
     CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+    NLP_URL: https://serving-ml.fabrique.social.gouv.fr
   cache:
     key:
       files:
@@ -85,8 +86,6 @@ Update Prod index:
       - node_modules
 
   before_script:
-    - echo "$ELASTICSEARCH_URL"
-    - echo "$ELASTICSEARCH_DATA_TOKEN"
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
   script:
