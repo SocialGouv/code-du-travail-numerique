@@ -14,8 +14,6 @@ RUN yarn workspace @cdt/data dump-dev
 FROM node:12.19-alpine3.10
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
-COPY --from=cdtn-base-image /app/node_modules/@socialgouv/kali-data/data /app/node_modules/@socialgouv/kali-data/data
-COPY --from=cdtn-base-image /app/node_modules/@socialgouv/fiches-travail-data/data /app/node_modules/@socialgouv/fiches-travail-data/data
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
