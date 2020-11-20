@@ -13,11 +13,8 @@ function getIdccBody({ query }) {
     query: {
       bool: {
         filter: [
-          {
-            term: {
-              source: "conventions_collectives",
-            },
-          },
+          { term: { source: "conventions_collectives" } },
+          { term: { isPublished: true } },
         ],
         must: {
           bool: {

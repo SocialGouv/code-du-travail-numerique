@@ -11,11 +11,10 @@ function getRelatedThemesBody({ query, size = 5 }) {
     _source: ["icon", "title", "slug", "url", "source", "cdtnId"],
     query: {
       bool: {
-        filter: {
-          term: {
-            source: `${SOURCES.THEMES}`,
-          },
-        },
+        filter: [
+          { term: { source: `${SOURCES.THEMES}` } },
+          { term: { isPublished: true } },
+        ],
         must: {
           match: {
             title: {

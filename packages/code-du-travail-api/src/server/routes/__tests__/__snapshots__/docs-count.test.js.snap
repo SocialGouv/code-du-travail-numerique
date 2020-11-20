@@ -18,7 +18,7 @@ Object {
       },
       Object {
         "doc_count": 3,
-        "key": "page_fiche_ministere_travail",
+        "key": "outils",
       },
       Object {
         "doc_count": 3,
@@ -38,7 +38,7 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "outils",
+        "key": "page_fiche_ministere_travail",
       },
       Object {
         "doc_count": 1,

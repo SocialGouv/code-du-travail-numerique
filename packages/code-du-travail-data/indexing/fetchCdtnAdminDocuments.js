@@ -97,6 +97,7 @@ function toElastic({
   slug,
   text,
   is_searchable,
+  is_published,
   metaDescription,
   document,
 }) {
@@ -107,6 +108,7 @@ function toElastic({
     cdtnId,
     excludeFromSearch: !is_searchable,
     id,
+    isPublished: is_published,
     metaDescription,
     slug,
     source,

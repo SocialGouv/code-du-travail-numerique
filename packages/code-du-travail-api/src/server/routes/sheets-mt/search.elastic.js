@@ -17,12 +17,9 @@ function getSheetMTQuery({ slug }) {
     query: {
       bool: {
         filter: [
-          {
-            term: { source: SOURCES.SHEET_MT_PAGE },
-          },
-          {
-            term: { slug },
-          },
+          { term: { source: SOURCES.SHEET_MT_PAGE } },
+          { term: { slug } },
+          { term: { isPublished: true } },
         ],
       },
     },

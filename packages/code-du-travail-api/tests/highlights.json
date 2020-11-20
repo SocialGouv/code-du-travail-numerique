@@ -7,6 +7,11 @@
           "url": "/fiche-ministere-travail/la-demission#Comment-presenter-une-demission",
           "title": "pouf pouf",
           "position": 0
+        },
+        {
+          "url": "/outils/heures-recherche-emploi",
+          "title": "[DRAFT] Heures pour recherche d’emploi",
+          "position": 1
         }
       ],
       "title": "homepage",

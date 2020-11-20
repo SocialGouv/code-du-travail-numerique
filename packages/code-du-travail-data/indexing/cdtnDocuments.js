@@ -135,6 +135,7 @@ async function* cdtnDocumentsGen() {
         excludeFromSearch: false,
         icon,
         id,
+        isPublished: true,
         position,
         refs,
         slug: toSlug(title, position),

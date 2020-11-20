@@ -49,7 +49,6 @@ const documentsSlugs = [
   "/external/mon-compte-formation",
   "/external/index-egapro",
   "/fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
-  "/fiche-ministere-travail/5-questions-reponses-sur-la-validation-des-acquis-de-lexperience-vae",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -71,6 +70,26 @@ async function updateDocumentsData(slugs) {
       }
     }
     data.push(highlightsData, preQualifiedData, glossaryData, versions);
+    data.push({
+      action: "Calculer",
+      breadcrumbs: [
+        {
+          label: "Départ de l'entreprise",
+          slug: "/themes/8-depart-de-lentreprise",
+        },
+      ],
+      cdtnId: "d8fca710c5",
+      date: "08/11/2019",
+      description:
+        "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      excludeFromSearch: false,
+      id: "d09665fc-961c-44bf-a399-c34cfedf1d24",
+      isPublished: false,
+      slug: "heures-recherche-emploi",
+      source: "outils",
+      text: "heure pour recherche d'emploi",
+      title: "[DRAFT] Heures pour recherche d’emploi",
+    });
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
       JSON.stringify(data, 0, 2)

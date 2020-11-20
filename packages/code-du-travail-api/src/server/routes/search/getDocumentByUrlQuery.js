@@ -12,6 +12,7 @@ const getDocumentByUrlQuery = (
     "action",
     "breadcrumbs",
     "cdtnId",
+    "isPublished",
   ]
 ) => {
   const { slug, source } = getDataFromUrl(url);

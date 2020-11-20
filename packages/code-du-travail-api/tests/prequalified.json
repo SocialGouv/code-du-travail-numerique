@@ -11,6 +11,11 @@
           "position": 0
         },
         {
+          "url": "/outils/heures-recherche-emploi",
+          "title": "[DRAFT] Heures pour recherche d’emploi",
+          "position": 0
+        },
+        {
           "url": "/fiche-ministere-travail/la-demission",
           "title": "La démission : comment présenter une démission ?",
           "position": 1
@@ -120,39 +125,6 @@
         "mettre fin à mon contrat de travail",
         "comment présenter sa démission ?",
         "formalités d’une démission"
-      ]
-    },
-    {
-      "title": "cse",
-      "theme": "fc69c570-5520-478e-9302-3e226e1cc718",
-      "refs": [
-        {
-          "url": "/fiche-service-public/comite-social-et-economique-cse",
-          "title": "Comité social et économique (CSE)",
-          "position": 1
-        },
-        {
-          "url": "/fiche-service-public/hygiene-et-securite-quand-faut-il-consulter-le-chsct-ou-le-cse",
-          "title": "Hygiène et sécurité : quand faut-il consulter le CHSCT (ou le CSE) ?",
-          "position": 2
-        },
-        {
-          "url": "/fiche-service-public/comment-se-deroulent-les-reunions-du-comite-dentreprise-ce",
-          "title": "Comment se déroulent les réunions du comité d'entreprise (CE) ?",
-          "position": 3
-        }
-      ],
-      "variants": [
-        "cse",
-        "Comité social et économique",
-        "Quel est le rôle du CSE ?",
-        "C'est quoi le CSE ?",
-        "Quelles sont les institutions représentatives du personnel ?",
-        "Quel est le rôle des instances représentatives du personnel ?",
-        "missions du cse",
-        "cse definition",
-        "cse entreprise",
-        "Quels sont les IRP ?"
       ]
     },
     {

@@ -63,11 +63,6 @@ Object {
     },
     Object {
       "source": "external",
-      "title": "Heures pour recherche d’emploi",
-      "url": "/outils/heures-recherche-emploi",
-    },
-    Object {
-      "source": "external",
       "title": "",
       "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes",
     },

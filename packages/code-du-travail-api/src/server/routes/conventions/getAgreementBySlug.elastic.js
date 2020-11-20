@@ -4,7 +4,11 @@ function getAgreementBody({ slug }) {
   return {
     query: {
       bool: {
-        filter: [{ term: { slug } }, { term: { source: SOURCES.CCN } }],
+        filter: [
+          { term: { slug } },
+          { term: { source: SOURCES.CCN } },
+          { term: { isPublished: true } },
+        ],
       },
     },
     size: 1,

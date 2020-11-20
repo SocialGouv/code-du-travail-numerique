@@ -89,6 +89,10 @@ export const documentMapping = {
     // available in editorial content
     intro: { type: "text" },
 
+    isPublished: {
+      type: "boolean",
+    },
+
     metaDescription: { type: "text" },
 
     nbArticles: {

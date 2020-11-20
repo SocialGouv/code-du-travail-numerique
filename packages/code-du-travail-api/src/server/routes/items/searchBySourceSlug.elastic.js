@@ -38,12 +38,9 @@ function getSearchBody({ source, slug }) {
     query: {
       bool: {
         filter: [
-          {
-            term: { source },
-          },
-          {
-            term: { slug },
-          },
+          { term: { source } },
+          { term: { slug } },
+          { term: { isPublished: true } },
         ],
       },
     },
