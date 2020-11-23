@@ -100,7 +100,7 @@ async function main() {
     let covisitDocuments = await Promise.all(pDocs);
     await monologQueue.onIdle();
     // add NLP vectors
-    if (!excludeSources.includes(covisitDocuments[0].source)) {
+    if (!excludeSources.includes(source)) {
       const pDocs = covisitDocuments.map((doc) =>
         nlpQueue.add(() => retry(() => addVector(doc), { retries: 3 }))
       );

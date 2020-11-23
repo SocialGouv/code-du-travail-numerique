@@ -1,22 +1,48 @@
 // eslint-disable-next-line simple-import-sort/sort
 import slugify from "@socialgouv/cdtn-slugify";
-import themes from "@socialgouv/datafiller-data/data/themes.json";
-
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import fetch from "node-fetch";
 
 import { addGlossary } from "./addGlossary";
-import { createThemer, toBreadcrumbs, toSlug } from "./breadcrumbs";
 import {
   getDocumentBySource,
   getAllKaliBlocks,
 } from "./fetchCdtnAdminDocuments";
+import { buildGetBreadcrumbs } from "./breadcrumbs";
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 import { getArticlesByTheme } from "./kali";
 
-const getBreadcrumbs = createThemer(themes);
+const CDTN_ADMIN_ENDPOINT =
+  process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
+
+const themeRelationsQuery = JSON.stringify({
+  query: `{
+  themeRelations: document_relations(where: {type: {_eq: "theme"}}) {
+    parentId: document_a
+    position: data(path: "position")
+    theme: b {
+      cdtnId: cdtn_id
+      id: initial_id
+      title
+      slug
+      source
+      document
+      contentRelations:relation_a(where: {type: {_eq: "theme-content"}}) {
+        position: data(path: "position")
+        document:b {
+          cdtnId: cdtn_id
+          slug
+          source
+          title
+        }
+      }
+    }
+  }
+}`,
+});
 
 /**
  * Find duplicate slugs
@@ -37,6 +63,15 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
+  const themeRelationsResult = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: themeRelationsQuery,
+    method: "POST",
+  }).then((r) => r.json());
+
+  const getBreadcrumbs = buildGetBreadcrumbs(
+    themeRelationsResult.data.themeRelations
+  );
+
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
   yield {
@@ -46,25 +81,28 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Courriers ===");
   yield {
-    documents: await getDocumentBySource(SOURCES.LETTERS),
+    documents: await getDocumentBySource(SOURCES.LETTERS, getBreadcrumbs),
     source: SOURCES.LETTERS,
   };
 
   logger.info("=== Outils ===");
   yield {
-    documents: await getDocumentBySource(SOURCES.TOOLS),
+    documents: await getDocumentBySource(SOURCES.TOOLS, getBreadcrumbs),
     source: SOURCES.TOOLS,
   };
 
   logger.info("=== Outils externes ===");
   yield {
-    documents: await getDocumentBySource(SOURCES.EXTERNALS),
+    documents: await getDocumentBySource(SOURCES.EXTERNALS, getBreadcrumbs),
     source: SOURCES.EXTERNALS,
   };
 
   logger.info("=== Dossiers ===");
   yield {
-    documents: await getDocumentBySource(SOURCES.THEMATIC_FILES),
+    documents: await getDocumentBySource(
+      SOURCES.THEMATIC_FILES,
+      getBreadcrumbs
+    ),
     source: SOURCES.THEMATIC_FILES,
   };
 
@@ -75,7 +113,10 @@ async function* cdtnDocumentsGen() {
   };
 
   logger.info("=== Contributions ===");
-  const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
+  const contributions = await getDocumentBySource(
+    SOURCES.CONTRIBUTIONS,
+    getBreadcrumbs
+  );
   yield {
     documents: contributions.map(({ answers, ...contribution }) => ({
       ...contribution,
@@ -91,7 +132,7 @@ async function* cdtnDocumentsGen() {
   };
 
   logger.info("=== Conventions Collectives ===");
-  const ccnData = await getDocumentBySource(SOURCES.CCN);
+  const ccnData = await getDocumentBySource(SOURCES.CCN, getBreadcrumbs);
   const allKaliBlocks = await getAllKaliBlocks();
   yield {
     documents: ccnData.map(({ ...content }) => {
@@ -108,7 +149,7 @@ async function* cdtnDocumentsGen() {
           return {
             ...data,
             answer: addGlossary(data.answer),
-            theme: theme.label,
+            theme: theme && theme.label,
           };
         }),
         articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
@@ -120,19 +161,18 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Fiches SP ===");
   yield {
-    documents: await getDocumentBySource(SOURCES.SHEET_SP),
+    documents: await getDocumentBySource(SOURCES.SHEET_SP, getBreadcrumbs),
     source: SOURCES.SHEET_SP,
   };
 
   logger.info("=== page fiches travail ===");
-  const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
+  const fichesMT = await getDocumentBySource(
+    SOURCES.SHEET_MT_PAGE,
+    getBreadcrumbs
+  );
   yield {
     documents: fichesMT.map(({ sections, ...infos }) => ({
       ...infos,
-      // fix breadcrumbs
-      breadcrumbs: getBreadcrumbs(
-        `/${getRouteBySource(SOURCES.SHEET_MT)}/${infos.slug}`
-      ),
       sections: sections.map(({ html, ...section }) => {
         delete section.description;
         delete section.text;
@@ -148,45 +188,65 @@ async function* cdtnDocumentsGen() {
   logger.info("=== Fiche MT(split) ===");
   const splittedFiches = fichesMT.flatMap(splitArticle);
   yield {
-    documents: splittedFiches.map((fiche) => ({
-      ...fiche,
-      // fix breadcrumbs generation
-      breadcrumbs: getBreadcrumbs(
-        `/${getRouteBySource(SOURCES.SHEET_MT)}/${fiche.slug.replace(
-          /#.*$/,
-          ""
-        )}`
-      ),
-      source: SOURCES.SHEET_MT,
-    })),
+    documents: splittedFiches.map((fiche) => {
+      // we don't want splitted fiches to have the same cdtnId than full pages
+      // iit causes bugs, tons of weird bugs
+      delete fiche.cdtnId;
+      return {
+        ...fiche,
+        breadcrumbs: getBreadcrumbs(fiche.cdtnId),
+        source: SOURCES.SHEET_MT,
+      };
+    }),
     source: SOURCES.SHEET_MT,
   };
 
   logger.info("=== Themes ===");
   yield {
-    documents: themes.map(
+    documents: themeRelationsResult.data.themeRelations.map(
       ({
-        id,
-        breadcrumbs,
-        children,
-        icon,
-        introduction,
         position,
-        refs,
-        title,
+        theme: {
+          id,
+          cdtnId,
+          document: { icon, description },
+          slug,
+          source,
+          title,
+          contentRelations,
+        },
       }) => {
+        const breadcrumbs = getBreadcrumbs(cdtnId);
+        breadcrumbs.pop();
         return {
-          breadcrumbs: breadcrumbs.map(toBreadcrumbs),
-          children: children.map(toBreadcrumbs),
-          description: introduction,
-          excludeFromSearch: false,
+          breadcrumbs,
+          cdtnId,
+          children: themeRelationsResult.data.themeRelations
+            .filter((relation) => relation.parentId === cdtnId)
+            .sort(
+              ({ position: positionA }, { position: positionB }) =>
+                positionA - positionB
+            )
+            .map(({ theme: { slug, title } }) => ({
+              label: title,
+              slug,
+            })),
+          description,
           icon,
           id,
           isPublished: true,
           position,
-          refs,
-          slug: toSlug(title, position),
-          source: SOURCES.THEMES,
+          refs: contentRelations
+            .sort(
+              ({ position: positionA }, { position: positionB }) =>
+                positionA - positionB
+            )
+            .map(({ document: { slug, source, title } }) => ({
+              title,
+              url: `/${getRouteBySource(source)}/${slug}`,
+            })),
+          slug,
+          source,
           title,
         };
       }

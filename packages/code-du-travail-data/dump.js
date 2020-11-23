@@ -68,7 +68,7 @@ const dump = async () => {
       const docs = await Promise.all(pDocs);
       await monologQueue.onIdle();
       // add NLP vectors
-      if (excludeSources.includes(docs[0].source)) {
+      if (excludeSources.includes(source)) {
         allDocuments = allDocuments.concat(docs);
       } else {
         const pDocs = docs.map((doc) =>
