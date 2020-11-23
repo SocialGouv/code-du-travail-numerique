@@ -29,11 +29,11 @@ const LegalPage = () => {
           </FocusRoot>
           <Wrapper variant="main">
             <p>
-              Le site est édité par la
+              Le site est édité par la{" "}
               <a href="https://fabrique.social.gouv.fr/">
                 fabrique des Ministères sociaux
               </a>{" "}
-              situé :
+              située :
             </p>
             <Address>
               Tour Mirabeau
@@ -46,7 +46,7 @@ const LegalPage = () => {
               Tél. : 01 40 56 60 00
             </Address>
             <Title shift={spacings.larger}>Directeur de la publication</Title>
-            <p>Yves Struillou, Directeur Général du Travail</p>
+            <p>Pierre RAMAIN, Directeur Général du Travail</p>
             <Title shift={spacings.larger}>Hébergement</Title>
             <p>
               Ce site est hébergé par Microsoft Azure France (région France

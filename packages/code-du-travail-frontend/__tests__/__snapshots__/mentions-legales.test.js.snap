@@ -1294,13 +1294,14 @@ exports[`<MentionLegales /> should render 1`] = `
           >
             <p>
               Le site est édité par la
+               
               <a
                 href="https://fabrique.social.gouv.fr/"
               >
                 fabrique des Ministères sociaux
               </a>
                
-              situé :
+              située :
             </p>
             <address
               class="c29"
@@ -1327,7 +1328,7 @@ exports[`<MentionLegales /> should render 1`] = `
               </h2>
             </header>
             <p>
-              Yves Struillou, Directeur Général du Travail
+              Pierre RAMAIN, Directeur Général du Travail
             </p>
             <header
               class="c30"
