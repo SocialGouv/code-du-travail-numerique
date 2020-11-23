@@ -40,44 +40,43 @@ async function* cdtnDocumentsGen() {
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
   yield {
-    source: SOURCES.EDITORIAL_CONTENT,
     documents: markdownTransform(documents),
+    source: SOURCES.EDITORIAL_CONTENT,
   };
 
   logger.info("=== Courriers ===");
   yield {
-    source: SOURCES.LETTERS,
     documents: await getDocumentBySource(SOURCES.LETTERS),
+    source: SOURCES.LETTERS,
   };
 
   logger.info("=== Outils ===");
   yield {
-    source: SOURCES.TOOLS,
     documents: await getDocumentBySource(SOURCES.TOOLS),
+    source: SOURCES.TOOLS,
   };
 
   logger.info("=== Outils externes ===");
   yield {
-    source: SOURCES.EXTERNALS,
     documents: await getDocumentBySource(SOURCES.EXTERNALS),
+    source: SOURCES.EXTERNALS,
   };
 
   logger.info("=== Dossiers ===");
   yield {
-    source: SOURCES.THEMATIC_FILES,
     documents: await getDocumentBySource(SOURCES.THEMATIC_FILES),
+    source: SOURCES.THEMATIC_FILES,
   };
 
   logger.info("=== Code du travail ===");
   yield {
-    source: SOURCES.CDT,
     documents: await getDocumentBySource(SOURCES.CDT),
+    source: SOURCES.CDT,
   };
 
   logger.info("=== Contributions ===");
   const contributions = await getDocumentBySource(SOURCES.CONTRIBUTIONS);
   yield {
-    source: SOURCES.CONTRIBUTIONS,
     documents: contributions.map(({ answers, ...contribution }) => ({
       ...contribution,
       answers: {
@@ -88,13 +87,13 @@ async function* cdtnDocumentsGen() {
         },
       },
     })),
+    source: SOURCES.CONTRIBUTIONS,
   };
 
   logger.info("=== Conventions Collectives ===");
   const ccnData = await getDocumentBySource(SOURCES.CCN);
   const allKaliBlocks = await getAllKaliBlocks();
   yield {
-    source: SOURCES.CCN,
     documents: ccnData.map(({ ...content }) => {
       return {
         ...content,
@@ -112,22 +111,22 @@ async function* cdtnDocumentsGen() {
             theme: theme.label,
           };
         }),
-        source: SOURCES.CCN,
         articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
+        source: SOURCES.CCN,
       };
     }),
+    source: SOURCES.CCN,
   };
 
   logger.info("=== Fiches SP ===");
   yield {
-    source: SOURCES.SHEET_SP,
     documents: await getDocumentBySource(SOURCES.SHEET_SP),
+    source: SOURCES.SHEET_SP,
   };
 
   logger.info("=== page fiches travail ===");
   const fichesMT = await getDocumentBySource(SOURCES.SHEET_MT_PAGE);
   yield {
-    source: SOURCES.SHEET_MT_PAGE,
     documents: fichesMT.map(({ sections, ...infos }) => ({
       ...infos,
       // fix breadcrumbs
@@ -143,12 +142,12 @@ async function* cdtnDocumentsGen() {
         };
       }),
     })),
+    source: SOURCES.SHEET_MT_PAGE,
   };
 
   logger.info("=== Fiche MT(split) ===");
   const splittedFiches = fichesMT.flatMap(splitArticle);
   yield {
-    source: SOURCES.SHEET_MT,
     documents: splittedFiches.map((fiche) => ({
       ...fiche,
       // fix breadcrumbs generation
@@ -160,11 +159,11 @@ async function* cdtnDocumentsGen() {
       ),
       source: SOURCES.SHEET_MT,
     })),
+    source: SOURCES.SHEET_MT,
   };
 
   logger.info("=== Themes ===");
   yield {
-    source: SOURCES.THEMES,
     documents: themes.map(
       ({
         id,
@@ -192,22 +191,22 @@ async function* cdtnDocumentsGen() {
         };
       }
     ),
+    source: SOURCES.THEMES,
   };
 
   logger.info("=== Highlights ===");
   yield {
-    source: SOURCES.HIGHLIGHTS,
     documents: [
       {
         data: require("@socialgouv/datafiller-data/data/hightlights.json"),
         source: SOURCES.HIGHLIGHTS,
       },
     ],
+    source: SOURCES.HIGHLIGHTS,
   };
 
   logger.info("=== glossary ===");
   yield {
-    source: SOURCES.GLOSSARY,
     documents: [
       {
         data: require("@socialgouv/datafiller-data/data/glossary.json").map(
@@ -221,28 +220,29 @@ async function* cdtnDocumentsGen() {
         source: SOURCES.GLOSSARY,
       },
     ],
+    source: SOURCES.GLOSSARY,
   };
 
   logger.info("=== PreQualified Request ===");
   yield {
-    source: SOURCES.PREQUALIFIED,
     documents: [
       {
         data: require("@socialgouv/datafiller-data/data/requests.json"),
         source: SOURCES.PREQUALIFIED,
       },
     ],
+    source: SOURCES.PREQUALIFIED,
   };
 
   logger.info("=== data version ===");
   yield {
-    source: SOURCES.VERSIONS,
     documents: [
       {
         data: getVersions(),
         source: SOURCES.VERSIONS,
       },
     ],
+    source: SOURCES.VERSIONS,
   };
 }
 
