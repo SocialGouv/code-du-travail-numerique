@@ -27,16 +27,11 @@ function getSentryCspUrl() {
 
 const dev = process.env.NODE_ENV !== "production";
 
-const robotsDev = [
-  "User-agent: *",
-  "Disallow: /",
-  "Disallow: /code-du-travail/",
-].join("\n");
+const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
 const robotsProd = [
   "User-agent: *",
   "Disallow: /assets/",
   "Disallow: /images/",
-  "Disallow: /code-du-travail/",
   "",
   `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`,
 ].join("\n");
