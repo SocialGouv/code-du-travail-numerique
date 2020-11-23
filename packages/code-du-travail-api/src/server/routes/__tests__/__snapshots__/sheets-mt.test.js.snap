@@ -9,15 +9,15 @@ Object {
     "breadcrumbs": Array [
       Object {
         "label": "Santé, sécurité et conditions de travail",
-        "slug": "/themes/6-sante-securite-et-conditions-de-travail",
+        "slug": "/themes/sante-securite-et-conditions-de-travail",
       },
       Object {
         "label": "Santé au travail",
-        "slug": "/themes/63-sante-au-travail",
+        "slug": "/themes/sante-au-travail",
       },
       Object {
         "label": "Inaptitude",
-        "slug": "/themes/633-inaptitude",
+        "slug": "/themes/inaptitude",
       },
     ],
     "cdtnId": "55a26a9073",

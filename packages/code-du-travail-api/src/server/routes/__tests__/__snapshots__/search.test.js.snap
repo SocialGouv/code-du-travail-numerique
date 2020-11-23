@@ -21,11 +21,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
       ],
       "cdtnId": "a9ccf1d613",
-      "slug": "81-demission",
+      "slug": "demission",
       "source": "themes",
       "title": "Démission",
     },
@@ -35,7 +35,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "e4982f0aa9",
       "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
+      "slug": "depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
     },
@@ -45,7 +45,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "5594695039",
       "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
+      "slug": "embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
     },
@@ -83,11 +83,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "8c42435f9a",
@@ -103,11 +103,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "5d4a0ee541",
@@ -123,11 +123,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "eed9ab7d0a",
@@ -137,86 +137,16 @@ Object {
       "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "algo": "pre-qualified",
-      "position": 2,
-      "source": "external",
-      "title": "Peut-on percevoir l'allocation chômage en cas de démission ?",
-      "url": "/fiche-service-public/peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 3,
-      "source": "external",
-      "title": "La démission : faut-il respecter un préavis ?",
-      "url": "/fiche-ministere-travail/la-demission#Faut-il-respecter-un-preavis",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 4,
-      "source": "external",
-      "title": "Peut-on démissionner pendant ses congés payés ?",
-      "url": "/fiche-service-public/peut-on-demissionner-pendant-ses-conges-payes",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 5,
-      "source": "external",
-      "title": "Peut-on démissionner pendant un arrêt maladie ?",
-      "url": "/fiche-service-public/peut-on-demissionner-pendant-un-arret-maladie",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 6,
-      "source": "external",
-      "title": "La démission : le salarié peut-il « démissionner » dans le cadre d’un contrat à durée déterminée ?",
-      "url": "/fiche-ministere-travail/la-demission#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 7,
-      "source": "external",
-      "title": "La démission : le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
-      "url": "/fiche-ministere-travail/la-demission#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 8,
-      "source": "external",
-      "title": "La démission : et les heures pour recherche d’emploi ?",
-      "url": "/fiche-ministere-travail/la-demission#Et-les-heures-pour-recherche-d-emploi",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 9,
-      "source": "external",
-      "title": "Peut-on démissionner pendant un congé maternité ?",
-      "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-maternite",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 10,
-      "source": "external",
-      "title": "Peut-on démissionner pendant un congé parental ?",
-      "url": "/fiche-service-public/peut-on-demissionner-pendant-un-conge-parental",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 11,
-      "source": "external",
-      "title": "Démission du salarié à domicile employé par un particulier",
-      "url": "/fiche-service-public/demission-du-salarie-a-domicile-employe-par-un-particulier",
-    },
-    Object {
       "_score": 0,
       "algo": "pre-qualified",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "38474d168c",
@@ -226,27 +156,13 @@ Object {
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
-    Object {
-      "algo": "pre-qualified",
-      "position": 13,
-      "source": "external",
-      "title": "Article L1231-1",
-      "url": "/code-du-travail/l1231-1",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "position": 15,
-      "source": "external",
-      "title": "Article L1237-2",
-      "url": "/code-du-travail/l1237-2",
-    },
   ],
   "themes": Array [
     Object {
       "_score": 1.9145181,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
-      "slug": "81-demission",
+      "slug": "demission",
       "source": "themes",
       "title": "Démission",
     },
@@ -256,7 +172,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "5594695039",
       "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
+      "slug": "embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
     },
@@ -266,7 +182,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "e4982f0aa9",
       "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
+      "slug": "depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
     },
@@ -303,11 +219,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "8c42435f9a",
@@ -323,11 +239,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "eed9ab7d0a",
@@ -343,11 +259,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "1eea193273",
@@ -362,11 +278,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "38474d168c",
@@ -382,11 +298,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/81-demission",
+          "slug": "/themes/demission",
         },
       ],
       "cdtnId": "8c3014ce56",
@@ -401,11 +317,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Documents à remettre au salarié",
-          "slug": "/themes/80-documents-a-remettre-au-salarie",
+          "slug": "/themes/documents-a-remettre-au-salarie",
         },
       ],
       "cdtnId": "59a4d4173c",
@@ -422,11 +338,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Licenciement : droits des salariés et procédures",
-          "slug": "/themes/84-licenciement-droits-des-salaries-et-procedures",
+          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
         },
       ],
       "cdtnId": "d8a3605790",
@@ -441,15 +357,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Embauche et contrat de travail",
-          "slug": "/themes/1-embauche-et-contrat-de-travail",
+          "slug": "/themes/embauche-et-contrat-de-travail",
         },
         Object {
           "label": "Embauche",
-          "slug": "/themes/11-embauche",
+          "slug": "/themes/embauche",
         },
         Object {
           "label": "Période d'essai",
-          "slug": "/themes/113-periode-dessai",
+          "slug": "/themes/periode-dessai",
         },
       ],
       "cdtnId": "772cb955ce",
@@ -464,15 +380,15 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Rupture conventionnelle",
-          "slug": "/themes/83-rupture-conventionnelle",
+          "slug": "/themes/rupture-conventionnelle",
         },
         Object {
           "label": "Rupture conventionnelle individuelle",
-          "slug": "/themes/831-rupture-conventionnelle-individuelle",
+          "slug": "/themes/rupture-conventionnelle-individuelle",
         },
       ],
       "cdtnId": "a712ecb976",
@@ -487,11 +403,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Documents à remettre au salarié",
-          "slug": "/themes/80-documents-a-remettre-au-salarie",
+          "slug": "/themes/documents-a-remettre-au-salarie",
         },
       ],
       "cdtnId": "19837df114",
@@ -506,7 +422,7 @@ Object {
       "_score": 1.9145181,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
-      "slug": "81-demission",
+      "slug": "demission",
       "source": "themes",
       "title": "Démission",
     },
@@ -516,7 +432,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "5594695039",
       "description": "Vous venez de trouver un travail, vous embauchez un salarié ou un apprenti ? Vous souhaitez faire une déclaration préalable à l’embauche, rédiger un contrat de travail (CDI, CDD, travail temporaire, temps plein, temps partiel) ? Retrouvez toutes nos réponses ici.  ",
-      "slug": "1-embauche-et-contrat-de-travail",
+      "slug": "embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
     },
@@ -526,7 +442,7 @@ Object {
       "breadcrumbs": Array [],
       "cdtnId": "e4982f0aa9",
       "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-      "slug": "8-depart-de-lentreprise",
+      "slug": "depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
     },
@@ -554,11 +470,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Documents à remettre au salarié",
-          "slug": "/themes/80-documents-a-remettre-au-salarie",
+          "slug": "/themes/documents-a-remettre-au-salarie",
         },
       ],
       "cdtnId": "19837df114",
@@ -573,11 +489,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
         Object {
           "label": "Documents à remettre au salarié",
-          "slug": "/themes/80-documents-a-remettre-au-salarie",
+          "slug": "/themes/documents-a-remettre-au-salarie",
         },
       ],
       "cdtnId": "59a4d4173c",
@@ -594,7 +510,7 @@ Object {
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
-      "slug": "1-embauche-et-contrat-de-travail",
+      "slug": "embauche-et-contrat-de-travail",
       "source": "themes",
       "title": "Embauche et contrat de travail",
     },
@@ -604,11 +520,11 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l'entreprise",
-          "slug": "/themes/8-depart-de-lentreprise",
+          "slug": "/themes/depart-de-lentreprise",
         },
       ],
       "cdtnId": "a9ccf1d613",
-      "slug": "81-demission",
+      "slug": "demission",
       "source": "themes",
       "title": "Démission",
     },
@@ -617,7 +533,7 @@ Object {
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",
-      "slug": "8-depart-de-lentreprise",
+      "slug": "depart-de-lentreprise",
       "source": "themes",
       "title": "Départ de l'entreprise",
     },

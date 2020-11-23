@@ -6,15 +6,15 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l'entreprise",
-        "slug": "/themes/8-depart-de-lentreprise",
+        "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Rupture conventionnelle",
-        "slug": "/themes/83-rupture-conventionnelle",
+        "slug": "/themes/rupture-conventionnelle",
       },
       Object {
         "label": "Rupture conventionnelle individuelle",
-        "slug": "/themes/831-rupture-conventionnelle-individuelle",
+        "slug": "/themes/rupture-conventionnelle-individuelle",
       },
     ],
     "cdtnId": "a712ecb976",
@@ -27,15 +27,15 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Embauche et contrat de travail",
-        "slug": "/themes/1-embauche-et-contrat-de-travail",
+        "slug": "/themes/embauche-et-contrat-de-travail",
       },
       Object {
         "label": "Embauche",
-        "slug": "/themes/11-embauche",
+        "slug": "/themes/embauche",
       },
       Object {
         "label": "Période d'essai",
-        "slug": "/themes/113-periode-dessai",
+        "slug": "/themes/periode-dessai",
       },
     ],
     "cdtnId": "772cb955ce",
@@ -48,11 +48,11 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l'entreprise",
-        "slug": "/themes/8-depart-de-lentreprise",
+        "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Documents à remettre au salarié",
-        "slug": "/themes/80-documents-a-remettre-au-salarie",
+        "slug": "/themes/documents-a-remettre-au-salarie",
       },
     ],
     "cdtnId": "19837df114",

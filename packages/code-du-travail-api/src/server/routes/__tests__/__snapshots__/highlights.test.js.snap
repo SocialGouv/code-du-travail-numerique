@@ -6,11 +6,11 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l'entreprise",
-        "slug": "/themes/8-depart-de-lentreprise",
+        "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Démission",
-        "slug": "/themes/81-demission",
+        "slug": "/themes/demission",
       },
     ],
     "cdtnId": "eed9ab7d0a",
