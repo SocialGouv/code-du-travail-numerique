@@ -90,26 +90,26 @@ async function main() {
   });
 
   const t0 = Date.now();
-  for await (const docsIds of cdtnDocumentsGen()) {
-    logger.info(`› ${docsIds[0].source}... ${docsIds.length} items`);
+  for await (const { source, documents } of cdtnDocumentsGen()) {
+    logger.info(`› ${source}... ${documents.length} items`);
 
     // add covisits using pQueue (there is a plan to change this : see #2915)
-    const pDocs = docsIds.map((doc) =>
+    const pDocs = documents.map((doc) =>
       monologQueue.add(() => fetchCovisits(doc))
     );
-    let documents = await Promise.all(pDocs);
+    let covisitDocuments = await Promise.all(pDocs);
     await monologQueue.onIdle();
     // add NLP vectors
-    if (!excludeSources.includes(documents[0].source)) {
-      const pDocs = documents.map((doc) =>
+    if (!excludeSources.includes(covisitDocuments[0].source)) {
+      const pDocs = covisitDocuments.map((doc) =>
         nlpQueue.add(() => retry(() => addVector(doc), { retries: 3 }))
       );
-      documents = await Promise.all(pDocs);
+      covisitDocuments = await Promise.all(pDocs);
       await nlpQueue.onIdle();
     }
     await indexDocumentsBatched({
       client,
-      documents,
+      documents: covisitDocuments,
       indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     });
   }

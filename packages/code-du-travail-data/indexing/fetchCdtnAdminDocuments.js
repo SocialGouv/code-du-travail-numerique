@@ -57,11 +57,38 @@ const gqlAgreggateDocumentBySource = (source) =>
 }`,
   });
 
+const gqlAllKaliBlocks = () =>
+  JSON.stringify({
+    query: `query KaliBlocks {
+      kali_blocks {id, blocks}
+ }`,
+  });
+
+/**
+ *
+ * @param {string} id
+ * @returns {Promise<ingester.AgreementKaliBlocks>}
+ */
+export async function getAllKaliBlocks() {
+  const result = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: gqlAllKaliBlocks(),
+    method: "POST",
+  }).then((r) => r.json());
+  if (result.errors && result.errors.length) {
+    console.error(result.errors[0].message);
+    throw new Error(`error fetching kali blocks`);
+  }
+  return result.data.kali_blocks;
+}
+
 export async function getDocumentBySource(source) {
   const nbDocResult = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: gqlAgreggateDocumentBySource(source),
     method: "POST",
   }).then((r) => r.json());
+  if (nbDocResult.errors && nbDocResult.errors.length) {
+    return [];
+  }
   const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
   const queue = new PQueue({ concurrency: 10 });
 
