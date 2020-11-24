@@ -33,7 +33,7 @@
     "@socialgouv/cdtn-slugify": "^4.35.0",
     "@socialgouv/cdtn-sources": "^4.35.0",
     "@socialgouv/datafiller-data": "^2.6.0",
-    "@socialgouv/kali-data": "^2.8.0",
+    "@socialgouv/kali-data": "^2.11.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "node-fetch": "^2.6.1",
