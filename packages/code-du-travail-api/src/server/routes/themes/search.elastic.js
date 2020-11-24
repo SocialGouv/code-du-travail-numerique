@@ -30,7 +30,7 @@ function getThemeQuery({ slug }) {
     query: {
       bool: {
         filter: [
-          { term: { slug: slug.replace(/^\d*-/, "") } },
+          { term: { slug } },
           { term: { isPublished: true } },
           { term: { source: SOURCES.THEMES } },
         ],
