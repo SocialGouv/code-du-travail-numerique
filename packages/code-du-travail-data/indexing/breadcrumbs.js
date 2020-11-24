@@ -1,38 +1,34 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
-function toBreadcrumbs({ theme, position }) {
+function toBreadcrumbs(theme) {
   return {
     label: theme.title,
-    position,
+    position: theme.parentRelations[0].position,
     slug: `/${getRouteBySource(SOURCES.THEMES)}/${theme.slug}`,
   };
 }
 
-export function buildGetBreadcrumbs(themeRelations) {
-  /* utilities */
-
+export function buildGetBreadcrumbs(themes) {
   // beware, this one is recursive
   // we might want to set a depth limit for safety reasons
   // it picks a relation and returns an array of all possible breadcrumbs
-  function buildAllBreadcrumbs(relation) {
-    const currentBreadcrumb = toBreadcrumbs(relation);
-    const parentRelations = themeRelations.filter(
-      (themeRelation) => themeRelation.theme.cdtnId === relation.parentId
+  function buildAllBreadcrumbs(theme) {
+    const currentBreadcrumb = toBreadcrumbs(theme);
+    const parentTheme = themes.filter(
+      (parentTheme) =>
+        parentTheme.cdtnId === theme.parentRelations[0].parentThemeId
     );
-    if (!parentRelations.length) {
+    if (!parentTheme.length) {
       return [[currentBreadcrumb]];
     }
-    return parentRelations.flatMap(buildAllBreadcrumbs).map((breadcrumbs) => {
+    return parentTheme.flatMap(buildAllBreadcrumbs).map((breadcrumbs) => {
       breadcrumbs.push(currentBreadcrumb);
       return breadcrumbs;
     });
   }
 
   const themeToBreadcrumbsMap = new Map(
-    themeRelations.map((relation) => [
-      relation.theme.cdtnId,
-      buildAllBreadcrumbs(relation),
-    ])
+    themes.map((theme) => [theme.cdtnId, buildAllBreadcrumbs(theme)])
   );
 
   function getMainBreadcrumb(allBreadcrumbs = []) {
@@ -54,17 +50,16 @@ export function buildGetBreadcrumbs(themeRelations) {
     return mainBreadcrumb || [];
   }
 
-  /* end of utilities */
-
   return function getBreadcrumbs(cdtnId) {
     if (!cdtnId) return [];
-    const relatedRelations = themeRelations.filter(
-      (themeRelation) =>
-        themeRelation.theme.contentRelations.find(
-          (contentRelation) => contentRelation.document.cdtnId === cdtnId
-        ) || themeRelation.theme.cdtnId === cdtnId
+    const relatedThemes = themes.filter(
+      (theme) =>
+        theme.cdtnId === cdtnId ||
+        theme.contentRelations.find(
+          (contentRelation) => contentRelation.content.cdtnId === cdtnId
+        )
     );
-    const allBreadcrumbs = relatedRelations.flatMap(({ theme }) =>
+    const allBreadcrumbs = relatedThemes.flatMap((theme) =>
       themeToBreadcrumbsMap.get(theme.cdtnId)
     );
     return getMainBreadcrumb(allBreadcrumbs);

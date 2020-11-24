@@ -1,6 +1,6 @@
 // eslint-disable-next-line simple-import-sort/sort
 import slugify from "@socialgouv/cdtn-slugify";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 
 import { addGlossary } from "./addGlossary";
@@ -14,31 +14,32 @@ import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 import { getArticlesByTheme } from "./kali";
+import { buildThemes } from "./buildThemes";
 
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
-const themeRelationsQuery = JSON.stringify({
+const themesQuery = JSON.stringify({
   query: `{
-  themeRelations: document_relations(where: {type: {_eq: "theme"}}) {
-    parentId: document_a
-    position: data(path: "position")
-    theme: b {
-      cdtnId: cdtn_id
-      id: initial_id
-      title
-      slug
-      source
-      document
-      contentRelations:relation_a(where: {type: {_eq: "theme-content"}}) {
-        position: data(path: "position")
-        document:b {
-          cdtnId: cdtn_id
-          slug
-          source
-          title
-        }
+  themes: documents(where: {source: {_eq: "${SOURCES.THEMES}"}}) {
+    cdtnId: cdtn_id
+    id: initial_id
+    slug
+    source
+    title
+    document
+    contentRelations: relation_a(where: {type: {_eq: "theme-content"}}, order_by: {}) {
+      content: b {
+        cdtnId: cdtn_id
+        slug
+        source
+        title
       }
+      position: data(path: "position")
+    }
+    parentRelations: relation_b(where: {type: {_eq: "theme"}}) {
+      parentThemeId: document_a
+      position: data(path: "position")
     }
   }
 }`,
@@ -63,14 +64,14 @@ async function getDuplicateSlugs(allDocuments) {
 }
 
 async function* cdtnDocumentsGen() {
-  const themeRelationsResult = await fetch(CDTN_ADMIN_ENDPOINT, {
-    body: themeRelationsQuery,
+  const themesQueryResult = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: themesQuery,
     method: "POST",
   }).then((r) => r.json());
 
-  const getBreadcrumbs = buildGetBreadcrumbs(
-    themeRelationsResult.data.themeRelations
-  );
+  const themes = themesQueryResult.data.themes;
+
+  const getBreadcrumbs = buildGetBreadcrumbs(themes);
 
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
@@ -203,54 +204,7 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Themes ===");
   yield {
-    documents: themeRelationsResult.data.themeRelations.map(
-      ({
-        position,
-        theme: {
-          id,
-          cdtnId,
-          document: { icon, description },
-          slug,
-          source,
-          title,
-          contentRelations,
-        },
-      }) => {
-        const breadcrumbs = getBreadcrumbs(cdtnId);
-        breadcrumbs.pop();
-        return {
-          breadcrumbs,
-          cdtnId,
-          children: themeRelationsResult.data.themeRelations
-            .filter((relation) => relation.parentId === cdtnId)
-            .sort(
-              ({ position: positionA }, { position: positionB }) =>
-                positionA - positionB
-            )
-            .map(({ theme: { slug, title } }) => ({
-              label: title,
-              slug,
-            })),
-          description,
-          icon,
-          id,
-          isPublished: true,
-          position,
-          refs: contentRelations
-            .sort(
-              ({ position: positionA }, { position: positionB }) =>
-                positionA - positionB
-            )
-            .map(({ document: { slug, source, title } }) => ({
-              title,
-              url: `/${getRouteBySource(source)}/${slug}`,
-            })),
-          slug,
-          source,
-          title,
-        };
-      }
-    ),
+    documents: buildThemes(themes, getBreadcrumbs),
     source: SOURCES.THEMES,
   };
 
