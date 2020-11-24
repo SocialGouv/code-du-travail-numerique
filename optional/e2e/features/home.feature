@@ -23,7 +23,7 @@ Scénario:
   Alors je vois "Emploi et formation professionnelle"
   Alors je vois "Santé, sécurité et conditions de travail"
   Alors je vois "Représentation du personnel et négociation collective"
-  Alors je vois "Départ de l'entreprise"
+  Alors je vois "Départ de l’entreprise"
   Alors je vois "Conflits au travail et contrôle de la réglementation"
   Alors le lien "Voir tous les thèmes" pointe sur "themes"
 
