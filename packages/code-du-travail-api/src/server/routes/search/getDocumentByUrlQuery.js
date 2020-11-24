@@ -1,4 +1,3 @@
-const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { getDataFromUrl } = require("./utils");
 
 // get ES document related to given url
