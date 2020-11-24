@@ -31,7 +31,7 @@ function Articles({ blocs, containerId, convention }) {
               <P>
                 Pour que ce thème s’applique à votre situation, il doit être
                 indiqué dans l’article en question qu’un accord d’entreprise ne
-                peut par déroger à la convention collective; à moins que
+                peut pas déroger à la convention collective; à moins que
                 l’accord d’entreprise ne prévoie des garanties au moins
                 équivalentes.
               </P>
