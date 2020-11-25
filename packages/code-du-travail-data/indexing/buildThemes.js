@@ -13,9 +13,8 @@ function buildThemes(themes, getBreadcrumbs) {
       parentRelations,
     }) => {
       const breadcrumbs = getBreadcrumbs(cdtnId);
-      breadcrumbs.pop();
       return {
-        breadcrumbs,
+        breadcrumbs: breadcrumbs.slice(0, -1),
         cdtnId,
         children: themes
           .filter(
