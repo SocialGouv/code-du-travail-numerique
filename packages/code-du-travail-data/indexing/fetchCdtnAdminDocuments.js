@@ -124,27 +124,33 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
             breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(doc.source),
         };
       })
-      .map((doc) => toElastic(doc))
+      .map((doc) => toElastic(doc, getBreadcrumbs))
   );
   return documents;
 }
 
-function toElastic({
-  id,
-  breadcrumbs,
-  cdtnId,
-  title,
-  source,
-  slug,
-  text,
-  is_searchable,
-  is_published,
-  metaDescription,
-  document,
-}) {
+function toElastic(
+  {
+    id,
+    cdtnId,
+    title,
+    source,
+    slug,
+    text,
+    is_searchable,
+    is_published,
+    metaDescription,
+    document,
+  },
+  getBreadcrumbs
+) {
+  let breadcrumbs = [];
+  if (getBreadcrumbs) {
+    breadcrumbs = getBreadcrumbs(cdtnId);
+  }
   return {
     ...document,
-    breadcrumbs,
+    breadcrumbs: breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(source),
     cdtnId,
     excludeFromSearch: !is_searchable,
     id,
