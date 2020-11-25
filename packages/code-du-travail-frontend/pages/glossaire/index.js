@@ -90,10 +90,10 @@ function Glossary({ letters }) {
       <div key={letter}>
         <LetterTitle letter={letter} />
         <StyledList>
-          {terms.map(({ title, slug }) => (
+          {terms.map(({ term, slug }) => (
             <li key={slug}>
               <Link href={`/glossaire/${slug}`}>
-                <a>{title}</a>
+                <a>{term}</a>
               </Link>
             </li>
           ))}

@@ -1,29 +1,30 @@
-import { addGlossary } from "../addGlossary";
+import { createGlossaryTransform } from "../glossary";
 
-jest.mock("@socialgouv/datafiller-data/data/glossary.json", () => [
+const glossaryData = [
   {
-    abbrs: "",
+    abbrs: [],
     definition:
       "<p>Phrase ou ensemble de phrases d'un accord, d'une convention collective, d'une loi.</p>",
     title: "Disposition",
     variants: ["dispositions"],
   },
   {
-    abbrs: "",
+    abbrs: [],
     definition:
       "<p>Sommes versées en compensation ou en réparation de quelque chose.</p>",
     title: "indemnité",
     variants: ["indemnité"],
   },
   {
-    abbrs: "cc",
+    abbrs: ["cc"],
     definition: "<p>Cette phrase ne doit pas apparaîte</p>",
     title: "Convention Collective",
     variants: [],
   },
-]);
+];
 
 describe("addGlossary", () => {
+  const addGlossary = createGlossaryTransform(glossaryData);
   test("should return a formated html with web components tooltip", () => {
     const htmlContent =
       "<p>voici une convention collective et un web component mais aussi dispositions, ceci est un test</p>";

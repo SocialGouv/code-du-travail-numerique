@@ -6,8 +6,6 @@ import markdownAstStringify from "remark-stringify";
 import markdownAstStrip from "strip-markdown";
 import unified from "unified";
 
-const { addGlossary } = require("./addGlossary");
-
 const textProcessor = unified()
   .use(markdownToMardownAst)
   .use(markdownAstStrip)
@@ -19,7 +17,7 @@ const htmlProcessor = unified()
   .use(htmlAstToAnotherHtmlAst)
   .use(htmlAstStringify);
 
-export function markdownTransform(documents) {
+export function markdownTransform(addGlossary, documents) {
   return documents.map(({ contents, ...rest }) => ({
     ...rest,
     contents: contents.map((content) => {

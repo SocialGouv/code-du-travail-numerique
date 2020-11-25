@@ -21,17 +21,14 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function Term({ term }) {
+function Term({ term: { term, definition, references } }) {
   return (
     <Layout>
-      <Metas
-        title={`${term.title} - Code du travail numérique`}
-        description={term.definition}
-      />
+      <Metas title={`${term} - Code du travail numérique`} description={term} />
       <Section>
         <Container narrow>
           <FocusRoot>
-            <PageTitle>{term.title}</PageTitle>
+            <PageTitle>{term}</PageTitle>
           </FocusRoot>
           <Wrapper variant="main">
             <Table>
@@ -39,15 +36,15 @@ function Term({ term }) {
                 <tr>
                   <th>Définition</th>
                   <td>
-                    <Html>{term.definition}</Html>
+                    <Html>{definition}</Html>
                   </td>
                 </tr>
-                {term.refs.length > 0 && (
+                {references.length > 0 && (
                   <tr>
                     <th>Sources</th>
                     <td>
                       <StyledList>
-                        {term.refs.map(({ url }) => (
+                        {references.map(({ url }) => (
                           <li key={url}>
                             <a
                               href={url}
