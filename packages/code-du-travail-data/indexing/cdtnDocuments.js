@@ -1,14 +1,15 @@
 // eslint-disable-next-line simple-import-sort/sort
-import slugify from "@socialgouv/cdtn-slugify";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 
-import { addGlossary } from "./addGlossary";
+import { createGlossaryTransform } from "./glossary";
+import { buildGetBreadcrumbs } from "./breadcrumbs";
 import {
   getDocumentBySource,
   getAllKaliBlocks,
+  getGlossary,
 } from "./fetchCdtnAdminDocuments";
-import { buildGetBreadcrumbs } from "./breadcrumbs";
+
 import { splitArticle } from "./fichesTravailSplitter";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
@@ -73,10 +74,13 @@ async function* cdtnDocumentsGen() {
 
   const getBreadcrumbs = buildGetBreadcrumbs(themes);
 
+  const glossaryTerms = await getGlossary();
+  const addGlossary = createGlossaryTransform(glossaryTerms);
+
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
   yield {
-    documents: markdownTransform(documents),
+    documents: markdownTransform(addGlossary, documents),
     source: SOURCES.EDITORIAL_CONTENT,
   };
 
@@ -223,14 +227,7 @@ async function* cdtnDocumentsGen() {
   yield {
     documents: [
       {
-        data: require("@socialgouv/datafiller-data/data/glossary.json").map(
-          (item) => {
-            return {
-              ...item,
-              slug: slugify(item.title),
-            };
-          }
-        ),
+        data: glossaryTerms,
         source: SOURCES.GLOSSARY,
       },
     ],

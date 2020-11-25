@@ -1,19 +1,21 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import Glossaire from "../pages/glossaire";
+
 const glossary = [
   {
-    title: "Accord d'entreprise",
+    abbreviations: [],
+    definition:
+      "<p>Accord collectif de travail conclu au niveau d'une entreprise.</p>",
+    referenceqs: [],
     slug: "accord-dentreprise",
-    abbrs: [],
+    term: "Accord d'entreprise",
     variants: [
       "accord collectif d'entreprise",
       "accords d'entreprise",
       "accords collectifs d'entreprise",
     ],
-    definition:
-      "<p>Accord collectif de travail conclu au niveau d'une entreprise.</p>",
-    refs: [],
   },
 ];
 describe("<Glossaire />", () => {

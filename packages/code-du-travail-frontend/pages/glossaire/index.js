@@ -1,4 +1,3 @@
-import slugify from "@socialgouv/cdtn-slugify";
 import {
   Container,
   FlatList,
@@ -52,9 +51,7 @@ Glossaire.getInitialProps = async () => {
     return { statusCode: responseContainer.status };
   }
   const glossary = await responseContainer.json();
-  return {
-    glossary: glossary.map((word) => ({ ...word, slug: slugify(word.title) })),
-  };
+  return { glossary };
 };
 
 export default Glossaire;
@@ -90,10 +87,10 @@ function Glossary({ letters }) {
       <div key={letter}>
         <LetterTitle letter={letter} />
         <StyledList>
-          {terms.map(({ title, slug }) => (
+          {terms.map(({ term, slug }) => (
             <li key={slug}>
               <Link href={`/glossaire/${slug}`}>
-                <a>{title}</a>
+                <a>{term}</a>
               </Link>
             </li>
           ))}

@@ -79,6 +79,25 @@ export async function getAllKaliBlocks() {
   return result.data.kali_blocks;
 }
 
+const gqlGlossary = () =>
+  JSON.stringify({
+    query: `query Glossary {
+      glossary {term, abbreviations, definition, variants, references, slug}
+ }`,
+  });
+
+export async function getGlossary() {
+  const result = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: gqlGlossary(),
+    method: "POST",
+  }).then((r) => r.json());
+  if (result.errors && result.errors.length) {
+    console.error(result.errors[0].message);
+    throw new Error(`error fetching kali blocks`);
+  }
+  return result.data.glossary;
+}
+
 export async function getDocumentBySource(source, getBreadcrumbs) {
   const nbDocResult = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: gqlAgreggateDocumentBySource(source),
