@@ -8,7 +8,7 @@ const CDTN_ADMIN_ENDPOINT =
 const gqlAgreggateDocumentBySource = (source) =>
   JSON.stringify({
     query: `{
-  documents_aggregate(where: {is_available:{_eq: true}, source: {_eq: "${source}"}}){
+  documents_aggregate(where: {is_available:{_eq: true}, is_published: {_eq: true}, source: {_eq: "${source}"}}){
     aggregate {
       count
     }
@@ -23,7 +23,7 @@ const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
     order_by: {cdtn_id: asc},
     limit: ${limit}
     offset: ${offset}
-    where: {source: {_eq: "${source}"},  is_available: {_eq: true} }) {
+    where: {source: {_eq: "${source}"},  is_available: {_eq: true}, is_published: {_eq: true} }) {
     slug
     source
     modified: updated_at
