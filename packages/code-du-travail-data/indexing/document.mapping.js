@@ -55,8 +55,8 @@ export const documentMapping = {
     // available for themes
     children: {
       properties: {
+        label: { type: "text" },
         slug: { type: "text" },
-        title: { type: "text" },
       },
     },
 

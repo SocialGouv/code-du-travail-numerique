@@ -9,11 +9,7 @@ function getRootThemesQuery() {
           { term: { source: SOURCES.THEMES } },
           { term: { isPublished: true } },
         ],
-        must_not: {
-          exists: {
-            field: "breadcrumbs",
-          },
-        },
+        must_not: { exists: { field: "breadcrumbs" } },
       },
     },
     sort: [{ position: { order: "asc" } }],
@@ -33,7 +29,11 @@ function getThemeQuery({ slug }) {
     ],
     query: {
       bool: {
-        filter: [{ term: { slug } }, { term: { isPublished: true } }],
+        filter: [
+          { term: { slug } },
+          { term: { isPublished: true } },
+          { term: { source: SOURCES.THEMES } },
+        ],
       },
     },
     sort: [{ position: { order: "asc" } }],

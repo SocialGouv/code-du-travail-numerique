@@ -4,9 +4,7 @@ function getHightlightsBody() {
   return {
     query: {
       bool: {
-        filter: {
-          term: { source: SOURCES.HIGHLIGHTS },
-        },
+        filter: { term: { source: SOURCES.HIGHLIGHTS } },
       },
     },
   };

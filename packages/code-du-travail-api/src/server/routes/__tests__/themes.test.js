@@ -11,9 +11,9 @@ test("return themes root themes", async () => {
   expect(response.body).toMatchSnapshot();
 });
 
-test("return theme data for slug 8-depart-de-lentreprise", async () => {
+test("return theme data for slug depart-de-lentreprise", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/themes/8-depart-de-lentreprise`
+    `/api/v1/themes/depart-de-lentreprise`
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();

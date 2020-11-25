@@ -59,8 +59,19 @@ const nextConfig = {
   },
 };
 
-module.exports = compose(
-  withSourceMaps,
-  withBundleAnalyzer,
-  withTranspileModule
-)(nextConfig);
+module.exports = {
+  async redirects() {
+    return [
+      {
+        destination: "/themes/:slug",
+        permanent: true,
+        source: "/themes/(\\d{1,}-):slug",
+      },
+    ];
+  },
+  ...compose(
+    withSourceMaps,
+    withBundleAnalyzer,
+    withTranspileModule
+  )(nextConfig),
+};

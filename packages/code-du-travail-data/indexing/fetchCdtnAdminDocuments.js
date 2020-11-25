@@ -1,12 +1,10 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import allThemes from "@socialgouv/datafiller-data/data/themes.json";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
-import { createThemer } from "./breadcrumbs";
-
-const getBreadcrumbs = createThemer(allThemes);
 const fixBreadcrumbs = (source) => {
+  // /!\ beware /!\
+  // This won't work as soon as an editorial content is not in COVID folder !
   if (source === SOURCES.EDITORIAL_CONTENT) {
     return [
       {
@@ -81,7 +79,7 @@ export async function getAllKaliBlocks() {
   return result.data.kali_blocks;
 }
 
-export async function getDocumentBySource(source) {
+export async function getDocumentBySource(source, getBreadcrumbs) {
   const nbDocResult = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: gqlAgreggateDocumentBySource(source),
     method: "POST",
@@ -112,23 +110,44 @@ export async function getDocumentBySource(source) {
     });
   });
   const docs = await Promise.all(pDocuments);
-  const documents = docs.flatMap((docs) => docs.map(toElastic));
+  const documents = docs.flatMap((docs) =>
+    // /!\ beware /!\
+    // first map should me removed once admin has a way to handle
+    // editorial content's theme / path
+    docs
+      .map((doc) => {
+        if (!getBreadcrumbs) return doc;
+        const breadcrumbs = getBreadcrumbs(doc.cdtnId);
+        return {
+          ...doc,
+          breadcrumbs:
+            breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(doc.source),
+        };
+      })
+      .map((doc) => toElastic(doc, getBreadcrumbs))
+  );
   return documents;
 }
 
-function toElastic({
-  id,
-  cdtnId,
-  title,
-  source,
-  slug,
-  text,
-  is_searchable,
-  is_published,
-  metaDescription,
-  document,
-}) {
-  const breadcrumbs = getBreadcrumbs(`/${getRouteBySource(source)}/${slug}`);
+function toElastic(
+  {
+    id,
+    cdtnId,
+    title,
+    source,
+    slug,
+    text,
+    is_searchable,
+    is_published,
+    metaDescription,
+    document,
+  },
+  getBreadcrumbs
+) {
+  let breadcrumbs = [];
+  if (getBreadcrumbs) {
+    breadcrumbs = getBreadcrumbs(cdtnId);
+  }
   return {
     ...document,
     breadcrumbs: breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(source),
@@ -142,13 +161,4 @@ function toElastic({
     text,
     title,
   };
-}
-
-async function main() {
-  const documents = await getDocumentBySource(SOURCES.LETTERS);
-  console.log(JSON.stringify(documents, 0, 2));
-}
-
-if (module === require.main) {
-  main().catch(console.error);
 }

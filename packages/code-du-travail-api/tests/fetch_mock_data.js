@@ -25,9 +25,9 @@ const client = new Client({
  * Also make sure that you have a fiche-ministere-travail without a "#" to ensure that url resolution works fine
  */
 const documentsSlugs = [
-  "/themes/81-demission",
-  "/themes/8-depart-de-lentreprise",
-  "/themes/1-embauche-et-contrat-de-travail",
+  "/themes/demission",
+  "/themes/depart-de-lentreprise",
+  "/themes/embauche-et-contrat-de-travail",
   "/fiche-service-public/arret-maladie-pendant-le-preavis-quelles-consequences",
   "/fiche-service-public/demission-dun-salarie",
   "/fiche-service-public/demission-dune-assistante-maternelle",

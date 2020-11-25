@@ -1,7 +1,7 @@
 import slugify from "@socialgouv/cdtn-slugify";
 
 function splitArticle(article) {
-  const { title, id, isPublished } = article;
+  const { cdtnId, title, id, isPublished } = article;
   const slug = slugify(title);
   let prefixTitle = title;
   // extract accronyms inside parenthesis
@@ -41,6 +41,7 @@ function splitArticle(article) {
         const title = transformSectionTitle({ prefixTitle, sectionTitle });
         return {
           anchor,
+          cdtnId,
           description,
           html,
           id: id + (anchor ? `#${anchor}` : ""),

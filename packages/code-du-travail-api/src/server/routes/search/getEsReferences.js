@@ -63,6 +63,7 @@ const getEsReferences = async (refs = []) => {
         delete esReference._source.isPublished;
         return esReference;
       }
+      return [];
     }
     return makeHit(ref);
   });

@@ -24,7 +24,7 @@ router.get("/highlights/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getHightlightsBody();
 
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no highlights data`);
