@@ -27,7 +27,7 @@ function _createSitemap(baseUrl, documents) {
     if (!latestPost || postDate > latestPost) {
       latestPost = postDate;
     }
-    const projectURL = `${baseUrl}/${getRouteBySource(doc.source)}${doc.slug}`;
+    const projectURL = `${baseUrl}/${getRouteBySource(doc.source)}/${doc.slug}`;
     return toUrlEntry(projectURL, postDate);
   });
 
