@@ -82,7 +82,7 @@ export async function getAllKaliBlocks() {
 const gqlGlossary = () =>
   JSON.stringify({
     query: `query Glossary {
-      glossary {term, abbreviations, definition, variants}
+      glossary {term, abbreviations, definition, variants, references}
  }`,
   });
 
