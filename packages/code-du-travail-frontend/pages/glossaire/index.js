@@ -52,9 +52,7 @@ Glossaire.getInitialProps = async () => {
     return { statusCode: responseContainer.status };
   }
   const glossary = await responseContainer.json();
-  return {
-    glossary: glossary.map((word) => ({ ...word, slug: slugify(word.title) })),
-  };
+  return { glossary };
 };
 
 export default Glossaire;
