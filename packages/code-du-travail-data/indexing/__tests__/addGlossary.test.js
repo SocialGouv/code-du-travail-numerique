@@ -2,23 +2,23 @@ import { createGlossaryTransform } from "../glossary";
 
 const glossaryData = [
   {
-    abbrs: [],
+    abbreviations: [],
     definition:
       "<p>Phrase ou ensemble de phrases d'un accord, d'une convention collective, d'une loi.</p>",
-    title: "Disposition",
+    term: "Disposition",
     variants: ["dispositions"],
   },
   {
-    abbrs: [],
+    abbreviations: [],
     definition:
       "<p>Sommes versées en compensation ou en réparation de quelque chose.</p>",
-    title: "indemnité",
+    term: "indemnité",
     variants: ["indemnité"],
   },
   {
-    abbrs: ["cc"],
+    abbreviations: ["cc"],
     definition: "<p>Cette phrase ne doit pas apparaîte</p>",
-    title: "Convention Collective",
+    term: "Convention Collective",
     variants: [],
   },
 ];
