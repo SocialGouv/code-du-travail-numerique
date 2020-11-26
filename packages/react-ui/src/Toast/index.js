@@ -73,7 +73,7 @@ const StyledToast = styled.div`
   border-width: 2px;
   border-radius: ${({ squared }) => (squared ? "0" : box.borderRadius)};
   box-shadow: ${({ shadow, theme, variant }) =>
-    shadow ? box.shadow.default(theme[variant]) : "none"};
+    shadow ? box.shadow.large(theme[variant]) : "none"};
   animation: ${({ animate }) => {
     if (!animate) return "none";
     if (animate === "from-top") {
