@@ -94,21 +94,12 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.12.5":
+"@babel/generator@^7.12.5", "@babel/generator@^7.9.6":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.5.tgz#a2c50de5c8b6d708ab95be5e6053936c1884a4de"
   integrity sha512-m16TQQJ8hPt7E+OS/XVQg/7U184MLXtvuGbCdA7na61vha+ImkyyNM/9DDA0unYCVZn3ZOhng+qz48/KBOT96A==
   dependencies:
     "@babel/types" "^7.12.5"
-    jsesc "^2.5.1"
-    source-map "^0.5.0"
-
-"@babel/generator@^7.9.6":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.1.tgz#0d70be32bdaa03d7c51c8597dda76e0df1f15468"
-  integrity sha512-DB+6rafIdc9o72Yc3/Ph5h+6hUjeOp66pF0naQBgUFFuPqzQwIlPTm3xZR7YNvduIMtkDIj2t21LSQwnbCrXvg==
-  dependencies:
-    "@babel/types" "^7.12.1"
     jsesc "^2.5.1"
     source-map "^0.5.0"
 
@@ -2716,15 +2707,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.15.0":
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.15.0.tgz#6da7949ac1917f026eb8eb89e0155d2cb2a2555c"
-  integrity sha512-DO4oom4wS27yu2WHRZLvtnPfwQAPXrqUbuLzZTq+jZJKr3gWpdeqnBJiL3+Ib84iD8k5P6MwD0QW2k6qUAczrw==
+"@socialgouv/fiches-travail-data@^4.17.0":
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.17.0.tgz#89e0925081a2b2e529402cc179b9484ea0738c99"
+  integrity sha512-tt5gDeCAup9vnm4iQBIwSyxWw2AYD77foBFxWamvW7/itzhlPkFp0pg8Jed7y0BmR7TuHhD5iim3sgyczCeTyA==
 
-"@socialgouv/kali-data@^2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.12.0.tgz#c6d313c2ea0467a42e10209c2eadee31a1dcb67c"
-  integrity sha512-Yv5F/XLozhvbiZS4x/F8+Us9H60qqpPVJVD7LezHBUl41skT9jKYH7lNlh3GM1Tbg1xk9tgaTH0HNnbZirrq8w==
+"@socialgouv/kali-data@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.13.0.tgz#3daf8e0494f989bccbdf5dc448d429d9b621df7a"
+  integrity sha512-0VAmJa03UtXLTCP37pMLylDHUyx6lRvkZwuxll3NOX3TPOkKJ4AR6fE5LyArd+sxq6CdmM5p+krM2GInZw1a6g==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
