@@ -30,7 +30,7 @@ function Feedback({
   };
 
   return (
-    <Section>
+    <StyledSection>
       <Container>
         <StyledWrapper variant="light">
           <StyledHeading
@@ -75,13 +75,19 @@ function Feedback({
           )}
         </StyledWrapper>
       </Container>
-    </Section>
+    </StyledSection>
   );
 }
 
 export { Feedback };
 
 const { breakpoints, spacings } = theme;
+
+const StyledSection = styled(Section)`
+  @media print {
+    display: none;
+  }
+`;
 
 const StyledWrapper = styled(Wrapper)`
   display: flex;

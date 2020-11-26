@@ -53,6 +53,9 @@ const { breakpoints, fonts, spacings } = theme;
 
 const Nav = styled.nav`
   margin-bottom: ${spacings.small};
+  @media print {
+    display: none;
+  }
 `;
 const StyledContainer = styled(Container)`
   display: flex;

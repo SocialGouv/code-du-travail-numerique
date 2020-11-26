@@ -1,19 +1,20 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+
 import { box, breakpoints, spacings } from "../../theme";
 
 export const Wrapper = styled.div`
   padding: ${spacings.medium} ${spacings.xmedium};
   color: ${({ theme }) => theme.paragraph};
   border-radius: ${box.borderRadius};
-  ${props => {
+  ${(props) => {
     if (props.size === "large") {
       return css`
         padding: ${spacings.larger};
       `;
     }
   }}
-  ${props => {
+  ${(props) => {
     if (props.variant === "light") {
       return css`
         border: ${({ theme }) => box.border(theme.border)};
@@ -44,6 +45,9 @@ export const Wrapper = styled.div`
           border-radius: ${box.borderRadius};
           box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
           content: "";
+          @media print {
+            display: none;
+          }
         }
       `;
     }

@@ -103,6 +103,7 @@ const StyledHeader = styled.header`
   }
   @media print {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 `;
@@ -197,5 +198,8 @@ const SearchBarWrapper = styled.div`
   margin-left: ${spacings.base};
   @media (max-width: ${breakpoints.tablet}) {
     display: ${({ overThreshold }) => (overThreshold ? "flex" : "none")};
+  }
+  @media print {
+    display: none;
   }
 `;

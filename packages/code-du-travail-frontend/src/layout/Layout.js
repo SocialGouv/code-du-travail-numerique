@@ -29,6 +29,9 @@ const BackgroundContainer = styled.div`
   @media (max-width: ${breakpoints.mobile}) {
     padding-top: calc(${MOBILE_HEADER_HEIGHT});
   }
+  @media print {
+    padding-top: 0;
+  }
 `;
 
 const BackgroundLayer = styled.div`
@@ -61,6 +64,9 @@ const BackgroundLayer = styled.div`
         height: 80rem;
       }
     `};
+  @media print {
+    background: none;
+  }
 `;
 
 const StyledMain = styled.main`

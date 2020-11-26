@@ -122,6 +122,9 @@ const ShareContainer = styled.div`
     margin-top: ${spacings.small};
     margin-bottom: 0;
   }
+  @media print {
+    display: none;
+  }
 `;
 
 const OrderedSuptitle = styled(Suptitle)`
