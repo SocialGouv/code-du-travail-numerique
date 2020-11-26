@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.38.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.37.0...v4.38.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* glossaire ([#3170](https://github.com/SocialGouv/code-du-travail-numerique/issues/3170)) ([6206dfb](https://github.com/SocialGouv/code-du-travail-numerique/commit/6206dfba63a339c64170148606f3cd7ee54cd059))
+* only  publish in sitemap ([#3166](https://github.com/SocialGouv/code-du-travail-numerique/issues/3166)) ([cf82239](https://github.com/SocialGouv/code-du-travail-numerique/commit/cf822394cfb91b1aac02a2c6a3e05123cc684bde))
+* **data:** forward isPublished to fiche travail-emploi ([#3156](https://github.com/SocialGouv/code-du-travail-numerique/issues/3156)) ([a006836](https://github.com/SocialGouv/code-du-travail-numerique/commit/a0068362b9843ae03f3552d20773fc02ba8948d1))
+* **frontend:** allow code-du-travail for robot ([#3154](https://github.com/SocialGouv/code-du-travail-numerique/issues/3154)) ([bc19f68](https://github.com/SocialGouv/code-du-travail-numerique/commit/bc19f687f853f0f57e8a9b7e6018af49d0fea0b4)), closes [#3137](https://github.com/SocialGouv/code-du-travail-numerique/issues/3137)
+* **frontend:** typo on ccn pages ([#3153](https://github.com/SocialGouv/code-du-travail-numerique/issues/3153)) ([2bedd44](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bedd443fb36287272f86192ab6f93d55ebb92cb)), closes [#3143](https://github.com/SocialGouv/code-du-travail-numerique/issues/3143)
+* **frontend:** update mention-légale page ([#3155](https://github.com/SocialGouv/code-du-travail-numerique/issues/3155)) ([910819d](https://github.com/SocialGouv/code-du-travail-numerique/commit/910819d051380badf253ce964c9ad109d819506f))
+* **sitemap:** add missign separator between source and slug ([#3165](https://github.com/SocialGouv/code-du-travail-numerique/issues/3165)) ([7052939](https://github.com/SocialGouv/code-du-travail-numerique/commit/7052939b35e6149fd28f198b3e71f28eae3afb39))
+* disable glossary on for initial dump used in frontend ([#3149](https://github.com/SocialGouv/code-du-travail-numerique/issues/3149)) ([e546a85](https://github.com/SocialGouv/code-du-travail-numerique/commit/e546a85ce414dbd78078c2fc3f89141086d30f98))
+
+
+### Features
+
+* **data:** filter document using is_published ([#3140](https://github.com/SocialGouv/code-du-travail-numerique/issues/3140)) ([8d810c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/8d810c9b05f0c21bf61fa078788a53e2c4a51cc2))
+* **data:** indexing use admin/kali_blocks ([#3147](https://github.com/SocialGouv/code-du-travail-numerique/issues/3147)) ([145a2a4](https://github.com/SocialGouv/code-du-travail-numerique/commit/145a2a4e5c08779a9623ab355bb1f6273d9aba55))
+* **front:** display survery after 5 secs ([#3171](https://github.com/SocialGouv/code-du-travail-numerique/issues/3171)) ([012892a](https://github.com/SocialGouv/code-du-travail-numerique/commit/012892a24f791472aecb99c25ac86e37e2935237))
+
+
+
+
+
 # [4.37.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.36.0...v4.37.0) (2020-11-17)
 
 
