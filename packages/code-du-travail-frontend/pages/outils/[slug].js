@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
 import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
@@ -37,6 +38,7 @@ function Outils({ description, icon, slug, title }) {
           <Wrapper variant="main">
             <Tool icon={icon} title={title} />
           </Wrapper>
+          <ToolSurvey />
         </Container>
       </Section>
     </Layout>

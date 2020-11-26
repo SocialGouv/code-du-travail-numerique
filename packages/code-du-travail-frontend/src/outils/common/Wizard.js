@@ -69,7 +69,7 @@ function Wizard({
 
   const previousVisible = stepIndex > 0;
   const nextVisible = stepIndex < steps.length - 1;
-  const printVisible = stepIndex === steps.length - 1;
+  const isLastStep = stepIndex === steps.length - 1;
 
   const validate = (values) => {
     const Step = steps[stepIndex].component;
@@ -126,6 +126,7 @@ function Wizard({
                 )}
                 {title}
               </ToolTitle>
+
               <StepList
                 activeIndex={stepIndex}
                 items={stepItems}
@@ -137,7 +138,7 @@ function Wizard({
                 hasError={invalid && submitFailed}
                 onPrev={() => prevStep(form.getState().values)}
                 nextVisible={nextVisible}
-                printVisible={printVisible}
+                printVisible={isLastStep}
                 previousVisible={previousVisible}
               />
               {stepIndex > 0 && stepIndex < steps.length - 1 && (
