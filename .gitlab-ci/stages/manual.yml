@@ -90,3 +90,39 @@ Update Prod index:
     - yarn install --frozen-lockfile --prefer-offline
   script:
     - yarn workspace @cdt/data ingest
+
+Update PreProd index:
+  stage: "Prepare"
+  image:  node:12.14-alpine3.10
+  dependencies: []
+  when: manual
+  environment:
+    name: preprod-dev2
+  only:
+    refs:
+      - master
+  variables:
+    ES_INDEX_PREFIX: cdtn-preprod
+    ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
+    ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
+    ES_LOGS: "$ES_LOGS"
+    ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
+    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+    NLP_URL: https://serving-ml.fabrique.social.gouv.fr
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: ${CI_JOB_NAME}
+    paths:
+      - .cache
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - node_modules
+
+  before_script:
+    - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
+    - yarn install --frozen-lockfile --prefer-offline
+  script:
+    - yarn workspace @cdt/data ingest

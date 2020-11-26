@@ -35,7 +35,7 @@ export function getArticlesByTheme(allBlocks, id) {
                 (node) => node.data.id === articleId
               );
               if (!node) {
-                console.debug(
+                console.error(
                   `${articleId} not found in idcc ${agreementTree.data.num}`
                 );
               }
