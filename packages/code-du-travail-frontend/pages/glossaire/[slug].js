@@ -24,7 +24,10 @@ const {
 function Term({ term: { term, definition, references } }) {
   return (
     <Layout>
-      <Metas title={`${term} - Code du travail numérique`} description={term} />
+      <Metas
+        title={`${term} - Code du travail numérique`}
+        description={definition}
+      />
       <Section>
         <Container narrow>
           <FocusRoot>
@@ -44,7 +47,7 @@ function Term({ term: { term, definition, references } }) {
                     <th>Sources</th>
                     <td>
                       <StyledList>
-                        {references.map(({ url }) => (
+                        {references.map((url) => (
                           <li key={url}>
                             <a
                               href={url}
