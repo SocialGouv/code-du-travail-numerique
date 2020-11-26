@@ -37,6 +37,9 @@ export const AsideContent = styled(Section)`
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
+  @media print {
+    display: none;
+  }
 `;
 
 AsideContent.propTypes = {

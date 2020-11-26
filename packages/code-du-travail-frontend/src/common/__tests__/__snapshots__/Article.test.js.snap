@@ -221,6 +221,12 @@ exports[`<Article /> should render 1`] = `
   }
 }
 
+@media print {
+  .c1:before {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     padding: 1.6rem 1rem;
@@ -253,6 +259,12 @@ exports[`<Article /> should render 1`] = `
   }
 }
 
+@media print {
+  .c4 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c5 {
     font-size: 1.4rem;
@@ -276,6 +288,12 @@ exports[`<Article /> should render 1`] = `
     order: 5;
     margin-top: 1rem;
     margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c3 {
+    display: none;
   }
 }
 

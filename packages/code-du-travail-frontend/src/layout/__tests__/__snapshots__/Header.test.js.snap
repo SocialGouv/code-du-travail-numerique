@@ -421,6 +421,7 @@ exports[`<Header /> should render 1`] = `
 @media print {
   .c0 {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 }
@@ -489,6 +490,12 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:980px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media print {
   .c7 {
     display: none;
   }

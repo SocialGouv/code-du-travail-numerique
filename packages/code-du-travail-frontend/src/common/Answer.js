@@ -126,4 +126,7 @@ const ShareContainer = styled(Container)`
   @media (max-width: ${breakpoints.mobile}) {
     justify-content: flex-start;
   }
+  @media print {
+    display: none;
+  }
 `;

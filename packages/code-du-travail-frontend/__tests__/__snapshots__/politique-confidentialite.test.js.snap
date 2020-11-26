@@ -773,6 +773,12 @@ exports[`<CookiePolicy /> should render 1`] = `
   }
 }
 
+@media print {
+  .c28:before {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c28 {
     padding: 1.6rem 1rem;
@@ -989,6 +995,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 @media print {
   .c2 {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 }
@@ -1062,9 +1069,27 @@ exports[`<CookiePolicy /> should render 1`] = `
   }
 }
 
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding-top: calc(9rem);
+  }
+}
+
+@media print {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    background: none;
   }
 }
 

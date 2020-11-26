@@ -183,6 +183,9 @@ const { breakpoints, fonts, spacings } = theme;
 const Flex = styled.div`
   display: flex;
   align-items: center;
+  @media print {
+    display: none;
+  }
 `;
 
 const commonActionStyles = css`

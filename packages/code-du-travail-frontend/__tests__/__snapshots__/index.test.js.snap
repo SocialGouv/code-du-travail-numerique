@@ -1372,6 +1372,7 @@ exports[`<Home /> should render 1`] = `
 @media print {
   .c2 {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 }
@@ -1428,6 +1429,12 @@ exports[`<Home /> should render 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
 @media (max-width:1180px) {
   .c1 {
     height: 110rem;
@@ -1437,6 +1444,12 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c1 {
     height: 80rem;
+  }
+}
+
+@media print {
+  .c1 {
+    background: none;
   }
 }
 
