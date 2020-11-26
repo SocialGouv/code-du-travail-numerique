@@ -124,6 +124,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -340,6 +341,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -672,6 +674,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -880,6 +883,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -1161,6 +1165,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -1357,6 +1362,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -1641,6 +1647,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -1837,6 +1844,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -2172,6 +2180,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -2392,6 +2401,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -2673,6 +2683,7 @@ exports[`<Wizard /> should render a step 1`] = `
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -2869,6 +2880,7 @@ exports[`<Wizard /> should render a step 1`] = `
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
