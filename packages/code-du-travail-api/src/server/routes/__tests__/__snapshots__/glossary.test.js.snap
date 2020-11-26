@@ -2,12 +2,10 @@
 
 exports[`return glossary matching the slug 1`] = `
 Object {
-  "abbrs": Array [],
+  "abbreviations": Array [],
   "definition": "<p>Mesure d'urgence prise par précaution.</p>",
-  "refs": Array [
-    Object {
-      "url": "https://www.service-public.fr/particuliers/glossaire/R37450",
-    },
+  "references": Array [
+    "https://www.service-public.fr/particuliers/glossaire/R37450",
   ],
   "slug": "a-titre-conservatoire",
   "title": "A titre conservatoire",
@@ -18,12 +16,10 @@ Object {
 exports[`return glossary terms 1`] = `
 Array [
   Object {
-    "abbrs": Array [],
+    "abbreviations": Array [],
     "definition": "<p>Mesure d'urgence prise par précaution.</p>",
-    "refs": Array [
-      Object {
-        "url": "https://www.service-public.fr/particuliers/glossaire/R37450",
-      },
+    "references": Array [
+      "https://www.service-public.fr/particuliers/glossaire/R37450",
     ],
     "slug": "a-titre-conservatoire",
     "title": "A titre conservatoire",
