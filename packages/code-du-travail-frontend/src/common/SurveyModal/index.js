@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { initialState, reducer } from "./reducer";
 
-const PROMPT_DELAY = 15000; // 15 seconds
+const PROMPT_DELAY = 5000; // 5 seconds
 
 export const SurveyModal = ({
   children: renderProp,
