@@ -13,7 +13,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   color: #3e486e;
 }
 
-.c13 {
+.c14 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -21,15 +21,15 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fff;
 }
 
-.c13 > *:first-child {
+.c14 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c14 > *:last-child {
   margin-bottom: 0;
 }
 
-.c19 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -66,16 +66,16 @@ exports[`<ConventionCollective /> should render 1`] = `
   opacity: 1;
 }
 
-.c19:link,
-.c19:visited {
+.c20:link,
+.c20:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):active,
+.c20:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -84,7 +84,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c19[disabled] {
+.c20[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -113,7 +113,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   position: relative;
 }
 
-.c17 {
+.c18 {
   position: absolute;
   background-color: #f66663;
   border-radius: none;
@@ -126,7 +126,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c15 {
+.c16 {
   position: relative;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
@@ -244,7 +244,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   height: 2rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,7 +262,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c16 {
+.c17 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -271,7 +271,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -286,7 +286,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin: 0;
 }
 
-.c20 + .c20 {
+.c21 + .c21 {
   margin-left: 4rem;
 }
 
@@ -334,45 +334,45 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 1.6rem;
   }
 }
@@ -389,6 +389,12 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media print {
+  .c6 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c7 {
     font-size: 1.4rem;
@@ -401,8 +407,14 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
+@media print {
+  .c13 {
+    display: none;
+  }
+}
+
 @media (max-width:1180px) {
-  .c14 {
+  .c15 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -416,20 +428,20 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c16 {
+  .c17 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c18 {
+  .c19 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -438,7 +450,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c20 + .c20 {
+  .c21 + .c21 {
     margin-left: 0;
   }
 }
@@ -455,6 +467,12 @@ exports[`<ConventionCollective /> should render 1`] = `
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+}
+
+@media print {
+  .c5 {
+    display: none;
   }
 }
 
@@ -584,32 +602,32 @@ exports[`<ConventionCollective /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c12"
+        class="c12 c13"
       >
         <div
           class="c0"
         >
           <div
-            class="c13 c14"
+            class="c14 c15"
           >
             <h3
-              class="c15 c16"
+              class="c16 c17"
             >
               <div
-                class="c17"
+                class="c18"
               />
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c18"
+              class="c19"
             >
               <button
-                class="c19 c20 "
+                class="c20 c21 "
               >
                 Non
               </button>
               <button
-                class="c19 c20 "
+                class="c20 c21 "
               >
                 Oui
               </button>

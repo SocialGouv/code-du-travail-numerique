@@ -153,6 +153,12 @@ exports[`<Wrapper /> it renders a main Wrapper 1`] = `
   margin-bottom: 0;
 }
 
+@media print {
+  .c0:before {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 1.6rem 1rem;

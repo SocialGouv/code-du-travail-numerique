@@ -88,6 +88,12 @@ exports[`<Share /> renders 1`] = `
   height: 2rem;
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.4rem;

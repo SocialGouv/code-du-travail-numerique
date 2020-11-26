@@ -1054,6 +1054,7 @@ exports[`<Recherche /> should render 1`] = `
 @media print {
   .c2 {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 }
@@ -1107,6 +1108,18 @@ exports[`<Recherche /> should render 1`] = `
 @media (max-width:600px) {
   .c0 {
     padding-top: calc(9rem);
+  }
+}
+
+@media print {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    background: none;
   }
 }
 

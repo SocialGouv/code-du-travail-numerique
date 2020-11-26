@@ -940,6 +940,12 @@ exports[`<Theme /> should render 1`] = `
   }
 }
 
+@media print {
+  .c23 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c27 {
     font-size: 1.2rem;
@@ -1035,6 +1041,7 @@ exports[`<Theme /> should render 1`] = `
 @media print {
   .c2 {
     position: relative;
+    height: auto;
     box-shadow: none;
   }
 }
@@ -1108,9 +1115,27 @@ exports[`<Theme /> should render 1`] = `
   }
 }
 
+@media print {
+  .c9 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c0 {
     padding-top: calc(9rem);
+  }
+}
+
+@media print {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    background: none;
   }
 }
 

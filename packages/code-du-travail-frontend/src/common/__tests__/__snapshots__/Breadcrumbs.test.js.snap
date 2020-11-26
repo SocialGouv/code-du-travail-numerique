@@ -138,6 +138,12 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
   .c5 {
     font-size: 1.2rem;
