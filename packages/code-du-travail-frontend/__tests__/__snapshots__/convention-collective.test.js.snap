@@ -495,7 +495,7 @@ exports[`<ConventionCollective /> should render 1`] = `
       <div
         class="c0 c5"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >

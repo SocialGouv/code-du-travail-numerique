@@ -72,7 +72,7 @@ function Answer({
           )}
           {additionalContent}
           <ShareContainer>
-            Partagez ce contenu&nbsp;:&nbsp;
+            Partager ce contenu&nbsp;:&nbsp;
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           <Feedback

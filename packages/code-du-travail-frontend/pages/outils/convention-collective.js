@@ -30,6 +30,7 @@ const SearchConvention = () => (
           <ConventionForm />
         </Wrapper>
         <ShareContainer>
+          Partager ce contenu&nbsp;:&nbsp;
           <Share title={title} metaDescription={description} />
         </ShareContainer>
       </Container>
@@ -43,6 +44,11 @@ const { spacings } = theme;
 
 const ShareContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   margin-top: ${spacings.medium};
+  font-weight: bold;
+  @media print {
+    display: none;
+  }
 `;
