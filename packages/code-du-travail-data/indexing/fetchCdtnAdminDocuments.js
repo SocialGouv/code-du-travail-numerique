@@ -130,20 +130,7 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
   });
   const docs = await Promise.all(pDocuments);
   const documents = docs.flatMap((docs) =>
-    // /!\ beware /!\
-    // first map should me removed once admin has a way to handle
-    // editorial content's theme / path
-    docs
-      .map((doc) => {
-        if (!getBreadcrumbs) return doc;
-        const breadcrumbs = getBreadcrumbs(doc.cdtnId);
-        return {
-          ...doc,
-          breadcrumbs:
-            breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(doc.source),
-        };
-      })
-      .map((doc) => toElastic(doc, getBreadcrumbs))
+    docs.map((doc) => toElastic(doc, getBreadcrumbs))
   );
   return documents;
 }

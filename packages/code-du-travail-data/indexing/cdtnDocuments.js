@@ -137,7 +137,7 @@ async function* cdtnDocumentsGen() {
   };
 
   logger.info("=== Conventions Collectives ===");
-  const ccnData = await getDocumentBySource(SOURCES.CCN, getBreadcrumbs);
+  const ccnData = await getDocumentBySource(SOURCES.CCN);
   const allKaliBlocks = await getAllKaliBlocks();
   yield {
     documents: ccnData.map(({ ...content }) => {
