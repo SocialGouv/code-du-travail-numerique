@@ -16,6 +16,8 @@ Release:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when updating Elasticloud data
+      - $UPDATE_ES_INDEX
   before_script:
     - npm config set access public
     - npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
@@ -45,34 +47,28 @@ Production:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
+      # Don't run when updating Elasticloud data
+      - UPDATE_ES_INDEX
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
   script:
+    - echo "deploy ${CI_COMMIT_REF_SLUG}"
     - curl --request POST
       --form ref="${CI_COMMIT_REF_SLUG}"
       --form token="${CI_JOB_TOKEN}"
       --form variables[PRODUCTION]="true"
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
 
-Update Prod index:
-  stage: "Prepare"
-  image:  node:12.14-alpine3.10
-  dependencies: []
-  when: manual
-  environment:
-    name: prod2
-  only:
-    refs:
-      - master
+.update_elasticloud: &update_elasticloud
   variables:
-    ES_INDEX_PREFIX: cdtn-prod
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
     ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
     ES_LOGS: "$ES_LOGS"
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
     CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
     NLP_URL: https://serving-ml.fabrique.social.gouv.fr
+
   cache:
     key:
       files:
@@ -80,6 +76,7 @@ Update Prod index:
       prefix: ${CI_JOB_NAME}
     paths:
       - .cache
+
   artifacts:
     expire_in: 1 week
     paths:
@@ -91,38 +88,33 @@ Update Prod index:
   script:
     - yarn workspace @cdt/data ingest
 
-Update PreProd index:
-  stage: "Prepare"
-  image:  node:12.14-alpine3.10
-  dependencies: []
-  when: manual
+
+
+Update preprod data:
+  extends:
+    - .update_elasticloud
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "trigger" && $UPDATE_ES_INDEX == "PREPROD"'
+      when: always
+    - if: $CI_PIPELINE_SOURCE == "push"
+      when: never
+
   environment:
     name: preprod-dev2
-  only:
-    refs:
-      - master
   variables:
     ES_INDEX_PREFIX: cdtn-preprod
-    ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
-    ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
-    ES_LOGS: "$ES_LOGS"
-    ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
-    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
-    NLP_URL: https://serving-ml.fabrique.social.gouv.fr
-  cache:
-    key:
-      files:
-        - yarn.lock
-      prefix: ${CI_JOB_NAME}
-    paths:
-      - .cache
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - node_modules
 
-  before_script:
-    - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
-    - yarn install --frozen-lockfile --prefer-offline
-  script:
-    - yarn workspace @cdt/data ingest
+
+Update prod data:
+  extends:
+    - .update_elasticloud
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "trigger" && $UPDATE_ES_INDEX == "PREPROD"'
+      when: always
+    - if: $CI_PIPELINE_SOURCE == "push"
+      when: never
+
+  environment:
+    name: prod2
+  variables:
+    ES_INDEX_PREFIX: cdtn-prod
