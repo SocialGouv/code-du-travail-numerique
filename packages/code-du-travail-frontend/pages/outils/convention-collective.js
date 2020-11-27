@@ -30,7 +30,7 @@ const SearchConvention = () => (
           <ConventionForm />
         </Wrapper>
         <ShareContainer>
-          Partager ce contenu&nbsp;:&nbsp;
+          Partager cette page&nbsp;:&nbsp;
           <Share title={title} metaDescription={description} />
         </ShareContainer>
       </Container>
