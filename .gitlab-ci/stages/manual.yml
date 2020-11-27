@@ -61,6 +61,7 @@ Production:
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
 
 .update_elasticloud: &update_elasticloud
+  stage: "Deploy"
   variables:
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
     ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
