@@ -200,6 +200,7 @@ const ToolTitle = styled.h1`
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: ${spacings.base};
     padding: ${spacings.base} 0 ${spacings.small} 0;
     border-bottom: 0;
   }

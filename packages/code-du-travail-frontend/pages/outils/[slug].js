@@ -1,8 +1,10 @@
 import tools from "@cdt/data...tools/internals.json";
-import { Container, Section, Wrapper } from "@socialgouv/cdtn-ui";
+import { Container, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
+import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
+import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -32,13 +34,16 @@ function Outils({ description, icon, slug, title }) {
         title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
       />
-      <Section>
+      <StyledSection>
         <Container>
+          <ShareContainer>
+            <Share title={title} metaDescription={description} />
+          </ShareContainer>
           <Wrapper variant="main">
             <Tool icon={icon} title={title} />
           </Wrapper>
         </Container>
-      </Section>
+      </StyledSection>
     </Layout>
   );
 }
@@ -56,3 +61,19 @@ Outils.getInitialProps = async ({ query }) => {
     title,
   };
 };
+
+const { breakpoints, spacings } = theme;
+
+const StyledSection = styled(Section)`
+  padding-top: 0;
+`;
+
+const ShareContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: ${spacings.small};
+  margin-bottom: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacings.small};
+  }
+`;
