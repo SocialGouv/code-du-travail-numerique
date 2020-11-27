@@ -71,7 +71,6 @@ const StyledSection = styled(Section)`
 const ShareContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-top: ${spacings.small};
   margin-bottom: ${spacings.base};
   @media (max-width: ${breakpoints.mobile}) {
     margin-bottom: ${spacings.small};
