@@ -28,14 +28,14 @@
   },
   "dependencies": {
     "@reach/dialog": "0.11.2",
-    "polished": "^4.0.4",
+    "polished": "^4.0.5",
     "react-accessible-accordion": "^3.3.3",
     "react-feather": "^2.0.9",
     "react-tabs": "^3.1.1",
     "use-onclickoutside": "^0.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.7",
+    "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
