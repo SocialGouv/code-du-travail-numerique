@@ -28,28 +28,30 @@ function _createSitemap(baseUrl, documents) {
       latestPost = postDate;
     }
     const projectURL = `${baseUrl}/${getRouteBySource(doc.source)}/${doc.slug}`;
-    return toUrlEntry(projectURL, postDate);
+    return toUrlEntry(projectURL, doc.modified);
   });
 
   const staticPages = [
-    "a-propos",
-    "droit-du-travail",
-    "mentions-legales",
-    "politique-confidentialite",
-    "integration",
-  ].map(toUrlEntry);
+    `/a-propos`,
+    `/droit-du-travail`,
+    `/mentions-legales`,
+    `/politique-confidentialite`,
+    `/integration`,
+  ]
+    .map((path) => `https://${PROD_HOSTNAME}${path}`)
+    .map(toUrlEntry);
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>${baseUrl}/</loc>
-      <lastmod>${latestPost}</lastmod>
+      <lastmod>${new Date(latestPost).toISOString()}</lastmod>
       <priority>0.8</priority>
     </url>
     ${pages.concat(staticPages).join("")}
   </urlset>`;
 }
 
-function toUrlEntry(url, date = new Date(), priority = 0.5) {
+function toUrlEntry(url, date = new Date().toISOString(), priority = 0.5) {
   return `
   <url>
     <loc>${url}</loc>
