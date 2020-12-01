@@ -57,7 +57,7 @@
     "xxhashjs": "^0.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.7",
+    "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@socialgouv/eslint-config-recommended": "^1.46.0",
     "@zeit/ncc": "^0.22.3",
