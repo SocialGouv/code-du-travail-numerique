@@ -97,7 +97,7 @@ Update preprod data:
   extends:
     - .update_elasticloud
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "trigger" && $UPDATE_ES_INDEX == "PREPROD"'
+    - if: '($CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web") && $UPDATE_ES_INDEX == "PREPROD"'
       when: always
     - if: $CI_PIPELINE_SOURCE == "push"
       when: never
@@ -112,7 +112,7 @@ Update prod data:
   extends:
     - .update_elasticloud
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "trigger" && $UPDATE_ES_INDEX == "PROD"'
+    - if: '($CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web") && $UPDATE_ES_INDEX == "PROD"'
       when: always
     - if: $CI_PIPELINE_SOURCE == "push"
       when: never
