@@ -154,7 +154,7 @@ export const documentMapping = {
     },
 
     // used for CC search
-    synonyms: {
+    synonymes: {
       fields: {
         french: {
           analyzer: "french_indexing",

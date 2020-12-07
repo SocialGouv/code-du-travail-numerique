@@ -37,7 +37,7 @@ function getIdccBody({ query }) {
               },
               {
                 match_phrase_prefix: {
-                  "synonyms.french": {
+                  "synonymes.french": {
                     query: `${query}`,
                   },
                 },
