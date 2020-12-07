@@ -882,7 +882,7 @@ exports[`<Answer /> should renders 1`] = `
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -2152,7 +2152,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
       <div
         class="c3 c32"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c14"
         >
@@ -3179,7 +3179,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -4314,7 +4314,7 @@ exports[`<Answer /> should renders related content 1`] = `
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -5495,7 +5495,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -6523,7 +6523,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -7552,7 +7552,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >
@@ -8576,7 +8576,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
       <div
         class="c0 c22"
       >
-        Partagez ce contenu : 
+        Partager ce contenu : 
         <div
           class="c6"
         >

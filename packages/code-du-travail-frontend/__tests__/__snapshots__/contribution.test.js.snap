@@ -2675,7 +2675,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <div
               class="c4 c74"
             >
-              Partagez ce contenu : 
+              Partager ce contenu : 
               <div
                 class="c36"
               >
@@ -5825,7 +5825,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <div
               class="c4 c74"
             >
-              Partagez ce contenu : 
+              Partager ce contenu : 
               <div
                 class="c36"
               >
