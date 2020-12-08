@@ -23,7 +23,7 @@ function validate(values) {
   }
   if (values.refusRenouvellementAuto === true) {
     errors.refusRenouvellementAuto =
-      "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait son renouvellement automatique n’a pas le droit à une prime de précarité.";
+      "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait dès l’origine son renouvellement et ses modalités de renouvellement n’a pas le droit à une prime de précarité.";
   }
   return errors;
 }
@@ -60,7 +60,7 @@ function StepCDD() {
       <YesNoQuestion
         data-testid="refusRenouvellementAuto"
         name="refusRenouvellementAuto"
-        label="Le salarié a-t-il refusé de renouveler le CDD alors que le CDD comportait une clause de renouvellement automatique&nbsp;?"
+        label="Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat&nbsp;?"
       />
     </>
   );
