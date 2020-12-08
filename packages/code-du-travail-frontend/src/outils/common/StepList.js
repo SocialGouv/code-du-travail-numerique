@@ -34,7 +34,7 @@ export function StepList({ activeIndex = 0, items = [], anchorRef }) {
   );
 }
 
-const { spacings, breakpoints } = theme;
+const { box, spacings, breakpoints } = theme;
 
 const StyledWrapper = styled(Wrapper)`
   position: absolute;
@@ -45,6 +45,7 @@ const StyledWrapper = styled(Wrapper)`
   flex-direction: column;
   width: ${STEP_LIST_WIDTH};
   padding: 6rem ${spacings.larger} ${spacings.larger} ${spacings.larger};
+  border-radius: ${box.borderRadius} 0 0 ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     flex-direction: row-reverse;
@@ -53,6 +54,7 @@ const StyledWrapper = styled(Wrapper)`
     width: 100%;
     margin: 0;
     padding: ${spacings.base} ${spacings.small};
+    border-radius: ${box.borderRadius};
   }
   @media print {
     display: none;

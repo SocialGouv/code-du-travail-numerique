@@ -124,6 +124,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   flex-direction: column;
   width: 28rem;
   padding: 6rem 4rem 4rem 4rem;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .c4 {
@@ -320,6 +321,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
     width: 100%;
     margin: 0;
     padding: 1.6rem 1rem;
+    border-radius: 0.6rem;
   }
 }
 
