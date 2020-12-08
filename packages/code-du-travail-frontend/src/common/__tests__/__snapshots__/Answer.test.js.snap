@@ -4476,7 +4476,6 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c37 c38"
               href="/url.extrenal/tool"
-              rel="nofollow"
             >
               <svg
                 class="c39 c40"
@@ -4501,7 +4500,6 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c37 c38"
               href="/outils/TOOL_1"
-              rel="nofollow"
             >
               <svg
                 class="c39 c40"
@@ -4536,7 +4534,6 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c37 c38"
               href="/fiche-service-public/LINK_1"
-              rel="nofollow"
             >
               <svg
                 class="c39 c40"
@@ -4561,7 +4558,6 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c37 c38"
               href="/fiche-ministere-travail/LINK_2"
-              rel="nofollow"
             >
               <svg
                 class="c39 c40"
@@ -4586,7 +4582,6 @@ exports[`<Answer /> should renders related content 1`] = `
             <a
               class="c37 c38"
               href="/fiche-service-public/LINK_4"
-              rel="nofollow"
             >
               <svg
                 class="c39 c40"

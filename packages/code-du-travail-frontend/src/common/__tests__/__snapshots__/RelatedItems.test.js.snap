@@ -116,7 +116,6 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c4 c5"
-          rel="nofollow"
         >
           <svg
             class="c6 c7"
@@ -140,7 +139,6 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c4 c5"
-          rel="nofollow"
         >
           <svg
             class="c6 c7"
@@ -174,7 +172,6 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c4 c5"
-          rel="nofollow"
         >
           <svg
             class="c6 c7"
@@ -198,7 +195,6 @@ exports[`<RelatedItems /> should render 1`] = `
       >
         <a
           class="c4 c5"
-          rel="nofollow"
         >
           <svg
             class="c6 c7"

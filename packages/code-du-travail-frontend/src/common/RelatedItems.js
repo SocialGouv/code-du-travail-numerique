@@ -111,7 +111,6 @@ export const RelatedItems = ({ items = [] }) => {
                     <StyledLinkItem key={href}>
                       <Link href={href} passHref>
                         <ArrowLink
-                          rel="nofollow"
                           arrowPosition="left"
                           onClick={() =>
                             matoSelectRelated(
