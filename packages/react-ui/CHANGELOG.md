@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.39.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.38.0...v4.39.0) (2020-12-09)
+
+
+### Bug Fixes
+
+* **frontend:** pretty print documents ([#3172](https://github.com/SocialGouv/code-du-travail-numerique/issues/3172)) ([5854776](https://github.com/SocialGouv/code-du-travail-numerique/commit/58547767d05e45a8c670ec9f65fb8703d54472a2))
+
+
+### Features
+
+* **frontend:** add survey prompt in tools ([#3167](https://github.com/SocialGouv/code-du-travail-numerique/issues/3167)) ([de78d38](https://github.com/SocialGouv/code-du-travail-numerique/commit/de78d389ede530635ca13f3c52f6b485542413c3))
+
+
+
+
+
 # [4.38.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.37.0...v4.38.0) (2020-11-26)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

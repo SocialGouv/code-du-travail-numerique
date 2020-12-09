@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.39.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.38.0...v4.39.0) (2020-12-09)
+
+
+### Bug Fixes
+
+* **frontend:** minor sitemap issues ([#3180](https://github.com/SocialGouv/code-du-travail-numerique/issues/3180)) ([23c7476](https://github.com/SocialGouv/code-du-travail-numerique/commit/23c747618cc9002c4bfc0f920e23c296293d6510))
+* **frontend:** pretty print documents ([#3172](https://github.com/SocialGouv/code-du-travail-numerique/issues/3172)) ([5854776](https://github.com/SocialGouv/code-du-travail-numerique/commit/58547767d05e45a8c670ec9f65fb8703d54472a2))
+* **frontend:** remove nofollow relatedContent ([#3195](https://github.com/SocialGouv/code-du-travail-numerique/issues/3195)) ([657c80e](https://github.com/SocialGouv/code-du-travail-numerique/commit/657c80ef6cd8f708432984c0b143fbe1e536ab91))
+* **frontend:** udpate indemniteprecarite question label ([#3193](https://github.com/SocialGouv/code-du-travail-numerique/issues/3193)) ([#3196](https://github.com/SocialGouv/code-du-travail-numerique/issues/3196)) ([4c9a910](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c9a91034e4f2c646c2e6ab272b4ea611934dbd5))
+
+
+### Features
+
+* **frontend:** add share to tools and cc search ([#3175](https://github.com/SocialGouv/code-du-travail-numerique/issues/3175)) ([17658c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/17658c858592cabf653db1b742f1665aedb5baeb))
+* **frontend:** add survey prompt in tools ([#3167](https://github.com/SocialGouv/code-du-travail-numerique/issues/3167)) ([de78d38](https://github.com/SocialGouv/code-du-travail-numerique/commit/de78d389ede530635ca13f3c52f6b485542413c3))
+
+
+
+
+
 # [4.38.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.37.0...v4.38.0) (2020-11-26)
 
 
