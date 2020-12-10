@@ -69,7 +69,7 @@ Production:
     ELASTICSEARCH_DATA_TOKEN: "$ELASTICSEARCH_DATA_TOKEN"
     ES_LOGS: "$ES_LOGS"
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
-    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+    CDTN_ADMIN_ENDPOINT: $CDTN_ADMIN_ENDPOINT
     NLP_URL: https://serving-ml.fabrique.social.gouv.fr
 
   cache:
