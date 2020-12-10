@@ -5,15 +5,18 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "label": "Départ de l'entreprise",
+        "label": "Départ de l’entreprise",
+        "position": 8,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Rupture conventionnelle",
+        "position": 3,
         "slug": "/themes/rupture-conventionnelle",
       },
       Object {
         "label": "Rupture conventionnelle individuelle",
+        "position": 1,
         "slug": "/themes/rupture-conventionnelle-individuelle",
       },
     ],
@@ -27,14 +30,17 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Embauche et contrat de travail",
+        "position": 1,
         "slug": "/themes/embauche-et-contrat-de-travail",
       },
       Object {
         "label": "Embauche",
+        "position": 1,
         "slug": "/themes/embauche",
       },
       Object {
-        "label": "Période d'essai",
+        "label": "Période d’essai",
+        "position": 3,
         "slug": "/themes/periode-dessai",
       },
     ],
@@ -47,11 +53,13 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "label": "Départ de l'entreprise",
+        "label": "Départ de l’entreprise",
+        "position": 8,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Documents à remettre au salarié",
+        "position": 0,
         "slug": "/themes/documents-a-remettre-au-salarie",
       },
     ],

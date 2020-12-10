@@ -5,15 +5,16 @@ Array [
   Object {
     "breadcrumbs": Array [
       Object {
-        "label": "Départ de l'entreprise",
+        "label": "Départ de l’entreprise",
+        "position": 8,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
         "label": "Démission",
+        "position": 1,
         "slug": "/themes/demission",
       },
     ],
-    "cdtnId": "eed9ab7d0a",
     "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
     "slug": "la-demission#Comment-presenter-une-demission",
     "source": "fiches_ministere_travail",

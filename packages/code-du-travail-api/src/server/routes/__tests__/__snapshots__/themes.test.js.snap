@@ -6,38 +6,38 @@ Object {
   "children": Array [
     Object {
       "label": "Documents à remettre au salarié",
-      "slug": "/themes/documents-a-remettre-au-salarie",
+      "slug": "documents-a-remettre-au-salarie",
     },
     Object {
       "label": "Démission",
-      "slug": "/themes/demission",
+      "slug": "demission",
     },
     Object {
-      "label": "Fin d'un CDD - CTT",
-      "slug": "/themes/fin-dun-cdd-ctt",
+      "label": "Fin d’un CDD - CTT",
+      "slug": "fin-dun-cdd-ctt",
     },
     Object {
       "label": "Rupture conventionnelle",
-      "slug": "/themes/rupture-conventionnelle",
+      "slug": "rupture-conventionnelle",
     },
     Object {
       "label": "Licenciement : droits des salariés et procédures",
-      "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+      "slug": "licenciement-droits-des-salaries-et-procedures",
     },
     Object {
       "label": "Retraite",
-      "slug": "/themes/retraite",
+      "slug": "retraite",
     },
     Object {
       "label": "Autres départs",
-      "slug": "/themes/autres-departs",
+      "slug": "autres-departs",
     },
   ],
   "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,
   "refs": Array [],
   "slug": "depart-de-lentreprise",
-  "title": "Départ de l'entreprise",
+  "title": "Départ de l’entreprise",
 }
 `;
 
@@ -48,11 +48,11 @@ Object {
       "children": Array [
         Object {
           "label": "Embauche",
-          "slug": "/themes/embauche",
+          "slug": "embauche",
         },
         Object {
           "label": "Contrat de travail",
-          "slug": "/themes/contrat-de-travail",
+          "slug": "contrat-de-travail",
         },
       ],
       "icon": "Contract",
@@ -64,37 +64,37 @@ Object {
       "children": Array [
         Object {
           "label": "Documents à remettre au salarié",
-          "slug": "/themes/documents-a-remettre-au-salarie",
+          "slug": "documents-a-remettre-au-salarie",
         },
         Object {
           "label": "Démission",
-          "slug": "/themes/demission",
+          "slug": "demission",
         },
         Object {
-          "label": "Fin d'un CDD - CTT",
-          "slug": "/themes/fin-dun-cdd-ctt",
+          "label": "Fin d’un CDD - CTT",
+          "slug": "fin-dun-cdd-ctt",
         },
         Object {
           "label": "Rupture conventionnelle",
-          "slug": "/themes/rupture-conventionnelle",
+          "slug": "rupture-conventionnelle",
         },
         Object {
           "label": "Licenciement : droits des salariés et procédures",
-          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+          "slug": "licenciement-droits-des-salaries-et-procedures",
         },
         Object {
           "label": "Retraite",
-          "slug": "/themes/retraite",
+          "slug": "retraite",
         },
         Object {
           "label": "Autres départs",
-          "slug": "/themes/autres-departs",
+          "slug": "autres-departs",
         },
       ],
       "icon": "Depart",
       "position": 8,
       "slug": "depart-de-lentreprise",
-      "title": "Départ de l'entreprise",
+      "title": "Départ de l’entreprise",
     },
   ],
 }
