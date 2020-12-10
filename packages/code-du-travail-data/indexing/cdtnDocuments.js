@@ -195,11 +195,13 @@ async function* cdtnDocumentsGen() {
   yield {
     documents: splittedFiches.map((fiche) => {
       // we don't want splitted fiches to have the same cdtnId than full pages
-      // iit causes bugs, tons of weird bugs
+      // it causes bugs, tons of weird bugs, but we need the id for the
+      // breadcrumb generation
+      const breadcrumbs = getBreadcrumbs(fiche.cdtnId);
       delete fiche.cdtnId;
       return {
         ...fiche,
-        breadcrumbs: getBreadcrumbs(fiche.cdtnId),
+        breadcrumbs,
         source: SOURCES.SHEET_MT,
       };
     }),
