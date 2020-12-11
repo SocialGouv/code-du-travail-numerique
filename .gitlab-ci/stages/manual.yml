@@ -105,7 +105,7 @@ Update preprod data:
   environment:
     name: preprod-dev2
   variables:
-    ES_INDEX_PREFIX: cdtn-preprod
+    ES_INDEX_PREFIX: cdtn-feature-1785717
 
 
 Update prod data:
