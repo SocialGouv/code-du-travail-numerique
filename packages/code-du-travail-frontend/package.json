@@ -73,11 +73,11 @@
     "unified": "^9.2.0",
     "unist-util-find": "^1.0.2",
     "url-search-params": "^1.1.0",
-    "uuid": "^8.3.1"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
     "@socialgouv/eslint-config-react": "^1.46.0",
     "@testing-library/react": "^11.2.2",
     "babel-eslint": "^10.1.0",
