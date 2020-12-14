@@ -24,13 +24,13 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "husky": "^4.3.5",
+    "husky": "^4.3.6",
     "lerna": "^3.22.1"
   },
   "resolutions": {
-    "@babel/core": "^7.12.9",
+    "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.7"
+    "@babel/preset-env": "^7.12.10"
   },
   "workspaces": {
     "packages": [
