@@ -112,9 +112,9 @@ function StepSalaires({ form }) {
   );
 }
 
-function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
+function getSalairesPeriods({ dateEntree, dateNotification, absencePeriods }) {
   const dEntree = parse(dateEntree);
-  const dSortie = parse(dateSortie);
+  const dNotification = parse(dateNotification);
 
   const totalAbsence = (absencePeriods || [])
     .filter((period) => Boolean(period.duration))
@@ -124,13 +124,12 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
     }, 0);
 
   const nbMonthes = Math.min(
-    differenceInMonths(dSortie, dEntree) - totalAbsence,
+    differenceInMonths(dNotification, dEntree) - totalAbsence,
     12
   );
-
   return Array.from({ length: nbMonthes }).map((_, index) => {
     return {
-      label: format(subMonths(dSortie, index), "MMMM yyyy", {
+      label: format(subMonths(dNotification, index + 1), "MMMM yyyy", {
         locale: frLocale,
       }),
       salary: null,

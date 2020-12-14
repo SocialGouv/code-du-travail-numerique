@@ -384,7 +384,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary0"
           >
-            juillet 2019
+            mars 2019
           </label>
         </td>
         <td>
@@ -419,7 +419,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary1"
           >
-            juin 2019
+            février 2019
           </label>
         </td>
         <td>
@@ -454,7 +454,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary2"
           >
-            mai 2019
+            janvier 2019
           </label>
         </td>
         <td>
@@ -489,7 +489,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary3"
           >
-            avril 2019
+            décembre 2018
           </label>
         </td>
         <td>
@@ -524,7 +524,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary4"
           >
-            mars 2019
+            novembre 2018
           </label>
         </td>
         <td>
@@ -559,7 +559,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary5"
           >
-            février 2019
+            octobre 2018
           </label>
         </td>
         <td>
@@ -594,7 +594,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary6"
           >
-            janvier 2019
+            septembre 2018
           </label>
         </td>
         <td>
@@ -629,7 +629,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary7"
           >
-            décembre 2018
+            août 2018
           </label>
         </td>
         <td>
@@ -664,7 +664,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary8"
           >
-            novembre 2018
+            juillet 2018
           </label>
         </td>
         <td>
@@ -699,7 +699,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary9"
           >
-            octobre 2018
+            juin 2018
           </label>
         </td>
         <td>
@@ -734,7 +734,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary10"
           >
-            septembre 2018
+            mai 2018
           </label>
         </td>
         <td>
@@ -769,7 +769,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
           <label
             for="salary11"
           >
-            août 2018
+            avril 2018
           </label>
         </td>
         <td>
