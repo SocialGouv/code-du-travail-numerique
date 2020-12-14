@@ -302,7 +302,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   <p
     class="c0"
   >
-    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
+    Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c1"
@@ -1078,7 +1078,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <p
     class="c0"
   >
-    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
+    Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
       aria-label="champs obligatoire"
       class="c1"

@@ -49,7 +49,7 @@ function StepSalaires({ form }) {
               <>
                 <YesNoQuestion
                   name="hasSameSalaire"
-                  label="Le salaire mensuel a-t-il été le même durant les 12 derniers mois&nbsp;?"
+                  label="Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement&nbsp;?"
                   onChange={(hasSameSalaire) => {
                     if (hasSameSalaire) {
                       form.change("salaires", []);
