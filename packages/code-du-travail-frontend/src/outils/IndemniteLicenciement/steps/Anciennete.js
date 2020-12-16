@@ -148,8 +148,15 @@ function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
 }
 
 function computeSalaraires(values) {
-  if (values.hasSameSalaire) {
-    return getSalairesPeriods(values);
+  if (values.hasSameSalaire === false && values.salaires) {
+    const salairePeriods = getSalairesPeriods(values);
+    return salairePeriods.map(({ label, salary }) => {
+      const month = values.salaires.find((item) => item.label === label);
+      if (month) {
+        return { label, salary: month.salary };
+      }
+      return { label, salary };
+    });
   }
   return null;
 }

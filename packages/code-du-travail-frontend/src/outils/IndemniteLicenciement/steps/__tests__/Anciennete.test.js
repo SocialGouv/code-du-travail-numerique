@@ -120,7 +120,7 @@ describe("computeSalaires", () => {
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",
-        hasSameSalaire: true,
+        hasSameSalaire: false,
       }).length
     ).toEqual(12);
   });
@@ -130,7 +130,7 @@ describe("computeSalaires", () => {
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",
-        hasSameSalaire: false,
+        hasSameSalaire: true,
       })
     ).toBe(null);
   });
