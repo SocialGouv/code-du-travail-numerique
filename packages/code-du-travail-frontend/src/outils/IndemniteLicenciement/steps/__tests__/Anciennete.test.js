@@ -114,17 +114,47 @@ describe("computeAncienneté", () => {
 });
 
 describe("computeSalaires", () => {
-  it("should compute salaires periods if hasSameSalaire is true", () => {
+  it("should compute salaires periods only if there is previous salaires", () => {
     expect(
       computeSalaraires({
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",
         hasSameSalaire: false,
+        salaires: [],
       }).length
     ).toEqual(12);
   });
-  it("should not compute salaires periods if hasSameSalaire is false", () => {
+  it("should restore previous salaires periods", () => {
+    expect(
+      computeSalaraires({
+        dateEntree: "2018-01-01",
+        dateNotification: "2018-09-01",
+        dateSortie: "2018-10-01",
+        hasSameSalaire: false,
+        salaires: [
+          { label: "août 2018", salary: 2000 },
+          { label: "juillet 2018", salary: 1450 },
+          { label: "juin 2018", salary: 2000 },
+          { label: "mai 2018", salary: 1500 },
+          { label: "avril 2018", salary: 2000 },
+          { label: "mars 2018", salary: 1400 },
+          { label: "février 2018", salary: 2000 },
+          { label: "janvier 2018", salary: 1500 },
+        ],
+      })
+    ).toEqual([
+      { label: "août 2018", salary: 2000 },
+      { label: "juillet 2018", salary: 1450 },
+      { label: "juin 2018", salary: 2000 },
+      { label: "mai 2018", salary: 1500 },
+      { label: "avril 2018", salary: 2000 },
+      { label: "mars 2018", salary: 1400 },
+      { label: "février 2018", salary: 2000 },
+      { label: "janvier 2018", salary: 1500 },
+    ]);
+  });
+  it("should not compute salaires periods if hasSameSalaire is true", () => {
     expect(
       computeSalaraires({
         dateEntree: "2016-04-01",
