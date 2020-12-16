@@ -3,7 +3,11 @@ import arrayMutators from "final-form-arrays";
 import React from "react";
 import { Form } from "react-final-form";
 
-import { computeAnciennete, StepAnciennete } from "../Anciennete";
+import {
+  computeAnciennete,
+  computeSalaraires,
+  StepAnciennete,
+} from "../Anciennete";
 
 function renderForm(data) {
   return render(
@@ -106,5 +110,28 @@ describe("computeAncienneté", () => {
         dateSortie: "2018-04-01",
       })
     ).toEqual(1.75);
+  });
+});
+
+describe("computeSalaires", () => {
+  it("should compute salaires periods if hasSameSalaire is true", () => {
+    expect(
+      computeSalaraires({
+        dateEntree: "2016-04-01",
+        dateNotification: "2018-04-01",
+        dateSortie: "2018-05-01",
+        hasSameSalaire: true,
+      }).length
+    ).toEqual(12);
+  });
+  it("should not compute salaires periods if hasSameSalaire is false", () => {
+    expect(
+      computeSalaraires({
+        dateEntree: "2016-04-01",
+        dateNotification: "2018-04-01",
+        dateSortie: "2018-05-01",
+        hasSameSalaire: false,
+      })
+    ).toBe(null);
   });
 });
