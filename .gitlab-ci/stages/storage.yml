@@ -13,4 +13,4 @@ Export storage to prod:
     DESTINATION_CONTAINER: "cdtn"
     DESTINATION_SERVER: "prod"
     # kosko options
-    KOSKO_GENERATE_ARGS: --env dev restore
+    KOSKO_GENERATE_ARGS: --env prod restore
