@@ -3,7 +3,7 @@
 exports[`kosko generate --prod restore 1`] = `
 "metadata:
   name: restore-container-8843083e
-  namespace: code-du-travail-numerique-secret
+  namespace: cdtn-admin-secret
 spec:
   backoffLimit: 0
   template:
@@ -68,22 +68,22 @@ spec:
             - name: SOURCE_ACCOUNT_NAME
               valueFrom:
                 secretKeyRef:
-                  name: azure-codedutravailnumeriqueprod-volume
+                  name: azure-cdtnadminprod-volume
                   key: azurestorageaccountname
             - name: SOURCE_ACCOUNT_KEY
               valueFrom:
                 secretKeyRef:
-                  name: azure-codedutravailnumeriqueprod-volume
+                  name: azure-cdtnadminprod-volume
                   key: azurestorageaccountkey
             - name: DESTINATION_ACCOUNT_NAME
               valueFrom:
                 secretKeyRef:
-                  name: azure-codedutravailnumeriquedev-volume
+                  name: azure-cdtnadmindev-volume
                   key: azurestorageaccountname
             - name: DESTINATION_ACCOUNT_KEY
               valueFrom:
                 secretKeyRef:
-                  name: azure-codedutravailnumeriquedev-volume
+                  name: azure-cdtnadmindev-volume
                   key: azurestorageaccountkey
             - name: SOURCE_CONTAINER
               value: source-container
