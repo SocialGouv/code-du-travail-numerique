@@ -1,4 +1,3 @@
-# todo: restrict to MEP + ingest in production
 Export storage to prod:
   stage: .post
   when: manual
@@ -6,6 +5,11 @@ Export storage to prod:
     - .base_deploy_kosko_stage
   environment:
     name: prod2
+  rules:
+    - if: '($CI_PIPELINE_SOURCE == "trigger" || $CI_PIPELINE_SOURCE == "web") && $UPDATE_ES_INDEX == "PROD"'
+      when: always
+  environment:
+    name: preprod-dev2
   variables:
     # storage copy
     SOURCE_CONTAINER: "cdtn"
