@@ -2388,7 +2388,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     >
                       <a
                         class="c59 no-after"
-                        href="api.url/docs/filename.pdf"
+                        href="azure.url/cdtn/filename.pdf"
                       >
                         <svg
                           class="c60"
@@ -2439,7 +2439,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   <a
                     class="c65 no-after"
-                    href="api.url/docs/filename.pdf"
+                    href="azure.url/cdtn/filename.pdf"
                   >
                     Télécharger le modèle (
                     pdf
