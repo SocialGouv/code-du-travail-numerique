@@ -30,6 +30,9 @@ deployment:
     successThreshold: 1
     timeoutSeconds: 3
 
+  envFrom:
+    - secretRef:
+        name: cdtn-secret
   env:
     - name: API_URL
       value: "${API_URL}/api/v1"
@@ -39,37 +42,16 @@ deployment:
       value: ${FRONTEND_HOST}
     - name: FRONTEND_PORT
       value: "3000"
-    - name: IS_PRODUCTION_DEPLOYMENT
-      valueFrom:
-        secretKeyRef:
-          name: cdtn-secret
-          key: IS_PRODUCTION_DEPLOYMENT
     - name: NODE_ENV
       value: "production"
-    - name: PIWIK_SITE_ID
-      valueFrom:
-        secretKeyRef:
-          name: cdtn-secret
-          key: PIWIK_SITE_ID
-    - name: PIWIK_URL
-      valueFrom:
-        secretKeyRef:
-          name: cdtn-secret
-          key: PIWIK_URL
     - name: PORT
       value: "3000"
     - name: PROD_HOSTNAME
       value: "code.travail.gouv.fr"
-    - name: SENTRY_PUBLIC_DSN
-      valueFrom:
-        secretKeyRef:
-          name: cdtn-secret
-          key: SENTRY_PUBLIC_DSN
     - name: VERSION
       value: "${VERSION}"
     - name: COMMIT
       value: "${COMMIT}"
-
   initContainers:
     - name: wait-for-api
       image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
