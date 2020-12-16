@@ -1,0 +1,16 @@
+# todo: restrict to MEP + ingest in production
+Export storage to prod:
+  stage: .post
+  when: manual
+  extends:
+    - .base_deploy_kosko_stage
+  environment:
+    name: prod2
+  variables:
+    # storage copy
+    SOURCE_CONTAINER: "cdtn"
+    SOURCE_SERVER: "dev"
+    DESTINATION_CONTAINER: "cdtn"
+    DESTINATION_SERVER: "prod"
+    # kosko options
+    KOSKO_GENERATE_ARGS: --env dev restore
