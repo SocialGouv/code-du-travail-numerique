@@ -54,6 +54,31 @@ deployment:
       value: "${VERSION}"
     - name: COMMIT
       value: "${COMMIT}"
+    - name: IS_PRODUCTION_DEPLOYMENT
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: IS_PRODUCTION_DEPLOYMENT
+    - name: PIWIK_SITE_ID
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_SITE_ID
+    - name: PIWIK_URL
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: PIWIK_URL
+    - name: SENTRY_PUBLIC_DSN
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: SENTRY_PUBLIC_DSN
+    - name: AZURE_BASE_URL
+      valueFrom:
+        secretKeyRef:
+          name: cdtn-secret
+          key: AZURE_BASE_URL
   initContainers:
     - name: wait-for-api
       image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
