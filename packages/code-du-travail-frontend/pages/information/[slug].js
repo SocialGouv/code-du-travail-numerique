@@ -41,8 +41,12 @@ const InfoLink = ({ children, href }) => {
 };
 
 function getUrl(file) {
-  const [filename] = file.match(/[^/]+$/);
-  return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+  try {
+    const [filename] = file.match(/[^/]+$/);
+    return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+  } catch (error) {
+    return file;
+  }
 }
 
 const processor = unified()
