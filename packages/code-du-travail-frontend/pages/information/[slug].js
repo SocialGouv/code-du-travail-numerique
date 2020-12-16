@@ -22,7 +22,7 @@ import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 
 const {
-  publicRuntimeConfig: { API_URL },
+  publicRuntimeConfig: { API_URL, AZURE_CONTAINER, AZURE_BASE_URL },
 } = getConfig();
 
 const InfoLink = ({ children, href }) => {
@@ -39,6 +39,11 @@ const InfoLink = ({ children, href }) => {
     </a>
   );
 };
+
+function getUrl(file) {
+  const [filename] = file.match(/[^/]+$/);
+  return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+}
 
 const processor = unified()
   .use(htmlToHtmlAst, { fragment: true })
@@ -72,12 +77,12 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <figure key={name}>
-              <img src={imgUrl} alt={altText} />
+              <img src={getUrl(imgUrl)} alt={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"
                   className="no-after"
-                  href={fileUrl}
+                  href={getUrl(fileUrl)}
                   narrow
                   variant="navLink"
                   download

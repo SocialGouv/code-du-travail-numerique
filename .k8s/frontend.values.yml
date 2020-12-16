@@ -40,6 +40,8 @@ deployment:
       value: ${ENVIRONMENT}
     - name: FRONTEND_HOST
       value: ${FRONTEND_HOST}
+    - name: AZURE_CONTAINER
+      value: ${AZURE_CONTAINER}
     - name: FRONTEND_PORT
       value: "3000"
     - name: NODE_ENV

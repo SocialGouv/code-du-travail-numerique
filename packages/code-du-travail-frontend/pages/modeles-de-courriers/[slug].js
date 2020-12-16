@@ -19,8 +19,13 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
 const {
-  publicRuntimeConfig: { API_URL },
+  publicRuntimeConfig: { API_URL, AZURE_BASE_URL, AZURE_CONTAINER },
 } = getConfig();
+
+function getUrl(file) {
+  const [filename] = file.match(/[^/]+$/);
+  return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+}
 
 const fetchCourrier = ({ slug }) =>
   fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);
@@ -84,7 +89,7 @@ class ModeleCourrier extends React.Component {
                 <Button
                   as="a"
                   className="no-after"
-                  href={fileUrl}
+                  href={getUrl(fileUrl)}
                   narrow
                   variant="primary"
                 >
@@ -113,7 +118,7 @@ class ModeleCourrier extends React.Component {
             <Button
               as="a"
               className="no-after"
-              href={fileUrl}
+              href={getUrl(fileUrl)}
               variant="primary"
             >
               Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;

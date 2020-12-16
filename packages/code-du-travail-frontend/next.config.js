@@ -30,6 +30,8 @@ const nextConfig = {
       process.env.API_SIRET2IDCC_URL ||
       "https://siret2idcc.fabrique.social.gouv.fr/api/v2",
     API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
+    AZURE_BASE_URL: process.env.AZURE_BASE_URL,
+    AZURE_CONTAINER: process.env.AZURE_CONTAINER,
     COMMIT: process.env.COMMIT,
     FRONTEND_HOST:
       `https://${process.env.FRONTEND_HOST}` ||
