@@ -82,4 +82,4 @@ Scénario:
 
   Alors je vois "périodes d'alternance à temps plein et à temps partiel"
   Quand je choisis "Non"
-  Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?"
+  Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification"
