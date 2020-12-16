@@ -10,6 +10,7 @@ import { TextQuestion } from "../../common/TextQuestion";
 import { isDate } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { AbsencePeriods, MOTIFS } from "../components/AbsencePeriods";
+import { getSalairesPeriods } from "./Salaires";
 
 function validate({
   dateEntree,
@@ -110,13 +111,19 @@ StepAnciennete.validate = validate;
 /**
  * The decorator here is used to compute the ancienneté value
  * based on the data provided by the user
- * decorator can only be used in initialSteps since final-form do not allows
+ *
+ * We also need to verify if hasSameSalaire exists to update
+ * salaires period values in case the user go backward to answer
+ * a previous question
+ *
+ * info: decorator can only be used in initialSteps since final-form do not allows
  * decorator to be added once the form is created
  */
 StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {
     anciennete: (_, values) => computeAnciennete(values),
+    salaires: (_, values) => computeSalaraires(values),
   },
 });
 
@@ -140,4 +147,18 @@ function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
 }
 
-export { StepAnciennete, computeAnciennete };
+function computeSalaraires(values) {
+  if (values.hasSameSalaire === false && values.salaires) {
+    const salairePeriods = getSalairesPeriods(values);
+    return salairePeriods.map(({ label, salary }) => {
+      const month = values.salaires.find((item) => item.label === label);
+      if (month) {
+        return { label, salary: month.salary };
+      }
+      return { label, salary };
+    });
+  }
+  return null;
+}
+
+export { StepAnciennete, computeAnciennete, computeSalaraires };
