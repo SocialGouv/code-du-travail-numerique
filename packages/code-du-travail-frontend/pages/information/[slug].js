@@ -20,9 +20,10 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
+import { toUrl } from "../../src/lib/getFileUrl";
 
 const {
-  publicRuntimeConfig: { API_URL, AZURE_CONTAINER, AZURE_BASE_URL },
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 const InfoLink = ({ children, href }) => {
@@ -39,15 +40,6 @@ const InfoLink = ({ children, href }) => {
     </a>
   );
 };
-
-function getUrl(file) {
-  try {
-    const [filename] = file.match(/[^/]+$/);
-    return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
-  } catch (error) {
-    return file;
-  }
-}
 
 const processor = unified()
   .use(htmlToHtmlAst, { fragment: true })
@@ -81,12 +73,12 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <figure key={name}>
-              <img src={getUrl(imgUrl)} alt={altText} />
+              <img src={toUrl(imgUrl)} alt={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"
                   className="no-after"
-                  href={getUrl(fileUrl)}
+                  href={toUrl(fileUrl)}
                   narrow
                   variant="navLink"
                   download
