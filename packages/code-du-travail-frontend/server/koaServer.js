@@ -12,6 +12,8 @@ const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
 const PACKAGE_VERSION = process.env.VERSION || "";
+const AZURE_BASE_URL =
+  process.env.AZURE_BASE_URL || "https://cdtnadmindev.blob.core.windows.net";
 
 function getSentryCspUrl() {
   // NOTE(douglasduteil): is pre production if we can find the version in the url
@@ -63,7 +65,7 @@ async function getKoaServer({ nextApp }) {
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.fr",
         "https://ad.doubleclick.net",
-        "https://cdtnadminprod.blob.core.windows.net",
+        AZURE_BASE_URL,
       ],
       scriptSrc: [
         "'self'",
