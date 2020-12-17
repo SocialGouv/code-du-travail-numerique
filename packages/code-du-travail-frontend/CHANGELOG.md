@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.40.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.39.0...v4.40.0) (2020-12-17)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3208](https://github.com/SocialGouv/code-du-travail-numerique/issues/3208)) ([fdac3c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/fdac3c084c9d68f7efdd9512eaaa06ab4260663c))
+* **idl:** use dateNotification for ask for  previous salaries ([#3206](https://github.com/SocialGouv/code-du-travail-numerique/issues/3206)) ([2885d5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/2885d5e82968629a5e9a75b09a71f7e7f42e0e7e)), closes [#1880](https://github.com/SocialGouv/code-du-travail-numerique/issues/1880)
+
+
+### Features
+
+* **data:** synonymes convention collectives [#3063](https://github.com/SocialGouv/code-du-travail-numerique/issues/3063) ([#3123](https://github.com/SocialGouv/code-du-travail-numerique/issues/3123)) ([4301878](https://github.com/SocialGouv/code-du-travail-numerique/commit/43018780401dbfdaa422527f66c16bd187ba8a19))
+
+
+
+
+
 # [4.39.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.38.0...v4.39.0) (2020-12-09)
 
 
