@@ -61,6 +61,16 @@ Quand("je scroll à {string}", (text) => {
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -140);
 });
 
+Quand(
+  "je clique sur {string} je télécharge le fichier {string}",
+  (buttonText, filename) => {
+    I.handleDownloads(filename);
+    I.click(buttonText);
+    I.amInPath("output/downloads");
+    I.seeFile(filename);
+  }
+);
+
 //
 
 Alors("je vois {string}", (text) => {
@@ -102,5 +112,18 @@ Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
   I.seeNumberOfVisibleElements(
     `//header[*[${textMatcher}]]/${target} | //div/*[${textMatcher}]/${target}`,
     parseInt(num, 10)
+  );
+});
+
+Alors("je suis redirigé vers la page: {string}", (url) => {
+  // also check search and hash
+  I.waitForFunction(
+    (url) =>
+      window.location.pathname +
+        window.location.search +
+        window.location.hash ===
+      url,
+    [url],
+    10
   );
 });
