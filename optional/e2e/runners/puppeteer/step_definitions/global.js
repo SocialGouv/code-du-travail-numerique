@@ -14,6 +14,10 @@ Soit("un utilisateur sur la page {string}", (page) => {
 
 //
 
+Quand("j'attends {int} secondes", (num) => {
+  I.wait(num);
+});
+
 Quand("je pause le test", () => {
   pause();
 });
@@ -61,15 +65,10 @@ Quand("je scroll à {string}", (text) => {
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -140);
 });
 
-Quand(
-  "je clique sur {string} je télécharge le fichier {string}",
-  (buttonText, filename) => {
-    I.handleDownloads(filename);
-    I.click(buttonText);
-    I.amInPath("output/downloads");
-    I.seeFile(filename);
-  }
-);
+Quand("je télécharge en cliquant sur {string}", (dowloadText) => {
+  I.handleDownloads();
+  I.click(dowloadText);
+});
 
 //
 
@@ -126,4 +125,9 @@ Alors("je suis redirigé vers la page: {string}", (url) => {
     [url],
     10
   );
+});
+
+Alors("j'ai téléchargé le fichier {string}", (filename) => {
+  I.amInPath("output/downloads");
+  I.seeFile(filename);
 });
