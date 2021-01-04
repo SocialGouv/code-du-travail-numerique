@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname $0)/_/husky.sh"
 
-lerna run --stream --parallel prepush
+yarn lerna run --stream --parallel prepush
