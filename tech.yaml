@@ -1,0 +1,49 @@
+name: Code du travail numérique
+
+# List your code repos
+repositories:
+  frontend: https://github.com/SocialGouv/code-du-travail-numerique
+  cdtn-admin: https://github.com/SocialGouv/cdtn-admin
+  cdtn-contrib: https://github.com/SocialGouv/code-du-travail-backoffice
+  kali-data: https://github.com/SocialGouv/kali-data
+  legi-data: https://github.com/SocialGouv/legi-data
+  fiches-vdd: https://github.com/SocialGouv/fiches-vdd
+  fiches-travail-data: https://github.com/SocialGouv/fiches-travail-data
+  serving-ml: https://github.com/SocialGouv/serving-ml
+
+# List all docs links
+documentation:
+  dossier gDocs cdtn: https://drive.google.com/drive/u/0/folders/15iWpijYQEhA4SmCmbq-JD3gW1kmpXqn1
+  schemas tech: https://excalidraw.com/#json=5918245009752064,LLCbZufjKhzL8tF6cbFrpg
+
+# List all the tools used by the team
+tools:
+  ticketing: https://github.com/SocialGouv/code-du-travail-numerique/issues
+  sentry: https://sentry.fabrique.social.gouv.fr/incubateur/code-du-travail-numerique
+  matomo: https://matomo.fabrique.social.gouv.fr
+  calendar: https://calendar.google.com/calendar/embed?src=tajq67at1kaucktamb2f1bv8ug%40group.calendar.google.com&ctz=Europe%2FParis
+  design: https://figma.com/
+
+# Overall technical stack
+stack:
+  frontend:
+    - NextJS
+  api:
+    - Koa
+    - ElasticSearch
+  nlp:
+    - tensorflow
+  cdtn-admin:
+    - NextJS
+    - hasura
+    - PostgreSQL
+  cdtn-contrib:
+    - NextJS
+    - PostgREST
+    - PostgreSQL
+  tests:
+    - Jest unit tests
+    - Jest integraton tests
+    - e2e Gherkin
+  ci:
+    - Gitlab-ci
