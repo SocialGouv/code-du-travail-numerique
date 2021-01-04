@@ -38,11 +38,6 @@
       "packages/code-du-travail-data/dataset/*"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "lerna run --stream --parallel prepush"
-    }
-  },
   "engines": {
     "node": ">= 12.13"
   },
