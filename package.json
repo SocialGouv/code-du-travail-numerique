@@ -6,8 +6,6 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
     "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
     "build": "lerna run build",
     "build:ui": "yarn workspace @socialgouv/cdtn-ui build && yarn workspace @socialgouv/react-fiche-service-public build",
     "dev:docker": "docker-compose up elasticsearch",
@@ -44,8 +42,5 @@
   "engines": {
     "node": ">= 12.13"
   },
-  "version": "0.0.0",
-  "devDependencies": {
-    "pinst": "^2.1.1"
-  }
+  "version": "0.0.0"
 }
