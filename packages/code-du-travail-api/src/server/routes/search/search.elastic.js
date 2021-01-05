@@ -14,16 +14,14 @@ function getSearchBody({ query, size, sources = [] }) {
             // contents other than CCN
             { terms: { source: sources.filter((s) => s != SOURCES.CCN) } },
             // OR ( CCN source AND contributions )
-            sources.includes(SOURCES.CCN)
-              ? {
-                  bool: {
-                    must: [
-                      { term: { source: SOURCES.CCN } },
-                      { term: { contributions: true } },
-                    ],
-                  },
-                }
-              : {},
+            {
+              bool: {
+                must: [
+                  { term: { source: SOURCES.CCN } },
+                  { term: { contributions: true } },
+                ],
+              },
+            },
           ],
         },
       }
