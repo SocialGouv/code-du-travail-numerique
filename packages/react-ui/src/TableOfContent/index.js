@@ -19,21 +19,23 @@ export const TableOfContent = ({
 
   useEffect(() => {
     const titles = [];
-    contents.map(({ label, id }) => {
-      if (label && !id) {
-        return titles.push({ isSection: true, label });
-      }
-      if (id) {
-        const titleElement = document.getElementById(id);
-        if (titleElement) {
-          titles.push({
-            active: false,
-            element: titleElement,
-            id,
-          });
+    if (contents && contents.length) {
+      contents.map(({ label, id }) => {
+        if (label && !id) {
+          return titles.push({ isSection: true, label });
         }
-      }
-    });
+        if (id) {
+          const titleElement = document.getElementById(id);
+          if (titleElement) {
+            titles.push({
+              active: false,
+              element: titleElement,
+              id,
+            });
+          }
+        }
+      });
+    }
     setTitles(titles);
   }, [contents, setTitles]);
 
