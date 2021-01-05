@@ -17,7 +17,7 @@ Export storage to prod:
     # storage copy
     SOURCE_CONTAINER: "cdtn"
     SOURCE_SERVER: "dev"
-    DESTINATION_CONTAINER: "cdtn-test-3211"
-    DESTINATION_SERVER: "dev"
+    DESTINATION_CONTAINER: "cdtn"
+    DESTINATION_SERVER: "prod"
     # kosko options
     KOSKO_GENERATE_ARGS: --env prod restore
