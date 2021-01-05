@@ -1,3 +1,5 @@
+const { SOURCES } = require("@socialgouv/cdtn-sources");
+
 function getIdccBody({ query }) {
   return {
     _source: [
@@ -13,7 +15,7 @@ function getIdccBody({ query }) {
     query: {
       bool: {
         filter: [
-          { term: { source: "conventions_collectives" } },
+          { term: { source: SOURCES.CCN } },
           { term: { isPublished: true } },
         ],
         must: {

@@ -133,6 +133,13 @@ async function* cdtnDocumentsGen() {
     SOURCES.CONTRIBUTIONS,
     getBreadcrumbs
   );
+  // we keep track of the idccs used in the contributions
+  // in order to flag the corresponding conventions collectives below
+  const contribIDCCs = new Set();
+  contributions.forEach(({ answers }) =>
+    answers.conventions.forEach(({ idcc }) => contribIDCCs.add(parseInt(idcc)))
+  );
+
   yield {
     documents: contributions.map(({ answers, ...contribution }) => ({
       ...contribution,
@@ -167,6 +174,7 @@ async function* cdtnDocumentsGen() {
           };
         }),
         articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
+        contributions: contribIDCCs.has(content.num),
         source: SOURCES.CCN,
       };
     }),
