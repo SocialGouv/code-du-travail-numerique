@@ -1,4 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 function getSearchBody({ query, size, sources = [] }) {
   if (sources.length === 0) {
