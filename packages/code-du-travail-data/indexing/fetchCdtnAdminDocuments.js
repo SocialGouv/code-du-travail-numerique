@@ -1,22 +1,5 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
-
-const fixBreadcrumbs = (source) => {
-  // /!\ beware /!\
-  // This won't work as soon as an editorial content is not in COVID folder !
-  if (source === SOURCES.EDITORIAL_CONTENT) {
-    return [
-      {
-        label: "Dossier Coronavirus-Covid 19",
-        slug: `/${getRouteBySource(
-          SOURCES.THEMATIC_FILES
-        )}/ministere-du-travail-notre-dossier-sur-le-coronavirus`,
-      },
-    ];
-  }
-  return [];
-};
 
 const LIMIT = 300;
 const CDTN_ADMIN_ENDPOINT =
@@ -156,7 +139,7 @@ function toElastic(
   }
   return {
     ...document,
-    breadcrumbs: breadcrumbs.length > 0 ? breadcrumbs : fixBreadcrumbs(source),
+    breadcrumbs,
     cdtnId,
     excludeFromSearch: !is_searchable,
     id,

@@ -2,31 +2,42 @@ import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { breakpoints, fonts, spacings } from "../theme";
+import { breakpoints, colors, fonts, spacings } from "../theme";
 import { useTOCReducer } from "./useTOCReducer";
 
 const initialState = {
   titles: [],
 };
 
-export const TableOfContent = ({ ids, observerArea, threshold, ...props }) => {
+export const TableOfContent = ({
+  contents,
+  observerArea,
+  threshold,
+  ...props
+}) => {
   const { observerCallback, setTitles, titles } = useTOCReducer(initialState);
 
   useEffect(() => {
     const titles = [];
-
-    ids.map((id) => {
-      const titleElement = document.getElementById(id);
-      if (titleElement) {
-        titles.push({
-          active: false,
-          element: titleElement,
-          id,
-        });
+    contents.map(({ label, id }) => {
+      if (label && !id) {
+        return titles.push({ isSection: true, label });
+      }
+      if (id) {
+        const titleElement = document.getElementById(id);
+        if (titleElement) {
+          titles.push({
+            active: false,
+            element: titleElement,
+            id,
+          });
+        }
       }
     });
     setTitles(titles);
+  }, [contents, setTitles]);
 
+  useEffect(() => {
     let observer = false;
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver(observerCallback, {
@@ -34,28 +45,39 @@ export const TableOfContent = ({ ids, observerArea, threshold, ...props }) => {
         threshold,
       });
       titles.forEach((title) => {
-        observer.observe(title.element);
+        if (title.element) {
+          observer.observe(title.element);
+        }
       });
     }
 
     return () => {
       observer && observer.disconnect();
     };
-  }, [ids, observerArea, observerCallback, setTitles, threshold]);
+  }, [titles, observerArea, observerCallback, threshold]);
 
   return (
     <div {...props}>
-      {titles.map(({ active, element, id }) => (
-        <TableItem active={active} key={`menu-${id}`} href={`#${element.id}`}>
-          {element.getAttribute("data-short-title") || element.textContent}
-        </TableItem>
-      ))}
+      {titles.map(({ isSection, active, element, label, id }) =>
+        isSection ? (
+          <TableSection>{label}</TableSection>
+        ) : (
+          <TableItem active={active} key={`menu-${id}`} href={`#${element.id}`}>
+            {element.getAttribute("data-short-title") || element.textContent}
+          </TableItem>
+        )
+      )}
     </div>
   );
 };
 
 TableOfContent.propTypes = {
-  ids: PropTypes.arrayOf(PropTypes.string),
+  contents: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+    })
+  ),
   observerArea: PropTypes.shape({
     bottom: PropTypes.string,
     top: PropTypes.string,
@@ -68,6 +90,16 @@ TableOfContent.defaultProps = {
   observerArea: { bottom: "70%", top: "0px" },
   threshold: ["1"],
 };
+
+const TableSection = styled.span`
+  display: block;
+  padding: ${spacings.base} 0 ${spacings.small} 0;
+  color: ${colors.altText};
+  font-weight: bold;
+  font-size: ${fonts.sizes.small};
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+`;
 
 const TableItem = styled.a`
   display: block;

@@ -1,5 +1,6 @@
 import {
   ArrowLink,
+  Button,
   Container,
   FlatList,
   icons,
@@ -13,7 +14,7 @@ import {
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
@@ -50,21 +51,19 @@ function DossierThematique({ dossier }) {
           <FixedWrapper>
             <NavTitle>Sommaire</NavTitle>
             <TableOfContent
-              ids={sections.map(({ categories }) =>
-                categories.map((category) => category.id)
-              )}
+              contents={sections.flatMap(({ label, categories }) => [
+                { label },
+                ...categories.map((category) => ({
+                  id: category.id,
+                })),
+              ])}
             />
           </FixedWrapper>
           <Content>
             {populars.length > 0 && (
               <StyledWrapper variant="light">
                 <IconStripe centered icon={icons["Populars"]}>
-                  <H2
-                    id="populaires"
-                    data-short-title="Contenu les plus populaires"
-                  >
-                    Contenus populaires
-                  </H2>
+                  <H3 id="populaires">Contenus populaires</H3>
                 </IconStripe>
                 <StyledFlatList>
                   {populars.map((ref) => (
@@ -76,25 +75,12 @@ function DossierThematique({ dossier }) {
               </StyledWrapper>
             )}
             {sections.map(({ label, categories }) => (
-              <>
-                {label}
-                {categories.map(({ icon, id, refs, shortTitle, title }) => (
-                  <StyledWrapper key={id}>
-                    <IconStripe centered icon={icons[icon]}>
-                      <H2 id={id} data-short-title={shortTitle}>
-                        {title}
-                      </H2>
-                    </IconStripe>
-                    <StyledFlatList>
-                      {refs.map((ref) => (
-                        <Li key={ref.url || ref.externalUrl}>
-                          <DossierLink {...ref} />
-                        </Li>
-                      ))}
-                    </StyledFlatList>
-                  </StyledWrapper>
+              <React.Fragment key={label || "sans-label"}>
+                <H2>{label}</H2>
+                {categories.map(({ id, ...props }) => (
+                  <Category key={id} id={id} {...props} />
                 ))}
-              </>
+              </React.Fragment>
             ))}
           </Content>
         </MainContainer>
@@ -104,159 +90,41 @@ function DossierThematique({ dossier }) {
 }
 
 DossierThematique.getInitialProps = async ({ query: { slug } }) => {
-  // const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
-  // if (!responseContainer.ok) {
-  //   return { statusCode: responseContainer.status };
-  // }
-  // const dossier = await responseContainer.json();
-  const dossier = {
-    metaDescription: "oui oui",
-    populars: [
-      {
-        title:
-          "Covid-19 : Les mesures de protection en entreprise (Protocole national)",
-        url:
-          "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national",
-      },
-      {
-        title:
-          "Covid-19 : évaluer le risque sanitaire (document d'évaluation des risques) [Infographie]",
-        url:
-          "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national",
-      },
-    ],
-    sections: [
-      {
-        categories: [
-          {
-            icon: "Health",
-            id: "no-label",
-            refs: [
-              {
-                title:
-                  "Arrêt maladie : indemnités journalières versées au salarié",
-                url:
-                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-              },
-              {
-                title: "Personnes vulnérables",
-                url:
-                  "https://www.service-public.fr/particuliers/actualites/A14380",
-              },
-              {
-                title: "Cas contact : demander un arrêt maladie en ligne",
-                url: "https://declare.ameli.fr/cas-contact/conditions",
-              },
-            ],
-            title: "Je suis une catégorie sans label, bien placée",
-          },
-        ],
-      },
-      {
-        categories: [
-          {
-            icon: "Health",
-            id: "jeunes",
-            refs: [
-              {
-                title:
-                  "Arrêt maladie : indemnités journalières versées au salarié",
-                url:
-                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-              },
-              {
-                title: "Personnes vulnérables",
-                url:
-                  "https://www.service-public.fr/particuliers/actualites/A14380",
-              },
-              {
-                title: "Cas contact : demander un arrêt maladie en ligne",
-                url: "https://declare.ameli.fr/cas-contact/conditions",
-              },
-            ],
-            title: "Jeunes",
-          },
-          {
-            icon: "Health",
-            id: "jeuness",
-            refs: [
-              {
-                title:
-                  "Arrêt maladie : indemnités journalières versées au salarié",
-                url:
-                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-              },
-              {
-                title: "Personnes vulnérables",
-                url:
-                  "https://www.service-public.fr/particuliers/actualites/A14380",
-              },
-              {
-                title: "Cas contact : demander un arrêt maladie en ligne",
-                url: "https://declare.ameli.fr/cas-contact/conditions",
-              },
-            ],
-            title: "Jaunes",
-          },
-        ],
-        label: "Aides pour recruter",
-      },
-      {
-        categories: [
-          {
-            icon: "Health",
-            id: "jeunessss",
-            refs: [
-              {
-                title:
-                  "Arrêt maladie : indemnités journalières versées au salarié",
-                url:
-                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-              },
-              {
-                title: "Personnes vulnérables",
-                url:
-                  "https://www.service-public.fr/particuliers/actualites/A14380",
-              },
-              {
-                title: "Cas contact : demander un arrêt maladie en ligne",
-                url: "https://declare.ameli.fr/cas-contact/conditions",
-              },
-            ],
-            title: "Jeunes",
-          },
-          {
-            icon: "Health",
-            id: "jeunesss",
-            refs: [
-              {
-                title:
-                  "Arrêt maladie : indemnités journalières versées au salarié",
-                url:
-                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
-              },
-              {
-                title: "Personnes vulnérables",
-                url:
-                  "https://www.service-public.fr/particuliers/actualites/A14380",
-              },
-              {
-                title: "Cas contact : demander un arrêt maladie en ligne",
-                url: "https://declare.ameli.fr/cas-contact/conditions",
-              },
-            ],
-            title: "Jaunes",
-          },
-        ],
-        label: "Truc muches",
-      },
-    ],
-    title: "ok ok",
-  };
+  const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
+  if (!responseContainer.ok) {
+    return { statusCode: responseContainer.status };
+  }
+  const dossier = await responseContainer.json();
   return { dossier };
 };
 
-const { breakpoints, fonts, spacings } = theme;
+const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
+  const [areAllVisible, setAllVisible] = useState(false);
+  const visibleRefs = refs.slice(0, areAllVisible ? refs.length : 3);
+  return (
+    <StyledWrapper>
+      <IconStripe centered icon={icons[icon]}>
+        <H3 id={id} data-short-title={shortTitle}>
+          {title}
+        </H3>
+      </IconStripe>
+      <StyledFlatList>
+        {visibleRefs.map((ref) => (
+          <Li key={ref.url || ref.externalUrl}>
+            <DossierLink {...ref} />
+          </Li>
+        ))}
+      </StyledFlatList>
+      {!areAllVisible && refs.length > 4 && (
+        <SeeMore small variant="flat" onClick={() => setAllVisible(true)}>
+          Voir tout
+        </SeeMore>
+      )}
+    </StyledWrapper>
+  );
+};
+
+const { breakpoints, colors, fonts, spacings } = theme;
 
 const MainContainer = styled(Container)`
   display: flex;
@@ -299,6 +167,17 @@ const StyledWrapper = styled(Wrapper)`
 `;
 
 const H2 = styled.h2`
+  color: ${colors.altText};
+  font-weight: bold;
+  font-size: ${fonts.sizes.headings.xmedium};
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.small};
+  }
+`;
+
+const H3 = styled.h3`
   margin: 0;
 `;
 
@@ -346,6 +225,10 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   className: "no-after",
 }))`
   word-break: break-word;
+`;
+
+const SeeMore = styled(Button)`
+  margin-top: ${spacings.small};
 `;
 
 export default DossierThematique;
