@@ -11,11 +11,12 @@ Export storage to prod:
     # When deploying new CDTN
     - if: $PRODUCTION
       when: always
+    - when: manual
   variables:
     # storage copy
     SOURCE_CONTAINER: "cdtn"
     SOURCE_SERVER: "dev"
-    DESTINATION_CONTAINER: "cdtn"
-    DESTINATION_SERVER: "prod"
+    DESTINATION_CONTAINER: "cdtn-test-3211"
+    DESTINATION_SERVER: "dev"
     # kosko options
     KOSKO_GENERATE_ARGS: --env prod restore
