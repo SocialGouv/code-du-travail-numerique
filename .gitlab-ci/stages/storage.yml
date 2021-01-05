@@ -1,5 +1,5 @@
 Export storage to prod:
-  stage: ".post"
+  stage: .post
   extends:
     - .base_deploy_kosko_stage
   environment:
