@@ -7,7 +7,7 @@ function getSearchBody({ query, size, sources = [] }) {
 
   // if convention collectives are required
   // we only return the one with contributions
-  const sourceFilter = !sources.includes(SOURCES.CCN)
+  const sourceFilter = sources.includes(SOURCES.CCN)
     ? {
         bool: {
           should: [
