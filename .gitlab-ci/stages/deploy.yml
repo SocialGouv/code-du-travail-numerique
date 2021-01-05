@@ -6,57 +6,8 @@ include:
     ref: v9.1.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
-    ref: v9.1.1
+    ref: v9.1.2
 
-
-#
-# temp fix for base_deploy_hpa_chart_stage, handle new helm stable repo
-#
-variables:
-  HELM_CHART_VERSION: "3.0.0"
-  K8S_NAMESPACE: "${KUBE_NAMESPACE}"
-
-.base_deploy_hpa_chart_stage:
-  extends: .base_docker_helm_image_stage
-  script:
-    - echo "kubectl config set-context --current --namespace=${K8S_NAMESPACE}"
-    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
-    #
-    - helm init --client-only --stable-repo-url=https://charts.helm.sh/stable
-    - curl -L https://github.com/SocialGouv/helm-charts/releases/download/v${HELM_CHART_VERSION}/helm-just-linux-${HELM_CHART_VERSION}.tgz | tar -C $(helm home) -xzv
-    - helm repo add socialgouv https://github.com/SocialGouv/helm-charts/releases/download/v${HELM_CHART_VERSION}
-
-    - echo "helm just fetch socialgouv/hpa#${HELM_CHART_VERSION}"
-    - helm just fetch "socialgouv/hpa#${HELM_CHART_VERSION}"
-
-    - envsubst < $VALUES_FILE > ./values.yaml
-    # Set own wildcard when deploying in dev environment
-    - >-
-      HELM_RENDER_ARGS="
-        --set image.tag=${IMAGE_TAG}
-        --set ingress.hosts[0].host=${HOST}
-        --set ingress.tls[0].hosts[0]=${HOST}
-        ${HELM_RENDER_ARGS}"
-    # Set own certificate when deploying in prod environment
-    - |-
-      if [[ -n "${PRODUCTION+x}" ]]; then
-        HELM_RENDER_ARGS=" \
-          --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=letsencrypt-prod \
-          --set-string ingress.annotations.kubernetes\.io/tls-acme=true \
-          ${HELM_RENDER_ARGS}"
-      else
-        HELM_RENDER_ARGS=" \
-          --set ingress.tls[0].secretName=wildcard-crt \
-          ${HELM_RENDER_ARGS}"
-      fi
-    - echo "$ helm just render ${CONTEXT} hpa ${HELM_RENDER_ARGS} --values ./values.yaml"
-
-    - helm just render ${CONTEXT} hpa
-      ${HELM_RENDER_ARGS}
-      --values ./values.yaml
-    - helm just apply ${CONTEXT}
-#
-#
 #
 
 Create namespace:
