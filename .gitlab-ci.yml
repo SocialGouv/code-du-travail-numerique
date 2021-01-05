@@ -11,7 +11,7 @@ include:
     ref: v9.1.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
-    ref: v20.1.1
+    ref: v20.1.5
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/quality.yml
