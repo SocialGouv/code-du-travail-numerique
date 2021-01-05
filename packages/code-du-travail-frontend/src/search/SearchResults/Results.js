@@ -3,14 +3,21 @@ import {
   getRouteBySource,
   SOURCES,
 } from "@socialgouv/cdtn-sources";
-import { Container, Heading, theme, Tile, Title } from "@socialgouv/cdtn-ui";
+import {
+  Button,
+  Container,
+  Heading,
+  theme,
+  Tile,
+  Title,
+  ViewMore,
+} from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { CallToActionTile } from "../../common/tiles/CallToAction";
-import { ViewMore } from "../../common/ViewMore";
 import { matopush } from "../../piwik";
 import { reportSelectionToMatomo, summarize } from "../utils";
 
@@ -124,11 +131,18 @@ export const Results = ({ id, isSearch, items, query }) => {
         </Title>
       )}
       <ViewMore
-        label="Plus de résultats"
-        onClick={() => {
-          matopush(["trackEvent", "nextResultPage", query]);
-        }}
+        button={(viewMore) => (
+          <StyledButton
+            onClick={() => {
+              matopush(["trackEvent", "nextResultPage", query]);
+              viewMore();
+            }}
+          >
+            Plus de résultats
+          </StyledButton>
+        )}
         query={query}
+        stepSize={7}
       >
         {items.map((item) => (
           <StyledListItem key={`${item.source}-${item.slug}`}>
@@ -140,8 +154,16 @@ export const Results = ({ id, isSearch, items, query }) => {
   );
 };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: ${spacings.xmedium};
+  ${(props) => props.styles && props.styles}
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 0 auto;
+  }
 `;

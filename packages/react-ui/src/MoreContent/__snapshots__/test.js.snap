@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Grid /> renders with an More icon 1`] = `
+exports[`<MoreContent /> renders with an More icon 1`] = `
 .c0 {
   margin-bottom: 2.4rem;
 }

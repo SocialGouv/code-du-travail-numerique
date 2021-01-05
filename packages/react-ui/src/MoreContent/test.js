@@ -3,7 +3,7 @@ import React from "react";
 
 import { MoreContent } from ".";
 
-describe("<Grid />", () => {
+describe("<MoreContent />", () => {
   const actionLabel = "Would you like to know more ?";
   const contentLabel = "Here’s some more";
   it("renders with an More icon", () => {
