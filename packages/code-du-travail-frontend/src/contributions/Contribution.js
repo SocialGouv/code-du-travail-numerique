@@ -15,7 +15,6 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
@@ -97,11 +96,6 @@ const References = ({ references = [] }) => {
 };
 
 const Contribution = ({ answers, content }) => {
-  const router = useRouter();
-  const [, slug] = router.pathname.split(
-    `${getRouteBySource(SOURCES.CONTRIBUTIONS)}/`
-  );
-
   /**
    * conventionalAnswer are special kind of contribution that include
    * only one a single ccn answer
