@@ -6,7 +6,6 @@ import {
   IconStripe,
   PageTitle,
   Section,
-  Select,
   TableOfContent,
   theme,
   Wrapper,
@@ -14,7 +13,7 @@ import {
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
@@ -26,16 +25,16 @@ const {
 } = getConfig();
 
 function DossierThematique({ dossier }) {
-  const [filter, setFilter] = useState("");
-
   if (!dossier) {
     return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
   }
-  const { description = "", metaDescription, categories, title } = dossier;
-
-  const sortedCategories = categories.sort(
-    (previous, next) => previous.position - next.position
-  );
+  const {
+    description = "",
+    metaDescription,
+    populars,
+    sections = [],
+    title,
+  } = dossier;
 
   return (
     <Layout>
@@ -46,50 +45,57 @@ function DossierThematique({ dossier }) {
       <Section>
         <Container narrow>
           <PageTitle subtitle={description}>{title}</PageTitle>
-          <SelectWrapper>
-            <Select
-              onChange={(event) => {
-                setFilter(event.target.value);
-              }}
-            >
-              <option value="">Tous les contenus</option>
-              {sortedCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.shortTitle || category.title}
-                </option>
-              ))}
-            </Select>
-          </SelectWrapper>
         </Container>
         <MainContainer>
           <FixedWrapper>
             <NavTitle>Sommaire</NavTitle>
             <TableOfContent
-              ids={sortedCategories.map((category) => category.id)}
+              ids={sections.map(({ categories }) =>
+                categories.map((category) => category.id)
+              )}
             />
           </FixedWrapper>
           <Content>
-            {sortedCategories
-              .filter((category) => (filter ? category.id === filter : true))
-              .map(({ icon, id, refs, shortTitle, title }, index) => (
-                <StyledWrapper
-                  key={id}
-                  {...(index === 0 && { variant: "light" })}
-                >
-                  <IconStripe centered icon={icons[icon]}>
-                    <H2 id={id} data-short-title={shortTitle}>
-                      {title}
-                    </H2>
-                  </IconStripe>
-                  <StyledFlatList>
-                    {refs.map((ref) => (
-                      <Li key={ref.url || ref.externalUrl}>
-                        <DossierLink {...ref} />
-                      </Li>
-                    ))}
-                  </StyledFlatList>
-                </StyledWrapper>
-              ))}
+            {populars.length > 0 && (
+              <StyledWrapper variant="light">
+                <IconStripe centered icon={icons["Populars"]}>
+                  <H2
+                    id="populaires"
+                    data-short-title="Contenu les plus populaires"
+                  >
+                    Contenus populaires
+                  </H2>
+                </IconStripe>
+                <StyledFlatList>
+                  {populars.map((ref) => (
+                    <Li key={ref.url || ref.externalUrl}>
+                      <DossierLink {...ref} />
+                    </Li>
+                  ))}
+                </StyledFlatList>
+              </StyledWrapper>
+            )}
+            {sections.map(({ label, categories }) => (
+              <>
+                {label}
+                {categories.map(({ icon, id, refs, shortTitle, title }) => (
+                  <StyledWrapper key={id}>
+                    <IconStripe centered icon={icons[icon]}>
+                      <H2 id={id} data-short-title={shortTitle}>
+                        {title}
+                      </H2>
+                    </IconStripe>
+                    <StyledFlatList>
+                      {refs.map((ref) => (
+                        <Li key={ref.url || ref.externalUrl}>
+                          <DossierLink {...ref} />
+                        </Li>
+                      ))}
+                    </StyledFlatList>
+                  </StyledWrapper>
+                ))}
+              </>
+            ))}
           </Content>
         </MainContainer>
       </Section>
@@ -98,24 +104,159 @@ function DossierThematique({ dossier }) {
 }
 
 DossierThematique.getInitialProps = async ({ query: { slug } }) => {
-  const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const dossier = await responseContainer.json();
+  // const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
+  // if (!responseContainer.ok) {
+  //   return { statusCode: responseContainer.status };
+  // }
+  // const dossier = await responseContainer.json();
+  const dossier = {
+    metaDescription: "oui oui",
+    populars: [
+      {
+        title:
+          "Covid-19 : Les mesures de protection en entreprise (Protocole national)",
+        url:
+          "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national",
+      },
+      {
+        title:
+          "Covid-19 : évaluer le risque sanitaire (document d'évaluation des risques) [Infographie]",
+        url:
+          "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national",
+      },
+    ],
+    sections: [
+      {
+        categories: [
+          {
+            icon: "Health",
+            id: "no-label",
+            refs: [
+              {
+                title:
+                  "Arrêt maladie : indemnités journalières versées au salarié",
+                url:
+                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
+              },
+              {
+                title: "Personnes vulnérables",
+                url:
+                  "https://www.service-public.fr/particuliers/actualites/A14380",
+              },
+              {
+                title: "Cas contact : demander un arrêt maladie en ligne",
+                url: "https://declare.ameli.fr/cas-contact/conditions",
+              },
+            ],
+            title: "Je suis une catégorie sans label, bien placée",
+          },
+        ],
+      },
+      {
+        categories: [
+          {
+            icon: "Health",
+            id: "jeunes",
+            refs: [
+              {
+                title:
+                  "Arrêt maladie : indemnités journalières versées au salarié",
+                url:
+                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
+              },
+              {
+                title: "Personnes vulnérables",
+                url:
+                  "https://www.service-public.fr/particuliers/actualites/A14380",
+              },
+              {
+                title: "Cas contact : demander un arrêt maladie en ligne",
+                url: "https://declare.ameli.fr/cas-contact/conditions",
+              },
+            ],
+            title: "Jeunes",
+          },
+          {
+            icon: "Health",
+            id: "jeuness",
+            refs: [
+              {
+                title:
+                  "Arrêt maladie : indemnités journalières versées au salarié",
+                url:
+                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
+              },
+              {
+                title: "Personnes vulnérables",
+                url:
+                  "https://www.service-public.fr/particuliers/actualites/A14380",
+              },
+              {
+                title: "Cas contact : demander un arrêt maladie en ligne",
+                url: "https://declare.ameli.fr/cas-contact/conditions",
+              },
+            ],
+            title: "Jaunes",
+          },
+        ],
+        label: "Aides pour recruter",
+      },
+      {
+        categories: [
+          {
+            icon: "Health",
+            id: "jeunessss",
+            refs: [
+              {
+                title:
+                  "Arrêt maladie : indemnités journalières versées au salarié",
+                url:
+                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
+              },
+              {
+                title: "Personnes vulnérables",
+                url:
+                  "https://www.service-public.fr/particuliers/actualites/A14380",
+              },
+              {
+                title: "Cas contact : demander un arrêt maladie en ligne",
+                url: "https://declare.ameli.fr/cas-contact/conditions",
+              },
+            ],
+            title: "Jeunes",
+          },
+          {
+            icon: "Health",
+            id: "jeunesss",
+            refs: [
+              {
+                title:
+                  "Arrêt maladie : indemnités journalières versées au salarié",
+                url:
+                  "/fiche-service-public/arret-maladie-indemnites-journalieres-versees-au-salarie",
+              },
+              {
+                title: "Personnes vulnérables",
+                url:
+                  "https://www.service-public.fr/particuliers/actualites/A14380",
+              },
+              {
+                title: "Cas contact : demander un arrêt maladie en ligne",
+                url: "https://declare.ameli.fr/cas-contact/conditions",
+              },
+            ],
+            title: "Jaunes",
+          },
+        ],
+        label: "Truc muches",
+      },
+    ],
+    title: "ok ok",
+  };
   return { dossier };
 };
 
 const { breakpoints, fonts, spacings } = theme;
-
-const SelectWrapper = styled.div`
-  display: none;
-  text-align: center;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: block;
-    margin-bottom: ${spacings.large};
-  }
-`;
 
 const MainContainer = styled(Container)`
   display: flex;
