@@ -117,7 +117,7 @@ const Contribution = ({ answers, content }) => {
 
   let conventionAnswer;
   if (isConventionalAnswer) {
-    [conventionAnswer] = answers.conventions;
+    conventionAnswer = answers.conventionAnswer;
   } else if (convention && answers.conventions) {
     conventionAnswer = answers.conventions.find(
       (answer) => parseInt(answer.idcc, 10) === convention.num
