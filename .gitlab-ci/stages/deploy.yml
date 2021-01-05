@@ -6,6 +6,9 @@ include:
     ref: v9.1.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
+    ref: v9.1.1
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_hpa_chart_stage.yml
     ref: v9.1.2
 
 #
