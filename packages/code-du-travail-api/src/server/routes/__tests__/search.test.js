@@ -70,3 +70,11 @@ it("returns unique documents from prequalified data (same slug but different sou
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
 });
+
+it("return conventions", async () => {
+  const response = await request(app.callback()).get(
+    `/api/v1/search?q=boulangerie`
+  );
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchSnapshot();
+});
