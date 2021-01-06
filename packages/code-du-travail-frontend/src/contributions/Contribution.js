@@ -191,13 +191,17 @@ const Contribution = ({ answers, content }) => {
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
-                <StyledDiv>
-                  Ce contenu est personnalisé avec les informations de la
-                  convention collective:
-                </StyledDiv>
-                <Toast variant="secondary" onRemove={() => setConvention()}>
-                  {convention.shortTitle}
-                </Toast>
+                {!isConventionalAnswer && (
+                  <>
+                    <StyledDiv>
+                      Ce contenu est personnalisé avec les informations de la
+                      convention collective:
+                    </StyledDiv>
+                    <Toast variant="secondary" onRemove={() => setConvention()}>
+                      {convention.shortTitle}
+                    </Toast>
+                  </>
+                )}
                 {conventionAnswer ? (
                   <>
                     <MdxWrapper>
