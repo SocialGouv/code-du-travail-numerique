@@ -123,7 +123,7 @@ const Contribution = ({ answers, content }) => {
       (answer) => parseInt(answer.idcc, 10) === convention.num
     );
   }
-
+  console.log({ conventionAnswer });
   // ensure we have valid data in ccInfo
   return (
     <>
@@ -136,10 +136,18 @@ const Contribution = ({ answers, content }) => {
               {isConventionDetected || isConventionalAnswer ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des{" "}
-                  <a href="#customisation">
-                    informations de la convention collective :{" "}
-                    {convention.shortTitle || conventionAnswer.shortTitle}
-                  </a>
+                  {isConventionDetected && (
+                    <a href="#customisation">
+                      informations de la convention collective :{" "}
+                      {convention.shortTitle}
+                    </a>
+                  )}
+                  {isConventionalAnswer && (
+                    <a href="#customisation">
+                      informations de la convention collective :{" "}
+                      {conventionAnswer.shortName}
+                    </a>
+                  )}
                 </>
               ) : (
                 <>
@@ -172,9 +180,16 @@ const Contribution = ({ answers, content }) => {
               hasMarginTop={Boolean(answers.generic)}
               id="customisation"
             >
-              Que dit votre convention collective&nbsp;?
+              {isConventionalAnswer ? (
+                <>
+                  Que dit la convention <i>{conventionAnswer.shortName}</i>
+                  &nbsp;?
+                </>
+              ) : (
+                <>Que dit votre convention collective&nbsp;?</>
+              )}
             </StyledTitle>
-            {!isConventionDetected || !isConventionalAnswer ? (
+            {!isConventionDetected && !isConventionalAnswer ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
@@ -182,9 +197,11 @@ const Contribution = ({ answers, content }) => {
                   Ce contenu est personnalisé avec les informations de la
                   convention collective:
                 </StyledDiv>
-                <Toast variant="secondary" onRemove={() => setConvention()}>
-                  {convention.shortTitle}
-                </Toast>
+                {isConventionDetected && (
+                  <Toast variant="secondary" onRemove={() => setConvention()}>
+                    {convention.shortTitle}
+                  </Toast>
+                )}
                 {conventionAnswer ? (
                   <>
                     <MdxWrapper>
