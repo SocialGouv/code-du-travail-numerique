@@ -123,7 +123,6 @@ const Contribution = ({ answers, content }) => {
       (answer) => parseInt(answer.idcc, 10) === convention.num
     );
   }
-  console.log({ conventionAnswer });
   // ensure we have valid data in ccInfo
   return (
     <>
