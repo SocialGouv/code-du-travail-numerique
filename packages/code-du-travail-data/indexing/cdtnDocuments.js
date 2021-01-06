@@ -20,6 +20,8 @@ import { buildThemes } from "./buildThemes";
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
+console.error(`Accessing cdtn admin on ${CDTN_ADMIN_ENDPOINT}`);
+
 const themesQuery = JSON.stringify({
   query: `{
   themes: documents(where: {source: {_eq: "${SOURCES.THEMES}"}}) {
