@@ -134,17 +134,16 @@ const Contribution = ({ answers, content }) => {
               <InsertTitle>Page personnalisable</InsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
                 <>
-                  Cette page a été personnalisée avec l’ajout des{" "}
-                  {isConventionDetected && (
-                    <a href="#customisation">
-                      informations de la convention collective :{" "}
-                      {convention.shortTitle}
-                    </a>
-                  )}
-                  {isConventionalAnswer && (
+                  Cette page a été personnalisée avec l’ajout des {}
+                  {isConventionalAnswer ? (
                     <a href="#customisation">
                       informations de la convention collective :{" "}
                       {conventionAnswer.shortName}
+                    </a>
+                  ) : (
+                    <a href="#customisation">
+                      informations de la convention collective :{" "}
+                      {convention.shortTitle}
                     </a>
                   )}
                 </>
@@ -188,7 +187,7 @@ const Contribution = ({ answers, content }) => {
                 <>Que dit votre convention collective&nbsp;?</>
               )}
             </StyledTitle>
-            {!isConventionDetected && !isConventionalAnswer ? (
+            {!isConventionDetected ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
@@ -196,11 +195,9 @@ const Contribution = ({ answers, content }) => {
                   Ce contenu est personnalisé avec les informations de la
                   convention collective:
                 </StyledDiv>
-                {isConventionDetected && (
-                  <Toast variant="secondary" onRemove={() => setConvention()}>
-                    {convention.shortTitle}
-                  </Toast>
-                )}
+                <Toast variant="secondary" onRemove={() => setConvention()}>
+                  {convention.shortTitle}
+                </Toast>
                 {conventionAnswer ? (
                   <>
                     <MdxWrapper>
