@@ -155,11 +155,19 @@ async function* cdtnDocumentsGen() {
   };
 
   logger.info("=== Conventions Collectives ===");
+  const ccnQR =
+    "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.";
   const ccnData = await getDocumentBySource(SOURCES.CCN);
   const allKaliBlocks = await getAllKaliBlocks();
   yield {
-    documents: ccnData.map(({ ...content }) => {
+    documents: ccnData.map(({ title, shortTitle, ...content }) => {
+      // we use our custom description
+      delete content.description;
       return {
+        description: ccnQR,
+        longTitle: title,
+        shortTitle,
+        title: shortTitle,
         ...content,
         answers: content.answers.map((data) => {
           const contrib = contributions.find(({ slug }) => data.slug === slug);
