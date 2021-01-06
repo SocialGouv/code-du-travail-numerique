@@ -13,6 +13,6 @@ variables:
   IMAGE_INFRA_BASE_NAME: infra/images-docker
   KIBANA_PORT: 5601
   NLP_URL: https://preprod-serving-ml.dev2.fabrique.social.gouv.fr
-  CDTN_ADMIN_ENDPOINT: https://lionelb-split-con-71vz1o-cdtn-admin.dev2.fabrique.social.gouv.fr
+  CDTN_ADMIN_ENDPOINT: https://lionelb-split-con-71vz1o-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
   PYTHON_VERSION: 3.7.2-alpine
   RANCHER_PROJECT_ID: c-kk8xm:p-8q2jj
