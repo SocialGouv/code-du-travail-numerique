@@ -187,7 +187,7 @@ const Contribution = ({ answers, content }) => {
                 <>Que dit votre convention collective&nbsp;?</>
               )}
             </StyledTitle>
-            {!isConventionDetected ? (
+            {!isConventionDetected && !isConventionalAnswer ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
