@@ -9,6 +9,7 @@ import {
   Section,
   TableOfContent,
   theme,
+  Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
@@ -63,7 +64,9 @@ function DossierThematique({ dossier }) {
             {populars.length > 0 && (
               <PopularWrapper variant="light">
                 <IconStripe centered icon={icons["Populars"]}>
-                  <H3 id="populaires">Contenus populaires</H3>
+                  <Title as="h3" stripe="none" id="populaires">
+                    Contenus populaires
+                  </Title>
                 </IconStripe>
                 <StyledFlatList>
                   {populars.map((ref) => (
@@ -105,14 +108,14 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
     <StyledWrapper>
       {icon ? (
         <IconStripe centered icon={icons[icon]}>
-          <H3 id={id} data-short-title={shortTitle}>
+          <Title as="h3" stripe="none" id={id} data-short-title={shortTitle}>
             {title}
-          </H3>
+          </Title>
         </IconStripe>
       ) : (
-        <H3 id={id} data-short-title={shortTitle}>
+        <Title as="h3" stripe="none" id={id} data-short-title={shortTitle}>
           {title}
-        </H3>
+        </Title>
       )}
       <StyledFlatList>
         {visibleRefs.map((ref) => (
@@ -180,16 +183,12 @@ const H2 = styled.h2`
   margin: ${spacings.larger} 0 ${spacings.small} 0;
   color: ${colors.altText};
   font-weight: bold;
-  font-size: ${fonts.sizes.headings.xmedium};
+  font-size: ${fonts.sizes.headings.mobileMedium};
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.headings.small};
+    font-size: ${fonts.sizes.headings.xmedium};
   }
-`;
-
-const H3 = styled.h3`
-  margin: 0;
 `;
 
 const StyledFlatList = styled(FlatList)`
