@@ -15,7 +15,9 @@ function getSearchBody({ source, slug }) {
       "icon", // outils
       "id",
       "notaHtml",
-      "metaDescription", // dossiers
+      "metaDescription",
+      "populars", // dossiers
+      "sections", // dossiers
       "path", // code-du-travail
       "raw", // service-public
       "referencedTexts", // service-public, ministere-travail

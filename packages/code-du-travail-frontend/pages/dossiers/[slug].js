@@ -61,7 +61,7 @@ function DossierThematique({ dossier }) {
           </FixedWrapper>
           <Content>
             {populars.length > 0 && (
-              <StyledWrapper variant="light">
+              <PopularWrapper variant="light">
                 <IconStripe centered icon={icons["Populars"]}>
                   <H3 id="populaires">Contenus populaires</H3>
                 </IconStripe>
@@ -72,7 +72,7 @@ function DossierThematique({ dossier }) {
                     </Li>
                   ))}
                 </StyledFlatList>
-              </StyledWrapper>
+              </PopularWrapper>
             )}
             {sections.map(({ label, categories }) => (
               <React.Fragment key={label || "sans-label"}>
@@ -103,11 +103,17 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
   const visibleRefs = refs.slice(0, areAllVisible ? refs.length : 3);
   return (
     <StyledWrapper>
-      <IconStripe centered icon={icons[icon]}>
+      {icon ? (
+        <IconStripe centered icon={icons[icon]}>
+          <H3 id={id} data-short-title={shortTitle}>
+            {title}
+          </H3>
+        </IconStripe>
+      ) : (
         <H3 id={id} data-short-title={shortTitle}>
           {title}
         </H3>
-      </IconStripe>
+      )}
       <StyledFlatList>
         {visibleRefs.map((ref) => (
           <Li key={ref.url || ref.externalUrl}>
@@ -166,7 +172,12 @@ const StyledWrapper = styled(Wrapper)`
   }
 `;
 
+const PopularWrapper = styled(StyledWrapper)`
+  margin-bottom: 6rem;
+`;
+
 const H2 = styled.h2`
+  margin: ${spacings.larger} 0 ${spacings.small} 0;
   color: ${colors.altText};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.xmedium};
