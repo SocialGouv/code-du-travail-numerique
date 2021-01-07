@@ -24,7 +24,7 @@ Register socialgouv/cdtn base image:
     DOCKER_BUILD_ARGS: >-
       --build-arg ES_LOGS=$ES_LOGS
       --build-arg ES_LOGS_TOKEN=$ES_LOGS_TOKEN
-      --build-arg CDTN_ADMIN_ENDPOINT=https://manu-trigger-branch-dev2-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
+      --build-arg CDTN_ADMIN_ENDPOINT=$CDTN_ADMIN_ENDPOINT
 
 Register elasticsearch image:
   <<: *register_stage
