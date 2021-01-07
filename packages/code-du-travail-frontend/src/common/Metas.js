@@ -18,7 +18,7 @@ export default function Metas({ title, description }) {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content={`${FRONTEND_HOST}/static/assets/img/social-preview.png`}
+        content={`${FRONTEND_HOST}/static/assets/img/social-preview.svg`}
       />
       <meta property="og:site_name" content="Code du travail numérique" />
       <meta property="og:locale" content="fr" />
