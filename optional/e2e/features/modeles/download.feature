@@ -9,9 +9,9 @@ Fonctionnalité: Modèle de lettre
     Soit un utilisateur sur la page "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
 
     Alors je vois "Objet : Rupture de la période d’essai"
-    Alors je vois "Télécharger le modèle (docx - 19.74Ko)"
+    Alors je vois "Télécharger le modèle"
 
-    Quand je télécharge en cliquant sur "Télécharger le modèle (docx - 19.74Ko)"
+    Quand je télécharge en cliquant sur "Télécharger le modèle"
     Quand j'attends 2 secondes
     Alors j'ai téléchargé le fichier "rupture_periode_d-essai_salarie.docx"
 
