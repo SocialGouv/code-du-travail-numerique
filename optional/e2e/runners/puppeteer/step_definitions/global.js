@@ -67,7 +67,7 @@ Quand("je scroll à {string}", (text) => {
 
 Quand("je télécharge en cliquant sur {string}", (dowloadText) => {
   I.handleDownloads();
-  I.click(dowloadText);
+  I.click(`//*[text()[starts-with(., "${dowloadText}")]]`);
 });
 
 //
