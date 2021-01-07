@@ -64,9 +64,9 @@ function DossierThematique({ dossier }) {
             {populars.length > 0 && (
               <PopularWrapper variant="light">
                 <IconStripe centered icon={icons["Populars"]}>
-                  <Title as="h3" stripe="none" id="populaires">
+                  <H3 styled="h3" stripe="none" id="populaires">
                     Contenus populaires
-                  </Title>
+                  </H3>
                 </IconStripe>
                 <StyledFlatList>
                   {populars.map((ref) => (
@@ -108,14 +108,14 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
     <StyledWrapper>
       {icon ? (
         <IconStripe centered icon={icons[icon]}>
-          <Title as="h3" stripe="none" id={id} data-short-title={shortTitle}>
+          <H3 id={id} data-short-title={shortTitle}>
             {title}
-          </Title>
+          </H3>
         </IconStripe>
       ) : (
-        <Title as="h3" stripe="none" id={id} data-short-title={shortTitle}>
+        <H3 stripe="none" id={id} data-short-title={shortTitle}>
           {title}
-        </Title>
+        </H3>
       )}
       <StyledFlatList>
         {visibleRefs.map((ref) => (
@@ -133,7 +133,7 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
   );
 };
 
-const { breakpoints, colors, fonts, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
 
 const MainContainer = styled(Container)`
   display: flex;
@@ -181,11 +181,23 @@ const PopularWrapper = styled(StyledWrapper)`
 
 const H2 = styled.h2`
   margin: ${spacings.larger} 0 ${spacings.small} 0;
-  color: ${colors.altText};
+  color: ${({ theme }) => theme.altText};
   font-weight: bold;
   font-size: ${fonts.sizes.headings.mobileMedium};
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.xmedium};
+  }
+`;
+
+const H3 = styled.h3`
+  margin: 0;
+  color: ${({ theme }) => theme.title};
+  font-weight: normal;
+  font-size: ${fonts.sizes.headings.medium};
+  font-family: "Merriweather", serif;
+  line-height: ${fonts.lineHeightTitle};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.headings.xmedium};
   }
