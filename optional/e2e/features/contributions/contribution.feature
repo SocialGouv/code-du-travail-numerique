@@ -10,5 +10,5 @@ Fonctionnalité: Contributions
 
     Alors je vois "Que dit le code du travail"
     Alors je vois "Texte applicable"
-    Alors je vois "Article L1242-3 du code du travail"
+    Alors je vois "article L1242-3 du code du travail"
     Alors je vois "Que dit votre convention collective"
