@@ -5,9 +5,10 @@ import fetch from "node-fetch";
 import { createGlossaryTransform } from "./glossary";
 import { buildGetBreadcrumbs } from "./breadcrumbs";
 import {
-  getDocumentBySource,
   getAllKaliBlocks,
+  getDocumentBySource,
   getGlossary,
+  getHighlights,
 } from "./fetchCdtnAdminDocuments";
 
 import { splitArticle } from "./fichesTravailSplitter";
@@ -224,12 +225,7 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Highlights ===");
   yield {
-    documents: [
-      {
-        data: require("@socialgouv/datafiller-data/data/hightlights.json"),
-        source: SOURCES.HIGHLIGHTS,
-      },
-    ],
+    documents: await getHighlights(getBreadcrumbs),
     source: SOURCES.HIGHLIGHTS,
   };
 

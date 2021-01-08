@@ -1,10 +1,10 @@
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 
-function getHightlightsBody() {
+function getHightlightsBody({ slug }) {
   return {
     query: {
       bool: {
-        filter: { term: { source: SOURCES.HIGHLIGHTS } },
+        filter: [{ term: { source: SOURCES.HIGHLIGHTS } }, { term: { slug } }],
       },
     },
   };

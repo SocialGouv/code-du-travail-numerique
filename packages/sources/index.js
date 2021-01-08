@@ -53,6 +53,7 @@ const labelBySource = {
   [SOURCES.THEMATIC_FILES]: "Dossiers",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
+  [SOURCES.HIGHLIGHTS]: "Highlights",
 };
 
 const routes = /**@type {[import(".").SourceRoute, string][]}*/ (Object.entries(

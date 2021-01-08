@@ -131,7 +131,7 @@ export const documentMapping = {
 
     publishedAt: { type: "date" },
 
-    // available for themes
+    // available for themes and highlights
     refs: {
       properties: {
         title: { type: "text" },
@@ -158,6 +158,11 @@ export const documentMapping = {
     // Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
     source: {
       type: "keyword",
+    },
+
+    // Indicates wether the document is a split version of anothe one
+    split: {
+      type: "boolean",
     },
 
     // used for CC search
