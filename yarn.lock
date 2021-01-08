@@ -2685,10 +2685,10 @@
     esm "^3.2.25"
     winston "^3.3.3"
 
-"@socialgouv/datafiller-data@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.9.0.tgz#9cf6af214a8574f5c39de464a0861d5cbb9a065d"
-  integrity sha512-5SJg6A2gKZD8cijE708AYwMRM90cqb4+0flDz27OGg+mQRfWeRKc7IYgSNdBqr1jrckBU4+Sy/6+wzal37oGDA==
+"@socialgouv/datafiller-data@^2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.10.0.tgz#08435d9b5bcbfb330d3903923ae51a044404a2d6"
+  integrity sha512-EzuZO3WC5cOa7nrQzx4SB7kaUfrdrxYiuezcvZUSCKKxSf1e1wUTd4IFqOz6+FXgvJZuQTqE+XCLmEEa2W+dEQ==
   dependencies:
     node-fetch "^2.6.1"
     p-pipe "^3.1.0"
@@ -2718,10 +2718,10 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.37.0":
-  version "4.37.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.37.0.tgz#947595a05ddd39af4aa45966660cd3d3f426411d"
-  integrity sha512-XNQMwIFX8pqzJwjL0FyahXSEGltb92KD+7CsZoHEAOEUR1nkjLybfhvvJySh+hYdGNRT5YQBRmeZDWcHNIslww==
+"@socialgouv/fiches-travail-data@^4.42.0":
+  version "4.42.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.42.0.tgz#22ad435cb1494fa7ccbd5350bcd46fb708a5eb13"
+  integrity sha512-XvsF9SxUd968Y9cpa8dYlb1DrngPgM3R1RYenGx4+W6/Odqz3OWbJ4hD9FnkYLExYjZtn0I4UO9O4X5+UeapJg==
 
 "@socialgouv/kali-data@^2.29.0":
   version "2.29.0"
