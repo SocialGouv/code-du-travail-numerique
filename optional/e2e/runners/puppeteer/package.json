@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^1.46.0",
-    "eslint": "^7.14.0"
+    "eslint": "^7.17.0"
   },
   "license": "Apache-2.0"
 }
