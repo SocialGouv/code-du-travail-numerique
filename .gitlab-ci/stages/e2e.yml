@@ -39,3 +39,9 @@ Test on deployed branch:
     - echo "${CODECEPT_BASEURL}"
     #
     - CODECEPT_BASEURL=${CODECEPT_BASEURL} yarn test
+
+  artifacts:
+    when: always
+    paths:
+      - ./optional/e2e/runners/puppeteer/output
+    expire_in: 1 week

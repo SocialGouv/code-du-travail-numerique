@@ -1,13 +1,13 @@
 {
   "name": "@cdt/data...courrier-type",
-  "version": "4.39.0",
+  "version": "4.40.0",
   "private": true,
   "description": "generate courrier-type.json",
   "main": "index.js",
   "dependencies": {
-    "@socialgouv/cdtn-slugify": "^4.39.0",
-    "@socialgouv/cdtn-sources": "^4.39.0",
-    "@socialgouv/datafiller-data": "^2.9.0",
+    "@socialgouv/cdtn-slugify": "^4.40.0",
+    "@socialgouv/cdtn-sources": "^4.40.0",
+    "@socialgouv/datafiller-data": "^2.10.0",
     "mammoth": "^1.4.14"
   }
 }

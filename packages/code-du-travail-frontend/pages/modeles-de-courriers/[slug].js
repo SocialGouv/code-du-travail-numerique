@@ -17,6 +17,7 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { toUrl } from "../../src/lib/getFileUrl";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -84,7 +85,7 @@ class ModeleCourrier extends React.Component {
                 <Button
                   as="a"
                   className="no-after"
-                  href={fileUrl}
+                  href={toUrl(fileUrl)}
                   narrow
                   variant="primary"
                 >
@@ -113,7 +114,7 @@ class ModeleCourrier extends React.Component {
             <Button
               as="a"
               className="no-after"
-              href={fileUrl}
+              href={toUrl(fileUrl)}
               variant="primary"
             >
               Télécharger le modèle ({extension} - {filesizeFormated}Ko) &nbsp;

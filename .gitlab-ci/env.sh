@@ -19,6 +19,7 @@ export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
 #
 
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
+export AZURE_CONTAINER="cdtn-dev"
 if [ -z ${ES_INDEX_PREFIX+x} ]; then
   export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
 fi
@@ -29,7 +30,7 @@ if [[ "${BRANCH_NAME}" = "master" ]]; then
   export BRANCH_HASH=master;
   export ES_INDEX_PREFIX="cdtn-${BRANCH_HASH}"
   export K8S_NAMESPACE="cdtn-${BRANCH_HASH}"
-
+  export AZURE_CONTAINER="cdtn"
 fi
 
 if [[ -n "${COMMIT_TAG}" ]]; then
@@ -38,6 +39,7 @@ if [[ -n "${COMMIT_TAG}" ]]; then
   export IMAGE_TAG=$(printf "${COMMIT_TAG}" | sed "s/^v//")
   export ES_INDEX_PREFIX="cdtn-preprod"
   export K8S_NAMESPACE="cdtn-preprod"
+  export AZURE_CONTAINER="cdtn"
 fi
 
 
@@ -48,6 +50,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export K8S_NAMESPACE="cdtn"
   export DOMAIN="code.travail.fabrique.social.gouv.fr";
   export NLP_URL="https://serving-ml.fabrique.social.gouv.fr";
+  export AZURE_CONTAINER="cdtn"
 else
   export DOMAIN="${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}";
 fi

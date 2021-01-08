@@ -14,6 +14,10 @@ Soit("un utilisateur sur la page {string}", (page) => {
 
 //
 
+Quand("j'attends {int} secondes", (num) => {
+  I.wait(num);
+});
+
 Quand("je pause le test", () => {
   pause();
 });
@@ -61,6 +65,11 @@ Quand("je scroll à {string}", (text) => {
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -140);
 });
 
+Quand("je télécharge en cliquant sur {string}", (dowloadText) => {
+  I.handleDownloads();
+  I.click(`//*[text()[starts-with(., "${dowloadText}")]]`);
+});
+
 //
 
 Alors("je vois {string}", (text) => {
@@ -103,4 +112,22 @@ Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
     `//header[*[${textMatcher}]]/${target} | //div/*[${textMatcher}]/${target}`,
     parseInt(num, 10)
   );
+});
+
+Alors("je suis redirigé vers la page: {string}", (url) => {
+  // also check search and hash
+  I.waitForFunction(
+    (url) =>
+      window.location.pathname +
+        window.location.search +
+        window.location.hash ===
+      url,
+    [url],
+    10
+  );
+});
+
+Alors("j'ai téléchargé le fichier {string}", (filename) => {
+  I.amInPath("output/downloads");
+  I.seeFile(filename);
 });

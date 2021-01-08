@@ -2,16 +2,17 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_stage.yml
-    ref: v9.1.1
+    ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_helm_image_stage.yml
-    ref: v9.1.1
+    ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
-    ref: v9.1.1
+    ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
     ref: v20.1.5
+
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/quality.yml

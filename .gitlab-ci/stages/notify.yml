@@ -39,7 +39,10 @@ include:
   only:
     variables:
       - $PRODUCTION
-
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $UPDATE_ES_INDEX
 #
 
 Notify Starting Deployment:

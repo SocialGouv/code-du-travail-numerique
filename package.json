@@ -5,6 +5,7 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
+    "postinstall": "test -n \"$IS_DOCKER\" || husky install",
     "build": "lerna run build",
     "build:ui": "yarn workspace @socialgouv/cdtn-ui build && yarn workspace @socialgouv/react-fiche-service-public build",
     "dev:docker": "docker-compose up elasticsearch",
@@ -25,24 +26,19 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "husky": "^4.3.6",
+    "husky": "^5.0.6",
     "lerna": "^3.22.1"
   },
   "resolutions": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.10"
+    "@babel/preset-env": "^7.12.11"
   },
   "workspaces": {
     "packages": [
       "packages/*",
       "packages/code-du-travail-data/dataset/*"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "lerna run --stream --parallel prepush"
-    }
   },
   "engines": {
     "node": ">= 12.13"

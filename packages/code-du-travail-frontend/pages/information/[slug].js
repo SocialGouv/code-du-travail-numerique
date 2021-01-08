@@ -20,6 +20,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
+import { toUrl } from "../../src/lib/getFileUrl";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -72,12 +73,12 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <figure key={name}>
-              <img src={imgUrl} alt={altText} />
+              <img src={toUrl(imgUrl)} alt={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"
                   className="no-after"
-                  href={fileUrl}
+                  href={toUrl(fileUrl)}
                   narrow
                   variant="navLink"
                   download
