@@ -2718,15 +2718,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.42.0":
-  version "4.42.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.42.0.tgz#22ad435cb1494fa7ccbd5350bcd46fb708a5eb13"
-  integrity sha512-XvsF9SxUd968Y9cpa8dYlb1DrngPgM3R1RYenGx4+W6/Odqz3OWbJ4hD9FnkYLExYjZtn0I4UO9O4X5+UeapJg==
+"@socialgouv/fiches-travail-data@^4.43.0":
+  version "4.43.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.43.0.tgz#c415cf3dd347ffb72f59b97c9a85962009111f5a"
+  integrity sha512-lNGPlmY0gjKYDWXWh4becu5tF1qCu7ErC+u35TmPIiQ2lI/FYWj/3UUB0FNUvNTjTPbl144fOFJ8p8M/wZrFkA==
 
-"@socialgouv/kali-data@^2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.29.0.tgz#f33c27413e9096671eb2853447573bf683f76a9f"
-  integrity sha512-SdQsFTSIUQq0AIHoUpfBEF/Eix4PwiRGQH0kMIbIx12qYBu4R6EH1LzQDdqi29NxL4pPrz21+2nMdjQRslaeNg==
+"@socialgouv/kali-data@^2.30.0":
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.30.0.tgz#9df519f161db23c79c09603966a4615cf9beeb00"
+  integrity sha512-3tcX3kvN/FkM7R7FSUx49q6Qfx042dKYTuQvDIcF3ZCpkyGWAO6LIHpuV7UMxhjccVTDNqX9lPBTuqvz8rCAkw==
   dependencies:
     unist-util-find "1.0.1"
     unist-util-flat-filter "1.0.0"
