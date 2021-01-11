@@ -1,31 +1,9 @@
-const { SOURCES } = require("@socialgouv/cdtn-sources");
+const sourcesFilter = require("./sourcesFilter.elastic");
 
 function getSearchBody({ query, size, sources = [] }) {
   if (sources.length === 0) {
     throw new Error("[getSearchBody] sources should not be empty");
   }
-
-  // if convention collectives are required
-  // we only return the one with contributions
-  const sourceFilter = sources.includes(SOURCES.CCN)
-    ? {
-        bool: {
-          should: [
-            // contents other than CCN
-            { terms: { source: sources.filter((s) => s != SOURCES.CCN) } },
-            // OR ( CCN source AND contributions )
-            {
-              bool: {
-                must: [
-                  { term: { source: SOURCES.CCN } },
-                  { term: { contributions: true } },
-                ],
-              },
-            },
-          ],
-        },
-      }
-    : { terms: { source: sources } };
 
   return {
     _source: [
@@ -67,7 +45,7 @@ function getSearchBody({ query, size, sources = [] }) {
               ],
             },
           },
-        ].concat(sourceFilter),
+        ].concat(sourcesFilter(sources)),
         should: [
           {
             match_phrase: {
