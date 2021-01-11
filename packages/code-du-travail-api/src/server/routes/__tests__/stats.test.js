@@ -35,10 +35,6 @@ test("return stats", async () => {
   expect(response.status).toBe(200);
   expect(response.body).toMatchInlineSnapshot(`
     Object {
-      "feedback": Object {
-        "negative": 2,
-        "positive": 3,
-      },
       "nbDocuments": 26,
       "nbPageViews": 10,
       "nbSearches": 4,
