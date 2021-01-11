@@ -9,7 +9,6 @@ import {
   Section,
   TableOfContent,
   theme,
-  Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
@@ -64,7 +63,7 @@ function DossierThematique({ dossier }) {
             {populars.length > 0 && (
               <PopularWrapper variant="light">
                 <IconStripe centered icon={icons["Populars"]}>
-                  <H3 styled="h3" stripe="none" id="populaires">
+                  <H3 as="h2" stripe="none" id="populaires">
                     Contenus populaires
                   </H3>
                 </IconStripe>
@@ -125,9 +124,9 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
         ))}
       </StyledFlatList>
       {!areAllVisible && refs.length > 4 && (
-        <SeeMore small variant="flat" onClick={() => setAllVisible(true)}>
+        <SeeAll small variant="flat" onClick={() => setAllVisible(true)}>
           Voir tout
-        </SeeMore>
+        </SeeAll>
       )}
     </StyledWrapper>
   );
@@ -249,7 +248,7 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   word-break: break-word;
 `;
 
-const SeeMore = styled(Button)`
+const SeeAll = styled(Button)`
   margin-top: ${spacings.small};
 `;
 
