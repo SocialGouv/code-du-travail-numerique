@@ -1,9 +1,12 @@
-import { Button, FlatList, theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
-const ViewMore = ({
+import { Button } from "../Button";
+import { FlatList } from "../FlatList";
+import { breakpoints, spacings } from "../theme";
+
+export const ViewMore = ({
   button,
   children,
   initialSize,
@@ -51,20 +54,6 @@ ViewMore.propTypes = {
   tolerance: PropTypes.number,
 };
 
-export { ViewMore };
-
-const { breakpoints, spacings } = theme;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: ${breakpoints.mobile}) {
-    justify-content: stretch;
-  }
-`;
-
 const defaultRenderProp = (onClick) => (
   <StyledButton onClick={onClick}>Voir plus</StyledButton>
 );
@@ -75,6 +64,16 @@ ViewMore.defaultProps = {
   listContainer: FlatList,
   query: "",
 };
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: stretch;
+  }
+`;
 
 const StyledButton = styled(Button)`
   margin-top: ${spacings.xmedium};

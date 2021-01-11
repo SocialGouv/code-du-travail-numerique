@@ -1,20 +1,20 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { MoreContent } from ".";
+import { ViewMore } from ".";
 
-describe("<MoreContent />", () => {
+describe("<ViewMore />", () => {
   const actionLabel = "Would you like to know more ?";
   const contentLabel = "Here’s some more";
   it("renders with an More icon", () => {
     const { container } = render(
-      <MoreContent title={actionLabel}>{contentLabel}</MoreContent>
+      <ViewMore title={actionLabel}>{contentLabel}</ViewMore>
     );
     expect(container).toMatchSnapshot();
   });
   it("unfolds when clicked", () => {
     const { getByText, queryByText } = render(
-      <MoreContent title={actionLabel}>{contentLabel}</MoreContent>
+      <ViewMore title={actionLabel}>{contentLabel}</ViewMore>
     );
 
     const unfoldButton = getByText(actionLabel);

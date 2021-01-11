@@ -118,17 +118,13 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
         </H3>
       )}
       <ViewMore
-        initialSize="4"
-        label="Voir tout"
+        initialSize={4}
         listContainer={StyledFlatList}
-        buttonProps={{
-          small: true,
-          styles: `
-        margin-top: ${spacings.small};
-        align-self: flex-start;
-      `,
-          variant: "flat",
-        }}
+        button={(onClick) => (
+          <SeeAll variant="flat" small onClick={onClick}>
+            Voir tout
+          </SeeAll>
+        )}
       >
         {refs.map((ref) => (
           <Li key={ref.url || ref.externalUrl}>
@@ -252,6 +248,14 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   className: "no-after",
 }))`
   word-break: break-word;
+`;
+
+const SeeAll = styled(Button)`
+  align-self: flex-start;
+  margin-top: ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    align-self: stretch;
+  }
 `;
 
 export default DossierThematique;

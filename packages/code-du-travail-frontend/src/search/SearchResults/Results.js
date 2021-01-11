@@ -3,7 +3,14 @@ import {
   getRouteBySource,
   SOURCES,
 } from "@socialgouv/cdtn-sources";
-import { Container, Heading, theme, Tile, Title } from "@socialgouv/cdtn-ui";
+import {
+  Button,
+  Container,
+  Heading,
+  theme,
+  Tile,
+  Title,
+} from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
@@ -125,9 +132,16 @@ export const Results = ({ id, isSearch, items, query }) => {
       )}
       <ViewMore
         label="Plus de résultats"
-        onClick={() => {
-          matopush(["trackEvent", "nextResultPage", query]);
-        }}
+        button={(viewMore) => (
+          <StyledButton
+            onClick={() => {
+              matopush(["trackEvent", "nextResultPage", query]);
+              viewMore();
+            }}
+          >
+            Voir plus
+          </StyledButton>
+        )}
         query={query}
         stepSize={7}
       >
@@ -141,8 +155,16 @@ export const Results = ({ id, isSearch, items, query }) => {
   );
 };
 
-const { spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: ${spacings.xmedium};
+  ${(props) => props.styles && props.styles}
+  @media (max-width: ${breakpoints.mobile}) {
+    flex: 1 0 auto;
+  }
 `;
