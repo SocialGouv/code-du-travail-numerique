@@ -29,22 +29,19 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/permanent-redirect: https://code.travail.gouv.fr$request_uri
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/tls-acme: "true"
   labels:
-    app.kubernetes.io/instance: frontend
-  name: frontend-nodejs-code-www
+    app.kubernetes.io/component: redirect
+    app.kubernetes.io/name: cdtn
+  name: cdtn-redirect
   namespace: cdtn
 spec:
   rules:
-    - host: www.code.travail.gouv.fr
-      http:
-        paths:
-          - backend:
-              serviceName: frontend-nodejs
-              servicePort: http
-            path: /
+  - host: www.code.travail.gouv.fr
   tls:
-    - hosts:
-        - www.code.travail.gouv.fr
-      secretName: frontend-crt-www
+  - hosts:
+    - www.code.travail.gouv.fr
+    secretName: redirect-crt
+
