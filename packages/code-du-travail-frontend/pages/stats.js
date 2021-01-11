@@ -56,17 +56,6 @@ const Stats = ({ data }) => {
                 <Heading>Consultations</Heading>
                 <Num>{data.nbPageViews}</Num>
               </Tile>
-
-              <Tile variant="dark">
-                <Heading>Taux de satisfaction</Heading>
-                <Num>
-                  {Math.round(
-                    (100 * data.feedback.positive) /
-                      (data.feedback.positive + data.feedback.negative)
-                  )}
-                  %
-                </Num>
-              </Tile>
             </Grid>
             <p>
               Statistiques d’utilisation depuis le{" "}

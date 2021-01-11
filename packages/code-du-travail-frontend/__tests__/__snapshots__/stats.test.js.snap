@@ -1493,25 +1493,6 @@ exports[`<Stats /> should render 1`] = `
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="c32"
-                  >
-                    <div
-                      class="c33 c34"
-                    >
-                      <h3
-                        class="c35"
-                      >
-                        Taux de satisfaction
-                      </h3>
-                      <div
-                        class="c36"
-                      >
-                        60
-                        %
-                      </div>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </div>

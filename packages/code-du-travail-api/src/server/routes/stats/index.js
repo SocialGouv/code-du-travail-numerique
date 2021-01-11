@@ -53,10 +53,6 @@ const methodParams = [
   {
     method: "Actions.get",
   },
-  {
-    label: ["negative", "positive"],
-    method: "Events.getAction", // transform into label[]=
-  },
 ];
 
 router.get("/stats", async (ctx) => {
@@ -77,18 +73,9 @@ router.get("/stats", async (ctx) => {
   for (const { doc_count } of buckets) {
     nbDocuments += doc_count;
   }
-  const [nbVisitData, infoData, feedbackData] = await Promise.all(promises);
-  const positiveFeedback = feedbackData.find((f) => f.label === "positive") || {
-    nb_events: 0,
-  };
-  const negativeFeedback = feedbackData.find((f) => f.label === "negative") || {
-    nb_event: 0,
-  };
+  const [nbVisitData, infoData] = await Promise.all(promises);
+
   ctx.body = {
-    feedback: {
-      negative: negativeFeedback.nb_events,
-      positive: positiveFeedback.nb_events,
-    },
     nbDocuments,
     nbPageViews: infoData.nb_pageviews,
     nbSearches: infoData.nb_searches,
