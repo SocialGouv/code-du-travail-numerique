@@ -9,6 +9,10 @@ include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
     ref: v9.1.2
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_deploy_kosko_stage.yml
+    ref: v20.1.5
+
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/quality.yml
@@ -18,6 +22,7 @@ include:
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
   - /.gitlab-ci/stages/e2e.yml
+  - /.gitlab-ci/stages/storage.yml
 
 stages:
   - "Prepare"
