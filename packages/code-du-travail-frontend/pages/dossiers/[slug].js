@@ -14,12 +14,15 @@ import {
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
+import { ViewMore } from "../../src/common/ViewMore";
 import { Layout } from "../../src/layout/Layout";
+
+const { breakpoints, fonts, spacings } = theme;
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -101,8 +104,6 @@ DossierThematique.getInitialProps = async ({ query: { slug } }) => {
 };
 
 const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
-  const [areAllVisible, setAllVisible] = useState(false);
-  const visibleRefs = refs.slice(0, areAllVisible ? refs.length : 3);
   return (
     <StyledWrapper>
       {icon ? (
@@ -116,23 +117,28 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
           {title}
         </H3>
       )}
-      <StyledFlatList>
-        {visibleRefs.map((ref) => (
+      <ViewMore
+        initialSize="4"
+        label="Voir tout"
+        listContainer={StyledFlatList}
+        buttonProps={{
+          small: true,
+          styles: `
+        margin-top: ${spacings.small};
+        align-self: flex-start;
+      `,
+          variant: "flat",
+        }}
+      >
+        {refs.map((ref) => (
           <Li key={ref.url || ref.externalUrl}>
             <DossierLink {...ref} />
           </Li>
         ))}
-      </StyledFlatList>
-      {!areAllVisible && refs.length > 4 && (
-        <SeeAll small variant="flat" onClick={() => setAllVisible(true)}>
-          Voir tout
-        </SeeAll>
-      )}
+      </ViewMore>
     </StyledWrapper>
   );
 };
-
-const { breakpoints, fonts, spacings } = theme;
 
 const MainContainer = styled(Container)`
   display: flex;
@@ -246,10 +252,6 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   className: "no-after",
 }))`
   word-break: break-word;
-`;
-
-const SeeAll = styled(Button)`
-  margin-top: ${spacings.small};
 `;
 
 export default DossierThematique;

@@ -18,7 +18,7 @@ export const ResultList = ({
         {`${title} (${items.length}`}&nbsp;
         {`résultat${items.length > 1 ? "s" : ""})`}
       </Heading>
-      <ViewMore label={buttonLabel} query={query}>
+      <ViewMore label={buttonLabel} query={query} stepSize={7}>
         {items.map((item) => (
           <StyledListItem key={seedId(item)}>{item}</StyledListItem>
         ))}

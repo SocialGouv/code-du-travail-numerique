@@ -20,8 +20,8 @@ const ViewMore = ({
   }, [initialSize, query]);
   const viewMore = useCallback(() => {
     onClick();
-    setCurrentSize(currentSize + stepSize);
-  }, [stepSize, currentSize, onClick]);
+    setCurrentSize(stepSize ? currentSize + stepSize : childSize);
+  }, [stepSize, currentSize, childSize, onClick]);
   const isShowMoreVisible = childSize > currentSize;
   return (
     <>
@@ -43,7 +43,7 @@ ViewMore.propTypes = {
   buttonProps: PropTypes.object,
   children: PropTypes.node.isRequired,
   initialSize: PropTypes.number,
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   listContainer: PropTypes.elementType,
   onClick: PropTypes.func,
   query: PropTypes.string,
@@ -56,8 +56,9 @@ const { breakpoints, spacings } = theme;
 
 const ButtonWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: ${spacings.xmedium};
   @media (max-width: ${breakpoints.mobile}) {
     justify-content: stretch;
   }
@@ -68,6 +69,8 @@ const StyledFlatList = styled(FlatList)`
 `;
 
 const StyledButton = styled(Button)`
+  margin-top: ${spacings.xmedium};
+  ${(props) => props.styles && props.styles}
   @media (max-width: ${breakpoints.mobile}) {
     flex: 1 0 auto;
   }
@@ -80,5 +83,4 @@ ViewMore.defaultProps = {
   listContainer: StyledFlatList,
   onClick: () => {},
   query: "",
-  stepSize: 7,
 };

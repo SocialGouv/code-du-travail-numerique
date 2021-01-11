@@ -129,6 +129,7 @@ export const Results = ({ id, isSearch, items, query }) => {
           matopush(["trackEvent", "nextResultPage", query]);
         }}
         query={query}
+        stepSize={7}
       >
         {items.map((item) => (
           <StyledListItem key={`${item.source}-${item.slug}`}>
