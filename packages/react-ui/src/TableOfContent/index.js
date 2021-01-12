@@ -62,7 +62,7 @@ export const TableOfContent = ({
     <div {...props}>
       {titles.map(({ isSection, active, element, label, id }) =>
         isSection ? (
-          <TableSection>{label}</TableSection>
+          <TableSection key={`menu-${label}`}>{label}</TableSection>
         ) : (
           <TableItem active={active} key={`menu-${id}`} href={`#${element.id}`}>
             {element.getAttribute("data-short-title") || element.textContent}
