@@ -125,13 +125,10 @@
     "title": "Convention collective",
     "slug": "convention-collective",
     "questions": [
-       "trouver ma convention collective",
-      "convention collective métallurgie",
-      "convention collective syntec",
-      "convention collective btp",
-      "convention collective batiment",
-      "convention collective commerce",
-      "convention collective chimie"
+      "trouver ma convention collective",
+      "convention collective",
+      "recherche ccn",
+      "trouver ma cc"
     ],
     "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
     "action": "Consulter",

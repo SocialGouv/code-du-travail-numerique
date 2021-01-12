@@ -1,4 +1,5 @@
 const sourcesFilter = require("./sourcesFilter.elastic");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 function getSearchBody({ query, size, sources = [] }) {
   if (sources.length === 0) {
@@ -75,7 +76,7 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.2,
-                query: "contributions",
+                query: SOURCES.CONTRIBUTIONS,
               },
             },
           },
@@ -83,7 +84,7 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.1,
-                query: "outils",
+                query: SOURCES.TOOLS,
               },
             },
           },
@@ -91,7 +92,15 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.1,
-                query: "modeles_de_courriers",
+                query: SOURCES.LETTERS,
+              },
+            },
+          },
+          {
+            match: {
+              source: {
+                boost: 5,
+                query: SOURCES.SHEET_SP,
               },
             },
           },
