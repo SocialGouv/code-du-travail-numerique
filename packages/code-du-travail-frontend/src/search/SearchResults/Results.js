@@ -131,7 +131,6 @@ export const Results = ({ id, isSearch, items, query }) => {
         </Title>
       )}
       <ViewMore
-        label="Plus de résultats"
         button={(viewMore) => (
           <StyledButton
             onClick={() => {
@@ -139,7 +138,7 @@ export const Results = ({ id, isSearch, items, query }) => {
               viewMore();
             }}
           >
-            Voir plus
+            Plus de résultats
           </StyledButton>
         )}
         query={query}

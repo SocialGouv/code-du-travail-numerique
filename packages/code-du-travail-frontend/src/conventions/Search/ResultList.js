@@ -3,12 +3,7 @@ import React from "react";
 import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
-export const ResultList = ({
-  buttonLabel = "Plus de résultats",
-  items,
-  query,
-  title,
-}) => {
+export const ResultList = ({ items, query, title }) => {
   const seedId = useUIDSeed();
   return (
     <StyledWrapper variant="light">
@@ -16,7 +11,7 @@ export const ResultList = ({
         {`${title} (${items.length}`}&nbsp;
         {`résultat${items.length > 1 ? "s" : ""})`}
       </Heading>
-      <ViewMore label={buttonLabel} query={query} stepSize={7}>
+      <ViewMore query={query} stepSize={7}>
         {items.map((item) => (
           <StyledListItem key={seedId(item)}>{item}</StyledListItem>
         ))}
