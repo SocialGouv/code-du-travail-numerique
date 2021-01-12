@@ -9,6 +9,7 @@ import {
   Section,
   TableOfContent,
   theme,
+  ViewMore,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
@@ -19,7 +20,6 @@ import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
-import { ViewMore } from "../../src/common/ViewMore";
 import { Layout } from "../../src/layout/Layout";
 
 const { breakpoints, fonts, spacings } = theme;

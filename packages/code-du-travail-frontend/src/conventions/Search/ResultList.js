@@ -1,9 +1,7 @@
-import { Heading, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Heading, theme, ViewMore, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
-
-import { ViewMore } from "../../common/ViewMore";
 
 export const ResultList = ({
   buttonLabel = "Plus de résultats",

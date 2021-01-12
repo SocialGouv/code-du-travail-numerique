@@ -6,7 +6,6 @@ import { Tile } from ".";
 
 export default {
   argTypes: {
-    // naming onCLick not work :/
     handler: { action: "clicked" },
   },
   component: Tile,
