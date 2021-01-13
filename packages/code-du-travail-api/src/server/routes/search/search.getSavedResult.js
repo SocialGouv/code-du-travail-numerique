@@ -100,8 +100,9 @@ const testMatch = ({ query, knownQueriesSet, allVariants }) => {
 const getSavedResult = async (query) => {
   const { knownQueriesSet, allVariants } = await getPrequalified();
 
+  // allow
   const knownQuery =
-    query.length > 3 && testMatch({ allVariants, knownQueriesSet, query });
+    query.length >= 3 && testMatch({ allVariants, knownQueriesSet, query });
 
   if (knownQuery && knownQuery.refs) {
     // get ES results for a known query
