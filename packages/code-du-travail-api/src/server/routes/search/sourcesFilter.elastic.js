@@ -8,9 +8,10 @@ const sourcesFilter = (sources) =>
         bool: {
           should: [
             // contents other than CCN
+            // we want a boost here to avoid noise from CCNs
             {
               terms: {
-                boost: 5,
+                boost: 30,
                 source: sources.filter((s) => s != SOURCES.CCN),
               },
             },
@@ -20,6 +21,12 @@ const sourcesFilter = (sources) =>
                 must: [
                   { term: { source: SOURCES.CCN } },
                   { term: { contributions: true } },
+                  {
+                    rank_feature: {
+                      boost: 10,
+                      field: "effectif",
+                    },
+                  },
                 ],
               },
             },

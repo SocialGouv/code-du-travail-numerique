@@ -96,14 +96,6 @@ function getSearchBody({ query, size, sources = [] }) {
               },
             },
           },
-          {
-            match: {
-              source: {
-                boost: 5,
-                query: SOURCES.SHEET_SP,
-              },
-            },
-          },
         ],
       },
     },
