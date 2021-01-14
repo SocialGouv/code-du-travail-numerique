@@ -42,7 +42,13 @@ const nextConfig = {
     SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
   },
   async redirects() {
-    return [];
+    return [
+      {
+        destination: "/api/sitemap",
+        permanent: false,
+        source: "/sitemap.xml",
+      },
+    ];
   },
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,

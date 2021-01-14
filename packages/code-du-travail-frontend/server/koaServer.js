@@ -35,7 +35,7 @@ const robotsProd = [
   "Disallow: /assets/",
   "Disallow: /images/",
   "",
-  `Sitemap: https://${PROD_HOSTNAME}/api/sitemap`,
+  `Sitemap: https://${PROD_HOSTNAME}/sitemap.xml`,
 ].join("\n");
 
 async function getKoaServer({ nextApp }) {
