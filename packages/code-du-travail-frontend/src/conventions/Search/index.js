@@ -70,7 +70,6 @@ const Search = ({ onSelectConvention }) => {
             <>
               {conventions.length !== 0 && (
                 <ResultList
-                  buttonLabel={"Voir plus de conventions collectives "}
                   title="CONVENTIONS COLLECTIVES"
                   query={query}
                   items={conventions.map((convention, index) => (
@@ -85,7 +84,6 @@ const Search = ({ onSelectConvention }) => {
               )}
               {entreprises.length !== 0 && (
                 <ResultList
-                  buttonLabel={"Voir plus d’entreprises"}
                   title="ENTREPRISES"
                   query={query}
                   items={entreprises.map((entreprise) => (

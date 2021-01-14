@@ -26,7 +26,15 @@ export const base = () => (
       <Layout>
         <NavTitle>Sommaire</NavTitle>
         <StyledTableOfContent
-          ids={["menu1", "menu2", "non-existing-id", "menu3", "menu4", "menu5"]}
+          contents={[
+            { id: "menu1" },
+            { id: "menu2" },
+            { label: "some delimiter" },
+            { id: "non-existing-id" },
+            { id: "menu3" },
+            { id: "menu4" },
+            { id: "menu5" },
+          ]}
         />
         <Content>
           <h2 id="menu1">This should trigger menu 1</h2>

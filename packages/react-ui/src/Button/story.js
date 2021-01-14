@@ -8,7 +8,6 @@ import { Button } from ".";
 
 export default {
   argTypes: {
-    // naming onCLick not work :/
     handler: { action: "clicked" },
   },
   component: Button,

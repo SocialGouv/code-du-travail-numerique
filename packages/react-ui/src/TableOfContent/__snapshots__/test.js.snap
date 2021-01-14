@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TableOfContent /> renders with nav items 1`] = `
+.c1 {
+  display: block;
+  padding: 1.6rem 0 1rem 0;
+  color: #4d73b8;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  text-transform: uppercase;
+}
+
 .c0 {
   display: block;
   padding: 0.4rem 0;
@@ -22,13 +32,20 @@ exports[`<TableOfContent /> renders with nav items 1`] = `
 }
 
 <div>
-  <div>
+  <div
+    ids=""
+  >
     <a
       class="c0"
       href="#it-works-1"
     >
       This should appear inside the table of content
     </a>
+    <span
+      class="c1"
+    >
+      delimiter
+    </span>
     <a
       class="c0"
       href="#it-works-2"
@@ -52,6 +69,8 @@ exports[`<TableOfContent /> renders with nav items 1`] = `
 
 exports[`<TableOfContent /> renders without nav items 1`] = `
 <div>
-  <div />
+  <div
+    ids=""
+  />
 </div>
 `;

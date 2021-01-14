@@ -1,41 +1,44 @@
 import {
   ArrowLink,
+  Button,
   Container,
   FlatList,
   icons,
   IconStripe,
   PageTitle,
   Section,
-  Select,
   TableOfContent,
   theme,
+  ViewMore,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
+const { breakpoints, fonts, spacings } = theme;
+
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
 function DossierThematique({ dossier }) {
-  const [filter, setFilter] = useState("");
-
   if (!dossier) {
     return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
   }
-  const { description = "", metaDescription, categories, title } = dossier;
-
-  const sortedCategories = categories.sort(
-    (previous, next) => previous.position - next.position
-  );
+  const {
+    description = "",
+    metaDescription,
+    populars,
+    sections = [],
+    title,
+  } = dossier;
 
   return (
     <Layout>
@@ -46,50 +49,44 @@ function DossierThematique({ dossier }) {
       <Section>
         <Container narrow>
           <PageTitle subtitle={description}>{title}</PageTitle>
-          <SelectWrapper>
-            <Select
-              onChange={(event) => {
-                setFilter(event.target.value);
-              }}
-            >
-              <option value="">Tous les contenus</option>
-              {sortedCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.shortTitle || category.title}
-                </option>
-              ))}
-            </Select>
-          </SelectWrapper>
         </Container>
         <MainContainer>
           <FixedWrapper>
             <NavTitle>Sommaire</NavTitle>
             <TableOfContent
-              ids={sortedCategories.map((category) => category.id)}
+              contents={sections.flatMap(({ label, categories }) => [
+                { label },
+                ...categories.map((category) => ({
+                  id: category.id,
+                })),
+              ])}
             />
           </FixedWrapper>
           <Content>
-            {sortedCategories
-              .filter((category) => (filter ? category.id === filter : true))
-              .map(({ icon, id, refs, shortTitle, title }, index) => (
-                <StyledWrapper
-                  key={id}
-                  {...(index === 0 && { variant: "light" })}
-                >
-                  <IconStripe centered icon={icons[icon]}>
-                    <H2 id={id} data-short-title={shortTitle}>
-                      {title}
-                    </H2>
-                  </IconStripe>
-                  <StyledFlatList>
-                    {refs.map((ref) => (
-                      <Li key={ref.url || ref.externalUrl}>
-                        <DossierLink {...ref} />
-                      </Li>
-                    ))}
-                  </StyledFlatList>
-                </StyledWrapper>
-              ))}
+            {populars.length > 0 && (
+              <PopularWrapper variant="light">
+                <IconStripe centered icon={icons["Populars"]}>
+                  <H3 as="h2" stripe="none" id="populaires">
+                    Contenus populaires
+                  </H3>
+                </IconStripe>
+                <StyledFlatList>
+                  {populars.map((ref) => (
+                    <Li key={ref.url || ref.externalUrl}>
+                      <DossierLink {...ref} />
+                    </Li>
+                  ))}
+                </StyledFlatList>
+              </PopularWrapper>
+            )}
+            {sections.map(({ label, categories }) => (
+              <React.Fragment key={label || "sans-label"}>
+                <H2>{label}</H2>
+                {categories.map(({ id, ...props }) => (
+                  <Category key={id} id={id} {...props} />
+                ))}
+              </React.Fragment>
+            ))}
           </Content>
         </MainContainer>
       </Section>
@@ -106,16 +103,38 @@ DossierThematique.getInitialProps = async ({ query: { slug } }) => {
   return { dossier };
 };
 
-const { breakpoints, fonts, spacings } = theme;
-
-const SelectWrapper = styled.div`
-  display: none;
-  text-align: center;
-  @media (max-width: ${breakpoints.tablet}) {
-    display: block;
-    margin-bottom: ${spacings.large};
-  }
-`;
+const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
+  return (
+    <StyledWrapper>
+      {icon ? (
+        <IconStripe centered icon={icons[icon]}>
+          <H3 id={id} data-short-title={shortTitle}>
+            {title}
+          </H3>
+        </IconStripe>
+      ) : (
+        <H3 stripe="none" id={id} data-short-title={shortTitle}>
+          {title}
+        </H3>
+      )}
+      <ViewMore
+        initialSize={4}
+        listContainer={StyledFlatList}
+        button={(onClick) => (
+          <SeeAll variant="flat" small onClick={onClick}>
+            Voir tout
+          </SeeAll>
+        )}
+      >
+        {refs.map((ref) => (
+          <Li key={ref.url || ref.externalUrl}>
+            <DossierLink {...ref} />
+          </Li>
+        ))}
+      </ViewMore>
+    </StyledWrapper>
+  );
+};
 
 const MainContainer = styled(Container)`
   display: flex;
@@ -157,8 +176,32 @@ const StyledWrapper = styled(Wrapper)`
   }
 `;
 
+const PopularWrapper = styled(StyledWrapper)`
+  margin-bottom: 6rem;
+`;
+
 const H2 = styled.h2`
+  margin: ${spacings.larger} 0 ${spacings.small} 0;
+  color: ${({ theme }) => theme.altText};
+  font-weight: bold;
+  font-size: ${fonts.sizes.headings.mobileMedium};
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.xmedium};
+  }
+`;
+
+const H3 = styled.h3`
   margin: 0;
+  color: ${({ theme }) => theme.title};
+  font-weight: normal;
+  font-size: ${fonts.sizes.headings.medium};
+  font-family: "Merriweather", serif;
+  line-height: ${fonts.lineHeightTitle};
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.sizes.headings.xmedium};
+  }
 `;
 
 const StyledFlatList = styled(FlatList)`
@@ -205,6 +248,14 @@ const LeftArrowLink = styled(ArrowLink).attrs(() => ({
   className: "no-after",
 }))`
   word-break: break-word;
+`;
+
+const SeeAll = styled(Button)`
+  align-self: flex-start;
+  margin-top: ${spacings.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    align-self: stretch;
+  }
 `;
 
 export default DossierThematique;

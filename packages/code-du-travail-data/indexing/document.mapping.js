@@ -45,7 +45,7 @@ export const documentMapping = {
       },
     },
 
-    // only in thematic files
+    // only in dossiers
     categories: {
       enabled: false,
     },
@@ -117,6 +117,13 @@ export const documentMapping = {
     path: {
       analyzer: "french",
       type: "text",
+    },
+
+    // only in dossiers
+    populars: {
+      properties: {
+        title: { type: "text" },
+      },
     },
 
     // available for themes

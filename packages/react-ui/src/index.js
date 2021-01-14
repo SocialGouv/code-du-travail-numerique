@@ -42,6 +42,7 @@ export { Tabs } from "./Tabs";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
 export { Text } from "./Text";
+export { ViewMore } from "./ViewMore";
 
 // Fields
 export { Input } from "./field/Input";
