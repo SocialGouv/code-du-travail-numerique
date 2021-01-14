@@ -6,7 +6,7 @@ include:
     ref: v9.1.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_delete_useless_k8s_ns_stage.yml
-    ref: v15.0.0
+    ref: v17.0.0
 
 #
 
