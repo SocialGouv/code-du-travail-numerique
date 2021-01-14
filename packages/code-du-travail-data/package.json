@@ -12,7 +12,7 @@
     "dump-dev": "node -r esm dump.js > ./dist/dump.data.json",
     "lint": "eslint ./indexing/*",
     "populate-dev": "node -r esm indexing/index.js",
-    "populate": "NODE_ENV=production node ./dist/populate/index.js",
+    "populate": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
     "ingest": "node -r esm indexing/ingest",
     "prepush": "yarn lint",

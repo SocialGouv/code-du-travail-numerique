@@ -96,18 +96,34 @@ const References = ({ references = [] }) => {
 };
 
 const Contribution = ({ answers, content }) => {
+  /**
+   * conventionalAnswer are special kind of contribution that include
+   * only one a single ccn answer
+   * this allow us to set conventional answer directly for a given ccn
+   */
+  const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
+    answers,
+    "conventionAnswer"
+  );
+
   const hasConventionAnswers =
-    answers.conventions && answers.conventions.length > 0;
+    (answers.conventions && answers.conventions.length > 0) ||
+    isConventionalAnswer;
+
   const [convention, setConvention] = useLocalStorage("convention");
-  const conventionAnswer =
-    convention &&
-    answers.conventions &&
-    answers.conventions.find(
-      (answer) => parseInt(answer.idcc, 10) === convention.num
-    );
-  // ensure we have valid data in ccInfo
+
   const isConventionDetected =
     convention && convention.id && convention.num && convention.title;
+
+  let conventionAnswer;
+  if (isConventionalAnswer) {
+    conventionAnswer = answers.conventionAnswer;
+  } else if (convention && answers.conventions) {
+    conventionAnswer = answers.conventions.find(
+      (answer) => parseInt(answer.idcc, 10) === convention.num
+    );
+  }
+  // ensure we have valid data in ccInfo
   return (
     <>
       {hasConventionAnswers && (
@@ -116,13 +132,20 @@ const Contribution = ({ answers, content }) => {
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
               <InsertTitle>Page personnalisable</InsertTitle>
-              {isConventionDetected ? (
+              {isConventionDetected || isConventionalAnswer ? (
                 <>
-                  Cette page a été personnalisée avec l’ajout des{" "}
-                  <a href="#customisation">
-                    informations de la convention collective :{" "}
-                    {convention.shortTitle}
-                  </a>
+                  Cette page a été personnalisée avec l’ajout des {}
+                  {isConventionalAnswer ? (
+                    <a href="#customisation">
+                      informations de la convention collective :{" "}
+                      {conventionAnswer.shortName}
+                    </a>
+                  ) : (
+                    <a href="#customisation">
+                      informations de la convention collective :{" "}
+                      {convention.shortTitle}
+                    </a>
+                  )}
                 </>
               ) : (
                 <>
@@ -155,19 +178,30 @@ const Contribution = ({ answers, content }) => {
               hasMarginTop={Boolean(answers.generic)}
               id="customisation"
             >
-              Que dit votre convention collective&nbsp;?
+              {isConventionalAnswer ? (
+                <>
+                  Que dit la convention <i>{conventionAnswer.shortName}</i>
+                  &nbsp;?
+                </>
+              ) : (
+                <>Que dit votre convention collective&nbsp;?</>
+              )}
             </StyledTitle>
-            {!isConventionDetected ? (
+            {!isConventionDetected && !isConventionalAnswer ? (
               <SearchConvention onSelectConvention={setConvention} />
             ) : (
               <>
-                <StyledDiv>
-                  Ce contenu est personnalisé avec les informations de la
-                  convention collective:
-                </StyledDiv>
-                <Toast variant="secondary" onRemove={() => setConvention()}>
-                  {convention.shortTitle}
-                </Toast>
+                {!isConventionalAnswer && (
+                  <>
+                    <StyledDiv>
+                      Ce contenu est personnalisé avec les informations de la
+                      convention collective:
+                    </StyledDiv>
+                    <Toast variant="secondary" onRemove={() => setConvention()}>
+                      {convention.shortTitle}
+                    </Toast>
+                  </>
+                )}
                 {conventionAnswer ? (
                   <>
                     <MdxWrapper>
@@ -187,12 +221,14 @@ const Contribution = ({ answers, content }) => {
                     </Section>
                   </>
                 )}
-                <ButtonWrapper>
-                  <Button variant="primary" onClick={() => setConvention()}>
-                    Changer de convention collective
-                    <StyledCloseIcon />
-                  </Button>
-                </ButtonWrapper>
+                {!isConventionalAnswer && (
+                  <ButtonWrapper>
+                    <Button variant="primary" onClick={() => setConvention()}>
+                      Changer de convention collective
+                      <StyledCloseIcon />
+                    </Button>
+                  </ButtonWrapper>
+                )}
               </>
             )}
           </Wrapper>
