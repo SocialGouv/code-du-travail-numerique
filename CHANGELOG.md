@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.41.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.40.0...v4.41.0) (2021-01-14)
+
+
+### Bug Fixes
+
+* **api:** allow 3 characters prequalifieds ([#3247](https://github.com/SocialGouv/code-du-travail-numerique/issues/3247)) ([6cf911c](https://github.com/SocialGouv/code-du-travail-numerique/commit/6cf911c31a1768152602904ec4d7d1d92da2f928))
+* **ci:** fix helm stable charts repo ([#3224](https://github.com/SocialGouv/code-du-travail-numerique/issues/3224)) ([e39744d](https://github.com/SocialGouv/code-du-travail-numerique/commit/e39744d0b1b18d86c4537d26edd1e8a3e10cc259))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3213](https://github.com/SocialGouv/code-du-travail-numerique/issues/3213)) ([61dd9c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/61dd9c5cb30eef0958e16f49d92cbd7a5cd6d494))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3233](https://github.com/SocialGouv/code-du-travail-numerique/issues/3233)) ([4e88ecf](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e88ecf85c370d6ebabbe3770310d1a9b02a3dd6))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3239](https://github.com/SocialGouv/code-du-travail-numerique/issues/3239)) ([02ffc51](https://github.com/SocialGouv/code-du-travail-numerique/commit/02ffc51e4cdfa97015c321e8463b55813e6fffc9))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3246](https://github.com/SocialGouv/code-du-travail-numerique/issues/3246)) ([61429b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/61429b75b072b81cb483270b7713426b746d9703))
+* **deps:** update all dependencies ([#3240](https://github.com/SocialGouv/code-du-travail-numerique/issues/3240)) ([a3fdbc1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a3fdbc1f25b0a460cec09cdbe137f41615481642))
+* **deps:** update all non-major dependencies (minor) ([#3219](https://github.com/SocialGouv/code-du-travail-numerique/issues/3219)) ([b8dfacb](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8dfacb5563d69ad8643a16ba908901313f8dc5e))
+* **deps:** update dependency next-transpile-modules to v6 ([#3223](https://github.com/SocialGouv/code-du-travail-numerique/issues/3223)) ([d56fece](https://github.com/SocialGouv/code-du-travail-numerique/commit/d56fece2f127e238a4fef69dba328cda29dba331))
+* **frontend:** fix ccn breadcrumbs ([#3238](https://github.com/SocialGouv/code-du-travail-numerique/issues/3238)) ([09a0ab1](https://github.com/SocialGouv/code-du-travail-numerique/commit/09a0ab1f5520cf3b5a8016180060257d77622001)), closes [#3187](https://github.com/SocialGouv/code-du-travail-numerique/issues/3187)
+* **frontend:** remove attestation redir ([#3252](https://github.com/SocialGouv/code-du-travail-numerique/issues/3252)) ([952d0bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/952d0bcadbdd083faf65a254570a780693f13026))
+* **frontend:** use static sitemap ([#3251](https://github.com/SocialGouv/code-du-travail-numerique/issues/3251)) ([32a9d49](https://github.com/SocialGouv/code-du-travail-numerique/commit/32a9d49ea872e8dfd050bade48bef2761fcc19ff))
+* **k8s:** use 301 at nginx level ([#3129](https://github.com/SocialGouv/code-du-travail-numerique/issues/3129)) ([4bfbe6d](https://github.com/SocialGouv/code-du-travail-numerique/commit/4bfbe6d6df3fa147355c31ac2aefadc65d075854))
+* **stats:** remove old satisfaction rate ([#3241](https://github.com/SocialGouv/code-du-travail-numerique/issues/3241)) ([96e49ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/96e49bafe3446851447659b34dc3bfdc5c0adfd6))
+* add plan de contenu ([#3168](https://github.com/SocialGouv/code-du-travail-numerique/issues/3168)) ([9cea92e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9cea92ec0ffba36e230cce516f0ebb8d2fb67a1a))
+
+
+### Features
+
+* **frontend:** expose ccn contribution answers ([#3230](https://github.com/SocialGouv/code-du-travail-numerique/issues/3230)) ([3a99a18](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a99a18dfe9aca3949db34732be052d0f55c548a))
+* new folder structure ([#3250](https://github.com/SocialGouv/code-du-travail-numerique/issues/3250)) ([d13fc1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/d13fc1c9269732a3416e003575c8888d2b456905))
+* **ci:** add storage containers copy ([#3211](https://github.com/SocialGouv/code-du-travail-numerique/issues/3211)) ([c460c0d](https://github.com/SocialGouv/code-du-travail-numerique/commit/c460c0d7f75625ec1289eac2f60eafe7f1d88f5a))
+* **front:** update social preview ([#3234](https://github.com/SocialGouv/code-du-travail-numerique/issues/3234)) ([b157a68](https://github.com/SocialGouv/code-du-travail-numerique/commit/b157a68f66dc2e4ff05da1553fb480518febd990))
+
+
+
+
+
 # [4.40.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.39.0...v4.40.0) (2020-12-17)
 
 

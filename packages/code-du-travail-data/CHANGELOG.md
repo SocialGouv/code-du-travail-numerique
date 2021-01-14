@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.41.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.40.0...v4.41.0) (2021-01-14)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3213](https://github.com/SocialGouv/code-du-travail-numerique/issues/3213)) ([61dd9c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/61dd9c5cb30eef0958e16f49d92cbd7a5cd6d494))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3233](https://github.com/SocialGouv/code-du-travail-numerique/issues/3233)) ([4e88ecf](https://github.com/SocialGouv/code-du-travail-numerique/commit/4e88ecf85c370d6ebabbe3770310d1a9b02a3dd6))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3239](https://github.com/SocialGouv/code-du-travail-numerique/issues/3239)) ([02ffc51](https://github.com/SocialGouv/code-du-travail-numerique/commit/02ffc51e4cdfa97015c321e8463b55813e6fffc9))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3246](https://github.com/SocialGouv/code-du-travail-numerique/issues/3246)) ([61429b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/61429b75b072b81cb483270b7713426b746d9703))
+* **deps:** update all dependencies ([#3240](https://github.com/SocialGouv/code-du-travail-numerique/issues/3240)) ([a3fdbc1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a3fdbc1f25b0a460cec09cdbe137f41615481642))
+* **deps:** update all non-major dependencies (minor) ([#3219](https://github.com/SocialGouv/code-du-travail-numerique/issues/3219)) ([b8dfacb](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8dfacb5563d69ad8643a16ba908901313f8dc5e))
+* add plan de contenu ([#3168](https://github.com/SocialGouv/code-du-travail-numerique/issues/3168)) ([9cea92e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9cea92ec0ffba36e230cce516f0ebb8d2fb67a1a))
+
+
+### Features
+
+* **frontend:** expose ccn contribution answers ([#3230](https://github.com/SocialGouv/code-du-travail-numerique/issues/3230)) ([3a99a18](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a99a18dfe9aca3949db34732be052d0f55c548a))
+* new folder structure ([#3250](https://github.com/SocialGouv/code-du-travail-numerique/issues/3250)) ([d13fc1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/d13fc1c9269732a3416e003575c8888d2b456905))
+
+
+
+
+
 # [4.40.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.39.0...v4.40.0) (2020-12-17)
 
 
