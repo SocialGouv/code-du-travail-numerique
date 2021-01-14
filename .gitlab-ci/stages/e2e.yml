@@ -1,5 +1,5 @@
 Test on deployed branch:
-  stage: E2E testing
+  stage: Post Deploy
   image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppeteer:0.29.0
   except:
     refs:

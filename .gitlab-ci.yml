@@ -30,6 +30,5 @@ stages:
   - "Registration"
   - "Post Registration"
   - "Deploy"
-  - "Notify Finished Deployment"
-  - "E2E testing"
+  - "Post Deploy"
   # - "Update ES data"
