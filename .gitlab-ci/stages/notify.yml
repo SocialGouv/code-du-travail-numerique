@@ -82,6 +82,8 @@ Delete useless k8s namespaces:
   extends:
     - .base_delete_useless_k8s_ns_stage
     - .notify_dev
+  only:
+    - master
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
   variables:
