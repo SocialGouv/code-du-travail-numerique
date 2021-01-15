@@ -70,6 +70,8 @@ Production:
     ES_LOGS: "$ES_LOGS"
     ES_LOGS_TOKEN: "$ES_LOGS_TOKEN"
     CDTN_ADMIN_ENDPOINT: "$CDTN_ADMIN_ENDPOINT"
+    PYTHON_TEST_VERSION: $PYTHON_VERSION
+    PYTHON_TEST_VERSION_QUOTE: "$PYTHON_VERSION"
     NLP_URL: https://serving-ml.fabrique.social.gouv.fr
 
   cache:
@@ -88,6 +90,9 @@ Production:
   before_script:
     - echo $CDTN_ADMIN_ENDPOINT
     - echo $PYTHON_VERSION
+    - echo $PYTHON_TEST_VERSION
+    - echo $PYTHON_TEST_VERSION_QUOTE
+    - echo $ES_LOGS_TOKEN
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
   script:
