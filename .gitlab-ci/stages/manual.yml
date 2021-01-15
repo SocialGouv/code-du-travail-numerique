@@ -89,6 +89,7 @@ Production:
 
   before_script:
     - echo $CDTN_ADMIN_ENDPOINT
+    - echo $FOO
     - echo $CDTNADMIN_ENDPOINT
     - echo $CDTNADMIN_ENDPOINT_QUOTE
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
