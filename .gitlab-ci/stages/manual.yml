@@ -85,8 +85,6 @@ Production:
       - node_modules
 
   before_script:
-    - echo $CDTN_ADMIN_ENDPOINT
-    - echo $FOO
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
   script:
