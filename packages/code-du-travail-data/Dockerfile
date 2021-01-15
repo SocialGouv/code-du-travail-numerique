@@ -8,7 +8,7 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 
 ARG NLP_URL
 ENV NLP_URL=$NLP_URL
-
+ENV DISABLE_GLOSSARY=true
 RUN yarn workspace @cdt/data dump-dev
 
 FROM node:12.20-alpine3.10
