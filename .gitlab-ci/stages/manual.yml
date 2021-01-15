@@ -3,7 +3,7 @@
 #
 
 Release:
-  stage: "Deploy"
+  stage: .post
   image: node:12.14-alpine3.10
   dependencies: []
   when: manual
@@ -36,7 +36,7 @@ Release:
 #
 
 Production:
-  stage: "Deploy"
+  stage: .post
   image: curlimages/curl:7.67.0
   dependencies: []
   when: manual
