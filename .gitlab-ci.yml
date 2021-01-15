@@ -28,7 +28,6 @@ stages:
   - "Prepare"
   - "Code Quality"
   - "Registration"
-  - "Post Registration"
   - "Deploy"
-  - "Post Deploy"
+  - "Notify Finished Deployment"
   # - "Update ES data"

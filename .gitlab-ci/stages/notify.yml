@@ -11,7 +11,7 @@ include:
 #
 
 .notify_stage:
-  stage: Post Deploy
+  stage: Notify Finished Deployment
   dependencies:
     - Notify Starting Deployment
   before_script:

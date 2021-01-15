@@ -20,7 +20,7 @@ Create namespace:
     - .dev_stage
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
-  stage: "Post Registration"
+  stage: "Register"
   before_script:
     - source ./.gitlab-ci/env.sh
   after_script:
