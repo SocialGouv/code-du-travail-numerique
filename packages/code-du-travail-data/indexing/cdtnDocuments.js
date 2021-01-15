@@ -70,7 +70,15 @@ async function* cdtnDocumentsGen() {
   const themesQueryResult = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: themesQuery,
     method: "POST",
-  }).then((r) => r.json());
+  }).then(async (r) => {
+    const data = await r.json();
+    if (r.ok) {
+      return data;
+    }
+    return Promise.reject(data);
+  });
+
+  console.log("themes fetched");
 
   const themes = themesQueryResult.data.themes;
 

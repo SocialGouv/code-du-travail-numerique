@@ -158,13 +158,14 @@ async function main() {
 }
 
 main().catch((response) => {
+  console.error(response);
   if (response.body) {
     logger.error({ statusCode: response.meta.statusCode });
     logger.error({ name: response.name });
     logger.error({ request: response.meta.meta.request });
     logger.error({ body: response.body });
   } else {
-    logger.error(response);
+    logger.error({ response });
   }
-  process.exit(-1);
+  process.exit(1);
 });
