@@ -78,7 +78,7 @@ async function* cdtnDocumentsGen() {
     return Promise.reject(data);
   });
 
-  console.log("themes fetched");
+  console.error("themes fetched");
 
   const themes = themesQueryResult.data.themes;
 
@@ -154,9 +154,7 @@ async function* cdtnDocumentsGen() {
       return {
         ...content,
         answers: content.answers.map((data) => {
-          const contrib = contributions.find(
-            ({ index }) => data.index === index
-          );
+          const contrib = contributions.find(({ slug }) => data.slug === slug);
           if (!contrib) {
             throw "unknown contribution";
           }

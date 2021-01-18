@@ -1,3 +1,5 @@
+import memoizee from "memoizee";
+
 const conventionMatchers = [
   "convention collective",
   "conventions collectives",
@@ -22,7 +24,7 @@ const endTag = `(?=[^<]*</)`;
  */
 const DISABLE_GLOSSARY = process.env.DISABLE_GLOSSARY || false;
 
-export const createGlossaryTransform = (glossaryTerms) =>
+export const createGlossaryTransform = (glossaryTerms) => {
   function addGlossary(htmlContent) {
     if (DISABLE_GLOSSARY) {
       return htmlContent;
@@ -105,4 +107,6 @@ export const createGlossaryTransform = (glossaryTerms) =>
     });
 
     return finalContent;
-  };
+  }
+  return memoizee(addGlossary);
+};
