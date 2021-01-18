@@ -10,6 +10,7 @@ repositories:
   fiches-vdd: https://github.com/SocialGouv/fiches-vdd
   fiches-travail-data: https://github.com/SocialGouv/fiches-travail-data
   serving-ml: https://github.com/SocialGouv/serving-ml
+  siret2idcc: https://github.com/SocialGouv/siret2idcc
 
 # List all docs links
 documentation:
@@ -41,6 +42,8 @@ stack:
     - NextJS
     - PostgREST
     - PostgreSQL
+  siret2idcc:
+    - NodeJS
   tests:
     - Jest unit tests
     - Jest integraton tests
