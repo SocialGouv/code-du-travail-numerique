@@ -77,10 +77,12 @@ class ConventionCollective extends React.Component {
                 "Droit du travail: Existe-t-il une hiérarchie entre les textes ?",
             },
           ]}
-          source={{
-            name: "Légifrance",
-            url: convention.url,
-          }}
+          source={
+            convention.url && {
+              name: "Légifrance",
+              url: convention.url,
+            }
+          }
           subtitle={
             <Text fontSize="small">
               {convention.title} (IDCC {formatIdcc(convention.num)})
