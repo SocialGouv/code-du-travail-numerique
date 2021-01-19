@@ -6,7 +6,6 @@ import { promisify } from "util";
 
 import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
 import glossaryData from "./glossary.json";
-import highlightsData from "./highlights.json";
 import preQualifiedData from "./prequalified.json";
 import versions from "./versions.json";
 
@@ -49,6 +48,7 @@ const documentsSlugs = [
   "/external/mon-compte-formation",
   "/external/index-egapro",
   "/fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
+  "/highlights/homepage",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -69,7 +69,7 @@ async function updateDocumentsData(slugs) {
         data.push(item._source);
       }
     }
-    data.push(highlightsData, preQualifiedData, glossaryData, versions);
+    data.push(preQualifiedData, glossaryData, versions);
     data.push({
       action: "Calculer",
       breadcrumbs: [

@@ -4,7 +4,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.492731,
+      "_score": 22.683619,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -33,7 +33,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.4365463,
+      "_score": 3.589242,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -132,7 +132,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.9145181,
+      "_score": 1.9676356,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -147,7 +147,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 3.4365463,
+      "_score": 3.589242,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -156,7 +156,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 3.3062394,
+      "_score": 3.4476256,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -167,7 +167,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 10.078829,
+      "_score": 10.381781,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -233,7 +233,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 8.706947,
+      "_score": 8.928762,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -255,7 +255,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 3.6849642,
+      "_score": 3.7786508,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -282,7 +282,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2614",
     },
     Object {
-      "_score": 2.9534154,
+      "_score": 3.00379,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -379,7 +379,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.9145181,
+      "_score": 1.9676356,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -394,7 +394,7 @@ exports[`returns unique documents from prequalified data (same slug but differen
 Object {
   "articles": Array [
     Object {
-      "_score": 1.0106163,
+      "_score": 1.0930889,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -450,7 +450,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.5882375,
+      "_score": 2.648949,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -459,7 +459,7 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "_score": 0.9558022,
+      "_score": 0.9986019,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",
