@@ -36,6 +36,7 @@
     "@socialgouv/kali-data": "^2.32.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
+    "memoizee": "^0.4.15",
     "node-fetch": "^2.6.1",
     "p-queue": "^6.6.2",
     "p-retry": "^4.2.0",
