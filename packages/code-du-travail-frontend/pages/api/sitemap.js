@@ -3,26 +3,23 @@ import https from "https";
 
 const {
   AZURE_BASE_URL = "https://cdtnadminprod.blob.core.windows.net",
-  SITEMAP_FILE = "sitemap.xml",
   FRONTEND_HOST,
 } = process.env;
 
-let sitemapFile = SITEMAP_FILE;
-
 export default async function Sitemap(req, res) {
+  let sitemapFile = "sitemap.xml";
   if (/dev2/.test(FRONTEND_HOST)) {
+    const [hash] = FRONTEND_HOST.match(/^\w+/);
+    sitemapFile = `sitemap-${hash}.xml`;
     try {
-      const response = await fetch(
-        `${AZURE_BASE_URL}/sitemap/${SITEMAP_FILE}`,
-        {
-          method: "HEAD",
-        }
-      );
-      if (response.ok) {
-        const [hash] = FRONTEND_HOST.match(/^\w+/);
-        sitemapFile = `sitemap-${hash}.xml`;
+      const response = await fetch(`${AZURE_BASE_URL}/sitemap/${sitemapFile}`, {
+        method: "HEAD",
+      });
+      if (!response.ok) {
+        throw response;
       }
     } catch (error) {
+      console.error(`fail to retrieve ${sitemapFile}`);
       sitemapFile = "sitemap.xml";
     }
   }
