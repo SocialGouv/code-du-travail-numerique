@@ -114,6 +114,14 @@ Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
   );
 });
 
+Alors("je vois le thème {string}", (theme) => {
+  I.seeElement(`//a[text()="${theme}" and starts-with(@href, "/themes/")]`);
+});
+
+Alors("je ne vois pas le thème {string}", (theme) => {
+  I.dontSeeElement(`//a[text()="${theme}" and starts-with(@href, "/themes/")]`);
+});
+
 Alors("je suis redirigé vers la page: {string}", (url) => {
   // also check search and hash
   I.waitForFunction(
