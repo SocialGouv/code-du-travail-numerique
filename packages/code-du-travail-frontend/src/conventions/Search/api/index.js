@@ -2,10 +2,11 @@ import { parseIdcc } from "@cdt/data";
 
 import { searchConvention } from "./convention.service";
 import {
-  searchEntrepriseByName,
+  // searchEntrepriseByName,
   searchEntrepriseBySiren,
   searchEntrepriseBySiret,
 } from "./entreprise.service";
+import { searchEntrepriseByName } from "./entreprise.service.elastic";
 import getQueryType from "./getQueryType";
 
 // build a result list based on query type

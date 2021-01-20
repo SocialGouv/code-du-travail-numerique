@@ -17,6 +17,8 @@ const dossiersRoute = require("./routes/dossiers");
 const glossaryRoute = require("./routes/glossary");
 const versionRoutes = require("./routes/version");
 const indexRoute = require("./routes/index");
+const entreprisesRoutes = require("./routes/entreprises");
+
 const { logger } = require("./utils/logger");
 
 const app = new Koa();
@@ -65,6 +67,7 @@ app.use(dossiersRoute.routes());
 app.use(glossaryRoute.routes());
 app.use(versionRoutes.routes());
 app.use(indexRoute.routes());
+app.use(entreprisesRoutes.routes());
 
 if (process.env.NODE_ENV !== "production") {
   logger.info("-- DEV MODE ---");

@@ -34,7 +34,6 @@ const apiEntrepriseFullText = memoizee(
       .catch(() => []),
   { promise: true }
 );
-
 // api entreprise siret call
 const apiEntrepriseSiret = memoizee(
   (siret) =>
