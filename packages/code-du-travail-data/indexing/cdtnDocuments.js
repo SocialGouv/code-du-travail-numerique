@@ -88,6 +88,7 @@ async function* cdtnDocumentsGen() {
   const glossaryTerms = await getGlossary();
   const addGlossary = createGlossaryTransform(glossaryTerms);
 
+  /*
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
   yield {
@@ -127,6 +128,7 @@ async function* cdtnDocumentsGen() {
     documents: await getDocumentBySource(SOURCES.CDT),
     source: SOURCES.CDT,
   };
+*/
 
   logger.info("=== Contributions ===");
   const contributions = await getDocumentBySource(
@@ -136,9 +138,9 @@ async function* cdtnDocumentsGen() {
   // we keep track of the idccs used in the contributions
   // in order to flag the corresponding conventions collectives below
   const contribIDCCs = new Set();
-  contributions.forEach(({ answers }) =>
-    answers.conventions.forEach(({ idcc }) => contribIDCCs.add(parseInt(idcc)))
-  );
+  contributions.forEach(({ answers }) => {
+    if (answers.conventionAnswer) contribIDCCs.add(parseInt(answers));
+  });
 
   yield {
     documents: contributions.map(({ answers, ...contribution }) => ({
@@ -153,6 +155,8 @@ async function* cdtnDocumentsGen() {
     })),
     source: SOURCES.CONTRIBUTIONS,
   };
+
+  /*
 
   logger.info("=== Conventions Collectives ===");
   const ccnQR =
@@ -277,6 +281,7 @@ async function* cdtnDocumentsGen() {
     ],
     source: SOURCES.VERSIONS,
   };
+  */
 }
 
 export { getDuplicateSlugs, cdtnDocumentsGen };
