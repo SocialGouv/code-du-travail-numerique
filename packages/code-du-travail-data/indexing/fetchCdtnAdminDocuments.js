@@ -1,3 +1,4 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
@@ -79,6 +80,63 @@ export async function getGlossary() {
     throw new Error(`error fetching kali blocks`);
   }
   return result.data.glossary;
+}
+
+const gqlHighlights = () =>
+  JSON.stringify({
+    query: `query getHighlights {
+    highlights: documents(where: {source: {_eq: "${SOURCES.HIGHLIGHTS}"}}) {
+      cdtnId: cdtn_id
+      id:initial_id
+      slug
+      source
+      isPublished: is_published
+      is_searchable
+      contentRelations: relation_a(where: {type: {_eq: "document-content"}}) {
+        position: data(path: "position")
+        content: b {
+          cdtnId: cdtn_id
+          slug
+          source
+          title
+          document
+        }
+      }
+    }
+  }`,
+  });
+
+export async function getHighlights(getBreadcrumbs) {
+  const result = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: gqlHighlights(),
+    method: "POST",
+  }).then((r) => r.json());
+  if (result.errors && result.errors.length) {
+    console.error(result.errors[0].message);
+    throw new Error(`error fetching highlights`);
+  }
+  const toElasticHighlights = result.data.highlights.map((highlight) => {
+    const refs = highlight.contentRelations
+      .sort(
+        ({ position: positionA }, { position: positionB }) =>
+          positionA - positionB
+      )
+      .map(({ content: { cdtnId, document, slug, source, title } }) => ({
+        breadcrumbs: getBreadcrumbs(cdtnId),
+        cdtnId,
+        description: document.description,
+        slug,
+        source,
+        title,
+      }));
+    delete highlight.contentRelations;
+    return {
+      ...highlight,
+      excludeFromSearch: true,
+      refs,
+    };
+  });
+  return toElasticHighlights;
 }
 
 export async function getDocumentBySource(source, getBreadcrumbs) {

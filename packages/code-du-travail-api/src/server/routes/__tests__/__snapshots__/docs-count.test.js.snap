@@ -38,11 +38,11 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "page_fiche_ministere_travail",
+        "key": "highlights",
       },
       Object {
-        "doc_count": 1,
-        "key": "glossary",
+        "doc_count": 2,
+        "key": "page_fiche_ministere_travail",
       },
     ],
     "doc_count_error_upper_bound": 0,
