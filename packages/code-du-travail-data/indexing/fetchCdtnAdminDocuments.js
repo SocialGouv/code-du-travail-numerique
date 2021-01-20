@@ -92,7 +92,7 @@ const gqlHighlights = () =>
       source
       isPublished: is_published
       is_searchable
-      contentRelations: relation_a(where: {type: {_eq: "highlight"}}) {
+      contentRelations: relation_a(where: {type: {_eq: "document-content"}}) {
         position: data(path: "position")
         content: b {
           cdtnId: cdtn_id
