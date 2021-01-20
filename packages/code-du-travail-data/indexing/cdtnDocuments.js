@@ -88,7 +88,6 @@ async function* cdtnDocumentsGen() {
   const glossaryTerms = await getGlossary();
   const addGlossary = createGlossaryTransform(glossaryTerms);
 
-  /*
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
   yield {
@@ -128,7 +127,6 @@ async function* cdtnDocumentsGen() {
     documents: await getDocumentBySource(SOURCES.CDT),
     source: SOURCES.CDT,
   };
-*/
 
   logger.info("=== Contributions ===");
   const contributions = await getDocumentBySource(
@@ -155,8 +153,6 @@ async function* cdtnDocumentsGen() {
     })),
     source: SOURCES.CONTRIBUTIONS,
   };
-
-  /*
 
   logger.info("=== Conventions Collectives ===");
   const ccnQR =
@@ -281,7 +277,6 @@ async function* cdtnDocumentsGen() {
     ],
     source: SOURCES.VERSIONS,
   };
-  */
 }
 
 export { getDuplicateSlugs, cdtnDocumentsGen };
