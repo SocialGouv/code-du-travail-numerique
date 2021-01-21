@@ -137,7 +137,7 @@ async function* cdtnDocumentsGen() {
   // in order to flag the corresponding conventions collectives below
   const contribIDCCs = new Set();
   contributions.forEach(({ answers }) => {
-    if (answers.conventionAnswer) contribIDCCs.add(parseInt(answers));
+    if (answers.conventionAnswer) contribIDCCs.add(parseInt(answers.conventionAnswer.idcc));
   });
 
   yield {
