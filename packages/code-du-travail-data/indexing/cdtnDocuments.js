@@ -133,6 +133,15 @@ async function* cdtnDocumentsGen() {
     SOURCES.CONTRIBUTIONS,
     getBreadcrumbs
   );
+  // we keep track of the idccs used in the contributions
+  // in order to flag the corresponding conventions collectives below
+  const contribIDCCs = new Set();
+  contributions.forEach(({ answers }) => {
+    if (answers.conventionAnswer) {
+      contribIDCCs.add(parseInt(answers.conventionAnswer.idcc));
+    }
+  });
+
   yield {
     documents: contributions.map(({ answers, ...contribution }) => ({
       ...contribution,
@@ -148,11 +157,19 @@ async function* cdtnDocumentsGen() {
   };
 
   logger.info("=== Conventions Collectives ===");
+  const ccnQR =
+    "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.";
   const ccnData = await getDocumentBySource(SOURCES.CCN);
   const allKaliBlocks = await getAllKaliBlocks();
   yield {
-    documents: ccnData.map(({ ...content }) => {
+    documents: ccnData.map(({ title, shortTitle, ...content }) => {
+      // we use our custom description
+      delete content.description;
       return {
+        description: ccnQR,
+        longTitle: title,
+        shortTitle,
+        title: shortTitle,
         ...content,
         answers: content.answers.map((data) => {
           const contrib = contributions.find(({ slug }) => data.slug === slug);
@@ -167,6 +184,7 @@ async function* cdtnDocumentsGen() {
           };
         }),
         articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
+        contributions: contribIDCCs.has(content.num),
         source: SOURCES.CCN,
       };
     }),

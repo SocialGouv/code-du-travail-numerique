@@ -40,7 +40,7 @@ const routeBySource = {
 
 // mapping elastic search source type -> source label
 const labelBySource = {
-  [SOURCES.CCN]: "Legifrance",
+  [SOURCES.CCN]: "Conventions collectives",
   [SOURCES.CDT]: "Code du travail",
   [SOURCES.CONTRIBUTIONS]: "Contributions",
   [SOURCES.EDITORIAL_CONTENT]: "Information",

@@ -34,12 +34,12 @@ class ConventionCollective extends React.Component {
       );
     }
     const { convention } = this.props;
-    const { shortTitle, title } = convention;
+    const { shortTitle, longTitle } = convention;
     return (
       <Layout>
         <Metas
           title={`Convention collective ${shortTitle}`}
-          description={title}
+          description={longTitle}
         />
         <Answer
           breadcrumbs={[

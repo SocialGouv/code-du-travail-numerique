@@ -1,7 +1,11 @@
+const sourcesFilter = require("./sourcesFilter.elastic");
+const { SOURCES } = require("@socialgouv/cdtn-sources");
+
 function getSearchBody({ query, size, sources = [] }) {
   if (sources.length === 0) {
     throw new Error("[getSearchBody] sources should not be empty");
   }
+
   return {
     _source: [
       "title",
@@ -42,11 +46,7 @@ function getSearchBody({ query, size, sources = [] }) {
               ],
             },
           },
-        ].concat({
-          terms: {
-            source: sources,
-          },
-        }),
+        ].concat(sourcesFilter(sources)),
         should: [
           {
             match_phrase: {
@@ -76,7 +76,7 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.2,
-                query: "contributions",
+                query: SOURCES.CONTRIBUTIONS,
               },
             },
           },
@@ -84,7 +84,7 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.1,
-                query: "outils",
+                query: SOURCES.TOOLS,
               },
             },
           },
@@ -92,7 +92,7 @@ function getSearchBody({ query, size, sources = [] }) {
             match: {
               source: {
                 boost: 1.1,
-                query: "modeles_de_courriers",
+                query: SOURCES.LETTERS,
               },
             },
           },

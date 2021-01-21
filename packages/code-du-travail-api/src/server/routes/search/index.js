@@ -52,6 +52,7 @@ router.get("/search", async (ctx) => {
     SOURCES.EXTERNALS,
     SOURCES.THEMATIC_FILES,
     SOURCES.EDITORIAL_CONTENT,
+    SOURCES.CCN,
   ];
   const skipSavedResults =
     ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
