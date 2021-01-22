@@ -56,8 +56,6 @@ Les données provenant de packages externes sont désormais mis à jour de mani�
 - [fiches-vdd](https://github.com/SocialGouv/fiches-vdd)
 - [legi-data](https://github.com/SocialGouv/legi-data)
 - [kali-data](https://github.com/SocialGouv/kali-data)
-- [datafiller-data](https://github.com/SocialGouv/datafiller-data)
-- [fiches-travail-data](https://github.com/SocialGouv/fiches-travail-data)
 - [contributions-data](https://github.com/SocialGouv/contributions-data)
 
 ## Schéma

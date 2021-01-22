@@ -7,8 +7,6 @@ repositories:
   cdtn-contrib: https://github.com/SocialGouv/code-du-travail-backoffice
   kali-data: https://github.com/SocialGouv/kali-data
   legi-data: https://github.com/SocialGouv/legi-data
-  fiches-vdd: https://github.com/SocialGouv/fiches-vdd
-  fiches-travail-data: https://github.com/SocialGouv/fiches-travail-data
   serving-ml: https://github.com/SocialGouv/serving-ml
   siret2idcc: https://github.com/SocialGouv/siret2idcc
 

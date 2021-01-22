@@ -25,8 +25,6 @@ services:
       - elasticsearch
     ports:
       - $API_PORT:$API_PORT
-    volumes:
-      - ./packages/code-du-travail-data/dataset/courrier-type/docx:/code-du-travail-data/dataset/courrier-type/docx
 
   data:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$CDTN_HASH

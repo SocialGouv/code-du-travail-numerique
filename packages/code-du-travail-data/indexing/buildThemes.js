@@ -1,5 +1,3 @@
-import { getRouteBySource } from "@socialgouv/cdtn-sources";
-
 function buildThemes(themes, getBreadcrumbs) {
   return themes.map(
     ({
@@ -40,9 +38,13 @@ function buildThemes(themes, getBreadcrumbs) {
             ({ position: positionA }, { position: positionB }) =>
               positionA - positionB
           )
-          .map(({ content: { slug, source, title } }) => ({
+          .map(({ content: { cdtnId, document, slug, source, title } }) => ({
+            breadcrumbs: getBreadcrumbs(cdtnId),
+            cdtnId,
+            description: document.description,
+            slug,
+            source,
             title,
-            url: `/${getRouteBySource(source)}/${slug}`,
           })),
         slug,
         source,
