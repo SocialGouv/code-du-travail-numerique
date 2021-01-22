@@ -32,12 +32,12 @@ it("asks same sources wether it is search sem or search elastic and gets a descr
   expect(searchBody._source).toContain("description");
 });
 
-it("returns search results for demission from datafiller", async () => {
+it("returns search results for demission from prequalified requests", async () => {
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission"
   );
   expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot(); // datafiller is involved here (no ES or Sem)
+  expect(response.body).toMatchSnapshot(); // prequalifieds requests are involved here (no ES or Sem)
 });
 
 it("returns 3 search results for demission from elastic if size = 3", async () => {

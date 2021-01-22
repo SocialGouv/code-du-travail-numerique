@@ -35,7 +35,48 @@ Object {
   ],
   "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
   "position": 8,
-  "refs": Array [],
+  "refs": Array [
+    Object {
+      "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
+      "url": "/fiche-service-public/rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
+    },
+    Object {
+      "title": "Arrêt maladie pendant le préavis : quelles conséquences ?",
+      "url": "/contribution/arret-maladie-pendant-le-preavis-quelles-consequences",
+    },
+    Object {
+      "title": "Peut-on garder la mutuelle de l'entreprise à la fin du contrat de travail ?",
+      "url": "/fiche-service-public/peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
+    },
+    Object {
+      "title": "Démission, licenciement : peut-on travailler ailleurs avant la fin du préavis ?",
+      "url": "/fiche-service-public/demission-licenciement-peut-on-travailler-ailleurs-avant-la-fin-du-preavis",
+    },
+    Object {
+      "title": "Indemnité compensatrice de préavis",
+      "url": "/fiche-service-public/indemnite-compensatrice-de-preavis",
+    },
+    Object {
+      "title": "Heures pour recherche d’emploi",
+      "url": "/outils/heures-recherche-emploi",
+    },
+    Object {
+      "title": "Indemnité compensatrice de congés payés",
+      "url": "/fiche-service-public/indemnite-compensatrice-de-conges-payes",
+    },
+    Object {
+      "title": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
+      "url": "/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+    },
+    Object {
+      "title": "Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?",
+      "url": "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
+    },
+    Object {
+      "title": "Salarié sans papiers : quelles règles pour la rupture du contrat de travail ?",
+      "url": "/fiche-service-public/salarie-sans-papiers-quelles-regles-pour-la-rupture-du-contrat-de-travail",
+    },
+  ],
   "slug": "depart-de-lentreprise",
   "title": "Départ de l’entreprise",
 }

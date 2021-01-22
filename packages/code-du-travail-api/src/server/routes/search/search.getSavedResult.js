@@ -6,7 +6,6 @@ const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 
 const { logger } = require("../../utils/logger");
-const getEsReferences = require("./getEsReferences");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 const memoizee = require("memoizee");
@@ -104,12 +103,14 @@ const getSavedResult = async (query) => {
   const knownQuery =
     query.length >= 3 && testMatch({ allVariants, knownQueriesSet, query });
 
-  if (knownQuery && knownQuery.refs) {
+  if (knownQuery && knownQuery.refs && knownQuery.refs.length > 0) {
     // get ES results for a known query
     logger.info(`getSavedResult: ${knownQuery.title}`);
-    const refs = await getEsReferences(knownQuery.refs);
-    return refs;
+    return knownQuery.refs.map((ref) => ({
+      _source: ref,
+    }));
   }
+  return false;
 };
 
 module.exports = getSavedResult;
