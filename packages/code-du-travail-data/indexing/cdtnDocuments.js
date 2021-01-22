@@ -9,6 +9,7 @@ import {
   getDocumentBySource,
   getGlossary,
   getHighlights,
+  getPrequalifieds,
 } from "./fetchCdtnAdminDocuments";
 
 import { splitArticle } from "./fichesTravailSplitter";
@@ -38,6 +39,7 @@ const themesQuery = JSON.stringify({
         slug
         source
         title
+        document
       }
       position: data(path: "position")
     }
@@ -262,7 +264,7 @@ async function* cdtnDocumentsGen() {
   yield {
     documents: [
       {
-        data: require("@socialgouv/datafiller-data/data/requests.json"),
+        data: await getPrequalifieds(),
         source: SOURCES.PREQUALIFIED,
       },
     ],
