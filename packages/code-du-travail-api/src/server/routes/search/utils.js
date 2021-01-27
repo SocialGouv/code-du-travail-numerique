@@ -48,27 +48,6 @@ const mergePipe = (a, b, max_result) => {
   return mergeDuplicate(res).slice(0, max_result);
 };
 
-const getDataFromUrl = (url) => {
-  const [, sourceRoute, slug] = url.split("/");
-  let source = getSourceByRoute(sourceRoute);
-  // since theme routing has changed, we will keep this monkey patch for a while
-  let trimmedSlug = slug;
-  if (source === SOURCES.THEMES) {
-    trimmedSlug = slug.replace(/^\d*-/, "");
-  }
-  // Beware, "/fiche-ministere-travail/la-demission" matches both
-  // the split introduction and the full page. We always refer to the full page
-  // to avoid bugs (because this page could have no introduction).
-  if (source === SOURCES.SHEET_MT && !slug.includes("#")) {
-    source = SOURCES.SHEET_MT_PAGE;
-  }
-  return {
-    slug: trimmedSlug,
-    source,
-  };
-};
-
 exports.merge = merge;
 exports.removeDuplicate = removeDuplicate;
 exports.mergePipe = mergePipe;
-exports.getDataFromUrl = getDataFromUrl;

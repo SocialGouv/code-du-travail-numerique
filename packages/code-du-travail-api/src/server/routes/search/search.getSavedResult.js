@@ -1,5 +1,5 @@
+const { SOURCES } = require("@socialgouv/cdtn-sources");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getPrequalifiedBody = require("./prequalified.elastic");
 const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -23,21 +23,36 @@ const preprocess = (q) => {
 //  searches and map variant matches with the actual known query.
 
 async function _getPrequalified() {
-  const body = getPrequalifiedBody();
-  const response = await elasticsearchClient.search({ body, index });
+  const { body: { count = 10000 } = {} } = await elasticsearchClient.count({
+    body: { query: { term: { source: SOURCES.PREQUALIFIED } } },
+  });
+  const response = await elasticsearchClient.search({
+    body: {
+      query: {
+        bool: {
+          filter: {
+            term: { source: SOURCES.PREQUALIFIED },
+          },
+        },
+      },
+      size: count,
+    },
+    index,
+  });
   if (response.body.hits.total.value === 0) {
     return null;
   }
 
-  const knownQueries = response.body.hits.hits[0]._source.data;
-
-  const knownQueriesSet = knownQueries.reduce((queries, query) => {
-    for (const variant of query.variants) {
-      const prepro = preprocess(variant);
-      queries[prepro] = query;
-    }
-    return queries;
-  }, {});
+  const knownQueriesSet = response.body.hits.hits.reduce(
+    (queries, { _source: query }) => {
+      for (const variant of query.variants) {
+        const prepro = preprocess(variant);
+        queries[prepro] = query;
+      }
+      return queries;
+    },
+    {}
+  );
 
   return {
     allVariants: Object.keys(knownQueriesSet),
