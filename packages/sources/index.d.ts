@@ -27,6 +27,7 @@ type Sources = {
   THEMES: "themes",
   TOOLS: "outils",
   VERSIONS: "versions",
+  HIGHLIGHTS: "highlights",
 }
 
 type Routes = {
@@ -44,11 +45,13 @@ type Routes = {
   [SOURCES.THEMATIC_FILES]: "dossiers",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
+  [SOURCES.HIGHLIGHTS]: "highlights",
+  [SOURCES.PREQUALIFIED]: "prequalified",
 }
 
 type SourceKeys = keyof Sources;
 type SourceValues = Sources[SourceKeys];
 type RouteKeys = keyof Routes;
 type RouteValues = Routes[SourceRoute];
-type SourceLabel = Exclude<SourceValues, "highlights" | "glossary" | "prequalified" | "versions" >
-type SourceRoute = Exclude<SourceValues, "highlights" |  "prequalified" | "versions" >
+type SourceLabel = Exclude<SourceValues, "glossary" | "versions" >
+type SourceRoute = Exclude<SourceValues, "versions" >
