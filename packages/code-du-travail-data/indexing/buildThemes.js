@@ -39,7 +39,6 @@ function buildThemes(themes, getBreadcrumbs) {
               positionA - positionB
           )
           .map(({ content: { cdtnId, document, slug, source, title } }) => ({
-            breadcrumbs: getBreadcrumbs(cdtnId),
             cdtnId,
             description: document.description,
             slug,

@@ -10,7 +10,7 @@ const gqlRequestBySource = (source, offset = 0, limit = null) =>
   JSON.stringify({
     query: `{
   documents(
-    order_by: {cdtn_id: asc},
+    order_by: {cdtn_id: asc}
     limit: ${limit}
     offset: ${offset}
     where: {source: {_eq: "${source}"},  is_available: {_eq: true} }
@@ -103,28 +103,15 @@ export async function getHighlights(getBreadcrumbs) {
     throw new Error(`error fetching highlights`);
   }
   const toElasticHighlights = result.data.documents.map((highlight) => {
-    const refs = highlight.contentRelations
-      .sort(
-        ({ position: positionA }, { position: positionB }) =>
-          positionA - positionB
-      )
-      .map(({ content: { cdtnId, document, slug, source, title } }) => ({
-        breadcrumbs: getBreadcrumbs(cdtnId),
-        cdtnId,
-        description: document.description,
-        slug,
-        source,
-        title,
-      }));
     return toElastic({
       ...highlight,
-      refs,
+      refs: toRefs(highlight.contentRelations, getBreadcrumbs),
     });
   });
   return toElasticHighlights;
 }
 
-export async function getPrequalifieds() {
+export async function getPrequalifieds(getBreadcrumbs) {
   const result = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: gqlRequestBySource(SOURCES.PREQUALIFIED),
     method: "POST",
@@ -135,23 +122,10 @@ export async function getPrequalifieds() {
   }
 
   const formattedPrequalifieds = result.data.documents.map((prequalified) => {
-    const refs = prequalified.contentRelations
-      .sort(
-        ({ position: positionA }, { position: positionB }) =>
-          positionA - positionB
-      )
-      .map(({ content: { cdtnId, document, slug, source, title } }) => ({
-        cdtnId,
-        description: document.description,
-        slug,
-        source,
-        title,
-      }));
-    return {
-      refs,
-      title: prequalified.title,
-      variants: prequalified.document.variants,
-    };
+    return toElastic({
+      ...prequalified,
+      refs: toRefs(prequalified.contentRelations, getBreadcrumbs),
+    });
   });
   return formattedPrequalifieds;
 }
@@ -227,4 +201,20 @@ function toElastic(
     text,
     title,
   };
+}
+
+function toRefs(contentRelations, getBreadcrumbs) {
+  return contentRelations
+    .sort(
+      ({ position: positionA }, { position: positionB }) =>
+        positionA - positionB
+    )
+    .map(({ content: { cdtnId, document, slug, source, title } }) => ({
+      breadcrumbs: getBreadcrumbs(cdtnId),
+      cdtnId,
+      description: document.description,
+      slug,
+      source,
+      title,
+    }));
 }

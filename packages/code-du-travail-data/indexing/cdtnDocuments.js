@@ -249,6 +249,12 @@ async function* cdtnDocumentsGen() {
     source: SOURCES.HIGHLIGHTS,
   };
 
+  logger.info("=== PreQualified Request ===");
+  yield {
+    documents: await getPrequalifieds(getBreadcrumbs),
+    source: SOURCES.PREQUALIFIED,
+  };
+
   logger.info("=== glossary ===");
   yield {
     documents: [
@@ -258,17 +264,6 @@ async function* cdtnDocumentsGen() {
       },
     ],
     source: SOURCES.GLOSSARY,
-  };
-
-  logger.info("=== PreQualified Request ===");
-  yield {
-    documents: [
-      {
-        data: await getPrequalifieds(),
-        source: SOURCES.PREQUALIFIED,
-      },
-    ],
-    source: SOURCES.PREQUALIFIED,
   };
 
   logger.info("=== data version ===");
