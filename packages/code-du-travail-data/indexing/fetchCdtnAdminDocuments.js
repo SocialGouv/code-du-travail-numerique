@@ -139,7 +139,7 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
     return [];
   }
   const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
-  const queue = new PQueue({ concurrency: 10 });
+  const queue = new PQueue({ concurrency: 5 });
 
   const pDocuments = Array.from(
     { length: Math.ceil(nbDoc / LIMIT) },
