@@ -1,3 +1,4 @@
+import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -44,6 +45,7 @@ class Fiche extends React.Component {
       <Layout>
         <Metas title={title} description={description} />
         <Answer
+          suptitle={getLabelBySource(SOURCES.CDT)}
           title={title}
           relatedItems={relatedItems}
           date={
