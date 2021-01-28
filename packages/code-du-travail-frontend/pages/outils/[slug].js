@@ -53,7 +53,7 @@ function Outils({ description, icon, slug, relatedItems, title }) {
             <Tool icon={icon} title={title} />
           </Wrapper>
           <ToolSurvey />
-          <RelatedItems items={relatedItems} />
+          <RelatedItems disableSurvey items={relatedItems} />
         </Container>
       </StyledSection>
     </Layout>
