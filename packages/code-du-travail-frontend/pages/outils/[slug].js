@@ -1,9 +1,12 @@
 import tools from "@cdt/data...tools/internals.json";
+import * as Sentry from "@sentry/browser";
 import { Container, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import getConfig from "next/config";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
+import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
@@ -15,6 +18,12 @@ import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarit
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { matopush } from "../../src/piwik";
 
+const { SOURCES } = require("@socialgouv/cdtn-sources");
+
+const {
+  publicRuntimeConfig: { API_URL },
+} = getConfig();
+
 const toolsBySlug = {
   "heures-recherche-emploi": HeuresRechercheEmploi,
   "indemnite-licenciement": CalculateurIndemnite,
@@ -24,7 +33,7 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-function Outils({ description, icon, slug, title }) {
+function Outils({ description, icon, slug, relatedItems, title }) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -44,6 +53,7 @@ function Outils({ description, icon, slug, title }) {
             <Tool icon={icon} title={title} />
           </Wrapper>
           <ToolSurvey />
+          <RelatedItems items={relatedItems} />
         </Container>
       </StyledSection>
     </Layout>
@@ -55,10 +65,21 @@ export default Outils;
 Outils.getInitialProps = async ({ query }) => {
   const { slug } = query;
   const { description, icon, title } = tools.find((tool) => tool.slug === slug);
+  let relatedItems = [];
+  try {
+    const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
+    if (response.ok) {
+      relatedItems = await response.json().then((data) => data.relatedItems);
+    }
+  } catch (e) {
+    console.error(e);
+    Sentry.captureException(e);
+  }
 
   return {
     description,
     icon,
+    relatedItems,
     slug,
     title,
   };
