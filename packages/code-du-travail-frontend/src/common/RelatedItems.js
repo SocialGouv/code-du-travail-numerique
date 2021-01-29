@@ -29,7 +29,7 @@ const matoSelectRelated = (reco, selection) => {
   ]);
 };
 
-export const RelatedItems = ({ items = [] }) => {
+export const RelatedItems = ({ disableSurvey = false, items = [] }) => {
   const isArticleSource = (source) =>
     ![SOURCES.EXTERNALS, SOURCES.LETTERS, SOURCES.TOOLS].includes(source);
 
@@ -47,53 +47,55 @@ export const RelatedItems = ({ items = [] }) => {
 
   return (
     <Container>
-      <SurveyModal>
-        {({
-          setModalVisible,
-          isPromptVisible,
-          isSurveyDisabled,
-          setPromptVisible,
-          setSurveyDisabled,
-        }) =>
-          !isSurveyDisabled &&
-          isPromptVisible && (
-            <PromptWrapper>
-              <Toast animate="from-right" wide shadow>
-                <CloseButton
-                  variant="naked"
-                  small
-                  narrow
-                  title="ne pas répondre aux questions"
-                  onClick={() => {
-                    setPromptVisible(false);
-                    setSurveyDisabled(true);
-                  }}
-                >
-                  <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
-                  <CloseIcon aria-hidden />
-                </CloseButton>
-                <PromptContainer>
-                  <Subtitle>Questionnaire</Subtitle>
-                  <PromptLabel>Aidez-nous à améliorer le site</PromptLabel>
-                  <Button
+      {!disableSurvey && (
+        <SurveyModal>
+          {({
+            setModalVisible,
+            isPromptVisible,
+            isSurveyDisabled,
+            setPromptVisible,
+            setSurveyDisabled,
+          }) =>
+            !isSurveyDisabled &&
+            isPromptVisible && (
+              <PromptWrapper>
+                <Toast animate="from-right" wide shadow>
+                  <CloseButton
+                    variant="naked"
                     small
+                    narrow
+                    title="ne pas répondre aux questions"
                     onClick={() => {
-                      matopush([
-                        "trackEvent",
-                        "survey",
-                        "open from related items",
-                      ]);
-                      setModalVisible(true);
+                      setPromptVisible(false);
+                      setSurveyDisabled(true);
                     }}
                   >
-                    Commencer
-                  </Button>
-                </PromptContainer>
-              </Toast>
-            </PromptWrapper>
-          )
-        }
-      </SurveyModal>
+                    <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
+                    <CloseIcon aria-hidden />
+                  </CloseButton>
+                  <PromptContainer>
+                    <Subtitle>Questionnaire</Subtitle>
+                    <PromptLabel>Aidez-nous à améliorer le site</PromptLabel>
+                    <Button
+                      small
+                      onClick={() => {
+                        matopush([
+                          "trackEvent",
+                          "survey",
+                          "open from related items",
+                        ]);
+                        setModalVisible(true);
+                      }}
+                    >
+                      Commencer
+                    </Button>
+                  </PromptContainer>
+                </Toast>
+              </PromptWrapper>
+            )
+          }
+        </SurveyModal>
+      )}
       {relatedGroups.map(
         ({ title, items }) =>
           items.length > 0 && (
