@@ -51,7 +51,7 @@
     "memoizee": "^0.4.15",
     "next": "10.0.5",
     "next-transpile-modules": "^6.0.0",
-    "p-debounce": "^2.1.0",
+    "p-debounce": "^3.0.1",
     "p-queue": "^6.6.2",
     "react": "^17.0.1",
     "react-autosuggest": "10.0.4",
