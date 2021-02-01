@@ -22,19 +22,24 @@ const preprocess = (q) => {
 // We populate the saved queries in an object in order to ease
 //  searches and map variant matches with the actual known query.
 
+const prequalifiedQuery = {
+  bool: {
+    filter: [
+      { term: { source: SOURCES.PREQUALIFIED } },
+      { term: { isPublished: true } },
+    ],
+  },
+};
+
 async function _getPrequalified() {
   const { body: { count = 10000 } = {} } = await elasticsearchClient.count({
-    body: { query: { term: { source: SOURCES.PREQUALIFIED } } },
+    body: {
+      query: prequalifiedQuery,
+    },
   });
   const response = await elasticsearchClient.search({
     body: {
-      query: {
-        bool: {
-          filter: {
-            term: { source: SOURCES.PREQUALIFIED },
-          },
-        },
-      },
+      query: prequalifiedQuery,
       size: count,
     },
     index,
