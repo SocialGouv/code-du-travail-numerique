@@ -1,9 +1,11 @@
 name: Code du travail numérique
+homepage: https://code.travail.gouv.fr
 
 # List your code repos
 repositories:
   frontend: https://github.com/SocialGouv/code-du-travail-numerique
   cdtn-admin: https://github.com/SocialGouv/cdtn-admin
+  cdtn-api: https://github.com/SocialGouv/cdtn-api
   cdtn-contrib: https://github.com/SocialGouv/code-du-travail-backoffice
   kali-data: https://github.com/SocialGouv/kali-data
   legi-data: https://github.com/SocialGouv/legi-data
