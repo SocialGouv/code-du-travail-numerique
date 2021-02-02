@@ -17,6 +17,10 @@ Object {
         "key": "external",
       },
       Object {
+        "doc_count": 2,
+        "key": "fiches_ministere_travail",
+      },
+      Object {
         "doc_count": 4,
         "key": "fiches_service_public",
       },
@@ -25,24 +29,12 @@ Object {
         "key": "glossary",
       },
       Object {
-        "doc_count": 1,
-        "key": "highlights",
-      },
-      Object {
         "doc_count": 3,
         "key": "modeles_de_courriers",
       },
       Object {
         "doc_count": 3,
         "key": "outils",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "page_fiche_ministere_travail",
-      },
-      Object {
-        "doc_count": 1,
-        "key": "prequalified",
       },
       Object {
         "doc_count": 3,
