@@ -2,7 +2,7 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
-const LIMIT = 300;
+const LIMIT = 200;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
@@ -150,7 +150,14 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
         body: gqlRequestBySource(source, index * LIMIT, LIMIT),
         method: "POST",
       })
-        .then((r) => r.json())
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          const error = new Error(res.statusText);
+          error.status = res.status;
+          throw error;
+        })
         .then((result) => {
           if (result.errors) {
             console.error(result.errors);
