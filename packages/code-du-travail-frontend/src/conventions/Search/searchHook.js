@@ -2,11 +2,16 @@ import { useEffect, useState } from "react";
 
 import { getResults } from "./api";
 
+export const ENTERPRISE_SEARCH = "enterprise";
+export const CONVENTION_SEARCH = "convention";
+export const ADRESSE_SEARCH = "adresse";
+
 // a hook that return [status, searchResults]
 // todo: package as a module
-const useSearchCC = (query) => {
+const useSearchCC = (query, searchType) => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
+
   // load results when query change
   useEffect(() => {
     let shouldUpdate = true;
@@ -15,7 +20,7 @@ const useSearchCC = (query) => {
         setStatus("loading");
         setResults();
         try {
-          const results = await getResults(query);
+          const results = await getResults(query, searchType);
           if (shouldUpdate) {
             if (results) {
               if (results.conventions.length || results.entreprises.length) {
@@ -40,7 +45,7 @@ const useSearchCC = (query) => {
     return function () {
       shouldUpdate = false;
     };
-  }, [query]);
+  }, [query, searchType]);
 
   return [status, results];
 };

@@ -1,15 +1,21 @@
 const Router = require("koa-router");
 
-const { entrepriseSearchBody, mapHit } = require("./searchEntreprise");
+const {
+  entrepriseSearchBody,
+  mapHit,
+  entrepriseAddressSearchBody,
+} = require("./searchEntreprise");
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const { logger } = require("../../utils/logger");
 
 // const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 // const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 const index = "cdtn-siren";
 
 const router = new Router({ prefix: API_BASE_URL });
+
+// const ENTERPRISE_SEARCH = "enterprise";
+const ADRESSE_SEARCH = "adresse";
 
 /**
  * Return the enterprises that match the search query
@@ -21,10 +27,13 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} enterprise search results
  */
 router.get("/entreprises", async (ctx) => {
-  const { q: query } = ctx.query;
-  logger.info(query);
+  const { q: query, t: searchType } = ctx.query;
 
-  const body = entrepriseSearchBody(query);
+  const body =
+    searchType == ADRESSE_SEARCH
+      ? entrepriseAddressSearchBody(query)
+      : entrepriseSearchBody(query);
+
   const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `enterprises not found, no entreprise matching ${query}`);

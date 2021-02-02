@@ -4,17 +4,41 @@ import memoizee from "memoizee";
 import getConfig from "next/config";
 
 const {
-  publicRuntimeConfig: { API_URL },
+  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_URL },
 } = getConfig();
+
+// TODO duplicated api siret2idcc call
+const apiSiret2idcc = memoizee(
+  (sirets) =>
+    fetch(`${API_SIRET2IDCC_URL}/${sirets}`)
+      .then((r) => r.json())
+      .then((data) => (data.error && []) || data)
+      .catch(() => []),
+  { promise: true }
+);
+
+const getConventions = async ({ siret }) =>
+  apiSiret2idcc(siret).then((result) => result.length && result[0].conventions);
 
 // memoize search results
 const cdtnEntrepriseFullText = memoizee(
-  (query) => {
-    const url = `${API_URL}/entreprises?q=${encodeURIComponent(query)}`;
+  (query, searchType) => {
+    const url = `${API_URL}/entreprises?q=${encodeURIComponent(
+      query
+    )}&t=${searchType}`;
 
     return fetch(url).then((response) => {
       if (response.ok) {
-        return response.json().then(({ enterprises }) => enterprises);
+        return response.json().then(({ enterprises }) =>
+          Promise.all(
+            enterprises.map((e) =>
+              getConventions(e).then((c) => {
+                e.conventions = c;
+                return e;
+              })
+            )
+          )
+        );
       }
       throw new Error("Un problème est survenu.");
     });
@@ -22,10 +46,6 @@ const cdtnEntrepriseFullText = memoizee(
   { promise: true }
 );
 
-const searchEntrepriseByName = debounce(cdtnEntrepriseFullText, 300);
+const searchEntrepriseES = debounce(cdtnEntrepriseFullText, 300);
 
-export {
-  searchEntrepriseByName,
-  // searchEntrepriseBySiret,
-  // searchEntrepriseBySiren,
-};
+export { searchEntrepriseES };
