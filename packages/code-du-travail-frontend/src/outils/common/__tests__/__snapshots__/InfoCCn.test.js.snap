@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
-.c8 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -46,18 +46,18 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   color: #f66663;
 }
 
-.c3 {
+.c6 {
   position: relative;
   display: inline-block;
 }
 
-.c5 {
+.c8 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -79,15 +79,15 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   appearance: none;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-calendar-picker-indicator {
+.c8::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -100,74 +100,114 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5:invalid {
+.c8:invalid {
   border-color: #eb5757;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: #9298af;
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c5::placeholder {
+.c8::placeholder {
   color: #9298af;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: #7994d4;
 }
 
-.c5:focus::-webkit-input-placeholder {
+.c8:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::-moz-placeholder {
+.c8:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c5:focus:-ms-input-placeholder {
+.c8:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c5:focus::placeholder {
+.c8:focus::placeholder {
   color: transparent;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c4 {
-  width: 100%;
+.c5 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.c6 {
-  margin-top: 2.4rem;
+.c5:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c5:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c5:checked:before {
+  display: block;
 }
 
 .c7 {
+  width: 100%;
+}
+
+.c9 {
+  margin-top: 2.4rem;
+}
+
+.c10 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c9 {
+.c12 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -188,26 +228,54 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   color: #eb5757;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.c2 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -215,6 +283,12 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
 
 @media (max-width:600px) {
   .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
     font-size: 1.6rem;
   }
 }
@@ -236,16 +310,60 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
       class="c2"
       for="convention-search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      Recherchez votre convention collective par :
     </label>
+    <div
+      class="c3"
+    >
+      <label
+        class="c4"
+        for="radio-enterprise"
+      >
+        <input
+          checked=""
+          class="c5"
+          id="radio-enterprise"
+          name="radio-enterprise"
+          type="radio"
+          value="true"
+        />
+        Nom de votre entreprise ou numéro de SIRET
+      </label>
+      <label
+        class="c4"
+        for="radio-convention"
+      >
+        <input
+          class="c5"
+          id="radio-convention"
+          name="radio-convention"
+          type="radio"
+          value="false"
+        />
+        Nom de votre convention collective ou IDCC
+      </label>
+      <label
+        class="c4"
+        for="radio-adresse"
+      >
+        <input
+          class="c5"
+          id="radio-adresse"
+          name="radio-adresse"
+          type="radio"
+          value="false"
+        />
+        Adresse de votre entreprise
+      </label>
+    </div>
     <span
-      class="c3 c4"
+      class="c6 c7"
     >
       <input
-        class="c5"
+        class="c8"
         id="convention-search"
         name="q"
-        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
         role="search"
         type="search"
         value=""
@@ -253,16 +371,16 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
     </span>
     
     <p
-      class="c6"
+      class="c9"
     >
       Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
       <span
-        class="c7"
+        class="c10"
       >
         Consultez
          
         <button
-          class="c8 c9"
+          class="c11 c12"
           type="button"
         >
           notre aide
@@ -278,7 +396,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
 `;
 
 exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
-.c7 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -323,18 +441,18 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   color: #f66663;
 }
 
-.c2 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c4 {
+.c7 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -356,15 +474,15 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   appearance: none;
 }
 
-.c4::-webkit-outer-spin-button,
-.c4::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c4::-webkit-calendar-picker-indicator {
+.c7::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -377,74 +495,114 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c4:invalid {
+.c7:invalid {
   border-color: #eb5757;
 }
 
-.c4::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c4::-moz-placeholder {
+.c7::-moz-placeholder {
   color: #9298af;
 }
 
-.c4:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c4::placeholder {
+.c7::placeholder {
   color: #9298af;
 }
 
-.c4:focus {
+.c7:focus {
   border-color: #7994d4;
 }
 
-.c4:focus::-webkit-input-placeholder {
+.c7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c4:focus::-moz-placeholder {
+.c7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c4:focus:-ms-input-placeholder {
+.c7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c4:focus::placeholder {
+.c7:focus::placeholder {
   color: transparent;
 }
 
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c3 {
-  width: 100%;
+.c4 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.c5 {
-  margin-top: 2.4rem;
+.c4:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c4:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c4:checked:before {
+  display: block;
 }
 
 .c6 {
+  width: 100%;
+}
+
+.c8 {
+  margin-top: 2.4rem;
+}
+
+.c9 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c8 {
+.c11 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -459,26 +617,54 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   cursor: default;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.c1 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 @media (max-width:600px) {
-  .c7 {
+  .c10 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c7 {
+  .c10 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c5 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c7 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -486,6 +672,12 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
 
 @media (max-width:600px) {
   .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
     font-size: 1.6rem;
   }
 }
@@ -501,16 +693,60 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
       class="c1"
       for="convention-search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      Recherchez votre convention collective par :
     </label>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+        for="radio-enterprise"
+      >
+        <input
+          checked=""
+          class="c4"
+          id="radio-enterprise"
+          name="radio-enterprise"
+          type="radio"
+          value="true"
+        />
+        Nom de votre entreprise ou numéro de SIRET
+      </label>
+      <label
+        class="c3"
+        for="radio-convention"
+      >
+        <input
+          class="c4"
+          id="radio-convention"
+          name="radio-convention"
+          type="radio"
+          value="false"
+        />
+        Nom de votre convention collective ou IDCC
+      </label>
+      <label
+        class="c3"
+        for="radio-adresse"
+      >
+        <input
+          class="c4"
+          id="radio-adresse"
+          name="radio-adresse"
+          type="radio"
+          value="false"
+        />
+        Adresse de votre entreprise
+      </label>
+    </div>
     <span
-      class="c2 c3"
+      class="c5 c6"
     >
       <input
-        class="c4"
+        class="c7"
         id="convention-search"
         name="q"
-        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
         role="search"
         type="search"
         value=""
@@ -518,16 +754,16 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
     </span>
     
     <p
-      class="c5"
+      class="c8"
     >
       Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
       <span
-        class="c6"
+        class="c9"
       >
         Consultez
          
         <button
-          class="c7 c8"
+          class="c10 c11"
           type="button"
         >
           notre aide

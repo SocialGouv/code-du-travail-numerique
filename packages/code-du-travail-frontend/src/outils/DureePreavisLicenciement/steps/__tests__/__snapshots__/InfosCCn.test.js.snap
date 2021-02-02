@@ -157,6 +157,10 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   }
 }
 
+@media (max-width:600px) {
+
+}
+
 <div>
   <label
     class="c0"

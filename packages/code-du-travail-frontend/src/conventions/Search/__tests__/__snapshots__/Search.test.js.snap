@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
-.c7 {
+exports[`<Search /> should render 1`] = `
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -46,18 +46,18 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c9:focus,
+.c9:hover,
+.c9:active {
   color: #f66663;
 }
 
-.c1 {
+.c4 {
   position: relative;
   display: inline-block;
 }
 
-.c3 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -79,15 +79,15 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   appearance: none;
 }
 
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c3::-webkit-calendar-picker-indicator {
+.c6::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -100,351 +100,175 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c3:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c3::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c3::-moz-placeholder {
+.c6::-moz-placeholder {
   color: #9298af;
 }
 
-.c3:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c3::placeholder {
+.c6::placeholder {
   color: #9298af;
 }
 
-.c3:focus {
+.c6:focus {
   border-color: #7994d4;
 }
 
-.c3:focus::-webkit-input-placeholder {
+.c6:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c3:focus::-moz-placeholder {
+.c6:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c3:focus:-ms-input-placeholder {
+.c6:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c3:focus::placeholder {
+.c6:focus::placeholder {
   color: transparent;
 }
 
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c2 {
-  width: 100%;
+.c3 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c3:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c3:checked:before {
+  display: block;
 }
 
 .c5 {
-  margin-top: 2.4rem;
+  width: 100%;
 }
 
-.c6 {
-  display: block;
-  margin-top: 1.6rem;
+.c7 {
+  margin-top: 2.4rem;
 }
 
 .c8 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="xxxx"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      Le service de recherche est indisponible.
-    </div>
-  </div>
-  <p
-    class="c5"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c6"
-    >
-      Consultez
-       
-      <button
-        class="c7 c8"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> should render 1`] = `
-.c6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c6:focus,
-.c6:hover,
-.c6:active {
-  color: #f66663;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c4 {
-  margin-top: 2.4rem;
-}
-
-.c5 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c7 {
+.c10 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 @media (max-width:600px) {
-  .c6 {
+  .c9 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     padding: 0 1rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
   }
 }
 
@@ -453,16 +277,60 @@ exports[`<Search /> should render 1`] = `
     class="c0"
     for="convention-search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    Recherchez votre convention collective par :
   </label>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="radio-enterprise"
+    >
+      <input
+        checked=""
+        class="c3"
+        id="radio-enterprise"
+        name="radio-enterprise"
+        type="radio"
+        value="true"
+      />
+      Nom de votre entreprise ou numéro de SIRET
+    </label>
+    <label
+      class="c2"
+      for="radio-convention"
+    >
+      <input
+        class="c3"
+        id="radio-convention"
+        name="radio-convention"
+        type="radio"
+        value="false"
+      />
+      Nom de votre convention collective ou IDCC
+    </label>
+    <label
+      class="c2"
+      for="radio-adresse"
+    >
+      <input
+        class="c3"
+        id="radio-adresse"
+        name="radio-adresse"
+        type="radio"
+        value="false"
+      />
+      Adresse de votre entreprise
+    </label>
+  </div>
   <span
-    class="c1 c2"
+    class="c4 c5"
   >
     <input
-      class="c3"
+      class="c6"
       id="convention-search"
       name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+      placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
       role="search"
       type="search"
       value=""
@@ -470,1923 +338,16 @@ exports[`<Search /> should render 1`] = `
   </span>
   
   <p
-    class="c4"
+    class="c7"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c5"
+      class="c8"
     >
       Consultez
        
       <button
-        class="c6 c7"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> should show no results when no result 1`] = `
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c7:focus,
-.c7:hover,
-.c7:active {
-  color: #f66663;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c5 {
-  margin-top: 2.4rem;
-}
-
-.c6 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c8 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="9999"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      Aucun résultat n’a été trouvé.
-    </div>
-  </div>
-  <p
-    class="c5"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c6"
-    >
-      Consultez
-       
-      <button
-        class="c7 c8"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> should show spinner when loading 1`] = `
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c7:focus,
-.c7:hover,
-.c7:active {
-  color: #f66663;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c5 {
-  margin-top: 2.4rem;
-}
-
-.c6 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c8 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="8888"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      <svg
-        aria-labelledby="title desc"
-        class="__react-svg-spinner_circle"
-        height="1em"
-        role="img"
-        style="animation-duration: 750ms;"
-        viewBox="0 0 32 32"
-        width="1em"
-      >
-        <title
-          id="title"
-        >
-          Circle loading spinner
-        </title>
-        <desc
-          id="desc"
-        >
-          Image of a partial circle indicating "loading."
-        </desc>
-        <style>
-          
-      .__react-svg-spinner_circle{
-          transition-property: transform;
-          animation-name: __react-svg-spinner_infinite-spin;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-      }
-      @keyframes __react-svg-spinner_infinite-spin {
-          from {transform: rotate(0deg)}
-          to {transform: rotate(360deg)}
-      }
-    
-        </style>
-        <circle
-          cx="16"
-          cy="16"
-          fill="none"
-          r="12"
-          role="presentation"
-          stroke="rgba(0,0,0,0.4)"
-          stroke-dasharray="43.982297150257104"
-          stroke-linecap="round"
-          stroke-width="4"
-        />
-      </svg>
-       Recherche des convention collectives...
-    </div>
-  </div>
-  <p
-    class="c5"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c6"
-    >
-      Consultez
-       
-      <button
-        class="c7 c8"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when input is IDCC, should search conventions 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c16:focus,
-.c16:hover,
-.c16:active {
-  color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
-  display: block;
-  padding: 1.6rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
-}
-
-.c5 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c9 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c14 {
-  margin-top: 2.4rem;
-}
-
-.c15 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c17 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c16 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="1234"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
-    >
-      <h3
-        class="c7"
-      >
-        CONVENTIONS COLLECTIVES (2
-         
-        résultats)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
-        >
-          <a
-            class="c11"
-            href="/convention-collective/275-small-titre"
-          >
-            small titre
-             
-            <span
-              class="c12"
-            >
-              (IDCC 
-              0275
-              )
-            </span>
-          </a>
-        </li>
-        <li
-          class="c9 c10"
-        >
-          <a
-            class="c13"
-            href="/convention-collective/276-smaller-convention-2"
-          >
-            smaller convention 2
-             
-            <span
-              class="c12"
-            >
-              (IDCC 
-              0276
-              )
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <p
-    class="c14"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c15"
-    >
-      Consultez
-       
-      <button
-        class="c16 c17"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when input is a valid IDCC, should show only the perfect match 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c15:focus,
-.c15:hover,
-.c15:active {
-  color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c11 {
-  display: block;
-  padding: 1.6rem 0;
-  padding-top: 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c12 {
-  font-weight: normal;
-}
-
-.c5 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c9 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c13 {
-  margin-top: 2.4rem;
-}
-
-.c14 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c16 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c15 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="4567"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
-    >
-      <h3
-        class="c7"
-      >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
-        >
-          <a
-            class="c11"
-            href="/convention-collective/4567-smaller-convention-2"
-          >
-            smaller convention 2
-             
-            <span
-              class="c12"
-            >
-              (IDCC 
-              4567
-              )
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <p
-    class="c13"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c14"
-    >
-      Consultez
-       
-      <button
-        class="c15 c16"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c12:focus,
-.c12:hover,
-.c12:active {
-  color: #f66663;
-}
-
-.c8 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c13 {
-  display: block;
-  padding: 0.8rem 0;
-  color: #7994d4;
-  font-weight: 600;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  font-weight: normal;
-}
-
-.c11 {
-  margin: 0.8rem 0 0 0;
-  font-weight: bold;
-}
-
-.c5 + .c5 {
-  margin-top: 1.6rem;
-}
-
-.c9 + .c9 {
-  border-top: 1px solid #bbcadf;
-}
-
-.c10:last-of-type > *:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c15 {
-  margin-top: 2.4rem;
-}
-
-.c16 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c17 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="012345678"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
-    >
-      <h3
-        class="c7"
-      >
-        ENTREPRISES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
-        >
-          <div
-            class="c11"
-          >
-            Entreprise 2 93100 Commune test 1
-          </div>
-          <button
-            class="c12 c13"
-          >
-             
-            <span
-              class="c14"
-            >
-              (IDCC 
-              0843
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <p
-    class="c15"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c16"
-    >
-      Consultez
-       
-      <button
-        class="c12 c17"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`] = `
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c7:focus,
-.c7:hover,
-.c7:active {
-  color: #f66663;
-}
-
-.c1 {
-  position: relative;
-  display: inline-block;
-}
-
-.c3 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-outer-spin-button,
-.c3::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c3::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c3:invalid {
-  border-color: #eb5757;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c3::-moz-placeholder {
-  color: #9298af;
-}
-
-.c3:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c3::placeholder {
-  color: #9298af;
-}
-
-.c3:focus {
-  border-color: #7994d4;
-}
-
-.c3:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c3:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c3:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c2 {
-  width: 100%;
-}
-
-.c5 {
-  margin-top: 2.4rem;
-}
-
-.c6 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c8 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c4 {
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-<div>
-  <label
-    class="c0"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="01234567891011"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      Le service de recherche est indisponible.
-    </div>
-  </div>
-  <p
-    class="c5"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="c6"
-    >
-      Consultez
-       
-      <button
-        class="c7 c8"
+        class="c9 c10"
         type="button"
       >
         notre aide
