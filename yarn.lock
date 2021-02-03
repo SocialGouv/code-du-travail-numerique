@@ -2686,10 +2686,10 @@
     esm "^3.2.25"
     winston "^3.3.3"
 
-"@socialgouv/datafiller-data@^2.14.0":
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.14.0.tgz#ccbe2a92c40b13c0229d4e08f4be851348488204"
-  integrity sha512-twL421SE9y4vh6tmSIGJ0zGerSYv7f7pfKL2B5T4r0+a0QWWEoB3A9CXsV5R7dqERqQAHfz5Hcup5Q/enTM1FA==
+"@socialgouv/datafiller-data@^2.15.0":
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.15.0.tgz#5a6bbc9df877bc1a393c9e440f55c335062825f8"
+  integrity sha512-OWnxsiYTawcewAiFPn0liOSv1CGJCmdBdKwEOXvQDd0v7KDdaiyCQ+6JMBAkUysl1X2KriQOsZON7lAlhvayUg==
   dependencies:
     node-fetch "^2.6.1"
     p-pipe "^3.1.0"
@@ -2719,15 +2719,15 @@
     eslint-plugin-simple-import-sort "~5.0.3"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.52.0":
-  version "4.52.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.52.0.tgz#ee38ba1eb5443b5a85e31f075c2f487d825f2528"
-  integrity sha512-xFESXULxTMFIggPdMQjt0/bN0unGf4RS5ka1bxh4h3Vis6UNZWj3L3GnpYhsPfYof7wu5CA1HSOIh/0xINXKlQ==
+"@socialgouv/fiches-travail-data@^4.59.0":
+  version "4.59.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.59.0.tgz#abfa61a9916ef1008381eae67e34e5b805b3aa5d"
+  integrity sha512-ELdD4O6W2UYmi6rGMWyWV/8ehJ3GV4+brMiTcfn33TE3ZVlOSurUOenc5CPWhw+tiMzKxcFahHBJGxa1lMFGBQ==
 
-"@socialgouv/kali-data@^2.39.0":
-  version "2.39.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.39.0.tgz#846ac9ecd4abae4aebf5b0507758fe8a2d280b5d"
-  integrity sha512-os8YM3c9wMohXaqMrq00xqfefLvdmQLEpa/WzupP3Zg5nF/9tssJEN+DTNCkzW+qG1IMLB6qDD/Tb41lRsx38w==
+"@socialgouv/kali-data@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.45.0.tgz#9c6def284b2e40c0eb60649d89f05616aebeced2"
+  integrity sha512-zwX7+Qcb/ZL34SVOOYgsSRw8SN8WMA0VcEUJM7WnKa/iozbeTIB9X2G1MvOgyMe4qkTDlQCsX2OO10UUfy2FxA==
   dependencies:
     unist-util-find "1.0.2"
     unist-util-flat-filter "1.0.0"
