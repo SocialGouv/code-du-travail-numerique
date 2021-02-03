@@ -54,6 +54,8 @@ async function _getPrequalified() {
         const prepro = preprocess(variant);
         queries[prepro] = query;
       }
+      const title = preprocess(query.title);
+      queries[title] = query;
       return queries;
     },
     {}
