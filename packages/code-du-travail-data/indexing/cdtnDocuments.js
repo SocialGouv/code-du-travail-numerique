@@ -9,6 +9,7 @@ import {
   getDocumentBySource,
   getGlossary,
   getHighlights,
+  getPrequalifieds,
 } from "./fetchCdtnAdminDocuments";
 
 import { splitArticle } from "./fichesTravailSplitter";
@@ -38,6 +39,7 @@ const themesQuery = JSON.stringify({
         slug
         source
         title
+        document
       }
       position: data(path: "position")
     }
@@ -247,6 +249,12 @@ async function* cdtnDocumentsGen() {
     source: SOURCES.HIGHLIGHTS,
   };
 
+  logger.info("=== PreQualified Request ===");
+  yield {
+    documents: await getPrequalifieds(getBreadcrumbs),
+    source: SOURCES.PREQUALIFIED,
+  };
+
   logger.info("=== glossary ===");
   yield {
     documents: [
@@ -256,17 +264,6 @@ async function* cdtnDocumentsGen() {
       },
     ],
     source: SOURCES.GLOSSARY,
-  };
-
-  logger.info("=== PreQualified Request ===");
-  yield {
-    documents: [
-      {
-        data: require("@socialgouv/datafiller-data/data/requests.json"),
-        source: SOURCES.PREQUALIFIED,
-      },
-    ],
-    source: SOURCES.PREQUALIFIED,
   };
 
   logger.info("=== data version ===");

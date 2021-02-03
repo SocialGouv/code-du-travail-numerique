@@ -22,7 +22,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/docsCount", async (ctx) => {
   const {
     body: { aggregations },
-  } = await elasticsearchClient.search({ index, body: docsCountBody });
+  } = await elasticsearchClient.search({ body: docsCountBody, index });
   ctx.body = { ...aggregations };
 });
 

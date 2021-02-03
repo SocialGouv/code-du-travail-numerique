@@ -68,7 +68,7 @@ export const ListLink = ({
     );
   }
 
-  // internal link but not indexeg (hence no slug)
+  // external links
   if (!slug) {
     return (
       <Link href={url} passHref>

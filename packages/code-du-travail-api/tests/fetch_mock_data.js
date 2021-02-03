@@ -1,12 +1,10 @@
 import { DOCUMENTS } from "@cdt/data/indexing/esIndexName";
 import { Client } from "@elastic/elasticsearch";
+import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-sources";
 import { writeFile as _writeFile } from "fs";
 import { join } from "path";
 import { promisify } from "util";
 
-import getDocumentByUrlQuery from "../src/server/routes/search/getDocumentByUrlQuery";
-import glossaryData from "./glossary.json";
-import preQualifiedData from "./prequalified.json";
 import versions from "./versions.json";
 
 const writeFile = promisify(_writeFile);
@@ -18,6 +16,54 @@ const client = new Client({
   log: [{ levels: ["error", "warning"], type: "stdio" }],
   node: `${ELASTICSEARCH_URL}`,
 });
+
+const getDataFromUrl = (url) => {
+  const [, sourceRoute, slug] = url.split("/");
+  let source = getSourceByRoute(sourceRoute);
+  // since theme routing has changed, we will keep this monkey patch for a while
+  let trimmedSlug = slug;
+  if (source === SOURCES.THEMES) {
+    trimmedSlug = slug.replace(/^\d*-/, "");
+  }
+  // Beware, "/fiche-ministere-travail/la-demission" matches both
+  // the split introduction and the full page. We always refer to the full page
+  // to avoid bugs (because this page could have no introduction).
+  if (source === SOURCES.SHEET_MT && !slug.includes("#")) {
+    source = SOURCES.SHEET_MT_PAGE;
+  }
+  return {
+    slug: trimmedSlug,
+    source,
+  };
+};
+
+const getDocumentByUrlQuery = (
+  url,
+  _source = [
+    "title",
+    "source",
+    "slug",
+    "description",
+    "url",
+    "action",
+    "breadcrumbs",
+    "cdtnId",
+    "isPublished",
+    "refs",
+  ]
+) => {
+  const { slug, source } = getDataFromUrl(url);
+  if (!source) return;
+  return {
+    _source,
+    query: {
+      bool: {
+        filter: [{ term: { slug } }, { term: { source } }],
+      },
+    },
+    size: 1,
+  };
+};
 
 /*
  * Make sure you have at least two documents with the same slug here to test a corner case (certificat-de-travail)
@@ -49,6 +95,8 @@ const documentsSlugs = [
   "/external/index-egapro",
   "/fiche-ministere-travail/5-questions-reponses-sur-la-sante-au-travail",
   "/highlights/homepage",
+  "/prequalified/comment-demissionner",
+  "/outils/heures-recherche-emploi",
 ];
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -69,27 +117,25 @@ async function updateDocumentsData(slugs) {
         data.push(item._source);
       }
     }
-    data.push(preQualifiedData, glossaryData, versions);
-    data.push({
-      action: "Calculer",
-      breadcrumbs: [
-        {
-          label: "Départ de l'entreprise",
-          slug: "/themes/8-depart-de-lentreprise",
-        },
-      ],
-      cdtnId: "d8fca710c5",
-      date: "08/11/2019",
-      description:
-        "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
-      excludeFromSearch: false,
-      id: "d09665fc-961c-44bf-a399-c34cfedf1d24",
-      isPublished: false,
-      slug: "heures-recherche-emploi",
-      source: "outils",
-      text: "heure pour recherche d'emploi",
-      title: "[DRAFT] Heures pour recherche d’emploi",
-    });
+    // it's easier to add a static glossary and versions entry
+    data.push(
+      {
+        data: [
+          {
+            abbreviations: [],
+            definition: "<p>Mesure d'urgence prise par précaution.</p>",
+            references: [
+              "https://www.service-public.fr/particuliers/glossaire/R37450",
+            ],
+            slug: "a-titre-conservatoire",
+            title: "A titre conservatoire",
+            variants: [],
+          },
+        ],
+        source: "glossary",
+      },
+      versions
+    );
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
       JSON.stringify(data, 0, 2)

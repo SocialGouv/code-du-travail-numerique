@@ -7,9 +7,5 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique",
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
-  },
-  "dependencies": {
-    "@socialgouv/cdtn-sources": "^4.42.0",
-    "@socialgouv/datafiller-data": "^2.15.0"
   }
 }

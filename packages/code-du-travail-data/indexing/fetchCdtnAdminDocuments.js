@@ -2,28 +2,39 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
-const LIMIT = 300;
+const LIMIT = 200;
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
-const gqlRequestBySource = (source, offset = 0, limit = LIMIT) =>
+const gqlRequestBySource = (source, offset = 0, limit = null) =>
   JSON.stringify({
     query: `{
   documents(
-    order_by: {cdtn_id: asc},
+    order_by: {cdtn_id: asc}
     limit: ${limit}
     offset: ${offset}
-    where: {source: {_eq: "${source}"},  is_available: {_eq: true} }) {
+    where: {source: {_eq: "${source}"},  is_available: {_eq: true} }
+  ) {
     id:initial_id
     cdtnId:cdtn_id
     title
     slug
     source
     text
-    is_published
-    is_searchable
+    isPublished: is_published
+    isSearchable: is_searchable
     metaDescription:meta_description
     document
+    contentRelations: relation_a(where: {type: {_eq: "document-content"}}) {
+      position: data(path: "position")
+      content: b {
+        cdtnId: cdtn_id
+        slug
+        source
+        title
+        document
+      }
+    }
   }
 }`,
   });
@@ -82,61 +93,41 @@ export async function getGlossary() {
   return result.data.glossary;
 }
 
-const gqlHighlights = () =>
-  JSON.stringify({
-    query: `query getHighlights {
-    highlights: documents(where: {source: {_eq: "${SOURCES.HIGHLIGHTS}"}}) {
-      cdtnId: cdtn_id
-      id:initial_id
-      slug
-      source
-      isPublished: is_published
-      is_searchable
-      contentRelations: relation_a(where: {type: {_eq: "document-content"}}) {
-        position: data(path: "position")
-        content: b {
-          cdtnId: cdtn_id
-          slug
-          source
-          title
-          document
-        }
-      }
-    }
-  }`,
-  });
-
 export async function getHighlights(getBreadcrumbs) {
   const result = await fetch(CDTN_ADMIN_ENDPOINT, {
-    body: gqlHighlights(),
+    body: gqlRequestBySource(SOURCES.HIGHLIGHTS),
     method: "POST",
   }).then((r) => r.json());
   if (result.errors && result.errors.length) {
     console.error(result.errors[0].message);
     throw new Error(`error fetching highlights`);
   }
-  const toElasticHighlights = result.data.highlights.map((highlight) => {
-    const refs = highlight.contentRelations
-      .sort(
-        ({ position: positionA }, { position: positionB }) =>
-          positionA - positionB
-      )
-      .map(({ content: { cdtnId, document, slug, source, title } }) => ({
-        breadcrumbs: getBreadcrumbs(cdtnId),
-        cdtnId,
-        description: document.description,
-        slug,
-        source,
-        title,
-      }));
-    delete highlight.contentRelations;
-    return {
+  const toElasticHighlights = result.data.documents.map((highlight) => {
+    return toElastic({
       ...highlight,
-      excludeFromSearch: true,
-      refs,
-    };
+      refs: toRefs(highlight.contentRelations, getBreadcrumbs),
+    });
   });
   return toElasticHighlights;
+}
+
+export async function getPrequalifieds(getBreadcrumbs) {
+  const result = await fetch(CDTN_ADMIN_ENDPOINT, {
+    body: gqlRequestBySource(SOURCES.PREQUALIFIED),
+    method: "POST",
+  }).then((r) => r.json());
+  if (result.errors && result.errors.length) {
+    console.error(result.errors[0].message);
+    throw new Error(`error fetching highlights`);
+  }
+
+  const formattedPrequalifieds = result.data.documents.map((prequalified) => {
+    return toElastic({
+      ...prequalified,
+      refs: toRefs(prequalified.contentRelations, getBreadcrumbs),
+    });
+  });
+  return formattedPrequalifieds;
 }
 
 export async function getDocumentBySource(source, getBreadcrumbs) {
@@ -148,7 +139,7 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
     return [];
   }
   const nbDoc = nbDocResult.data.documents_aggregate.aggregate.count;
-  const queue = new PQueue({ concurrency: 10 });
+  const queue = new PQueue({ concurrency: 5 });
 
   const pDocuments = Array.from(
     { length: Math.ceil(nbDoc / LIMIT) },
@@ -159,7 +150,14 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
         body: gqlRequestBySource(source, index * LIMIT, LIMIT),
         method: "POST",
       })
-        .then((r) => r.json())
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          const error = new Error(res.statusText);
+          error.status = res.status;
+          throw error;
+        })
         .then((result) => {
           if (result.errors) {
             console.error(result.errors);
@@ -184,10 +182,11 @@ function toElastic(
     source,
     slug,
     text,
-    is_searchable,
-    is_published,
+    isSearchable,
+    isPublished,
     metaDescription,
     document,
+    refs,
   },
   getBreadcrumbs
 ) {
@@ -199,13 +198,30 @@ function toElastic(
     ...document,
     breadcrumbs,
     cdtnId,
-    excludeFromSearch: !is_searchable,
+    excludeFromSearch: !isSearchable,
     id,
-    isPublished: is_published,
+    isPublished,
     metaDescription,
+    refs,
     slug,
     source,
     text,
     title,
   };
+}
+
+function toRefs(contentRelations, getBreadcrumbs) {
+  return contentRelations
+    .sort(
+      ({ position: positionA }, { position: positionB }) =>
+        positionA - positionB
+    )
+    .map(({ content: { cdtnId, document, slug, source, title } }) => ({
+      breadcrumbs: getBreadcrumbs(cdtnId),
+      cdtnId,
+      description: document.description,
+      slug,
+      source,
+      title,
+    }));
 }

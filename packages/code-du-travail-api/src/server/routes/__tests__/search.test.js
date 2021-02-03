@@ -6,7 +6,6 @@ const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
-const getDocumentByUrlQuery = require("../search/getDocumentByUrlQuery");
 
 const { logger } = require("../../utils/logger");
 require("./__mocking__/mockNLP");
@@ -21,23 +20,16 @@ app.use(router.routes());
 it("asks same sources wether it is search sem or search elastic and gets a description", () => {
   const searchBody = getSearchBody({ sources: [SOURCES.CDT] });
   const semBody = getSemBody({ sources: [SOURCES.CDT] });
-  const getEsRefBody = getDocumentByUrlQuery("/code-du-travail/slug");
   expect(searchBody._source).toEqual(semBody._source);
-
-  // getEsRefBody need to ask isPublished in order to remove unpublish items
-  // the field isPublished, is removed from _source result objects
-  expect(getEsRefBody._source.filter((f) => f !== "isPublished")).toEqual(
-    semBody._source
-  );
   expect(searchBody._source).toContain("description");
 });
 
-it("returns search results for demission from datafiller", async () => {
+it("returns search results for demission from prequalified requests", async () => {
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission"
   );
   expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot(); // datafiller is involved here (no ES or Sem)
+  expect(response.body).toMatchSnapshot(); // prequalified requests are involved here (no ES or Sem)
 });
 
 it("returns 3 search results for demission from elastic if size = 3", async () => {

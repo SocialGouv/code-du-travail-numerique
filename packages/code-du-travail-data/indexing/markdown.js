@@ -18,7 +18,7 @@ const htmlProcessor = unified()
   .use(htmlAstStringify);
 
 export function markdownTransform(addGlossary, documents) {
-  return documents.map(({ contents, ...rest }) => ({
+  return documents.map(({ contents = [], ...rest }) => ({
     ...rest,
     contents: contents.map((content) => {
       content.html = addGlossary(

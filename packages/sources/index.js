@@ -36,6 +36,8 @@ const routeBySource = {
   [SOURCES.THEMATIC_FILES]: "dossiers",
   [SOURCES.THEMES]: "themes",
   [SOURCES.TOOLS]: "outils",
+  [SOURCES.HIGHLIGHTS]: "highlights",
+  [SOURCES.PREQUALIFIED]: "prequalified",
 };
 
 // mapping elastic search source type -> source label
@@ -53,7 +55,8 @@ const labelBySource = {
   [SOURCES.THEMATIC_FILES]: "Dossiers",
   [SOURCES.THEMES]: "Themes",
   [SOURCES.TOOLS]: "Outils",
-  [SOURCES.HIGHLIGHTS]: "Highlights",
+  [SOURCES.HIGHLIGHTS]: "À la une",
+  [SOURCES.PREQUALIFIED]: "Requêtes préqualifiées",
 };
 
 const routes = /**@type {[import(".").SourceRoute, string][]}*/ (Object.entries(

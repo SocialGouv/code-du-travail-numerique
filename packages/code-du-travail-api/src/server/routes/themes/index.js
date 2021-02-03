@@ -4,7 +4,6 @@ const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { getRootThemesQuery, getThemeQuery } = require("./search.elastic.js");
-const getEsReferences = require("../search/getEsReferences");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
@@ -51,11 +50,9 @@ router.get("/themes/:slug", async (ctx) => {
   }
 
   const theme = response.body.hits.hits[0];
-  const refs = await getEsReferences(theme._source.refs);
 
   ctx.body = {
     ...theme._source,
-    refs: refs.map(({ _source }) => _source),
   };
 });
 

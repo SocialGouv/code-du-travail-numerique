@@ -238,5 +238,9 @@ export const documentMapping = {
     url: {
       type: "keyword",
     },
+    // used in prequalifieds
+    variants: {
+      type: "text",
+    },
   },
 };

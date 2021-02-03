@@ -1,8 +1,24 @@
+const { SOURCES } = require("@socialgouv/cdtn-sources");
+
 module.exports = {
-  size: 0,
   aggs: {
     sources: {
-      terms: { field: "source" },
+      terms: {
+        exclude: [
+          SOURCES.SHEET_MT_PAGE,
+          SOURCES.VERSIONS,
+          SOURCES.HIGHLIGHTS,
+          SOURCES.PREQUALIFIED,
+        ],
+        field: "source",
+        order: {
+          _key: "asc",
+        },
+        // to be changed if we ever have more than 100 different
+        // type of sources
+        size: 100,
+      },
     },
   },
+  size: 0,
 };

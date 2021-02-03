@@ -32,7 +32,6 @@
     "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-slugify": "^4.41.0",
     "@socialgouv/cdtn-sources": "^4.42.0",
-    "@socialgouv/datafiller-data": "^2.15.0",
     "@socialgouv/kali-data": "^2.45.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
