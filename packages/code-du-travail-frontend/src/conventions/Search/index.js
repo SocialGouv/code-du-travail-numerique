@@ -15,6 +15,7 @@ import useSearchCC, {
   ADRESSE_SEARCH,
   CONVENTION_SEARCH,
   ENTERPRISE_SEARCH,
+  ENTERPRISE_SEARCH2,
 } from "./searchHook";
 
 const trackInput = debounce((query, path, trackingUID) => {
@@ -27,6 +28,12 @@ const searchTypes = [
   {
     key: ENTERPRISE_SEARCH,
     label: "Nom de votre entreprise ou numéro de SIRET",
+    placeholder:
+      "Saisissez le nom de votre entreprise + code postal ou numéro de SIRET",
+  },
+  {
+    key: ENTERPRISE_SEARCH2,
+    label: "Nom de votre entreprise ou numéro de SIRET / groupé par convention",
     placeholder:
       "Saisissez le nom de votre entreprise + code postal ou numéro de SIRET",
   },

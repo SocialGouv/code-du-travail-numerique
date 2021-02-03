@@ -298,6 +298,19 @@ exports[`<Search /> should render 1`] = `
     </label>
     <label
       class="c2"
+      for="radio-enterprise2"
+    >
+      <input
+        class="c3"
+        id="radio-enterprise2"
+        name="radio-enterprise2"
+        type="radio"
+        value="false"
+      />
+      Nom de votre entreprise ou numéro de SIRET / groupé par convention
+    </label>
+    <label
+      class="c2"
       for="radio-convention"
     >
       <input

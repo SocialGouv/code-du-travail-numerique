@@ -4,6 +4,7 @@ import {
   ADRESSE_SEARCH,
   CONVENTION_SEARCH,
   ENTERPRISE_SEARCH,
+  ENTERPRISE_SEARCH2,
 } from "../searchHook";
 import { searchConvention } from "./convention.service";
 import {
@@ -24,7 +25,9 @@ export const getResults = async (query, searchType) => {
   const type = getQueryType(query);
   const cleaned = query.replace(/[\s .-]/g, "");
 
-  if ([ENTERPRISE_SEARCH, ADRESSE_SEARCH].includes(searchType)) {
+  if (
+    [ENTERPRISE_SEARCH, ENTERPRISE_SEARCH2, ADRESSE_SEARCH].includes(searchType)
+  ) {
     if (type === "text") {
       entreprises = await searchEntrepriseES(
         trimmedQuery,
@@ -35,6 +38,26 @@ export const getResults = async (query, searchType) => {
             entreprise.conventions && entreprise.conventions.length
         )
       );
+
+      // hack : group by convention for prototyping purpose
+      if (searchType === ENTERPRISE_SEARCH2) {
+        const flatConv = entreprises.flatMap((e) =>
+          e.conventions.map((c) => [c, e])
+        );
+
+        conventions = flatConv.reduce((acc, [c, e]) => {
+          const existingC = acc.find(({ num }) => num == c.num);
+          if (existingC) {
+            existingC.entreprises.push(e);
+          } else {
+            c.entreprises = [e];
+            acc.push(c);
+          }
+          return acc;
+        }, []);
+
+        entreprises = [];
+      }
     } else if (type === "siren") {
       entreprises = await searchEntrepriseBySiren(cleaned);
     } else if (type === "siret") {

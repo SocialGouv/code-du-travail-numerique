@@ -676,6 +676,19 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </label>
         <label
           class="c19"
+          for="radio-enterprise2"
+        >
+          <input
+            class="c20"
+            id="radio-enterprise2"
+            name="radio-enterprise2"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+        </label>
+        <label
+          class="c19"
           for="radio-convention"
         >
           <input
@@ -1411,6 +1424,19 @@ exports[`<Contribution /> should render answer references 1`] = `
             value="true"
           />
           Nom de votre entreprise ou numéro de SIRET
+        </label>
+        <label
+          class="c19"
+          for="radio-enterprise2"
+        >
+          <input
+            class="c20"
+            id="radio-enterprise2"
+            name="radio-enterprise2"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise ou numéro de SIRET / groupé par convention
         </label>
         <label
           class="c19"
@@ -2152,6 +2178,19 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </label>
         <label
           class="c19"
+          for="radio-enterprise2"
+        >
+          <input
+            class="c20"
+            id="radio-enterprise2"
+            name="radio-enterprise2"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+        </label>
+        <label
+          class="c19"
           for="radio-convention"
         >
           <input
@@ -2890,6 +2929,19 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </label>
         <label
           class="c19"
+          for="radio-enterprise2"
+        >
+          <input
+            class="c20"
+            id="radio-enterprise2"
+            name="radio-enterprise2"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+        </label>
+        <label
+          class="c19"
           for="radio-convention"
         >
           <input
@@ -3552,6 +3604,19 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
             value="true"
           />
           Nom de votre entreprise ou numéro de SIRET
+        </label>
+        <label
+          class="c16"
+          for="radio-enterprise2"
+        >
+          <input
+            class="c17"
+            id="radio-enterprise2"
+            name="radio-enterprise2"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise ou numéro de SIRET / groupé par convention
         </label>
         <label
           class="c16"

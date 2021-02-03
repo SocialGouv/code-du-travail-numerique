@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getResults } from "./api";
 
 export const ENTERPRISE_SEARCH = "enterprise";
+export const ENTERPRISE_SEARCH2 = "enterprise2";
 export const CONVENTION_SEARCH = "convention";
 export const ADRESSE_SEARCH = "adresse";
 

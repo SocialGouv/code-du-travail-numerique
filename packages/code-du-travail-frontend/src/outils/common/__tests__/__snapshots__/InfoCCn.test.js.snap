@@ -331,6 +331,19 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
       </label>
       <label
         class="c4"
+        for="radio-enterprise2"
+      >
+        <input
+          class="c5"
+          id="radio-enterprise2"
+          name="radio-enterprise2"
+          type="radio"
+          value="false"
+        />
+        Nom de votre entreprise ou numéro de SIRET / groupé par convention
+      </label>
+      <label
+        class="c4"
         for="radio-convention"
       >
         <input
@@ -711,6 +724,19 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
           value="true"
         />
         Nom de votre entreprise ou numéro de SIRET
+      </label>
+      <label
+        class="c3"
+        for="radio-enterprise2"
+      >
+        <input
+          class="c4"
+          id="radio-enterprise2"
+          name="radio-enterprise2"
+          type="radio"
+          value="false"
+        />
+        Nom de votre entreprise ou numéro de SIRET / groupé par convention
       </label>
       <label
         class="c3"

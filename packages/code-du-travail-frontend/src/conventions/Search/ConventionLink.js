@@ -41,6 +41,19 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
     >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        {!small ? (
+          <div>
+            {convention.entreprises?.map(({ label, ville }) => {
+              return (
+                <CompanyLabel key={label}>
+                  {label} {ville}
+                </CompanyLabel>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </StyledLink>
     </Link>
   );
@@ -60,4 +73,9 @@ const StyledLink = styled.a`
 
 const IDCC = styled.span`
   font-weight: normal;
+`;
+
+const CompanyLabel = styled.div`
+  font-weight: normal;
+  color: ${({ theme }) => theme.title};
 `;
