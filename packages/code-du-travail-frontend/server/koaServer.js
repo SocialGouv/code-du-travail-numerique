@@ -70,6 +70,7 @@ async function getKoaServer({ nextApp }) {
       scriptSrc: [
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
         "https://mon-entreprise.fr",
         "https://www.googletagmanager.com",
         "*.fabrique.social.gouv.fr",

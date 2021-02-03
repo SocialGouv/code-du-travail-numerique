@@ -9,6 +9,8 @@ const withTranspileModule = require("next-transpile-modules")([
   "parse5",
   "p-debounce",
   "is-plain-obj",
+  "xdm",
+  "unist-util-position-from-estree",
 ]);
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",

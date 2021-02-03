@@ -65,9 +65,9 @@ const rehypeToReact = (content) => {
       <ContentMT {...content} />
     );
   return {
-    content: () => contentComponent,
-    hdn: Hdn,
-    tab: Tab,
+    Content: () => contentComponent,
+    HDN: Hdn,
+    Tab: Tab,
   };
 };
 

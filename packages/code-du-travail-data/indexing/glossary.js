@@ -1,112 +1,170 @@
-import memoizee from "memoizee";
+const findAndReplaceMd = require("mdast-util-find-and-replace");
+const findAndReplaceHtml = require("hast-util-find-and-replace");
+const acorn = require("acorn");
+const syntax = require("micromark-extension-mdx-jsx");
+const fromMarkdown = require("mdast-util-from-markdown");
+const toMarkdown = require("mdast-util-to-markdown");
+const mdxJsx = require("mdast-util-mdx-jsx");
+const mdxMd = require("micromark-extension-mdx-md");
+const HtmlParser = require("@starptech/webparser").HtmlParser;
+const fromWebparser = require("@starptech/hast-util-from-webparser"); // less strict html parser
+const toHtml = require("hast-util-to-html");
 
-const conventionMatchers = [
-  "convention collective",
-  "conventions collectives",
-  "accords de branches",
-  "accord de branche",
-  "disposition conventionnelle",
-  "dispositions conventionnelles",
-];
+const DEFAULT_TOOLTIP_TAG_NAME = "webcomponent-tooltip";
 
-// we cannot use \b word boundary since \w does not match diacritics
-// So we do a kind of \b equivalent.
-// the main différence is that matched pattern can include a whitespace as first char
-const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
-const wordBoundaryStart = `(?:^|[^_/\\w${frDiacritics}-])`;
-const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
+const stripDefinition = (definition) =>
+  definition.replace(/'/g, "’").replace("<p>", "").replace("</p>", "");
 
-const startTag = `(?<=>[^><]*)`;
-const endTag = `(?=[^<]*</)`;
+// build mdast for a tooltip
+// for some reason we need to wrap it in a span
+const getMarkdownTooltip = (glossaryTerm) => (match) => {
+  const tagName = glossaryTerm.tagName || DEFAULT_TOOLTIP_TAG_NAME;
 
-/**
- * addGlossary is a heavy operation that is only neede while dumping for ES
- */
-const DISABLE_GLOSSARY = process.env.DISABLE_GLOSSARY || false;
+  const attrs =
+    (glossaryTerm.definition &&
+      ` content="${encodeURIComponent(
+        stripDefinition(glossaryTerm.definition)
+      )}"`) ||
+    "";
 
-export const createGlossaryTransform = (glossaryTerms) => {
-  function addGlossary(htmlContent) {
-    if (DISABLE_GLOSSARY) {
-      return htmlContent;
-    }
+  // as the regexp capture optional previous and next character, arrange HTML properly
+  const startChar = match.charAt(0).match(/\W/) ? match.charAt(0) : "";
+  const endChar = match.charAt(match.length - 1).match(/\W/)
+    ? match.charAt(match.length - 1)
+    : "";
+  const text = match.slice(startChar.length, match.length - endChar.length);
 
-    if (!htmlContent) return "";
+  return {
+    type: "html",
+    value: `${startChar}<${tagName}${attrs}>${text}</${tagName}>${endChar}`,
+  };
+};
 
-    let idHtmlContent = htmlContent;
+// replace non-unicode JS Regexp word boundaries `\b`
+const nonWordChars = `[?!"'’“>\\|,:;.\\s()\\[\\]]`;
 
-    let glossary = [];
-    glossaryTerms.forEach(
-      ({ abbreviations = [], definition, term, variants = [] }) => {
-        glossary = glossary.concat(
-          [term, ...variants].map((term) => ({
-            definition,
-            pattern: new RegExp(
-              `${startTag}${wordBoundaryStart}(${term})${wordBoundaryEnd}${endTag}`,
-              "gi"
-            ),
-            term,
-          }))
-        );
-
-        for (const abbreviation in abbreviations) {
-          glossary.push({
-            definition,
-            pattern: new RegExp(
-              `${startTag}\\b(${abbreviation})\\b${endTag}`,
-              "g"
-            ),
-            term: abbreviation,
-          });
-        }
-      }
+// build  hast for a tooltip
+// for some reason we need to wrap it in a span
+const getHtmlTooltip = (glossaryTerm) => (match) => {
+  const tagName = glossaryTerm.tagName || DEFAULT_TOOLTIP_TAG_NAME;
+  const attrs = {};
+  if (glossaryTerm.definition) {
+    attrs.content = encodeURIComponent(
+      stripDefinition(glossaryTerm.definition)
     );
-
-    // we make sure that bigger terms are replaced first
-    glossary.sort((previous, next) => {
-      return next.term.length - previous.term.length;
-    });
-
-    // we also sure that cc matchers are replaced first
-    conventionMatchers.forEach((matcher) => {
-      glossary.unshift({
-        definition: false,
-        pattern: new RegExp(`${startTag}(${matcher})${endTag}`, "gi"),
-        term: matcher,
-      });
-    });
-
-    const idToWebComponent = new Map();
-
-    glossary.forEach(({ definition, pattern, term }, index) => {
-      // while we loop, we replace the matches with an id to prevent nested matches
-      idHtmlContent = idHtmlContent.replace(pattern, function (
-        match // contains the matching term with the word boundaries
-      ) {
-        const id = "__tt__" + index;
-        const webComponent = definition
-          ? `<webcomponent-tooltip content="${encodeURIComponent(
-              definition
-                .replace(/'/g, "’")
-                .replace("<p>", "")
-                .replace("</p>", "")
-            )}">${term}</webcomponent-tooltip>`
-          : `<webcomponent-tooltip-cc>${term}</webcomponent-tooltip-cc>`;
-        idToWebComponent.set(id, webComponent);
-        return match.replace(new RegExp(term), id);
-      });
-    });
-
-    // In the end, we replace the id with its related component
-    let finalContent = idHtmlContent;
-    idToWebComponent.forEach((webComponent, id) => {
-      // make sure we don't match larger numbers
-      finalContent = finalContent.replace(
-        new RegExp(`${id}([^1-9])`, "g"),
-        `${webComponent}$1`
-      );
-    });
-
-    return finalContent;
   }
-  return memoizee(addGlossary);
+
+  // as the regexp capture optional previous and next character, arrange HTML properly
+  const startChar = match.charAt(0).match(/\W/) ? match.charAt(0) : "";
+  const endChar = match.charAt(match.length - 1).match(new RegExp(nonWordChars))
+    ? match.charAt(match.length - 1)
+    : "";
+  const text = match.slice(startChar.length, match.length - endChar.length);
+  const children = [];
+  if (startChar) children.push({ type: "text", value: startChar });
+  children.push({
+    children: [
+      {
+        type: "text",
+        value: text,
+      },
+    ],
+    properties: attrs,
+    tagName,
+    type: "element",
+  });
+  if (endChar) children.push({ type: "text", value: endChar });
+
+  return {
+    children,
+    tagName: "span",
+    type: "element",
+  };
+};
+
+// build search&replace map for *-util-find-and-replace
+const buildReplaceMap = (tooltipFunction, glossaryTerms) => {
+  // build a flat list of all possibles expressions : term + variants
+  // todo: add with diacritics removed ?
+  const replaceMap = glossaryTerms.flatMap((glossaryTerm) => [
+    [
+      new RegExp(
+        `(${nonWordChars}|^)${glossaryTerm.term}(${nonWordChars}|$)`,
+        "i"
+      ),
+      tooltipFunction(glossaryTerm),
+    ],
+    ...((glossaryTerm.variants &&
+      glossaryTerm.variants.map((variant) => [
+        new RegExp(`(${nonWordChars}|^)${variant}(${nonWordChars}|$)`, "i"),
+        tooltipFunction(glossaryTerm),
+      ])) ||
+      []),
+  ]);
+  return replaceMap;
+};
+
+// replace glossary terms in some MDX content
+export const addGlossary = ({
+  content,
+  glossaryTerms,
+  contentType = "html",
+}) => {
+  if (!content) return content;
+  const tooltipFunction =
+    contentType === "html" ? getHtmlTooltip : getMarkdownTooltip;
+
+  const valueMap = buildReplaceMap(tooltipFunction, glossaryTerms);
+
+  const tagNames = Array.from(
+    new Set(glossaryTerms.map((t) => t.tagName).filter(Boolean))
+  );
+
+  try {
+    if (contentType === "markdown") {
+      const tree = fromMarkdown(content, {
+        extensions: [syntax({ acorn: acorn }), mdxMd],
+        mdastExtensions: [mdxJsx.fromMarkdown],
+      });
+
+      findAndReplaceMd(tree, valueMap);
+
+      const out = toMarkdown(tree, {
+        bullet: "-",
+        //ruleSpaces: true,
+        extensions: [mdxJsx.toMarkdown],
+
+        listItemIndent: "one",
+      }).trim();
+      return out;
+    } else {
+      const result = new HtmlParser({
+        decodeEntities: false,
+        ignoreFirstLf: false,
+        selfClosingElements: true,
+      }).parse(content);
+
+      const tree = fromWebparser(result.rootNodes);
+
+      findAndReplaceHtml(tree, valueMap, {
+        ignore: [
+          "title",
+          "script",
+          "style",
+          "svg",
+          "math",
+          "webcomponent-tooltip",
+          ...tagNames,
+        ],
+      });
+
+      const out = toHtml(tree).trim();
+      return out;
+    }
+  } catch (e) {
+    console.log(`Cannot parse content`, contentType, e.message);
+    console.log("e", e);
+    console.log(content.slice(0, 100) + "...");
+    return content;
+  }
 };

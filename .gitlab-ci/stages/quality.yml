@@ -45,6 +45,7 @@ Lint socialgouv/react-fiche-service-public:
 Lint @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @cdt/frontend lint
 
@@ -57,6 +58,7 @@ Lint @cdtn/data:
 Lint Dockerfiles:
   <<: *quality_stage
   image: hadolint/hadolint
+  allow_failure: true
   script:
     - |-
       for i in $(find . -name Dockerfile); do
@@ -68,6 +70,7 @@ Lint Dockerfiles:
 Test @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @cdt/frontend test
 
