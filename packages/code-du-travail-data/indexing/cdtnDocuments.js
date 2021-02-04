@@ -7,9 +7,8 @@ import { buildGetBreadcrumbs } from "./breadcrumbs";
 import {
   getAllKaliBlocks,
   getDocumentBySource,
+  getDocumentBySourceWithRelation,
   getGlossary,
-  getHighlights,
-  getPrequalifieds,
 } from "./fetchCdtnAdminDocuments";
 
 import { splitArticle } from "./fichesTravailSplitter";
@@ -245,13 +244,19 @@ async function* cdtnDocumentsGen() {
 
   logger.info("=== Highlights ===");
   yield {
-    documents: await getHighlights(getBreadcrumbs),
+    documents: await getDocumentBySourceWithRelation(
+      SOURCES.HIGHLIGHTS,
+      getBreadcrumbs
+    ),
     source: SOURCES.HIGHLIGHTS,
   };
 
   logger.info("=== PreQualified Request ===");
   yield {
-    documents: await getPrequalifieds(getBreadcrumbs),
+    documents: await getDocumentBySourceWithRelation(
+      SOURCES.PREQUALIFIED,
+      getBreadcrumbs
+    ),
     source: SOURCES.PREQUALIFIED,
   };
 
