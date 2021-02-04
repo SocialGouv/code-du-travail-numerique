@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.43.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.42.0...v4.43.0) (2021-02-04)
+
+
+### Features
+
+* prequalifieds from admin ([#3273](https://github.com/SocialGouv/code-du-travail-numerique/issues/3273)) ([8f5b1fc](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f5b1fc5ceaa7c45105d7198ad96b1994fd63b11))
+
+
+
+
+
 ## [4.31.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.31.1-alpha.3...v4.31.1) (2020-09-29)
 
 **Note:** Version bump only for package @cdt/data...synonyms

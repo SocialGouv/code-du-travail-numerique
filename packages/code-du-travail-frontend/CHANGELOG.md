@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.43.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.42.0...v4.43.0) (2021-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3272](https://github.com/SocialGouv/code-du-travail-numerique/issues/3272)) ([11a3411](https://github.com/SocialGouv/code-du-travail-numerique/commit/11a3411101fee8264150c8b17844cbf9acf81a5c))
+* **deps:** update [@socialgouv](https://github.com/socialgouv) data packages ([#3275](https://github.com/SocialGouv/code-du-travail-numerique/issues/3275)) ([063e0b5](https://github.com/SocialGouv/code-du-travail-numerique/commit/063e0b5910307ea524126162a710274bb899864f))
+* **frontend:** handle branch sitemap ([#3267](https://github.com/SocialGouv/code-du-travail-numerique/issues/3267)) ([7dad854](https://github.com/SocialGouv/code-du-travail-numerique/commit/7dad854eda2127aee8165f89ee7fb81843a01dca))
+
+
+### Features
+
+* prequalifieds from admin ([#3273](https://github.com/SocialGouv/code-du-travail-numerique/issues/3273)) ([8f5b1fc](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f5b1fc5ceaa7c45105d7198ad96b1994fd63b11))
+* **front:** add relatedItems to tools ([#3276](https://github.com/SocialGouv/code-du-travail-numerique/issues/3276)) ([fce2d77](https://github.com/SocialGouv/code-du-travail-numerique/commit/fce2d77fbf139c7b12f9b666d2cabf23fecee3a8))
+* **front:** add suptitle to cdt articles ([#3277](https://github.com/SocialGouv/code-du-travail-numerique/issues/3277)) ([06fd791](https://github.com/SocialGouv/code-du-travail-numerique/commit/06fd791582603cea70b0a94016aab7c8969fbde8))
+
+
+
+
+
 # [4.42.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.41.0...v4.42.0) (2021-01-21)
 
 
