@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "yarn build:populate && DISABLE_GLOSSARY=true yarn dump-dev",
+    "build": "yarn build:populate",
     "build:populate": "ncc build ./indexing/index.js -o dist/populate",
     "check-slugs": "DISABLE_GLOSSARY=true  node -r esm indexing/slugChecker",
     "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
