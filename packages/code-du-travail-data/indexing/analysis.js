@@ -148,4 +148,4 @@ const tokenizer = {
   },
 };
 
-export { char_filter, analyzer, filter, tokenizer };
+export { analyzer, char_filter, filter, tokenizer };

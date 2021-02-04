@@ -46,4 +46,4 @@ const Error = styled.div`
 
 const InlineError = (props) => <Error {...props} as="span" />;
 
-export { ErrorField, ErrorComputedField, Error, InlineError };
+export { Error, ErrorComputedField, ErrorField, InlineError };

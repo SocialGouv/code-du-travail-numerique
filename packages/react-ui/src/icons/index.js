@@ -21,9 +21,9 @@ export { default as PartialActivity } from "./components/bicolor/PartialActivity
 export { default as Populars } from "./components/bicolor/Populars";
 export { default as Precarity } from "./components/bicolor/Precarity";
 export { default as PriorNotice } from "./components/bicolor/PriorNotice";
-export { default as Rules } from "./components/bicolor/Rules";
 export { default as Resignation } from "./components/bicolor/Resignation";
 export { default as Resources } from "./components/bicolor/Resources";
+export { default as Rules } from "./components/bicolor/Rules";
 export { default as Salary } from "./components/bicolor/Salary";
 export { default as Security } from "./components/bicolor/Security";
 export { default as Termination } from "./components/bicolor/Termination";
@@ -39,6 +39,7 @@ export { default as ArrowDown } from "./components/monochrome/ArrowDown";
 export { default as ArrowRight } from "./components/monochrome/ArrowRight";
 export { default as Burger } from "./components/monochrome/Burger";
 export { default as Calendar } from "./components/monochrome/Calendar";
+export { default as External } from "./components/monochrome/Calendar";
 export { default as Check } from "./components/monochrome/Check";
 export { default as Close } from "./components/monochrome/Close";
 export { default as Config } from "./components/monochrome/Config";
@@ -46,7 +47,6 @@ export { default as DirectionLeft } from "./components/monochrome/DirectionLeft"
 export { default as DirectionRight } from "./components/monochrome/DirectionRight";
 export { default as Download } from "./components/monochrome/Download";
 export { default as Euro } from "./components/monochrome/Euro";
-export { default as External } from "./components/monochrome/Calendar";
 export { default as Help } from "./components/monochrome/Help";
 export { default as Home } from "./components/monochrome/Home";
 export { default as Link } from "./components/monochrome/Link";

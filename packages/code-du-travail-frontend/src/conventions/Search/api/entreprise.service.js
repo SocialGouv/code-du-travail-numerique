@@ -127,6 +127,6 @@ const searchEntrepriseBySiren = debounce(apiEntrepriseSiren, 300);
 
 export {
   searchEntrepriseByName,
-  searchEntrepriseBySiret,
   searchEntrepriseBySiren,
+  searchEntrepriseBySiret,
 };

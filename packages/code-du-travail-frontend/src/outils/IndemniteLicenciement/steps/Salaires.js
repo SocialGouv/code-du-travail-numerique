@@ -141,4 +141,4 @@ StepSalaires.propTypes = {
   form: PropTypes.object.isRequired,
 };
 
-export { StepSalaires, getSalairesPeriods };
+export { getSalairesPeriods, StepSalaires };

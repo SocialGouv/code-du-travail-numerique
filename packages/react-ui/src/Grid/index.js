@@ -4,7 +4,7 @@ import React from "react";
 import { Grid as RootGrid } from "./Grid";
 import { GridCell } from "./GridCell";
 
-export { RootGrid, GridCell };
+export { GridCell, RootGrid };
 export const Grid = ({ children, ...props }) => (
   <RootGrid {...props}>
     {Array.isArray(children) ? (

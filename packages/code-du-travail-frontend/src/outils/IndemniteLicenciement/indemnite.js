@@ -138,4 +138,4 @@ function getIndemniteFromFinalForm(form) {
   };
 }
 
-export { getIndemnite, getSalaireRef, getIndemniteFromFinalForm, round };
+export { getIndemnite, getIndemniteFromFinalForm, getSalaireRef, round };
