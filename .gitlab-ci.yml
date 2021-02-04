@@ -4,8 +4,8 @@ include:
     file: /base_register_stage.yml
     ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
-    file: //base_docker_helm_image_stage.yml
-    ref: v20.6.1
+    file: /base_docker_helm_image_stage.yml
+    ref: feat-deploy-update-to-helm@3
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
     ref: v9.1.2
