@@ -5,11 +5,8 @@ include:
     file: /base_create_namespace_stage.yml
     ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
-    file: /base_deploy_nodejs_chart_stage.yml
-    ref: v9.1.2
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_deploy_hpa_chart_stage.yml
-    ref: v9.1.2
+    file: /base_deploy_app_chart_stage.yml
+    ref: feat-deploy-update-to-helm@3
 
 
 #
@@ -78,7 +75,7 @@ Create namespace:
 
 .deploy_api_stage: &deploy_api_stage
   <<: *deploy_stage
-  extends: .base_deploy_hpa_chart_stage
+  extends: .base_deploy_app_chart_stage
   variables:
     <<: *deploy_stage_variables
     CONTEXT: api
@@ -115,7 +112,7 @@ Deploy @cdtn/api (prod):
 
 .deploy_frontend_stage: &deploy_frontend_stage
   <<: *deploy_stage
-  extends: .base_deploy_hpa_chart_stage
+  extends: .base_deploy_app_chart_stage
   variables:
     <<: *deploy_stage_variables
     PORT: ${FRONTEND_PORT}
