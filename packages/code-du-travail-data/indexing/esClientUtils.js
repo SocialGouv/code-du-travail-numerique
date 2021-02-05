@@ -134,12 +134,12 @@ function getIndicesToDelete(patterns, timestamp, indices) {
 }
 
 export {
-  createIndex,
   bulkIndexDocuments,
-  version,
-  indexDocumentsBatched,
-  deleteOldIndex,
   chunks,
-  range,
+  createIndex,
+  deleteOldIndex,
   getIndicesToDelete,
+  indexDocumentsBatched,
+  range,
+  version,
 };

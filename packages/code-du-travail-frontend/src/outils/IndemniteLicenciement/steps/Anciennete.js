@@ -161,4 +161,4 @@ function computeSalaraires(values) {
   return null;
 }
 
-export { StepAnciennete, computeAnciennete, computeSalaraires };
+export { computeAnciennete, computeSalaraires, StepAnciennete };

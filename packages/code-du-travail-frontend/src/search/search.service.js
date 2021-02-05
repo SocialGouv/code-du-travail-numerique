@@ -51,6 +51,6 @@ const fetchSuggestResultsDebounced = pDebounce(
 );
 
 export {
-  fetchSuggestResultsDebounced as fetchSuggestResults,
   fetchSearchResultsMemoized as fetchSearchResults,
+  fetchSuggestResultsDebounced as fetchSuggestResults,
 };

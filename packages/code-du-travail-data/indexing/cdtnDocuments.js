@@ -1,22 +1,20 @@
-// eslint-disable-next-line simple-import-sort/sort
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 
-import { createGlossaryTransform } from "./glossary";
 import { buildGetBreadcrumbs } from "./breadcrumbs";
+import { buildThemes } from "./buildThemes";
 import {
   getAllKaliBlocks,
   getDocumentBySource,
   getDocumentBySourceWithRelation,
   getGlossary,
 } from "./fetchCdtnAdminDocuments";
-
 import { splitArticle } from "./fichesTravailSplitter";
+import { createGlossaryTransform } from "./glossary";
+import { getArticlesByTheme } from "./kali";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
-import { getArticlesByTheme } from "./kali";
-import { buildThemes } from "./buildThemes";
 
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
@@ -283,4 +281,4 @@ async function* cdtnDocumentsGen() {
   };
 }
 
-export { getDuplicateSlugs, cdtnDocumentsGen };
+export { cdtnDocumentsGen, getDuplicateSlugs };

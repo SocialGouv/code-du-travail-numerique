@@ -512,7 +512,7 @@
     tslib "^2.1.0"
     type-fest "^0.20.2"
 
-"@kosko/env@^1.0.1", "@kosko/env@^1.0.3":
+"@kosko/env@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@kosko/env/-/env-1.0.3.tgz#3615add577b2eb4af060474886f32d1c4e797f01"
   integrity sha512-hN8WsB+Mpu9TctXBrWfMAJx2G31/1RK3Eq3VcHMHup7jb+AV10rJw1EaRhjwMzechMlXYoK+HeYtYTym/kbP4A==
@@ -569,7 +569,7 @@
     is-plain-object "^5.0.0"
     tslib "^2.0.3"
 
-"@kubernetes-models/sealed-secrets@^1.0.1", "@kubernetes-models/sealed-secrets@^1.0.3":
+"@kubernetes-models/sealed-secrets@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@kubernetes-models/sealed-secrets/-/sealed-secrets-1.0.3.tgz#722481ba40856cfca416679eb1787e991f8caf26"
   integrity sha512-3PkwPsryJRISW2hYexrytY2y5tttLgsiX+HB8YPGUN8ebpJRO1LvhI+aDwkhZuYIzlM3+IUbFjomyWQIb3/nkA==
@@ -628,15 +628,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.1.0.tgz#a109a59d44b06fb3099cb134b81c0af074f5df42"
-  integrity sha512-8G8YeEuGb1bTEO4r/rXq/83cxVoOoD3h4YV9EGOPqCexDFtrem9ectYKoNHzAU+IkH+wzlB0cHDdZGru79++Hw==
+"@socialgouv/kosko-charts@^4.7.4":
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.7.4.tgz#196378b8e3e00bb3c9ae6d0c517d2454791d8ac2"
+  integrity sha512-XtEP24RBKmm8f6k1mPAxr9KgyZN9OTvxbUv8oVQ4oGCsiy96XpbhXNbhvJyUB3E6mIRnd9uA7JgRim5iEA28uw==
   dependencies:
-    "@kosko/env" "^1.0.1"
-    "@kubernetes-models/sealed-secrets" "^1.0.1"
+    "@kosko/env" "^1.0.3"
+    "@kubernetes-models/sealed-secrets" "^1.0.3"
     "@sindresorhus/is" "^4.0.0"
-    kubernetes-models "^1.0.1"
+    kubernetes-models "^1.0.3"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
@@ -2675,7 +2675,7 @@ kosko@^1.0.3:
     "@kosko/cli" "^1.1.1"
     import-local "^3.0.2"
 
-kubernetes-models@^1.0.1, kubernetes-models@^1.0.3:
+kubernetes-models@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-1.0.3.tgz#928d1ee31f533c22d4868b7cc7357e0c46a9e1c6"
   integrity sha512-5RtMfOqFfyLK1bEGeylUQvp8gPSNQaTeihV4q5iWfSEw+S9JtYLKGy5/Z/Ts9JVnbM80NrD2RPGNDAFShYksyQ==

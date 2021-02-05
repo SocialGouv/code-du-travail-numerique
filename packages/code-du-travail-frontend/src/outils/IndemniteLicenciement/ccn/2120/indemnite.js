@@ -142,4 +142,4 @@ function getIndemnite({
     infoCalculConventionnel: { formula, labels },
   };
 }
-export { getSalaireRef, getIndemnite };
+export { getIndemnite, getSalaireRef };
