@@ -34,7 +34,12 @@ router.get("/entreprises", async (ctx) => {
       ? entrepriseAddressSearchBody(query)
       : entrepriseSearchBody(query);
 
+  // console.log(JSON.stringify(body, null, 2));
+
   const response = await elasticsearchClient.search({ body, index });
+
+  // console.log(JSON.stringify(response, null, 2));
+
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `enterprises not found, no entreprise matching ${query}`);
   }

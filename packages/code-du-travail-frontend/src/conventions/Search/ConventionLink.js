@@ -46,7 +46,7 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
             {convention.entreprises?.map(({ label, ville }) => {
               return (
                 <CompanyLabel key={label}>
-                  {label} {ville}
+                  {label} - {ville}
                 </CompanyLabel>
               );
             })}

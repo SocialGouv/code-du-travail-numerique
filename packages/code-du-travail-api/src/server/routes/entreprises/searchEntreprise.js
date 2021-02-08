@@ -55,8 +55,31 @@ export const entrepriseSearchBody = (query) => ({
   collapse,
   query: {
     bool: {
-      must: [{ match: { naming: query } }],
-      should: [{ rank_feature }, { match: { villeCp: query } }],
+      must: [
+        {
+          bool: {
+            should: [
+              { fuzzy: { naming: query } },
+              { match: { naming: query } },
+            ],
+          },
+        },
+      ],
+      // must: [{ match: { naming: query } }],
+      should: [
+        { rank_feature },
+        // {
+        // match: { cp: { boost: 0.2, query: query.replace(/\D/g, "") } },
+        // },
+        {
+          match: {
+            ville: {
+              boost: 0.2,
+              query,
+            },
+          },
+        },
+      ],
     },
   },
   size,

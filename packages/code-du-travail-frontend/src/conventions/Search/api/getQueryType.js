@@ -10,7 +10,7 @@ const getQueryType = (str) => {
     } else if (strClean.length === 14) {
       return "siret";
     }
-    return;
+    return "text";
   }
   if (str.length >= 2) {
     // search nom CC + APi entreprise
