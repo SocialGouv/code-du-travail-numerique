@@ -38,7 +38,6 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 | [code-du-travail-api](./packages/code-du-travail-api)                 | NodeJS koa API                                     |
 | [code-du-travail-data](./packages/code-du-travail-data)               | Datasets and Elastic indexing scripts and mappings |
 | [code-du-travail-frontend](./packages/code-du-travail-frontend)       | Next.js frontend application                       |
-| [react-fiches-service-public](./packages/react-fiches-service-public) | React components for fiches service-public.fr      |
 | [react-ui](./packages/react-ui)                                       | React components and styleguide                    |
 
 #### Frontend
@@ -59,11 +58,11 @@ The React components are defined in the [react-ui](./packages/react-ui) package 
 
 #### Backend
 
-To run the NodeJS API, you need an Elasticsearch instance and a [python-nlp](./packages/code-du-travail-nlp) instance.
+To run the NodeJS API, you need an Elasticsearch instance.
 
 The provided [docker-compose.yml](./docker-compose.yml) provide all the environment.
 
-We recommend to use the `docker-compose.override.dev.yml` config for local development. 
+We recommend using the `docker-compose.override.dev.yml` config for local development. 
 Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.override.yml`
 (more information on the [docker-compose documentation](https://docs.docker.com/compose/extends/#multiple-compose-files)).
 
@@ -78,7 +77,7 @@ $ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travai
 $ docker run \
         --rm \
         --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dist/dump.data.json \
-        >! packages/code-du-travail-data/dist/dump.tf.json
+        >! packages/code-du-travail-data/dist/dump.data.json
 ```
 
 Then you can launch services using docker-compose
@@ -137,8 +136,8 @@ To launch a local tf-serve instance, you can report to the README of our [servin
 
 You can also read the packages readme
 
-- [Data README](./packages/code-du-travail-nlp/README.md)
-- [API README](./packages/code-du-travail-nlp/README.md)
+- [Data README](./packages/code-du-travail-data/README.md)
+- [API README](./packages/code-du-travail-api/README.md)
 - [e2e README](./optional/e2e/README.md)
 
 ## Contributions
