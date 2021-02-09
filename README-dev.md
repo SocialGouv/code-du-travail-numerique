@@ -63,7 +63,13 @@ To run the NodeJS API, you need an Elasticsearch instance and a [python-nlp](./p
 
 The provided [docker-compose.yml](./docker-compose.yml) provide all the environment.
 
-We recommend to use the `docker-compose.override.dev.yml` config for local development.
+We recommend to use the `docker-compose.override.dev.yml` config for local development. 
+Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.override.yml`
+(more information on the [docker-compose documentation](https://docs.docker.com/compose/extends/#multiple-compose-files)).
+
+```sh
+cp docker-compose.override.dev.yml docker-compose.override.yml
+```
 
 To fill your ElasticSearch, you'll need to get the latest dataset dump from our registry :
 
