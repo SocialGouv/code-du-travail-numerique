@@ -1,14 +1,12 @@
 # Gherkin E2E tests
 
 The end to end tests are written in Gherkin.  
-You can find them in the [features](./features) folder.
+You can find them in the [features](features) folder.
 
 ## [Codecept runners](https://codecept.io/bdd/#gherkin)
 
 You can run the Gherkin tests with through the different [Codecept](https://codecept.io) runners.  
 Each of them are individual packages that should be separately install and run (see each `README.md`).
-
-### [Puppeteer Runner](./.runners/puppeteer/README.md)
 
 ## Adding a new test
 
@@ -31,24 +29,6 @@ As the website is native french, the Gherkin tests are native french too.
 We use the `#language: fr` to tell Codecept that the file has french Gherkin syntax in it.
 To ensure that Codecept is compatible with the french syntax, we added a local `step_definitions/_fr.js` with what is needed to be translated.
 
-## HOW-TO
+## Execute tests
 
-> How can I run only tests that match a string pattern ?
-
-```sh
-yarn test --grep "propos"
-```
-
-will only run tests which name match "propos"
-
-> How can I run test using my localhost server
-
-```sh
-$ CODECEPT_BASEURL=http://localhost:3000 yarn test
-```
-
-> How can I debug my failing test
-
-```sh
-$ yarn test --verbose --steps
-```
+See the [Gherkin | Codeceptjs | Puppeteer documentation](runners/puppeteer).
