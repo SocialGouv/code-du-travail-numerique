@@ -6,7 +6,9 @@ import { ConventionLink } from "./ConventionLink";
 
 export const CompanyTile = ({ conventions = [], label, ville, onClick }) => (
   <>
-    <Entreprise>{label}</Entreprise>
+    <Entreprise>
+      <div dangerouslySetInnerHTML={{ __html: label }} />
+    </Entreprise>
     {ville ? <Ville>{ville}</Ville> : ""}
 
     {conventions.length ? (

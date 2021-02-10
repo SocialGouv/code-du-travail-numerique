@@ -1,3 +1,6 @@
+const pre = "<b><u>";
+const post = "</b></u>";
+
 export const mapHit = ({
   _source: {
     siren,
@@ -12,36 +15,48 @@ export const mapHit = ({
     idcc,
     siret,
   },
-}) => ({
-  closed: false,
-  codePostalEtablissement,
-  conventions: [{ idcc }],
-  denominationUniteLegale,
-  denominationUsuelle1UniteLegale,
-  denominationUsuelle2UniteLegale,
-  denominationUsuelle3UniteLegale,
-  id: siren,
-  label: Array.from(
-    new Set([
-      denominationUniteLegale,
-      denominationUsuelle1UniteLegale,
-      denominationUsuelle2UniteLegale,
-      denominationUsuelle3UniteLegale,
-      nomUniteLegale,
-      nomUsageUniteLegale,
-    ])
-  )
-    .filter((f) => f)
-    .join(" "),
-  nomUniteLegale,
-  nomUsageUniteLegale,
-  siren,
-  siret,
-  type: "entreprise",
-  ville: [codePostalEtablissement, libelleCommuneEtablissement]
-    .filter((e) => e)
-    .join(" "),
-});
+  highlight: { naming },
+}) => {
+  const labelTokens = naming
+    .join(" ")
+    .split(" ")
+    .map((n) => ({
+      fmt: n,
+      raw: n.replace(pre, "").replace(post, "").trim().toUpperCase(),
+    }))
+    .reduce((acc, curr) => {
+      if (!acc.map(({ raw }) => raw).includes(curr.raw)) {
+        acc.push(curr);
+      }
+      return acc;
+    }, []);
+
+  const label = labelTokens
+    .map(({ fmt }) => fmt)
+    // remove CodePostal
+    .slice(0, labelTokens.length - 1)
+    .join(" ");
+
+  return {
+    closed: false,
+    codePostalEtablissement,
+    conventions: [{ idcc }],
+    denominationUniteLegale,
+    denominationUsuelle1UniteLegale,
+    denominationUsuelle2UniteLegale,
+    denominationUsuelle3UniteLegale,
+    id: siren,
+    label,
+    nomUniteLegale,
+    nomUsageUniteLegale,
+    siren,
+    siret,
+    type: "entreprise",
+    ville: [codePostalEtablissement, libelleCommuneEtablissement]
+      .filter((e) => e)
+      .join(" "),
+  };
+};
 
 const size = 50;
 
@@ -53,13 +68,18 @@ const collapse = {
 
 export const entrepriseSearchBody = (query) => ({
   collapse,
+  highlight: {
+    fields: {
+      naming: { post_tags: [post], pre_tags: [pre] },
+    },
+  },
   query: {
     bool: {
       must: [
         {
           bool: {
             should: [
-              { fuzzy: { naming: query } },
+              { fuzzy: { naming: { boost: 0.6, value: query } } },
               { match: { naming: query } },
             ],
           },
