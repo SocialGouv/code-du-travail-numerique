@@ -8,6 +8,10 @@ You can find them in the [features](features) folder.
 You can run the Gherkin tests with through the different [Codecept](https://codecept.io) runners.  
 Each of them are individual packages that should be separately install and run (see each `README.md`).
 
+## Setup & run tests
+
+See the [Gherkin | Codeceptjs | Puppeteer documentation](runners/puppeteer).
+
 ## Adding a new test
 
 > As example, we are going to add a test for the ``
@@ -28,7 +32,3 @@ Each of them are individual packages that should be separately install and run (
 As the website is native french, the Gherkin tests are native french too.  
 We use the `#language: fr` to tell Codecept that the file has french Gherkin syntax in it.
 To ensure that Codecept is compatible with the french syntax, we added a local `step_definitions/_fr.js` with what is needed to be translated.
-
-## Execute tests
-
-See the [Gherkin | Codeceptjs | Puppeteer documentation](runners/puppeteer).
