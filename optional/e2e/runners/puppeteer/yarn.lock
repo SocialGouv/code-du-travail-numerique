@@ -36,10 +36,10 @@
     lodash.merge "^4.6.2"
     lodash.mergewith "^4.6.2"
 
-"@codeceptjs/helper@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@codeceptjs/helper/-/helper-1.0.1.tgz#11bd5b3cecfda4864923fbe744b40366b7b8b0f7"
-  integrity sha512-Lg8Jcm4E53eM1ZU35vEfjwlvew4nnqJ2E5ivd6yXn6irlvG8wOt8WXXu4qoNo5F53oI3sVn7LHM05T8O9DCduQ==
+"@codeceptjs/helper@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@codeceptjs/helper/-/helper-1.0.2.tgz#feefbdc7877e7cf98dabcda55ae313b72bda6d98"
+  integrity sha512-QKuyw4cGVa78YYj+g02RXitcUYpV4qKjZDHxfCIH2w8lJIr1FQohRD3o/MpcqEnvp475HQJN/OyWhdUBstJupA==
 
 "@eslint/eslintrc@^0.3.0":
   version "0.3.0"
@@ -312,12 +312,12 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-axios@^0.19.1:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
-  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
-    follow-redirects "1.5.10"
+    follow-redirects "^1.10.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -464,17 +464,17 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codeceptjs@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-3.0.4.tgz#53a6265d6bc266454764ed9e69fc2b00c35f2ae7"
-  integrity sha512-qSZuvkyDVpYEf5bkJ0gbP5UfK0EG3uD9JaEU95Kq5a5jh4RQZ/pE4YpafhFJphEKvW/2ozTYpFLQ+ak9O/4+Gw==
+codeceptjs@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/codeceptjs/-/codeceptjs-3.0.5.tgz#9522298a53e47c716210d705027f3ad2c8ec2939"
+  integrity sha512-NQxE2bBBpM8pR/p46PR13T21vBLsSIQVP8FaMgzUorAA6ueFL4pTup00OQQa6fUH6MK+i8lXYzBDWr5e8elYhg==
   dependencies:
     "@codeceptjs/configure" "^0.6.2"
-    "@codeceptjs/helper" "^1.0.1"
+    "@codeceptjs/helper" "^1.0.2"
     acorn "^7.4.1"
     allure-js-commons "^1.3.2"
     arrify "^2.0.1"
-    axios "^0.19.1"
+    axios "^0.21.1"
     chalk "^4.1.0"
     commander "^2.20.3"
     cross-spawn "^7.0.3"
@@ -584,13 +584,6 @@ debug@4, debug@4.1.1, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
   dependencies:
     ms "^2.1.1"
-
-debug@=3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
-  dependencies:
-    ms "2.0.0"
 
 debug@^2.2.0, debug@^2.6.9:
   version "2.6.9"
@@ -1112,12 +1105,10 @@ fn-args@^4.0.0:
   resolved "https://registry.yarnpkg.com/fn-args/-/fn-args-4.0.0.tgz#2e912f7a74c5e9ef25060bd60127d6a8680237a5"
   integrity sha512-M9XSagc92ejQhi+7kjpFPAO59xKbGRsbOg/9dfwSj84DfzB0pj+Q81DVD1pKr084Xf2oICwUNI0pCvGORmD9zg==
 
-follow-redirects@1.5.10:
-  version "1.5.10"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
-  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
-  dependencies:
-    debug "=3.1.0"
+follow-redirects@^1.10.0:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.2.tgz#dd73c8effc12728ba5cf4259d760ea5fb83e3147"
+  integrity sha512-6mPTgLxYm3r6Bkkg0vNM0HTjfGrOEtsfbhagQvbxDEsEkpNhw582upBaoRZylzen6krEmxXJgt9Ju6HiI4O7BA==
 
 fs-constants@^1.0.0:
   version "1.0.0"

@@ -9,16 +9,16 @@
   dependencies:
     "@babel/highlight" "^7.12.13"
 
-"@babel/core@^7.1.0", "@babel/core@^7.12.13", "@babel/core@^7.7.5":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.13.tgz#b73a87a3a3e7d142a66248bf6ad88b9ceb093425"
-  integrity sha512-BQKE9kXkPlXHPeqissfxo0lySWJcYdEP0hdtJOH/iJfDdhOCcgtNCjftCJg3qqauB4h+lz2N6ixM++b9DN1Tcw==
+"@babel/core@^7.1.0", "@babel/core@^7.12.16", "@babel/core@^7.7.5":
+  version "7.12.16"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.16.tgz#8c6ba456b23b680a6493ddcfcd9d3c3ad51cab7c"
+  integrity sha512-t/hHIB504wWceOeaOoONOhu+gX+hpjfeN6YRBT209X/4sibZQfSF1I0HFRRlBe97UZZosGx5XwUg1ZgNbelmNw==
   dependencies:
     "@babel/code-frame" "^7.12.13"
-    "@babel/generator" "^7.12.13"
+    "@babel/generator" "^7.12.15"
     "@babel/helper-module-transforms" "^7.12.13"
     "@babel/helpers" "^7.12.13"
-    "@babel/parser" "^7.12.13"
+    "@babel/parser" "^7.12.16"
     "@babel/template" "^7.12.13"
     "@babel/traverse" "^7.12.13"
     "@babel/types" "^7.12.13"
@@ -30,10 +30,10 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.13.tgz#5f6ebe6c85db99886db2d7b044409196f872a503"
-  integrity sha512-9qQ8Fgo8HaSvHEt6A5+BATP7XktD/AdAnObUeTRz5/e2y3kbrxZgz32qUJJsdmwUvBJzF4AeV21nGTNwv05Mpw==
+"@babel/generator@^7.12.13", "@babel/generator@^7.12.15":
+  version "7.12.15"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.12.15.tgz#4617b5d0b25cc572474cc1aafee1edeaf9b5368f"
+  integrity sha512-6F2xHxBiFXWNSGb7vyCUTBF8RCLY66rS0zEPcP8t/nQyXjha5EuK4z7H5o7fWG8B4M7y6mqVWq1J+1PuwRhecQ==
   dependencies:
     "@babel/types" "^7.12.13"
     jsesc "^2.5.1"
@@ -143,10 +143,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.13.tgz#3ee7be4131fe657ba9143d5c5b3a9f253fdb75e9"
-  integrity sha512-z7n7ybOUzaRc3wwqLpAX8UFIXsrVXUJhtNGBwAnLz6d1KUapqyq7ad2La8gZ6CXhHmGAIL32cop8Tst4/PNWLw==
+"@babel/parser@^7.1.0", "@babel/parser@^7.12.13", "@babel/parser@^7.12.16":
+  version "7.12.16"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.16.tgz#cc31257419d2c3189d394081635703f549fc1ed4"
+  integrity sha512-c/+u9cqV6F0+4Hpq01jnJO+GLp2DdT63ppz9Xa+6cHaajM9VFzK/iDXiKK65YtpeVwu+ctfS6iqlMqRgQRzeCw==
 
 "@babel/plugin-syntax-async-generators@^7.8.4":
   version "7.8.4"
@@ -560,29 +560,29 @@
     js-yaml "^4.0.0"
     node-fetch "^2.6.1"
 
-"@kubernetes-models/base@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@kubernetes-models/base/-/base-1.1.0.tgz#dd52675f466376dd451cf020253c5f01b3aac9ba"
-  integrity sha512-b7r8TBcbaokpfOswd+2gcgtUmESLIyHf6ufYQbdY7nyWQjk4ZJXunm4vggqa8+6NAoc1MoxIwha9R9i3PQaCHA==
+"@kubernetes-models/base@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/base/-/base-1.2.0.tgz#638ecca63c45be9cb8afea817247d0107baa2f49"
+  integrity sha512-q/P9B8TbRuMog77wCqQTTFt2QSrFuljX4GtgWzl17Th9OIEJVb0VFlMCsSXJc8qbCQCHByPHk4j09lno0amb3A==
   dependencies:
-    "@kubernetes-models/validate" "^1.0.1"
+    "@kubernetes-models/validate" "^1.1.0"
     is-plain-object "^5.0.0"
     tslib "^2.0.3"
 
-"@kubernetes-models/sealed-secrets@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@kubernetes-models/sealed-secrets/-/sealed-secrets-1.0.3.tgz#722481ba40856cfca416679eb1787e991f8caf26"
-  integrity sha512-3PkwPsryJRISW2hYexrytY2y5tttLgsiX+HB8YPGUN8ebpJRO1LvhI+aDwkhZuYIzlM3+IUbFjomyWQIb3/nkA==
+"@kubernetes-models/sealed-secrets@^1.0.3", "@kubernetes-models/sealed-secrets@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/sealed-secrets/-/sealed-secrets-1.1.0.tgz#adc42adea283ee074674b8ce80a93f4ec1b032c6"
+  integrity sha512-JZ6dJbwBctAkRXQyIHgdKIl5hJx/erXmqAdtQja5YHhaQ56LEcd4cRLTYl/XvO8Br7FA1s/SFT9/QQbylqZcng==
   dependencies:
-    "@kubernetes-models/base" "^1.1.0"
-    "@kubernetes-models/validate" "^1.0.1"
-    kubernetes-models "^1.0.3"
+    "@kubernetes-models/base" "^1.2.0"
+    "@kubernetes-models/validate" "^1.1.0"
+    kubernetes-models "^1.1.0"
     tslib "^2.0.3"
 
-"@kubernetes-models/validate@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@kubernetes-models/validate/-/validate-1.0.1.tgz#377b1b6738bbd5226dfba958e681aa6d4db86a2b"
-  integrity sha512-MCzrJfEfcxwvsGeX7v9iVK81EJq05+d8tvWXivgTQvaNFMLFkY3boUQxkp/0nqafpHIT4BxWf1LBIR3+57btuQ==
+"@kubernetes-models/validate@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/validate/-/validate-1.1.0.tgz#2357fa1eb8b0ebfa2453e51f6d157e689bbbfa09"
+  integrity sha512-IQ5aknZgZh/ZyyFiyjRb2ncMva/hoK1O7C9FudZInYB5ql94eM0vD6m/iKnmKXtY0VBX6sYYlAl3oXU9AA7+Qw==
   dependencies:
     ajv "^6.12.6"
     big-integer "^1.6.48"
@@ -628,15 +628,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^4.7.4":
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.7.4.tgz#196378b8e3e00bb3c9ae6d0c517d2454791d8ac2"
-  integrity sha512-XtEP24RBKmm8f6k1mPAxr9KgyZN9OTvxbUv8oVQ4oGCsiy96XpbhXNbhvJyUB3E6mIRnd9uA7JgRim5iEA28uw==
+"@socialgouv/kosko-charts@^4.7.11":
+  version "4.7.11"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.7.11.tgz#d983c8c44af0dfce690eef02c821ca83cd0cb598"
+  integrity sha512-ytg2iugCaAnA6bfZpHo/3tk/PYhfcrk1G5FkUWj+Xytl67tC1+bz/aony2cepjBLMQvM0/2cVjKcbjzXKNhIPg==
   dependencies:
     "@kosko/env" "^1.0.3"
-    "@kubernetes-models/sealed-secrets" "^1.0.3"
+    "@kubernetes-models/sealed-secrets" "^1.1.0"
     "@sindresorhus/is" "^4.0.0"
-    kubernetes-models "^1.0.3"
+    kubernetes-models "^1.1.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
@@ -705,10 +705,10 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
-"@types/node@*", "@types/node@^14.14.22":
-  version "14.14.22"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
-  integrity sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
+"@types/node@*", "@types/node@^14.14.28":
+  version "14.14.28"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.28.tgz#cade4b64f8438f588951a6b35843ce536853f25b"
+  integrity sha512-lg55ArB+ZiHHbBBttLpzD07akz0QPrZgUODNakeC09i62dnrywr9mFErHuaPlB6I7z+sEbK+IYmplahvplCj2g==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2675,13 +2675,13 @@ kosko@^1.0.3:
     "@kosko/cli" "^1.1.1"
     import-local "^3.0.2"
 
-kubernetes-models@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-1.0.3.tgz#928d1ee31f533c22d4868b7cc7357e0c46a9e1c6"
-  integrity sha512-5RtMfOqFfyLK1bEGeylUQvp8gPSNQaTeihV4q5iWfSEw+S9JtYLKGy5/Z/Ts9JVnbM80NrD2RPGNDAFShYksyQ==
+kubernetes-models@^1.0.3, kubernetes-models@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-1.1.0.tgz#0e60c91d2960ff33a1dbb31f65ac0c26f172e631"
+  integrity sha512-FB5Jo5Q2jBTl1eTEqkI/4Ohgy8/yAnRbo2axDaXLISL+LwvofCRdoBChYXWUvEC61UwdbBo7OCdAF+Bzb4nvUw==
   dependencies:
-    "@kubernetes-models/base" "^1.1.0"
-    "@kubernetes-models/validate" "^1.0.1"
+    "@kubernetes-models/base" "^1.2.0"
+    "@kubernetes-models/validate" "^1.1.0"
     tslib "^2.0.3"
 
 leven@^3.1.0:
@@ -3878,10 +3878,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
-  integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
+typescript@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
+  integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
 
 underscore@1.7.0:
   version "1.7.0"
