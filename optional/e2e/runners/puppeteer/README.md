@@ -1,5 +1,7 @@
 # Gherkin | Codeceptjs | Puppeteer
 
+> **WARNING**, all commands must be run from this directory.
+
 ## Install
 
 ```sh
