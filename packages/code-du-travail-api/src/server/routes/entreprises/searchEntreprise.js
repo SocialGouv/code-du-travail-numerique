@@ -48,9 +48,6 @@ export const mapHit = ({
       ? formatLabel(highlight.naming)
       : formatLabel(naming.split(" "));
 
-  console.error("here !!");
-  console.error(label);
-
   return {
     closed: false,
     codePostalEtablissement,
