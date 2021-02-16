@@ -1,22 +1,8 @@
 const pre = "<b><u>";
 const post = "</b></u>";
 
-export const mapHit = ({
-  _source: {
-    siren,
-    denominationUniteLegale,
-    libelleCommuneEtablissement,
-    codePostalEtablissement,
-    nomUniteLegale,
-    nomUsageUniteLegale,
-    denominationUsuelle1UniteLegale,
-    denominationUsuelle2UniteLegale,
-    denominationUsuelle3UniteLegale,
-    idcc,
-    siret,
-  },
-  highlight: { naming },
-}) => {
+// we remove CP and deduplicate tokens to compose company's label
+const formatLabel = (naming) => {
   const labelTokens = naming
     .join(" ")
     .split(" ")
@@ -31,11 +17,39 @@ export const mapHit = ({
       return acc;
     }, []);
 
-  const label = labelTokens
-    .map(({ fmt }) => fmt)
-    // remove CodePostal
-    .slice(0, labelTokens.length - 1)
-    .join(" ");
+  return (
+    labelTokens
+      .map(({ fmt }) => fmt)
+      // remove CodePostal
+      .slice(0, labelTokens.length - 1)
+      .join(" ")
+  );
+};
+
+export const mapHit = ({
+  _source: {
+    siren,
+    denominationUniteLegale,
+    libelleCommuneEtablissement,
+    codePostalEtablissement,
+    nomUniteLegale,
+    nomUsageUniteLegale,
+    denominationUsuelle1UniteLegale,
+    denominationUsuelle2UniteLegale,
+    denominationUsuelle3UniteLegale,
+    idcc,
+    siret,
+    naming,
+  },
+  highlight,
+}) => {
+  const label =
+    highlight && highlight.naming
+      ? formatLabel(highlight.naming)
+      : formatLabel(naming.split(" "));
+
+  console.error("here !!");
+  console.error(label);
 
   return {
     closed: false,
