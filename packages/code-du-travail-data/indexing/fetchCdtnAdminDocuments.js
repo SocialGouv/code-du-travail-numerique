@@ -1,3 +1,4 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
@@ -208,7 +209,13 @@ function toElastic(
 ) {
   let breadcrumbs = [];
   if (getBreadcrumbs) {
-    breadcrumbs = getBreadcrumbs(cdtnId);
+    if (source === SOURCES.CONTRIBUTIONS) {
+      breadcrumbs = getBreadcrumbs(cdtnId, {
+        contributionIndex: document.index,
+      });
+    } else {
+      breadcrumbs = getBreadcrumbs(cdtnId);
+    }
   }
   return {
     ...document,

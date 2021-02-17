@@ -50,15 +50,22 @@ export function buildGetBreadcrumbs(themes) {
     return mainBreadcrumb || [];
   }
 
-  return function getBreadcrumbs(cdtnId) {
+  return function getBreadcrumbs(cdtnId, extras) {
     if (!cdtnId) return [];
     const relatedThemes = themes.filter(
       (theme) =>
         theme.cdtnId === cdtnId ||
         theme.contentRelations.find(
-          (contentRelation) => contentRelation.content.cdtnId === cdtnId
+          (contentRelation) =>
+            contentRelation.content.cdtnId === cdtnId ||
+            (extras &&
+              extras.contributionIndex &&
+              contentRelation.content.document.index &&
+              contentRelation.content.document.index ===
+                extras.contributionIndex)
         )
     );
+
     const allBreadcrumbs = relatedThemes.flatMap((theme) =>
       themeToBreadcrumbsMap.get(theme.cdtnId)
     );
