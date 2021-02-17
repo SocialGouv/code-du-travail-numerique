@@ -24,18 +24,19 @@ const Hdn = (props) => (
   </Alert>
 );
 
-const ContentSP = ({ raw }) => (
-  <>
-    {raw && (
-      <StyledContent>
-        <FicheServicePublic data={JSON.parse(raw).children} />
-      </StyledContent>
-    )}
-  </>
-);
+const ContentSP = ({ raw }) => {
+  return (
+    <>
+      {raw && (
+        <StyledContent>
+          <FicheServicePublic data={JSON.parse(raw).children} />
+        </StyledContent>
+      )}
+    </>
+  );
+};
 
-const ContentMT = (props) => {
-  const { intro, sections } = props;
+const ContentMT = ({ intro, sections }) => {
   return (
     <>
       {intro && (
@@ -59,7 +60,7 @@ const ContentMT = (props) => {
 const rehypeToReact = (content) => {
   const contentComponent =
     content && content.raw ? (
-      <ContentSP raw={content.raw} />
+      <ContentSP {...content} />
     ) : (
       <ContentMT {...content} />
     );

@@ -3138,6 +3138,15 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   text-align: left;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
 @media (max-width:600px) {
   .c0 {
     margin-bottom: 1rem;
@@ -3171,6 +3180,11 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
         Que dit le code du travail ?
       </h2>
     </header>
+    <div
+      class="c3"
+    >
+       
+    </div>
     <div>
       <p>
         hello 
