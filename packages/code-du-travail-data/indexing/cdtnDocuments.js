@@ -132,6 +132,17 @@ async function* cdtnDocumentsGen() {
     SOURCES.CONTRIBUTIONS,
     getBreadcrumbs
   );
+
+  const breadcrumbsOfRootContributionsPerIndex = contributions.reduce(
+    (state, contribution) => {
+      if (contribution.breadcrumbs.length > 0) {
+        state[contribution.index] = contribution.breadcrumbs;
+      }
+      return state;
+    },
+    {}
+  );
+
   // we keep track of the idccs used in the contributions
   // in order to flag the corresponding conventions collectives below
   const contribIDCCs = new Set();
@@ -142,16 +153,22 @@ async function* cdtnDocumentsGen() {
   });
 
   yield {
-    documents: contributions.map(({ answers, ...contribution }) => ({
-      ...contribution,
-      answers: {
-        ...answers,
-        generic: {
-          ...answers.generic,
-          markdown: addGlossary(answers.generic.markdown),
+    documents: contributions.map(
+      ({ answers, breadcrumbs, ...contribution }) => ({
+        ...contribution,
+        breadcrumbs:
+          breadcrumbs.length > 0
+            ? breadcrumbs
+            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
+        answers: {
+          ...answers,
+          generic: {
+            ...answers.generic,
+            markdown: addGlossary(answers.generic.markdown),
+          },
         },
-      },
-    })),
+      })
+    ),
     source: SOURCES.CONTRIBUTIONS,
   };
 
@@ -173,7 +190,8 @@ async function* cdtnDocumentsGen() {
         answers: content.answers.map((data) => {
           const contrib = contributions.find(({ slug }) => data.slug === slug);
           if (!contrib) {
-            throw "unknown contribution";
+            // slug de la contrib
+            throw `Contribution with slug ${data.slug} not found. Perhaps the contribution has been deactivated, please check on the admin.`;
           }
           const [theme] = contrib.breadcrumbs;
           return {
