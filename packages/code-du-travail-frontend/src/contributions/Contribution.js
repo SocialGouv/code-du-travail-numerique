@@ -167,14 +167,25 @@ const Contribution = ({ answers, content }) => {
       {answers.generic && (
         <section>
           <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
-          {content && content.url && (
+          {content && (
             <Meta>
-              Source:&nbsp;
-              <a href={content.url} target="_blank" rel="noopener noreferrer">
-                {getLabelBySource(content.source)}
-              </a>
+              {content.url && (
+                <>
+                  Source&nbsp;:{" "}
+                  <a
+                    href={content.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Fiche {getLabelBySource(content.source)}
+                  </a>
+                </>
+              )}
+              {content.source && content.date && <>&nbsp;-&nbsp;</>}{" "}
+              {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
             </Meta>
           )}
+
           <Mdx
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
@@ -253,6 +264,7 @@ const Contribution = ({ answers, content }) => {
 const { breakpoints, fonts, spacings } = theme;
 
 const Meta = styled.div`
+  display: flex;
   margin-bottom: ${spacings.medium};
   font-size: ${fonts.sizes.small};
 `;

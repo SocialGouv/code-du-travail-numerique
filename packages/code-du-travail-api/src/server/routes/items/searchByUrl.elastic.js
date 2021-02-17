@@ -1,6 +1,6 @@
 function getDocumentByUrlBody({ url }) {
   return {
-    _source: ["raw", "intro", "sections", "source", "url"],
+    _source: ["date", "raw", "intro", "sections", "source", "url"],
     query: {
       bool: {
         filter: [{ term: { url } }, { term: { isPublished: true } }],
