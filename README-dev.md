@@ -33,13 +33,13 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 
 #### Packages
 
-| Package                                                               | description                                        |
-| --------------------------------------------------------------------- | -------------------------------------------------- |
-| [code-du-travail-api](./packages/code-du-travail-api)                 | NodeJS koa API                                     |
-| [code-du-travail-data](./packages/code-du-travail-data)               | Datasets and Elastic indexing scripts and mappings |
-| [code-du-travail-frontend](./packages/code-du-travail-frontend)       | Next.js frontend application                       |
-| [react-ui](./packages/react-ui)                                       | React components and styleguide                    |
-| [react-fiches-service-public](./packages/react-fiche-service-public)  | React components for fiches service-public.fr      |
+| Package                                                              | description                                        |
+| -------------------------------------------------------------------- | -------------------------------------------------- |
+| [code-du-travail-api](./packages/code-du-travail-api)                | NodeJS koa API                                     |
+| [code-du-travail-data](./packages/code-du-travail-data)              | Datasets and Elastic indexing scripts and mappings |
+| [code-du-travail-frontend](./packages/code-du-travail-frontend)      | Next.js frontend application                       |
+| [react-ui](./packages/react-ui)                                      | React components and styleguide                    |
+| [react-fiches-service-public](./packages/react-fiche-service-public) | React components for fiches service-public.fr      |
 
 #### Frontend
 
@@ -63,7 +63,7 @@ To run the NodeJS API, you need an Elasticsearch instance.
 
 The provided [docker-compose.yml](./docker-compose.yml) provide all the environment.
 
-We recommend using the `docker-compose.override.dev.yml` config for local development. 
+We recommend using the `docker-compose.override.dev.yml` config for local development.
 Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.override.yml`
 (more information on the [docker-compose documentation](https://docs.docker.com/compose/extends/#multiple-compose-files)).
 
@@ -84,8 +84,8 @@ $ docker run \
 Then you can launch services using docker-compose
 
 ```sh
-# start elasticsearch 
-$ docker-compose up elasticsearch 
+# start elasticsearch
+$ docker-compose up elasticsearch
 
 # Launch indexing script : fill ElasticSearch
 $ yarn workspace @cdt/data populate-dev
@@ -101,7 +101,6 @@ In this section you will find commands that you may need during your work
 Start a local TF Serve NLP instance
 [Look at this repo](https://github.com/SocialGouv/serving-ml)
 
-
 Create a dump with semantic vectors (you will need a NLP service available)
 (if NLP_URL env is not provide it will create a dump without semantic vectors)
 
@@ -112,7 +111,7 @@ mas
 # Dump with semantic vectors
 CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
 
-# For dev purpose,you can generate a fast Dump 
+# For dev purpose,you can generate a fast Dump
 # without semantic vectors nor glossary words.
 DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
 ```
@@ -130,7 +129,7 @@ docker run \
    --rm --entrypoint cat \
    registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) \
    /app/dist/dump.data.json \
-   >! packages/code-du-travail-data/dist/dump.tf.json
+   >! packages/code-du-travail-data/dist/dump.data.json
 ```
 
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)

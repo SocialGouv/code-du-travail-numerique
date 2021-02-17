@@ -1,5 +1,9 @@
 import slugify from "@socialgouv/cdtn-slugify";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import {
+  getLabelBySource,
+  getRouteBySource,
+  SOURCES,
+} from "@socialgouv/cdtn-sources";
 import {
   Badge,
   Button,
@@ -163,6 +167,14 @@ const Contribution = ({ answers, content }) => {
       {answers.generic && (
         <section>
           <Title stripe="left">Que dit le code du travail&nbsp;?</Title>
+          {content && content.url && (
+            <Meta>
+              Source:&nbsp;
+              <a href={content.url} target="_blank" rel="noopener noreferrer">
+                {getLabelBySource(content.source)}
+              </a>
+            </Meta>
+          )}
           <Mdx
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
@@ -238,7 +250,12 @@ const Contribution = ({ answers, content }) => {
   );
 };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, fonts, spacings } = theme;
+
+const Meta = styled.div`
+  margin-bottom: ${spacings.medium};
+  font-size: ${fonts.sizes.small};
+`;
 
 const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
