@@ -2,6 +2,7 @@ import { Accordion } from "@socialgouv/cdtn-ui";
 import { decode } from "@socialgouv/fiches-travail-data";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
+import Head from "next/head";
 import { withRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -60,6 +61,9 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
   return (
     <Layout>
       <Metas title={title} description={description} />
+      <Head>
+        <link rel="canonical" href={url} />
+      </Head>
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}
