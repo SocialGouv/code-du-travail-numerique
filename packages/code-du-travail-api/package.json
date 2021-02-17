@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "4.43.0",
+  "version": "4.44.0",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.1.0",
-    "@socialgouv/cdtn-sources": "^4.43.0",
+    "@socialgouv/cdtn-sources": "^4.44.0",
     "date-fns": "^2.16.1",
     "elastic-apm-node": "^3.10.0",
     "fuzzball": "^1.3.1",
@@ -40,7 +40,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@cdt/data": "^4.43.0",
+    "@cdt/data": "^4.44.0",
     "@socialgouv/eslint-config-recommended": "^1.49.0",
     "@zeit/ncc": "^0.22.3",
     "eslint": "^7.19.0",
