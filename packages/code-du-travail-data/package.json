@@ -32,7 +32,7 @@
     "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-slugify": "^4.44.0",
     "@socialgouv/cdtn-sources": "^4.44.0",
-    "@socialgouv/kali-data": "^2.54.0",
+    "@socialgouv/kali-data": "^2.55.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
     "memoizee": "^0.4.15",
