@@ -3174,6 +3174,12 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c4 {
+    display: none;
+  }
+}
+
 <div>
   <section>
     <header
@@ -3200,7 +3206,14 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
           target="_blank"
         >
           Fiche 
+          service-public.fr
         </a>
+      </span>
+      <span
+        aria-hidden="true"
+        class="c4"
+      >
+         - 
       </span>
       <span>
         Mis à jour le : 

@@ -181,7 +181,7 @@ const Contribution = ({ answers, content }) => {
                   </a>
                 </span>
               )}
-              {content.source && content.date && (
+              {content.url && content.date && (
                 <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
               )}
               {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
