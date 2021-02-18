@@ -3166,6 +3166,14 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <div>
   <section>
     <header
@@ -3183,7 +3191,21 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
     <div
       class="c3"
     >
-       
+      <span>
+        Source :
+         
+        <a
+          href="https://service-public.fr/professionnels-entreprises/vosdroits/F33693"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Fiche 
+        </a>
+      </span>
+      <span>
+        Mis à jour le : 
+        13/37/42
+      </span>
     </div>
     <div>
       <p>

@@ -170,7 +170,7 @@ const Contribution = ({ answers, content }) => {
           {content && (
             <Meta>
               {content.url && (
-                <>
+                <span>
                   Source&nbsp;:{" "}
                   <a
                     href={content.url}
@@ -179,9 +179,11 @@ const Contribution = ({ answers, content }) => {
                   >
                     Fiche {getLabelBySource(content.source)}
                   </a>
-                </>
+                </span>
               )}
-              {content.source && content.date && <>&nbsp;-&nbsp;</>}{" "}
+              {content.source && content.date && (
+                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+              )}
               {content.date && <span>Mis à jour le&nbsp;: {content.date}</span>}
             </Meta>
           )}
@@ -267,6 +269,14 @@ const Meta = styled.div`
   display: flex;
   margin-bottom: ${spacings.medium};
   font-size: ${fonts.sizes.small};
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
+`;
+const HideOnMobile = styled.span`
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 const MdxWrapper = styled.div`
