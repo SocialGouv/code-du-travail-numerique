@@ -88,7 +88,10 @@ async function* cdtnDocumentsGen() {
   const addGlossary = createGlossaryTransform(glossaryTerms);
 
   logger.info("=== Editorial contents ===");
-  const documents = await getDocumentBySource(SOURCES.EDITORIAL_CONTENT);
+  const documents = await getDocumentBySource(
+    SOURCES.EDITORIAL_CONTENT,
+    getBreadcrumbs
+  );
   yield {
     documents: markdownTransform(addGlossary, documents),
     source: SOURCES.EDITORIAL_CONTENT,
