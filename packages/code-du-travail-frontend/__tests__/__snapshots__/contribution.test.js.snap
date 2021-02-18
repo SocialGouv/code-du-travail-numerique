@@ -1877,6 +1877,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c60 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
   .c53 {
     margin-bottom: 2rem;
   }
@@ -2534,9 +2542,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </header>
                     <div
                       class="c60"
-                    >
-                       
-                    </div>
+                    />
                     <div>
                       <p>
                         Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
@@ -5041,6 +5047,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c60 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
   .c53 {
     margin-bottom: 2rem;
   }
@@ -5698,9 +5712,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </header>
                     <div
                       class="c60"
-                    >
-                       
-                    </div>
+                    />
                     <div>
                       <p>
                         Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.
