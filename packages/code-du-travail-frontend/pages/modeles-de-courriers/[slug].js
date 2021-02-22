@@ -2,6 +2,7 @@ import {
   Badge,
   Button,
   icons,
+  OverflowWrapper,
   ScreenReaderOnly,
   Section,
   theme,
@@ -95,7 +96,9 @@ class ModeleCourrier extends React.Component {
                   </ScreenReaderOnly>
                 </Button>
               </FloatWrapper>
-              <Html>{html}</Html>
+              <OverflowWrapper>
+                <Html>{html}</Html>
+              </OverflowWrapper>
             </LightWrapper>
           </Section>
           <Notice>
