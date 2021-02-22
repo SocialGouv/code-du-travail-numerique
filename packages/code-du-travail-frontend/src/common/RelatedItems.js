@@ -153,7 +153,6 @@ const PromptWrapper = styled.div`
     bottom: ${spacings.small};
     left: 27%;
     z-index: 1;
-    margin-bottom: 0;
   }
   @media (max-width: ${breakpoints.mobile}) {
     right: ${spacings.small};
