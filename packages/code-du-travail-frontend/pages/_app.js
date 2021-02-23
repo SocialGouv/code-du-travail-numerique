@@ -60,7 +60,7 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
-    initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    initPiwik({ piwikUrl: "https://matomo.dev2.fabrique.social.gouv.fr", siteId: PIWIK_SITE_ID });
   }
 
   componentDidCatch(error, errorInfo) {
