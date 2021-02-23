@@ -298,16 +298,29 @@ exports[`<Search /> should render 1`] = `
     </label>
     <label
       class="c2"
-      for="radio-enterprise2"
+      for="radio-enterprise_no_cc"
     >
       <input
         class="c3"
-        id="radio-enterprise2"
-        name="radio-enterprise2"
+        id="radio-enterprise_no_cc"
+        name="radio-enterprise_no_cc"
         type="radio"
         value="false"
       />
-      Nom de votre entreprise ou numéro de SIRET / groupé par convention
+      Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+    </label>
+    <label
+      class="c2"
+      for="radio-adresse"
+    >
+      <input
+        class="c3"
+        id="radio-adresse"
+        name="radio-adresse"
+        type="radio"
+        value="false"
+      />
+      Nom de votre entreprise & adresse 
     </label>
     <label
       class="c2"
@@ -322,19 +335,6 @@ exports[`<Search /> should render 1`] = `
       />
       Nom de votre convention collective ou IDCC
     </label>
-    <label
-      class="c2"
-      for="radio-adresse"
-    >
-      <input
-        class="c3"
-        id="radio-adresse"
-        name="radio-adresse"
-        type="radio"
-        value="false"
-      />
-      Adresse de votre entreprise
-    </label>
   </div>
   <span
     class="c4 c5"
@@ -343,12 +343,13 @@ exports[`<Search /> should render 1`] = `
       class="c6"
       id="convention-search"
       name="q"
-      placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+      placeholder="Saisissez le nom de votre entreprise"
       role="search"
       type="search"
       value=""
     />
   </span>
+  
   
   <p
     class="c7"

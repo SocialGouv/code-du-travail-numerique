@@ -676,16 +676,29 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </label>
         <label
           class="c19"
-          for="radio-enterprise2"
+          for="radio-enterprise_no_cc"
         >
           <input
             class="c20"
-            id="radio-enterprise2"
-            name="radio-enterprise2"
+            id="radio-enterprise_no_cc"
+            name="radio-enterprise_no_cc"
             type="radio"
             value="false"
           />
-          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+        </label>
+        <label
+          class="c19"
+          for="radio-adresse"
+        >
+          <input
+            class="c20"
+            id="radio-adresse"
+            name="radio-adresse"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise & adresse 
         </label>
         <label
           class="c19"
@@ -700,19 +713,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           />
           Nom de votre convention collective ou IDCC
         </label>
-        <label
-          class="c19"
-          for="radio-adresse"
-        >
-          <input
-            class="c20"
-            id="radio-adresse"
-            name="radio-adresse"
-            type="radio"
-            value="false"
-          />
-          Adresse de votre entreprise
-        </label>
       </div>
       <span
         class="c21 c22"
@@ -721,12 +721,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           class="c23"
           id="convention-search"
           name="q"
-          placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+          placeholder="Saisissez le nom de votre entreprise"
           role="search"
           type="search"
           value=""
         />
       </span>
+      
       
       <p
         class="c24"
@@ -1427,16 +1428,29 @@ exports[`<Contribution /> should render answer references 1`] = `
         </label>
         <label
           class="c19"
-          for="radio-enterprise2"
+          for="radio-enterprise_no_cc"
         >
           <input
             class="c20"
-            id="radio-enterprise2"
-            name="radio-enterprise2"
+            id="radio-enterprise_no_cc"
+            name="radio-enterprise_no_cc"
             type="radio"
             value="false"
           />
-          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+        </label>
+        <label
+          class="c19"
+          for="radio-adresse"
+        >
+          <input
+            class="c20"
+            id="radio-adresse"
+            name="radio-adresse"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise & adresse 
         </label>
         <label
           class="c19"
@@ -1451,19 +1465,6 @@ exports[`<Contribution /> should render answer references 1`] = `
           />
           Nom de votre convention collective ou IDCC
         </label>
-        <label
-          class="c19"
-          for="radio-adresse"
-        >
-          <input
-            class="c20"
-            id="radio-adresse"
-            name="radio-adresse"
-            type="radio"
-            value="false"
-          />
-          Adresse de votre entreprise
-        </label>
       </div>
       <span
         class="c21 c22"
@@ -1472,12 +1473,13 @@ exports[`<Contribution /> should render answer references 1`] = `
           class="c23"
           id="convention-search"
           name="q"
-          placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+          placeholder="Saisissez le nom de votre entreprise"
           role="search"
           type="search"
           value=""
         />
       </span>
+      
       
       <p
         class="c24"
@@ -2178,16 +2180,29 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </label>
         <label
           class="c19"
-          for="radio-enterprise2"
+          for="radio-enterprise_no_cc"
         >
           <input
             class="c20"
-            id="radio-enterprise2"
-            name="radio-enterprise2"
+            id="radio-enterprise_no_cc"
+            name="radio-enterprise_no_cc"
             type="radio"
             value="false"
           />
-          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+        </label>
+        <label
+          class="c19"
+          for="radio-adresse"
+        >
+          <input
+            class="c20"
+            id="radio-adresse"
+            name="radio-adresse"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise & adresse 
         </label>
         <label
           class="c19"
@@ -2202,19 +2217,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           />
           Nom de votre convention collective ou IDCC
         </label>
-        <label
-          class="c19"
-          for="radio-adresse"
-        >
-          <input
-            class="c20"
-            id="radio-adresse"
-            name="radio-adresse"
-            type="radio"
-            value="false"
-          />
-          Adresse de votre entreprise
-        </label>
       </div>
       <span
         class="c21 c22"
@@ -2223,12 +2225,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           class="c23"
           id="convention-search"
           name="q"
-          placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+          placeholder="Saisissez le nom de votre entreprise"
           role="search"
           type="search"
           value=""
         />
       </span>
+      
       
       <p
         class="c24"
@@ -2929,16 +2932,29 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </label>
         <label
           class="c19"
-          for="radio-enterprise2"
+          for="radio-enterprise_no_cc"
         >
           <input
             class="c20"
-            id="radio-enterprise2"
-            name="radio-enterprise2"
+            id="radio-enterprise_no_cc"
+            name="radio-enterprise_no_cc"
             type="radio"
             value="false"
           />
-          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+        </label>
+        <label
+          class="c19"
+          for="radio-adresse"
+        >
+          <input
+            class="c20"
+            id="radio-adresse"
+            name="radio-adresse"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise & adresse 
         </label>
         <label
           class="c19"
@@ -2953,19 +2969,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
           />
           Nom de votre convention collective ou IDCC
         </label>
-        <label
-          class="c19"
-          for="radio-adresse"
-        >
-          <input
-            class="c20"
-            id="radio-adresse"
-            name="radio-adresse"
-            type="radio"
-            value="false"
-          />
-          Adresse de votre entreprise
-        </label>
       </div>
       <span
         class="c21 c22"
@@ -2974,12 +2977,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
           class="c23"
           id="convention-search"
           name="q"
-          placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+          placeholder="Saisissez le nom de votre entreprise"
           role="search"
           type="search"
           value=""
         />
       </span>
+      
       
       <p
         class="c24"
@@ -3607,16 +3611,29 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         </label>
         <label
           class="c16"
-          for="radio-enterprise2"
+          for="radio-enterprise_no_cc"
         >
           <input
             class="c17"
-            id="radio-enterprise2"
-            name="radio-enterprise2"
+            id="radio-enterprise_no_cc"
+            name="radio-enterprise_no_cc"
             type="radio"
             value="false"
           />
-          Nom de votre entreprise ou numéro de SIRET / groupé par convention
+          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
+        </label>
+        <label
+          class="c16"
+          for="radio-adresse"
+        >
+          <input
+            class="c17"
+            id="radio-adresse"
+            name="radio-adresse"
+            type="radio"
+            value="false"
+          />
+          Nom de votre entreprise & adresse 
         </label>
         <label
           class="c16"
@@ -3631,19 +3648,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           />
           Nom de votre convention collective ou IDCC
         </label>
-        <label
-          class="c16"
-          for="radio-adresse"
-        >
-          <input
-            class="c17"
-            id="radio-adresse"
-            name="radio-adresse"
-            type="radio"
-            value="false"
-          />
-          Adresse de votre entreprise
-        </label>
       </div>
       <span
         class="c18 c19"
@@ -3652,12 +3656,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           class="c20"
           id="convention-search"
           name="q"
-          placeholder="Saisissez le nom de votre entreprise + code postal ou numéro de SIRET"
+          placeholder="Saisissez le nom de votre entreprise"
           role="search"
           type="search"
           value=""
         />
       </span>
+      
       
       <p
         class="c21"
