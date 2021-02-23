@@ -3,6 +3,8 @@ import fetch from "isomorphic-unfetch";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 
+import { ADRESSE_SEARCH } from "../searchHook";
+
 const {
   publicRuntimeConfig: { API_SIRET2IDCC_URL, API_URL },
 } = getConfig();
@@ -22,10 +24,10 @@ const getConventions = async ({ siret }) =>
 
 // memoize search results
 const cdtnEntrepriseFullText = memoizee(
-  (query, searchType) => {
+  (query, address, searchType) => {
     const url = `${API_URL}/entreprises?q=${encodeURIComponent(
       query
-    )}&t=${searchType}`;
+    )}&t=${searchType}&a=${searchType == ADRESSE_SEARCH ? address : undefined}`;
 
     return fetch(url).then((response) => {
       if (response.ok) {

@@ -3,7 +3,7 @@ const Router = require("koa-router");
 const {
   entrepriseSearchBody,
   mapHit,
-  entrepriseAddressSearchBody,
+  // entrepriseAddressSearchBody,
 } = require("./searchEntreprise");
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -15,7 +15,8 @@ const index = "cdtn-siren";
 const router = new Router({ prefix: API_BASE_URL });
 
 // const ENTERPRISE_SEARCH = "enterprise";
-const ADRESSE_SEARCH = "adresse";
+// const ADRESSE_SEARCH = "adresse";
+const ENTERPRISE_SEARCH_NO_CC = "enterprise_no_cc";
 
 /**
  * Return the enterprises that match the search query
@@ -27,12 +28,11 @@ const ADRESSE_SEARCH = "adresse";
  * @returns {Object} enterprise search results
  */
 router.get("/entreprises", async (ctx) => {
-  const { q: query, t: searchType } = ctx.query;
+  const { q: query, t: searchType, a: address } = ctx.query;
 
-  const body =
-    searchType == ADRESSE_SEARCH
-      ? entrepriseAddressSearchBody(query)
-      : entrepriseSearchBody(query);
+  const with_cc = searchType !== ENTERPRISE_SEARCH_NO_CC;
+
+  const body = entrepriseSearchBody(query, address, with_cc);
 
   // console.log(JSON.stringify(body, null, 2));
 

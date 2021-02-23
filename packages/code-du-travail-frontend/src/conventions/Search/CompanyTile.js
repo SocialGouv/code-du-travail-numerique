@@ -3,13 +3,26 @@ import React from "react";
 import styled from "styled-components";
 
 import { ConventionLink } from "./ConventionLink";
+import { ADRESSE_SEARCH, ENTERPRISE_SEARCH_NO_CC } from "./searchHook";
 
-export const CompanyTile = ({ conventions = [], label, ville, onClick }) => (
+export const CompanyTile = ({
+  conventions = [],
+  simpleLabel,
+  label,
+  ville,
+  onClick,
+  searchType,
+}) => (
   <>
-    <Entreprise>
+    <Entreprise>{simpleLabel}</Entreprise>
+    <Ville>
       <div dangerouslySetInnerHTML={{ __html: label }} />
-    </Entreprise>
-    {ville ? <Ville>{ville}</Ville> : ""}
+    </Ville>
+    {ville && [ADRESSE_SEARCH, ENTERPRISE_SEARCH_NO_CC].includes(searchType) ? (
+      <Ville>{ville}</Ville>
+    ) : (
+      ""
+    )}
 
     {conventions.length ? (
       conventions.map((convention) => (

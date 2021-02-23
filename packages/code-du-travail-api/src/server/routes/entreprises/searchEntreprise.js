@@ -1,7 +1,7 @@
 const pre = "<b><u>";
 const post = "</b></u>";
 
-// we remove CP and deduplicate tokens to compose company's label
+// we remove deduplicate tokens to compose company's label
 const formatLabel = (naming) => {
   const labelTokens = naming
     .join(" ")
@@ -17,13 +17,7 @@ const formatLabel = (naming) => {
       return acc;
     }, []);
 
-  return (
-    labelTokens
-      .map(({ fmt }) => fmt)
-      // remove CodePostal
-      .slice(0, labelTokens.length - 1)
-      .join(" ")
-  );
+  return labelTokens.map(({ fmt }) => fmt).join(" ");
 };
 
 export const mapHit = ({
@@ -48,6 +42,17 @@ export const mapHit = ({
       ? formatLabel(highlight.naming)
       : formatLabel(naming.split(" "));
 
+  // take first by priority
+  const simpleLabel = [
+    denominationUniteLegale,
+    denominationUsuelle1UniteLegale,
+    denominationUsuelle2UniteLegale,
+    denominationUsuelle3UniteLegale,
+    nomUniteLegale,
+    nomUsageUniteLegale,
+  ].find((l) => l);
+  console.log(simpleLabel);
+
   return {
     closed: false,
     codePostalEtablissement,
@@ -60,6 +65,7 @@ export const mapHit = ({
     label,
     nomUniteLegale,
     nomUsageUniteLegale,
+    simpleLabel,
     siren,
     siret,
     type: "entreprise",
@@ -77,7 +83,7 @@ const collapse = {
   field: "siren",
 };
 
-export const entrepriseSearchBody = (query) => ({
+export const entrepriseSearchBody = (query, address, withIdcc) => ({
   collapse,
   highlight: {
     fields: {
@@ -86,6 +92,7 @@ export const entrepriseSearchBody = (query) => ({
   },
   query: {
     bool: {
+      filter: [{ term: { withIdcc } }],
       must: [
         {
           bool: {
@@ -99,9 +106,17 @@ export const entrepriseSearchBody = (query) => ({
       // must: [{ match: { naming: query } }],
       should: [
         { rank_feature },
-        // {
-        // match: { cp: { boost: 0.2, query: query.replace(/\D/g, "") } },
-        // },
+        {
+          match: {
+            cp: {
+              boost: 0.2,
+              query: address ? address.replace(/\D/g, "") : "",
+            },
+          },
+        },
+        {
+          match: { address },
+        },
         {
           match: {
             ville: {

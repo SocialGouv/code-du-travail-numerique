@@ -15,7 +15,7 @@ import useSearchCC, {
   ADRESSE_SEARCH,
   CONVENTION_SEARCH,
   ENTERPRISE_SEARCH,
-  ENTERPRISE_SEARCH2,
+  ENTERPRISE_SEARCH_NO_CC,
 } from "./searchHook";
 
 const trackInput = debounce((query, path, trackingUID) => {
@@ -28,30 +28,30 @@ const searchTypes = [
   {
     key: ENTERPRISE_SEARCH,
     label: "Nom de votre entreprise ou numéro de SIRET",
-    placeholder:
-      "Saisissez le nom de votre entreprise + code postal ou numéro de SIRET",
+    placeholder: "Saisissez le nom de votre entreprise",
   },
   {
-    key: ENTERPRISE_SEARCH2,
-    label: "Nom de votre entreprise ou numéro de SIRET / groupé par convention",
-    placeholder:
-      "Saisissez le nom de votre entreprise + code postal ou numéro de SIRET",
+    key: ENTERPRISE_SEARCH_NO_CC,
+    label:
+      "Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions",
+    placeholder: "Saisissez le nom de votre entreprise",
+  },
+  {
+    key: ADRESSE_SEARCH,
+    label: "Nom de votre entreprise & adresse ",
+    placeholder: "Saisissez l'adresse de votre société",
   },
   {
     key: CONVENTION_SEARCH,
     label: "Nom de votre convention collective ou IDCC",
     placeholder: "Saisissez votre convention collective ou IDCC",
   },
-  {
-    key: ADRESSE_SEARCH,
-    label: "Adresse de votre entreprise",
-    placeholder: "Saisissez l'adresse de votre société",
-  },
 ];
 
 const Search = ({ onSelectConvention }) => {
   const router = useRouter();
   const [query, setQuery] = useState("");
+  const [address, setAddress] = useState("");
   const [trackingUID, setTrackingUID] = useState("");
   const [searchType, setSearchType] = useState(ENTERPRISE_SEARCH);
 
@@ -67,8 +67,15 @@ const Search = ({ onSelectConvention }) => {
     setQuery(value);
   };
 
+  const onAddressChange = (keyEvent) => {
+    const value = keyEvent.target.value;
+    trackInput(value, router.asPath, trackingUID);
+    setAddress(value);
+  };
+
   const [status, { conventions = [], entreprises = [] } = {}] = useSearchCC(
     query,
+    address,
     searchType
   );
 
@@ -127,6 +134,20 @@ const Search = ({ onSelectConvention }) => {
         id="convention-search"
         onChange={onInputChange}
       />
+
+      {searchType == ADRESSE_SEARCH ? (
+        <BlockInput
+          role="search"
+          placeholder="Ville, code postal ou adresse complète"
+          value={address}
+          type="search"
+          name="a"
+          id="convention-search-address"
+          onChange={onAddressChange}
+        />
+      ) : (
+        ""
+      )}
       {query && (
         <ResultsContainer>
           {status === "loading" && (
@@ -160,6 +181,7 @@ const Search = ({ onSelectConvention }) => {
                   query={query}
                   items={entreprises.map((entreprise) => (
                     <CompanyTile
+                      searchType={searchType}
                       {...entreprise}
                       key={entreprise.siret}
                       onClick={onSelectConvention}
