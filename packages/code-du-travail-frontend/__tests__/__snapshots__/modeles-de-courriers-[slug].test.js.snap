@@ -2411,10 +2411,18 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         </div>
                       </a>
                     </div>
-                    <div>
-                      <p>
-                        youhou
-                      </p>
+                    <div
+                      class="c24"
+                    >
+                      <div
+                        class="c25"
+                      >
+                        <div>
+                          <p>
+                            youhou
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
