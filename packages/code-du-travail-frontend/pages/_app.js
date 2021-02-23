@@ -60,7 +60,9 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
+    // eslint-disable-next-line no-console
     console.log("PIWIK_URL", PIWIK_URL);
+    // eslint-disable-next-line no-console
     console.log("PIWIK_SITE_ID", PIWIK_SITE_ID);
     initPiwik({
       piwikUrl: "https://matomo.dev2.fabrique.social.gouv.fr",
