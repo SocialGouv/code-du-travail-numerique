@@ -66,7 +66,7 @@ export default class MyApp extends App {
     console.log("PIWIK_SITE_ID", PIWIK_SITE_ID);
     initPiwik({
       piwikUrl: "https://matomo.dev2.fabrique.social.gouv.fr",
-      siteId: PIWIK_SITE_ID,
+      siteId: "2",
     });
   }
 
