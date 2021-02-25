@@ -14,9 +14,9 @@ See the [Gherkin | Codeceptjs | Puppeteer documentation](runners/puppeteer).
 
 ## Adding a new test
 
-> As example, we are going to add a test for the ``
+> As example, we are going to add a test for the `konami code`
 
-1.  Create a `.feature` file
+1.  Create a `konami-code.feature` file
 1.  Write your Gherkin
 1.  Run `yarn codeceptjs gherkin:snippets` in each codeceptjs runners
 1.  Implement the missing snippets

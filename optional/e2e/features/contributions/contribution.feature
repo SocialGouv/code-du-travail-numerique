@@ -10,5 +10,6 @@ Fonctionnalité: Contributions
 
     Alors je vois "Que dit le code du travail"
     Alors je vois "Texte applicable"
-    Alors je vois "article L1242-3 du code du travail"
+    Alors je vois "Références"
+    Alors je vois "L1242-8-1"
     Alors je vois "Que dit votre convention collective"
