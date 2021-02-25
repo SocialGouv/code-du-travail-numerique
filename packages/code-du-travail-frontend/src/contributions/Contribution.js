@@ -192,6 +192,7 @@ const Contribution = ({ answers, content }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
+          <References references={answers.generic.references} />
         </section>
       )}
       {hasConventionAnswers && (
