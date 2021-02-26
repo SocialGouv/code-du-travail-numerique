@@ -66,18 +66,37 @@ const ToastContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: ${spacings.base};
+  @media (max-width: ${breakpoints.mobile}) {
+    position: fixed;
+    right: ${spacings.small};
+    bottom: ${spacings.small};
+    left: ${spacings.small};
+    z-index: 1;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-bottom: 0;
+  }
 `;
 
 const PromptContainer = styled.div`
   display: flex;
   @media (max-width: ${breakpoints.mobile}) {
+    display: block;
     padding: ${spacings.xsmall} 0;
+    text-align: center;
   }
 `;
 
 const CloseButton = styled(Button)`
   margin-right: ${spacings.small};
   color: ${({ theme }) => theme.secondary};
+  @media (max-width: ${breakpoints.mobile}) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin-right: 0;
+  }
 `;
 
 const CloseIcon = styled(icons.Close)`
@@ -94,6 +113,8 @@ const PromptLabel = styled.div`
   font-weight: bold;
   font-size: 1.7rem;
   @media (max-width: ${breakpoints.mobile}) {
-    padding-right: ${spacings.xmedium};
+    margin-right: 0;
+    padding-top: ${spacings.small};
+    padding-bottom: ${spacings.medium};
   }
 `;
