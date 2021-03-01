@@ -31,6 +31,7 @@ export const mapHit = ({
     denominationUsuelle1UniteLegale,
     denominationUsuelle2UniteLegale,
     denominationUsuelle3UniteLegale,
+    activitePrincipale,
     idcc,
     siret,
     naming,
@@ -51,9 +52,9 @@ export const mapHit = ({
     nomUniteLegale,
     nomUsageUniteLegale,
   ].find((l) => l);
-  console.log(simpleLabel);
 
   return {
+    activitePrincipale,
     closed: false,
     codePostalEtablissement,
     conventions: [{ idcc }],

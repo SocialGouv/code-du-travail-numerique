@@ -9,6 +9,7 @@ export const CompanyTile = ({
   conventions = [],
   simpleLabel,
   label,
+  activitePrincipale,
   ville,
   onClick,
   searchType,
@@ -18,6 +19,7 @@ export const CompanyTile = ({
     <Ville>
       <div dangerouslySetInnerHTML={{ __html: label }} />
     </Ville>
+    <Ville>{activitePrincipale}</Ville>
     {ville && [ADRESSE_SEARCH, ENTERPRISE_SEARCH_NO_CC].includes(searchType) ? (
       <Ville>{ville}</Ville>
     ) : (
