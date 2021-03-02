@@ -54,6 +54,18 @@ Lint @cdtn/data:
   script:
     - yarn workspace @cdt/data lint
 
+Lint @socialgouv/cdtn...dataset...stop-words:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...dataset...stop-words lint
+
+Lint @socialgouv/cdtn...infra...logger:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...infra...logger lint
+
 Lint Dockerfiles:
   <<: *quality_stage
   image: hadolint/hadolint
@@ -124,6 +136,19 @@ Test @cdtn/data:
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
+
+
+Test @socialgouv/cdtn...dataset...stop-words:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...dataset...stop-words test
+
+Test @socialgouv/cdtn...infra...logger:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...infra...logger test
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage
