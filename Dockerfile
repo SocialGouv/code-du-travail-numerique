@@ -23,7 +23,6 @@ COPY ./infra/logger/package.json /app/infra/logger/package.json
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
 COPY ./packages/code-du-travail-data/dataset/simulateurs/package.json /app/packages/code-du-travail-data/dataset/simulateurs/package.json
-COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
 COPY ./packages/code-du-travail-data/dataset/tools/package.json /app/packages/code-du-travail-data/dataset/tools/package.json
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 COPY ./packages/sources/package.json /app/packages/sources/package.json
