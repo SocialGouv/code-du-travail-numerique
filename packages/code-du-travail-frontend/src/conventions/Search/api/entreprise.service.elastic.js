@@ -6,9 +6,11 @@ import getConfig from "next/config";
 import { ADRESSE_SEARCH } from "../searchHook";
 
 const {
-  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_URL },
+  // publicRuntimeConfig: { API_SIRET2IDCC_URL, API_URL },
+  publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+/*
 // TODO duplicated api siret2idcc call
 const apiSiret2idcc = memoizee(
   (sirets) =>
@@ -21,6 +23,7 @@ const apiSiret2idcc = memoizee(
 
 const getConventions = async ({ siret }) =>
   apiSiret2idcc(siret).then((result) => result.length && result[0].conventions);
+  */
 
 // memoize search results
 const cdtnEntrepriseFullText = memoizee(
@@ -32,9 +35,35 @@ const cdtnEntrepriseFullText = memoizee(
     return fetch(url).then((response) => {
       if (response.ok) {
         return response.json().then(({ enterprises }) =>
+          // here we might want to retrieve all ccs here for the different etablissements
+          // for now we just use the attached one
+
+          enterprises.map((e) => {
+            e.conventions = [{ num: e.idcc, shortTitle: e.convention }];
+            return e;
+          })
+        );
+      }
+
+      /*
           Promise.all(
             enterprises.map((e) =>
               getConventions(e).then((c) => {
+                e.conventions = [{ num: e.idcc, shortTitle: e.convention }];
+                // return e;
+                // console.log(e.conventions);
+                // console.log(c);
+
+                if (e.idcc != c[0].num) {
+                  console.log(JSON.stringify(e));
+                  console.log(e.siret);
+                  console.log("issue here :");
+                  console.log(e.idcc);
+                  console.log(c[0].num);
+                  console.log(c.map(({ num }) => num));
+                  // console.log(JSON.stringify(c));
+                }
+
                 e.conventions = c;
                 return e;
               })
@@ -42,6 +71,7 @@ const cdtnEntrepriseFullText = memoizee(
           )
         );
       }
+      */
       throw new Error("Un problème est survenu.");
     });
   },
