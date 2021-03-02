@@ -33,6 +33,7 @@
     "@socialgouv/cdtn-slugify": "^4.44.0",
     "@socialgouv/cdtn-sources": "^4.44.0",
     "@socialgouv/cdtn...dataset...stop-words": "^1.0.0-alpha.1",
+    "@socialgouv/cdtn...dataset...synonyms": "^1.0.0-alpha.1",
     "@socialgouv/cdtn...infra...logger": "^1.0.0-alpha.1",
     "@socialgouv/kali-data": "^2.55.0",
     "esm": "^3.2.25",

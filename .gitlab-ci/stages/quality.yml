@@ -60,6 +60,12 @@ Lint @socialgouv/cdtn...dataset...stop-words:
   script:
     - yarn workspace @socialgouv/cdtn...dataset...stop-words lint
 
+Lint @socialgouv/cdtn...dataset...synonyms:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...dataset...synonyms lint
+
 Lint @socialgouv/cdtn...infra...logger:
   <<: *quality_stage
   <<: *master_based_stage
@@ -137,12 +143,17 @@ Test @cdtn/data:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
 
-
 Test @socialgouv/cdtn...dataset...stop-words:
   <<: *quality_stage
   <<: *master_based_stage
   script:
     - yarn workspace @socialgouv/cdtn...dataset...stop-words test
+
+Test @socialgouv/cdtn...dataset...synonyms:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...dataset...synonyms test
 
 Test @socialgouv/cdtn...infra...logger:
   <<: *quality_stage

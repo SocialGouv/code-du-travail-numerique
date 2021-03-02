@@ -1,6 +1,5 @@
-import stopwords from "@socialgouv/cdtn...dataset...stop-words";
-
-import synonyms from "../dataset/synonyms";
+import { stopwords } from "@socialgouv/cdtn...dataset...stop-words";
+import { synonyms } from "@socialgouv/cdtn...dataset...synonyms";
 
 const filter = {
   // Normalize acronyms so that no matter the format, the resulting token will be the same.
