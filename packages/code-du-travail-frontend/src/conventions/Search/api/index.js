@@ -30,8 +30,6 @@ export const getResults = async (query, address, searchType) => {
       searchType
     )
   ) {
-    console.log(trimmedQuery);
-    console.log(type);
     if (type === "text") {
       entreprises = await searchEntrepriseES(trimmedQuery, address, searchType);
     } else if (type === "siren") {
