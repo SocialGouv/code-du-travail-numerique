@@ -8,6 +8,8 @@
   },
   "npmClient": "yarn",
   "packages": [
+    "dataset/*",
+    "infra/*",
     "packages/*"
   ],
   "useWorkspaces": true,

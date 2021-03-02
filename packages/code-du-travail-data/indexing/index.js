@@ -1,4 +1,5 @@
 import { Client } from "@elastic/elasticsearch";
+import { logger } from "@socialgouv/cdtn...infra...logger";
 
 import { documentMapping } from "./document.mapping";
 import {
@@ -8,7 +9,6 @@ import {
   version,
 } from "./esClientUtils";
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
-import { logger } from "./logger";
 import { populateSuggestions } from "./suggestion";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";

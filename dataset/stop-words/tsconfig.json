@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "resolveJsonModule": true,
+    "outDir": "lib",
+    "rootDir": "src"
+  }
+}

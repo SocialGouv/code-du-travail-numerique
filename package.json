@@ -36,6 +36,8 @@
   },
   "workspaces": {
     "packages": [
+      "dataset/*",
+      "infra/*",
       "packages/*",
       "packages/code-du-travail-data/dataset/*"
     ]

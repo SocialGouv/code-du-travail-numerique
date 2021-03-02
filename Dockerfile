@@ -15,10 +15,13 @@ COPY ./scripts /app/scripts
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
+# NOTE(douglasduteil): temporally listing future cdtn-admin packages
+COPY ./dataset/stop-words/package.json /app/dataset/stop-words/package.json
+COPY ./infra/logger/package.json /app/infra/logger/package.json
+
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
 COPY ./packages/code-du-travail-data/dataset/simulateurs/package.json /app/packages/code-du-travail-data/dataset/simulateurs/package.json
-COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
 COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
 COPY ./packages/code-du-travail-data/dataset/tools/package.json /app/packages/code-du-travail-data/dataset/tools/package.json
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
@@ -38,6 +41,10 @@ ARG IS_DOCKER=true
 RUN yarn --frozen-lockfile && yarn cache clean
 
 #
+
+# NOTE(douglasduteil): temporally listing future cdtn-admin packages
+COPY ./dataset /app/dataset
+COPY ./infra /app/infra
 
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages

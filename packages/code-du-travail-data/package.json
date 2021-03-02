@@ -32,6 +32,8 @@
     "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-slugify": "^4.44.0",
     "@socialgouv/cdtn-sources": "^4.44.0",
+    "@socialgouv/cdtn...dataset...stop-words": "^1.0.0-alpha.1",
+    "@socialgouv/cdtn...infra...logger": "^1.0.0-alpha.1",
     "@socialgouv/kali-data": "^2.55.0",
     "esm": "^3.2.25",
     "lodash.uniqby": "^4.7.0",
@@ -53,7 +55,6 @@
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.4",
     "uuid": "^8.3.2",
-    "winston": "^3.3.3",
     "xxhashjs": "^0.2.2"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
-import stopwords from "../dataset/stop_words";
+import stopwords from "@socialgouv/cdtn...dataset...stop-words";
+
 import synonyms from "../dataset/synonyms";
 
 const filter = {

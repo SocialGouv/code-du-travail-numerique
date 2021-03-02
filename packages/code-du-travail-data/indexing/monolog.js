@@ -2,7 +2,7 @@ import { Client } from "@elastic/elasticsearch";
 import { Queries } from "@socialgouv/cdtn-monolog";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
-// import { logger } from "./logger";
+// import { logger } from "@socialgouv/cdtn...infra...logger";
 
 const ES_LOGS = process.env.ES_LOGS;
 const ES_LOGS_TOKEN = process.env.ES_LOGS_TOKEN;
