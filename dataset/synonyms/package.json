@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn...dataset...synonyms",
-  "description": "SocialGouv - Code du travail numerique - Dataset - Stop Words",
+  "description": "SocialGouv - Code du travail numerique - Dataset - Synonyms",
   "version": "1.0.0-alpha.1",
   "babel": {
     "env": {
