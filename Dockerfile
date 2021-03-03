@@ -18,6 +18,7 @@ COPY ./yarn.lock /app/yarn.lock
 # NOTE(douglasduteil): temporally listing future cdtn-admin packages
 COPY ./dataset/stop-words/package.json /app/dataset/stop-words/package.json
 COPY ./dataset/synonyms/package.json /app/dataset/synonyms/package.json
+COPY ./infra/elasticsearch/package.json /app/infra/elasticsearch/package.json
 COPY ./infra/logger/package.json /app/infra/logger/package.json
 
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json

@@ -37,6 +37,7 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
+    "prepush": "yarn lint && yarn test",
     "test": "jest",
     "watch": "yarn build --watch --preserveWatchOutput"
   },

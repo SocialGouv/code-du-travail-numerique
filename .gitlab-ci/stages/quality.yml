@@ -66,6 +66,12 @@ Lint @socialgouv/cdtn...dataset...synonyms:
   script:
     - yarn workspace @socialgouv/cdtn...dataset...synonyms lint
 
+Lint @socialgouv/cdtn...infra...elasticsearch:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...infra...elasticsearch lint
+
 Lint @socialgouv/cdtn...infra...logger:
   <<: *quality_stage
   <<: *master_based_stage
@@ -154,6 +160,12 @@ Test @socialgouv/cdtn...dataset...synonyms:
   <<: *master_based_stage
   script:
     - yarn workspace @socialgouv/cdtn...dataset...synonyms test
+
+Test @socialgouv/cdtn...infra...elasticsearch:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @socialgouv/cdtn...infra...elasticsearch test
 
 Test @socialgouv/cdtn...infra...logger:
   <<: *quality_stage

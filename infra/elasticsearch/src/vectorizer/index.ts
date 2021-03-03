@@ -1,22 +1,33 @@
-// vectorizer is imported by code-du-travail-api which is using CommonJS, and throwing an exception
-// when requiring code-du-travail-data ES module, thus we keep using CommonJS import here
-const fetch = require("node-fetch");
-const { stopwords } = require("@socialgouv/cdtn...dataset...stop-words");
+//
 
+import { stopwords } from "@socialgouv/cdtn...dataset...stop-words";
+import fetch from "node-fetch";
 // URL of the TF serve deployment
-const NLP_URL =
-  process.env.NLP_URL ||
-  "https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
-const tfServeURL = NLP_URL + "/v1/models/sentqam:predict";
 
-function stripAccents(text) {
+function stripAccents(text: string) {
   // strip accents
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-const stopWords = new Set(stopwords.map(stripAccents));
+async function callTFServe(body: string): Promise<number[][]> {
+  const NLP_URL =
+    process.env.NLP_URL ??
+    "https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
 
-function preprocess(text) {
+  const tfServeURL = NLP_URL + "/v1/models/sentqam:predict";
+
+  const response = await fetch(tfServeURL, { body, method: "POST" });
+  if (response.ok) {
+    const json: { outputs: number[][] } = await response.json();
+    return json.outputs;
+  } else {
+    throw new Error(response.statusText);
+  }
+}
+
+export function preprocess(text: string): string {
+  const stopWords = new Set(stopwords.map(stripAccents));
+
   const stripped = stripAccents(text);
 
   // 09/06/20 : cheap tokenizer, we should probably use something more solid
@@ -29,18 +40,11 @@ function preprocess(text) {
   return noStopWords.join(" ");
 }
 
-async function callTFServe(body) {
-  const response = await fetch(tfServeURL, { body, method: "POST" });
-  if (response.ok) {
-    const json = await response.json();
-    return json["outputs"];
-  } else {
-    throw new Error(response.statusText);
-  }
-}
-
-async function vectorizeDocument(title, content) {
-  if (title == undefined || title == "") {
+export async function vectorizeDocument(
+  title: string,
+  content: string
+): Promise<number[]> {
+  if (title === "") {
     throw new Error("Cannot vectorize document with empty title.");
   }
 
@@ -49,13 +53,14 @@ async function vectorizeDocument(title, content) {
 
   const body = JSON.stringify({
     inputs: { context, input },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     signature_name: "response_encoder",
   });
   const vectors = await callTFServe(body);
   return vectors[0];
 }
 
-async function vectorizeQuery(query) {
+export async function vectorizeQuery(query: string): Promise<number[]> {
   if (!query) {
     throw new Error("Cannot vectorize empty query.");
   }
@@ -63,10 +68,9 @@ async function vectorizeQuery(query) {
   const inputs = [preprocess(query)];
   const body = JSON.stringify({
     inputs,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     signature_name: "question_encoder",
   });
   const vectors = await callTFServe(body);
   return vectors[0];
 }
-
-module.exports = { preprocess, vectorizeDocument, vectorizeQuery };

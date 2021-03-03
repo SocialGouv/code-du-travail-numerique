@@ -23,5 +23,5 @@ ENV SUGGEST_FILE=../dataset/suggestions.txt
 
 USER node
 
-ENV DUMP_PATH=../dump.data.json
+ENV DUMP_PATH=/app/dist/dump.data.json
 ENTRYPOINT ["yarn", "populate"]
