@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 27.688023,
+      "_score": 27.614605,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -24,7 +24,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.143171,
+      "_score": 22.027914,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -42,7 +42,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 2.94797,
+      "_score": 2.92844,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -51,7 +51,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 2.8290424,
+      "_score": 2.833201,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -62,29 +62,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 37.678734,
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "8c42435f9a",
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
-    Object {
-      "_score": 1.3151006,
+      "_score": 37.75128,
       "action": "Calculer",
       "algo": "both",
       "breadcrumbs": Array [
@@ -104,6 +82,28 @@ Object {
       "slug": "preavis-demission",
       "source": "outils",
       "title": "Préavis de démission",
+    },
+    Object {
+      "_score": 37.64896,
+      "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "8c42435f9a",
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
       "_score": 1.2952552,
@@ -128,7 +128,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 36.361824,
+      "_score": 36.3161,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -150,7 +150,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 35.71634,
+      "_score": 35.70983,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -167,7 +167,7 @@ Object {
       "title": "Heures pour recherche d’emploi",
     },
     Object {
-      "_score": 31.628939,
+      "_score": 31.589436,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -306,7 +306,7 @@ Object {
       "title": "L1237-2",
     },
     Object {
-      "_score": 2.94797,
+      "_score": 2.92844,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -519,7 +519,7 @@ exports[`returns unique documents from prequalified data (same slug but differen
 Object {
   "articles": Array [
     Object {
-      "_score": 1.173369,
+      "_score": 0.13325512,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -530,7 +530,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 56.320465,
+      "_score": 56.71788,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -551,7 +551,7 @@ Object {
       "title": "Certificat de travail",
     },
     Object {
-      "_score": 54.965897,
+      "_score": 55.34269,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -573,7 +573,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
-      "_score": 33.820084,
+      "_score": 34.216045,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -595,7 +595,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 33.43704,
+      "_score": 33.85958,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -621,55 +621,7 @@ Object {
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     Object {
-      "_score": 33.29029,
-      "action": "Calculer",
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "1eea193273",
-      "description": "Calculez la durée de préavis à respecter en cas de démission",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Préavis de démission",
-    },
-    Object {
-      "_score": 33.25407,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "position": 3,
-          "slug": "/themes/rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "position": 1,
-          "slug": "/themes/rupture-conventionnelle-individuelle",
-        },
-      ],
-      "cdtnId": "a712ecb976",
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "_score": 32.182713,
+      "_score": 32.509827,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
