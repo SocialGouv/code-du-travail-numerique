@@ -4,7 +4,7 @@
 
 Release:
   stage: .post
-  image: node:12.14-alpine3.10
+  image: node:14.16-alpine3.13
   dependencies: []
   when: manual
   variables:
@@ -62,7 +62,7 @@ Production:
 
 .update_elasticloud: &update_elasticloud
   stage: "Deploy"
-  image:  node:12.14-alpine3.10
+  image:  node:14.16-alpine3.13
   dependencies: []
   variables:
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
