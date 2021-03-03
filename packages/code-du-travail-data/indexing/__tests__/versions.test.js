@@ -5,6 +5,7 @@ jest.mock("../../package.json", () => ({
     "@socialgouv/lib-a": "1",
     "@socialgouv/lib-b": "2",
     "@socialgouv/lib-c": "3",
+    "@socialgouv/lib...lib-a": "4",
     foo: "bar",
     "foo/foo": "bar",
   },
