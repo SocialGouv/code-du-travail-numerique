@@ -11,7 +11,7 @@ ENV NLP_URL=$NLP_URL
 
 RUN yarn workspace @cdt/data dump-dev
 
-FROM node:12.20-alpine3.10
+FROM node:12.21-alpine3.10
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json

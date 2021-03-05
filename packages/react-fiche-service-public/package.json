@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "date-fns": "^2.16.1"
+    "date-fns": "^2.19.0"
   },
   "peerDependencies": {
     "@socialgouv/cdtn-ui": "4.x",
@@ -29,26 +29,26 @@
     "styled-components": "5.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
     "@babel/preset-react": "^7.12.13",
     "@rollup/plugin-commonjs": "^17.1.0",
-    "@rollup/plugin-node-resolve": "^11.1.1",
-    "@socialgouv/eslint-config-react": "^1.49.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@socialgouv/eslint-config-react": "^1.55.0",
     "@testing-library/react": "^11.2.5",
     "babel-jest": "^26.6.3",
-    "eslint": "^7.19.0",
+    "eslint": "^7.21.0",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.3",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "rollup": "^2.38.5",
+    "rollup": "^2.40.0",
     "rollup-plugin-babel": "^4.4.0",
     "styled-components": "^5.2.1",
-    "stylelint": "^13.9.0",
+    "stylelint": "^13.11.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
