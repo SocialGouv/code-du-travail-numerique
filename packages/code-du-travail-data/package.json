@@ -48,7 +48,7 @@
     "remark-rehype": "^8.0.0",
     "remark-stringify": "^9.0.1",
     "strip-markdown": "^4.0.0",
-    "unified": "^9.2.0",
+    "unified": "^9.2.1",
     "unist-util-find": "^1.0.2",
     "unist-util-parents": "^1.0.3",
     "unist-util-select": "^3.0.4",
@@ -57,8 +57,8 @@
     "xxhashjs": "^0.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@zeit/ncc": "^0.22.3",
     "babel-eslint": "^10.1.0",
