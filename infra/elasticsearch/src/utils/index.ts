@@ -1,7 +1,7 @@
 //
 
 import type { Client } from "@elastic/elasticsearch";
-import { logger } from "@socialgouv/cdtn...infra...logger";
+import { logger as cdtnLoggger } from "@socialgouv/cdtn...infra...logger";
 
 import { analyzer, char_filter, filter, tokenizer } from "./analysis";
 
@@ -20,7 +20,7 @@ export interface Document {
 
 //
 
-export const log = logger.child({
+export const logger = cdtnLoggger.child({
   package: "@socialgouv/cdtn...infra...elasticsearch",
 });
 
@@ -67,6 +67,7 @@ export async function createIndex({
     logger.info(`Index ${indexName} created.`);
   } catch (error: unknown) {
     logger.error("index create", error);
+    throw error;
   }
 }
 
@@ -109,6 +110,7 @@ export async function bulkIndexDocuments({
     logger.info(`Index ${documents.length} documents.`);
   } catch (error: unknown) {
     logger.error("index documents", error);
+    throw error;
   }
 }
 

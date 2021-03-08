@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@socialgouv/cdtn...infra...elasticsearch": "^1.0.0-alpha.1",
+    "@socialgouv/cdtn...infra...logger": "^1.0.0-alpha.1",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.21.0",
