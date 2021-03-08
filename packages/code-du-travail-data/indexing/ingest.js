@@ -6,7 +6,7 @@ import {
   vectorizeDocument,
   version,
 } from "@socialgouv/cdtn...infra...elasticsearch";
-import { logger } from "@socialgouv/cdtn...infra...logger";
+import { logger as cdtnLoggger } from "@socialgouv/cdtn...infra...logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
@@ -34,6 +34,9 @@ const esClientConfig = {
 
 const client = new Client(esClientConfig);
 
+const logger = cdtnLoggger.child({
+  package: "@cdt/data",
+});
 export async function addVector(data) {
   if (NLP_URL) {
     if (!data.title) {

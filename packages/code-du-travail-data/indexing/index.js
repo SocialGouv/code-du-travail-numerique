@@ -1,13 +1,13 @@
 import { Client } from "@elastic/elasticsearch";
-import { logger } from "@socialgouv/cdtn...infra...logger";
-
-import { documentMapping } from "./document.mapping";
 import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
   version,
-} from "./esClientUtils";
+} from "@socialgouv/cdtn...infra...elasticsearch";
+import { logger as cdtnLoggger } from "@socialgouv/cdtn...infra...logger";
+
+import { documentMapping } from "./document.mapping";
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { populateSuggestions } from "./suggestion";
 
@@ -27,7 +27,9 @@ const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
 const DUMP_PATH = process.env.DUMP_PATH || "../dist/dump.data.json";
-
+const logger = cdtnLoggger.child({
+  package: "@cdt/data",
+});
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
 const esClientConfig = {

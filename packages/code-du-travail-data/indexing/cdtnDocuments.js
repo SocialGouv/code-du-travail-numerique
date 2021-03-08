@@ -1,4 +1,4 @@
-import { logger } from "@socialgouv/cdtn...infra...logger";
+import { logger as cdtnLoggger } from "@socialgouv/cdtn...infra...logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 
@@ -16,10 +16,14 @@ import { getArticlesByTheme } from "./kali";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 
+const logger = cdtnLoggger.child({
+  package: "@cdt/data",
+});
+
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
-console.error(`Accessing cdtn admin on ${CDTN_ADMIN_ENDPOINT}`);
+logger.error(`Accessing cdtn admin on ${CDTN_ADMIN_ENDPOINT}`);
 
 const themesQuery = JSON.stringify({
   query: `{
@@ -78,7 +82,7 @@ async function* cdtnDocumentsGen() {
     return Promise.reject(data);
   });
 
-  console.error("themes fetched");
+  logger.error("themes fetched");
 
   const themes = themesQueryResult.data.themes;
 
@@ -159,10 +163,6 @@ async function* cdtnDocumentsGen() {
     documents: contributions.map(
       ({ answers, breadcrumbs, ...contribution }) => ({
         ...contribution,
-        breadcrumbs:
-          breadcrumbs.length > 0
-            ? breadcrumbs
-            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
         answers: {
           ...answers,
           generic: {
@@ -170,6 +170,10 @@ async function* cdtnDocumentsGen() {
             markdown: addGlossary(answers.generic.markdown),
           },
         },
+        breadcrumbs:
+          breadcrumbs.length > 0
+            ? breadcrumbs
+            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
       })
     ),
     source: SOURCES.CONTRIBUTIONS,
