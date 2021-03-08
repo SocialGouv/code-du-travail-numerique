@@ -36,6 +36,7 @@ async function _getPrequalified() {
     body: {
       query: prequalifiedQuery,
     },
+    index,
   });
   const response = await elasticsearchClient.search({
     body: {
