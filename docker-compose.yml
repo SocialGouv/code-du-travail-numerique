@@ -2,6 +2,8 @@ version: "3"
 
 services:
   elasticsearch:
+    environment:
+      - discovery.type=single-node
     ulimits:
       memlock:
         soft: -1
