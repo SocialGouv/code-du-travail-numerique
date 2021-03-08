@@ -21,7 +21,6 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
-
 ENV SUGGEST_FILE=../dataset/suggestions.txt
 
 USER node
