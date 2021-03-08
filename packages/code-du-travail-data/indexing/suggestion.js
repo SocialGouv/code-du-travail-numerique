@@ -1,12 +1,12 @@
 import { Client } from "@elastic/elasticsearch";
-import fs from "fs";
-import readline from "readline";
-
 import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
-} from "./esClientUtils";
+} from "@socialgouv/cdtn...infra...elasticsearch";
+import fs from "fs";
+import readline from "readline";
+
 import { suggestionMapping } from "./suggestion.mapping";
 
 const ELASTICSEARCH_URL =

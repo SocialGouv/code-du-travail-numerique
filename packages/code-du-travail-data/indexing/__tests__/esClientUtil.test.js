@@ -1,4 +1,8 @@
-import { chunks, getIndicesToDelete, range } from "../esClientUtils";
+import {
+  chunks,
+  getIndicesToDelete,
+  range,
+} from "@socialgouv/cdtn...infra...elasticsearch";
 
 const testCases = [
   [["cdtn"], 1, [{ index: "bob" }, { index: "dylan" }, { index: "yo" }], []],

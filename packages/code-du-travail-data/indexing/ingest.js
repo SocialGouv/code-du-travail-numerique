@@ -1,5 +1,11 @@
 import { Client } from "@elastic/elasticsearch";
-import { vectorizeDocument } from "@socialgouv/cdtn...infra...elasticsearch";
+import {
+  createIndex,
+  deleteOldIndex,
+  indexDocumentsBatched,
+  vectorizeDocument,
+  version,
+} from "@socialgouv/cdtn...infra...elasticsearch";
 import { logger } from "@socialgouv/cdtn...infra...logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
@@ -7,12 +13,6 @@ import retry from "p-retry";
 
 import { cdtnDocumentsGen } from "./cdtnDocuments";
 import { documentMapping } from "./document.mapping";
-import {
-  createIndex,
-  deleteOldIndex,
-  indexDocumentsBatched,
-  version,
-} from "./esClientUtils";
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { fetchCovisits } from "./monolog";
 import { populateSuggestions } from "./suggestion";
