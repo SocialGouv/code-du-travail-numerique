@@ -2,13 +2,14 @@ import { Client } from "@elastic/elasticsearch";
 import {
   createIndex,
   deleteOldIndex,
+  documentMapping,
+  DOCUMENTS,
   indexDocumentsBatched,
+  SUGGESTIONS,
   version,
 } from "@socialgouv/cdtn...infra...elasticsearch";
 import { logger as cdtnLoggger } from "@socialgouv/cdtn...infra...logger";
 
-import { documentMapping } from "./document.mapping";
-import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { populateSuggestions } from "./suggestion";
 
 // NOTE(douglasduteil): define the __non_webpack_require__ as requireFn

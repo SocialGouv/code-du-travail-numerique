@@ -3,11 +3,10 @@ import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
+  suggestionMapping,
 } from "@socialgouv/cdtn...infra...elasticsearch";
 import fs from "fs";
 import readline from "readline";
-
-import { suggestionMapping } from "./suggestion.mapping";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
