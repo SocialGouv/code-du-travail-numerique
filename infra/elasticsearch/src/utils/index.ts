@@ -176,8 +176,9 @@ export function getIndicesToDelete(
     .filter(({ index }) => !currentIndices.includes(index))
     .filter(isCdtnIndex)
     .sort(({ index: indexA }, { index: indexB }) => {
-      const [, typeA = "", tsA = "0"] = indexA.match(/(\w+)-(\d+)/g) ?? [];
-      const [, typeB = "", tsB = "0"] = indexB.match(/(\w+)-(\d+)/g) ?? [];
+      const prefixReg = /(\w+)-(\d+)/;
+      const [, typeA = "", tsA = "0"] = prefixReg.exec(indexA) ?? [];
+      const [, typeB = "", tsB = "0"] = prefixReg.exec(indexB) ?? [];
       return tsA === tsB
         ? Number(typeA) - Number(typeB)
         : Number(tsA) - Number(tsB);
