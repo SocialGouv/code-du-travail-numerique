@@ -1,5 +1,5 @@
 const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn...infra...elasticsearch");
 const { vectorizeQuery } = require("@socialgouv/cdtn...infra...elasticsearch");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
