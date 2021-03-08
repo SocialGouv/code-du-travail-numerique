@@ -12,13 +12,15 @@ ENV NLP_URL=$NLP_URL
 RUN yarn workspace @cdt/data dump-dev
 
 FROM node:14.16-alpine3.13
+
+WORKDIR /app
+
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
-WORKDIR /app
 
 ENV SUGGEST_FILE=../dataset/suggestions.txt
 
