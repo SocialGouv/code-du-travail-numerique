@@ -9,8 +9,6 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 ARG NLP_URL
 ENV NLP_URL=$NLP_URL
 
-ENV CDTN_ADMIN_ENDPOINT=https://lionelb-add-publi-vdgr1r-cdtn-admin.dev2.fabrique.social.gouv.fr/api/graphql
-
 RUN yarn workspace @cdt/data dump-dev
 
 FROM node:14.16-alpine3.13
