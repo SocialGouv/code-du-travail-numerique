@@ -87,18 +87,21 @@ export async function bulkIndexDocuments({
       items: { index: { status: number } }[];
     }
 
-    const resp = await client.bulk<BulkApiResponse>({
-      body: documents.map((doc, i) => [
-        {
-          index: {
-            _index: indexName,
-            // if available, use our cdtnId as the actual Elastic document id
-            ...(doc.cdtnId && { _id: doc.cdtnId }),
-            // unless we're in testing mode where we use position
-            ...(process.env.NODE_ENV === "test" && { _id: i }),
-          },
+    const body = documents.flatMap((doc, i) => [
+      {
+        index: {
+          _index: indexName,
+          // if available, use our cdtnId as the actual Elastic document id
+          ...(doc.cdtnId && { _id: doc.cdtnId }),
+          // unless we're in testing mode where we use position
+          ...(process.env.NODE_ENV === "test" && { _id: i }),
         },
-      ]),
+      },
+      doc,
+    ]);
+
+    const resp = await client.bulk<BulkApiResponse>({
+      body,
       index: indexName,
     });
     if (resp.body.errors) {
