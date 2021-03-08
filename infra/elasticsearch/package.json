@@ -21,6 +21,7 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.17",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-typescript": "^7.13.0",
     "@socialgouv/eslint-config-typescript": "^1.53.0",
