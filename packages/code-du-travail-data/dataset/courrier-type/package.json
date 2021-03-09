@@ -7,7 +7,7 @@
   "dependencies": {
     "@socialgouv/cdtn-slugify": "^4.44.0",
     "@socialgouv/cdtn-sources": "^4.44.0",
-    "@socialgouv/datafiller-data": "^2.15.0",
+    "@socialgouv/datafiller-data": "^2.16.0",
     "mammoth": "^1.4.16"
   }
 }
