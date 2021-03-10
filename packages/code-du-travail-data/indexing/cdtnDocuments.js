@@ -10,7 +10,7 @@ import {
   getGlossary,
 } from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
-import { addGlossary } from "./glossary";
+import { create as createGlossary } from "./glossary";
 import { getArticlesByTheme } from "./kali";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
@@ -85,6 +85,7 @@ async function* cdtnDocumentsGen() {
   const getBreadcrumbs = buildGetBreadcrumbs(themes);
 
   const glossaryTerms = await getGlossary();
+  const glossary = createGlossary(glossaryTerms);
 
   logger.info("glossary fetched");
 
@@ -95,7 +96,7 @@ async function* cdtnDocumentsGen() {
   );
   yield {
     documents: markdownTransform(
-      (content) => addGlossary({ content, contentType: "html", glossaryTerms }),
+      (content) => glossary.replaceHtml(content),
       documents
     ),
     source: SOURCES.EDITORIAL_CONTENT,
@@ -169,19 +170,11 @@ async function* cdtnDocumentsGen() {
             answers.conventions &&
             answers.conventions.map((answer) => ({
               ...answer,
-              markdown: addGlossary({
-                content: answer.markdown,
-                contentType: "markdown",
-                glossaryTerms,
-              }),
+              markdown: glossary.replaceMarkdown(answer.markdown),
             })),
           generic: {
             ...answers.generic,
-            markdown: addGlossary({
-              content: answers.generic.markdown,
-              contentType: "markdown",
-              glossaryTerms,
-            }),
+            markdown: glossary.replaceMarkdown(answers.generic.markdown),
           },
         },
         breadcrumbs:
@@ -217,11 +210,7 @@ async function* cdtnDocumentsGen() {
           const [theme] = contrib.breadcrumbs;
           return {
             ...data,
-            answer: addGlossary({
-              content: data.answer,
-              contentType: "html",
-              glossaryTerms,
-            }),
+            answer: glossary.replaceHtml(data.answer),
             theme: theme && theme.label,
           };
         }),
@@ -252,11 +241,7 @@ async function* cdtnDocumentsGen() {
         delete section.text;
         return {
           ...section,
-          html: addGlossary({
-            content: html,
-            contentType: "html",
-            glossaryTerms,
-          }),
+          html: glossary.replaceHtml(html),
         };
       }),
     })),
