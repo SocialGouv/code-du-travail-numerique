@@ -187,4 +187,182 @@ Some content
 </Tab>`
     );
   });
+
+  test("should handle complex markdown 2", () => {
+    const content = `Le code du travail prévoit la durée maximale de la période d’essai. Il précise que, dans certains cas, la période d’essai est automatiquement réduite ou supprimée.
+
+#### 1. Conditions de réduction ou suppression de la période d'essai
+
+En effet, après la fin du contrat d’apprentissage, il ne peut pas y avoir de période d’essai en cas d’embauche en CDI, CDD ou contrat de mission (intérim), sauf si une convention collective ou un accord d’entreprise en prévoit une.
+
+La durée de la période d’essai normalement prévue est automatiquement réduite dans les cas suivants :
+
+- En cas de poursuite du contrat de travail en CDI après la fin d’un CDD, la durée du CDD est déduite de la période d’essai du CDI ;
+- En cas d’embauche après la fin du contrat de mission (intérim), la durée des missions effectuées par le salarié dans l'entreprise au cours des 3 mois précédant l'embauche est déduite de la période d'essai ;
+- En cas d'embauche dans les 3 mois après un stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d'essai. Celle-ci ne peut pas être réduite de plus de la moitié, sauf si un accord collectif prévoit des mesures plus favorables. Si cette embauche est effectuée dans un emploi correspondant avec les activités confiées au stagiaire, la durée du stage est déduite intégralement de la période d'essai.
+
+#### 2. Durées de la période d'essai
+
+La durée de la période d'essai varie selon le type de contrat de travail.
+
+<Tab title="CDI">
+
+La période d’essai, appelée période d’essai initiale, peut être renouvelée une fois. Sa durée maximale varie en fonction de la catégorie professionnelle du salarié.
+
+- Ouvriers et Employés :
+
+  - Durée de la période d’essai initiale : 2 mois ;
+  - Durée totale de la période d’essai avec renouvellement : 4 mois.
+
+  - Agents de maîtrise :
+  - Durée de la période d’essai initiale : 3 mois ;
+  - Durée totale de la période d’essai avec renouvellement : 6 mois.
+
+  - Cadres :
+  - Durée de la période d’essai initiale : 4 mois ;
+  - Durée totale de la période d’essai avec renouvellement : 8 mois.
+
+  <HDN>
+
+Si une convention et/ ou un accord collectif d'entreprise prévoi(en)t des durées différentes, l’employeur et le salarié appliquent :
+
+- La durée de la période d’essai prévue par la convention ou l'accord de branche conclu avant le 26 juin 2008, si cette durée est plus longue que celle prévue par le code du travail ;
+
+  ou
+
+  - La durée de la période d’essai initiale de l’accord d’entreprise, si elle est plus longue que celle prévue par une convention ou un accord de branche et plus courte que celle prévue par le code du travail, pour les contrats de travail conclus depuis le 1er janvier 2018.
+
+L'employeur et le salarié peuvent toujours fixer, dans le contrat de travail, une durée plus courte, qui s'appliquera.
+
+</HDN>
+
+</Tab>
+
+<Tab title="CDD">
+
+La durée de la période d’essai dépend de la durée du CDD. Si le CDD n’a pas de terme précis, la durée de la période d’essai est fixée par rapport à la durée minimale du CDD.
+
+- CDD de 6 mois maximum : 1 jour par semaine de travail, sans dépasser 2 semaines de période d’essai ;
+- CDD de plus de 6 mois : 1 mois maximum.
+
+<HDN>
+
+Si une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte.
+
+Le contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera.
+
+</HDN>
+
+</Tab>`;
+
+    expect(glossary.replaceMarkdown(content)).toEqual(
+      `Le code du travail prévoit la durée maximale de la période d’essai. Il précise que, dans certains cas, la période d’essai est automatiquement réduite ou supprimée.
+
+#### 1. Conditions de réduction ou suppression de la période d'essai
+
+En effet, après la fin du contrat d’apprentissage, il ne peut pas y avoir de période d’essai en cas d’embauche en CDI, CDD ou contrat de mission (intérim), sauf si une convention collective ou un accord d’entreprise en prévoit une.
+
+La durée de la période d’essai normalement prévue est automatiquement réduite dans les cas suivants :
+
+- En cas de poursuite du contrat de travail en CDI après la fin d’un CDD, la durée du CDD est déduite de la période d’essai du CDI ;
+- En cas d’embauche après la fin du contrat de mission (intérim), la durée des missions effectuées par le salarié dans l'entreprise au cours des 3 mois précédant l'embauche est déduite de la période d'essai ;
+- En cas d'embauche dans les 3 mois après un stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d'essai. Celle-ci ne peut pas être réduite de plus de la moitié, sauf si un accord collectif prévoit des mesures plus favorables. Si cette embauche est effectuée dans un emploi correspondant avec les activités confiées au stagiaire, la durée du stage est déduite intégralement de la période d'essai.
+
+#### 2. Durées de la période d'essai
+
+La durée de la période d'essai varie selon le type de contrat de travail.
+
+<Tab title="CDI">
+
+La période d’essai, appelée période d’essai initiale, peut être renouvelée une fois. Sa durée maximale varie en fonction de la catégorie professionnelle du salarié.
+
+- Ouvriers et Employés :
+
+  - Durée de la période d’essai initiale : 2 mois ;
+
+  - Durée totale de la période d’essai avec renouvellement : 4 mois.
+
+  - Agents de maîtrise :
+
+  - Durée de la période d’essai initiale : 3 mois ;
+
+  - Durée totale de la période d’essai avec renouvellement : 6 mois.
+
+  - Cadres :
+
+  - Durée de la période d’essai initiale : 4 mois ;
+
+  - Durée totale de la période d’essai avec renouvellement : 8 mois.
+
+<HDN>
+
+Si une convention et/ ou un accord collectif d'entreprise prévoi(en)t des durées différentes, l’employeur et le salarié appliquent :
+
+- La durée de la période d’essai prévue par la convention ou l'<webcomponent-tooltip>accord de branche</webcomponent-tooltip> conclu avant le 26 juin 2008, si cette durée est plus longue que celle prévue par le code du travail ;
+
+  ou
+
+  - La durée de la période d’essai initiale de l’accord d’entreprise, si elle est plus longue que celle prévue par une convention ou un <webcomponent-tooltip>accord de branche</webcomponent-tooltip> et plus courte que celle prévue par le code du travail, pour les contrats de travail conclus depuis le 1er janvier 2018.
+
+L'employeur et le salarié peuvent toujours fixer, dans le contrat de travail, une durée plus courte, qui s'appliquera.
+
+</HDN>
+
+</Tab>
+
+<Tab title="CDD">
+
+La durée de la période d’essai dépend de la durée du CDD. Si le CDD n’a pas de terme précis, la durée de la période d’essai est fixée par rapport à la durée minimale du CDD.
+
+- CDD de 6 mois maximum : 1 jour par semaine de travail, sans dépasser 2 semaines de période d’essai ;
+- CDD de plus de 6 mois : 1 mois maximum.
+
+<HDN>
+
+Si une convention ou un accord collectif de branche ou d’entreprise prévoit une durée différente de celle prévue par le code du travail, l'employeur et le salarié appliquent la durée la plus courte.
+
+Le contrat de travail peut toujours prévoir une durée de période d'essai plus courte, qui s’appliquera.
+
+</HDN>
+
+</Tab>`
+    );
+  });
+
+  test("should accept malformed MDX", () => {
+    const content = `# some MDX
+
+<Tab>
+
+  <Tab>
+
+  - item 1
+
+    Or
+
+    - item veryspecial
+
+  </Tab>
+
+</Tab>
+
+ `;
+    expect(glossary.replaceMarkdown(content)).toEqual(
+      `# some MDX
+
+<Tab>
+
+<Tab>
+
+- item 1
+
+  Or
+
+  - item <tag-veryspecial>veryspecial</tag-veryspecial>
+
+</Tab>
+
+</Tab>`
+    );
+  });
 });

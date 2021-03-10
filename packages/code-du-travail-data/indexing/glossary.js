@@ -153,7 +153,8 @@ export const create = (glossaryTerms) => {
     },
     replaceMarkdown: (markdown) => {
       try {
-        const tree = fromMarkdown(markdown, {
+        const fixedMarkdown = markdown.replace(/^\s+</gm, "<");
+        const tree = fromMarkdown(fixedMarkdown, {
           extensions: [mdxJsxSyntax({ acorn: acorn }), mdxMd],
           mdastExtensions: [mdxJsx.fromMarkdown],
         });
