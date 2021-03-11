@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "lib",
+    "paths": { "@socialgouv/cdtn...infra...elasticsearch/*": ["./src/*"] },
+    "rootDir": "src"
+  }
+}
