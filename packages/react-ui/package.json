@@ -13,7 +13,7 @@
     "lint-js": "eslint src/**/*.js",
     "lint-css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint-js && yarn lint-css",
-    "prepush": "yarn lint && yarn test",
+    "prepush": "lint-staged",
     "start": "start-storybook",
     "svg": "svgo --config=src/icons/mono.config.yaml -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.yaml -f src/icons/src/bicolor && npx @svgr/cli --icon --no-dimensions -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
@@ -57,6 +57,7 @@
     "eslint": "^7.21.0",
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.3",
+    "lint-staged": "^10.5.4",
     "npx": "^10.2.2",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
@@ -79,6 +80,14 @@
     "react",
     "ui"
   ],
+  "lint-staged": {
+    "src/**/*.js": [
+      "yarn lint-js --fix",
+      "git add",
+      "yarn lint-css",
+      "yarn test --bail --findRelatedTests"
+    ]
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"

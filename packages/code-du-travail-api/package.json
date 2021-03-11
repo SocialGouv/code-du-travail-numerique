@@ -7,7 +7,7 @@
   "scripts": {
     "build": "ncc build ./src/server/index.js -o dist --source-map",
     "lint": "eslint src/**/*.js",
-    "prepush": "yarn lint",
+    "prepush": "lint-staged",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon -r esm ./src/server/index.js",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn node -r esm tests/fetch_mock_data.js",
@@ -46,8 +46,16 @@
     "eslint": "^7.21.0",
     "esm": "^3.2.25",
     "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
     "nodemon": "^2.0.7",
     "supertest": "^6.1.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint --fix",
+      "git add",
+      "yarn test --bail --findRelatedTests"
+    ]
   },
   "jest": {
     "setupFiles": [
