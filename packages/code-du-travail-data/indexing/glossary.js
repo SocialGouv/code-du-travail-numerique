@@ -145,9 +145,9 @@ export const create = (glossaryTerms) => {
         const out = toHtml(tree).trim();
         return out;
       } catch (e) {
-        console.log(`Cannot parse HTML content`, e.message);
-        console.log("e", e);
-        console.log(html.slice(0, 100) + "...");
+        console.error(`Cannot parse HTML content`, e.message);
+        console.error("e", e);
+        console.error(html.slice(0, 100) + "...");
         return html;
       }
     },
@@ -168,9 +168,9 @@ export const create = (glossaryTerms) => {
         }).trim();
         return out;
       } catch (e) {
-        console.log(`Cannot parse Markdown content`, e.message);
-        console.log("e", e);
-        console.log(markdown.slice(0, 100) + "...");
+        console.error(`Cannot parse Markdown content`, e.message);
+        console.error("e", e);
+        console.error(markdown.slice(0, 100) + "...");
         return markdown;
       }
     },
