@@ -142,7 +142,11 @@ export const create = (glossaryTerms) => {
           ],
         });
 
-        const out = toHtml(tree).trim();
+        const out = toHtml(tree, {
+          allowParseErrors: true,
+        })
+          .trim()
+          .replace(/&#x26;/g, "&");
         return out;
       } catch (e) {
         console.error(`Cannot parse HTML content`, e.message);
@@ -153,7 +157,9 @@ export const create = (glossaryTerms) => {
     },
     replaceMarkdown: (markdown) => {
       try {
-        const fixedMarkdown = markdown.replace(/^\s+</gm, "<");
+        const fixedMarkdown = markdown
+          .replace(/^\s+</gm, "<")
+          .replace(/<br>/gi, "\n");
         const tree = fromMarkdown(fixedMarkdown, {
           extensions: [mdxJsxSyntax({ acorn: acorn }), mdxMd],
           mdastExtensions: [mdxJsx.fromMarkdown],

@@ -79,6 +79,11 @@ describe("glossary.replaceHtml", () => {
       `now for some<span> <tag-veryspecial>veryspecial</tag-veryspecial> </span>term`
     );
   });
+
+  test("should not HTML encode &nbsp;", () => {
+    const content = `<p>La démission&nbsp;</p>`;
+    expect(glossary.replaceHtml(content)).toEqual(`<p>La démission&nbsp;</p>`);
+  });
 });
 
 describe("glossary.replaceMarkdown", () => {
