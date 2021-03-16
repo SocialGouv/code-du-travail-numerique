@@ -11,7 +11,6 @@ export const CompanyTile = ({
   highlightLabel,
   activitePrincipale,
   address,
-  etablissements,
   onClick,
   matching,
 }) => (
