@@ -37,7 +37,7 @@ export const CompanyTile = ({
       <Ville>{address}</Ville>
     ) : (
       <Ville>
-        {matching} établissements trouvés ({etablissements} en France)
+        {matching} établissements avec convention collective trouvés
       </Ville>
     )}
     {conventions.length ? (
