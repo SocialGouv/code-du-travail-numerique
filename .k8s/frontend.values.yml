@@ -17,15 +17,15 @@ deployment:
 
   livenessProbe:
     path: /health
-    failureThreshold: 2
-    initialDelaySeconds: 10
+    failureThreshold: 10
+    initialDelaySeconds: 15
     periodSeconds: 2
     successThreshold: 1
     timeoutSeconds: 3
   readinessProbe:
     path: /health
-    failureThreshold: 2
-    initialDelaySeconds: 10
+    failureThreshold: 10
+    initialDelaySeconds: 15
     periodSeconds: 2
     successThreshold: 1
     timeoutSeconds: 3
@@ -95,7 +95,7 @@ deployment:
         - |
           retry=120; # 5s * (12 * 10) = 10min
           while
-            ! curl -sS "${API_URL}/api/v1/version" &&
+            ! curl -sS "${API_URL}" &&
             [[ $(( retry-- )) -gt 0 ]];
           do echo "Waiting for api to be available ($(( retry )))" ; sleep 5s ; done ;
 
