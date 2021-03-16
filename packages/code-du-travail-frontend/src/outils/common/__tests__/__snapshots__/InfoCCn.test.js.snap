@@ -331,32 +331,6 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
       </label>
       <label
         class="c4"
-        for="radio-enterprise_no_cc"
-      >
-        <input
-          class="c5"
-          id="radio-enterprise_no_cc"
-          name="radio-enterprise_no_cc"
-          type="radio"
-          value="false"
-        />
-        Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
-      </label>
-      <label
-        class="c4"
-        for="radio-adresse"
-      >
-        <input
-          class="c5"
-          id="radio-adresse"
-          name="radio-adresse"
-          type="radio"
-          value="false"
-        />
-        Nom de votre entreprise & adresse 
-      </label>
-      <label
-        class="c4"
         for="radio-convention"
       >
         <input
@@ -376,13 +350,25 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
         class="c8"
         id="convention-search"
         name="q"
-        placeholder="Saisissez le nom de votre entreprise"
+        placeholder="Saisissez le nom de votre entreprise ou son numéro de SIREN ou SIRET"
         role="search"
         type="search"
         value=""
       />
     </span>
-    
+    <span
+      class="c6 c7"
+    >
+      <input
+        class="c8"
+        id="convention-search-address"
+        name="a"
+        placeholder="Ville ou code postal"
+        role="search"
+        type="search"
+        value=""
+      />
+    </span>
     
     <p
       class="c9"
@@ -728,32 +714,6 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
       </label>
       <label
         class="c3"
-        for="radio-enterprise_no_cc"
-      >
-        <input
-          class="c4"
-          id="radio-enterprise_no_cc"
-          name="radio-enterprise_no_cc"
-          type="radio"
-          value="false"
-        />
-        Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
-      </label>
-      <label
-        class="c3"
-        for="radio-adresse"
-      >
-        <input
-          class="c4"
-          id="radio-adresse"
-          name="radio-adresse"
-          type="radio"
-          value="false"
-        />
-        Nom de votre entreprise & adresse 
-      </label>
-      <label
-        class="c3"
         for="radio-convention"
       >
         <input
@@ -773,13 +733,25 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
         class="c7"
         id="convention-search"
         name="q"
-        placeholder="Saisissez le nom de votre entreprise"
+        placeholder="Saisissez le nom de votre entreprise ou son numéro de SIREN ou SIRET"
         role="search"
         type="search"
         value=""
       />
     </span>
-    
+    <span
+      class="c5 c6"
+    >
+      <input
+        class="c7"
+        id="convention-search-address"
+        name="a"
+        placeholder="Ville ou code postal"
+        role="search"
+        type="search"
+        value=""
+      />
+    </span>
     
     <p
       class="c8"

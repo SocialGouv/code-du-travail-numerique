@@ -2748,32 +2748,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         </label>
                         <label
                           class="c69"
-                          for="radio-enterprise_no_cc"
-                        >
-                          <input
-                            class="c70"
-                            id="radio-enterprise_no_cc"
-                            name="radio-enterprise_no_cc"
-                            type="radio"
-                            value="false"
-                          />
-                          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
-                        </label>
-                        <label
-                          class="c69"
-                          for="radio-adresse"
-                        >
-                          <input
-                            class="c70"
-                            id="radio-adresse"
-                            name="radio-adresse"
-                            type="radio"
-                            value="false"
-                          />
-                          Nom de votre entreprise & adresse 
-                        </label>
-                        <label
-                          class="c69"
                           for="radio-convention"
                         >
                           <input
@@ -2793,13 +2767,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           class="c73"
                           id="convention-search"
                           name="q"
-                          placeholder="Saisissez le nom de votre entreprise"
+                          placeholder="Saisissez le nom de votre entreprise ou son numéro de SIREN ou SIRET"
                           role="search"
                           type="search"
                           value=""
                         />
                       </span>
-                      
+                      <span
+                        class="c71 c72"
+                      >
+                        <input
+                          class="c73"
+                          id="convention-search-address"
+                          name="a"
+                          placeholder="Ville ou code postal"
+                          role="search"
+                          type="search"
+                          value=""
+                        />
+                      </span>
                       
                       <p
                         class="c74"
@@ -6050,32 +6036,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         </label>
                         <label
                           class="c69"
-                          for="radio-enterprise_no_cc"
-                        >
-                          <input
-                            class="c70"
-                            id="radio-enterprise_no_cc"
-                            name="radio-enterprise_no_cc"
-                            type="radio"
-                            value="false"
-                          />
-                          Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions
-                        </label>
-                        <label
-                          class="c69"
-                          for="radio-adresse"
-                        >
-                          <input
-                            class="c70"
-                            id="radio-adresse"
-                            name="radio-adresse"
-                            type="radio"
-                            value="false"
-                          />
-                          Nom de votre entreprise & adresse 
-                        </label>
-                        <label
-                          class="c69"
                           for="radio-convention"
                         >
                           <input
@@ -6095,13 +6055,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           class="c73"
                           id="convention-search"
                           name="q"
-                          placeholder="Saisissez le nom de votre entreprise"
+                          placeholder="Saisissez le nom de votre entreprise ou son numéro de SIREN ou SIRET"
                           role="search"
                           type="search"
                           value=""
                         />
                       </span>
-                      
+                      <span
+                        class="c71 c72"
+                      >
+                        <input
+                          class="c73"
+                          id="convention-search-address"
+                          name="a"
+                          placeholder="Ville ou code postal"
+                          role="search"
+                          type="search"
+                          value=""
+                        />
+                      </span>
                       
                       <p
                         class="c74"

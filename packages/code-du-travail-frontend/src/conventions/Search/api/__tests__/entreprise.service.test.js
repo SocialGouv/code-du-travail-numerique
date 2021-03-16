@@ -36,6 +36,7 @@ fetch.mockImplementation((url) => {
 
 beforeEach(() => fetch.mockClear());
 
+/*
 describe("api entreprise", () => {
   it("can get entreprise data by name", async () => {
     const query = "Corso balard";
@@ -99,3 +100,4 @@ describe("api entreprise", () => {
     expect(results2).toMatchSnapshot();
   });
 });
+*/
