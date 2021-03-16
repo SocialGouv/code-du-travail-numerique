@@ -57,6 +57,13 @@ const Contribution = ({ answers, content }) => {
     "conventionAnswer"
   );
 
+  const filteredRefs = answers.generic.references.filter(
+    ({ category, url }) => {
+      if (category !== "external") return true;
+      return url !== content.url;
+    }
+  );
+
   const hasConventionAnswers =
     (answers.conventions && answers.conventions.length > 0) ||
     isConventionalAnswer;
@@ -139,7 +146,7 @@ const Contribution = ({ answers, content }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
-          <ReferencesJuridiques references={answers.generic.references} />
+          <ReferencesJuridiques references={filteredRefs} />
         </section>
       )}
       {hasConventionAnswers && (
