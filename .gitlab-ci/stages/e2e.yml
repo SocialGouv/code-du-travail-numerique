@@ -27,7 +27,7 @@ Test on deployed branch:
     - |-
       retry=60;
       while
-        ! wget -q -O - "$@" "${FRONTEND_URL}/api/version"  | grep "${COMMIT}" &&
+        ! wget -q -O - "$@" "${FRONTEND_URL}/api/version"  | grep "${CI_COMMIT_REF_NAME}" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for frontend to be ready" ; sleep 3 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
