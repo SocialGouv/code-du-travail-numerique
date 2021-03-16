@@ -8,15 +8,9 @@ const {
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
-// const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-// const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
 const index = "cdtn-siren";
 
 const router = new Router({ prefix: API_BASE_URL });
-
-// const ENTERPRISE_SEARCH = "enterprise";
-// const ADRESSE_SEARCH = "adresse";
-const ENTERPRISE_SEARCH_NO_CC = "enterprise_no_cc";
 
 /**
  * Return the enterprises that match the search query
@@ -28,11 +22,13 @@ const ENTERPRISE_SEARCH_NO_CC = "enterprise_no_cc";
  * @returns {Object} enterprise search results
  */
 router.get("/entreprises", async (ctx) => {
-  const { q: query, t: searchType, a: address } = ctx.query;
+  const { q: query, a: address } = ctx.query;
 
-  const with_cc = searchType !== ENTERPRISE_SEARCH_NO_CC;
+  if (!query) {
+    ctx.throw(400, `query parameter q is required`);
+  }
 
-  const body = entrepriseSearchBody(query, address, with_cc);
+  const body = entrepriseSearchBody(query, address);
 
   // console.log(JSON.stringify(body, null, 2));
 
@@ -44,7 +40,7 @@ router.get("/entreprises", async (ctx) => {
     ctx.throw(404, `enterprises not found, no entreprise matching ${query}`);
   }
 
-  ctx.body = { enterprises: response.body.hits.hits.map(mapHit) };
+  ctx.body = { entreprises: response.body.hits.hits.map(mapHit) };
 });
 
 module.exports = router;

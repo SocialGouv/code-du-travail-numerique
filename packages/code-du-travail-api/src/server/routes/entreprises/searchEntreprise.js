@@ -20,29 +20,29 @@ const formatLabel = (naming) => {
   return labelTokens.map(({ fmt }) => fmt).join(" ");
 };
 
-export const mapHit = ({
+const mapHit = ({
   _source: {
     siren,
     denominationUniteLegale,
-    libelleCommuneEtablissement,
-    codePostalEtablissement,
     nomUniteLegale,
     nomUsageUniteLegale,
     denominationUsuelle1UniteLegale,
     denominationUsuelle2UniteLegale,
     denominationUsuelle3UniteLegale,
     activitePrincipale,
+    etablissements,
     idcc,
     convention,
     siret,
+    address,
     naming,
   },
   highlight,
 }) => {
-  const label =
-    highlight && highlight.naming
-      ? formatLabel(highlight.naming)
-      : formatLabel(naming.split(" "));
+  const label = formatLabel(naming.split(" "));
+
+  const highlightLabel =
+    highlight && highlight.naming ? formatLabel(highlight.naming) : label;
 
   // take first by priority
   const simpleLabel = [
@@ -56,26 +56,16 @@ export const mapHit = ({
 
   return {
     activitePrincipale,
-    closed: false,
-    codePostalEtablissement,
+    address,
     convention,
-    denominationUniteLegale,
-    denominationUsuelle1UniteLegale,
-    denominationUsuelle2UniteLegale,
-    denominationUsuelle3UniteLegale,
+    etablissements,
+    highlightLabel,
     id: siren,
-    // conventions: [{ idcc }],
     idcc: parseInt(idcc),
     label,
-    nomUniteLegale,
-    nomUsageUniteLegale,
     simpleLabel,
     siren,
     siret,
-    type: "entreprise",
-    ville: [codePostalEtablissement, libelleCommuneEtablissement]
-      .filter((e) => e)
-      .join(" "),
   };
 };
 
@@ -87,7 +77,7 @@ const collapse = {
   field: "siren",
 };
 
-export const entrepriseSearchBody = (query, address, withIdcc) => ({
+const entrepriseSearchBody = (query, address = "", withIdcc = true) => ({
   collapse,
   highlight: {
     fields: {
@@ -103,11 +93,12 @@ export const entrepriseSearchBody = (query, address, withIdcc) => ({
             should: [
               { fuzzy: { naming: { boost: 0.6, value: query } } },
               { match: { naming: query } },
+              { match: { siret: query } },
+              { match: { siren: query } },
             ],
           },
         },
       ],
-      // must: [{ match: { naming: query } }],
       should: [
         { rank_feature },
         {
@@ -135,15 +126,7 @@ export const entrepriseSearchBody = (query, address, withIdcc) => ({
   size,
 });
 
-export const entrepriseAddressSearchBody = (query) => ({
-  collapse: {
-    field: "siren",
-  },
-  query: {
-    bool: {
-      must: [{ match: { address: query } }],
-      should: [{ rank_feature }, { match: { villeCp: query } }],
-    },
-  },
-  size,
-});
+module.exports = {
+  entrepriseSearchBody,
+  mapHit,
+};
