@@ -17,6 +17,8 @@ const cdtnEntrepriseFullText = memoizee(
       if (response.ok) {
         const { entreprises } = await response.json();
         return entreprises;
+      } else if (response.status == 404) {
+        return [];
       }
 
       throw new Error("Un problème est survenu.");
