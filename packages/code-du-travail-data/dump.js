@@ -65,6 +65,7 @@ const dump = async () => {
       const pDocs = documents.map((doc) =>
         monologQueue.add(() => fetchCovisits(doc))
       );
+      console.error(`  › add monolog data`);
       const docs = await Promise.all(pDocs);
       await monologQueue.onIdle();
       // add NLP vectors
@@ -74,6 +75,7 @@ const dump = async () => {
         const pDocs = docs.map((doc) =>
           nlpQueue.add(() => retry(() => fetchVector(doc), { retries: 3 }))
         );
+        console.error(`  › add vectors data`);
         const docsWithData = await Promise.all(pDocs);
         await nlpQueue.onIdle();
         allDocuments = allDocuments.concat(docsWithData);

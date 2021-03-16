@@ -18,22 +18,24 @@ const htmlProcessor = unified()
   .use(htmlAstStringify);
 
 export function markdownTransform(addGlossary, documents) {
-  return documents.map(({ contents = [], ...rest }) => ({
-    ...rest,
-    contents: contents.map((content) => {
-      content.html = addGlossary(
-        htmlProcessor.processSync(content.markdown).contents
-      );
-      delete content.markdown;
-      return content;
-    }),
-    intro: addGlossary(htmlProcessor.processSync(rest.intro).contents),
-    text:
-      textProcessor.processSync(rest.intro) +
-      contents
-        .map(({ markdown }) =>
-          textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
-        )
-        .join(""),
-  }));
+  return documents.map(({ contents = [], ...rest }) => {
+    return {
+      ...rest,
+      contents: contents.map((content) => {
+        content.html = addGlossary(
+          htmlProcessor.processSync(content.markdown).contents
+        );
+        delete content.markdown;
+        return content;
+      }),
+      intro: addGlossary(htmlProcessor.processSync(rest.intro).contents),
+      text:
+        textProcessor.processSync(rest.intro) +
+        contents
+          .map(({ markdown }) =>
+            textProcessor.processSync(markdown).contents.replace(/\s\s+/g, " ")
+          )
+          .join(""),
+    };
+  });
 }

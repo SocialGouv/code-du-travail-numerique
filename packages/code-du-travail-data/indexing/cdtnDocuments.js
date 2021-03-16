@@ -10,7 +10,7 @@ import {
   getGlossary,
 } from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
-import { createGlossaryTransform } from "./glossary";
+import { create as createGlossary } from "./glossary";
 import { getArticlesByTheme } from "./kali";
 import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
@@ -78,14 +78,16 @@ async function* cdtnDocumentsGen() {
     return Promise.reject(data);
   });
 
-  console.error("themes fetched");
+  logger.info("themes fetched");
 
   const themes = themesQueryResult.data.themes;
 
   const getBreadcrumbs = buildGetBreadcrumbs(themes);
 
   const glossaryTerms = await getGlossary();
-  const addGlossary = createGlossaryTransform(glossaryTerms);
+  const glossary = createGlossary(glossaryTerms);
+
+  logger.info("glossary fetched");
 
   logger.info("=== Editorial contents ===");
   const documents = await getDocumentBySource(
@@ -93,7 +95,10 @@ async function* cdtnDocumentsGen() {
     getBreadcrumbs
   );
   yield {
-    documents: markdownTransform(addGlossary, documents),
+    documents: markdownTransform(
+      (content) => glossary.replaceHtml(content),
+      documents
+    ),
     source: SOURCES.EDITORIAL_CONTENT,
   };
 
@@ -159,17 +164,23 @@ async function* cdtnDocumentsGen() {
     documents: contributions.map(
       ({ answers, breadcrumbs, ...contribution }) => ({
         ...contribution,
+        answers: {
+          ...answers,
+          conventions:
+            answers.conventions &&
+            answers.conventions.map((answer) => ({
+              ...answer,
+              markdown: glossary.replaceMarkdown(answer.markdown),
+            })),
+          generic: {
+            ...answers.generic,
+            markdown: glossary.replaceMarkdown(answers.generic.markdown),
+          },
+        },
         breadcrumbs:
           breadcrumbs.length > 0
             ? breadcrumbs
             : breadcrumbsOfRootContributionsPerIndex[contribution.index],
-        answers: {
-          ...answers,
-          generic: {
-            ...answers.generic,
-            markdown: addGlossary(answers.generic.markdown),
-          },
-        },
       })
     ),
     source: SOURCES.CONTRIBUTIONS,
@@ -199,7 +210,7 @@ async function* cdtnDocumentsGen() {
           const [theme] = contrib.breadcrumbs;
           return {
             ...data,
-            answer: addGlossary(data.answer),
+            answer: glossary.replaceHtml(data.answer),
             theme: theme && theme.label,
           };
         }),
@@ -230,7 +241,7 @@ async function* cdtnDocumentsGen() {
         delete section.text;
         return {
           ...section,
-          html: addGlossary(html),
+          html: glossary.replaceHtml(html),
         };
       }),
     })),

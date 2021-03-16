@@ -233,7 +233,7 @@ const Contribution = ({ answers, content }) => {
                     <MdxWrapper>
                       <Mdx
                         markdown={conventionAnswer.markdown}
-                        components={rehypeToReact}
+                        components={rehypeToReact()}
                       />
                     </MdxWrapper>
 
