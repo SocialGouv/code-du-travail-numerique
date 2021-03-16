@@ -31,18 +31,33 @@ const mapHit = ({
     denominationUsuelle3UniteLegale,
     activitePrincipale,
     etablissements,
-    idcc,
-    convention,
     siret,
     address,
     naming,
   },
+  inner_hits,
   highlight,
 }) => {
   const label = formatLabel(naming.split(" "));
 
   const highlightLabel =
     highlight && highlight.naming ? formatLabel(highlight.naming) : label;
+
+  const matching = inner_hits.matchingEtablissements.hits.total.value;
+
+  const conventions = inner_hits.matchingEtablissements.hits.hits.reduce(
+    (acc, { fields: { convention, idcc } }) => {
+      const o = {
+        num: parseInt(idcc),
+        shortTitle: convention ? convention[0] : "",
+      };
+      if (!acc.has(o.num)) {
+        acc.set(o.num, o);
+      }
+      return acc;
+    },
+    new Map()
+  );
 
   // take first by priority
   const simpleLabel = [
@@ -57,28 +72,61 @@ const mapHit = ({
   return {
     activitePrincipale,
     address,
-    convention,
-    etablissements,
+    conventions: Array.from(conventions.values()),
+    etablissements: parseInt(etablissements),
     highlightLabel,
     id: siren,
-    idcc: parseInt(idcc),
     label,
+    matching,
     simpleLabel,
     siren,
     siret,
   };
 };
 
-const size = 50;
+const size = 20;
 
 const rank_feature = { boost: 10, field: "trancheEffectifsUniteLegale" };
 
-const collapse = {
+const collapse = (withAllConventions) => ({
   field: "siren",
-};
+  inner_hits: {
+    _source: false,
+    docvalue_fields: ["idcc", "convention"],
+    name: "matchingEtablissements",
+    size: withAllConventions ? 10000 : 1,
+  },
+});
 
-const entrepriseSearchBody = (query, address = "", withIdcc = true) => ({
-  collapse,
+const addressFilter = (address) =>
+  address
+    ? [
+        {
+          match: {
+            cp: {
+              query: address ? address.replace(/\D/g, "") : "",
+            },
+          },
+        },
+        {
+          match: {
+            ville: {
+              query: address,
+            },
+          },
+        },
+      ]
+    : [{ match_all: {} }];
+
+const entrepriseSearchBody = (
+  query,
+  address,
+  // return convention of every etablissements associated to the main company
+  withAllConventions,
+  // only search for etablissements with convention attached
+  withIdcc = true
+) => ({
+  collapse: collapse(withAllConventions),
   highlight: {
     fields: {
       naming: { post_tags: [post], pre_tags: [pre] },
@@ -90,6 +138,11 @@ const entrepriseSearchBody = (query, address = "", withIdcc = true) => ({
       must: [
         {
           bool: {
+            should: addressFilter(address),
+          },
+        },
+        {
+          bool: {
             should: [
               { fuzzy: { naming: { boost: 0.6, value: query } } },
               { match: { naming: query } },
@@ -99,28 +152,7 @@ const entrepriseSearchBody = (query, address = "", withIdcc = true) => ({
           },
         },
       ],
-      should: [
-        { rank_feature },
-        {
-          match: {
-            cp: {
-              boost: 0.2,
-              query: address ? address.replace(/\D/g, "") : "",
-            },
-          },
-        },
-        {
-          match: { address },
-        },
-        {
-          match: {
-            ville: {
-              boost: 0.2,
-              query,
-            },
-          },
-        },
-      ],
+      should: [{ rank_feature }],
     },
   },
   size,

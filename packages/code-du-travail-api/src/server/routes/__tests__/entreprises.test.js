@@ -18,7 +18,7 @@ const getFirst = (query, address) =>
 const checkFields = ({
   address,
   activitePrincipale,
-  idcc,
+  conventions,
   simpleLabel,
   label,
   etablissements,
@@ -27,7 +27,7 @@ const checkFields = ({
     address,
     etablissements,
     activitePrincipale,
-    idcc,
+    conventions,
     simpleLabel,
     label,
   ].forEach((f) => expect(f).toBeDefined());
@@ -63,17 +63,18 @@ test("search case insensitive", async () => {
 });
 
 test("search with postal code", async () => {
-  const cp = "75008";
+  const cp = "59800";
   const e = await getFirst("ZARA", cp);
 
   expect(e.address).toContain(cp);
+  expect(e.matching).toBe(3);
 });
 
 test("search with city", async () => {
-  const ville = "75008";
+  const ville = "lille";
   const e = await getFirst("ZARA", ville);
 
-  expect(e.address).toContain(ville);
+  expect(e.address.toLowerCase()).toContain(ville);
 });
 
 test("search fuzzy", async () => {
@@ -103,4 +104,10 @@ test("search SIREN / SIRET", async () => {
   expect(eSiren.siren).toEqual(siren);
 });
 
-// test("search limit", async () => {});
+test("conventions should be different if address set or not", async () => {
+  const e1 = await getFirst("michelin");
+  const e2 = await getFirst("michelin", "clermont");
+
+  expect(e1.conventions.length).toEqual(2);
+  expect(e2.conventions.length).toEqual(1);
+});

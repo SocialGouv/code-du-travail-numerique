@@ -3,29 +3,43 @@ import React from "react";
 import styled from "styled-components";
 
 import { ConventionLink } from "./ConventionLink";
-import { ADRESSE_SEARCH, ENTERPRISE_SEARCH_NO_CC } from "./searchHook";
 
 export const CompanyTile = ({
   conventions = [],
   simpleLabel,
   label,
+  highlightLabel,
   activitePrincipale,
-  ville,
+  address,
+  etablissements,
   onClick,
-  searchType,
+  matching,
 }) => (
   <>
-    <Entreprise>{simpleLabel}</Entreprise>
-    <Ville>
-      <div dangerouslySetInnerHTML={{ __html: label }} />
-    </Ville>
-    <Ville>{activitePrincipale}</Ville>
-    {ville && [ADRESSE_SEARCH, ENTERPRISE_SEARCH_NO_CC].includes(searchType) ? (
-      <Ville>{ville}</Ville>
+    <Entreprise>
+      {simpleLabel == label ? (
+        <div dangerouslySetInnerHTML={{ __html: highlightLabel }} />
+      ) : (
+        simpleLabel
+      )}
+    </Entreprise>
+
+    {simpleLabel != label ? (
+      <Ville>
+        <div dangerouslySetInnerHTML={{ __html: highlightLabel }} />
+      </Ville>
     ) : (
       ""
     )}
 
+    <Ville>{activitePrincipale}</Ville>
+    {matching == 1 ? (
+      <Ville>{address}</Ville>
+    ) : (
+      <Ville>
+        {matching} établissements trouvés ({etablissements} en France)
+      </Ville>
+    )}
     {conventions.length ? (
       conventions.map((convention) => (
         <ConventionLink

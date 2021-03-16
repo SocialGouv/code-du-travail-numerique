@@ -12,10 +12,8 @@ import { ConventionLink } from "./ConventionLink";
 import { HelpModal } from "./HelpModal";
 import { ResultList } from "./ResultList";
 import useSearchCC, {
-  ADRESSE_SEARCH,
   CONVENTION_SEARCH,
   ENTERPRISE_SEARCH,
-  ENTERPRISE_SEARCH_NO_CC,
 } from "./searchHook";
 
 const trackInput = debounce((query, path, trackingUID) => {
@@ -28,18 +26,8 @@ const searchTypes = [
   {
     key: ENTERPRISE_SEARCH,
     label: "Nom de votre entreprise ou numéro de SIRET",
-    placeholder: "Saisissez le nom de votre entreprise",
-  },
-  {
-    key: ENTERPRISE_SEARCH_NO_CC,
-    label:
-      "Nom de votre entreprise ou numéro de SIRET : entreprises sans conventions",
-    placeholder: "Saisissez le nom de votre entreprise",
-  },
-  {
-    key: ADRESSE_SEARCH,
-    label: "Nom de votre entreprise & adresse ",
-    placeholder: "Saisissez l'adresse de votre société",
+    placeholder:
+      "Saisissez le nom de votre entreprise ou son numéro de SIREN ou SIRET",
   },
   {
     key: CONVENTION_SEARCH,
@@ -135,10 +123,10 @@ const Search = ({ onSelectConvention }) => {
         onChange={onInputChange}
       />
 
-      {searchType == ADRESSE_SEARCH ? (
+      {searchType == ENTERPRISE_SEARCH ? (
         <BlockInput
           role="search"
-          placeholder="Ville, code postal ou adresse complète"
+          placeholder="Ville ou code postal"
           value={address}
           type="search"
           name="a"
@@ -185,6 +173,7 @@ const Search = ({ onSelectConvention }) => {
                       {...entreprise}
                       key={entreprise.siret}
                       onClick={onSelectConvention}
+                      addressSet={address != ""}
                     />
                   ))}
                 />

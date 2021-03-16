@@ -19,16 +19,22 @@ const router = new Router({ prefix: API_BASE_URL });
  * http://localhost:1337/api/v1/entreprises/
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
+ * @param {string} querystring.a A `a` querystring param containing a specific postal code or city name to help the search process
+ * @param {string} querystring.cc A `q` querystring param containing a boolean to return attach every convention associated to the main company
  * @returns {Object} enterprise search results
  */
 router.get("/entreprises", async (ctx) => {
-  const { q: query, a: address } = ctx.query;
+  const { q: query, a: address, cc: withAllConventions } = ctx.query;
 
   if (!query) {
     ctx.throw(400, `query parameter q is required`);
   }
 
-  const body = entrepriseSearchBody(query, address);
+  const body = entrepriseSearchBody(
+    query,
+    address,
+    withAllConventions ? withAllConventions === "false" : true
+  );
 
   // console.log(JSON.stringify(body, null, 2));
 

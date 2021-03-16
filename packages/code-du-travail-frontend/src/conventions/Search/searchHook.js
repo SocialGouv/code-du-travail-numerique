@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import { getResults } from "./api";
 
 export const ENTERPRISE_SEARCH = "enterprise";
-export const ENTERPRISE_SEARCH_NO_CC = "enterprise_no_cc";
 export const CONVENTION_SEARCH = "convention";
-export const ADRESSE_SEARCH = "adresse";
 
 // a hook that return [status, searchResults]
 // todo: package as a module
