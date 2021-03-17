@@ -12,7 +12,7 @@
     "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",
     "lint": "yarn lint-js && yarn lint-css",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --findRelatedTests",
+    "prepush": "yarn test --bail --changedSince=master",
     "start": "NODE_ENV=production node server/server.js",
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
