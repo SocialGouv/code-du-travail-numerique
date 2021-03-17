@@ -9,7 +9,10 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 ARG NLP_URL
 ENV NLP_URL=$NLP_URL
 
-RUN yarn workspace @cdt/data dump-dev
+ENV DISABLE_GLOSSARY=true
+
+ARG CDTN_ADMIN_ENDPOINT
+ENV CDTN_ADMIN_ENDPOINT=$CDTN_ADMIN_ENDPOINT
 
 FROM node:14.16-alpine3.13
 
@@ -22,8 +25,7 @@ COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
 ENV SUGGEST_FILE=./dataset/suggestions.txt
-ENV DUMP_PATH=../dump.data.json
 
 USER node
 
-ENTRYPOINT ["yarn", "populate"]
+ENTRYPOINT ["yarn", "start"]

@@ -88,7 +88,7 @@ Then you can launch services using docker-compose
 $ docker-compose up elasticsearch
 
 # Launch indexing script : fill ElasticSearch
-$ yarn workspace @cdt/data populate-dev
+$ CDTN_ADMIN_ENDPOINT=http://localhost:8080/api/graphql yarn workspace @cdt/data ingest
 
 # Start API in dev mode : runs on http://localhost:1337
 yarn workspace @cdt/api dev
@@ -101,35 +101,12 @@ In this section you will find commands that you may need during your work
 Start a local TF Serve NLP instance
 [Look at this repo](https://github.com/SocialGouv/serving-ml)
 
-Create a dump with semantic vectors (you will need a NLP service available)
-(if NLP_URL env is not provide it will create a dump without semantic vectors)
+# For dev purpose, you can generate a fast Dump
 
-```sh
-# Dump only documents
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
-mas
-# Dump with semantic vectors
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
-
-# For dev purpose,you can generate a fast Dump
 # without semantic vectors nor glossary words.
-DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
-```
-
-Populate elasticsearch index using a local dump
 
 ```
-yarn workspace @cdt/data populate-dev
-```
-
-Download a dump from master data image
-
-```
-docker run \
-   --rm --entrypoint cat \
-   registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) \
-   /app/dist/dump.data.json \
-   >! packages/code-du-travail-data/dist/dump.data.json
+DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://localhost:8080/api/graphql yarn workspace @cdt/data ingest
 ```
 
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
