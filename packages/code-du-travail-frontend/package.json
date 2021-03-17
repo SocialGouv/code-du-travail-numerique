@@ -7,6 +7,7 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
+    "dev2": "NODE_OPTIONS='--inspect' next dev",
     "dev": "node server/server.js",
     "lint-js": "eslint src/* pages/*",
     "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",
@@ -52,6 +53,7 @@
     "next-transpile-modules": "^6.2.0",
     "p-debounce": "^2.1.0",
     "p-queue": "^6.6.2",
+    "publicodes": "^1.0.0-beta.12",
     "react": "^17.0.1",
     "react-autosuggest": "10.1.0",
     "react-delay": "^0.1.0",

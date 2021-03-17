@@ -1,0 +1,98 @@
+contrat salarié:
+contrat salarié . ancienneté: 12 mois
+
+contrat salarié . préavis de retraite:
+  formule: contrat salarié . préavis de retraite tranches
+
+contrat salarié . préavis de retraite tranches:
+  formule:
+    variations:
+      - si: ancienneté < 6 mois
+        alors: 100
+      - si: ancienneté > 24 mois
+        alors: 102
+      - sinon: 101
+
+# Convention collective Boulangerie-pâtisserie (entreprises artisanales)
+contrat salarié . convention collective:
+  par défaut: "'IDCC292'"
+
+# Convention collective nationale de l'industrie pharmaceutique
+contrat salarié . convention collective . IDCC176:
+  description: Convention collective nationale de l'industrie pharmaceutique
+  formule: convention collective = 'IDCC176'
+
+contrat salarié . convention collective . IDCC176 . conclu après 1 juillet 2019: oui
+
+contrat salarié . convention collective . IDCC176 . groupe: 1
+
+contrat salarié . convention collective . IDCC176 . préavis de retaite tranche:
+  formule:
+    variations:
+      - si: contrat salarié . convention collective . IDCC176 . conclu après 1 juillet 2019
+        alors:
+          variations:
+            - si: contrat salarié . convention collective . IDCC176 . groupe >= 6
+              alors: 4
+            - si: contrat salarié . convention collective . IDCC176 . groupe >= 4
+              alors: 3
+            - si: contrat salarié . convention collective . IDCC176 . groupe <= 3
+              alors: 2
+      - sinon:
+          variations:
+            - si: contrat salarié . convention collective . IDCC176 . groupe <= 4
+              alors: 2
+            - si: contrat salarié . convention collective . IDCC176 . groupe >= 5
+              alors: 3
+
+contrat salarié . convention collective . IDCC176 . préavis de retaite:
+  titre: retraite industrie pharmaceutique
+  remplace:
+    - règle: contrat salarié . préavis de retraite tranches
+  formule: contrat salarié . convention collective . IDCC176 . préavis de retaite tranche
+
+
+# Convention collective nationale Plasturgie
+contrat salarié . convention collective . IDCC292:
+  description: Convention collective nationale plasturgie
+  formule: convention collective = 'IDCC292'
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle:
+  formule:
+    une possibilité:
+      choix obligatoire: oui
+      possibilités:
+        - Cadres
+        - Collaborateurs
+  par défaut: "'Collaborateurs'"
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Cadres:
+  formule: catégorie profressionnelle = 'Cadres'
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs:
+  formule: catégorie profressionnelle = 'Collaborateurs'
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Cadres . préavis de retaite:
+  titre: retraite cadre plasturgie
+  remplace:
+    - règle: contrat salarié . préavis de retraite tranches
+  formule: 303
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs . coefficient: 700
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs . préavis de retaite tranche:
+  formule:
+    variations:
+      - si: contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs . coefficient >= 800
+        alors: 302
+      - sinon:
+          variations:
+            - si: contrat salarié . ancienneté <= 24
+              alors: 301
+            - sinon: 302
+
+contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs . préavis de retaite:
+  titre: retraite collaborateur plasturgie
+  remplace:
+    - règle: contrat salarié . préavis de retraite tranches
+  formule: contrat salarié . convention collective . IDCC292 . catégorie profressionnelle . Collaborateurs . préavis de retaite tranche

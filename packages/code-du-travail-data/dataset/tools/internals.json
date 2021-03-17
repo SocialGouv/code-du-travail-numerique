@@ -134,5 +134,23 @@
     "action": "Consulter",
     "date": "01/01/2020",
     "id": "c249bd2a-6f33-4176-ad09-166bb8e5747b"
+  },
+  {
+    "icon": "Indemnity",
+    "title": "Mise ou départ à la retraitre",
+    "slug": "preavis-retraite",
+    "questions": [
+      "Quelle est mon indemnité de licenciement",
+      "Comment calculer mon indemnité de licenciement",
+      "indemnité de licenciement pour inaptitude d'origine professionnelle",
+      "indemnité de licenciement pour inaptitude d'origine professionnelle",
+      "indemnité spéciale de licenciement pour inaptitude 'origine professionnelle",
+      "indemnité de licenciement en cas d'alternance temps plein temps partiel",
+      "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
+    ],
+    "description": "Estimez simplement le montant de l’indemnité de licenciement",
+    "action": "Estimer",
+    "date": "18/10/2018",
+    "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773"
   }
 ]
