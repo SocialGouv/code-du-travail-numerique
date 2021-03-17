@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn lerna run \
+  --exclude-dependents \
+  --parallel precommit\
+  --since HEAD \
+  --stream \
+  ;
+
