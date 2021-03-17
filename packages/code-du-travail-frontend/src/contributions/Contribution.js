@@ -1,102 +1,49 @@
 import slugify from "@socialgouv/cdtn-slugify";
-import {
-  getLabelBySource,
-  getRouteBySource,
-  SOURCES,
-} from "@socialgouv/cdtn-sources";
+import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Badge,
   Button,
-  Heading,
   icons,
   IconStripe,
   InsertTitle,
   Section,
-  Subtitle,
   theme,
   Title,
   Toast,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
+import References from "../common/References";
 import { useLocalStorage } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
 
-const RefLink = ({ title, url }) =>
-  url ? (
-    <a href={url} target="_blank" rel="noopener noreferrer nofollow">
-      {title}
-    </a>
-  ) : (
-    <span>{title}</span>
-  );
+const ReferencesJuridiques = ({ references = [] }) => {
+  const refs = references.flatMap(({ category, title, url }) => {
+    if (category === "labor_code") {
+      return {
+        slug: slugify(title),
+        title,
+        type: SOURCES.CDT,
+      };
+    }
+    if (category === "agreement") {
+      return {
+        title: `${title} de la convention collective`,
+        type: SOURCES.EXTERNALS,
+        url,
+      };
+    }
+    return { title, type: SOURCES.EXTERNALS, url };
+  });
 
-const References = ({ references = [] }) => {
-  const agreementRefs = references.filter(
-    (ref) => ref.category === "agreement"
-  );
-  const laborCodeRef = references.filter(
-    (ref) => ref.category === "labor_code"
-  );
-  const othersRefs = references.filter(
-    (ref) => !["agreement", "labor_code"].includes(ref.category)
-  );
   if (references.length === 0) {
     return null;
   }
-
-  return (
-    <>
-      <Heading>Références</Heading>
-      {agreementRefs.length !== 0 && (
-        <>
-          <Subtitle>Convention collective</Subtitle>
-          <ul>
-            {agreementRefs.map(({ url, title, index }) => (
-              <li key={`agreement_ref${index}`}>
-                <RefLink title={title} url={url} />
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-      {laborCodeRef.length !== 0 && (
-        <>
-          <Subtitle>Code du travail</Subtitle>
-          <ul>
-            {laborCodeRef.map((ref, index) => (
-              <li key={`laborCode_ref${index}`}>
-                <Link
-                  href={`/${getRouteBySource(SOURCES.CDT)}/${slugify(
-                    ref.title
-                  )}`}
-                >
-                  <a rel="nofollow">{ref.title}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-      {othersRefs.length !== 0 && (
-        <>
-          <Subtitle>Autres sources</Subtitle>
-          <ul>
-            {othersRefs.map(({ title, url }, index) => (
-              <li key={`otherRef_${index}`}>
-                <RefLink title={title} url={url} />
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </>
-  );
+  return <References label="Références" references={refs} accordionList="3" />;
 };
 
 const Contribution = ({ answers, content }) => {
@@ -108,6 +55,13 @@ const Contribution = ({ answers, content }) => {
   const isConventionalAnswer = Object.prototype.hasOwnProperty.call(
     answers,
     "conventionAnswer"
+  );
+
+  const filteredRefs = answers?.generic?.references?.filter(
+    ({ category, url }) => {
+      if (category !== null) return true;
+      return url !== content.url;
+    }
   );
 
   const hasConventionAnswers =
@@ -192,7 +146,7 @@ const Contribution = ({ answers, content }) => {
             markdown={answers.generic.markdown}
             components={rehypeToReact(content)}
           />
-          <References references={answers.generic.references} />
+          <ReferencesJuridiques references={filteredRefs} />
         </section>
       )}
       {hasConventionAnswers && (
@@ -237,7 +191,9 @@ const Contribution = ({ answers, content }) => {
                       />
                     </MdxWrapper>
 
-                    <References references={conventionAnswer.references} />
+                    <ReferencesJuridiques
+                      references={conventionAnswer.references}
+                    />
                   </>
                 ) : (
                   <>
