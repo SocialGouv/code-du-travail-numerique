@@ -13,7 +13,8 @@
     "lint-js": "eslint src/**/*.js",
     "lint-css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint-js && yarn lint-css",
-    "prepush": "lint-staged",
+    "precommit": "lint-staged",
+    "prepush": "yarn test --bail --changedSince=master",
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
@@ -67,10 +68,8 @@
   ],
   "lint-staged": {
     "{__mocks__,__tests__,src}/**/*.js": [
-      "yarn lint-js --fix",
-      "git add",
       "yarn lint-css",
-      "yarn test --bail --findRelatedTests"
+      "yarn lint-js --fix"
     ]
   },
   "jest": {

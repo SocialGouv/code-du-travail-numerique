@@ -11,7 +11,8 @@
     "lint-js": "eslint src/* pages/*",
     "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",
     "lint": "yarn lint-js && yarn lint-css",
-    "prepush": "lint-staged",
+    "precommit": "lint-staged",
+    "prepush": "yarn test --bail --changedSince=master",
     "start": "NODE_ENV=production node server/server.js",
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
@@ -105,14 +106,10 @@
       "yarn lint-css"
     ],
     "{__tests__,pages,server,src}/**/*.js": [
-      "yarn lint-js --fix",
-      "git add",
-      "yarn test --bail --findRelatedTests"
+      "yarn lint-js --fix"
     ],
     "{__mocks__,test}/**/*.js": [
-      "yarn lint-js --fix",
-      "git add",
-      "bash -c \"yarn test --bail\""
+      "yarn lint-js --fix"
     ]
   },
   "jest": {
