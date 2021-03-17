@@ -31,3 +31,12 @@ stages:
   - "Deploy"
   - "Notify Finished Deployment"
   # - "Update ES data"
+
+#
+
+"@socialgouv/cdtn-logger":
+  stage: Prepare
+  trigger:
+    include:
+      - local: /infra/logger/.gitlab-ci.yml
+    strategy: depend
