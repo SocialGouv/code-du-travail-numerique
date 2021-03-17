@@ -159,10 +159,6 @@ async function* cdtnDocumentsGen() {
     documents: contributions.map(
       ({ answers, breadcrumbs, ...contribution }) => ({
         ...contribution,
-        breadcrumbs:
-          breadcrumbs.length > 0
-            ? breadcrumbs
-            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
         answers: {
           ...answers,
           generic: {
@@ -170,6 +166,10 @@ async function* cdtnDocumentsGen() {
             markdown: addGlossary(answers.generic.markdown),
           },
         },
+        breadcrumbs:
+          breadcrumbs.length > 0
+            ? breadcrumbs
+            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
       })
     ),
     source: SOURCES.CONTRIBUTIONS,
