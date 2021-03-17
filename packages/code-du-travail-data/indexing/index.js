@@ -11,6 +11,13 @@ import {
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
 import { populateSuggestions } from "./suggestion";
 
+// NOTE(douglasduteil): define the __non_webpack_require__ as requireFn
+// As we are using @vercel/ncc to run this code and we want to require dynamic
+// files we need this `__non_webpack_require__`.
+const requireFn =
+  // eslint-disable-next-line no-undef
+  typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
+
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
 const DOCUMENT_INDEX_NAME = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
@@ -48,7 +55,7 @@ async function main() {
     indexName: `${DOCUMENT_INDEX_NAME}-${ts}`,
     mappings: documentMapping,
   });
-  const documents = require(DUMP_PATH);
+  const documents = requireFn(DUMP_PATH);
   await indexDocumentsBatched({
     client,
     documents,
