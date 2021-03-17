@@ -59,7 +59,7 @@ const Contribution = ({ answers, content }) => {
 
   const filteredRefs = answers?.generic?.references?.filter(
     ({ category, url }) => {
-      if (category !== "external") return true;
+      if (category !== null) return true;
       return url !== content.url;
     }
   );

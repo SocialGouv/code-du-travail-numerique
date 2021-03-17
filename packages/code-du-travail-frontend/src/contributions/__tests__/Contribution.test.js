@@ -25,7 +25,7 @@ describe("<Contribution />", () => {
         markdown: "hello **world**",
         references: [
           {
-            category: "external",
+            category: null,
             title: "f33693",
             url:
               "https://service-public.fr/professionnels-entreprises/vosdroits/F33693",
