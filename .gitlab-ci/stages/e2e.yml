@@ -19,6 +19,7 @@ Test on deployed branch:
       - optional/e2e/runners/puppeteer/node_modules
       - $CI_PROJECT_DIR/.yarn
   retry: 2
+  start_in: 30 minutes
 
   before_script:
     - source ./.gitlab-ci/env.sh
