@@ -3,7 +3,7 @@
 exports[`<Headband /> should render 1`] = `
 .c0 {
   position: absolute;
-  top: 18rem;
+  top: 13.5rem;
   z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;

@@ -8,7 +8,7 @@ import { useWindowScrollPosition } from "../../lib/useScrollLocation";
 import SearchBar from "../../search/SearchBar";
 import { BurgerNav } from "./BurgerNav";
 
-export const HEADER_HEIGHT = "18rem";
+export const HEADER_HEIGHT = "13.5rem";
 export const MOBILE_HEADER_HEIGHT = "9rem";
 
 const printDate = () => {
@@ -43,8 +43,8 @@ export const Header = ({ currentPage = "" }) => {
           >
             <MinistereTravail
               overThreshold={overThreshold}
-              src={"/static/assets/img/ministere-travail.svg"}
-              alt="Site officiel du gouvernement | Ministère du travail | Liberté, égalité, fraternité"
+              src={"/static/assets/img/logo-rf.svg"}
+              alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             />
             <Logo />
           </LogoLink>
@@ -145,8 +145,8 @@ const LogoLink = styled.a`
 const MinistereTravail = styled.img`
   display: ${({ overThreshold }) => (overThreshold ? "none" : "inline-block")};
   flex-shrink: 0;
-  width: 18.2rem;
-  height: 15rem;
+  width: 13.5rem;
+  height: 11.5rem;
   background-color: white;
   @media (max-width: ${breakpoints.mobile}) {
     width: auto;
