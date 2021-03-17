@@ -21,9 +21,9 @@ COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
-ENV SUGGEST_FILE=./dataset/suggestions.txt
-ENV DUMP_PATH=../dump.data.json
+ENV SUGGEST_FILE=../dataset/suggestions.txt
 
 USER node
 
+ENV DUMP_PATH=/app/dist/dump.data.json
 ENTRYPOINT ["yarn", "populate"]
