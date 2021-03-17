@@ -15,7 +15,8 @@
     "populate": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
     "ingest": "node -r esm indexing/ingest",
-    "prepush": "lint-staged",
+    "precommit": "lint-staged",
+    "prepush": "yarn test --bail --findRelatedTests",
     "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
   },
   "repository": {
@@ -70,9 +71,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn lint --fix",
-      "git add",
-      "yarn test --bail --findRelatedTests"
+      "yarn lint --fix"
     ]
   },
   "jest": {
