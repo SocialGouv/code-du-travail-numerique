@@ -134,8 +134,9 @@ exports.documentMapping = {
     // available for themes and highlights
     refs: {
       properties: {
+        slug: { type: "keyword" },
+        source: { type: "keyword" },
         title: { type: "text" },
-        url: { type: "keyword" },
       },
     },
 

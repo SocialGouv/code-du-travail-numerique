@@ -1,8 +1,4 @@
-const {
-  vectorizeDocument,
-  vectorizeQuery,
-  preprocess,
-} = require("../vectorizer");
+import { preprocess, vectorizeDocument, vectorizeQuery } from "../vectorizer";
 
 const timeout = 10000;
 
@@ -31,17 +27,7 @@ test(
   timeout
 );
 
-test(
-  "Should fail when no content passed",
-  async () => {
-    await vectorizeQuery().catch((e) =>
-      expect(e).toEqual(new Error("Cannot vectorize empty query."))
-    );
-  },
-  timeout
-);
-
-test("Should preprocess text", async () => {
+test("Should preprocess text", () => {
   expect(preprocess("à la nôtre")).toEqual("");
   expect(preprocess("çode du tràvail")).toEqual("code travail");
   // this one should be "aime code travail" when using better tokenization

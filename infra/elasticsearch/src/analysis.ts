@@ -1,7 +1,15 @@
-const { stopwords } = require("./dataset/stop_words");
-const { synonyms } = require("./dataset/synonyms");
+//
 
-const filter = {
+// NOTE(douglasduteil): disable naming-convention for elasticsearch mapping
+// As the mapping files are following the elasticsearch explicit mapping format
+// https://www.elastic.co/guide/en/elasticsearch/reference/current/explicit-mapping.html
+// we do not want to enfore a external naming convention here.
+/* eslint-disable @typescript-eslint/naming-convention */
+
+import { stopwords } from "./dataset/stop_words";
+import { synonyms } from "./dataset/synonyms";
+
+export const filter = {
   // Normalize acronyms so that no matter the format, the resulting token will be the same.
   // E.g.: SmiC => S.M.I.C. => SMIC => smic.
   french_acronyms: {
@@ -56,7 +64,7 @@ const filter = {
   },
 };
 
-const analyzer = {
+export const analyzer = {
   article_id_analyzer: {
     filter: ["lowercase", "french_acronyms"],
     tokenizer: "article_id_tokenizer",
@@ -127,7 +135,7 @@ const analyzer = {
   },
 };
 
-const char_filter = {
+export const char_filter = {
   startwith: {
     pattern: "^(.*)",
     replacement: "__start__ $1",
@@ -135,7 +143,7 @@ const char_filter = {
   },
 };
 
-const tokenizer = {
+export const tokenizer = {
   article_id_tokenizer: {
     pattern: "[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?",
     type: "simple_pattern",
