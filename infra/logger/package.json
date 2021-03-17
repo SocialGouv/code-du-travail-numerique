@@ -1,0 +1,18 @@
+{
+  "name": "@socialgouv/cdtn-logger",
+  "description": "SocialGouv - Code du travail numerique - Infrastructure - Logger",
+  "version": "1.0.0-alpha.1",
+  "dependencies": {
+    "winston": "^3.3.3"
+  },
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "private": "true",
+  "repository": {
+    "directory": "infra/logger",
+    "type": "git",
+    "url": "https://github.com/SocialGouv/cdtn-admin.git"
+  },
+  "sideEffects": false,
+  "typings": "lib/index.d.ts"
+}
