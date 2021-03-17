@@ -1,5 +1,7 @@
 import { getDuplicateSlugs } from "../cdtnDocuments";
 
+jest.mock("@socialgouv/cdtn-logger");
+
 describe("getDuplicateSlug", () => {
   test("should return an empty array if there is no duplicate slug", async () => {
     const documents = [

@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const getAgreementBody = require("./getAgreementBySlug.elastic");
 const API_BASE_URL = require("../v1.prefix");
@@ -23,7 +23,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/conventions/:slug", async (ctx) => {
   const { slug } = ctx.params;
   const body = getAgreementBody({ slug });
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `agreement not found, no agreement match ${slug}`);
   }

@@ -4,6 +4,15 @@
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "index.js",
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
   "scripts": {
     "build": "yarn build:populate",
     "build:populate": "ncc build ./indexing/index.js -o dist/populate",
@@ -30,6 +39,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
+    "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@socialgouv/cdtn-logger": "1.0.0-alpha.1",
     "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-slugify": "^4.44.0",
@@ -59,6 +69,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-env": "^7.12.17",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@vercel/ncc": "^0.27.0",

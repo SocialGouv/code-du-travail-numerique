@@ -19,12 +19,9 @@ function format(str) {
   return `${[...tokens, abbrev].join(", ")} => ${abbrev}`;
 }
 
-const synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
+exports.synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
   .map(str => format(str).toLowerCase())
   .sort();
 
-module.exports = synonyms;
-
-if (module === require.main) {
-  console.log(JSON.stringify(synonyms, null, 2));
-}
+exports.cdtnSynonyms = cdtn_synonyms
+exports.thesaurus = thesaurus

@@ -1,6 +1,6 @@
-import { logger } from "@socialgouv/cdtn-logger";
+const { logger } = require("@socialgouv/cdtn-logger");
 
-import { analyzer, char_filter, filter, tokenizer } from "./analysis";
+const { analyzer, char_filter, filter, tokenizer } = require("./analysis");
 
 async function createIndex({ client, indexName, mappings }) {
   const { body } = await client.indices.exists({ index: indexName });
@@ -134,7 +134,7 @@ function getIndicesToDelete(patterns, timestamp, indices) {
     .slice(0, -patterns.length);
 }
 
-export {
+module.exports = {
   bulkIndexDocuments,
   chunks,
   createIndex,

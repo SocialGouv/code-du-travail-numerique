@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -22,7 +22,7 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/modeles", async (ctx) => {
   const body = getModeleBody();
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value > 0) {
     ctx.body = response.body.hits.hits.map(({ _source }) => _source);
   } else {

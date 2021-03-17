@@ -1,4 +1,4 @@
-export const documentMapping = {
+exports.documentMapping = {
   properties: {
     // available for tools
     action: { type: "text" },

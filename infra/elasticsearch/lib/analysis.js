@@ -1,5 +1,5 @@
-import stopwords from "../dataset/stop_words";
-import synonyms from "../dataset/synonyms";
+const { stopwords } = require("./dataset/stop_words");
+const { synonyms } = require("./dataset/synonyms");
 
 const filter = {
   // Normalize acronyms so that no matter the format, the resulting token will be the same.
@@ -148,4 +148,4 @@ const tokenizer = {
   },
 };
 
-export { analyzer, char_filter, filter, tokenizer };
+module.exports = { analyzer, char_filter, filter, tokenizer };

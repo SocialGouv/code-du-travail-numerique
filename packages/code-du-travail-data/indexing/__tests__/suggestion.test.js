@@ -1,7 +1,11 @@
-import { createIndex, indexDocumentsBatched } from "../esClientUtils";
+import {
+  createIndex,
+  indexDocumentsBatched,
+} from "@socialgouv/cdtn-elasticsearch";
+
 import { populateSuggestions } from "../suggestion";
 
-jest.mock("../esClientUtils");
+jest.mock("@socialgouv/cdtn-elasticsearch");
 
 const INDEX_NAME = process.env.SUGGEST_INDEX_NAME;
 const BUFFER_SIZE = process.env.BUFFER_SIZE;
