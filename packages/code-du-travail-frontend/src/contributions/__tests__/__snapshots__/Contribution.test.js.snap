@@ -3106,6 +3106,68 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer and content 1`] = `
+.c5 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: auto;
+}
+
+.c13 {
+  -webkit-flex: 0 0 2.8rem;
+  -ms-flex: 0 0 2.8rem;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  height: 2.1rem;
+  margin: 0 1.6rem 0 0;
+  padding-top: 0.6rem;
+  color: #f66663;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c9:hover .c12 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c7 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -3138,6 +3200,19 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   text-align: left;
 }
 
+.c11 {
+  padding: 0.8rem 0;
+  font-weight: normal;
+}
+
+.c8 {
+  padding-left: 0;
+}
+
+.c6 {
+  margin-bottom: 2rem;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3145,6 +3220,30 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   display: flex;
   margin-bottom: 2rem;
   font-size: 1.4rem;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c5 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    -webkit-flex: 0 0 2rem;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 1.7rem;
+    margin: 0 1rem 0 0;
+  }
 }
 
 @media (max-width:600px) {
@@ -3163,6 +3262,12 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    margin-bottom: 1.6rem;
   }
 }
 
@@ -3227,6 +3332,42 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
           world
         </strong>
       </p>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
+      >
+        Références
+      </div>
+      <ul
+        class="c7 c8"
+      >
+        <li>
+          <a
+            class="c9 c10 c11"
+            href="/code-du-travail/l-1243"
+            rel="nofollow"
+          >
+            <svg
+              class="c12 c13"
+              fill="none"
+              viewBox="0 0 28 15"
+            >
+              <path
+                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="c14"
+            >
+              Article L-1243 du Code du travail
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 </div>

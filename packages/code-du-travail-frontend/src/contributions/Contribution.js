@@ -57,7 +57,7 @@ const Contribution = ({ answers, content }) => {
     "conventionAnswer"
   );
 
-  const filteredRefs = answers.generic.references.filter(
+  const filteredRefs = answers?.generic?.references?.filter(
     ({ category, url }) => {
       if (category !== "external") return true;
       return url !== content.url;

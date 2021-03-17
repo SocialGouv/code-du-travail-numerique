@@ -20,10 +20,20 @@ describe("<Contribution />", () => {
     expect(container).toMatchSnapshot();
   });
   it("should render with generic answer and content", () => {
-    const answers = { generic: { markdown: "hello **world**", references: [
-      {category: "external", title: "f33693", url: "https://service-public.fr/professionnels-entreprises/vosdroits/F33693"},
-      {category: "labor_code", title: "L-1243"},
-    ] } };
+    const answers = {
+      generic: {
+        markdown: "hello **world**",
+        references: [
+          {
+            category: "external",
+            title: "f33693",
+            url:
+              "https://service-public.fr/professionnels-entreprises/vosdroits/F33693",
+          },
+          { category: "labor_code", title: "L-1243" },
+        ],
+      },
+    };
     const content = {
       date: "13/37/42",
       raw:
