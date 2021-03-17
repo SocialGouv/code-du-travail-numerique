@@ -2,6 +2,7 @@
 
 .register_stage: &register_stage
   extends: .base_register_stage
+  interruptible: true
   stage: "Registration"
   except:
     variables:
@@ -69,11 +70,11 @@ Register data image:
       --network=host
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
   before_script:
-      - |-
-        echo "connecting to ${NLP_URL}";
-        retry=60;
-        while
-          ! wget -q -O - "$@" ${NLP_URL}/v1/models/sentqam &&
-          [[ $(( retry-- )) -gt 0 ]];
-        do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
-        [ "$retry" -eq "-1" ] && exit 1
+    - |-
+      echo "connecting to ${NLP_URL}";
+      retry=60;
+      while
+        ! wget -q -O - "$@" ${NLP_URL}/v1/models/sentqam &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
+      [ "$retry" -eq "-1" ] && exit 1
