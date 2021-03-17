@@ -3,7 +3,7 @@ const Koa = require("koa");
 const router = require("../items");
 require("./__mocking__/mockNLP");
 
-jest.mock("@cdt/data/indexing/vectorizer");
+jest.mock("@socialgouv/cdtn-elasticsearch");
 
 const app = new Koa();
 app.use(router.routes());

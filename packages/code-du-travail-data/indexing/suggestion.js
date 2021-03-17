@@ -1,13 +1,12 @@
 import { Client } from "@elastic/elasticsearch";
-import fs from "fs";
-import readline from "readline";
-
 import {
   createIndex,
   deleteOldIndex,
   indexDocumentsBatched,
-} from "./esClientUtils";
-import { suggestionMapping } from "./suggestion.mapping";
+  suggestionMapping,
+} from "@socialgouv/cdtn-elasticsearch";
+import fs from "fs";
+import readline from "readline";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";

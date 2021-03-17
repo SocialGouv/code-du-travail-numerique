@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");

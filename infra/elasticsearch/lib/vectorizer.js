@@ -1,7 +1,7 @@
 // vectorizer is imported by code-du-travail-api which is using CommonJS, and throwing an exception
 // when requiring code-du-travail-data ES module, thus we keep using CommonJS import here
 const fetch = require("node-fetch");
-const semantic_stopwords = require("../dataset/stop_words");
+const { stopwords: semantic_stopwords } = require("./dataset/stop_words");
 
 // URL of the TF serve deployment
 const NLP_URL =

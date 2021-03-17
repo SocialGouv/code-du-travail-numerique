@@ -1,0 +1,24 @@
+{
+  "name": "@socialgouv/cdtn-elasticsearch",
+  "description": "SocialGouv - Code du travail numerique - Infrastructure - Elasticsearch",
+  "version": "1.0.0-alpha.1",
+  "dependencies": {
+    "@socialgouv/cdtn-logger": "1.0.0-alpha.1",
+    "node-fetch": "^2.6.1"
+  },
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "peerDependencies": {
+    "@elastic/elasticsearch": "7.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "infra/elasticsearch",
+    "type": "git",
+    "url": "https://github.com/SocialGouv/cdtn-admin.git"
+  },
+  "sideEffects": false,
+  "typings": "lib/index.d.ts"
+}

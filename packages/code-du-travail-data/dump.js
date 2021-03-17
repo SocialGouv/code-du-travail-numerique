@@ -1,3 +1,4 @@
+import { vectorizeDocument } from "@socialgouv/cdtn-elasticsearch";
 import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
@@ -5,7 +6,6 @@ import retry from "p-retry";
 
 import { cdtnDocumentsGen } from "./indexing/cdtnDocuments";
 import { fetchCovisits } from "./indexing/monolog";
-import { vectorizeDocument } from "./indexing/vectorizer";
 
 logger.silent = true;
 const t0 = Date.now();

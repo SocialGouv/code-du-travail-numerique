@@ -19,7 +19,7 @@ import { getVersions } from "./versions";
 const CDTN_ADMIN_ENDPOINT =
   process.env.CDTN_ADMIN_ENDPOINT || "http://localhost:8080/v1/graphql";
 
-console.error(`Accessing cdtn admin on ${CDTN_ADMIN_ENDPOINT}`);
+logger.info(`Accessing cdtn admin on ${CDTN_ADMIN_ENDPOINT}`);
 
 const themesQuery = JSON.stringify({
   query: `{
