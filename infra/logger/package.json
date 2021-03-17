@@ -23,12 +23,12 @@
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-typescript": "^7.13.0",
     "@elastic/elasticsearch": "^7.10.0",
-    "@socialgouv/eslint-config-typescript": "^1.57.0",
+    "@socialgouv/eslint-config-typescript": "^1.59.0",
     "@tsconfig/node14": "^1.0.0",
     "@types/jest": "^26.0.20",
     "@types/std-mocks": "^1.0.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
-    "eslint": "^7.19.0",
+    "eslint": "^7.21.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
@@ -47,15 +47,14 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
-    "prepush": "yarn lint && yarn test",
     "precommit": "lint-staged",
+    "prepush": "yarn test --bail --changedSince=master",
     "test": "jest",
     "watch": "yarn build --watch --preserveWatchOutput"
   },
   "lint-staged": {
     "src/**": [
-      "yarn lint --fix",
-      "yarn test --bail --findRelatedTests"
+      "yarn lint --fix"
     ]
   },
   "sideEffects": false,

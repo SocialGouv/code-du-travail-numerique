@@ -1,4 +1,4 @@
-exports.suggestionMapping = {
+export const suggestionMapping = {
   properties: {
     ranking: {
       type: "rank_feature",

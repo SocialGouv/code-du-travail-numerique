@@ -70,7 +70,7 @@
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-env": "^7.12.17",
-    "@socialgouv/eslint-config-recommended": "^1.55.0",
+    "@socialgouv/eslint-config-recommended": "^1.59.0",
     "@vercel/ncc": "^0.27.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",

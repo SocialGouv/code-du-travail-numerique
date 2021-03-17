@@ -1,6 +1,7 @@
-import { chunks, getIndicesToDelete, range } from "./esClientUtils";
+import { chunks, getIndicesToDelete, range } from "./client";
 
-const testCases = [
+type TestCase = [string[], number, { index: string }[], { index: string }[]];
+const testCases: TestCase[] = [
   [["cdtn"], 1, [{ index: "bob" }, { index: "dylan" }, { index: "yo" }], []],
   [
     ["cdtn", "ccn"],
@@ -65,7 +66,7 @@ const testCases = [
 ];
 
 describe("getIndicesToDelete", () => {
-  test.each(testCases)(
+  test.each<TestCase>(testCases)(
     ".getIndicesToDelete(%j, %d, %j)",
     (patterns, timestamp, indices, indicestoDelete) => {
       expect(getIndicesToDelete(patterns, timestamp, indices)).toEqual(
