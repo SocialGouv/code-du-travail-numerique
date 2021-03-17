@@ -171,6 +171,7 @@ exports[`<Answer /> should renders 1`] = `
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1231,6 +1232,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c37 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2468,6 +2470,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3541,6 +3544,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3553,6 +3557,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c34 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -4779,6 +4784,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -5807,6 +5813,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -6835,6 +6842,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -7864,6 +7872,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c27 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;

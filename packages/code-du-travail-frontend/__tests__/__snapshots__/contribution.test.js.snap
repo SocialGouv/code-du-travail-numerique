@@ -545,6 +545,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c79 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -557,6 +558,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c97 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3715,6 +3717,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c79 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3727,6 +3730,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c97 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;

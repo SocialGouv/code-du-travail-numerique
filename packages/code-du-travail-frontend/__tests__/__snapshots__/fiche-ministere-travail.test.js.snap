@@ -562,6 +562,7 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c68 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -574,6 +575,7 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c87 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;

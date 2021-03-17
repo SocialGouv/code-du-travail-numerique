@@ -33,13 +33,14 @@ function Feedback({
     <StyledSection>
       <Container>
         <StyledWrapper variant="light">
-          <StyledHeading
+          <StyledStrong
+            as={Heading}
             variant="primary"
             stripe="left"
             shift={theme.spacings.xmedium}
           >
             Avez-vous trouvé la réponse à votre question&nbsp;?
-          </StyledHeading>
+          </StyledStrong>
           {isSatisfied === null && (
             <YesNo>
               <StyledButton
@@ -102,7 +103,7 @@ const StyledWrapper = styled(Wrapper)`
   }
 `;
 
-const StyledHeading = styled(Heading)`
+const StyledStrong = styled.strong`
   flex: 0 1 auto;
   margin-bottom: 0;
   padding-top: ${spacings.small};
