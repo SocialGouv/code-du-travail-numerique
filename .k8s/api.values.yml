@@ -17,15 +17,15 @@ deployment:
 
   livenessProbe:
     path: /api/v1/version
-    failureThreshold: 2
-    initialDelaySeconds: 60
+    failureThreshold: 10
+    initialDelaySeconds: 15
     periodSeconds: 2
     successThreshold: 1
     timeoutSeconds: 4
   readinessProbe:
     path: /api/v1/version
-    failureThreshold: 2
-    initialDelaySeconds: 60
+    failureThreshold: 10
+    initialDelaySeconds: 15
     periodSeconds: 2
     successThreshold: 1
     timeoutSeconds: 4
@@ -84,30 +84,6 @@ deployment:
         secretKeyRef:
           name: cdtn-secret
           key: PIWIK_URL
-
-  initContainers:
-    - name: wait-for-nlp
-      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
-      resources:
-        requests:
-          cpu: 5m
-          memory: 16Mi
-        limits:
-          cpu: 50m
-          memory: 32Mi
-      command:
-        - sh
-        - -c
-        - |
-          retry=120; # 5s * (12 * 10) = 10min
-          while
-            ! wget -q -O - "$@" ${NLP_URL}/v1/models/sentqam &&
-            [[ $(( retry-- )) -gt 0 ]];
-          do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
-
-          [[ $(( retry )) -lt 1 ]] && exit 128;
-
-          echo Ready;
 
 service:
   port: ${PORT}
