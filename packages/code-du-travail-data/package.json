@@ -16,7 +16,7 @@
     "populate-suggest": "node -r esm indexing/suggestion",
     "ingest": "node -r esm indexing/ingest",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --findRelatedTests",
+    "prepush": "yarn test --bail --changedSince=master",
     "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
   },
   "repository": {
