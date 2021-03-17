@@ -1,5 +1,6 @@
-import { analyzer, char_filter, filter, tokenizer } from "./analysis";
 import { logger } from "@socialgouv/cdtn-logger";
+
+import { analyzer, char_filter, filter, tokenizer } from "./analysis";
 
 async function createIndex({ client, indexName, mappings }) {
   const { body } = await client.indices.exists({ index: indexName });
