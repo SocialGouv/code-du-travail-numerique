@@ -648,10 +648,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^4.9.4":
-  version "4.9.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.9.4.tgz#e5b3171dfff5c5d8932cc582db6f2b46718b2e18"
-  integrity sha512-aTDZW5zOlBaQ/3xWFTC4565iiR5tjzrs+ckndm5kp6WxoxwBtpDDyF0CnGmqdGOgSUFeBDT5BLSPDXnw80H9Vg==
+"@socialgouv/kosko-charts@^4.9.5":
+  version "4.10.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.10.2.tgz#2a97e54b520a8b9c0f98d57843cbfd7e90949e98"
+  integrity sha512-CDeQQJ+hvt0MmvDLUxE3zPxCBBH1LTcQ2RsKvixbJK8pUbNi6XTrgrmJWha+mYQyp4x2nBTVkOdu+tks2In+dA==
   dependencies:
     "@kosko/env" "^1.0.3"
     "@kubernetes-models/sealed-secrets" "^1.2.0"
@@ -725,10 +725,10 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
-"@types/node@*", "@types/node@^14.14.31":
-  version "14.14.31"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
-  integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
+"@types/node@*", "@types/node@^14.14.35":
+  version "14.14.35"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.35.tgz#42c953a4e2b18ab931f72477e7012172f4ffa313"
+  integrity sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"

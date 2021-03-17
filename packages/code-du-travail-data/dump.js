@@ -1,9 +1,9 @@
+import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
 
 import { cdtnDocumentsGen } from "./indexing/cdtnDocuments";
-import { logger } from "./indexing/logger";
 import { fetchCovisits } from "./indexing/monolog";
 import { vectorizeDocument } from "./indexing/vectorizer";
 

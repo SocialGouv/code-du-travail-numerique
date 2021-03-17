@@ -1,3 +1,4 @@
+import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import fetch from "node-fetch";
 
@@ -12,7 +13,6 @@ import {
 import { splitArticle } from "./fichesTravailSplitter";
 import { createGlossaryTransform } from "./glossary";
 import { getArticlesByTheme } from "./kali";
-import { logger } from "./logger";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 
@@ -159,10 +159,6 @@ async function* cdtnDocumentsGen() {
     documents: contributions.map(
       ({ answers, breadcrumbs, ...contribution }) => ({
         ...contribution,
-        breadcrumbs:
-          breadcrumbs.length > 0
-            ? breadcrumbs
-            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
         answers: {
           ...answers,
           generic: {
@@ -170,6 +166,10 @@ async function* cdtnDocumentsGen() {
             markdown: addGlossary(answers.generic.markdown),
           },
         },
+        breadcrumbs:
+          breadcrumbs.length > 0
+            ? breadcrumbs
+            : breadcrumbsOfRootContributionsPerIndex[contribution.index],
       })
     ),
     source: SOURCES.CONTRIBUTIONS,

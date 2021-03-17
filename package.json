@@ -5,7 +5,7 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "postinstall": "test -n \"$IS_DOCKER\" || husky install",
+    "postinstall": "test -n \"$IS_DOCKER\" || test -n \"$CI\" || husky install",
     "build": "lerna run build",
     "build:ui": "yarn workspace @socialgouv/cdtn-ui build && yarn workspace @socialgouv/react-fiche-service-public build",
     "dev:docker": "docker-compose up elasticsearch",
@@ -36,6 +36,7 @@
   },
   "workspaces": {
     "packages": [
+      "infra/*",
       "packages/*",
       "packages/code-du-travail-data/dataset/*"
     ]

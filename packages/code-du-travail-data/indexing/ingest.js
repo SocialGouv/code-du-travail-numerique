@@ -1,4 +1,5 @@
 import { Client } from "@elastic/elasticsearch";
+import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
@@ -12,7 +13,6 @@ import {
   version,
 } from "./esClientUtils";
 import { DOCUMENTS, SUGGESTIONS } from "./esIndexName";
-import { logger } from "./logger";
 import { fetchCovisits } from "./monolog";
 import { populateSuggestions } from "./suggestion";
 import { vectorizeDocument } from "./vectorizer";

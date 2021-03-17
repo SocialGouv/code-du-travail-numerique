@@ -31,7 +31,7 @@
     "polished": "^4.1.1",
     "react-accessible-accordion": "^3.3.4",
     "react-feather": "^2.0.9",
-    "react-tabs": "^3.2.0",
+    "react-tabs": "^3.2.1",
     "use-onclickoutside": "^0.3.1"
   },
   "devDependencies": {
@@ -73,7 +73,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0",
-    "svgo": "^2.2.1"
+    "svgo": "^2.2.2"
   },
   "license": "MIT",
   "keywords": [

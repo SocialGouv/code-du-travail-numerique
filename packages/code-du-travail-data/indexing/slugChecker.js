@@ -1,5 +1,6 @@
+import { logger } from "@socialgouv/cdtn-logger";
+
 import { cdtnDocumentsGen, getDuplicateSlugs } from "./cdtnDocuments";
-import { logger } from "./logger";
 
 const checkDuplicates = async () => {
   const documents = await cdtnDocumentsGen();
