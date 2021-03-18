@@ -1,6 +1,10 @@
 ---
-
 include:
+  - project: SocialGouv/gitlab-ci-yml
+    file:
+      - /base_register_docker_stage.yml
+    ref: v20.7.14
+  #
   - /infra/logger/.gitlab-ci.logger-lib.yml
 
 #
@@ -9,8 +13,8 @@ include:
 
 variables:
   #
-  PACKAGE: ingester
-  PACKAGE_CWD: modules/${PACKAGE}
+  PACKAGE: code-du-travail-api
+  PACKAGE_CWD: packages/${PACKAGE}
   #
   CACHE_FALLBACK_KEY: ${PACKAGE}-${CI_JOB_NAME}-${CI_DEFAULT_BRANCH}
   MONOREPO_CACHE_FOLDER: ${CI_PROJECT_DIR}/.cache/monorepo
@@ -60,18 +64,16 @@ Install:
 #
 
 Build:
-  stage: test
+  stage: build
   image: node:14.16-alpine3.13
   cache:
     key: ${PACKAGE}-${CI_JOB_NAME}-${CI_COMMIT_REF_SLUG}
     paths:
-      - ${PACKAGE_CWD}/lib
+      - ${PACKAGE_CWD}/dist
   variables:
     CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
-      artifacts: true
-    - job: lib logger
       artifacts: true
   script:
     # NOTE(douglasduteil): ensure to have clean build
@@ -80,19 +82,17 @@ Build:
   artifacts:
     expire_in: 1 week
     paths:
-      - ${PACKAGE_CWD}/lib
+      - ${PACKAGE_CWD}/dist
 
 #
 #
 #
 
 Lint:
-  stage: test
+  stage: build
   image: node:14.16-alpine3.13
   needs:
     - job: Install
-      artifacts: true
-    - job: lib logger
       artifacts: true
   script:
     - yarn lint
@@ -102,12 +102,66 @@ Lint:
 #
 
 Test:
-  stage: test
+  stage: build
   image: node:14.16-alpine3.13
   needs:
     - job: Install
       artifacts: true
     - job: lib logger
       artifacts: true
+  needs:
+    - Register elasticsearch image
+  services:
+    - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+      alias: elasticsearch
+      command:
+        - "bin/elasticsearch"
+        - "-Expack.security.enabled=false"
+        - "-Ediscovery.type=single-node"
+  variables:
+    ELASTICSEARCH_URL: http://elasticsearch:$ELASTICSEARCH_PORT
+    # HACK(douglasduteil): make ES not that memory hungry
+    ES_JAVA_OPTS: "-Xms256m -Xmx256m"
   script:
+    # NOTE(douglasduteil): the elasticsearch health check must be last
+    # As we block the job waiting for elasticsearch to be up.
+    - |-
+      echo "connecting to ${CI_REGISTRY_IMAGE}/elasticsearch:${CI_COMMIT_SHA}";
+      echo "${ELASTICSEARCH_URL}";
+      retry=60;
+      while
+        ! wget -q -O - "$@" "${ELASTICSEARCH_URL}/_cat/health?h=status" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for Elasticsearch to go Green (${retry})" ; sleep 1 ; done ;
+      [ "${retry}" -eq "-1" ] && exit 1
+    #
     - yarn test
+
+#
+#
+#
+
+Register elasticsearch image:
+  stage: .pre
+  needs:  []
+  extends:
+    - .base_register_docker_stage
+  before_script:
+    - cd "${CI_PROJECT_DIR}"
+  variables:
+    CONTEXT: ./docker/elasticsearch
+    DOCKER_BUILD_ARGS: ""
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
+
+Register:
+  stage: test
+  extends:
+    - .base_register_docker_stage
+  needs:
+    - job: Build
+      artifacts: true
+  variables:
+    CONTEXT: .
+    DOCKER_BUILD_ARGS: >-
+      --shm-size 512M
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/${PACKAGE}

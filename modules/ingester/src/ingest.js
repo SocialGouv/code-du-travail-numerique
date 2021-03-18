@@ -1,8 +1,3 @@
-import {
-  cdtnDocumentsGen,
-  fetchCovisits,
-  populateSuggestions,
-} from "@cdtn/ingester";
 import { Client } from "@elastic/elasticsearch";
 import {
   createIndex,
@@ -18,6 +13,10 @@ import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
+
+import { cdtnDocumentsGen } from "./cdtnDocuments";
+import { fetchCovisits } from "./monolog";
+import { populateSuggestions } from "./suggestion";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
@@ -36,7 +35,7 @@ const esClientConfig = {
 
 const client = new Client(esClientConfig);
 
-export async function addVector(data) {
+async function addVector(data) {
   if (NLP_URL) {
     if (!data.title) {
       logger.error(`No title for document ${data.source} / ${data.slug}`);
@@ -67,7 +66,7 @@ const excludeSources = [
   SOURCES.VERSIONS,
 ];
 
-async function main() {
+export async function injest() {
   const ts = Date.now();
   const nlpQueue = new PQueue({ concurrency: 5 });
 
@@ -157,16 +156,3 @@ async function main() {
 
   await deleteOldIndex({ client, patterns, timestamp: ts });
 }
-
-main().catch((response) => {
-  console.error(response);
-  if (response.body) {
-    logger.error({ statusCode: response.meta.statusCode });
-    logger.error({ name: response.name });
-    logger.error({ request: response.meta.meta.request });
-    logger.error({ body: response.body });
-  } else {
-    logger.error({ response });
-  }
-  process.exit(1);
-});

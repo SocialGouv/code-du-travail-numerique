@@ -39,6 +39,7 @@
       "infra/*",
       "modules/*",
       "packages/*",
+      "targets/*",
       "packages/code-du-travail-data/dataset/*"
     ]
   },

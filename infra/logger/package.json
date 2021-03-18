@@ -22,7 +22,6 @@
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-typescript": "^7.13.0",
-    "@elastic/elasticsearch": "^7.10.0",
     "@socialgouv/eslint-config-typescript": "^1.57.0",
     "@tsconfig/node14": "^1.0.0",
     "@types/jest": "^26.0.20",

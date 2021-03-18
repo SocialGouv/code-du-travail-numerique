@@ -11,7 +11,7 @@
 {"entity": "risque s\u00e9rieux atteinte \u00e0 la sant\u00e9 \u00e0 la s\u00e9curit\u00e9 ou \u00e0 int\u00e9grit\u00e9 physique ou morale de l'apprenti", "value": 2.0}
 {"entity": "directe", "value": 2.0}
 {"entity": "dur\u00e9e cdd", "value": 28.88}
-{"entity": "\u00e0 combien ai-je droit d'heures pour recherche d'emploi?", "value": 2.5}
+{"entity": "\u00e0 combien ai-je droit d'heures pour recherche d'emploi?", "value": 2.0}
 {"entity": "discrimination", "value": 61.55}
 {"entity": "comment est calcul\u00e9 mon pr\u00e9avis de d\u00e9mission ?", "value": 2.0}
 {"entity": "p\u00e9nibilit\u00e9", "value": 54.9}

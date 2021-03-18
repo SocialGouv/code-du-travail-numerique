@@ -1080,7 +1080,7 @@
   resolved "https://registry.yarnpkg.com/@data-forge/serialization/-/serialization-1.0.1.tgz#2a963ea78154688f738e3465558b1c0a2d5963e2"
   integrity sha512-EP7IWimh5JcDOISVoXvNIjUAqcPN1FkNWvuvjY3uzcswErxB8j93ldlUBvgvGEszqFRwMM3fpMF0HrISg5iBSQ==
 
-"@elastic/elasticsearch@7", "@elastic/elasticsearch@^7.10.0", "@elastic/elasticsearch@^7.11.0", "@elastic/elasticsearch@^7.9.0":
+"@elastic/elasticsearch@7", "@elastic/elasticsearch@^7.11.0", "@elastic/elasticsearch@^7.9.0":
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/@elastic/elasticsearch/-/elasticsearch-7.11.0.tgz#e196243d0ed026742fc160d72cc5b4b5b6c7807d"
   integrity sha512-AFVVuANIdbV1qYjuOi4hnsX/DehWYG+bbhQO4amq9K4/NnzU7mpGWOPgVlRQTiX+vBfBkx7SL6h4QEjIlM3ztA==

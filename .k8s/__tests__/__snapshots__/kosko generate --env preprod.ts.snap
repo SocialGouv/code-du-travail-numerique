@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`kosko generate --preprod 1`] = `
-"42
+"apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    field.cattle.io/creatorId: gitlab
+    field.cattle.io/projectId: c-bar:p-foo
+    git/branch: v1.2.3
+    git/remote: >-
+      https://gitlab-ci-token:[MASKED]@gitlab.factory.social.gouv.fr/SocialGouv/code-du-travail-numerique.git
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    azure-pg-admin-user: code-du-travail-numerique
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: code-du-travail-numerique-85-preprod-dev2
 "
 `;

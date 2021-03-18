@@ -11,18 +11,19 @@ include:
     ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
-    ref: v20.7.11
+    ref: v20.7.14
 
   #
+
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
-  - /.gitlab-ci/stages/register.yml
-  - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
-  - /.gitlab-ci/stages/notify.yml
-  - /.gitlab-ci/stages/e2e.yml
-  - /.gitlab-ci/stages/storage.yml
+  # - /.gitlab-ci/stages/quality.yml
+  # - /.gitlab-ci/stages/register.yml
+  # - /.gitlab-ci/stages/manual.yml
+  # - /.gitlab-ci/stages/scan.yml
+  # - /.gitlab-ci/stages/deploy.yml
+  # - /.gitlab-ci/stages/notify.yml
+  # - /.gitlab-ci/stages/e2e.yml
+  # - /.gitlab-ci/stages/storage.yml
 
 stages:
   - "Prepare"
@@ -34,6 +35,8 @@ stages:
 
 #
 
+variables:
+  MONOREPO_CACHE_FOLDER: ${CI_PROJECT_DIR}/.cache/monorepo
 
 .base_stage:
   rules:
@@ -45,14 +48,14 @@ stages:
       when: never
     - when: always
 
-k8s test:
+🛂 k8s test:
   stage: Prepare
   needs: []
   extends:
     - .base_kosko_k8s_test
     - .base_stage
 
-"@socialgouv/cdtn-logger":
+📦 logger:
   stage: Prepare
   extends:
     - .base_stage
@@ -60,14 +63,60 @@ k8s test:
     include:
       - local: /infra/logger/.gitlab-ci.yml
     strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
 
-ingester:
+🧱 ingester:
   stage: Code Quality
   needs:
-    - job: "@socialgouv/cdtn-logger"
+    - job: 📦 logger
   trigger:
     include:
       - local: /modules/ingester/.gitlab-ci.yml
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
+
+🎯 ingester-elasticsearch:
+  stage: Registration
+  needs:
+    - job: 📦 logger
+    - job: 🧱 ingester
+  trigger:
+    include:
+      - local: /targets/ingester-elasticsearch/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
+
+🎯 api:
+  stage: Registration
+  needs:
+    - job: 📦 logger
+  trigger:
+    include:
+      - local: /packages/code-du-travail-api/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
+
+🚀 ingester-elasticsearch (dev):
+  stage: Deploy
+  only:
+    - branches
+  extends:
+    - .base_deploy_kosko_stage
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}-dev2
+  needs:
+    - job: 🎯 ingester-elasticsearch
+  variables:
+    # kosko options
+    KOSKO_GENERATE_ARGS: _namespace ingester-elasticsearch --env dev
+    # jobs/injestor variables
+    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+    ES_INDEX_PREFIX: "cdtn-dev-${CI_COMMIT_REF_SLUG}"
