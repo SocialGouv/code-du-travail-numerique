@@ -543,8 +543,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c79 {
+.c80 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -555,8 +556,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c97 {
+.c98 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1029,7 +1031,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c80 {
+.c79 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1157,7 +1159,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 1.6rem;
 }
 
-.c98 {
+.c97 {
   font-size: 1.6rem;
 }
 
@@ -1614,20 +1616,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     font-size: 1.6rem;
   }
 }
@@ -1834,13 +1836,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c79 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c79 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1930,7 +1932,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c97 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -2810,14 +2812,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <div
                   class="c77 c78"
                 >
-                  <h3
+                  <strong
                     class="c79 c80"
                   >
                     <div
                       class="c66"
                     />
                     Avez-vous trouvé la réponse à votre question ?
-                  </h3>
+                  </strong>
                   <p
                     class="c81"
                   >
@@ -2894,11 +2896,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     Code du travail numérique
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >
@@ -2977,11 +2979,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     Aidez-nous à améliorer cet outil
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >
@@ -3032,11 +3034,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     En collaboration avec
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >
@@ -3713,8 +3715,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c79 {
+.c80 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3725,8 +3728,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c97 {
+.c98 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -4199,7 +4203,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c80 {
+.c79 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -4327,7 +4331,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 1.6rem;
 }
 
-.c98 {
+.c97 {
   font-size: 1.6rem;
 }
 
@@ -4784,20 +4788,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     font-size: 1.6rem;
   }
 }
@@ -5004,13 +5008,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c79 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c79 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -5100,7 +5104,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c97 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -5980,14 +5984,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <div
                   class="c77 c78"
                 >
-                  <h3
+                  <strong
                     class="c79 c80"
                   >
                     <div
                       class="c66"
                     />
                     Avez-vous trouvé la réponse à votre question ?
-                  </h3>
+                  </strong>
                   <p
                     class="c81"
                   >
@@ -6064,11 +6068,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     Code du travail numérique
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >
@@ -6147,11 +6151,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     Aidez-nous à améliorer cet outil
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >
@@ -6202,11 +6206,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <div
                   class="c96 "
                 >
-                  <h3
+                  <strong
                     class="c97 c98"
                   >
                     En collaboration avec
-                  </h3>
+                  </strong>
                   <ul
                     class="c99 c100"
                   >

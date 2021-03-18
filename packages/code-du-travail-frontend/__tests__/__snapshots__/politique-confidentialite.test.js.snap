@@ -342,8 +342,9 @@ exports[`<CookiePolicy /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c45 {
+.c46 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -469,7 +470,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c46 {
+.c45 {
   font-size: 1.6rem;
 }
 
@@ -868,7 +869,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c46 {
     font-size: 1.6rem;
   }
 }
@@ -958,7 +959,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c45 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1456,11 +1457,11 @@ exports[`<CookiePolicy /> should render 1`] = `
               <div
                 class="c44 "
               >
-                <h3
+                <strong
                   class="c45 c46"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c47 c48"
                 >
@@ -1539,11 +1540,11 @@ exports[`<CookiePolicy /> should render 1`] = `
               <div
                 class="c44 "
               >
-                <h3
+                <strong
                   class="c45 c46"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c47 c48"
                 >
@@ -1594,11 +1595,11 @@ exports[`<CookiePolicy /> should render 1`] = `
               <div
                 class="c44 "
               >
-                <h3
+                <strong
                   class="c45 c46"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c47 c48"
                 >

@@ -560,8 +560,9 @@ exports[`<FicheMT /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c68 {
+.c69 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -572,8 +573,9 @@ exports[`<FicheMT /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c87 {
+.c88 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -878,7 +880,7 @@ exports[`<FicheMT /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c69 {
+.c68 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -997,7 +999,7 @@ exports[`<FicheMT /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c88 {
+.c87 {
   font-size: 1.6rem;
 }
 
@@ -1466,20 +1468,20 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c69 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c69 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c87 {
+  .c88 {
     font-size: 1.6rem;
   }
 }
@@ -1641,13 +1643,13 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c69 {
+  .c68 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c68 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1723,7 +1725,7 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c87 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -2493,14 +2495,14 @@ exports[`<FicheMT /> should render 1`] = `
               <div
                 class="c66 c67"
               >
-                <h3
+                <strong
                   class="c68 c69"
                 >
                   <div
                     class="c70"
                   />
                   Avez-vous trouvé la réponse à votre question ?
-                </h3>
+                </strong>
                 <p
                   class="c71"
                 >
@@ -2577,11 +2579,11 @@ exports[`<FicheMT /> should render 1`] = `
               <div
                 class="c86 "
               >
-                <h3
+                <strong
                   class="c87 c88"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c89 c90"
                 >
@@ -2660,11 +2662,11 @@ exports[`<FicheMT /> should render 1`] = `
               <div
                 class="c86 "
               >
-                <h3
+                <strong
                   class="c87 c88"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c89 c90"
                 >
@@ -2715,11 +2717,11 @@ exports[`<FicheMT /> should render 1`] = `
               <div
                 class="c86 "
               >
-                <h3
+                <strong
                   class="c87 c88"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c89 c90"
                 >

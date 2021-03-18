@@ -154,8 +154,9 @@ exports[`<Footer /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c15 {
+.c16 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -244,7 +245,7 @@ exports[`<Footer /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c16 {
+.c15 {
   font-size: 1.6rem;
 }
 
@@ -353,7 +354,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 1.6rem;
   }
 }
@@ -411,7 +412,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c15 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -480,11 +481,11 @@ exports[`<Footer /> should render 1`] = `
             <div
               class="c14 "
             >
-              <h3
+              <strong
                 class="c15 c16"
               >
                 Code du travail numérique
-              </h3>
+              </strong>
               <ul
                 class="c17 c18"
               >
@@ -563,11 +564,11 @@ exports[`<Footer /> should render 1`] = `
             <div
               class="c14 "
             >
-              <h3
+              <strong
                 class="c15 c16"
               >
                 Aidez-nous à améliorer cet outil
-              </h3>
+              </strong>
               <ul
                 class="c17 c18"
               >
@@ -618,11 +619,11 @@ exports[`<Footer /> should render 1`] = `
             <div
               class="c14 "
             >
-              <h3
+              <strong
                 class="c15 c16"
               >
                 En collaboration avec
-              </h3>
+              </strong>
               <ul
                 class="c17 c18"
               >

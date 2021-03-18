@@ -35,6 +35,7 @@ Heading.defaultProps = {
 
 const StyledHeading = styled.h3`
   position: relative;
+  display: block;
   margin: ${({ isFirst }) => (isFirst ? 0 : spacings.large)} 0
     ${spacings.medium} 0;
   color: ${({ theme }) => theme.title};

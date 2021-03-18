@@ -169,8 +169,9 @@ exports[`<Answer /> should renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -375,7 +376,7 @@ exports[`<Answer /> should renders 1`] = `
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -516,14 +517,14 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -648,13 +649,13 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -997,14 +998,14 @@ exports[`<Answer /> should renders 1`] = `
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -1229,8 +1230,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   transform: translateY(-50%);
 }
 
-.c37 {
+.c38 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1518,7 +1520,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   justify-content: stretch;
 }
 
-.c38 {
+.c37 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1678,14 +1680,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c38 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c38 {
     font-size: 1.6rem;
   }
 }
@@ -1834,13 +1836,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c38 {
+  .c37 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c37 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -2267,14 +2269,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           <div
             class="c35 c36"
           >
-            <h3
+            <strong
               class="c37 c38"
             >
               <div
                 class="c39"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c40"
             >
@@ -2466,8 +2468,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2672,7 +2675,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -2813,14 +2816,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -2945,13 +2948,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -3294,14 +3297,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -3539,8 +3542,9 @@ exports[`<Answer /> should renders related content 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3553,6 +3557,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c34 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -3764,7 +3769,7 @@ exports[`<Answer /> should renders related content 1`] = `
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -3921,14 +3926,14 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -4084,13 +4089,13 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -4430,14 +4435,14 @@ exports[`<Answer /> should renders related content 1`] = `
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -4777,8 +4782,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -4983,7 +4989,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -5124,14 +5130,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -5256,13 +5262,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -5606,14 +5612,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -5805,8 +5811,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -6011,7 +6018,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -6152,14 +6159,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -6284,13 +6291,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -6634,14 +6641,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -6833,8 +6840,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -7039,7 +7047,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -7180,14 +7188,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -7312,13 +7320,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -7663,14 +7671,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >
@@ -7862,8 +7870,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   transform: translateY(-50%);
 }
 
-.c27 {
+.c28 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -8068,7 +8077,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   justify-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -8209,14 +8218,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     font-size: 1.6rem;
   }
 }
@@ -8341,13 +8350,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:1180px) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c27 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -8687,14 +8696,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           <div
             class="c25 c26"
           >
-            <h3
+            <strong
               class="c27 c28"
             >
               <div
                 class="c29"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c30"
             >

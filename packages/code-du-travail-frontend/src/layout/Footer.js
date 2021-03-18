@@ -55,7 +55,9 @@ const Footer = () => {
           <nav>
             <Links>
               <Category>
-                <StyledHeading isFirst>Code du travail numérique</StyledHeading>
+                <Heading as={StyledStrong} isFirst>
+                  Code du travail numérique
+                </Heading>
                 <StyledList>
                   <StyledListItem>
                     <Link passHref href="/droit-du-travail">
@@ -97,9 +99,9 @@ const Footer = () => {
                 </StyledList>
               </Category>
               <Category>
-                <StyledHeading isFirst>
+                <Heading as={StyledStrong} isFirst>
                   Aidez-nous à améliorer cet outil
-                </StyledHeading>
+                </Heading>
                 <StyledList>
                   <StyledListItem>
                     <ContactModal>
@@ -173,7 +175,9 @@ const Footer = () => {
                 </StyledList>
               </Category>
               <Category>
-                <StyledHeading isFirst>En collaboration avec</StyledHeading>
+                <Heading as={StyledStrong} isFirst>
+                  En collaboration avec
+                </Heading>
                 <StyledList>
                   <StyledListItem>
                     <StyledLink
@@ -345,7 +349,7 @@ const StyledList = styled(FlatList)`
   }
 `;
 
-const StyledHeading = styled(Heading)`
+const StyledStrong = styled.strong`
   font-size: ${fonts.sizes.default};
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.small};

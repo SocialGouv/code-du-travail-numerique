@@ -342,8 +342,9 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c48 {
+.c49 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -475,7 +476,7 @@ exports[`<Glossaire /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c49 {
+.c48 {
   font-size: 1.6rem;
 }
 
@@ -879,7 +880,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c49 {
     font-size: 1.6rem;
   }
 }
@@ -975,7 +976,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c48 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1568,11 +1569,11 @@ exports[`<Glossaire /> should render 1`] = `
               <div
                 class="c47 "
               >
-                <h3
+                <strong
                   class="c48 c49"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c34 c50"
                 >
@@ -1651,11 +1652,11 @@ exports[`<Glossaire /> should render 1`] = `
               <div
                 class="c47 "
               >
-                <h3
+                <strong
                   class="c48 c49"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c34 c50"
                 >
@@ -1706,11 +1707,11 @@ exports[`<Glossaire /> should render 1`] = `
               <div
                 class="c47 "
               >
-                <h3
+                <strong
                   class="c48 c49"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c34 c50"
                 >

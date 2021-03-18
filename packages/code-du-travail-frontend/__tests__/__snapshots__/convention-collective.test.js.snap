@@ -126,8 +126,9 @@ exports[`<ConventionCollective /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c17 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -262,7 +263,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c17 {
+.c16 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -365,14 +366,14 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     font-size: 1.6rem;
   }
 }
@@ -428,13 +429,13 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c17 {
+  .c16 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c16 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -610,14 +611,14 @@ exports[`<ConventionCollective /> should render 1`] = `
           <div
             class="c14 c15"
           >
-            <h3
+            <strong
               class="c16 c17"
             >
               <div
                 class="c18"
               />
               Avez-vous trouvé la réponse à votre question ?
-            </h3>
+            </strong>
             <p
               class="c19"
             >

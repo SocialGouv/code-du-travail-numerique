@@ -404,8 +404,9 @@ exports[`<CodeDuTravail /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c38 {
+.c39 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -416,8 +417,9 @@ exports[`<CodeDuTravail /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c57 {
+.c58 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -569,7 +571,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c39 {
+.c38 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -682,7 +684,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c58 {
+.c57 {
   font-size: 1.6rem;
 }
 
@@ -1075,20 +1077,20 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c58 {
     font-size: 1.6rem;
   }
 }
@@ -1157,13 +1159,13 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c39 {
+  .c38 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c38 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1245,7 +1247,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c57 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1660,14 +1662,14 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <div
                 class="c36 c37"
               >
-                <h3
+                <strong
                   class="c38 c39"
                 >
                   <div
                     class="c40"
                   />
                   Avez-vous trouvé la réponse à votre question ?
-                </h3>
+                </strong>
                 <p
                   class="c41"
                 >
@@ -1744,11 +1746,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c59 c60"
                 >
@@ -1827,11 +1829,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c59 c60"
                 >
@@ -1882,11 +1884,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c59 c60"
                 >

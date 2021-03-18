@@ -649,8 +649,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c69 {
+.c70 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -661,8 +662,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c88 {
+.c89 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -967,7 +969,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c70 {
+.c69 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1086,7 +1088,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c89 {
+.c88 {
   font-size: 1.6rem;
 }
 
@@ -1596,20 +1598,20 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c70 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c70 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c89 {
     font-size: 1.6rem;
   }
 }
@@ -1765,13 +1767,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c70 {
+  .c69 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c69 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1847,7 +1849,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c88 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -2587,14 +2589,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div
                 class="c56 c68"
               >
-                <h3
+                <strong
                   class="c69 c70"
                 >
                   <div
                     class="c71"
                   />
                   Avez-vous trouvé la réponse à votre question ?
-                </h3>
+                </strong>
                 <p
                   class="c72"
                 >
@@ -2671,11 +2673,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div
                 class="c87 "
               >
-                <h3
+                <strong
                   class="c88 c89"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c90 c91"
                 >
@@ -2754,11 +2756,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div
                 class="c87 "
               >
-                <h3
+                <strong
                   class="c88 c89"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c90 c91"
                 >
@@ -2809,11 +2811,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <div
                 class="c87 "
               >
-                <h3
+                <strong
                   class="c88 c89"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c90 c91"
                 >

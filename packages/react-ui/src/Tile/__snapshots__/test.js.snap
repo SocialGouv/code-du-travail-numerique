@@ -34,6 +34,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 
 .c5 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -196,6 +197,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 
 .c4 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -323,6 +325,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 exports[`<Tile /> renders a tile with an icon 1`] = `
 .c4 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -484,6 +487,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 exports[`<Tile /> renders a tile with text inside 1`] = `
 .c3 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -608,6 +612,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
 .c4 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;

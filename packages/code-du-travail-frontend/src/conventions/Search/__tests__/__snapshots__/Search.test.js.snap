@@ -76,6 +76,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 
 .c7 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1219,6 +1220,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 
 .c7 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1606,6 +1608,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 
 .c7 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -1965,6 +1968,7 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
 
 .c7 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -2581,6 +2585,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 
 .c7 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
