@@ -1,6 +1,6 @@
-import { getVersions } from "../versions";
+import { getVersions } from "./versions";
 
-jest.mock("../../package.json", () => ({
+jest.mock("../package.json", () => ({
   dependencies: {
     "@socialgouv/lib-a": "1",
     "@socialgouv/lib-b": "2",

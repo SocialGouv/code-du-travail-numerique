@@ -1,6 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 
-import { fetchCovisits } from "../monolog";
+import { fetchCovisits } from "./monolog";
 
 const testDoc = {
   slug: "activite-partielle-chomage-partiel",
