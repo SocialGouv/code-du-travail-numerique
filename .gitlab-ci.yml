@@ -34,8 +34,21 @@ stages:
 
 #
 
+
+.base_stage:
+  rules:
+    - if: $PRODUCTION
+      when: never
+    - if: $UPDATE_ES_INDEX
+      when: never
+    - if: $CI_COMMIT_MESSAGE =~ /^chore(release):*/
+      when: never
+    - when: always
+
 "@socialgouv/cdtn-logger":
   stage: Prepare
+  extends:
+    - .base_stage
   trigger:
     include:
       - local: /infra/logger/.gitlab-ci.yml
