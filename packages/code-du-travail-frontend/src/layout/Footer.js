@@ -17,6 +17,7 @@ import styled from "styled-components";
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { SurveyModal } from "../common/SurveyModal";
+import { Partners } from "../home/Partners";
 import { matopush } from "../piwik";
 
 const { DirectionRight: DirectionRightIcon } = icons;
@@ -51,6 +52,9 @@ const Footer = () => {
             </ServiceRenseignementModal>
           </Container>
         </ServiceSection>
+
+        {router.pathname === "/" && <Partners />}
+
         <NavSection>
           <nav>
             <Links>
