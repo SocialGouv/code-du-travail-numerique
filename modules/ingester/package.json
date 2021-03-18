@@ -17,6 +17,7 @@
     "@babel/cli": "^7.12.17",
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
+    "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "eslint": "^7.21.0",
     "jest": "^26.6.3",
@@ -32,7 +33,7 @@
     "url": "https://github.com/SocialGouv/cdtn-admin.git"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --ignore \"src/**/*.test.js\"",
     "lint": "eslint src",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",

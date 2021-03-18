@@ -1,3 +1,4 @@
+import { populateSuggestions } from "@cdtn/ingester";
 import { Client } from "@elastic/elasticsearch";
 import {
   createIndex,
@@ -16,7 +17,6 @@ import retry from "p-retry";
 
 import { cdtnDocumentsGen } from "./cdtnDocuments";
 import { fetchCovisits } from "./monolog";
-import { populateSuggestions } from "./suggestion";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
