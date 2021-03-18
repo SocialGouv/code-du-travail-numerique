@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
+    "@cdtn/ingester": "1.0.0-alpha.1",
     "@elastic/elasticsearch": "^7.11.0",
     "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@socialgouv/cdtn-logger": "1.0.0-alpha.1",

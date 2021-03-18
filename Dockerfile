@@ -18,6 +18,7 @@ COPY ./yarn.lock /app/yarn.lock
 # NOTE(douglasduteil): temporally listing future cdtn-admin packages
 COPY ./infra/elasticsearch/package.json /app/infra/elasticsearch/package.json
 COPY ./infra/logger/package.json /app/infra/logger/package.json
+COPY ./modules/ingester/package.json /app/modules/ingester/package.json
 
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
@@ -43,6 +44,7 @@ RUN yarn --frozen-lockfile && yarn cache clean
 
 # NOTE(douglasduteil): temporally listing future cdtn-admin packages
 COPY ./infra /app/infra
+COPY ./modules /app/modules
 
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
