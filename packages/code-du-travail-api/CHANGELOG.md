@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.45.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.44.1...v4.45.0) (2021-03-18)
+
+
+### Bug Fixes
+
+* **api:** specify index while counting prequalified ([#3341](https://github.com/SocialGouv/code-du-travail-numerique/issues/3341)) ([72dd8b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/72dd8b7662f6c5ddcba877db4d6a8c185fff4e61))
+
+
+
+
+
 ## [4.44.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.44.0...v4.44.1) (2021-02-18)
 
 **Note:** Version bump only for package @cdt/api
