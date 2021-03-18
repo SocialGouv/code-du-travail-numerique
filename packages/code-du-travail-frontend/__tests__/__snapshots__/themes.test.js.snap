@@ -324,7 +324,7 @@ exports[`<Theme /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c50 {
+.c51 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -505,7 +505,7 @@ exports[`<Theme /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c51 {
+.c50 {
   font-size: 1.6rem;
 }
 
@@ -904,7 +904,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     font-size: 1.6rem;
   }
 }
@@ -1005,7 +1005,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c50 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1476,11 +1476,11 @@ exports[`<Theme /> should render 1`] = `
               <div
                 class="c49 "
               >
-                <h3
+                <strong
                   class="c50 c51"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c52 c53"
                 >
@@ -1559,11 +1559,11 @@ exports[`<Theme /> should render 1`] = `
               <div
                 class="c49 "
               >
-                <h3
+                <strong
                   class="c50 c51"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c52 c53"
                 >
@@ -1614,11 +1614,11 @@ exports[`<Theme /> should render 1`] = `
               <div
                 class="c49 "
               >
-                <h3
+                <strong
                   class="c50 c51"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c52 c53"
                 >

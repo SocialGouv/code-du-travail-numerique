@@ -340,7 +340,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c57 {
+.c58 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -596,7 +596,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c58 {
+.c57 {
   font-size: 1.6rem;
 }
 
@@ -993,7 +993,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c58 {
     font-size: 1.6rem;
   }
 }
@@ -1083,7 +1083,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c57 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1625,11 +1625,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c33 c59"
                 >
@@ -1708,11 +1708,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c33 c59"
                 >
@@ -1763,11 +1763,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <div
                 class="c56 "
               >
-                <h3
+                <strong
                   class="c57 c58"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c33 c59"
                 >
