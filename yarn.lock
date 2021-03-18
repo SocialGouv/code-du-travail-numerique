@@ -2602,12 +2602,12 @@
     remark "^12.0.1"
     remark-html "^13.0.1"
 
-"@socialgouv/eslint-config-react@^1.55.0":
-  version "1.55.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.55.0.tgz#0e1178b8291d96f4c1226643913672efeef240aa"
-  integrity sha512-hp03WvfuAr5RNqBM3A9n7rhoWb5r54YhrygmdrqVp1WJ43H+A1mhtPG22xQn+ddEEvAeCTLR82wyp5NMkIxjfw==
+"@socialgouv/eslint-config-react@^1.59.0":
+  version "1.59.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.59.0.tgz#c50f3fdb226770fc0c8fb3de74f206be3bf2ae7d"
+  integrity sha512-QjBcd00iN3Xkv70/WMYNIqVBax+8Yk2A0pz6I7FkUNj6XPP7kwFzKODb2RHsWZNr32Ex0MW2gQQmIba5TEJO+g==
   dependencies:
-    "@socialgouv/eslint-config-recommended" "^1.55.0"
+    "@socialgouv/eslint-config-recommended" "^1.59.0"
     babel-eslint "^10.1.0"
     eslint-plugin-jsx-a11y "~6.4.1"
     eslint-plugin-react "~7.22.0"
