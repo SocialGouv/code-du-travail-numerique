@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "babel src --out-dir lib",
-    "lint": "eslint lib",
+    "lint": "eslint src",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "test": "jest"
