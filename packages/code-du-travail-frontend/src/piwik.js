@@ -48,7 +48,6 @@ export function initPiwik({
       matopush(["setCustomUrl", pathname]);
       matopush(["setDocumentTitle", document.title]);
       matopush(["deleteCustomVariables", "page"]);
-      matopush(["setGenerationTimeMs", 0]);
       if (/^\/recherche/.test(pathname) && q) {
         matopush(["trackSiteSearch", q]);
       } else {
