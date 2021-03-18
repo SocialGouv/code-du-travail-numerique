@@ -392,6 +392,7 @@ exports[`<Recherche /> should render 1`] = `
 
 .c29 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -402,8 +403,9 @@ exports[`<Recherche /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c46 {
+.c47 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -510,7 +512,7 @@ exports[`<Recherche /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c47 {
+.c46 {
   font-size: 1.6rem;
 }
 
@@ -938,7 +940,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c47 {
     font-size: 1.6rem;
   }
 }
@@ -1009,7 +1011,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c46 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1384,11 +1386,11 @@ exports[`<Recherche /> should render 1`] = `
               <div
                 class="c45 "
               >
-                <h3
+                <strong
                   class="c46 c47"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c48 c49"
                 >
@@ -1467,11 +1469,11 @@ exports[`<Recherche /> should render 1`] = `
               <div
                 class="c45 "
               >
-                <h3
+                <strong
                   class="c46 c47"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c48 c49"
                 >
@@ -1522,11 +1524,11 @@ exports[`<Recherche /> should render 1`] = `
               <div
                 class="c45 "
               >
-                <h3
+                <strong
                   class="c46 c47"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c48 c49"
                 >

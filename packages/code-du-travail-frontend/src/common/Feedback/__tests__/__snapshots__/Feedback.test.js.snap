@@ -105,8 +105,9 @@ exports[`<Feedback/> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c5 {
+.c6 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -135,7 +136,7 @@ exports[`<Feedback/> should render 1`] = `
   justify-content: stretch;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -214,14 +215,14 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -247,13 +248,13 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -284,14 +285,14 @@ exports[`<Feedback/> should render 1`] = `
       <div
         class="c3 c4"
       >
-        <h3
+        <strong
           class="c5 c6"
         >
           <div
             class="c7"
           />
           Avez-vous trouvé la réponse à votre question ?
-        </h3>
+        </strong>
         <p
           class="c8"
         >
@@ -417,8 +418,9 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateY(-50%);
 }
 
-.c5 {
+.c6 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -447,7 +449,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   justify-content: stretch;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -519,14 +521,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -552,13 +554,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -588,14 +590,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       <div
         class="c3 c4"
       >
-        <h3
+        <strong
           class="c5 c6"
         >
           <div
             class="c7"
           />
           Avez-vous trouvé la réponse à votre question ?
-        </h3>
+        </strong>
         <p
           class="c8"
         >
@@ -666,8 +668,9 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   transform: translateY(-50%);
 }
 
-.c5 {
+.c6 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -696,7 +699,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   justify-content: stretch;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -756,14 +759,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -789,13 +792,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c6 {
+  .c5 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -825,14 +828,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       <div
         class="c3 c4"
       >
-        <h3
+        <strong
           class="c5 c6"
         >
           <div
             class="c7"
           />
           Avez-vous trouvé la réponse à votre question ?
-        </h3>
+        </strong>
         <p
           class="c8"
         >

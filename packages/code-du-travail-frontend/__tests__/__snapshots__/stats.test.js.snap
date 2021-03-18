@@ -417,6 +417,7 @@ exports[`<Stats /> should render 1`] = `
 
 .c35 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -425,8 +426,9 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c49 {
+.c50 {
   position: relative;
+  display: block;
   margin: 0 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -533,7 +535,7 @@ exports[`<Stats /> should render 1`] = `
   padding-left: 1.6rem;
 }
 
-.c50 {
+.c49 {
   font-size: 1.6rem;
 }
 
@@ -1031,7 +1033,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c50 {
     font-size: 1.6rem;
   }
 }
@@ -1102,7 +1104,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c49 {
     margin-top: 1rem;
     text-align: center;
   }
@@ -1561,11 +1563,11 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c48 "
               >
-                <h3
+                <strong
                   class="c49 c50"
                 >
                   Code du travail numérique
-                </h3>
+                </strong>
                 <ul
                   class="c51 c52"
                 >
@@ -1644,11 +1646,11 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c48 "
               >
-                <h3
+                <strong
                   class="c49 c50"
                 >
                   Aidez-nous à améliorer cet outil
-                </h3>
+                </strong>
                 <ul
                   class="c51 c52"
                 >
@@ -1699,11 +1701,11 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c48 "
               >
-                <h3
+                <strong
                   class="c49 c50"
                 >
                   En collaboration avec
-                </h3>
+                </strong>
                 <ul
                   class="c51 c52"
                 >

@@ -132,6 +132,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 
 .c12 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -444,6 +445,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 
 .c8 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
@@ -711,6 +713,7 @@ exports[`<Tabulator /> should render 1`] = `
 
 .c8 {
   position: relative;
+  display: block;
   margin: 3.2rem 0 2rem 0;
   color: #2f3b6c;
   font-weight: 600;
