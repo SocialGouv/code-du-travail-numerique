@@ -161,7 +161,8 @@ const Logo = styled(icons.Logo)`
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${breakpoints.mobile}) {
     height: 5rem;
-    margin-left: 2rem;
+    width: auto;
+    margin-left: 1rem;
   }
 `;
 

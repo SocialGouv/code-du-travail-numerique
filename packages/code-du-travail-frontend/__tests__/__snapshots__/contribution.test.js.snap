@@ -2010,7 +2010,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 @media (max-width:600px) {
   .c8 {
     height: 5rem;
-    margin-left: 2rem;
+    width: auto;
+    margin-left: 1rem;
   }
 }
 
@@ -5182,7 +5183,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 @media (max-width:600px) {
   .c8 {
     height: 5rem;
-    margin-left: 2rem;
+    width: auto;
+    margin-left: 1rem;
   }
 }
 

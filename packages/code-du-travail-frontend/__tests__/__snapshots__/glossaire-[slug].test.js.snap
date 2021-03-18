@@ -1071,7 +1071,8 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:600px) {
   .c8 {
     height: 5rem;
-    margin-left: 2rem;
+    width: auto;
+    margin-left: 1rem;
   }
 }
 
