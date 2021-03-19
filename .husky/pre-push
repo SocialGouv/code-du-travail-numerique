@@ -7,3 +7,9 @@ yarn lerna run \
   --since master \
   --stream \
   ;
+
+if git diff master --name-only | grep --quiet ".k8s"
+then
+  yarn k8s
+  yarn k8s prepush
+fi
