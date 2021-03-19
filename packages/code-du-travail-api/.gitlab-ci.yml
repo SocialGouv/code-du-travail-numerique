@@ -169,6 +169,4 @@ Register:
       artifacts: true
   variables:
     CONTEXT: .
-    DOCKER_BUILD_ARGS: >-
-      --shm-size 512M
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/${PACKAGE}
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/api
