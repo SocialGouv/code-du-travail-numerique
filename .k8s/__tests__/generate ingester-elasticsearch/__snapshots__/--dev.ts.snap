@@ -9,6 +9,7 @@ metadata:
 data:
   NODE_ENV: production
   CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+  NLP_URL: https://preprod-serving-ml.dev2.fabrique.social.gouv.fr
 ---
 apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
