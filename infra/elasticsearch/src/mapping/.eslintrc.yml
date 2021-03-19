@@ -1,0 +1,6 @@
+rules:
+  # NOTE(douglasduteil): disable naming-convention for elasticsearch mapping
+  # As the mapping files are following the elasticsearch explicit mapping format
+  # https://www.elastic.co/guide/en/elasticsearch/reference/current/explicit-mapping.html
+  # we do not want to enfore a external naming convention here.
+  "@typescript-eslint/naming-convention": "off"

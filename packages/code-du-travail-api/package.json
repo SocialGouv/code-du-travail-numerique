@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
-    "@socialgouv/eslint-config-recommended": "^1.55.0",
+    "@socialgouv/eslint-config-recommended": "^1.59.0",
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.21.0",
     "esm": "^3.2.25",

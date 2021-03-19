@@ -6,14 +6,14 @@ variables:
   GIT_STRATEGY: fetch
   GIT_DEPTH: 3
   #
-  PACKAGE: logger
+  PACKAGE: elasticsearch
   CACHE_FALLBACK_KEY: ${PACKAGE}-${CI_JOB_NAME}-${CI_DEFAULT_BRANCH}
   MONOREPO_CACHE_FOLDER: ${CI_PROJECT_DIR}/.cache/monorepo
 
 before_script:
   - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
   - sh ./.gitlab-ci/monorepo.sh skip && exit 0 || true
-  - cd infra/logger
+  - cd infra/elasticsearch
 
 Install:
   stage: build
@@ -26,29 +26,51 @@ Install:
       prefix: ${PACKAGE}-${CI_JOB_NAME}
     paths:
       - .cache
-      - infra/logger/node_modules
+      - infra/elasticsearch/node_modules
       - node_modules
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh has-changed
         --find-ignore "*/node_modules/*"
         --verbose
-        infra/logger || true
+        infra/elasticsearch || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip && {
-        rm -rf .cache/yarn infra/logger/node_modules node_modules;
+        rm -rf .cache/yarn infra/elasticsearch/node_modules node_modules;
         exit 0;
       } || true
   script:
     - yarn config set cache-folder ${CI_PROJECT_DIR}/.cache/yarn
-    - yarn global add @socialgouv/yarn-workspace-focus-install --cwd infra/logger
-    - yarn exec yarn-workspace-focus-install -- --cwd infra/logger
+    - yarn global add @socialgouv/yarn-workspace-focus-install --cwd infra/elasticsearch
+    - yarn exec yarn-workspace-focus-install -- --cwd infra/elasticsearch
   artifacts:
     expire_in: 1 week
     paths:
       - ${MONOREPO_CACHE_FOLDER}/skip
-      - infra/logger/node_modules
+      - infra/elasticsearch/node_modules
       - node_modules
+
+cdtn-logger lib:
+  stage: build
+  image: node:14.16-alpine3.13
+  needs: []
+  cache:
+    key:
+      files:
+        - yarn.lock
+      prefix: logger-Build
+    paths:
+      - infra/logger/lib
+    policy: pull
+  before_script:
+    - cd ${CI_PROJECT_DIR}
+  script:
+    - md5sum infra/logger/lib/*
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - infra/logger/lib
+
 
 #
 #
@@ -63,9 +85,13 @@ Build:
         - yarn.lock
       prefix: ${PACKAGE}-${CI_JOB_NAME}
     paths:
-      - infra/logger/lib
+      - infra/elasticsearch/lib
+  variables:
+    CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
+      artifacts: true
+    - job: cdtn-logger lib
       artifacts: true
   script:
     # NOTE(douglasduteil): ensure to have clean build
@@ -74,7 +100,7 @@ Build:
   artifacts:
     expire_in: 1 week
     paths:
-      - infra/logger/lib
+      - infra/elasticsearch/lib
 
 #
 #
@@ -85,6 +111,8 @@ Lint:
   image: node:14.16-alpine3.13
   needs:
     - job: Install
+      artifacts: true
+    - job: cdtn-logger lib
       artifacts: true
   script:
     - yarn lint
@@ -98,6 +126,8 @@ Test:
   image: node:14.16-alpine3.13
   needs:
     - job: Install
+      artifacts: true
+    - job: cdtn-logger lib
       artifacts: true
   script:
     - yarn test
