@@ -75,6 +75,9 @@ spec:
             periodSeconds: 5
             initialDelaySeconds: 0
             timeoutSeconds: 15
+          env:
+            - name: ES_INDEX_PREFIX
+              value: cdtn-prod
 ---
 apiVersion: v1
 kind: Service
