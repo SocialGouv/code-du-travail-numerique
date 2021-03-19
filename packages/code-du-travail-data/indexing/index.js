@@ -1,3 +1,4 @@
+import { populateSuggestions } from "@cdtn/ingester";
 import { Client } from "@elastic/elasticsearch";
 import {
   createIndex,
@@ -9,8 +10,6 @@ import {
   version,
 } from "@socialgouv/cdtn-elasticsearch";
 import { logger } from "@socialgouv/cdtn-logger";
-
-import { populateSuggestions } from "./suggestion";
 
 // NOTE(douglasduteil): define the __non_webpack_require__ as requireFn
 // As we are using @vercel/ncc to run this code and we want to require dynamic

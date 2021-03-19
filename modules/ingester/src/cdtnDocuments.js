@@ -50,7 +50,7 @@ const themesQuery = JSON.stringify({
  * Find duplicate slugs
  * @param {iterable} allDocuments is an iterable generator
  */
-async function getDuplicateSlugs(allDocuments) {
+export async function getDuplicateSlugs(allDocuments) {
   let slugs = [];
   for await (const documents of allDocuments) {
     slugs = slugs.concat(
@@ -64,7 +64,7 @@ async function getDuplicateSlugs(allDocuments) {
     .reduce((state, { slug, count }) => ({ ...state, [slug]: count }), {});
 }
 
-async function* cdtnDocumentsGen() {
+export async function* cdtnDocumentsGen() {
   const themesQueryResult = await fetch(CDTN_ADMIN_ENDPOINT, {
     body: themesQuery,
     method: "POST",
@@ -295,5 +295,3 @@ async function* cdtnDocumentsGen() {
     source: SOURCES.VERSIONS,
   };
 }
-
-export { cdtnDocumentsGen, getDuplicateSlugs };

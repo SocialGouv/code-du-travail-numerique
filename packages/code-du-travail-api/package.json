@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
+    "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.1.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
@@ -41,7 +42,6 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.21.0",

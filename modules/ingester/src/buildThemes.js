@@ -1,4 +1,4 @@
-function buildThemes(themes, getBreadcrumbs) {
+export function buildThemes(themes, getBreadcrumbs) {
   return themes.map(
     ({
       cdtnId,
@@ -52,5 +52,3 @@ function buildThemes(themes, getBreadcrumbs) {
     }
   );
 }
-
-export { buildThemes };

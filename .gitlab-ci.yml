@@ -60,3 +60,14 @@ k8s test:
     include:
       - local: /infra/logger/.gitlab-ci.yml
     strategy: depend
+
+ingester:
+  stage: Code Quality
+  needs:
+    - job: "@socialgouv/cdtn-logger"
+  trigger:
+    include:
+      - local: /modules/ingester/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID

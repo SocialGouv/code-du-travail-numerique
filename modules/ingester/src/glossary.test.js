@@ -1,4 +1,4 @@
-import { createGlossaryTransform } from "../glossary";
+import { createGlossaryTransform } from "./glossary";
 
 const glossaryData = [
   {

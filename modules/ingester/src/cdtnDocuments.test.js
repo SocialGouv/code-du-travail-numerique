@@ -1,4 +1,4 @@
-import { getDuplicateSlugs } from "../cdtnDocuments";
+import { getDuplicateSlugs } from "./cdtnDocuments";
 
 jest.mock("@socialgouv/cdtn-logger");
 

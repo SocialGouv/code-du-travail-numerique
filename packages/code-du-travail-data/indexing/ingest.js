@@ -1,3 +1,8 @@
+import {
+  cdtnDocumentsGen,
+  fetchCovisits,
+  populateSuggestions,
+} from "@cdtn/ingester";
 import { Client } from "@elastic/elasticsearch";
 import {
   createIndex,
@@ -13,10 +18,6 @@ import { logger } from "@socialgouv/cdtn-logger";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import PQueue from "p-queue";
 import retry from "p-retry";
-
-import { cdtnDocumentsGen } from "./cdtnDocuments";
-import { fetchCovisits } from "./monolog";
-import { populateSuggestions } from "./suggestion";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 

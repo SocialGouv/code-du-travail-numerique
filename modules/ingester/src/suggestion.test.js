@@ -3,37 +3,36 @@ import {
   indexDocumentsBatched,
 } from "@socialgouv/cdtn-elasticsearch";
 
-import { populateSuggestions } from "../suggestion";
+import { populateSuggestions } from "./suggestion";
 
 jest.mock("@socialgouv/cdtn-elasticsearch");
 
-const INDEX_NAME = process.env.SUGGEST_INDEX_NAME;
-const BUFFER_SIZE = process.env.BUFFER_SIZE;
+process.env.SUGGEST_FILE = "./__fixtures__/suggestion_data_test.txt";
+process.env.BUFFER_SIZE = "10";
 
 const testCasesCount = 25;
 
-describe("populate_suggestion", () => {
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
+afterEach(() => {
+  jest.resetAllMocks();
+});
 
-  test("should create suggestionIndex", async () => {
-    await populateSuggestions("client", INDEX_NAME);
-    expect(createIndex).toHaveBeenCalledTimes(1);
+test("should create suggestionIndex", async () => {
+  await populateSuggestions("client", process.env.SUGGEST_FILE);
+  expect(createIndex).toHaveBeenCalledTimes(1);
 
-    expect(createIndex.mock.calls[0][0].client).toBe("client");
-    expect(createIndex.mock.calls[0][0].indexName).toBe(INDEX_NAME);
-  });
+  expect(createIndex.mock.calls[0][0].client).toBe("client");
+  expect(createIndex.mock.calls[0][0].indexName).toBe(process.env.SUGGEST_FILE);
+});
 
-  test("should pushSuggestion", async () => {
-    await populateSuggestions("client", INDEX_NAME);
-    expect(indexDocumentsBatched).toHaveBeenCalledTimes(
-      Math.ceil(testCasesCount / BUFFER_SIZE)
-    );
-    expect(indexDocumentsBatched.mock.calls[0][0].client).toBe("client");
-    expect(createIndex.mock.calls[0][0].indexName).toBe(INDEX_NAME);
-    expect(indexDocumentsBatched.mock.calls[0][0].documents)
-      .toMatchInlineSnapshot(`
+test("should pushSuggestion", async () => {
+  await populateSuggestions("client", process.env.SUGGEST_FILE);
+  expect(indexDocumentsBatched).toHaveBeenCalledTimes(
+    Math.ceil(testCasesCount / process.env.BUFFER_SIZE)
+  );
+  expect(indexDocumentsBatched.mock.calls[0][0].client).toBe("client");
+  expect(createIndex.mock.calls[0][0].indexName).toBe(process.env.SUGGEST_FILE);
+  expect(indexDocumentsBatched.mock.calls[0][0].documents)
+    .toMatchInlineSnapshot(`
       Array [
         Object {
           "ranking": 2,
@@ -77,8 +76,8 @@ describe("populate_suggestion", () => {
         },
       ]
     `);
-    expect(indexDocumentsBatched.mock.calls[1][0].documents)
-      .toMatchInlineSnapshot(`
+  expect(indexDocumentsBatched.mock.calls[1][0].documents)
+    .toMatchInlineSnapshot(`
       Array [
         Object {
           "ranking": 2,
@@ -122,8 +121,8 @@ describe("populate_suggestion", () => {
         },
       ]
     `);
-    expect(indexDocumentsBatched.mock.calls[2][0].documents)
-      .toMatchInlineSnapshot(`
+  expect(indexDocumentsBatched.mock.calls[2][0].documents)
+    .toMatchInlineSnapshot(`
       Array [
         Object {
           "ranking": 2,
@@ -147,9 +146,4 @@ describe("populate_suggestion", () => {
         },
       ]
     `);
-  });
 });
-/**
- *
- SUGGEST_INDEX_NAME=suggest-index SUGGEST_FILE=/Users/remim/dev/cdtn/code-du-travail-numeriqu/packages/code-du-travail-data/indexing/__tests__/suggestion_data_test.txt
- */

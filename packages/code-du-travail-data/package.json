@@ -26,7 +26,7 @@
     "ingest": "node -r esm indexing/ingest",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
-    "test": "BUFFER_SIZE=10 SUGGEST_FILE=./indexing/__tests__/suggestion_data_test.txt jest"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -38,24 +38,16 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
+    "@cdtn/ingester": "1.0.0-alpha.1",
     "@elastic/elasticsearch": "^7.11.0",
     "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
     "@socialgouv/cdtn-logger": "^4.45.0",
-    "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "esm": "^3.2.25",
-    "memoizee": "^0.4.15",
     "node-fetch": "^2.6.1",
     "p-queue": "^6.6.2",
-    "p-retry": "^4.4.0",
-    "rehype-raw": "^5.1.0",
-    "rehype-stringify": "^8.0.0",
-    "remark-parse": "^9.0.0",
-    "remark-rehype": "^8.0.0",
-    "remark-stringify": "^9.0.1",
-    "strip-markdown": "^4.0.0",
-    "unified": "^9.2.1"
+    "p-retry": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
