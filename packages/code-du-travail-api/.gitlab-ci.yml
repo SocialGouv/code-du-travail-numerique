@@ -109,8 +109,7 @@ Test:
       artifacts: true
     - job: lib logger
       artifacts: true
-  needs:
-    - Register elasticsearch image
+    - job: Register elasticsearch image
   services:
     - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
