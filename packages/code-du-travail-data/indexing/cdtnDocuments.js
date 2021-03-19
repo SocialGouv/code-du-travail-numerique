@@ -5,14 +5,12 @@ import fetch from "node-fetch";
 import { buildGetBreadcrumbs } from "./breadcrumbs";
 import { buildThemes } from "./buildThemes";
 import {
-  getAllKaliBlocks,
   getDocumentBySource,
   getDocumentBySourceWithRelation,
   getGlossary,
 } from "./fetchCdtnAdminDocuments";
 import { splitArticle } from "./fichesTravailSplitter";
 import { createGlossaryTransform } from "./glossary";
-import { getArticlesByTheme } from "./kali";
 import { markdownTransform } from "./markdown";
 import { getVersions } from "./versions";
 
@@ -77,8 +75,6 @@ async function* cdtnDocumentsGen() {
     }
     return Promise.reject(data);
   });
-
-  console.error("themes fetched");
 
   const themes = themesQueryResult.data.themes;
 
@@ -179,7 +175,6 @@ async function* cdtnDocumentsGen() {
   const ccnQR =
     "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.";
   const ccnData = await getDocumentBySource(SOURCES.CCN);
-  const allKaliBlocks = await getAllKaliBlocks();
   yield {
     documents: ccnData.map(({ title, shortTitle, ...content }) => {
       // we use our custom description
@@ -203,7 +198,6 @@ async function* cdtnDocumentsGen() {
             theme: theme && theme.label,
           };
         }),
-        articlesByTheme: getArticlesByTheme(allKaliBlocks, content.id),
         contributions: contribIDCCs.has(content.num),
         source: SOURCES.CCN,
       };
