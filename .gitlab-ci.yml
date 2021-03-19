@@ -113,6 +113,7 @@ stages:
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
   needs:
+    - job: 🛂 k8s test
     - job: 🎯 ingester-elasticsearch
   variables:
     # kosko options
@@ -132,6 +133,7 @@ stages:
     name: ${CI_COMMIT_REF_SLUG}-dev2
     url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   needs:
+    - job: 🛂 k8s test
     - job: 🎯 api
   variables:
     # kosko options
