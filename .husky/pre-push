@@ -4,6 +4,6 @@
 yarn lerna run \
   --exclude-dependents \
   --parallel prepush\
-  --since HEAD \
+  --since master \
   --stream \
   ;
