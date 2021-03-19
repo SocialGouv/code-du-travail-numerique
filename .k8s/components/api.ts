@@ -63,9 +63,10 @@ const deployment = manifests.find(
 ok(deployment);
 
 const waitForElasticsearchIndexContainer = waitForHttp({
-  name: "wait-for-elasticsearch-index",
+  name: "elasticsearch-index",
   url: "${ELASTICSEARCH_URL}/_cat/health?h=status",
 });
+waitForElasticsearchIndexContainer.image = "registry.gitlab.factory.social.gouv.fr/socialgouv/docker/wait-for-http:5.0.1"
 waitForElasticsearchIndexContainer.envFrom = [
   { secretRef: { name: "api-secret" } },
 ];
