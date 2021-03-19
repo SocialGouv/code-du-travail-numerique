@@ -121,10 +121,12 @@ stages:
     CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
     ES_INDEX_PREFIX: "cdtn-dev-${CI_COMMIT_REF_SLUG}"
 
-🚀 api (dev):
+🚀 Review:
   stage: Deploy
-  only:
-    - branches
+  rules:
+    - if: "$PRODUCTION || $RELEASE || $CI_COMMIT_TAG"
+      when: never
+    - when: on_success
   extends:
     - .base_deploy_kosko_stage
   environment:
