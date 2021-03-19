@@ -15,7 +15,7 @@ variables:
 
 before_script:
   - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
-  - sh ./.gitlab-ci/monorepo.sh skip && exit 0 || true
+  - sh -x ./.gitlab-ci/monorepo.sh skip && exit 0 || true
   - cd "${PACKAGE_CWD}"
 
 Install:
@@ -30,7 +30,7 @@ Install:
       - node_modules
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
-    - sh ./.gitlab-ci/monorepo.sh has-changed
+    - sh -x ./.gitlab-ci/monorepo.sh has-changed
         --find-ignore "*/node_modules/*"
         --verbose
         ${PACKAGE_CWD} || true
