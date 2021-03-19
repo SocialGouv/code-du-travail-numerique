@@ -8,8 +8,9 @@
     ]
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
     "@socialgouv/cdtn-logger": "^4.45.0",
-    "@socialgouv/cdtn-monolog": "^1.1.2",
+    "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "@socialgouv/contributions-data-types": "^3.12.0",
     "memoizee": "^0.4.15",
