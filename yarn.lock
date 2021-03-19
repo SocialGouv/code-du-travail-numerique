@@ -2682,15 +2682,6 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data-types/-/kali-data-types-2.55.0.tgz#2a2b3fe322ecba6e5549b7044007ce9d769e59d6"
   integrity sha512-I216kM7dtK5WFempSklQaKTE1kAamzYn0ZSg/u5M2XDMG2TZbOBau+WA0lA6oqPzoWUmTeZjkVUV5IpmPtn8fQ==
 
-"@socialgouv/kali-data@^2.55.0":
-  version "2.55.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-2.55.0.tgz#873f8a87e8fe890ade11bb87b59000db014adc56"
-  integrity sha512-QhevQDlcStdoA1G7pByJxjmJf7roajzm1/nAXgcjSLAV5pKvJNo8EUyFWER5t74+d47P/e2yGxIcgGSjzemKDA==
-  dependencies:
-    unist-util-find "1.0.2"
-    unist-util-flat-filter "1.0.0"
-    unist-util-parents "1.0.3"
-
 "@storybook/addon-a11y@^6.1.21":
   version "6.1.21"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.1.21.tgz#28e44c9f3b7b9e8a319f59b112092fb9aa15fb96"
@@ -18423,20 +18414,13 @@ unist-util-find-all-after@^3.0.2:
   dependencies:
     unist-util-is "^4.0.0"
 
-unist-util-find@1.0.2, unist-util-find@^1.0.2:
+unist-util-find@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-find/-/unist-util-find-1.0.2.tgz#4d5b01a69fca2a382ad4f55f9865e402129ecf56"
   integrity sha512-ft06UDYzqi9o9RmGP0sZWI/zvLLQiBW2/MD+rW6mDqbOWDcmknGX9orQPspfuGRYWr8eSJAmfsBcvOpfGRJseA==
   dependencies:
     lodash.iteratee "^4.5.0"
     unist-util-visit "^1.1.0"
-
-unist-util-flat-filter@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-flat-filter/-/unist-util-flat-filter-1.0.0.tgz#44972de80c889462c444da8878f5576568a113c6"
-  integrity sha512-zjTmbMgyL1V7iUCnFaGLms9HtGbqK4d3YINqzu+wiMbau93GdiDGtJiB8lMhAyxAaxIAK2rOCeBCldF0FUreKQ==
-  dependencies:
-    unist-util-is "^4.0.0"
 
 unist-util-generated@^1.0.0:
   version "1.1.6"
@@ -18453,7 +18437,7 @@ unist-util-is@^4.0.0:
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.4.tgz#3e9e8de6af2eb0039a59f50c9b3e99698a924f50"
   integrity sha512-3dF39j/u423v4BBQrk1AQ2Ve1FxY5W3JKwXxVFzBODQ6WEvccguhgp802qQLKSnxPODE6WuRZtV+ohlUg4meBA==
 
-unist-util-parents@1.0.3, unist-util-parents@^1.0.3:
+unist-util-parents@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-parents/-/unist-util-parents-1.0.3.tgz#9730446164303c40c01bcbe03221d11bc9189a4d"
   integrity sha512-GA82HBLgPxR+qkOzbti/jxzmkMBDu8iS/mw58iCwLpCl9JpLyGxkVr7nsFpAX956qIsa5yKNKM5SeGS8yCY8Lw==

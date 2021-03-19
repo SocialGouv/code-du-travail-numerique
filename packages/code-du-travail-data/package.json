@@ -44,7 +44,6 @@
     "@socialgouv/cdtn-logger": "^4.45.0",
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
-    "@socialgouv/kali-data": "^2.55.0",
     "esm": "^3.2.25",
     "node-fetch": "^2.6.1",
     "p-queue": "^6.6.2",
