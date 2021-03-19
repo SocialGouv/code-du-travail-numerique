@@ -36,7 +36,7 @@ stages:
 #
 
 variables:
-  MONOREPO_CACHE_FOLDER: ${CI_PROJECT_DIR}/.cache/monorepo
+  MONOREPO_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/monorepo"
 
 .base_stage:
   rules:
