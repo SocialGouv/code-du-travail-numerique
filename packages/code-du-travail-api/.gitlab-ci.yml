@@ -100,7 +100,7 @@ Lint:
 Lint Dockerfiles:
   stage: build
   needs: []
-  image: hadolint/hadolint:latest-debian
+  image: hadolint/hadolint:v1.23.0-alpine
   script:
     - hadolint ./Dockerfile
 
