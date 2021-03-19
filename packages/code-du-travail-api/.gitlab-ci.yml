@@ -134,7 +134,7 @@ Test:
       do echo "Waiting for Elasticsearch to go Green (${retry})" ; sleep 1 ; done ;
       [ "${retry}" -eq "-1" ] && exit 1
     #
-    - yarn test
+    - yarn test --coverage
 
 #
 #
