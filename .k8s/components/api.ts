@@ -1,21 +1,12 @@
-import env from "@kosko/env";
 import { create } from "@socialgouv/kosko-charts/components/app";
-import { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
+import { addInitContainer } from "@socialgouv/kosko-charts/utils/addInitContainer";
+import { waitForHttp } from "@socialgouv/kosko-charts/utils/waitForHttp";
+import { ok } from "assert";
+import env from "@kosko/env";
+import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
+import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 
-let ES_INDEX_PREFIX =
-  process.env.ES_INDEX_PREFIX ?? `cdtn-feature-${process.env.CI_ENVIRONMENT_SLUG}`;
-
-if (process.env.CI_COMMIT_REF_SLUG === "master") {
-  ES_INDEX_PREFIX = "cdtn-master"
-}
-
-if (process.env.CI_COMMIT_TAG) {
-  ES_INDEX_PREFIX = "cdtn-preprod"
-}
-
-if (process.env.PRODUCTION) {
-  ES_INDEX_PREFIX = "cdtn-prod"
-}
+import { ES_INDEX_PREFIX } from "../utils/ES_INDEX_PREFIX";
 
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   path: "/api/v1/version",
@@ -56,11 +47,30 @@ const manifests = create("api", {
       env: [
         {
           name: "ES_INDEX_PREFIX",
-          value: ES_INDEX_PREFIX
-        }
-      ]
+          value: ES_INDEX_PREFIX,
+        },
+      ],
     },
   },
 });
+
+//
+
+const deployment = manifests.find(
+  (manifest: { kind: string }): manifest is Deployment =>
+    manifest.kind === "Deployment"
+);
+ok(deployment);
+
+const waitForElasticsearchIndexContainer = waitForHttp({
+  name: "wait-for-elasticsearch-index",
+  url: "${ELASTICSEARCH_URL}/_cat/health?h=status",
+});
+waitForElasticsearchIndexContainer.envFrom = [
+  { secretRef: { name: "api-secret" } },
+];
+addInitContainer(deployment, waitForElasticsearchIndexContainer);
+
+//
 
 export default [...manifests];

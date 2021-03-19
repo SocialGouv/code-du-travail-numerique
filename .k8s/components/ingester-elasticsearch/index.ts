@@ -42,11 +42,11 @@ const ingester = () => {
               imagePullPolicy: "IfNotPresent",
               resources: {
                 limits: {
-                  cpu: "1",
+                  cpu: "2",
                   memory: "1Gi",
                 },
                 requests: {
-                  cpu: "500m",
+                  cpu: "1",
                   memory: "512Mi",
                 },
               },
