@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`kosko generate --prod restore 1`] = `
-"metadata:
+"apiVersion: batch/v1
+kind: Job
+metadata:
   name: restore-container-8843083e
   namespace: cdtn-admin-secret
 spec:
@@ -68,29 +70,29 @@ spec:
             - name: SOURCE_ACCOUNT_NAME
               valueFrom:
                 secretKeyRef:
-                  name: azure-cdtnadminprod-volume
                   key: azurestorageaccountname
+                  name: azure-cdtnadminprod-volume
             - name: SOURCE_ACCOUNT_KEY
               valueFrom:
                 secretKeyRef:
-                  name: azure-cdtnadminprod-volume
                   key: azurestorageaccountkey
+                  name: azure-cdtnadminprod-volume
             - name: DESTINATION_ACCOUNT_NAME
               valueFrom:
                 secretKeyRef:
-                  name: azure-cdtnadmindev-volume
                   key: azurestorageaccountname
+                  name: azure-cdtnadmindev-volume
             - name: DESTINATION_ACCOUNT_KEY
               valueFrom:
                 secretKeyRef:
-                  name: azure-cdtnadmindev-volume
                   key: azurestorageaccountkey
+                  name: azure-cdtnadmindev-volume
             - name: SOURCE_CONTAINER
               value: source-container
             - name: DESTINATION_CONTAINER
               value: destination-container
           envFrom: []
-          image: 'mcr.microsoft.com/azure-cli:2.15.1'
+          image: mcr.microsoft.com/azure-cli:2.15.1
           imagePullPolicy: IfNotPresent
           name: restore-db
           resources:
@@ -101,7 +103,6 @@ spec:
               cpu: 50m
               memory: 64Mi
       restartPolicy: Never
-apiVersion: batch/v1
-kind: Job
+  ttlSecondsAfterFinished: 86400
 "
 `;
