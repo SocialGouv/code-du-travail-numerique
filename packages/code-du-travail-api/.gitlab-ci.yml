@@ -97,6 +97,13 @@ Lint:
   script:
     - yarn lint
 
+Lint Dockerfiles:
+  stage: build
+  needs: []
+  image: hadolint/hadolint:latest-debian
+  script:
+    - hadolint ./Dockerfile
+
 #
 #
 #
@@ -157,6 +164,7 @@ Register:
   extends:
     - .base_register_docker_stage
   needs:
+    - job: Lint Dockerfiles
     - job: Build
       artifacts: true
   variables:
