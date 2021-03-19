@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { SUGGESTIONS } = require("@cdt/data/indexing/esIndexName");
+const { SUGGESTIONS } = require("@socialgouv/cdtn-elasticsearch");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -21,16 +21,16 @@ const suggestionsSize = 5;
  *
  * @returns {Object} List of matching suggestions.
  */
-router.get("/suggest", async ctx => {
+router.get("/suggest", async (ctx) => {
   const { q = "", size = suggestionsSize } = ctx.request.query;
 
   if (q.length >= minQueryLength) {
     const body = getSuggestQuery(q, size);
     const response = await elasticsearchClient.search({
-      index,
       body,
+      index,
     });
-    ctx.body = response.body.hits.hits.map(t => t._source.title);
+    ctx.body = response.body.hits.hits.map((t) => t._source.title);
   } else {
     ctx.body = [];
   }

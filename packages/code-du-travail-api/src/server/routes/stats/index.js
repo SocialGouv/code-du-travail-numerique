@@ -3,7 +3,7 @@ const API_BASE_URL = require("../v1.prefix");
 const fetch = require("node-fetch");
 const { startOfDay, subMonths, max, format } = require("date-fns");
 
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const docsCountBody = require("../docs-count/docCount.elastic");
 

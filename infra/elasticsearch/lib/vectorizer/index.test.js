@@ -1,8 +1,4 @@
-const {
-  vectorizeDocument,
-  vectorizeQuery,
-  preprocess,
-} = require("../vectorizer");
+const { vectorizeDocument, vectorizeQuery, preprocess } = require("./index");
 
 const timeout = 10000;
 

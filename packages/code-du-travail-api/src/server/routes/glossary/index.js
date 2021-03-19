@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
+const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -14,14 +14,14 @@ const router = new Router({ prefix: API_BASE_URL });
 async function _getGlossaryData() {
   const body = getGlossaryBody();
 
-  const response = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ body, index });
   return response;
 }
 
 const getGlossary = memoizee(_getGlossaryData, {
-  promise: true,
   maxAge: 1000 * 5 * 60,
   preFetch: true,
+  promise: true,
 });
 
 /**

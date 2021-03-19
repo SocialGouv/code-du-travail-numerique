@@ -4,6 +4,15 @@
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "index.js",
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
   "scripts": {
     "build": "yarn build:populate",
     "build:populate": "ncc build ./indexing/index.js -o dist/populate",
@@ -59,6 +68,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-env": "^7.12.17",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@vercel/ncc": "^0.27.0",

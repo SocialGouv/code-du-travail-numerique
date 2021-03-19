@@ -1,6 +1,5 @@
 const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
-const { DOCUMENTS } = require("@cdt/data/indexing/esIndexName");
-const { vectorizeQuery } = require("@cdt/data/indexing/vectorizer");
+const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./searchBySourceSlug.elastic");
