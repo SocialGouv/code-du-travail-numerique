@@ -45,6 +45,13 @@ stages:
       when: never
     - when: always
 
+k8s test:
+  stage: Prepare
+  needs: []
+  extends:
+    - .base_kosko_k8s_test
+    - .base_stage
+
 "@socialgouv/cdtn-logger":
   stage: Prepare
   extends:
