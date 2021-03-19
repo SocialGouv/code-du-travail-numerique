@@ -131,6 +131,7 @@ stages:
     - .base_deploy_kosko_stage
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
+    url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   needs:
     - job: 🎯 api
   variables:
