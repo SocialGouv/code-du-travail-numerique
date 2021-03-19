@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN yarn add elastic-apm-node --production
 
-USER nodemkdir '/app/node_modules'
+USER node
 
 COPY ./dist /app/dist
 COPY ./package.json /app/package.json
