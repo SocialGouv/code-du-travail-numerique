@@ -101,23 +101,6 @@ spec:
           env:
             - name: ES_INDEX_PREFIX
               value: cdtn-preprod
-      initContainers:
-        - args:
-            - \${ELASTICSEARCH_URL}/_cat/health?h=status
-          image: >-
-            registry.gitlab.factory.social.gouv.fr/socialgouv/docker/wait-for-http:5.0.1
-          imagePullPolicy: Always
-          name: wait-for-elasticsearch-index
-          resources:
-            limits:
-              cpu: 20m
-              memory: 32Mi
-            requests:
-              cpu: 5m
-              memory: 16Mi
-          envFrom:
-            - secretRef:
-                name: api-secret
 ---
 apiVersion: v1
 kind: Service
