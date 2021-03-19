@@ -120,3 +120,20 @@ stages:
     # jobs/injestor variables
     CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
     ES_INDEX_PREFIX: "cdtn-dev-${CI_COMMIT_REF_SLUG}"
+
+🚀 api (dev):
+  stage: Deploy
+  only:
+    - branches
+  extends:
+    - .base_deploy_kosko_stage
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}-dev2
+  needs:
+    - job: 🎯 api
+  variables:
+    # kosko options
+    KOSKO_GENERATE_ARGS: --env dev
+    # jobs/injestor variables
+    CDTN_ADMIN_ENDPOINT: https://cdtn-admin.fabrique.social.gouv.fr/api/graphql
+    ES_INDEX_PREFIX: "cdtn-dev-${CI_COMMIT_REF_SLUG}"

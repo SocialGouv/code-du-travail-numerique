@@ -2,6 +2,138 @@
 
 exports[`kosko generate --prod 1`] = `
 "---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod2
+    app.gitlab.com/env.name: prod2
+  labels:
+    app: api
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: api
+  namespace: cdtn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-cdtn
+        app.gitlab.com/env: prod2
+        app.gitlab.com/env.name: prod2
+      labels:
+        app: api
+        application: cdtn
+        owner: cdtn
+        team: cdtn
+    spec:
+      containers:
+        - image: registry.gitlab.factory.social.gouv.fr/socialgouv/cdtn/api:1.2.3
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 15
+          name: api
+          ports:
+            - containerPort: 8000
+              name: http
+          readinessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 2Gi
+            requests:
+              cpu: 500m
+              memory: 1.5Gi
+          startupProbe:
+            failureThreshold: 12
+            httpGet:
+              path: /api/v1/version
+              port: http
+            periodSeconds: 5
+            initialDelaySeconds: 0
+            timeoutSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: api
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod2
+    app.gitlab.com/env.name: prod2
+  namespace: cdtn
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+  selector:
+    app: api
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/tls-acme: 'true'
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod2
+    app.gitlab.com/env.name: prod2
+  labels:
+    app: api
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: api
+  namespace: cdtn
+spec:
+  rules:
+    - host: cdtn.fabrique.social.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: api
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - cdtn.fabrique.social.gouv.fr
+      secretName: api-crt
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
