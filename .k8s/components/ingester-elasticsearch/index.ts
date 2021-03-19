@@ -10,7 +10,6 @@ import { ConfigMap } from "kubernetes-models/_definitions/IoK8sApiCoreV1ConfigMa
 import { ES_INDEX_PREFIX } from "../../utils/ES_INDEX_PREFIX";
 
 ok(process.env.CI_REGISTRY_IMAGE, "Missing CI_REGISTRY_IMAGE");
-ok(process.env.ES_INDEX_PREFIX, "Missing ES_INDEX_PREFIX");
 
 const configMap = loadYaml<ConfigMap>(
   env,
