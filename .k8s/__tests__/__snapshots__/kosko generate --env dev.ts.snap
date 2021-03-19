@@ -72,7 +72,7 @@ spec:
             timeoutSeconds: 15
           name: api
           ports:
-            - containerPort: 8000
+            - containerPort: 1337
               name: http
           readinessProbe:
             failureThreshold: 15
@@ -145,7 +145,7 @@ spec:
   ports:
     - name: http
       port: 80
-      targetPort: 8000
+      targetPort: 1337
   selector:
     app: api
   type: ClusterIP
