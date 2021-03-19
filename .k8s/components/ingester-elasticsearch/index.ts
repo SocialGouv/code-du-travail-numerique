@@ -7,6 +7,8 @@ import { loadYaml } from "@socialgouv/kosko-charts/utils/getEnvironmentComponent
 import { merge } from "@socialgouv/kosko-charts/utils/@kosko/env/merge";
 import { ConfigMap } from "kubernetes-models/_definitions/IoK8sApiCoreV1ConfigMap";
 
+import { ES_INDEX_PREFIX } from "../../utils/ES_INDEX_PREFIX";
+
 ok(process.env.CI_REGISTRY_IMAGE, "Missing CI_REGISTRY_IMAGE");
 ok(process.env.ES_INDEX_PREFIX, "Missing ES_INDEX_PREFIX");
 
@@ -63,7 +65,7 @@ const ingester = () => {
               env: [
                 {
                   name: "ES_INDEX_PREFIX",
-                  value: `${process.env.ES_INDEX_PREFIX}-${process.env.CI_ENVIRONMENT_SLUG}`,
+                  value: ES_INDEX_PREFIX,
                 },
               ],
             },
