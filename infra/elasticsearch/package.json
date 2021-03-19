@@ -3,7 +3,7 @@
   "description": "SocialGouv - Code du travail numerique - Infrastructure - Elasticsearch",
   "version": "1.0.0-alpha.1",
   "dependencies": {
-    "@socialgouv/cdtn-logger": "1.0.0-alpha.1",
+    "@socialgouv/cdtn-logger": "^4.45.0",
     "node-fetch": "^2.6.1"
   },
   "license": "Apache-2.0",
