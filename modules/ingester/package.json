@@ -22,9 +22,7 @@
     "remark-rehype": "^8.0.0",
     "remark-stringify": "^9.0.1",
     "strip-markdown": "^4.0.0",
-    "unified": "^9.2.1",
-    "unist-util-find": "^1.0.2",
-    "unist-util-parents": "^1.0.3"
+    "unified": "^9.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.17",
