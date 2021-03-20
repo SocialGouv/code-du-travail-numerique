@@ -118,7 +118,7 @@ Test:
 Test SDR data:
   stage: build
   needs:  []
-  image: alpine:3.10
+  image: alpine:3.13.2
   allow_failure: true
   script:
     - apk add --no-cache jq wget
