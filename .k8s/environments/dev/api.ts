@@ -13,4 +13,5 @@ export default {
       },
     },
   },
+  subDomainPrefix: "api-",
 } as Partial<AppConfig>;

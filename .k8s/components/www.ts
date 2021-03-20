@@ -1,56 +1,42 @@
 import { create } from "@socialgouv/kosko-charts/components/app";
 import env from "@kosko/env";
 import { ok } from "assert";
-import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
+import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
 
-import { ES_INDEX_PREFIX } from "../utils/ES_INDEX_PREFIX";
+ok(process.env.CI_ENVIRONMENT_URL, "Missing CI_ENVIRONMENT_URL");
+const apiConfig = env.component("api");
+const API_URL = new URL(`${process.env.CI_ENVIRONMENT_URL}/api/v1`);
+API_URL.hostname = (apiConfig.subDomainPrefix ?? "api.") + API_URL.hostname;
 
-const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
-  path: "/api/v1/version",
-  port: "http",
-};
-
-const manifests = create("api", {
+const manifests = create("www", {
   env,
   config: {
-    subDomainPrefix: "api.",
-    containerPort: 1337,
+    containerPort: 3000,
     container: {
-      livenessProbe: {
-        httpGet,
-        initialDelaySeconds: 15,
-        timeoutSeconds: 15,
-      },
-      readinessProbe: {
-        httpGet,
-        initialDelaySeconds: 5,
-        timeoutSeconds: 3,
-      },
-      startupProbe: {
-        httpGet,
-        initialDelaySeconds: 0,
-        timeoutSeconds: 15,
-      },
       resources: {
         requests: {
-          cpu: "100m",
-          memory: "320Mi",
+          cpu: "200m",
+          memory: "560Mi", // 400 + 160  ~(40% of 400)
         },
         limits: {
-          cpu: "100m",
-          memory: "320Mi",
+          cpu: "200m",
+          memory: "560Mi",
         },
       },
       env: [
         {
-          name: "ELASTIC_APM_ENVIRONMENT",
-          value: `cdtn-${process.env.CI_ENVIRONMENT_SLUG}`,
+          name: "API_URL",
+          value: String(API_URL),
         },
         {
-          name: "ES_INDEX_PREFIX",
-          value: ES_INDEX_PREFIX,
+          name: "COMMIT",
+          value: process.env.CI_COMMIT_SHA,
+        },
+        {
+          name: "FRONTEND_HOST",
+          value: process.env.CI_ENVIRONMENT_URL,
         },
         {
           name: "VERSION",
@@ -65,6 +51,10 @@ const deployment = manifests.find(
   (manifest): manifest is Deployment => manifest.kind === "Deployment"
 );
 ok(deployment);
+
+addWaitForHttp(deployment, "http://api");
+
+//
 
 const hpa = new HorizontalPodAutoscaler({
   metadata: deployment.metadata,

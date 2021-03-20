@@ -12,31 +12,6 @@ include:
     ref: v9.1.2
 
 
-#
-
-Create namespace:
-  extends:
-    - .base_create_namespace_stage
-    - .dev_stage
-  environment:
-    name: ${CI_COMMIT_REF_SLUG}-dev2
-  stage: "Registration"
-  before_script:
-    - source ./.gitlab-ci/env.sh
-  after_script:
-    - source ./.gitlab-ci/env.sh
-    #
-    # Create cdtn secrets
-    - envsubst < ./.k8s/secrets.yml | kubectl apply -n ${K8S_NAMESPACE} -f - || true
-    #
-    # Copy elasticsearch-creds
-    - kubectl get secret elasticsearch-cloud-data --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
-    - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
-    - kubectl get secret elastic-apm --namespace=cdtn-secret --export -o yaml |
-      kubectl apply --namespace=${K8S_NAMESPACE} -f -
-#
 
 .deploy_stage: &deploy_stage
   stage: "Deploy"
