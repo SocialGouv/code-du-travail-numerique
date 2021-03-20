@@ -6,7 +6,6 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "sideEffects": false,
-  "type": "module",
   "files": [
     "lib"
   ],

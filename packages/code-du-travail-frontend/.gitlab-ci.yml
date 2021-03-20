@@ -6,6 +6,7 @@ include:
     ref: v20.7.14
   #
   - /packages/react-ui/.gitlab-ci.react-ui.yml
+  - /packages/react-fiche-service-public/.gitlab-ci.react-fiche-service-public.yml
 
 #
 #
@@ -78,6 +79,8 @@ Build:
       artifacts: true
     - job: 🚚 react ui
       artifacts: true
+    - job: 🚚 react-fiche-service-public
+      artifacts: true
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh skip && test -d ${PACKAGE_CWD}/.next && exit 0 || true
@@ -100,6 +103,8 @@ Lint:
   image: node:14.16-alpine3.13
   needs:
     - job: Install
+      artifacts: true
+    - job: 🚚 react ui
       artifacts: true
   script:
     - yarn lint

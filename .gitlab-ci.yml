@@ -123,6 +123,7 @@ stages:
     - .base_stage
   stage: Registration
   needs:
+    - job: 📦 react-fiche-service-public
     - job: 📦 react-ui
   trigger:
     include:
