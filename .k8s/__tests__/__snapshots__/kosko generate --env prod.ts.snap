@@ -137,6 +137,43 @@ spec:
         - cdtn.fabrique.social.gouv.fr
       secretName: api-crt
 ---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod2
+    app.gitlab.com/env.name: prod2
+  labels:
+    app: api
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: api
+  namespace: cdtn
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
