@@ -106,6 +106,8 @@ Lint:
       artifacts: true
     - job: 🚚 react ui
       artifacts: true
+    - job: 🚚 react-fiche-service-public
+      artifacts: true
   script:
     - yarn lint
 
