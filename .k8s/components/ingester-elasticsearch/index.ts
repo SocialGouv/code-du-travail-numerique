@@ -27,7 +27,7 @@ const ingester = () => {
 
   const job = new Job({
     metadata: {
-      name: `ingester-elasticsearch-${process.env.CI_JOB_ID}`,
+      name: "ingester-elasticsearch",
       namespace: envParams.namespace.name,
     },
     spec: {

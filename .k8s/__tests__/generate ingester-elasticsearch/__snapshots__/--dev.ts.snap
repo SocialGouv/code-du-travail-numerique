@@ -34,7 +34,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ingester-elasticsearch-424242
+  name: ingester-elasticsearch
   namespace: code-du-travail-numerique-85-master-dev2
 spec:
   backoffLimit: 0

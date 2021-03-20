@@ -10,7 +10,6 @@ test("kosko generate ingester-elasticsearch --dev", async () => {
       ...project("code-du-travail-numerique").dev,
       CDTN_ADMIN_ENDPOINT:
         "https://cdtn-admin.fabrique.social.gouv.fr/api/graphql",
-      CI_JOB_ID: "424242",
       RANCHER_PROJECT_ID: "c-bar:p-foo",
     })
   ).toMatchSnapshot();

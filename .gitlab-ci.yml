@@ -115,6 +115,21 @@ stages:
   needs:
     - job: 🛂 k8s test
     - job: 🎯 ingester-elasticsearch
+  before_script:
+    - kubectl config set-context --current --namespace=${CI_ENVIRONMENT_SLUG}
+    #
+    # Do nothing if the job already exits
+    # Exept if the job is triggered through the web interface.
+    - |
+      if [[ kubectl get job ingester-elasticsearch ]]; then
+        if [[ $CI_PIPELINE_SOURCE == "web" ]]; then
+          kubectl delete job ingester-elasticsearch || true
+        else
+          echo "Job found on ${CI_ENVIRONMENT_SLUG}"
+          echo "Skip !"
+          exit 0
+        fi
+      fi
   variables:
     # kosko options
     KOSKO_GENERATE_ARGS: _namespace ingester-elasticsearch --env dev
