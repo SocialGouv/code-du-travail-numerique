@@ -14,4 +14,4 @@ if (process.env.PRODUCTION) {
   ES_INDEX_PREFIX = "cdtn-prod";
 }
 
-export { ES_INDEX_PREFIX }
+export { ES_INDEX_PREFIX };;
