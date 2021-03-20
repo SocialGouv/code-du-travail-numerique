@@ -121,8 +121,7 @@ Test SDR data:
   image: alpine:3.13.2
   allow_failure: true
   script:
-    - apk add --no-cache jq wget
-    - apk add --no-cache jq=1.6-r0 wget=1.20.3-r0
+    - apk add --no-cache jq=1.6-r1 wget=1.21.1-r1
     - |-
       jq ".[].url" ./src/data/services-de-renseignement.json |
         xargs -n 1 wget --spider
