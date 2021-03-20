@@ -72,44 +72,7 @@ Create namespace:
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
-#
-#
-#
 
-.deploy_api_stage: &deploy_api_stage
-  <<: *deploy_stage
-  extends: .base_deploy_hpa_chart_stage
-  variables:
-    <<: *deploy_stage_variables
-    CONTEXT: api
-    PORT: 8000
-    VALUES_FILE: ./.k8s/api.values.yml
-    ENABLE_APM: "false"
-  before_script:
-    - source ./.gitlab-ci/env.sh
-    - HOST=${API_HOST}
-
-#
-
-Deploy @cdtn/api (dev):
-  extends:
-    - .deploy_api_stage
-    - .dev_stage
-  variables:
-    HELM_RENDER_ARGS: >-
-      --set autoscaling.enabled=false
-      --set deployment.resources.requests.memory=256Mi
-      --set deployment.resources.requests.cpu=.3m
-      --set ingress.annotations.certmanager\.k8s\.io/cluster-issuer=null
-      --set ingress.annotations.kubernetes\.io/tls-acme=null
-
-Deploy @cdtn/api (prod):
-  extends:
-    - .deploy_api_stage
-    - .prod_stage
-  variables:
-    ENABLE_APM: "false"
-#
 #
 #
 
