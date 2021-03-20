@@ -2,10 +2,10 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 
-import { dependencies, peerDependencies } from "./package.json";
+import { peerDependencies } from "./package.json";
 
 export default {
-  external: (id) => dependencies[id] || peerDependencies[id],
+  external: (id) => peerDependencies[id],
   input: "src/index.js",
   output: [
     {
