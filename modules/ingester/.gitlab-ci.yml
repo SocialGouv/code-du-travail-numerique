@@ -37,7 +37,6 @@ Install:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh has-changed
         --find-ignore "*/node_modules/*"
-        --verbose
         ${PACKAGE_CWD} || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip && {
