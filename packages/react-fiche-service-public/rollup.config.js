@@ -1,16 +1,12 @@
 import commonjs from "@rollup/plugin-commonjs";
-import resolve from "@rollup/plugin-node-resolve";
-import babel from "rollup-plugin-babel";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
+
+import { dependencies, peerDependencies } from "./package.json";
 
 export default {
-  external: [
-    "@socialgouv/cdtn-ui",
-    "react-uid",
-    "prop-types",
-    "react",
-    "react-dom",
-    "styled-components",
-  ],
+  external: (id) =>
+    dependencies[id] || peerDependencies[id] || id.startsWith("date-fns/"),
   input: "src/index.js",
   output: [
     {
@@ -22,7 +18,7 @@ export default {
       format: "esm",
     },
   ],
-  plugins: [babel(), resolve(), commonjs()],
+  plugins: [babel({ babelHelpers: "bundled" }), nodeResolve(), commonjs()],
   watch: {
     include: "src/**",
   },

@@ -2,8 +2,10 @@ import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { babel } from "@rollup/plugin-babel";
 
+import { dependencies, peerDependencies } from "./package.json";
+
 export default {
-  external: ["prop-types", "react", "react-dom", "styled-components"],
+  external: (id) => dependencies[id] || peerDependencies[id],
   input: "src/index.js",
   output: [
     {

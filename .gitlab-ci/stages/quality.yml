@@ -25,12 +25,6 @@
 #
 
 
-Lint socialgouv/react-fiche-service-public:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @socialgouv/react-fiche-service-public lint
-
 Lint Dockerfiles:
   <<: *quality_stage
   image: hadolint/hadolint
@@ -42,11 +36,6 @@ Lint Dockerfiles:
         hadolint ${i}
       done
 
-Test @socialgouv/react-fiche-service-public:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @socialgouv/react-fiche-service-public test
 
 Test @cdtn/data:
   <<: *quality_stage

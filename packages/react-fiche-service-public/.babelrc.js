@@ -1,21 +1,17 @@
 module.exports = {
-  "presets": [
+  presets: [
     "@babel/preset-react",
     [
       "@babel/preset-env",
       {
-        "modules": false
-      }
-    ]
+        modules: false,
+      },
+    ],
   ],
-  "plugins": [
-    "@babel/plugin-proposal-class-properties"
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        ["@babel/preset-env", { "modules": "cjs" }]
-      ]
-    }
-  }
-}
+  plugins: ["@babel/plugin-proposal-class-properties"],
+  env: {
+    test: {
+      presets: [["@babel/preset-env", { modules: "cjs" }]],
+    },
+  },
+};
