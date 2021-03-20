@@ -116,7 +116,7 @@ stages:
     - job: 🛂 k8s test
     - job: 🎯 ingester-elasticsearch
   before_script:
-    - kubectl config set-context --current --namespace=${CI_ENVIRONMENT_SLUG}
+    - kubectl config set-context --current --namespace=${KUBE_NAMESPACE}
     #
     # Do nothing if the job already exits
     # Exept if the job is triggered through the web interface.
