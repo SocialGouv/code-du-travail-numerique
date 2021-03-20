@@ -74,7 +74,7 @@ Build:
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
+    - job: 🚚 logger
       artifacts: true
   script:
     # NOTE(douglasduteil): ensure to have clean build
@@ -115,7 +115,7 @@ Test:
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
+    - job: 🚚 logger
       artifacts: true
     - job: Register elasticsearch image
   services:

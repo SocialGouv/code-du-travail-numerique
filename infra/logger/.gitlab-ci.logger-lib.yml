@@ -2,7 +2,7 @@
 #
 #
 
-lib logger:
+🚚 logger:
   stage: .pre
   image: alpine:3.13
   needs: []
