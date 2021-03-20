@@ -323,8 +323,8 @@ metadata:
   namespace: code-du-travail-numerique-85-preprod-dev2
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
-  IS_PRODUCTION_DEPLOYMENT: 'true'
   AZURE_CONTAINER: ctdn
+  IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
