@@ -1,0 +1,26 @@
+#
+#
+#
+
+🚚 react ui:
+  stage: .pre
+  image: alpine:3.13
+  needs: []
+  variables:
+    PACKAGE: react-ui
+    PACKAGE_CWD: packages/${PACKAGE}
+    #
+    CACHE_FALLBACK_KEY: ${PACKAGE}-Build-${CI_DEFAULT_BRANCH}
+  cache:
+    key: ${PACKAGE}-Build-${CI_COMMIT_REF_SLUG}
+    paths:
+      - ${PACKAGE_CWD}/lib
+    policy: pull
+  before_script:
+    - cd ${CI_PROJECT_DIR}
+  script:
+    - md5sum ${PACKAGE_CWD}/lib/*
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - ${PACKAGE_CWD}/lib

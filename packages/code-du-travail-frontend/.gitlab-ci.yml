@@ -4,6 +4,8 @@ include:
     file:
       - /base_register_docker_stage.yml
     ref: v20.7.14
+  #
+  - /packages/react-ui/.gitlab-ci.react-ui.yml
 
 #
 #
