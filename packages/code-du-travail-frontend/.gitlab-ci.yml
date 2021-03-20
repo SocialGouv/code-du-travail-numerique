@@ -67,14 +67,15 @@ Build:
     key: ${PACKAGE}-${CI_JOB_NAME}-${CI_COMMIT_REF_SLUG}
     paths:
       - ${PACKAGE_CWD}/.next
+    - - .next/cache/
   variables:
     CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
       artifacts: true
   script:
-    # NOTE(douglasduteil): ensure to have clean build
-    - rm -rf .next
+    # TODO(douglasduteil): ensure to have clean build
+    # - rm -rf .next
     - yarn build
   artifacts:
     expire_in: 1 week
