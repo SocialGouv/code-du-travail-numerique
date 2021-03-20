@@ -1,6 +1,6 @@
 import commonjs from "@rollup/plugin-commonjs";
-import resolve from "@rollup/plugin-node-resolve";
-import babel from "rollup-plugin-babel";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
 
 export default {
   external: ["prop-types", "react", "react-dom", "styled-components"],
@@ -15,7 +15,7 @@ export default {
       format: "esm",
     },
   ],
-  plugins: [babel(), resolve(), commonjs()],
+  plugins: [babel({ babelHelpers: "bundled" }), nodeResolve(), commonjs()],
   watch: {
     include: "src/**",
   },
