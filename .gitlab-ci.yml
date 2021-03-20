@@ -121,7 +121,7 @@ stages:
     # Do nothing if the job already exits
     # Exept if the job is triggered through the web interface.
     - |
-      if [[ kubectl get job ingester-elasticsearch ]]; then
+      if kubectl get job ingester-elasticsearch; then
         if [[ $CI_PIPELINE_SOURCE == "web" ]]; then
           kubectl delete job ingester-elasticsearch || true
         else
