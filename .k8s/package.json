@@ -22,6 +22,7 @@
     "@types/jest": "^26.0.20",
     "dotenv": "^8.2.0",
     "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
   },
   "license": "Apache-2.0",
@@ -29,8 +30,13 @@
     "generate": "kosko generate",
     "lint": "prettier __tests__ components environments utils",
     "lint:fix": "yarn lint --write",
-    "precommit": "yarn lint:fix",
+    "precommit": "lint-staged",
     "prepush": "yarn test",
     "test": "jest"
+  },
+  "lint-staged": {
+    "{__tests__,components,environments,utils}": [
+      "prettier --write"
+    ]
   }
 }
