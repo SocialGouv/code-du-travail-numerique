@@ -1,16 +1,12 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import ModelesDeCourriers from "../pages/modeles-de-courriers/index";
 
 describe("<ModelesDeCourriers />", () => {
   it("should render", () => {
     const data = [
       {
-        title: "Rupture de période d’essai à l'initiative de l'employeur",
-        source: "modeles_de_courriers",
-        slug: "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-        description:
-          "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
         breadcrumbs: [
           {
             label: "Embauche et contrat de travail",
@@ -25,13 +21,13 @@ describe("<ModelesDeCourriers />", () => {
             slug: "/themes/113-periode-dessai",
           },
         ],
+        description:
+          "Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
+        slug: "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+        source: "modeles_de_courriers",
+        title: "Rupture de période d’essai à l'initiative de l'employeur",
       },
       {
-        title: "Demande de rendez-vous en vue d’une rupture conventionnelle",
-        source: "modeles_de_courriers",
-        slug: "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-        description:
-          "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
         breadcrumbs: [
           {
             label: "Départ de l'entreprise",
@@ -46,6 +42,11 @@ describe("<ModelesDeCourriers />", () => {
             slug: "/themes/831-rupture-conventionnelle-individuelle",
           },
         ],
+        description:
+          "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
+        slug: "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+        source: "modeles_de_courriers",
+        title: "Demande de rendez-vous en vue d’une rupture conventionnelle",
       },
     ];
     const { container } = render(<ModelesDeCourriers data={data} />);
