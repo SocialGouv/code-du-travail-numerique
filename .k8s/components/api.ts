@@ -44,8 +44,16 @@ const manifests = create("api", {
       },
       env: [
         {
+          name: "ELASTIC_APM_ENVIRONMENT",
+          value: `cdtn-${process.env.CI_ENVIRONMENT_SLUG}`,
+        },
+        {
           name: "ES_INDEX_PREFIX",
           value: ES_INDEX_PREFIX,
+        },
+        {
+          name: "VERSION",
+          value: process.env.CI_COMMIT_REF_NAME,
         },
       ],
     },

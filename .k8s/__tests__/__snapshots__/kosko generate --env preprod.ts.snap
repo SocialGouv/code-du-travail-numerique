@@ -99,8 +99,12 @@ spec:
             initialDelaySeconds: 0
             timeoutSeconds: 15
           env:
+            - name: ELASTIC_APM_ENVIRONMENT
+              value: cdtn-preprod-dev2
             - name: ES_INDEX_PREFIX
               value: cdtn-preprod
+            - name: VERSION
+              value: v1.2.3
 ---
 apiVersion: v1
 kind: Service
