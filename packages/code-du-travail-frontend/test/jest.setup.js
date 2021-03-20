@@ -16,10 +16,4 @@ jest.mock("next/config", () => () => ({
   },
 }));
 
-/**
- * this removes the reach-ui warning that check modal css import
- */
-// eslint-disable-next-line import/no-extraneous-dependencies
-require("@reach/utils").checkStyles = jest.fn();
-
 window.scrollTo = jest.fn();
