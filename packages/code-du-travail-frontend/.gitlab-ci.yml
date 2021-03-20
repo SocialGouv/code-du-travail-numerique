@@ -40,8 +40,8 @@ Install:
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh has-changed
-        --find-ignore "*/node_modules/*"
-        ${PACKAGE_CWD} || true
+      --find-ignore "*/node_modules/*"
+      ${PACKAGE_CWD} || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip && {
         rm -rf .cache/yarn "${PACKAGE_CWD}/node_modules" node_modules;
@@ -69,7 +69,7 @@ Build:
     key: ${PACKAGE}-${CI_JOB_NAME}-${CI_COMMIT_REF_SLUG}
     paths:
       - ${PACKAGE_CWD}/.next
-    - - .next/cache/
+      - .next/cache/
   variables:
     CI_DEBUG_TRACE: "true"
   needs:
@@ -119,7 +119,7 @@ Test:
 
 Test SDR data:
   stage: build
-  needs:  []
+  needs: []
   image: alpine:3.13.2
   allow_failure: true
   script:
