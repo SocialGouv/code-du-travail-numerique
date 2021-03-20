@@ -24,11 +24,6 @@
 
 #
 
-Lint socialgouv/react-ui:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @socialgouv/cdtn-ui lint
 
 Lint socialgouv/react-fiche-service-public:
   <<: *quality_stage
@@ -46,12 +41,6 @@ Lint Dockerfiles:
         echo "[+] hadolint ${i}"
         hadolint ${i}
       done
-
-Test @socialgouv/cdtn-ui:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @socialgouv/cdtn-ui test
 
 Test @socialgouv/react-fiche-service-public:
   <<: *quality_stage

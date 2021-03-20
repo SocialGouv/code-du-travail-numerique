@@ -66,6 +66,17 @@ stages:
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
 
+📦 react-ui:
+  stage: Prepare
+  extends:
+    - .base_stage
+  trigger:
+    include:
+      - local: /packages/react-ui/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+
 🧱 ingester:
   stage: Code Quality
   needs:
@@ -80,7 +91,6 @@ stages:
 🎯 ingester-elasticsearch:
   stage: Registration
   needs:
-    - job: 📦 logger
     - job: 🧱 ingester
   trigger:
     include:
@@ -91,7 +101,8 @@ stages:
 
 🎯 www:
   stage: Registration
-  needs: []
+  needs:
+    - job: 📦 react-ui
   trigger:
     include:
       - local: /packages/code-du-travail-frontend/.gitlab-ci.yml
