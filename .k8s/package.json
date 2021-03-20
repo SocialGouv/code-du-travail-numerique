@@ -38,7 +38,7 @@
     "test": "jest"
   },
   "lint-staged": {
-    "{__tests__,components,environments,utils}/**/*.{js,ts,ya?ml}": [
+    "{__tests__,components,environments,utils}/**/*.{js,ts,yml,yaml}": [
       "prettier --write"
     ]
   }
