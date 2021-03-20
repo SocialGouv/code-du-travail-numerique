@@ -65,7 +65,6 @@ stages:
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
-    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
 
 🧱 ingester:
   stage: Code Quality
@@ -77,7 +76,6 @@ stages:
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
-    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
 
 🎯 ingester-elasticsearch:
   stage: Registration
@@ -90,7 +88,16 @@ stages:
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
-    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
+
+🎯 www:
+  stage: Registration
+  needs: []
+  trigger:
+    include:
+      - local: /packages/code-du-travail-frontend/.gitlab-ci.yml
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
 
 🎯 api:
   stage: Registration
@@ -102,7 +109,6 @@ stages:
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
-    # MONOREPO_CACHE_FOLDER: $MONOREPO_CACHE_FOLDER
 
 🚀 ingester-elasticsearch (dev):
   stage: Deploy
@@ -150,6 +156,7 @@ stages:
   needs:
     - job: 🛂 k8s test
     - job: 🎯 api
+    - job: 🎯 www
   variables:
     # kosko options
     KOSKO_GENERATE_ARGS: --env dev

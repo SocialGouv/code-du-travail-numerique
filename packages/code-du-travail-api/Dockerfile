@@ -7,6 +7,6 @@ RUN yarn add elastic-apm-node --production
 USER node
 
 COPY ./dist /app/dist
-COPY ./package.json /app/package.json
+COPY ./package.json /app/
 
 ENTRYPOINT ["yarn", "start"]

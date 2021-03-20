@@ -36,18 +36,6 @@ Lint socialgouv/react-fiche-service-public:
   script:
     - yarn workspace @socialgouv/react-fiche-service-public lint
 
-Lint @cdtn/frontend:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/frontend lint
-
-Lint @cdtn/data:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/data lint
-
 Lint Dockerfiles:
   <<: *quality_stage
   image: hadolint/hadolint
@@ -58,12 +46,6 @@ Lint Dockerfiles:
         echo "[+] hadolint ${i}"
         hadolint ${i}
       done
-
-Test @cdtn/frontend:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/frontend test
 
 Test @socialgouv/cdtn-ui:
   <<: *quality_stage
@@ -83,13 +65,3 @@ Test @cdtn/data:
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
-
-Test @cdtn/frontend SDR data:
-  <<: *quality_stage
-  image: alpine:3.10
-  allow_failure: true
-  before_script:
-    - apk add --no-cache jq=1.6-r0 wget=1.20.3-r0
-  script:
-    - |-
-      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider

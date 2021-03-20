@@ -1,13 +1,12 @@
-ARG TAG_BASE_IMAGE=master
-ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
-ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
-
-# hadolint ignore=DL3006
-FROM ${BASE_IMAGE}
+FROM node:14.16-alpine3.13
 
 WORKDIR /app
 
 USER node
 
+COPY ./.next /app/.next
+COPY ./package.json /app/
+
 ENV NEXT_TELEMETRY_DISABLED=1
-ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]
+
+ENTRYPOINT ["yarn", "start"]
