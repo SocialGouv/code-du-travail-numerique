@@ -97,7 +97,7 @@ Install production:
       -type l \
       -not -path "*/.bin/*" \
       \
-      -exec bash -c 'pkg=$(readlink -f "{}") && rm {} && mv $pkg {}' \;
+      -exec sh -c 'pkg=$(readlink -f "{}") && rm {} && mv $pkg {}' \;
   artifacts:
     expire_in: 1 week
     paths:
