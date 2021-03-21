@@ -91,7 +91,8 @@ Install production:
 
     # HACK(douglasduteil): replace the links with the original
     # inspired by https://stackoverflow.com/questions/7167424/replace-all-symlinks-with-original
-    - for link in $(find node_modules/@socialgouv -maxdepth 1 -type l )
+    - |
+      for link in $(find node_modules/@socialgouv -maxdepth 1 -type l )
       do
         loc="$(dirname "$link")"
         dir="$(readlink -e "$link")"
