@@ -102,7 +102,7 @@ async function getKoaServer({ nextApp }) {
   if (IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       const isProdUrl = ctx.host === PROD_HOSTNAME;
-      const isHealthCheckUrl = ctx.path === "/health";
+      const isHealthCheckUrl = ctx.path === "/healthz";
       if (!isProdUrl && !isHealthCheckUrl) {
         const productionUrl = `https://${PROD_HOSTNAME}${ctx.originalUrl}`;
         if (process.env.NODE_ENV !== "test") {
@@ -123,7 +123,7 @@ async function getKoaServer({ nextApp }) {
     });
   }
 
-  router.get("/health", async (ctx) => {
+  router.get("/healthz", async (ctx) => {
     ctx.body = { status: "up and running" };
   });
 

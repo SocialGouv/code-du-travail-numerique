@@ -52,8 +52,8 @@ describe("/IS_PRODUCTION_DEPLOYMENT=true", () => {
     );
     process.env.NODE_ENV = "test";
   });
-  it("should return health probe", async () => {
-    const response = await request(app.callback()).get("/health");
+  it("should return healthz probe", async () => {
+    const response = await request(app.callback()).get("/healthz");
     expect(response.status).toBe(200);
     expect(response.body.status).toEqual("up and running");
   });
@@ -79,8 +79,8 @@ describe("/IS_PRODUCTION_DEPLOYMENT=false", () => {
       "noindex, nofollow, nosnippet"
     );
   });
-  it("should return health probe", async () => {
-    const response = await request(app.callback()).get("/health");
+  it("should return healthz probe", async () => {
+    const response = await request(app.callback()).get("/healthz");
     expect(response.body.status).toEqual("up and running");
   });
 });
@@ -96,7 +96,7 @@ describe("/NODE_ENV=production", () => {
     process.env.NODE_ENV = undefined;
   });
   it("should set production CSP", async () => {
-    const response = await request(app.callback()).get("/health");
+    const response = await request(app.callback()).get("/healthz");
     expect(response.status).toBe(200);
     expect(response.headers["content-security-policy"]).toMatchSnapshot();
   });
@@ -113,7 +113,7 @@ describe("/NODE_ENV=*", () => {
     process.env.NODE_ENV = undefined;
   });
   it("should set dev CSP", async () => {
-    const response = await request(app.callback()).get("/health");
+    const response = await request(app.callback()).get("/healthz");
     expect(response.status).toBe(200);
     expect(
       response.headers["content-security-policy-report-only"]
