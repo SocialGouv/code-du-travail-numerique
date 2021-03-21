@@ -91,6 +91,8 @@ Lint:
   needs:
     - job: Install
       artifacts: true
+    - job: 🚚 react-ui
+      artifacts: true
   script:
     - yarn lint
 
@@ -103,6 +105,8 @@ Test:
   image: node:14.16-alpine3.13
   needs:
     - job: Install
+      artifacts: true
+    - job: 🚚 react-ui
       artifacts: true
   script:
     - yarn test
