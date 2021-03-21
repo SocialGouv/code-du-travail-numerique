@@ -65,7 +65,7 @@ Build:
       artifacts: true
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
-    - sh ./.gitlab-ci/monorepo.sh skip && test -d ${PACKAGE_CWD}/lib && exit 0 || true
+    - sh ./.gitlab-ci/monorepo.sh skip && exit 0 || true
     - cd "${PACKAGE_CWD}"
   script:
     # NOTE(douglasduteil): ensure to have clean build
