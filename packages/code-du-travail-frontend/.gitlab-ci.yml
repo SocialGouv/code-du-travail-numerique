@@ -196,4 +196,7 @@ Register:
     - sh ./.gitlab-ci/monorepo.sh skip && exit 0 || true
   variables:
     CONTEXT: .
+    DOCKER_BUILD_ARGS: >-
+      --shm-size 512M
+      -f ${PACKAGE_CWD}/Dockerfile
     IMAGE_NAME: $CI_REGISTRY_IMAGE/www
