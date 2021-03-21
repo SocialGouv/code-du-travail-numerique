@@ -197,5 +197,5 @@ Register:
   variables:
     CONTEXT: .
     DOCKER_BUILD_ARGS: >-
-      -f code-du-travail-frontend/Dockerfile
+      -f packages/code-du-travail-frontend/Dockerfile
     IMAGE_NAME: $CI_REGISTRY_IMAGE/www
