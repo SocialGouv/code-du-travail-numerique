@@ -15,7 +15,6 @@ USER node
 # The node_modules to copy below can be generated with :
 # $ yarn exec yarn-workspace-focus-install -- --cwd packages/code-du-travail-frontend --production
 COPY ./node_modules /node_modules
-COPY ./packages/code-du-travail-frontend/node_modules /app/node_modules
 
 COPY ./packages/code-du-travail-frontend/public /app/public
 COPY ./packages/code-du-travail-frontend/server /app/server
