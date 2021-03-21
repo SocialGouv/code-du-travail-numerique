@@ -157,4 +157,5 @@ Register:
     - cat Dockerfile
     - ls -la
   variables:
+    CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE/www
