@@ -126,6 +126,8 @@ Test:
   needs:
     - job: Install
       artifacts: true
+    - job: 🚚 react-ui
+      artifacts: true
   script:
     - yarn test --coverage
 
