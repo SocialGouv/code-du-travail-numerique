@@ -69,8 +69,6 @@ Build:
     key: ${PACKAGE}-${CI_JOB_NAME}-${CI_COMMIT_REF_SLUG}
     paths:
       - ${PACKAGE_CWD}/dist
-  variables:
-    CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
       artifacts: true

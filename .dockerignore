@@ -1,10 +1,12 @@
-*.md
-.git
-**/venv
-**/dist
-**/build
-**/node_modules
-**/.next
-**/.docz
-**/coverage
-**/fiches_service_public/data
+# NOTE(douglasduteil): whilelist the docker monorepo vision
+# This docker context should be used by the packages/code-du-travail-frontend
+# No other files should be.
+*
+
+# NOTE(douglasduteil): whilelist the docker monorepo vision
+# List your packages/code-du-travail-frontend COPY here plz...
+!node_modules
+!packages/code-du-travail-frontend/.next
+!packages/code-du-travail-frontend/node_modules
+!packages/code-du-travail-frontend/package.json
+!packages/code-du-travail-frontend/server
