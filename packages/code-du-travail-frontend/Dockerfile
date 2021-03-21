@@ -17,8 +17,9 @@ USER node
 COPY ./node_modules /node_modules
 COPY ./packages/code-du-travail-frontend/node_modules /app/node_modules
 
-COPY ./packages/code-du-travail-frontend/.next /app/.next
+COPY ./packages/code-du-travail-frontend/public /app/public
 COPY ./packages/code-du-travail-frontend/server /app/server
+COPY ./packages/code-du-travail-frontend/.next /app/.next
 COPY ./packages/code-du-travail-frontend/package.json /app/
 
 ENV NEXT_TELEMETRY_DISABLED=1
