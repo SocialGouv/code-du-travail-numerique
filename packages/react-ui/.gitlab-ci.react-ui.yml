@@ -2,7 +2,7 @@
 #
 #
 
-🚚 react ui:
+🚚 react-ui:
   stage: .pre
   image: alpine:3.13
   needs: []
