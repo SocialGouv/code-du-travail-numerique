@@ -95,7 +95,7 @@ Install production:
       for link in $(find node_modules/@socialgouv -maxdepth 1 -type l )
       do
         loc="$(dirname "$link")"
-        dir="$(readlink -e "$link")"
+        dir="$(readlink -f "$link")"
         rm $link
         echo "mv $dir $link"
         mv $dir $link
