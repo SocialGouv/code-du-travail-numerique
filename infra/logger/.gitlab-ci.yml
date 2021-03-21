@@ -35,7 +35,6 @@ Install:
         ${PACKAGE_CWD} || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip &&
-      test -d node_modules && {
         rm -rf .cache/yarn "${PACKAGE_CWD}/node_modules" node_modules;
         exit 0;
       } || true
