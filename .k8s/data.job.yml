@@ -22,18 +22,25 @@ spec:
                 secretKeyRef:
                   name: elasticsearch-cloud-data
                   key: url
-            - name: ELASTICSEARCH_USER
+            - name: ELASTICSEARCH_DATA_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: elasticsearch-cloud-data
-                  key: user
-            - name: ELASTICSEARCH_PWD
+                  key: ELASTICSEARCH_DATA_TOKEN
+            - name: ES_LOGS
               valueFrom:
                 secretKeyRef:
-                  name: elasticsearch-cloud-data
-                  key: password
+                  name: monolog
+                  key: ES_LOGS
+            - name: ES_LOGS_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: monolog
+                  key: ES_LOGS_TOKEN
             - name: ES_INDEX_PREFIX
               value: "${ES_INDEX_PREFIX}"
+            - name: NLP_URL
+              value: "${NLP_URL}"
           resources:
             requests:
               cpu: 5m

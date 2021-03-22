@@ -62,7 +62,7 @@ Production:
 
 .update_elasticloud: &update_elasticloud
   stage: "Deploy"
-  image:  node:14.16-alpine3.13
+  image: node:14.16-alpine3.13
   dependencies: []
   variables:
     ELASTICSEARCH_URL: "$ELASTICSEARCH_URL"
@@ -88,9 +88,7 @@ Production:
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
   script:
-    - yarn workspace @cdt/data ingest
-
-
+    - yarn workspace @cdt/data start
 
 Update preprod data:
   extends:
@@ -105,7 +103,6 @@ Update preprod data:
     name: preprod-dev2
   variables:
     ES_INDEX_PREFIX: cdtn-preprod
-
 
 Update prod data:
   extends:
