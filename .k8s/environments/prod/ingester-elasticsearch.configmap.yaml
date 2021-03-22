@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ingester-elasticsearch
+data:
+  CDTN_ADMIN_ENDPOINT: "https://cdtn-admin.fabrique.social.gouv.fr/api/graphql"
+  NLP_URL: "https://serving-ml.fabrique.social.gouv.fr"
+  NODE_ENV: "production"

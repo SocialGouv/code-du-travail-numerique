@@ -19,7 +19,6 @@ include:
   - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/manual.yml
   - /.gitlab-ci/stages/scan.yml
-  - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
   - /.gitlab-ci/stages/e2e.yml
   - /.gitlab-ci/stages/storage.yml
@@ -71,3 +70,43 @@ ingester:
     strategy: depend
   variables:
     PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+
+🚀 Review:
+  extends:
+    - .base_deploy_kosko_stage
+  stage: Deploy
+  rules:
+    - if: "$PRODUCTION || $RELEASE || $CI_COMMIT_TAG"
+      when: never
+    - when: on_success
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}-dev2
+    url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
+  variables:
+    KOSKO_GENERATE_ARGS: --env dev
+
+🚀 Preprod:
+  extends:
+    - .base_deploy_kosko_stage
+  stage: Deploy
+  rules:
+    - if: "$PRODUCTION || $RELEASE"
+      when: never
+    - if: "$CI_COMMIT_TAG"
+  environment:
+    name: preprod-dev2
+    url: https://preprod-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
+  variables:
+    KOSKO_GENERATE_ARGS: --env preprod
+
+🚀 Production:
+  extends:
+    - .base_deploy_kosko_stage
+  stage: Deploy
+  rules:
+    - if: "$PRODUCTION && $CI_COMMIT_TAG"
+  environment:
+    name: prod2
+    url: https://${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
+  variables:
+    KOSKO_GENERATE_ARGS: --env prod
