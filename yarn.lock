@@ -2626,25 +2626,11 @@
     esm "^3.2.25"
     winston "^3.3.3"
 
-<<<<<<< HEAD
 "@socialgouv/contributions-data-types@^3.12.0":
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/contributions-data-types/-/contributions-data-types-3.14.0.tgz#61cfd61b0e9708637309ec9755b2afddf56132f2"
   integrity sha512-YNw+LWy5T1l6oaT3tAa2IDSqQpN9sDhqjaiPQ636ECsC6mEa8ALl9m1dNvkDSAg5KztiUSYedm/hL5fCv7/nDQ==
 
-||||||| parent of f6d8228d (refactor(data): replace dump / populate with ingest)
-"@socialgouv/datafiller-data@^2.17.0":
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/datafiller-data/-/datafiller-data-2.17.0.tgz#49c7b634eb1f768f0394caad44a18313c8da3201"
-  integrity sha512-mKdQVDdQ883vlRukqrLkhjLl1mWLw/bOgWJlYWc0Wt2Q+tYsjAmnQUgddeUsXjpLg4pIhr1Duhhv0Nu6JG9lPQ==
-  dependencies:
-    node-fetch "^2.6.1"
-    p-pipe "^3.1.0"
-    remark "^12.0.1"
-    remark-html "^13.0.1"
-
-=======
->>>>>>> f6d8228d (refactor(data): replace dump / populate with ingest)
 "@socialgouv/eslint-config-react@^1.59.0":
   version "1.59.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-1.59.0.tgz#c50f3fdb226770fc0c8fb3de74f206be3bf2ae7d"
