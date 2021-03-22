@@ -23,7 +23,6 @@
     "populate-dev": "node -r esm indexing/index.js",
     "populate": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/populate/index.js",
     "populate-suggest": "node -r esm indexing/suggestion",
-    "ingest": "node -r esm indexing/ingest",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "test": "jest"

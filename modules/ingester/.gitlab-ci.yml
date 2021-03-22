@@ -1,3 +1,8 @@
+---
+
+include:
+  - /infra/logger/.gitlab-ci.logger-lib.yml
+
 #
 #
 #
@@ -5,7 +10,7 @@
 variables:
   #
   PACKAGE: ingester
-  PACKAGE_CWD: ${CI_PROJECT_DIR}/modules/${PACKAGE}
+  PACKAGE_CWD: modules/${PACKAGE}
   #
   CACHE_FALLBACK_KEY: ${PACKAGE}-${CI_JOB_NAME}-${CI_DEFAULT_BRANCH}
   MONOREPO_CACHE_FOLDER: ${CI_PROJECT_DIR}/.cache/monorepo
@@ -19,7 +24,7 @@ before_script:
   - cd "${PACKAGE_CWD}"
 
 Install:
-  stage: build
+  stage: .pre
   image: node:14.16-alpine3.13
   needs: []
   cache:
@@ -32,7 +37,6 @@ Install:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh has-changed
         --find-ignore "*/node_modules/*"
-        --verbose
         ${PACKAGE_CWD} || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip && {
@@ -41,36 +45,14 @@ Install:
       } || true
   script:
     - yarn config set cache-folder ${CI_PROJECT_DIR}/.cache/yarn
-    - yarn global add @socialgouv/yarn-workspace-focus-install --cwd ${PACKAGE_CWD}
-    - yarn exec yarn-workspace-focus-install -- --cwd ${PACKAGE_CWD}
+    - yarn global add @socialgouv/yarn-workspace-focus-install
+    - yarn exec yarn-workspace-focus-install -- --cwd ${PACKAGE_CWD} -- --frozen-lockfile --prefer-offline
   artifacts:
     expire_in: 1 week
     paths:
       - ${MONOREPO_CACHE_FOLDER}/skip
       - ${PACKAGE_CWD}/node_modules
       - node_modules
-
-lib logger:
-  stage: build
-  image: node:14.16-alpine3.13
-  needs: []
-  cache:
-    key:
-      files:
-        - yarn.lock
-      prefix: logger-Build
-    paths:
-      - infra/logger/lib
-    policy: pull
-  before_script:
-    - cd ${CI_PROJECT_DIR}
-  script:
-    - md5sum infra/logger/lib/*
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - infra/logger/lib
-
 
 #
 #
@@ -83,12 +65,10 @@ Build:
     key: ${PACKAGE}-${CI_JOB_NAME}-${CI_COMMIT_REF_SLUG}
     paths:
       - ${PACKAGE_CWD}/lib
-  variables:
-    CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
+    - job: 🚚 logger
       artifacts: true
   script:
     # NOTE(douglasduteil): ensure to have clean build
@@ -109,7 +89,7 @@ Lint:
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
+    - job: 🚚 logger
       artifacts: true
   script:
     - yarn lint
@@ -124,7 +104,7 @@ Test:
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
+    - job: 🚚 logger
       artifacts: true
   script:
     - yarn test
