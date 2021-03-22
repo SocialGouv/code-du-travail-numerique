@@ -1,4 +1,5 @@
 import { Client } from "@elastic/elasticsearch";
+import { logger } from "@socialgouv/cdtn-logger";
 import { Queries } from "@socialgouv/cdtn-monolog";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
@@ -9,21 +10,16 @@ const ES_LOGS_TOKEN = process.env.ES_LOGS_TOKEN;
 
 if (!ES_LOGS || !ES_LOGS_TOKEN) {
   if (process.env.NODE_ENV != "test") {
-    console.error(
+    logger.warning(
       `Missing env variable for accessing Monolog Elastic Search logs : ${
         ES_LOGS ? "" : "ES_LOGS"
       } ${
         ES_LOGS_TOKEN ? "" : "ES_LOGS_TOKEN"
       }, Covisites won't be available in related items.`
-      // logger.error(
-      //   `Missing env variable for accessing Monolog Elastic Search logs : ${
-      //     ES_LOGS ? "" : "ES_LOGS"
-      //   } ${ES_LOGS_TOKEN ? "" : "ES_LOGS_TOKEN"}`
-      // );
     );
   }
 } else {
-  console.error(`Accessing Monolog Elastic Search logs on ${ES_LOGS}`);
+  logger.info(`Accessing Monolog Elastic Search logs on ${ES_LOGS}`);
 }
 
 const esClientConfig = {

@@ -45,9 +45,9 @@ spec:
               value: "${CDTN_ADMIN_ENDPOINT}"
           resources:
             requests:
-              cpu: 5m
+              cpu: 300m
               memory: 100Mi
             limits:
-              cpu: 300m
+              cpu: 1
               memory: 2Gi
       restartPolicy: Never

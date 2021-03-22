@@ -1,3 +1,4 @@
+import { logger } from "@socialgouv/cdtn-logger";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
 
@@ -98,10 +99,12 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
     concurrency: 10,
     pageSize: 300,
   });
+  logger.debug(`start fetching ${source} docs`);
   const docs = await Promise.all(pDocuments);
   const documents = docs.flatMap((docs) =>
     docs.map((doc) => toElastic(doc, getBreadcrumbs))
   );
+  logger.debug(`fetched ${documents} ${source} docs`);
   return documents;
 }
 
