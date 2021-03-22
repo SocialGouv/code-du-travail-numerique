@@ -1107,14 +1107,14 @@ exports[`<Layout /> should render 1`] = `
             <header
               class="c27"
             >
-              <h3
+              <strong
                 class="c28"
               >
                 <div
                   class="c29"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c30 c31"

@@ -1356,14 +1356,14 @@ exports[`<Term /> should render 1`] = `
             <header
               class="c35"
             >
-              <h3
+              <strong
                 class="c36"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c37 c38"

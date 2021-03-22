@@ -2515,14 +2515,14 @@ exports[`<Outils /> should render 1`] = `
             <header
               class="c50"
             >
-              <h3
+              <strong
                 class="c51"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c52 c53"

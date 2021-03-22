@@ -1529,14 +1529,14 @@ exports[`<Glossaire /> should render 1`] = `
             <header
               class="c39"
             >
-              <h3
+              <strong
                 class="c40"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c41 c42"

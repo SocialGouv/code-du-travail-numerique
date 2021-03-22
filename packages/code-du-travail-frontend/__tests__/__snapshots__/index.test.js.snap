@@ -2833,14 +2833,14 @@ exports[`<Home /> should render 1`] = `
             <header
               class="c62"
             >
-              <h3
+              <strong
                 class="c63"
               >
                 <div
                   class="c64"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c65 c66"

@@ -1713,14 +1713,14 @@ exports[`<FicheSP /> should render 1`] = `
             <header
               class="c47"
             >
-              <h3
+              <strong
                 class="c48"
               >
                 <div
                   class="c49"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c50 c51"

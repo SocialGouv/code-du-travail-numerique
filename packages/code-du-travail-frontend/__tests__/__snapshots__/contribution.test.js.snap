@@ -2856,14 +2856,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               <header
                 class="c87"
               >
-                <h3
+                <strong
                   class="c88"
                 >
                   <div
                     class="c89"
                   />
                   Besoin de plus d’informations ?
-                </h3>
+                </strong>
               </header>
               <div
                 class="c90 c91"
@@ -6029,14 +6029,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               <header
                 class="c87"
               >
-                <h3
+                <strong
                   class="c88"
                 >
                   <div
                     class="c89"
                   />
                   Besoin de plus d’informations ?
-                </h3>
+                </strong>
               </header>
               <div
                 class="c90 c91"

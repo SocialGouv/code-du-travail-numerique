@@ -77,6 +77,7 @@ class SearchPage extends React.Component {
               <Container>
                 <StyledWrapper variant="light">
                   <Heading
+                    as="strong"
                     shift={theme.spacings.xmedium}
                     variant="primary"
                     stripe="left"

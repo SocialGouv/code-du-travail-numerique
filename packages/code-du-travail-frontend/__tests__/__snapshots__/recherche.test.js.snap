@@ -1304,14 +1304,14 @@ exports[`<Recherche /> should render 1`] = `
           <div
             class="c27 c28"
           >
-            <h3
+            <strong
               class="c29"
             >
               <div
                 class="c30"
               />
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
-            </h3>
+            </strong>
             <div
               class="c31"
             >
@@ -1346,14 +1346,14 @@ exports[`<Recherche /> should render 1`] = `
             <header
               class="c37"
             >
-              <h3
+              <strong
                 class="c38"
               >
                 <div
                   class="c18"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c39 c40"
