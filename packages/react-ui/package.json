@@ -33,7 +33,7 @@
     "react-accessible-accordion": "^3.3.4",
     "react-feather": "^2.0.9",
     "react-tabs": "^3.2.1",
-    "use-onclickoutside": "^0.3.1"
+    "use-onclickoutside": "^0.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
