@@ -104,7 +104,7 @@ export async function getDocumentBySource(source, getBreadcrumbs) {
   const documents = docs.flatMap((docs) =>
     docs.map((doc) => toElastic(doc, getBreadcrumbs))
   );
-  logger.debug(`fetched ${documents} ${source} docs`);
+  logger.debug(`fetched ${documents.length} ${source} docs`);
   return documents;
 }
 
