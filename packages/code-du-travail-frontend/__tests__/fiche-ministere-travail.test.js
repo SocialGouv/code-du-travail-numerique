@@ -1,12 +1,12 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import FicheMT from "../pages/fiche-ministere-travail/[slug]";
 
 describe("<FicheMT />", () => {
   it("should render", () => {
     const data = {
       _source: {
-        title: "Fiche MT test",
         breadcrumbs: [
           {
             label: "Santé, sécurité et conditions de travail",
@@ -24,6 +24,7 @@ describe("<FicheMT />", () => {
             title: "1) Visite d’information et de prévention : pour qui ?",
           },
         ],
+        title: "Fiche MT test",
         url: "fiche.travail.url",
       },
     };

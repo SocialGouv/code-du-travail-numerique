@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { render } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
 import { theme } from "@socialgouv/cdtn-ui";
+import { render } from "@testing-library/react";
+import PropTypes from "prop-types";
+import React from "react";
+import { ThemeProvider } from "styled-components";
 
 const AllTheProviders = ({ children }) => {
   return (

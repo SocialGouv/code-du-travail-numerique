@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import Stats from "../pages/stats";
 
 const data = {
@@ -7,10 +8,10 @@ const data = {
     negative: 2,
     positive: 3,
   },
+  nbDocuments: 16,
   nbPageViews: 10,
   nbSearches: 4,
   nbVisits: 20,
-  nbDocuments: 16,
 };
 
 describe("<Stats />", () => {

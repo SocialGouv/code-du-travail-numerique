@@ -1,5 +1,6 @@
-import React from "react";
 import { render } from "@testing-library/react";
+import React from "react";
+
 import CookiePolicy from "../pages/politique-confidentialite";
 
 describe("<CookiePolicy />", () => {
