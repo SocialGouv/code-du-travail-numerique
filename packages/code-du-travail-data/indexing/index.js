@@ -109,6 +109,7 @@ async function main() {
     );
     let covisitDocuments = await Promise.all(pDocs);
     await monologQueue.onIdle();
+    logger.debug("covisit fetched");
     // add NLP vectors
     if (!excludeSources.includes(source)) {
       const pDocs = covisitDocuments.map((doc) =>
@@ -116,6 +117,7 @@ async function main() {
       );
       covisitDocuments = await Promise.all(pDocs);
       await nlpQueue.onIdle();
+      logger.debug("nlp vector fetched");
     }
     await indexDocumentsBatched({
       client,
