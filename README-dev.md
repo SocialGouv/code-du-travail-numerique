@@ -33,13 +33,13 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 
 #### Packages
 
-| Package                                                              | description                                        |
-| -------------------------------------------------------------------- | -------------------------------------------------- |
-| [code-du-travail-api](./packages/code-du-travail-api)                | NodeJS koa API                                     |
-| [code-du-travail-data](./packages/code-du-travail-data)              | Datasets and Elastic indexing scripts and mappings |
-| [code-du-travail-frontend](./packages/code-du-travail-frontend)      | Next.js frontend application                       |
-| [react-ui](./packages/react-ui)                                      | React components and styleguide                    |
-| [react-fiches-service-public](./packages/react-fiche-service-public) | React components for fiches service-public.fr      |
+| Package                                                              | description                                   |
+| -------------------------------------------------------------------- | --------------------------------------------- |
+| [code-du-travail-api](./packages/code-du-travail-api)                | NodeJS koa API                                |
+| [code-du-travail-data](./packages/code-du-travail-data)              | Elastic indexing scripts                      |
+| [code-du-travail-frontend](./packages/code-du-travail-frontend)      | Next.js frontend application                  |
+| [react-ui](./packages/react-ui)                                      | React components and styleguide               |
+| [react-fiches-service-public](./packages/react-fiche-service-public) | React components for fiches service-public.fr |
 
 #### Frontend
 
@@ -71,15 +71,7 @@ Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.o
 cp docker-compose.override.dev.yml docker-compose.override.yml
 ```
 
-To fill your ElasticSearch, you'll need to get the latest dataset dump from our registry :
-
-```sh
-$ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
-$ docker run \
-        --rm \
-        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dist/dump.data.json \
-        >! packages/code-du-travail-data/dist/dump.data.json
-```
+To fill your ElasticSearch, you'll need to a local cdtn-admin endpoint :
 
 Then you can launch services using docker-compose
 
@@ -88,7 +80,7 @@ Then you can launch services using docker-compose
 $ docker-compose up elasticsearch
 
 # Launch indexing script : fill ElasticSearch
-$ yarn workspace @cdt/data populate-dev
+$ yarn workspace @cdt/data start:dev
 
 # Start API in dev mode : runs on http://localhost:1337
 yarn workspace @cdt/api dev
@@ -98,38 +90,19 @@ yarn workspace @cdt/api dev
 
 In this section you will find commands that you may need during your work
 
-Start a local TF Serve NLP instance
-[Look at this repo](https://github.com/SocialGouv/serving-ml)
-
 Create a dump with semantic vectors (you will need a NLP service available)
 (if NLP_URL env is not provide it will create a dump without semantic vectors)
 
 ```sh
 # Dump only documents
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
+CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data start:dev
 mas
 # Dump with semantic vectors
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data dump-dev
+CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data start:dev
 
 # For dev purpose,you can generate a fast Dump
 # without semantic vectors nor glossary words.
-DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data dump-dev
-```
-
-Populate elasticsearch index using a local dump
-
-```
-yarn workspace @cdt/data populate-dev
-```
-
-Download a dump from master data image
-
-```
-docker run \
-   --rm --entrypoint cat \
-   registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$(git rev-parse origin/master) \
-   /app/dist/dump.data.json \
-   >! packages/code-du-travail-data/dist/dump.data.json
+DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data start:dev
 ```
 
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
