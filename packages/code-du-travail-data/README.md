@@ -10,7 +10,7 @@ Pour chaque document, il possible aussi de rajouter une représentation vectorie
 
 ```sh
 # Ingerer les données dans elacticsearch avec leur representation vectorielle (title_vector)
-$ NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data start:dev
+NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data start:dev
 ```
 
 Les données sont rangées dans 2 index elasticsearch

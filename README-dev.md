@@ -77,10 +77,10 @@ Then you can launch services using docker-compose
 
 ```sh
 # start elasticsearch
-$ docker-compose up elasticsearch
+docker-compose up elasticsearch
 
 # Launch indexing script : fill ElasticSearch
-$ yarn workspace @cdt/data start:dev
+yarn workspace @cdt/data start:dev
 
 # Start API in dev mode : runs on http://localhost:1337
 yarn workspace @cdt/api dev
