@@ -14,11 +14,10 @@ metadata:
   namespace: cdtn
 spec:
   rules:
-  - host: www.code.travail.gouv.fr
-  - host: code.travail.fabrique.social.gouv.fr
+    - host: www.code.travail.gouv.fr
+    - host: code.travail.fabrique.social.gouv.fr
   tls:
-  - hosts:
-    - www.code.travail.gouv.fr
-    - code.travail.fabrique.social.gouv.fr
-    secretName: redirect-crt
-
+    - hosts:
+        - www.code.travail.gouv.fr
+        - code.travail.fabrique.social.gouv.fr
+      secretName: redirect-crt
