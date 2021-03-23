@@ -11,6 +11,9 @@ Test on deployed branch:
       # Don't run when updating Elasticloud data
       - $UPDATE_ES_INDEX
 
+  when: delayed
+  start_in: 30 minutes
+
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
   cache:

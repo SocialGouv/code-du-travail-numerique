@@ -14,18 +14,15 @@
     }
   },
   "scripts": {
-    "build": "yarn build:populate",
-    "build:populate": "ncc build ./indexing/index.js -o dist/populate",
+    "build": "ncc build ./indexing/index.js -o dist",
     "check-slugs": "DISABLE_GLOSSARY=true  node -r esm indexing/slugChecker",
     "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
-    "dump-dev": "node -r esm dump.js > ./dist/dump.data.json",
-    "lint": "eslint ./indexing/*",
-    "populate-dev": "node -r esm indexing/index.js",
-    "populate": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/populate/index.js",
+    "start": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/index.js",
+    "start:dev": "node -r esm indexing/ingest",
     "populate-suggest": "node -r esm indexing/suggestion",
-    "ingest": "node -r esm indexing/ingest",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
+    "lint": "eslint ./indexing/*",
     "test": "jest"
   },
   "repository": {

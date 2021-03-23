@@ -62,6 +62,8 @@ k8s test:
     strategy: depend
 
 ingester:
+  extends:
+    - .base_stage
   stage: Code Quality
   needs:
     - job: "@socialgouv/cdtn-logger"
