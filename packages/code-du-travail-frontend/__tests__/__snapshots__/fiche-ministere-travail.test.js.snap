@@ -2539,14 +2539,14 @@ exports[`<FicheMT /> should render 1`] = `
             <header
               class="c77"
             >
-              <h3
+              <strong
                 class="c78"
               >
                 <div
                   class="c79"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c80 c81"

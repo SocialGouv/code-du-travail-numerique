@@ -1585,14 +1585,14 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <header
               class="c48"
             >
-              <h3
+              <strong
                 class="c49"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c50 c51"

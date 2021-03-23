@@ -4861,14 +4861,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <header
               class="c94"
             >
-              <h3
+              <strong
                 class="c95"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c30 c96"

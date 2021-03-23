@@ -1523,14 +1523,14 @@ exports[`<Stats /> should render 1`] = `
             <header
               class="c40"
             >
-              <h3
+              <strong
                 class="c41"
               >
                 <div
                   class="c26"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c42 c43"

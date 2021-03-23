@@ -34,7 +34,7 @@ const Footer = () => {
       <StyledFooter>
         <ServiceSection>
           <Container>
-            <Title as="h3" isFirst stripe="top">
+            <Title as="strong" isFirst stripe="top">
               Besoin de plus d’informations&nbsp;?
             </Title>
             <StyledContainer narrow noPadding>

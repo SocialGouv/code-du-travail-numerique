@@ -1417,14 +1417,14 @@ exports[`<CookiePolicy /> should render 1`] = `
             <header
               class="c36"
             >
-              <h3
+              <strong
                 class="c37"
               >
                 <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?
-              </h3>
+              </strong>
             </header>
             <div
               class="c38 c39"
