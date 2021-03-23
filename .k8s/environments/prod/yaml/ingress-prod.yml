@@ -39,9 +39,8 @@ metadata:
   namespace: cdtn
 spec:
   rules:
-  - host: www.code.travail.gouv.fr
+    - host: www.code.travail.gouv.fr
   tls:
-  - hosts:
-    - www.code.travail.gouv.fr
-    secretName: redirect-crt
-
+    - hosts:
+        - www.code.travail.gouv.fr
+      secretName: redirect-crt

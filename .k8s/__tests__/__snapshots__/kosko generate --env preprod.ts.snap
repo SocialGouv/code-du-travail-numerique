@@ -1,6 +1,430 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`kosko generate --preprod 1`] = `
-"42
+"---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    field.cattle.io/creatorId: gitlab
+    field.cattle.io/projectId: c-bar:p-foo
+    git/branch: v1.2.3
+    git/remote: >-
+      https://gitlab-ci-token:[MASKED]@gitlab.factory.social.gouv.fr/SocialGouv/code-du-travail-numerique.git
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    azure-pg-admin-user: code-du-travail-numerique
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: code-du-travail-numerique-85-preprod-dev2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: api
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-code-du-travail-numerique
+        app.gitlab.com/env: preprod-dev2
+        app.gitlab.com/env.name: preprod-dev2
+      labels:
+        app: api
+        application: v1-2-3-code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    spec:
+      containers:
+        - image: >-
+            registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:1.2.3
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 15
+          name: api
+          ports:
+            - containerPort: 1337
+              name: http
+          readinessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: 100m
+              memory: 320Mi
+            requests:
+              cpu: 100m
+              memory: 320Mi
+          startupProbe:
+            failureThreshold: 12
+            httpGet:
+              path: /api/v1/version
+              port: http
+            periodSeconds: 5
+            initialDelaySeconds: 0
+            timeoutSeconds: 15
+          env:
+            - name: ELASTIC_APM_ENVIRONMENT
+              value: cdtn-preprod-dev2
+            - name: ES_INDEX_PREFIX
+              value: cdtn-preprod
+            - name: VERSION
+              value: v1.2.3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 1337
+  selector:
+    app: api
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: api
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  rules:
+    - host: api-preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: api
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - api-preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr
+      secretName: wildcard-crt
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: api
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: www
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: www
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-code-du-travail-numerique
+        app.gitlab.com/env: preprod-dev2
+        app.gitlab.com/env.name: preprod-dev2
+      labels:
+        app: www
+        application: v1-2-3-code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    spec:
+      containers:
+        - image: >-
+            registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/www:1.2.3
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 5
+            timeoutSeconds: 5
+          name: www
+          ports:
+            - containerPort: 3000
+              name: http
+          readinessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 0
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 200m
+              memory: 560Mi
+            requests:
+              cpu: 200m
+              memory: 560Mi
+          startupProbe:
+            failureThreshold: 12
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 5
+          env:
+            - name: API_URL
+              value: >-
+                https://api-preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr/api/v1
+            - name: COMMIT
+              value: 0123456789abcdefghijklmnopqrstuvwxyz0123
+            - name: FRONTEND_HOST
+              value: >-
+                https://preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr
+            - name: VERSION
+              value: v1.2.3
+          envFrom:
+            - configMapRef:
+                name: www-configmap
+      initContainers:
+        - args:
+            - http://api
+          image: >-
+            registry.gitlab.factory.social.gouv.fr/socialgouv/docker/wait-for-http:5.0.1
+          imagePullPolicy: Always
+          name: wait-for-www
+          resources:
+            limits:
+              cpu: 20m
+              memory: 32Mi
+            requests:
+              cpu: 5m
+              memory: 16Mi
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: www-configmap
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  namespace: code-du-travail-numerique-85-preprod-dev2
+data:
+  AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
+  AZURE_CONTAINER: ctdn
+  IS_PRODUCTION_DEPLOYMENT: 'false'
+  NODE_ENV: production
+  PIWIK_SITE_ID: '3'
+  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+  PROD_HOSTNAME: code.travail.gouv.fr
+  SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: www
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+  selector:
+    app: www
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: www
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  rules:
+    - host: preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: www
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - preprod-code-du-travail-numerique.dev2.fabrique.social.gouv.fr
+      secretName: wildcard-crt
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev2
+    app.gitlab.com/env.name: preprod-dev2
+  labels:
+    app: www
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-preprod-dev2
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: www
 "
 `;
