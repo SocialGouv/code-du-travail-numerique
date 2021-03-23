@@ -87,7 +87,7 @@ Production:
   before_script:
     - yarn config set cache-folder $CI_PROJECT_DIR/.cache/yarn
     - yarn install --frozen-lockfile --prefer-offline
-    - yarn workspace @cdtn/logger build
+    - yarn workspace @socialgouv/cdtn-logger build
     - yarn workspace @cdtn/ingester build
     - yarn workspace @cdt/data build
   script:
