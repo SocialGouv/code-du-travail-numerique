@@ -23,8 +23,8 @@ Make sure you're using NodeJS 12+.
 
 ```sh
 # Install all the packages
-$ yarn
-$ yarn build
+yarn
+yarn build
 ```
 
 Note: environment file can be created using [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`, default to `dev`

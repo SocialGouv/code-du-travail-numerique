@@ -6,24 +6,24 @@ L'image docker DATA contient un dump des documents ainsi que les vecteurs associ
 
 L'ensemble des documents et données utilisés par l'api est stocké dans une base elasticsearch et peut être mis à jour en lançant le script d'indexation sans avoir à re-déployer l'api ou le frontend.
 
-Pour chaque document, il possible aussi de rajouter une représentation vectorielle qui servira à la recherche semantique. Pour cela, il faut que la variable d'environnement NLP_URL soit fournie et pointe vers une instance du service NLP. Reportez-vous au [README.md du projet serving-ml](https://github.com/SocialGouv/serving-ml) pour voir comment démarrer une instance locale du service. Une instance est également accessible à cette URL : https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/
+Pour chaque document, il possible aussi de rajouter une représentation vectorielle qui servira à la recherche semantique. Pour cela, il faut que la variable d'environnement NLP_URL soit fournie et pointe vers une instance du service NLP. Reportez-vous au [README.md du projet serving-ml](https://github.com/SocialGouv/serving-ml) pour voir comment démarrer une instance locale du service. Une instance est également accessible à cette URL : <https://preprod-serving-ml.dev2.fabrique.social.gouv.fr/>
 
 ```sh
 # Ingerer les données dans elacticsearch avec leur representation vectorielle (title_vector)
 NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data start:dev
 ```
 
-Les données sont rangées dans 2 index elasticsearch
+Les données sont rangées dans 2 index elasticsearch :
 
-- un index avec les documents
-- un index avec les suggestions.
+-   un index avec les documents
+-   un index avec les suggestions.
 
 ## Related
 
-- [fiches-vdd](https://github.com/SocialGouv/fiches-vdd)
-- [legi-data](https://github.com/SocialGouv/legi-data)
-- [kali-data](https://github.com/SocialGouv/kali-data)
-- [contributions-data](https://github.com/SocialGouv/contributions-data)
+-   [fiches-vdd](https://github.com/SocialGouv/fiches-vdd)
+-   [legi-data](https://github.com/SocialGouv/legi-data)
+-   [kali-data](https://github.com/SocialGouv/kali-data)
+-   [contributions-data](https://github.com/SocialGouv/contributions-data)
 
 ## Schéma
 
