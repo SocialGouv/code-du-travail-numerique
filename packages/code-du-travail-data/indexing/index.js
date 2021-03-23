@@ -45,20 +45,16 @@ export async function addVector(data) {
     await vectorizeDocument(title, data.text)
       .then((title_vector) => {
         if (title_vector.message) {
-          logger.error(
-            `[addVector] error fetching ${data.title}`,
-            title_vector.message
-          );
           throw new Error(
-            `[addVector] error fetching ${data.title} - ${data.message}`
+            `[addVector] error fetching ${data.title} - ${title_vector.message}`
           );
         }
         data.title_vector = title_vector;
       })
       .catch((err) => {
         logger.error(
-          `[addVector] catch error fetching ${data.title}`,
-          err.message
+          `[addVector] catch error fetching ${data.title} ${err}`,
+          err
         );
       });
   }
