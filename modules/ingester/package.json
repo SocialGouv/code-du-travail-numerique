@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.11.0",
-    "@socialgouv/cdtn-logger": "^4.45.0",
+    "@socialgouv/cdtn-elasticsearch": "^1.0.0-alpha.10",
+    "@socialgouv/cdtn-logger": "^1.0.0-alpha.10",
     "@socialgouv/cdtn-monolog": "1.1.2",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "@socialgouv/contributions-data-types": "^3.12.0",
@@ -28,7 +29,6 @@
     "@babel/cli": "^7.12.17",
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
-    "@socialgouv/cdtn-elasticsearch": "^1.0.0-alpha.1",
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
     "@socialgouv/kali-data-types": "^2.55.0",

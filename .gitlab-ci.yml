@@ -34,7 +34,6 @@ stages:
 
 #
 
-
 .base_stage:
   rules:
     - if: $PRODUCTION
@@ -52,21 +51,10 @@ k8s test:
     - .base_kosko_k8s_test
     - .base_stage
 
-"@socialgouv/cdtn-logger":
-  stage: Prepare
-  extends:
-    - .base_stage
-  trigger:
-    include:
-      - local: /infra/logger/.gitlab-ci.yml
-    strategy: depend
-
 ingester:
   extends:
     - .base_stage
   stage: Code Quality
-  needs:
-    - job: "@socialgouv/cdtn-logger"
   trigger:
     include:
       - local: /modules/ingester/.gitlab-ci.yml
