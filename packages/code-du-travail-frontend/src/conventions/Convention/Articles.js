@@ -17,7 +17,7 @@ import { trackAccordionPanelState } from "./utils";
 const { spacings } = theme;
 
 function getArticleUrl({ id, containerId }) {
-  return `https://beta.legifrance.gouv.fr/conv_coll/id/${id}/?idConteneur=${containerId}`;
+  return `https://legifrance.gouv.fr/conv_coll/id/${id}/?idConteneur=${containerId}`;
 }
 
 function Articles({ blocs, containerId, convention }) {
