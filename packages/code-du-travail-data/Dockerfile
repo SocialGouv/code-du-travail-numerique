@@ -6,11 +6,6 @@ ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE} as cdtn-base-image
 
-ARG NLP_URL
-ENV NLP_URL=$NLP_URL
-
-RUN yarn workspace @cdt/data dump-dev
-
 FROM node:14.16-alpine3.13
 
 WORKDIR /app
@@ -20,8 +15,7 @@ COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY ./dataset/suggestions.txt ./dataset/suggestions.txt
 
 ENV SUGGEST_FILE=./dataset/suggestions.txt
-ENV DUMP_PATH=../dump.data.json
 
 USER node
 
-ENTRYPOINT ["yarn", "populate"]
+ENTRYPOINT ["yarn", "start"]

@@ -35,7 +35,9 @@ async function callTFServe(body) {
     const json = await response.json();
     return json["outputs"];
   } else {
-    throw new Error(response.statusText);
+    throw new Error(
+      `callTFServe ${response.statusText} - data: ${response.status}`
+    );
   }
 }
 

@@ -11,7 +11,6 @@ include:
     file: /base_deploy_hpa_chart_stage.yml
     ref: v9.1.2
 
-
 #
 
 Create namespace:
@@ -31,6 +30,8 @@ Create namespace:
     #
     # Copy elasticsearch-creds
     - kubectl get secret elasticsearch-cloud-data --namespace=cdtn-secret --export -o yaml |
+      kubectl apply --namespace=${K8S_NAMESPACE} -f -
+    - kubectl get secret monolog --namespace=cdtn-secret --export -o yaml |
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
     - kubectl get secret elasticsearch-cloud-api --namespace=cdtn-secret --export -o yaml |
       kubectl apply --namespace=${K8S_NAMESPACE} -f -
@@ -55,8 +56,8 @@ Create namespace:
       - $PRODUCTION
   except:
     variables:
-    # Don't run when updating Elasticloud data
-    - $UPDATE_ES_INDEX
+      # Don't run when updating Elasticloud data
+      - $UPDATE_ES_INDEX
 
 #
 
