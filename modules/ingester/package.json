@@ -16,6 +16,7 @@
     "memoizee": "^0.4.15",
     "node-fetch": "^2.6.1",
     "p-queue": "^6.6.2",
+    "p-retry": "^4.4.0",
     "rehype-raw": "^5.1.0",
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^9.0.0",
@@ -46,7 +47,7 @@
     "url": "https://github.com/SocialGouv/cdtn-admin.git"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --ignore \"src/**/*.test.js\"",
     "lint": "eslint src",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
@@ -61,5 +62,5 @@
     "rootDir": "src"
   },
   "sideEffects": false,
-  "typings": "lib/index.d.ts"
+  "typings": "index.d.ts"
 }
