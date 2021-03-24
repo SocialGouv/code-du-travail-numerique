@@ -27,35 +27,41 @@
 Lint @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @cdt/api lint
 
 Lint socialgouv/react-ui:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @socialgouv/cdtn-ui lint
 
 Lint socialgouv/react-fiche-service-public:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @socialgouv/react-fiche-service-public lint
 
 Lint @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @cdt/frontend lint
 
 Lint @cdtn/data:
   <<: *quality_stage
   <<: *master_based_stage
+  allow_failure: true
   script:
     - yarn workspace @cdt/data lint
 
 Lint Dockerfiles:
   <<: *quality_stage
+  allow_failure: true
   image: hadolint/hadolint
   script:
     - |-
