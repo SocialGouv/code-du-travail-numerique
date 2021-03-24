@@ -31,9 +31,9 @@ Install:
   before_script:
     - wget -qO ./.gitlab-ci/monorepo.sh https://raw.githubusercontent.com/SocialGouv/gitlab-ci-yml/master/monorepo.sh
     - sh ./.gitlab-ci/monorepo.sh has-changed
-        --find-ignore "*/node_modules/*"
-        --verbose
-        ${PACKAGE_CWD} || true
+      --find-ignore "*/node_modules/*"
+      --verbose
+      ${PACKAGE_CWD} || true
     - |
       sh ./.gitlab-ci/monorepo.sh skip && {
         rm -rf .cache/yarn "${PACKAGE_CWD}/node_modules" node_modules;
@@ -50,28 +50,6 @@ Install:
       - ${PACKAGE_CWD}/node_modules
       - node_modules
 
-lib logger:
-  stage: build
-  image: node:14.16-alpine3.13
-  needs: []
-  cache:
-    key:
-      files:
-        - yarn.lock
-      prefix: logger-Build
-    paths:
-      - infra/logger/lib
-    policy: pull
-  before_script:
-    - cd ${CI_PROJECT_DIR}
-  script:
-    - md5sum infra/logger/lib/*
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - infra/logger/lib
-
-
 #
 #
 #
@@ -87,8 +65,6 @@ Build:
     CI_DEBUG_TRACE: "true"
   needs:
     - job: Install
-      artifacts: true
-    - job: lib logger
       artifacts: true
   script:
     # NOTE(douglasduteil): ensure to have clean build
@@ -109,8 +85,6 @@ Lint:
   needs:
     - job: Install
       artifacts: true
-    - job: lib logger
-      artifacts: true
   script:
     - yarn lint
 
@@ -123,8 +97,6 @@ Test:
   image: node:14.16-alpine3.13
   needs:
     - job: Install
-      artifacts: true
-    - job: lib logger
       artifacts: true
   script:
     - yarn test

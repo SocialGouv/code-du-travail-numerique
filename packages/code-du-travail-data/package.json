@@ -37,8 +37,8 @@
   "dependencies": {
     "@cdtn/ingester": "1.0.0-alpha.1",
     "@elastic/elasticsearch": "^7.11.0",
-    "@socialgouv/cdtn-elasticsearch": "1.0.0-alpha.1",
-    "@socialgouv/cdtn-logger": "^4.45.0",
+    "@socialgouv/cdtn-elasticsearch": "^1.0.0-alpha.10",
+    "@socialgouv/cdtn-logger": "^1.0.0-alpha.10",
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "esm": "^3.2.25",
