@@ -40,7 +40,7 @@
       "infra/*",
       "modules/*",
       "packages/*",
-      "packages/code-du-travail-data/dataset/*"
+      "packages/code-du-travail-data/*"
     ]
   },
   "engines": {
