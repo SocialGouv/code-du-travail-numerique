@@ -9,7 +9,6 @@ Snyk docker scan:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      - $UPDATE_ES_INDEX
   dependencies: []
   when: manual
   needs:

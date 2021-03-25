@@ -54,10 +54,6 @@ Create namespace:
   only:
     variables:
       - $PRODUCTION
-  except:
-    variables:
-      # Don't run when updating Elasticloud data
-      - $UPDATE_ES_INDEX
 
 #
 
@@ -68,8 +64,6 @@ Create namespace:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      # Don't run when updating Elasticloud data
-      - $UPDATE_ES_INDEX
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
@@ -153,46 +147,6 @@ Deploy @cdtn/frontend extra ingress(prod):
     - cat ./.k8s/ingress-prod.yml | envsubst | kubectl apply -f -
   before_script:
     - source ./.gitlab-ci/env.sh
-
 #
 #
 #
-
-.deploy-data: &deploy_data
-  <<: *deploy_stage
-  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/kubectl:0.20.0
-  variables:
-    <<: *deploy_stage_variables
-    CONTEXT: data
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
-  script:
-    - source ./.gitlab-ci/env.sh
-    - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
-    #
-    - kubectl delete job ${CONTEXT} || true
-    - cat ./.k8s/data.job.yml | envsubst | kubectl apply -f -
-
-#
-# Temporary disabled
-# Update Elasticsearch Index:
-#   extends:
-#     - .deploy-data
-#   stage: "Update ES data"
-#   environment:
-#     name: prod2
-#   only:
-#     refs:
-#       - master
-#     variables:
-#       - $CI_COMMIT_MESSAGE =~ /update @socialgouv data packages/
-#   variables:
-#     PRODUCTION: "true"
-
-Create Elasticsearch Index (dev):
-  <<: *deploy_data
-  <<: *dev_stage
-
-Create Elasticsearch Index (prod):
-  <<: *deploy_data
-  <<: *prod_stage

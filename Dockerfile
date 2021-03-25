@@ -15,9 +15,6 @@ COPY ./scripts /app/scripts
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
-# NOTE(douglasduteil): temporally listing future cdtn-admin packages
-COPY ./modules/ingester/package.json /app/modules/ingester/package.json
-
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
 COPY ./packages/code-du-travail-data/dataset/simulateurs/package.json /app/packages/code-du-travail-data/dataset/simulateurs/package.json
@@ -40,9 +37,6 @@ RUN yarn --frozen-lockfile && yarn cache clean
 
 # fake CI env
 ENV CI=true
-
-# NOTE(douglasduteil): temporally listing future cdtn-admin packages
-COPY ./modules /app/modules
 
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages

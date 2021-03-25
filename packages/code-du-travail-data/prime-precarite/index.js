@@ -7,13 +7,13 @@ const SPREADSHEET_TAB = 1;
 const getCells = promisify(GoogleSpreadsheets.cells);
 
 const csvColumns = {
-  contractType: 2,
-  idcc: 3,
-  hasConventionalProvision: 5,
   allowBonus: 10,
-  endMessage: 11,
-  rate: 12,
   bonusLabel: 14,
+  contractType: 2,
+  endMessage: 11,
+  hasConventionalProvision: 5,
+  idcc: 3,
+  rate: 12,
   refLabel: 16,
   refUrl: 17,
 };
@@ -71,7 +71,7 @@ async function main() {
 }
 
 if (module === require.main) {
-  main().catch(error => {
+  main().catch((error) => {
     console.error(error);
   });
 }

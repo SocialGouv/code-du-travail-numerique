@@ -21,7 +21,7 @@ export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
 export K8S_NAMESPACE="${PROJECT}-feature-${BRANCH_HASH}"
 export AZURE_CONTAINER="cdtn-dev"
 if [ -z ${ES_INDEX_PREFIX+x} ]; then
-  export ES_INDEX_PREFIX="cdtn-feature-${BRANCH_HASH}"
+  export ES_INDEX_PREFIX="cdtn-master"
 fi
 
 #
