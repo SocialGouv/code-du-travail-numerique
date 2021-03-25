@@ -14,7 +14,6 @@ Snyk docker scan:
   needs:
     - Register api image
     - Register frontend image
-    - Register data image
   allow_failure: true
   before_script:
     - source .gitlab-ci/env.sh
