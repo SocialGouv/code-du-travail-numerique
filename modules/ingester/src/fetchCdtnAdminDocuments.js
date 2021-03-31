@@ -56,6 +56,7 @@ const gqlRequestBySourceWithRelations = (source, offset = 0, limit = null) =>
         slug
         source
         title
+        url
         document
       }
     }
