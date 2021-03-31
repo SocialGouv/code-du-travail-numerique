@@ -72,4 +72,3 @@ spec:
             do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
             [ "$retry" -eq "-1" ] && exit 1
       restartPolicy: Never
-      init
