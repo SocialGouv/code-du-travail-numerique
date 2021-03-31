@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.45.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.0...v4.45.1) (2021-03-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.105.0 ([#3378](https://github.com/SocialGouv/code-du-travail-numerique/issues/3378)) ([8bc37a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8bc37a0403c30f1b5e8982e3c183655b762b4ea9))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.106.0 ([#3397](https://github.com/SocialGouv/code-du-travail-numerique/issues/3397)) ([94e588f](https://github.com/SocialGouv/code-du-travail-numerique/commit/94e588f4d4cde0e7dc05832bca9796f6bdde6979))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.110.0 ([#3399](https://github.com/SocialGouv/code-du-travail-numerique/issues/3399)) ([69e7030](https://github.com/SocialGouv/code-du-travail-numerique/commit/69e7030f82c3ff26f9b24479e12aa3654de41c0d))
+* **frontend:** don't use beta for legifrance url ([#3395](https://github.com/SocialGouv/code-du-travail-numerique/issues/3395)) ([6b38da1](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b38da178289988434fbe2c12d22f4f12b235150))
+* **frontend:** fix external tools url ([#3402](https://github.com/SocialGouv/code-du-travail-numerique/issues/3402)) ([4697d10](https://github.com/SocialGouv/code-du-travail-numerique/commit/4697d10184908fd3ed381a13d0b15ebfffb21799))
+* **frontend:** use strong over h3 ([#3393](https://github.com/SocialGouv/code-du-travail-numerique/issues/3393)) ([0e935ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/0e935ce32532cee397487efa2bbcb88fe1f43c4a))
+
+
+### Reverts
+
+* fix(deps): update all dependencies ([#3339](https://github.com/SocialGouv/code-du-travail-numerique/issues/3339)) ([6822e08](https://github.com/SocialGouv/code-du-travail-numerique/commit/6822e08fccfb574a40399918e2390945a5d36c2c))
+
+
+
+
+
 # [4.45.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.44.1...v4.45.0) (2021-03-18)
 
 
