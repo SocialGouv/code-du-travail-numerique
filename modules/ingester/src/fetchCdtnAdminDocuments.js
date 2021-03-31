@@ -218,5 +218,6 @@ function toRefs(contentRelations, getBreadcrumbs) {
       slug,
       source,
       title,
+      url: document.url,
     }));
 }

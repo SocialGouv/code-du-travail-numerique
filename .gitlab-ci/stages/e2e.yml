@@ -12,7 +12,7 @@ Test on deployed branch:
       - $UPDATE_ES_INDEX
 
   when: delayed
-  start_in: 30 minutes
+  start_in: 20 minutes
 
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
