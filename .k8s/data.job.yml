@@ -50,4 +50,26 @@ spec:
             limits:
               cpu: 1000m
               memory: 2Gi
+      initContainers:
+        - name: wait-for-nlp
+          image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
+          resources:
+            requests:
+              cpu: 5m
+              memory: 16Mi
+            limits:
+              cpu: 50m
+              memory: 32Mi
+          command:
+            - sh
+            - -c
+            - |
+            echo "connecting to ${NLP_URL}";
+            retry=60;
+            while
+              ! curl -sS "${NLP_URL}/v1/models/sentqam" &&
+              [[ $(( retry-- )) -gt 0 ]];
+            do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
+            [ "$retry" -eq "-1" ] && exit 1
       restartPolicy: Never
+      init
