@@ -56,7 +56,6 @@ const gqlRequestBySourceWithRelations = (source, offset = 0, limit = null) =>
         slug
         source
         title
-        url
         document
       }
     }
@@ -212,13 +211,13 @@ function toRefs(contentRelations, getBreadcrumbs) {
       ({ position: positionA }, { position: positionB }) =>
         positionA - positionB
     )
-    .map(({ content: { cdtnId, document, slug, source, title, url } }) => ({
+    .map(({ content: { cdtnId, document, slug, source, title } }) => ({
       breadcrumbs: getBreadcrumbs(cdtnId),
       cdtnId,
       description: document.description,
       slug,
       source,
       title,
-      url,
+      url: document.url,
     }));
 }
