@@ -64,11 +64,11 @@ spec:
             - sh
             - -c
             - |
-              echo "connecting to ${NLP_URL}";
+              echo "connecting to ${NLP_URL}/v1/models/sentqam";
               retry=60;
               while
                 ! curl -sS "${NLP_URL}/v1/models/sentqam" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
-              [ "$retry" -eq "-1" ] && exit 1
+              [[ $(( retry )) -lt 1 ]] && exit 1;
       restartPolicy: Never
