@@ -1,5 +1,10 @@
 exports.config = {
   output: "./output",
+  rerun: {
+    // run 3 times until 1st success
+    minSuccess: 1,
+    maxReruns: 3,
+  },
   helpers: {
     Puppeteer: {
       chrome: {
