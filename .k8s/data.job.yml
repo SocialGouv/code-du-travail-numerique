@@ -71,4 +71,7 @@ spec:
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for nlp api to be ready ($retry)" ; sleep 5 ; done ;
               [[ $(( retry )) -lt 1 ]] && exit 1;
+
+              echo Ready;
+
       restartPolicy: Never
