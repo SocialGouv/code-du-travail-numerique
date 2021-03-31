@@ -89,9 +89,7 @@ Alors("je vois que bouton {string} est désactivé", (text) => {
 });
 
 Alors("le lien {string} pointe sur {string}", (text, url) => {
-  I.seeElement(
-    `//a[starts-with(., "${text}") and contains(./@href, "${url}")]`
-  );
+  I.seeElement(`//a[contains(., '${text}') and contains(@href, '${url}')]`);
 });
 
 Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
