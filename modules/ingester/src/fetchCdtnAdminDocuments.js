@@ -211,12 +211,13 @@ function toRefs(contentRelations, getBreadcrumbs) {
       ({ position: positionA }, { position: positionB }) =>
         positionA - positionB
     )
-    .map(({ content: { cdtnId, document, slug, source, title } }) => ({
+    .map(({ content: { cdtnId, document, slug, source, title, url } }) => ({
       breadcrumbs: getBreadcrumbs(cdtnId),
       cdtnId,
       description: document.description,
       slug,
       source,
       title,
+      url,
     }));
 }
