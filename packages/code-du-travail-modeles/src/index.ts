@@ -1,0 +1,1 @@
+/* Générateur des modèles sociales */

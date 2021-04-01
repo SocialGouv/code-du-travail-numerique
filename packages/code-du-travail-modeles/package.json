@@ -1,0 +1,22 @@
+{
+  "name": "@cdtn/modeles-social",
+  "version": "0.0.1",
+  "description": "Les règles publicodes des simulateurs de code du travail numérique",
+  "main": "./dist/index.js",
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
+    "directory": "packages/code-du-travail-modeles"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {},
+  "scripts": {
+    "build": "tsc"
+  }
+}
