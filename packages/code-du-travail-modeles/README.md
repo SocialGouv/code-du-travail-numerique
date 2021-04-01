@@ -2,7 +2,7 @@
 
 Ce package contient les modèles [publicodes](https://publi.codes/) pour les simulateurs du code du travail numérique.
 
-# Organisation
+## Organisation
 
 Le package contient les modèles publicodes dans le dossier 'src/modeles' dans le format YAML. 
 Le découpage des modèles n'est pas encore finalisé. 
