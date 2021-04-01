@@ -35,7 +35,7 @@ export function TextSearch({ containerId, convention }) {
       </Title>
       <Form
         target="_blank"
-        action="https://beta.legifrance.gouv.fr/search/kali#kali"
+        action="https://legifrance.gouv.fr/search/kali#kali"
         onSubmit={trackSearch}
       >
         <Box>

@@ -5588,7 +5588,7 @@ exports[`<Convention /> renders 1`] = `
     </p>
   </header>
   <form
-    action="https://beta.legifrance.gouv.fr/search/kali#kali"
+    action="https://legifrance.gouv.fr/search/kali#kali"
     class="c43"
     target="_blank"
   >
