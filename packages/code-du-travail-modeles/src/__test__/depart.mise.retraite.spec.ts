@@ -1,8 +1,7 @@
 import Engine from "publicodes";
-import { MergeModeles } from "../utils/mergeModeles";
+import { mergeModels } from "../utils/merger";
 
-const modeles = new MergeModeles().merge();
-const engine = new Engine(modeles);
+const engine = new Engine(mergeModels());
 
 test.each`
   seniority | expectedNotice
@@ -27,7 +26,6 @@ test.each`
     expect(result.unit?.numerators).toEqual(["mois"]);
   }
 );
-
 
 test.each`
   seniority | expectedNotice
