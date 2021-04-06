@@ -12,6 +12,7 @@ import { Layout } from "../../src/layout/Layout";
 import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
+import { SimulateurPreavisRetraite } from "../../src/outils/DureePreavisRetraite";
 import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
@@ -30,6 +31,7 @@ const toolsBySlug = {
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
+  "preavis-retraite": SimulateurPreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
 };
 
