@@ -19,6 +19,12 @@ rules:
     ]
   ]
 
+settings:
+  import/resolver:
+    node: {
+      "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    }
+
 overrides:
   - files: ["*.test.js"]
     env:
