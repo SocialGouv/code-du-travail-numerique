@@ -27,7 +27,6 @@ COPY ./packages/sources/package.json /app/packages/sources/package.json
 COPY ./packages/slugify/package.json /app/packages/slugify/package.json
 
 
-
 # PERF(douglasduteil): put packages that are more likely to change in order here
 # By order of "more likely to change" the frontend, the api, etc... are changing
 # more often than the dataset.
