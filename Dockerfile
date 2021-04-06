@@ -27,6 +27,7 @@ COPY ./packages/sources/package.json /app/packages/sources/package.json
 COPY ./packages/slugify/package.json /app/packages/slugify/package.json
 
 
+
 # PERF(douglasduteil): put packages that are more likely to change in order here
 # By order of "more likely to change" the frontend, the api, etc... are changing
 # more often than the dataset.
@@ -34,6 +35,7 @@ COPY ./packages/slugify/package.json /app/packages/slugify/package.json
 COPY ./packages/react-ui/package.json /app/packages/react-ui/package.json
 COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
+COPY ./packages/code-du-travail-modeles/package.json /app/packages/code-du-travail-modeles-social/package.json
 
 ARG IS_DOCKER=true
 RUN yarn --frozen-lockfile && yarn cache clean
