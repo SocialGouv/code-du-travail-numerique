@@ -15,6 +15,7 @@
     "description": "Estimez simplement le montant de l’indemnité de licenciement",
     "action": "Estimer",
     "date": "18/10/2018",
+    "enable": true,
     "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773"
   },
   {
@@ -32,6 +33,7 @@
     "description": "Calculez la durée de préavis à respecter en cas de démission",
     "action": "Calculer",
     "date": "24/07/2019",
+    "enable": true,
     "id": "0a7cbd40-fe2f-4c21-9799-88564a45f30a"
   },
   {
@@ -60,6 +62,7 @@
     "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
     "action": "Estimer",
     "date": "14/03/2019",
+    "enable": true,
     "id": "4718de1b-dda5-47e7-a797-c14e62cf7259"
   },
   {
@@ -80,6 +83,7 @@
     "description": "Estimez le montant de l’indemnité de fin de CDD ou intérim",
     "action": "Estimer",
     "date": "14/03/2019",
+    "enable": true,
     "id": "1f092661-e948-4f27-aafd-7f5142f25f46"
   },
   {
@@ -96,6 +100,7 @@
     "description": "Calculez la durée de préavis à respecter en cas de licenciement",
     "action": "Calculer",
     "date": "08/11/2019",
+    "enable": true,
     "id": "fcc43645-9ac1-433d-bd95-0eb44239b864"
   },
   {
@@ -118,6 +123,7 @@
     "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
     "action": "Calculer",
     "date": "08/11/2019",
+    "enable": true,
     "id": "d09665fc-961c-44bf-a399-c34cfedf1d24"
   },
   {
@@ -133,6 +139,17 @@
     "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
     "action": "Consulter",
     "date": "01/01/2020",
+    "enable": true,
     "id": "c249bd2a-6f33-4176-ad09-166bb8e5747b"
+  },
+  {
+    "icon": "Termination",
+    "title": "Préavis de départ ou de mise à la retraite",
+    "slug": "preavis-retraite",
+    "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
+    "action": "Calculer",
+    "date": "06/04/2021",
+    "enable": false,
+    "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665"
   }
 ]
