@@ -2,6 +2,7 @@
 
 .quality_stage: &quality_stage
   stage: "Code Quality"
+  interruptible: true
   dependencies: []
   except:
     variables:

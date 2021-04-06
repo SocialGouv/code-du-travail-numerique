@@ -46,6 +46,7 @@ stages:
 
 k8s test:
   stage: Prepare
+  interruptible: true
   needs: []
   extends:
     - .base_kosko_k8s_test
