@@ -34,7 +34,7 @@ COPY ./packages/slugify/package.json /app/packages/slugify/package.json
 COPY ./packages/react-ui/package.json /app/packages/react-ui/package.json
 COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY ./packages/code-du-travail-modeles/package.json /app/packages/code-du-travail-modeles-social/package.json
+COPY ./packages/code-du-travail-modeles/package.json /app/packages/code-du-travail-modeles/package.json
 
 ARG IS_DOCKER=true
 RUN yarn --frozen-lockfile && yarn cache clean
