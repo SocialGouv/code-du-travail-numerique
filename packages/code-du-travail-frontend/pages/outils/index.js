@@ -34,24 +34,28 @@ const Outils = () => (
         </FocusRoot>
         <Grid>
           {DocumentsTile}
-          {tools.map(({ action, description, icon, slug, title }) => {
-            const linkProps = {
-              passHref: true,
-            };
-            linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-            return (
-              <Link {...linkProps} passHref key={slug}>
-                <CallToActionTile
-                  action={action}
-                  custom
-                  title={title}
-                  icon={icons[icon]}
-                >
-                  {description}
-                </CallToActionTile>
-              </Link>
-            );
-          })}
+          {tools
+            .filter(
+              (tool) => tool.enable || !process.env.IS_PRODUCTION_DEPLOYMENT
+            )
+            .map(({ action, description, icon, slug, title }) => {
+              const linkProps = {
+                passHref: true,
+              };
+              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+              return (
+                <Link {...linkProps} passHref key={slug}>
+                  <CallToActionTile
+                    action={action}
+                    custom
+                    title={title}
+                    icon={icons[icon]}
+                  >
+                    {description}
+                  </CallToActionTile>
+                </Link>
+              );
+            })}
           <CallToActionTile
             key={monCompteFormation.slug}
             action={monCompteFormation.action}
