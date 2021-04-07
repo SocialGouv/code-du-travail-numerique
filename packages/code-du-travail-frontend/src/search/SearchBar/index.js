@@ -1,4 +1,4 @@
-import { Button, icons, theme } from "@socialgouv/cdtn-ui";
+import { Button, icons, ScreenReaderOnly, theme } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -73,6 +73,11 @@ const SearchBar = ({
   };
   return (
     <SearchForm action="/recherche" onSubmit={onFormSubmit}>
+      <ScreenReaderOnly>
+        <label htmlFor={inputId} id="search">
+          Rechercher
+        </label>
+      </ScreenReaderOnly>
       {hasButton && !hasSearchIcon && <SearchIconLeft />}
       <SearchInput
         inputId={inputId}

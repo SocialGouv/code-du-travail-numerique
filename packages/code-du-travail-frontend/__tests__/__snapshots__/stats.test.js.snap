@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Stats /> should render 1`] = `
-.c4 {
+.c8 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c42 {
+.c47 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,13 +15,13 @@ exports[`<Stats /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c23 {
+.c28 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c27 {
+.c32 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -30,7 +30,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: #fff;
 }
 
-.c27:before {
+.c32:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,15 +44,15 @@ exports[`<Stats /> should render 1`] = `
   content: "";
 }
 
-.c27 > *:first-child {
+.c32 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c32 > *:last-child {
   margin-bottom: 0;
 }
 
-.c33 {
+.c38 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,15 +60,27 @@ exports[`<Stats /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c33 > *:first-child {
+.c38 > *:first-child {
   margin-top: 0;
 }
 
-.c33 > *:last-child {
+.c38 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c15:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+}
+
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -105,16 +117,16 @@ exports[`<Stats /> should render 1`] = `
   opacity: 1;
 }
 
-.c13:link,
-.c13:visited {
+.c18:link,
+.c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):active,
+.c18:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -123,7 +135,7 @@ exports[`<Stats /> should render 1`] = `
   border-color: transparent;
 }
 
-.c13[disabled] {
+.c18[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -131,7 +143,7 @@ exports[`<Stats /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c55 {
+.c59 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -176,13 +188,13 @@ exports[`<Stats /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c55:focus,
-.c55:hover,
-.c55:active {
+.c59:focus,
+.c59:hover,
+.c59:active {
   color: #f66663;
 }
 
-.c44 {
+.c49 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -219,16 +231,16 @@ exports[`<Stats /> should render 1`] = `
   opacity: 1;
 }
 
-.c44:link,
-.c44:visited {
+.c49:link,
+.c49:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c44:not([disabled]):hover,
-.c44:not([disabled]):active,
-.c44:not([disabled]):focus {
+.c49:not([disabled]):hover,
+.c49:not([disabled]):active,
+.c49:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -237,7 +249,7 @@ exports[`<Stats /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c44[disabled] {
+.c49[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -245,7 +257,7 @@ exports[`<Stats /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c18 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -282,16 +294,16 @@ exports[`<Stats /> should render 1`] = `
   opacity: 1;
 }
 
-.c18:link,
-.c18:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):active,
-.c18:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):active,
+.c23:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -300,7 +312,7 @@ exports[`<Stats /> should render 1`] = `
   border-color: transparent;
 }
 
-.c18[disabled] {
+.c23[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -308,24 +320,24 @@ exports[`<Stats /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c19 {
+.c24 {
   height: auto;
   padding: 0;
 }
 
-.c21 {
+.c26 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c28 {
+.c33 {
   position: relative;
   overflow: visible;
 }
 
-.c28:before,
-.c28:after {
+.c33:before,
+.c33:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -340,19 +352,19 @@ exports[`<Stats /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c28:before {
+.c33:before {
   left: -2rem;
 }
 
-.c28:after {
+.c33:after {
   right: -2rem;
 }
 
-.c30 {
+.c35 {
   overflow-x: visible;
 }
 
-.c31 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,7 +391,7 @@ exports[`<Stats /> should render 1`] = `
   list-style-type: none;
 }
 
-.c32 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -396,13 +408,13 @@ exports[`<Stats /> should render 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c51 {
+.c1 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c26 {
+.c31 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -415,7 +427,7 @@ exports[`<Stats /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c35 {
+.c40 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -426,7 +438,7 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c50 {
+.c55 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -437,21 +449,21 @@ exports[`<Stats /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c24 {
+.c29 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c40 {
+.c45 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c25 {
+.c30 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -462,7 +474,7 @@ exports[`<Stats /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c41 {
+.c46 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -474,13 +486,13 @@ exports[`<Stats /> should render 1`] = `
   text-align: center;
 }
 
-.c37 {
+.c42 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c38 {
+.c43 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -488,7 +500,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c38:before {
+.c43:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -500,27 +512,27 @@ exports[`<Stats /> should render 1`] = `
   content: "";
 }
 
-.c39 {
+.c44 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c43 {
+.c48 {
   margin-bottom: 2rem;
 }
 
-.c45 {
+.c50 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c46 {
+.c51 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c47 {
+.c52 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -531,26 +543,26 @@ exports[`<Stats /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c48 + .c48 {
+.c53 + .c53 {
   padding-left: 1.6rem;
 }
 
-.c49 {
+.c54 {
   font-size: 1.6rem;
 }
 
-.c53 {
+.c57 {
   margin: 0.4rem 0;
 }
 
-.c54 {
+.c58 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.c56 {
+.c60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -569,11 +581,11 @@ exports[`<Stats /> should render 1`] = `
   background-color: #e4e8ef;
 }
 
-.c57 {
+.c61 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c58 {
+.c62 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -581,15 +593,15 @@ exports[`<Stats /> should render 1`] = `
   user-select: none;
 }
 
-.c12 ul {
+.c17 ul {
   z-index: 1;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
+.c17 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
-.c10 {
+.c14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -601,12 +613,12 @@ exports[`<Stats /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c15 {
+.c20 {
   width: 3rem;
   height: 3rem;
 }
 
-.c11 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -630,23 +642,23 @@ exports[`<Stats /> should render 1`] = `
   appearance: none;
 }
 
-.c11::-webkit-input-placeholder {
+.c16::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c11::-moz-placeholder {
+.c16::-moz-placeholder {
   color: #9298af;
 }
 
-.c11:-ms-input-placeholder {
+.c16:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c11::placeholder {
+.c16::placeholder {
   color: #9298af;
 }
 
-.c14 {
+.c19 {
   position: absolute;
   top: 0;
   right: 0;
@@ -655,13 +667,13 @@ exports[`<Stats /> should render 1`] = `
   color: #7994d4;
 }
 
-.c20 {
+.c25 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
 }
 
-.c2 {
+.c6 {
   position: absolute;
   top: 0;
   z-index: 3;
@@ -671,12 +683,12 @@ exports[`<Stats /> should render 1`] = `
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c3 {
+.c7 {
   display: none;
   text-align: right;
 }
 
-.c5 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -693,7 +705,7 @@ exports[`<Stats /> should render 1`] = `
   height: 100%;
 }
 
-.c6 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -711,7 +723,7 @@ exports[`<Stats /> should render 1`] = `
   text-decoration: none;
 }
 
-.c7 {
+.c11 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -721,7 +733,7 @@ exports[`<Stats /> should render 1`] = `
   background-color: white;
 }
 
-.c8 {
+.c12 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -731,7 +743,7 @@ exports[`<Stats /> should render 1`] = `
   color: #f66663;
 }
 
-.c16 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -749,12 +761,12 @@ exports[`<Stats /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c17 {
+.c22 {
   display: none;
   color: #7994d4;
 }
 
-.c9 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -767,12 +779,36 @@ exports[`<Stats /> should render 1`] = `
   margin-left: 1.6rem;
 }
 
+.c2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c3 {
+  padding-left: 0;
+}
+
+.c4 {
+  background-color: #3e486e;
+  position: absolute;
+  padding: 0.4rem;
+  display: inline-block;
+  left: -7000px;
+  z-index: 4;
+}
+
+.c4:focus {
+  left: 0;
+  position: relative;
+}
+
 .c0 {
   position: relative;
   padding-top: calc(13.5rem);
 }
 
-.c1 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -783,13 +819,13 @@ exports[`<Stats /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c22 {
+.c27 {
   position: relative;
   z-index: 2;
   margin-top: 6rem;
 }
 
-.c34 {
+.c39 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -805,7 +841,7 @@ exports[`<Stats /> should render 1`] = `
   width: 100%;
 }
 
-.c36 {
+.c41 {
   color: #7994d4;
   font-weight: bold;
   font-size: 5rem;
@@ -813,125 +849,125 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c8 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c47 {
     padding: 0;
   }
 }
 
 @media print {
-  .c42 {
+  .c47 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c28 {
     padding: 2.4rem 0;
   }
 }
 
 @media print {
-  .c27:before {
+  .c32:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c32 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c32 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c38 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c33 {
+  .c38 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c59 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c55 {
+  .c59 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c49 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c44 {
+  .c49 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c49 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c23 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c18 {
+  .c23 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c23 {
     padding: 0 3rem;
   }
 }
@@ -941,7 +977,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c26 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -952,32 +988,32 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c33 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c28:before,
-  .c28:after {
+  .c33:before,
+  .c33:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c35 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c34 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c36 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -988,18 +1024,18 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c37 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c32:first-of-type {
+  .c37:first-of-type {
     margin-left: 2rem;
   }
 
-  .c32:last-of-type:after {
+  .c37:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -1009,82 +1045,82 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c32 {
+  .c37 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c32 {
+  .c37 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c37 {
     width: 80%;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c40 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c55 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c29 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c45 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c30 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c46 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c38 {
+  .c43 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c44 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c51 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c52 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1092,32 +1128,32 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 + .c48 {
+  .c53 + .c53 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c56 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c54 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c58 {
+  .c62 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c14 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1126,20 +1162,20 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c16 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c6 {
     height: 9rem;
   }
 }
 
 @media print {
-  .c2 {
+  .c6 {
     position: relative;
     height: auto;
     box-shadow: none;
@@ -1147,13 +1183,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media print {
-  .c3 {
+  .c7 {
     display: block;
   }
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c10 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1163,7 +1199,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c10 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1173,14 +1209,14 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c11 {
     width: auto;
     height: 7.5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c12 {
     height: 5rem;
     width: auto;
     margin-left: 1rem;
@@ -1188,13 +1224,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media print {
-  .c16 {
+  .c21 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c17 {
+  .c22 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -1203,7 +1239,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c22 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
@@ -1211,13 +1247,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c13 {
     display: none;
   }
 }
 
 @media print {
-  .c9 {
+  .c13 {
     display: none;
   }
 }
@@ -1235,13 +1271,13 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c5 {
     background: none;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c27 {
     margin-top: 3.2rem;
   }
 }
@@ -1250,33 +1286,57 @@ exports[`<Stats /> should render 1`] = `
   <div
     class="c0"
   >
+    <ul
+      class="c1 c2"
+    >
+      <li
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="#content"
+        >
+          Allez au contenu
+        </a>
+      </li>
+      <li
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="#search"
+        >
+          Allez à la recherche
+        </a>
+      </li>
+    </ul>
     <div
-      class="c1"
+      class="c5"
     />
     <header
-      class="c2"
+      class="c6"
     >
       <div
-        class="c3"
+        class="c7"
         id="printDate"
       >
         le 04/01/2020 à 00:00:00
       </div>
       <div
-        class="c4 c5"
+        class="c8 c9"
       >
         <a
-          class="c6"
+          class="c10"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="c7"
+            class="c11"
             src="/static/assets/img/logo-rf.svg"
           />
           <svg
-            class="c8"
+            class="c12"
             fill="none"
             viewBox="0 0 657 265"
           >
@@ -1299,12 +1359,21 @@ exports[`<Stats /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="c9"
+          class="c13"
         >
           <form
             action="/recherche"
-            class="c10"
+            class="c14"
           >
+            <div
+              class="c15"
+            >
+              <label
+                id="search"
+              >
+                Rechercher
+              </label>
+            </div>
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1317,7 +1386,7 @@ exports[`<Stats /> should render 1`] = `
                 aria-controls="react-autowhatever-1"
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
-                class="c11"
+                class="c16"
                 id="main-search-input"
                 name="q"
                 placeholder="Rechercher"
@@ -1326,17 +1395,17 @@ exports[`<Stats /> should render 1`] = `
                 value=""
               />
               <div
-                class="c12"
+                class="c17"
                 id="react-autowhatever-1"
                 role="listbox"
               />
             </div>
             <button
-              class="c13 c14"
+              class="c18 c19"
               type="submit"
             >
               <svg
-                class="c15"
+                class="c20"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1349,10 +1418,10 @@ exports[`<Stats /> should render 1`] = `
           </form>
         </div>
         <div
-          class="c16"
+          class="c21"
         >
           <a
-            class="c17"
+            class="c22"
             href="/recherche"
           >
             <svg
@@ -1366,10 +1435,10 @@ exports[`<Stats /> should render 1`] = `
             </svg>
           </a>
           <button
-            class="c18 c19 c20"
+            class="c23 c24 c25"
           >
             <svg
-              class="c21"
+              class="c26"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1385,13 +1454,14 @@ exports[`<Stats /> should render 1`] = `
       </div>
     </header>
     <main
-      class="c22"
+      class="c27"
+      id="content"
     >
       <div
-        class="c23"
+        class="c28"
       >
         <div
-          class="c4"
+          class="c8"
         >
           <div
             data-next-focus-root="true"
@@ -1400,97 +1470,97 @@ exports[`<Stats /> should render 1`] = `
             tabindex="-1"
           >
             <header
-              class="c24"
+              class="c29"
             >
               <h1
-                class="c25"
+                class="c30"
               >
                 <div
-                  class="c26"
+                  class="c31"
                 />
                 Statistiques du Code du travail numérique
               </h1>
             </header>
           </div>
           <div
-            class="c27"
+            class="c32"
           >
             <div
-              class="c28 c29"
+              class="c33 c34"
             >
               <div
-                class="c30"
+                class="c35"
               >
                 <ul
-                  class="c31"
+                  class="c36"
                 >
                   <li
-                    class="c32"
+                    class="c37"
                   >
                     <div
-                      class="c33 c34"
+                      class="c38 c39"
                     >
                       <h3
-                        class="c35"
+                        class="c40"
                       >
                         Contenus référencés
                       </h3>
                       <div
-                        class="c36"
+                        class="c41"
                       >
                         16
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c32"
+                    class="c37"
                   >
                     <div
-                      class="c33 c34"
+                      class="c38 c39"
                     >
                       <h3
-                        class="c35"
+                        class="c40"
                       >
                         Visites
                       </h3>
                       <div
-                        class="c36"
+                        class="c41"
                       >
                         20
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c32"
+                    class="c37"
                   >
                     <div
-                      class="c33 c34"
+                      class="c38 c39"
                     >
                       <h3
-                        class="c35"
+                        class="c40"
                       >
                         Recherches
                       </h3>
                       <div
-                        class="c36"
+                        class="c41"
                       >
                         4
                       </div>
                     </div>
                   </li>
                   <li
-                    class="c32"
+                    class="c37"
                   >
                     <div
-                      class="c33 c34"
+                      class="c38 c39"
                     >
                       <h3
-                        class="c35"
+                        class="c40"
                       >
                         Consultations
                       </h3>
                       <div
-                        class="c36"
+                        class="c41"
                       >
                         10
                       </div>
@@ -1509,40 +1579,40 @@ exports[`<Stats /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c37"
+      class="c42"
     >
       <footer
-        class="c38"
+        class="c43"
       >
         <div
-          class="c23 c39"
+          class="c28 c44"
         >
           <div
-            class="c4"
+            class="c8"
           >
             <header
-              class="c40"
+              class="c45"
             >
               <strong
-                class="c41"
+                class="c46"
               >
                 <div
-                  class="c26"
+                  class="c31"
                 />
                 Besoin de plus d’informations ?
               </strong>
             </header>
             <div
-              class="c42 c43"
+              class="c47 c48"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c44"
+              class="c49"
             >
               Contacter nos services en région
               <svg
-                class="c45"
+                class="c50"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1555,98 +1625,98 @@ exports[`<Stats /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c23 c46"
+          class="c28 c51"
         >
           <nav>
             <div
-              class="c4 c47"
+              class="c8 c52"
             >
               <div
-                class="c48 "
+                class="c53 "
               >
                 <strong
-                  class="c49 c50"
+                  class="c54 c55"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="c51 c52"
+                  class="c1 c56"
                 >
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -1655,39 +1725,39 @@ exports[`<Stats /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c48 "
+                class="c53 "
               >
                 <strong
-                  class="c49 c50"
+                  class="c54 c55"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
                 <ul
-                  class="c51 c52"
+                  class="c1 c56"
                 >
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <button
-                      class="c55"
+                      class="c59"
                     >
                       Contact
                     </button>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <button
-                      class="c55"
+                      class="c59"
                     >
                       Répondez à notre questionnaire
                     </button>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1696,10 +1766,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1710,21 +1780,21 @@ exports[`<Stats /> should render 1`] = `
                 </ul>
               </div>
               <div
-                class="c48 "
+                class="c53 "
               >
                 <strong
-                  class="c49 c50"
+                  class="c54 c55"
                 >
                   En collaboration avec
                 </strong>
                 <ul
-                  class="c51 c52"
+                  class="c1 c56"
                 >
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1733,10 +1803,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1745,10 +1815,10 @@ exports[`<Stats /> should render 1`] = `
                     </a>
                   </li>
                   <li
-                    class="c53"
+                    class="c57"
                   >
                     <a
-                      class="c54"
+                      class="c58"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -1762,10 +1832,10 @@ exports[`<Stats /> should render 1`] = `
           </nav>
         </div>
         <div
-          class="c56"
+          class="c60"
         >
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1774,12 +1844,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c58"
+            class="c62"
           >
             |
           </span>
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1788,12 +1858,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c58"
+            class="c62"
           >
             |
           </span>
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1802,12 +1872,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c58"
+            class="c62"
           >
             |
           </span>
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1816,12 +1886,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c58"
+            class="c62"
           >
             |
           </span>
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -1830,12 +1900,12 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c58"
+            class="c62"
           >
             |
           </span>
           <a
-            class="c54 c57"
+            class="c58 c61"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

@@ -20,9 +20,11 @@ const SearchHero = () => (
           travail.
         </P>
       </Header>
-      <Label htmlFor={SEARCH_ID}> Recherchez par mots-clés</Label>
+      <Label id="search" htmlFor={SEARCH_ID}>
+        Recherchez par mots-clés
+      </Label>
       <SearchBarWrapper>
-        <SearchBar inputId={SEARCH_ID} hasFocus hasButton />
+        <SearchBar inputId={SEARCH_ID} hasButton />
       </SearchBarWrapper>
       <StyledWorkersWrapper>
         <StyledWorkers />

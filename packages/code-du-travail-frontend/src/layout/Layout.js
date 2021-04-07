@@ -5,14 +5,21 @@ import styled, { css } from "styled-components";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
+import { SkipNavLink } from "./Header/SkipNavLink";
 
 const Layout = ({ children, currentPage }) => {
+  const isHome = currentPage === "home";
   return (
     <BackgroundContainer>
+      <SkipNavLink />
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
-        <StyledMain>{children}</StyledMain>
+        {isHome ? (
+          <StyledMain>{children}</StyledMain>
+        ) : (
+          <StyledMain id="content">{children}</StyledMain>
+        )}
       </ErrorBoundary>
       <Footer />
     </BackgroundContainer>
