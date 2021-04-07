@@ -590,7 +590,7 @@
     is-plain-object "^5.0.0"
     tslib "^2.0.3"
 
-"@kubernetes-models/sealed-secrets@^1.2.0", "@kubernetes-models/sealed-secrets@^1.5.2":
+"@kubernetes-models/sealed-secrets@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@kubernetes-models/sealed-secrets/-/sealed-secrets-1.5.2.tgz#20e9ab28af002aaa9214441914e5f1ade23a0f4e"
   integrity sha512-MY+OWeFoE5G2//Xr08JrARlz/1o7ONAaOOAJYsiPKn5kxF9b6F+3k+NhKp1/s2SfvZ7e/WOq4NN27cKq+CJOYA==
@@ -648,15 +648,12 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^4.9.4":
-  version "4.9.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-4.9.4.tgz#e5b3171dfff5c5d8932cc582db6f2b46718b2e18"
-  integrity sha512-aTDZW5zOlBaQ/3xWFTC4565iiR5tjzrs+ckndm5kp6WxoxwBtpDDyF0CnGmqdGOgSUFeBDT5BLSPDXnw80H9Vg==
+"@socialgouv/kosko-charts@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-5.1.2.tgz#8ad9bb86635b0ab4aeaf4f4abc18e7363de5efdc"
+  integrity sha512-tvEzOCGi1DszX2G/z6IUYCxCpVfMHH5cZBt+vVhqC30XVlh2n6O9hZQcZ6ClYda/C7qmXmTEnsBrJjt3v6sT4g==
   dependencies:
-    "@kosko/env" "^1.0.3"
-    "@kubernetes-models/sealed-secrets" "^1.2.0"
     "@sindresorhus/is" "^4.0.0"
-    kubernetes-models "^1.2.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
@@ -2716,7 +2713,7 @@ kosko@^1.0.3:
     "@kosko/cli" "^1.1.1"
     import-local "^3.0.2"
 
-kubernetes-models@^1.2.0, kubernetes-models@^1.5.2:
+kubernetes-models@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-1.5.2.tgz#695a9f5be19087530dae9462bebc4e23dde5a7eb"
   integrity sha512-st0l4Q3cmK4XmK5h7P7dQqfChm3a2G7huP1EVMzZ1IoMARommE3lsXOm3BjBEZEFGeS4fLAKj+c8iOYXySK6Nw==
