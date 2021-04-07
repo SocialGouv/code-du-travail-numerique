@@ -35,10 +35,10 @@ COPY ./packages/react-ui/package.json /app/packages/react-ui/package.json
 COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 
-ARG IS_DOCKER=true
 RUN yarn --frozen-lockfile && yarn cache clean
 
-#
+# fake CI env
+ENV CI=true
 
 # NOTE(douglasduteil): temporally listing future cdtn-admin packages
 COPY ./modules /app/modules
