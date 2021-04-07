@@ -16,7 +16,7 @@
     "start": "lerna run start",
     "test": "lerna run test",
     "jest:ui": "yarn workspace @cdt/frontend test -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/cdtn-ui jest -u",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
     "lerna": "^4.0.0"
   },
   "resolutions": {
