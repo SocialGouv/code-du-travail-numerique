@@ -5,7 +5,6 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "postinstall": "test -n \"$IS_DOCKER\" || test -n \"$CI\" || husky install",
     "build": "lerna run build",
     "build:ui": "yarn workspace @socialgouv/cdtn-ui build && yarn workspace @socialgouv/react-fiche-service-public build",
     "dev:docker": "docker-compose up elasticsearch",
@@ -16,7 +15,8 @@
     "lint": "lerna run lint",
     "start": "lerna run start",
     "test": "lerna run test",
-    "jest:ui": "yarn workspace @cdt/frontend test -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/cdtn-ui jest -u"
+    "jest:ui": "yarn workspace @cdt/frontend test -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/cdtn-ui jest -u",
+    "prepare": "is-ci || husky install"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,8 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "husky": "^5.1.3",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
     "lerna": "^4.0.0"
   },
   "resolutions": {
