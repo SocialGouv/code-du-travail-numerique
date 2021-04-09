@@ -1623,6 +1623,16 @@ exports[`<Glossaire /> should render 1`] = `
                   >
                     <a
                       class="c52"
+                      href="/accessibility"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c51"
+                  >
+                    <a
+                      class="c52"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

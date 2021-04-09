@@ -1800,6 +1800,16 @@ exports[`<CodeDuTravail /> should render 1`] = `
                   >
                     <a
                       class="c62"
+                      href="/accessibility"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c61"
+                  >
+                    <a
+                      class="c62"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

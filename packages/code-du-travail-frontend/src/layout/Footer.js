@@ -84,6 +84,11 @@ const Footer = () => {
                     </Link>
                   </StyledListItem>
                   <StyledListItem>
+                    <Link passHref href="/accessibility">
+                      <StyledLink>Accessibilité : non conforme</StyledLink>
+                    </Link>
+                  </StyledListItem>
+                  <StyledListItem>
                     <Link passHref href="/politique-confidentialite">
                       <StyledLink>Politique de confidentialité</StyledLink>
                     </Link>
@@ -287,6 +292,7 @@ const StyledFooter = styled.footer`
   margin-top: ${spacings.larger};
   padding-top: ${spacings.base};
   background-color: ${({ theme }) => theme.bgSecondary};
+
   &:before {
     position: absolute;
     top: -27px;
@@ -298,6 +304,7 @@ const StyledFooter = styled.footer`
     border-radius: 100%;
     content: "";
   }
+
   @media print {
     display: none;
   }

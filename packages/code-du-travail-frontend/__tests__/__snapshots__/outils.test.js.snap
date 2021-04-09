@@ -2726,6 +2726,16 @@ exports[`<Outils /> should render 1`] = `
                   >
                     <a
                       class="c64"
+                      href="/accessibility"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c63"
+                  >
+                    <a
+                      class="c64"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
