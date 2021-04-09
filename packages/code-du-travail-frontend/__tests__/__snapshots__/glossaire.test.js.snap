@@ -1144,6 +1144,7 @@ exports[`<Glossaire /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -1537,6 +1538,7 @@ exports[`<Glossaire /> should render 1`] = `
     >
       <footer
         class="c38"
+        role="contentinfo"
       >
         <div
           class="c24 c39"

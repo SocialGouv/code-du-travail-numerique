@@ -517,6 +517,7 @@ exports[`<Header /> should render 1`] = `
 <div>
   <header
     class="c0"
+    role="banner"
   >
     <div
       class="c1"

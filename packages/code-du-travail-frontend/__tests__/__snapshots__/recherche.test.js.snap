@@ -1158,6 +1158,7 @@ exports[`<Recherche /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -1355,6 +1356,7 @@ exports[`<Recherche /> should render 1`] = `
     >
       <footer
         class="c36"
+        role="contentinfo"
       >
         <div
           class="c27 c37"

@@ -1382,6 +1382,7 @@ exports[`<Outils /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -2640,6 +2641,7 @@ exports[`<Outils /> should render 1`] = `
     >
       <footer
         class="c49"
+        role="contentinfo"
       >
         <div
           class="c25 c50"

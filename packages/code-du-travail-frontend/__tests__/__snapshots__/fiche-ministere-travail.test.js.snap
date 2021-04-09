@@ -1875,6 +1875,7 @@ exports[`<FicheMT /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -2539,6 +2540,7 @@ exports[`<FicheMT /> should render 1`] = `
     >
       <footer
         class="c75"
+        role="contentinfo"
       >
         <div
           class="c64 c76"

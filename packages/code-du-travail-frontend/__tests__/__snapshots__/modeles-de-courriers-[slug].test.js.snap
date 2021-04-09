@@ -1999,6 +1999,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -2633,6 +2634,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     >
       <footer
         class="c76"
+        role="contentinfo"
       >
         <div
           class="c56 c77"

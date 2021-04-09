@@ -2232,6 +2232,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
     />
     <header
       class="c2"
+      role="banner"
     >
       <div
         class="c3"
@@ -4857,6 +4858,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
     >
       <footer
         class="c92"
+        role="contentinfo"
       >
         <div
           class="c25 c93"

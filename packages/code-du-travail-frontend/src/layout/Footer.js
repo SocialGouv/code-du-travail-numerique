@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <OverflowWrapper>
-      <StyledFooter>
+      <StyledFooter role="contentinfo">
         <ServiceSection>
           <Container>
             <Title as="strong" isFirst stripe="top">

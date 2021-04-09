@@ -2095,6 +2095,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       />
       <header
         class="c2"
+        role="banner"
       >
         <div
           class="c3"
@@ -2868,6 +2869,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       >
         <footer
           class="c86"
+          role="contentinfo"
         >
           <div
             class="c62 c87"
@@ -5300,6 +5302,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       />
       <header
         class="c2"
+        role="banner"
       >
         <div
           class="c3"
@@ -6073,6 +6076,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       >
         <footer
           class="c86"
+          role="contentinfo"
         >
           <div
             class="c62 c87"
