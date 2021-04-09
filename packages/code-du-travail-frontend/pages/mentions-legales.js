@@ -10,7 +10,6 @@ import {
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -24,9 +23,7 @@ const LegalPage = () => {
 
       <Section>
         <Container narrow>
-          <FocusRoot>
-            <PageTitle>Mentions légales</PageTitle>
-          </FocusRoot>
+          <PageTitle>Mentions légales</PageTitle>
           <Wrapper variant="main">
             <p>
               Le site est édité par la{" "}

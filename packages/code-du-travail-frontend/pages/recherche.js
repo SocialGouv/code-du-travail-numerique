@@ -14,7 +14,6 @@ import { withRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { ConventionModal } from "../src/conventions/SearchModal";
 import { Layout } from "../src/layout/Layout";
@@ -70,7 +69,6 @@ class SearchPage extends React.Component {
         ) : (
           <>
             <Section>
-              <FocusRoot />
               <SearchResults items={items} isSearch query={query} />
             </Section>
             <Section>

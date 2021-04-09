@@ -11,7 +11,7 @@ import styled from "styled-components";
 import { AccessibilityModal } from "../../common/AccessibilityModal";
 
 export const BurgerNav = ({ currentPage }) => (
-  <StyledBurgerNav>
+  <StyledBurgerNav role="navigation" id="navigation">
     <>
       <AccessibilityModal>
         {(openModal) => (

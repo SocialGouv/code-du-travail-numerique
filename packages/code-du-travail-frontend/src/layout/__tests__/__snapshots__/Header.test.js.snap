@@ -566,6 +566,7 @@ exports[`<Header /> should render 1`] = `
         <form
           action="/recherche"
           class="c8"
+          role="search"
         >
           <div
             class="c9"
@@ -638,6 +639,8 @@ exports[`<Header /> should render 1`] = `
         </a>
         <button
           class="c17 c18 c19"
+          id="navigation"
+          role="navigation"
         >
           <svg
             class="c20"

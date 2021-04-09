@@ -72,7 +72,7 @@ const SearchBar = ({
     }
   };
   return (
-    <SearchForm action="/recherche" onSubmit={onFormSubmit}>
+    <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
         <label htmlFor={inputId} id="search">
           Rechercher

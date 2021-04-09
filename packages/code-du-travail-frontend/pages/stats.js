@@ -12,7 +12,6 @@ import getConfig from "next/config";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -32,9 +31,7 @@ const Stats = ({ data }) => {
       />
       <Section>
         <Container>
-          <FocusRoot>
-            <PageTitle>Statistiques du Code du travail numérique</PageTitle>
-          </FocusRoot>
+          <PageTitle>Statistiques du Code du travail numérique</PageTitle>
           <Wrapper variant="main">
             <Grid columns={3}>
               <Tile variant="dark">

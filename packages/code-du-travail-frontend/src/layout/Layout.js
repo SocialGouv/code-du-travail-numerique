@@ -5,21 +5,16 @@ import styled, { css } from "styled-components";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
-import { SkipNavLink } from "./Header/SkipNavLink";
 
 const Layout = ({ children, currentPage }) => {
-  const isHome = currentPage === "home";
   return (
     <BackgroundContainer>
-      <SkipNavLink />
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
-        {isHome ? (
-          <StyledMain>{children}</StyledMain>
-        ) : (
-          <StyledMain id="content">{children}</StyledMain>
-        )}
+        <StyledMain id="content" role="main">
+          {children}
+        </StyledMain>
       </ErrorBoundary>
       <Footer />
     </BackgroundContainer>
@@ -78,7 +73,6 @@ const BackgroundLayer = styled.div`
 
 const StyledMain = styled.main`
   position: relative;
-  z-index: 2;
   margin-top: 6rem;
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.large};

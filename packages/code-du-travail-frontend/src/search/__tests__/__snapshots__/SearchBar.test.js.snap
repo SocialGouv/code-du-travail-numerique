@@ -182,6 +182,7 @@ exports[`<SearchBar /> should render 1`] = `
   <form
     action="/recherche"
     class="c0"
+    role="search"
   >
     <div
       class="c1"
@@ -427,6 +428,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   <form
     action="/recherche"
     class="c0"
+    role="search"
   >
     <div
       class="c1"

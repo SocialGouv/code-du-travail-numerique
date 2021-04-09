@@ -11,7 +11,6 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
@@ -49,9 +48,7 @@ class Theme extends React.Component {
         <Breadcrumbs items={theme.breadcrumbs} />
         <Section>
           <Container>
-            <FocusRoot>
-              <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
-            </FocusRoot>
+            <PageTitle subtitle={theme.description}>{theme.title}</PageTitle>
             {theme.children && theme.children.length > 0 && (
               <StyledContainer>
                 {theme.children.map(({ slug, label }) => (

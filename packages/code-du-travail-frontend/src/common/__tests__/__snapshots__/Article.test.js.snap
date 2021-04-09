@@ -333,7 +333,6 @@ exports[`<Article /> should render 1`] = `
   >
     <div
       class="c1"
-      data-main-content="true"
     >
       <div
         class="c2"
@@ -448,8 +447,6 @@ exports[`<Article /> should render 1`] = `
         </div>
         <header
           class="c10 c11"
-          data-next-focus-root="true"
-          tabindex="-1"
         >
           <h1
             class="c12"

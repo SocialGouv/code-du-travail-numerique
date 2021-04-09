@@ -703,7 +703,6 @@ exports[`<Answer /> should renders 1`] = `
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -818,8 +817,6 @@ exports[`<Answer /> should renders 1`] = `
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -1969,7 +1966,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
       >
         <div
           class="c11"
-          data-main-content="true"
         >
           <div
             class="c12"
@@ -2089,8 +2085,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
             <header
               class="c22 c23"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c24"
@@ -3002,7 +2996,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -3117,8 +3110,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -4143,7 +4134,6 @@ exports[`<Answer /> should renders related content 1`] = `
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -4258,8 +4248,6 @@ exports[`<Answer /> should renders related content 1`] = `
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -5316,7 +5304,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -5431,8 +5418,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -6345,7 +6330,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -6460,8 +6444,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -7374,7 +7356,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -7489,8 +7470,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"
@@ -8404,7 +8383,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
       >
         <div
           class="c3"
-          data-main-content="true"
         >
           <div
             class="c4"
@@ -8519,8 +8497,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </div>
             <header
               class="c12 c13"
-              data-next-focus-root="true"
-              tabindex="-1"
             >
               <h1
                 class="c14"

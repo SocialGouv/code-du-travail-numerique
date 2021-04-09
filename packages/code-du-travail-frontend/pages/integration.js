@@ -8,7 +8,6 @@ import {
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -22,9 +21,8 @@ export default function IntegrationPage() {
 
       <Section>
         <Container narrow>
-          <FocusRoot>
-            <PageTitle>Intégrer le Code du travail numérique</PageTitle>
-          </FocusRoot>
+          <PageTitle>Intégrer le Code du travail numérique</PageTitle>
+
           <Wrapper variant="main">
             <p>
               L’équipe du Code du travail numérique vous propose d’intégrer son

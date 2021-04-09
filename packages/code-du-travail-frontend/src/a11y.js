@@ -1,10 +1,13 @@
 import { ScreenReaderOnly } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+import { SkipNavLink } from "./layout/Header/SkipNavLink";
 
 export function A11y({ initialTitle = "" }) {
   const router = useRouter();
   const [ariaTitle, setAriaTitle] = useState(initialTitle);
+  const refTitle = useRef();
   useEffect(() => {
     const routeChangeComplete = () => {
       /**
@@ -23,9 +26,8 @@ export function A11y({ initialTitle = "" }) {
         if (titleNode) {
           setAriaTitle(`${titleNode.textContent}`);
         }
-        const focusRoot = document.querySelector("[data-next-focus-root]");
-        if (focusRoot) {
-          focusRoot.focus();
+        if (refTitle.current) {
+          refTitle.current.focus();
         }
       }, 0);
     };
@@ -37,21 +39,15 @@ export function A11y({ initialTitle = "" }) {
 
   return (
     <>
-      <ScreenReaderOnly aria-live="polite" role="status">
+      <ScreenReaderOnly
+        aria-live="polite"
+        role="status"
+        ref={refTitle}
+        tabIndex="-1"
+      >
         {ariaTitle}
       </ScreenReaderOnly>
+      <SkipNavLink />
     </>
-  );
-}
-
-export function FocusRoot(props) {
-  return (
-    <div
-      data-next-focus-root
-      style={{ outline: "none" }}
-      tabIndex="-1"
-      role="group"
-      {...props}
-    />
   );
 }

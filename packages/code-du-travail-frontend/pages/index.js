@@ -54,12 +54,11 @@ const Home = ({ themes = [], highlights = [] }) => (
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     />
     <SearchHero />
-    <div id="content">
-      {highlights.length > 0 && (
-        <Highlights highlights={highlights.slice(0, 4)} />
-      )}
-      {themes.length > 0 && <Themes themes={themes} />}
-    </div>
+    {highlights.length > 0 && (
+      <Highlights highlights={highlights.slice(0, 4)} />
+    )}
+    {themes.length > 0 && <Themes themes={themes} />}
+
     <Section>
       <Container>
         <PageTitle

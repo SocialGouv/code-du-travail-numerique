@@ -12,7 +12,6 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -33,9 +32,7 @@ function Glossaire({ glossary }) {
       />
       <Section>
         <Container narrow>
-          <FocusRoot>
-            <PageTitle subtitle={subtitle}>Glossaire</PageTitle>
-          </FocusRoot>
+          <PageTitle subtitle={subtitle}>Glossaire</PageTitle>
           <Wrapper variant="main">
             <GlossaryNavigation letters={termsByLetters} />
             <Glossary letters={termsByLetters} />

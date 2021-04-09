@@ -11,7 +11,6 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
@@ -29,9 +28,7 @@ const Outils = () => (
     />
     <Section>
       <Container>
-        <FocusRoot>
-          <PageTitle>Retrouvez tous nos outils</PageTitle>
-        </FocusRoot>
+        <PageTitle>Retrouvez tous nos outils</PageTitle>
         <Grid>
           {DocumentsTile}
           {tools

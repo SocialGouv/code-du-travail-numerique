@@ -415,6 +415,7 @@ exports[`<SearchHero /> should render 1`] = `
         <form
           action="/recherche"
           class="c10"
+          role="search"
         >
           <div
             class="c11"

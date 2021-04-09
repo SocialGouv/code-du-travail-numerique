@@ -8,7 +8,6 @@ import {
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { Share } from "../../src/common/Share";
 import ConventionForm from "../../src/conventions/Search";
@@ -23,9 +22,7 @@ const SearchConvention = () => (
     <Metas title={title} description={description} />
     <Section>
       <Container narrow>
-        <FocusRoot>
-          <PageTitle>Recherchez votre convention collective</PageTitle>
-        </FocusRoot>
+        <PageTitle>Recherchez votre convention collective</PageTitle>
         <Wrapper variant="main">
           <ConventionForm />
         </Wrapper>
