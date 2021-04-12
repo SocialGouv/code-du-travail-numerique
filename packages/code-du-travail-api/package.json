@@ -28,8 +28,8 @@
   "dependencies": {
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.1.0",
-    "@socialgouv/cdtn-elasticsearch": "^1.1.1",
-    "@socialgouv/cdtn-logger": "^1.1.1",
+    "@socialgouv/cdtn-elasticsearch": "^1.1.2",
+    "@socialgouv/cdtn-logger": "^1.1.2",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "date-fns": "^2.19.0",
     "elastic-apm-node": "^3.12.1",
