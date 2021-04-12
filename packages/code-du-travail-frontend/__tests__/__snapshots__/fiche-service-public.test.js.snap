@@ -1807,7 +1807,7 @@ exports[`<FicheSP /> should render 1`] = `
                   >
                     <a
                       class="c62"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

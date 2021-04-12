@@ -2950,7 +2950,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     >
                       <a
                         class="c102"
-                        href="/accessibility"
+                        href="/accessibilite"
                       >
                         Accessibilité : non conforme
                       </a>
@@ -6133,7 +6133,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     >
                       <a
                         class="c102"
-                        href="/accessibility"
+                        href="/accessibilite"
                       >
                         Accessibilité : non conforme
                       </a>

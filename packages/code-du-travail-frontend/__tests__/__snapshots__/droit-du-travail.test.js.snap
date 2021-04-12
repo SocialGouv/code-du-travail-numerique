@@ -4955,7 +4955,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   >
                     <a
                       class="c107"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

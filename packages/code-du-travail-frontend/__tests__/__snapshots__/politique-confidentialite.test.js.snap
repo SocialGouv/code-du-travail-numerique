@@ -1511,7 +1511,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                   >
                     <a
                       class="c50"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

@@ -1201,7 +1201,7 @@ exports[`<Layout /> should render 1`] = `
                   >
                     <a
                       class="c42"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

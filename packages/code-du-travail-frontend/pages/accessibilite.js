@@ -12,7 +12,7 @@ import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
-const Accessibility = () => (
+const Accessibilite = () => (
   <Layout>
     <Metas
       title="Accessibilité - Code du travail numérique"
@@ -33,7 +33,7 @@ const Accessibility = () => (
             n° 2005-102 du 11 février 2005.
           </p>
           <p>
-            A cette fin, il met en œuvre la stratégie et l’action suivante :
+            À cette fin, il met en œuvre la stratégie et l’action suivante :
             réalisation d’un audit de conformité à la milieu de l’année 2021.
           </p>
           <p>
@@ -58,13 +58,13 @@ const Accessibility = () => (
           <Title shift={theme.spacings.larger}>
             Établissement de cette déclaration d’accessibilité
           </Title>
-          <p>Cette déclaration a été établie le 1 avril 2021.</p>
+          <p>Cette déclaration a été établie le 12 avril 2021.</p>
           <Title shift={theme.spacings.larger}>Amélioration et contact</Title>
           <p>
             Si vous n’arrivez pas à accéder à un contenu ou à un service, vous
-            pouvez contacter le responsable de Code.travail.gouv.fr pour être
-            orienté vers une alternative accessible ou obtenir le contenu sous
-            une autre forme.
+            pouvez contacter le responsable du site Internet
+            code.travail.gouv.fr pour être orienté vers une alternative
+            accessible ou obtenir le contenu sous une autre forme.
           </p>
           <p>
             E-mail :{" "}
@@ -135,4 +135,4 @@ const Accessibility = () => (
     </Section>
   </Layout>
 );
-export default Accessibility;
+export default Accessibilite;

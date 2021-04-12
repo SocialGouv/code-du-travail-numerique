@@ -1560,7 +1560,7 @@ exports[`<About /> should render 1`] = `
                   >
                     <a
                       class="c51"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

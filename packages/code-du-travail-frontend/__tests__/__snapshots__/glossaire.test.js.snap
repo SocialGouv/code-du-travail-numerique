@@ -1623,7 +1623,7 @@ exports[`<Glossaire /> should render 1`] = `
                   >
                     <a
                       class="c52"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

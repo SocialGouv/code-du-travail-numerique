@@ -2927,7 +2927,7 @@ exports[`<Home /> should render 1`] = `
                   >
                     <a
                       class="c77"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

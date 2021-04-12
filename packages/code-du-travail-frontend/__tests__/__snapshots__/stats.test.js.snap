@@ -1617,7 +1617,7 @@ exports[`<Stats /> should render 1`] = `
                   >
                     <a
                       class="c54"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

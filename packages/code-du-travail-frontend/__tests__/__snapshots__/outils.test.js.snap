@@ -2726,7 +2726,7 @@ exports[`<Outils /> should render 1`] = `
                   >
                     <a
                       class="c64"
-                      href="/accessibility"
+                      href="/accessibilite"
                     >
                       Accessibilité : non conforme
                     </a>

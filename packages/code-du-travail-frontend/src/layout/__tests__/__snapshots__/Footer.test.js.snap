@@ -534,7 +534,7 @@ exports[`<Footer /> should render 1`] = `
                 >
                   <a
                     class="c20"
-                    href="/accessibility"
+                    href="/accessibilite"
                   >
                     Accessibilité : non conforme
                   </a>
