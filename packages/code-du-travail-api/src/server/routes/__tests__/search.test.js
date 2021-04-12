@@ -1,18 +1,14 @@
 const request = require("supertest");
 const Koa = require("koa");
-const winston = require("winston");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const router = require("../search");
 
 const getSearchBody = require("../search/search.elastic");
 const getSemBody = require("../search/search.sem");
 
-const { logger } = require("../../utils/logger");
 require("./__mocking__/mockNLP");
 
 jest.mock("@socialgouv/cdtn-elasticsearch");
-
-logger.level = winston.error;
 
 const app = new Koa();
 app.use(router.routes());
