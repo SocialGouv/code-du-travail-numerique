@@ -23,6 +23,7 @@ class WebComponentsTooltip extends LitElement {
       }
 
       .tooltip {
+        display: inline;
         position: relative;
         border-bottom-color: #4d73b8;
         border-bottom-color: var(--color-altText);
@@ -58,14 +59,14 @@ class WebComponentsTooltip extends LitElement {
         }
       }
 
-      .tooltip .content.visible {
+      .content.visible {
         display: block;
       }
     `;
   }
 
   render() {
-    return html`<div
+    return html` <div
       tabindex="0"
       class="tooltip"
       aria-describedby="tooltip-definition"
@@ -91,6 +92,7 @@ class WebComponentsTooltip extends LitElement {
     throttledDisplayInViewport(target, this);
     this.visible = true;
   }
+
   hide() {
     this.visible = false;
     const target = this.shadowRoot.querySelector(".content");
