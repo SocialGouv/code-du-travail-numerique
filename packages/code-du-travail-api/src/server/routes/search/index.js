@@ -2,7 +2,7 @@ const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 
-const API_BASE_URL = require("../v1.prefix");
+const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSavedResult = require("./search.getSavedResult");
 const getSearchBody = require("./search.elastic");
@@ -10,10 +10,10 @@ const getSemBody = require("./search.sem");
 const getRelatedThemesBody = require("./searchRelatedThemes.elastic");
 const getRelatedArticlesBody = require("./searchRelatedArticles.elastic");
 const { removeDuplicate, merge, mergePipe } = require("./utils");
-const { logger } = require("../../utils/logger");
+const { logger } = require("@socialgouv/cdtn-logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;

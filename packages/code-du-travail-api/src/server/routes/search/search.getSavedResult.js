@@ -3,12 +3,13 @@ const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
-const { logger } = require("../../utils/logger");
+const { logger } = require("@socialgouv/cdtn-logger");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 const memoizee = require("memoizee");
+const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
 
 const THRESHOLD = 90;
 const NON_FUZZY_TOKENS = new Set(["cdd", "cdi", "csp"]);
