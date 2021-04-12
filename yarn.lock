@@ -2576,18 +2576,18 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/cdtn-elasticsearch@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-elasticsearch/-/cdtn-elasticsearch-1.1.0.tgz#7fcefa3f6ba046b8f96421ae3c18d663fe2fa1bf"
-  integrity sha512-S3ZWmtDuXMLMRQoF/0CddkD1m8CuHreXOuwI7zNIEAeKYrvgDQB16ET8fZx+a5voGjTpSDBCPUUNYef1v3dG3Q==
+"@socialgouv/cdtn-elasticsearch@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-elasticsearch/-/cdtn-elasticsearch-1.1.1.tgz#115efe006ad722d480fd7d5cb929495a59a86f08"
+  integrity sha512-e41rng7nf7Jv3xOwqfBqAcUTDXQFjMkZP6pmXvhKOsDBp0NVzVONQoDO68Hha9TlmnvnnpbhWxZVASKXHu4w6w==
   dependencies:
-    "@socialgouv/cdtn-logger" "^1.1.0"
+    "@socialgouv/cdtn-logger" "^1.1.1"
     node-fetch "^2.6.1"
 
-"@socialgouv/cdtn-logger@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-logger/-/cdtn-logger-1.1.0.tgz#55c6e8282f30fa3412546c573a1a36843fd6056b"
-  integrity sha512-nleLRibdoZCAqHQ7mH9uYSMr88JmC9/iufXxCuCl6jzccRuxkJ3mEGiWPEDBmNjHvUvX3YX0bI/Ht2lR2qCGew==
+"@socialgouv/cdtn-logger@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-logger/-/cdtn-logger-1.1.1.tgz#68fdd067dae022b147ccd3e80251a34eb7610278"
+  integrity sha512-gGJsVk1147dADi22rveZ7NsO2hBKlaO/q9r4v6/cSA3bnZ5GYIAOKe/aeIN+tGivcLLk9MOMcH8nDf60+rWS1g==
   dependencies:
     winston "^3.3.3"
 
