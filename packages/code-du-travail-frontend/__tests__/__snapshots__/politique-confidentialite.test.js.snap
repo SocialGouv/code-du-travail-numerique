@@ -1511,6 +1511,16 @@ exports[`<CookiePolicy /> should render 1`] = `
                   >
                     <a
                       class="c50"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c49"
+                  >
+                    <a
+                      class="c50"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

@@ -2633,6 +2633,16 @@ exports[`<FicheMT /> should render 1`] = `
                   >
                     <a
                       class="c92"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c91"
+                  >
+                    <a
+                      class="c92"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

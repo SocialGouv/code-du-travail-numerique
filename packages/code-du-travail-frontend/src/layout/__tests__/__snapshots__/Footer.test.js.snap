@@ -534,6 +534,16 @@ exports[`<Footer /> should render 1`] = `
                 >
                   <a
                     class="c20"
+                    href="/accessibilite"
+                  >
+                    Accessibilité : non conforme
+                  </a>
+                </li>
+                <li
+                  class="c19"
+                >
+                  <a
+                    class="c20"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité

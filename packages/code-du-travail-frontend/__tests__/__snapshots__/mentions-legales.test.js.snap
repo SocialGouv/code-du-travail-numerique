@@ -1569,6 +1569,16 @@ exports[`<MentionLegales /> should render 1`] = `
                   >
                     <a
                       class="c53"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c52"
+                  >
+                    <a
+                      class="c53"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

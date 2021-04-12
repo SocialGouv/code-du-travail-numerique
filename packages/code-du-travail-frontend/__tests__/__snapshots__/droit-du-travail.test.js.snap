@@ -4955,6 +4955,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   >
                     <a
                       class="c107"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c106"
+                  >
+                    <a
+                      class="c107"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

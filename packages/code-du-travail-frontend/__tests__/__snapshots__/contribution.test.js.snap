@@ -2950,6 +2950,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     >
                       <a
                         class="c102"
+                        href="/accessibilite"
+                      >
+                        Accessibilité : non conforme
+                      </a>
+                    </li>
+                    <li
+                      class="c101"
+                    >
+                      <a
+                        class="c102"
                         href="/politique-confidentialite"
                       >
                         Politique de confidentialité
@@ -6116,6 +6126,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         href="/mentions-legales"
                       >
                         Mentions légales
+                      </a>
+                    </li>
+                    <li
+                      class="c101"
+                    >
+                      <a
+                        class="c102"
+                        href="/accessibilite"
+                      >
+                        Accessibilité : non conforme
                       </a>
                     </li>
                     <li

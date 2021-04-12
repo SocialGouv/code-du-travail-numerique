@@ -1807,6 +1807,16 @@ exports[`<FicheSP /> should render 1`] = `
                   >
                     <a
                       class="c62"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c61"
+                  >
+                    <a
+                      class="c62"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

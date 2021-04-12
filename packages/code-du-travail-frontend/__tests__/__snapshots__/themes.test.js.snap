@@ -1530,6 +1530,16 @@ exports[`<Theme /> should render 1`] = `
                   >
                     <a
                       class="c55"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c54"
+                  >
+                    <a
+                      class="c55"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

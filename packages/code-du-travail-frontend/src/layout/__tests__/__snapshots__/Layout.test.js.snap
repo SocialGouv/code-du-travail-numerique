@@ -1201,6 +1201,16 @@ exports[`<Layout /> should render 1`] = `
                   >
                     <a
                       class="c42"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c41"
+                  >
+                    <a
+                      class="c42"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité

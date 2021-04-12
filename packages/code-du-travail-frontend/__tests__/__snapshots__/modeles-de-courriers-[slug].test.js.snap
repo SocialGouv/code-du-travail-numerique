@@ -2727,6 +2727,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   >
                     <a
                       class="c93"
+                      href="/accessibilite"
+                    >
+                      Accessibilité : non conforme
+                    </a>
+                  </li>
+                  <li
+                    class="c92"
+                  >
+                    <a
+                      class="c93"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
