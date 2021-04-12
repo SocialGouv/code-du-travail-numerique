@@ -34,10 +34,10 @@ const SkipLink = styled.a`
   background-color: ${({ theme }) => theme.paragraph};
   padding: ${spacings.tiny};
   display: inline-block;
-  color: ${({ theme }) => theme.white};
   left: -7000px;
   position: absolute;
   :focus {
+    color: ${({ theme }) => theme.white};
     left: 0;
     position: relative;
   }
