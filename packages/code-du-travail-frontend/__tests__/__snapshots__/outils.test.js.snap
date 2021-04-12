@@ -21,16 +21,17 @@ exports[`<Outils /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .c35 {
@@ -378,6 +379,12 @@ exports[`<Outils /> should render 1`] = `
   color: #7994d4;
 }
 
+.c62 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c29 {
   position: relative;
   overflow: visible;
@@ -453,12 +460,6 @@ exports[`<Outils /> should render 1`] = `
   margin: 1rem;
   padding: 0;
   width: calc(100% / 4 - 2 * 1rem - 1px);
-}
-
-.c62 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c28 {

@@ -6,7 +6,9 @@ export function SkipNavLink() {
   return (
     <SkipNav>
       <Li>
-        <SkipLink href="#navigation">Allez à la navigation</SkipLink>
+        <SkipLink type="inline" as="a" href="#navigation">
+          Allez à la navigation
+        </SkipLink>
       </Li>
       <Li>
         <SkipLink href="#search">Allez à la recherche</SkipLink>

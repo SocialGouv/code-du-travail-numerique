@@ -59,16 +59,17 @@ exports[`<Term /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .c14 {
@@ -322,6 +323,12 @@ exports[`<Term /> should render 1`] = `
   color: #7994d4;
 }
 
+.c47 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c30 {
   position: relative;
   overflow: hidden;
@@ -353,12 +360,6 @@ exports[`<Term /> should render 1`] = `
 
 .c31 {
   overflow-x: auto;
-}
-
-.c47 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c28 {
