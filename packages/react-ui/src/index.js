@@ -34,10 +34,7 @@ export { Modal, ModalContentWrapper } from "./Modal";
 export { MoreContent } from "./MoreContent";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { Progress } from "./Progress";
-export {
-  ScreenReaderOnly,
-  ScreenReaderOnlyFocusable,
-} from "./ScreenReaderOnly";
+export { ScreenReaderOnly } from "./ScreenReaderOnly";
 export { Stripe } from "./Stripe";
 export { Table } from "./Table";
 export { TableOfContent } from "./TableOfContent";
