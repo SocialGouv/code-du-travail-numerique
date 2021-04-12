@@ -48,12 +48,14 @@ function Outils({ description, icon, slug, relatedItems, title }) {
       />
       <StyledSection>
         <Container>
-          <ShareContainer>
-            <Share title={title} metaDescription={description} />
-          </ShareContainer>
-          <Wrapper variant="main">
-            <Tool icon={icon} title={title} />
-          </Wrapper>
+          <Flex>
+            <Wrapper variant="main">
+              <Tool icon={icon} title={title} />
+            </Wrapper>
+            <ShareContainer>
+              <Share title={title} metaDescription={description} />
+            </ShareContainer>
+          </Flex>
           <ToolSurvey />
           <RelatedItems disableSurvey items={relatedItems} />
         </Container>
@@ -100,4 +102,9 @@ const ShareContainer = styled.div`
   @media (max-width: ${breakpoints.mobile}) {
     margin-bottom: ${spacings.small};
   }
+`;
+
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
 `;
