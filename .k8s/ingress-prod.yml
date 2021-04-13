@@ -4,31 +4,6 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/tls-acme: "true"
-  labels:
-    app.kubernetes.io/instance: frontend
-  name: frontend-nodejs-code
-  namespace: cdtn
-spec:
-  rules:
-    - host: code.travail.gouv.fr
-      http:
-        paths:
-          - backend:
-              serviceName: frontend-nodejs
-              servicePort: http
-            path: /
-  tls:
-    - hosts:
-        - code.travail.gouv.fr
-      secretName: frontend-crt-code
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/permanent-redirect: https://code.travail.gouv.fr$request_uri
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/tls-acme: "true"
@@ -40,8 +15,10 @@ metadata:
 spec:
   rules:
   - host: www.code.travail.gouv.fr
+  - host: code.travail.fabrique.social.gouv.fr
   tls:
   - hosts:
     - www.code.travail.gouv.fr
+    - code.travail.fabrique.social.gouv.fr
     secretName: redirect-crt
 
