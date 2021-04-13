@@ -58,6 +58,7 @@ const Home = ({ themes = [], highlights = [] }) => (
       <Highlights highlights={highlights.slice(0, 4)} />
     )}
     {themes.length > 0 && <Themes themes={themes} />}
+
     <Section>
       <Container>
         <PageTitle

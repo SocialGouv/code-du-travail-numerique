@@ -12,7 +12,9 @@ const Layout = ({ children, currentPage }) => {
       <BackgroundLayer currentPage={currentPage} />
       <Header currentPage={currentPage} />
       <ErrorBoundary message="Une erreur est survenue">
-        <StyledMain>{children}</StyledMain>
+        <StyledMain id="content" role="main">
+          {children}
+        </StyledMain>
       </ErrorBoundary>
       <Footer />
     </BackgroundContainer>
@@ -71,7 +73,6 @@ const BackgroundLayer = styled.div`
 
 const StyledMain = styled.main`
   position: relative;
-  z-index: 2;
   margin-top: 6rem;
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.large};

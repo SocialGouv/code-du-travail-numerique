@@ -136,6 +136,12 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateX(4px);
 }
 
+.c2 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c25 {
   position: relative;
   overflow: visible;
@@ -228,12 +234,6 @@ exports[`<SearchResults/> should render results 1`] = `
   margin: 1rem;
   padding: 0;
   width: calc(100% / 4 - 2 * 1rem - 1px);
-}
-
-.c2 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c24 {

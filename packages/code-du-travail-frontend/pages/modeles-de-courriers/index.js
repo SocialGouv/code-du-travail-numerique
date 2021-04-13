@@ -15,7 +15,6 @@ import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
@@ -71,9 +70,7 @@ function Modeles(props) {
       />
       <Section>
         <Container narrow>
-          <FocusRoot>
-            <PageTitle subtitle={subtitle}>{title}</PageTitle>
-          </FocusRoot>
+          <PageTitle subtitle={subtitle}>{title}</PageTitle>
           <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
             {themes &&
               [

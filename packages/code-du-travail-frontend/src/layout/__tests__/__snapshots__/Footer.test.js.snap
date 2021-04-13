@@ -430,6 +430,7 @@ exports[`<Footer /> should render 1`] = `
   >
     <footer
       class="c1"
+      role="contentinfo"
     >
       <div
         class="c2 c3"

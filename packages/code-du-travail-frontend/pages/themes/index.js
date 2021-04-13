@@ -15,7 +15,6 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -50,11 +49,9 @@ const ThemesPage = ({ children = [] }) => (
     />
     <Section>
       <Container>
-        <FocusRoot>
-          <PageTitle subtitle="Découvrez l’intégralité de nos contenus organisés par grands thèmes">
-            Contenus par thème
-          </PageTitle>
-        </FocusRoot>
+        <PageTitle subtitle="Découvrez l’intégralité de nos contenus organisés par grands thèmes">
+          Contenus par thème
+        </PageTitle>
         <Grid>
           {children &&
             children.map(({ children, icon, slug, title }) => (

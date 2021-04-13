@@ -1412,6 +1412,20 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   color: #9298af;
 }
 
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1464,20 +1478,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 
 .c4:checked:before {
   display: block;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
 }
 
 .c11 {

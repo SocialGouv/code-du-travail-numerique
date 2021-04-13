@@ -2,10 +2,15 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-export const ScreenReaderOnly = ({ type, ...props }) => {
-  const Component = type === "inline" ? InlineSR : BlockSR;
-  return <Component {...props} />;
-};
+export const ScreenReaderOnly = React.forwardRef(({ type, ...props }, ref) => {
+  return type === "inline" ? (
+    <SROnly as="span" {...props} ref={ref} />
+  ) : (
+    <SROnly {...props} ref={ref} />
+  );
+});
+
+ScreenReaderOnly.displayName = "ScreenReaderOnly";
 
 ScreenReaderOnly.propTypes = {
   type: PropTypes.oneOf(["block", "inline"]),
@@ -15,28 +20,17 @@ ScreenReaderOnly.defaultProps = {
   type: "block",
 };
 
-const InlineSR = styled.span`
-  &:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-  }
-`;
-
-const BlockSR = styled.div`
-  &:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-  }
+/**
+ * From twiter bootstrap v4
+ */
+const SROnly = styled.div`
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 `;

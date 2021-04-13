@@ -12,7 +12,6 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { FocusRoot } from "../../src/a11y";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
@@ -30,9 +29,7 @@ function Term({ term: { term, definition, references } }) {
       />
       <Section>
         <Container narrow>
-          <FocusRoot>
-            <PageTitle>{term}</PageTitle>
-          </FocusRoot>
+          <PageTitle>{term}</PageTitle>
           <Wrapper variant="main">
             <Table>
               <tbody>

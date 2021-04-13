@@ -10,7 +10,6 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -22,11 +21,9 @@ const About = () => (
     />
     <Section>
       <Container narrow>
-        <FocusRoot>
-          <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
-            À propos
-          </PageTitle>
-        </FocusRoot>
+        <PageTitle subtitle="Apprenez-en plus sur notre histoire, notre équipe et nos méthodes">
+          À propos
+        </PageTitle>
         <Wrapper variant="main">
           <Title shift={theme.spacings.larger}>
             Qu’est-ce que le Code du travail numérique&nbsp;?

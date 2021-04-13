@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> should render 1`] = `
-.c3 {
+.c1 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,16 +51,16 @@ exports[`<SearchBar /> should render 1`] = `
   opacity: 1;
 }
 
-.c3:link,
-.c3:visited {
+.c4:link,
+.c4:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -56,7 +69,7 @@ exports[`<SearchBar /> should render 1`] = `
   border-color: transparent;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -64,11 +77,11 @@ exports[`<SearchBar /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c2 ul {
+.c3 ul {
   z-index: 1;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
@@ -84,12 +97,12 @@ exports[`<SearchBar /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c5 {
+.c6 {
   width: 3rem;
   height: 3rem;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,23 +126,23 @@ exports[`<SearchBar /> should render 1`] = `
   appearance: none;
 }
 
-.c1::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c1::-moz-placeholder {
+.c2::-moz-placeholder {
   color: #9298af;
 }
 
-.c1:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c1::placeholder {
+.c2::placeholder {
   color: #9298af;
 }
 
-.c4 {
+.c5 {
   position: absolute;
   top: 0;
   right: 0;
@@ -139,13 +152,13 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c4 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c3 {
+  .c4 {
     display: none;
   }
 }
@@ -160,7 +173,7 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -170,7 +183,17 @@ exports[`<SearchBar /> should render 1`] = `
   <form
     action="/recherche"
     class="c0"
+    role="search"
   >
+    <div
+      class="c1"
+    >
+      <label
+        id="search"
+      >
+        Rechercher
+      </label>
+    </div>
     <div
       aria-expanded="false"
       aria-haspopup="listbox"
@@ -183,7 +206,7 @@ exports[`<SearchBar /> should render 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="c1"
+        class="c2"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -192,17 +215,17 @@ exports[`<SearchBar /> should render 1`] = `
         value=""
       />
       <div
-        class="c2"
+        class="c3"
         id="react-autowhatever-1"
         role="listbox"
       />
     </div>
     <button
-      class="c3 c4"
+      class="c4 c5"
       type="submit"
     >
       <svg
-        class="c5"
+        class="c6"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -217,7 +240,20 @@ exports[`<SearchBar /> should render 1`] = `
 `;
 
 exports[`<SearchBar /> should render suggestions 1`] = `
-.c5 {
+.c1 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -254,16 +290,16 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   opacity: 1;
 }
 
-.c5:link,
-.c5:visited {
+.c6:link,
+.c6:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):active,
-.c5:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):active,
+.c6:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -272,7 +308,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   border-color: transparent;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -280,19 +316,19 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
 }
 
-.c3 p {
+.c4 p {
   margin: 0;
 }
 
-.c2 ul {
+.c3 ul {
   z-index: 1;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f2f5fa;
 }
 
@@ -308,12 +344,12 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   flex-grow: 1;
 }
 
-.c7 {
+.c8 {
   width: 3rem;
   height: 3rem;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,23 +373,23 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   appearance: none;
 }
 
-.c1::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c1::-moz-placeholder {
+.c2::-moz-placeholder {
   color: #9298af;
 }
 
-.c1:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c1::placeholder {
+.c2::placeholder {
   color: #9298af;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   top: 0;
   right: 0;
@@ -363,13 +399,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c6 {
     display: none;
   }
 }
@@ -384,7 +420,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
@@ -394,7 +430,17 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   <form
     action="/recherche"
     class="c0"
+    role="search"
   >
+    <div
+      class="c1"
+    >
+      <label
+        id="search"
+      >
+        Rechercher
+      </label>
+    </div>
     <div
       aria-expanded="true"
       aria-haspopup="listbox"
@@ -407,7 +453,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="c1"
+        class="c2"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -416,7 +462,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         value="yolo"
       />
       <div
-        class="c2"
+        class="c3"
         id="react-autowhatever-1"
         role="listbox"
       >
@@ -432,10 +478,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c3"
+              class="c4"
             >
               <div
-                class="c4"
+                class="c5"
               >
                 foo
               </div>
@@ -449,10 +495,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c3"
+              class="c4"
             >
               <div
-                class="c4"
+                class="c5"
               >
                 foobar
               </div>
@@ -466,10 +512,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c3"
+              class="c4"
             >
               <div
-                class="c4"
+                class="c5"
               >
                 foo bar ?
               </div>
@@ -483,10 +529,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c3"
+              class="c4"
             >
               <div
-                class="c4"
+                class="c5"
               >
                 foo bazzz
               </div>
@@ -496,11 +542,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
       </div>
     </div>
     <button
-      class="c5 c6"
+      class="c6 c7"
       type="submit"
     >
       <svg
-        class="c7"
+        class="c8"
         fill="none"
         viewBox="0 0 32 32"
       >

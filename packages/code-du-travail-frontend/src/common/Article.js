@@ -23,15 +23,13 @@ const Article = ({
 }) => {
   return (
     <Container>
-      <Wrapper variant="main" data-main-content>
+      <Wrapper variant="main">
         <Flex>
           <ShareContainer>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
           <StyledPageTitle
-            tabIndex="-1"
-            data-next-focus-root
             subtitle={subtitle}
             stripe="left"
             shift={theme.spacings.larger}

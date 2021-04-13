@@ -8,7 +8,6 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { FocusRoot } from "../src/a11y";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -20,9 +19,7 @@ const Accessibilite = () => (
     />
     <Section>
       <Container narrow>
-        <FocusRoot>
-          <PageTitle>Accessibilité</PageTitle>
-        </FocusRoot>
+        <PageTitle>Accessibilité</PageTitle>
         <Wrapper variant="main">
           <Title shift={theme.spacings.larger}>
             Déclaration d’accessibilité
