@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext } from "react";
 import Engine, { Evaluation } from "publicodes";
 import { Rule } from "publicodes/dist/types/rule";
 import usePublicodeHandler from "./PubliHandler";
@@ -10,14 +10,12 @@ export interface MissingArgs {
 }
 
 export interface PublicodeContextInterface {
-  isLoading: boolean;
   result: Evaluation;
   missingArgs: MissingArgs[];
   setSituation: (values: Record<string, string>) => void;
 }
 
 export const publicodeContext = createContext<PublicodeContextInterface>({
-  isLoading: true,
   result: null,
   missingArgs: [],
   setSituation: () => {},
@@ -29,32 +27,21 @@ export function usePublicode(): PublicodeContextInterface {
 
 const { Provider } = publicodeContext;
 
-const PublicodeProvider: React.FC<
-  { children: React.ReactNode } & { rule: string }
-> = ({ children, rule }) => {
-  const [rules, setRules] = useState<string | null>(null);
+interface PublicodeProvider {
+  publicodes: string;
+  rule: string;
+}
 
-  useEffect(() => {
-    const loadRules = async (): Promise<void> => {
-      try {
-        const rules = await fetch(
-          "/api/simulateurs/preavis-retraite"
-        ).then((it) => it.json());
-        setRules(rules);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    loadRules();
-  }, []);
+const PublicodeProvider: React.FC<
+  { children: React.ReactNode } & PublicodeProvider
+> = ({ children, publicodes, rule }) => {
+  const { result, missingArgs, setSituation } = usePublicodeHandler({
+    engine: new Engine(publicodes),
+    rule: rule,
+  });
 
   return (
-    <Provider
-      value={usePublicodeHandler({
-        engine: rules ? new Engine(rules) : null,
-        rule: rule,
-      })}
-    >
+    <Provider value={{ result, missingArgs, setSituation }}>
       {children}
     </Provider>
   );

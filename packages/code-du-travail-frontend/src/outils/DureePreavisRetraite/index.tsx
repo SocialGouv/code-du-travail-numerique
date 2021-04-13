@@ -4,8 +4,11 @@ import { Wizard } from "../common/Wizard";
 import { PublicodeProvider } from "../publicodes";
 import { initialState, stepReducer } from "./stepReducer";
 
-const SimulateurPreavisRetraite = ({ icon, title }) => (
-  <PublicodeProvider rule="contrat salarié . préavis de retraite">
+const SimulateurPreavisRetraite = ({ icon, title, publicodes }) => (
+  <PublicodeProvider
+    publicodes={publicodes}
+    rule="contrat salarié . préavis de retraite"
+  >
     <Wizard
       icon={icon}
       title={title}

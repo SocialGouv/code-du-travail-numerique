@@ -9,6 +9,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
+import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -35,13 +36,13 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-function Outils({ description, icon, slug, relatedItems, title }) {
+function Outils({ description, icon, slug, relatedItems, title, publicodes }) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
   });
   return (
-    <Layout>
+    <Layout currentPage="">
       <Metas
         title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
@@ -80,9 +81,12 @@ Outils.getInitialProps = async ({ query }) => {
     Sentry.captureException(e);
   }
 
+  const publicodes = loadPublicodes(slug);
+
   return {
     description,
     icon,
+    publicodes,
     relatedItems,
     slug,
     title,
