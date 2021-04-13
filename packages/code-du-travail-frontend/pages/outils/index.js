@@ -1,5 +1,3 @@
-import externalTools from "@cdt/data...tools/externals.json";
-import tools from "@cdt/data...tools/internals.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Container,
@@ -15,13 +13,10 @@ import { FocusRoot } from "../../src/a11y";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
+import { getTools } from "../api/simulateurs/index";
 import { DocumentsTile } from "../index";
 
-const monCompteFormation = externalTools.find(
-  (tools) => tools.title === "Mon compte formation"
-);
-
-const Outils = () => (
+const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
     <Metas
       title={`Boîte a outils - Code du travail numérique`}
@@ -34,17 +29,14 @@ const Outils = () => (
         </FocusRoot>
         <Grid>
           {DocumentsTile}
-          {tools
-            .filter(
-              (tool) => tool.enable || !process.env.IS_PRODUCTION_DEPLOYMENT
-            )
-            .map(({ action, description, icon, slug, title }) => {
+          {cdtnSimulators.map(
+            ({ id, action, description, icon, slug, title }) => {
               const linkProps = {
                 passHref: true,
               };
               linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
               return (
-                <Link {...linkProps} passHref key={slug}>
+                <Link {...linkProps} passHref key={id}>
                   <CallToActionTile
                     action={action}
                     custom
@@ -55,24 +47,34 @@ const Outils = () => (
                   </CallToActionTile>
                 </Link>
               );
-            })}
-          <CallToActionTile
-            key={monCompteFormation.slug}
-            action={monCompteFormation.action}
-            custom
-            title={monCompteFormation.title}
-            icon={icons[monCompteFormation.icon]}
-            href={monCompteFormation.url}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="no-after"
-          >
-            {monCompteFormation.description}
-          </CallToActionTile>
+            }
+          )}
+          {externalTools.map(
+            ({ id, action, description, icon, title, url }) => (
+              <CallToActionTile
+                key={id}
+                action={action}
+                custom
+                title={title}
+                icon={icons[icon]}
+                href={url}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="no-after"
+              >
+                {description}
+              </CallToActionTile>
+            )
+          )}
         </Grid>
       </Container>
     </Section>
   </Layout>
 );
 
+export async function getStaticProps() {
+  return {
+    props: getTools(),
+  };
+}
 export default Outils;
