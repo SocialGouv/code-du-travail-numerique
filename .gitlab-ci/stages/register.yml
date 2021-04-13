@@ -20,10 +20,6 @@ Register socialgouv/cdtn base image:
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
-    DOCKER_BUILD_ARGS: >-
-      --build-arg ES_LOGS=$ES_LOGS
-      --build-arg ES_LOGS_TOKEN=$ES_LOGS_TOKEN
-      --build-arg CDTN_ADMIN_ENDPOINT=$CDTN_ADMIN_ENDPOINT
 
 Register elasticsearch image:
   <<: *register_stage

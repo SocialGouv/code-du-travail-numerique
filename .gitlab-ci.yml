@@ -22,7 +22,6 @@ include:
   - /.gitlab-ci/stages/deploy.yml
   - /.gitlab-ci/stages/notify.yml
   - /.gitlab-ci/stages/e2e.yml
-  - /.gitlab-ci/stages/storage.yml
 
 stages:
   - "Prepare"
