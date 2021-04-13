@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/modeles-social",
-  "version": "0.0.1",
+  "version": "4.46.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/modeles.json",
   "types": "./index.d.ts",
@@ -15,7 +15,6 @@
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3"
   },
-  "peerDependencies": {},
   "scripts": {
     "prebuild": "tsc",
     "build": "node bin/index.js"

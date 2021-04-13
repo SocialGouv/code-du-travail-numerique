@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.46.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.2...v4.46.0) (2021-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.112.0 ([#3306](https://github.com/SocialGouv/code-du-travail-numerique/issues/3306)) ([1f4fb47](https://github.com/SocialGouv/code-du-travail-numerique/commit/1f4fb47da34c96836b0c77d3ed0ee98722b70972))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.113.0 ([#3424](https://github.com/SocialGouv/code-du-travail-numerique/issues/3424)) ([34903fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/34903feaf87428fb2741e128f2a33589e1c87d21))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.116.0 ([#3431](https://github.com/SocialGouv/code-du-travail-numerique/issues/3431)) ([0b0d0f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/0b0d0f6c9932494bab3459f0ba59eff4d9971116))
+* **deps:** update dependency @socialgouv/kosko-charts to v5 ([#3412](https://github.com/SocialGouv/code-du-travail-numerique/issues/3412)) ([21b9bd0](https://github.com/SocialGouv/code-du-travail-numerique/commit/21b9bd00639c92c7c3d424f51d5caa00aad60b80))
+* **deps:** update dependency husky to v6 ([#3413](https://github.com/SocialGouv/code-du-travail-numerique/issues/3413)) ([e08f2b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/e08f2b77b49dd07b57c091b049d366868da25cb7))
+* **deps:** update socialgouv ([#3409](https://github.com/SocialGouv/code-du-travail-numerique/issues/3409)) ([261889b](https://github.com/SocialGouv/code-du-travail-numerique/commit/261889bb21d55e2ee6a3d3bf496888246d001269))
+
+
+### Features
+
+* **accessibility:** add the accessibility status of the website ([#3430](https://github.com/SocialGouv/code-du-travail-numerique/issues/3430)) ([99585d0](https://github.com/SocialGouv/code-du-travail-numerique/commit/99585d0ae5c7cd87cab7b31cbb6ec88aae76b573))
+* **simulator:** add an endpoint to get publicodes for a simulator ([#3418](https://github.com/SocialGouv/code-du-travail-numerique/issues/3418)) ([c8a85ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8a85ce966293f0c51ae5a4e76902ccc0f7b029f))
+* **simulator:** add origine, anciennete and result steps for business retirement simulator ([#3425](https://github.com/SocialGouv/code-du-travail-numerique/issues/3425)) ([78b216d](https://github.com/SocialGouv/code-du-travail-numerique/commit/78b216d78f570804f7884297f9007de450e2aa5a))
+* **simulator:** init folder for publicode models ([#3416](https://github.com/SocialGouv/code-du-travail-numerique/issues/3416)) ([71f7503](https://github.com/SocialGouv/code-du-travail-numerique/commit/71f7503cdc230751c152f317723ed750edf41a7f))
+* **simulator:** initialise business retirement simulator ([#3423](https://github.com/SocialGouv/code-du-travail-numerique/issues/3423)) ([0d677ff](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d677ff3bee260a99508d896f380719b34c8d6bf))
+
+
+
+
+
 ## [4.45.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.1...v4.45.2) (2021-04-01)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
