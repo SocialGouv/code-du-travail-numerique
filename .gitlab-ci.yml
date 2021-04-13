@@ -30,7 +30,6 @@ stages:
   - "Registration"
   - "Deploy"
   - "Notify Finished Deployment"
-  # - "Update ES data"
 
 #
 
@@ -51,14 +50,3 @@ k8s test:
   extends:
     - .base_kosko_k8s_test
     - .base_stage
-
-ingester:
-  extends:
-    - .base_stage
-  stage: Code Quality
-  trigger:
-    include:
-      - local: /modules/ingester/.gitlab-ci.yml
-    strategy: depend
-  variables:
-    PARENT_PIPELINE_ID: $CI_PIPELINE_ID

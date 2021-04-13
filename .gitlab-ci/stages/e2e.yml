@@ -8,11 +8,6 @@ Test on deployed branch:
     variables:
       # Don't run when deploying in production
       - $PRODUCTION
-      # Don't run when updating Elasticloud data
-      - $UPDATE_ES_INDEX
-
-  when: delayed
-  start_in: 20 minutes
 
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2

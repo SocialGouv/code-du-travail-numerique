@@ -1,11 +1,11 @@
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
-const API_BASE_URL = require("../v1.prefix");
+const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 const docsCountBody = require("./docCount.elastic");
 
 const router = new Router({ prefix: API_BASE_URL });

@@ -4,14 +4,14 @@ const { promisify } = require("util");
 const getCells = promisify(GoogleSpreadsheets.cells);
 
 const csvColumns = {
-  type: 1,
-  idcc: 2,
-  typeRupture: 13,
   answer: 24,
   answer2: 25,
   answer3: 26,
+  idcc: 2,
   ref: 27,
   refUrl: 28,
+  type: 1,
+  typeRupture: 13,
 };
 
 const criteriaIndex = [

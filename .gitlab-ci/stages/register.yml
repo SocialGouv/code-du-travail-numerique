@@ -8,8 +8,6 @@
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      # Don't run when updating Elasticloud data
-      - $UPDATE_ES_INDEX
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
@@ -53,17 +51,3 @@ Register frontend image:
       --build-arg REGISTRY=$CI_REGISTRY_IMAGE
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
-
-Register data image:
-  <<: *register_stage
-  services:
-    - name: docker:19-dind
-  needs:
-    - Register socialgouv/cdtn base image
-
-  variables:
-    CONTEXT: packages/code-du-travail-data
-    DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/data

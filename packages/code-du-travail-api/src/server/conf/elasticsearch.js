@@ -2,7 +2,7 @@
 
 const winston = require("winston");
 const { Client } = require("@elastic/elasticsearch");
-const { logger } = require("../utils/logger");
+const { logger } = require("@socialgouv/cdtn-logger");
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
@@ -17,8 +17,8 @@ switch (process.env.NODE_ENV) {
     break;
   case "production":
     esClientConfig.auth = {
-      username: process.env.ELASTICSEARCH_USER || "elastic",
       password: process.env.ELASTICSEARCH_PWD,
+      username: process.env.ELASTICSEARCH_USER || "elastic",
     };
     break;
 }

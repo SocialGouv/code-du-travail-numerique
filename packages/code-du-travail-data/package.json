@@ -14,15 +14,9 @@
     }
   },
   "scripts": {
-    "build": "ncc build ./indexing/index.js -o dist",
-    "check-slugs": "DISABLE_GLOSSARY=true  node -r esm indexing/slugChecker",
-    "download-suggestion": "curl -L $SUGGEST_DATA_URL -o ./dataset/suggestions.txt",
-    "start": "NODE_OPTIONS=--max_old_space_size=1536 NODE_ENV=production node ./dist/index.js",
-    "start:dev": "node -r esm indexing/ingest",
-    "populate-suggest": "node -r esm indexing/suggestion",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
-    "lint": "eslint ./indexing/*",
+    "lint": "eslint ./index.js",
     "test": "jest"
   },
   "repository": {
@@ -34,24 +28,11 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
-  "dependencies": {
-    "@cdtn/ingester": "^4.45.1",
-    "@elastic/elasticsearch": "^7.11.0",
-    "@socialgouv/cdtn-elasticsearch": "^1.0.0-alpha.10",
-    "@socialgouv/cdtn-logger": "^1.0.0-alpha.10",
-    "@socialgouv/cdtn-slugify": "^4.45.0",
-    "@socialgouv/cdtn-sources": "^4.45.0",
-    "esm": "^3.2.25",
-    "node-fetch": "^2.6.1",
-    "p-queue": "^6.6.2",
-    "p-retry": "^4.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.17",
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@babel/preset-env": "^7.12.17",
     "@socialgouv/eslint-config-recommended": "^1.55.0",
-    "@vercel/ncc": "^0.27.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.21.0",

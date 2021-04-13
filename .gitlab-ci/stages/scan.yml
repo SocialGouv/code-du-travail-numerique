@@ -9,13 +9,11 @@ Snyk docker scan:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      - $UPDATE_ES_INDEX
   dependencies: []
   when: manual
   needs:
     - Register api image
     - Register frontend image
-    - Register data image
   allow_failure: true
   before_script:
     - source .gitlab-ci/env.sh

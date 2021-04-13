@@ -17,7 +17,7 @@ const dossiersRoute = require("./routes/dossiers");
 const glossaryRoute = require("./routes/glossary");
 const versionRoutes = require("./routes/version");
 const indexRoute = require("./routes/index");
-const { logger } = require("./utils/logger");
+const { logger } = require("@socialgouv/cdtn-logger");
 
 const app = new Koa();
 const PORT = process.env.PORT || 1337;

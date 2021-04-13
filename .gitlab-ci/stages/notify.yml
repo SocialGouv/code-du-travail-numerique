@@ -27,8 +27,6 @@ include:
     variables:
       # Don't run when deploying in production an existing image
       - $PRODUCTION
-      # Don't run when updating Elasticloud data
-      - $UPDATE_ES_INDEX
       # Don't register a base image for release commit
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
@@ -39,10 +37,6 @@ include:
   only:
     variables:
       - $PRODUCTION
-  except:
-    variables:
-      # Don't run when deploying in production an existing image
-      - $UPDATE_ES_INDEX
 #
 
 Notify Starting Deployment:

@@ -6,12 +6,13 @@ const getSearchBody = require("./searchBySourceSlug.elastic");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
 const getRelatedItemsBody = require("./relatedItems.elastic");
-const { logger } = require("../../utils/logger");
+const { logger } = require("@socialgouv/cdtn-logger");
+const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
 
 const MAX_RESULTS = 4;
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 // standard related items :
 const sources = [

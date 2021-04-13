@@ -14,8 +14,8 @@
 
 ### Demos
 
-- Production : <https://code.travail.gouv.fr>
-- master (dev) : <https://master-code-travail.dev.fabrique.social.gouv.fr>
+-   Production : <https://code.travail.gouv.fr>
+-   master (dev) : <https://master-code-travail.dev.fabrique.social.gouv.fr>
 
 ## Installation
 
@@ -88,46 +88,28 @@ yarn workspace @cdt/api dev
 
 ## Howto
 
-In this section you will find commands that you may need during your work
-
-Create a dump with semantic vectors (you will need a NLP service available)
-(if NLP_URL env is not provide it will create a dump without semantic vectors)
-
-```sh
-# Dump only documents
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data start:dev
-mas
-# Dump with semantic vectors
-CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql NLP_URL=https://preprod-serving-ml.dev2.fabrique.social.gouv.fr yarn workspace @cdt/data start:dev
-
-# For dev purpose,you can generate a fast Dump
-# without semantic vectors nor glossary words.
-DISABLE_GLOSSARY=true CDTN_ADMIN_ENDPOINT=https://cdtn-admin.fabrique.social.gouv.fr/api/graphql yarn workspace @cdt/data start:dev
-```
-
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)
 
 You can also read the packages readme
 
-- [Data README](./packages/code-du-travail-data/README.md)
-- [API README](./packages/code-du-travail-api/README.md)
-- [e2e README](./optional/e2e/README.md)
+-   [API README](./packages/code-du-travail-api/README.md)
+-   [e2e README](./optional/e2e/README.md)
 
 ## Contributions
 
-- See [code of conduct](./CODE_OF_CONDUCT.md)
-- Work on feature branches
-- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+-   See [code of conduct](./CODE_OF_CONDUCT.md)
+-   Work on feature branches
+-   Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
 
 ### Issues
 
-- Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
-- nomenclature des labels :
+-   Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
+-   nomenclature des labels :
 
-  - t : `t`ype of issue
-  - p : name of `p`roduct (we differentiate ES and nav by themes for now)
-  - s : `s`tatus of the issue
-  - o : name of the dedicated t`o`ol
+    -   t : `t`ype of issue
+    -   p : name of `p`roduct (we differentiate ES and nav by themes for now)
+    -   s : `s`tatus of the issue
+    -   o : name of the dedicated t`o`ol
 
 ## License
 

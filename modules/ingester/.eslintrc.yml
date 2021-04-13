@@ -1,3 +1,0 @@
----
-extends:
-  - "@socialgouv/eslint-config-recommended"

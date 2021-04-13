@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { promisify } from "util";
+
 import { getQuestions, getSituations } from "./lib";
 
 const writeFile = promisify(fs.writeFile);
@@ -8,9 +9,9 @@ const writeFile = promisify(fs.writeFile);
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
 
 const dataTab = {
+  "heures-recherche-emploi": 4,
   "preavis-demission": 2,
   "preavis-licenciement": 3,
-  "heures-recherche-emploi": 4,
 };
 
 async function main() {
@@ -31,7 +32,7 @@ async function main() {
 }
 
 if (module === require.main) {
-  main().catch(error => {
+  main().catch((error) => {
     console.error(error);
   });
 }
