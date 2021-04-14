@@ -65,6 +65,7 @@ export FRONTEND_HOST="${DOMAIN}";
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export API_HOST="api.${DOMAIN}";
+  export FRONTEND_HOST="code.travail.gouv.fr";
 fi
 
 export API_URL="https://${API_HOST}"

@@ -4,6 +4,7 @@ const helmet = require("koa-helmet");
 const Router = require("koa-router");
 const Sentry = require("@sentry/node");
 const redirects = require("./redirects.json");
+const { logger } = require("@socialgouv/cdtn-logger");
 
 const IS_PRODUCTION_DEPLOYMENT =
   process.env.IS_PRODUCTION_DEPLOYMENT === "true";
@@ -92,31 +93,14 @@ async function getKoaServer({ nextApp }) {
   if (dev) {
     router.post("/report-violation", (ctx) => {
       if (ctx.request.body) {
-        console.log("CSP Violation: ", ctx.request.body);
+        logger.warning("CSP Violation: ", ctx.request.body);
       } else {
-        console.log("CSP Violation: No data received!");
+        logger.warning("CSP Violation: No data received!");
       }
       ctx.status = 204;
     });
   }
-  if (IS_PRODUCTION_DEPLOYMENT) {
-    server.use(async function (ctx, next) {
-      const isProdUrl = ctx.host === PROD_HOSTNAME;
-      const isHealthCheckUrl = ctx.path === "/health";
-      if (!isProdUrl && !isHealthCheckUrl) {
-        const productionUrl = `https://${PROD_HOSTNAME}${ctx.originalUrl}`;
-        if (process.env.NODE_ENV !== "test") {
-          console.log(
-            `301 redirect ${ctx.host}${ctx.originalUrl} to production url ${productionUrl}`
-          );
-        }
-        ctx.status = 301;
-        ctx.redirect(productionUrl);
-        return;
-      }
-      await next();
-    });
-  } else {
+  if (!IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();

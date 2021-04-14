@@ -44,14 +44,7 @@ describe("/IS_PRODUCTION_DEPLOYMENT=true", () => {
     const response = await request(app.callback()).get("/robots.txt");
     expect(response.headers["x-robots-tag"]).toBe(undefined);
   });
-  it("should redirect to production url", async () => {
-    const response = await request(app.callback()).get("/some-url");
-    expect(response.status).toBe(301);
-    expect(response.headers.location).toEqual(
-      `https://prod-test-hostname/some-url`
-    );
-    process.env.NODE_ENV = "test";
-  });
+
   it("should return health probe", async () => {
     const response = await request(app.callback()).get("/health");
     expect(response.status).toBe(200);
