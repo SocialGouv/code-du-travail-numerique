@@ -7,7 +7,7 @@ const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getIdccBody = require("./idcc.elastic");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

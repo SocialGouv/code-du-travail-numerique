@@ -10,7 +10,7 @@ const docsCountBody = require("../docs-count/docCount.elastic");
 const router = new Router({ prefix: API_BASE_URL });
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID || "3";
 const MATOMO_URL =

@@ -6,7 +6,7 @@ const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { getSuggestQuery } = require("./suggest.elastic.js");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${SUGGESTIONS}`;
+const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${SUGGESTIONS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 

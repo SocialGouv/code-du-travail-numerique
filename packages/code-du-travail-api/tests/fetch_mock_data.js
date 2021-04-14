@@ -103,7 +103,7 @@ const documentsSlugs = [
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
 async function updateDocumentsData(slugs) {
-  const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+  const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
   const requests = slugs.reduce((state, slug) => {
     state.push({ index });
     state.push(getDocumentByUrlQuery(slug, []));

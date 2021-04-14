@@ -14,8 +14,8 @@ import documents from "./cdtn_document.data.json";
 import suggestions from "./suggestions_data.json";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn_test";
-const documentsIndexName = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
-const suggestionsIndexName = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${SUGGESTIONS}`;
+const documentsIndexName = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+const suggestionsIndexName = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${SUGGESTIONS}`;
 
 async function main() {
   await version({ client });

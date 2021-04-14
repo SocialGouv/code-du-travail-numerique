@@ -13,7 +13,7 @@ const { removeDuplicate, merge, mergePipe } = require("./utils");
 const { logger } = require("@socialgouv/cdtn-logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;

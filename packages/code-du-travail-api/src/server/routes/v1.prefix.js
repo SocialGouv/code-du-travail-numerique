@@ -9,5 +9,7 @@ if (!major) {
 }
 module.exports = {
   API_BASE_URL: "/api/v1",
-  CDTN_ADMIN_VERSION: `v${major}`,
+  CDTN_ADMIN_VERSION: /^cdtn-(prod|preprod)/.test(process.env.ES_INDEX_PREFIX)
+    ? `-v${major}`
+    : ``,
 };

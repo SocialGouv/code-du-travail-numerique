@@ -8,7 +8,7 @@ const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 
 const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+const index = `${ES_INDEX_PREFIX}${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 /**
  * Return thematic files that match a given slug
