@@ -28,6 +28,7 @@
     "@next/bundle-analyzer": "^10.0.9",
     "@sentry/browser": "^6.2.2",
     "@sentry/node": "^6.2.2",
+    "@socialgouv/cdtn-logger": "^1.1.2",
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "@socialgouv/cdtn-ui": "^4.46.0",
