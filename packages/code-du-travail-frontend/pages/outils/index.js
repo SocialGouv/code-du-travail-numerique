@@ -69,7 +69,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
   </Layout>
 );
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: getTools(),
   };
