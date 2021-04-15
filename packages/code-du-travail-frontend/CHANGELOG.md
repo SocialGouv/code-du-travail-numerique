@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.47.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.46.0...v4.47.0) (2021-04-15)
+
+
+### Bug Fixes
+
+* **frontend:** fix safari tooltip display bug ([#3433](https://github.com/SocialGouv/code-du-travail-numerique/issues/3433)) ([15526e9](https://github.com/SocialGouv/code-du-travail-numerique/commit/15526e91664c6b813129dd7e04880b4f7af6e8bb)), closes [#3351](https://github.com/SocialGouv/code-du-travail-numerique/issues/3351)
+* **frontend:** replace getStaticPath with getServerSideProps ([#3438](https://github.com/SocialGouv/code-du-travail-numerique/issues/3438)) ([849446b](https://github.com/SocialGouv/code-du-travail-numerique/commit/849446b30b422c61a8cefe56900aa6966491e862))
+* **frontend:** use getStaticPath for /api/simulateur endpoint ([#3435](https://github.com/SocialGouv/code-du-travail-numerique/issues/3435)) ([8a1db26](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a1db2694eabbcbe81d7ed5ca5a8e8488401d0ab))
+* **k8s:** use code.travail.gouv.fr as default ([#3436](https://github.com/SocialGouv/code-du-travail-numerique/issues/3436)) ([953281b](https://github.com/SocialGouv/code-du-travail-numerique/commit/953281b6f06f76115636825c92424a2487a8cdd2))
+
+
+### Features
+
+* **frontend:** add a11y navigation skip link ([#3426](https://github.com/SocialGouv/code-du-travail-numerique/issues/3426)) ([b3d5a80](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3d5a80b7f5187cbe18f183b3656bde97aa78642)), closes [#3403](https://github.com/SocialGouv/code-du-travail-numerique/issues/3403)
+
+
+
+
+
 # [4.46.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.2...v4.46.0) (2021-04-13)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.47.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.46.0...v4.47.0) (2021-04-15)
+
+
+### Features
+
+* **frontend:** add a11y navigation skip link ([#3426](https://github.com/SocialGouv/code-du-travail-numerique/issues/3426)) ([b3d5a80](https://github.com/SocialGouv/code-du-travail-numerique/commit/b3d5a80b7f5187cbe18f183b3656bde97aa78642)), closes [#3403](https://github.com/SocialGouv/code-du-travail-numerique/issues/3403)
+
+
+
+
+
 # [4.46.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.2...v4.46.0) (2021-04-13)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui
