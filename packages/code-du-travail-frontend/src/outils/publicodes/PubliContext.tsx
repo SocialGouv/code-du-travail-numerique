@@ -35,6 +35,7 @@ interface PublicodeProvider {
 const PublicodeProvider: React.FC<
   { children: React.ReactNode } & PublicodeProvider
 > = ({ children, publicodes, rule }) => {
+  console.log("")
   const { result, missingArgs, setSituation } = usePublicodeHandler({
     engine: new Engine(publicodes),
     rule: rule,

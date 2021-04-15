@@ -51,7 +51,7 @@ function Outils({ description, icon, slug, relatedItems, title, publicodes }) {
         <Container>
           <Flex>
             <Wrapper variant="main">
-              <Tool icon={icon} title={title} />
+              <Tool icon={icon} title={title} publicodes={publicodes} />
             </Wrapper>
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -67,7 +67,7 @@ function Outils({ description, icon, slug, relatedItems, title, publicodes }) {
 
 export default Outils;
 
-Outils.getInitialProps = async ({ query }) => {
+export async function getServerSideProps({ query }) {
   const { slug } = query;
   const { description, icon, title } = tools.find((tool) => tool.slug === slug);
   let relatedItems = [];
@@ -84,14 +84,16 @@ Outils.getInitialProps = async ({ query }) => {
   const publicodes = loadPublicodes(slug);
 
   return {
-    description,
-    icon,
-    publicodes,
-    relatedItems,
-    slug,
-    title,
+    props: {
+      description,
+      icon,
+      publicodes,
+      relatedItems,
+      slug,
+      title,
+    },
   };
-};
+}
 
 const { breakpoints, spacings } = theme;
 
