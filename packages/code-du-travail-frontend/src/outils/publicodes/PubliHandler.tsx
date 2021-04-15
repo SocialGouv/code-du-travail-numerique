@@ -42,7 +42,6 @@ const usePublicodeHandler = ({
   }, [engine, rule, situation]);
 
   return {
-    isLoading: engine === null,
     missingArgs,
     result: value,
     setSituation: newSituation,
