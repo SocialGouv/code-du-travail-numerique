@@ -29,6 +29,7 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
       Ou s'adresser ?
     </strong>
     <a
+      aria-label="Label du lien ! (nouvelle fenêtre)"
       href="url du lien"
       rel="noopener noreferrer"
       target="_blank"

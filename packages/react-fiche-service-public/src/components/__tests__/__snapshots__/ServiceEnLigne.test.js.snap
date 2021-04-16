@@ -114,6 +114,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 
 <div>
   <a
+    aria-label="Se retrouve dans en entête Texte qui se retrouve dans le lien (nouvelle fenêtre)"
     class="c0 c1 no-after"
     href="url à retoruver dans le lien"
     rel="noopener noreferrer"

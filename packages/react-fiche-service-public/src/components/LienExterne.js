@@ -35,7 +35,12 @@ export class LienExterne extends React.PureComponent {
     const url = data.attributes.URL;
     const label = getText(data);
     return (
-      <a href={url} rel="noopener noreferrer" target="_blank">
+      <a
+        href={url}
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label={`${label} (nouvelle fenêtre)`}
+      >
         {label}
       </a>
     );
