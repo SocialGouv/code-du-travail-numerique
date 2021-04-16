@@ -36,13 +36,20 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-function Outils({ description, icon, slug, relatedItems, title, publicodes }) {
+function Outils({
+  description,
+  icon,
+  slug,
+  relatedItems,
+  title,
+  publicodeRules,
+}) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
   });
   return (
-    <Layout currentPage="">
+    <Layout>
       <Metas
         title={`${title} - Code du travail numérique - Ministère du travail`}
         description={description}
@@ -51,7 +58,7 @@ function Outils({ description, icon, slug, relatedItems, title, publicodes }) {
         <Container>
           <Flex>
             <Wrapper variant="main">
-              <Tool icon={icon} title={title} publicodes={publicodes} />
+              <Tool icon={icon} title={title} publicodeRules={publicodeRules} />
             </Wrapper>
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -81,13 +88,13 @@ export async function getServerSideProps({ query }) {
     Sentry.captureException(e);
   }
 
-  const publicodes = loadPublicodes(slug);
+  const publicodeRules = loadPublicodes(slug);
 
   return {
     props: {
       description,
       icon,
-      publicodes,
+      publicodeRules,
       relatedItems,
       slug,
       title,

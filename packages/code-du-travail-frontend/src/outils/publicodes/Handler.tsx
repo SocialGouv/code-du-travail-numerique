@@ -1,17 +1,17 @@
 import Engine from "publicodes";
 import { useMemo, useState } from "react";
 
-import { PublicodeContextInterface } from "./PubliContext";
+import { PublicodesContextInterface } from "./index";
 
 interface State {
   engine: Partial<Engine>;
-  rule: string;
+  targetRule: string;
 }
 
-const usePublicodeHandler = ({
+const usePublicodesHandler = ({
   engine,
-  rule,
-}: State): PublicodeContextInterface => {
+  targetRule,
+}: State): PublicodesContextInterface => {
   const [situation, setSituation] = useState<Record<string, string>>({});
 
   function newSituation(args: Record<string, string>): void {
@@ -23,7 +23,7 @@ const usePublicodeHandler = ({
   }
 
   const missingArgs = useMemo(() => {
-    const result = engine?.setSituation(situation).evaluate(rule);
+    const result = engine?.setSituation(situation).evaluate(targetRule);
     return Object.keys(result?.missingVariables ?? [])
       .map((arg) => {
         const detail = engine.getRule(arg);
@@ -34,12 +34,12 @@ const usePublicodeHandler = ({
         };
       })
       .sort((a, b) => b.indice - a.indice);
-  }, [engine, rule, situation]);
+  }, [engine, targetRule, situation]);
 
   const value = useMemo(() => {
-    const result = engine?.setSituation(situation).evaluate(rule);
+    const result = engine?.setSituation(situation).evaluate(targetRule);
     return result?.nodeValue ?? null;
-  }, [engine, rule, situation]);
+  }, [engine, targetRule, situation]);
 
   return {
     missingArgs,
@@ -48,4 +48,4 @@ const usePublicodeHandler = ({
   };
 };
 
-export default usePublicodeHandler;
+export default usePublicodesHandler;

@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Wizard } from "../common/Wizard";
-import { PublicodeProvider } from "../publicodes";
+import { PublicodesProvider } from "../publicodes/index";
 import { initialState, stepReducer } from "./stepReducer";
 
-const SimulateurPreavisRetraite = ({ icon, title, publicodes }) => (
-  <PublicodeProvider
-    publicodes={publicodes}
-    rule="contrat salarié . préavis de retraite"
+const SimulateurPreavisRetraite = ({ icon, title, publicodeRules }) => (
+  <PublicodesProvider
+    rules={publicodeRules}
+    targetRule="contrat salarié . préavis de retraite"
   >
     <Wizard
       icon={icon}
@@ -16,7 +16,7 @@ const SimulateurPreavisRetraite = ({ icon, title, publicodes }) => (
       // @ts-ignore
       stepReducer={stepReducer}
     />
-  </PublicodeProvider>
+  </PublicodesProvider>
 );
 
 export { SimulateurPreavisRetraite };

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 
 import { Highlight, SectionTitle } from "../../common/stepStyles";
-import { usePublicode } from "../../publicodes/PubliContext";
+import { usePublicodes } from "../../publicodes";
 
 function ResultStep({ form }) {
-  const publicodeContext = usePublicode();
+  const publicodeContext = usePublicodes();
 
   useEffect(() => {
     publicodeContext.setSituation(form.getState().values);
