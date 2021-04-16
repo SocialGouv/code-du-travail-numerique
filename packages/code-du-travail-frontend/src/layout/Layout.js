@@ -6,7 +6,7 @@ import { ErrorBoundary } from "../common/ErrorBoundary";
 import Footer from "./Footer";
 import { Header, HEADER_HEIGHT, MOBILE_HEADER_HEIGHT } from "./Header";
 
-const Layout = ({ children, currentPage }) => {
+const Layout = ({ children, currentPage = "" }) => {
   return (
     <BackgroundContainer>
       <BackgroundLayer currentPage={currentPage} />

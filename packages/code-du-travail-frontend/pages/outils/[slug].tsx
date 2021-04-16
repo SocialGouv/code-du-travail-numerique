@@ -9,6 +9,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
+import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -35,7 +36,14 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-function Outils({ description, icon, slug, relatedItems, title }) {
+function Outils({
+  description,
+  icon,
+  slug,
+  relatedItems,
+  title,
+  publicodeRules,
+}) {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -50,7 +58,7 @@ function Outils({ description, icon, slug, relatedItems, title }) {
         <Container>
           <Flex>
             <Wrapper variant="main">
-              <Tool icon={icon} title={title} />
+              <Tool icon={icon} title={title} publicodeRules={publicodeRules} />
             </Wrapper>
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -66,7 +74,7 @@ function Outils({ description, icon, slug, relatedItems, title }) {
 
 export default Outils;
 
-Outils.getInitialProps = async ({ query }) => {
+export async function getServerSideProps({ query }) {
   const { slug } = query;
   const { description, icon, title } = tools.find((tool) => tool.slug === slug);
   let relatedItems = [];
@@ -80,14 +88,19 @@ Outils.getInitialProps = async ({ query }) => {
     Sentry.captureException(e);
   }
 
+  const publicodeRules = loadPublicodes(slug);
+
   return {
-    description,
-    icon,
-    relatedItems,
-    slug,
-    title,
+    props: {
+      description,
+      icon,
+      publicodeRules,
+      relatedItems,
+      slug,
+      title,
+    },
   };
-};
+}
 
 const { breakpoints, spacings } = theme;
 

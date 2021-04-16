@@ -1,5 +1,6 @@
 extends:
   - "@socialgouv/eslint-config-react"
+  - "plugin:import/typescript"
 
 rules:
   jsx-a11y/anchor-is-valid: off
