@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "../../../common/A11yLink";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { MathFormula } from "../../common/MathFormula";
 import {
@@ -179,17 +180,17 @@ function StepIndemnite({ form }) {
               "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
             }
           >
-            <a target="_blank" rel="noopener noreferrer">
+            <A11yLink target="_blank" rel="noopener noreferrer">
               salarié en CDD
-            </a>
+            </A11yLink>
           </Link>
         ) : (
           <Link
             href={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
           >
-            <a target="_blank" rel="noopener noreferrer">
+            <A11yLink target="_blank" rel="noopener noreferrer">
               salarié en contrat de travail temporaire (contrat d’intérim)
-            </a>
+            </A11yLink>
           </Link>
         )}
       </p>

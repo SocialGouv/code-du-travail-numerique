@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "./A11yLink";
 import { Share } from "./Share";
 
 const Article = ({
@@ -41,13 +42,13 @@ const Article = ({
               (source.url ? (
                 <Span>
                   Source:{" "}
-                  <a
+                  <A11yLink
                     href={source.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     {source.name}
-                  </a>
+                  </A11yLink>
                 </Span>
               ) : (
                 <Span>Source: {source.name}</Span>

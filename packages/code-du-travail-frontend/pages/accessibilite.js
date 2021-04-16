@@ -8,6 +8,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 
+import { A11yLink } from "../src/common/A11yLink";
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 
@@ -87,22 +88,22 @@ const Accessibilite = () => (
             Vous pouvez :
             <ul>
               <li>
-                <a
+                <A11yLink
                   href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Écrire un message au Défenseur des droits
-                </a>
+                </A11yLink>
               </li>
               <li>
-                <a
+                <A11yLink
                   href="https://www.defenseurdesdroits.fr/saisir/delegues"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Contacter le délégué du Défenseur des droits dans votre région
-                </a>
+                </A11yLink>
               </li>
               <li>
                 Envoyer un courrier par la poste (gratuit, ne pas mettre de
@@ -119,13 +120,13 @@ const Accessibilite = () => (
           <p>
             Pour en savoir plus sur la politique d’accessibilité numérique de
             l’État : <br />
-            <a
+            <A11yLink
               href="http://references.modernisation.gouv.fr/accessibilite-numerique"
               target="_blank"
               rel="noopener noreferrer"
             >
               http://references.modernisation.gouv.fr/accessibilite-numerique
-            </a>
+            </A11yLink>
           </p>
         </Wrapper>
       </Container>

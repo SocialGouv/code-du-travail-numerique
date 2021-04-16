@@ -10,6 +10,8 @@ import {
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "../common/A11yLink";
+
 const Origins = () => (
   <Section
     variant="light"
@@ -40,13 +42,13 @@ const Origins = () => (
                   <p>
                     Le droit du travail en France est influencé par les textes
                     de{" "}
-                    <a
+                    <A11yLink
                       href="https://www.ilo.org/global/lang--fr/index.htm"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
                       l’Organisation internationale du travail
-                    </a>{" "}
+                    </A11yLink>{" "}
                     (OIT), agence des Nations Unies pour le monde du travail.
                     L’OIT rédige des recommandations et des conventions.
                   </p>
@@ -61,13 +63,13 @@ const Origins = () => (
                   <p>
                     <i>
                       Exemple de convention&nbsp;:{" "}
-                      <a
+                      <A11yLink
                         href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         la Convention n°158 de l’OIT sur le licenciement
-                      </a>
+                      </A11yLink>
                       .
                     </i>
                   </p>
@@ -78,23 +80,23 @@ const Origins = () => (
                   <p>
                     <i>
                       Exemples&nbsp;:{" "}
-                      <a
+                      <A11yLink
                         href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         Le Pacte international relatif aux droits civils et
                         politiques de 1966
-                      </a>{" "}
+                      </A11yLink>{" "}
                       et{" "}
-                      <a
+                      <A11yLink
                         href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         le Pacte international relatif aux droits économiques,
                         sociaux et culturels de 1966
-                      </a>
+                      </A11yLink>
                       .
                     </i>
                   </p>
@@ -108,21 +110,21 @@ const Origins = () => (
                 <>
                   <p>
                     Le droit du travail français est influencé par{" "}
-                    <a
+                    <A11yLink
                       href="https://europa.eu/european-union/index_fr"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
                       l’Union Européenne
-                    </a>{" "}
+                    </A11yLink>{" "}
                     et par{" "}
-                    <a
+                    <A11yLink
                       href="https://www.coe.int/fr/"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
                       le Conseil de l’Europe
-                    </a>
+                    </A11yLink>
                     .
                   </p>
                   <p>
@@ -134,30 +136,30 @@ const Origins = () => (
                     <li>des directives</li>
                     <li>
                       des accords collectifs européens négociés par{" "}
-                      <a
+                      <A11yLink
                         href="https://www.etuc.org/fr"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         la Confédération européenne des syndicats (CES)
-                      </a>
+                      </A11yLink>
                       ,{" "}
-                      <a
+                      <A11yLink
                         href="https://www.businesseurope.eu/"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         Business Europe
-                      </a>{" "}
+                      </A11yLink>{" "}
                       et{" "}
-                      <a
+                      <A11yLink
                         href="https://www.ceep.eu/"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         le Centre européen des entreprises à participation
                         publique
-                      </a>{" "}
+                      </A11yLink>{" "}
                       (CEEP)
                     </li>
                   </ul>
@@ -168,27 +170,27 @@ const Origins = () => (
                   </p>
                   <ul>
                     <li>
-                      <a
+                      <A11yLink
                         href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         La Convention européenne de sauvegarde des droits de
                         l’Homme et des libertés fondamentales
-                      </a>{" "}
+                      </A11yLink>{" "}
                       qui évoque des droits civils et politiques comme par
                       exemple la liberté syndicale, l’interdiction du travail
                       forcé, des discriminations, le respect de la vie privée et
                       familiale.
                     </li>
                     <li>
-                      <a
+                      <A11yLink
                         href="https://www.coe.int/en/web/european-social-charter"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
                         La Charte sociale européenne
-                      </a>{" "}
+                      </A11yLink>{" "}
                       qui concerne les droits sociaux et économiques dans les
                       domaines notamment de l’emploi et des conditions de
                       travail.
@@ -204,13 +206,13 @@ const Origins = () => (
                 <>
                   <p>
                     Texte le plus important du système juridique français,{" "}
-                    <a
+                    <A11yLink
                       href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                     >
                       la Constitution du 4 octobre 1958
-                    </a>{" "}
+                    </A11yLink>{" "}
                     est le texte fondateur de la Vème République. La
                     Constitution a pour objectif d’organiser les pouvoirs
                     publics, de définir leur rôle et leurs relations entre eux.
@@ -218,29 +220,29 @@ const Origins = () => (
                   <p>
                     Dans son préambule la Constitution de 1958 renvoie
                     explicitement à 3 autres textes fondamentaux&nbsp;:{" "}
-                    <a
+                    <A11yLink
                       href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       la Déclaration des Droits de l’Homme et du Citoyen de 1789
-                    </a>
+                    </A11yLink>
                     ,{" "}
-                    <a
+                    <A11yLink
                       href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       le Préambule de la Constitution du 27 octobre 1946
-                    </a>{" "}
+                    </A11yLink>{" "}
                     et{" "}
-                    <a
+                    <A11yLink
                       href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       la Charte de l’environnement de 2004
-                    </a>
+                    </A11yLink>
                     .
                   </p>
                   <p>

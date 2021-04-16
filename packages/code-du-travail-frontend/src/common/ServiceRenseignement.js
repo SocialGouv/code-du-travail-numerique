@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 import { matopush } from "../piwik.js";
+import { A11yLink } from "./A11yLink";
 
 function DepartementLink({ departement }) {
   const trackSRClick = useCallback(() => {
@@ -13,14 +14,14 @@ function DepartementLink({ departement }) {
   }, []);
   return (
     <p>
-      <a
+      <A11yLink
         onClick={trackSRClick}
         target="_blank"
         rel="noopener noreferrer"
         href={departement.url}
       >
         {departement.url}
-      </a>
+      </A11yLink>
     </p>
   );
 }

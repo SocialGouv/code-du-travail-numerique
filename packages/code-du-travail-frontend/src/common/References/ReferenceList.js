@@ -18,6 +18,7 @@ const ExternalLink = ({ title, url }) =>
       href={url}
       rel="noopener noreferrer nofollow"
       target="_blank"
+      aria-label={`${title} (Nouvelle fenêtre)`}
       arrowPosition="left"
     >
       {title}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { A11yLink } from "../../common/A11yLink";
+
 const createValuesMatcher = (values) => (item) => {
   function swallowEqual(a, b) {
     return Object.entries(a).every(([key, value]) => {
@@ -110,14 +112,14 @@ export function getRef(refs) {
     <ul>
       {refs.map(({ ref, refUrl }) => (
         <li key={refUrl}>
-          <a
+          <A11yLink
             href={refUrl}
             target="_blank"
             rel="noopener noreferrer"
             title={`Consultez l’${ref.toLowerCase()}`}
           >
             {ref}
-          </a>
+          </A11yLink>
         </li>
       ))}
     </ul>
