@@ -277,7 +277,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <a
                     class="c11 c12 c13"
                     href="/code-du-travail/l1244-3"
-                    rel="nofollow"
                   >
                     <svg
                       class="c14 c15"
@@ -300,7 +299,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   <a
                     class="c11 c12 c13"
                     href="/code-du-travail/r1244-4"
-                    rel="nofollow"
                   >
                     <svg
                       class="c14 c15"
@@ -321,6 +319,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
+                    aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
                     class="c11 c12 c13 no-after"
                     href="https://article.jo/L3121-44"
                     rel="noopener noreferrer nofollow"
@@ -345,6 +344,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
+                    aria-label="Article foo du JPO (Nouvelle fenêtre)"
                     class="c11 c12 c13 no-after"
                     href="https://article.jo/foo"
                     rel="noopener noreferrer nofollow"
@@ -369,6 +369,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
+                    aria-label="Convention foo (Nouvelle fenêtre)"
                     class="c11 c12 c13 no-after"
                     href="https://ma-convention-collective/ccc-foo"
                     rel="noopener noreferrer nofollow"

@@ -84,6 +84,7 @@ exports[`<StepResult /> should render no results 1`] = `
   <ul>
     <li>
       <a
+        aria-label="Article 33 (nouvelle fenêtre)"
         href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
         rel="noopener noreferrer"
         target="_blank"
@@ -209,6 +210,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   <ul>
     <li>
       <a
+        aria-label="Article 29 (nouvelle fenêtre)"
         href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
         rel="noopener noreferrer"
         target="_blank"
@@ -298,6 +300,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <ul>
     <li>
       <a
+        aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
         href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
         rel="noopener noreferrer"
         target="_blank"
@@ -403,6 +406,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <ul>
     <li>
       <a
+        aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
         href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
         rel="noopener noreferrer"
         target="_blank"
