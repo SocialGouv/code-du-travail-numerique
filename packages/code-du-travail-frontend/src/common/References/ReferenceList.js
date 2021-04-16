@@ -7,9 +7,7 @@ import styled from "styled-components";
 
 const InternalLink = ({ title, type, slug }) => (
   <Link href={`/${getRouteBySource(type)}/${slug}`} passHref>
-    <StyledArrowLink rel="nofollow" arrowPosition="left">
-      {title}
-    </StyledArrowLink>
+    <StyledArrowLink arrowPosition="left">{title}</StyledArrowLink>
   </Link>
 );
 
