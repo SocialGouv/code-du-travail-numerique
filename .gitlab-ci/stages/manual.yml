@@ -49,9 +49,9 @@ Production:
       # that only bump version / udpate changelog
       - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
   script:
-    - echo "deploy ${COMMIT_TAG}"
+    - echo "deploy ${CI_COMMIT_TAG}"
     - curl --request POST
-      --form ref="${COMMIT_TAG}"
+      --form ref="${CI_COMMIT_TAG}"
       --form token="${CI_JOB_TOKEN}"
       --form variables[PRODUCTION]="true"
       ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/trigger/pipeline
