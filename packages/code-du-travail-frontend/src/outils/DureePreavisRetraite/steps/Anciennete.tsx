@@ -3,7 +3,7 @@ import React from "react";
 import { TextQuestion } from "../../common/TextQuestion";
 import { isPositiveNumber } from "../../common/validators";
 
-function AncienneteStep() {
+function AncienneteStep(): JSX.Element {
   return (
     <>
       <TextQuestion

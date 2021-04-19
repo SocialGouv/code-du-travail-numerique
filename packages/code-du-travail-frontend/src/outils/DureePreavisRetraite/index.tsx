@@ -1,12 +1,22 @@
 import React from "react";
 
 import { Wizard } from "../common/Wizard";
-import { PublicodesProvider } from "../publicodes/index";
+import { PublicodesProvider } from "../publicodes";
 import { initialState, stepReducer } from "./stepReducer";
 
-const SimulateurPreavisRetraite = ({ icon, title, publicodeRules }) => (
+interface Props {
+  icon: string;
+  title: string;
+  publicodesRules: any;
+}
+
+const SimulateurPreavisRetraite = ({
+  icon,
+  title,
+  publicodesRules,
+}: Props): JSX.Element => (
   <PublicodesProvider
-    rules={publicodeRules}
+    rules={publicodesRules}
     targetRule="contrat salarié . préavis de retraite"
   >
     <Wizard

@@ -7,7 +7,7 @@ import { Question } from "../../common/Question";
 import { RadioContainer } from "../../common/stepStyles";
 import { required } from "../../common/validators";
 
-function OrigineStep() {
+function OrigineStep(): JSX.Element {
   return (
     <>
       <Question as="p" required>

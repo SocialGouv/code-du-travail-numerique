@@ -1,6 +1,6 @@
+import Engine, { Evaluation, Rule } from "publicodes";
 import React, { createContext, useContext } from "react";
-import Engine, { Evaluation } from "publicodes";
-import { Rule } from "publicodes/dist/types/rule";
+
 import usePublicodesHandler from "./Handler";
 
 interface MissingArgs {
@@ -16,9 +16,11 @@ export interface PublicodesContextInterface {
 }
 
 const publicodesContext = createContext<PublicodesContextInterface>({
-  result: null,
   missingArgs: [],
-  setSituation: () => {},
+  result: null,
+  setSituation: () => {
+    throw Error("Not implemented");
+  },
 });
 
 export function usePublicodes(): PublicodesContextInterface {
@@ -29,7 +31,7 @@ const { Provider } = publicodesContext;
 
 export const PublicodesProvider: React.FC<
   { children: React.ReactNode } & {
-    rules: string;
+    rules: any;
     targetRule: string;
   }
 > = ({ children, rules, targetRule }) => {
@@ -39,7 +41,7 @@ export const PublicodesProvider: React.FC<
   });
 
   return (
-    <Provider value={{ result, missingArgs, setSituation }}>
+    <Provider value={{ missingArgs, result, setSituation }}>
       {children}
     </Provider>
   );
