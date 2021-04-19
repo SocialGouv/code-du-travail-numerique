@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
 
 import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
 
-function ResultStep({ form }) {
-  const publicodeContext = usePublicodes();
+function ResultStep({
+  form,
+}: WizardStepProps<Record<string, string>>): JSX.Element {
+  const publicodesContext = usePublicodes();
 
   useEffect(() => {
-    publicodeContext.setSituation(form.getState().values);
-  }, [form]);
+    publicodesContext.setSituation(form.getState().values);
+  }, [form, publicodesContext]);
 
   return (
     <>
@@ -16,7 +19,7 @@ function ResultStep({ form }) {
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
         départ à la retraite est estimée à&nbsp;
-        <Highlight>{publicodeContext.result}</Highlight> mois.
+        <Highlight>{publicodesContext.result}</Highlight> mois.
       </p>
     </>
   );

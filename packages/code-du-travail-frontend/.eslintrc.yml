@@ -6,27 +6,21 @@ rules:
   jsx-a11y/anchor-is-valid: off
   jsx-a11y/label-has-for: off
   react/prop-types: off
-  import/no-unresolved: [
-    2,
-    ignore: [
-      wrapped-testing-library/react
-    ]
-  ]
-  no-console: [
-    "error",
-    allow: [
-      "warn",
-      "error"
-    ]
-  ]
+  import/no-unresolved: [2, ignore: [wrapped-testing-library/react]]
+  no-console: ["error", allow: ["warn", "error"]]
 
 settings:
   import/resolver:
-    node: {
-      "extensions": [".js", ".jsx", ".ts", ".tsx"]
-    }
+    node: { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
 
 overrides:
   - files: ["*.test.js"]
     env:
       jest: true
+  - files: ["**/*.ts", "**/*.tsx"]
+    extends:
+      - "plugin:@typescript-eslint/recommended"
+    rules:
+      no-undef: "off"
+      "@typescript-eslint/ban-ts-comment": "warn"
+

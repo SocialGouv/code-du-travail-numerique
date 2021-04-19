@@ -1,6 +1,7 @@
+import { Action, ActionName, State } from "../common/type/WizardType";
 import Steps from "./steps";
 
-export const initialState = {
+export const initialState: State = {
   stepIndex: 0,
   steps: [
     {
@@ -26,16 +27,16 @@ export const initialState = {
   ],
 };
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
-    case "reset": {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+    case ActionName.setStepIndex: {
+      return { stepIndex: action.payload, steps: state.steps };
     }
     default:
-      console.warn("action unknow", type);
+      console.warn("action unknown", action);
       return state;
   }
 }

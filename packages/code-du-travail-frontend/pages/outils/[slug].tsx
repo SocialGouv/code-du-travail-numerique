@@ -1,6 +1,8 @@
 import tools from "@cdt/data...tools/internals.json";
 import * as Sentry from "@sentry/browser";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { GetServerSideProps } from "next";
 import getConfig from "next/config";
 import React, { useEffect } from "react";
 import styled from "styled-components";
@@ -20,8 +22,6 @@ import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarit
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { matopush } from "../../src/piwik";
 
-const { SOURCES } = require("@socialgouv/cdtn-sources");
-
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
@@ -36,14 +36,23 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
+interface Props {
+  description: string;
+  icon: string;
+  publicodesRules: any;
+  relatedItems: Array<any>;
+  slug: string;
+  title: string;
+}
+
 function Outils({
   description,
   icon,
   slug,
   relatedItems,
   title,
-  publicodeRules,
-}) {
+  publicodesRules,
+}: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
@@ -58,7 +67,11 @@ function Outils({
         <Container>
           <Flex>
             <Wrapper variant="main">
-              <Tool icon={icon} title={title} publicodeRules={publicodeRules} />
+              <Tool
+                icon={icon}
+                title={title}
+                publicodesRules={publicodesRules}
+              />
             </Wrapper>
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -74,8 +87,10 @@ function Outils({
 
 export default Outils;
 
-export async function getServerSideProps({ query }) {
-  const { slug } = query;
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  query,
+}) => {
+  const slug = query.slug as string;
   const { description, icon, title } = tools.find((tool) => tool.slug === slug);
   let relatedItems = [];
   try {
@@ -88,19 +103,19 @@ export async function getServerSideProps({ query }) {
     Sentry.captureException(e);
   }
 
-  const publicodeRules = loadPublicodes(slug);
+  const publicodesRules = loadPublicodes(slug);
 
   return {
     props: {
       description,
       icon,
-      publicodeRules,
+      publicodesRules,
       relatedItems,
       slug,
       title,
     },
   };
-}
+};
 
 const { breakpoints, spacings } = theme;
 

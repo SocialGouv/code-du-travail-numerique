@@ -1,6 +1,6 @@
 import React from "react";
 
-const IntroductionStep = () => (
+const IntroductionStep = (): JSX.Element => (
   <>
     <p>
       Ce simulateur est un outil qui permet de calculer la durée de préavis à
