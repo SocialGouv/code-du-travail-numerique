@@ -7,13 +7,41 @@ contrat salarié . mise à la retraite:
   title: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
 
-contrat salarié . préavis de retraite:
-  valeur: contrat salarié . préavis de retraite légale
+contrat salarié . préavis de retraite: 0 mois
+
+contrat salarié . préavis de retraite . inférieur à 6 mois:
+  applicable si: ancienneté < 6 mois
+  remplace: contrat salarié . préavis de retraite
+  valeur:
+    variations:
+      - si: contrat salarié . convention collective = ''
+        alors: contrat salarié . préavis de retraite légale
+      - sinon: contrat salarié . préavis de retraite collective
+
+contrat salarié . préavis de retraite . mise à la retraite:
+  applicable si: contrat salarié . mise à la retraite
+  remplace: contrat salarié . préavis de retraite
+  valeur:
+    le maximum de:
+      - contrat salarié . préavis de retraite légale
+      - contrat salarié . préavis de retraite collective
+
+contrat salarié . préavis de retraite . départ à la retraite:
+  applicable si: contrat salarié . mise à la retraite = non
+  remplace: contrat salarié . préavis de retraite
+  valeur:
+    variations:
+      - si: contrat salarié . convention collective = ''
+        alors: contrat salarié . préavis de retraite légale
+      - sinon:
+          le minimum de:
+            - contrat salarié . préavis de retraite légale
+            - contrat salarié . préavis de retraite collective
 
 contrat salarié . préavis de retraite légale:
   titre: Préavis de départ légale
   valeur: contrat salarié . préavis de retraite tranches
-  référence:
+  références:
     - source: code du travail
       article: L1237-10
       lien: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
@@ -37,3 +65,12 @@ contrat salarié . préavis de retraite tranches:
       - montant: 1 mois
         plafond: 24 mois
       - montant: 2 mois
+
+# Remplacé par la valeur de la CC quand on en sélectionne une
+# 99 mois est un hack car on veut le minimum entre le code du travail et la CC.
+# Si on n'en sélectionne pas, elle n'est pas calculée et 99 permet d'éviter de prendre la valeur de la CC.
+contrat salarié . préavis de retraite collective: 0 mois
+
+contrat salarié . convention collective:
+  question: Quelle est votre convention collective ?
+  par défaut: "''"

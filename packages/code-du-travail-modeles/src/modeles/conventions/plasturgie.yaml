@@ -1,0 +1,55 @@
+# Convention collective nationale Plasturgie
+contrat salarié . convention collective . plasturgie:
+  description: Convention collective nationale plasturgie
+  applicable si: convention collective = 'IDCC0292'
+  valeur: oui
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle:
+  question: Quelle est votre catégorie professionelle ?
+  formule:
+    une possibilité:
+      choix obligatoire: oui
+      possibilités:
+        - Cadres
+        - Collaborateurs
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Cadres:
+  applicable si: catégorie profressionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Cadres . préavis de retaite:
+  titre: Préavis de retraite pour un cadre
+  remplace: contrat salarié . préavis de retraite collective
+  formule: 3 mois
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs:
+  applicable si: catégorie profressionnelle = 'Collaborateurs'
+  valeur: oui
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . coefficient:
+  question: Quelle est votre coefficient ?
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite tranches:
+  titre: Tranches du préavis de retraite pour un collaborateur
+  variations:
+    - si: coefficient >= 800
+      alors: 2 mois
+    - sinon:
+        variations:
+          - si: contrat salarié . ancienneté < 24
+            alors: 1 mois
+          - sinon: 2 mois
+  références:
+    - source: covention collective
+      article: Article 28
+      lien: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856
+      code: KALIARTI000005856351
+    - source: covention collective
+      article: Article 8
+      url: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856728/?idConteneur=KALICONT000005635856
+      code: KALIARTI000005856728
+
+contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite:
+  titre: Préavis de retraite pour un collaborateur
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite tranches
