@@ -9,14 +9,22 @@ interface MissingArgs {
   rawNode: Rule;
 }
 
+export interface Argument {
+  name: string;
+  rawNode: Rule;
+  value: string;
+}
+
 export interface PublicodesContextInterface {
   result: Evaluation;
   missingArgs: MissingArgs[];
+  situation: Argument[];
   setSituation: (values: Record<string, string>) => void;
 }
 
 const publicodesContext = createContext<PublicodesContextInterface>({
   missingArgs: [],
+  situation: [],
   result: null,
   setSituation: () => {
     throw Error("Not implemented");
@@ -35,13 +43,15 @@ export const PublicodesProvider: React.FC<
     targetRule: string;
   }
 > = ({ children, rules, targetRule }) => {
-  const { result, missingArgs, setSituation } = usePublicodesHandler({
-    engine: new Engine(rules),
-    targetRule: targetRule,
-  });
+  const { result, missingArgs, setSituation, situation } = usePublicodesHandler(
+    {
+      engine: new Engine(rules),
+      targetRule: targetRule,
+    }
+  );
 
   return (
-    <Provider value={{ missingArgs, result, setSituation }}>
+    <Provider value={{ missingArgs, result, setSituation, situation }}>
       {children}
     </Provider>
   );

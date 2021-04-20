@@ -20,6 +20,11 @@ export const initialState: State = {
       name: "ccn",
     },
     {
+      component: Steps.Informations,
+      label: "Informations",
+      name: "infos",
+    },
+    {
       component: Steps.AncienneteStep,
       label: "Ancienneté",
       name: "anciennete",
