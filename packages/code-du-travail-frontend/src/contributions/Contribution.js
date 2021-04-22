@@ -17,6 +17,7 @@ import styled from "styled-components";
 
 import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
+import { A11yLink } from "../common/A11yLink";
 import References from "../common/References";
 import { useLocalStorage } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
@@ -126,13 +127,13 @@ const Contribution = ({ answers, content }) => {
               {content.url && (
                 <span>
                   Source&nbsp;:{" "}
-                  <a
+                  <A11yLink
                     href={content.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Fiche {getLabelBySource(content.source)}
-                  </a>
+                    {`Fiche: ${getLabelBySource(content.source)}`}
+                  </A11yLink>
                 </span>
               )}
               {content.url && content.date && (

@@ -54,7 +54,7 @@ export function TextSearch({ containerId, convention }) {
           <input type="hidden" name="tab_selection" value="kali" />
           <input type="hidden" name="page" value="1" />
           <SubmitIcon type="submit" small narrow variant="naked">
-            <StyledSearchIcon />
+            <StyledSearchIcon aria-label="rechercher (nouvelle fenêtre)" />
           </SubmitIcon>
         </Box>
       </Form>

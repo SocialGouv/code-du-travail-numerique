@@ -62,6 +62,9 @@ export const ListLink = ({
         target="_blank"
         rel="noreferer noopener"
         className="no-after"
+        aria-label={`${subtitle} ${title} ${summarize(
+          description
+        )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
       />

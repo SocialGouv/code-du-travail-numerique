@@ -372,7 +372,11 @@ const StyledListItem = styled.li`
   margin: ${spacings.tiny} 0;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.a.attrs((props) => ({
+  ...(props.target === "_blank" && {
+    "aria-label": `${props.children} (Nouvelle fenêtre)`,
+  }),
+}))`
   font-weight: normal;
   text-decoration: none;
   cursor: pointer;

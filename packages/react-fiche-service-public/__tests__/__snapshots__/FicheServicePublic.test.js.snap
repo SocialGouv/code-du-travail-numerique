@@ -955,6 +955,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
                     </p>
                     <a
+                      aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
                       class="c24 c25 no-after"
                       href="https://www.service-public.fr/simulateur/calcul/Demission"
                       rel="noopener noreferrer"
@@ -1781,6 +1782,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       />
     </div>
     <a
+      aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
       class="c24 c25 no-after"
       href="https://www.service-public.fr/simulateur/calcul/Demission"
       rel="noopener noreferrer"

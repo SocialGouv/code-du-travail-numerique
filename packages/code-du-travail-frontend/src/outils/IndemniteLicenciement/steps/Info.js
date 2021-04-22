@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "../../../common/A11yLink";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { TypeContrat } from "../components/TypeContrat";
 
@@ -17,13 +18,13 @@ function validate(values) {
         travail temporaires. Sous certaines conditions, le salarié peut avoir le
         droit à une&nbsp;
         <Link href={`${getRouteBySource(SOURCES.TOOLS)}/imdemnite-precarite`}>
-          <a
+          <A11yLink
             href="/fiche-service-public/qui-peut-toucher-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
             target="_blank"
             el="noopener noreferrer"
           >
-            indemnité de précarité
-          </a>
+            indemnité de précarité (nouvelle fenêtre)
+          </A11yLink>
         </Link>
         .
       </>

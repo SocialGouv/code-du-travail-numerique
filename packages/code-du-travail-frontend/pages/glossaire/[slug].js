@@ -12,6 +12,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "../../src/common/A11yLink";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
@@ -46,14 +47,14 @@ function Term({ term: { term, definition, references } }) {
                       <StyledList>
                         {references.map((url) => (
                           <li key={url}>
-                            <a
+                            <A11yLink
                               href={url}
                               target="_blank"
                               title="voir la référence"
                               rel="nofollow noreferrer noopener"
                             >
                               {url}
-                            </a>
+                            </A11yLink>
                           </li>
                         ))}
                       </StyledList>

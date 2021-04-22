@@ -776,6 +776,7 @@ exports[`<SearchResults/> should render results 1`] = `
         class="c3"
       >
         <a
+          aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
           class="c4 no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           rel="noreferer noopener"

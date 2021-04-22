@@ -21,6 +21,7 @@ class ServiceEnLigne extends React.PureComponent {
         href={url}
         rel="noopener noreferrer"
         target="_blank"
+        aria-label={`${type} ${title} (nouvelle fenêtre)`}
         className="no-after"
         subtitle={type}
         title={title}

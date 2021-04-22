@@ -243,9 +243,11 @@ const DossierLink = ({ url, title }) => {
   );
 };
 
-const LeftArrowLink = styled(ArrowLink).attrs(() => ({
+const LeftArrowLink = styled(ArrowLink).attrs((props) => ({
+  ...(props.target === "_blank" && {
+    "aria-label": `${props.children} (nouvelle fenêtre)`,
+  }),
   arrowPosition: "left",
-  className: "no-after",
 }))`
   word-break: break-word;
 `;

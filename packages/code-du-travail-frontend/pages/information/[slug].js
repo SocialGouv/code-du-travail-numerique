@@ -16,6 +16,7 @@ import htmlAstToReact from "rehype-react";
 import styled from "styled-components";
 import unified from "unified";
 
+import { A11yLink } from "../../src/common/A11yLink";
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
@@ -35,9 +36,9 @@ const InfoLink = ({ children, href }) => {
     );
   }
   return (
-    <a href={href} rel="noopener noreferrer" target="_blank">
+    <A11yLink href={href} rel="noopener noreferrer" target="_blank">
       {children}
-    </a>
+    </A11yLink>
   );
 };
 

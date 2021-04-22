@@ -18,7 +18,7 @@ export const base = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://www.youtube.com/watch?v=RvPRrIOa8Nw
+          https://www.youtube.com/watch?v=RvPRrIOa8Nw (nouvelle fenêtre)
         </a>
       </MoreContent>
     </Section>

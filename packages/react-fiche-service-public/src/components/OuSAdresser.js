@@ -21,7 +21,12 @@ class OuSAdresser extends React.PureComponent {
       const url = data.children.find((child) => child.name === "RessourceWeb")
         .attributes.URL;
       content = (
-        <a href={url} rel="noopener noreferrer" target="_blank">
+        <a
+          href={url}
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label={`${label} (nouvelle fenêtre)`}
+        >
           {label}
         </a>
       );

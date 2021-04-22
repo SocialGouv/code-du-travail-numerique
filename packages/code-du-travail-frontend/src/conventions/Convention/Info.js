@@ -6,6 +6,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
+import { A11yLink } from "../../common/A11yLink";
+
 const Detail = ({ label, children }) => (
   <StyledDetail>
     <DetailLabel>{label} :</DetailLabel>
@@ -24,16 +26,16 @@ const Info = ({ convention: { num, title, date_publi, url } }) => (
     )}
     {url && (
       <p data-no-glossary>
-        <a target="_blank" rel="noopener noreferrer nofollow" href={url}>
+        <A11yLink target="_blank" rel="noopener noreferrer nofollow" href={url}>
           Voir la convention sur Légifrance
-        </a>
+        </A11yLink>
       </p>
     )}
     <p data-no-glossary>
       <Link href="/glossaire/convention-collective" passHref>
-        <a target="_blank" rel="noopener noreferrer nofollow">
+        <A11yLink target="_blank" rel="noopener noreferrer nofollow">
           Qu’est-ce qu’une convention collective&nbsp;?
-        </a>
+        </A11yLink>
       </Link>
     </p>
   </React.Fragment>

@@ -2810,6 +2810,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c92"
                   >
                     <a
+                      aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c93"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
@@ -2822,6 +2823,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c92"
                   >
                     <a
+                      aria-label="Journal des modifications (Nouvelle fenêtre)"
                       class="c93"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
@@ -2847,6 +2849,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c92"
                   >
                     <a
+                      aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
                       class="c93"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
@@ -2859,6 +2862,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c92"
                   >
                     <a
+                      aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
                       class="c93"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
@@ -2871,6 +2875,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c92"
                   >
                     <a
+                      aria-label="beta.gouv.fr (Nouvelle fenêtre)"
                       class="c93"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
@@ -2888,6 +2893,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           class="c95"
         >
           <a
+            aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
@@ -2902,6 +2908,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             |
           </span>
           <a
+            aria-label="service-public.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
@@ -2916,6 +2923,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             |
           </span>
           <a
+            aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
@@ -2930,6 +2938,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             |
           </span>
           <a
+            aria-label="data.gouv.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
@@ -2944,6 +2953,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             |
           </span>
           <a
+            aria-label="gouvernement.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
@@ -2958,6 +2968,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             |
           </span>
           <a
+            aria-label="cnil.fr (Nouvelle fenêtre)"
             class="c93 c96"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"

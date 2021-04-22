@@ -3306,12 +3306,12 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
         Source :
          
         <a
+          aria-label="Fiche: service-public.fr (nouvelle fenêtre)"
           href="https://service-public.fr/professionnels-entreprises/vosdroits/F33693"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Fiche 
-          service-public.fr
+          Fiche: service-public.fr
         </a>
       </span>
       <span
@@ -3348,7 +3348,6 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
           <a
             class="c9 c10 c11"
             href="/code-du-travail/l-1243"
-            rel="nofollow"
           >
             <svg
               class="c12 c13"
