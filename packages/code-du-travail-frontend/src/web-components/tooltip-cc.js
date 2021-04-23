@@ -8,6 +8,7 @@ const { throttledDisplayInViewport } = utils;
 class WebComponentsTooltipCC extends LitElement {
   static get properties() {
     return {
+      linkFocused: { type: Boolean },
       visible: { type: Boolean },
     };
   }
@@ -15,6 +16,7 @@ class WebComponentsTooltipCC extends LitElement {
   constructor() {
     super();
     this.visible = false;
+    this.linkFocused = false;
   }
 
   static get styles() {
@@ -73,8 +75,8 @@ class WebComponentsTooltipCC extends LitElement {
       class="tooltip"
       aria-describedby="tooltip-searchcc"
       @focus="${this.show}"
+      @blur="${this.hideIfLinkNotFocused}"
       @mouseenter="${this.show}"
-      @blur="${this.hide}"
       @mouseleave="${this.hide}"
     >
       <slot></slot>
@@ -87,6 +89,7 @@ class WebComponentsTooltipCC extends LitElement {
         <a
           href="/outils/convention-collective"
           @pointerdown="${this.showModal}"
+          @focus="${this.focusLink}"
           @blur="${this.hide}"
         >
           Cliquez ici pour rechercher votre convention collective
@@ -99,10 +102,28 @@ class WebComponentsTooltipCC extends LitElement {
     const target = this.shadowRoot.querySelector(".content");
     throttledDisplayInViewport(target, this);
     this.visible = true;
+    this.linkFocused = false;
+  }
+
+  focusLink() {
+    this.linkFocused = true;
+  }
+
+  hideIfLinkNotFocused() {
+    // Put a delay to wait the onFocus event on the link
+    const intervalId = setInterval(() => {
+      if (!this.linkFocused) {
+        this.visible = false;
+        const target = this.shadowRoot.querySelector(".content");
+        target.style.display = "none";
+        clearInterval(intervalId);
+      }
+    }, 100);
   }
 
   hide() {
     this.visible = false;
+    this.linkFocused = false;
     const target = this.shadowRoot.querySelector(".content");
     target.style.display = "none";
   }
