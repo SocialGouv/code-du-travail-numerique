@@ -1,7 +1,7 @@
 import { FormApi } from "final-form";
 
 export interface Step {
-  component: (props: WizardStepProps<Record<string, string>>) => JSX.Element;
+  component: (props: WizardStepProps) => JSX.Element;
   label: string;
   name: string;
 }
@@ -20,7 +20,19 @@ export type Action =
   | { type: ActionName.reset }
   | { type: ActionName.setStepIndex; payload: number };
 
-export interface WizardStepProps<Data> {
-  form: FormApi<Data>;
+export interface WizardStepProps {
+  form: FormApi<FormContent>;
   dispatch: (state: State, action: Action) => State;
 }
+
+interface ConventionCollective {
+  id: string;
+  num: number;
+  shortTitle: string;
+  slug: string;
+  title: string;
+}
+
+export type FormContent = Record<string, string> & {
+  ccn?: ConventionCollective;
+};

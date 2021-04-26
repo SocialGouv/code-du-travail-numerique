@@ -15,6 +15,11 @@ export const initialState: State = {
       name: "origine",
     },
     {
+      component: Steps.ConventionCollective,
+      label: "Convention collective",
+      name: "ccn",
+    },
+    {
       component: Steps.AncienneteStep,
       label: "Ancienneté",
       name: "anciennete",
