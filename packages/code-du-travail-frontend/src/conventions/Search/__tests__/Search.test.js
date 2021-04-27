@@ -1,10 +1,9 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
-import fetch from "isomorphic-unfetch";
 import React from "react";
 
 import Search from "../";
 
-jest.mock("isomorphic-unfetch");
+global.fetch = jest.fn();
 jest.useFakeTimers();
 
 jest.mock("../../../piwik", () => ({

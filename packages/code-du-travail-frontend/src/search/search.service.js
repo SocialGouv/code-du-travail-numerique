@@ -1,4 +1,3 @@
-import fetch from "isomorphic-unfetch";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 import pDebounce from "p-debounce";

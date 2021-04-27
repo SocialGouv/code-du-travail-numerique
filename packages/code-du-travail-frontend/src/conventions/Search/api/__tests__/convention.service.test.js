@@ -1,10 +1,8 @@
-import fetch from "isomorphic-unfetch";
-
 import { fetchResponse } from "../../../../../test/mockFetch";
 import { searchConvention } from "../convention.service";
 import { idccPayload } from "./conventions.mock";
 
-jest.mock("isomorphic-unfetch");
+global.fetch = jest.fn();
 
 describe("convention service", () => {
   beforeEach(() => fetch.mockClear());

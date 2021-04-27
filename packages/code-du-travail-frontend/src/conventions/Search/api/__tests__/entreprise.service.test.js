@@ -1,4 +1,3 @@
-import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 
 import { fetchResponse } from "../../../../../test/mockFetch";
@@ -18,7 +17,7 @@ const {
   publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
 } = getConfig();
 
-jest.mock("isomorphic-unfetch");
+global.fetch = jest.fn();
 
 fetch.mockImplementation((url) => {
   if (url.startsWith(`${API_ENTREPRISE_URL}/v1/full_text`)) {

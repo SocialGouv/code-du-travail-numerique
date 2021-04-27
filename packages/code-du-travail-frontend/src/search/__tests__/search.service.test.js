@@ -1,9 +1,7 @@
-import fetch from "isomorphic-unfetch";
-
 import { fetchSearchResults, fetchSuggestResults } from "../search.service";
 
 jest.useFakeTimers();
-jest.mock("isomorphic-unfetch");
+global.fetch = jest.fn();
 
 fetch.mockResolvedValue({
   json: () => Promise.resolve(results),

@@ -1,5 +1,4 @@
 import debounce from "debounce-promise";
-import fetch from "isomorphic-unfetch";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 

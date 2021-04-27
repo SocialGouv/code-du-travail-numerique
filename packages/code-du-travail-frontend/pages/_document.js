@@ -1,4 +1,4 @@
-import "url-search-params";
+import "@ungap/url-search-params/cjs";
 
 import * as Sentry from "@sentry/browser";
 import Document, { Head, Html, Main, NextScript } from "next/document";

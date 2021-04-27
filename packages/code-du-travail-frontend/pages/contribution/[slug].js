@@ -1,5 +1,4 @@
 import { extractMdxContentUrl } from "@cdt/data";
-import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import React from "react";
 
