@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 import { useMemo, useState } from "react";
 
-import { SituationElement, PublicodesContextInterface } from "./index";
+import { PublicodesContextInterface, SituationElement } from "./index";
 
 interface State {
   engine: Partial<Engine>;
@@ -12,7 +12,9 @@ const usePublicodesHandler = ({
   engine,
   targetRule,
 }: State): PublicodesContextInterface => {
-  const [situation, setSituation] = useState<Map<string, SituationElement>>(new Map());
+  const [situation, setSituation] = useState<Map<string, SituationElement>>(
+    new Map()
+  );
 
   function newSituation(args: Record<string, string>): void {
     const situation: Map<string, SituationElement> = new Map();

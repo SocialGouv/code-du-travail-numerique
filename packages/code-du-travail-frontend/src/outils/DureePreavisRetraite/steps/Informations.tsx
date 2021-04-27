@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { TextQuestion } from "../../common/TextQuestion";
+import PubliQuestion from "../../common/PubliQuestion";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
 import { transformInfoCcn } from "../../publicodes/TransformInfoCcn";
@@ -26,12 +26,10 @@ function Informations({ form }: WizardStepProps): JSX.Element {
           .filter((item) => !excludedRules.includes(item.name))
           .map((item) => {
             return (
-              <TextQuestion
+              <PubliQuestion
                 key={item.name}
                 name={item.name}
-                label={item.rawNode.question}
-                validate={undefined}
-                placeholder="0"
+                rule={item.rawNode}
               />
             );
           })}
@@ -41,11 +39,10 @@ function Informations({ form }: WizardStepProps): JSX.Element {
           .filter((item) => !excludedRules.includes(item.name))
           .map((item) => {
             return (
-              <TextQuestion
+              <PubliQuestion
                 key={item.name}
                 name={item.name}
-                label={item.rawNode.question}
-                validate={() => true}
+                rule={item.rawNode}
               />
             );
           })}
