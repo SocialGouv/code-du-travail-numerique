@@ -8,6 +8,8 @@ import { transformInfoCcn } from "../../publicodes/TransformInfoCcn";
 function Informations({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
+  // List of excluded rules to show in this step.
+  // Pulicodes can return them as missing args, but there are populated by another steps.
   const excludedRules = [
     "contrat salarié - ancienneté",
     "contrat salarié - convention collective",
@@ -44,7 +46,6 @@ function Informations({ form }: WizardStepProps): JSX.Element {
                 name={item.name}
                 label={item.rawNode.question}
                 validate={() => true}
-                placeholder="0"
               />
             );
           })}

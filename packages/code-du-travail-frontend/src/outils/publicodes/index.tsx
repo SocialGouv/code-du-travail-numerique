@@ -9,7 +9,7 @@ interface MissingArgs {
   rawNode: Rule;
 }
 
-export interface Argument {
+export interface SituationElement {
   name: string;
   rawNode: Rule;
   value: string;
@@ -18,7 +18,7 @@ export interface Argument {
 export interface PublicodesContextInterface {
   result: Evaluation;
   missingArgs: MissingArgs[];
-  situation: Argument[];
+  situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
 }
 
