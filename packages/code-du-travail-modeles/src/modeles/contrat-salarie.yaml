@@ -66,9 +66,6 @@ contrat salarié . préavis de retraite tranches:
         plafond: 24 mois
       - montant: 2 mois
 
-# Remplacé par la valeur de la CC quand on en sélectionne une
-# 99 mois est un hack car on veut le minimum entre le code du travail et la CC.
-# Si on n'en sélectionne pas, elle n'est pas calculée et 99 permet d'éviter de prendre la valeur de la CC.
 contrat salarié . préavis de retraite collective: 0 mois
 
 contrat salarié . convention collective:
