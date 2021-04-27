@@ -3,7 +3,6 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { withRouter } from "next/router";
 import React from "react";
