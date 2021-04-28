@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.48.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.47.0...v4.48.0) (2021-04-28)
+
+
+### Bug Fixes
+
+* **a11y:** inform user when links open a new window ([#3444](https://github.com/SocialGouv/code-du-travail-numerique/issues/3444)) ([80ef852](https://github.com/SocialGouv/code-du-travail-numerique/commit/80ef85283f5cfdde5dea4283eaba19260e52007b))
+
+
+### Features
+
+* **react-ui:** add new svg icons ([#3454](https://github.com/SocialGouv/code-du-travail-numerique/issues/3454)) ([3fcb55e](https://github.com/SocialGouv/code-du-travail-numerique/commit/3fcb55e3cbf47e2fd41d0073801b7555e3196fd8))
+
+
+
+
+
 # [4.47.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.46.0...v4.47.0) (2021-04-15)
 
 

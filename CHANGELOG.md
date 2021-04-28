@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.48.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.47.0...v4.48.0) (2021-04-28)
+
+
+### Bug Fixes
+
+* **a11y:** inform user when links open a new window ([#3444](https://github.com/SocialGouv/code-du-travail-numerique/issues/3444)) ([80ef852](https://github.com/SocialGouv/code-du-travail-numerique/commit/80ef85283f5cfdde5dea4283eaba19260e52007b))
+* **accessibility:** fix focus on CC tooltip ([#3451](https://github.com/SocialGouv/code-du-travail-numerique/issues/3451)) ([eb6cfeb](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb6cfeb9b8209ddc1546fd5e8d0431476e6269eb))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.120.0 ([#3437](https://github.com/SocialGouv/code-du-travail-numerique/issues/3437)) ([86df679](https://github.com/SocialGouv/code-du-travail-numerique/commit/86df6792ee904ffbd98f1668d7528e5d0d833943))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.123.0 ([#3447](https://github.com/SocialGouv/code-du-travail-numerique/issues/3447)) ([e080133](https://github.com/SocialGouv/code-du-travail-numerique/commit/e080133b1daa1953a1b20a583f510f1496befca6))
+
+
+### Features
+
+* **react-ui:** add new svg icons ([#3454](https://github.com/SocialGouv/code-du-travail-numerique/issues/3454)) ([3fcb55e](https://github.com/SocialGouv/code-du-travail-numerique/commit/3fcb55e3cbf47e2fd41d0073801b7555e3196fd8))
+* **simulator:** add publicodes to handle simulators ([#3432](https://github.com/SocialGouv/code-du-travail-numerique/issues/3432)) ([c38aa4b](https://github.com/SocialGouv/code-du-travail-numerique/commit/c38aa4b4af8d92175a553248ea5acb77f137b0c5))
+* **simulator:** add strong types thank typescrypt and eslint ([#3445](https://github.com/SocialGouv/code-du-travail-numerique/issues/3445)) ([edcdce9](https://github.com/SocialGouv/code-du-travail-numerique/commit/edcdce99ec0cf2cb5af6522910824acab3b79361))
+* **simulator:** add the labor agreement for plasturgie ([#3446](https://github.com/SocialGouv/code-du-travail-numerique/issues/3446)) ([837aeb1](https://github.com/SocialGouv/code-du-travail-numerique/commit/837aeb19fcd9b35fe6be893d6abfe3e30da66d07))
+* **simulator:** add the step to ask the labor agreement to the user ([#3448](https://github.com/SocialGouv/code-du-travail-numerique/issues/3448)) ([cba9e8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/cba9e8f3435f0ad8cc332cb702cddd96b3fbd022))
+
+
+
+
+
 # [4.47.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.46.0...v4.47.0) (2021-04-15)
 
 
