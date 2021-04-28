@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.48.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.0...v4.48.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* **cdtn-ui:** add code into published package ([#3456](https://github.com/SocialGouv/code-du-travail-numerique/issues/3456)) ([372a04f](https://github.com/SocialGouv/code-du-travail-numerique/commit/372a04f5f6ddcc9fe6569c57e0483c4f938a6a9e))
+* **cdtn-ui:** dummy change ([9d499e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d499e8f12d7e76827c8999247dfb0f668eed678))
+* **react-ui:** add code into published package ([#3456](https://github.com/SocialGouv/code-du-travail-numerique/issues/3456)) ([3769735](https://github.com/SocialGouv/code-du-travail-numerique/commit/37697350204fd3917409d09144246dc8202b7936))
+
+
+
+
+
 # [4.48.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.47.0...v4.48.0) (2021-04-28)
 
 
