@@ -28,7 +28,7 @@ function Informations({ form }: WizardStepProps): JSX.Element {
             return (
               <PubliQuestion
                 key={item.name}
-                name={item.name}
+                name={"infos." + item.name}
                 rule={item.rawNode}
               />
             );
@@ -41,7 +41,7 @@ function Informations({ form }: WizardStepProps): JSX.Element {
             return (
               <PubliQuestion
                 key={item.name}
-                name={item.name}
+                name={"infos." + item.name}
                 rule={item.rawNode}
               />
             );

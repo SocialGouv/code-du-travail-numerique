@@ -35,4 +35,5 @@ interface ConventionCollective {
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;
+  infos?: Record<string, string>;
 };
