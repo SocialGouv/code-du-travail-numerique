@@ -119,7 +119,7 @@ const testMatch = ({ query, knownQueriesSet, allVariants }) => {
 };
 
 // find known query if any
-const getSavedResult = async (query) => {
+const getPrequalifiedResults = async (query) => {
   const { knownQueriesSet, allVariants } = await getPrequalified();
 
   // allow
@@ -136,4 +136,4 @@ const getSavedResult = async (query) => {
   return false;
 };
 
-module.exports = getSavedResult;
+module.exports = getPrequalifiedResults;
