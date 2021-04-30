@@ -25,7 +25,7 @@ it("returns search results for demission from prequalified requests", async () =
     "/api/v1/search?q=démission"
   );
   expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot(); // prequalified requests are involved here (no ES or Sem)
+  expect(response.body).toMatchSnapshot(); // prequalified results completed by ES results
 });
 
 it("returns 3 search results for demission from elastic if size = 3", async () => {
