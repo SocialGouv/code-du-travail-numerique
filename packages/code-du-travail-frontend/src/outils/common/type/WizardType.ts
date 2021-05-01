@@ -4,6 +4,7 @@ export interface Step {
   component: (props: WizardStepProps) => JSX.Element;
   label: string;
   name: string;
+  skip?: (values: FormContent) => boolean;
 }
 
 export interface State {
