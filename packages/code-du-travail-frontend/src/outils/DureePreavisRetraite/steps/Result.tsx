@@ -3,13 +3,15 @@ import React, { useEffect } from "react";
 import { Highlight, SectionTitle } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
-import { transformInfoCcn } from "../../publicodes/TransformInfoCcn";
+import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
 function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
   useEffect(() => {
-    publicodesContext.setSituation(transformInfoCcn(form.getState().values));
+    publicodesContext.setSituation(
+      mapToPublicodesSituation(form.getState().values)
+    );
   }, [form]);
 
   return (
