@@ -1,7 +1,7 @@
 #
 
 .register_stage: &register_stage
-  extends: .base_register_stage
+  extends: .base_register_kaniko_stage
   interruptible: true
   stage: "Registration"
   except:
@@ -19,15 +19,16 @@ Register socialgouv/cdtn base image:
   stage: "Prepare"
   variables:
     CONTEXT: .
-    IMAGE_NAME: $CI_REGISTRY_IMAGE
+    IMAGE_NAME: cdtn-base
 
 Register elasticsearch image:
   <<: *register_stage
   stage: "Prepare"
   variables:
     CONTEXT: ./docker/elasticsearch
-    DOCKER_BUILD_ARGS: ""
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
+    DOCKER_BUILD_ARGS: >-
+      --dockerfile ./docker/elasticsearch/Dockerfile
+    IMAGE_NAME: cdtn-elasticsearch
 #
 
 Register api image:
@@ -35,15 +36,13 @@ Register api image:
   variables:
     CONTEXT: packages/code-du-travail-api
     DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/api
+      --dockerfile ./packages/code-du-travail-api/Dockerfile
+    IMAGE_NAME: cdtn-api
 
 Register frontend image:
   <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-frontend
     DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+      --dockerfile ./packages/code-du-travail-frontend/Dockerfile
+    IMAGE_NAME: cdtn-frontend
