@@ -1,6 +1,7 @@
 import React from "react";
 
 import { StepDynamicPublicodes } from "../../common/StepDynamicPublicodes";
+import { Label } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 
 const excludedRules = [
@@ -10,7 +11,13 @@ const excludedRules = [
 ];
 
 const Informations = (props: WizardStepProps): JSX.Element => (
-  <StepDynamicPublicodes {...props} excludedRules={excludedRules} />
+  <>
+    <Label>
+      Veuillez indiquer les informations ci-dessous en rapport à votre
+      convention collective.
+    </Label>
+    <StepDynamicPublicodes {...props} excludedRules={excludedRules} />
+  </>
 );
 
 export { Informations };
