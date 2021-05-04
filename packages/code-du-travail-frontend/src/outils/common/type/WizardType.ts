@@ -4,6 +4,7 @@ export interface Step {
   component: (props: WizardStepProps) => JSX.Element;
   label: string;
   name: string;
+  skip?: (values: FormContent) => boolean;
 }
 
 export interface State {
@@ -35,4 +36,5 @@ interface ConventionCollective {
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;
+  infos?: Record<string, string>;
 };

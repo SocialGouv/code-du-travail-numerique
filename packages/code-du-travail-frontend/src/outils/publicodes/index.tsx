@@ -1,4 +1,4 @@
-import Engine, { Evaluation, Rule } from "publicodes";
+import Engine, { Evaluation, Rule as PubliRule } from "publicodes";
 import React, { createContext, useContext } from "react";
 
 import usePublicodesHandler from "./Handler";
@@ -7,6 +7,21 @@ interface MissingArgs {
   name: string;
   indice: number;
   rawNode: Rule;
+}
+
+export enum RuleType {
+  Liste = "liste",
+}
+
+export interface RuleListe {
+  type: RuleType.Liste;
+  valeurs: Record<string, string>;
+}
+
+export type RuleCdtn = RuleListe;
+
+export interface Rule extends PubliRule {
+  cdtn?: RuleCdtn;
 }
 
 export interface SituationElement {
@@ -24,11 +39,11 @@ export interface PublicodesContextInterface {
 
 const publicodesContext = createContext<PublicodesContextInterface>({
   missingArgs: [],
-  situation: [],
   result: null,
   setSituation: () => {
     throw Error("Not implemented");
   },
+  situation: [],
 });
 
 export function usePublicodes(): PublicodesContextInterface {
