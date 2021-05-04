@@ -19,7 +19,7 @@ const usePublicodesHandler = ({
   function newSituation(args: Record<string, string>): void {
     const situation: Map<string, SituationElement> = new Map();
     Object.entries(args).forEach(([key, value]) => {
-      const publiKey = key.replaceAll(" - ", " . ");
+      const publiKey = key.replace(/ - /g, " . ");
       const detail = engine.getRule(publiKey);
       situation.set(publiKey, {
         name: key,
@@ -49,7 +49,7 @@ const usePublicodesHandler = ({
         const detail = engine.getRule(key);
         return {
           indice: value,
-          name: key.replace(/ . /g, " - "),
+          name: key.replace(/ \. /g, " - "),
           rawNode: detail.rawNode,
         };
       })

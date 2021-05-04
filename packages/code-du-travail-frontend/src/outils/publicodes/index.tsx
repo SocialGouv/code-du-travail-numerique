@@ -11,10 +11,11 @@ interface MissingArgs {
 
 export enum RuleType {
   Liste = "liste",
+  OuiNon = "oui-non",
 }
 
 export interface RuleListe {
-  type: RuleType.Liste;
+  type: RuleType;
   valeurs: Record<string, string>;
 }
 
