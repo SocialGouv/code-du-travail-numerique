@@ -1,0 +1,62 @@
+# Convention collective nationale de l'industrie pharmaceutique
+contrat salarié . convention collective . industrie pharmaceutique:
+  titre: Convention collective nationale de l'industrie pharmaceutique
+  applicable si: convention collective = 'IDCC0176'
+  valeur: oui
+
+contrat salarié . convention collective . industrie pharmaceutique . groupe:
+  question: Quel est votre groupe ?
+  description: Description sur le groupe
+  cdtn:
+    type: liste
+    valeurs:
+      "Groupe 1": 1
+      "Groupe 2": 2
+      "Groupe 3": 3
+      "Groupe 4": 4
+      "Groupe 5": 5
+      "Groupe 6+": 6
+
+contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019:
+  question: Avez vous conclu votre contrat de travail après le 1er juillet 2019 ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . industrie pharmaceutique . préavis de retaite tranches:
+  grille:
+    assiette: groupe
+    tranches:
+      - montant: 2 mois
+        plafond: 5
+      - montant: 3 mois
+
+contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019 . préavis retraite tranches:
+  applicable si: conclu après 1 juillet 2019
+  remplace: préavis de retaite tranches
+  valeur:
+    grille:
+      assiette: groupe
+      tranches:
+        - montant: 2 mois
+          plafond: 4
+        - montant: 3 mois
+          plafond: 5
+        - montant: 4 mois
+
+contrat salarié . convention collective . industrie pharmaceutique . préavis de retaite:
+  titre: Préavis de retraite pour la convention collective de l'industrie pharmaceutique
+  remplace: préavis de retraite collective
+  valeur: contrat salarié . convention collective . industrie pharmaceutique . préavis de retaite tranches
+  références:
+    - source: covention collective
+      article: Article 34
+      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189666?idConteneur=KALICONT000005635184
+      code: KALIARTI000022189666
+    - source: covention collective
+      article: Article 32.2
+      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184
+      code: KALIARTI000022189662
+    - source: covention collective
+      article: Article 36
+      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184
+      code: KALIARTI000005857748
