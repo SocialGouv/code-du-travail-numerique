@@ -46,7 +46,7 @@ Create namespace:
     - docker:dind
   variables: &deploy_stage_variables
     IMAGE_TAG: ${CI_COMMIT_SHA}
-    REGISTRY: ${CI_REGISTRY_IMAGE}
+    REGISTRY: ${HARBOR_REGISTRY}/${HARBOR_PROJECT}
 
 .prod_stage: &prod_stage
   environment:

@@ -1,5 +1,5 @@
 image:
-  repository: ${CI_REGISTRY_IMAGE}/frontend
+  repository: ${REGISTRY}/cdtn-frontend
   tag: ${IMAGE_TAG}
 
 fullnameOverride: "frontend-nodejs"
