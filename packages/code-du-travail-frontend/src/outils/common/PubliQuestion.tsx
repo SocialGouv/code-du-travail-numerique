@@ -31,12 +31,10 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
 
 const reverseValues = (
   values: Record<string, string>
-): Record<string, string> => {
-  const output = {};
-  Object.entries(values).map(([key, value]) => {
-    output[value] = key;
-  });
-  return output;
-};
+): Record<string, string> =>
+  Object.entries(values).reduce((state, [key, value]) => {
+    state[value] = key;
+    return state;
+  }, {});
 
 export default PubliQuestion;

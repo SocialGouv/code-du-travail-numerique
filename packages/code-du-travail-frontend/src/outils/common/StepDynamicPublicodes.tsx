@@ -14,7 +14,8 @@ interface Props extends WizardStepProps {
  * This step allows the user to come back to an answered question.
  * It will reset the depending questions.
  *
- * Note: The collected answers will be stored in the `infos` object in the form. You can use the method `mapToPublicodesSituation` to map to a publicodes situation object from yours steps.
+ * Note: The collected answers will be stored in the `infos` object in the form.
+ * You can use the method `mapToPublicodesSituation` to map to a publicodes situation object from yours steps.
  *
  * @param excludedRules list of rules to exclude from this step. For instance: there are populated by another steps (like CC)
  * @param form the form from react final form provided by the wizard.
@@ -36,19 +37,21 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
    */
   const resetNextQuestions = (name: string) => {
     const infos = form.getState().values.infos;
-    if (infos) {
-      const infosKeys = Object.keys(infos);
-      const indexOfKeyChanged = infosKeys.findIndex((key) => key === name);
-      if (indexOfKeyChanged !== -1) {
-        infosKeys
-          .slice(indexOfKeyChanged + 1, infosKeys.length)
-          .forEach((keyToDelete) => {
-            form.batch(() => {
-              form.change(`infos.${keyToDelete}`, undefined);
-            });
-          });
-      }
+    if (!infos) {
+      return;
     }
+    const infosKeys = Object.keys(infos);
+    const indexOfKeyChanged = infosKeys.findIndex((key) => key === name);
+    if (indexOfKeyChanged === -1) {
+      return;
+    }
+    form.batch(() => {
+      infosKeys
+        .slice(indexOfKeyChanged + 1, infosKeys.length)
+        .forEach((keyToDelete) => {
+          form.change(`infos.${keyToDelete}`, undefined);
+        });
+    });
   };
 
   return (
