@@ -39,6 +39,7 @@ export { Stripe } from "./Stripe";
 export { Table } from "./Table";
 export { TableOfContent } from "./TableOfContent";
 export { Tabs } from "./Tabs";
+export { Tag } from "./Tag";
 export { Text } from "./Text";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";
