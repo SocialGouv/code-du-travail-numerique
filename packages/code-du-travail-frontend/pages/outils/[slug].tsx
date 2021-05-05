@@ -13,6 +13,7 @@ import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
+import { AgreementSearch } from "../../src/outils/ConventionCollective";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
 import { SimulateurPreavisRetraite } from "../../src/outils/DureePreavisRetraite";
@@ -27,6 +28,7 @@ const {
 } = getConfig();
 
 const toolsBySlug = {
+  "convention-collective": AgreementSearch,
   "heures-recherche-emploi": HeuresRechercheEmploi,
   "indemnite-licenciement": CalculateurIndemnite,
   "indemnite-precarite": SimulateurIndemnitePrecarite,

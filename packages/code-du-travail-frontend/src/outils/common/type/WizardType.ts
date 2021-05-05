@@ -1,9 +1,11 @@
 import { FormApi } from "final-form";
+import React from "react";
 
 export interface Step {
   component: (props: WizardStepProps) => JSX.Element;
   label: string;
   name: string;
+  skip?: (values: FormContent) => boolean;
 }
 
 export interface State {
@@ -22,7 +24,7 @@ export type Action =
 
 export interface WizardStepProps {
   form: FormApi<FormContent>;
-  dispatch: (state: State, action: Action) => State;
+  dispatch: React.Dispatch<Action>;
 }
 
 interface ConventionCollective {

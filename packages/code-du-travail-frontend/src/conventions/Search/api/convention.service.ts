@@ -2,6 +2,14 @@ import debounce from "debounce-promise";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 
+export type Agreement = {
+  id: string;
+  num: number;
+  shortTitle: string;
+  slug: string;
+  title: string;
+};
+
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
@@ -15,19 +23,24 @@ const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
 });
 
 // memoize search results
+
 const apiIdcc = memoizee(
-  (query) => {
+  function createFetcher(query: string) {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
 
-    return fetch(url).then((response) => {
+    return fetch(url).then(async (response) => {
       if (response.ok) {
         return response
           .json()
-          .then((results) =>
-            results.hits.hits.map(({ _source }) => formatCCn(_source))
+          .then(
+            (results) =>
+              results.hits.hits.map(({ _source }) =>
+                formatCCn(_source)
+              ) as Agreement[]
           );
       }
-      throw new Error("Un problème est survenu.");
+      const errorMessage = await response.text();
+      return Promise.reject(new Error(errorMessage));
     });
   },
   { promise: true }
