@@ -30,6 +30,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 .c4 {
+  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;

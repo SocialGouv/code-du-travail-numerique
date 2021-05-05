@@ -14,7 +14,7 @@ export { Wrapper } from "./layout/Wrapper";
 
 // Components
 export { Accordion } from "./Accordion";
-export { Alert } from "./Alert";
+export { Alert, AlertWithIcon } from "./Alert";
 export { ArrowLink } from "./ArrowLink";
 export { Badge } from "./Badge";
 export { BurgerNav } from "./BurgerNav";
