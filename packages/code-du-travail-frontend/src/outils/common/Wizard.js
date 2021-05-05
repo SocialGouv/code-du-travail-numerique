@@ -101,7 +101,6 @@ function Wizard({
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
-  const Icon = icons[icon];
 
   return (
     <Form
@@ -120,15 +119,7 @@ function Wizard({
               {Rules && (
                 <Rules values={form.getState().values} dispatch={dispatch} />
               )}
-              <ToolTitle>
-                {Icon && (
-                  <IconWrapper>
-                    <Icon />
-                  </IconWrapper>
-                )}
-                {title}
-              </ToolTitle>
-
+              <WizardTitle title={title} icon={icon} />
               <StepList
                 activeIndex={stepIndex}
                 items={stepItems}
@@ -181,7 +172,21 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export { Wizard };
+function WizardTitle({ title, icon }) {
+  const Icon = icons[icon];
+  return (
+    <ToolTitle>
+      {Icon && (
+        <IconWrapper>
+          <Icon />
+        </IconWrapper>
+      )}
+      {title}
+    </ToolTitle>
+  );
+}
+
+export { Wizard, WizardTitle };
 
 const { breakpoints, box, spacings } = theme;
 
