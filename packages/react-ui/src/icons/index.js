@@ -66,3 +66,4 @@ export { default as ShareFacebook } from "./components/monochrome/ShareFacebook"
 export { default as ShareLinkedin } from "./components/monochrome/ShareLinkedin";
 export { default as ShareTwitter } from "./components/monochrome/ShareTwitter";
 export { default as ShareWhatsapp } from "./components/monochrome/ShareWhatsapp";
+export { HelpCircle } from "react-feather";
