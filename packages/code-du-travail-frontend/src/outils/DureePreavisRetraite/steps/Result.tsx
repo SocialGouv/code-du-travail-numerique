@@ -1,3 +1,4 @@
+import { Alert } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 
 import { Highlight, SectionTitle } from "../../common/stepStyles";
@@ -14,6 +15,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
     );
   }, [form]);
 
+  const notifications = publicodesContext.getNotifications();
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -22,6 +24,15 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         départ à la retraite est estimée à&nbsp;
         <Highlight>{publicodesContext.result}</Highlight> mois.
       </p>
+      {notifications.length > 0 && (
+        <Alert>
+          {publicodesContext.getNotifications().map((notification) => (
+            <p key={notification.dottedName}>
+              <b>{notification.description}</b>
+            </p>
+          ))}
+        </Alert>
+      )}
     </>
   );
 }

@@ -2,14 +2,15 @@
   "name": "@socialgouv/modeles-social",
   "version": "4.48.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
-  "main": "./lib/modeles.json",
-  "types": "./index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",
     "directory": "packages/code-du-travail-modeles"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.11",
     "@types/jest": "^26.0.22",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.4",
@@ -17,9 +18,11 @@
   },
   "scripts": {
     "prebuild": "tsc",
-    "build": "node bin/index.js"
+    "build": "node bin/build.js",
+    "clean": "rimraf bin lib"
   },
   "dependencies": {
+    "fs-extra": "^10.0.0",
     "publicodes": "^1.0.0-beta.15",
     "yaml": "^1.10.2"
   }

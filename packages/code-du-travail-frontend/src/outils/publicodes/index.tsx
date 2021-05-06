@@ -1,3 +1,4 @@
+import { Notification } from "@socialgouv/modeles-social";
 import Engine, { Evaluation, Rule as PubliRule } from "publicodes";
 import React, { createContext, useContext } from "react";
 
@@ -32,6 +33,7 @@ export interface SituationElement {
 }
 
 export interface PublicodesContextInterface {
+  getNotifications: () => Notification[];
   result: Evaluation;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
@@ -39,6 +41,7 @@ export interface PublicodesContextInterface {
 }
 
 const publicodesContext = createContext<PublicodesContextInterface>({
+  getNotifications: () => [],
   missingArgs: [],
   result: null,
   setSituation: () => {
@@ -59,15 +62,21 @@ export const PublicodesProvider: React.FC<
     targetRule: string;
   }
 > = ({ children, rules, targetRule }) => {
-  const { result, missingArgs, setSituation, situation } = usePublicodesHandler(
-    {
-      engine: new Engine(rules),
-      targetRule: targetRule,
-    }
-  );
+  const {
+    getNotifications,
+    result,
+    missingArgs,
+    setSituation,
+    situation,
+  } = usePublicodesHandler({
+    engine: new Engine(rules),
+    targetRule: targetRule,
+  });
 
   return (
-    <Provider value={{ missingArgs, result, setSituation, situation }}>
+    <Provider
+      value={{ getNotifications, missingArgs, result, setSituation, situation }}
+    >
       {children}
     </Provider>
   );

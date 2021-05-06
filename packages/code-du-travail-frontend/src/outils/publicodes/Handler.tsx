@@ -1,10 +1,11 @@
+import { getNotifications } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import { useMemo, useState } from "react";
 
 import { PublicodesContextInterface, SituationElement } from "./index";
 
 interface State {
-  engine: Partial<Engine>;
+  engine: Engine;
   targetRule: string;
 }
 
@@ -64,6 +65,7 @@ const usePublicodesHandler = ({
   }, [engine, targetRule, situation]);
 
   return {
+    getNotifications: () => getNotifications(engine),
     missingArgs,
     result: value,
     setSituation: newSituation,
