@@ -1625,6 +1625,7 @@ exports[`<Home /> should render 1`] = `
       class="c15"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <div
         class="c16 c17"
