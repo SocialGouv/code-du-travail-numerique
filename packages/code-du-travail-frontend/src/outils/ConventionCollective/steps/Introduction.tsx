@@ -38,7 +38,7 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
           </Text>
           <ButtonWrapper>
             <Button variant="link" as="div">
-              Je la saisi
+              Je la saisie
             </Button>
           </ButtonWrapper>
         </Tile>
