@@ -11,7 +11,8 @@ import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
 import { Entreprise } from "../../../conventions/Search/api/entreprises.service";
-import { AgreementTile } from "../common/AgreementTile";
+import { SectionTitle } from "../../common/stepStyles";
+import { AgreementTile } from "../agreement/AgreementTile";
 import { ListItem, ResultList } from "../common/ResultList";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise } from "../enterprise/SearchEnterprise";
@@ -20,12 +21,14 @@ const EnterpriseSearchStep = (): JSX.Element => {
   const [entreprise, setEntreprise] = useState<Entreprise>(null);
   return (
     <>
-      <p>Précisez et selectionner votre convention collective </p>
+      <SectionTitle>
+        Précisez et selectionner votre convention collective.
+      </SectionTitle>
 
-      <PaddedAlert variant="secondary">
+      <AlertWithMargin variant="secondary">
         Avec le nom de l’entreprise, il est possible de retrouver la convention
         collective associée.
-      </PaddedAlert>
+      </AlertWithMargin>
 
       {entreprise ? (
         <>
@@ -102,6 +105,7 @@ const EnterpriseSearchStep = (): JSX.Element => {
 };
 
 export { EnterpriseSearchStep };
+
 const SearchIcon = styled(icons.Search)`
   width: 1.6em;
   color: ${({ theme }) => theme.border};
@@ -116,9 +120,8 @@ const VerticalCenter = styled.div`
   justify-content: space-between;
   padding: ${theme.spacings.xsmall} 0;
 `;
-const PaddedAlert = styled(AlertWithIcon)`
-  padding-top: ${theme.spacings.medium};
-  padding-bottom: ${theme.spacings.medium};
+const AlertWithMargin = styled(AlertWithIcon)`
+  margin: ${theme.spacings.large} 0;
 `;
 
 const Li = styled.li`

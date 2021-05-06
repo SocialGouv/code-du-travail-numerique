@@ -1,7 +1,7 @@
 import tools from "@cdt/data...tools/internals.json";
 import * as Sentry from "@sentry/browser";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Container, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
 import React, { useEffect } from "react";
@@ -68,13 +68,7 @@ function Outils({
       <StyledSection>
         <Container>
           <Flex>
-            <Wrapper variant="main">
-              <Tool
-                icon={icon}
-                title={title}
-                publicodesRules={publicodesRules}
-              />
-            </Wrapper>
+            <Tool icon={icon} title={title} publicodesRules={publicodesRules} />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
             </ShareContainer>
@@ -92,8 +86,9 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const slug = query.slug as string;
-  const { description, icon, title } = tools.find((tool) => tool.slug === slug);
+  const { slug, description, icon, title } = tools.find(
+    (tool) => tool.slug === query.slug
+  );
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);

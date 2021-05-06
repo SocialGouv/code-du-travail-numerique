@@ -1,18 +1,19 @@
+import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
+import { SectionTitle } from "../../common/stepStyles";
 import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { ListItem, ResultList } from "../common/ResultList";
 
 const AgreementSearchStep = (): JSX.Element => {
   return (
-    <>
-      <p>
-        Précisez et selectionner votre convention collective{" "}
-        <Notice>(champ obligatoire)</Notice>
-      </p>
+    <form>
+      <SectionTitle>
+        Précisez et selectionner votre convention collective
+      </SectionTitle>
 
       <SearchAgreement
         renderResults={(state, query) => {
@@ -44,7 +45,7 @@ const AgreementSearchStep = (): JSX.Element => {
           ) : null;
         }}
       />
-    </>
+    </form>
   );
 };
 

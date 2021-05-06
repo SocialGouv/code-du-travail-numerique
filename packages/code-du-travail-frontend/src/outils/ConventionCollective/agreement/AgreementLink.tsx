@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 import { Agreement } from "../../../conventions/Search/api/convention.service";
 import { matopush } from "../../../piwik";
+import { ResultItem } from "../common/ResultList";
 
 type AgreementItemProps = {
   agreement: Agreement;
@@ -26,38 +27,13 @@ export function AgreementLink({
 
   return (
     <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
-      <StyledLink isFirst={isFirst} onClick={clickHandler}>
+      <ResultItem as="a" isFirst={isFirst} onClick={clickHandler}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-      </StyledLink>
+      </ResultItem>
     </Link>
   );
 }
-const { spacings } = theme;
-const StyledLink = styled.a`
-  display: block;
-  padding: ${({ small }) => (small ? spacings.xsmall : spacings.medium)}
-    ${spacings.xmedium};
-  color: ${({ theme }) => theme.paragraph};
-  font-weight: 600;
-  text-align: left;
-  text-decoration: none;
-  position: relative;
-  &:hover {
-    color: ${({ theme }) => theme.title};
-    background-color: ${({ theme }) => theme.border};
-  }
-  &:not(:hover)::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    top: -1px;
-    margin: 0 ${spacings.xmedium};
-    border-top: solid ${({ theme }) => theme.border};
-    border-top-width: ${({ isFirst }) => (isFirst ? "0px" : "1px")};
-  }
-`;
+
 const IDCC = styled.span`
   font-weight: normal;
 `;

@@ -24,12 +24,11 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
           d’activité (Ex : Transports routiers). Elle adapte les règles du code
           du travail aux situations particulières de la branche (primes, congés,
           salaires minima, préavis, prévoyance…).
-          <br />
-          <Text variant="secondary" fontWeight="700">
-            Vous pouvez retrouver le nom de votre convention collective sur
-            votre bulletin de paie ou sur votre contrat de travail.
-          </Text>
         </p>
+        <Text as="p" fontWeight="700">
+          Vous pouvez retrouver le nom de votre convention collective sur votre
+          bulletin de paie ou sur votre contrat de travail.
+        </Text>
       </AlertWithIcon>
       <Flex>
         <Tile onClick={() => onSelecSearchType(SearchType.agreement)}>
@@ -61,12 +60,20 @@ const Flex = styled.div`
   display: flex;
   padding-top: ${theme.spacings.medium};
   justify-content: space-around;
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Tile = styled(TileUi)`
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: 30%;
+  flex: 0 1 auto;
+  width: 28rem;
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    & + & {
+      margin-top: ${theme.spacings.medium};
+    }
+  }
 `;
 
 const ButtonWrapper = styled.div`
