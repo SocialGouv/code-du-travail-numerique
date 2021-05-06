@@ -8,12 +8,15 @@ import { SectionTitle } from "../../common/stepStyles";
 import { AgreementTile } from "../agreement/AgreementTile";
 import { ListItem, ResultList } from "../common/ResultList";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
-import { SearchEnterprise } from "../enterprise/SearchEnterprise";
+import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
 
 const EnterpriseSearchStep = (): JSX.Element => {
-  const [entreprise, setEntreprise] = useState<Entreprise>(null);
+  const [result, setResult] = useState<{
+    entreprise: Entreprise;
+    params: SearchParams;
+  }>(null);
 
-  if (entreprise) {
+  if (result) {
     return (
       <>
         <SectionTitle>Convention collective</SectionTitle>
@@ -22,27 +25,31 @@ const EnterpriseSearchStep = (): JSX.Element => {
           variant="secondary"
           onRemove={(event) => {
             event.preventDefault();
-            setEntreprise(null);
+            setResult(null);
           }}
         >
           <VerticalCenter>
             <SearchIcon />
-            {entreprise.simpleLabel}, {entreprise.matchingEtablissement.address}
+            {result.entreprise.simpleLabel}
+            {result.params.address &&
+              ` , ${result.entreprise.matchingEtablissement.address}`}
           </VerticalCenter>
         </CenteredToast>
         <Text as="p" variant="primary">
-          {entreprise.conventions.length > 1
-            ? `${entreprise.conventions.length} conventions collectives trouvées pour`
-            : `${entreprise.conventions.length} convention collective trouvée pour`}
+          {result.entreprise.conventions.length > 1
+            ? `${result.entreprise.conventions.length} conventions collectives trouvées pour `
+            : `${result.entreprise.conventions.length} convention collective trouvée pour `}
           <b>
             <u>
-              "{entreprise.simpleLabel},{" "}
-              {entreprise.matchingEtablissement.address}"
+              « {result.entreprise.simpleLabel}
+              {result.params.address &&
+                ` , ${result.entreprise.matchingEtablissement.address}`}{" "}
+              »
             </u>
           </b>
         </Text>
         <FlatList>
-          {entreprise.conventions.map((agreement) => (
+          {result.entreprise.conventions.map((agreement) => (
             <Li key={agreement.id}>
               <AgreementTile agreement={agreement} />
             </Li>
@@ -74,7 +81,7 @@ const EnterpriseSearchStep = (): JSX.Element => {
                       showAddress={params.address.length > 0}
                       isFirst={index === 0}
                       entreprise={item}
-                      onClick={setEntreprise}
+                      onClick={() => setResult({ entreprise: item, params })}
                     />
                   </ListItem>
                 );

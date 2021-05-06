@@ -19,7 +19,7 @@ type Props = {
   ) => JSX.Element;
 };
 
-type SearchParams = {
+export type SearchParams = {
   address: string;
   query: string;
 };

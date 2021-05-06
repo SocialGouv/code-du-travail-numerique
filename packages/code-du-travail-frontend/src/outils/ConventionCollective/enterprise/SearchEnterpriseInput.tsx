@@ -19,9 +19,7 @@ export function SearchEnterpriseInput({
 }: Props): JSX.Element {
   return (
     <>
-      <SectionTitle>
-        Précisez et sélectionnez votre convention collective
-      </SectionTitle>
+      <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
 
       <AlertWithMargin variant="secondary">
         Avec le nom de l’entreprise, il est possible de retrouver la convention
