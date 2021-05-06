@@ -40,12 +40,13 @@ export function EnterpriseButton({
       {showTitleWithHighlight ? (
         <Title
           as="div"
-          fontSize="medium"
+          fontSize="hsmall"
+          fontWeight="600"
           dangerouslySetInnerHTML={{ __html: highlightLabel }}
         />
       ) : (
         <>
-          <Title as="div" fontSize="medium">
+          <Title as="div" fontWeight="600" fontSize="hsmall">
             {simpleLabel}
           </Title>
           <Subtitle
@@ -79,6 +80,9 @@ const ItemButton = styled(ResultItem)`
 
 const Title = styled(Text)`
   padding-bottom: ${spacings.xsmall};
+  & b {
+    font-weight: 700;
+  }
 `;
 const Subtitle = styled(Text)`
   padding-bottom: ${spacings.xsmall};

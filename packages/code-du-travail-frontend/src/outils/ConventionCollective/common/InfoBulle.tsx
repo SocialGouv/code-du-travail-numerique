@@ -36,7 +36,7 @@ const InfoButton = styled(Button)`
   font-weight: 700;
   font-size: ${theme.fonts.sizes.small};
   color: ${({ theme }) => theme.secondary};
-  margin-left: ${theme.spacings.base};
+  margin-left: ${theme.spacings.xsmall};
   padding: 0.5rem;
   height: 2rem;
   width: 2rem;
