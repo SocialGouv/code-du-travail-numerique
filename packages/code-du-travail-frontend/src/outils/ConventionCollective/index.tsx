@@ -59,6 +59,7 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
 const WizardWrapper = styled(Wrapper)`
   overflow: visible;
   max-width: 86rem;
+  width: 100%;
   margin: 0 auto;
 `;
 

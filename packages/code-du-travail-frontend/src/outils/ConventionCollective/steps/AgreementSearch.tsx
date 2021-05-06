@@ -12,7 +12,7 @@ const AgreementSearchStep = (): JSX.Element => {
   return (
     <form>
       <SectionTitle>
-        Précisez et selectionner votre convention collective
+        Précisez et sélectionnez votre convention collective
       </SectionTitle>
 
       <SearchAgreement

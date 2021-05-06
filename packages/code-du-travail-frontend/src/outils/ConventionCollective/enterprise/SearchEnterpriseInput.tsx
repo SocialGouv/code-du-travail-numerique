@@ -1,7 +1,8 @@
-import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import { AlertWithIcon, Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
+import { SectionTitle } from "../../common/stepStyles";
 import { InfoBulle } from "../common/InfoBulle";
 
 type Props = {
@@ -17,45 +18,55 @@ export function SearchEnterpriseInput({
   onChange,
 }: Props): JSX.Element {
   return (
-    <Form>
-      <Box>
-        <InlineLabel htmlFor="enterprise-search">
-          Nom de votre entreprise ou numéro Siret{" "}
-          <Text fontWeight="400">(obligatoire)</Text>
-        </InlineLabel>
-        <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
-          <p>
-            Le numéro Siret est un <strong>numéro de 14 chiffres</strong> unique
-            pour chaque entreprise. Il est présent sur la{" "}
-            <strong>fiche de paie du salarié</strong>.<br />
-            Ex : 40123778000127
-          </p>
-        </InfoBulle>
-        <BlockInput
-          placeholder="Ex : Café de la gare ou 40123778000127"
-          value={query}
-          type="text"
-          name="query"
-          id="enterprise-search"
-          onChange={onChange}
-          autoComplete="off"
-        />
-      </Box>
-      <Box>
-        <InlineLabel htmlFor="enterprise-search-address">
-          Code postal ou ville
-        </InlineLabel>
-        <BlockInput
-          placeholder="Ex : 31000 ou Toulouse "
-          value={address}
-          type="text"
-          name="address"
-          id="enterprise-search-address"
-          onChange={onChange}
-          autoComplete="off"
-        />
-      </Box>
-    </Form>
+    <>
+      <SectionTitle>
+        Précisez et sélectionnez votre convention collective
+      </SectionTitle>
+
+      <AlertWithMargin variant="secondary">
+        Avec le nom de l’entreprise, il est possible de retrouver la convention
+        collective associée.
+      </AlertWithMargin>
+      <Form>
+        <Box>
+          <InlineLabel htmlFor="enterprise-search">
+            Nom de votre entreprise ou numéro Siret{" "}
+            <Text fontWeight="400">(obligatoire)</Text>
+          </InlineLabel>
+          <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+            <p>
+              Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
+              unique pour chaque entreprise. Il est présent sur la{" "}
+              <strong>fiche de paie du salarié</strong>.<br />
+              Ex : 40123778000127
+            </p>
+          </InfoBulle>
+          <BlockInput
+            placeholder="Ex : Café de la gare ou 40123778000127"
+            value={query}
+            type="text"
+            name="query"
+            id="enterprise-search"
+            onChange={onChange}
+            autoComplete="off"
+          />
+        </Box>
+        <Box>
+          <InlineLabel htmlFor="enterprise-search-address">
+            Code postal ou ville
+          </InlineLabel>
+          <BlockInput
+            placeholder="Ex : 31000 ou Toulouse "
+            value={address}
+            type="text"
+            name="address"
+            id="enterprise-search-address"
+            onChange={onChange}
+            autoComplete="off"
+          />
+        </Box>
+      </Form>
+    </>
   );
 }
 
@@ -88,4 +99,8 @@ const Box = styled.div`
       padding-left: 0;
     }
   }
+`;
+
+const AlertWithMargin = styled(AlertWithIcon)`
+  margin: ${theme.spacings.large} 0;
 `;

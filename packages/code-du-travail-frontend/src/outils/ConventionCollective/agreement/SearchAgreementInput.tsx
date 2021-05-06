@@ -1,15 +1,7 @@
-import {
-  Alert,
-  Button,
-  icons,
-  Input,
-  Label as LabelUI,
-  theme,
-} from "@socialgouv/cdtn-ui";
-import React, { useState } from "react";
+import { Input, Label as LabelUI, Text, theme } from "@socialgouv/cdtn-ui";
+import React from "react";
 import styled from "styled-components";
 
-import { Label } from "../../common/stepStyles";
 import { InfoBulle } from "../common/InfoBulle";
 
 type Props = {
@@ -28,7 +20,9 @@ export function SearchAgreementInput({
   return (
     <>
       <InlineLabel htmlFor="agreement-search">
-        Nom de la convention collective ou son numéro d’identification (IDCC)
+        Nom de la convention collective ou son numéro d’identification{" "}
+        <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
+        <Text fontWeight="400">(obligatoire)</Text>
       </InlineLabel>
       <InfoBulle title="Qu'est ce qu'un IDCC">
         <p>
