@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { Entreprise } from "../../../conventions/Search/api/entreprises.service";
 import { matopush } from "../../../piwik";
+import { ResultItem } from "../common/ResultList";
 
 type CompagnyItemProps = {
   entreprise: Entreprise;
@@ -35,7 +36,7 @@ export function EnterpriseButton({
   };
   const showTitleWithHighlight = label === simpleLabel;
   return (
-    <ItemButton isFirst={isFirst} onClick={clickHandler}>
+    <ItemButton as="button" isFirst={isFirst} onClick={clickHandler}>
       {showTitleWithHighlight ? (
         <Title
           as="div"
@@ -63,45 +64,16 @@ export function EnterpriseButton({
   );
 }
 
-const { spacings, fonts } = theme;
+const { spacings } = theme;
 
 const Activity = styled(Text)`
   color: ${({ theme }) => theme.altText};
   padding-bottom: ${spacings.xsmall};
 `;
 
-const ItemButton = styled.button`
-  display: block;
-  appearance: none;
-  width: 100%;
-  background-color: transparent;
-  font-weight: 500;
-  border: none;
-  font-size: ${fonts.sizes.default};
-  padding: ${({ small }) => (small ? spacings.xsmall : spacings.medium)}
-    ${spacings.xmedium};
-  color: ${({ theme }) => theme.paragraph};
-  text-align: left;
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
-  &:hover {
-    color: ${({ theme }) => theme.title};
-    background-color: ${({ theme }) => theme.border};
-  }
+const ItemButton = styled(ResultItem)`
   &:hover ${Activity} {
     color: ${({ theme }) => theme.paragraph};
-  }
-  &:not(:hover)::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    top: -1px;
-    margin: 0 ${spacings.xmedium};
-    border-top: solid ${({ theme }) => theme.border};
-    border-top-width: ${({ isFirst }) => (isFirst ? "0px" : "1px")};
   }
 `;
 

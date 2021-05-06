@@ -1,4 +1,4 @@
-import { Button, theme } from "@socialgouv/cdtn-ui";
+import { Button, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -19,6 +19,13 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
   const [searchType, setSearchType] = useState<SearchType>(null);
 
   function clearSearchType() {
+    window.scrollTo(0, 0);
+
+    const main: HTMLDivElement = document.querySelector("[role=main]");
+    if (main) {
+      main.scrollIntoView(true);
+      main.focus();
+    }
     setSearchType(null);
   }
 
@@ -35,28 +42,24 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
       Step = <Steps.IntroductionStep onSelecSearchType={setSearchType} />;
   }
   return (
-    <WizardWrapper>
+    <WizardWrapper variant="main">
       <WizardTitle title={title} icon={icon} />
       {Step}
       {searchType && (
-        <p>
+        <div>
           <Button small type="button" onClick={clearSearchType} variant="flat">
             Précédent
           </Button>
-        </p>
+        </div>
       )}
     </WizardWrapper>
   );
 }
 
-const WizardWrapper = styled.div`
+const WizardWrapper = styled(Wrapper)`
   overflow: visible;
-  @media (max-width: ${theme.breakpoints.tablet}) {
-    padding: 0;
-  }
-  @media print {
-    border: 0;
-  }
+  max-width: 86rem;
+  margin: 0 auto;
 `;
 
 export { AgreementSearch };
