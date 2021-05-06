@@ -4,6 +4,6 @@ import { spacings } from "../../theme";
 
 export default createGlobalStyle`
   p {
-    margin: ${spacings.xmedium} 0;
+    margin: ${spacings.base} 0;
   }
 `;
