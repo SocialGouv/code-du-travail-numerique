@@ -60,7 +60,7 @@ const Flex = styled.div`
   display: flex;
   padding-top: ${theme.spacings.medium};
   justify-content: space-around;
-  @media (max-width: ${theme.breakpoints.tablet}) {
+  @media (max-width: ${theme.breakpoints.mobile}) {
     flex-direction: column;
     align-items: center;
   }
@@ -69,7 +69,7 @@ const Flex = styled.div`
 const Tile = styled(TileUi)`
   flex: 0 1 auto;
   width: 28rem;
-  @media (max-width: ${theme.breakpoints.tablet}) {
+  @media (max-width: ${theme.breakpoints.mobile}) {
     & + & {
       margin-top: ${theme.spacings.medium};
     }
