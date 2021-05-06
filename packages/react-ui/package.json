@@ -41,7 +41,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.12.13",
     "@babel/preset-env": "^7.12.17",
     "@babel/preset-react": "7.12.13",
-    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@socialgouv/eslint-config-react": "^1.59.0",
     "@storybook/addon-a11y": "^6.1.21",
