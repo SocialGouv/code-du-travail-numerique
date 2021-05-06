@@ -1,5 +1,3 @@
-const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
-
 // merge by one of each
 
 const merge = (res1, res2, max_result) => {
