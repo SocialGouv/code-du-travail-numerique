@@ -20,7 +20,7 @@
     "build": "node bin/index.js"
   },
   "dependencies": {
-    "publicodes": "^1.0.0-beta.12",
+    "publicodes": "^1.0.0-beta.15",
     "yaml": "^1.10.2"
   }
 }
