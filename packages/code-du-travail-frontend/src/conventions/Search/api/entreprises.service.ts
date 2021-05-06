@@ -40,7 +40,6 @@ const ENTERPRISE_API_URL =
 
 const apiEntreprises = memoizee(
   function createFetcher(query: string, address: string) {
-    console.log({ address, query });
     const url = `${ENTERPRISE_API_URL}?q=${encodeURIComponent(
       query
     )}&a=${encodeURIComponent(address)}`;
