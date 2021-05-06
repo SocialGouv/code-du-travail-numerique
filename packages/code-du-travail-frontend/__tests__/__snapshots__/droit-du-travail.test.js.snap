@@ -2382,6 +2382,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       class="c24"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <div
         class="c25"
