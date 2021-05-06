@@ -1,4 +1,4 @@
-import { icons, theme } from "@socialgouv/cdtn-ui";
+import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
@@ -103,54 +103,56 @@ function Wizard({
   const Step = steps[stepIndex].component;
 
   return (
-    <Form
-      initialValues={initialValues}
-      validate={validate}
-      decorators={decorators}
-      mutators={{
-        ...arrayMutators,
-      }}
-      onSubmit={handlePageSubmit}
-    >
-      {({ handleSubmit, form, invalid, submitFailed }) => {
-        return (
-          <>
-            <StyledForm onSubmit={handleSubmit}>
-              {Rules && (
-                <Rules values={form.getState().values} dispatch={dispatch} />
-              )}
-              <WizardTitle title={title} icon={icon} />
-              <StepList
-                activeIndex={stepIndex}
-                items={stepItems}
-                anchorRef={anchorRef}
-              />
-              <Step form={form} dispatch={dispatch} />
-
-              <PrevNextBar
-                hasError={invalid && submitFailed}
-                onPrev={() => prevStep(form.getState().values)}
-                nextVisible={nextVisible}
-                printVisible={isLastStep}
-                previousVisible={previousVisible}
-              />
-              {stepIndex > 0 && stepIndex < steps.length - 1 && (
-                <Notice>
-                  <Mandatory>*</Mandatory> Champs obligatoires
-                </Notice>
-              )}
-              {process.env.NODE_ENV !== "production" &&
-                process.env.NODE_ENV !== "test" && (
-                  <details>
-                    <summary>state</summary>
-                    <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
-                  </details>
+    <Wrapper variant="main">
+      <Form
+        initialValues={initialValues}
+        validate={validate}
+        decorators={decorators}
+        mutators={{
+          ...arrayMutators,
+        }}
+        onSubmit={handlePageSubmit}
+      >
+        {({ handleSubmit, form, invalid, submitFailed }) => {
+          return (
+            <>
+              <StyledForm onSubmit={handleSubmit}>
+                {Rules && (
+                  <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-            </StyledForm>
-          </>
-        );
-      }}
-    </Form>
+                <WizardTitle title={title} icon={icon} />
+                <StepList
+                  activeIndex={stepIndex}
+                  items={stepItems}
+                  anchorRef={anchorRef}
+                />
+                <Step form={form} dispatch={dispatch} />
+
+                <PrevNextBar
+                  hasError={invalid && submitFailed}
+                  onPrev={() => prevStep(form.getState().values)}
+                  nextVisible={nextVisible}
+                  printVisible={isLastStep}
+                  previousVisible={previousVisible}
+                />
+                {stepIndex > 0 && stepIndex < steps.length - 1 && (
+                  <Notice>
+                    <Mandatory>*</Mandatory> Champs obligatoires
+                  </Notice>
+                )}
+                {process.env.NODE_ENV !== "production" &&
+                  process.env.NODE_ENV !== "test" && (
+                    <details>
+                      <summary>state</summary>
+                      <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                    </details>
+                  )}
+              </StyledForm>
+            </>
+          );
+        }}
+      </Form>
+    </Wrapper>
   );
 }
 

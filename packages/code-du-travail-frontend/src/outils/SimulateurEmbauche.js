@@ -1,4 +1,4 @@
-import { Alert, Section, Title } from "@socialgouv/cdtn-ui";
+import { Alert, Section, Title, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
 
@@ -39,7 +39,7 @@ class SimulateurEmbauche extends React.PureComponent {
   render() {
     const { simulator } = this.state;
     return (
-      <>
+      <Wrapper variant="main">
         <Title>Salaire brut/net</Title>
         <Alert>
           Pour information, l’estimation du salaire net après impôt est basée
@@ -66,7 +66,7 @@ class SimulateurEmbauche extends React.PureComponent {
             <div ref={this.simRef} />
           </Section>
         )}
-      </>
+      </Wrapper>
     );
   }
 }
