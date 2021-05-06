@@ -9,7 +9,7 @@ Fonctionnalité: Recherche de convention collective par idcc
 Scénario:
   Soit un utilisateur sur la page "/outils/convention-collective"
 
-  Quand je clique sur "Je la saisi"
+  Quand je clique sur "Je la saisie"
   Quand je renseigne "boulangerie" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
   Quand j'attend que le texte "Boulangerie" apparaisse
   Alors le lien "Boulangerie-pâtisserie (entreprises artisanales)" pointe sur "/convention-collective/843-boulangerie-patisserie-entreprises-artisanales"
