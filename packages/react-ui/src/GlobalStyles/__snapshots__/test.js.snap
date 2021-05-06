@@ -67,7 +67,7 @@ HTMLCollection [
     ul ul{list-style-type:circle;}
     ol{list-style-type:decimal;}
     ol ol{list-style-type:upper-latin;}
-    p{margin:2.4rem 0;}
+    p{margin:1.6rem 0;}
     *,*:after,*:before{box-sizing:border-box;}
     html{font-size:62.5%;line-height:1.625;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-font-smoothing:antialiased;}
     body{margin:0;color:#3e486e;font-size:1.6rem;font-family:'Open Sans',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background-color:#fff;}
