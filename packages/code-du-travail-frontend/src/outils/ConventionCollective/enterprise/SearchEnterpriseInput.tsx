@@ -68,6 +68,9 @@ const Form = styled.form`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const InlineLabel = styled(Label)`
@@ -80,5 +83,9 @@ const Box = styled.div`
   & + & {
     flex: 0 1 25rem;
     padding-left: ${theme.spacings.xmedium};
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      padding-top: ${theme.spacings.xmedium};
+      padding-left: 0;
+    }
   }
 `;
