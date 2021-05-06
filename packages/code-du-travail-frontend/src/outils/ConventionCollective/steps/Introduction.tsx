@@ -32,7 +32,10 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
       </AlertWithIcon>
       <Flex>
         <Tile onClick={() => onSelecSearchType(SearchType.agreement)}>
-          <Text fontWeight="700">Je connais ma convention collective</Text>
+          <Text fontWeight="700">
+            Je connais
+            <br /> ma convention collective
+          </Text>
           <ButtonWrapper>
             <Button variant="link" as="div">
               Je la saisi
@@ -41,7 +44,7 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
         </Tile>
         <Tile onClick={() => onSelecSearchType(SearchType.compagny)}>
           <Text fontWeight="700">
-            Je ne connais pas ma convention collective
+            Je ne connais <br /> pas ma convention collective
           </Text>
           <ButtonWrapper>
             <Button variant="link" as="div">
