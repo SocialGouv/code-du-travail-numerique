@@ -12,14 +12,11 @@ contrat salarié . préavis de retraite: 0 mois
 contrat salarié . préavis de retraite . inférieur à 6 mois:
   applicable si: ancienneté < 6 mois
   remplace: contrat salarié . préavis de retraite
-  valeur:
-    variations:
-      - si: contrat salarié . convention collective = ''
-        alors: contrat salarié . préavis de retraite légale
-      - sinon: contrat salarié . préavis de retraite collective
+  valeur: contrat salarié . préavis de retraite collective
 
 contrat salarié . préavis de retraite . mise à la retraite:
   applicable si: contrat salarié . mise à la retraite
+  non applicable si: ancienneté < 6 mois
   remplace: contrat salarié . préavis de retraite
   valeur:
     le maximum de:
@@ -28,15 +25,12 @@ contrat salarié . préavis de retraite . mise à la retraite:
 
 contrat salarié . préavis de retraite . départ à la retraite:
   applicable si: contrat salarié . mise à la retraite = non
+  non applicable si: ancienneté < 6 mois
   remplace: contrat salarié . préavis de retraite
   valeur:
-    variations:
-      - si: contrat salarié . convention collective = ''
-        alors: contrat salarié . préavis de retraite légale
-      - sinon:
-          le minimum de:
-            - contrat salarié . préavis de retraite légale
-            - contrat salarié . préavis de retraite collective
+    le minimum de:
+      - contrat salarié . préavis de retraite légale
+      - contrat salarié . préavis de retraite collective
 
 contrat salarié . préavis de retraite légale:
   titre: Préavis de départ légale
@@ -66,7 +60,7 @@ contrat salarié . préavis de retraite tranches:
         plafond: 24 mois
       - montant: 2 mois
 
-contrat salarié . préavis de retraite collective: 0 mois
+contrat salarié . préavis de retraite collective: non
 
 contrat salarié . convention collective:
   question: Quelle est votre convention collective ?

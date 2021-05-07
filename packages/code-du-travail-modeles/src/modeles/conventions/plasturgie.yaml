@@ -6,12 +6,11 @@ contrat salarié . convention collective . plasturgie:
 
 contrat salarié . convention collective . plasturgie . catégorie profressionnelle:
   question: Quelle est votre catégorie professionelle ?
-  formule:
-    une possibilité:
-      choix obligatoire: oui
-      possibilités:
-        - Cadres
-        - Collaborateurs
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Collaborateurs: "'Collaborateurs'"
 
 contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Cadres:
   applicable si: catégorie profressionnelle = 'Cadres'
@@ -28,6 +27,11 @@ contrat salarié . convention collective . plasturgie . catégorie profressionne
 
 contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . coefficient:
   question: Quelle est votre coefficient ?
+  cdtn:
+    type: liste
+    valeurs:
+      "Entre 700 et 750": 700
+      "Entre 800 et 830": 800
 
 contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite tranches:
   titre: Tranches du préavis de retraite pour un collaborateur

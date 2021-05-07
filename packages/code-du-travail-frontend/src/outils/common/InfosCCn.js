@@ -24,6 +24,8 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   );
   useEffect(() => {
     form.batch(() => {
+      // Simulateur Duree Preavis Retraite:  Delete infos when change CC
+      form.change("infos", undefined);
       form.change("criteria", undefined);
       form.change("typeRupture", undefined);
       form.change(CONVENTION_NAME, storedConvention);

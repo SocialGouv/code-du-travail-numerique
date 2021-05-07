@@ -15,7 +15,7 @@
 .master_based_stage: &master_based_stage
   variables:
     GIT_STRATEGY: none
-  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  image: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-base:$CI_COMMIT_SHA
   needs:
     - Register socialgouv/cdtn base image
   before_script:
@@ -95,7 +95,7 @@ Test @cdtn/api:
     - Register elasticsearch image
     - Register socialgouv/cdtn base image
   services:
-    - name: $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+    - name: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
       command:
         [
@@ -112,7 +112,7 @@ Test @cdtn/api:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
     - |-
-      echo "connecting to $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA";
+      echo "connecting to $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-elasticsearch:$CI_COMMIT_SHA";
       echo $ELASTICSEARCH_URL;
       retry=60;
       while

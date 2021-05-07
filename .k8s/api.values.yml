@@ -1,5 +1,5 @@
 image:
-  repository: ${CI_REGISTRY_IMAGE}/api
+  repository: ${REGISTRY}/cdtn-api
   tag: ${IMAGE_TAG}
 
 fullnameOverride: "api-nodejs"

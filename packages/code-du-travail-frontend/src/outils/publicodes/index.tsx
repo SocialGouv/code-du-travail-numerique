@@ -1,4 +1,5 @@
-import Engine, { Evaluation, Rule } from "publicodes";
+import { Notification } from "@socialgouv/modeles-social";
+import Engine, { Evaluation, Rule as PubliRule } from "publicodes";
 import React, { createContext, useContext } from "react";
 
 import usePublicodesHandler from "./Handler";
@@ -9,6 +10,22 @@ interface MissingArgs {
   rawNode: Rule;
 }
 
+export enum RuleType {
+  Liste = "liste",
+  OuiNon = "oui-non",
+}
+
+export interface RuleListe {
+  type: RuleType;
+  valeurs: Record<string, string>;
+}
+
+export type RuleCdtn = RuleListe;
+
+export interface Rule extends PubliRule {
+  cdtn?: RuleCdtn;
+}
+
 export interface SituationElement {
   name: string;
   rawNode: Rule;
@@ -16,6 +33,7 @@ export interface SituationElement {
 }
 
 export interface PublicodesContextInterface {
+  getNotifications: () => Notification[];
   result: Evaluation;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
@@ -23,12 +41,13 @@ export interface PublicodesContextInterface {
 }
 
 const publicodesContext = createContext<PublicodesContextInterface>({
+  getNotifications: () => [],
   missingArgs: [],
-  situation: [],
   result: null,
   setSituation: () => {
     throw Error("Not implemented");
   },
+  situation: [],
 });
 
 export function usePublicodes(): PublicodesContextInterface {
@@ -43,15 +62,21 @@ export const PublicodesProvider: React.FC<
     targetRule: string;
   }
 > = ({ children, rules, targetRule }) => {
-  const { result, missingArgs, setSituation, situation } = usePublicodesHandler(
-    {
-      engine: new Engine(rules),
-      targetRule: targetRule,
-    }
-  );
+  const {
+    getNotifications,
+    result,
+    missingArgs,
+    setSituation,
+    situation,
+  } = usePublicodesHandler({
+    engine: new Engine(rules),
+    targetRule: targetRule,
+  });
 
   return (
-    <Provider value={{ missingArgs, result, setSituation, situation }}>
+    <Provider
+      value={{ getNotifications, missingArgs, result, setSituation, situation }}
+    >
       {children}
     </Provider>
   );

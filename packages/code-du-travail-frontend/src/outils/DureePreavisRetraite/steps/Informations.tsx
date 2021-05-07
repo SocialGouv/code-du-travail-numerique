@@ -1,57 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import { TextQuestion } from "../../common/TextQuestion";
+import { StepDynamicPublicodes } from "../../common/StepDynamicPublicodes";
+import { SectionTitle } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { usePublicodes } from "../../publicodes";
-import { transformInfoCcn } from "../../publicodes/TransformInfoCcn";
 
-function Informations({ form }: WizardStepProps): JSX.Element {
-  const publicodesContext = usePublicodes();
+const excludedRules = [
+  "contrat salarié - ancienneté",
+  "contrat salarié - convention collective",
+  "contrat salarié - mise à la retraite",
+];
 
-  // List of excluded rules to show in this step.
-  // Pulicodes can return them as missing args, but there are populated by another steps.
-  const excludedRules = [
-    "contrat salarié - ancienneté",
-    "contrat salarié - convention collective",
-    "contrat salarié - mise à la retraite",
-  ];
-  useEffect(() => {
-    publicodesContext.setSituation(transformInfoCcn(form.getState().values));
-  }, [form]);
-
-  return (
-    <>
-      <>
-        {publicodesContext.situation
-          .filter((item) => !excludedRules.includes(item.name))
-          .map((item) => {
-            return (
-              <TextQuestion
-                key={item.name}
-                name={item.name}
-                label={item.rawNode.question}
-                validate={undefined}
-                placeholder="0"
-              />
-            );
-          })}
-      </>
-      <>
-        {publicodesContext.missingArgs
-          .filter((item) => !excludedRules.includes(item.name))
-          .map((item) => {
-            return (
-              <TextQuestion
-                key={item.name}
-                name={item.name}
-                label={item.rawNode.question}
-                validate={() => true}
-              />
-            );
-          })}
-      </>
-    </>
-  );
-}
+const Informations = (props: WizardStepProps): JSX.Element => (
+  <>
+    <SectionTitle>
+      Veuillez indiquer les informations ci-dessous en rapport à votre
+      convention collective.
+    </SectionTitle>
+    <StepDynamicPublicodes {...props} excludedRules={excludedRules} />
+  </>
+);
 
 export { Informations };
