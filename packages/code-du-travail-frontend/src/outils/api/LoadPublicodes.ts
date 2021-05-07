@@ -1,4 +1,4 @@
-import modeles from "@socialgouv/modeles-social";
+import { modeles } from "@socialgouv/modeles-social";
 
 export const loadPublicodes = (simulator: string): any => {
   switch (simulator) {

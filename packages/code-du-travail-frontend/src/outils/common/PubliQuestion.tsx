@@ -3,6 +3,7 @@ import React from "react";
 import { Rule, RuleType } from "../publicodes";
 import { SelectQuestion } from "./SelectQuestion";
 import { TextQuestion } from "./TextQuestion";
+import { YesNoPubliQuestion } from "./YesNoPubliQuestion";
 
 interface Props {
   name: string;
@@ -22,6 +23,8 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
           onChange={onChange}
         />
       );
+    case RuleType.OuiNon:
+      return <YesNoPubliQuestion name={name} label={rule.question} />;
     default:
       return (
         <TextQuestion name={name} label={rule.question} validate={undefined} />
