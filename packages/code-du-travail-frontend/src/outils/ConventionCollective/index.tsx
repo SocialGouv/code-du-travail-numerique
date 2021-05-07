@@ -12,7 +12,7 @@ interface Props {
 
 export enum SearchType {
   agreement = "convention",
-  compagny = "entreprise",
+  enterprise = "entreprise",
 }
 
 function AgreementSearch({ icon, title }: Props): JSX.Element {
@@ -35,7 +35,7 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
     case SearchType.agreement:
       Step = <Steps.AgreementSearchStep />;
       break;
-    case SearchType.compagny:
+    case SearchType.enterprise:
       Step = <Steps.EnterpriseSearchStep />;
       break;
     default:
