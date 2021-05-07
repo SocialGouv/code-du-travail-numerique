@@ -134,6 +134,13 @@ function Wizard({
                 items={stepItems}
                 anchorRef={anchorRef}
               />
+
+              {stepIndex > 0 && stepIndex < steps.length - 1 && (
+                <p>
+                  <Mandatory>*</Mandatory> Champs obligatoires
+                </p>
+              )}
+
               <Step form={form} dispatch={dispatch} />
 
               <PrevNextBar
@@ -143,11 +150,6 @@ function Wizard({
                 printVisible={isLastStep}
                 previousVisible={previousVisible}
               />
-              {stepIndex > 0 && stepIndex < steps.length - 1 && (
-                <Notice>
-                  <Mandatory>*</Mandatory> Champs obligatoires
-                </Notice>
-              )}
               {process.env.NODE_ENV !== "production" &&
                 process.env.NODE_ENV !== "test" && (
                   <details>
@@ -183,7 +185,7 @@ Wizard.propTypes = {
 
 export { Wizard };
 
-const { breakpoints, box, spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -215,11 +217,6 @@ const IconWrapper = styled.span`
   width: 5.2rem;
   height: 5.2rem;
   margin-right: ${spacings.base};
-`;
-
-const Notice = styled.p`
-  padding-top: ${spacings.medium};
-  border-top: ${({ theme }) => box.border(theme.border)};
 `;
 
 const Mandatory = styled.span`
