@@ -63,7 +63,7 @@ const dataFetchReducer = <A>(
   }
 };
 
-type Fetcher<A, B, Result> = (a: A, b?: B) => Promise<Result>;
+type Fetcher<Result> = (query: string, address?: string) => Promise<Result>;
 
 /**
  * a factory function that return a suggesterHook that
@@ -71,23 +71,21 @@ type Fetcher<A, B, Result> = (a: A, b?: B) => Promise<Result>;
  * @param fetcher an async function that should receive only one argument
  * @returns a hook function
  */
-export function createSuggesterHook<A, B, Result>(
-  fetcher: Fetcher<A, B, Result>
-) {
-  return function (a: A, b?: B): FetchReducerState<Result> {
+export function createSuggesterHook<Result>(fetcher: Fetcher<Result>) {
+  return function (query: string, address?: string): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
     >(dataFetchReducer, { isError: false, isLoading: false });
     useEffect(() => {
       let shouldCancel = false;
       async function fetchData() {
-        if (!a) {
+        if (!query) {
           dispatch({ type: Actions.reset });
           return;
         }
         dispatch({ type: Actions.init });
         try {
-          const results = await fetcher(a, b);
+          const results = await fetcher(query, address);
           if (shouldCancel) {
             return;
           }
@@ -100,8 +98,7 @@ export function createSuggesterHook<A, B, Result>(
       return () => {
         shouldCancel = true;
       };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [...[a, b]]);
+    }, [query, address]);
     return state;
   };
 }
