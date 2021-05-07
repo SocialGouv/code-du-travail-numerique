@@ -14,7 +14,7 @@ export { Wrapper } from "./layout/Wrapper";
 
 // Components
 export { Accordion } from "./Accordion";
-export { Alert } from "./Alert";
+export { Alert, AlertWithIcon } from "./Alert";
 export { ArrowLink } from "./ArrowLink";
 export { Badge } from "./Badge";
 export { BurgerNav } from "./BurgerNav";
@@ -39,6 +39,7 @@ export { Stripe } from "./Stripe";
 export { Table } from "./Table";
 export { TableOfContent } from "./TableOfContent";
 export { Tabs } from "./Tabs";
+export { Tag } from "./Tag";
 export { Text } from "./Text";
 export { Tile } from "./Tile";
 export { Toast } from "./Toast";

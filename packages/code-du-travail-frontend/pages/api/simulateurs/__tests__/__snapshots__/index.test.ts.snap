@@ -133,9 +133,9 @@ Object {
     Object {
       "action": "Consulter",
       "date": "01/01/2020",
-      "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
+      "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
       "enable": true,
-      "icon": "Nego",
+      "icon": "SearchCC",
       "id": "c249bd2a-6f33-4176-ad09-166bb8e5747b",
       "questions": Array [
         "trouver ma convention collective",
@@ -144,7 +144,7 @@ Object {
         "trouver ma cc",
       ],
       "slug": "convention-collective",
-      "title": "Convention collective",
+      "title": "Trouver sa convention collective",
     },
   ],
   "externalTools": Array [
@@ -293,9 +293,9 @@ Object {
     Object {
       "action": "Consulter",
       "date": "01/01/2020",
-      "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
+      "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
       "enable": true,
-      "icon": "Nego",
+      "icon": "SearchCC",
       "id": "c249bd2a-6f33-4176-ad09-166bb8e5747b",
       "questions": Array [
         "trouver ma convention collective",
@@ -304,7 +304,7 @@ Object {
         "trouver ma cc",
       ],
       "slug": "convention-collective",
-      "title": "Convention collective",
+      "title": "Trouver sa convention collective",
     },
     Object {
       "action": "Calculer",

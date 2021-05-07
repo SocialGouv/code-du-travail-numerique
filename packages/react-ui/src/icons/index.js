@@ -30,6 +30,7 @@ export { default as Resignation } from "./components/bicolor/Resignation";
 export { default as Resources } from "./components/bicolor/Resources";
 export { default as Rules } from "./components/bicolor/Rules";
 export { default as Salary } from "./components/bicolor/Salary";
+export { default as SearchCC } from "./components/bicolor/SearchCC";
 export { default as Security } from "./components/bicolor/Security";
 export { default as SpecificJob } from "./components/bicolor/SpecificJob";
 export { default as Termination } from "./components/bicolor/Termination";
@@ -40,7 +41,6 @@ export { default as Warning } from "./components/bicolor/Warning";
 export { default as WorkersHero } from "./components/bicolor/WorkersHero";
 export { default as WorkersTheme } from "./components/bicolor/WorkersTheme";
 export { default as Youth } from "./components/bicolor/Youth";
-
 // Monochrome icons
 export { default as ArrowDown } from "./components/monochrome/ArrowDown";
 export { default as ArrowRight } from "./components/monochrome/ArrowRight";
@@ -66,3 +66,4 @@ export { default as ShareFacebook } from "./components/monochrome/ShareFacebook"
 export { default as ShareLinkedin } from "./components/monochrome/ShareLinkedin";
 export { default as ShareTwitter } from "./components/monochrome/ShareTwitter";
 export { default as ShareWhatsapp } from "./components/monochrome/ShareWhatsapp";
+export { HelpCircle } from "react-feather";

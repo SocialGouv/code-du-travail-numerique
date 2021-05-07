@@ -127,8 +127,8 @@
     "id": "d09665fc-961c-44bf-a399-c34cfedf1d24"
   },
   {
-    "icon": "Nego",
-    "title": "Convention collective",
+    "icon": "SearchCC",
+    "title": "Trouver sa convention collective",
     "slug": "convention-collective",
     "questions": [
       "trouver ma convention collective",
@@ -136,7 +136,7 @@
       "recherche ccn",
       "trouver ma cc"
     ],
-    "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC",
+    "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
     "action": "Consulter",
     "date": "01/01/2020",
     "enable": true,

@@ -1,4 +1,4 @@
-import { icons, theme } from "@socialgouv/cdtn-ui";
+import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
@@ -101,65 +101,58 @@ function Wizard({
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
-  const Icon = icons[icon];
 
   return (
-    <Form
-      initialValues={initialValues}
-      validate={validate}
-      decorators={decorators}
-      mutators={{
-        ...arrayMutators,
-      }}
-      onSubmit={handlePageSubmit}
-    >
-      {({ handleSubmit, form, invalid, submitFailed }) => {
-        return (
-          <>
-            <StyledForm onSubmit={handleSubmit}>
-              {Rules && (
-                <Rules values={form.getState().values} dispatch={dispatch} />
-              )}
-              <ToolTitle>
-                {Icon && (
-                  <IconWrapper>
-                    <Icon />
-                  </IconWrapper>
+    <Wrapper variant="main">
+      <Form
+        initialValues={initialValues}
+        validate={validate}
+        decorators={decorators}
+        mutators={{
+          ...arrayMutators,
+        }}
+        onSubmit={handlePageSubmit}
+      >
+        {({ handleSubmit, form, invalid, submitFailed }) => {
+          return (
+            <>
+              <StyledForm onSubmit={handleSubmit}>
+                {Rules && (
+                  <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-                {title}
-              </ToolTitle>
+                <WizardTitle title={title} icon={icon} />
+                <StepList
+                  activeIndex={stepIndex}
+                  items={stepItems}
+                  anchorRef={anchorRef}
+                />
+                <Step form={form} dispatch={dispatch} />
 
-              <StepList
-                activeIndex={stepIndex}
-                items={stepItems}
-                anchorRef={anchorRef}
-              />
-              <Step form={form} dispatch={dispatch} />
-
-              <PrevNextBar
-                hasError={invalid && submitFailed}
-                onPrev={() => prevStep(form.getState().values)}
-                nextVisible={nextVisible}
-                printVisible={isLastStep}
-                previousVisible={previousVisible}
-              />
-              {stepIndex > 0 && stepIndex < steps.length - 1 && (
-                <Notice>
-                  <Mandatory>*</Mandatory> Champs obligatoires
-                </Notice>
-              )}
-              {process.env.NODE_ENV !== "production" &&
-                process.env.NODE_ENV !== "test" && (
-                  <details>
-                    <summary>state</summary>
-                    <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
-                  </details>
+                <PrevNextBar
+                  hasError={invalid && submitFailed}
+                  onPrev={() => prevStep(form.getState().values)}
+                  nextVisible={nextVisible}
+                  printVisible={isLastStep}
+                  previousVisible={previousVisible}
+                />
+                {stepIndex > 0 && stepIndex < steps.length - 1 && (
+                  <Notice>
+                    <Mandatory>*</Mandatory> Champs obligatoires
+                  </Notice>
                 )}
-            </StyledForm>
-          </>
-        );
-      }}
-    </Form>
+                {process.env.NODE_ENV !== "production" &&
+                  process.env.NODE_ENV !== "test" && (
+                    <details>
+                      <summary>state</summary>
+                      <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                    </details>
+                  )}
+              </StyledForm>
+            </>
+          );
+        }}
+      </Form>
+    </Wrapper>
   );
 }
 
@@ -181,7 +174,21 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export { Wizard };
+function WizardTitle({ title, icon }) {
+  const Icon = icons[icon];
+  return (
+    <ToolTitle>
+      {Icon && (
+        <IconWrapper>
+          <Icon />
+        </IconWrapper>
+      )}
+      {title}
+    </ToolTitle>
+  );
+}
+
+export { Wizard, WizardTitle };
 
 const { breakpoints, box, spacings } = theme;
 

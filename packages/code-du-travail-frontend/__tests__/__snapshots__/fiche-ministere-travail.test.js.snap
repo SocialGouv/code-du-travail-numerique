@@ -2022,6 +2022,7 @@ exports[`<FicheMT /> should render 1`] = `
       class="c23"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <nav
         class="c24"
