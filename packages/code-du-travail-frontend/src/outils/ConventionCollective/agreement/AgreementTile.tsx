@@ -6,11 +6,10 @@ import {
 } from "@socialgouv/cdtn-sources";
 import { Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 
 import { Convention } from "../../../conventions/Search/api/entreprises.service";
-import { matopush } from "../../../piwik";
+import { useTrackingContext } from "../common/TrackingContext";
 
 type Props = {
   agreement: Convention;
@@ -20,14 +19,10 @@ const getConventionSlug = (convention: Convention) =>
   slugify(`${convention.idcc}-${convention.shortTitle}`.substring(0, 80));
 
 export function AgreementTile({ agreement }: Props): JSX.Element {
-  const router = useRouter();
+  const { trackEvent, title, uuid } = useTrackingContext();
+
   const clickHandler = () => {
-    matopush([
-      "trackEvent",
-      "cc_compagny_select_cc",
-      router.asPath,
-      agreement.shortTitle,
-    ]);
+    trackEvent("cc_select", title, agreement.shortTitle, uuid);
   };
   return (
     <Link

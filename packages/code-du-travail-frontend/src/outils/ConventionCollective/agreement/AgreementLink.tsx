@@ -1,14 +1,12 @@
 import { formatIdcc } from "@cdt/data";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
 import { Agreement } from "../../../conventions/Search/api/convention.service";
-import { matopush } from "../../../piwik";
 import { ResultItem } from "../common/ResultList";
+import { useTrackingContext } from "../common/TrackingContext";
 
 type AgreementItemProps = {
   agreement: Agreement;
@@ -20,9 +18,9 @@ export function AgreementLink({
   isFirst,
 }: AgreementItemProps): JSX.Element {
   const { num, shortTitle } = agreement;
-  const router = useRouter();
+  const { trackEvent, title, uuid } = useTrackingContext();
   const clickHandler = () => {
-    matopush(["trackEvent", "cc_select", router.asPath, shortTitle]);
+    trackEvent("cc_select", title, shortTitle, uuid);
   };
 
   return (

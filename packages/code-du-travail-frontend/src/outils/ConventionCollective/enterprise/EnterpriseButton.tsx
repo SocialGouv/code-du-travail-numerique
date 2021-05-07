@@ -1,11 +1,10 @@
 import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
-import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
 import { Entreprise } from "../../../conventions/Search/api/entreprises.service";
-import { matopush } from "../../../piwik";
 import { ResultItem } from "../common/ResultList";
+import { useTrackingContext } from "../common/TrackingContext";
 
 type CompagnyItemProps = {
   entreprise: Entreprise;
@@ -21,7 +20,6 @@ export function EnterpriseButton({
   onClick,
 }: CompagnyItemProps): JSX.Element {
   const {
-    siren,
     label,
     etablissements,
     highlightLabel,
@@ -29,9 +27,11 @@ export function EnterpriseButton({
     activitePrincipale,
     matchingEtablissement,
   } = entreprise;
-  const router = useRouter();
+
+  const { trackEvent, title, uuid } = useTrackingContext();
+
   const clickHandler = () => {
-    matopush(["trackEvent", "cc_compagny_select", router.asPath, siren]);
+    trackEvent("enterprise_select", title, label, uuid);
     onClick(entreprise);
   };
   const showTitleWithHighlight = label === simpleLabel;
