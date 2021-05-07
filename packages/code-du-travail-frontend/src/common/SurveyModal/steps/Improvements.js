@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { matopush } from "../../../piwik";
 import { ActionBar } from "../components/ActionBar";
+import { MandatoryLabel } from "../components/MandatoryLabel";
 import { ProgressBar } from "../components/ProgressBar";
 import { Question } from "../components/Question";
 
@@ -29,6 +30,7 @@ export const ImprovementsStep = ({
   return (
     <>
       <ProgressBar state={state} />
+      <MandatoryLabel />
       <Question>
         Quels sont le(s) contenu(s) que vous souhaiteriez voir enrichi(s)&nbsp;?
       </Question>
