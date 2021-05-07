@@ -1,15 +1,12 @@
 import { Section } from "@socialgouv/cdtn-ui";
-import { useRouter } from "next/router";
-import pDebounce from "p-debounce";
 import React, { useEffect, useState } from "react";
-import { v4 as generateUUID } from "uuid";
 
 import {
   Entreprise,
   searchEntreprises,
 } from "../../../conventions/Search/api/entreprises.service";
-import { matopush } from "../../../piwik";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
+import { useTrackingContext } from "../common/TrackingContext";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
@@ -24,20 +21,6 @@ export type SearchParams = {
   query: string;
 };
 
-const trackInput = pDebounce(
-  (query: string, path: string, trackingUID: string) => {
-    if (query.length > 1) {
-      matopush([
-        "trackEvent",
-        "compagny_search",
-        path,
-        `${trackingUID} : ${query}`,
-      ]);
-    }
-  },
-  2000
-);
-
 const useEntrepriseSuggester = createSuggesterHook(searchEntreprises);
 
 export function SearchEnterprise({ renderResults }: Props): JSX.Element {
@@ -45,20 +28,23 @@ export function SearchEnterprise({ renderResults }: Props): JSX.Element {
     address: "",
     query: "",
   });
-  const [trackingUID, setTrackingUID] = useState("");
-  const router = useRouter();
   const state = useEntrepriseSuggester(search);
 
+  const { trackEvent, title, uuid } = useTrackingContext();
+
+  const { query, address } = search;
+
   useEffect(() => {
-    // we want to connect events that are
-    // related so we only generate an uuid on mount
-    setTrackingUID(generateUUID());
-  }, []);
+    let fullquery = query;
+    if (address) {
+      fullquery += `##${address}`;
+    }
+    trackEvent("enterprise_search", title, fullquery, uuid);
+  }, [query, address, trackEvent, title, uuid]);
 
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    trackInput(value, router.asPath, trackingUID);
     setSearch({ ...search, [name]: value });
   };
 

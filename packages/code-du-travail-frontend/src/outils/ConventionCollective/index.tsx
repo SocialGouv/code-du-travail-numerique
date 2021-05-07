@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { WizardTitle } from "../common/Wizard";
+import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
 
 interface Props {
@@ -17,7 +18,7 @@ export enum SearchType {
 
 function AgreementSearch({ icon, title }: Props): JSX.Element {
   const [searchType, setSearchType] = useState<SearchType>(null);
-
+  const { uuid, trackEvent } = useTrackingContext();
   function clearSearchType() {
     window.scrollTo(0, 0);
 
@@ -26,7 +27,32 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
       main.scrollIntoView(true);
       main.focus();
     }
+    if (searchType === SearchType.agreement) {
+      trackEvent("click_search_agreement", title, uuid);
+    } else {
+      trackEvent("click_search_enterprise", title, uuid);
+    }
+
     setSearchType(null);
+  }
+
+  function handleSearchType(value) {
+    if (value === SearchType.agreement) {
+      trackEvent(
+        "view_step_cc_search_p1",
+        "click_view_step_cc_search_p1",
+        title,
+        uuid
+      );
+    } else {
+      trackEvent(
+        "view_step_cc_search_p2",
+        "click_view_step_cc_search_p2",
+        title,
+        uuid
+      );
+    }
+    setSearchType(value);
   }
 
   let Step;
@@ -39,7 +65,7 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
       Step = <Steps.EnterpriseSearchStep />;
       break;
     default:
-      Step = <Steps.IntroductionStep onSelecSearchType={setSearchType} />;
+      Step = <Steps.IntroductionStep onSelecSearchType={handleSearchType} />;
   }
   return (
     <WizardWrapper variant="main">
@@ -63,4 +89,10 @@ const WizardWrapper = styled(Wrapper)`
   margin: 0 auto;
 `;
 
-export { AgreementSearch };
+const AgreementSearchWithContext = (props: Props): JSX.Element => (
+  <TrackingProvider title={props.title}>
+    <AgreementSearch {...props} />
+  </TrackingProvider>
+);
+
+export { AgreementSearchWithContext as AgreementSearch };
