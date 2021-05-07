@@ -20,7 +20,7 @@ const EnterpriseSearchStep = (): JSX.Element => {
     return (
       <>
         <SectionTitle>Convention collective</SectionTitle>
-        <p>Vous avez sélectionné l’entreprise &nbsp;:</p>
+        <p>Vous avez sélectionné l’entreprise&nbsp;:</p>
         <CenteredToast
           variant="secondary"
           onRemove={(event) => {

@@ -1,11 +1,4 @@
-import React, {
-  Reducer,
-  ReducerAction,
-  ReducerState,
-  useEffect,
-  useReducer,
-  useState,
-} from "react";
+import { Reducer, useEffect, useReducer } from "react";
 
 export enum Status {
   idle = "idle",
@@ -66,14 +59,18 @@ const dataFetchReducer = <A>(
         isLoading: false,
       };
     default:
-      throw new Error();
+      throw new Error(`Actions ${action["type"]} is not implemented`);
   }
 };
 
-export function createSuggesterHook<A>(
-  fetcher: (...rest: string[]) => Promise<A>
-) {
-  return function (...params: string[]): FetchReducerState<A> {
+/**
+ * a factory function that return a suggesterHook that
+ * use fetcher to return result
+ * @param fetcher an async function that should receive only one argument
+ * @returns a hook function
+ */
+export function createSuggesterHook<A, I>(fetcher: (params: I) => Promise<A>) {
+  return function (params: I): FetchReducerState<A> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<A>, FecthActions<A>>
     >(dataFetchReducer, { isError: false, isLoading: false });
@@ -86,7 +83,7 @@ export function createSuggesterHook<A>(
         }
         dispatch({ type: Actions.init });
         try {
-          const results = await fetcher(...params);
+          const results = await fetcher(params);
           if (shouldCancel) {
             return;
           }
@@ -99,7 +96,8 @@ export function createSuggesterHook<A>(
       return () => {
         shouldCancel = true;
       };
-    }, [...params]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(params)]);
     return state;
   };
 }

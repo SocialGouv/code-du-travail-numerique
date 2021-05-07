@@ -28,13 +28,14 @@ const trackInput = pDebounce(
   2000
 );
 
-const suggester = createSuggesterHook(searchConvention);
+const useAgreementSuggester = createSuggesterHook(searchConvention);
 
 export function SearchAgreement({ renderResults }: Props): JSX.Element {
   const [query, setQuery] = useState("");
-  const state = suggester(query);
   const [trackingUID, setTrackingUID] = useState("");
   const router = useRouter();
+  const state = useAgreementSuggester(query);
+
   useEffect(() => {
     // we want to connect events that are
     // related so we only generate an uuid on mount

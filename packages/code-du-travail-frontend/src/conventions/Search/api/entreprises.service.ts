@@ -39,10 +39,10 @@ const ENTERPRISE_API_URL =
   "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search";
 
 const apiEntreprises = memoizee(
-  function createFetcher(query: string, address: string) {
-    const url = `${ENTERPRISE_API_URL}?q=${encodeURIComponent(
-      query
-    )}&a=${encodeURIComponent(address)}`;
+  function createFetcher(search) {
+    const url = `${ENTERPRISE_API_URL}?q=${encodeURIComponent(search.query)}${
+      search.address ? `&a=${encodeURIComponent(search.address)}` : ""
+    }`;
 
     return fetch(url)
       .then(async (response) => {
@@ -54,7 +54,9 @@ const apiEntreprises = memoizee(
       })
       .then(({ entreprises }) => entreprises);
   },
-  { promise: true }
+  // We use a normalizer because the fetcher argument
+  // is an object that will change on each update and avoid memoization
+  { normalizer: (args) => JSON.stringify(args[0]), promise: true }
 );
 
 const searchEntreprises = debounce(apiEntreprises, 300);

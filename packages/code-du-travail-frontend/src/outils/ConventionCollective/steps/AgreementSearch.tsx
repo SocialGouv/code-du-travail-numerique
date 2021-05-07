@@ -1,7 +1,5 @@
-import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
-import styled from "styled-components";
 
 import { SectionTitle } from "../../common/stepStyles";
 import { AgreementLink } from "../agreement/AgreementLink";
@@ -27,7 +25,6 @@ const AgreementSearchStep = (): JSX.Element => {
           if (state.isError) {
             return <>{state.error}</>;
           }
-
           return state.data ? (
             state.data.length > 0 ? (
               <ResultList query={query}>
@@ -50,8 +47,3 @@ const AgreementSearchStep = (): JSX.Element => {
 };
 
 export { AgreementSearchStep };
-
-const Notice = styled.strong`
-  font-weight: 700;
-  color: ${({ theme }) => theme.secondary};
-`;

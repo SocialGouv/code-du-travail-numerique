@@ -42,7 +42,7 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
             </Button>
           </ButtonWrapper>
         </Tile>
-        <Tile onClick={() => onSelecSearchType(SearchType.compagny)}>
+        <Tile onClick={() => onSelecSearchType(SearchType.enterprise)}>
           <Text fontWeight="700">
             Je ne connais <br /> pas ma convention collective
           </Text>
