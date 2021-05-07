@@ -72,11 +72,9 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
       <WizardTitle title={title} icon={icon} />
       {Step}
       {searchType && (
-        <div>
-          <Button small type="button" onClick={clearSearchType} variant="flat">
-            Précédent
-          </Button>
-        </div>
+        <Button small type="button" onClick={clearSearchType} variant="flat">
+          Précédent
+        </Button>
       )}
     </WizardWrapper>
   );

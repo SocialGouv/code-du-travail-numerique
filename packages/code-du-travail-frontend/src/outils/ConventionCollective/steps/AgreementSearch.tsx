@@ -1,7 +1,9 @@
+import { Section as SectionUi } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
+import styled from "styled-components";
 
-import { SectionTitle } from "../../common/stepStyles";
+import { InlineError } from "../../common/ErrorField";
 import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { ListItem, ResultList } from "../common/ResultList";
@@ -9,35 +11,37 @@ import { ListItem, ResultList } from "../common/ResultList";
 const AgreementSearchStep = (): JSX.Element => {
   return (
     <form>
-      <SectionTitle>
-        Précisez et sélectionnez votre convention collective
-      </SectionTitle>
-
       <SearchAgreement
         renderResults={(state, query) => {
           if (state.isLoading) {
             return (
-              <>
+              <Section>
                 <Spinner /> recherche en cours
-              </>
+              </Section>
             );
           }
           if (state.isError) {
-            return <>{state.error}</>;
+            return (
+              <Section>
+                <InlineError>{state.error}</InlineError>
+              </Section>
+            );
           }
           return state.data ? (
             state.data.length > 0 ? (
-              <ResultList query={query}>
-                {state.data.map((item, index) => {
-                  return (
-                    <ListItem key={item.id}>
-                      <AgreementLink isFirst={index === 0} agreement={item} />
-                    </ListItem>
-                  );
-                })}
-              </ResultList>
+              <Section>
+                <ResultList query={query}>
+                  {state.data.map((item, index) => {
+                    return (
+                      <ListItem key={item.id}>
+                        <AgreementLink isFirst={index === 0} agreement={item} />
+                      </ListItem>
+                    );
+                  })}
+                </ResultList>
+              </Section>
             ) : (
-              <>Pas de résultat</>
+              <Section>Pas de résultat</Section>
             )
           ) : null;
         }}
@@ -47,3 +51,7 @@ const AgreementSearchStep = (): JSX.Element => {
 };
 
 export { AgreementSearchStep };
+
+const Section = styled(SectionUi)`
+  padding-top: 0;
+`;

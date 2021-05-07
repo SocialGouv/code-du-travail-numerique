@@ -1,9 +1,17 @@
-import { FlatList, icons, Text, theme, Toast } from "@socialgouv/cdtn-ui";
+import {
+  FlatList,
+  icons,
+  Section as SectionUi,
+  Text,
+  theme,
+  Toast,
+} from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
 import { Entreprise } from "../../../conventions/Search/api/entreprises.service";
+import { InlineError } from "../../common/ErrorField";
 import { SectionTitle } from "../../common/stepStyles";
 import { AgreementTile } from "../agreement/AgreementTile";
 import { ListItem, ResultList } from "../common/ResultList";
@@ -63,32 +71,38 @@ const EnterpriseSearchStep = (): JSX.Element => {
       renderResults={(state, params) => {
         if (state.isLoading) {
           return (
-            <>
+            <Section>
               <Spinner /> recherche en cours
-            </>
+            </Section>
           );
         }
         if (state.isError) {
-          return <>{state.error}</>;
+          return (
+            <Section>
+              <InlineError>{state.error}</InlineError>
+            </Section>
+          );
         }
         return state.data ? (
           state.data.length > 0 ? (
-            <ResultList query={`${params.query}-${params.address}`}>
-              {state.data.map((item, index) => {
-                return (
-                  <ListItem key={item.siren}>
-                    <EnterpriseButton
-                      showAddress={params.address.length > 0}
-                      isFirst={index === 0}
-                      entreprise={item}
-                      onClick={() => setResult({ entreprise: item, params })}
-                    />
-                  </ListItem>
-                );
-              })}
-            </ResultList>
+            <Section>
+              <ResultList query={`${params.query}-${params.address}`}>
+                {state.data.map((item, index) => {
+                  return (
+                    <ListItem key={item.siren}>
+                      <EnterpriseButton
+                        showAddress={params.address.length > 0}
+                        isFirst={index === 0}
+                        entreprise={item}
+                        onClick={() => setResult({ entreprise: item, params })}
+                      />
+                    </ListItem>
+                  );
+                })}
+              </ResultList>
+            </Section>
           ) : (
-            <>Pas de résultat</>
+            <Section>Pas de résultat</Section>
           )
         ) : null;
       }}
@@ -120,4 +134,7 @@ const Li = styled.li`
   &:last-child {
     margin-bottom: ${theme.spacings.large};
   }
+`;
+const Section = styled(SectionUi)`
+  padding-top: 0;
 `;

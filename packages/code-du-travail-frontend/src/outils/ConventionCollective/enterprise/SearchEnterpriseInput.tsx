@@ -1,4 +1,11 @@
-import { AlertWithIcon, Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import {
+  AlertWithIcon,
+  Input,
+  Label,
+  Section as SectionUi,
+  Text,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -18,7 +25,7 @@ export function SearchEnterpriseInput({
   onChange,
 }: Props): JSX.Element {
   return (
-    <>
+    <Section>
       <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
 
       <AlertWithMargin variant="secondary">
@@ -64,10 +71,12 @@ export function SearchEnterpriseInput({
           />
         </Box>
       </Form>
-    </>
+    </Section>
   );
 }
-
+const Section = styled(SectionUi)`
+  padding-top: 0;
+`;
 const BlockInput = styled(Input)`
   padding-top: ${theme.spacings.base};
   width: 100%;

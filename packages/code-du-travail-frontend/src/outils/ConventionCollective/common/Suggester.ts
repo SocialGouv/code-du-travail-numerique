@@ -63,27 +63,31 @@ const dataFetchReducer = <A>(
   }
 };
 
+type Fetcher<A, B, Result> = (a: A, b?: B) => Promise<Result>;
+
 /**
  * a factory function that return a suggesterHook that
  * use fetcher to return result
  * @param fetcher an async function that should receive only one argument
  * @returns a hook function
  */
-export function createSuggesterHook<A, I>(fetcher: (params: I) => Promise<A>) {
-  return function (params: I): FetchReducerState<A> {
+export function createSuggesterHook<A, B, Result>(
+  fetcher: Fetcher<A, B, Result>
+) {
+  return function (a: A, b?: B): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
-      Reducer<FetchReducerState<A>, FecthActions<A>>
+      Reducer<FetchReducerState<Result>, FecthActions<Result>>
     >(dataFetchReducer, { isError: false, isLoading: false });
     useEffect(() => {
       let shouldCancel = false;
       async function fetchData() {
-        if (!params || !params[0]) {
+        if (!a) {
           dispatch({ type: Actions.reset });
           return;
         }
         dispatch({ type: Actions.init });
         try {
-          const results = await fetcher(params);
+          const results = await fetcher(a, b);
           if (shouldCancel) {
             return;
           }
@@ -97,7 +101,7 @@ export function createSuggesterHook<A, I>(fetcher: (params: I) => Promise<A>) {
         shouldCancel = true;
       };
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(params)]);
+    }, [...[a, b]]);
     return state;
   };
 }

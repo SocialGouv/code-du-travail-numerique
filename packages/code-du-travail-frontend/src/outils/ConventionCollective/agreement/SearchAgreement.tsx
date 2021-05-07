@@ -35,7 +35,7 @@ export function SearchAgreement({ renderResults }: Props): JSX.Element {
   return (
     <>
       <SearchAgreementInput query={query} onChange={searchInputHandler} />
-      <Section>{renderResults(state, query)}</Section>
+      {state.data && <Section>{renderResults(state, query)}</Section>}
     </>
   );
 }

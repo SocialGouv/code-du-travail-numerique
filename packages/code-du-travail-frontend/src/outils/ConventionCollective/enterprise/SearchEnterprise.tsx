@@ -28,7 +28,7 @@ export function SearchEnterprise({ renderResults }: Props): JSX.Element {
     address: "",
     query: "",
   });
-  const state = useEntrepriseSuggester(search);
+  const state = useEntrepriseSuggester(search.query, search.address);
 
   const { trackEvent, title, uuid } = useTrackingContext();
 
@@ -55,7 +55,7 @@ export function SearchEnterprise({ renderResults }: Props): JSX.Element {
         address={search.address}
         onChange={searchInputHandler}
       />
-      <Section>{renderResults(state, search)}</Section>
+      {renderResults(state, search)}
     </>
   );
 }
