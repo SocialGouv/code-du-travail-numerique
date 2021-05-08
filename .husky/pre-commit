@@ -3,8 +3,14 @@
 
 yarn lerna run \
   --exclude-dependents \
-  --parallel precommit\
+  --parallel precommit \
   --since HEAD \
   --stream \
   ;
 
+if git diff --cached --name-only | grep --quiet ".k8s"
+then
+  yarn k8s
+  yarn k8s precommit
+  git add .k8s
+fi
