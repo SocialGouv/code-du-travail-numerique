@@ -13,6 +13,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
     publicodesContext.setSituation(
       mapToPublicodesSituation(form.getState().values)
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form]);
 
   const notifications = publicodesContext.getNotifications();
@@ -22,7 +23,11 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
         départ à la retraite est estimée à&nbsp;
-        <Highlight>{publicodesContext.result}</Highlight> mois.
+        <Highlight>
+          {publicodesContext.result.value}{" "}
+          {publicodesContext.result.unit.numerators[0]}
+        </Highlight>
+        .
       </p>
       {notifications.length > 0 && (
         <Alert>

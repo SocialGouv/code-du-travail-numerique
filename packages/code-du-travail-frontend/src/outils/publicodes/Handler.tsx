@@ -61,7 +61,12 @@ const usePublicodesHandler = ({
     const result = engine
       ?.setSituation(buildSituation(situation))
       .evaluate(targetRule);
-    return result?.nodeValue ?? null;
+
+    if (result === null) {
+      return null;
+    }
+
+    return { unit: result.unit, value: result.nodeValue };
   }, [engine, targetRule, situation]);
 
   return {

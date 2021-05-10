@@ -1,5 +1,5 @@
 import { Notification } from "@socialgouv/modeles-social";
-import Engine, { Evaluation, Rule as PubliRule } from "publicodes";
+import Engine, { Evaluation, Rule as PubliRule, Unit } from "publicodes";
 import React, { createContext, useContext } from "react";
 
 import usePublicodesHandler from "./Handler";
@@ -32,9 +32,14 @@ export interface SituationElement {
   value: string;
 }
 
+export interface PublicodesResult {
+  value: Evaluation;
+  unit?: Unit;
+}
+
 export interface PublicodesContextInterface {
   getNotifications: () => Notification[];
-  result: Evaluation;
+  result?: PublicodesResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
