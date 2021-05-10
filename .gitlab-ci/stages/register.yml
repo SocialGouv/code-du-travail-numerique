@@ -38,7 +38,7 @@ Register api image:
     DOCKER_BUILD_ARGS: >-
       --dockerfile ./packages/code-du-travail-api/Dockerfile
     IMAGE_NAME: cdtn-api
-    REGISTRY: ${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base:${CI_COMMIT_SHA}
+    REGISTRY: ${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
 
 Register frontend image:
   <<: *register_stage
@@ -47,5 +47,4 @@ Register frontend image:
     DOCKER_BUILD_ARGS: >-
       --dockerfile ./packages/code-du-travail-frontend/Dockerfile
     IMAGE_NAME: cdtn-frontend
-    IMAGE_TAG: ${CI_COMMIT_SHA}
-    REGISTRY: ${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base:${CI_COMMIT_SHA}
+    REGISTRY: ${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
