@@ -126,6 +126,7 @@ export const StyledButton = styled.button`
       border-color: ${borderColor};
       box-shadow: ${boxShadow};
       opacity: 1;
+      will-change: transform;
 
       &:link,
       &:visited {
