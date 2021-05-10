@@ -49,6 +49,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   border-color: #7994d4;
   box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c0:link,
@@ -112,6 +113,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c9:link,

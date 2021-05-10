@@ -36,6 +36,7 @@ exports[`BurgerStyles renders 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c0:link,

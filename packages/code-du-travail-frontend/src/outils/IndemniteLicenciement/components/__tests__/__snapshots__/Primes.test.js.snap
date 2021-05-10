@@ -36,6 +36,7 @@ exports[`<Primes /> should add a prime 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c4:link,
@@ -338,6 +339,7 @@ exports[`<Primes /> should delete a prime 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c0:link,
@@ -462,6 +464,7 @@ exports[`<Primes /> should render 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c4:link,

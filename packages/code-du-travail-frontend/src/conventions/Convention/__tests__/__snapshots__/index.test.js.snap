@@ -184,6 +184,7 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c48:link,

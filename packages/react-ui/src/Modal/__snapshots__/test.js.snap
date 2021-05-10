@@ -46,6 +46,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c2:link,
@@ -287,6 +288,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c2:link,
