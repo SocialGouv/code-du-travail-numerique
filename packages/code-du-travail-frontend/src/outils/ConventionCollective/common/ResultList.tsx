@@ -15,7 +15,7 @@ export function ResultList({ query, children }: Props): JSX.Element {
   );
 
   return (
-    <WrapperNoPadding variant="light" data-id="toto">
+    <WrapperNoPadding variant="light">
       <ViewMore
         button={viewMoreButton}
         query={query}
