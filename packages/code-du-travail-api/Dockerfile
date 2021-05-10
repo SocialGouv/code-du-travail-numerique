@@ -1,5 +1,5 @@
 ARG TAG_BASE_IMAGE=master
-ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
+ARG REGISTRY=harbor.fabrique.social.gouv.fr/cdtn/cdtn-base
 ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 
 # hadolint ignore=DL3006
