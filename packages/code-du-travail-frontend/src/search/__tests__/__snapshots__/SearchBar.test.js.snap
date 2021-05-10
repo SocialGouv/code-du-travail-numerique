@@ -49,6 +49,7 @@ exports[`<SearchBar /> should render 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c4:link,
@@ -288,6 +289,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c6:link,

@@ -36,6 +36,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c13:link,
@@ -569,6 +570,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c13:link,

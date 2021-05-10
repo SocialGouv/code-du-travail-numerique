@@ -52,6 +52,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-color: #f66663;
   box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,
@@ -545,6 +546,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-color: #7994d4;
   box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,
@@ -608,6 +610,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c16:link,
@@ -1095,6 +1098,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-color: #f66663;
   box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,
@@ -1578,6 +1582,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-color: #f66663;
   box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,
@@ -2054,6 +2059,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   border-color: #7994d4;
   box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,
@@ -2117,6 +2123,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c16:link,
@@ -2616,6 +2623,7 @@ exports[`<Wizard /> should render a step 1`] = `
   border-color: #f66663;
   box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
+  will-change: transform;
 }
 
 .c14:link,

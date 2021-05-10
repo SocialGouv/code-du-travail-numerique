@@ -36,6 +36,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c8:link,
@@ -420,6 +421,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c2:link,
@@ -585,6 +587,7 @@ exports[`<Salaires /> should render 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c8:link,

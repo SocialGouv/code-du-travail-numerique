@@ -81,6 +81,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c20:link,

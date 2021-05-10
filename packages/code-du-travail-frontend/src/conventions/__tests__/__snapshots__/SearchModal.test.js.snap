@@ -110,6 +110,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c10:link,
