@@ -111,6 +111,7 @@ exports[`<Answer /> should renders 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -1136,6 +1137,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c41:link,
@@ -2404,6 +2406,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -3469,6 +3472,7 @@ exports[`<Answer /> should renders related content 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -4712,6 +4716,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -5738,6 +5743,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -6764,6 +6770,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,
@@ -7791,6 +7798,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   border-color: #bbcadf;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c31:link,

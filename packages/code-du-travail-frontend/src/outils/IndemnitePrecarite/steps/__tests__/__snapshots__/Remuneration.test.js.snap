@@ -36,6 +36,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   border-color: transparent;
   box-shadow: none;
   opacity: 1;
+  will-change: transform;
 }
 
 .c11:link,
