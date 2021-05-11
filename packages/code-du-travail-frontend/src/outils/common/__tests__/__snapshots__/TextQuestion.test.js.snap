@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextQuestion /> should render 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c3 {
   position: relative;
   display: inline-block;
@@ -98,12 +105,6 @@ exports[`<TextQuestion /> should render 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -142,10 +143,11 @@ exports[`<TextQuestion /> should render 1`] = `
   >
     lorem ipsum
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div

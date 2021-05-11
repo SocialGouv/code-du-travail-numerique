@@ -65,6 +65,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c5 {
   position: relative;
   display: inline-block;
@@ -193,12 +200,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -300,10 +301,11 @@ exports[`<Salaires /> should add a salaire 1`] = `
   >
     Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div
@@ -450,6 +452,13 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c3 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -471,12 +480,6 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
 }
 
 @media (max-width:600px) {
@@ -523,10 +526,11 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   >
     Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <button
@@ -614,6 +618,13 @@ exports[`<Salaires /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c5 {
@@ -744,12 +755,6 @@ exports[`<Salaires /> should render 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -851,10 +856,11 @@ exports[`<Salaires /> should render 1`] = `
   >
     Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div

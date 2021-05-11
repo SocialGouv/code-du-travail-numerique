@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaire /> renders 1`] = `
+.c4 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -99,12 +106,6 @@ exports[`<Salaire /> renders 1`] = `
   cursor: default;
 }
 
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -187,10 +188,11 @@ exports[`<Salaire /> renders 1`] = `
   >
     De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -227,6 +229,13 @@ exports[`<Salaire /> renders 1`] = `
 `;
 
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
+.c4 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -325,12 +334,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   cursor: default;
 }
 
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -413,10 +416,11 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -455,10 +459,11 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -564,6 +569,13 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 .c10 tfoot {
   vertical-align: top;
+}
+
+.c4 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c0 {
@@ -752,12 +764,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   cursor: default;
 }
 
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -898,10 +904,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -940,10 +947,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -1069,6 +1077,13 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 `;
 
 exports[`<Salaire /> renders an input field of type number 1`] = `
+.c4 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -1255,12 +1270,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   cursor: default;
 }
 
-.c4 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1377,10 +1386,11 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -1419,10 +1429,11 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
-      aria-label="champs obligatoire"
       class="c4"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div

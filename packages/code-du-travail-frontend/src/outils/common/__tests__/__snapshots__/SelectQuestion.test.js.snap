@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
+.c2 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c3 {
   position: relative;
   display: -webkit-inline-box;
@@ -79,12 +86,6 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   cursor: pointer;
 }
 
-.c2 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   width: 40rem;
 }
@@ -121,10 +122,11 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
     >
       Une question ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div
@@ -186,6 +188,13 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 `;
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
+.c2 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c3 {
   position: relative;
   display: -webkit-inline-box;
@@ -264,12 +273,6 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   cursor: pointer;
 }
 
-.c2 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   width: 40rem;
 }
@@ -306,10 +309,11 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
     >
       Une question ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div

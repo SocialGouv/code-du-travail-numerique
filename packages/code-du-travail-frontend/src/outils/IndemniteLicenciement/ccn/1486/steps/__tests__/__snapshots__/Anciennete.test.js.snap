@@ -17,6 +17,13 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
+.c5 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c1 {
   position: relative;
   display: -webkit-inline-box;
@@ -115,12 +122,6 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   cursor: default;
 }
 
-.c5 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -205,10 +206,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
-      aria-label="champs obligatoire"
       class="c5"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div

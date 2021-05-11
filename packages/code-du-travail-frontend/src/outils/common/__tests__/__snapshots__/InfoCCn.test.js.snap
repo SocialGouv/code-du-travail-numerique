@@ -52,6 +52,13 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   color: #f66663;
 }
 
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c3 {
   position: relative;
   display: inline-block;
@@ -182,12 +189,6 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   cursor: default;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 @media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
@@ -226,10 +227,11 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
     >
       Quelle est la convention collective applicable au salarié ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <label

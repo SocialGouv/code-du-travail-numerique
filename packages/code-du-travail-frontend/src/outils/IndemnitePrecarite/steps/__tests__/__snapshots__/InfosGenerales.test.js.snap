@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfosGenerales /> should render 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -64,12 +71,6 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 @media (max-width:600px) {
   .c0 {
     font-size: 1.6rem;
@@ -83,10 +84,11 @@ exports[`<StepInfosGenerales /> should render 1`] = `
     >
       Quel est le type du contrat de travail ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <label
@@ -125,6 +127,13 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,12 +275,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c7 {
   width: 40rem;
 }
@@ -311,10 +314,11 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     >
       Quel est le type du contrat de travail ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <label
@@ -353,10 +357,11 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       >
         Quel est le type de CDD ?
         <span
-          aria-label="champs obligatoire"
           class="c1"
+          font-size="default"
+          font-weight="400"
         >
-          *
+           (obligatoire)
         </span>
       </label>
       <div
@@ -454,6 +459,13 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -595,12 +607,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c7 {
   width: 40rem;
 }
@@ -640,10 +646,11 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     >
       Quel est le type du contrat de travail ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <label
@@ -682,10 +689,11 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       >
         Quel est le type de CDD ?
         <span
-          aria-label="champs obligatoire"
           class="c1"
+          font-size="default"
+          font-weight="400"
         >
-          *
+           (obligatoire)
         </span>
       </label>
       <div
@@ -783,6 +791,13 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 `;
 
 exports[`<StepInfosGenerales /> should render with CTT 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -846,12 +861,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   cursor: default;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -884,10 +893,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       Quel est le type du contrat de travail ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <label
@@ -922,10 +932,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       S’agit-il d’un contrat de mission-formation ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <div
@@ -964,10 +975,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <div
@@ -1006,10 +1018,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <div
@@ -1048,10 +1061,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
       <span
-        aria-label="champs obligatoire"
         class="c1"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <div

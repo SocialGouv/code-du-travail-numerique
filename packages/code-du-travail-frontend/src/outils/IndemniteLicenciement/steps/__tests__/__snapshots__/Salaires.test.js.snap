@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepSalaires /> should render lastSalaires 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c10 {
   position: relative;
   display: inline-block;
@@ -172,12 +179,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -262,10 +263,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   >
     Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -304,10 +306,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   >
     Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -352,10 +355,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
       >
         Salaire mensuel brut
         <span
-          aria-label="champs obligatoire"
           class="c1"
+          font-size="default"
+          font-weight="400"
         >
-          *
+           (obligatoire)
         </span>
       </label>
       <p
@@ -805,6 +809,13 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 `;
 
 exports[`<StepSalaires /> should render same salaire 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c7 {
   position: relative;
   display: inline-block;
@@ -976,12 +987,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1038,10 +1043,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   >
     Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -1080,10 +1086,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   >
     Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -1122,10 +1129,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   >
     Quel a été le montant du salaire mensuel brut ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <p
@@ -1222,6 +1230,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c7 {
@@ -1559,12 +1574,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   cursor: default;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1761,10 +1770,11 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   >
     Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div

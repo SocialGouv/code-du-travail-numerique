@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Anciennete /> should render 1`] = `
+.c2 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c4 {
   position: relative;
   display: inline-block;
@@ -193,12 +200,6 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: default;
 }
 
-.c2 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -255,10 +256,11 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Quelle est la date d’entrée dans l’entreprise ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div
@@ -283,10 +285,11 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Quelle est la date de notification du licenciement ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div
@@ -311,10 +314,11 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Quelle est la date de sortie de l’entreprise ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div
@@ -343,10 +347,11 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Y a-t-il eu des absences de plus d’un mois durant le contrat de travail ?
       <span
-        aria-label="champs obligatoire"
         class="c2"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </p>
     <div
