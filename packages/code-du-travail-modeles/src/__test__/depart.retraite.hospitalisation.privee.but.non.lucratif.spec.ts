@@ -77,3 +77,55 @@ test.each`
     expect(result.missingVariables).toEqual({});
   }
 );
+
+test.each`
+  seniority | category                                 | coefficient
+  ${5}      | ${"Non-cadres"}                          | ${0}
+  ${6}      | ${"Non-cadres"}                          | ${0}
+  ${24}     | ${"Non-cadres"}                          | ${0}
+  ${5}      | ${"Directeurs généraux"}                 | ${0}
+  ${6}      | ${"Directeurs généraux"}                 | ${4}
+  ${24}     | ${"Directeurs généraux"}                 | ${6}
+  ${5}      | ${"Directeurs"}                          | ${4}
+  ${6}      | ${"Directeurs"}                          | ${4}
+  ${24}     | ${"Directeurs"}                          | ${6}
+  ${5}      | ${"Directeurs-adjoints"}                 | ${4}
+  ${6}      | ${"Directeurs-adjoints"}                 | ${4}
+  ${24}     | ${"Directeurs-adjoints"}                 | ${6}
+  ${5}      | ${"Gestionnaires"}                       | ${4}
+  ${6}      | ${"Gestionnaires"}                       | ${4}
+  ${24}     | ${"Gestionnaires"}                       | ${6}
+  ${5}      | ${"Médecins"}                            | ${4}
+  ${6}      | ${"Médecins"}                            | ${4}
+  ${24}     | ${"Médecins"}                            | ${6}
+  ${5}      | ${"Pharmaciens"}                         | ${4}
+  ${6}      | ${"Pharmaciens"}                         | ${4}
+  ${24}     | ${"Pharmaciens"}                         | ${6}
+  ${5}      | ${"Biologistes"}                         | ${4}
+  ${6}      | ${"Biologistes"}                         | ${4}
+  ${24}     | ${"Biologistes"}                         | ${6}
+  ${5}      | ${"Autres cadres"}                       | ${4}
+  ${6}      | ${"Autres cadres"}                       | ${4}
+  ${24}     | ${"Autres cadres"}                       | ${4}
+  ${5}      | ${"Cadres administratifs et de gestion"} | ${714}
+  ${6}      | ${"Cadres administratifs et de gestion"} | ${714}
+  ${24}     | ${"Cadres administratifs et de gestion"} | ${714}
+  ${5}      | ${"Cadres administratifs et de gestion"} | ${715}
+  ${6}      | ${"Cadres administratifs et de gestion"} | ${715}
+  ${24}     | ${"Cadres administratifs et de gestion"} | ${715}
+`(
+  "Pour un employé d'un départ à la retraite, on attend une notification",
+  ({ seniority, category, coefficient }) => {
+    const notifications = getNotifications(
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC0029'",
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
+      })
+    );
+
+    expect(notifications).toHaveLength(0);
+  }
+);
