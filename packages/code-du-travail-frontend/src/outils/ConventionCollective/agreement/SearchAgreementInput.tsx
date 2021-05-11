@@ -1,6 +1,6 @@
 import {
   Input,
-  Label as LabelUI,
+  Label,
   Section as SectionUi,
   Text,
   theme,
@@ -72,7 +72,7 @@ const BlockInput = styled(Input)`
   width: 100%;
 `;
 
-const InlineLabel = styled(LabelUI)`
+const InlineLabel = styled(Label)`
   display: inline;
   margin-right: 0;
 `;

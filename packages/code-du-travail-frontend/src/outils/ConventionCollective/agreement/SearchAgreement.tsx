@@ -1,10 +1,11 @@
 import { Section } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useState } from "react";
+import pDebounce from "p-debounce";
+import React, { useEffect, useMemo, useState } from "react";
 
 import {
   Agreement,
-  searchConvention,
-} from "../../../conventions/Search/api/convention.service";
+  searchAgreement,
+} from "../../../conventions/Search/api/agreement.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
@@ -16,16 +17,18 @@ type Props = {
   ) => JSX.Element;
 };
 
-const useAgreementSuggester = createSuggesterHook(searchConvention);
+const useAgreementSuggester = createSuggesterHook(searchAgreement);
 
 export function SearchAgreement({ renderResults }: Props): JSX.Element {
   const [query, setQuery] = useState("");
   const state = useAgreementSuggester(query);
   const { trackEvent, title, uuid } = useTrackingContext();
-
+  const debouncedTrackEvent = useMemo(() => pDebounce(trackEvent, 500), [
+    trackEvent,
+  ]);
   useEffect(() => {
-    trackEvent("cc_search", title, query, uuid);
-  }, [query, trackEvent, title, uuid]);
+    debouncedTrackEvent("cc_search", title, query, uuid);
+  }, [query, debouncedTrackEvent, title, uuid]);
 
   const searchInputHandler = (keyEvent) => {
     const value = keyEvent.target.value;

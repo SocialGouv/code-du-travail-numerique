@@ -2,19 +2,19 @@ import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-import { Entreprise } from "../../../conventions/Search/api/entreprises.service";
+import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { ResultItem } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
 type CompagnyItemProps = {
-  entreprise: Entreprise;
+  enterprise: Enterprise;
   isFirst: boolean;
   showAddress: boolean;
-  onClick: (entreprise: Entreprise) => void;
+  onClick: (enterprise: Enterprise) => void;
 };
 
 export function EnterpriseButton({
-  entreprise,
+  enterprise,
   isFirst,
   showAddress,
   onClick,
@@ -26,13 +26,13 @@ export function EnterpriseButton({
     simpleLabel,
     activitePrincipale,
     matchingEtablissement,
-  } = entreprise;
+  } = enterprise;
 
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
     trackEvent("enterprise_select", title, label, uuid);
-    onClick(entreprise);
+    onClick(enterprise);
   };
   const showTitleWithHighlight = label === simpleLabel;
   return (

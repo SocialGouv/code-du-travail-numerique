@@ -8,21 +8,21 @@ import { Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
-import { Convention } from "../../../conventions/Search/api/entreprises.service";
+import { AgreementData } from "../../../conventions/Search/api/enterprises.service";
 import { useTrackingContext } from "../common/TrackingContext";
 
 type Props = {
-  agreement: Convention;
+  agreement: AgreementData;
 };
 
-const getConventionSlug = (convention: Convention) =>
+const getConventionSlug = (convention: AgreementData) =>
   slugify(`${convention.idcc}-${convention.shortTitle}`.substring(0, 80));
 
 export function AgreementTile({ agreement }: Props): JSX.Element {
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("cc_select", title, agreement.shortTitle, uuid);
+    trackEvent("cc_select", title, agreement.idcc.toString(), uuid);
   };
   return (
     <Link

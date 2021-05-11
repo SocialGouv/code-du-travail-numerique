@@ -46,6 +46,6 @@ const apiIdcc = memoizee(
   { promise: true }
 );
 
-const searchConvention = debounce(apiIdcc, 300);
+const searchAgreement = debounce(apiIdcc, 300);
 
-export { searchConvention };
+export { searchAgreement };

@@ -1,17 +1,17 @@
-import { Section } from "@socialgouv/cdtn-ui";
-import React, { useEffect, useState } from "react";
+import pDebounce from "p-debounce";
+import React, { useEffect, useMemo, useState } from "react";
 
 import {
-  Entreprise,
-  searchEntreprises,
-} from "../../../conventions/Search/api/entreprises.service";
+  Enterprise,
+  searchEnterprises,
+} from "../../../conventions/Search/api/enterprises.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
   renderResults: (
-    renderProps: FetchReducerState<Entreprise[]>,
+    renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
 };
@@ -21,17 +21,18 @@ export type SearchParams = {
   query: string;
 };
 
-const useEntrepriseSuggester = createSuggesterHook(searchEntreprises);
+const useEnterpriseSuggester = createSuggesterHook(searchEnterprises);
 
 export function SearchEnterprise({ renderResults }: Props): JSX.Element {
   const [search, setSearch] = useState<SearchParams>({
     address: "",
     query: "",
   });
-  const state = useEntrepriseSuggester(search.query, search.address);
-
+  const state = useEnterpriseSuggester(search.query, search.address);
   const { trackEvent, title, uuid } = useTrackingContext();
-
+  const debouncedTrackEvent = useMemo(() => pDebounce(trackEvent, 1000), [
+    trackEvent,
+  ]);
   const { query, address } = search;
 
   useEffect(() => {
@@ -39,8 +40,8 @@ export function SearchEnterprise({ renderResults }: Props): JSX.Element {
     if (address) {
       fullquery += `##${address}`;
     }
-    trackEvent("enterprise_search", title, fullquery, uuid);
-  }, [query, address, trackEvent, title, uuid]);
+    debouncedTrackEvent("enterprise_search", title, fullquery, uuid);
+  }, [query, address, debouncedTrackEvent, title, uuid]);
 
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;

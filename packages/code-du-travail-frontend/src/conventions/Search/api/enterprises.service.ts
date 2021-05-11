@@ -1,15 +1,13 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
 
-import { Agreement } from "./convention.service";
-
-export interface ApiEntrepriseData {
-  entreprises: Entreprise[];
+export interface ApiEnterpriseData {
+  entreprises: Enterprise[];
 }
 
-export interface Entreprise {
+export interface Enterprise {
   activitePrincipale?: string;
-  conventions: Convention[];
+  conventions: AgreementData[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -19,7 +17,10 @@ export interface Entreprise {
   matchingEtablissement: MatchingEtablissement;
 }
 
-export interface Convention {
+/**
+ * Agreement type from @socialgouv/kali-data/data/index.json
+ */
+export interface AgreementData {
   idcc: number;
   shortTitle: string;
   etat?: string;
@@ -38,7 +39,7 @@ export interface MatchingEtablissement {
 const ENTERPRISE_API_URL =
   "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search";
 
-const apiEntreprises = memoizee(function createFetcher(
+const apiEnterprises = memoizee(function createFetcher(
   query: string,
   address?: string
 ) {
@@ -49,7 +50,7 @@ const apiEntreprises = memoizee(function createFetcher(
   return fetch(url)
     .then(async (response) => {
       if (response.ok) {
-        return response.json() as Promise<ApiEntrepriseData>;
+        return response.json() as Promise<ApiEnterpriseData>;
       }
       const errorMessage = await response.text();
       return Promise.reject(new Error(errorMessage));
@@ -57,6 +58,6 @@ const apiEntreprises = memoizee(function createFetcher(
     .then(({ entreprises }) => entreprises);
 });
 
-const searchEntreprises = debounce(apiEntreprises, 300);
+const searchEnterprises = debounce(apiEnterprises, 300);
 
-export { searchEntreprises };
+export { searchEnterprises };

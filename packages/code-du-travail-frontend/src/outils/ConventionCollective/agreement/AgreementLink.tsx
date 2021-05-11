@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { Agreement } from "../../../conventions/Search/api/convention.service";
+import { Agreement } from "../../../conventions/Search/api/agreement.service";
 import { ResultItem } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
@@ -20,7 +20,7 @@ export function AgreementLink({
   const { num, shortTitle } = agreement;
   const { trackEvent, title, uuid } = useTrackingContext();
   const clickHandler = () => {
-    trackEvent("cc_select", title, shortTitle, uuid);
+    trackEvent("cc_select", title, num.toString(), uuid);
   };
 
   return (

@@ -1,6 +1,6 @@
 import { parseIdcc } from "@cdt/data";
 
-import { searchConvention } from "./convention.service";
+import { searchAgreement } from "./agreement.service";
 import {
   searchEntrepriseByName,
   searchEntrepriseBySiren,
@@ -18,7 +18,7 @@ export const getResults = async (query) => {
 
   if (type === "text") {
     [conventions, entreprises] = await Promise.all([
-      searchConvention(trimmedQuery),
+      searchAgreement(trimmedQuery),
       searchEntrepriseByName(trimmedQuery).then((entreprises) =>
         entreprises.filter(
           (entreprise) =>
@@ -31,7 +31,7 @@ export const getResults = async (query) => {
   } else if (type === "siret") {
     entreprises = await searchEntrepriseBySiret(query.replace(/[\s .-]/g, ""));
   } else if (type === "idcc") {
-    const matches = await searchConvention(parseIdcc(trimmedQuery));
+    const matches = await searchAgreement(parseIdcc(trimmedQuery));
 
     if (matches && matches.length) {
       const perfectMatch = matches.find(

@@ -1,4 +1,3 @@
-import pDebounce from "p-debounce";
 import React, { createContext, useContext } from "react";
 import { v4 as generateUUID } from "uuid";
 
@@ -41,10 +40,5 @@ export function TrackingProvider({
   const trackEvent = (...params) => {
     matopush(["trackEvent", ...params]);
   };
-  const debuncedTrackEvent = pDebounce(trackEvent, 2000);
-  return (
-    <Provider value={{ title, trackEvent: debuncedTrackEvent, uuid }}>
-      {children}
-    </Provider>
-  );
+  return <Provider value={{ title, trackEvent, uuid }}>{children}</Provider>;
 }
