@@ -1,9 +1,8 @@
-import { Button, InputRadio, theme } from "@socialgouv/cdtn-ui";
+import { Button, InputRadio, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useCallback } from "react";
 import styled from "styled-components";
 
 import { ActionBar } from "../components/ActionBar";
-import { MandatoryLabel } from "../components/MandatoryLabel";
 import { ProgressBar } from "../components/ProgressBar";
 import { Question } from "../components/Question";
 
@@ -15,8 +14,10 @@ export const CompanyStep = ({ dispatch, state }) => {
   return (
     <>
       <ProgressBar state={state} />
-      <MandatoryLabel />
-      <Question>Quelle est la taille de votre entreprise&nbsp;?</Question>
+      <Question>
+        Quelle est la taille de votre entreprise&nbsp;?
+        <Text fontWeight="400">&nbsp;(obligatoire)</Text>
+      </Question>
       <StyledInputRadio
         value="[0;10["
         onChange={setTailleEntreprise}

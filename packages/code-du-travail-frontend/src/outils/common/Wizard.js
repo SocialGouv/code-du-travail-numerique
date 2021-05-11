@@ -218,8 +218,3 @@ const IconWrapper = styled.span`
   height: 5.2rem;
   margin-right: ${spacings.base};
 `;
-
-const Mandatory = styled.span`
-  color: ${({ theme }) => theme.primary};
-  font-weight: 600;
-`;

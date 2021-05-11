@@ -1,4 +1,4 @@
-import { theme } from "@socialgouv/cdtn-ui";
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,7 +6,7 @@ export function Question({ required, children, ...otherProps }) {
   return (
     <Label {...otherProps}>
       {children}
-      {required && <Mandatory aria-label="champs obligatoire">*</Mandatory>}
+      {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     </Label>
   );
 }
@@ -23,10 +23,4 @@ const Label = styled.label`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-`;
-
-export const Mandatory = styled.span`
-  display: inline-block;
-  margin-left: ${spacings.small};
-  color: ${({ theme }) => theme.error};
 `;
