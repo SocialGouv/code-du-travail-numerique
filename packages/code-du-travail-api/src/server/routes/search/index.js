@@ -4,7 +4,7 @@ const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getSavedResult = require("./search.getSavedResult");
+const getPrequalifiedResults = require("./searchPrequalifiedResults");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
 const getRelatedThemesBody = require("./searchRelatedThemes.elastic");
@@ -53,23 +53,28 @@ router.get("/search", async (ctx) => {
     SOURCES.EDITORIAL_CONTENT,
     SOURCES.CCN,
   ];
-  const skipSavedResults =
+  const skipPrequalifiedResults =
     ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
-  // shortcut ES if we find a known query
-  const knownQueryResult = !skipSavedResults && (await getSavedResult(query));
+
+  // check prequalified requests
+  const prequalifiedResults =
+    !skipPrequalifiedResults && (await getPrequalifiedResults(query));
   let documents = [];
   let articles = [];
   let themes = [];
-  if (knownQueryResult) {
-    knownQueryResult.forEach((item) => (item._source.algo = "pre-qualified"));
-    documents = knownQueryResult.filter(
+
+  if (prequalifiedResults) {
+    prequalifiedResults.forEach(
+      (item) => (item._source.algo = "pre-qualified")
+    );
+    documents = prequalifiedResults.filter(
       ({ _source: { source } }) =>
         ![SOURCES.CDT, SOURCES.THEMES].includes(source)
     );
-    articles = knownQueryResult.filter(
+    articles = prequalifiedResults.filter(
       ({ _source: { source } }) => source === SOURCES.CDT
     );
-    themes = knownQueryResult.filter(
+    themes = prequalifiedResults.filter(
       ({ _source: { source } }) => source === SOURCES.THEMES
     );
   }
@@ -78,45 +83,48 @@ router.get("/search", async (ctx) => {
   const shouldRequestCdt = articles.length < 5;
   const shouldRequestThemes = themes.length < 5;
   const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
-  if (!knownQueryResult || shouldRequestThemes) {
-    const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
-      (error) => {
-        logger.error(error.message);
-      }
-    );
 
-    if (!knownQueryResult) {
-      searches[DOCUMENTS_ES] = [
-        { index },
-        getSearchBody({ query, size, sources }),
-      ];
-      if (query_vector) {
-        searches[DOCUMENTS_SEM] = [
-          { index },
-          getSemBody({ query_vector, size, sources }),
-        ];
-      }
+  const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
+    (error) => {
+      logger.error(error.message);
     }
+  );
 
-    if (shouldRequestThemes) {
-      const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
-      searches[THEMES_ES] = [
-        { index }, // we search in themeIndex here to try to match title in breadcrumb
-        getRelatedThemesBody({
-          query,
+  // if not enough prequalified results, we also trigger ES search
+  if (
+    !prequalifiedResults ||
+    prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
+  ) {
+    searches[DOCUMENTS_ES] = [
+      { index },
+      getSearchBody({ query, size, sources }),
+    ];
+    if (query_vector) {
+      searches[DOCUMENTS_SEM] = [
+        { index },
+        getSemBody({ query_vector, size, sources }),
+      ];
+    }
+  }
+
+  if (shouldRequestThemes) {
+    const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
+    searches[THEMES_ES] = [
+      { index }, // we search in themeIndex here to try to match title in breadcrumb
+      getRelatedThemesBody({
+        query,
+        size: themeNumber,
+      }),
+    ];
+    if (query_vector) {
+      searches[THEMES_SEM] = [
+        { index },
+        getSemBody({
+          query_vector,
           size: themeNumber,
+          sources: [SOURCES.THEMES],
         }),
       ];
-      if (query_vector) {
-        searches[THEMES_SEM] = [
-          { index },
-          getSemBody({
-            query_vector,
-            size: themeNumber,
-            sources: [SOURCES.THEMES],
-          }),
-        ];
-      }
     }
   }
 
@@ -136,20 +144,26 @@ router.get("/search", async (ctx) => {
     searches,
   });
 
-  if (!knownQueryResult) {
-    const fulltextHits = extractHits(results[DOCUMENTS_ES]);
-    const semanticHits = extractHits(results[DOCUMENTS_SEM]);
+  const fulltextHits = extractHits(results[DOCUMENTS_ES]);
+  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
 
-    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-    semanticHits.forEach((item) => (item._source.algo = "semantic"));
+  const semanticHits = extractHits(results[DOCUMENTS_SEM]);
+  semanticHits.forEach((item) => (item._source.algo = "semantic"));
 
-    // we only consider semantic results above a given threshold
-    const semanticHitsFiltered = semanticHits.filter(
-      (item) => item._score > SEMANTIC_THRESHOLD
-    );
-    semanticHitsFiltered.forEach((item) => (item._source.algo = "semantic"));
-    documents = mergePipe(fulltextHits, semanticHitsFiltered, size);
-  }
+  // we only consider semantic results above a given threshold
+  const semanticHitsFiltered = semanticHits.filter(
+    (item) => item._score > SEMANTIC_THRESHOLD
+  );
+
+  // we merge prequalified + full text + semantic results
+  const mergedSearchResults = mergePipe(
+    fulltextHits,
+    semanticHitsFiltered,
+    size
+  );
+  documents.push(...mergedSearchResults);
+  documents = removeDuplicate(documents);
+
   if (shouldRequestThemes) {
     const fulltextHits = extractHits(results[THEMES_ES]);
     const semanticHits = extractHits(results[THEMES_SEM]);
