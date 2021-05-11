@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`convention service can search IDCCs 1`] = `
+exports[`agreement service can search IDCCs 1`] = `
 Array [
   Object {
     "id": "KALICONT000005635886",

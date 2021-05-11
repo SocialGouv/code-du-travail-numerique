@@ -25,7 +25,7 @@ const Label = styled.label`
   }
 `;
 
-const Mandatory = styled.span`
+export const Mandatory = styled.span`
   display: inline-block;
   margin-left: ${spacings.small};
   color: ${({ theme }) => theme.error};

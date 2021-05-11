@@ -51,6 +51,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
 }
 
 .c27 {
+  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1560,6 +1561,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
       class="c23"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <div
         class="c4 c24"

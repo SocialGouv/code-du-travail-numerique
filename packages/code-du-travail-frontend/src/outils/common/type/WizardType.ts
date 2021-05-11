@@ -1,4 +1,5 @@
 import { FormApi } from "final-form";
+import React from "react";
 
 export interface Step {
   component: (props: WizardStepProps) => JSX.Element;
@@ -23,7 +24,7 @@ export type Action =
 
 export interface WizardStepProps {
   form: FormApi<FormContent>;
-  dispatch: (state: State, action: Action) => State;
+  dispatch: React.Dispatch<Action>;
 }
 
 interface ConventionCollective {

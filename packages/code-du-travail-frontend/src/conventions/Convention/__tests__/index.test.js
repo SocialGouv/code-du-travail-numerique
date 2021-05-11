@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { agreement } from "../../Search/api/__tests__/conventions.mock";
+import { agreement } from "../../Search/api/__tests__/agreement.mock";
 import Convention from "..";
 
 describe("<Convention />", () => {

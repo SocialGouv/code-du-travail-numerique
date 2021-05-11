@@ -1235,6 +1235,7 @@ exports[`<Recherche /> should render 1`] = `
       class="c14"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <div
         class="c15"

@@ -1114,6 +1114,7 @@ exports[`<Layout /> should render 1`] = `
       class="c23"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <h1>
         home

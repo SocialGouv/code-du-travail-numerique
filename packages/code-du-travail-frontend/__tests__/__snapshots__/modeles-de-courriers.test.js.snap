@@ -1395,6 +1395,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       class="c23"
       id="content"
       role="main"
+      tabindex="-1"
     >
       <div
         class="c24"

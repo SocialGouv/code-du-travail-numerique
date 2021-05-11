@@ -1,7 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HeuresRechercheEmploi /> should render 1`] = `
-.c2 {
+.c0 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.c0:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  content: "";
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -9,15 +40,15 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
-.c14 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -55,16 +86,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   will-change: transform;
 }
 
-.c14:link,
-.c14:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -73,7 +104,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c14[disabled] {
+.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -81,13 +112,13 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
+.c8 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,12 +137,12 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c16 {
+.c17 {
   width: 3rem;
   margin-left: 1rem;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -128,16 +159,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 0.6rem 0 0 0.6rem;
 }
 
-.c4 {
+.c5 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c6 {
+.c7 {
   display: none;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,11 +186,11 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   outline: none;
 }
 
-.c8 + .c8 {
+.c9 + .c9 {
   margin-top: 1.6rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,11 +208,11 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   outline: none;
 }
 
-.c8 + .c8 {
+.c9 + .c9 {
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -206,7 +237,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c12 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -231,12 +262,12 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c0 {
+.c1 {
   padding: 0 0 0 28rem;
   overflow: visible;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,45 +281,64 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-bottom: 1px solid #bbcadf;
 }
 
+@media print {
+  .c0:before {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
-  .c2 {
+  .c0 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c2 {
+  .c0 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c3 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c3 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c14 {
+  .c15 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:980px) {
-  .c15 + .c15 {
+  .c16 + .c16 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c14 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -300,13 +350,13 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media print {
-  .c13 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c3 {
+  .c4 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -327,66 +377,66 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media print {
-  .c3 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
   .c4 {
-    margin: 0;
+    display: none;
   }
 }
 
 @media (max-width:980px) {
   .c5 {
-    display: none;
+    margin: 0;
   }
 }
 
 @media (max-width:980px) {
   .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c10 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c8 + .c8 {
+  .c9 + .c9 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 
-  .c8 + .c8 {
+  .c9 + .c9 {
     margin-top: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c0 {
-    border: 0;
   }
 }
 
 @media (max-width:980px) {
   .c1 {
+    padding: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    border: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
     margin-bottom: 1.6rem;
     padding: 1.6rem 0 1rem 0;
     border-bottom: 0;
@@ -394,123 +444,127 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 <div>
-  <form
+  <div
     class="c0"
   >
-    <h1
+    <form
       class="c1"
     >
-      Heures pour recherche d'emploi
-    </h1>
-    <div
-      class="c2 c3"
-    >
-      <span
-        class="c4"
+      <h1
+        class="c2"
       >
-        Étape
+        Heures pour recherche d'emploi
+      </h1>
+      <div
+        class="c3 c4"
+      >
         <span
           class="c5"
         >
-          s
+          Étape
+          <span
+            class="c6"
+          >
+            s
+          </span>
+          <span
+            class="c7"
+          >
+             
+            1/5
+          </span>
         </span>
-        <span
-          class="c6"
+        <ul
+          class="c8"
         >
-           
-          1/5
-        </span>
-      </span>
-      <ul
-        class="c7"
+          <li
+            aria-live="polite"
+            class="c9 c10"
+            tabindex="-1"
+          >
+            <span
+              class="c11"
+            >
+              1
+            </span>
+            Introduction
+          </li>
+          <li
+            class="c9 c12"
+          >
+            <span
+              class="c13"
+            >
+              2
+            </span>
+            Convention collective
+          </li>
+          <li
+            class="c9 c12"
+          >
+            <span
+              class="c13"
+            >
+              3
+            </span>
+            Type de rupture
+          </li>
+          <li
+            class="c9 c12"
+          >
+            <span
+              class="c13"
+            >
+              4
+            </span>
+            Informations
+          </li>
+          <li
+            class="c9 c12"
+          >
+            <span
+              class="c13"
+            >
+              5
+            </span>
+            Résultat
+          </li>
+        </ul>
+      </div>
+      <p>
+        Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi. Il peut s’agir du préavis en cas de licenciement, de démission ou de rupture de la période d’essai. En cas de rupture de la période d’essai, le préavis est aussi appelé délai de prévenance.
+      </p>
+      <p>
+        Le code du travail ne prévoit pas ce droit (sauf cas particulier du droit applicable à l’Alsace Moselle). En revanche, plusieurs conventions collectives fixent un nombre d’heures d’absence autorisée pour rechercher un emploi et leurs conditions d’utilisation.
+      </p>
+      <p>
+        Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. 
+        <br />
+        Prévoyez 2 à 5 minutes pour cette simulation.
+      </p>
+      <p>
+        Cliquez sur Commencer pour démarrer la simulation.
+      </p>
+      <div
+        class="c14"
       >
-        <li
-          aria-live="polite"
-          class="c8 c9"
-          tabindex="-1"
+        <button
+          class="c15 c16 "
         >
-          <span
-            class="c10"
+          Commencer
+          <svg
+            class="c17"
+            fill="none"
+            viewBox="0 0 28 15"
           >
-            1
-          </span>
-          Introduction
-        </li>
-        <li
-          class="c8 c11"
-        >
-          <span
-            class="c12"
-          >
-            2
-          </span>
-          Convention collective
-        </li>
-        <li
-          class="c8 c11"
-        >
-          <span
-            class="c12"
-          >
-            3
-          </span>
-          Type de rupture
-        </li>
-        <li
-          class="c8 c11"
-        >
-          <span
-            class="c12"
-          >
-            4
-          </span>
-          Informations
-        </li>
-        <li
-          class="c8 c11"
-        >
-          <span
-            class="c12"
-          >
-            5
-          </span>
-          Résultat
-        </li>
-      </ul>
-    </div>
-    <p>
-      Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi. Il peut s’agir du préavis en cas de licenciement, de démission ou de rupture de la période d’essai. En cas de rupture de la période d’essai, le préavis est aussi appelé délai de prévenance.
-    </p>
-    <p>
-      Le code du travail ne prévoit pas ce droit (sauf cas particulier du droit applicable à l’Alsace Moselle). En revanche, plusieurs conventions collectives fixent un nombre d’heures d’absence autorisée pour rechercher un emploi et leurs conditions d’utilisation.
-    </p>
-    <p>
-      Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. 
-      <br />
-      Prévoyez 2 à 5 minutes pour cette simulation.
-    </p>
-    <p>
-      Cliquez sur Commencer pour démarrer la simulation.
-    </p>
-    <div
-      class="c13"
-    >
-      <button
-        class="c14 c15 "
-      >
-        Commencer
-        <svg
-          class="c16"
-          fill="none"
-          viewBox="0 0 28 15"
-        >
-          <path
-            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
-    </div>
-  </form>
+            <path
+              d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 `;
