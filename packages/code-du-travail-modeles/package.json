@@ -18,6 +18,7 @@
   },
   "scripts": {
     "prebuild": "tsc",
+    "test": "jest",
     "build": "node bin/build.js",
     "clean": "rimraf bin lib"
   },
