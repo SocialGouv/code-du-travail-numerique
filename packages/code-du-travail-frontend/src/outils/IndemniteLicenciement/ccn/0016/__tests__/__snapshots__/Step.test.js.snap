@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask detail about categories 1`] = `
+.c9 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: inline-block;
@@ -272,12 +279,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
   cursor: pointer;
 }
 
-.c9 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -459,10 +460,11 @@ exports[`<Step /> should ask detail about categories 1`] = `
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
-      aria-label="champs obligatoire"
       class="c9"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div
@@ -483,6 +485,13 @@ exports[`<Step /> should ask detail about categories 1`] = `
 `;
 
 exports[`<Step /> should ask detail about retirement 1`] = `
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   position: relative;
   display: inline-block;
@@ -753,12 +762,6 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   cursor: default;
 }
 
-.c6 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -880,10 +883,11 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
-      aria-label="champs obligatoire"
       class="c6"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div
@@ -905,10 +909,11 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   >
     Le salarié pourrait-il bénéficier de la retraite ?
     <span
-      aria-label="champs obligatoire"
       class="c6"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <div
@@ -945,6 +950,13 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   position: relative;
   display: inline-block;
@@ -1133,12 +1145,6 @@ exports[`<Step /> should render 1`] = `
   cursor: pointer;
 }
 
-.c6 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1254,10 +1260,11 @@ exports[`<Step /> should render 1`] = `
   >
     Quel est l'âge du salarié à la date du licenciement ?
     <span
-      aria-label="champs obligatoire"
       class="c6"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div

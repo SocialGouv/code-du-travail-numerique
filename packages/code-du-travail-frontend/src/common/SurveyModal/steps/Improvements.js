@@ -1,4 +1,4 @@
-import { Button, Input, InputCheckbox, theme } from "@socialgouv/cdtn-ui";
+import { Button, Input, InputCheckbox, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useCallback } from "react";
 import styled from "styled-components";
 
@@ -31,6 +31,7 @@ export const ImprovementsStep = ({
       <ProgressBar state={state} />
       <Question>
         Quels sont le(s) contenu(s) que vous souhaiteriez voir enrichi(s)&nbsp;?
+        <Text fontWeight="400">&nbsp;(obligatoire)</Text>
       </Question>
       <StyledInputCheckbox
         label="les fiches sur le droit du travail"

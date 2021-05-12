@@ -65,6 +65,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   position: relative;
   display: inline-block;
@@ -236,12 +243,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c7 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -375,10 +376,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   >
     Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <label
@@ -425,10 +427,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   >
     Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div
@@ -573,6 +576,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 `;
 
 exports[`<StepRemuneration /> should render one input 1`] = `
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: inline-block;
@@ -744,12 +754,6 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -807,10 +811,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   >
     Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </p>
   <label
@@ -858,10 +863,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   >
     Quelle est la rémunération totale brute perçue durant le contrat de travail ?
     <span
-      aria-label="champs obligatoire"
       class="c1"
+      font-size="default"
+      font-weight="400"
     >
-      *
+       (obligatoire)
     </span>
   </label>
   <div

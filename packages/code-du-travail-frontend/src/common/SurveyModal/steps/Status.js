@@ -1,4 +1,4 @@
-import { Button, InputRadio, theme } from "@socialgouv/cdtn-ui";
+import { Button, InputRadio, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useCallback } from "react";
 import styled from "styled-components";
 
@@ -14,7 +14,10 @@ export const StatusStep = ({ dispatch, state }) => {
   return (
     <>
       <ProgressBar state={state} />
-      <Question>Vous êtes</Question>
+      <Question>
+        Quel est votre statut&nbsp;?
+        <Text fontWeight="400">&nbsp;(obligatoire)</Text>
+      </Question>
       <StyledInputRadio
         value="salarie"
         onChange={setStatus}

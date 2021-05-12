@@ -135,11 +135,6 @@ function Wizard({
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                 />
-                {stepIndex > 0 && stepIndex < steps.length - 1 && (
-                  <Notice>
-                    <Mandatory>*</Mandatory> Champs obligatoires
-                  </Notice>
-                )}
                 {process.env.NODE_ENV !== "production" &&
                   process.env.NODE_ENV !== "test" && (
                     <details>
@@ -190,7 +185,7 @@ function WizardTitle({ title, icon }) {
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, box, spacings } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -222,14 +217,4 @@ const IconWrapper = styled.span`
   width: 5.2rem;
   height: 5.2rem;
   margin-right: ${spacings.base};
-`;
-
-const Notice = styled.p`
-  padding-top: ${spacings.medium};
-  border-top: ${({ theme }) => box.border(theme.border)};
-`;
-
-const Mandatory = styled.span`
-  color: ${({ theme }) => theme.primary};
-  font-weight: 600;
 `;

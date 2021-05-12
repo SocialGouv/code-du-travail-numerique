@@ -20,6 +20,13 @@ exports[`<StepInformations /> should render 1`] = `
 `;
 
 exports[`<StepInformations /> should render catégorie professionelle 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c4 {
   position: relative;
   display: -webkit-inline-box;
@@ -98,12 +105,6 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   cursor: pointer;
 }
 
-.c3 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c5 {
   width: 40rem;
 }
@@ -154,10 +155,11 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
     >
       Quelle est la catégorie professionnelle du salarié ?
       <span
-        aria-label="champs obligatoire"
         class="c3"
+        font-size="default"
+        font-weight="400"
       >
-        *
+         (obligatoire)
       </span>
     </label>
     <div

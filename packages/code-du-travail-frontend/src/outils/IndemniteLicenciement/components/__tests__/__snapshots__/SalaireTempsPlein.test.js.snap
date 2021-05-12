@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: inline-block;
@@ -109,12 +116,6 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   cursor: pointer;
 }
 
-.c3 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   color: #3e486e;
   font-size: 1.4rem;
@@ -180,10 +181,11 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
       >
         Salaire mensuel brut
         <span
-          aria-label="champs obligatoire"
           class="c3"
+          font-size="default"
+          font-weight="400"
         >
-          *
+           (obligatoire)
         </span>
       </label>
       <p
@@ -283,6 +285,13 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 `;
 
 exports[`<SalaireTempsPlein /> should render 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: inline-block;
@@ -391,12 +400,6 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
-  display: inline-block;
-  margin-left: 1rem;
-  color: #eb5757;
-}
-
 .c4 {
   color: #3e486e;
   font-size: 1.4rem;
@@ -462,10 +465,11 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
       >
         Salaire mensuel brut
         <span
-          aria-label="champs obligatoire"
           class="c3"
+          font-size="default"
+          font-weight="400"
         >
-          *
+           (obligatoire)
         </span>
       </label>
       <p
