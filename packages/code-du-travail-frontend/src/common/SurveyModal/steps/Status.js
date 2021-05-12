@@ -15,7 +15,7 @@ export const StatusStep = ({ dispatch, state }) => {
     <>
       <ProgressBar state={state} />
       <Question>
-        Vous êtes
+        Quel est votre statut&nbsp;?
         <Text fontWeight="400">&nbsp;(obligatoire)</Text>
       </Question>
       <StyledInputRadio
