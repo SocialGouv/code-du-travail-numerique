@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **frontend:** button hover animation on firefox ([#3476](https://github.com/SocialGouv/code-du-travail-numerique/issues/3476)) ([dd44d23](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd44d23a4d0d38338ffac13c0969a9a440e5b964))
+
+
+### Features
+
+* **frontend:** add new search cc tool ([#3469](https://github.com/SocialGouv/code-du-travail-numerique/issues/3469)) ([ca59da1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca59da196a7743069f115a09dce55880fc5a6c1c))
+
+
+
+
+
 ## [4.48.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.0...v4.48.1) (2021-04-28)
 
 

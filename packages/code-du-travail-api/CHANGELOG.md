@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **docker:** sed registry.gitlab.factory.social.gouv.fr ([#3477](https://github.com/SocialGouv/code-du-travail-numerique/issues/3477)) ([9c9194a](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c9194a3919edb7aa06cdae6f12981dae26a24e6))
+
+
+### Features
+
+* **search:** complete prequalified results ([#3459](https://github.com/SocialGouv/code-du-travail-numerique/issues/3459)) ([04e2284](https://github.com/SocialGouv/code-du-travail-numerique/commit/04e2284f2d87fc7d06023b15173aa7588d85fdb9)), closes [#2037](https://github.com/SocialGouv/code-du-travail-numerique/issues/2037)
+
+
+
+
+
 # [4.46.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.2...v4.46.0) (2021-04-13)
 
 **Note:** Version bump only for package @cdt/api

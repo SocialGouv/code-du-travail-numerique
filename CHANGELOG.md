@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **docker:** sed registry.gitlab.factory.social.gouv.fr ([#3477](https://github.com/SocialGouv/code-du-travail-numerique/issues/3477)) ([9c9194a](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c9194a3919edb7aa06cdae6f12981dae26a24e6))
+* **frontend:** button hover animation on firefox ([#3476](https://github.com/SocialGouv/code-du-travail-numerique/issues/3476)) ([dd44d23](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd44d23a4d0d38338ffac13c0969a9a440e5b964))
+* packages/code-du-travail-frontend/package.json to reduce vulnerabilities ([#3457](https://github.com/SocialGouv/code-du-travail-numerique/issues/3457)) ([e1786ff](https://github.com/SocialGouv/code-du-travail-numerique/commit/e1786ff71cb55ee969bee6f5adabfbaa10e21baf))
+
+
+### Features
+
+* **accessibility:** add (obligatoire) on mandatory field ([#3474](https://github.com/SocialGouv/code-du-travail-numerique/issues/3474)) ([1fd3d27](https://github.com/SocialGouv/code-du-travail-numerique/commit/1fd3d27d8239257036be03320ebeffa68047b12c))
+* **ci:** use kaniko build ([#3461](https://github.com/SocialGouv/code-du-travail-numerique/issues/3461)) ([936b12c](https://github.com/SocialGouv/code-du-travail-numerique/commit/936b12c3db364a79473be860bbd9d073edbaed0a))
+* **frontend:** add new search cc tool ([#3469](https://github.com/SocialGouv/code-du-travail-numerique/issues/3469)) ([ca59da1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca59da196a7743069f115a09dce55880fc5a6c1c))
+* **search:** complete prequalified results ([#3459](https://github.com/SocialGouv/code-du-travail-numerique/issues/3459)) ([04e2284](https://github.com/SocialGouv/code-du-travail-numerique/commit/04e2284f2d87fc7d06023b15173aa7588d85fdb9)), closes [#2037](https://github.com/SocialGouv/code-du-travail-numerique/issues/2037)
+* **simulator:** add industrie pharmaceutique labor agreement to seniority notice ([#3470](https://github.com/SocialGouv/code-du-travail-numerique/issues/3470)) ([6b7bab1](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b7bab11b7c12b267639f2c55c1582ebe3b9bb0c))
+
+
+### Reverts
+
+* **frontend:** remove search ccn tool ([#3486](https://github.com/SocialGouv/code-du-travail-numerique/issues/3486)) ([e587b31](https://github.com/SocialGouv/code-du-travail-numerique/commit/e587b3101fadc3ba5c5c37f7db34a4b606db296f))
+
+
+
+
+
 ## [4.48.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.0...v4.48.1) (2021-04-28)
 
 

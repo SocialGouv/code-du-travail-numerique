@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
+
+
+### Features
+
+* **simulator:** add industrie pharmaceutique labor agreement to seniority notice ([#3470](https://github.com/SocialGouv/code-du-travail-numerique/issues/3470)) ([6b7bab1](https://github.com/SocialGouv/code-du-travail-numerique/commit/6b7bab11b7c12b267639f2c55c1582ebe3b9bb0c))
+
+
+
+
+
 # [4.48.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.47.0...v4.48.0) (2021-04-28)
 
 
