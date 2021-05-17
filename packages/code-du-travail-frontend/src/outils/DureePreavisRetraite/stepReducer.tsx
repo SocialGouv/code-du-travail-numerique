@@ -25,7 +25,14 @@ export const initialState: State = {
       component: Steps.Informations,
       label: "Informations",
       name: "infos",
-      skip: (values) => !values.ccn || !supportedCcn.includes(values.ccn.num),
+      skip: (values) => {
+        if (
+          values.ccn.num === 44 &&
+          values["contrat salarié - mise à la retraite"] === "non"
+        )
+          return true;
+        return !values.ccn || !supportedCcn.includes(values.ccn.num);
+      },
     },
     {
       component: Steps.AncienneteStep,
