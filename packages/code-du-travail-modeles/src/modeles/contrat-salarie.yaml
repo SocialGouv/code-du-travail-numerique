@@ -7,6 +7,9 @@ contrat salarié . mise à la retraite:
   title: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
 
+contrat salarié . départ à la retraite:
+  valeur: mise à la retraite = non
+
 contrat salarié . préavis de retraite: 0 mois
 
 contrat salarié . préavis de retraite . inférieur à 6 mois:
