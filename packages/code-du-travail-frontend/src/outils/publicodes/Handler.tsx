@@ -1,4 +1,5 @@
 import { getNotifications } from "@socialgouv/modeles-social";
+import { getReferences } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine from "publicodes";
 import { useMemo, useState } from "react";
 
@@ -71,6 +72,7 @@ const usePublicodesHandler = ({
 
   return {
     getNotifications: () => getNotifications(engine),
+    getReferences: () => getReferences(engine),
     missingArgs,
     result: value,
     setSituation: newSituation,
