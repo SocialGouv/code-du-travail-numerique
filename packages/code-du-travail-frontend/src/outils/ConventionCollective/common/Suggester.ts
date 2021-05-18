@@ -55,6 +55,7 @@ const dataFetchReducer = <A>(
     case Actions.failure:
       return {
         ...state,
+        error: action.payload,
         isError: true,
         isLoading: false,
       };
@@ -91,6 +92,7 @@ export function createSuggesterHook<Result>(fetcher: Fetcher<Result>) {
           }
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
+          console.error(error);
           dispatch({ payload: error, type: Actions.failure });
         }
       }

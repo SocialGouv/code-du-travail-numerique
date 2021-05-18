@@ -1,6 +1,9 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
 import getConfig from "next/config";
+import React from "react";
+
+import { InlineError } from "../../../outils/common/ErrorField";
 
 export type Agreement = {
   id: string;
@@ -22,12 +25,29 @@ const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
   title,
 });
 
+const nafError = (
+  <InlineError>
+    Numéro d’indentification (IDCC) incorrect. Il semblerait que vous ayez saisi
+    un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités
+    Françaises).
+  </InlineError>
+);
+const tooManyNumberError = (
+  <InlineError>
+    Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4
+    chiffres uniquement.
+  </InlineError>
+);
 // memoize search results
-
 const apiIdcc = memoizee(
   function createFetcher(query: string) {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
-
+    if (/^(\d{4}\w)$/.test(query.replace(/\W/g, ""))) {
+      return Promise.reject(nafError);
+    }
+    if (/^\d{5,}$/.test(query.replace(/\W/g, ""))) {
+      return Promise.reject(tooManyNumberError);
+    }
     return fetch(url).then(async (response) => {
       if (response.ok) {
         return response

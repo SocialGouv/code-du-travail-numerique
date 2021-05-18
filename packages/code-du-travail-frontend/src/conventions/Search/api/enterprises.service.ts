@@ -37,7 +37,7 @@ export interface MatchingEtablissement {
 }
 
 const ENTERPRISE_API_URL =
-  "https://api-lionel-remove-fak-35q5k4-recherche-entreprises.dev2.fabrique.social.gouv.fr/api/v1/search";
+  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search";
 
 const apiEnterprises = memoizee(function createFetcher(
   query: string,
