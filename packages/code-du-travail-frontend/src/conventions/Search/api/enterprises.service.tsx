@@ -58,10 +58,7 @@ const siretNumberError = (
     Veuillez indiquer un numéro Siret (14 chiffres uniquement)
   </InlineError>
 );
-const apiEnterprises = memoizee(function createFetcher(
-  query = "",
-  address = ""
-) {
+const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
   }
