@@ -1,3 +1,4 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   AlertWithIcon,
   Button,
@@ -5,17 +6,14 @@ import {
   theme,
   Tile as TileUi,
 } from "@socialgouv/cdtn-ui";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import {} from "../../common/type/WizardType";
 import { SearchType } from "..";
 
-type Props = {
-  onSelecSearchType: (type: SearchType) => void;
-};
-
-const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
+const IntroductionStep = (): JSX.Element => {
   return (
     <>
       <AlertWithIcon variant="secondary">
@@ -31,27 +29,37 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
         </Text>
       </AlertWithIcon>
       <Flex>
-        <Tile onClick={() => onSelecSearchType(SearchType.agreement)}>
-          <Text fontWeight="700">
-            Je connais
-            <br /> ma convention collective
-          </Text>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la saisie
-            </Button>
-          </ButtonWrapper>
-        </Tile>
-        <Tile onClick={() => onSelecSearchType(SearchType.enterprise)}>
-          <Text fontWeight="700">
-            Je ne connais <br /> pas ma convention collective
-          </Text>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la recherche
-            </Button>
-          </ButtonWrapper>
-        </Tile>
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective#${SearchType.agreement}`}
+          passHref
+        >
+          <Tile>
+            <Text fontWeight="700">
+              Je connais
+              <br /> ma convention collective
+            </Text>
+            <ButtonWrapper>
+              <Button variant="link" as="div">
+                Je la saisie
+              </Button>
+            </ButtonWrapper>
+          </Tile>
+        </Link>
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective#${SearchType.enterprise}`}
+          passHref
+        >
+          <Tile>
+            <Text fontWeight="700">
+              Je ne connais <br /> pas ma convention collective
+            </Text>
+            <ButtonWrapper>
+              <Button variant="link" as="div">
+                Je la recherche
+              </Button>
+            </ButtonWrapper>
+          </Tile>
+        </Link>
       </Flex>
     </>
   );

@@ -28,11 +28,14 @@ const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
 const nafError = (
   <InlineError>
     Numéro d’indentification (IDCC) incorrect. Il semblerait que vous ayez saisi
-    un code APE (Activité Principale Exercée) ou NAF (Nomenclature des Activités
-    Françaises).
+    un code <abbr title="Activité Principale Exercée">APE</abbr> (Activité
+    Principale Exercée) ou{" "}
+    <abbr title="Nomenclature des Activités Françaises">NAF</abbr> (Nomenclature
+    des Activités Françaises) et dont l’objectif est d’identifier l’activité
+    principale de l’entreprise.
   </InlineError>
 );
-const tooManyNumberError = (
+const onlyNumberError = (
   <InlineError>
     Numéro d’indentification (IDCC) incorrect. Ce numéro est composé de 4
     chiffres uniquement.
@@ -42,11 +45,11 @@ const tooManyNumberError = (
 const apiIdcc = memoizee(
   function createFetcher(query: string) {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
-    if (/^(\d{4}\w)$/.test(query.replace(/\W/g, ""))) {
+    if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
       return Promise.reject(nafError);
     }
     if (/^\d{5,}$/.test(query.replace(/\W/g, ""))) {
-      return Promise.reject(tooManyNumberError);
+      return Promise.reject(onlyNumberError);
     }
     return fetch(url).then(async (response) => {
       if (response.ok) {

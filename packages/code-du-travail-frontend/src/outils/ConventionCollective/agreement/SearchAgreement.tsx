@@ -1,4 +1,3 @@
-import { Section } from "@socialgouv/cdtn-ui";
 import pDebounce from "p-debounce";
 import React, { useEffect, useMemo, useState } from "react";
 
