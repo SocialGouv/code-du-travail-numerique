@@ -1,4 +1,9 @@
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  waitFor,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
 import React from "react";
 
 import Search from "../";
@@ -113,11 +118,17 @@ describe("<Search />", () => {
         },
       },
     });
-    const { container, getByRole } = renderSearchForm({
+    const { debug, container, getByRole, queryByText } = renderSearchForm({
       onSelectConvention: null,
     });
     fireEvent.change(getByRole("search"), { target: { value: "4567" } });
     jest.runAllTimers();
+    await waitForElementToBeRemoved(() =>
+      queryByText("Recherche des convention collectives...")
+    );
+
+    debug();
+    await new Promise((resolve) => setTimeout(resolve, 0));
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
     expect(container).toMatchSnapshot();

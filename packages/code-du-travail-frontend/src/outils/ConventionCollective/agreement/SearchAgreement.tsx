@@ -3,8 +3,8 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import {
   Agreement,
-  searchAgreement,
-} from "../../../conventions/Search/api/agreement.service";
+  searchAgreements,
+} from "../../../conventions/Search/api/agreements.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
@@ -16,7 +16,7 @@ type Props = {
   ) => JSX.Element;
 };
 
-const useAgreementSuggester = createSuggesterHook(searchAgreement);
+const useAgreementSuggester = createSuggesterHook(searchAgreements);
 
 export function SearchAgreement({ renderResults }: Props): JSX.Element {
   const [query, setQuery] = useState("");
