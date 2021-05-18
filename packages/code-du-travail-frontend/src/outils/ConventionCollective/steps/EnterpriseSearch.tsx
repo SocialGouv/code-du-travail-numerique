@@ -79,7 +79,34 @@ const EnterpriseSearchStep = (): JSX.Element => {
         if (state.isError) {
           return (
             <Section>
+              *errorZ
               <InlineError>{state.error}</InlineError>
+            </Section>
+          );
+        }
+        if (
+          state?.data?.length === 0 &&
+          /^\d{2,8}$/.test(params.query.replace(/\W/g, ""))
+        ) {
+          return (
+            <Section>
+              <InlineError>
+                Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9
+                chiffres) valide
+              </InlineError>
+            </Section>
+          );
+        }
+        if (
+          state?.data?.length === 0 &&
+          /\d{14}/.test(params.query.replace(/\s/g, ""))
+        ) {
+          return (
+            <Section>
+              <InlineError>
+                Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9
+                chiffres) valide
+              </InlineError>
             </Section>
           );
         }
