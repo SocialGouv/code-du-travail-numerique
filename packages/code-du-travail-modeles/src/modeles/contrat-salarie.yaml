@@ -12,47 +12,53 @@ contrat salarié . départ à la retraite:
 
 contrat salarié . préavis de retraite: 0 mois
 
-contrat salarié . préavis de retraite . inférieur à 6 mois:
-  applicable si: ancienneté < 6 mois
+contrat salarié . préavis de retraite . mise à la retraite inférieur à 6 mois:
+  applicable si:
+    toutes ces conditions:
+      - ancienneté < 6 mois
+      - contrat salarié . mise à la retraite
   remplace: contrat salarié . préavis de retraite
   valeur: contrat salarié . préavis de retraite collective
+  références:
+    Article L1237-6: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
+
+contrat salarié . préavis de retraite . départ à la retraite inférieur à 6 mois:
+  applicable si:
+    toutes ces conditions:
+      - ancienneté < 6 mois
+      - contrat salarié . départ à la retraite
+  remplace: contrat salarié . préavis de retraite
+  valeur: contrat salarié . préavis de retraite collective
+  références:
+    Article L1237-10: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
 
 contrat salarié . préavis de retraite . mise à la retraite:
-  applicable si: contrat salarié . mise à la retraite
+  applicable si: mise à la retraite
   non applicable si: ancienneté < 6 mois
   remplace: contrat salarié . préavis de retraite
   valeur:
     le maximum de:
-      - contrat salarié . préavis de retraite légale
+      - contrat salarié . préavis de retraite . tranches
       - contrat salarié . préavis de retraite collective
+  références:
+    Article L1237-6: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
 
 contrat salarié . préavis de retraite . départ à la retraite:
-  applicable si: contrat salarié . mise à la retraite = non
+  applicable si: départ à la retraite
   non applicable si: ancienneté < 6 mois
   remplace: contrat salarié . préavis de retraite
   valeur:
     le minimum de:
-      - contrat salarié . préavis de retraite légale
+      - contrat salarié . préavis de retraite . tranches
       - contrat salarié . préavis de retraite collective
-
-contrat salarié . préavis de retraite légale:
-  titre: Préavis de départ légale
-  valeur: contrat salarié . préavis de retraite tranches
   références:
-    - source: code du travail
-      article: L1237-10
-      lien: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
-      code: LEGIARTI000006901184
-    - source: code du travail
-      article: L1234-1
-      url: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
-      code: LEGIARTI000006901112
-    - source: code du travail
-      article: L1237-6
-      url: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
-      code: LEGIARTI000006901180
+    Article L1237-10: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
 
-contrat salarié . préavis de retraite tranches:
+contrat salarié . préavis de retraite . tranches:
   titre: Tranches du préavis de départ dans le code du travail
   grille:
     assiette: ancienneté

@@ -43,23 +43,23 @@ contrat salarié . convention collective . industrie pharmaceutique . conclu apr
           plafond: 5
         - montant: 4 mois
 
-contrat salarié . convention collective . industrie pharmaceutique . préavis de retaite:
+contrat salarié . convention collective . industrie pharmaceutique . préavis de départ à la retaite:
+  applicable si: départ à la retraite
   titre: Préavis de retraite pour la convention collective de l'industrie pharmaceutique
   remplace: préavis de retraite collective
-  valeur: contrat salarié . convention collective . industrie pharmaceutique . préavis de retaite tranches
+  valeur: préavis de retaite tranches
   références:
-    - source: covention collective
-      article: Article 34
-      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189666?idConteneur=KALICONT000005635184
-      code: KALIARTI000022189666
-    - source: covention collective
-      article: Article 32.2
-      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184
-      code: KALIARTI000022189662
-    - source: covention collective
-      article: Article 36
-      lien: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184
-      code: KALIARTI000005857748
+    Article 34: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189666?idConteneur=KALICONT000005635184
+    Article 32.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184
+
+contrat salarié . convention collective . industrie pharmaceutique . préavis de mise à la retaite:
+  applicable si: mise à la retraite
+  titre: Préavis de retraite pour la convention collective de l'industrie pharmaceutique
+  remplace: préavis de retraite collective
+  valeur: préavis de retaite tranches
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184
+    Article 32.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184
 
 contrat salarié . convention collective . industrie pharmaceutique . notification:
   applicable si:
