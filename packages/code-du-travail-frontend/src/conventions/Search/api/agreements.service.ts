@@ -26,14 +26,14 @@ const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
 
 // memoize search results
 const apiIdcc = memoizee(
-  function createFetcher(query = "") {
-    const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
+  function createFetcher(query) {
     if (/^\d{4}[A-Za-z]$/.test(query.replace(/\W/g, ""))) {
       return Promise.reject(nafError);
     }
     if (/^\d{5,}$/.test(query.replace(/\W/g, ""))) {
       return Promise.reject(onlyNumberError);
     }
+    const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
     return fetch(url).then(async (response) => {
       if (response.ok) {
         return response.json().then((results) => {
