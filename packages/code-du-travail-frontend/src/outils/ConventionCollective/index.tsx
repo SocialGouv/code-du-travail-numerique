@@ -1,5 +1,8 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Button, Wrapper } from "@socialgouv/cdtn-ui";
-import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { WizardTitle } from "../common/Wizard";
@@ -55,6 +58,18 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
     setSearchType(value);
   }
 
+  const router = useRouter();
+  useEffect(() => {
+    function handleHashNavigation(url) {
+      const [, hash = ""] = url.split("#");
+      handleSearchType(hash);
+    }
+    router.events.on("hashChangeStart", handleHashNavigation);
+    return () => {
+      router.events.off("hashChangeStart", handleHashNavigation);
+    };
+  });
+
   let Step;
 
   switch (searchType) {
@@ -65,16 +80,24 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
       Step = <Steps.EnterpriseSearchStep />;
       break;
     default:
-      Step = <Steps.IntroductionStep onSelecSearchType={handleSearchType} />;
+      Step = <Steps.IntroductionStep />;
   }
   return (
     <WizardWrapper variant="main">
       <WizardTitle title={title} icon={icon} />
       {Step}
       {searchType && (
-        <Button small type="button" onClick={clearSearchType} variant="flat">
-          Précédent
-        </Button>
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={clearSearchType}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
       )}
     </WizardWrapper>
   );

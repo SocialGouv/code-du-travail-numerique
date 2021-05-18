@@ -1,12 +1,20 @@
-import { Section as SectionUi } from "@socialgouv/cdtn-ui";
+import { SOURCES } from "@socialgouv/cdtn-sources";
+import {
+  AlertWithIcon,
+  Button,
+  Heading,
+  Section as SectionUi,
+  Title,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
+import Link from "next/link";
 import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
-import { InlineError } from "../../common/ErrorField";
 import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
-import { InfoBulle } from "../common/InfoBulle";
+import { HelpModal } from "../common/Modal";
 import { ListItem, ResultList } from "../common/ResultList";
 
 const AgreementSearchStep = (): JSX.Element => {
@@ -23,28 +31,6 @@ const AgreementSearchStep = (): JSX.Element => {
         if (state.isError) {
           return <Section> {state.error}</Section>;
         }
-        // if (/^(\d{4}\w)$/.test(query.replace(/\W/g, ""))) {
-        //   return (
-        //     <Section>
-        //       <InlineError>
-        //         Numéro d’indentification (IDCC) incorrect. Il semblerait que
-        //         vous ayez saisi un code APE (Activité Principale Exercée) ou
-        //         NAF (Nomenclature des Activités Françaises).
-        //       </InlineError>
-        //       <InfoBulle title="Qu'est ce qu'un code NAF ou APE">
-        //         <p>
-        //           Les codes APE (Activité Principale Exercée) ou NAF
-        //           (Nomenclature des Activités Françaises) qui sont des numéros
-        //           composés de 4 chiffres et d’une lettre dont l’objectif est
-        //           d’identifier l’activité principale de l’entreprise.
-        //         </p>
-        //         <p>
-        //           <em>exemple: </em>4752A.
-        //         </p>
-        //       </InfoBulle>
-        //     </Section>
-        //   );
-        // }
 
         return state.data ? (
           state.data.length > 0 ? (
@@ -60,7 +46,70 @@ const AgreementSearchStep = (): JSX.Element => {
               </ResultList>
             </Section>
           ) : (
-            <Section>Pas de résultat</Section>
+            <Section>
+              <Wrapper variant="light">
+                <p>
+                  <strong>Aucune convention collective n’a été trouvée</strong>.
+                </p>
+                Suggestions&nbsp;:
+                <ul>
+                  <li>Vérifiez l’orthographe des termes de recherche</li>
+                  <li>
+                    Utilisez la rubrique ci-dessous “Vous ne trouvez pas votre
+                    convention collective&nbsp;?”
+                  </li>
+                </ul>
+              </Wrapper>
+              <Wrapper>
+                Vous ne trouvez pas votre convention collective&nbsp;?
+                <br />
+                <HelpModal
+                  title="Vous ne trouvez pas votre convention collective"
+                  renderButton={(openModal) => (
+                    <Button variant="link" onClick={openModal}>
+                      Consulter notre aide
+                    </Button>
+                  )}
+                >
+                  <Title stripe="none" as="h3">
+                    Vous ne trouvez pas convention collective&nbsp;?
+                  </Title>
+                  <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
+                  <ul>
+                    <li>
+                      Votre convention collective a un autre code : si vous le
+                      pouvez, utilisez le numéro Siret de votre entreprise. Ce
+                      dernier doit être présent sur votre bulletin de paie.
+                    </li>
+                    <li>
+                      Votre convention collective a un statut particulier :
+                      administration ou établissement publics, associations,
+                      secteur agricole, La Poste, La Croix Rouge etc.
+                    </li>
+                    <li>
+                      Votre entreprise n’est rattachée à aucune convention
+                      collective.
+                    </li>
+                  </ul>
+                  <Heading>
+                    Essayez avec la recherche par entreprise&nbsp;
+                  </Heading>
+                  <AlertWithIcon variant="secondary">
+                    Avec le nom de l’entreprise, il est possible de retrouver la
+                    convention collective associée
+                    <br />
+                    <Link
+                      passHref
+                      href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
+                    >
+                      <Button as="a" variant="link" narrow small>
+                        Je recherche avec le nom de l’entreprise
+                      </Button>
+                    </Link>{" "}
+                  </AlertWithIcon>
+                </HelpModal>
+              </Wrapper>
+            </Section>
           )
         ) : null;
       }}
