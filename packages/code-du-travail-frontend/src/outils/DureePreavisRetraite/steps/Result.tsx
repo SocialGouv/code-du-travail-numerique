@@ -44,8 +44,8 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         <>
           <SectionTitle>Source</SectionTitle>
           <ul>
-            {references.map(({ article, url }) => (
-              <li key={url}>
+            {references.map(({ article, url }, id) => (
+              <li key={`${url}-${id}`}>
                 <A11yLink
                   href={url}
                   target="_blank"
