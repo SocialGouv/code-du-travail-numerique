@@ -19,8 +19,6 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
 
   const notifications = publicodesContext.getNotifications();
   const references = publicodesContext.getReferences();
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
