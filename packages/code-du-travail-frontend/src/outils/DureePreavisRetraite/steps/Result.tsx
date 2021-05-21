@@ -2,6 +2,7 @@ import { Alert } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 
 import { A11yLink } from "../../../common/A11yLink";
+import Mdx from "../../../common/Mdx";
 import { Highlight, SectionTitle } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
@@ -34,9 +35,10 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
       {notifications.length > 0 && (
         <Alert>
           {publicodesContext.getNotifications().map((notification) => (
-            <p key={notification.dottedName}>
-              <b>{notification.description}</b>
-            </p>
+            <Mdx
+              key={notification.dottedName}
+              markdown={notification.description}
+            />
           ))}
         </Alert>
       )}
