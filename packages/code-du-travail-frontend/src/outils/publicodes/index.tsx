@@ -1,4 +1,5 @@
 import { Notification } from "@socialgouv/modeles-social";
+import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine, { Evaluation, Rule as PubliRule, Unit } from "publicodes";
 import React, { createContext, useContext } from "react";
 
@@ -39,6 +40,7 @@ export interface PublicodesResult {
 
 export interface PublicodesContextInterface {
   getNotifications: () => Notification[];
+  getReferences: () => References[];
   result?: PublicodesResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
@@ -47,6 +49,7 @@ export interface PublicodesContextInterface {
 
 const publicodesContext = createContext<PublicodesContextInterface>({
   getNotifications: () => [],
+  getReferences: () => [],
   missingArgs: [],
   result: null,
   setSituation: () => {
@@ -69,6 +72,7 @@ export const PublicodesProvider: React.FC<
 > = ({ children, rules, targetRule }) => {
   const {
     getNotifications,
+    getReferences,
     result,
     missingArgs,
     setSituation,
@@ -80,7 +84,14 @@ export const PublicodesProvider: React.FC<
 
   return (
     <Provider
-      value={{ getNotifications, missingArgs, result, setSituation, situation }}
+      value={{
+        getNotifications,
+        getReferences,
+        missingArgs,
+        result,
+        setSituation,
+        situation,
+      }}
     >
       {children}
     </Provider>
