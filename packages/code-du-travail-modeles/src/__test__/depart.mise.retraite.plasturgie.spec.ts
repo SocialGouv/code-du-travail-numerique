@@ -20,7 +20,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle":
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Cadres'",
       })
       .evaluate("contrat salarié . préavis de retraite");
@@ -47,7 +47,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle":
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Cadres'",
       })
       .evaluate("contrat salarié . préavis de retraite");
@@ -72,9 +72,9 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle":
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . coefficient": coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -99,9 +99,9 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle":
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . coefficient": coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
