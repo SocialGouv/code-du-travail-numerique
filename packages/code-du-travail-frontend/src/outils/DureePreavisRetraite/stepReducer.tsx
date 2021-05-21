@@ -2,7 +2,7 @@ import { Action, ActionName, State } from "../common/type/WizardType";
 import Steps from "./steps";
 
  
-const supportedCcn = [16, 29, 44, 176, 292, 413];
+const supportedCcn = [16, 29, 44, 176, 275, 292, 413];
 
 export const initialState: State = {
   stepIndex: 0,
