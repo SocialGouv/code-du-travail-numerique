@@ -2,7 +2,7 @@ import { Action, ActionName, State } from "../common/type/WizardType";
 import Steps from "./steps";
 
 // Add only idcc number for Agreement asking for additionnal information
-const supportedCcn = [16, 29, 44, 176, 275, 292];
+const supportedCcn = [16, 29, 44, 176, 275, 292, 413];
 
 export const initialState: State = {
   stepIndex: 0,
