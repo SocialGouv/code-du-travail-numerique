@@ -20,7 +20,7 @@
   "scripts": {
     "prebuild": "tsc",
     "test": "jest",
-    "#test": "nodemon nodemon --watch 'src/**' --ext 'ts,yaml'   --exec 'jest'",
+    "test2": "nodemon --watch 'src/**' --ext 'ts,yaml'   --exec jest",
     "build": "node bin/build.js",
     "clean": "rimraf bin lib"
   },
