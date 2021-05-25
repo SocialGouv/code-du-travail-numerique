@@ -7,7 +7,7 @@ import {
 import Steps from "./steps";
 
 // Add only idcc number for Agreement asking for additional information
-const supportedCcn = [16, 29, 44, 176, 275, 292, 413, 573];
+const supportedCcn = [16, 29, 44, 176, 275, 292, 413, 573, 675];
 // Add only idcc number for Agreement skipping the information step in case of 'départ à la retraite'
 const excludedCcnFromVoluntaryPath = [44, 573];
 
