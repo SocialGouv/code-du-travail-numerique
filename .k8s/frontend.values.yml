@@ -81,7 +81,7 @@ deployment:
           key: AZURE_BASE_URL
   initContainers:
     - name: wait-for-api
-      image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/curl:1.53.1
+      image: ghcr.io/socialgouv/docker/curl:6.14.0
       resources:
         requests:
           cpu: 5m

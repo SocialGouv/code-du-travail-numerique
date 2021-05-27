@@ -1,6 +1,6 @@
 Test on deployed branch:
   stage: .post
-  image: registry.gitlab.factory.social.gouv.fr/socialgouv/docker/puppeteer:0.29.0
+  image: ghcr.io/socialgouv/docker/puppeteer:6.14.0
   except:
     refs:
       # Don't run on release
