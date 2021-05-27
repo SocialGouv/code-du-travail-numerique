@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { TextQuestion } from "../../common/TextQuestion";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
+import { usePublicodes } from "../../publicodes";
+import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
-function AncienneteStep(): JSX.Element {
+function AncienneteStep({ form }: WizardStepProps): JSX.Element {
+  const publicodesContext = usePublicodes();
+
+  useEffect(() => {
+    publicodesContext.setSituation(
+      mapToPublicodesSituation(form.getState().values)
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form]);
+
   return (
     <>
       <TextQuestion
