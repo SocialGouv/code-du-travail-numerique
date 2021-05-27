@@ -8,24 +8,25 @@ import {
 
 const engine = new Engine(mergeModels());
 
-test("Pour un préavis de mise à la retraite, on devrait avoir les références légales d'une mise à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 12,
-      "contrat salarié . mise à la retraite": "oui",
-    })
-  );
+test.each`
+  retirement  | seniority | expectedReferences
+  ${"depart"} | ${5}      | ${DepartRetraiteReferences}
+  ${"depart"} | ${6}      | ${DepartRetraiteReferences}
+  ${"depart"} | ${24}     | ${DepartRetraiteReferences}
+  ${"mise"}   | ${5}      | ${MiseRetraiteReferences}
+  ${"mise"}   | ${6}      | ${MiseRetraiteReferences}
+  ${"mise"}   | ${24}     | ${MiseRetraiteReferences}
+`(
+  "Vérification des références juridiques pour un employé avec une ancienneté de $seniority mois en $retirement à la retraite",
+  ({ retirement, seniority, expectedReferences }) => {
+    const result = getReferences(
+      engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . mise à la retraite":
+          retirement === "mise" ? "oui" : "non",
+      })
+    );
 
-  expect(result).toEqual(expect.arrayContaining(MiseRetraiteReferences));
-});
-
-test("Pour un préavis de départ à la retraite, on devrait avoir les références légales d'un départ à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 12,
-      "contrat salarié . mise à la retraite": "non",
-    })
-  );
-
-  expect(result).toEqual(expect.arrayContaining(DepartRetraiteReferences));
-});
+    expect(result).toEqual(expect.arrayContaining(expectedReferences));
+  }
+);
