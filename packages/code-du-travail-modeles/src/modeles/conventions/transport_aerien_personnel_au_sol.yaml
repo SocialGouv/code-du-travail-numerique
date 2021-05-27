@@ -69,6 +69,7 @@ contrat salarié . convention collective . transport aérien personnel au sol . 
 
 contrat salarié . convention collective . transport aérien personnel au sol . Cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . Cadres . préavis départ à la retraite:
   remplace: contrat salarié . préavis de retraite collective

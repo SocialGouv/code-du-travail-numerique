@@ -40,6 +40,7 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );
 
@@ -80,5 +81,6 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );
