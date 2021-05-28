@@ -14,3 +14,11 @@ export const mapToPublicodesSituation = (
     ...formWithoutCcn,
   };
 };
+
+export const reverseValues = (
+  values: Record<string, string>
+): Record<string, string> =>
+  Object.entries(values).reduce((state, [key, value]) => {
+    state[value] = key;
+    return state;
+  }, {});

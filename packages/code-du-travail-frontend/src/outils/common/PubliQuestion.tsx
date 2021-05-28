@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Rule, RuleType } from "../publicodes";
+import { reverseValues } from "../publicodes/Utils";
 import { SelectQuestion } from "./SelectQuestion";
 import { TextQuestion } from "./TextQuestion";
 import { YesNoPubliQuestion } from "./YesNoPubliQuestion";
@@ -31,13 +32,5 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
       );
   }
 };
-
-const reverseValues = (
-  values: Record<string, string>
-): Record<string, string> =>
-  Object.entries(values).reduce((state, [key, value]) => {
-    state[value] = key;
-    return state;
-  }, {});
 
 export default PubliQuestion;
