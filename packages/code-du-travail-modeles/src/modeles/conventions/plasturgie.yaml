@@ -5,6 +5,7 @@ contrat salarié . convention collective . plasturgie:
   valeur: oui
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle:
+  titre: Catégorie professionnelle
   question: Quelle est votre catégorie professionelle ?
   cdtn:
     type: liste

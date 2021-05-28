@@ -3,6 +3,8 @@ contrat salarié . ancienneté:
   titre: Ancienneté du salarié
   question: Quel est votre ancienneté en mois ?
   unité: mois
+  cdtn:
+    type: entier
 
 contrat salarié . mise à la retraite:
   titre: Origine du départ à la retraite
