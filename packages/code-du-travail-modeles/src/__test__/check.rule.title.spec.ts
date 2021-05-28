@@ -16,6 +16,7 @@ allCc.forEach((idcc) => {
     Object.keys(result.missingVariables).forEach((missingVariable) => {
       const rule = engine.getRule(missingVariable);
       expect(rule.rawNode).toContainTitre();
+      expect(rule.rawNode).toContainQuestion();
       expect(rule.rawNode).toContainValidCdtnType();
     });
   });

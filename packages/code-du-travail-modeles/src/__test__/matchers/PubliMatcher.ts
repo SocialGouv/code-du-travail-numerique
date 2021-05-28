@@ -4,6 +4,7 @@ declare global {
   namespace jest {
     interface Matchers<R> {
       toContainTitre: () => R;
+      toContainQuestion: () => R;
       toContainValidCdtnType: () => R;
     }
   }
@@ -20,6 +21,19 @@ expect.extend({
     return {
       pass: rule.titre.trim() !== "",
       message: () => `Invalid 'titre' on ${rule.nom}. Titre can't be empty`,
+    };
+  },
+  toContainQuestion(rule: Rule) {
+    if (rule.question === undefined || rule.question === null) {
+      return {
+        pass: false,
+        message: () => `Missing property 'question' on ${rule.nom}`,
+      };
+    }
+    return {
+      pass: rule.question.trim() !== "",
+      message: () =>
+        `Invalid 'question' on ${rule.nom}. Question can't be empty`,
     };
   },
   toContainValidCdtnType(rule: Rule) {
