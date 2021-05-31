@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.50.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.49.0...v4.50.0) (2021-05-31)
+
+
+### Bug Fixes
+
+* packages/code-du-travail-frontend/package.json to reduce vulnerabilities ([#3495](https://github.com/SocialGouv/code-du-travail-numerique/issues/3495)) ([43dc43a](https://github.com/SocialGouv/code-du-travail-numerique/commit/43dc43ade611fb7535b1f89ed4f389c335e41362))
+
+
+### Features
+
+* **google:** add Google Search Console validation file for Virginie ([#3524](https://github.com/SocialGouv/code-du-travail-numerique/issues/3524)) ([c5973be](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5973be3d44a5fd008ba8831fcb4fb8e486ec202))
+* **simulateur:** add retirement for ccn 413 ([#3491](https://github.com/SocialGouv/code-du-travail-numerique/issues/3491)) ([6cac343](https://github.com/SocialGouv/code-du-travail-numerique/commit/6cac3431d89540f29755984cc3ef34ba7edfa9b8))
+* **simulator:** add CC 275 to retirement notice simulator ([#3498](https://github.com/SocialGouv/code-du-travail-numerique/issues/3498)) ([f440e46](https://github.com/SocialGouv/code-du-travail-numerique/commit/f440e462c919e6f43444f3db02bea7f98bb9ffc0))
+* **simulator:** add CC 44 to retirement notice simulator ([#3488](https://github.com/SocialGouv/code-du-travail-numerique/issues/3488)) ([cb79899](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb79899c279816e94a1268e8d71c1224888acf66))
+* **simulator:** add CC 573 to retirement notice simulator ([#3500](https://github.com/SocialGouv/code-du-travail-numerique/issues/3500)) ([95fd1ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/95fd1cecdfd3924cc214217dca500ee5f5c4ee05))
+* **simulator:** add CC 675 to retirement notice simulator ([#3501](https://github.com/SocialGouv/code-du-travail-numerique/issues/3501)) ([2792208](https://github.com/SocialGouv/code-du-travail-numerique/commit/279220823259adb13c51bc21ca653e9fc7059a84))
+* **simulator:** add retirement for CC 650 ([#3499](https://github.com/SocialGouv/code-du-travail-numerique/issues/3499)) ([e95aead](https://github.com/SocialGouv/code-du-travail-numerique/commit/e95aead28d2df2e747736a397a91ae74848a2013))
+* **simulator:** show references on retirement notice simulator ([#3494](https://github.com/SocialGouv/code-du-travail-numerique/issues/3494)) ([87032ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/87032ad68a0cf46cca6504b510965807020763a0))
+
+
+
+
+
 # [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
 
 
