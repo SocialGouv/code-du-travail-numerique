@@ -90,7 +90,7 @@ Deploy @cdtn/api (dev):
   extends:
     - .deploy_api_stage
     - .dev_stage
-  image: ghcr.io/socialgouv/docker/helm:5.0.1
+  image: ghcr.io/socialgouv/docker/helm:0.28.0
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -103,7 +103,7 @@ Deploy @cdtn/api (prod):
   extends:
     - .deploy_api_stage
     - .prod_stage
-  image: ghcr.io/socialgouv/docker/helm:5.0.1
+  image: ghcr.io/socialgouv/docker/helm:0.28.0
   variables:
     ENABLE_APM: "false"
 #
@@ -128,7 +128,7 @@ Deploy @cdtn/frontend (dev):
   extends:
     - .deploy_frontend_stage
     - .dev_stage
-  image: ghcr.io/socialgouv/docker/helm:5.0.1
+  image: ghcr.io/socialgouv/docker/helm:0.28.0
   variables:
     HELM_RENDER_ARGS: >-
       --set autoscaling.enabled=false
@@ -140,7 +140,7 @@ Deploy @cdtn/frontend (dev):
 Deploy @cdtn/frontend (prod):
   <<: *deploy_frontend_stage
   <<: *prod_stage
-  image: ghcr.io/socialgouv/docker/helm:5.0.1
+  image: ghcr.io/socialgouv/docker/helm:0.28.0
 
 Deploy @cdtn/frontend extra ingress(prod):
   <<: *deploy_stage
