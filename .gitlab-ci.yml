@@ -8,7 +8,7 @@ include:
     ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
-    ref: v9.1.2
+    ref: v22.1.9
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
     ref: v22.1.9
