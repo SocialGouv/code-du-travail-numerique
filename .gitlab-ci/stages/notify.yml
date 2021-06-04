@@ -12,6 +12,7 @@ include:
 
 .notify_stage:
   stage: Notify Finished Deployment
+  image: ghcr.io/socialgouv/docker/git-deploy:6.17.0
   dependencies:
     - Notify Starting Deployment
   before_script:
