@@ -37,6 +37,32 @@ class PageContribution extends React.Component {
     return { data };
   }
 
+  function;
+
+  buildTitleAndDescription(breadcrumbs, conventionAnswer, title, description) {
+    if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
+      const titleWithThemeAndCC =
+        breadcrumbs[breadcrumbs.length - 1].label +
+        " - " +
+        conventionAnswer.shortName;
+      return {
+        description: title + " " + description,
+        title: titleWithThemeAndCC,
+      };
+    }
+    return {
+      description,
+      title,
+    };
+  }
+
+  buildDescription(title, description) {
+    if (title) {
+      return title + " " + description;
+    }
+    return description;
+  }
+
   render() {
     const {
       data: {
@@ -48,10 +74,16 @@ class PageContribution extends React.Component {
       content,
     } = this.props;
 
+    const metas = this.buildTitleAndDescription(
+      breadcrumbs,
+      answers.conventionAnswer,
+      title,
+      description
+    );
     return (
       <div>
         <Layout>
-          <Metas title={title} description={description} />
+          <Metas title={metas.title} description={metas.description} />
           <Answer
             title={title}
             relatedItems={relatedItems}
