@@ -3,7 +3,7 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_create_namespace_stage.yml
-    ref: v9.1.2
+    ref: v22.1.9
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
     ref: v9.1.2
