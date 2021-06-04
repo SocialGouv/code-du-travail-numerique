@@ -1,9 +1,4 @@
-import {
-  Action,
-  ActionName,
-  FormContent,
-  State,
-} from "../common/type/WizardType";
+import { Action, ActionName, FormContent, State } from "../common/type/WizardType";
 import Steps from "./steps";
 
 // Add only idcc number for Agreement asking for additional information
@@ -35,7 +30,7 @@ export const initialState: State = {
       name: "infos",
       skip: (values: FormContent): boolean => {
         if (
-          excludedCcnFromVoluntaryPath.includes(values.ccn.num) &&
+          excludedCcnFromVoluntaryPath.includes(values.ccn?.num) &&
           values["contrat salarié - mise à la retraite"] === "non"
         )
           return true;

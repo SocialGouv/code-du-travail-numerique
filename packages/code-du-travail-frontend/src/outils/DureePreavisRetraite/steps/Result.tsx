@@ -1,22 +1,13 @@
 import { Alert } from "@socialgouv/cdtn-ui";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";
 import Mdx from "../../../common/Mdx";
 import { Highlight, SectionTitle } from "../../common/stepStyles";
-import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
-function ResultStep({ form }: WizardStepProps): JSX.Element {
+function ResultStep(): JSX.Element {
   const publicodesContext = usePublicodes();
-
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [form]);
 
   const notifications = publicodesContext.getNotifications();
   const references = publicodesContext.getReferences();

@@ -22,6 +22,7 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );
 
@@ -56,6 +57,7 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );
 
@@ -66,7 +68,7 @@ test.each`
   ${24}
 `(
   "Pour un employé possédant $seniority mois d'ancienneté en départ à la retraite, on doit afficher une notification",
-  ({ seniority, expectedNotice }) => {
+  ({ seniority }) => {
     const result = getNotifications(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0573'",
@@ -101,7 +103,7 @@ test.each`
   ${24}     | ${"Cadres"}
 `(
   "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, on ne doit pas afficher de notification",
-  ({ seniority, category, expectedNotice }) => {
+  ({ seniority, category }) => {
     const result = getNotifications(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0573'",

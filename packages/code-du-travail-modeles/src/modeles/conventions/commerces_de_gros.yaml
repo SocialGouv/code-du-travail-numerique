@@ -5,6 +5,7 @@ contrat salarié . convention collective . commerces de gros:
   valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
+  applicable si: mise à la retraite
   question: Quelle est votre catégorie professionelle ?
   cdtn:
     type: liste

@@ -1,22 +1,35 @@
 import { getNotifications } from "@socialgouv/modeles-social";
 import { getReferences } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine from "publicodes";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-import { PublicodesContextInterface, SituationElement } from "./index";
+import type {
+  MissingArgs,
+  PublicodesContextInterface,
+  PublicodesResult,
+  SituationElement,
+} from "./index";
 
 interface State {
   engine: Engine;
   targetRule: string;
 }
 
+type PublicodeData = {
+  situation: Map<string, SituationElement>;
+  missingArgs: MissingArgs[];
+  result: PublicodesResult | null;
+};
+
 const usePublicodesHandler = ({
   engine,
   targetRule,
 }: State): PublicodesContextInterface => {
-  const [situation, setSituation] = useState<Map<string, SituationElement>>(
-    new Map()
-  );
+  const [data, setData] = useState<PublicodeData>({
+    missingArgs: [],
+    result: null,
+    situation: new Map(),
+  });
 
   function newSituation(args: Record<string, string>): void {
     const situation: Map<string, SituationElement> = new Map();
@@ -29,7 +42,14 @@ const usePublicodesHandler = ({
         value: value,
       });
     });
-    setSituation(situation);
+    engine.setSituation(buildSituation(situation));
+    const result = engine.evaluate(targetRule);
+
+    setData({
+      missingArgs: buildMissingArgs(result.missingVariables),
+      result: { unit: result.unit, value: result.nodeValue },
+      situation,
+    });
   }
 
   const buildSituation = (
@@ -42,11 +62,8 @@ const usePublicodesHandler = ({
     return situation;
   };
 
-  const missingArgs = useMemo(() => {
-    const result = engine
-      ?.setSituation(buildSituation(situation))
-      .evaluate(targetRule);
-    return Object.entries(result?.missingVariables ?? [])
+  const buildMissingArgs = (missingArgs: Record<string, number>) => {
+    return Object.entries(missingArgs)
       .map(([key, value]) => {
         const detail = engine.getRule(key);
         return {
@@ -56,27 +73,15 @@ const usePublicodesHandler = ({
         };
       })
       .sort((a, b) => b.indice - a.indice);
-  }, [engine, targetRule, situation]);
-
-  const value = useMemo(() => {
-    const result = engine
-      ?.setSituation(buildSituation(situation))
-      .evaluate(targetRule);
-
-    if (result === null) {
-      return null;
-    }
-
-    return { unit: result.unit, value: result.nodeValue };
-  }, [engine, targetRule, situation]);
+  };
 
   return {
     getNotifications: () => getNotifications(engine),
     getReferences: () => getReferences(engine),
-    missingArgs,
-    result: value,
+    missingArgs: data.missingArgs,
+    result: data.result,
     setSituation: newSituation,
-    situation: Array.from(situation.values()),
+    situation: Array.from(data.situation.values()),
   };
 };
 
