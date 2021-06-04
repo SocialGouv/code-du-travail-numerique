@@ -3,7 +3,7 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_create_namespace_stage.yml
-    ref: v22.1.9
+    ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_nodejs_chart_stage.yml
     ref: v9.1.2
@@ -17,6 +17,9 @@ Create namespace:
   extends:
     - .base_create_namespace_stage
     - .dev_stage
+  image:
+    name: ghcr.io/socialgouv/docker/kubectl:0.28.0
+    entrypoint: [""]
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
   stage: "Registration"
