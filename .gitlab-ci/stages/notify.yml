@@ -3,7 +3,7 @@
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_notify_github_stage.yml
-    ref: v22.1.9
+    ref: v9.1.1
   - project: SocialGouv/gitlab-ci-yml
     file: /base_delete_useless_k8s_ns_stage.yml
     ref: v17.0.0
@@ -12,6 +12,7 @@ include:
 
 .notify_stage:
   stage: Notify Finished Deployment
+  image: ghcr.io/socialgouv/docker/git-deploy:6.17.0
   dependencies:
     - Notify Starting Deployment
   before_script:
