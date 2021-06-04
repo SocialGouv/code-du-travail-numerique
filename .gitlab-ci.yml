@@ -11,10 +11,10 @@ include:
     ref: v9.1.2
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
-    ref: v20.7.11
+    ref: v22.1.8
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_kaniko_stage.yml
-    ref: v20.7.11
+    ref: v22.1.8
 
   #
   - /.gitlab-ci/variables.yml
