@@ -1,13 +1,25 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { useEffect } from "react";
 import { Field } from "react-final-form";
 
 import { ErrorField } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { RadioContainer } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { required } from "../../common/validators";
+import { usePublicodes } from "../../publicodes";
+import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
-function OrigineStep(): JSX.Element {
+function OrigineStep({ form }: WizardStepProps): JSX.Element {
+  const publicodesContext = usePublicodes();
+
+  useEffect(() => {
+    publicodesContext.setSituation(
+      mapToPublicodesSituation(form.getState().values)
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form]);
+
   return (
     <>
       <Question as="p" required>
