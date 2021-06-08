@@ -5,7 +5,7 @@ contrat salarié . convention collective . habillement commerce succursales:
   valeur: oui
 
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
-  question: Quel est votre catégorie professionnelle ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   titre: Catégorie professionnelle
   cdtn:
     type: liste

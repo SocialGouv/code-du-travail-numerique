@@ -5,7 +5,7 @@ contrat salarié . convention collective . établissement handicap:
   valeur: oui
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
-  question: Quelle est votre catégorie professionelle ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   titre: Catégorie professionnelle
   cdtn:
     type: liste

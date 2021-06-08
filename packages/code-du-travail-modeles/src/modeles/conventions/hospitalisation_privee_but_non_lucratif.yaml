@@ -6,7 +6,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle:
   titre: Catégorie professionnelle
-  question: Quelle est votre catégorie professionelle ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
