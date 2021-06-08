@@ -23,7 +23,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient:
   titre: Coefficient
-  question: Quel est votre coefficient ?
+  question: Quel est le coefficient du salarié ?
   cdtn:
     type: liste
     valeurs:

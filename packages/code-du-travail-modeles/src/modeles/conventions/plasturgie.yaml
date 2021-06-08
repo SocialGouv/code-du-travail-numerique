@@ -30,7 +30,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
   valeur: oui
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient:
-  question: Quelle est votre coefficient ?
+  question: Quel est le coefficient du salarié ?
   titre: Coefficient
   cdtn:
     type: liste
