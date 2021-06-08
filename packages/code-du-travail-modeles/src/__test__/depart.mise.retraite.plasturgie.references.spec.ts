@@ -10,12 +10,12 @@ const engine = new Engine(mergeModels());
 
 const CadreReferences = [
   {
-    article: "Article 28 et Avenant Cadres",
+    article: "Article 28",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856",
   },
   {
-    article: "Article 8",
+    article: "Article 8 et Avenant Cadres",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856728/?idConteneur=KALICONT000005635856",
   },
@@ -23,12 +23,12 @@ const CadreReferences = [
 
 const CollaborateursReferences = [
   {
-    article: "Article 28 et Avenant Collaborateurs",
+    article: "Article 28",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856",
   },
   {
-    article: "Article 15",
+    article: "Article 15 de l'Avenant \"Ouvriers, collaborateurs, employés, techniciens, dessinateurs et agents de maîtrise\"",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856709/?idConteneur=KALICONT000005635856",
   },
