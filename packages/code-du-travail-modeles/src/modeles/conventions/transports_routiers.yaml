@@ -111,5 +111,5 @@ contrat salarié . convention collective . transports routiers . catégorie prof
       - mise à la retraite
       - groupe >= 6
   type: notification
-  description: Le salarié pourra quitter son emploi après avoir exécuté un préavis de 1 mois sous réserve d’en avoir informé son employeur au moins 10 jours à l’avance. Dans ce cas, il n’a droit qu’à la rémunération correspondant au temps qu’il a effectivement travaillé (et éventuellement une indemnité de congédiement).
+  description: Le salarié pourra quitter son emploi après avoir exécuté un préavis de 1 mois sous réserve d’en avoir informé son employeur au moins 10 jours à l’avance.
   valeur: oui
