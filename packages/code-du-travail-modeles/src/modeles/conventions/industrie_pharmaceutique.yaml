@@ -6,7 +6,7 @@ contrat salarié . convention collective . industrie pharmaceutique:
 
 contrat salarié . convention collective . industrie pharmaceutique . groupe:
   titre: Groupe
-  question: Quel est votre groupe ?
+  question: Quel est le groupe du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -19,7 +19,7 @@ contrat salarié . convention collective . industrie pharmaceutique . groupe:
 
 contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019:
   titre: Contrat de travail conclu après le 1er juillet 2019
-  question: Avez vous conclu votre contrat de travail après le 1er juillet 2019 ?
+  question: Le contrat de travail a-t-il été conclu après le 1er juillet 2019 ?
   cdtn:
     type: oui-non
 
@@ -41,7 +41,7 @@ contrat salarié . convention collective . industrie pharmaceutique . conclu apr
         - montant: 2 mois
           plafond: 4
         - montant: 3 mois
-          plafond: 5
+          plafond: 6
         - montant: 4 mois
 
 contrat salarié . convention collective . industrie pharmaceutique . préavis de départ à la retaite:
@@ -65,8 +65,21 @@ contrat salarié . convention collective . industrie pharmaceutique . préavis d
 contrat salarié . convention collective . industrie pharmaceutique . notification:
   applicable si:
     toutes ces conditions:
+      - conclu après 1 juillet 2019
       - groupe >= 4
       - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
   type: notification
-  description: Cette durée s'applique si les salariés ne bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947.
+  description: Cette durée ne s'applique que si les salariés ne bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947.
+  valeur: oui
+
+contrat salarié . convention collective . industrie pharmaceutique . notification 2:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - groupe <= 3
+      - conclu après 1 juillet 2019 = non
+      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+  type: notification
+  description: |
+    Attention : L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail.
   valeur: oui
