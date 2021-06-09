@@ -22,7 +22,7 @@ const SearchResults = ({
   });
 
   useEffect(() => {
-    setArticleQuery(classifyTokens(query.split(" ")).includes(true));
+    setArticleQuery(classifyTokens(query.split(" ")).includes("B-ART"));
   }, [query]);
 
   return (
