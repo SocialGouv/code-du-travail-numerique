@@ -35,6 +35,7 @@
     "@socialgouv/fiches-travail-data": "^4.123.0",
     "@socialgouv/modeles-social": "^4.50.0",
     "@socialgouv/react-fiche-service-public": "^4.48.0",
+    "@socialgouv/reference-article": "^1.0.1",
     "@ungap/url-search-params": "^0.2.2",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.19.0",

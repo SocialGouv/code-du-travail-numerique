@@ -2619,6 +2619,11 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.123.0.tgz#5ce0958faabf408382e538ebcc946e10bb0f5dd6"
   integrity sha512-zklDUC03nMSqJ3EW2kGywEMd8zbEuwdo264S9kRiihCuBZNQWPq/lKDzxZGSE8TqxwKKrzwOKz0mDYMqO2Gh9Q==
 
+"@socialgouv/reference-article@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/reference-article/-/reference-article-1.0.1.tgz#9fd791dd1e8c119bb013f5c78ab0f85975ed7d05"
+  integrity sha512-WJtKEuJHZX7ImpKg1+AzCgSRA2+G3vImT+H4HWZ+v/23Qe8lNqZ61rJJdRiOJ04IrLfRt34vREuX2+GYBPpgaQ==
+
 "@storybook/addon-a11y@^6.1.21":
   version "6.1.21"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.1.21.tgz#28e44c9f3b7b9e8a319f59b112092fb9aa15fb96"
