@@ -1,4 +1,4 @@
-import { theme, Toast } from "@socialgouv/cdtn-ui";
+import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
@@ -15,7 +15,7 @@ export const CONVENTION_NAME = "ccn";
 
 type Props = {
   form: FormApi<FormContent>;
-  supportedCcn: Array<number>;
+  supportedCcn?: Array<number>;
   isOptional: boolean;
 };
 
@@ -74,8 +74,24 @@ function StepInfoCCn({
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
-                {!supportedCcn.includes(input.value.num) && (
-                  <p>Cette CC n est pas supporté</p>
+                {supportedCcn && !supportedCcn.includes(input.value.num) && (
+                  <Alert variant="primary">
+                    <p>
+                      <Text
+                        variant="primary"
+                        fontSize="hsmall"
+                        fontWeight="700"
+                      >
+                        A noter
+                      </Text>
+                    </p>
+                    La convention collective sélectionnée n&apos;a pas été
+                    traitée par nos services. Vous pouvez poursuivre la
+                    simulation pour connaitre la durée prévue par le code du
+                    travail mais nous vous conseillons de vérifier si votre
+                    convention collective prévoit un délai plus favorable qui
+                    vous serait applicable.
+                  </Alert>
                 )}
               </>
             );

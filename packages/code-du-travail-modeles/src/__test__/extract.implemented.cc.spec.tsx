@@ -2,12 +2,18 @@ import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
 import { extractImplementedCc } from "../internal/ExtractSupportedCc";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(
+  mergeModels([
+    "industries_chimiques.yaml",
+    "industrie_pharmaceutique.yaml",
+    "metallurgie_ingenieurs_cadres.yaml",
+  ])
+);
 
 test("Extract all supported CC from the YAML modeles", () => {
   const result = extractImplementedCc(engine);
 
-  expect(result).toContain(expect.arrayContaining([44, 176, 650]));
+  expect(result).toEqual(expect.arrayContaining([176, 44, 650]));
 });
 
 test("Check all convention collective has a IDCC property", () => {
