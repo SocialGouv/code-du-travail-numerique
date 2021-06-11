@@ -21,3 +21,15 @@ allCc.forEach((idcc) => {
     });
   });
 });
+
+test("Vérification que toutes les règles avec une question ont bien un titre avec un type cdtn", () => {
+  Object.values(engine.getParsedRules())
+    .filter(
+      (rule) => rule.rawNode.nom !== "contrat salarié . convention collective"
+    )
+    .filter((rule) => rule.rawNode.question !== undefined)
+    .forEach((rule) => {
+      expect(rule.rawNode).toContainTitre();
+      expect(rule.rawNode).toContainValidCdtnType();
+    });
+});

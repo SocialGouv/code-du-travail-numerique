@@ -31,6 +31,7 @@ contrat salarié . convention collective . plasturgie . catégorie professionnel
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient:
   question: Quelle est votre coefficient ?
+  titre: Coefficient
   cdtn:
     type: liste
     valeurs:

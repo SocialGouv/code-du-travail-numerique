@@ -18,7 +18,7 @@ function SituationInput({ element, form }: PublicodesInputProps): JSX.Element {
     case RuleType.Liste:
       return <>{reverseValues(element.rawNode.cdtn.valeurs)[element.value]}</>;
     case RuleType.OuiNon:
-      return <>{element.value}</>;
+      return <>{element.value === "oui" ? "Oui" : "Non"}</>;
   }
   return (
     <>
