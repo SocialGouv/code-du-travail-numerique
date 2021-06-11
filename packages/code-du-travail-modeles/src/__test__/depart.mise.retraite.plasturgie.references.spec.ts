@@ -15,7 +15,7 @@ const CadreReferences = [
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856",
   },
   {
-    article: "Article 8 et Avenant Cadres",
+    article: "Article 8 de l'Avenant Cadres",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856728/?idConteneur=KALICONT000005635856",
   },
