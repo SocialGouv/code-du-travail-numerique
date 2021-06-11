@@ -46,6 +46,19 @@ const MiseRetraiteGroup4PharmaReferences = [
   },
 ];
 
+const MiseRetraiteGroup1a3PharmaReferences = [
+  {
+    article: "Article 35",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109",
+  },
+  {
+    article: "Article 32.2",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
+  },
+];
+
 test.each`
   retirement  | expectedReferences
   ${"mise"}   | ${MiseRetraiteReferences.concat(MiseRetraitePharmaReferences)}
@@ -84,6 +97,25 @@ test("Vérification des références juridiques pour un employé du groupe 4 en 
   expect(result).toEqual(
     expect.arrayContaining(
       MiseRetraiteReferences.concat(MiseRetraiteGroup4PharmaReferences)
+    )
+  );
+});
+
+test("Vérification des références juridiques pour un employé du groupe 1 à 3 en mise à la retraite", () => {
+  const result = getReferences(
+    engine.setSituation({
+      "contrat salarié . convention collective": "'IDCC0176'",
+      "contrat salarié . ancienneté": 6,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+        "non",
+      "contrat salarié . convention collective . industrie pharmaceutique . groupe": 2,
+    })
+  );
+
+  expect(result).toEqual(
+    expect.arrayContaining(
+      MiseRetraiteReferences.concat(MiseRetraiteGroup1a3PharmaReferences)
     )
   );
 });
