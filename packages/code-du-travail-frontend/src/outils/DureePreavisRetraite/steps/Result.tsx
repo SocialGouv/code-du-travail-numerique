@@ -3,10 +3,12 @@ import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";
 import Mdx from "../../../common/Mdx";
+import PubliSituation from "../../common/PubliSituation";
 import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
 
-function ResultStep(): JSX.Element {
+function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
   const notifications = publicodesContext.getNotifications();
@@ -33,6 +35,10 @@ function ResultStep(): JSX.Element {
           ))}
         </Alert>
       )}
+      <PubliSituation
+        situation={publicodesContext.situation}
+        form={form.getState().values}
+      />
       {references.length > 0 && (
         <>
           <SectionTitle>Source</SectionTitle>

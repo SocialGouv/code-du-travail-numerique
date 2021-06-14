@@ -5,6 +5,7 @@ contrat salarié . convention collective . transport aérien personnel au sol:
   valeur: oui
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle:
+  titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste

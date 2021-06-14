@@ -1,11 +1,19 @@
 contrat salarié: oui
 contrat salarié . ancienneté:
-  title: Ancienneté du salarié
+  titre: Ancienneté du salarié
   question: Quel est votre ancienneté en mois ?
+  unité: mois
+  cdtn:
+    type: entier
 
 contrat salarié . mise à la retraite:
-  title: Origine du départ à la retraite
+  titre: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
+  cdtn:
+    type: liste
+    valeurs:
+      Mise à la retraite: oui
+      Départ à la retraite: non
 
 contrat salarié . départ à la retraite:
   valeur: mise à la retraite = non
@@ -60,5 +68,6 @@ contrat salarié . préavis de retraite . tranches:
 contrat salarié . préavis de retraite collective: non
 
 contrat salarié . convention collective:
+  titre: Convention collective
   question: Quelle est votre convention collective ?
   par défaut: "''"

@@ -5,6 +5,7 @@ contrat salarié . convention collective . transports routiers:
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle:
+  titre: Catégorie professionnelle
   question: Quelle est votre catégorie professionelle ?
   cdtn:
     type: liste
@@ -41,6 +42,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe:
   question: Quelle est votre groupe ?
+  titre: Groupe
   cdtn:
     type: liste
     valeurs:
