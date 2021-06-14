@@ -28,7 +28,8 @@ const CollaborateursReferences = [
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856",
   },
   {
-    article: "Article 15 de l'Avenant \"Ouvriers, collaborateurs, employés, techniciens, dessinateurs et agents de maîtrise\"",
+    article:
+      'Article 15 de l\'Avenant "Ouvriers, collaborateurs, employés, techniciens, dessinateurs et agents de maîtrise"',
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856709/?idConteneur=KALICONT000005635856",
   },
@@ -51,6 +52,8 @@ test.each`
           "'Cadres'",
       })
     );
+
+    expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
   }
 );
@@ -73,6 +76,8 @@ test.each`
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": 800,
       })
     );
+
+    expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
   }
 );

@@ -15,14 +15,14 @@ const CadreReferences = [
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851149/?idConteneur=KALICONT000005635617",
   },
 ];
-const MiseRetraiteEmployesReferences = [
+const RetraiteEmployesReferences = [
   {
     article: "Article 38",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851078/?idConteneur=KALICONT000005635617",
   },
 ];
-const MiseRetraiteAgentsMaitriseReferences = [
+const RetraiteAgentsMaitriseReferences = [
   {
     article: "Article 9 de l'avenant maitrise",
     url:
@@ -34,10 +34,10 @@ test.each`
   retirement  | category                | expectedReferences
   ${"mise"}   | ${"Cadres"}             | ${MiseRetraiteReferences.concat(CadreReferences)}
   ${"départ"} | ${"Cadres"}             | ${DepartRetraiteReferences.concat(CadreReferences)}
-  ${"mise"}   | ${"Employés"}           | ${MiseRetraiteReferences.concat(MiseRetraiteEmployesReferences)}
-  ${"départ"} | ${"Employés"}           | ${DepartRetraiteReferences}
-  ${"mise"}   | ${"Agents de maîtrise"} | ${MiseRetraiteReferences.concat(MiseRetraiteAgentsMaitriseReferences)}
-  ${"départ"} | ${"Agents de maîtrise"} | ${DepartRetraiteReferences}
+  ${"mise"}   | ${"Employés"}           | ${MiseRetraiteReferences.concat(RetraiteEmployesReferences)}
+  ${"départ"} | ${"Employés"}           | ${DepartRetraiteReferences.concat(RetraiteEmployesReferences)}
+  ${"mise"}   | ${"Agents de maîtrise"} | ${MiseRetraiteReferences.concat(RetraiteAgentsMaitriseReferences)}
+  ${"départ"} | ${"Agents de maîtrise"} | ${DepartRetraiteReferences.concat(RetraiteAgentsMaitriseReferences)}
 `(
   "Vérification des références juridiques pour un $category en $retirement à la retraite",
   ({ retirement, category, expectedReferences }) => {
@@ -51,6 +51,7 @@ test.each`
       })
     );
 
+    expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
   }
 );
