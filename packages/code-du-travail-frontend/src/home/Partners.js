@@ -13,7 +13,7 @@ export function Partners() {
         <Flex>
           <Link
             href="https://service-public.fr"
-            title="aller sur le vite service-public.fr"
+            title="aller sur le site service-public.fr"
             className="no-after"
           >
             <Image
