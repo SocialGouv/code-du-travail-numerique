@@ -1,0 +1,56 @@
+# Convention collective nationale de commerces de gros du 23 juin 1970.
+contrat salarié . convention collective . commerces de gros:
+  description: Convention collective nationale de commerces de gros du 23 juin 1970.
+  applicable si: convention collective = 'IDCC0573'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
+  applicable si: mise à la retraite
+  titre: Catégorie professionnelle
+  question: Quelle est votre catégorie professionelle ?
+  cdtn:
+    type: liste
+    valeurs:
+      Ouvriers: "'Ouvriers'"
+      Employés: "'Employés'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Techniciens: "'Techniciens'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . Non cadres:
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Ouvriers'
+      - catégorie professionnelle = 'Employés'
+      - catégorie professionnelle = 'Agents de maîtrise'
+      - catégorie professionnelle = 'Techniciens'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . Non cadres . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 41: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026801989/?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . Cadres . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 6 mois
+  références:
+    Avenant n°I relatif aux cadres Article 5: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005836506/?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . notification départ à la retraite:
+  applicable si: départ à la retraite
+  type: notification
+  description: |
+    Pour les salariés qui relèvent de l'ancienne convention collective du commerce de gros de la confiserie, chocolaterie, biscuiterie et alimentation fine et des négociants-distributeurs de levure, la durée du préavis est égale à **3** mois, si le salarié :
+      * a une ancienneté supérieure à 2 ans dans l'entreprise,
+      * et ; souhaite prendre sa retraite à compter de 65 ans révolus,
+      * et a un contrat de travail en cours d’exécution le 21 février 2019 qui dépend de l'ancienne convention collective.
+    Le préavis se terminera au dernier jour du trimestre civil.
+  valeur: oui

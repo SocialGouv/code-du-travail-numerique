@@ -1,7 +1,10 @@
-import { Action, ActionName, State } from "../common/type/WizardType";
+import { Action, ActionName, FormContent, State } from "../common/type/WizardType";
 import Steps from "./steps";
 
-const supportedCcn = [16, 176, 292];
+// Add only idcc number for Agreement asking for additional information
+const supportedCcn = [16, 29, 44, 176, 275, 292, 413, 573, 675];
+// Add only idcc number for Agreement skipping the information step in case of 'départ à la retraite'
+const excludedCcnFromVoluntaryPath = [44, 573];
 
 export const initialState: State = {
   stepIndex: 0,
@@ -25,7 +28,14 @@ export const initialState: State = {
       component: Steps.Informations,
       label: "Informations",
       name: "infos",
-      skip: (values) => !values.ccn || !supportedCcn.includes(values.ccn.num),
+      skip: (values: FormContent): boolean => {
+        if (
+          excludedCcnFromVoluntaryPath.includes(values.ccn?.num) &&
+          values["contrat salarié - mise à la retraite"] === "non"
+        )
+          return true;
+        return !values.ccn || !supportedCcn.includes(values.ccn.num);
+      },
     },
     {
       component: Steps.AncienneteStep,

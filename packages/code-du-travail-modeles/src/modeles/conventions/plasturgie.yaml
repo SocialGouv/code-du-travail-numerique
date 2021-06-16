@@ -4,7 +4,8 @@ contrat salarié . convention collective . plasturgie:
   applicable si: convention collective = 'IDCC0292'
   valeur: oui
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle:
+contrat salarié . convention collective . plasturgie . catégorie professionnelle:
+  titre: Catégorie professionnelle
   question: Quelle est votre catégorie professionelle ?
   cdtn:
     type: liste
@@ -12,28 +13,32 @@ contrat salarié . convention collective . plasturgie . catégorie profressionne
       Cadres: "'Cadres'"
       Collaborateurs: "'Collaborateurs'"
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Cadres:
-  applicable si: catégorie profressionnelle = 'Cadres'
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
   valeur: oui
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Cadres . préavis de retaite:
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Cadres . préavis de retaite:
   titre: Préavis de retraite pour un cadre
   remplace: contrat salarié . préavis de retraite collective
-  formule: 3 mois
+  valeur: 3 mois
+  références:
+    Article 28 et Avenant Cadres: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856
+    Article 8: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856728/?idConteneur=KALICONT000005635856
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs:
-  applicable si: catégorie profressionnelle = 'Collaborateurs'
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs:
+  applicable si: catégorie professionnelle = 'Collaborateurs'
   valeur: oui
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . coefficient:
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient:
   question: Quelle est votre coefficient ?
+  titre: Coefficient
   cdtn:
     type: liste
     valeurs:
       "Entre 700 et 750": 700
       "Entre 800 et 830": 800
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite tranches:
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . préavis de retaite tranches:
   titre: Tranches du préavis de retraite pour un collaborateur
   variations:
     - si: coefficient >= 800
@@ -44,16 +49,10 @@ contrat salarié . convention collective . plasturgie . catégorie profressionne
             alors: 1 mois
           - sinon: 2 mois
   références:
-    - source: covention collective
-      article: Article 28
-      lien: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856
-      code: KALIARTI000005856351
-    - source: covention collective
-      article: Article 8
-      url: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856728/?idConteneur=KALICONT000005635856
-      code: KALIARTI000005856728
+    Article 28 et Avenant Collaborateurs: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856351/?idConteneur=KALICONT000005635856
+    Article 15: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005856709/?idConteneur=KALICONT000005635856
 
-contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite:
+contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . préavis de retaite:
   titre: Préavis de retraite pour un collaborateur
   remplace: contrat salarié . préavis de retraite collective
-  valeur: contrat salarié . convention collective . plasturgie . catégorie profressionnelle . Collaborateurs . préavis de retaite tranches
+  valeur: contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . préavis de retaite tranches

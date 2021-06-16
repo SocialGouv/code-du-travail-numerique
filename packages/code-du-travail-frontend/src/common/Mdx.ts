@@ -1,11 +1,16 @@
-import { createElement } from "react";
+import React, { createElement } from "react";
 import raw from "rehype-raw";
 import rehype2react from "rehype-react";
 import markdownParser from "remark-parse";
 import remark2rehype from "remark-rehype";
 import unified from "unified";
 
-const Mdx = ({ markdown, components = {} }) => {
+type Props = {
+  markdown: string;
+  components?: any[];
+};
+
+const Mdx: React.FC<Props> = ({ markdown, components = {} }) => {
   // @lionelb: we wrapped the <Content /> tag with a div to avoid have it wrapped with a paragraph
   const wrappedMarkdown = markdown.replace(
     /(<Content [^>]+><\/Content>)/,
@@ -19,7 +24,7 @@ const Mdx = ({ markdown, components = {} }) => {
       components,
       createElement,
     })
-    .processSync(wrappedMarkdown).result;
+    .processSync(wrappedMarkdown).result as JSX.Element;
 };
 
 export default Mdx;

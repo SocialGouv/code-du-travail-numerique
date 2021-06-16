@@ -17,6 +17,7 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
       })
@@ -24,6 +25,7 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );
 
@@ -41,6 +43,7 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
       })
@@ -48,5 +51,6 @@ test.each`
 
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
   }
 );

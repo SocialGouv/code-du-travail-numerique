@@ -1,10 +1,11 @@
 import { Notification } from "@socialgouv/modeles-social";
+import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine, { Evaluation, Rule as PubliRule, Unit } from "publicodes";
-import React, { createContext, useContext } from "react";
+import React, { createContext, useMemo } from "react";
 
 import usePublicodesHandler from "./Handler";
 
-interface MissingArgs {
+export interface MissingArgs {
   name: string;
   indice: number;
   rawNode: Rule;
@@ -39,14 +40,16 @@ export interface PublicodesResult {
 
 export interface PublicodesContextInterface {
   getNotifications: () => Notification[];
+  getReferences: () => References[];
   result?: PublicodesResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
 }
 
-const publicodesContext = createContext<PublicodesContextInterface>({
+const PublicodesContext = createContext<PublicodesContextInterface>({
   getNotifications: () => [],
+  getReferences: () => [],
   missingArgs: [],
   result: null,
   setSituation: () => {
@@ -56,10 +59,12 @@ const publicodesContext = createContext<PublicodesContextInterface>({
 });
 
 export function usePublicodes(): PublicodesContextInterface {
-  return useContext(publicodesContext) as PublicodesContextInterface;
+  const context = React.useContext(PublicodesContext);
+  if (context === undefined) {
+    throw new Error("usePublicodes must be used within a PublicodesProvider");
+  }
+  return context;
 }
-
-const { Provider } = publicodesContext;
 
 export const PublicodesProvider: React.FC<
   { children: React.ReactNode } & {
@@ -67,22 +72,34 @@ export const PublicodesProvider: React.FC<
     targetRule: string;
   }
 > = ({ children, rules, targetRule }) => {
+  const engine = useMemo(() => {
+    return new Engine(rules);
+  }, [rules]);
+
   const {
     getNotifications,
+    getReferences,
     result,
     missingArgs,
     setSituation,
     situation,
   } = usePublicodesHandler({
-    engine: new Engine(rules),
+    engine: engine,
     targetRule: targetRule,
   });
 
   return (
-    <Provider
-      value={{ getNotifications, missingArgs, result, setSituation, situation }}
+    <PublicodesContext.Provider
+      value={{
+        getNotifications,
+        getReferences,
+        missingArgs,
+        result,
+        setSituation,
+        situation,
+      }}
     >
       {children}
-    </Provider>
+    </PublicodesContext.Provider>
   );
 };

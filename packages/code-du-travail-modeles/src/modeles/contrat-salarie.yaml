@@ -1,55 +1,60 @@
 contrat salarié: oui
 contrat salarié . ancienneté:
-  title: Ancienneté du salarié
+  titre: Ancienneté du salarié
   question: Quel est votre ancienneté en mois ?
+  unité: mois
+  cdtn:
+    type: entier
 
 contrat salarié . mise à la retraite:
-  title: Origine du départ à la retraite
+  titre: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
+  cdtn:
+    type: liste
+    valeurs:
+      Mise à la retraite: oui
+      Départ à la retraite: non
+
+contrat salarié . départ à la retraite:
+  valeur: mise à la retraite = non
 
 contrat salarié . préavis de retraite: 0 mois
 
-contrat salarié . préavis de retraite . inférieur à 6 mois:
-  applicable si: ancienneté < 6 mois
-  remplace: contrat salarié . préavis de retraite
-  valeur: contrat salarié . préavis de retraite collective
-
 contrat salarié . préavis de retraite . mise à la retraite:
-  applicable si: contrat salarié . mise à la retraite
-  non applicable si: ancienneté < 6 mois
+  applicable si: mise à la retraite
   remplace: contrat salarié . préavis de retraite
-  valeur:
-    le maximum de:
-      - contrat salarié . préavis de retraite légale
-      - contrat salarié . préavis de retraite collective
+  variations:
+    - si:
+        toutes ces conditions:
+          - ancienneté < 6 mois
+          - préavis de retraite collective # Hack pour empêcher que la règle ne soit pas évaluer
+      alors: contrat salarié . préavis de retraite collective
+    - sinon:
+        le maximum de:
+          - contrat salarié . préavis de retraite . tranches
+          - contrat salarié . préavis de retraite collective
+  références:
+    Article L1237-6: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
 
 contrat salarié . préavis de retraite . départ à la retraite:
-  applicable si: contrat salarié . mise à la retraite = non
-  non applicable si: ancienneté < 6 mois
+  applicable si: départ à la retraite
   remplace: contrat salarié . préavis de retraite
-  valeur:
-    le minimum de:
-      - contrat salarié . préavis de retraite légale
-      - contrat salarié . préavis de retraite collective
-
-contrat salarié . préavis de retraite légale:
-  titre: Préavis de départ légale
-  valeur: contrat salarié . préavis de retraite tranches
+  variations:
+    - si:
+        toutes ces conditions:
+          - ancienneté < 6 mois
+          - préavis de retraite collective # Hack pour empêcher que la règle ne soit pas évaluer
+      alors: contrat salarié . préavis de retraite collective
+    - sinon:
+        le minimum de:
+          - contrat salarié . préavis de retraite . tranches
+          - contrat salarié . préavis de retraite collective
   références:
-    - source: code du travail
-      article: L1237-10
-      lien: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
-      code: LEGIARTI000006901184
-    - source: code du travail
-      article: L1234-1
-      url: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
-      code: LEGIARTI000006901112
-    - source: code du travail
-      article: L1237-6
-      url: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
-      code: LEGIARTI000006901180
+    Article L1237-10: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
+    Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
 
-contrat salarié . préavis de retraite tranches:
+contrat salarié . préavis de retraite . tranches:
   titre: Tranches du préavis de départ dans le code du travail
   grille:
     assiette: ancienneté
@@ -63,5 +68,6 @@ contrat salarié . préavis de retraite tranches:
 contrat salarié . préavis de retraite collective: non
 
 contrat salarié . convention collective:
+  titre: Convention collective
   question: Quelle est votre convention collective ?
   par défaut: "''"

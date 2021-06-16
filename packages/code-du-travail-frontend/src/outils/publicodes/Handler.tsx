@@ -1,38 +1,77 @@
 import { getNotifications } from "@socialgouv/modeles-social";
+import { getReferences } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine from "publicodes";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-import { PublicodesContextInterface, SituationElement } from "./index";
+import type {
+  MissingArgs,
+  PublicodesContextInterface,
+  PublicodesResult,
+  SituationElement,
+} from "./index";
 
 interface State {
   engine: Engine;
   targetRule: string;
 }
 
+type PublicodeData = {
+  situation: Array<SituationElement>;
+  missingArgs: MissingArgs[];
+  result: PublicodesResult | null;
+};
+
 const usePublicodesHandler = ({
   engine,
   targetRule,
 }: State): PublicodesContextInterface => {
-  const [situation, setSituation] = useState<Map<string, SituationElement>>(
-    new Map()
-  );
+  const [data, setData] = useState<PublicodeData>({
+    missingArgs: [],
+    result: null,
+    situation: [],
+  });
 
   function newSituation(args: Record<string, string>): void {
-    const situation: Map<string, SituationElement> = new Map();
-    Object.entries(args).forEach(([key, value]) => {
-      const publiKey = key.replace(/ - /g, " . ");
-      const detail = engine.getRule(publiKey);
-      situation.set(publiKey, {
-        name: key,
-        rawNode: detail.rawNode,
-        value: value,
-      });
+    // Situation is an array to keep the order of the answers
+    const currentSituation = data.situation;
+    const newSituation: SituationElement[] = [];
+
+    // Update the current situation with new values
+    currentSituation.forEach((element) => {
+      // Keep the data only if always here in the form
+      if (args[element.name]) {
+        newSituation.push({
+          name: element.name,
+          rawNode: element.rawNode,
+          value: args[element.name],
+        });
+      }
     });
-    setSituation(situation);
+    // Add the new entries from the form
+    Object.entries(args).forEach(([key, value]) => {
+      if (!newSituation.find((element) => element.name === key)) {
+        const publiKey = key.replace(/ - /g, " . ");
+        const detail = engine.getRule(publiKey);
+        newSituation.push({
+          name: key,
+          rawNode: detail.rawNode,
+          value: value,
+        });
+      }
+    });
+
+    engine.setSituation(buildSituation(newSituation));
+    const result = engine.evaluate(targetRule);
+
+    setData({
+      missingArgs: buildMissingArgs(result.missingVariables),
+      result: { unit: result.unit, value: result.nodeValue },
+      situation: newSituation,
+    });
   }
 
   const buildSituation = (
-    map: Map<string, SituationElement>
+    map: Array<SituationElement>
   ): Record<string, string> => {
     const situation: Record<string, string> = {};
     map.forEach((arg) => {
@@ -41,11 +80,8 @@ const usePublicodesHandler = ({
     return situation;
   };
 
-  const missingArgs = useMemo(() => {
-    const result = engine
-      ?.setSituation(buildSituation(situation))
-      .evaluate(targetRule);
-    return Object.entries(result?.missingVariables ?? [])
+  const buildMissingArgs = (missingArgs: Record<string, number>) => {
+    return Object.entries(missingArgs)
       .map(([key, value]) => {
         const detail = engine.getRule(key);
         return {
@@ -55,26 +91,15 @@ const usePublicodesHandler = ({
         };
       })
       .sort((a, b) => b.indice - a.indice);
-  }, [engine, targetRule, situation]);
-
-  const value = useMemo(() => {
-    const result = engine
-      ?.setSituation(buildSituation(situation))
-      .evaluate(targetRule);
-
-    if (result === null) {
-      return null;
-    }
-
-    return { unit: result.unit, value: result.nodeValue };
-  }, [engine, targetRule, situation]);
+  };
 
   return {
     getNotifications: () => getNotifications(engine),
-    missingArgs,
-    result: value,
+    getReferences: () => getReferences(engine),
+    missingArgs: data.missingArgs,
+    result: data.result,
     setSituation: newSituation,
-    situation: Array.from(situation.values()),
+    situation: Array.from(data.situation.values()),
   };
 };
 

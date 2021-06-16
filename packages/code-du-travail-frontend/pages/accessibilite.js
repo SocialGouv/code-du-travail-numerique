@@ -32,7 +32,7 @@ const Accessibilite = () => (
           </p>
           <p>
             À cette fin, il met en œuvre la stratégie et l’action suivante :
-            réalisation d’un audit de conformité à la milieu de l’année 2021.
+            réalisation d’un audit de conformité au milieu de l’année 2021.
           </p>
           <p>
             Cette déclaration d’accessibilité s’applique au site Internet
