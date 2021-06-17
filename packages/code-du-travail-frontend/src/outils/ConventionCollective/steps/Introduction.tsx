@@ -40,7 +40,7 @@ const IntroductionStep = (): JSX.Element => {
             </Text>
             <ButtonWrapper>
               <Button variant="link" as="div">
-                Je la saisie
+                Je la saisis
               </Button>
             </ButtonWrapper>
           </Tile>

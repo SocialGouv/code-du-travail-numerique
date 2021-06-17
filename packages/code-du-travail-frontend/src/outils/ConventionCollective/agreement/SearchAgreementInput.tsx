@@ -29,11 +29,11 @@ export function SearchAgreementInput({
       <SectionTitle>
         Précisez et sélectionnez votre convention collective
       </SectionTitle>
-      <form>
+      <form onSubmit={(event) => event.preventDefault()}>
         <InlineLabel htmlFor="agreement-search">
           Nom de la convention collective ou son numéro d’identification{" "}
           <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
-          <Text fontWeight="400">(obligatoire)</Text>
+          <Text fontWeight="400">(champ obligatoire)</Text>
         </InlineLabel>
         <InfoBulle title="Qu'est ce qu'un IDCC">
           <p>
