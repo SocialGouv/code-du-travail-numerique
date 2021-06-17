@@ -14,4 +14,4 @@ Fonctionnalité: Dossier Coronavirus
 
     Quand je clique sur "Covid-19 : Les mesures de protection"
     Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise (Protocole national)" apparaisse
-    Alors je vois "Généralisation du télétravail"
+    Alors je vois "Organiser le télétravail et les horaires"
