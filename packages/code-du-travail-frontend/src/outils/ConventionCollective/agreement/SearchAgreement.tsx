@@ -1,5 +1,5 @@
 import pDebounce from "p-debounce";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { ForwardedRef, useEffect, useMemo, useState } from "react";
 
 import {
   Agreement,
@@ -14,11 +14,15 @@ type Props = {
     renderProps: FetchReducerState<Agreement[]>,
     query: string
   ) => JSX.Element;
+  inputRef: ForwardedRef<HTMLFormElement>;
 };
 
 const useAgreementSuggester = createSuggesterHook(searchAgreements);
 
-export function SearchAgreement({ renderResults }: Props): JSX.Element {
+export function SearchAgreement({
+  renderResults,
+  inputRef,
+}: Props): JSX.Element {
   const [query, setQuery] = useState("");
   const state = useAgreementSuggester(query);
   const { trackEvent, title, uuid } = useTrackingContext();
@@ -36,7 +40,11 @@ export function SearchAgreement({ renderResults }: Props): JSX.Element {
 
   return (
     <>
-      <SearchAgreementInput query={query} onChange={searchInputHandler} />
+      <SearchAgreementInput
+        query={query}
+        onChange={searchInputHandler}
+        ref={inputRef}
+      />
       {renderResults(state, query)}
     </>
   );

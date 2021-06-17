@@ -9,7 +9,7 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
@@ -26,9 +26,11 @@ type AgreementSearchStepProps = {
 const AgreementSearchStep = ({
   onBackClick,
 }: AgreementSearchStepProps): JSX.Element => {
+  const refInput = useRef<HTMLFormElement>();
   return (
     <>
       <SearchAgreement
+        inputRef={refInput}
         renderResults={(state, query) => {
           if (state.isLoading) {
             return (
@@ -48,7 +50,9 @@ const AgreementSearchStep = ({
             }
             return <Section role="status"> {state.error}</Section>;
           }
-
+          if (refInput.current) {
+            refInput.current.scrollIntoView();
+          }
           return state.data ? (
             state.data.length > 0 ? (
               <Section>

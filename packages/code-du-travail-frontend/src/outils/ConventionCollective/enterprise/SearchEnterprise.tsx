@@ -1,5 +1,5 @@
 import pDebounce from "p-debounce";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { ForwardedRef, useEffect, useMemo, useState } from "react";
 
 import {
   Enterprise,
@@ -14,6 +14,7 @@ type Props = {
     renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
+  inputRef: ForwardedRef<HTMLDivElement>;
 };
 
 export type SearchParams = {
@@ -23,7 +24,10 @@ export type SearchParams = {
 
 const useEnterpriseSuggester = createSuggesterHook(searchEnterprises);
 
-export function SearchEnterprise({ renderResults }: Props): JSX.Element {
+export function SearchEnterprise({
+  renderResults,
+  inputRef,
+}: Props): JSX.Element {
   const [search, setSearch] = useState<SearchParams>({
     address: "",
     query: "",
@@ -52,6 +56,7 @@ export function SearchEnterprise({ renderResults }: Props): JSX.Element {
   return (
     <>
       <SearchEnterpriseInput
+        ref={inputRef}
         query={search.query}
         address={search.address}
         onChange={searchInputHandler}

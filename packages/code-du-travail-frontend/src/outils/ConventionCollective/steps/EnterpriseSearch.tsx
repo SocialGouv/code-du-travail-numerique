@@ -10,7 +10,7 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
@@ -34,6 +34,7 @@ const EnterpriseSearchStep = ({
     enterprise: Enterprise;
     params: SearchParams;
   }>(null);
+  const refInput = useRef<HTMLDivElement>();
   if (result) {
     return (
       <>
@@ -72,7 +73,11 @@ const EnterpriseSearchStep = ({
   return (
     <>
       <SearchEnterprise
+        inputRef={refInput}
         renderResults={(state, params) => {
+          if (refInput.current && state.data && !state.isLoading) {
+            refInput.current.scrollIntoView();
+          }
           const isSiret = /^\d{14}$/.test(params.query.replace(/\s/g, ""));
           if (state.isLoading) {
             return (
@@ -107,9 +112,10 @@ const EnterpriseSearchStep = ({
                           showAddress={params.address.length > 0 || isSiret}
                           isFirst={index === 0}
                           enterprise={item}
-                          onClick={() =>
-                            setResult({ enterprise: item, params })
-                          }
+                          onClick={() => {
+                            window.scrollTo(0, 0);
+                            setResult({ enterprise: item, params });
+                          }}
                         />
                       </ListItem>
                     );
