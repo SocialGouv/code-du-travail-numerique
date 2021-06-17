@@ -54,7 +54,7 @@ Scénario:
 
   Quand je renseigne "01/01/2020" dans le champ "la date de sortie"
   Alors je vois "La date de notification doit se situer avant la date de sortie"
-  Quand je renseigne "01/02/2020" dans le champ "la date de sortie"
+  Quand je renseigne "02/02/2020" dans le champ "la date de sortie"
   Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
 
 

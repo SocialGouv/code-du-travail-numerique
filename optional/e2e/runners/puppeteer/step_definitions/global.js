@@ -48,12 +48,12 @@ Quand("j'attends que les suggestions apparaissent", () => {
 });
 
 Quand("j'attends que les résultats de recherche apparaissent", () => {
-  I.waitForElement("[aria-label^='Résultats de recherche']", 3);
+  I.waitForElement("[aria-label^='Résultats de recherche']", 10);
 });
 
 Quand("j'attends que le titre de page {string} apparaisse", (title) => {
   I.scrollPageToTop();
-  I.waitForElement(`//h1[contains(., "${title}")]`, 5);
+  I.waitForElement(`//h1[contains(., "${title}")]`, 10);
 });
 
 Quand("j'attend que le texte {string} apparaisse", (text) => {
