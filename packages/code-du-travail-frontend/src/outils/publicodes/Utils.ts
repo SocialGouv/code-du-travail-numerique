@@ -7,10 +7,25 @@ export const mapToPublicodesSituation = (
   form: FormContent
 ): Record<string, string> => {
   const { ccn, infos, ...formWithoutCcn } = form;
-  const ccnId = ccn ? `'IDCC${ccn.num.toString().padStart(4, "0")}'` : "''";
+  if (ccn) {
+    return {
+      "contrat salarié - convention collective": `'IDCC${ccn.num
+        .toString()
+        .padStart(4, "0")}'`,
+      ...infos,
+      ...formWithoutCcn,
+    };
+  }
   return {
-    "contrat salarié - convention collective": ccnId,
     ...infos,
     ...formWithoutCcn,
   };
 };
+
+export const reverseValues = (
+  values: Record<string, string>
+): Record<string, string> =>
+  Object.entries(values).reduce((state, [key, value]) => {
+    state[value] = key;
+    return state;
+  }, {});

@@ -5,6 +5,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle:
+  titre: Catégorie professionnelle
   question: Quelle est votre catégorie professionelle ?
   cdtn:
     type: liste
@@ -21,6 +22,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
       Autres cadres: "'Autres cadres'"
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient:
+  titre: Coefficient
   question: Quel est votre coefficient ?
   cdtn:
     type: liste
