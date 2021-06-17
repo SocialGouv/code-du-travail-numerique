@@ -3,6 +3,7 @@ import {
   AlertWithIcon,
   Button,
   Heading,
+  ScreenReaderOnly,
   Section as SectionUi,
   Title,
   Wrapper,
@@ -12,6 +13,7 @@ import React from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
+import { InlineError } from "../../common/ErrorField";
 import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { HelpModal } from "../common/Modal";
@@ -31,12 +33,20 @@ const AgreementSearchStep = ({
           if (state.isLoading) {
             return (
               <Section>
-                <Spinner /> recherche en cours
+                <Spinner aria-hidden />{" "}
+                <span role="status">recherche en cours</span>
               </Section>
             );
           }
           if (state.isError) {
-            return <Section> {state.error}</Section>;
+            if (typeof state.error === "string") {
+              return (
+                <Section role="status">
+                  <InlineError>{state.error}</InlineError>
+                </Section>
+              );
+            }
+            return <Section role="status"> {state.error}</Section>;
           }
 
           return state.data ? (
@@ -54,9 +64,12 @@ const AgreementSearchStep = ({
               </Section>
             ) : (
               <Section>
+                <ScreenReaderOnly role="status">
+                  {state.data.length} résultats
+                </ScreenReaderOnly>
                 <Wrapper variant="light">
                   <p>
-                    <strong>
+                    <strong role="status">
                       Aucune convention collective n’a été trouvée
                     </strong>
                     .
