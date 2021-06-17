@@ -1,7 +1,6 @@
 import { Container, Section } from "@socialgouv/cdtn-ui";
 import { classifyTokens } from "@socialgouv/reference-article";
-import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { matopush } from "../../piwik";
 import { Law } from "./Law";
@@ -13,31 +12,32 @@ const SearchResults = ({
   isSearch,
   query,
 }) => {
-  const [articleQuery, setArticleQuery] = useState(false);
-
   useEffect(() => {
     // distinction between actual search and theme search when logging
-    const eventType = isSearch ? "candidateResults" : "themeResults";
-    matopush(["trackEvent", eventType, query]);
+    if (isSearch) {
+      matopush(["trackEvent", "candidateResults", query]);
+    } else {
+      matopush(["trackEvent", "themeResults"]);
+    }
   });
-
-  useEffect(() => {
-    setArticleQuery(classifyTokens(query.split(" ")).includes("B-ART"));
-  }, [query]);
+  let isArticleSearch = false;
+  if (isSearch && query && classifyTokens(query.split(" ")).includes("B-ART")) {
+    isArticleSearch = true;
+  }
 
   return (
     <>
-      {articleQuery && articles.length > 0 && (
+      {isArticleSearch && articles.length > 0 && (
         <Section decorated variant="light">
           <Container>
             <Law items={articles} query={query} />
           </Container>
         </Section>
       )}
-      {!articleQuery && documents.length > 0 && (
+      {!isArticleSearch && documents.length > 0 && (
         <Results isSearch={isSearch} items={documents} query={query} />
       )}
-      {!articleQuery && (articles.length > 0 || themes.length > 0) && (
+      {!isArticleSearch && (articles.length > 0 || themes.length > 0) && (
         <Section decorated variant="light">
           <Container>
             {articles.length > 0 && <Law items={articles} query={query} />}
@@ -47,39 +47,6 @@ const SearchResults = ({
       )}
     </>
   );
-};
-
-SearchResults.propTypes = {
-  isSearch: PropTypes.bool,
-  items: PropTypes.shape({
-    articles: PropTypes.arrayOf(
-      PropTypes.shape({
-        slug: PropTypes.string,
-        source: PropTypes.string,
-        title: PropTypes.string,
-      })
-    ),
-    documents: PropTypes.arrayOf(
-      PropTypes.shape({
-        breadcrumbs: PropTypes.arrayOf(
-          PropTypes.shape({
-            label: PropTypes.string,
-            slug: PropTypes.string,
-          })
-        ),
-        slug: PropTypes.string,
-        source: PropTypes.string,
-        title: PropTypes.string,
-      })
-    ),
-    themes: PropTypes.arrayOf(
-      PropTypes.shape({
-        slug: PropTypes.string,
-        source: PropTypes.string,
-        title: PropTypes.string,
-      })
-    ),
-  }),
 };
 
 export { SearchResults };
