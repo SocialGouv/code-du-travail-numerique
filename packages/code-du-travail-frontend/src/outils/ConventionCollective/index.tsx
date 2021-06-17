@@ -1,6 +1,4 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Button, Wrapper } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
+import { Wrapper } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -39,6 +37,10 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
     setSearchType(null);
   }
 
+  function handleHashNavigation(url) {
+    const [, hash = ""] = url.split("#");
+    handleSearchType(hash);
+  }
   function handleSearchType(value) {
     if (value === SearchType.agreement) {
       trackEvent(
@@ -59,11 +61,9 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
   }
 
   const router = useRouter();
+
   useEffect(() => {
-    function handleHashNavigation(url) {
-      const [, hash = ""] = url.split("#");
-      handleSearchType(hash);
-    }
+    window.scrollTo(0, 0);
     router.events.on("hashChangeStart", handleHashNavigation);
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);
@@ -74,10 +74,10 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
 
   switch (searchType) {
     case SearchType.agreement:
-      Step = <Steps.AgreementSearchStep />;
+      Step = <Steps.AgreementSearchStep onBackClick={clearSearchType} />;
       break;
     case SearchType.enterprise:
-      Step = <Steps.EnterpriseSearchStep />;
+      Step = <Steps.EnterpriseSearchStep onBackClick={clearSearchType} />;
       break;
     default:
       Step = <Steps.IntroductionStep />;
@@ -86,19 +86,6 @@ function AgreementSearch({ icon, title }: Props): JSX.Element {
     <WizardWrapper variant="main">
       <WizardTitle title={title} icon={icon} />
       {Step}
-      {searchType && (
-        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-          <Button
-            as="a"
-            small
-            type="button"
-            onClick={clearSearchType}
-            variant="flat"
-          >
-            Précédent
-          </Button>
-        </Link>
-      )}
     </WizardWrapper>
   );
 }

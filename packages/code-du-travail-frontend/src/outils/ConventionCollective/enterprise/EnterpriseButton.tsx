@@ -25,6 +25,7 @@ export function EnterpriseButton({
     highlightLabel,
     simpleLabel,
     activitePrincipale,
+    address,
     matchingEtablissement,
   } = enterprise;
 
@@ -51,15 +52,18 @@ export function EnterpriseButton({
           </Title>
           <Subtitle
             as="div"
+            fontSize="small"
             dangerouslySetInnerHTML={{ __html: highlightLabel }}
           />
         </>
       )}
-      {activitePrincipale && <Activity as="div">{activitePrincipale}</Activity>}
+      {activitePrincipale && (
+        <Activity as="div">Activité: {activitePrincipale}</Activity>
+      )}
       {!showAddress && etablissements > 1 ? (
         <Tag> {etablissements} établissements </Tag>
       ) : (
-        <Text>{matchingEtablissement.address}</Text>
+        <Text>{address || matchingEtablissement.address}</Text>
       )}
     </ItemButton>
   );

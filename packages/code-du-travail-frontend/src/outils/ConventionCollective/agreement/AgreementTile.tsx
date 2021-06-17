@@ -1,3 +1,4 @@
+import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
 import {
   getLabelBySource,
@@ -31,7 +32,7 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
     >
       <Tile
         wide
-        title={agreement.shortTitle}
+        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.idcc)}`}
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >

@@ -1,8 +1,5 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import React from "react";
-
-import { InlineError } from "../../../outils/common/ErrorField";
 
 export interface ApiEnterpriseData {
   entreprises: Enterprise[];
@@ -17,7 +14,8 @@ export interface Enterprise {
   matching: number;
   simpleLabel: string;
   siren: string;
-  matchingEtablissement: MatchingEtablissement;
+  address?: string;
+  matchingEtablissement?: MatchingEtablissement;
 }
 
 /**
@@ -39,25 +37,18 @@ export interface MatchingEtablissement {
   address: string;
 }
 
+const siretSirenError =
+  "Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9 chiffres) valide";
+
+const siretLengthError =
+  "Veuillez indiquer un numéro Siret (14 chiffres obligatoire)";
+
+const siretNumberError =
+  "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
+
 const ENTERPRISE_API_URL =
-  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search";
+  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 
-const siretSirenError = (
-  <InlineError>
-    Veuillez indiquer un numéro Siret (14 chiffres) ou Siren (9 chiffres) valide
-  </InlineError>
-);
-
-const siretLengthError = (
-  <InlineError>
-    Veuillez indiquer un numéro Siret (14 chiffres obligatoire)
-  </InlineError>
-);
-const siretNumberError = (
-  <InlineError>
-    Veuillez indiquer un numéro Siret (14 chiffres uniquement)
-  </InlineError>
-);
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
@@ -71,19 +62,31 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/\D+\d{14}/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretNumberError);
   }
-  const url = `${ENTERPRISE_API_URL}?q=${encodeURIComponent(query)}${
+
+  const url = `${ENTERPRISE_API_URL}/search?q=${encodeURIComponent(query)}${
     address ? `&a=${encodeURIComponent(address)}` : ""
-  }`;
+  }&onlyWithConvention=true`;
+
+  // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
+  //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;
+  // } else if (/^\d{9}$/.test(query.replace(/\s/g, ""))) {
+  //   url = `${ENTERPRISE_API_URL}/entreprise/${query}`;
+  // }
 
   return fetch(url)
     .then(async (response) => {
       if (response.ok) {
-        return response.json() as Promise<ApiEnterpriseData>;
+        return response.json();
+      }
+      if (response.status === 404) {
+        return { entreprises: [] };
       }
       const errorMessage = await response.text();
-      return Promise.reject(new Error(errorMessage));
+      return Promise.reject(errorMessage);
     })
-    .then(({ entreprises }) => entreprises);
+    .then((result) => {
+      return result.entreprises;
+    });
 });
 
 const searchEnterprises = debounce(apiEnterprises, 300);

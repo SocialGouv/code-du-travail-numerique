@@ -92,7 +92,6 @@ export function createSuggesterHook<Result>(fetcher: Fetcher<Result>) {
           }
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
-          console.error(error);
           dispatch({ payload: error, type: Actions.failure });
         }
       }

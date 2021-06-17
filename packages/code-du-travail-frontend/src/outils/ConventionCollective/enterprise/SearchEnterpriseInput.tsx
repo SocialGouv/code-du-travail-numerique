@@ -32,7 +32,7 @@ export function SearchEnterpriseInput({
         Avec le nom de l’entreprise, il est possible de retrouver la convention
         collective associée.
       </AlertWithMargin>
-      <Form>
+      <Form onSubmit={(event) => event.preventDefault()}>
         <Box>
           <InlineLabel htmlFor="enterprise-search">
             Nom de votre entreprise ou numéro Siret{" "}
@@ -104,6 +104,9 @@ const Box = styled.div`
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};
       padding-left: 0;
+    }
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      flex: 0 1 auto;
     }
   }
 `;
