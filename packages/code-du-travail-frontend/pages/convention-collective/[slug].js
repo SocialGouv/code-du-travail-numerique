@@ -84,7 +84,7 @@ class ConventionCollective extends React.Component {
           }
           subtitle={
             <Text fontSize="small">
-              {convention.title} (IDCC {formatIdcc(convention.num)})
+              {convention.longTitle} (IDCC {formatIdcc(convention.num)})
             </Text>
           }
           suptitle="CONVENTION COLLECTIVE"
