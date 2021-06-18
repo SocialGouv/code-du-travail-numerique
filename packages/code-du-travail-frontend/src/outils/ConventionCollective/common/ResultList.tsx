@@ -58,7 +58,7 @@ const ViewMoreButton = styled(Button)`
   }
 `;
 
-export const ResultItem = styled.div`
+export const ResultItem = styled.a`
   display: block;
   appearance: none;
   width: 100%;

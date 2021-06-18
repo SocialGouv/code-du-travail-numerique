@@ -1,10 +1,11 @@
 import pDebounce from "p-debounce";
-import React, { ForwardedRef, useEffect, useMemo, useState } from "react";
+import React, { ForwardedRef, useEffect, useMemo } from "react";
 
 import {
   Enterprise,
   searchEnterprises,
 } from "../../../conventions/Search/api/enterprises.service";
+import { useNavContext } from "../common/NavContext";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
@@ -28,16 +29,16 @@ export function SearchEnterprise({
   renderResults,
   inputRef,
 }: Props): JSX.Element {
-  const [search, setSearch] = useState<SearchParams>({
-    address: "",
-    query: "",
-  });
-  const state = useEnterpriseSuggester(search.query, search.address);
+  const { searchParams, setSearchParams } = useNavContext();
+  const state = useEnterpriseSuggester(
+    searchParams.query,
+    searchParams.address
+  );
   const { trackEvent, title, uuid } = useTrackingContext();
   const debouncedTrackEvent = useMemo(() => pDebounce(trackEvent, 1000), [
     trackEvent,
   ]);
-  const { query, address } = search;
+  const { query, address } = searchParams;
 
   useEffect(() => {
     let fullquery = query;
@@ -50,18 +51,18 @@ export function SearchEnterprise({
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    setSearch({ ...search, [name]: value });
+    setSearchParams({ ...searchParams, [name]: value });
   };
 
   return (
     <>
       <SearchEnterpriseInput
         ref={inputRef}
-        query={search.query}
-        address={search.address}
+        query={searchParams.query}
+        address={searchParams.address}
         onChange={searchInputHandler}
       />
-      {renderResults(state, search)}
+      {renderResults(state, searchParams)}
     </>
   );
 }

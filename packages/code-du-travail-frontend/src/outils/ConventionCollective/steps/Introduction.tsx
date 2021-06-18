@@ -11,9 +11,12 @@ import React from "react";
 import styled from "styled-components";
 
 import {} from "../../common/type/WizardType";
-import { SearchType } from "..";
+import { ScreenType, useNavContext } from "../common/NavContext";
+import { useTrackingContext } from "../common/TrackingContext";
 
 const IntroductionStep = (): JSX.Element => {
+  const { trackEvent, uuid, title } = useTrackingContext();
+
   return (
     <>
       <AlertWithIcon variant="secondary">
@@ -30,10 +33,14 @@ const IntroductionStep = (): JSX.Element => {
       </AlertWithIcon>
       <Flex>
         <Link
-          href={`/${SOURCES.TOOLS}/convention-collective#${SearchType.agreement}`}
+          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
           passHref
         >
-          <Tile>
+          <Tile
+            onClick={() =>
+              trackEvent("cc_search_type_of_users", " click_p1", title, uuid)
+            }
+          >
             <Text fontWeight="700">
               Je connais
               <br /> ma convention collective
@@ -46,10 +53,14 @@ const IntroductionStep = (): JSX.Element => {
           </Tile>
         </Link>
         <Link
-          href={`/${SOURCES.TOOLS}/convention-collective#${SearchType.enterprise}`}
+          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
           passHref
         >
-          <Tile>
+          <Tile
+            onClick={() =>
+              trackEvent("cc_search_type_of_users", " click_p2", title, uuid)
+            }
+          >
             <Text fontWeight="700">
               Je ne connais <br /> pas ma convention collective
             </Text>

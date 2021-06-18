@@ -1,25 +1,22 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
-  FlatList,
   ScreenReaderOnly,
   Section as SectionUi,
-  Text,
-  theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { InlineError } from "../../common/ErrorField";
-import { SectionTitle } from "../../common/stepStyles";
-import { AgreementTile } from "../agreement/AgreementTile";
 import { HelpModal } from "../common/Modal";
+import { useNavContext } from "../common/NavContext";
 import { ListItem, ResultList } from "../common/ResultList";
+import { useTrackingContext } from "../common/TrackingContext";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
 
@@ -30,45 +27,19 @@ type EnterpriseSearchStepProps = {
 const EnterpriseSearchStep = ({
   onBackClick,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const [result, setResult] = useState<{
-    enterprise: Enterprise;
-    params: SearchParams;
-  }>(null);
+  const { setSearchParams, setEnterprise } = useNavContext();
+  const { trackEvent, uuid, title } = useTrackingContext();
   const refInput = useRef<HTMLDivElement>();
-  if (result) {
-    return (
-      <>
-        <SectionTitle>Convention collective</SectionTitle>
-        <Text as="p" variant="primary">
-          {result.enterprise.conventions.length > 1
-            ? `${result.enterprise.conventions.length} conventions collectives trouvées pour `
-            : `${result.enterprise.conventions.length} convention collective trouvée pour `}
-          <b>
-            <u>
-              « {result.enterprise.simpleLabel}
-              {result.enterprise.address &&
-                ` , ${result.enterprise.matchingEtablissement.address}`}{" "}
-              »
-            </u>
-          </b>
-        </Text>
-        <FlatList>
-          {result.enterprise.conventions.map((agreement) => (
-            <Li key={agreement.id}>
-              <AgreementTile agreement={agreement} />
-            </Li>
-          ))}
-        </FlatList>
-        <Button
-          small
-          type="button"
-          onClick={() => setResult(null)}
-          variant="flat"
-        >
-          Précédent
-        </Button>
-      </>
-    );
+  function handleEnterpriseSelection(
+    enterprise: Enterprise,
+    params: SearchParams
+  ) {
+    setEnterprise(enterprise);
+    setSearchParams(params);
+  }
+  function openModalHandler(openModal: () => void) {
+    trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
+    openModal();
   }
   return (
     <>
@@ -76,7 +47,7 @@ const EnterpriseSearchStep = ({
         inputRef={refInput}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
-            refInput.current.scrollIntoView();
+            refInput.current.scrollIntoView({ behavior: "smooth" });
           }
           const isSiret = /^\d{14}$/.test(params.query.replace(/\s/g, ""));
           if (state.isLoading) {
@@ -112,10 +83,9 @@ const EnterpriseSearchStep = ({
                           showAddress={params.address.length > 0 || isSiret}
                           isFirst={index === 0}
                           enterprise={item}
-                          onClick={() => {
-                            window.scrollTo(0, 0);
-                            setResult({ enterprise: item, params });
-                          }}
+                          onClick={() =>
+                            handleEnterpriseSelection(item, params)
+                          }
                         />
                       </ListItem>
                     );
@@ -143,7 +113,10 @@ const EnterpriseSearchStep = ({
                   <HelpModal
                     title="Vous ne trouvez pas votre convention collective"
                     renderButton={(openModal) => (
-                      <Button variant="link" onClick={openModal}>
+                      <Button
+                        variant="link"
+                        onClick={() => openModalHandler(openModal)}
+                      >
                         Consulter notre aide
                       </Button>
                     )}
@@ -175,6 +148,7 @@ const EnterpriseSearchStep = ({
           ) : null;
         }}
       />
+
       <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
@@ -186,14 +160,6 @@ const EnterpriseSearchStep = ({
 
 export { EnterpriseSearchStep };
 
-const Li = styled.li`
-  & + & {
-    margin-top: ${theme.spacings.base};
-  }
-  &:last-child {
-    margin-bottom: ${theme.spacings.large};
-  }
-`;
 const Section = styled(SectionUi)`
   padding-top: 1rem;
 `;

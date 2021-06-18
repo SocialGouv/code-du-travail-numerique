@@ -18,6 +18,7 @@ import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { HelpModal } from "../common/Modal";
 import { ListItem, ResultList } from "../common/ResultList";
+import { useTrackingContext } from "../common/TrackingContext";
 
 type AgreementSearchStepProps = {
   onBackClick: () => void;
@@ -27,6 +28,11 @@ const AgreementSearchStep = ({
   onBackClick,
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
+  const { trackEvent, title, uuid } = useTrackingContext();
+  function openModalHandler(openModal: () => void) {
+    trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
+    openModal();
+  }
   return (
     <>
       <SearchAgreement
@@ -50,8 +56,8 @@ const AgreementSearchStep = ({
             }
             return <Section role="status"> {state.error}</Section>;
           }
-          if (refInput.current) {
-            refInput.current.scrollIntoView();
+          if (refInput.current && state.data) {
+            refInput.current.scrollIntoView({ behavior: "smooth" });
           }
           return state.data ? (
             state.data.length > 0 ? (
@@ -93,7 +99,10 @@ const AgreementSearchStep = ({
                   <HelpModal
                     title="Vous ne trouvez pas votre convention collective"
                     renderButton={(openModal) => (
-                      <Button variant="link" onClick={openModal}>
+                      <Button
+                        variant="link"
+                        onClick={() => openModalHandler(openModal)}
+                      >
                         Consulter notre aide
                       </Button>
                     )}

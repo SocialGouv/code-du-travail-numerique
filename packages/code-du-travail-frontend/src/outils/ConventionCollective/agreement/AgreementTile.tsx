@@ -23,7 +23,7 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("cc_select", title, agreement.idcc.toString(), uuid);
+    trackEvent("cc_select_p2", title, `idcc${agreement.idcc.toString()}`, uuid);
   };
   return (
     <Link

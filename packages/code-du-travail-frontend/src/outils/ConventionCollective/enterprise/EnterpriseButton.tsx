@@ -1,8 +1,11 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
+import { ScreenType } from "../common/NavContext";
 import { ResultItem } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
@@ -26,46 +29,52 @@ export function EnterpriseButton({
     simpleLabel,
     activitePrincipale,
     address,
+    siren,
     matchingEtablissement,
   } = enterprise;
 
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("enterprise_select", title, label, uuid);
+    trackEvent("enterprise_select", title, `${label}##${siren}`, uuid);
     onClick(enterprise);
   };
   const showTitleWithHighlight = label === simpleLabel;
   return (
-    <ItemButton as="button" isFirst={isFirst} onClick={clickHandler}>
-      {showTitleWithHighlight ? (
-        <Title
-          as="div"
-          fontSize="hsmall"
-          fontWeight="600"
-          dangerouslySetInnerHTML={{ __html: highlightLabel }}
-        />
-      ) : (
-        <>
-          <Title as="div" fontWeight="600" fontSize="hsmall">
-            {simpleLabel}
-          </Title>
-          <Subtitle
+    <Link
+      href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`}
+      passHref
+    >
+      <ItemButton isFirst={isFirst} onClick={clickHandler}>
+        {showTitleWithHighlight ? (
+          <Title
             as="div"
-            fontSize="small"
+            fontSize="hsmall"
+            fontWeight="600"
             dangerouslySetInnerHTML={{ __html: highlightLabel }}
           />
-        </>
-      )}
-      {activitePrincipale && (
-        <Activity as="div">Activité: {activitePrincipale}</Activity>
-      )}
-      {!showAddress && etablissements > 1 ? (
-        <Tag> {etablissements} établissements </Tag>
-      ) : (
-        <Text>{address || matchingEtablissement.address}</Text>
-      )}
-    </ItemButton>
+        ) : (
+          <>
+            <Title as="div" fontWeight="600" fontSize="hsmall">
+              {simpleLabel}
+            </Title>
+            <Subtitle
+              as="div"
+              fontSize="small"
+              dangerouslySetInnerHTML={{ __html: highlightLabel }}
+            />
+          </>
+        )}
+        {activitePrincipale && (
+          <Activity as="div">Activité : {activitePrincipale}</Activity>
+        )}
+        {!showAddress && etablissements > 1 ? (
+          <Tag> {etablissements} établissements </Tag>
+        ) : (
+          <Text>{address || matchingEtablissement.address}</Text>
+        )}
+      </ItemButton>
+    </Link>
   );
 }
 
