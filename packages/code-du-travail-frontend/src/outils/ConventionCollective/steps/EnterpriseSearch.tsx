@@ -122,7 +122,7 @@ const EnterpriseSearchStep = ({
                     )}
                   >
                     <Title stripe="none" as="h3">
-                      Vous ne trouvez pas convention collective&nbsp;?
+                      Vous ne trouvez pas votre convention collective&nbsp;?
                     </Title>
                     <p>Il peut y avoir plusieurs explications à cela&nbsp;:</p>
                     <ul>
