@@ -1,3 +1,4 @@
+import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
 import {
   getLabelBySource,
@@ -22,7 +23,7 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("cc_select", title, agreement.idcc.toString(), uuid);
+    trackEvent("cc_select_p2", title, `idcc${agreement.idcc.toString()}`, uuid);
   };
   return (
     <Link
@@ -31,7 +32,7 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
     >
       <Tile
         wide
-        title={agreement.shortTitle}
+        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.idcc)}`}
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >

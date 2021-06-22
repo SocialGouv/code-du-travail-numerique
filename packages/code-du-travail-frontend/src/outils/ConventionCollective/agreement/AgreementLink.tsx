@@ -20,7 +20,7 @@ export function AgreementLink({
   const { num, shortTitle } = agreement;
   const { trackEvent, title, uuid } = useTrackingContext();
   const clickHandler = () => {
-    trackEvent("cc_select", title, num.toString(), uuid);
+    trackEvent("cc_select_p1", title, `idcc${num.toString()}`, uuid);
   };
 
   return (

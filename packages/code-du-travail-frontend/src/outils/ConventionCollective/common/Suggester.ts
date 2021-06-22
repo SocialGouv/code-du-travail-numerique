@@ -55,6 +55,7 @@ const dataFetchReducer = <A>(
     case Actions.failure:
       return {
         ...state,
+        error: action.payload,
         isError: true,
         isLoading: false,
       };

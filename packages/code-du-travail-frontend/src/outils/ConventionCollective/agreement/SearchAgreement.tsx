@@ -1,11 +1,10 @@
-import { Section } from "@socialgouv/cdtn-ui";
 import pDebounce from "p-debounce";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { ForwardedRef, useEffect, useMemo, useState } from "react";
 
 import {
   Agreement,
-  searchAgreement,
-} from "../../../conventions/Search/api/agreement.service";
+  searchAgreements,
+} from "../../../conventions/Search/api/agreements.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
@@ -15,11 +14,15 @@ type Props = {
     renderProps: FetchReducerState<Agreement[]>,
     query: string
   ) => JSX.Element;
+  inputRef: ForwardedRef<HTMLFormElement>;
 };
 
-const useAgreementSuggester = createSuggesterHook(searchAgreement);
+const useAgreementSuggester = createSuggesterHook(searchAgreements);
 
-export function SearchAgreement({ renderResults }: Props): JSX.Element {
+export function SearchAgreement({
+  renderResults,
+  inputRef,
+}: Props): JSX.Element {
   const [query, setQuery] = useState("");
   const state = useAgreementSuggester(query);
   const { trackEvent, title, uuid } = useTrackingContext();
@@ -37,8 +40,12 @@ export function SearchAgreement({ renderResults }: Props): JSX.Element {
 
   return (
     <>
-      <SearchAgreementInput query={query} onChange={searchInputHandler} />
-      {state.data && <Section>{renderResults(state, query)}</Section>}
+      <SearchAgreementInput
+        query={query}
+        onChange={searchInputHandler}
+        ref={inputRef}
+      />
+      {renderResults(state, query)}
     </>
   );
 }

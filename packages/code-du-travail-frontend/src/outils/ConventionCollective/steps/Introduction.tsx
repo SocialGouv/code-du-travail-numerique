@@ -1,3 +1,4 @@
+import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   AlertWithIcon,
   Button,
@@ -5,17 +6,17 @@ import {
   theme,
   Tile as TileUi,
 } from "@socialgouv/cdtn-ui";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 import {} from "../../common/type/WizardType";
-import { SearchType } from "..";
+import { ScreenType, useNavContext } from "../common/NavContext";
+import { useTrackingContext } from "../common/TrackingContext";
 
-type Props = {
-  onSelecSearchType: (type: SearchType) => void;
-};
+const IntroductionStep = (): JSX.Element => {
+  const { trackEvent, uuid, title } = useTrackingContext();
 
-const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
   return (
     <>
       <AlertWithIcon variant="secondary">
@@ -31,27 +32,45 @@ const IntroductionStep = ({ onSelecSearchType }: Props): JSX.Element => {
         </Text>
       </AlertWithIcon>
       <Flex>
-        <Tile onClick={() => onSelecSearchType(SearchType.agreement)}>
-          <Text fontWeight="700">
-            Je connais
-            <br /> ma convention collective
-          </Text>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la saisie
-            </Button>
-          </ButtonWrapper>
-        </Tile>
-        <Tile onClick={() => onSelecSearchType(SearchType.enterprise)}>
-          <Text fontWeight="700">
-            Je ne connais <br /> pas ma convention collective
-          </Text>
-          <ButtonWrapper>
-            <Button variant="link" as="div">
-              Je la recherche
-            </Button>
-          </ButtonWrapper>
-        </Tile>
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
+          passHref
+        >
+          <Tile
+            onClick={() =>
+              trackEvent("cc_search_type_of_users", " click_p1", title, uuid)
+            }
+          >
+            <Text fontWeight="700">
+              Je connais
+              <br /> ma convention collective
+            </Text>
+            <ButtonWrapper>
+              <Button variant="link" as="div">
+                Je la saisis
+              </Button>
+            </ButtonWrapper>
+          </Tile>
+        </Link>
+        <Link
+          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
+          passHref
+        >
+          <Tile
+            onClick={() =>
+              trackEvent("cc_search_type_of_users", " click_p2", title, uuid)
+            }
+          >
+            <Text fontWeight="700">
+              Je ne connais <br /> pas ma convention collective
+            </Text>
+            <ButtonWrapper>
+              <Button variant="link" as="div">
+                Je la recherche
+              </Button>
+            </ButtonWrapper>
+          </Tile>
+        </Link>
       </Flex>
     </>
   );
