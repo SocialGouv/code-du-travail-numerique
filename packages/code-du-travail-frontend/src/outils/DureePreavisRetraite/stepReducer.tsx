@@ -1,4 +1,9 @@
-import { Action, ActionName, FormContent, State } from "../common/type/WizardType";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
 import Steps from "./steps";
 
 // Add only idcc number for Agreement asking for additional information
