@@ -1836,7 +1836,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                       class="c63"
                       href="/accessibilite"
                     >
-                      Accessibilité : non conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li
