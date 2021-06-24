@@ -31,8 +31,17 @@ const Accessibilite = () => (
             n° 2005-102 du 11 février 2005.
           </p>
           <p>
-            À cette fin, il met en œuvre la stratégie et l’action suivante :
-            réalisation d’un audit de conformité au milieu de l’année 2021.
+            À cette fin, il met en œuvre la stratégie et les actions suivantes :
+            <ul>
+              <li>
+                La réalisation d’un audit de conformité le 19 mai de l’année
+                2021.
+              </li>
+              <li>
+                La mise en œuvre des recommandations pour atteindre l’objectif
+                de 75% d’ici la fin de l’année 2021.
+              </li>
+            </ul>
           </p>
           <p>
             Cette déclaration d’accessibilité s’applique au site Internet
@@ -40,9 +49,9 @@ const Accessibilite = () => (
           </p>
           <Title shift={theme.spacings.larger}>État de conformité</Title>
           <p>
-            Le site Internet code.travail.gouv.fr n’est pas encore en conformité
-            avec le référentiel général d’amélioration de l’accessibilité
-            (RGAA). Le site n’a pas encore été audité.
+            Le site Internet code.travail.gouv.fr  est en conformité partielle
+            avec le référentiel général d’amélioration de l’accessibilité (RGAA)
+            « version 4.1 ».
           </p>
           <p>
             Nous tâchons de rendre dès la conception, ce site accessible à
@@ -50,13 +59,57 @@ const Accessibilite = () => (
           </p>
           <Title shift={theme.spacings.larger}>Résultat des tests</Title>
           <p>
-            L’audit de conformité est en attente de réalisation (milieu de
-            l’année 2021).
+            L’audit de conformité réalisé par Alter Way révèle que :
+            <ul>
+              <li>[50%] des critères du RGAA version 4.1 sont respectés</li>
+            </ul>
           </p>
           <Title shift={theme.spacings.larger}>
             Établissement de cette déclaration d’accessibilité
           </Title>
-          <p>Cette déclaration a été établie le 12 avril 2021.</p>
+          <p>
+            Cette déclaration a été établie le 12 avril 2021. Elle a été mise à
+            jour le 23/06/2021.
+          </p>
+          <Title shift={theme.spacings.larger}>
+            ​Technologies utilisées pour la réalisation du Code du travail
+            numérique
+          </Title>
+          <ul>
+            <li>HTML5</li>
+            <li>WAI-ARIA</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <Title shift={theme.spacings.larger}>Environnement de test</Title>
+          <p>
+            Les vérifications de restitution de contenus ont été réalisées sur
+            la base de la combinaison fournie par la base de référence du RGAA
+            4.1, avec les versions suivantes :
+          </p>
+          <ul>
+            <li>Firefox</li>
+            <li>NVDA</li>
+          </ul>
+          <Title shift={theme.spacings.larger}>
+            Outils pour évaluer l’accessibilité
+          </Title>
+          <p>
+            Les vérifications de restitution de contenus ont été réalisées sur
+            la base de la combinaison fournie par la base de référence du RGAA
+            4.1, avec les versions suivantes :
+          </p>
+          <ul>
+            <li>wave</li>
+            <li>web developper toolbar</li>
+            <li>headings maps</li>
+            <li>wcag color contrast checker</li>
+            <li>
+              <a href="https://validator.w3.org" title="Validateur html du w3c">
+                Validateur w3c
+              </a>
+            </li>
+          </ul>
           <Title shift={theme.spacings.larger}>Amélioration et contact</Title>
           <p>
             Si vous n’arrivez pas à accéder à un contenu ou à un service, vous
@@ -83,7 +136,6 @@ const Accessibilite = () => (
             services du portail et vous n’avez pas obtenu de réponse
             satisfaisante.
           </p>
-
           <p>
             Vous pouvez :
             <ul>
