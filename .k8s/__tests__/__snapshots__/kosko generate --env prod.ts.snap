@@ -9,8 +9,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   labels:
     app: api
     application: cdtn
@@ -29,8 +29,8 @@ spec:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
         app.gitlab.com/app: socialgouv-cdtn
-        app.gitlab.com/env: prod2
-        app.gitlab.com/env.name: prod2
+        app.gitlab.com/env: prod
+        app.gitlab.com/env.name: prod
       labels:
         app: api
         application: cdtn
@@ -38,7 +38,7 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: registry.gitlab.factory.social.gouv.fr/socialgouv/cdtn/api:1.2.3
+        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-api:1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -62,8 +62,8 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 100m
-              memory: 320Mi
+              cpu: 500m
+              memory: 1Gi
             requests:
               cpu: 100m
               memory: 320Mi
@@ -77,9 +77,8 @@ spec:
             timeoutSeconds: 15
           env:
             - name: ELASTIC_APM_ENVIRONMENT
-              value: cdtn-prod2
-            - name: ES_INDEX_PREFIX
               value: cdtn-prod
+            - name: ES_INDEX_PREFIX
             - name: VERSION
               value: v1.2.3
 ---
@@ -96,8 +95,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   namespace: cdtn
 spec:
   ports:
@@ -118,8 +117,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   labels:
     app: api
     application: cdtn
@@ -141,43 +140,6 @@ spec:
         - api.cdtn.fabrique.social.gouv.fr
       secretName: api-crt
 ---
-apiVersion: autoscaling/v2beta2
-kind: HorizontalPodAutoscaler
-metadata:
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
-  labels:
-    app: api
-    application: cdtn
-    owner: cdtn
-    team: cdtn
-  name: api
-  namespace: cdtn
-spec:
-  minReplicas: 1
-  maxReplicas: 10
-  metrics:
-    - resource:
-        name: cpu
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-    - resource:
-        name: memory
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: api
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -185,8 +147,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   labels:
     app: www
     application: cdtn
@@ -195,7 +157,7 @@ metadata:
   name: www
   namespace: cdtn
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: www
@@ -205,8 +167,8 @@ spec:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
         app.gitlab.com/app: socialgouv-cdtn
-        app.gitlab.com/env: prod2
-        app.gitlab.com/env.name: prod2
+        app.gitlab.com/env: prod
+        app.gitlab.com/env.name: prod
       labels:
         app: www
         application: cdtn
@@ -214,15 +176,15 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: registry.gitlab.factory.social.gouv.fr/socialgouv/cdtn/www:1.2.3
+        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-frontend:1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
-              path: /healthz
+              path: /api/version
               port: http
-            initialDelaySeconds: 30
+            initialDelaySeconds: 15
             periodSeconds: 5
-            timeoutSeconds: 5
+            timeoutSeconds: 15
           name: www
           ports:
             - containerPort: 3000
@@ -230,42 +192,43 @@ spec:
           readinessProbe:
             failureThreshold: 15
             httpGet:
-              path: /healthz
+              path: /api/version
               port: http
-            initialDelaySeconds: 0
+            initialDelaySeconds: 5
             periodSeconds: 5
             successThreshold: 1
-            timeoutSeconds: 1
+            timeoutSeconds: 3
           resources:
             limits:
-              cpu: 200m
+              cpu: 500m
               memory: 560Mi
             requests:
-              cpu: 200m
-              memory: 560Mi
+              cpu: 100m
+              memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
-              path: /healthz
+              path: /api/version
               port: http
             periodSeconds: 5
+            initialDelaySeconds: 10
+            timeoutSeconds: 15
           env:
             - name: API_URL
               value: https://api.cdtn.fabrique.social.gouv.fr/api/v1
             - name: COMMIT
               value: 0123456789abcdefghijklmnopqrstuvwxyz0123
-            - name: FRONTEND_HOST
-              value: https://cdtn.fabrique.social.gouv.fr
             - name: VERSION
               value: v1.2.3
+            - name: FRONTEND_HOST
+              value: https://code.travail.gouv.fr
           envFrom:
             - configMapRef:
                 name: www-configmap
       initContainers:
         - args:
             - http://api
-          image: >-
-            registry.gitlab.factory.social.gouv.fr/socialgouv/docker/wait-for-http:5.0.1
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.26.2
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -276,16 +239,16 @@ spec:
               cpu: 5m
               memory: 16Mi
 ---
-apiVersion: v1
 kind: ConfigMap
+apiVersion: v1
 metadata:
   name: www-configmap
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   labels:
     application: cdtn
     owner: cdtn
@@ -314,8 +277,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   namespace: cdtn
 spec:
   ports:
@@ -336,8 +299,8 @@ metadata:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
     app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
   labels:
     app: www
     application: cdtn
@@ -347,7 +310,7 @@ metadata:
   namespace: cdtn
 spec:
   rules:
-    - host: cdtn.fabrique.social.gouv.fr
+    - host: code.travail.gouv.fr
       http:
         paths:
           - backend:
@@ -356,70 +319,8 @@ spec:
             path: /
   tls:
     - hosts:
-        - cdtn.fabrique.social.gouv.fr
-      secretName: www-crt
----
-apiVersion: autoscaling/v2beta2
-kind: HorizontalPodAutoscaler
-metadata:
-  annotations:
-    kapp.k14s.io/disable-default-ownership-label-rules: ''
-    kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod2
-    app.gitlab.com/env.name: prod2
-  labels:
-    app: www
-    application: cdtn
-    owner: cdtn
-    team: cdtn
-  name: www
-  namespace: cdtn
-spec:
-  minReplicas: 1
-  maxReplicas: 10
-  metrics:
-    - resource:
-        name: cpu
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-    - resource:
-        name: memory
-        target:
-          averageUtilization: 80
-          type: Utilization
-      type: Resource
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: www
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/tls-acme: 'true'
-  labels:
-    app.kubernetes.io/instance: frontend
-  name: frontend-nodejs-code
-  namespace: cdtn
-spec:
-  rules:
-    - host: code.travail.gouv.fr
-      http:
-        paths:
-          - backend:
-              serviceName: frontend-nodejs
-              servicePort: http
-            path: /
-  tls:
-    - hosts:
         - code.travail.gouv.fr
-      secretName: frontend-crt-code
+      secretName: www-crt
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -437,9 +338,11 @@ metadata:
 spec:
   rules:
     - host: www.code.travail.gouv.fr
+    - host: code.travail.fabrique.social.gouv.fr
   tls:
     - hosts:
         - www.code.travail.gouv.fr
+        - code.travail.fabrique.social.gouv.fr
       secretName: redirect-crt
 "
 `;

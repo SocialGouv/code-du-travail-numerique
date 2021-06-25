@@ -1,104 +1,108 @@
-import { create } from "@socialgouv/kosko-charts/components/app";
 import env from "@kosko/env";
 import { ok } from "assert";
-import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
-import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
+
+import { create } from "@socialgouv/kosko-charts/components/app";
 import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
+import { addEnv } from "@socialgouv/kosko-charts/utils/addEnv";
+import { getIngressHost } from "@socialgouv/kosko-charts/utils/getIngressHost";
+import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImagePath";
+
+import { EnvVar } from "kubernetes-models/v1/EnvVar";
+import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
+import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
+
+import getApiManifests from "./api";
 
 ok(process.env.CI_ENVIRONMENT_URL, "Missing CI_ENVIRONMENT_URL");
-const apiConfig = env.component("api");
-const API_URL = new URL(`${process.env.CI_ENVIRONMENT_URL}/api/v1`);
-API_URL.hostname = (apiConfig.subDomainPrefix ?? "api.") + API_URL.hostname;
 
-const manifests = create("www", {
-  env,
-  config: {
-    containerPort: 3000,
-    container: {
-      resources: {
-        requests: {
-          cpu: "200m",
-          memory: "560Mi", // 400 + 160  ~(40% of 400)
-        },
-        limits: {
-          cpu: "200m",
-          memory: "560Mi",
-        },
-      },
-      env: [
-        {
-          name: "API_URL",
-          value: String(API_URL),
-        },
-        {
-          name: "COMMIT",
-          value: process.env.CI_COMMIT_SHA,
-        },
-        {
-          name: "FRONTEND_HOST",
-          value: process.env.CI_ENVIRONMENT_URL,
-        },
-        {
-          name: "VERSION",
-          value: process.env.CI_COMMIT_REF_NAME,
-        },
-      ],
-    },
-  },
-});
+// all probes httpGet
+const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
+  path: "/api/version",
+  port: "http",
+};
 
-const deployment = manifests.find(
-  (manifest): manifest is Deployment => manifest.kind === "Deployment"
-);
-ok(deployment);
+export default async () => {
+  // extract computed url from API manifests for the frontend
+  const apiManifests = await getApiManifests();
+  const API_URL = "https://" + getIngressHost(apiManifests) + "/api/v1";
 
-addWaitForHttp(deployment, "http://api");
+  const productionConfig = {
+    domain: "travail.gouv.fr",
+    subdomain: "code",
+  };
 
-//
-
-const hpa = new HorizontalPodAutoscaler({
-  metadata: deployment.metadata,
-  spec: {
-    minReplicas: 1,
-    maxReplicas: 10,
-
-    metrics: [
-      {
-        resource: {
-          name: "cpu",
-          target: {
-            averageUtilization: 80,
-            type: "Utilization",
+  const manifests = await create("www", {
+    env,
+    config: {
+      containerPort: 3000,
+      image: getHarborImagePath({ name: "cdtn-frontend" }),
+      ...(env.env === "prod" ? productionConfig : {}),
+      container: {
+        livenessProbe: {
+          httpGet,
+          initialDelaySeconds: 15,
+          timeoutSeconds: 15,
+        },
+        readinessProbe: {
+          httpGet,
+          initialDelaySeconds: 5,
+          timeoutSeconds: 3,
+        },
+        startupProbe: {
+          httpGet,
+          initialDelaySeconds: 10,
+          timeoutSeconds: 15,
+        },
+        resources: {
+          requests: {
+            cpu: "100m",
+            memory: "256Mi",
+          },
+          limits: {
+            cpu: "500m",
+            memory: "560Mi",
           },
         },
-        type: "Resource",
-      },
-      {
-        resource: {
-          name: "memory",
-          target: {
-            averageUtilization: 80,
-            type: "Utilization",
+        env: [
+          {
+            name: "API_URL",
+            value: String(API_URL),
           },
-        },
-        type: "Resource",
+          {
+            name: "COMMIT",
+            value: process.env.CI_COMMIT_SHA,
+          },
+          {
+            name: "VERSION",
+            value: process.env.CI_COMMIT_REF_NAME,
+          },
+        ],
       },
-    ],
-
-    scaleTargetRef: {
-      apiVersion: deployment.apiVersion,
-      kind: deployment.kind,
-      name: deployment.metadata!.name!,
     },
-  },
-});
+  });
 
-//
+  // make some adjustments on generated manifests
+  const deployment = manifests.find(
+    (manifest): manifest is Deployment => manifest.kind === "Deployment"
+  );
+  ok(deployment);
+  ok(deployment.spec);
 
-if (process.env.CI_COMMIT_TAG) {
-  manifests.push(hpa);
-}
+  // add a wait condition on the API service with an initContainer
+  addWaitForHttp(deployment, "http://api");
 
-//
+  // assign 3 replicas in production env
+  if (env.env === "prod") {
+    deployment.spec.replicas = 3;
+  }
 
-export default [...manifests];
+  // get frontend computed url and assign the env var
+  const ingressHost = new EnvVar({
+    name: "FRONTEND_HOST",
+    value: "https://" + getIngressHost(manifests),
+  });
+
+  addEnv({ deployment, data: ingressHost });
+
+  return manifests;
+};
