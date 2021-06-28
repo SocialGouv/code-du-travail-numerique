@@ -1,6 +1,7 @@
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { Alert, InputRadio, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 import { Field } from "react-final-form";
+import styled from "styled-components";
 
 import { ErrorField } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
@@ -29,12 +30,12 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
         <Field
           type="radio"
           name="contrat salarié - mise à la retraite"
-          value="oui"
+          value="non"
           validate={required}
         >
           {(props) => (
             <InputRadio
-              label="L’employeur décide de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci."
+              label="Le salarié décide lui-même de partir à la retraite"
               {...props.input}
             />
           )}
@@ -42,20 +43,39 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
         <Field
           type="radio"
           name="contrat salarié - mise à la retraite"
-          value="non"
+          value="oui"
           validate={required}
         >
           {(props) => (
             <InputRadio
-              label="Le salarié décide de quitter volontairement l’entreprise pour prendre sa retraite."
+              label="L'employeur décide de mettre le salarié à la retraite"
               {...props.input}
             />
           )}
         </Field>
+        {form.getState().values &&
+          form.getState().values["contrat salarié - mise à la retraite"] ===
+            "oui" && (
+            <StyledAlert variant="primary">
+              <p>
+                <Text variant="primary" fontSize="hsmall" fontWeight="700">
+                  A noter
+                </Text>
+              </p>
+              L&apos;employeur qui décide une mise à la retraite doit avoir
+              informé le salarié de sa volonté de le mettre à la retraite.
+            </StyledAlert>
+          )}
         <ErrorField name="contrat salarié - mise à la retraite" />
       </RadioContainer>
     </>
   );
 }
+
+const { spacings } = theme;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacings.medium};
+`;
 
 export { OrigineStep };
