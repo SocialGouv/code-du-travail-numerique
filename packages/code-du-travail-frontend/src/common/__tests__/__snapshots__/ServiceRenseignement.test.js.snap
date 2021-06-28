@@ -29,12 +29,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  height: 4rem;
+  padding: 0 1rem;
+  color: #3e486e;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -43,18 +43,18 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 .c8:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c8:not([disabled]):hover,
 .c8:not([disabled]):active,
 .c8:not([disabled]):focus {
-  opacity: 1;
+  opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
+  background: transparent;
+  border-color: transparent;
 }
 
 .c8[disabled] {
@@ -237,20 +237,34 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 .c4 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .c6 {
-  width: 150px;
+  width: 250px;
   margin-left: 1rem;
 }
 
 .c9 {
-  margin-left: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: #7994d4;
 }
 
 .c10 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c11 {
   display: block;
   margin-top: 2rem;
 }
@@ -264,12 +278,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 @media print {
   .c8 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    padding: 0 3rem;
   }
 }
 
@@ -366,23 +374,35 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       class="c5 c6"
     >
       <input
+        autocomplete="off"
         class="c7"
         id="search-service"
+        maxlength="3"
         name="departement"
+        placeholder="ex. 31, 35, 75"
         type="text"
         value="26"
       />
     </span>
     <button
+      aria-label="Rechercher le service"
       class="c8 c9"
-      id="search-service-btn"
       type="submit"
     >
-      Rechercher
+      <svg
+        class="c10"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+          fill="currentColor"
+        />
+      </svg>
     </button>
   </form>
   <small
-    class="c10"
+    class="c11"
   >
     Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
     <ul>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c15 {
+.c16 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -78,7 +78,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
-.c13 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -116,16 +116,16 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   will-change: transform;
 }
 
-.c13:link,
-.c13:visited {
+.c11:link,
+.c11:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):active,
-.c13:not([disabled]):focus {
+.c11:not([disabled]):hover,
+.c11:not([disabled]):active,
+.c11:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -134,7 +134,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   border-color: transparent;
 }
 
-.c13[disabled] {
+.c11[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -167,7 +167,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   outline: none;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 0;
   right: 0;
@@ -346,20 +346,34 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 .c7 {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .c9 {
-  width: 150px;
-  margin-left: 1rem;
-}
-
-.c11 {
+  width: 250px;
   margin-left: 1rem;
 }
 
 .c12 {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: #7994d4;
+}
+
+.c13 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.c14 {
   display: block;
   margin-top: 2rem;
 }
@@ -383,13 +397,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c13 {
+  .c11 {
     display: none;
   }
 }
@@ -415,7 +429,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -551,23 +565,35 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 class="c8 c9"
               >
                 <input
+                  autocomplete="off"
                   class="c10"
                   id="search-service"
+                  maxlength="3"
                   name="departement"
+                  placeholder="ex. 31, 35, 75"
                   type="text"
                   value=""
                 />
               </span>
               <button
-                class="c0 c11"
-                id="search-service-btn"
+                aria-label="Rechercher le service"
+                class="c11 c12"
                 type="submit"
               >
-                Rechercher
+                <svg
+                  class="c13"
+                  fill="none"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                    fill="currentColor"
+                  />
+                </svg>
               </button>
             </form>
             <small
-              class="c12"
+              class="c14"
             >
               Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
               <ul>
@@ -587,11 +613,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             </small>
             ;
             <button
-              class="c13 c14"
+              class="c11 c15"
               title="fermer la modale"
             >
               <div
-                class="c15"
+                class="c16"
               >
                 fermer la modale
               </div>
