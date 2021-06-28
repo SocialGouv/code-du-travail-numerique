@@ -112,7 +112,7 @@ export default async () => {
 
   //
 
-  if (process.env.CI_COMMIT_TAG) {
+  if (env.env === "prod") {
     manifests.push(hpa);
   }
 
