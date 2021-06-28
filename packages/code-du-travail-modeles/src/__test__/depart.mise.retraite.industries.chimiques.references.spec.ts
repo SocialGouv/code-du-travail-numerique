@@ -40,6 +40,7 @@ test("Vérification des références juridiques pour un employé en départ à l
       "contrat salarié . convention collective": "'IDCC0044'",
       "contrat salarié . ancienneté": 6,
       "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
     })
   );
 
@@ -63,6 +64,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . ancienneté": 5,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient": 200,
       })

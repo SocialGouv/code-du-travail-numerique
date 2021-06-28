@@ -44,6 +44,7 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
       })
     );

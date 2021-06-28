@@ -20,6 +20,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -57,6 +58,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient": coefficient,
       })
@@ -90,6 +92,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . agents de maitrise et techniciens . coefficient": coefficient,
       })
@@ -117,6 +120,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");

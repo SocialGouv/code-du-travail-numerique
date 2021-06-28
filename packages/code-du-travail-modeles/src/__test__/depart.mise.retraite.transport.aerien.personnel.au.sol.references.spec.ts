@@ -57,6 +57,7 @@ test.each`
         "contrat salarié . ancienneté": 5,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle": `'${category}'`,
       })
     );

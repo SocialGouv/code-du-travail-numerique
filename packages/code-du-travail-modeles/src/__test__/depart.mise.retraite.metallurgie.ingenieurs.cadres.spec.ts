@@ -17,6 +17,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -39,6 +40,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -61,6 +63,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 
@@ -81,6 +84,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 

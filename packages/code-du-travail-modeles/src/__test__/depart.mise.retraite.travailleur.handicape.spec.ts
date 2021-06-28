@@ -1,25 +1,22 @@
 import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
-import { getNotifications } from "../utils/GetNotifications";
 
 const engine = new Engine(mergeModels());
 
 test.each`
   seniority | expectedNotice
-  ${3}      | ${1}
-  ${6}      | ${1}
-  ${12}     | ${1}
-  ${23}     | ${1}
-  ${24}     | ${2}
+  ${3}      | ${0}
+  ${6}      | ${2}
+  ${24}     | ${3}
 `(
-  "Pour un employé possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être de $expectedNotice mois",
+  "Pour un employé handicapé possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0054'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -31,20 +28,18 @@ test.each`
 
 test.each`
   seniority | expectedNotice
-  ${3}      | ${1}
-  ${6}      | ${1}
-  ${12}     | ${1}
-  ${23}     | ${1}
-  ${24}     | ${2}
+  ${3}      | ${0}
+  ${6}      | ${2}
+  ${24}     | ${3}
 `(
-  "Pour un employé possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être de $expectedNotice mois",
+  "Pour un employé handicapé possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice mois",
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0054'",
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 

@@ -34,6 +34,7 @@ test.each`
       .setSituation({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
       })
@@ -74,6 +75,7 @@ test.each`
       .setSituation({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
@@ -91,6 +93,7 @@ test("Pour un employé dans les transports routiers avec la catgorie TAM dans le
     engine.setSituation({
       "contrat salarié . convention collective": "'IDCC0016'",
       "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
       "contrat salarié . ancienneté": 5,
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'TAM'`,
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": 6,
@@ -129,6 +132,7 @@ test.each`
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,

@@ -53,6 +53,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": 6,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": 6,
