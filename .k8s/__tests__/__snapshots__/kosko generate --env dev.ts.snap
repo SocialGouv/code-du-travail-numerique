@@ -102,6 +102,7 @@ spec:
             - name: ELASTIC_APM_ENVIRONMENT
               value: cdtn-master-dev42
             - name: ES_INDEX_PREFIX
+              value: cdtn-prod
             - name: VERSION
               value: master
           envFrom:
