@@ -162,6 +162,44 @@ spec:
         - api-preprod-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
       secretName: wildcard-crt
 ---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev42
+    app.gitlab.com/env.name: preprod-dev42
+  labels:
+    app: api
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-preprod-dev42
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -204,7 +242,7 @@ spec:
           livenessProbe:
             failureThreshold: 6
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 15
             periodSeconds: 5
@@ -216,7 +254,7 @@ spec:
           readinessProbe:
             failureThreshold: 15
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 5
             periodSeconds: 5
@@ -227,12 +265,12 @@ spec:
               cpu: 500m
               memory: 560Mi
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             periodSeconds: 5
             initialDelaySeconds: 10
@@ -348,5 +386,43 @@ spec:
     - hosts:
         - preprod-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
       secretName: wildcard-crt
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: preprod-dev42
+    app.gitlab.com/env.name: preprod-dev42
+  labels:
+    app: www
+    application: v1-2-3-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-preprod-dev42
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: www
 "
 `;

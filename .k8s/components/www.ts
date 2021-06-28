@@ -10,6 +10,7 @@ import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImag
 import { EnvVar } from "kubernetes-models/v1/EnvVar";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
+import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
 
 import getApiManifests from "./api";
 
@@ -17,7 +18,7 @@ ok(process.env.CI_ENVIRONMENT_URL, "Missing CI_ENVIRONMENT_URL");
 
 // all probes httpGet
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
-  path: "/api/version",
+  path: "/health",
   port: "http",
 };
 
@@ -55,7 +56,7 @@ export default async () => {
         },
         resources: {
           requests: {
-            cpu: "100m",
+            cpu: "200m",
             memory: "256Mi",
           },
           limits: {
@@ -91,11 +92,6 @@ export default async () => {
   // add a wait condition on the API service with an initContainer
   addWaitForHttp(deployment, "http://api");
 
-  // assign 3 replicas in production env
-  if (env.env === "prod") {
-    deployment.spec.replicas = 3;
-  }
-
   // get frontend computed url and assign the env var
   const ingressHost = new EnvVar({
     name: "FRONTEND_HOST",
@@ -103,6 +99,49 @@ export default async () => {
   });
 
   addEnv({ deployment, data: ingressHost });
+
+  const hpa = new HorizontalPodAutoscaler({
+    metadata: deployment.metadata,
+    spec: {
+      minReplicas: 1,
+      maxReplicas: 10,
+
+      metrics: [
+        {
+          resource: {
+            name: "cpu",
+            target: {
+              averageUtilization: 80,
+              type: "Utilization",
+            },
+          },
+          type: "Resource",
+        },
+        {
+          resource: {
+            name: "memory",
+            target: {
+              averageUtilization: 80,
+              type: "Utilization",
+            },
+          },
+          type: "Resource",
+        },
+      ],
+
+      scaleTargetRef: {
+        apiVersion: deployment.apiVersion,
+        kind: deployment.kind,
+        name: deployment.metadata!.name!,
+      },
+    },
+  });
+
+  //
+
+  if (process.env.CI_COMMIT_TAG) {
+    manifests.push(hpa);
+  }
 
   return manifests;
 };

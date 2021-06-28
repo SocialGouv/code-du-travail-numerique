@@ -283,7 +283,7 @@ spec:
           livenessProbe:
             failureThreshold: 6
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 15
             periodSeconds: 5
@@ -295,7 +295,7 @@ spec:
           readinessProbe:
             failureThreshold: 15
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 5
             periodSeconds: 5
@@ -306,12 +306,12 @@ spec:
               cpu: 500m
               memory: 560Mi
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             periodSeconds: 5
             initialDelaySeconds: 10

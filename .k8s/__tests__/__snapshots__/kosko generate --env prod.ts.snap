@@ -140,6 +140,43 @@ spec:
         - api.cdtn.fabrique.social.gouv.fr
       secretName: api-crt
 ---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
+  labels:
+    app: api
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: api
+  namespace: cdtn
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -157,7 +194,7 @@ metadata:
   name: www
   namespace: cdtn
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: www
@@ -180,7 +217,7 @@ spec:
           livenessProbe:
             failureThreshold: 6
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 15
             periodSeconds: 5
@@ -192,7 +229,7 @@ spec:
           readinessProbe:
             failureThreshold: 15
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             initialDelaySeconds: 5
             periodSeconds: 5
@@ -203,12 +240,12 @@ spec:
               cpu: 500m
               memory: 560Mi
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
-              path: /api/version
+              path: /health
               port: http
             periodSeconds: 5
             initialDelaySeconds: 10
@@ -321,6 +358,43 @@ spec:
     - hosts:
         - code.travail.gouv.fr
       secretName: www-crt
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-cdtn
+    app.gitlab.com/env: prod
+    app.gitlab.com/env.name: prod
+  labels:
+    app: www
+    application: cdtn
+    owner: cdtn
+    team: cdtn
+  name: www
+  namespace: cdtn
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: www
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
