@@ -60,7 +60,7 @@ const Accessibilite = () => (
           </p>
           <Title shift={theme.spacings.larger}>Résultat des tests</Title>
           <p>
-            L’audit de conformité réalisé par Alter Way révèle que :
+            L’audit de conformité réalisé par Alter Way révèle que&nbsp;:
             <ul>
               <li>[50%] des critères du RGAA version 4.1 sont respectés</li>
             </ul>
