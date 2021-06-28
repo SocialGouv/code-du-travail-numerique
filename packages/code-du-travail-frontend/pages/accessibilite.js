@@ -31,7 +31,8 @@ const Accessibilite = () => (
             n° 2005-102 du 11 février 2005.
           </p>
           <p>
-            À cette fin, il met en œuvre la stratégie et les actions suivantes :
+            À cette fin, il met en œuvre la stratégie et les actions
+            suivantes&nbsp;:
             <ul>
               <li>
                 La réalisation d’un audit de conformité le 19 mai de l’année
@@ -49,7 +50,7 @@ const Accessibilite = () => (
           </p>
           <Title shift={theme.spacings.larger}>État de conformité</Title>
           <p>
-            Le site Internet code.travail.gouv.fr  est en conformité partielle
+            Le site Internet code.travail.gouv.fr est en conformité partielle
             avec le référentiel général d’amélioration de l’accessibilité (RGAA)
             « version 4.1 ».
           </p>
@@ -68,105 +69,108 @@ const Accessibilite = () => (
           <ul>
             <li>
               Critère 1.1. Chaque image porteuse d’information a-t-elle
-              une alternative textuelle ?
+              une alternative textuelle&nbsp;?
             </li>
             <li>
               Critère 1.2. Chaque image de décoration est-elle correctement
-              ignorée par les technologies d’assistance ?
+              ignorée par les technologies d’assistance&nbsp;?
             </li>
             <li>
               Critère 3.1. Dans chaque page web, l’information ne doit pas être
-              donnée uniquement par la couleur. Cette règle est-elle respectée ?
+              donnée uniquement par la couleur. Cette règle est-elle
+              respectée&nbsp;?
             </li>
             <li>
               Critère 3.2. Dans chaque page web, le contraste entre la couleur
               du texte et la couleur de son arrière-plan est-il suffisamment
-              élevé (hors cas particuliers) ?
+              élevé (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 5.7. Pour chaque tableau de données, la technique
               appropriée permettant d’associer chaque cellule avec
-              ses en-têtes est-elle utilisée (hors cas particuliers) ?
+              ses en-têtes est-elle utilisée (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 6.2. Dans chaque page web, chaque lien a-t-il
-              un intitulé ?
+              un intitulé&nbsp;?
             </li>
             <li>
               Critère 7.1. Chaque script est-il, si nécessaire, compatible avec
-              les technologies d’assistance ?
+              les technologies d’assistance&nbsp;?
             </li>
             <li>
               Critère 7.3. Chaque script est-il contrôlable par le clavier et
-              par tout dispositif de pointage (hors cas particuliers) ?
+              par tout dispositif de pointage (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 7.4. Pour chaque script qui initie un changement de
-              contexte, l’utilisateur est-il averti ou en a-t-il le contrôle ?
+              contexte, l’utilisateur est-il averti ou en a-t-il le
+              contrôle&nbsp;?
             </li>
             <li>
               Critère 7.5. Dans chaque page web, les messages de statut sont-ils
-              correctement restitués par les technologies d’assistance ?
+              correctement restitués par les technologies d’assistance&nbsp;?
             </li>
             <li>
               Critère 8.2. Pour chaque page web, le code source généré est-il
-              valide selon le type de document spécifié ?
+              valide selon le type de document spécifié&nbsp;?
             </li>
             <li>
               Critère 8.6. Pour chaque page web ayant un titre de page, ce titre
-              est-il pertinent ?
+              est-il pertinent&nbsp;?
             </li>
             <li>
               Critère 8.7. Dans chaque page web, chaque changement de
               langue est-il indiqué dans le code source (hors cas
-              particuliers) ?
+              particuliers)&nbsp;?
             </li>
             <li>
               Critère 8.9. Dans chaque page web, les balises ne doivent pas être
               utilisées uniquement à des fins de présentation. Cette règle
-              est-elle respectée ?
+              est-elle respectée&nbsp;?
             </li>
             <li>
               Critère 9.1. Dans chaque page web, l’information est-elle
-              structurée par l’utilisation appropriée de titres ?
+              structurée par l’utilisation appropriée de titres&nbsp;?
             </li>
             <li>
               Critère 9.2. Dans chaque page web, la structure du
-              document est-elle cohérente (hors cas particuliers) ?
+              document est-elle cohérente (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 9.3. Dans chaque page web, chaque liste est-elle
-              correctement structurée ?
+              correctement structurée&nbsp;?
             </li>
             <li>
               Critère 10.6. Dans chaque page web, chaque lien dont la nature
               n’est pas évidente est-il visible par rapport au texte
-              environnant ?
+              environnant&nbsp;?
             </li>
             <li>
-              Critère 11.1. Chaque champ de formulaire a-t-il une étiquette ?
+              Critère 11.1. Chaque champ de formulaire a-t-il
+              une étiquette&nbsp;?
             </li>
             <li>
               Critère 11.4. Dans chaque formulaire, chaque étiquette de champ et
-              son champ associé sont-ils accolés (hors cas particuliers) ?
+              son champ associé sont-ils accolés (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 11.5. Dans chaque formulaire, les champs de même
-              nature sont-ils regroupés, si nécessaire ?
+              nature sont-ils regroupés, si nécessaire&nbsp;?
             </li>
             <li>
               Critère 11.9. Dans chaque formulaire, l’intitulé de
-              chaque bouton est-il pertinent (hors cas particuliers) ?
+              chaque bouton est-il pertinent (hors cas particuliers)&nbsp;?
             </li>
             <li>
               Critère 12.6. Les zones de regroupement de contenus présentes dans
               plusieurs pages web (zones d’en-tête, de navigation principale,
               de contenu principal, de pied de page et de moteur de recherche)
-              peuvent-elles être atteintes ou évitées ?
+              peuvent-elles être atteintes ou évitées&nbsp;?
             </li>
             <li>
               Critère 12.8. Dans chaque page web, l’ordre de
-              tabulation est-il cohérent ?
+              tabulation est-il cohérent&nbsp;?
             </li>
           </ul>
           <Title shift={theme.spacings.larger}>
@@ -223,7 +227,7 @@ const Accessibilite = () => (
             accessible ou obtenir le contenu sous une autre forme.
           </p>
           <p>
-            E-mail :{" "}
+            E-mail&nbsp;:{" "}
             <a
               href="mailto:codedutravailnumérique@travail.gouv.fr"
               title="Envoyer un mail à codedutravailnumerique@travail.gouv.fr"
@@ -234,7 +238,6 @@ const Accessibilite = () => (
           <p>Nous essayons de répondre le plus rapidement possible.</p>
           <Title shift={theme.spacings.larger}>Voies de recours</Title>
           <p>Cette procédure est à utiliser dans le cas suivant.</p>
-
           <p>
             Vous avez signalé au responsable du site internet un défaut
             d’accessibilité qui vous empêche d’accéder à un contenu ou à un des
@@ -242,7 +245,7 @@ const Accessibilite = () => (
             satisfaisante.
           </p>
           <p>
-            Vous pouvez :
+            Vous pouvez&nbsp;:
             <ul>
               <li>
                 <A11yLink
@@ -264,7 +267,7 @@ const Accessibilite = () => (
               </li>
               <li>
                 Envoyer un courrier par la poste (gratuit, ne pas mettre de
-                timbre) : <br />
+                timbre)&nbsp;: <br />
                 Défenseur des droits <br />
                 Libre réponse 71120 <br />
                 75342 Paris CEDEX 07
@@ -276,7 +279,7 @@ const Accessibilite = () => (
           </Title>
           <p>
             Pour en savoir plus sur la politique d’accessibilité numérique de
-            l’État : <br />
+            l’État&nbsp;: <br />
             <A11yLink
               href="http://references.modernisation.gouv.fr/accessibilite-numerique"
               target="_blank"

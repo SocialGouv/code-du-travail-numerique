@@ -86,7 +86,7 @@ const Footer = () => {
                   <StyledListItem>
                     <Link passHref href="/accessibilite">
                       <StyledLink>
-                        Accessibilité : partiellement conforme
+                        Accessibilité&nbsp;: partiellement conforme
                       </StyledLink>
                     </Link>
                   </StyledListItem>
