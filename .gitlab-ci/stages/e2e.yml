@@ -11,6 +11,7 @@ Test on deployed branch:
 
   environment:
     name: ${CI_COMMIT_REF_SLUG}-dev2
+    url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
@@ -20,12 +21,12 @@ Test on deployed branch:
 
   before_script:
     - source ./.gitlab-ci/env.sh
-    - CODECEPT_BASEURL=${FRONTEND_URL}
+    - CODECEPT_BASEURL=${CI_ENVIRONMENT_URL}
     - cd ./optional/e2e/runners/puppeteer
     - |-
       retry=60;
       while
-        ! wget -q -O - "$@" "${FRONTEND_URL}/api/version"  | grep "${CI_COMMIT_REF_NAME}" &&
+        ! wget -q -O - "$@" "${CI_ENVIRONMENT_URL}/api/version"  | grep "${CI_COMMIT_REF_NAME}" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for frontend to be ready" ; sleep 3 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
