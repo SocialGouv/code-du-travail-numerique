@@ -194,7 +194,7 @@ const Accessibilite = () => (
           <p>
             Les vérifications de restitution de contenus ont été réalisées sur
             la base de la combinaison fournie par la base de référence du RGAA
-            4.1, avec les versions suivantes :
+            4.1, avec les versions suivantes&nbsp;:
           </p>
           <ul>
             <li>Firefox</li>
