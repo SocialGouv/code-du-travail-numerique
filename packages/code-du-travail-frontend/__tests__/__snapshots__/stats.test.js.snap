@@ -1644,7 +1644,7 @@ exports[`<Stats /> should render 1`] = `
                       class="c55"
                       href="/accessibilite"
                     >
-                      Accessibilité : partiellement conforme
+                      Accessibilité&nbsp;: partiellement conforme
                     </a>
                   </li>
                   <li
