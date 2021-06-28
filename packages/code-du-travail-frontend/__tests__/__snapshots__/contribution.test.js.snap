@@ -2106,7 +2106,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
           class="c3"
           id="printDate"
         >
-          le 04/01/2020 à 00:00:00
+          le 04/01/2020, 00:00:00
         </div>
         <div
           class="c4 c5"
@@ -5330,7 +5330,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
           class="c3"
           id="printDate"
         >
-          le 04/01/2020 à 00:00:00
+          le 04/01/2020, 00:00:00
         </div>
         <div
           class="c4 c5"

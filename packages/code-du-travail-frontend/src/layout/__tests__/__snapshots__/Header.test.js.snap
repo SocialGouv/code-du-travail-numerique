@@ -526,7 +526,7 @@ exports[`<Header /> should render 1`] = `
       class="c1"
       id="printDate"
     >
-      le 04/01/2020 à 00:00:00
+      le 04/01/2020, 00:00:00
     </div>
     <div
       class="c2 c3"
