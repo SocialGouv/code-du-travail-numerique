@@ -23,7 +23,7 @@ include:
 
 .notify_dev:
   environment:
-    name: ${CI_COMMIT_REF_SLUG}-dev2
+    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -80,6 +80,6 @@ Delete useless k8s namespaces:
   only:
     - master
   environment:
-    name: ${CI_COMMIT_REF_SLUG}-dev2
+    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
