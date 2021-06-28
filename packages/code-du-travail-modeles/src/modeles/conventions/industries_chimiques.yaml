@@ -7,7 +7,7 @@ contrat salarié . convention collective . industries chimiques:
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle:
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
-  question: Quelle est votre catégorie professionelle ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -29,7 +29,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient:
   titre: Coefficient
-  question: Quelle est votre coefficient ?
+  question: Quel est le coefficient du salarié ?
   cdtn:
     type: liste
     valeurs:
@@ -61,7 +61,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle . agents de maitrise et techniciens . coefficient:
   titre: Coefficient
-  question: Quelle est votre coefficient ?
+  question: Quel est le coefficient du salarié ?
   cdtn:
     type: liste
     valeurs:

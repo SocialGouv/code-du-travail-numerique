@@ -1,6 +1,5 @@
 import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
-import { getNotifications } from "../utils/GetNotifications";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -51,6 +50,7 @@ test.each`
       })
     );
 
+    expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
   }
 );

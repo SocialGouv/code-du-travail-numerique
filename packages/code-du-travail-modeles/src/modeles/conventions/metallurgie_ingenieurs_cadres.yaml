@@ -15,7 +15,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       - montant: 1 mois
         plafond: 24 mois
       - montant: 2 mois
-  références: 
+  références:
     Article 32.2: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173750/?idConteneur=KALICONT000005635842
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . départ à la retraite:
@@ -27,12 +27,5 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       - montant: 1 mois
         plafond: 24 mois
       - montant: 2 mois
-  références: 
+  références:
     Article 31.2: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173739/?idConteneur=KALICONT000005635842
-
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . notification:
-  type: notification
-  description: L'ancienneté se calcule à la date de notification du départ à la retraite.
-  valeur: oui
-
-

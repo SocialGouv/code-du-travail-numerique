@@ -54,8 +54,8 @@ test.each`
   ${6}
   ${24}
 `(
-  "Pour une employée avec une anciénneté de $seniority lors d'un départ à la retraite, on attend une notification",
-  ({ seniority, expectedNotification }) => {
+  "Pour une employée avec une anciénneté de $seniority lors d'un départ à la retraite, on n'attend pas de notification",
+  ({ seniority }) => {
     const notifications = getNotifications(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0650'",
@@ -64,10 +64,7 @@ test.each`
       })
     );
 
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toEqual(
-      "L'ancienneté se calcule à la date de notification du départ à la retraite."
-    );
+    expect(notifications).toHaveLength(0);
   }
 );
 
@@ -77,8 +74,8 @@ test.each`
   ${6}
   ${24}
 `(
-  "Pour une employée avec une anciénneté de $seniority lors d'une mise à la retraite, on attend une notification",
-  ({ seniority, expectedNotification }) => {
+  "Pour une employée avec une anciénneté de $seniority lors d'une mise à la retraite, on n'attend pas de notification",
+  ({ seniority }) => {
     const notifications = getNotifications(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0650'",
@@ -87,9 +84,6 @@ test.each`
       })
     );
 
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toEqual(
-      "L'ancienneté se calcule à la date de notification du départ à la retraite."
-    );
+    expect(notifications).toHaveLength(0);
   }
 );
