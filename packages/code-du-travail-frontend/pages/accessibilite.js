@@ -214,7 +214,10 @@ const Accessibilite = () => (
             <li>headings maps</li>
             <li>wcag color contrast checker</li>
             <li>
-              <a href="https://validator.w3.org" title="Validateur html du w3c">
+              <a
+                href="https://validator.w3.org"
+                title="Accéder au validateur html du w3c"
+              >
                 Validateur w3c
               </a>
             </li>
