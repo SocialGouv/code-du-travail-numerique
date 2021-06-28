@@ -57,6 +57,9 @@ k8s test:
     - .base_deploy_kosko_stage
   before_script:
     - source ./.gitlab-ci/env.sh
+    - echo $CI_ENVIRONMENT_NAME
+    - echo $CI_ENVIRONMENT_URL
+    - echo $CI_ENVIRONMENT_SLUG
   stage: Deploy
   rules:
     - if: "$PRODUCTION || $RELEASE || $CI_COMMIT_TAG"
