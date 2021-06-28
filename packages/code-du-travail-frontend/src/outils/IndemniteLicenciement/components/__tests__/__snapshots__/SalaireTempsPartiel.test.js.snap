@@ -554,6 +554,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
             class="c10"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
             >
@@ -621,6 +622,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
             class="c14"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1225,6 +1227,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
             class="c10"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
             >
@@ -1292,6 +1295,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
             class="c14"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1370,6 +1374,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
             class="c10"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
             >
@@ -1437,6 +1442,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
             class="c14"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
             >

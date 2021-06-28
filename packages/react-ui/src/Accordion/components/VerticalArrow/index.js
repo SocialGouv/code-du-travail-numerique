@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { ChevronRight } from "react-feather";
+import styled from "styled-components";
 
 import { animations } from "../../../theme";
 

@@ -71,7 +71,7 @@ export const RelatedItems = ({ disableSurvey = false, items = [] }) => {
                     }}
                   >
                     <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
-                    <CloseIcon aria-hidden />
+                    <CloseIcon aria-hidden="true" />
                   </CloseButton>
                   <PromptContainer>
                     <Subtitle>Questionnaire</Subtitle>

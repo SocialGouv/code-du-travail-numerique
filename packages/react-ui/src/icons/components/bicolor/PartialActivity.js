@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgPartialActivity(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" {...props}>
+    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
       <g clipPath="url(#partial-activity_svg__clip0)">
         <path
           d="M15.63 24.497v7.418m5.298-7.418v7.418"

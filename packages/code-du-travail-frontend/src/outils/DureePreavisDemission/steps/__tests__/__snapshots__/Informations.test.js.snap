@@ -192,6 +192,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         class="c7"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >
@@ -393,6 +394,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         class="c7"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >
@@ -464,6 +466,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         class="c7"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >

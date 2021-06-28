@@ -37,7 +37,7 @@ export const ToolSurvey = () => (
                 }}
               >
                 <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
-                <CloseIcon aria-hidden />
+                <CloseIcon aria-hidden="true" />
               </CloseButton>
               <div>
                 <StyledSubtitle>Questionnaire</StyledSubtitle>

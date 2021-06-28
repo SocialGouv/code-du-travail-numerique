@@ -498,6 +498,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         class="c11"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >

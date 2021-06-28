@@ -2,12 +2,7 @@ import * as React from "react";
 
 function SvgCrisisCompagny(props) {
   return (
-    <svg
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 52 52"
-      {...props}
-    >
+    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
       <path
         d="M1 4.846h.962v44.23c0 .532.43.962.961.962H26a.962.962 0 000-1.923H4.846a.962.962 0 01-.961-.961V4.846h.961L2.923 1 1 4.846zM35.615 50.038a.962.962 0 110-1.923h11.539v-.961L51 49.077 47.154 51v-.962H35.615zM30.808 49.077a.962.962 0 101.923 0 .962.962 0 00-1.923 0z"
         fill="#4E6896"

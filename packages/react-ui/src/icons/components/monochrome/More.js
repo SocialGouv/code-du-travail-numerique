@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgMore(props) {
   return (
-    <svg fill="none" viewBox="0 0 16 16" {...props}>
+    <svg fill="none" viewBox="0 0 16 16" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

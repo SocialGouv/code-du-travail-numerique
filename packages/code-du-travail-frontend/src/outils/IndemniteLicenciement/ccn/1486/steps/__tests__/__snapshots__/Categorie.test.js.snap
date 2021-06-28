@@ -155,6 +155,7 @@ exports[`<Categorie /> renders 1`] = `
       class="c4"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >

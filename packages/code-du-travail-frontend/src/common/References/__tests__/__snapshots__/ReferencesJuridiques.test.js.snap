@@ -230,6 +230,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               tabindex="0"
             >
               <svg
+                aria-hidden="true"
                 class="c3 c4"
                 fill="none"
                 height="24"
@@ -279,6 +280,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     href="/code-du-travail/l1244-3"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
@@ -301,6 +303,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     href="/code-du-travail/r1244-4"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
@@ -326,6 +329,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     target="_blank"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
@@ -351,6 +355,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     target="_blank"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"
@@ -376,6 +381,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     target="_blank"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c14 c15"
                       fill="none"
                       viewBox="0 0 28 15"

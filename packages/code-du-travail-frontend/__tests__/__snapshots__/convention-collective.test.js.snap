@@ -512,6 +512,7 @@ exports[`<ConventionCollective /> should render 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -533,6 +534,7 @@ exports[`<ConventionCollective /> should render 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -557,6 +559,7 @@ exports[`<ConventionCollective /> should render 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -580,6 +583,7 @@ exports[`<ConventionCollective /> should render 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"

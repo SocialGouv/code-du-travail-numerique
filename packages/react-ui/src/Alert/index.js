@@ -38,7 +38,7 @@ Alert.defaultProps = {
 export function AlertWithIcon({ variant, size, children, ...props }) {
   return (
     <Flex variant={variant} size={size} {...props}>
-      <AlertCircle />
+      <AlertCircle aria-hidden="true" />
       <Box>{children}</Box>
     </Flex>
   );

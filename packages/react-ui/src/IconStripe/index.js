@@ -10,7 +10,7 @@ const SMALL_SIZE = "3rem";
 export const IconStripe = ({ children, icon: Icon, small, ...props }) => (
   <FlexDiv {...props}>
     <IconWrapper small={small}>
-      <Icon />
+      <Icon aria-hidden="true" />
     </IconWrapper>
     <ChildrenWrapper>{children}</ChildrenWrapper>
   </FlexDiv>

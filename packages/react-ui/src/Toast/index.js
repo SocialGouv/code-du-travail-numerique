@@ -29,7 +29,7 @@ export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
           aria-label="Fermer"
           onClick={onRemove}
         >
-          <StyledX variant={variant} />
+          <StyledX aria-hidden="true" variant={variant} />
         </Button>
       )}
     </StyledToast>

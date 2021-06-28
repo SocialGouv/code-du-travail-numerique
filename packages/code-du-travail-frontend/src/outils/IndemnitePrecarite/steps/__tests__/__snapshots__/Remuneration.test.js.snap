@@ -460,6 +460,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
           class="c10"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -517,6 +518,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
           class="c10"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -887,6 +889,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
         class="c8"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
         >

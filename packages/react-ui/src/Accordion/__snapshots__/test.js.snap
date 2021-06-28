@@ -122,6 +122,7 @@ exports[`<Accordion /> renders 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c1 c2"
               fill="none"
               height="24"
@@ -293,6 +294,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c1 c2"
               fill="none"
               height="24"
@@ -464,6 +466,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c1 c2"
               fill="none"
               height="24"
@@ -635,6 +638,7 @@ exports[`<Accordion /> renders as h2 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c1 c2"
               fill="none"
               height="24"

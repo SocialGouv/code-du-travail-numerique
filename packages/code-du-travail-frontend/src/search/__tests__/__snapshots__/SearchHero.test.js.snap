@@ -430,6 +430,7 @@ exports[`<SearchHero /> should render 1`] = `
             </label>
           </div>
           <svg
+            aria-hidden="true"
             class="c12 c13"
             fill="none"
             viewBox="0 0 32 32"
@@ -477,6 +478,7 @@ exports[`<SearchHero /> should render 1`] = `
         class="c18"
       >
         <svg
+          aria-hidden="true"
           class="c19"
           fill="none"
           viewBox="0 0 616 514"

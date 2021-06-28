@@ -62,6 +62,7 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
       Lorem Ipsum
     </span>
     <svg
+      aria-hidden="true"
       class="c3 c4"
       fill="none"
       viewBox="0 0 28 15"
@@ -137,6 +138,7 @@ exports[`<ArrowLink /> renders an arrow on the right 1`] = `
       Lorem Ipsum
     </span>
     <svg
+      aria-hidden="true"
       class="c3 c4"
       fill="none"
       viewBox="0 0 28 15"

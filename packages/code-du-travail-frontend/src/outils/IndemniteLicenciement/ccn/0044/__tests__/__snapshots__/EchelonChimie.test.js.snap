@@ -255,6 +255,7 @@ exports[`<EchelonChimie /> should render 1`] = `
       class="c5"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >
@@ -537,6 +538,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
       class="c5"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >

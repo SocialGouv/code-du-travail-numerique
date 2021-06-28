@@ -35,7 +35,7 @@ export const ItemPanel = styled(AccordionItemPanel)`
 
 export const ItemButton = ({ children, noTitle = false }) => (
   <StyledAccordionItemButton>
-    <VerticalArrow />
+    <VerticalArrow aria-hidden="true" />
     <ButtonText noTitle={noTitle}>{children}</ButtonText>
   </StyledAccordionItemButton>
 );

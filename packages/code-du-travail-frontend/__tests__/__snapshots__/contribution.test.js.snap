@@ -2122,6 +2122,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               src="/static/assets/img/logo-rf.svg"
             />
             <svg
+              aria-label="Code du travail numérique"
               class="c8"
               fill="none"
               viewBox="0 0 657 265"
@@ -2192,6 +2193,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 type="submit"
               >
                 <svg
+                  aria-hidden="true"
                   class="c16"
                   fill="none"
                   viewBox="0 0 32 32"
@@ -2212,6 +2214,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               href="/recherche"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -2227,6 +2230,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               role="navigation"
             >
               <svg
+                aria-hidden="true"
                 class="c22"
                 fill="none"
                 viewBox="0 0 32 32"
@@ -2269,6 +2273,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     title="Retour à l'accueil"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c30"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2285,6 +2290,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   class="c28"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c31"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2306,6 +2312,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   class="c28"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c31"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2358,6 +2365,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -2379,6 +2387,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -2403,6 +2412,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -2426,6 +2436,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                             class="c39"
                           >
                             <svg
+                              aria-hidden="true"
                               class="c40"
                               fill="none"
                               viewBox="0 0 16 16"
@@ -2481,6 +2492,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       class="c52"
                     >
                       <svg
+                        aria-hidden="true"
                         fill="none"
                         viewBox="0 0 32 32"
                       >
@@ -2509,6 +2521,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c56"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
                         >
@@ -2741,6 +2754,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2762,6 +2776,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2786,6 +2801,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2809,6 +2825,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       class="c39"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c40"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -2905,6 +2922,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               >
                 Contacter nos services en région
                 <svg
+                  aria-hidden="true"
                   class="c94"
                   fill="none"
                   viewBox="0 0 28 15"
@@ -5346,6 +5364,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               src="/static/assets/img/logo-rf.svg"
             />
             <svg
+              aria-label="Code du travail numérique"
               class="c8"
               fill="none"
               viewBox="0 0 657 265"
@@ -5416,6 +5435,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 type="submit"
               >
                 <svg
+                  aria-hidden="true"
                   class="c16"
                   fill="none"
                   viewBox="0 0 32 32"
@@ -5436,6 +5456,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               href="/recherche"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -5451,6 +5472,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               role="navigation"
             >
               <svg
+                aria-hidden="true"
                 class="c22"
                 fill="none"
                 viewBox="0 0 32 32"
@@ -5493,6 +5515,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     title="Retour à l'accueil"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c30"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -5509,6 +5532,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   class="c28"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c31"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -5530,6 +5554,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   class="c28"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c31"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -5582,6 +5607,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -5603,6 +5629,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -5627,6 +5654,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           class="c39"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -5650,6 +5678,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                             class="c39"
                           >
                             <svg
+                              aria-hidden="true"
                               class="c40"
                               fill="none"
                               viewBox="0 0 16 16"
@@ -5705,6 +5734,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       class="c52"
                     >
                       <svg
+                        aria-hidden="true"
                         fill="none"
                         viewBox="0 0 32 32"
                       >
@@ -5733,6 +5763,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c56"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
                         >
@@ -5965,6 +5996,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -5986,6 +6018,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -6010,6 +6043,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     class="c39"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -6033,6 +6067,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       class="c39"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c40"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -6129,6 +6164,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               >
                 Contacter nos services en région
                 <svg
+                  aria-hidden="true"
                   class="c94"
                   fill="none"
                   viewBox="0 0 28 15"

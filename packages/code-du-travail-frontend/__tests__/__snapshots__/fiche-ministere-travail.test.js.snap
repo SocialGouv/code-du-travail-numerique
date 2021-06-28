@@ -1902,6 +1902,7 @@ exports[`<FicheMT /> should render 1`] = `
             src="/static/assets/img/logo-rf.svg"
           />
           <svg
+            aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
@@ -1972,6 +1973,7 @@ exports[`<FicheMT /> should render 1`] = `
               type="submit"
             >
               <svg
+                aria-hidden="true"
                 class="c16"
                 fill="none"
                 viewBox="0 0 32 32"
@@ -1992,6 +1994,7 @@ exports[`<FicheMT /> should render 1`] = `
             href="/recherche"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -2007,6 +2010,7 @@ exports[`<FicheMT /> should render 1`] = `
             role="navigation"
           >
             <svg
+              aria-hidden="true"
               class="c22"
               fill="none"
               viewBox="0 0 32 32"
@@ -2049,6 +2053,7 @@ exports[`<FicheMT /> should render 1`] = `
                   title="Retour à l'accueil"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c30"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2065,6 +2070,7 @@ exports[`<FicheMT /> should render 1`] = `
                 class="c28"
               >
                 <svg
+                  aria-hidden="true"
                   class="c31"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -2117,6 +2123,7 @@ exports[`<FicheMT /> should render 1`] = `
                         class="c40"
                       >
                         <svg
+                          aria-hidden="true"
                           class="c41"
                           fill="none"
                           viewBox="0 0 16 16"
@@ -2138,6 +2145,7 @@ exports[`<FicheMT /> should render 1`] = `
                         class="c40"
                       >
                         <svg
+                          aria-hidden="true"
                           class="c41"
                           fill="none"
                           viewBox="0 0 16 16"
@@ -2162,6 +2170,7 @@ exports[`<FicheMT /> should render 1`] = `
                         class="c40"
                       >
                         <svg
+                          aria-hidden="true"
                           class="c41"
                           fill="none"
                           viewBox="0 0 16 16"
@@ -2185,6 +2194,7 @@ exports[`<FicheMT /> should render 1`] = `
                           class="c40"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c41"
                             fill="none"
                             viewBox="0 0 16 16"
@@ -2297,6 +2307,7 @@ exports[`<FicheMT /> should render 1`] = `
                           tabindex="0"
                         >
                           <svg
+                            aria-hidden="true"
                             class="c57 c58"
                             fill="none"
                             height="24"
@@ -2413,6 +2424,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="c40"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c41"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2434,6 +2446,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="c40"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c41"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2458,6 +2471,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="c40"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c41"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -2481,6 +2495,7 @@ exports[`<FicheMT /> should render 1`] = `
                     class="c40"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c41"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2577,6 +2592,7 @@ exports[`<FicheMT /> should render 1`] = `
             >
               Contacter nos services en région
               <svg
+                aria-hidden="true"
                 class="c83"
                 fill="none"
                 viewBox="0 0 28 15"

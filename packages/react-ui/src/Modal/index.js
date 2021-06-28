@@ -36,7 +36,7 @@ export const Modal = ({
           ref={closeRef}
         >
           <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
-          <X aria-hidden />
+          <X aria-hidden="true" />
         </CloseButton>
       </Wrapper>
     </StyledDialogOverlay>
