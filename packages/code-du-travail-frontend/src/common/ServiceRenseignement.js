@@ -1,12 +1,14 @@
-import { Heading, Input, theme } from "@socialgouv/cdtn-ui";
+import { Button, Heading, icons, Input, theme } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
-import { UID } from "react-uid";
+import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 import { matopush } from "../piwik.js";
 import { A11yLink } from "./A11yLink";
+
+const { Search: SearchIcon } = icons;
 
 function DepartementLink({ departement }) {
   const trackSRClick = useCallback(() => {
@@ -30,12 +32,16 @@ function ServiceRenseignement() {
   const [departementData, setDepartementData] = useState();
   const router = useRouter();
   const onDepartmentInput = useCallback(
-    (keyEvent) => {
-      const departmentNum = (
-        keyEvent.target.value.replace(/^0+/, "") || ""
-      ).toLowerCase();
-      const departmentData = servicesDeRenseignement[departmentNum];
-      setDepartementData(departmentData);
+    ({ departement }) => {
+      if (departement) {
+        const departmentNum = (
+          departement.replace(/^0+/, "") || ""
+        ).toLowerCase();
+        const departmentData = servicesDeRenseignement[departmentNum];
+        setDepartementData(departmentData);
+      } else {
+        setDepartementData(undefined);
+      }
     },
     [setDepartementData]
   );
@@ -61,28 +67,37 @@ function ServiceRenseignement() {
           Service gratuit <span>+ prix appel</span>
         </Pricing>
       </NumberInsert>
-
       <Heading as="h4">Contact par email et prise de rendez-vous</Heading>
-      <p>
-        <UID name={(id) => `id_${id}`}>
-          {(id) => (
-            <>
-              <label htmlFor={id}>
-                Saisissez votre numéro de département&nbsp;:
-              </label>
-              <StyledInput
-                id={id}
-                type="text"
-                name="search-service"
-                autoComplete="off"
-                maxLength="3"
-                placeholder="ex. 31, 35, 75"
-                onChange={onDepartmentInput}
-              />
-            </>
-          )}
-        </UID>
-      </p>
+      <Form
+        onSubmit={onDepartmentInput}
+        render={({ handleSubmit }) => (
+          <StyledForm onSubmit={handleSubmit}>
+            <label htmlFor="search-service">
+              Saisissez votre numéro de département&nbsp;:
+            </label>
+            <Field
+              id="search-service"
+              type="text"
+              name="departement"
+              autoComplete="off"
+              maxLength="3"
+              placeholder="ex. 31, 35, 75"
+              render={({ input, ...props }) => (
+                <StyledInput {...props} {...input} id="search-service" />
+              )}
+            />
+            <SubmitIcon
+              type="submit"
+              small
+              narrow
+              variant="naked"
+              aria-label="Rechercher le service"
+            >
+              <StyledSearchIcon />
+            </SubmitIcon>
+          </StyledForm>
+        )}
+      />
       {departementData && <DepartementLink departement={departementData} />}
       <Small>
         Attention, ces services délivrent une information juridique, ils ne sont
@@ -94,6 +109,7 @@ function ServiceRenseignement() {
           <li>{"vous renseigner sur les cotisations sociales"}</li>
         </ul>
       </Small>
+      ;
     </>
   );
 }
@@ -143,6 +159,7 @@ const Pricing = styled.em`
     font-size: ${fonts.sizes.tiny};
     line-height: 1.8;
   }
+
   &:before {
     position: absolute;
     top: 50%;
@@ -159,6 +176,7 @@ const Pricing = styled.em`
       display: none;
     }
   }
+
   &:after {
     position: absolute;
     top: 0;
@@ -177,11 +195,29 @@ const Pricing = styled.em`
   }
 `;
 
+const StyledForm = styled.form`
+  position: relative;
+  width: max-content;
+  padding-top: ${spacings.small};
+  padding-bottom: ${spacings.small};
+`;
 const StyledInput = styled(Input)`
-  display: inline-block;
-  width: 150px;
-  margin-top: ${spacings.small};
+  width: 250px;
   margin-left: ${spacings.small};
+`;
+
+const SubmitIcon = styled(Button)`
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 3rem;
+  height: 5.4rem;
+  color: ${({ theme }) => theme.secondary};
+`;
+
+const StyledSearchIcon = styled(SearchIcon)`
+  width: 3rem;
+  height: 3rem;
 `;
 
 const Small = styled.small`
