@@ -390,6 +390,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       type="submit"
     >
       <svg
+        aria-hidden="true"
         class="c10"
         fill="none"
         viewBox="0 0 32 32"
