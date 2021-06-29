@@ -334,6 +334,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
           class="c7"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -889,6 +890,7 @@ exports[`<Salaires /> should render 1`] = `
           class="c7"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >

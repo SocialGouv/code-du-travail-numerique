@@ -243,6 +243,7 @@ exports[`<Article /> should render 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -268,6 +269,7 @@ exports[`<Article /> should render 1`] = `
         class="c4"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -315,6 +317,7 @@ exports[`<Article /> should render 1`] = `
           >
             Bonjour
             <svg
+              aria-hidden="true"
               class="c13 c14"
               fill="none"
               viewBox="0 0 28 15"

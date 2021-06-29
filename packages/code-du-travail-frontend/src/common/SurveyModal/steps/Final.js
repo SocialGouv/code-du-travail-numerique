@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 export const FinalStep = ({ setModalVisible }) => (
   <Centerer>
-    <StyledCheck />
-    <h1>Merci pour votre aide&nbsp;!</h1>
+    <StyledCheck aria-label="Questionnaire validé" />
+    <h1 role="status">Merci pour votre aide&nbsp;!</h1>
     <StyledLogo />
     <StyledHr />
     <Button

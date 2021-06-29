@@ -140,6 +140,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -441,6 +442,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >

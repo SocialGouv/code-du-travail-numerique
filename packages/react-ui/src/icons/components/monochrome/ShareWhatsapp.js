@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgShareWhatsapp(props) {
   return (
-    <svg viewBox="0 0 16 16" fill="none" {...props}>
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

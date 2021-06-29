@@ -706,6 +706,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c11"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -757,6 +758,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Consulter
                   <svg
+                    aria-hidden="true"
                     class="c16 c17"
                     fill="none"
                     viewBox="0 0 28 15"
@@ -815,6 +817,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Consulter
                   <svg
+                    aria-hidden="true"
                     class="c16 c17"
                     fill="none"
                     viewBox="0 0 28 15"
@@ -844,6 +847,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c11"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -895,6 +899,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 >
                   Consulter
                   <svg
+                    aria-hidden="true"
                     class="c16 c17"
                     fill="none"
                     viewBox="0 0 28 15"
@@ -924,6 +929,7 @@ exports[`<SearchResults/> should render results 1`] = `
               class="c11"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >

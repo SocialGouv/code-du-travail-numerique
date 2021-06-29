@@ -159,6 +159,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
         class="c6"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >
@@ -346,6 +347,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
         class="c6"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
         >

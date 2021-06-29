@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgAgreement(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" {...props}>
+    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

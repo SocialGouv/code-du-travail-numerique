@@ -593,6 +593,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -674,6 +675,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -798,6 +800,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -906,6 +909,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -1026,6 +1030,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -1326,6 +1331,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     tabindex="0"
                                   >
                                     <svg
+                                      aria-hidden="true"
                                       class="c16 c17"
                                       fill="none"
                                       height="24"
@@ -1404,6 +1410,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     tabindex="0"
                                   >
                                     <svg
+                                      aria-hidden="true"
                                       class="c16 c17"
                                       fill="none"
                                       height="24"
@@ -1557,6 +1564,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"
@@ -1686,6 +1694,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     tabindex="0"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c16 c17"
                       fill="none"
                       height="24"

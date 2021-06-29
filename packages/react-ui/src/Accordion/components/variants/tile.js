@@ -1,15 +1,15 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import React from "react";
 import {
   Accordion as RootAccordion,
-  AccordionItemButton,
   AccordionItem,
+  AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import styled, { css } from "styled-components";
 
-import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { fadeIn } from "../../../keyframes";
+import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow";
 
 export const Accordion = styled(RootAccordion)`
@@ -51,14 +51,14 @@ export const Item = styled(({ index, isLast, ...rest }) => (
       css`
         margin-top: ${spacings.medium};
       `}
-    }
+  }
   @media (max-width: ${breakpoints.mobile}) {
     ${({ index }) =>
       index > 0 &&
       css`
         margin-top: ${spacings.small};
       `}
-    }
+  }
 `;
 
 export const ItemPanel = styled(AccordionItemPanel)`
@@ -79,7 +79,7 @@ export const ItemButton = ({ children, icon: Icon }) => (
       )}
       <ButtonText>{children}</ButtonText>
     </FlexContainer>
-    <VerticalArrow />
+    <VerticalArrow aria-hidden="true" />
   </StyledAccordionItemButton>
 );
 

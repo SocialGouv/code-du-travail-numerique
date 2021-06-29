@@ -344,6 +344,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
+      aria-hidden="true"
       class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
@@ -361,6 +362,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
+      aria-hidden="true"
       class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
@@ -378,6 +380,7 @@ exports[`<Button /> it renders a Button link 1`] = `
     link
      
     <svg
+      aria-hidden="true"
       class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"

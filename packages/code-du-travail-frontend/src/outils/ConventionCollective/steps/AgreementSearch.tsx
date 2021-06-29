@@ -41,7 +41,7 @@ const AgreementSearchStep = ({
           if (state.isLoading) {
             return (
               <Section>
-                <Spinner aria-hidden />{" "}
+                <Spinner aria-hidden="true" />{" "}
                 <span role="status">recherche en cours</span>
               </Section>
             );

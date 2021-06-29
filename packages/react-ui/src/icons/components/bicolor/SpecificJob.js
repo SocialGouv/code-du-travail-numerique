@@ -2,12 +2,7 @@ import * as React from "react";
 
 function SvgSpecificJob(props) {
   return (
-    <svg
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 52 52"
-      {...props}
-    >
+    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
       <path
         d="M5.559 3A2.559 2.559 0 003 5.559v24.953a2.559 2.559 0 002.559 2.56h6.313v-2.56H5.56V5.56h17.114v2.409h2.559v-2.41A2.559 2.559 0 0022.673 3H5.56z"
         fill="#FF7067"

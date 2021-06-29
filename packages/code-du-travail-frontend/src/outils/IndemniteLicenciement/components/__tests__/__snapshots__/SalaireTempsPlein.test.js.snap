@@ -232,6 +232,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -267,6 +268,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -516,6 +518,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -551,6 +554,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
               >

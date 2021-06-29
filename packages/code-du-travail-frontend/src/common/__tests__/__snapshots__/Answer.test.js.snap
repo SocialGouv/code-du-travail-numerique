@@ -724,6 +724,7 @@ exports[`<Answer /> should renders 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -745,6 +746,7 @@ exports[`<Answer /> should renders 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -769,6 +771,7 @@ exports[`<Answer /> should renders 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -792,6 +795,7 @@ exports[`<Answer /> should renders 1`] = `
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -895,6 +899,7 @@ exports[`<Answer /> should renders 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -916,6 +921,7 @@ exports[`<Answer /> should renders 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -940,6 +946,7 @@ exports[`<Answer /> should renders 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -963,6 +970,7 @@ exports[`<Answer /> should renders 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -1899,6 +1907,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               title="Retour à l'accueil"
             >
               <svg
+                aria-hidden="true"
                 class="c7"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -1915,6 +1924,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="c5"
           >
             <svg
+              aria-hidden="true"
               class="c8"
               fill="none"
               viewBox="0 0 16 16"
@@ -1936,6 +1946,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             class="c5"
           >
             <svg
+              aria-hidden="true"
               class="c8"
               fill="none"
               viewBox="0 0 16 16"
@@ -1988,6 +1999,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                     class="c16"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2009,6 +2021,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                     class="c16"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2033,6 +2046,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                     class="c16"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -2056,6 +2070,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                       class="c16"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c17"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -2164,6 +2179,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c16"
             >
               <svg
+                aria-hidden="true"
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -2185,6 +2201,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c16"
             >
               <svg
+                aria-hidden="true"
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -2209,6 +2226,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c16"
             >
               <svg
+                aria-hidden="true"
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -2232,6 +2250,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c16"
               >
                 <svg
+                  aria-hidden="true"
                   class="c17"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -3019,6 +3038,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -3040,6 +3060,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -3064,6 +3085,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -3087,6 +3109,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -3190,6 +3213,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -3211,6 +3235,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -3235,6 +3260,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -3258,6 +3284,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -4158,6 +4185,7 @@ exports[`<Answer /> should renders related content 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -4179,6 +4207,7 @@ exports[`<Answer /> should renders related content 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -4203,6 +4232,7 @@ exports[`<Answer /> should renders related content 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -4226,6 +4256,7 @@ exports[`<Answer /> should renders related content 1`] = `
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -4326,6 +4357,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -4347,6 +4379,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -4371,6 +4404,7 @@ exports[`<Answer /> should renders related content 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -4394,6 +4428,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -4476,6 +4511,7 @@ exports[`<Answer /> should renders related content 1`] = `
               href="/url.extrenal/tool"
             >
               <svg
+                aria-hidden="true"
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -4500,6 +4536,7 @@ exports[`<Answer /> should renders related content 1`] = `
               href="/outils/TOOL_1"
             >
               <svg
+                aria-hidden="true"
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -4534,6 +4571,7 @@ exports[`<Answer /> should renders related content 1`] = `
               href="/fiche-service-public/LINK_1"
             >
               <svg
+                aria-hidden="true"
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -4558,6 +4596,7 @@ exports[`<Answer /> should renders related content 1`] = `
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
+                aria-hidden="true"
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -4582,6 +4621,7 @@ exports[`<Answer /> should renders related content 1`] = `
               href="/fiche-service-public/LINK_4"
             >
               <svg
+                aria-hidden="true"
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -5329,6 +5369,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -5350,6 +5391,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -5374,6 +5416,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -5397,6 +5440,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -5501,6 +5545,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -5522,6 +5567,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -5546,6 +5592,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -5569,6 +5616,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -6356,6 +6404,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -6377,6 +6426,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -6401,6 +6451,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -6424,6 +6475,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -6528,6 +6580,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -6549,6 +6602,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -6573,6 +6627,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -6596,6 +6651,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -7383,6 +7439,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -7404,6 +7461,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -7428,6 +7486,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -7451,6 +7510,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -7556,6 +7616,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -7577,6 +7638,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -7601,6 +7663,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -7624,6 +7687,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
@@ -8411,6 +8475,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -8432,6 +8497,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -8456,6 +8522,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                     class="c8"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -8479,6 +8546,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                       class="c8"
                     >
                       <svg
+                        aria-hidden="true"
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
@@ -8579,6 +8647,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -8600,6 +8669,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -8624,6 +8694,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="c8"
             >
               <svg
+                aria-hidden="true"
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -8647,6 +8718,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="c8"
               >
                 <svg
+                  aria-hidden="true"
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
