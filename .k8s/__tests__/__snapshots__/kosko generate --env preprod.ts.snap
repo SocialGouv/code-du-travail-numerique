@@ -323,8 +323,7 @@ spec:
             - name: VERSION
               value: v1.2.3
             - name: FRONTEND_HOST
-              value: >-
-                https://preprod-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+              value: preprod-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
           envFrom:
             - configMapRef:
                 name: www-configmap

@@ -327,7 +327,7 @@ spec:
               value: master
             - name: FRONTEND_HOST
               value: >-
-                https://master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+                master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
           envFrom:
             - configMapRef:
                 name: www-configmap
