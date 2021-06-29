@@ -581,6 +581,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 type="submit"
               >
                 <svg
+                  aria-hidden="true"
                   class="c13"
                   fill="none"
                   viewBox="0 0 32 32"
