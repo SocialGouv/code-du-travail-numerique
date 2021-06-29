@@ -103,3 +103,4 @@ k8s test:
   variables:
     KOSKO_GENERATE_ARGS: --env prod
     ES_INDEX_PREFIX: cdtn-prod
+    PRODUCTION_NAMESPACE: cdtn
