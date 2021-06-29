@@ -52,7 +52,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export NLP_URL="https://serving-ml.fabrique.social.gouv.fr";
   export AZURE_CONTAINER="cdtn"
 else
-  export DOMAIN="${BRANCH_HASH}-code-travail.${KUBE_INGRESS_BASE_DOMAIN}";
+  export DOMAIN="${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}";
 fi
 
 

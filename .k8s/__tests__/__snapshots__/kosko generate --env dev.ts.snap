@@ -1,6 +1,432 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`kosko generate --dev 1`] = `
-"42
+"---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    field.cattle.io/creatorId: gitlab
+    field.cattle.io/projectId: c-bar:p-foo
+    git/branch: master
+    git/remote: >-
+      https://gitlab-ci-token:[MASKED]@gitlab.factory.social.gouv.fr/SocialGouv/code-du-travail-numerique.git
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    azure-pg-admin-user: code-du-travail-numerique
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: code-du-travail-numerique-85-master-dev42
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    app: api
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-code-du-travail-numerique
+        app.gitlab.com/env: master-dev42
+        app.gitlab.com/env.name: master-dev42
+      labels:
+        app: api
+        application: master-dev42-code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    spec:
+      containers:
+        - image: >-
+            harbor.fabrique.social.gouv.fr/cdtn/cdtn-api:0123456789abcdefghijklmnopqrstuvwxyz0123
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 15
+          name: api
+          ports:
+            - containerPort: 1337
+              name: http
+          readinessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: /api/v1/version
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 320Mi
+          startupProbe:
+            failureThreshold: 12
+            httpGet:
+              path: /api/v1/version
+              port: http
+            periodSeconds: 5
+            initialDelaySeconds: 0
+            timeoutSeconds: 15
+          env:
+            - name: ELASTIC_APM_ENVIRONMENT
+              value: cdtn-master-dev42
+            - name: ES_INDEX_PREFIX
+              value: cdtn-prod
+            - name: VERSION
+              value: master
+          envFrom:
+            - secretRef:
+                name: api-secret
+            - configMapRef:
+                name: api-configmap
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: 'true'
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  name: api-secret
+  namespace: code-du-travail-numerique-85-master-dev42
+  labels:
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+spec:
+  encryptedData:
+    ELASTIC_APM_SECRET_TOKEN: >-
+      AgCCW05748GK8JN13dSMz2ZWKVUKomvJ16M4bRHnU4E+kHogBsOQVLlTzOMf444Bh1mv0IBFohFVbqo99ZVaJ3qvKWNT6sFZw5ezaH0YB0oL0WH7nhDHkaRPsalRHu9XfDc7DMPZkRKb8ESambfkXhFd/XhsBJAjo8kdnTry0NWFXh0iTjiYQ13/4TUNenleby8EmJBzap0hAkSE8NI/zJ3y3xFVIjT1YX2F/ZHdZ7KIx5WJua0jApPzGjFennlNIIMj/I/cBBDjsSf/dm66wDEKTufhuQ4h6VnlUzcZ6UUKAM7UvZcuzqFS/waYOizG8DXYes1P3u3ZjYyZVAcGB6Z6hbLlculSFQ628KNT8hqbTAM/NktidAIc9qFWk21f/g9jOQJO8phiPfLKKV+340tos9JgQlix4I3vkGVLJb6jmO5jL4sJXJu+vSklSeRoq9EEmB3JxCKG8tV/TjaeLPqAhRpqNSVArSx/VLhNffr0XqNhmHehxI4SAdzjEn+5DdHYDhm3knLSrFq0ckwtx3I5k8HXwOamUjtOtqhKwh9UTd6htMKbBI9l1Cg5LT3wCr5IJaUDkXQD0mT88BKI1SwhehErv3EEBgc8IoIdgh3fr/nLtQVFuG3btx8ONhDDP1b+sdsitFnWODU7/FDt0vQgYApylBZUdVTuKy8DmmwI++5OxzTIivpfKXHU0X7ym6Ec5OQUsBm8/srxSoMpsrhEk7M=
+    ELASTIC_APM_SERVER_URL: >-
+      AgA7RyST8+fyWyDiPW4uhsCQvevRgDquaKZE3TVDA1xt3agxUC4ioz4AOO7RbQD25hw9eBtlxSqLumhKhs0HbuxFmt4PSpHEBTkIgiBQvkIkSDD0y5VhxgiVqhHbvO6hQAX/WofFVjRw5fMS4PrxTMdpTzYDIxexB146n6sqJsIVTYVQr/ZZ9cZ5PWCb8GQEPoIOPvrXxfgk/TljQ8cXgQsRKKA08LpgYKCaT/wDLNYjGLluyUoGXVRtbN6w0bPTkK2XypmzdfZZWVdVni0fvxwLj9lk45G5eHSHWFTrMmDaxMfanvdl97AHdtwWRidoIJ3DHgzpqlfiJolHqQt3GQ0uf/qwJL/24DQKk9Pt4BkTd8d6QvKRoqp2znFoBFLsnkYiDNfCFopH2WKmAHXTFNRJzkCwcI9Xj/QMgCgayeDP1e2B91qXwYk+J0v989RF07BqmzL0KAxjzf5OroTWMyHD8nQrczpfTfQ3X259voyD+pjFfnSCPYFC4tAHX0opq9iE+seKfwA8RmoDJF36w8Er8mUIM/C5kE+YzNqFOjbC2+NPNvPmGM364QmdyBAs1IfXi6Z4ChOT4picHyjo0c/c8nIjoukXcIw9lgg5jK3AbJBSLLEq2gWPZpLXyQd4RDKpdAq/3BAtGTsRDTWoc8Cpeqfrz2xVOifBfyqE3OJjSJSUKPPGcWk2BR9vYE3JTRmMtpR8NorgpGj5fV1/4rbgjGxFHbSIwN/PemBA+8h9his+30vBNkjDRYIjtXA+PsC2tiWM7FlR5xlfUrqkNa4ILbDcBFSjSzYRQn3k2g==
+    ELASTICSEARCH_PWD: >-
+      AgA3RMCnG6++h79UFZpCZNNFScBtxBxvWPGVcZ/jU5k1pkSN5iGOE+B6II/iJ5mwKRK9RHSOQD/zG2FYh1GKtcp+F0IJBQZ5jbXZ4pK6SlpOML/djv6c5GG3N1dBlVYiiguh17MTcN9VUQ7RSO0I/DUdJQ6BP6thM7jbvFUqBiVft/XCB+gBQ7DWyrNghMK2P5lLwxYLG+LHocb3irNAudR/iBnYMRflmZ28djuID61qsM61vqSy4Z0mjara2OILg7brUhLgzRRJaE2zzaRp4jkBaiR35aeU/7YIwh+QVE5Hy2ZVKbuPGrR1ur6xfNzNpK+bzWORtXQFpCxxElCb3WUTgqDMHvxzzQrVfY5XdUFRoAKBaRegO7g4Kqq03bwyoyAnMOSM3OKQsWsmawBhvGgXOTqPDY3FBxXa+ohi7xZn3bt12qoyDHIuzCQJXyrcTWyB1bbxYCoNbCYQSmEHrObmq7eRn2Oo56YXqDk4YPvPU3A2kpHMC4LFOGxYM/40kGzqCwuCczXydlRkxN7H/fjQAqTLWkLu8ymZK7epuUmw/NekA1CsEBblG3BOWzXqmUd0h69LP9+EIFfRsudqx8nA1YUXG4r6nAz+L7pN6ZkIrl7HmuCtkBsITfJmRQ4kqitDP6IxM7tneglNZhfGwxmURTAzAyzjX7ndSlcsdkd2AvJYKQ+ehLAdRqGQj8LAe2AWVteslMhcajWtSycb1m0=
+    ELASTICSEARCH_URL: >-
+      AgBxkNsQpkk6V5GIA8WuYBXE1iTLglrzRoR5HQ9QtBzsjDb9siCHQc+U9UFI72hDKi3yNO2g1lk+Nh7ooKHpqzzV0PSB0gyUJwo4MmqfxUDw3ef2BHezK7DK0z1YB/ZU8BLK5LenLchoKsKejv1YC1OQmG6EUHPW/3hm2qiS56anl6AIyUqXsokx+5QScjmHE3KybThaBkva/7PEQn/vks9wbY2mePvBPanSnVSLuSUY0yn0UXrmJnyW87oXVaJSQU/+5oDPdnb4pN8wivmjQEBLyVvjL2xSFz2druu4wjDpArup981GA7jCTarCzxjomGKnfxu7U98YKho1OUbuGevL1TXZaOkXaSIpls5mViZjUB2WaUVqQhHr9K1f6Hmhidh6S7v8NX4NbPKgKA7PTJ1dzi7EeKUCiIJPXiSI76H/rNlEx55TlroXQxEPjmQ91yEcCtRNa6MS2X6Flu539+t2m0+nm+Wqx7SmbGROjvCbSaYMShdsYQgnRj3VMgzoToLcnRPO0MdIop2L6GN5ocyFPk/QRUry+A/TH5eYkuMGu/FhctdrNEMo2kcYgIiTfqQ9tuQQqD3UCJ74DkUOod8OJoTu2EQ6RVBXqVCb9cM0AmoYgUDx1JW0l1124UYzpqIPhaRdPe6M8JH9zXuQAI93R7Paezn8GEMaXfiBRc/fVRUdTbAdbGvdmEZVeiczEK+JsKcdvMuqud15UmcFF0N7rfuia1u6TjCvaF/gvFIlLnMccFYmKACJnf1SJ/5Cx6L0SajjyBhxNP8DMVHhmMpbIqfQBPJho0nVQk7ZoU5Heg==
+    ELASTICSEARCH_USER: >-
+      AgBDA3KxpDm7ha9j3Ehgsve6WJG8IoBRMRjKupvKvqQzPLJO/KT5R8KABK/Im7SL64fR5EQx+49N9VWNj72BxrB3jNJF3sQ3n4fYKANv05eJ4W5r3rG3OkphWowLc33+KxZwJKV2mTLi7yGh31PmA1Qx6uH0erKECDNS2hIf+S3MT3UT9Y9m9wAz/b0lRpCdGGjosJq0xgzFuPA7TOyEjVZj1nIstxQkB+A4IbKrw13fyo9IQKzv2lVbQGQI1elj2NXpTAS1lLA69XszYVy8cJg/OO+od3SVDd37QptVA1ZMT0AideG1DLoowi4uXoTlxvfKaB77lmOs9EUoGx8KPFvBKjNd23FaHc5H4dBKnUTWgLhTOyJ5hkBgdrik5i6ufAymS5K7ZOV/TxRL/7XAk0MhxvfobI7J56TGlUBTCxNQE90JsyZArjMW/JpxsyFzx5/J7DpLpdeNQikLWokwUqlt3BE0lpjjpAtN3gCAM5WOgbZamhuoT57cSWohP0AqNEe0cPbBZuhtDkz31iIa37Zrm0+djNXnQ6znWWJIAcnBFnv5VBklDApLxAKKKbOE1fHSEXPWW+d+Lp2banE2IhK/XqJI7gl5HjK66cEcRby5vQ2HVmfNa06jKsFjNhaqu5EKQpyw4u5wASb35gCcKtIK68R9jftow+xlOjSQnjP1POtWkjtEFU88dbWTdlh09nwEnKvneABpPw==
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: 'true'
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-code-du-travail-numerique
+        app.gitlab.com/env: master-dev42
+        app.gitlab.com/env.name: master-dev42
+      name: api-secret
+      labels:
+        application: master-dev42-code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    type: Opaque
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: api-configmap
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  namespace: code-du-travail-numerique-85-master-dev42
+data:
+  ELASTIC_APM_ACTIVE: 'false'
+  ELASTIC_APM_SERVICE_NAME: cdtn-api
+  ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
+  NLP_URL: https://preprod-serving-ml.dev2.fabrique.social.gouv.fr
+  NODE_ENV: production
+  PIWIK_SITE_ID: '3'
+  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: api
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 1337
+  selector:
+    app: api
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    app: api
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: api
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  rules:
+    - host: api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: api
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - >-
+          api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+      secretName: wildcard-crt
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    app: www
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: www
+  template:
+    metadata:
+      annotations:
+        kapp.k14s.io/disable-default-ownership-label-rules: ''
+        kapp.k14s.io/disable-default-label-scoping-rules: ''
+        app.gitlab.com/app: socialgouv-code-du-travail-numerique
+        app.gitlab.com/env: master-dev42
+        app.gitlab.com/env.name: master-dev42
+      labels:
+        app: www
+        application: master-dev42-code-du-travail-numerique
+        owner: code-du-travail-numerique
+        team: code-du-travail-numerique
+        cert: wildcard
+    spec:
+      containers:
+        - image: >-
+            harbor.fabrique.social.gouv.fr/cdtn/cdtn-frontend:0123456789abcdefghijklmnopqrstuvwxyz0123
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 15
+          name: www
+          ports:
+            - containerPort: 3000
+              name: http
+          readinessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: 500m
+              memory: 560Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
+          startupProbe:
+            failureThreshold: 12
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 5
+            initialDelaySeconds: 10
+            timeoutSeconds: 15
+          env:
+            - name: API_URL
+              value: >-
+                https://api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr/api/v1
+            - name: COMMIT
+              value: 0123456789abcdefghijklmnopqrstuvwxyz0123
+            - name: VERSION
+              value: master
+            - name: FRONTEND_HOST
+              value: >-
+                https://master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+          envFrom:
+            - configMapRef:
+                name: www-configmap
+      initContainers:
+        - args:
+            - http://api
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.26.2
+          imagePullPolicy: Always
+          name: wait-for-www
+          resources:
+            limits:
+              cpu: 20m
+              memory: 32Mi
+            requests:
+              cpu: 5m
+              memory: 16Mi
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: www-configmap
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  namespace: code-du-travail-numerique-85-master-dev42
+data:
+  AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
+  AZURE_CONTAINER: cdtn-dev
+  IS_PRODUCTION_DEPLOYMENT: 'false'
+  NODE_ENV: production
+  PIWIK_SITE_ID: '3'
+  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+  PROD_HOSTNAME: code.travail.gouv.fr
+  SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: www
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  annotations:
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+  selector:
+    app: www
+  type: ClusterIP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kapp.k14s.io/disable-default-ownership-label-rules: ''
+    kapp.k14s.io/disable-default-label-scoping-rules: ''
+    app.gitlab.com/app: socialgouv-code-du-travail-numerique
+    app.gitlab.com/env: master-dev42
+    app.gitlab.com/env.name: master-dev42
+  labels:
+    app: www
+    application: master-dev42-code-du-travail-numerique
+    owner: code-du-travail-numerique
+    team: code-du-travail-numerique
+    cert: wildcard
+  name: www
+  namespace: code-du-travail-numerique-85-master-dev42
+spec:
+  rules:
+    - host: master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+      http:
+        paths:
+          - backend:
+              serviceName: www
+              servicePort: 80
+            path: /
+  tls:
+    - hosts:
+        - master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+      secretName: wildcard-crt
 "
 `;

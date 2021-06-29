@@ -8,7 +8,7 @@ const {
 
 export default async function Sitemap(req, res) {
   let sitemapFile = "sitemap.xml";
-  if (/dev2/.test(FRONTEND_HOST)) {
+  if (/dev/.test(FRONTEND_HOST)) {
     const [hash] = FRONTEND_HOST.match(/^\w+/);
     sitemapFile = `sitemap-${hash}.xml`;
     try {

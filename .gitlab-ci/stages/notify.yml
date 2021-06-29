@@ -17,13 +17,14 @@ include:
     - Notify Starting Deployment
   before_script:
     - source ./.gitlab-ci/env.sh
-    - HOST=${FRONTEND_URL}
+    - HOST=${CI_ENVIRONMENT_URL}
 
 #
 
 .notify_dev:
   environment:
-    name: ${CI_COMMIT_REF_SLUG}-dev2
+    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
+    url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   except:
     variables:
       # Don't run when deploying in production an existing image
@@ -34,7 +35,8 @@ include:
 
 .notify_prod:
   environment:
-    name: prod2
+    name: ${AUTO_DEVOPS_PROD_ENVIRONMENT_NAME}
+    url: https://code.travail.gouv.fr
   only:
     variables:
       - $PRODUCTION
@@ -80,6 +82,6 @@ Delete useless k8s namespaces:
   only:
     - master
   environment:
-    name: ${CI_COMMIT_REF_SLUG}-dev2
+    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
   variables:
     K8S_NAMESPACE_PREFIX: cdtn-feature-
