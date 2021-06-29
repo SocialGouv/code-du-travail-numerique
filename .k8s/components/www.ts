@@ -95,7 +95,7 @@ export default async () => {
   // get frontend computed url and assign the env var
   const ingressHost = new EnvVar({
     name: "FRONTEND_HOST",
-    value: "https://" + getIngressHost(manifests),
+    value: getIngressHost(manifests),
   });
 
   addEnv({ deployment, data: ingressHost });
