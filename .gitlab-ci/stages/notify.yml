@@ -4,9 +4,6 @@ include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_notify_github_stage.yml
     ref: v9.1.1
-  - project: SocialGouv/gitlab-ci-yml
-    file: /base_delete_useless_k8s_ns_stage.yml
-    ref: v17.0.0
 
 #
 
@@ -74,14 +71,3 @@ Notify Success (prod):
     - .base_notify_success_stage
     - .notify_stage
     - .notify_prod
-
-Delete useless k8s namespaces:
-  extends:
-    - .base_delete_useless_k8s_ns_stage
-    - .notify_dev
-  only:
-    - master
-  environment:
-    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
-  variables:
-    K8S_NAMESPACE_PREFIX: cdtn-feature-
