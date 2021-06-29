@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: api-configmap
 data:
-  ELASTIC_APM_ACTIVE: "true"
+  ELASTIC_APM_ACTIVE: "false"
   ELASTIC_APM_SERVICE_NAME: "cdtn-api"
   ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: "true"
   NLP_URL: "https://preprod-serving-ml.dev2.fabrique.social.gouv.fr"

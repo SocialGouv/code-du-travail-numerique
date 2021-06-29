@@ -28,7 +28,7 @@ export default async () => {
   const API_URL = "https://" + getIngressHost(apiManifests) + "/api/v1";
 
   const productionConfig = {
-    domain: "fabrique.social.gouv.fr", //"travail.gouv.fr",
+    domain: "travail.gouv.fr",
     subdomain: "code",
   };
 
