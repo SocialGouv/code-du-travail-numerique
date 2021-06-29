@@ -59,6 +59,7 @@ test.each`
         "contrat salarié . ancienneté": 6,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
           "oui",
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": 5,
@@ -76,6 +77,7 @@ test("Vérification des références juridiques pour un employé du groupe 4 en 
       "contrat salarié . convention collective": "'IDCC0176'",
       "contrat salarié . ancienneté": 6,
       "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
       "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
         "non",
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 4,
@@ -97,6 +99,7 @@ test("Vérification des références juridiques pour un employé du groupe 1 à 
       "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
         "non",
       "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
       "contrat salarié . ancienneté": 6,
     })
   );

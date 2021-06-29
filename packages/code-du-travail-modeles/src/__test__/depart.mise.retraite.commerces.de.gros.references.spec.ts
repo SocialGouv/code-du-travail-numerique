@@ -41,6 +41,7 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 

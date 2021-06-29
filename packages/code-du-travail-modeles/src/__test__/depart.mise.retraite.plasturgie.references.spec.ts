@@ -48,6 +48,7 @@ test.each`
         "contrat salarié . ancienneté": 1,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Cadres'",
       })
@@ -71,6 +72,7 @@ test.each`
         "contrat salarié . ancienneté": 1,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": 800,

@@ -47,6 +47,7 @@ test.each`
         "contrat salarié . ancienneté": 6,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
       })
     );

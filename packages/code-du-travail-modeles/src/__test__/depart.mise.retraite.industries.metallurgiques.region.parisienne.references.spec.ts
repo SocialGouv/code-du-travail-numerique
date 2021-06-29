@@ -46,6 +46,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0054'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": 5,
       })
     );

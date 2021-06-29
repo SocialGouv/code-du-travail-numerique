@@ -28,6 +28,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
@@ -65,6 +66,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
@@ -89,6 +91,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
           "oui",
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
@@ -121,6 +124,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
@@ -143,6 +147,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
           "oui",
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
@@ -162,6 +167,7 @@ test("Pour une mise à la retraite avec un contract conclu avant le 1er juillet 
       "contrat salarié . convention collective": "'IDCC0176'",
       "contrat salarié . ancienneté": 3,
       "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
       "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
         "non",
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 3,
@@ -189,6 +195,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
         "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
         "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })

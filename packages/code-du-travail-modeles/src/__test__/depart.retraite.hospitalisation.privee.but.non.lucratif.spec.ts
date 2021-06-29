@@ -40,6 +40,7 @@ test.each`
       .setSituation({
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
       })
@@ -66,6 +67,7 @@ test.each`
       .setSituation({
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Cadres administratifs et de gestion'`,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
@@ -120,6 +122,7 @@ test.each`
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,

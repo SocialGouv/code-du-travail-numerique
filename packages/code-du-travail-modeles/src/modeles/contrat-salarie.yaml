@@ -15,14 +15,29 @@ contrat salarié . mise à la retraite:
       Mise à la retraite: oui
       Départ à la retraite: non
 
+contrat salarié . travailleur handicapé:
+  titre: Travailleur handicapé
+  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
+  cdtn:
+    type: oui-non
+
 contrat salarié . départ à la retraite:
   valeur: mise à la retraite = non
 
-contrat salarié . préavis de retraite: 0 mois
+contrat salarié . préavis de retraite calculé: 0 mois
+
+contrat salarié . préavis de retraite:
+  variations:
+    - si: travailleur handicapé
+      alors:
+       le minimum de:
+         - contrat salarié . préavis de retraite calculé * 2
+         - 3 mois
+    - sinon: contrat salarié . préavis de retraite calculé
 
 contrat salarié . préavis de retraite . mise à la retraite:
   applicable si: mise à la retraite
-  remplace: contrat salarié . préavis de retraite
+  remplace: contrat salarié . préavis de retraite calculé
   variations:
     - si:
         toutes ces conditions:
@@ -39,7 +54,7 @@ contrat salarié . préavis de retraite . mise à la retraite:
 
 contrat salarié . préavis de retraite . départ à la retraite:
   applicable si: départ à la retraite
-  remplace: contrat salarié . préavis de retraite
+  remplace: contrat salarié . préavis de retraite calculé
   variations:
     - si:
         toutes ces conditions:
