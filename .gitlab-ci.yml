@@ -74,6 +74,7 @@ k8s test:
     url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   variables:
     KOSKO_GENERATE_ARGS: --env dev
+    ES_INDEX_PREFIX: cdtn-preprod
 
 🚀 Preprod:
   extends:
@@ -88,6 +89,7 @@ k8s test:
     url: https://preprod-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
   variables:
     KOSKO_GENERATE_ARGS: --env preprod
+    ES_INDEX_PREFIX: cdtn-preprod
 
 🚀 Production:
   extends:
@@ -100,3 +102,4 @@ k8s test:
     url: https://code.travail.gouv.fr
   variables:
     KOSKO_GENERATE_ARGS: --env prod
+    ES_INDEX_PREFIX: cdtn-prod
