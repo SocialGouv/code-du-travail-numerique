@@ -330,7 +330,7 @@ spec:
             - name: VERSION
               value: v1.2.3
             - name: FRONTEND_HOST
-              value: https://code.fabrique.social.gouv.fr
+              value: https://code.travail.gouv.fr
           envFrom:
             - configMapRef:
                 name: www-configmap
@@ -419,7 +419,7 @@ metadata:
   namespace: cdtn
 spec:
   rules:
-    - host: code.fabrique.social.gouv.fr
+    - host: code.travail.gouv.fr
       http:
         paths:
           - backend:
@@ -428,7 +428,7 @@ spec:
             path: /
   tls:
     - hosts:
-        - code.fabrique.social.gouv.fr
+        - code.travail.gouv.fr
       secretName: www-crt
 ---
 apiVersion: autoscaling/v2beta2
@@ -467,5 +467,28 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: www
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/permanent-redirect: https://code.travail.gouv.fr$request_uri
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/tls-acme: 'true'
+  labels:
+    app.kubernetes.io/component: redirect
+    app.kubernetes.io/name: cdtn
+  name: cdtn-redirect
+  namespace: cdtn
+spec:
+  rules:
+    - host: www.code.travail.gouv.fr
+    - host: code.travail.fabrique.social.gouv.fr
+  tls:
+    - hosts:
+        - www.code.travail.gouv.fr
+        - code.travail.fabrique.social.gouv.fr
+      secretName: redirect-crt
 "
 `;
