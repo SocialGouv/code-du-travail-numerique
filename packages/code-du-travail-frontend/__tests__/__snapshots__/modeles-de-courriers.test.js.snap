@@ -1714,7 +1714,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                       class="c62"
                       href="/accessibilite"
                     >
-                      Accessibilité&nbsp;: partiellement conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

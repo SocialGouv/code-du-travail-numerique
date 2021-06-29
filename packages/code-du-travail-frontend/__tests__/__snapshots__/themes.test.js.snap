@@ -1564,7 +1564,7 @@ exports[`<Theme /> should render 1`] = `
                       class="c56"
                       href="/accessibilite"
                     >
-                      Accessibilité&nbsp;: partiellement conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

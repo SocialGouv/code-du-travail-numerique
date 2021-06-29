@@ -1240,7 +1240,7 @@ exports[`<Layout /> should render 1`] = `
                       class="c43"
                       href="/accessibilite"
                     >
-                      Accessibilité&nbsp;: partiellement conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

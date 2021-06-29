@@ -1655,7 +1655,7 @@ exports[`<Glossaire /> should render 1`] = `
                       class="c53"
                       href="/accessibilite"
                     >
-                      Accessibilité&nbsp;: partiellement conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

@@ -2786,7 +2786,7 @@ exports[`<Outils /> should render 1`] = `
                       class="c65"
                       href="/accessibilite"
                     >
-                      Accessibilité&nbsp;: partiellement conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

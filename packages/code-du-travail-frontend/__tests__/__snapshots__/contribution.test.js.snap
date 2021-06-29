@@ -3000,7 +3000,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c103"
                         href="/accessibilite"
                       >
-                        Accessibilité&nbsp;: partiellement conforme
+                        Accessibilité : partiellement conforme
                       </a>
                     </li>
                     <li
@@ -6242,7 +6242,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c103"
                         href="/accessibilite"
                       >
-                        Accessibilité&nbsp;: partiellement conforme
+                        Accessibilité : partiellement conforme
                       </a>
                     </li>
                     <li
