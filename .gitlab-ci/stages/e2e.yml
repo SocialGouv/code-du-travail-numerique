@@ -22,7 +22,7 @@ Test on deployed branch:
     - echo $CI_ENVIRONMENT_NAME
     - echo $CI_ENVIRONMENT_URL
     - echo $CI_ENVIRONMENT_SLUG
-    - source ./.gitlab-ci/env.sh
+    #- source ./.gitlab-ci/env.sh
     - CODECEPT_BASEURL=${CI_ENVIRONMENT_URL}
     - cd ./optional/e2e/runners/puppeteer
     - |-
