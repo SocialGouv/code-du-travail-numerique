@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.51.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.2...v4.51.3) (2021-06-29)
+
+
+### Bug Fixes
+
+* **ci:** fix FRONTEND_HOST and prod variables ([#3600](https://github.com/SocialGouv/code-du-travail-numerique/issues/3600)) ([2f3d0d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/2f3d0d747a412d4eb5ea84410f76d27f57b3fa0e))
+* use real prod hostnames and redirections ([#3599](https://github.com/SocialGouv/code-du-travail-numerique/issues/3599)) ([2bc15c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bc15c0998612a13bdcdb2621e03707ca429115a))
+
+
+
+
+
 ## [4.51.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.1...v4.51.2) (2021-06-29)
 
 
