@@ -609,6 +609,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           >
             services du ministère du Travail en région
             <svg
+              aria-hidden="true"
               class="c11 c12"
               fill="none"
               viewBox="0 0 28 15"

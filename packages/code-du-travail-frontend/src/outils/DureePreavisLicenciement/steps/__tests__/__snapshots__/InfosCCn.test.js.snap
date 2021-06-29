@@ -181,6 +181,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
       class="c3"
     >
       <svg
+        aria-hidden="true"
         class="c4"
         fill="none"
         height="24"

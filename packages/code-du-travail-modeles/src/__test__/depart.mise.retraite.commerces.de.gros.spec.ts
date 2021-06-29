@@ -67,7 +67,7 @@ test.each`
   ${6}
   ${24}
 `(
-  "Pour un employé possédant $seniority mois d'ancienneté en départ à la retraite, on doit afficher une notification",
+  "Pour un employé possédant $seniority mois d'ancienneté en mise à la retraite, on ne doit pas afficher de notification",
   ({ seniority }) => {
     const result = getNotifications(
       engine.setSituation({
@@ -77,10 +77,7 @@ test.each`
       })
     );
 
-    expect(result).toHaveLength(1);
-    expect(result[0].description).toContain(
-      `Pour les salariés qui relèvent de l'ancienne convention collective du commerce de gros de la confiserie, chocolaterie, biscuiterie et alimentation fine et des négociants-distributeurs de levure, la durée du préavis est égale à **3** mois, si le salarié`
-    );
+    expect(result).toHaveLength(0);
   }
 );
 
@@ -102,7 +99,7 @@ test.each`
   ${6}      | ${"Cadres"}
   ${24}     | ${"Cadres"}
 `(
-  "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, on ne doit pas afficher de notification",
+  "Pour un $category possédant $seniority mois d'ancienneté en mise à la retraite, on ne doit pas afficher de notification",
   ({ seniority, category }) => {
     const result = getNotifications(
       engine.setSituation({

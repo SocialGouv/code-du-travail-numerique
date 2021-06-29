@@ -461,6 +461,7 @@ exports[`<Footer /> should render 1`] = `
           >
             Contacter nos services en région
             <svg
+              aria-hidden="true"
               class="c11"
               fill="none"
               viewBox="0 0 28 15"

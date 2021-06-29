@@ -73,7 +73,7 @@ const Information = ({
       return (
         <>
           {type === "graphic" ? (
-            <figure key={name}>
+            <div key={name}>
               <img src={toUrl(imgUrl)} alt={altText} />
               <DownloadWrapper>
                 <Button
@@ -88,12 +88,10 @@ const Information = ({
                   <Download />
                 </Button>
               </DownloadWrapper>
-              <figcaption>
-                <MoreContent noLeftPadding title="Voir en détail">
-                  <Wrapper variant="dark">{reactContent}</Wrapper>
-                </MoreContent>
-              </figcaption>
-            </figure>
+              <MoreContent noLeftPadding title="Voir en détail">
+                <Wrapper variant="dark">{reactContent}</Wrapper>
+              </MoreContent>
+            </div>
           ) : (
             <React.Fragment key={name}>{reactContent}</React.Fragment>
           )}

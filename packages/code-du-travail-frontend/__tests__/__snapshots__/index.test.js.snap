@@ -1562,7 +1562,7 @@ exports[`<Home /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 04/01/2020 à 00:00:00
+        le 04/01/2020, 00:00:00
       </div>
       <div
         class="c4 c5"
@@ -1578,6 +1578,7 @@ exports[`<Home /> should render 1`] = `
             src="/static/assets/img/logo-rf.svg"
           />
           <svg
+            aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
@@ -1609,6 +1610,7 @@ exports[`<Home /> should render 1`] = `
             role="navigation"
           >
             <svg
+              aria-hidden="true"
               class="c14"
               fill="none"
               viewBox="0 0 32 32"
@@ -1682,6 +1684,7 @@ exports[`<Home /> should render 1`] = `
                 </label>
               </div>
               <svg
+                aria-hidden="true"
                 class="c27 c28"
                 fill="none"
                 viewBox="0 0 32 32"
@@ -1729,6 +1732,7 @@ exports[`<Home /> should render 1`] = `
             class="c33"
           >
             <svg
+              aria-hidden="true"
               class="c34"
               fill="none"
               viewBox="0 0 616 514"
@@ -2449,6 +2453,7 @@ exports[`<Home /> should render 1`] = `
                         class="c46"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -2474,9 +2479,9 @@ exports[`<Home /> should render 1`] = `
                         class="c48"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
-                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2520,6 +2525,7 @@ exports[`<Home /> should render 1`] = `
                           >
                             Consulter
                             <svg
+                              aria-hidden="true"
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
@@ -2549,6 +2555,7 @@ exports[`<Home /> should render 1`] = `
                         class="c46"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -2574,6 +2581,7 @@ exports[`<Home /> should render 1`] = `
                         class="c48"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
                         >
@@ -2613,6 +2621,7 @@ exports[`<Home /> should render 1`] = `
                           >
                             Calculer
                             <svg
+                              aria-hidden="true"
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
@@ -2642,6 +2651,7 @@ exports[`<Home /> should render 1`] = `
                         class="c46"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -2667,6 +2677,7 @@ exports[`<Home /> should render 1`] = `
                         class="c48"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
                         >
@@ -2714,6 +2725,7 @@ exports[`<Home /> should render 1`] = `
                           >
                             Estimer
                             <svg
+                              aria-hidden="true"
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
@@ -2743,6 +2755,7 @@ exports[`<Home /> should render 1`] = `
                         class="c46"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -2768,6 +2781,7 @@ exports[`<Home /> should render 1`] = `
                         class="c48"
                       >
                         <svg
+                          aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
                         >
@@ -2809,6 +2823,7 @@ exports[`<Home /> should render 1`] = `
                           >
                             Découvrir
                             <svg
+                              aria-hidden="true"
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
@@ -2836,6 +2851,7 @@ exports[`<Home /> should render 1`] = `
             >
               Voir tous les outils 
               <svg
+                aria-hidden="true"
                 class="c59"
                 fill="none"
                 viewBox="0 0 28 15"
@@ -2885,6 +2901,7 @@ exports[`<Home /> should render 1`] = `
             >
               Contacter nos services en région
               <svg
+                aria-hidden="true"
                 class="c69"
                 fill="none"
                 viewBox="0 0 28 15"

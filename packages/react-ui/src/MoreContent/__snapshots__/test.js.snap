@@ -102,6 +102,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
           tabindex="0"
         >
           <svg
+            aria-hidden="true"
             class="c2 c3"
             fill="none"
             viewBox="0 0 16 16"

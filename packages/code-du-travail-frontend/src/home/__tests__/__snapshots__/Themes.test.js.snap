@@ -606,6 +606,7 @@ exports[`<Themes /> should render 1`] = `
           class="c5"
         >
           <svg
+            aria-hidden="true"
             class="c6"
             fill="none"
             viewBox="0 0 807 518"
@@ -689,6 +690,7 @@ exports[`<Themes /> should render 1`] = `
                       class="c25"
                     >
                       <svg
+                        aria-hidden="true"
                         fill="none"
                         viewBox="0 0 52 52"
                       >
@@ -739,6 +741,7 @@ exports[`<Themes /> should render 1`] = `
                       class="c25"
                     >
                       <svg
+                        aria-hidden="true"
                         fill="none"
                         viewBox="0 0 52 52"
                       >
@@ -777,6 +780,7 @@ exports[`<Themes /> should render 1`] = `
                 class="c16 c17"
               >
                 <svg
+                  aria-hidden="true"
                   class="c29"
                   fill="none"
                   viewBox="0 0 236 208"
@@ -1349,6 +1353,7 @@ exports[`<Themes /> should render 1`] = `
                       class="c25"
                     >
                       <svg
+                        aria-hidden="true"
                         fill="none"
                         viewBox="0 0 52 52"
                       >
@@ -1394,6 +1399,7 @@ exports[`<Themes /> should render 1`] = `
         >
           Voir tous les thèmes 
           <svg
+            aria-hidden="true"
             class="c31"
             fill="none"
             viewBox="0 0 28 15"

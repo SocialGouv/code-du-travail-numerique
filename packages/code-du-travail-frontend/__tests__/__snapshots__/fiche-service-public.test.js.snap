@@ -1421,7 +1421,7 @@ exports[`<FicheSP /> should render 1`] = `
         class="c3"
         id="printDate"
       >
-        le 04/01/2020 à 00:00:00
+        le 04/01/2020, 00:00:00
       </div>
       <div
         class="c4 c5"
@@ -1437,6 +1437,7 @@ exports[`<FicheSP /> should render 1`] = `
             src="/static/assets/img/logo-rf.svg"
           />
           <svg
+            aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
@@ -1507,6 +1508,7 @@ exports[`<FicheSP /> should render 1`] = `
               type="submit"
             >
               <svg
+                aria-hidden="true"
                 class="c16"
                 fill="none"
                 viewBox="0 0 32 32"
@@ -1527,6 +1529,7 @@ exports[`<FicheSP /> should render 1`] = `
             href="/recherche"
           >
             <svg
+              aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1542,6 +1545,7 @@ exports[`<FicheSP /> should render 1`] = `
             role="navigation"
           >
             <svg
+              aria-hidden="true"
               class="c22"
               fill="none"
               viewBox="0 0 32 32"
@@ -1602,6 +1606,7 @@ exports[`<FicheSP /> should render 1`] = `
                   class="c32"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c33"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -1623,6 +1628,7 @@ exports[`<FicheSP /> should render 1`] = `
                   class="c32"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c33"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -1647,6 +1653,7 @@ exports[`<FicheSP /> should render 1`] = `
                   class="c32"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c33"
                     fill="none"
                     viewBox="0 0 16 16"
@@ -1670,6 +1677,7 @@ exports[`<FicheSP /> should render 1`] = `
                     class="c32"
                   >
                     <svg
+                      aria-hidden="true"
                       class="c33"
                       fill="none"
                       viewBox="0 0 16 16"
@@ -1766,6 +1774,7 @@ exports[`<FicheSP /> should render 1`] = `
             >
               Contacter nos services en région
               <svg
+                aria-hidden="true"
                 class="c54"
                 fill="none"
                 viewBox="0 0 28 15"

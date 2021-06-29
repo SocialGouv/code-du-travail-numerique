@@ -2,12 +2,7 @@ import * as React from "react";
 
 function SvgApprenticeship(props) {
   return (
-    <svg
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 52 52"
-      {...props}
-    >
+    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
       <path
         stroke="#FF7067"
         strokeWidth={2}

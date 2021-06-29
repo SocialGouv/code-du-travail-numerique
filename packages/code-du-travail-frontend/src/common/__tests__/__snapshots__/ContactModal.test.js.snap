@@ -400,6 +400,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 >
                   les services du ministère du Travail
                   <svg
+                    aria-hidden="true"
                     class="c7 c8"
                     fill="none"
                     viewBox="0 0 28 15"

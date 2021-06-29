@@ -5,18 +5,17 @@ contrat salarié . convention collective . établissement handicap:
   valeur: oui
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
-  question: Quelle est votre catégorie professionelle ?
+  question: Quelle est la catégorie professionnelle du salarié ?
   titre: Catégorie professionnelle
   cdtn:
     type: liste
     valeurs:
       Non cadres: "'Non cadres'"
-      Autres cadres: "'Autres cadres'"
       Directeurs de service: "'Directeurs de service'"
       Directeurs d'établissement: "'Directeurs d'établissement'"
       Directeurs de centre de formation en travail social: "'Directeurs de centre de formation en travail social'"
       Directeurs généraux: "'Directeurs généraux'"
-
+      Autres cadres: "'Autres cadres'"
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle . Non cadres:
   applicable si: catégorie professionnelle = 'Non cadres'

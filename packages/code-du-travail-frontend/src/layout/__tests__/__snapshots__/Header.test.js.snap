@@ -526,7 +526,7 @@ exports[`<Header /> should render 1`] = `
       class="c1"
       id="printDate"
     >
-      le 04/01/2020 à 00:00:00
+      le 04/01/2020, 00:00:00
     </div>
     <div
       class="c2 c3"
@@ -542,6 +542,7 @@ exports[`<Header /> should render 1`] = `
           src="/static/assets/img/logo-rf.svg"
         />
         <svg
+          aria-label="Code du travail numérique"
           class="c6"
           fill="none"
           viewBox="0 0 657 265"
@@ -612,6 +613,7 @@ exports[`<Header /> should render 1`] = `
             type="submit"
           >
             <svg
+              aria-hidden="true"
               class="c14"
               fill="none"
               viewBox="0 0 32 32"
@@ -632,6 +634,7 @@ exports[`<Header /> should render 1`] = `
           href="/recherche"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -647,6 +650,7 @@ exports[`<Header /> should render 1`] = `
           role="navigation"
         >
           <svg
+            aria-hidden="true"
             class="c20"
             fill="none"
             viewBox="0 0 32 32"

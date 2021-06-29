@@ -119,6 +119,7 @@ exports[`<RelatedItems /> should render 1`] = `
           class="c4 c5"
         >
           <svg
+            aria-hidden="true"
             class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
@@ -142,6 +143,7 @@ exports[`<RelatedItems /> should render 1`] = `
           class="c4 c5"
         >
           <svg
+            aria-hidden="true"
             class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
@@ -175,6 +177,7 @@ exports[`<RelatedItems /> should render 1`] = `
           class="c4 c5"
         >
           <svg
+            aria-hidden="true"
             class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"
@@ -198,6 +201,7 @@ exports[`<RelatedItems /> should render 1`] = `
           class="c4 c5"
         >
           <svg
+            aria-hidden="true"
             class="c6 c7"
             fill="none"
             viewBox="0 0 28 15"

@@ -250,6 +250,7 @@ exports[`<Primes /> should add a prime 1`] = `
           class="c3"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >
@@ -678,6 +679,7 @@ exports[`<Primes /> should render 1`] = `
           class="c3"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 32 32"
           >

@@ -68,6 +68,7 @@ test.each`
       })
     );
 
+    expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
   }
 );

@@ -184,6 +184,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
               title="Retour à l'accueil"
             >
               <svg
+                aria-hidden="true"
                 class="c7"
                 fill="none"
                 viewBox="0 0 16 16"
@@ -200,6 +201,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             class="c5"
           >
             <svg
+              aria-hidden="true"
               class="c8"
               fill="none"
               viewBox="0 0 16 16"
@@ -221,6 +223,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             class="c5"
           >
             <svg
+              aria-hidden="true"
               class="c8"
               fill="none"
               viewBox="0 0 16 16"

@@ -213,6 +213,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c5 c6"
               fill="none"
               height="24"
@@ -295,6 +296,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c5 c6"
               fill="none"
               height="24"
@@ -382,6 +384,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c5 c6"
               fill="none"
               height="24"
@@ -600,6 +603,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c3 c4"
               fill="none"
               height="24"
@@ -675,6 +679,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c3 c4"
               fill="none"
               height="24"
@@ -755,6 +760,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             tabindex="0"
           >
             <svg
+              aria-hidden="true"
               class="c3 c4"
               fill="none"
               height="24"

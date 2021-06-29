@@ -424,6 +424,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
           class="c9"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
           >
@@ -756,6 +757,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
           class="c9"
         >
           <svg
+            aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
           >

@@ -216,6 +216,7 @@ exports[`<PrevNextBar /> should render 1`] = `
     >
       Suivant
       <svg
+        aria-hidden="true"
         class="c3"
         fill="none"
         viewBox="0 0 28 15"
@@ -453,6 +454,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
     >
       Suivant
       <svg
+        aria-hidden="true"
         class="c3"
         fill="none"
         viewBox="0 0 28 15"
@@ -689,6 +691,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
     >
       Suivant
       <svg
+        aria-hidden="true"
         class="c3"
         fill="none"
         viewBox="0 0 28 15"

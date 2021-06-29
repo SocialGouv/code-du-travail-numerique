@@ -2,12 +2,7 @@ import * as React from "react";
 
 function SvgComponent(props) {
   return (
-    <svg
-      viewBox="0 0 52 52"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 52 52" fill="none" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

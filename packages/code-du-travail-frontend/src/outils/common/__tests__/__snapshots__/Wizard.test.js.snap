@@ -532,6 +532,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         >
           Commencer
           <svg
+            aria-hidden="true"
             class="c17"
             fill="none"
             viewBox="0 0 28 15"
@@ -1676,6 +1677,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         >
           Commencer
           <svg
+            aria-hidden="true"
             class="c17"
             fill="none"
             viewBox="0 0 28 15"
@@ -2207,6 +2209,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
         >
           Commencer
           <svg
+            aria-hidden="true"
             class="c17"
             fill="none"
             viewBox="0 0 28 15"
@@ -3353,6 +3356,7 @@ exports[`<Wizard /> should render a step 1`] = `
         >
           Commencer
           <svg
+            aria-hidden="true"
             class="c17"
             fill="none"
             viewBox="0 0 28 15"

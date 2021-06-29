@@ -1,12 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import React from "react";
 import {
   Accordion as RootAccordion,
-  AccordionItemButton,
   AccordionItem,
+  AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import styled, { css } from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme";
 import { VerticalArrow } from "../VerticalArrow";
@@ -93,7 +93,7 @@ export const ItemButton = ({ children, icon: Icon, index, isLast }) => (
         </IconWrapper>
       )}
       <ButtonText>{children}</ButtonText>
-      <VerticalArrow />
+      <VerticalArrow aria-hidden="true" />
     </ArrowBox>
   </StyledAccordionItemButton>
 );
@@ -209,7 +209,7 @@ const Decoration = styled.div`
     ${decorationHelper(
       COUNTER_WIDTH_MOBILE,
       NUMBER_WIDTH_MOBILE,
-      STROKE_DISTANCE_MOBILE,
+      STROKE_DISTANCE_MOBILE
     )}
   }
 `;

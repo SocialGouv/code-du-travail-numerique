@@ -32,11 +32,11 @@ test("Vérification des références juridiques pour un employé en départ à l
     })
   );
 
-  expect(result).toEqual(
-    expect.arrayContaining(
-      DepartRetraiteReferences.concat(DepartRetraiteMetallurgieReferences)
-    )
+  const expectedReferences = DepartRetraiteReferences.concat(
+    DepartRetraiteMetallurgieReferences
   );
+  expect(result).toHaveLength(expectedReferences.length);
+  expect(result).toEqual(expect.arrayContaining(expectedReferences));
 });
 
 test("Vérification des références juridiques pour un employé en mise à la retraite", () => {
@@ -48,9 +48,9 @@ test("Vérification des références juridiques pour un employé en mise à la r
     })
   );
 
-  expect(result).toEqual(
-    expect.arrayContaining(
-      MiseRetraiteReferences.concat(MiseRetraiteMetallurgieReferences)
-    )
+  const expectedReferences = MiseRetraiteReferences.concat(
+    MiseRetraiteMetallurgieReferences
   );
+  expect(result).toHaveLength(expectedReferences.length);
+  expect(result).toEqual(expect.arrayContaining(expectedReferences));
 });

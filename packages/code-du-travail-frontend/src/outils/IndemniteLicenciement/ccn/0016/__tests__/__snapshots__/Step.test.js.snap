@@ -381,6 +381,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
       class="c4"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >
@@ -853,6 +854,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
       class="c4"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >
@@ -1230,6 +1232,7 @@ exports[`<Step /> should render 1`] = `
       class="c4"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
       >

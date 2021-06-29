@@ -126,6 +126,7 @@ exports[`BurgerStyles renders 1`] = `
     class="c0 c1"
   >
     <svg
+      aria-hidden="true"
       class="c2"
       fill="none"
       viewBox="0 0 32 32"

@@ -120,6 +120,7 @@ exports[`<Share /> renders 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
@@ -141,6 +142,7 @@ exports[`<Share /> renders 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
@@ -165,6 +167,7 @@ exports[`<Share /> renders 1`] = `
         class="c2"
       >
         <svg
+          aria-hidden="true"
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
@@ -188,6 +191,7 @@ exports[`<Share /> renders 1`] = `
           class="c2"
         >
           <svg
+            aria-hidden="true"
             class="c3"
             fill="none"
             viewBox="0 0 16 16"

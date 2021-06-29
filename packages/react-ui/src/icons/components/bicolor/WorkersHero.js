@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgWorkersHero(props) {
   return (
-    <svg fill="none" viewBox="0 0 616 514" {...props}>
+    <svg fill="none" viewBox="0 0 616 514" aria-hidden="true" {...props}>
       <g opacity={0.8}>
         <path
           opacity={0.1}

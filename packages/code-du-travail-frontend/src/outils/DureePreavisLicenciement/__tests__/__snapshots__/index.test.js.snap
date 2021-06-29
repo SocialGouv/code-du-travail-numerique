@@ -558,6 +558,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         >
           Commencer
           <svg
+            aria-hidden="true"
             class="c17"
             fill="none"
             viewBox="0 0 28 15"

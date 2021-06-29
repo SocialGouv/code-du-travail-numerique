@@ -98,7 +98,7 @@ test("Pour un employé dans les transports routiers avec la catgorie TAM dans le
   );
   expect(notifications).toHaveLength(1);
   expect(notifications[0].description).toBe(
-    `Le salarié pourra quitter son emploi après avoir exécuté un préavis de 1 mois sous réserve d’en avoir informé son employeur au moins 10 jours à l’avance. Dans ce cas, il n’a droit qu’à la rémunération correspondant au temps qu’il a effectivement travaillé (et éventuellement une indemnité de congédiement).`
+    `Le salarié pourra quitter son emploi après avoir exécuté un préavis de 1 mois sous réserve d’en avoir informé son employeur au moins 10 jours à l’avance.`
   );
 });
 

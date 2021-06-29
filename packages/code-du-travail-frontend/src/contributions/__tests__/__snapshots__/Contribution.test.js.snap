@@ -458,6 +458,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       class="c1"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -486,6 +487,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="c5"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -1078,6 +1080,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       class="c1"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -1106,6 +1109,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c5"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -1698,6 +1702,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       class="c1"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -1726,6 +1731,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="c5"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -2318,6 +2324,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       class="c1"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -2346,6 +2353,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="c5"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -2887,6 +2895,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       class="c1"
     >
       <svg
+        aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
       >
@@ -2915,6 +2924,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="c5"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
         >
@@ -3350,6 +3360,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
             href="/code-du-travail/l-1243"
           >
             <svg
+              aria-hidden="true"
               class="c12 c13"
               fill="none"
               viewBox="0 0 28 15"

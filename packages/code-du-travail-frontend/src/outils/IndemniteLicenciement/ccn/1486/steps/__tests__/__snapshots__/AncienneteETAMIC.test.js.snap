@@ -528,6 +528,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
         class="c15"
       >
         <svg
+          aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
         >
