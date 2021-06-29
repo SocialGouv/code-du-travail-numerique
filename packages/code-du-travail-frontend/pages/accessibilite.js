@@ -65,7 +65,7 @@ const Accessibilite = () => (
               <li>[50%] des critères du RGAA version 4.1 sont respectés</li>
             </ul>
           </p>
-          <Title>Non-conformité</Title>
+          <Title shift={theme.spacings.larger}>Non-conformité</Title>
           <ul>
             <li>
               Critère 1.1. Chaque image porteuse d’information a-t-elle
