@@ -1649,7 +1649,7 @@ exports[`<Stats /> should render 1`] = `
                       class="c55"
                       href="/accessibilite"
                     >
-                      Accessibilité : non conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

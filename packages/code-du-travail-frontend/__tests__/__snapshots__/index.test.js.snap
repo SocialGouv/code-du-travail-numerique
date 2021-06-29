@@ -2979,7 +2979,7 @@ exports[`<Home /> should render 1`] = `
                       class="c78"
                       href="/accessibilite"
                     >
-                      Accessibilité : non conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li

@@ -1473,7 +1473,7 @@ exports[`<Recherche /> should render 1`] = `
                       class="c52"
                       href="/accessibilite"
                     >
-                      Accessibilité : non conforme
+                      Accessibilité : partiellement conforme
                     </a>
                   </li>
                   <li
