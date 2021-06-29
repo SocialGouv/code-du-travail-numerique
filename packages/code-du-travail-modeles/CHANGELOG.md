@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.51.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.50.0...v4.51.0) (2021-06-29)
+
+
+### Bug Fixes
+
+* **simulator:** bring fixes follow the tests ([#3547](https://github.com/SocialGouv/code-du-travail-numerique/issues/3547)) ([cd509bd](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd509bd461ac0d7f796cc2670ef966da5abf92b4))
+
+
+### Features
+
+* **simulator:** add question about the handicap ([#3585](https://github.com/SocialGouv/code-du-travail-numerique/issues/3585)) ([ed8970b](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed8970b4423ec4b61921207ec42385f0de2fcdb6))
+* **simulator:** improve retirement simulator ([#3508](https://github.com/SocialGouv/code-du-travail-numerique/issues/3508)) ([abfd929](https://github.com/SocialGouv/code-du-travail-numerique/commit/abfd929522808afefad2bc8c20aaa95d9c3d909d))
+* **simulator:** show user input detail on retirement notice ([#3510](https://github.com/SocialGouv/code-du-travail-numerique/issues/3510)) ([8a744ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a744ab6942116e8e943380ffc3cb2715cd46da0))
+
+
+
+
+
 # [4.50.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.49.0...v4.50.0) (2021-05-31)
 
 

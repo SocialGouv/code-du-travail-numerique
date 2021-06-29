@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.51.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.50.0...v4.51.0) (2021-06-29)
+
+
+### Bug Fixes
+
+* **frontend:** fix a11y images criteria ([#3586](https://github.com/SocialGouv/code-du-travail-numerique/issues/3586)) ([4eef9fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/4eef9fabcc79d6a86845222f0c1170931b4982f6))
+
+
+
+
+
 # [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
 
 
