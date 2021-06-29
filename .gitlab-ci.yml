@@ -1,4 +1,9 @@
 ---
+variables:
+  AUTO_DEVOPS_DEV_ENVIRONMENT_NAME: "-dev"
+  AUTO_DEVOPS_PREPROD_ENVIRONMENT_NAME: "-dev"
+  AUTO_DEVOPS_PROD_ENVIRONMENT_NAME: "prod"
+
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_stage.yml
@@ -23,11 +28,6 @@ include:
   - /.gitlab-ci/stages/scan.yml
   - /.gitlab-ci/stages/notify.yml
   - /.gitlab-ci/stages/e2e.yml
-
-variables:
-  AUTO_DEVOPS_DEV_ENVIRONMENT_NAME: "-dev"
-  AUTO_DEVOPS_PREPROD_ENVIRONMENT_NAME: "-dev"
-  AUTO_DEVOPS_PROD_ENVIRONMENT_NAME: "prod"
 
 stages:
   - "Prepare"
