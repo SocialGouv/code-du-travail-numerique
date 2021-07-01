@@ -7,10 +7,10 @@ variables:
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_stage.yml
-    ref: v9.1.2
+    ref: v23.2.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_helm_image_stage.yml
-    ref: v9.1.2
+    ref: v23.2.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
     ref: v23.1.0
