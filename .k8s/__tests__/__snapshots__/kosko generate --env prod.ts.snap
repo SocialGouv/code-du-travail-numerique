@@ -130,8 +130,8 @@ spec:
         team: cdtn
     type: Opaque
 ---
-kind: ConfigMap
 apiVersion: v1
+kind: ConfigMap
 metadata:
   name: api-configmap
   annotations:
@@ -348,8 +348,8 @@ spec:
               cpu: 5m
               memory: 16Mi
 ---
-kind: ConfigMap
 apiVersion: v1
+kind: ConfigMap
 metadata:
   name: www-configmap
   annotations:
