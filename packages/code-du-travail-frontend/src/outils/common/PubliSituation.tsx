@@ -34,7 +34,7 @@ type Props = {
 
 const PubliSituation: React.FC<Props> = ({ situation, form }) => (
   <>
-    <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
+    <SectionTitle>Les éléments saisis</SectionTitle>
     <ul>
       {situation.map((element) => (
         <li key={element.name}>
