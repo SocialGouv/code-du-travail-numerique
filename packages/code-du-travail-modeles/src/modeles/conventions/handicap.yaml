@@ -3,6 +3,7 @@ contrat salarié . convention collective . établissement handicap:
   description: Convention collective nationale des établissements et services pour les personnes inadaptées et handicapées
   applicable si: convention collective = 'IDCC0413'
   valeur: oui
+  idcc: 413
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?

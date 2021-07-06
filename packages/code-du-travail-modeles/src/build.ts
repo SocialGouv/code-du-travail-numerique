@@ -4,6 +4,8 @@ import { mergeModels } from "./internal/merger";
 import path from "path";
 import fs from "fs";
 import fse from "fs-extra";
+import { extractImplementedCc } from "./internal/ExtractSupportedCc";
+import Engine from "publicodes";
 
 const inDir = path.resolve(__dirname, "../bin");
 const outDir = path.resolve(__dirname, "../lib");
@@ -33,5 +35,21 @@ function copyJSFile() {
   fse.copy(`${inDir}/utils`, `${outDir}/utils`);
 }
 
+function writeSupportedCCFile() {
+  const modeles = mergeModels();
+  const ccn = extractImplementedCc(new Engine(modeles));
+  const jsString =
+    '"use strict";\n' +
+    'Object.defineProperty(exports, "__esModule", { value: true });\n' +
+    "exports.supportedCcn = void 0;\n" +
+    `exports.supportedCcn = ${JSON.stringify(ccn, null, 2)};`;
+  fs.writeFileSync(path.resolve(outDir, "constants.js"), jsString);
+  fs.writeFileSync(
+    path.resolve(outDir, "constants.d.ts"),
+    "export declare const supportedCcn: number[];"
+  );
+}
+
+writeSupportedCCFile();
 copyJSFile();
 writeJsonModel();

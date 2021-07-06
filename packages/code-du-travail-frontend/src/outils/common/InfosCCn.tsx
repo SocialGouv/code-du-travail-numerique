@@ -1,4 +1,5 @@
-import { theme, Toast } from "@socialgouv/cdtn-ui";
+import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
+import { FormApi } from "final-form";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
@@ -7,12 +8,26 @@ import ConventionSearch from "../../conventions/Search";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
+import { FormContent } from "./type/WizardType";
 import { required } from "./validators";
 
 export const CONVENTION_NAME = "ccn";
 
-function StepInfoCCn({ form, isOptionnal = true }) {
-  const [storedConvention, setConvention] = useLocalStorage("convention");
+type Props = {
+  form: FormApi<FormContent>;
+  supportedCcn?: Array<number>;
+  isOptional: boolean;
+};
+
+function StepInfoCCn({
+  form,
+  supportedCcn,
+  isOptional = true,
+}: Props): JSX.Element {
+  const [storedConvention, setConvention] = useLocalStorage(
+    "convention",
+    undefined
+  );
   const onSelectConvention = useCallback(
     (data) => {
       setConvention(data);
@@ -37,12 +52,14 @@ function StepInfoCCn({ form, isOptionnal = true }) {
     <>
       <Field
         name={CONVENTION_NAME}
-        validate={isOptionnal ? null : required}
+        validate={isOptional ? null : required}
         render={({ input, meta: { error } }) => {
           if (input.value) {
             return (
               <>
-                <Question>La convention collective</Question>
+                <Question required={!isOptional}>
+                  La convention collective
+                </Question>
                 <p>
                   Vous avez sélectionné la convention collective&nbsp;:&nbsp;
                 </p>
@@ -57,12 +74,31 @@ function StepInfoCCn({ form, isOptionnal = true }) {
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
+                {supportedCcn && !supportedCcn.includes(input.value.num) && (
+                  <Alert variant="primary">
+                    <p>
+                      <Text
+                        variant="primary"
+                        fontSize="hsmall"
+                        fontWeight="700"
+                      >
+                        A noter
+                      </Text>
+                    </p>
+                    La convention collective sélectionnée n&apos;a pas été
+                    traitée par nos services. Vous pouvez poursuivre la
+                    simulation pour connaitre la durée prévue par le code du
+                    travail mais nous vous conseillons de vérifier si votre
+                    convention collective prévoit un délai plus favorable qui
+                    vous serait applicable.
+                  </Alert>
+                )}
               </>
             );
           }
           return (
             <>
-              <Question as="p" required={!isOptionnal}>
+              <Question as="p" required={!isOptional}>
                 Quelle est la convention collective applicable au salarié ?
               </Question>
               <StyledConventionSearch onSelectConvention={onSelectConvention} />
@@ -75,12 +111,16 @@ function StepInfoCCn({ form, isOptionnal = true }) {
   );
 }
 
-export const StepInfoCCnMandatory = (props) => (
-  <StepInfoCCn {...props} isOptionnal={false} />
+export const StepInfoCCnMandatory = (props: Props): JSX.Element => (
+  <StepInfoCCn
+    {...props}
+    isOptional={false}
+    supportedCcn={props.supportedCcn}
+  />
 );
 
-export const StepInfoCCnOptionnal = (props) => (
-  <StepInfoCCn {...props} isOptionnal={true} />
+export const StepInfoCCnOptionnal = (props: Props): JSX.Element => (
+  <StepInfoCCn {...props} isOptional={true} supportedCcn={props.supportedCcn} />
 );
 
 const StyledConventionSearch = styled(ConventionSearch)`

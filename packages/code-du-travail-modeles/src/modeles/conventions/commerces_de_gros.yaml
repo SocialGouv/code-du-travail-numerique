@@ -3,6 +3,7 @@ contrat salarié . convention collective . commerces de gros:
   description: Convention collective nationale de commerces de gros du 23 juin 1970.
   applicable si: convention collective = 'IDCC0573'
   valeur: oui
+  idcc: 573
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
   applicable si: mise à la retraite
