@@ -27,7 +27,7 @@ const ResultDetail: React.FC<Props> = ({ content, publicodesContext }) => {
   return (
     <>
       <PubliSituation situation={publicodesContext.situation} form={content} />
-      <DecryptedResult nothing={""} />
+      <DecryptedResult data={content} publicodesContext={publicodesContext} />
       <PubliReferences references={references} />
     </>
   );
@@ -48,7 +48,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
                 publicodesContext={publicodesContext}
               />
             ),
-            title: <p>Comprendre le résultat</p>,
+            title: <p>Voir le détail du calcul</p>,
           },
         ]}
       />

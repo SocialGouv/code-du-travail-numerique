@@ -12,7 +12,7 @@ const PubliReferences: React.FC<Props> = ({ references }) => (
   <>
     {references.length > 0 && (
       <>
-        <SectionTitle>Les textes juridiques appliqués</SectionTitle>
+        <SectionTitle>Sources</SectionTitle>
         <ul>
           {references.map(({ article, url }, id) => (
             <li key={`${url}-${id}`}>
