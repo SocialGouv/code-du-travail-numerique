@@ -1,3 +1,4 @@
+import { Alert } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 const IntroductionStep = (): JSX.Element => (
@@ -19,6 +20,14 @@ const IntroductionStep = (): JSX.Element => (
       sur le bulletin de salaire ou le contrat de travail. Prévoyez X à X
       minutes pour cette simulation.
     </p>
+    <Alert>
+      Attention&nbsp;: Le résultat affiché correspond à la durée légale ou
+      conventionnelle, en fonction des informations renseignées. Toutefois, une
+      durée plus favorable peut être prévue par un accord collectif
+      d’entreprise, le contrat de travail, un usage ou encore une convention
+      collective de branche (si non renseignée dans le simulateur). Dans ce cas,
+      c’est cette durée plus favorable qui s’applique au salarié.
+    </Alert>
     <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
