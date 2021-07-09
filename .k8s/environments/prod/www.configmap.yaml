@@ -4,7 +4,7 @@ metadata:
   name: www-configmap
 data:
   AZURE_BASE_URL: "https://cdtnadminprod.blob.core.windows.net"
-  AZURE_CONTAINER: "ctdn"
+  AZURE_CONTAINER: "cdtn"
   IS_PRODUCTION_DEPLOYMENT: "true"
   NODE_ENV: "production"
   PIWIK_SITE_ID: "4"

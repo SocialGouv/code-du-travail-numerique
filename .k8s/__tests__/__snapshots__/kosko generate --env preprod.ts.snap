@@ -359,7 +359,7 @@ metadata:
   namespace: code-du-travail-numerique-85-preprod-dev42
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
-  AZURE_CONTAINER: ctdn
+  AZURE_CONTAINER: cdtn
   IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
