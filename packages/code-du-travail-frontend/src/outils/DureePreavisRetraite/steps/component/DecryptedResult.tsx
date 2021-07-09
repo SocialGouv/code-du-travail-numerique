@@ -62,8 +62,11 @@ const Description: React.FC<{
   ) {
     return (
       <Text variant="primary">
-        Pour un salarié ayant une ancienneté inférieure à 6 mois, la convention
-        collective sélectionnée prévoit un préavis à respecter.
+        Le code du travail ne prévoit pas de durée de préavis pour une
+        ancienneté inférieure à 6 mois mais il renvoie à la convention ou
+        l’accord collectif de travail ou, à défaut, aux usages pratiqués dans la
+        localité et la profession. La durée à appliquer pour le salarié est donc
+        la durée prévue par la convention collective.
       </Text>
     );
   }
