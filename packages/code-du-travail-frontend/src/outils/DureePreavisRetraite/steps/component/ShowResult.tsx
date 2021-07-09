@@ -1,9 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 import Mdx from "../../../../common/Mdx";
-import { SectionTitle } from "../../../common/stepStyles";
+import { Highlight, SectionTitle, SmallText } from "../../../common/stepStyles";
 import { PublicodesContextInterface } from "../../../publicodes";
-import { HighlightResult, Notification } from "../Result";
 
 type Props = {
   publicodesContext: PublicodesContextInterface;
@@ -54,5 +54,12 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
     </>
   );
 };
+
+export const HighlightResult = styled(Highlight)`
+  font-weight: bold;
+  font-size: 1.5em;
+`;
+
+export const Notification = styled(SmallText)``;
 
 export default ShowResult;
