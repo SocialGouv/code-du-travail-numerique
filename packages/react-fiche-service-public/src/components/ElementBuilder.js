@@ -4,15 +4,15 @@ import React from "react";
 import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
-import { getText, ignoreParagraph } from "../utils";
-import Accordion from "./Accordion";
-import { LienExterne, LienExterneCommente } from "./LienExterne";
-import List from "./List";
-import OuSAdresser from "./OuSAdresser";
-import ServiceEnLigne from "./ServiceEnLigne";
-import Table from "./Table";
-import Tabulator from "./Tabulator";
-import Title from "./Title";
+import { getText, ignoreParagraph } from "../utils.js";
+import Accordion from "./Accordion.js";
+import { LienExterne, LienExterneCommente } from "./LienExterne.js";
+import List from "./List.js";
+import OuSAdresser from "./OuSAdresser.js";
+import ServiceEnLigne from "./ServiceEnLigne.js";
+import Table from "./Table.js";
+import Tabulator from "./Tabulator.js";
+import Title from "./Title.js";
 
 const { spacings } = theme;
 

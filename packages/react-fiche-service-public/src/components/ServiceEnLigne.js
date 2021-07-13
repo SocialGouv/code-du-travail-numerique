@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { getText } from "../utils";
+import { getText } from "../utils.js";
 
 class ServiceEnLigne extends React.PureComponent {
   static propTypes = {

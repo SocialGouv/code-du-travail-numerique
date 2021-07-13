@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { ElementBuilder } from "./ElementBuilder";
+import { ElementBuilder } from "./ElementBuilder.js";
 
 const { spacings } = theme;
 

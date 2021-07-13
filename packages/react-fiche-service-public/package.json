@@ -3,8 +3,8 @@
   "version": "4.51.0",
   "private": true,
   "description": "Composant React pour render une fiche SP",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "type": "module",
+  "exports": "./lib/index.esm.js",
   "files": [
     "lib"
   ],
@@ -19,7 +19,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "date-fns": "^2.19.0"
+    "date-fns": "^2.22.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "peerDependencies": {
     "@socialgouv/cdtn-ui": "4.x",

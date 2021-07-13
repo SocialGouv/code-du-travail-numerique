@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { getText } from "../utils";
+import { getText } from "../utils.js";
 
 export class LienExterneCommente extends React.PureComponent {
   static propTypes = {

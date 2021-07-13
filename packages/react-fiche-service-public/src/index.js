@@ -1,1 +1,1 @@
-export { FicheServicePublic } from "./components/Fiche";
+export { FicheServicePublic } from "./components/Fiche.js";
