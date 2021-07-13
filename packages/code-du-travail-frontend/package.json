@@ -32,7 +32,7 @@
     "@socialgouv/cdtn-slugify": "^4.45.0",
     "@socialgouv/cdtn-sources": "^4.45.0",
     "@socialgouv/cdtn-ui": "^4.51.0",
-    "@socialgouv/fiches-travail-data": "^4.161.0",
+    "@socialgouv/fiches-travail-data": "^4.162.0",
     "@socialgouv/modeles-social": "^4.51.0",
     "@socialgouv/react-fiche-service-public": "^4.51.0",
     "@socialgouv/reference-article": "^1.0.1",
