@@ -1,4 +1,4 @@
-import { Dropdown, icons, theme, utils } from "@socialgouv/cdtn-ui/";
+import { Dropdown, icons, theme, utils } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 

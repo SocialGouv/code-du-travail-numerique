@@ -19,8 +19,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "date-fns": "^2.22.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "date-fns": "^2.22.1"
   },
   "peerDependencies": {
     "@socialgouv/cdtn-ui": "4.x",
@@ -50,6 +49,7 @@
     "react-dom": "^17.0.1",
     "rollup": "^2.40.0",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "styled-components": "^5.2.1",
     "stylelint": "^13.11.0",
     "stylelint-config-rational-order": "^0.1.2",

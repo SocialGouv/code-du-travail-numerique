@@ -18,7 +18,7 @@ export default {
     // using Babel to transform jsx
     babel({
       exclude: ["node_modules/**", "__tests__/**"],
-      externalHelpers: true,
+      externalHelpers: false,
       include: "src/**/*.js",
     }),
 
