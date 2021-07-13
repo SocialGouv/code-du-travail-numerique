@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 
-import { Toast } from "../Toast";
+import { Toast } from "../Toast/index.js";
 
 describe("<Toast />", () => {
   it("render default toast", () => {

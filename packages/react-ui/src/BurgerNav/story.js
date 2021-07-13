@@ -1,9 +1,13 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Wrapper } from "../layout/Wrapper";
-import { BurgerNav } from ".";
-import { BurgerNavButton, BurgerNavCurrent, BurgerNavLink } from "./NavItems";
+import { Section } from "../layout/Section/index.js";
+import { Wrapper } from "../layout/Wrapper/index.js";
+import { BurgerNav } from "./index.js";
+import {
+  BurgerNavButton,
+  BurgerNavCurrent,
+  BurgerNavLink,
+} from "./NavItems.js";
 
 export default {
   component: BurgerNav,

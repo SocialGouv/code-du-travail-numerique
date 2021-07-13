@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Custom } from "../icons";
-import { Section } from "../layout/Section";
+import { Custom } from "../icons/index.js";
+import { Section } from "../layout/Section/index.js";
 import { Title } from "../Titles/Title";
-import { Accordion } from ".";
+import { Accordion } from "./index.js";
 
 export default {
   component: Accordion,

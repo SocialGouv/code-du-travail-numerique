@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Section } from "../layout/Section";
-import { Heading } from "../Titles/Heading";
-import { PageTitle } from "../Titles/PageTitle";
-import { Title } from "../Titles/Title";
-import * as icons from ".";
+import { Section } from "../layout/Section/index.js";
+import { Heading } from "../Titles/Heading/index.js";
+import { PageTitle } from "../Titles/PageTitle/index.js";
+import { Title } from "../Titles/Title/index.js";
+import * as icons from "./index.js";
 
 export default {
   component: icons,
@@ -42,14 +42,14 @@ export const readme = () => (
       </li>
       <li>
         Export the new icon in the <b>index.js</b> file.{" "}
-        <code>{`export { default as MyNewIcon } from "./components/bicolor/MyNewIcon";`}</code>
+        <code>{`export { default as MyNewIcon } from "./components/bicolor/MyNewIcon.js"`}</code>
       </li>
     </ol>
     <Title>Use the icon</Title>
     <Heading>Inside the UI repo</Heading>
     <p>
       <code>
-        {`import { Calculator } from "../icons";`}
+        {`import { Calculator } from "../icons/index.js"`}
         <br />
         {`<Calculator />`}
       </code>
@@ -57,7 +57,7 @@ export const readme = () => (
     <Heading>Outside the UI repo</Heading>
     <p>
       <code>
-        {`import { icons } from "../theme";`}
+        {`import { icons } from "../theme.js"`}
         <br />
         {`const { Calculator } = icons;`}
         <br />

@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { breakpoints, colors, fonts, spacings } from "../theme";
-import { useTOCReducer } from "./useTOCReducer";
+import { breakpoints, colors, fonts, spacings } from "../theme.js";
+import { useTOCReducer } from "./useTOCReducer.js";
 
 const initialState = {
   titles: [],

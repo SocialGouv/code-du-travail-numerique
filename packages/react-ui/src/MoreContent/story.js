@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { MoreContent } from ".";
+import { Section } from "../layout/Section/index.js";
+import { MoreContent } from "./index.js";
 
 export default {
   component: MoreContent,

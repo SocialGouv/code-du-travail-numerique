@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { OverflowWrapper } from ".";
+import { Section } from "../layout/Section/index.js";
+import { OverflowWrapper } from "./index.js";
 
 export default {
   component: OverflowWrapper,

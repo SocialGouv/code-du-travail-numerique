@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Tile } from "../Tile";
-import { Grid } from ".";
+import { Tile } from "../Tile/index.js";
+import { Grid } from "./index.js";
 
 export default {
   component: Grid,

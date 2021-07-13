@@ -3,7 +3,7 @@ import React, { useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import useOnClickOutside from "use-onclickoutside";
 
-import { box, colors, spacings } from "../theme";
+import { box, colors, spacings } from "../theme.js";
 import { displayInViewport } from "../utils";
 
 export const Dropdown = ({ labelledBy, opener, ...props }) => {

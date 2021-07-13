@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 
-import { breakpoints, spacings } from "../theme";
-import { GridContext } from "./Grid";
+import { breakpoints, spacings } from "../theme.js";
+import { GridContext } from "./Grid.js";
 
 export const GridCell = (props) => {
   const columns = useContext(GridContext);

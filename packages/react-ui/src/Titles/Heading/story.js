@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Section } from "../../layout/Section";
-import { Wrapper } from "../../layout/Wrapper";
-import { spacings } from "../../theme";
-import { Subtitle } from "../Subtitle";
-import { Heading } from ".";
+import { Section } from "../../layout/Section/index.js";
+import { Wrapper } from "../../layout/Wrapper/index.js";
+import { spacings } from "../../theme.js";
+import { Subtitle } from "../Subtitle/index.js";
+import { Heading } from "./index.js";
 
 export default {
   component: Heading,

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { Grid as RootGrid } from "./Grid";
-import { GridCell } from "./GridCell";
+import { Grid as RootGrid } from "./Grid.js";
+import { GridCell } from "./GridCell.js";
 
 export { GridCell, RootGrid };
 export const Grid = ({ children, ...props }) => (

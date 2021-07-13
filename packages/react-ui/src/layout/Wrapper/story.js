@@ -1,13 +1,14 @@
 import React from "react";
-import { PageTitle } from "../../Titles/PageTitle";
-import { Title } from "../../Titles/Title";
-import { Section } from "../Section";
-import { Container } from "../Container";
-import { Wrapper } from ".";
+
+import { PageTitle } from "../../Titles/PageTitle/index.js";
+import { Title } from "../../Titles/Title/index.js";
+import { Container } from "../Container/index.js";
+import { Section } from "../Section/index.js";
+import { Wrapper } from "./index.js";
 
 export default {
   component: Wrapper,
-  title: 'Layout/Components/Wrapper',
+  title: "Layout/Components/Wrapper",
 };
 
 export const base = () => (

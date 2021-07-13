@@ -3,10 +3,10 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper";
-import { ScreenReaderOnly } from "../ScreenReaderOnly";
-import { animations, box, breakpoints, fonts, spacings } from "../theme";
-import { getTextFromComponent } from "../utils/getTextFromComponent";
+import { OverflowWrapper } from "../OverflowWrapper/index.js";
+import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 
 export const Tabs = (props) => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;

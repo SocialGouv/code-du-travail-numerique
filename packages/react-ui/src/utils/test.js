@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Title } from "../Titles/Title";
-import { getTextFromComponent } from "./getTextFromComponent";
+import { Title } from "../Titles/Title/index.js";
+import { getTextFromComponent } from "./getTextFromComponent.js";
 
 describe("getTextFromComponent", () => {
   it("returns nothing if component is empty", () => {

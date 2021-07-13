@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { breakpoints } from "../theme";
-import { Input } from "./Input";
+import { breakpoints } from "../theme.js";
+import { Input } from "./Input.js";
 
 export const InputDate = ({ ...props }) => (
   <StyledInputDate type="date" placeholder="JJ/MM/AAAA" {...props} />

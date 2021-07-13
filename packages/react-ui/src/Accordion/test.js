@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Custom } from "../icons";
-import { Accordion } from ".";
+import { Custom } from "../icons/index.js";
+import { Accordion } from "./index.js";
 
 describe("<Accordion />", () => {
   it("renders", () => {

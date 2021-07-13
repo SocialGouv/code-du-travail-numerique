@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { Config } from "../icons";
-import { box } from "../theme";
+import { Config } from "../icons/index.js";
+import { box } from "../theme.js";
 
 export const Badge = ({ icon: Icon, ...props }) => (
   <StyledBadge {...props}>

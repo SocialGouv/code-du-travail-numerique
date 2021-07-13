@@ -1,11 +1,12 @@
 import React from "react";
-import { PageTitle } from "../../Titles/PageTitle";
-import { Section } from "../Section";
-import { Container } from ".";
+
+import { PageTitle } from "../../Titles/PageTitle/index.js";
+import { Section } from "../Section/index.js";
+import { Container } from "./index.js";
 
 export default {
   component: Container,
-  title: 'Layout/Components/Container',
+  title: "Layout/Components/Container",
 };
 
 export const base = () => (

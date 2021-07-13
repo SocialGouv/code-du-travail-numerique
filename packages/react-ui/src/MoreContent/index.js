@@ -9,9 +9,9 @@ import {
 } from "react-accessible-accordion";
 import styled from "styled-components";
 
-import { More } from "../icons";
-import { fadeIn } from "../keyframes";
-import { animations, breakpoints, spacings } from "../theme";
+import { More } from "../icons/index.js";
+import { fadeIn } from "../keyframes.js";
+import { animations, breakpoints, spacings } from "../theme.js";
 
 export const MoreContent = ({ children, title, noLeftPadding, ...props }) => {
   return (

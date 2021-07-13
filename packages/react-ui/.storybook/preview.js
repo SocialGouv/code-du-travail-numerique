@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../src/GlobalStyles";
-import { Wrapper } from "../src/layout/Wrapper";
-import { blackAndWhiteColors, colors } from "../src/theme";
+import { Wrapper } from "../src/layout/Wrapper/index.js";
+import { blackAndWhiteColors, colors } from "../src/theme.js";
 
 export const globalTypes = {
   colors: {

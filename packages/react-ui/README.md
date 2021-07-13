@@ -27,7 +27,7 @@ React UI is a themed UI. In order to make it work in your project, you must prov
 
 ```js
 import { ThemeProvider } from "styled-components";
-import { theme } from "../../src/theme";
+import { theme } from "../../src/theme.js";
 
 const { colors } = theme;
 
@@ -96,7 +96,7 @@ Otherwise, the color won't change when the theme is dynamically modified. For ev
 While contributing to the project, for example, you should do:
 
 ```js
-import { box, spacings } from "../theme";
+import { box, spacings } from "../theme.js";
 const P = styled.p`
   margin: ${spacings.large};
   color: ${({ theme }) => theme.darkBlue};

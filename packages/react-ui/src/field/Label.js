@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { fonts, spacings } from "../theme";
+import { fonts, spacings } from "../theme.js";
 
 export const Label = ({ children, ...props }) => (
   <StyledLabel {...props}>{children}</StyledLabel>

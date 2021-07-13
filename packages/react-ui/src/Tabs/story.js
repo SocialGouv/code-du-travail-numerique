@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Title } from "../Titles/Title";
-import { Tabs } from ".";
+import { Title } from "../Titles/Title/index.js";
+import { Tabs } from "./index.js";
 
 export default {
   argTypes: {

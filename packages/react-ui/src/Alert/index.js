@@ -3,7 +3,7 @@ import React from "react";
 import { AlertCircle } from "react-feather";
 import styled from "styled-components";
 
-import { box, fonts, spacings } from "../theme";
+import { box, fonts, spacings } from "../theme.js";
 
 export const Alert = styled.div`
   font-size: ${({ size }) =>

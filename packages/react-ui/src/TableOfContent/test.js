@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { TableOfContent } from ".";
+import { TableOfContent } from "./index.js";
 
 describe("<TableOfContent />", () => {
   const observeMock = jest.fn();

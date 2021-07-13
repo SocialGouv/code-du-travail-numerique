@@ -1,12 +1,12 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 
-import { InputCheckbox } from "./Checkbox";
-import { Input } from "./Input";
-import { InputDate } from "./InputDate";
-import { InputRadio } from "./Radio";
-import { Select } from "./Select";
-import { Textarea } from "./Textarea";
+import { InputCheckbox } from "./Checkbox.js";
+import { Input } from "./Input.js";
+import { InputDate } from "./InputDate.js";
+import { InputRadio } from "./Radio.js";
+import { Select } from "./Select.js";
+import { Textarea } from "./Textarea.js";
 
 describe("<InputCheckbox />", () => {
   it("should render checkbox field", () => {

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Progress } from ".";
+import { Progress } from "./index.js";
 
 describe("<Progress />", () => {
   it("renders progress bar", () => {

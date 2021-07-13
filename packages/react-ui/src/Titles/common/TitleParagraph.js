@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { breakpoints, spacings } from "../../theme";
+import { breakpoints, spacings } from "../../theme.js";
 
 export const TitleParagraph = styled.p`
   margin-top: ${spacings.small};

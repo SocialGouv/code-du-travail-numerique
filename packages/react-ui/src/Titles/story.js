@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Wrapper } from "../layout/Wrapper";
-import { spacings } from "../theme";
-import { Heading } from "./Heading";
-import { InsertTitle } from "./InsertTitle";
-import { PageTitle } from "./PageTitle";
-import { Subtitle } from "./Subtitle";
-import { Title } from "./Title";
+import { Section } from "../layout/Section/index.js";
+import { Wrapper } from "../layout/Wrapper/index.js";
+import { spacings } from "../theme.js";
+import { Heading } from "./Heading/index.js";
+import { InsertTitle } from "./InsertTitle/index.js";
+import { PageTitle } from "./PageTitle/index.js";
+import { Subtitle } from "./Subtitle/index.js";
+import { Title } from "./Title/index.js";
 
 export default {
   component: Title,

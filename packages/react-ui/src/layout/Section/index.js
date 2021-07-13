@@ -1,8 +1,12 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
-import { CONTAINER_MAX_WIDTH, Container } from "../../layout/Container";
-import { breakpoints, spacings } from "../../theme";
+
+import {
+  Container,
+  CONTAINER_MAX_WIDTH,
+} from "../../layout/Container/index.js";
+import { breakpoints, spacings } from "../../theme.js";
 
 const BORDER_RADIUS = "10rem";
 
@@ -65,7 +69,7 @@ const StyledSection = styled.div`
         padding: ${large ? "6rem" : spacings.large} 0;
         min-height: ${BORDER_RADIUS};
         ${large &&
-          `
+        `
             @media (max-width: ${breakpoints.mobile}) {
               margin: ${spacings.large} 0 ${spacings.larger};
               padding: ${spacings.large} 0 ${spacings.larger};
@@ -130,16 +134,16 @@ const Content = styled.div`
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   decorated: PropTypes.bool,
-  large: PropTypes.bool,
-  innerTopContent: PropTypes.node,
   innerBottomContent: PropTypes.node,
+  innerTopContent: PropTypes.node,
+  large: PropTypes.bool,
   variant: PropTypes.oneOf(["default", "white", "light", "dark"]),
 };
 
 Section.defaultProps = {
   decorated: false,
-  large: false,
-  innerTopContent: null,
   innerBottomContent: null,
+  innerTopContent: null,
+  large: false,
   variant: "default",
 };

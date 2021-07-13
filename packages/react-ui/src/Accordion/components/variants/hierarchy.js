@@ -8,8 +8,8 @@ import {
 } from "react-accessible-accordion";
 import styled, { css } from "styled-components";
 
-import { box, breakpoints, fonts, spacings } from "../../../theme";
-import { VerticalArrow } from "../VerticalArrow";
+import { box, breakpoints, fonts, spacings } from "../../../theme.js";
+import { VerticalArrow } from "../VerticalArrow/index.js";
 
 const ITEM_SPACING = spacings.base;
 const ITEM_SPACING_MOBILE = spacings.tiny;

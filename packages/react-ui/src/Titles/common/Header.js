@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { breakpoints, spacings } from "../../theme";
+import { breakpoints, spacings } from "../../theme.js";
 
 export const Header = styled.header`
   ${({ isFirst, stripe, pageTitle, shift }) => {

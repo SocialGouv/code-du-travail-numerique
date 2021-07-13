@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Title } from ".";
+import { Title } from "./index.js";
 
 describe("<Title />", () => {
-  it("renders a H2 title ", () => {
+  it("renders a H2 title", () => {
     const { container } = render(<Title>Lorem Ipsum</Title>);
     expect(container).toMatchSnapshot();
   });

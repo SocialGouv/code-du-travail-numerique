@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Button } from "../Button";
-import { Section } from "../layout/Section";
-import { Title } from "../Titles/Title";
-import { Modal, ModalContentWrapper } from ".";
+import { Button } from "../Button/index.js";
+import { Section } from "../layout/Section/index.js";
+import { Title } from "../Titles/Title/index.js";
+import { Modal, ModalContentWrapper } from "./index.js";
 
 export default {
   component: Modal,

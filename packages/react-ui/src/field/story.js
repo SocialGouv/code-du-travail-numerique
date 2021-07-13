@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Euro, Search } from "../icons";
-import { Section } from "../layout/Section";
-import { InputCheckbox } from "./Checkbox";
-import { Input } from "./Input";
-import { InputDate } from "./InputDate";
-import { Label } from "./Label";
-import { InputRadio } from "./Radio";
-import { Select } from "./Select";
-import { Textarea } from "./Textarea";
+import { Euro, Search } from "../icons/index.js";
+import { Section } from "../layout/Section/index.js";
+import { InputCheckbox } from "./Checkbox.js";
+import { Input } from "./Input.js";
+import { InputDate } from "./InputDate.js";
+import { Label } from "./Label.js";
+import { InputRadio } from "./Radio.js";
+import { Select } from "./Select.js";
+import { Textarea } from "./Textarea.js";
 
 export default {
   component: Select,

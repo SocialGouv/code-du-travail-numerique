@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Document } from "../icons";
-import { IconStripe } from ".";
+import { Document } from "../icons/index.js";
+import { IconStripe } from "./index.js";
 
 describe("<Grid />", () => {
   it("renders", () => {

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { DirectionRight } from "../icons";
-import { animations, box, breakpoints, fonts, spacings } from "../theme";
+import { DirectionRight } from "../icons/index.js";
+import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const StyledButton = styled.button`
   display: inline-flex;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FlatList } from ".";
+import { FlatList } from "./index.js";
 
 export default {
   component: FlatList,

@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Holidays, Salary, Time } from "../icons";
-import { Section } from "../layout/Section";
-import { Tile } from ".";
+import { Holidays, Salary, Time } from "../icons/index.js";
+import { Section } from "../layout/Section/index.js";
+import { Tile } from "./index.js";
 
 export default {
   argTypes: {

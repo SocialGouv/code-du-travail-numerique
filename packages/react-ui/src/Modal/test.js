@@ -2,7 +2,7 @@ import { cleanup, render } from "@testing-library/react";
 import React from "react";
 import styled from "styled-components";
 
-import { Modal } from ".";
+import { Modal } from "./index.js";
 
 // HACK(lionelB): trick to prevent @reach-modal warning if styles are not imported
 // jsdom doesn"t support it for now @see https://github.com/jsdom/jsdom/issues/1895

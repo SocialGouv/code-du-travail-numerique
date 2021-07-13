@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints, fonts, spacings } from "../../theme";
+import { breakpoints, fonts, spacings } from "../../theme.js";
 
 export const InsertTitle = styled.div`
   margin: 0 0 ${spacings.small} 0;

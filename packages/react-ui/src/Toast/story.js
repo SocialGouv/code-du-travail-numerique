@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Toast } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Toast } from "./index.js";
 
 export default {
   argTypes: {

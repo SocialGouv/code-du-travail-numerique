@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Table } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Table } from "./index.js";
 
 export default {
   component: Table,

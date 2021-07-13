@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { fonts } from "../theme";
+import { fonts } from "../theme.js";
 
 export const Text = styled.span`
   ${({ variant, fontSize, fontWeight, theme }) => {

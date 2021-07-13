@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import { X } from "react-feather";
 import styled, { css } from "styled-components";
 
-import { Button } from "../Button";
-import { fromBottom, fromLeft, fromRight, fromTop } from "../keyframes";
-import { box, spacings } from "../theme";
+import { Button } from "../Button/index.js";
+import { fromBottom, fromLeft, fromRight, fromTop } from "../keyframes.js";
+import { box, spacings } from "../theme.js";
 
 export const Toast = ({ children, onRemove, timeout, variant, ...props }) => {
   useEffect(() => {

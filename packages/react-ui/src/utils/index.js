@@ -1,6 +1,6 @@
 // Bicolor icons
-export { copyToClipboard } from "./copyToClipboard";
+export { copyToClipboard } from "./copyToClipboard.js";
 export {
   displayInViewport,
   throttledDisplayInViewport,
-} from "./displayInViewport";
+} from "./displayInViewport.js";

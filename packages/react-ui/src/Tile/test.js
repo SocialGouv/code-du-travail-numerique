@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Time } from "../icons";
-import { Tile } from ".";
+import { Time } from "../icons/index.js";
+import { Tile } from "./index.js";
 
 describe("<Tile />", () => {
   it("renders a tile with text inside", () => {

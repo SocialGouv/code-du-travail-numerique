@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { fonts, spacings } from "../../theme";
+import { fonts, spacings } from "../../theme.js";
 
 export const Subtitle = styled.span`
   display: block;

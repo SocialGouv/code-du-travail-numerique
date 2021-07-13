@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Check } from "../icons";
-import { Section } from "../layout/Section";
-import { Wrapper } from "../layout/Wrapper";
-import { Badge } from ".";
+import { Check } from "../icons/index.js";
+import { Section } from "../layout/Section/index.js";
+import { Wrapper } from "../layout/Wrapper/index.js";
+import { Badge } from "./index.js";
 
 export default {
   component: Badge,

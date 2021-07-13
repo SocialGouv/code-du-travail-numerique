@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { box } from "../theme";
+import { box } from "../theme.js";
 
 export const InputRadio = ({ label, name, id, size, ...props }) => (
   <StyledLabel htmlFor={id} size={size}>

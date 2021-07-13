@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { Text } from "../Text";
-import { box, spacings } from "../theme";
+import { Text } from "../Text/index.js";
+import { box, spacings } from "../theme.js";
 
 export function Tag({ children }) {
   return (

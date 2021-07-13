@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import { darken, getContrast, lighten, rgba } from "polished";
 
 const WCAG_AA_MINIMAL_CONTRAST = 3;
