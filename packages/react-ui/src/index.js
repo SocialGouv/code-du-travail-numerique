@@ -3,7 +3,6 @@ export * as theme from "./theme.js";
 
 // Theme Provider
 export { ThemeProvider, useTheme } from "./ThemeProvider.js";
-
 // Utils
 export * as utils from "./utils/index.js";
 

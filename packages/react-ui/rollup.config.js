@@ -8,7 +8,7 @@ export default {
   input: "src/index.js",
   output: [
     {
-      file: packageJson.exports,
+      file: packageJson.main,
       format: "esm",
     },
   ],
@@ -17,7 +17,7 @@ export default {
     // using Babel to transform jsx
     babel({
       exclude: ["node_modules/**", "story.js", "test.js"],
-      externalHelpers: false,
+      externalHelpers: true,
       include: "src/**/*.js",
     }),
     resolve(),
