@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Heading /> renders a H3 heading  1`] = `
+exports[`<Heading /> renders a H3 heading 1`] = `
 .c0 {
   position: relative;
   display: block;
@@ -27,7 +27,7 @@ exports[`<Heading /> renders a H3 heading  1`] = `
 </div>
 `;
 
-exports[`<Heading /> renders a striped shifted H4 heading  1`] = `
+exports[`<Heading /> renders a striped shifted H4 heading 1`] = `
 .c1 {
   position: absolute;
   background-color: #7994d4;

@@ -90,7 +90,7 @@ exports[`<Container /> renders narrow without padding 1`] = `
 </div>
 `;
 
-exports[`<Container /> renders without padding even if the prop is specified, because the narrow prop is not  1`] = `
+exports[`<Container /> renders without padding even if the prop is specified, because the narrow prop is not 1`] = `
 .c0 {
   max-width: 124rem;
   margin: 0 auto;
