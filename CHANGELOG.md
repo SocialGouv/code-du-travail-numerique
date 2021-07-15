@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.52.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.3...v4.52.0) (2021-07-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.157.0 ([#3601](https://github.com/SocialGouv/code-du-travail-numerique/issues/3601)) ([23eb69c](https://github.com/SocialGouv/code-du-travail-numerique/commit/23eb69c50224297026a503f1633b6019f8cc6b70))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.161.0 ([#3611](https://github.com/SocialGouv/code-du-travail-numerique/issues/3611)) ([c2c8587](https://github.com/SocialGouv/code-du-travail-numerique/commit/c2c8587d85987a25d94e102af2ad5e4990dc46c7))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.162.0 ([#3631](https://github.com/SocialGouv/code-du-travail-numerique/issues/3631)) ([d0944a3](https://github.com/SocialGouv/code-du-travail-numerique/commit/d0944a3d96efee0fd3f834382b89d787241bd431))
+* azure storage cdtn url ([#3615](https://github.com/SocialGouv/code-du-travail-numerique/issues/3615)) ([09a6d00](https://github.com/SocialGouv/code-du-travail-numerique/commit/09a6d00dcf9791cc209fdee22a14fd7e126b33c5))
+
+
+### Features
+
+* **simulator:** show a message when the CC is not supported ([#3583](https://github.com/SocialGouv/code-du-travail-numerique/issues/3583)) ([c4ba1ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4ba1ac5d16cfbf99b8f45b05147429cb6e1473b))
+
+
+
+
+
 ## [4.51.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.2...v4.51.3) (2021-06-29)
 
 
