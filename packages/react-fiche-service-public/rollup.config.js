@@ -8,7 +8,7 @@ export default {
   input: "src/index.js",
   output: [
     {
-      file: packageJson.main,
+      file: packageJson.module,
       format: "esm",
     },
     {
