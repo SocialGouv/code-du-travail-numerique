@@ -485,14 +485,8 @@ exports[`<Result /> should render 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -524,12 +518,7 @@ exports[`<Result /> should render 1`] = `
                         <span
                           class="mord"
                         >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          0
+                          10
                         </span>
                         <span
                           class="mclose"
@@ -679,14 +668,8 @@ exports[`<Result /> should render 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1144,14 +1127,8 @@ exports[`<Result /> should render 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1182,14 +1159,8 @@ exports[`<Result /> should render 1`] = `
                         />
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          D
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          c
+                          Dc
                         </span>
                         <span
                           class="mspace"
@@ -1244,12 +1215,7 @@ exports[`<Result /> should render 1`] = `
                                       <span
                                         class="mord"
                                       >
-                                        1
-                                      </span>
-                                      <span
-                                        class="mord"
-                                      >
-                                        0
+                                        10
                                       </span>
                                     </span>
                                   </span>
@@ -1334,14 +1300,8 @@ exports[`<Result /> should render 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1404,30 +1364,15 @@ exports[`<Result /> should render 1`] = `
                         />
                         <span
                           class="mord mathnormal"
-                        >
-                          m
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
                           style="margin-right:0.05724em;"
                         >
-                          j
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
+                          maj
                         </span>
                         <span
                           class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
-                          r
+                          or
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1478,28 +1423,13 @@ exports[`<Result /> should render 1`] = `
                         <span
                           class="mord mathnormal"
                         >
-                          m
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          i
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          n
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
+                          min
                         </span>
                         <span
                           class="mord mathnormal"
                           style="margin-right:0.02778em;"
                         >
-                          r
+                          or
                         </span>
                         <span
                           class="mord mathnormal"

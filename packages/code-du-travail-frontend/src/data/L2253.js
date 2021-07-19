@@ -2,14 +2,7 @@
 export const THEMES_L22531 = {
   classifications: [],
   "conditions-durees-renouvellement-periode-essai": [
-    3700,
-    3710,
-    3720,
-    3730,
-    3740,
-    3750,
-    3760,
-    3770,
+    3700, 3710, 3720, 3730, 3740, 3750, 3760, 3770,
   ],
   "egalite-professionnelle": [102200],
   "garanties-collectives-complementaires": [],

@@ -22,11 +22,8 @@ function Result({ form }) {
     branche,
   } = state.values;
 
-  const {
-    salaireRefLegal,
-    indemniteLegale,
-    infoCalculLegal,
-  } = getIndemniteFromFinalForm(form);
+  const { salaireRefLegal, indemniteLegale, infoCalculLegal } =
+    getIndemniteFromFinalForm(form);
 
   const salaireRef = getSalaireRefConventionnel({
     dateNotification,
@@ -35,18 +32,16 @@ function Result({ form }) {
     salaireRefLegal,
     salaires,
   });
-  const {
-    indemniteConventionnelle,
-    infoCalculConventionnel,
-  } = getIndemniteConventionnelle({
-    age,
-    anciennete,
-    groupe,
-    hasOpe,
-    indemnite: indemniteLegale,
-    isEco,
-    salaireRef,
-  });
+  const { indemniteConventionnelle, infoCalculConventionnel } =
+    getIndemniteConventionnelle({
+      age,
+      anciennete,
+      groupe,
+      hasOpe,
+      indemnite: indemniteLegale,
+      isEco,
+      salaireRef,
+    });
 
   return (
     <IndemniteCCn

@@ -197,12 +197,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
                                   <span
                                     class="mord"
                                   >
-                                    3
-                                  </span>
-                                  <span
-                                    class="mord"
-                                  >
-                                    7
+                                    37
                                   </span>
                                 </span>
                               </span>
@@ -231,12 +226,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
                                   <span
                                     class="mord"
                                   >
-                                    1
-                                  </span>
-                                  <span
-                                    class="mord"
-                                  >
-                                    3
+                                    13
                                   </span>
                                 </span>
                               </span>
@@ -287,22 +277,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
                     <span
                       class="mord"
                     >
-                      3
-                    </span>
-                    <span
-                      class="mord"
-                    >
-                      .
-                    </span>
-                    <span
-                      class="mord"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="mord"
-                    >
-                      4
+                      3.14
                     </span>
                   </span>
                 </span>

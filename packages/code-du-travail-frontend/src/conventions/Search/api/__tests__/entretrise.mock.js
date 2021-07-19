@@ -721,8 +721,7 @@ export const siretIdccPayload = [
         texte_de_base: "KALITEXT000005670044",
         title:
           "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997",
-        url:
-          "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534",
+        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534",
       },
     ],
     siret: "80258570300027",

@@ -162,7 +162,8 @@ export function getIndemniteConventionnelle(data) {
     }),
     ...(!isCeilingReached &&
       previousIndemnites && {
-        "Indemnité de licenciement perçue précédemment ( I )": previousIndemnites,
+        "Indemnité de licenciement perçue précédemment ( I )":
+          previousIndemnites,
       }),
   };
 

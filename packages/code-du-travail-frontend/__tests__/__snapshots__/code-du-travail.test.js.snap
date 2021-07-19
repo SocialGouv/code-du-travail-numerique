@@ -41,20 +41,20 @@ exports[`<CodeDuTravail /> should render 1`] = `
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
-  padding: 0 !important;
   margin: -1px !important;
+  padding: 0 !important;
   overflow: hidden !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c27 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;

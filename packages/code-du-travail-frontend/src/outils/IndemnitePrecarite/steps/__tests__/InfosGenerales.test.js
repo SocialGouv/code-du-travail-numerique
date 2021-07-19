@@ -52,9 +52,8 @@ describe("<StepInfosGenerales />", () => {
     const { getByTestId, getByText } = renderForm({
       contractType: CONTRACT_TYPE.CTT,
     });
-    const missionFormation = getByTestId("cttFormation").querySelector(
-      `input[value=true]`
-    );
+    const missionFormation =
+      getByTestId("cttFormation").querySelector(`input[value=true]`);
     fireEvent.click(missionFormation);
     // validate form
     const validateButton = getByTestId("nextBt");
@@ -65,9 +64,8 @@ describe("<StepInfosGenerales />", () => {
     const { getByTestId, getByText } = renderForm({
       contractType: CONTRACT_TYPE.CTT,
     });
-    const missionFormation = getByTestId("cttFormation").querySelector(
-      `input[value=false]`
-    );
+    const missionFormation =
+      getByTestId("cttFormation").querySelector(`input[value=false]`);
     fireEvent.click(missionFormation);
     // validate form
     const validateButton = getByTestId("nextBt");

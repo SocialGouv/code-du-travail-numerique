@@ -130,10 +130,8 @@ describe("getIndemnite", () => {
   tests.forEach(({ title, data, result }) => {
     //eslint-disable-next-line jest/valid-title
     it(title, () => {
-      const {
-        indemniteConventionnelle,
-        infoCalculConventionnel,
-      } = getIndemniteConventionnelle(data);
+      const { indemniteConventionnelle, infoCalculConventionnel } =
+        getIndemniteConventionnelle(data);
       expect(indemniteConventionnelle).toBe(result);
       expect(infoCalculConventionnel).toMatchSnapshot();
     });

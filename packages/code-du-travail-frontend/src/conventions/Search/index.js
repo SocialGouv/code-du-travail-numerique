@@ -36,9 +36,8 @@ const Search = ({ onSelectConvention }) => {
     setQuery(value);
   };
 
-  const [status, { conventions = [], entreprises = [] } = {}] = useSearchCC(
-    query
-  );
+  const [status, { conventions = [], entreprises = [] } = {}] =
+    useSearchCC(query);
 
   return (
     <>

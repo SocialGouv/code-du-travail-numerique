@@ -399,14 +399,8 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
                       </span>
                       <span
                         class="mord mathnormal"
-                        style="margin-right:0.02778em;"
                       >
-                        r
-                      </span>
-                      <span
-                        class="mord mathnormal"
-                      >
-                        e
+                        re
                       </span>
                       <span
                         class="mord mathnormal"
