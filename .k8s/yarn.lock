@@ -598,7 +598,7 @@
     is-plain-object "^5.0.0"
     tslib "^2.2.0"
 
-"@kubernetes-models/sealed-secrets@^1.0.3":
+"@kubernetes-models/sealed-secrets@^1.6.3":
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/@kubernetes-models/sealed-secrets/-/sealed-secrets-1.6.3.tgz#21aea46a2a8e91ccc3b3eb6310df7bd086fbdf80"
   integrity sha512-n/QT4Yxtfooo+xthZaO4ewIRP+UXbdh6h+CI6gGmYVsjR0pGSai9eI9D+KDYrexlVOM0FqoZgIm1+DAVsrv5VA==
@@ -724,10 +724,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.20":
-  version "26.0.20"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.20.tgz#cd2f2702ecf69e86b586e1f5223a60e454056307"
-  integrity sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
+"@types/jest@^26.0.24":
+  version "26.0.24"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
+  integrity sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -2907,7 +2907,7 @@ kosko@^1.1.5:
     "@kosko/cli" "1.2.5"
     import-local "^3.0.2"
 
-kubernetes-models@^1.0.3, kubernetes-models@^1.7.1:
+kubernetes-models@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-1.7.1.tgz#e699a3b9454e219ff08d30fc2edaa81c9d3fd127"
   integrity sha512-x9lI7ravBEDDhKp71H2MSznSWoQFlzWNCQ3WAtYhRROUTCXOQjS6qpqtLnXWtV8mGoHsJR/JNlNPJ0eyliv5VQ==
@@ -2934,10 +2934,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.0.0.tgz#24d0a95aa316ba28e257f5c4613369a75a10c712"
-  integrity sha512-3rsRIoyaE8IphSUtO1RVTFl1e0SLBtxxUOPBtHxQgBHS5/i6nqvjcUfNioMa4BU9yGnPzbO+xkfLtXtxBpCzjw==
+lint-staged@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.0.1.tgz#1b8ae8ed5a52ed87252db95fe008c2618c85f55a"
+  integrity sha512-RkTA1ulE6jAGFskxpGAwxfVRXjHp7D9gFg/+KMARUWMPiVFP0t28Em2u0gL8sA0w3/ck3TC57F2v2RNeQ5XPnw==
   dependencies:
     chalk "^4.1.1"
     cli-truncate "^2.1.0"
