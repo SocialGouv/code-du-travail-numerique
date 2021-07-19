@@ -26,9 +26,10 @@ export function SearchAgreement({
   const [query, setQuery] = useState("");
   const state = useAgreementSuggester(query);
   const { trackEvent, title, uuid } = useTrackingContext();
-  const debouncedTrackEvent = useMemo(() => pDebounce(trackEvent, 500), [
-    trackEvent,
-  ]);
+  const debouncedTrackEvent = useMemo(
+    () => pDebounce(trackEvent, 500),
+    [trackEvent]
+  );
   useEffect(() => {
     debouncedTrackEvent("cc_search", title, query, uuid);
   }, [query, debouncedTrackEvent, title, uuid]);

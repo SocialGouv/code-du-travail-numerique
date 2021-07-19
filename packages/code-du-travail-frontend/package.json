@@ -10,7 +10,7 @@
     "dev": "node server/server.js",
     "lint-js": "eslint src pages __tests__ __mocks__",
     "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",
-    "lint": "yarn lint-js && yarn lint-css",
+    "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "NODE_ENV=production node server/server.js",

@@ -30,18 +30,15 @@ export function Result({ form }) {
     salairePeriods,
     salaires,
   });
-  const {
-    error,
-    indemniteConventionnelle,
-    infoCalculConventionnel,
-  } = getIndemnite({
-    anciennete,
-    categorie,
-    dateEntree,
-    dateSortie,
-    motif,
-    salaireRef,
-  });
+  const { error, indemniteConventionnelle, infoCalculConventionnel } =
+    getIndemnite({
+      anciennete,
+      categorie,
+      dateEntree,
+      dateSortie,
+      motif,
+      salaireRef,
+    });
   return (
     <IndemniteCCn
       indemniteConventionnelle={indemniteConventionnelle}
