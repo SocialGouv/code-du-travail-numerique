@@ -2,10 +2,10 @@
 
 exports[`<StepResult /> should render no results 1`] = `
 .c1 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -100,10 +100,10 @@ exports[`<StepResult /> should render no results 1`] = `
 
 exports[`<StepResult /> should render with duration 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -227,10 +227,10 @@ exports[`<StepResult /> should render with duration 1`] = `
 
 exports[`<StepResult /> should render with when no CC 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -318,10 +318,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
