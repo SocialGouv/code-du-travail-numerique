@@ -12,7 +12,7 @@
     "build": "NODE_ENV=production rollup --config",
     "lint-js": "eslint src/**/*.js",
     "lint-css": "stylelint 'src/**/*.js'",
-    "lint": "yarn lint-js && yarn lint-css",
+    "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "prepublishOnly": "yarn build",

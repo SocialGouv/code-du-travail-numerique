@@ -21,9 +21,8 @@ class AccordionWrapper extends React.PureComponent {
   };
   render() {
     const { data, headingLevel } = this.props;
-    const firstIndexOfAccordionItem = data.children.findIndex(
-      isItemOfAccordion
-    );
+    const firstIndexOfAccordionItem =
+      data.children.findIndex(isItemOfAccordion);
     const accordionItems = data.children
       .filter(isItemOfAccordion)
       .map((accordionItem) => {
