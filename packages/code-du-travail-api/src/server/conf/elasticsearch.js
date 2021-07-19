@@ -16,10 +16,7 @@ switch (process.env.NODE_ENV) {
     logger.level = winston.warn;
     break;
   case "production":
-    esClientConfig.auth = {
-      password: process.env.ELASTICSEARCH_PWD,
-      username: process.env.ELASTICSEARCH_USER || "elastic",
-    };
+    esClientConfig.auth = { apiKey: process.env.ELASTICSEARCH_TOKEN_API };
     break;
 }
 
