@@ -10,9 +10,9 @@ exports[`<Tag /> renders text 1`] = `
 
 .c1 {
   display: inline-block;
-  background-color: #f2f5fa;
-  color: #2f3b6c;
   padding: 0.4rem 0.8rem;
+  color: #2f3b6c;
+  background-color: #f2f5fa;
   border-radius: 0.6rem;
 }
 
