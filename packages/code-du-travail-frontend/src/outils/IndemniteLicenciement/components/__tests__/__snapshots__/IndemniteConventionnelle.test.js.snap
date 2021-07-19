@@ -336,14 +336,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -539,22 +533,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         <span
                           class="mord"
                         >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          7
+                          1337
                         </span>
                         <span
                           class="mspace"
@@ -585,14 +564,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -630,12 +603,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                         <span
                           class="mord mathnormal"
                         >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
+                          oo
                         </span>
                       </span>
                     </span>
@@ -945,14 +913,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1148,22 +1110,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         <span
                           class="mord"
                         >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          3
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          7
+                          1337
                         </span>
                         <span
                           class="mspace"
@@ -1194,14 +1141,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1239,12 +1180,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                         <span
                           class="mord mathnormal"
                         >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
+                          oo
                         </span>
                       </span>
                     </span>
