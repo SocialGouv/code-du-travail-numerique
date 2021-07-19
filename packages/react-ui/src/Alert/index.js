@@ -6,11 +6,11 @@ import styled from "styled-components";
 import { box, fonts, spacings } from "../theme.js";
 
 export const Alert = styled.div`
-  font-size: ${({ size }) =>
-    size === "medium" ? fonts.sizes.default : fonts.sizes.small};
   margin-bottom: ${spacings.base};
   padding: ${spacings.small} ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
+  font-size: ${({ size }) =>
+    size === "medium" ? fonts.sizes.default : fonts.sizes.small};
   background-color: ${({ theme }) => theme.bgSecondary};
   border: 1px solid
     ${({ theme, variant }) =>
@@ -60,8 +60,8 @@ const Flex = styled(Alert)`
 `;
 
 const Box = styled.div`
-  padding-left: ${spacings.medium};
   flex: 1;
+  padding-left: ${spacings.medium};
   & > *:first-child {
     margin-top: 0;
   }

@@ -530,14 +530,8 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -569,12 +563,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                         <span
                           class="mord"
                         >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          0
+                          10
                         </span>
                         <span
                           class="mclose"
@@ -724,14 +713,8 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -985,14 +968,8 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1569,14 +1546,8 @@ exports[`<Result /> renders legal indemnite 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -1608,12 +1579,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
                         <span
                           class="mord"
                         >
-                          1
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          0
+                          10
                         </span>
                         <span
                           class="mclose"
@@ -1763,14 +1729,8 @@ exports[`<Result /> renders legal indemnite 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"
@@ -2024,14 +1984,8 @@ exports[`<Result /> renders legal indemnite 1`] = `
                         </span>
                         <span
                           class="mord mathnormal"
-                          style="margin-right:0.02778em;"
                         >
-                          r
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          e
+                          re
                         </span>
                         <span
                           class="mord mathnormal"

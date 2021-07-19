@@ -15,9 +15,9 @@ export function Tag({ children }) {
 
 const StyledText = styled(Text)`
   display: inline-block;
-  background-color: ${({ theme }) => theme.bgSecondary};
-  color: ${({ theme }) => theme.title};
   padding: ${spacings.tiny} ${spacings.xsmall};
+  color: ${({ theme }) => theme.title};
+  background-color: ${({ theme }) => theme.bgSecondary};
   border-radius: ${box.borderRadius};
 `;
 

@@ -30,10 +30,8 @@ class SearchPage extends React.Component {
   }
 
   render() {
-    const {
-      router,
-      items = { articles: [], documents: [], themes: [] },
-    } = this.props;
+    const { router, items = { articles: [], documents: [], themes: [] } } =
+      this.props;
     const { q: query = "" } = router.query;
     return (
       <Layout

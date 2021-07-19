@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.52.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.3...v4.52.0) (2021-07-15)
+
+
+### Features
+
+* **simulator:** show a message when the CC is not supported ([#3583](https://github.com/SocialGouv/code-du-travail-numerique/issues/3583)) ([c4ba1ac](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4ba1ac5d16cfbf99b8f45b05147429cb6e1473b))
+
+
+
+
+
 # [4.51.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.50.0...v4.51.0) (2021-06-29)
 
 

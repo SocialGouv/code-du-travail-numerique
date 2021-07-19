@@ -31,8 +31,7 @@ const data = {
                 texte_de_base: "KALITEXT000005672603",
                 title:
                   "Convention collective nationale des salariés du particulier employeur du 24 novembre 1999.  ",
-                url:
-                  "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635792",
+                url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635792",
               },
               answer_id: "7affe443-d898-4766-8cc7-387bd0b95193",
               category: "agreement",
@@ -49,8 +48,7 @@ const data = {
               id: "290746f9-7474-41e7-8360-ef48061eff9d",
               title: "Cass. Soc., 26 septembre 2012, n°11-11697",
               updated_at: "2019-09-18T13:14:43.564732+00:00",
-              url:
-                "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000026442060&fastReqId=167357055&fastPos=1",
+              url: "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000026442060&fastReqId=167357055&fastPos=1",
             },
           ],
         },
@@ -61,8 +59,7 @@ const data = {
         markdown:
           "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.\n\nPour plus d'informations, voir la fiche :\n[Que devient le contrat du salarié au décès du particulier employeur ?](https://www.service-public.fr/particuliers/vosdroits/F31231)\n\n_Sources_ :\n[Article L1233-3 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000036762081&cidTexte=LEGITEXT000006072050)\n[Article L1224-1 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006900875&cidTexte=LEGITEXT000006072050)",
         references: [],
-        text:
-          "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.\n\nPour plus d'informations, voir la fiche :\nQue devient le contrat du salarié au décès du particulier employeur ?\n\nSources :\nArticle L1233-3 du code du travail\nArticle L1224-1 du code du travail",
+        text: "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.\n\nPour plus d'informations, voir la fiche :\nQue devient le contrat du salarié au décès du particulier employeur ?\n\nSources :\nArticle L1233-3 du code du travail\nArticle L1224-1 du code du travail",
       },
     },
     breadcrumbs: [
@@ -88,8 +85,7 @@ describe("<FicheContribution />", () => {
       <FicheContribution
         data={data}
         query={{
-          slug:
-            "arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles",
+          slug: "arret-maladie-pendant-la-periode-dessai-quelles-sont-les-regles",
         }}
       />
     );

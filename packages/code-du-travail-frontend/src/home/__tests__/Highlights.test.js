@@ -12,8 +12,7 @@ const highlights = [
       },
     ],
     description: "1. Dois-je prévenir mon employeur si je reviens, ou si...",
-    slug:
-      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
+    slug: "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie",
     source: "fiches_ministere_travail",
     title: "Coronavirus : je suis salarié",
   },
@@ -25,8 +24,7 @@ const highlights = [
       },
     ],
     description: "9. Quelles sont les recommandations sanitaires pour...",
-    slug:
-      "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
+    slug: "coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur",
     source: "fiches_ministere_travail",
     title: "Coronavirus : je suis employeur",
   },

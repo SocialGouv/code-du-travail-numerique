@@ -13,11 +13,8 @@ function Result({ form }) {
 
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
 
-  const {
-    indemniteConventionnelle,
-    infoCalculConventionnel,
-    error,
-  } = getIndemniteConventionnelle(data);
+  const { indemniteConventionnelle, infoCalculConventionnel, error } =
+    getIndemniteConventionnelle(data);
 
   const IndemniteWarning = () => (
     <StyledToast>

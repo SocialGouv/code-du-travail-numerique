@@ -2,10 +2,10 @@
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -265,17 +265,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  100
                                 </span>
                               </span>
                             </span>
@@ -379,15 +369,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   </span>
                   <span
                     class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
-                    S
+                    lS
                   </span>
                   <span
                     class="mord mathnormal"
@@ -403,28 +387,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   <span
                     class="mord mathnormal"
                   >
-                    a
+                    ai
                   </span>
                   <span
                     class="mord mathnormal"
                   >
-                    i
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    s
+                    res
                   </span>
                   <span
                     class="mord"
@@ -495,10 +463,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -763,17 +731,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  100
                                 </span>
                               </span>
                             </span>
@@ -802,12 +760,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  10
                                 </span>
                               </span>
                             </span>
@@ -882,15 +835,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   </span>
                   <span
                     class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
-                    S
+                    lS
                   </span>
                   <span
                     class="mord mathnormal"
@@ -906,28 +853,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   <span
                     class="mord mathnormal"
                   >
-                    a
+                    ai
                   </span>
                   <span
                     class="mord mathnormal"
                   >
-                    i
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    s
+                    res
                   </span>
                   <span
                     class="mord"
@@ -987,10 +918,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -1252,17 +1183,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  100
                                 </span>
                               </span>
                             </span>
@@ -1291,12 +1212,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  10
                                 </span>
                               </span>
                             </span>
@@ -1371,15 +1287,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   </span>
                   <span
                     class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
-                    S
+                    lS
                   </span>
                   <span
                     class="mord mathnormal"
@@ -1395,28 +1305,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   <span
                     class="mord mathnormal"
                   >
-                    a
+                    ai
                   </span>
                   <span
                     class="mord mathnormal"
                   >
-                    i
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    s
+                    res
                   </span>
                   <span
                     class="mord"
@@ -1487,10 +1381,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -1755,17 +1649,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  100
                                 </span>
                               </span>
                             </span>
@@ -1794,12 +1678,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  10
                                 </span>
                               </span>
                             </span>
@@ -1874,15 +1753,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   </span>
                   <span
                     class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
-                    S
+                    lS
                   </span>
                   <span
                     class="mord mathnormal"
@@ -1898,28 +1771,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   <span
                     class="mord mathnormal"
                   >
-                    a
+                    ai
                   </span>
                   <span
                     class="mord mathnormal"
                   >
-                    i
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    s
+                    res
                   </span>
                   <span
                     class="mord"
@@ -1979,10 +1836,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 .c2 {
-  font-size: 1.6rem;
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
+  font-size: 1.6rem;
   background-color: #f2f5fa;
   border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
@@ -2247,17 +2104,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  100
                                 </span>
                               </span>
                             </span>
@@ -2286,12 +2133,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                                 <span
                                   class="mord"
                                 >
-                                  1
-                                </span>
-                                <span
-                                  class="mord"
-                                >
-                                  0
+                                  10
                                 </span>
                               </span>
                             </span>
@@ -2366,15 +2208,9 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   </span>
                   <span
                     class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
                     style="margin-right:0.05764em;"
                   >
-                    S
+                    lS
                   </span>
                   <span
                     class="mord mathnormal"
@@ -2390,28 +2226,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   <span
                     class="mord mathnormal"
                   >
-                    a
+                    ai
                   </span>
                   <span
                     class="mord mathnormal"
                   >
-                    i
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.02778em;"
-                  >
-                    r
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    e
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    s
+                    res
                   </span>
                   <span
                     class="mord"

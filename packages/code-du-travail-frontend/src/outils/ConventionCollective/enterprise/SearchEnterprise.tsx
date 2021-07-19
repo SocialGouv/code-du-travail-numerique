@@ -35,9 +35,10 @@ export function SearchEnterprise({
     searchParams.address
   );
   const { trackEvent, title, uuid } = useTrackingContext();
-  const debouncedTrackEvent = useMemo(() => pDebounce(trackEvent, 1000), [
-    trackEvent,
-  ]);
+  const debouncedTrackEvent = useMemo(
+    () => pDebounce(trackEvent, 1000),
+    [trackEvent]
+  );
   const { query, address } = searchParams;
 
   useEffect(() => {

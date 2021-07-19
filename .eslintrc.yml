@@ -3,5 +3,4 @@ extends:
   - "@socialgouv/eslint-config-recommended"
 
 rules:
-  prefer-const: error
   import/no-extraneous-dependencies: error

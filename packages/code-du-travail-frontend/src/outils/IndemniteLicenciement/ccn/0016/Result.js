@@ -39,20 +39,17 @@ export function Result({ form }) {
     salaires,
   });
 
-  const {
-    error,
-    indemniteConventionnelle,
-    infoCalculConventionnel,
-  } = getIndemniteConventionnelle({
-    age,
-    anciennete,
-    cadreDuration,
-    categorie,
-    hasRetirementAge,
-    indemnite: indemniteLegale,
-    salaireRef: salaireRefConventionnel,
-    tamDuration,
-  });
+  const { error, indemniteConventionnelle, infoCalculConventionnel } =
+    getIndemniteConventionnelle({
+      age,
+      anciennete,
+      cadreDuration,
+      categorie,
+      hasRetirementAge,
+      indemnite: indemniteLegale,
+      salaireRef: salaireRefConventionnel,
+      tamDuration,
+    });
   return (
     <IndemniteCCn
       indemniteConventionnelle={indemniteConventionnelle}
