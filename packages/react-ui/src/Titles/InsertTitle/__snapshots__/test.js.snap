@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InsertTitle /> renders an insert title  1`] = `
+exports[`<InsertTitle /> renders an insert title 1`] = `
 .c0 {
   margin: 0 0 1rem 0;
   color: #f66663;

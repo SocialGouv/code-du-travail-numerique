@@ -4,7 +4,7 @@ import {
   Subtitle as Suptitle,
   theme,
   Wrapper,
-} from "@socialgouv/cdtn-ui/";
+} from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";

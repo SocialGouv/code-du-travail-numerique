@@ -2,9 +2,9 @@ import { Tabs } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { getText } from "../utils";
-import { ElementBuilder } from "./ElementBuilder";
-import Title from "./Title";
+import { getText } from "../utils.js";
+import { ElementBuilder } from "./ElementBuilder.js";
+import Title from "./Title.js";
 
 class Tabulator extends React.PureComponent {
   static propTypes = {

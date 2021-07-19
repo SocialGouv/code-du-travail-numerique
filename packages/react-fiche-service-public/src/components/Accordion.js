@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { getText } from "../utils";
-import { ElementBuilder } from "./ElementBuilder";
-import Title from "./Title";
+import { getText } from "../utils.js";
+import { ElementBuilder } from "./ElementBuilder.js";
+import Title from "./Title.js";
 
 const { spacings } = theme;
 

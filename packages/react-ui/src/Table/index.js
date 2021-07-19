@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper";
-import { box, spacings } from "../theme";
+import { OverflowWrapper } from "../OverflowWrapper/index.js";
+import { box, spacings } from "../theme.js";
 
 export const Table = ({ children, ...props }) => (
   <OverflowWrapper>

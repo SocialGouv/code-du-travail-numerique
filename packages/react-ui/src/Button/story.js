@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Close, More, Search } from "../icons";
-import { Section } from "../layout/Section";
-import { spacings } from "../theme";
-import { Button } from ".";
+import { Close, More, Search } from "../icons/index.js";
+import { Section } from "../layout/Section/index.js";
+import { spacings } from "../theme.js";
+import { Button } from "./index.js";
 
 export default {
   argTypes: {

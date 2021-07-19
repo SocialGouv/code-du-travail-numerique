@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { Button } from "../Button";
-import { box, breakpoints, fonts, spacings } from "../theme";
+import { Button } from "../Button/index.js";
+import { box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const BurgerNavButton = styled(Button).attrs(() => ({
   variant: "navLink",

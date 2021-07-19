@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../../layout/Section";
-import { InsertTitle } from ".";
+import { Section } from "../../layout/Section/index.js";
+import { InsertTitle } from "./index.js";
 
 export default {
   component: InsertTitle,

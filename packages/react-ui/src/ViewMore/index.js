@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { Button } from "../Button";
-import { FlatList } from "../FlatList";
-import { breakpoints, spacings } from "../theme";
+import { Button } from "../Button/index.js";
+import { FlatList } from "../FlatList/index.js";
+import { breakpoints, spacings } from "../theme.js";
 
 export const ViewMore = ({
   button,

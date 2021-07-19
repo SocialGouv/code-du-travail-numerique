@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper";
-import { breakpoints, spacings } from "../theme";
+import { OverflowWrapper } from "../OverflowWrapper/index.js";
+import { breakpoints, spacings } from "../theme.js";
 
 export const GridContext = React.createContext({ columns: 4 });
 

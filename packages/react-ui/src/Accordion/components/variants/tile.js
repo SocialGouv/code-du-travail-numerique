@@ -8,9 +8,9 @@ import {
 } from "react-accessible-accordion";
 import styled, { css } from "styled-components";
 
-import { fadeIn } from "../../../keyframes";
-import { box, breakpoints, fonts, spacings } from "../../../theme";
-import { VerticalArrow } from "../VerticalArrow";
+import { fadeIn } from "../../../keyframes.js";
+import { box, breakpoints, fonts, spacings } from "../../../theme.js";
+import { VerticalArrow } from "../VerticalArrow/index.js";
 
 export const Accordion = styled(RootAccordion)`
   display: flex;

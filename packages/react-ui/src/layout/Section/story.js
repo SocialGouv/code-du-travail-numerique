@@ -1,13 +1,14 @@
 import React from "react";
-import { Container } from "../../layout/Container";
-import { Wrapper } from "../../layout/Wrapper";
-import { PageTitle } from "../../Titles/PageTitle";
-import { Title } from "../../Titles/Title";
-import { Section } from ".";
+
+import { Container } from "../../layout/Container/index.js";
+import { Wrapper } from "../../layout/Wrapper/index.js";
+import { PageTitle } from "../../Titles/PageTitle/index.js";
+import { Title } from "../../Titles/Title/index.js";
+import { Section } from "./index.js";
 
 export default {
   component: Section,
-  title: 'Layout/Components/Section',
+  title: "Layout/Components/Section",
 };
 
 export const base = () => (

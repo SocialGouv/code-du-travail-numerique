@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Stripe } from "../../Stripe";
-import { breakpoints, fonts, spacings } from "../../theme";
-import { Header } from "../common/Header";
-import { TitleParagraph } from "../common/TitleParagraph";
+import { Stripe } from "../../Stripe/index.js";
+import { breakpoints, fonts, spacings } from "../../theme.js";
+import { Header } from "../common/Header.js";
+import { TitleParagraph } from "../common/TitleParagraph.js";
 
 export const PageTitle = ({
   as,

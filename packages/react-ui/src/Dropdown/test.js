@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Button } from "../Button";
-import { Dropdown } from ".";
+import { Button } from "../Button/index.js";
+import { Dropdown } from "./index.js";
 
 describe("<Dropdown />", () => {
   it("renders the button", () => {

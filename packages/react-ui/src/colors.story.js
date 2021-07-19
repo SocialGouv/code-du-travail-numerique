@@ -8,17 +8,17 @@ export default {
 export const Colors = () => {
   const ColorsComponent = () => {
     const theme = useContext(ThemeContext);
-    return Object.keys(theme).map(key => (
-      <div key={key} style={{ display: "flex", alignItems: "center" }}>
+    return Object.keys(theme).map((key) => (
+      <div key={key} style={{ alignItems: "center", display: "flex" }}>
         <span
           key={key}
           style={{
-            display: "inline-block",
-            margin: "10px",
-            width: "100px",
-            height: "1em",
             background: theme[key],
             border: "1px solid silver",
+            display: "inline-block",
+            height: "1em",
+            margin: "10px",
+            width: "100px",
           }}
         />
         <span>{key}</span>

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { box } from "../theme";
+import { box } from "../theme.js";
 
 export const Stripe = styled.div`
   position: absolute;

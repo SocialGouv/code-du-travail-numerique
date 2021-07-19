@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Tag } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Tag } from "./index.js";
 
 export default {
   component: Tag,

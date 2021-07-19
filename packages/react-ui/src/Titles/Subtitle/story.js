@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../../layout/Section";
-import { Subtitle } from ".";
+import { Section } from "../../layout/Section/index.js";
+import { Subtitle } from "./index.js";
 
 export default {
   component: Subtitle,

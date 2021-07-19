@@ -1,6 +1,6 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 
-import { useTOCReducer } from "./useTOCReducer";
+import { useTOCReducer } from "./useTOCReducer.js";
 
 describe("TableOfContent reducer", () => {
   const initialState = {

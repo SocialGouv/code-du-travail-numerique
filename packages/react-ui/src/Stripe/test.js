@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Stripe } from ".";
+import { Stripe } from "./index.js";
 
 describe("<Table />", () => {
   it("renders", () => {

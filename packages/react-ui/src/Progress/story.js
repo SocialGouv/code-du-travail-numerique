@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Progress } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Progress } from "./index.js";
 
 export default {
   component: Progress,

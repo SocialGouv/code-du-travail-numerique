@@ -3,9 +3,9 @@ import React from "react";
 import { AccordionItemHeading } from "react-accessible-accordion";
 import styled from "styled-components";
 
-import { ScreenReaderOnly } from "../ScreenReaderOnly";
-import { getTextFromComponent } from "../utils/getTextFromComponent";
-import * as variants from "./components/variants";
+import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
+import { getTextFromComponent } from "../utils/getTextFromComponent.js";
+import * as variants from "./components/variants/index.js";
 
 export const Accordion = ({ items, noTitle, variant, ...props }) => {
   /* eslint-disable import/namespace */

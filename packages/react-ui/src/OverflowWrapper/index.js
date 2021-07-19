@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 
-import { breakpoints } from "../theme";
+import { breakpoints } from "../theme.js";
 
 export const OverflowWrapper = ({
   children,

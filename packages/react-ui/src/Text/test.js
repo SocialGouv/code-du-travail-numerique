@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { Text } from ".";
+import { Text } from "./index.js";
 
 describe("<Text />", () => {
   it("renders text", () => {

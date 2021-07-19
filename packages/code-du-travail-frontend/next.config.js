@@ -21,6 +21,9 @@ const nextConfig = {
   devIndicators: {
     autoPrerender: false,
   },
+  future: {
+    webpack5: true,
+  },
   poweredByHeader: false,
   publicRuntimeConfig: {
     API_ENTREPRISE_URL:
@@ -41,15 +44,6 @@ const nextConfig = {
     PIWIK_URL: process.env.PIWIK_URL,
     SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
   },
-  async redirects() {
-    return [
-      {
-        destination: "/api/sitemap",
-        permanent: false,
-        source: "/sitemap.xml",
-      },
-    ];
-  },
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
   webpack: (config) => {
@@ -64,6 +58,11 @@ const nextConfig = {
 module.exports = {
   async redirects() {
     return [
+      {
+        destination: "/api/sitemap",
+        permanent: false,
+        source: "/sitemap.xml",
+      },
       {
         destination: "/themes/:slug",
         permanent: true,

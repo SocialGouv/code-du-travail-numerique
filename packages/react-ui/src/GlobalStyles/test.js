@@ -3,7 +3,7 @@ import "jest-styled-components";
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { GlobalStyles } from "./index";
+import { GlobalStyles } from "./index.js";
 
 describe("GlobalStyles", () => {
   it("generates styles", () => {

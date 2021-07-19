@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Text } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Text } from "./index.js";
 
 export default {
   component: Text,

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { box, breakpoints, spacings } from "../../theme";
+import { box, breakpoints, spacings } from "../../theme.js";
 
 export const Wrapper = styled.div`
   padding: ${spacings.medium} ${spacings.xmedium};

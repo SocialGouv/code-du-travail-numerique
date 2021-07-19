@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 
-import { Tabs } from ".";
+import { Tabs } from "./index.js";
 
 const items = [
   {

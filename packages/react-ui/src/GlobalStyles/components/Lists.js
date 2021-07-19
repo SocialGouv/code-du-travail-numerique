@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { spacings } from "../../theme";
+import { spacings } from "../../theme.js";
 
 export default createGlobalStyle`
   ul, ol {

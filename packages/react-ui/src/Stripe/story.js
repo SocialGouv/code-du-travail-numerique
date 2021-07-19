@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Section } from "../layout/Section";
-import { Wrapper } from "../layout/Wrapper";
-import { Stripe } from ".";
+import { Section } from "../layout/Section/index.js";
+import { Wrapper } from "../layout/Wrapper/index.js";
+import { Stripe } from "./index.js";
 
 export default {
   component: Stripe,

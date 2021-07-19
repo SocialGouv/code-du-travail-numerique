@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { render } from "@testing-library/react";
+import PropTypes from "prop-types";
+import React from "react";
 import { ThemeProvider } from "styled-components";
-import { colors } from "../../src/theme";
+
+import { colors } from "../../src/theme.js";
 
 const AllTheProviders = ({ children }) => {
   return (

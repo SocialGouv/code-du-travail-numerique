@@ -1,9 +1,9 @@
 import React from "react";
 
-import { PageTitle } from "../Titles/PageTitle";
-import { Container } from "./Container";
-import { Section } from "./Section";
-import { Wrapper } from "./Wrapper";
+import { PageTitle } from "../Titles/PageTitle/index.js";
+import { Container } from "./Container/index.js";
+import { Section } from "./Section/index.js";
+import { Wrapper } from "./Wrapper/index.js";
 
 export default {
   title: "Layout/Readme",

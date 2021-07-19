@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { ViewMore } from ".";
+import { ViewMore } from "./index.js";
 
 const arrayOfData = [
   "data-1",
