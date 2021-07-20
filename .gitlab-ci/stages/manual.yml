@@ -4,7 +4,7 @@
 
 Release:
   stage: .post
-  image: node:14.16-alpine3.13
+  image: node:14.17-alpine3.13
   dependencies: []
   when: manual
   variables:
