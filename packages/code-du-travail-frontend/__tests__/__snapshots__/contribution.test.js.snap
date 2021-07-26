@@ -3058,15 +3058,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <li
                       class="c102"
                     >
-                      <button
-                        class="c74"
-                      >
-                        Répondez à notre questionnaire
-                      </button>
-                    </li>
-                    <li
-                      class="c102"
-                    >
                       <a
                         aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                         class="c103"
@@ -6295,15 +6286,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c74"
                       >
                         Contact
-                      </button>
-                    </li>
-                    <li
-                      class="c102"
-                    >
-                      <button
-                        class="c74"
-                      >
-                        Répondez à notre questionnaire
                       </button>
                     </li>
                     <li

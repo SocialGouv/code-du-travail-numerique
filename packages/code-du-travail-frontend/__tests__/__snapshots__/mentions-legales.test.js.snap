@@ -1659,15 +1659,6 @@ exports[`<MentionLegales /> should render 1`] = `
                   <li
                     class="c53"
                   >
-                    <button
-                      class="c55"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c53"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c54"

@@ -2825,15 +2825,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   <li
                     class="c92"
                   >
-                    <button
-                      class="c94"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c92"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c93"

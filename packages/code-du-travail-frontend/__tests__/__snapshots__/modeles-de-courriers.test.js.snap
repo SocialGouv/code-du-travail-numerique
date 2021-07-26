@@ -1772,15 +1772,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   <li
                     class="c61"
                   >
-                    <button
-                      class="c63"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c61"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c62"
