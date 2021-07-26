@@ -31,8 +31,8 @@ $ yarn test
 You can change the tested URL by setting the CODECEPT_BASEURL
 
 ```sh
-$ export CODECEPT_BASEURL=http://master-code-travail.dev2.fabrique.social.gouv.fr
-# Test the http://master-code-travail.dev2.fabrique.social.gouv.fr
+$ export CODECEPT_BASEURL=http://master-code-travail.dev.fabrique.social.gouv.fr
+# Test the http://master-code-travail.dev.fabrique.social.gouv.fr
 $ yarn test
 ```
 

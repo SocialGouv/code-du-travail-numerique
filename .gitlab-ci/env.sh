@@ -14,7 +14,7 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
-export NLP_URL="https://preprod-serving-ml.dev2.fabrique.social.gouv.fr";
+export NLP_URL="https://preprod-serving-ml.dev.fabrique.social.gouv.fr";
 
 #
 
