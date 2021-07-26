@@ -1,4 +1,4 @@
-FROM elasticsearch:7.13.3
+FROM elasticsearch:7.13.4
 
 WORKDIR /usr/share/elasticsearch
 
