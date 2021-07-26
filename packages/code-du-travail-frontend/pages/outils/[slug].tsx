@@ -12,7 +12,6 @@ import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
 import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
-import { ToolSurvey } from "../../src/outils/common/ToolSurvey";
 import { AgreementSearch } from "../../src/outils/ConventionCollective";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
@@ -73,8 +72,7 @@ function Outils({
               <Share title={title} metaDescription={description} />
             </ShareContainer>
           </Flex>
-          <ToolSurvey />
-          <RelatedItems disableSurvey items={relatedItems} />
+          <RelatedItems items={relatedItems} />
         </Container>
       </StyledSection>
     </Layout>
