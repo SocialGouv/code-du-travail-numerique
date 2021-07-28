@@ -597,15 +597,6 @@ exports[`<Footer /> should render 1`] = `
                 <li
                   class="c19"
                 >
-                  <button
-                    class="c21"
-                  >
-                    Répondez à notre questionnaire
-                  </button>
-                </li>
-                <li
-                  class="c19"
-                >
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                     class="c20"

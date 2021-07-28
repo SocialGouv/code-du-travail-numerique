@@ -1531,15 +1531,6 @@ exports[`<Recherche /> should render 1`] = `
                   <li
                     class="c51"
                   >
-                    <button
-                      class="c53"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c51"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c52"

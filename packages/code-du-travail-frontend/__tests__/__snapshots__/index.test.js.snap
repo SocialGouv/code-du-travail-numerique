@@ -3037,15 +3037,6 @@ exports[`<Home /> should render 1`] = `
                   <li
                     class="c77"
                   >
-                    <button
-                      class="c10 c79"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c77"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c78"

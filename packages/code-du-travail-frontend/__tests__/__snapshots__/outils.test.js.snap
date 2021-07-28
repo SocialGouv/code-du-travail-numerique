@@ -2844,15 +2844,6 @@ exports[`<Outils /> should render 1`] = `
                   <li
                     class="c64"
                   >
-                    <button
-                      class="c14 c66"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c64"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c65"

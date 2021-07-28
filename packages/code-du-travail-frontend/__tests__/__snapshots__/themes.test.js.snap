@@ -1622,15 +1622,6 @@ exports[`<Theme /> should render 1`] = `
                   <li
                     class="c55"
                   >
-                    <button
-                      class="c57"
-                    >
-                      Répondez à notre questionnaire
-                    </button>
-                  </li>
-                  <li
-                    class="c55"
-                  >
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
                       class="c56"
