@@ -269,6 +269,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -615,30 +616,36 @@ exports[`<ConventionCollective /> should render 1`] = `
           class="c0"
         >
           <div
-            class="c14 c15"
+            class="c14"
           >
-            <strong
-              class="c16 c17"
+            <div
+              class="c15"
             >
-              <div
-                class="c18"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c19"
-            >
-              <button
-                class="c20 c21 "
+              <strong
+                class="c16 c17"
               >
-                Non
-              </button>
-              <button
-                class="c20 c21 "
+                <div
+                  class="c18"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c19"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c20 c21 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c20 c21 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
