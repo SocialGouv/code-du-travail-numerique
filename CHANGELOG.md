@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.52.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.1...v4.52.2) (2021-08-02)
+
+
+### Bug Fixes
+
+* **ci:** fix PROJECT_PATH in release ([7c2b33d](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c2b33d59f2d7849e2284adfdb5a1d15c2197902))
+* **ci:** force PROJET_PATH for GH notifications ([#3671](https://github.com/SocialGouv/code-du-travail-numerique/issues/3671)) ([47fda50](https://github.com/SocialGouv/code-du-travail-numerique/commit/47fda50498162e349a5b8f0eeff6b926feab6509))
+* **data:** update services-de-renseignement with new redirections ([#3643](https://github.com/SocialGouv/code-du-travail-numerique/issues/3643)) ([2151a72](https://github.com/SocialGouv/code-du-travail-numerique/commit/2151a724016e42e660dfe41af5d8a0ed42996836))
+* **frontend:** remove survey ([#3651](https://github.com/SocialGouv/code-du-travail-numerique/issues/3651)) ([d7a1097](https://github.com/SocialGouv/code-du-travail-numerique/commit/d7a10973e1532fbca3245eca83eebfcf35f44503))
+* dev2-dev urls ([#3645](https://github.com/SocialGouv/code-du-travail-numerique/issues/3645)) ([a9a0808](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9a0808c5e95a32fa1d643e86de1aff5f2eb1ce3))
+* update secret ([#3640](https://github.com/SocialGouv/code-du-travail-numerique/issues/3640)) ([9e2a8eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e2a8ebcc93981d6c1762c30019a2c4ac0f6f985))
+* **k8s:** update api secrets ([2a4b46d](https://github.com/SocialGouv/code-du-travail-numerique/commit/2a4b46dfa00c0b423144f5cd48da68296ca019df))
+
+
+
+
+
 ## [4.52.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.0...v4.52.1) (2021-07-20)
 
 

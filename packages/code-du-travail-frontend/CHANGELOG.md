@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.52.2](https://github.com/socialgouv/code-du-travail-numerique/compare/v4.52.1...v4.52.2) (2021-08-02)
+
+
+### Bug Fixes
+
+* **data:** update services-de-renseignement with new redirections ([#3643](https://github.com/socialgouv/code-du-travail-numerique/issues/3643)) ([2151a72](https://github.com/socialgouv/code-du-travail-numerique/commit/2151a724016e42e660dfe41af5d8a0ed42996836))
+* **frontend:** remove survey ([#3651](https://github.com/socialgouv/code-du-travail-numerique/issues/3651)) ([d7a1097](https://github.com/socialgouv/code-du-travail-numerique/commit/d7a10973e1532fbca3245eca83eebfcf35f44503))
+
+
+
+
+
 ## [4.52.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.0...v4.52.1) (2021-07-20)
 
 
