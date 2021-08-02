@@ -3,6 +3,7 @@ variables:
   AUTO_DEVOPS_DEV_ENVIRONMENT_NAME: "-dev"
   AUTO_DEVOPS_PREPROD_ENVIRONMENT_NAME: "-dev"
   AUTO_DEVOPS_PROD_ENVIRONMENT_NAME: "prod"
+  PROJECT_PATH: "socialgouv/code-du-travail-numerique"
 
 include:
   - project: SocialGouv/gitlab-ci-yml
