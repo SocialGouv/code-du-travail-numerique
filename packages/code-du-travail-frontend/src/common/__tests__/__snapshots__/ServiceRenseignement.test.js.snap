@@ -421,6 +421,5 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       </li>
     </ul>
   </small>
-  ;
 </div>
 `;

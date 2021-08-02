@@ -109,7 +109,6 @@ function ServiceRenseignement() {
           <li>{"vous renseigner sur les cotisations sociales"}</li>
         </ul>
       </Small>
-      ;
     </>
   );
 }
