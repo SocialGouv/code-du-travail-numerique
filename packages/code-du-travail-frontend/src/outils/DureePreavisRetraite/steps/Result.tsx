@@ -29,6 +29,8 @@ const ResultDetail: React.FC<Props> = ({ content, publicodesContext }) => {
 function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
+  const formValues = form.getState().values;
+
   return (
     <>
       <ShowResult publicodesContext={publicodesContext} />
@@ -37,7 +39,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
           {
             body: (
               <ResultDetail
-                content={form.getState().values}
+                content={formValues}
                 publicodesContext={publicodesContext}
               />
             ),
@@ -45,10 +47,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
           },
         ]}
       />
-      <WarningResult
-        publicodesContext={publicodesContext}
-        data={form.getState().values}
-      />
+      <WarningResult publicodesContext={publicodesContext} data={formValues} />
     </>
   );
 }
