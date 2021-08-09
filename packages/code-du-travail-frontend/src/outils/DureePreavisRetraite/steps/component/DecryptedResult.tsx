@@ -1,5 +1,6 @@
-import { Text } from "@socialgouv/cdtn-ui";
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
@@ -24,6 +25,14 @@ const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
   return <b>pas de préavis</b>;
 };
 
+const ExtraInformation: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <TextInformation>
+    <Text variant="secondary">{children}</Text>
+  </TextInformation>
+);
+
 const Description: React.FC<{
   isVolountary: boolean;
   result: PublicodesResult;
@@ -33,10 +42,10 @@ const Description: React.FC<{
 }> = ({ isVolountary, legaleResult, agreementResult, seniority }) => {
   if (agreementResult === null && legaleResult.value === 0 && seniority < 6) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de
         préavis à respecter.
-      </Text>
+      </ExtraInformation>
     );
   }
   if (
@@ -46,11 +55,11 @@ const Description: React.FC<{
     seniority < 6
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du
         travail ni la convention collective sélectionnée ne prévoit de préavis à
         respecter.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -61,13 +70,13 @@ const Description: React.FC<{
     seniority < 6
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         Le code du travail ne prévoit pas de durée de préavis pour une
         ancienneté inférieure à 6 mois mais il renvoie à la convention ou
         l’accord collectif de travail ou, à défaut, aux usages pratiqués dans la
         localité et la profession. La durée à appliquer pour le salarié est donc
         la durée prévue par la convention collective.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -77,10 +86,10 @@ const Description: React.FC<{
     legaleResult.value < agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à appliquer pour le salarié est donc la durée légale, celle-ci
         étant plus courte que la durée prévue par la convention collective.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -90,11 +99,11 @@ const Description: React.FC<{
     legaleResult.value === agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         Le résultat correspond à la fois à la durée prévue par le code du
         travail et à la fois à la durée prévue par la convention collective,
         celles-ci étant identiques dans cette situation.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -104,20 +113,20 @@ const Description: React.FC<{
     legaleResult.value > agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à appliquer pour le salarié est donc à la durée
         conventionnelle, celle-ci étant plus courte que la durée prévue par le
         code du travail.
-      </Text>
+      </ExtraInformation>
     );
   }
 
   if (isVolountary && agreementResult === null) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à appliquer pour le salarié est donc la durée prévue par le
         code du travail pour son ancienneté.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -127,10 +136,10 @@ const Description: React.FC<{
     legaleResult.value < agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à appliquer pour le salarié est donc à la durée prévue par la
         convention collective, celle-ci étant plus longue que la durée légale.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -140,11 +149,11 @@ const Description: React.FC<{
     legaleResult.value === agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         Le résultat correspond à la fois à la durée prévue par le code du
         travail et à la fois à la durée prévue par la convention collective,
         celles-ci étant identiques dans cette situation.
-      </Text>
+      </ExtraInformation>
     );
   }
 
@@ -154,19 +163,19 @@ const Description: React.FC<{
     legaleResult.value > agreementResult.value
   ) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à appliquer pour le salarié est donc la durée légale, celle-ci
         étant plus longue que la durée prévue par la convention collective.
-      </Text>
+      </ExtraInformation>
     );
   }
 
   if (!isVolountary && agreementResult === null) {
     return (
-      <Text variant="primary">
+      <ExtraInformation>
         La durée à respecter pour l’employeur est donc la durée prévue par le
         code du travail pour son ancienneté.
-      </Text>
+      </ExtraInformation>
     );
   }
   return <></>;
@@ -202,7 +211,6 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
           </Text>
         </>
       )}
-      <br />
       <Description
         isVolountary={type === "depart"}
         result={publicodesContext.result}
@@ -213,4 +221,10 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
     </>
   );
 };
+
+const { spacings } = theme;
+
+const TextInformation = styled.p`
+  margin-top: ${spacings.small};
+`;
 export default DecryptedResult;
