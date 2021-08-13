@@ -15,11 +15,11 @@
 ### Demos
 
 -   Production : <https://code.travail.gouv.fr>
--   master (dev) : <https://master-code-travail.dev.fabrique.social.gouv.fr>
+-   master (dev) : <https://master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/>
 
 ## Installation
 
-Make sure you're using NodeJS 12+.
+Make sure you're using NodeJS 14.17.4+.
 
 ```sh
 # Install all the packages
