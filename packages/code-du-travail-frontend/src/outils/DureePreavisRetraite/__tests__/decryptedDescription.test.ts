@@ -110,8 +110,8 @@ test.each`
     const data: unknown = {
       ccn,
       infos: {
-        "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
         "contrat salarié - ancienneté": seniority,
+        "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
       },
       seniorityGreaterThanTwoYears: true,
     };

@@ -6,6 +6,7 @@ export interface Step {
   label: string;
   name: string;
   skip?: (values: FormContent) => boolean;
+  annotation?: (props: WizardStepProps) => JSX.Element;
 }
 
 export interface State {
