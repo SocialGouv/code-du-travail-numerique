@@ -62,10 +62,10 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
           </IconStripe>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
-            peuvent prévoir une durée de préavis<sup>*</sup> ou encore une
-            condition d’ancienneté<sup>*</sup> plus favorable pour le salarié.
-            Dans ce cas, c’est cette durée plus favorable ou cette ancienneté
-            plus favorable qui s’applique au salarié.
+            peut prévoir une durée de préavis<sup>*</sup> ou une condition
+            d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce
+            cas, c’est cette durée ou cette ancienneté plus favorable qui
+            s’applique au salarié.
           </p>
           <p>
             <SmallText>
@@ -90,10 +90,10 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
           <p>
             Une convention collective de branche, un accord collectif
             d’entreprise, le contrat de travail ou un usage peut prévoir une
-            durée de préavis<sup>*</sup> ou encore une condition d’ancienneté
+            durée de préavis<sup>*</sup> ou une condition d’ancienneté
             <sup>*</sup> plus favorable pour le salarié. Dans ce cas, c’est
-            cette durée plus favorable ou cette ancienneté plus favorable qui
-            s’applique au salarié.
+            cette durée ou cette ancienneté plus favorable qui s’applique au
+            salarié.
           </p>
           <p>
             <SmallText>
@@ -120,10 +120,10 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
         </IconStripe>
         <p>
           Un accord collectif d’entreprise, le contrat de travail ou un usage
-          peuvent prévoir une durée de préavis<sup>*</sup> ou encore une
-          condition d’ancienneté<sup>*</sup> plus favorable pour le salarié.
-          Dans ce cas, c’est cette durée plus favorable ou cette ancienneté plus
-          favorable qui s’applique au salarié.
+          peut prévoir une durée de préavis<sup>*</sup> ou une condition
+          d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce cas,
+          c’est cette durée ou cette ancienneté plus favorable qui s’applique au
+          salarié.
         </p>
         <p>
           <SmallText>
@@ -148,10 +148,9 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
         <p>
           Une convention collective de branche, un accord collectif
           d’entreprise, le contrat de travail ou un usage peut prévoir une durée
-          de préavis<sup>*</sup> ou encore une condition d’ancienneté
+          de préavis<sup>*</sup> ou une condition d’ancienneté
           <sup>*</sup> plus favorable pour le salarié. Dans ce cas, c’est cette
-          durée plus favorable ou cette ancienneté plus favorable qui s’applique
-          au salarié.
+          durée ou cette ancienneté plus favorable qui s’applique au salarié.
         </p>
         <p>
           <SmallText>

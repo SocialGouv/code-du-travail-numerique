@@ -27,7 +27,7 @@ export interface WizardStepProps {
   dispatch: React.Dispatch<Action>;
 }
 
-interface ConventionCollective {
+export interface ConventionCollective {
   id: string;
   num: number;
   shortTitle: string;
