@@ -22,6 +22,7 @@ export function StepList({ activeIndex = 0, items = [], anchorRef }) {
             ref={activeIndex === index ? anchorRef : undefined}
             tabIndex={activeIndex === index ? "-1" : undefined}
             aria-live={activeIndex === index ? "polite" : undefined}
+            title={activeIndex === index ? "onglet actif" : null}
           >
             <IndexCircle isActive={activeIndex === index}>
               {index + 1}
@@ -89,9 +90,11 @@ const StyledListItem = styled.li`
   line-height: 1;
   text-align: left;
   text-decoration: none;
+
   & + & {
     margin-top: ${spacings.base};
   }
+
   outline: none; /* StepListItem may receive focus in order to improve accessibility */
   @media (max-width: ${breakpoints.tablet}) {
     display: ${({ isActive }) => (isActive ? "flex" : "none")};

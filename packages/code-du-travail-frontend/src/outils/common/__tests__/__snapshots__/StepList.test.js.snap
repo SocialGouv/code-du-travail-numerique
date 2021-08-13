@@ -261,6 +261,7 @@ exports[`<StepList /> should render 1`] = `
         aria-live="polite"
         class="c6 c9"
         tabindex="-1"
+        title="onglet actif"
       >
         <span
           class="c10"

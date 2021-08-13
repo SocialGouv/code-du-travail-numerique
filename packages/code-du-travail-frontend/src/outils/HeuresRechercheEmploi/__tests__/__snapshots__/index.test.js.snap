@@ -481,6 +481,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             aria-live="polite"
             class="c9 c10"
             tabindex="-1"
+            title="onglet actif"
           >
             <span
               class="c11"
