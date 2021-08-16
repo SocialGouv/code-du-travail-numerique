@@ -33,7 +33,7 @@
   "resolutions": {
     "@babel/core": "^7.14.8",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.14.9"
+    "@babel/preset-env": "^7.15.0"
   },
   "workspaces": {
     "packages": [
@@ -44,7 +44,7 @@
     ]
   },
   "engines": {
-    "node": ">= v14.17.4"
+    "node": ">= v14.17.5"
   },
   "version": "0.0.0"
 }
