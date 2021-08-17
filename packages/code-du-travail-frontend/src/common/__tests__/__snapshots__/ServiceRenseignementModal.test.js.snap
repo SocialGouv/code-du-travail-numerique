@@ -612,7 +612,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 </li>
               </ul>
             </small>
-            ;
             <button
               class="c11 c15"
               title="fermer la modale"
