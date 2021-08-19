@@ -61,7 +61,7 @@ Lint @cdtn/data:
 Lint Dockerfiles:
   <<: *quality_stage
   allow_failure: true
-  image: hadolint/hadolint
+  image: ghcr.io/hadolint/hadolint:v2.6.0-alpine
   script:
     - |-
       for i in $(find . -name Dockerfile); do
