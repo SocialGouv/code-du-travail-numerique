@@ -41,6 +41,7 @@ export { Tag } from "./Tag/index.js";
 export { Text } from "./Text/index.js";
 export { Tile } from "./Tile/index.js";
 export { Toast } from "./Toast/index.js";
+export { Tooltip } from "./Tooltip/index.js";
 export { ViewMore } from "./ViewMore/index.js";
 
 // Fields
