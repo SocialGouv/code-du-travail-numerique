@@ -2,6 +2,7 @@
   "extends": [
     "github>SocialGouv/renovate-config:socialgouv-data"
   ],
+  "dependencyDashboardLabels": [":hammer_and_wrench: tech", "dependencies"],
   "packageRules": [
     {
       "packagePatterns": [ "next" ],
