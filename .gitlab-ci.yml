@@ -8,13 +8,13 @@ variables:
 include:
   - project: SocialGouv/gitlab-ci-yml
     file: /base_docker_kubectl_image_stage.yml
-    ref: v23.2.1
+    ref: v23.3.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_deploy_kosko_stage.yml
-    ref: v23.2.1
+    ref: v23.3.0
   - project: SocialGouv/gitlab-ci-yml
     file: /base_register_kaniko_stage.yml
-    ref: v23.2.1
+    ref: v23.3.0
   #
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/quality.yml
