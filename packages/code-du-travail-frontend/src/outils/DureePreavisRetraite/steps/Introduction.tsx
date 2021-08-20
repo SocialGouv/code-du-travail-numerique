@@ -1,6 +1,4 @@
-import { Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 const IntroductionStep = (): JSX.Element => (
   <>
@@ -24,10 +22,5 @@ const IntroductionStep = (): JSX.Element => (
     <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
-
-const WarningToast = styled(Toast)`
-  font-size: 1.6rem;
-  font-style: italic;
-`;
 
 export { IntroductionStep };

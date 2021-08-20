@@ -2,14 +2,22 @@ import { Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-export function Question({ required, children, ...otherProps }) {
-  return (
-    <Label {...otherProps}>
-      {children}
-      {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
-    </Label>
-  );
-}
+type Props = {
+  as?: string;
+  required: boolean;
+  children: React.ReactNode;
+};
+
+export const Question = ({
+  required,
+  children,
+  ...otherProps
+}: Props): JSX.Element => (
+  <Label {...otherProps}>
+    {children}
+    {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
+  </Label>
+);
 
 const { breakpoints, fonts, spacings } = theme;
 

@@ -22,7 +22,6 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       <YesNoQuestion
         label="Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (à partir de 2 ans + 1 jour)&nbsp;?"
         name="seniorityGreaterThanTwoYears"
-        onChange={() => undefined}
       />
       {form.getState().values.seniorityGreaterThanTwoYears === false && (
         <TextQuestion
