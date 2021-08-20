@@ -2,29 +2,12 @@ import { Accordion } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import PubliReferences from "../../common/PubliReferences";
-import PubliSituation from "../../common/PubliSituation";
-import { FormContent, WizardStepProps } from "../../common/type/WizardType";
-import { PublicodesContextInterface, usePublicodes } from "../../publicodes";
+import { WizardStepProps } from "../../common/type/WizardType";
+import { usePublicodes } from "../../publicodes";
 import DecryptedResult from "./component/DecryptedResult";
 import ShowResult from "./component/ShowResult";
+import { Situation } from "./component/Situation";
 import WarningResult from "./component/WarningResult";
-
-interface Props {
-  content: FormContent;
-  publicodesContext: PublicodesContextInterface;
-}
-
-const ResultDetail: React.FC<Props> = ({ content, publicodesContext }) => {
-  const references = publicodesContext.getReferences();
-
-  return (
-    <>
-      <PubliSituation situation={publicodesContext.situation} form={content} />
-      <DecryptedResult data={content} publicodesContext={publicodesContext} />
-      <PubliReferences references={references} />
-    </>
-  );
-};
 
 function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
@@ -38,10 +21,19 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         items={[
           {
             body: (
-              <ResultDetail
-                content={formValues}
-                publicodesContext={publicodesContext}
-              />
+              <>
+                <Situation
+                  content={formValues}
+                  elements={publicodesContext.situation}
+                />
+                <DecryptedResult
+                  data={formValues}
+                  publicodesContext={publicodesContext}
+                />
+                <PubliReferences
+                  references={publicodesContext.getReferences()}
+                />
+              </>
             ),
             title: <p>Voir le détail du calcul</p>,
           },
