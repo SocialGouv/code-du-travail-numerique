@@ -3,11 +3,11 @@ import React, { useRef, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 
 export const Tooltip = ({
-  background = "000000",
+  background = "FFFFFF",
   children,
   position = "top",
   text,
-  textColor = "FFFFFF",
+  textColor = "3e486e",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
