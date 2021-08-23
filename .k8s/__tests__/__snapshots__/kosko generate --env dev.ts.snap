@@ -6,6 +6,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
+    socialgouv/creator: autodevops
+    janitor/ttl: 15d
     field.cattle.io/creatorId: gitlab
     field.cattle.io/projectId: c-bar:p-foo
     git/branch: master
@@ -206,7 +208,7 @@ spec:
     app: api
   type: ClusterIP
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -230,9 +232,12 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: api
-              servicePort: 80
+              service:
+                name: api
+                port:
+                  name: http
             path: /
+            pathType: Prefix
   tls:
     - hosts:
         - >-
@@ -332,7 +337,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.26.2
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.39.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -395,7 +400,7 @@ spec:
     app: www
   type: ClusterIP
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -419,9 +424,12 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: www
-              servicePort: 80
+              service:
+                name: www
+                port:
+                  name: http
             path: /
+            pathType: Prefix
   tls:
     - hosts:
         - master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr

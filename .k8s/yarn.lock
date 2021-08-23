@@ -666,13 +666,16 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^6.5.0":
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-6.5.0.tgz#be22aab06fb99ad173e270bfd0ddb8ae60e9a97f"
-  integrity sha512-YwLOCrBkJ77ojlG1eEYvF3V4vXIJWMAl/1XZ9hUl5bhF9MyYbEAI0izwiClwPZaTSv1DaP2+IRf5WS80KoCVUA==
+"@socialgouv/kosko-charts@^9.2.5":
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-9.2.5.tgz#ccaf3a63f75bd234d8a049728285735744362314"
+  integrity sha512-YCmQM7xIxy81KlaAO8tXmr7GvNitKM7dBZq8qChLiOfmndLEJenBxeo7LOavU7lRfIaes7DbVl3WsibMPYuOmw==
   dependencies:
+    "@kubernetes-models/sealed-secrets" "^2.0.2"
     "@sindresorhus/is" "^4.0.1"
     fs-extra "^10.0.0"
+    kubernetes-models "^2.0.2"
+    slugify "^1.6.0"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -3007,6 +3010,11 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
+
+slugify@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.0.tgz#6bdf8ed01dabfdc46425b67e3320b698832ff893"
+  integrity sha512-FkMq+MQc5hzYgM86nLuHI98Acwi3p4wX+a5BO9Hhw4JdK4L7WueIiZ4tXEobImPqBz2sVcV0+Mu3GRB30IGang==
 
 source-map-support@^0.5.6:
   version "0.5.19"
