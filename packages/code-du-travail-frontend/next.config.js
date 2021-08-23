@@ -14,15 +14,14 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const compose = (...fns) => (args) =>
-  fns.reduceRight((arg, fn) => fn(arg), args);
+const compose =
+  (...fns) =>
+  (args) =>
+    fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
   devIndicators: {
     autoPrerender: false,
-  },
-  future: {
-    webpack5: true,
   },
   poweredByHeader: false,
   publicRuntimeConfig: {
@@ -46,6 +45,7 @@ const nextConfig = {
   },
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
+
   webpack: (config) => {
     config.module.rules.push({
       loader: "ignore-loader",
@@ -53,6 +53,7 @@ const nextConfig = {
     });
     return config;
   },
+  webpack5: true,
 };
 
 module.exports = {
