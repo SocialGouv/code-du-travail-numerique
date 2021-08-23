@@ -51,7 +51,7 @@
     "koa-router": "^10.0.0",
     "lit-element": "2.5.1",
     "memoizee": "^0.4.15",
-    "next": "10.2.3",
+    "next": "11.1.0",
     "next-transpile-modules": "^6.4.1",
     "p-debounce": "^2.1.0",
     "publicodes": "^1.0.0-beta.16",
