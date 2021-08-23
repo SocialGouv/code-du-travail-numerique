@@ -93,8 +93,7 @@ export const createRootData = (
     isVoluntary: data.infos["contrat salarié - mise à la retraite"] === "non",
     labourAgreement,
     noticeUsed,
-    seniorityLessThan6Months:
-      Number(data.infos["contrat salarié - ancienneté"]) < 6,
+    seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
   };
 };
 
@@ -142,7 +141,7 @@ export const getDescription = (data: RootData): string | null => {
 
 const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   const legalResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite . tranches"
+    "contrat salarié . préavis de retraite légale"
   );
   let agreementResult = null;
   if (data.ccn) {
