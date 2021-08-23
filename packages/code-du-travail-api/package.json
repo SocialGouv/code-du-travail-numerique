@@ -33,7 +33,7 @@
     "@socialgouv/cdtn-sources": "^4.52.1",
     "date-fns": "^2.22.1",
     "elastic-apm-node": "^3.17.0",
-    "fuzzball": "^1.4.0",
+    "fuzzball": "^2.0.2",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
