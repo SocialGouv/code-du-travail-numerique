@@ -82,12 +82,12 @@
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.0.6",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.31.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
-    "jest": "^26.6.3",
+    "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.0.1",
     "mockdate": "^3.0.5",
@@ -113,6 +113,7 @@
     ]
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "testMatch": [
       "**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"
     ],
