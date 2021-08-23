@@ -9192,10 +9192,10 @@ fuse.js@^3.6.1:
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.6.1.tgz#7de85fdd6e1b3377c23ce010892656385fd9b10c"
   integrity sha512-hT9yh/tiinkmirKrlv4KWOjztdoZo1mx9Qh4KvWqC7isoXwdUY3PNWUxceF4/qO9R6riA2C29jdTOeQOIROjgw==
 
-fuzzball@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/fuzzball/-/fuzzball-1.4.0.tgz#d4ae8b596d6e7cb7cc86425d7d02fa563ad94057"
-  integrity sha512-ufKO0SHW65RSqZNu4rmLmraQVuwb8kVf8S/ICpkih/PfIff2YW3sa8zTvt7d7hJFXY1IvOOGJTeXxs69XLBd4Q==
+fuzzball@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/fuzzball/-/fuzzball-2.0.2.tgz#3f4e558ec2088b1460548359a61186792a597fe4"
+  integrity sha512-BTt/AuvMfQBMQaBQYZmtotktDR0CO2UTmXdGYrGkmMWbuuQADQ11Z7FuzjjxLeoCszqgcTs/JwgLHZN+HW3QEw==
   dependencies:
     heap ">=0.2.0"
     setimmediate "^1.0.5"
