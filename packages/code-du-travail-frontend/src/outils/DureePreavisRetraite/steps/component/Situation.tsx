@@ -1,4 +1,5 @@
 import { Text } from "@socialgouv/cdtn-ui";
+import { supportedCcn } from "@socialgouv/modeles-social/lib/constants";
 import React from "react";
 
 import PubliSituation from "../../../common/PubliSituation";
@@ -33,17 +34,26 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     }
   };
 
-  const getAnnotations = (): JSX.Element[] => {
+  const getAnnotations = (content: FormContent): JSX.Element[] => {
     if (content.infos["contrat salarié - travailleur handicapé"] === "oui") {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
+        if (content.ccn && supportedCcn.includes(content.ccn.num)) {
+          return [
+            <Text key="handicap">
+              Le salarié étant reconnu en tant que travailleur handicapé, la
+              durée du préavis de mise à la retraite est doublée mais ne peut
+              pas dépasser un maximum de 3 mois. Si la durée de préavis prévue
+              par la convention collective est supérieure à 3 mois, le résultat
+              conventionnel n’est pas doublé et c’est cette durée qui s’applique
+              car elle est plus favorable.
+            </Text>,
+          ];
+        }
         return [
           <Text key="handicap">
             Le salarié étant reconnu en tant que travailleur handicapé, la durée
             du préavis de mise à la retraite est doublée mais ne peut pas
-            dépasser un maximum de 3 mois. Si la durée de préavis prévue par la
-            convention collective est supérieure à 3 mois, le résultat
-            conventionnel n’est pas doublé et c’est cette durée qui s’applique
-            car elle est plus favorable.
+            dépasser un maximum de 3 mois.
           </Text>,
         ];
       }
@@ -58,12 +68,11 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     }
     return [];
   };
-
   return (
     <PubliSituation
       situation={elements}
       onOverrideInput={overrideSituation}
-      annotations={getAnnotations()}
+      annotations={getAnnotations(content)}
     />
   );
 };
