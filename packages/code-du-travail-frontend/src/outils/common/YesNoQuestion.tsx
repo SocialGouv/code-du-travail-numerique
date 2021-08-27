@@ -4,14 +4,14 @@ import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 
 import { ErrorField } from "./ErrorField";
-import { Question } from "./Question";
+import { Question, Tooltip } from "./Question";
 import { RadioContainer } from "./stepStyles";
 import { requiredBoolean } from "./validators";
 
 type Props = {
   name: string;
   label: string;
-  tooltip?: string;
+  tooltip?: Tooltip;
   required?: boolean;
   onChange?: (values: unknown) => void;
 };

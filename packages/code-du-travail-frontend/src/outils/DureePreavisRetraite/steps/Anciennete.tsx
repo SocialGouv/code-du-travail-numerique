@@ -22,7 +22,15 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       <YesNoQuestion
         label="Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (à partir de 2 ans + 1 jour)&nbsp;?"
         name="seniorityGreaterThanTwoYears"
-        tooltip="L'ancienneté du salarié est habituellement mentionnée sur le bulletin de salaire."
+        tooltip={{
+          content: (
+            <p>
+              L&apos;ancienneté du salarié est habituellement mentionnée sur le
+              bulletin de salaire.
+            </p>
+          ),
+          help: "",
+        }}
       />
       {form.getState().values.seniorityGreaterThanTwoYears === false && (
         <TextQuestion

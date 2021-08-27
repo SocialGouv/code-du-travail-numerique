@@ -1,11 +1,17 @@
-import { icons, Text, theme, Tooltip } from "@socialgouv/cdtn-ui";
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
+import { InfoBulle } from "./InfoBulle";
+
+export type Tooltip = {
+  content: JSX.Element;
+  help: string;
+};
 type Props = {
   as?: string;
   required: boolean;
-  tooltip?: string;
+  tooltip?: Tooltip;
   children: React.ReactNode;
 };
 
@@ -19,9 +25,9 @@ export const Question = ({
     {children}
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
-      <Tooltip text={tooltip} position="right">
-        <icons.Help width="2rem" />
-      </Tooltip>
+      <InfoBulle title={tooltip.help}>
+        <p>{tooltip.content}</p>
+      </InfoBulle>
     )}
   </Label>
 );
