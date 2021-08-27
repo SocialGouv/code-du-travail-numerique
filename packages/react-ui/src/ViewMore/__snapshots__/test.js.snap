@@ -187,6 +187,7 @@ exports[`<ViewMore /> renders with an button 1`] = `
   >
     <button
       class="c2 c3"
+      type="button"
     >
       Voir plus
     </button>
