@@ -1142,6 +1142,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       >
         <button
           class="c15 c16 "
+          type="button"
         >
           Imprimer le résultat
         </button>
@@ -2834,6 +2835,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       >
         <button
           class="c15 c16 "
+          type="button"
         >
           Imprimer le résultat
         </button>

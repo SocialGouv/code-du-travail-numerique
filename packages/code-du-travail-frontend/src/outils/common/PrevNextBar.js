@@ -16,7 +16,7 @@ function PrevNextBar({
     <>
       <StyledDiv>
         {printVisible && (
-          <StyledButton onClick={printResult}>
+          <StyledButton type="button" onClick={printResult}>
             Imprimer le résultat
           </StyledButton>
         )}
@@ -41,6 +41,7 @@ function PrevNextBar({
     </>
   );
 }
+
 PrevNextBar.propTypes = {
   hasError: PropTypes.bool,
   nextVisible: PropTypes.bool,
