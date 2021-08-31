@@ -2157,6 +2157,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c11"
               >
                 <label
+                  for="floating-search"
                   id="search"
                 >
                   Rechercher
@@ -2175,7 +2176,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   aria-label="recherchez par mots-clés"
                   autocomplete="off"
                   class="c12"
-                  id="main-search-input"
+                  id="floating-search"
                   name="q"
                   placeholder="Rechercher"
                   title="recherchez par mots-clés"
@@ -5390,6 +5391,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c11"
               >
                 <label
+                  for="floating-search"
                   id="search"
                 >
                   Rechercher
@@ -5408,7 +5410,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   aria-label="recherchez par mots-clés"
                   autocomplete="off"
                   class="c12"
-                  id="main-search-input"
+                  id="floating-search"
                   name="q"
                   placeholder="Rechercher"
                   title="recherchez par mots-clés"

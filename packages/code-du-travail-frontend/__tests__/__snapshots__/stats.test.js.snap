@@ -1327,6 +1327,7 @@ exports[`<Stats /> should render 1`] = `
               class="c11"
             >
               <label
+                for="floating-search"
                 id="search"
               >
                 Rechercher
@@ -1345,7 +1346,7 @@ exports[`<Stats /> should render 1`] = `
                 aria-label="recherchez par mots-clés"
                 autocomplete="off"
                 class="c12"
-                id="main-search-input"
+                id="floating-search"
                 name="q"
                 placeholder="Rechercher"
                 title="recherchez par mots-clés"
