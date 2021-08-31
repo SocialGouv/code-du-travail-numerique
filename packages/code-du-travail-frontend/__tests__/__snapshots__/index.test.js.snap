@@ -994,6 +994,10 @@ exports[`<Home /> should render 1`] = `
 .c22 {
   margin-top: 0.8rem;
   margin-bottom: 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c21 {
@@ -1020,6 +1024,7 @@ exports[`<Home /> should render 1`] = `
 
 .c23 {
   display: block;
+  margin-top: 0;
   margin-bottom: 0.8rem;
   color: #3e486e;
   font-weight: bold;
@@ -1652,11 +1657,11 @@ exports[`<Home /> should render 1`] = `
                 le Code du travail numérique
               </span>
             </h1>
-            <p
+            <h2
               class="c22"
             >
-              Obtenez des réponses aux questions que vous vous posez sur le droit du travail.
-            </p>
+              Obtenez les réponses à vos questions sur le droit du travail.
+            </h2>
           </header>
           <label
             class="c23"

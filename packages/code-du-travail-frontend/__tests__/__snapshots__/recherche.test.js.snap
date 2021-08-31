@@ -1242,22 +1242,18 @@ exports[`<Recherche /> should render 1`] = `
       <div
         class="c15"
       >
-        <label
-          for="search-input"
+        <header
+          class="c16"
         >
-          <header
-            class="c16"
+          <h1
+            class="c17"
           >
-            <h1
-              class="c17"
-            >
-              <div
-                class="c18"
-              />
-              Recherche
-            </h1>
-          </header>
-        </label>
+            <div
+              class="c18"
+            />
+            Recherche
+          </h1>
+        </header>
         <div
           class="c19"
         >
