@@ -645,10 +645,10 @@ exports[`<Themes /> should render 1`] = `
           <div
             class="c14"
           >
-            <ul
+            <div
               class="c15"
             >
-              <li
+              <div
                 class="c16 c17"
               >
                 <div
@@ -672,11 +672,11 @@ exports[`<Themes /> should render 1`] = `
                     </p>
                   </header>
                 </div>
-              </li>
-              <li
+              </div>
+              <div
                 class="c16 c17"
               />
-              <li
+              <div
                 class="c16"
               >
                 <a
@@ -726,8 +726,8 @@ exports[`<Themes /> should render 1`] = `
                     </div>
                   </div>
                 </a>
-              </li>
-              <li
+              </div>
+              <div
                 class="c16"
               >
                 <a
@@ -775,8 +775,8 @@ exports[`<Themes /> should render 1`] = `
                     </div>
                   </div>
                 </a>
-              </li>
-              <li
+              </div>
+              <div
                 class="c16 c17"
               >
                 <svg
@@ -1338,8 +1338,8 @@ exports[`<Themes /> should render 1`] = `
                     </lineargradient>
                   </defs>
                 </svg>
-              </li>
-              <li
+              </div>
+              <div
                 class="c16"
               >
                 <a
@@ -1389,8 +1389,8 @@ exports[`<Themes /> should render 1`] = `
                     </div>
                   </div>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
         <a
