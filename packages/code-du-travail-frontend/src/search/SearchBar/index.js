@@ -100,11 +100,18 @@ const SearchBar = ({
           hasSearchIcon={hasSearchIcon}
           variant="primary"
           type="submit"
+          title="Lancer ma recherche"
         >
           {(hasSearchIcon && <StyledSearchIcon />) || "Rechercher"}
         </SubmitButton>
       ) : (
-        <SubmitIcon type="submit" small narrow variant="naked">
+        <SubmitIcon
+          type="submit"
+          title="Lancer ma recherche"
+          small
+          narrow
+          variant="naked"
+        >
           <StyledSearchIcon />
         </SubmitIcon>
       )}

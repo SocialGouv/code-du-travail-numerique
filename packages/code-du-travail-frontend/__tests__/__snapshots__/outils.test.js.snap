@@ -1477,6 +1477,7 @@ exports[`<Outils /> should render 1`] = `
             </div>
             <button
               class="c14 c15 c16"
+              title="Lancer ma recherche"
               type="submit"
             >
               <svg

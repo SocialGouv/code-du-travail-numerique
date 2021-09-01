@@ -223,6 +223,7 @@ exports[`<SearchBar /> should render 1`] = `
     </div>
     <button
       class="c4 c5"
+      title="Lancer ma recherche"
       type="submit"
     >
       <svg
@@ -546,6 +547,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       class="c6 c7"
+      title="Lancer ma recherche"
       type="submit"
     >
       <svg

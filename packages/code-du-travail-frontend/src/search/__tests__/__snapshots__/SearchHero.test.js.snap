@@ -473,6 +473,7 @@ exports[`<SearchHero /> should render 1`] = `
           </div>
           <button
             class="c16 c17"
+            title="Lancer ma recherche"
             type="submit"
           >
             Rechercher

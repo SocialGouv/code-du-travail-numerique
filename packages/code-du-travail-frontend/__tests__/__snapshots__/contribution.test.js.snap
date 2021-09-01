@@ -2191,6 +2191,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </div>
               <button
                 class="c14 c15"
+                title="Lancer ma recherche"
                 type="submit"
               >
                 <svg
@@ -5425,6 +5426,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </div>
               <button
                 class="c14 c15"
+                title="Lancer ma recherche"
                 type="submit"
               >
                 <svg

@@ -11,6 +11,7 @@
     "dev": "lerna run dev --parallel",
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",
+    "test:frontend": "yarn workspace @cdt/frontend test --watch",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "start": "lerna run start",

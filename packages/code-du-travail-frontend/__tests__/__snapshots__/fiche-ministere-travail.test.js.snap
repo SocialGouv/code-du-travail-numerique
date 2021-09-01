@@ -1971,6 +1971,7 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
             <button
               class="c14 c15"
+              title="Lancer ma recherche"
               type="submit"
             >
               <svg
