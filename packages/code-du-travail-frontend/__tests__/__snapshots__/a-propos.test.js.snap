@@ -1493,7 +1493,7 @@ exports[`<About /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c38"
             >
               <strong
@@ -1504,7 +1504,7 @@ exports[`<About /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c40 c41"
             >
@@ -1531,205 +1531,203 @@ exports[`<About /> should render 1`] = `
         <div
           class="c24 c44"
         >
-          <nav>
+          <div
+            class="c4 c45"
+          >
             <div
-              class="c4 c45"
+              class="c46 "
             >
-              <div
-                class="c46 "
+              <strong
+                class="c47 c48"
               >
-                <strong
-                  class="c47 c48"
-                >
-                  Code du travail numérique
-                </strong>
-                <ul
-                  class="c49 c50"
-                >
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/droit-du-travail"
-                    >
-                      Le droit du travail
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/glossaire"
-                    >
-                      Glossaire
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/a-propos"
-                    >
-                      À propos
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/mentions-legales"
-                    >
-                      Mentions légales
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/accessibilite"
-                    >
-                      Accessibilité : partiellement conforme
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/politique-confidentialite"
-                    >
-                      Politique de confidentialité
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/stats"
-                    >
-                      Statistiques d’utilisation
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      class="c52"
-                      href="/integration"
-                    >
-                      Intégrer le Code du travail numérique
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c46 "
+                Code du travail numérique
+              </strong>
+              <ul
+                class="c49 c50"
               >
-                <strong
-                  class="c47 c48"
+                <li
+                  class="c51"
                 >
-                  Aidez-nous à améliorer cet outil
-                </strong>
-                <ul
-                  class="c49 c50"
+                  <a
+                    class="c52"
+                    href="/droit-du-travail"
+                  >
+                    Le droit du travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
                 >
-                  <li
-                    class="c51"
+                  <a
+                    class="c52"
+                    href="/glossaire"
                   >
-                    <button
-                      class="c53"
-                    >
-                      Contact
-                    </button>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c52"
-                      href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Contribuer sur Github
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
-                  >
-                    <a
-                      aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c52"
-                      href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Journal des modifications
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c46 "
-              >
-                <strong
-                  class="c47 c48"
+                    Glossaire
+                  </a>
+                </li>
+                <li
+                  class="c51"
                 >
-                  En collaboration avec
-                </strong>
-                <ul
-                  class="c49 c50"
+                  <a
+                    class="c52"
+                    href="/a-propos"
+                  >
+                    À propos
+                  </a>
+                </li>
+                <li
+                  class="c51"
                 >
-                  <li
-                    class="c51"
+                  <a
+                    class="c52"
+                    href="/mentions-legales"
                   >
-                    <a
-                      aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c52"
-                      href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      La Direction Générale du Travail
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
+                    Mentions légales
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/accessibilite"
                   >
-                    <a
-                      aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c52"
-                      href="https://fabrique.social.gouv.fr/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      La fabrique des Ministères sociaux
-                    </a>
-                  </li>
-                  <li
-                    class="c51"
+                    Accessibilité : partiellement conforme
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/politique-confidentialite"
                   >
-                    <a
-                      aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c52"
-                      href="https://beta.gouv.fr/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      beta.gouv.fr
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                    Politique de confidentialité
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/stats"
+                  >
+                    Statistiques d’utilisation
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    class="c52"
+                    href="/integration"
+                  >
+                    Intégrer le Code du travail numérique
+                  </a>
+                </li>
+              </ul>
             </div>
-          </nav>
+            <div
+              class="c46 "
+            >
+              <strong
+                class="c47 c48"
+              >
+                Aidez-nous à améliorer cet outil
+              </strong>
+              <ul
+                class="c49 c50"
+              >
+                <li
+                  class="c51"
+                >
+                  <button
+                    class="c53"
+                  >
+                    Contact
+                  </button>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    aria-label="Contribuer sur Github (Nouvelle fenêtre)"
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Contribuer sur Github
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    aria-label="Journal des modifications (Nouvelle fenêtre)"
+                    class="c52"
+                    href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Journal des modifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c46 "
+            >
+              <strong
+                class="c47 c48"
+              >
+                En collaboration avec
+              </strong>
+              <ul
+                class="c49 c50"
+              >
+                <li
+                  class="c51"
+                >
+                  <a
+                    aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
+                    class="c52"
+                    href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La Direction Générale du Travail
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
+                    class="c52"
+                    href="https://fabrique.social.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    La fabrique des Ministères sociaux
+                  </a>
+                </li>
+                <li
+                  class="c51"
+                >
+                  <a
+                    aria-label="beta.gouv.fr (Nouvelle fenêtre)"
+                    class="c52"
+                    href="https://beta.gouv.fr/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    beta.gouv.fr
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div
           class="c54"

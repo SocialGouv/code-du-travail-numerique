@@ -5,17 +5,19 @@ import styled from "styled-components";
 export function SkipNavLink() {
   return (
     <SkipNav>
-      <Li>
-        <SkipLink type="inline" as="a" href="#navigation">
-          Allez à la navigation
-        </SkipLink>
-      </Li>
-      <Li>
-        <SkipLink href="#search">Allez à la recherche</SkipLink>
-      </Li>
-      <Li>
-        <SkipLink href="#content">Allez au contenu</SkipLink>
-      </Li>
+      <nav>
+        <Li>
+          <SkipLink type="inline" as="a" href="#navigation">
+            Allez à la navigation
+          </SkipLink>
+        </Li>
+        <Li>
+          <SkipLink href="#search">Allez à la recherche</SkipLink>
+        </Li>
+        <Li>
+          <SkipLink href="#content">Allez au contenu</SkipLink>
+        </Li>
+      </nav>
     </SkipNav>
   );
 }

@@ -37,7 +37,7 @@ export const BurgerNav = ({ children, ...props }) => {
     };
   });
   if (isDesktop) {
-    return <Nav {...props}>{children}</Nav>;
+    return <Div {...props}>{children}</Div>;
   }
 
   return (
@@ -68,7 +68,7 @@ BurgerNav.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const Nav = styled.nav`
+const Div = styled.div`
   display: flex;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
