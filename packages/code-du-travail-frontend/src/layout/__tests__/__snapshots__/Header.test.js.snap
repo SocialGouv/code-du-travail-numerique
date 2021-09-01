@@ -427,6 +427,10 @@ exports[`<Header /> should render 1`] = `
   }
 }
 
+@media (max-width:980px) {
+
+}
+
 @media (max-width:600px) {
   .c0 {
     height: 9rem;
