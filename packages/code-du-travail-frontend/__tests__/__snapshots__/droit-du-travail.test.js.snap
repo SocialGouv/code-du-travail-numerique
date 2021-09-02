@@ -4929,7 +4929,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c94"
             >
               <strong
@@ -4940,7 +4940,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c31 c96"
             >

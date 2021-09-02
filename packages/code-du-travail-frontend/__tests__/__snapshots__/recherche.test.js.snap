@@ -1369,7 +1369,7 @@ exports[`<Recherche /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c38"
             >
               <strong
@@ -1380,7 +1380,7 @@ exports[`<Recherche /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c40 c41"
             >
