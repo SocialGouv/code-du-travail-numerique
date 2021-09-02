@@ -13,6 +13,7 @@ import Link from "next/link";
 import React from "react";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
+import { SRLWrapper } from "simple-react-lightbox";
 import styled from "styled-components";
 import unified from "unified";
 
@@ -74,7 +75,26 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <div key={name}>
-              <img src={toUrl(imgUrl)} alt={altText} />
+              <SRLWrapper
+                options={{
+                  buttons: {
+                    showAutoplayButton: false,
+                    showDownloadButton: false,
+                    showNextButton: false,
+                    showPrevButton: false,
+                  },
+                  thumbnails: {
+                    showThumbnails: false,
+                  },
+                }}
+              >
+                <img
+                  src={"https://svgshare.com/i/_jW.svg"}
+                  alt={altText}
+                  style={{ cursor: "pointer" }}
+                />
+              </SRLWrapper>
+              {/* <img src={toUrl(imgUrl)} alt={altText} /> */}
               <DownloadWrapper>
                 <Button
                   as="a"
