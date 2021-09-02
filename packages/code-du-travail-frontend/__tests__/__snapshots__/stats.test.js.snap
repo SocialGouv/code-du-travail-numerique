@@ -1451,10 +1451,10 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c31"
               >
-                <ul
+                <div
                   class="c32"
                 >
-                  <li
+                  <div
                     class="c33"
                   >
                     <div
@@ -1471,8 +1471,8 @@ exports[`<Stats /> should render 1`] = `
                         16
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1489,8 +1489,8 @@ exports[`<Stats /> should render 1`] = `
                         20
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1507,8 +1507,8 @@ exports[`<Stats /> should render 1`] = `
                         4
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1525,8 +1525,8 @@ exports[`<Stats /> should render 1`] = `
                         10
                       </div>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <p>
