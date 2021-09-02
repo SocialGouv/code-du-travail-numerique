@@ -69,7 +69,8 @@ const Information = ({
   } = { _source: {} },
 }) => {
   let editorialContent = contents.map(
-    ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
+    // ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
+    ({ type, name, altText, size, html, fileUrl, references = [] }) => {
       const reactContent = processor.processSync(html).result;
       return (
         <>
