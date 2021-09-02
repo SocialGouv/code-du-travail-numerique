@@ -7,6 +7,7 @@ import App from "next/app";
 import getConfig from "next/config";
 import Head from "next/head";
 import React from "react";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 import { A11y } from "../src/a11y";
 import { initPiwik } from "../src/piwik";
@@ -100,19 +101,21 @@ export default class MyApp extends App {
     }
     return (
       <React.StrictMode>
-        <ThemeProvider>
-          <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-              />
-            </Head>
-            <GlobalStyles />
-            <A11y />
-            <Component {...pageProps} />
-          </>
-        </ThemeProvider>
+        <SimpleReactLightbox>
+          <ThemeProvider>
+            <>
+              <Head>
+                <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                />
+              </Head>
+              <GlobalStyles />
+              <A11y />
+              <Component {...pageProps} />
+            </>
+          </ThemeProvider>
+        </SimpleReactLightbox>
       </React.StrictMode>
     );
   }
