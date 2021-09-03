@@ -2448,10 +2448,10 @@ exports[`<Home /> should render 1`] = `
             <div
               class="c41"
             >
-              <div
+              <ul
                 class="c42"
               >
-                <div
+                <li
                   class="c43"
                 >
                   <a
@@ -2552,8 +2552,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c43"
                 >
                   <a
@@ -2648,8 +2648,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c43"
                 >
                   <a
@@ -2752,8 +2752,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c43"
                 >
                   <a
@@ -2850,8 +2850,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
           <div

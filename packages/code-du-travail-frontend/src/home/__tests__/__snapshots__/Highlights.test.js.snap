@@ -361,10 +361,10 @@ exports[`<Highlights /> should render 1`] = `
         <div
           class="c7"
         >
-          <div
+          <ul
             class="c8"
           >
-            <div
+            <li
               class="c9"
             >
               <a
@@ -395,8 +395,8 @@ exports[`<Highlights /> should render 1`] = `
                   1. Dois-je prévenir mon employeur si je reviens, ou si...
                 </div>
               </a>
-            </div>
-            <div
+            </li>
+            <li
               class="c9"
             >
               <a
@@ -427,8 +427,8 @@ exports[`<Highlights /> should render 1`] = `
                   9. Quelles sont les recommandations sanitaires pour...
                 </div>
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
