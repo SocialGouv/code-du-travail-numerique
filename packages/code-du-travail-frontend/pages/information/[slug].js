@@ -10,10 +10,10 @@ import {
 } from "@socialgouv/cdtn-ui";
 import getConfig from "next/config";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import Lightbox from "react-image-lightbox";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
-import { SRLWrapper } from "simple-react-lightbox";
 import styled from "styled-components";
 import unified from "unified";
 
@@ -23,6 +23,28 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib/getFileUrl";
+
+const ImageWrapper = ({ altText, src }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <img
+        src={src}
+        alt={altText}
+        style={{ cursor: "zoom-in" }}
+        onClick={() => setIsOpen(true)}
+        aria-hidden="true"
+      />
+      {isOpen && (
+        <Lightbox
+          mainSrc={src}
+          onCloseRequest={() => setIsOpen(false)}
+          imageCaption={altText}
+        />
+      )}
+    </>
+  );
+};
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -69,33 +91,18 @@ const Information = ({
   } = { _source: {} },
 }) => {
   let editorialContent = contents.map(
-    // ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
-    ({ type, name, altText, size, html, fileUrl, references = [] }) => {
+    ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
       const reactContent = processor.processSync(html).result;
       return (
         <>
           {type === "graphic" ? (
             <div key={name}>
-              <SRLWrapper
-                options={{
-                  buttons: {
-                    showAutoplayButton: false,
-                    showDownloadButton: false,
-                    showNextButton: false,
-                    showPrevButton: false,
-                  },
-                  thumbnails: {
-                    showThumbnails: false,
-                  },
-                }}
-              >
-                <img
-                  src={"https://svgshare.com/i/_jW.svg"}
-                  alt={altText}
-                  style={{ cursor: "pointer" }}
-                />
-              </SRLWrapper>
+              <ImageWrapper
+                src={"/static/assets/img/test.svg"}
+                altText={altText}
+              />
               {/* <img src={toUrl(imgUrl)} alt={altText} /> */}
+              <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"
