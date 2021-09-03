@@ -2571,7 +2571,7 @@ exports[`<FicheMT /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c77"
             >
               <strong
@@ -2582,7 +2582,7 @@ exports[`<FicheMT /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c80 c81"
             >

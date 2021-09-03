@@ -1746,7 +1746,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c48"
             >
               <strong
@@ -1757,7 +1757,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c51 c52"
             >
