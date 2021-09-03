@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "react-image-lightbox/style.css";
 
 import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
@@ -7,7 +9,6 @@ import App from "next/app";
 import getConfig from "next/config";
 import Head from "next/head";
 import React from "react";
-import SimpleReactLightbox from "simple-react-lightbox";
 
 import { A11y } from "../src/a11y";
 import { initPiwik } from "../src/piwik";
@@ -101,21 +102,19 @@ export default class MyApp extends App {
     }
     return (
       <React.StrictMode>
-        <SimpleReactLightbox>
-          <ThemeProvider>
-            <>
-              <Head>
-                <meta
-                  name="viewport"
-                  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                />
-              </Head>
-              <GlobalStyles />
-              <A11y />
-              <Component {...pageProps} />
-            </>
-          </ThemeProvider>
-        </SimpleReactLightbox>
+        <ThemeProvider>
+          <>
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, shrink-to-fit=no"
+              />
+            </Head>
+            <GlobalStyles />
+            <A11y />
+            <Component {...pageProps} />
+          </>
+        </ThemeProvider>
       </React.StrictMode>
     );
   }
