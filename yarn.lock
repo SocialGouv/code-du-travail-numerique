@@ -2736,10 +2736,10 @@
     eslint-plugin-simple-import-sort "~7.0.0"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.191.0":
-  version "4.191.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.191.0.tgz#d91be601152daf94b5745bb5312b3707a1dfcbdd"
-  integrity sha512-E4DtXv5OUJVworkr5IJA3EDoaGMBPqjhG5WcX3b4/kYLef+j5H0XPV5u/vguQKsYkoO3bkbHeJwLNgy5YNYSRg==
+"@socialgouv/fiches-travail-data@^4.192.0":
+  version "4.192.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.192.0.tgz#bc0843bb404f5f52c92642c192e19a3981d108e6"
+  integrity sha512-bFnPUOwKHjaTg2lA7zgPTtH+BVxmDZoYmSsP+AGEpOHAzzpOV3NG1tl/R+jtoqd9oIU2vPAGjYQY1MXIt/BAHg==
 
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
