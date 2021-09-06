@@ -86,6 +86,18 @@ yarn workspace @cdt/data start:dev
 yarn workspace @cdt/api dev
 ```
 
+##### To run test on backend
+
+After running elasticsearch
+
+```sh
+# To fill the database
+yarn workspace @cdt/api pretest
+
+# To run test
+yarn workspace @cdt/api test
+```
+
 ## Howto
 
 To launch a local tf-serve instance, you can report to the README of our [serving-ml project](https://github.com/SocialGouv/serving-ml#using-a-tensorflow-model-with-tensorflowserving)

@@ -1,8 +1,11 @@
+const fetch = (...args) =>
+  import("node-fetch").then((mod) => mod.default(...args));
+
 const request = require("supertest");
 const Koa = require("koa");
-const fetch = require("node-fetch");
 
 const router = require("../stats");
+
 const app = new Koa();
 app.use(router.routes());
 

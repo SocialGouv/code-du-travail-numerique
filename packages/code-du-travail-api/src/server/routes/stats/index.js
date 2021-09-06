@@ -1,6 +1,7 @@
+const fetch = (...args) =>
+  import("node-fetch").then((mod) => mod.default(...args));
 const Router = require("koa-router");
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
-const fetch = require("node-fetch");
 const { startOfDay, subMonths, max, format } = require("date-fns");
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
