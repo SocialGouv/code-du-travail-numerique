@@ -10,13 +10,14 @@ import {
 } from "@socialgouv/cdtn-ui";
 import getConfig from "next/config";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Lightbox from "react-image-lightbox";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
 import styled from "styled-components";
 import unified from "unified";
 
+import { useScrollBlock } from "../../hooks";
 import { A11yLink } from "../../src/common/A11yLink";
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
@@ -25,21 +26,28 @@ import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib/getFileUrl";
 
 const ImageWrapper = ({ altText, src }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
+
   return (
     <>
       <img
         src={src}
         alt={altText}
         style={{ cursor: "zoom-in" }}
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setIsOpen(true);
+          blockScroll();
+        }}
         aria-hidden="true"
       />
       {isOpen && (
         <Lightbox
           mainSrc={src}
-          onCloseRequest={() => setIsOpen(false)}
-          imageCaption={altText}
+          onCloseRequest={() => {
+            setIsOpen(false);
+            allowScroll();
+          }}
         />
       )}
     </>
@@ -97,11 +105,6 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <div key={name}>
-              <ImageWrapper
-                src={"/static/assets/img/test.svg"}
-                altText={altText}
-              />
-              {/* <img src={toUrl(imgUrl)} alt={altText} /> */}
               <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
               <DownloadWrapper>
                 <Button
