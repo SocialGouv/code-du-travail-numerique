@@ -1887,6 +1887,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 <div>
   <nav
+    aria-label="Breadcrumb"
     class="c0"
   >
     <div
@@ -1895,10 +1896,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
       <div
         class="c2"
       >
-        <div
+        <ol
           class="c3 c4"
         >
-          <div
+          <li
             class="c5"
           >
             <a
@@ -1919,8 +1920,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </svg>
               Accueil
             </a>
-          </div>
-          <div
+          </li>
+          <li
             class="c5"
           >
             <svg
@@ -1941,8 +1942,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             >
               tag1
             </a>
-          </div>
-          <div
+          </li>
+          <li
             class="c5"
           >
             <svg
@@ -1963,8 +1964,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             >
               tag2
             </a>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </div>
   </nav>

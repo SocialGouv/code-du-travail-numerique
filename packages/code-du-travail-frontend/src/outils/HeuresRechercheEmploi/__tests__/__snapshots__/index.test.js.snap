@@ -474,7 +474,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             1/5
           </span>
         </span>
-        <ul
+        <ol
           class="c8"
         >
           <li
@@ -530,7 +530,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             </span>
             Résultat
           </li>
-        </ul>
+        </ol>
       </div>
       <p>
         Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi. Il peut s’agir du préavis en cas de licenciement, de démission ou de rupture de la période d’essai. En cas de rupture de la période d’essai, le préavis est aussi appelé délai de prévenance.

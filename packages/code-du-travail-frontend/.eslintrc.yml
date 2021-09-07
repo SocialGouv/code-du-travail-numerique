@@ -6,7 +6,7 @@ rules:
   jsx-a11y/anchor-is-valid: off
   jsx-a11y/label-has-for: off
   react/prop-types: off
-  import/no-unresolved: [2, ignore: [wrapped-testing-library/react]]
+  import/no-unresolved: [2, {caseSensitive: false}]
   no-console: ["error", allow: ["warn", "error"]]
 
 settings:

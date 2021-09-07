@@ -1340,6 +1340,7 @@ exports[`<Theme /> should render 1`] = `
       tabindex="-1"
     >
       <nav
+        aria-label="Breadcrumb"
         class="c24"
       >
         <div
@@ -1348,10 +1349,10 @@ exports[`<Theme /> should render 1`] = `
           <div
             class="c26"
           >
-            <div
+            <ol
               class="c4 c27"
             >
-              <div
+              <li
                 class="c28"
               >
                 <a
@@ -1372,8 +1373,8 @@ exports[`<Theme /> should render 1`] = `
                   </svg>
                   Accueil
                 </a>
-              </div>
-              <div
+              </li>
+              <li
                 class="c28"
               >
                 <svg
@@ -1394,8 +1395,8 @@ exports[`<Theme /> should render 1`] = `
                 >
                   Embauche et contrat de travail
                 </a>
-              </div>
-            </div>
+              </li>
+            </ol>
           </div>
         </div>
       </nav>

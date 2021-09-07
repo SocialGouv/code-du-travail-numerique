@@ -2261,6 +2261,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
         tabindex="-1"
       >
         <nav
+          aria-label="Breadcrumb"
           class="c24"
         >
           <div
@@ -2269,10 +2270,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <div
               class="c26"
             >
-              <div
+              <ol
                 class="c4 c27"
               >
-                <div
+                <li
                   class="c28"
                 >
                   <a
@@ -2293,8 +2294,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </svg>
                     Accueil
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c28"
                 >
                   <svg
@@ -2315,8 +2316,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   >
                     Départ de l'entreprise
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c28"
                 >
                   <svg
@@ -2337,8 +2338,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   >
                     Autres départs
                   </a>
-                </div>
-              </div>
+                </li>
+              </ol>
             </div>
           </div>
         </nav>
@@ -5514,6 +5515,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
         tabindex="-1"
       >
         <nav
+          aria-label="Breadcrumb"
           class="c24"
         >
           <div
@@ -5522,10 +5524,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <div
               class="c26"
             >
-              <div
+              <ol
                 class="c4 c27"
               >
-                <div
+                <li
                   class="c28"
                 >
                   <a
@@ -5546,8 +5548,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </svg>
                     Accueil
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c28"
                 >
                   <svg
@@ -5568,8 +5570,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   >
                     Départ de l'entreprise
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c28"
                 >
                   <svg
@@ -5590,8 +5592,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   >
                     Autres départs
                   </a>
-                </div>
-              </div>
+                </li>
+              </ol>
             </div>
           </div>
         </nav>

@@ -13,7 +13,7 @@ export function StepList({ activeIndex = 0, items = [], anchorRef }) {
           &nbsp;{`${activeIndex + 1}/${items.length}`}
         </StepProgress>
       </Title>
-      <FlatList>
+      <FlatList as="ol">
         {items.map((item, index) => (
           <StyledListItem
             key={item.name}
