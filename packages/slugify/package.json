@@ -30,6 +30,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@types/jest": "^26.0.24"
+    "@types/jest": "^27.0.1"
   }
 }
