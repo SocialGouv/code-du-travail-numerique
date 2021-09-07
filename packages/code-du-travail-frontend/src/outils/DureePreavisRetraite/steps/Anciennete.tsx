@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 
 import { TextQuestion } from "../../common/TextQuestion";
 import { WizardStepProps } from "../../common/type/WizardType";
@@ -20,13 +21,19 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   return (
     <>
       <YesNoQuestion
-        label="Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (à partir de 2 ans + 1 jour)&nbsp;?"
+        label={
+          <>
+            Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans
+            l&apos;entreprise <Small>(à partir de 2 ans + 1 jour)</Small>&nbsp;?
+          </>
+        }
         name="seniorityGreaterThanTwoYears"
         tooltip={{
           content: (
             <p>
-              L&apos;ancienneté du salarié est habituellement mentionnée sur le
-              bulletin de salaire.
+              L&apos;ancienneté du salarié est habituellement mentionnée sur
+              le&nbsp;
+              <b>bulletin de salaire</b>.
             </p>
           ),
           help: "",
@@ -44,5 +51,9 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
     </>
   );
 }
+
+const Small = styled.small`
+  font-size: 1.3rem;
+`;
 
 export { AncienneteStep };

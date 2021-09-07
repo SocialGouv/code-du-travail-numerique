@@ -21,27 +21,30 @@ export const Question = ({
   children,
   ...otherProps
 }: Props): JSX.Element => (
-  <Label {...otherProps}>
-    {children}
+  <LabelBlock {...otherProps}>
+    <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
       <InfoBulle title={tooltip.help}>
-        <p>{tooltip.content}</p>
+        <>{tooltip.content}</>
       </InfoBulle>
     )}
-  </Label>
+  </LabelBlock>
 );
 
 const { breakpoints, fonts, spacings } = theme;
 
-const Label = styled.label`
+const LabelBlock = styled.label`
   display: block;
   margin-top: ${spacings.medium};
   margin-bottom: ${spacings.small};
-  font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
+`;
+
+const Label = styled.span`
+  font-weight: 600;
 `;

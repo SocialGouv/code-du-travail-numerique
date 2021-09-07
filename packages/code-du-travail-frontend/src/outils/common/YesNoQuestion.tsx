@@ -10,7 +10,7 @@ import { requiredBoolean } from "./validators";
 
 type Props = {
   name: string;
-  label: string;
+  label: string | JSX.Element;
   tooltip?: Tooltip;
   required?: boolean;
   onChange?: (values: unknown) => void;
@@ -26,7 +26,7 @@ const YesNoQuestion = ({
 }: Props): JSX.Element => (
   <>
     <Question as="p" required={required} tooltip={tooltip}>
-      <>{label}</>
+      {label}
     </Question>
     <RadioContainer {...otherProps}>
       <Field
