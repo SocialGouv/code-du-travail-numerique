@@ -132,14 +132,14 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,7 +148,7 @@ exports[`<StepInfo /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -169,7 +169,7 @@ exports[`<StepInfo /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -184,12 +184,12 @@ exports[`<StepInfo /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -197,12 +197,15 @@ exports[`<StepInfo /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -232,9 +235,13 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Quel est le type du contrat de travail ?
       <span
         class="c1"
+      >
+        Quel est le type du contrat de travail ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -242,14 +249,14 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
     >
       <label
-        class="c3"
+        class="c4"
         for="contrat-cdd"
       >
         <input
-          class="c4"
+          class="c5"
           id="contrat-cdd"
           name="contrat"
           type="radio"
@@ -258,11 +265,11 @@ exports[`<StepInfo /> should render 1`] = `
         Contrat à durée determiné (CDD) ou contrat d’intérim
       </label>
       <label
-        class="c3"
+        class="c4"
         for="contrat-cdi"
       >
         <input
-          class="c4"
+          class="c5"
           id="contrat-cdi"
           name="contrat"
           type="radio"
@@ -274,9 +281,13 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Le licenciement est-il dû à une faute grave (ou lourde) ?
       <span
         class="c1"
+      >
+        Le licenciement est-il dû à une faute grave (ou lourde) ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -284,14 +295,14 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
     >
       <label
-        class="c3"
+        class="c4"
         for="fauteGrave-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="fauteGrave-yes"
           name="fauteGrave"
           type="radio"
@@ -300,11 +311,11 @@ exports[`<StepInfo /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="fauteGrave-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="fauteGrave-no"
           name="fauteGrave"
           type="radio"
@@ -316,9 +327,13 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
       <span
         class="c1"
+      >
+        Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -326,14 +341,14 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
     >
       <label
-        class="c3"
+        class="c4"
         for="inaptitude-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="inaptitude-yes"
           name="inaptitude"
           type="radio"
@@ -342,11 +357,11 @@ exports[`<StepInfo /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="inaptitude-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="inaptitude-no"
           name="inaptitude"
           type="radio"

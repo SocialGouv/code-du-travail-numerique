@@ -17,7 +17,7 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
-.c5 {
+.c6 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
@@ -59,7 +59,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,7 +68,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -89,7 +89,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   appearance: none;
 }
 
-.c8:before {
+.c9:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -104,12 +104,12 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   content: "";
 }
 
-.c8:checked {
+.c9:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c8:checked:before {
+.c9:checked:before {
   display: block;
 }
 
@@ -117,12 +117,15 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c6 {
+.c5 {
+  font-weight: 600;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -204,9 +207,13 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   <p
     class="c4"
   >
-    Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
     <span
       class="c5"
+    >
+      Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+    </span>
+    <span
+      class="c6"
       font-size="default"
       font-weight="400"
     >
@@ -214,14 +221,14 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     </span>
   </p>
   <div
-    class="c6"
+    class="c7"
   >
     <label
-      class="c7"
+      class="c8"
       for="hasBrancheContrat-yes"
     >
       <input
-        class="c8"
+        class="c9"
         id="hasBrancheContrat-yes"
         name="hasBrancheContrat"
         type="radio"
@@ -230,11 +237,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       Oui
     </label>
     <label
-      class="c7"
+      class="c8"
       for="hasBrancheContrat-no"
     >
       <input
-        class="c8"
+        class="c9"
         id="hasBrancheContrat-no"
         name="hasBrancheContrat"
         type="radio"

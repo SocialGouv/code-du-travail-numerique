@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCTT /> should render 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`<StepCTT /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +38,7 @@ exports[`<StepCTT /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +53,12 @@ exports[`<StepCTT /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -66,12 +66,15 @@ exports[`<StepCTT /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,9 +104,13 @@ exports[`<StepCTT /> should render 1`] = `
     <p
       class="c0"
     >
-      S’agit-il d’un contrat de mission-formation ?
       <span
         class="c1"
+      >
+        S’agit-il d’un contrat de mission-formation ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -111,15 +118,15 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="cttFormation"
     >
       <label
-        class="c3"
+        class="c4"
         for="cttFormation-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="cttFormation-yes"
           name="cttFormation"
           type="radio"
@@ -128,11 +135,11 @@ exports[`<StepCTT /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="cttFormation-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="cttFormation-no"
           name="cttFormation"
           type="radio"
@@ -144,9 +151,13 @@ exports[`<StepCTT /> should render 1`] = `
     <p
       class="c0"
     >
-      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
       <span
         class="c1"
+      >
+        Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -154,15 +165,15 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="ruptureContratFauteGrave"
     >
       <label
-        class="c3"
+        class="c4"
         for="ruptureContratFauteGrave-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="ruptureContratFauteGrave-yes"
           name="ruptureContratFauteGrave"
           type="radio"
@@ -171,11 +182,11 @@ exports[`<StepCTT /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="ruptureContratFauteGrave-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="ruptureContratFauteGrave-no"
           name="ruptureContratFauteGrave"
           type="radio"
@@ -187,9 +198,13 @@ exports[`<StepCTT /> should render 1`] = `
     <p
       class="c0"
     >
-      À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
       <span
         class="c1"
+      >
+        À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -197,15 +212,15 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="propositionCDIFinContrat"
     >
       <label
-        class="c3"
+        class="c4"
         for="propositionCDIFinContrat-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFinContrat-yes"
           name="propositionCDIFinContrat"
           type="radio"
@@ -214,11 +229,11 @@ exports[`<StepCTT /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="propositionCDIFinContrat-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFinContrat-no"
           name="propositionCDIFinContrat"
           type="radio"
@@ -230,9 +245,13 @@ exports[`<StepCTT /> should render 1`] = `
     <p
       class="c0"
     >
-      Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
       <span
         class="c1"
+      >
+        Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -240,15 +259,15 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="refusSouplesse"
     >
       <label
-        class="c3"
+        class="c4"
         for="refusSouplesse-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusSouplesse-yes"
           name="refusSouplesse"
           type="radio"
@@ -257,11 +276,11 @@ exports[`<StepCTT /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="refusSouplesse-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusSouplesse-no"
           name="refusSouplesse"
           type="radio"
