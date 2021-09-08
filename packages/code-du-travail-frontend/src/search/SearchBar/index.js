@@ -100,6 +100,7 @@ const SearchBar = ({
           hasSearchIcon={hasSearchIcon}
           variant="primary"
           type="submit"
+          aria-label="Lancer ma recherche"
           title="Lancer ma recherche"
         >
           {(hasSearchIcon && <StyledSearchIcon />) || "Rechercher"}
@@ -108,6 +109,7 @@ const SearchBar = ({
         <SubmitIcon
           type="submit"
           title="Lancer ma recherche"
+          aria-label="Lancer ma recherche"
           small
           narrow
           variant="naked"

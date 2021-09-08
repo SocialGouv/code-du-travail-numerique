@@ -1299,6 +1299,7 @@ exports[`<Recherche /> should render 1`] = `
               />
             </div>
             <button
+              aria-label="Lancer ma recherche"
               class="c24 c25"
               title="Lancer ma recherche"
               type="submit"

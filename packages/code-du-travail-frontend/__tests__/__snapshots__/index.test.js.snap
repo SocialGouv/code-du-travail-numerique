@@ -1726,6 +1726,7 @@ exports[`<Home /> should render 1`] = `
                 />
               </div>
               <button
+                aria-label="Lancer ma recherche"
                 class="c10 c31 c32"
                 title="Lancer ma recherche"
                 type="submit"
@@ -2442,10 +2443,10 @@ exports[`<Home /> should render 1`] = `
             <div
               class="c41"
             >
-              <ul
+              <div
                 class="c42"
               >
-                <li
+                <div
                   class="c43"
                 >
                   <a
@@ -2546,8 +2547,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </li>
-                <li
+                </div>
+                <div
                   class="c43"
                 >
                   <a
@@ -2642,8 +2643,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </li>
-                <li
+                </div>
+                <div
                   class="c43"
                 >
                   <a
@@ -2746,8 +2747,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </li>
-                <li
+                </div>
+                <div
                   class="c43"
                 >
                   <a
@@ -2844,8 +2845,8 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div
