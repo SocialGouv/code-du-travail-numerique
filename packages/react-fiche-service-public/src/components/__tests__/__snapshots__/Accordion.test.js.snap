@@ -171,7 +171,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 <div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -182,7 +182,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       />
       titre 0
     </h2>
-  </header>
+  </div>
   <p>
     paragraphe 0
   </p>
@@ -247,7 +247,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c9"
           >
-            <header
+            <div
               class="c0"
             >
               <h2
@@ -258,7 +258,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
                 />
                 titre 1
               </h2>
-            </header>
+            </div>
           </div>
           <div
             class="c10"
@@ -330,7 +330,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c9"
           >
-            <header
+            <div
               class="c0"
             >
               <h2
@@ -341,7 +341,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
                 />
                 titre 2
               </h2>
-            </header>
+            </div>
           </div>
           <div
             class="c10"
@@ -418,7 +418,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c9"
           >
-            <header
+            <div
               class="c0"
             >
               <h2
@@ -429,7 +429,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
                 />
                 titre 3
               </h2>
-            </header>
+            </div>
           </div>
           <div
             class="c10"

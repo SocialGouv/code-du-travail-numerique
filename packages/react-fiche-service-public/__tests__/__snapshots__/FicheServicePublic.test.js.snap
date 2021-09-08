@@ -550,7 +550,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         <div
           class="c9"
         >
-          <header
+          <div
             class="c10"
           >
             <h2
@@ -561,7 +561,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               />
               CDI
             </h2>
-          </header>
+          </div>
         </div>
         <div
           class="c13"

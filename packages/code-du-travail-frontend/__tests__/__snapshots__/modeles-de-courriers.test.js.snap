@@ -1615,7 +1615,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c49"
             >
               <strong
@@ -1626,7 +1626,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c51 c52"
             >

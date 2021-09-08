@@ -2574,7 +2574,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </div>
                   </div>
                   <section>
-                    <header
+                    <div
                       class="c59"
                     >
                       <h2
@@ -2585,7 +2585,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         />
                         Que dit le code du travail ?
                       </h2>
-                    </header>
+                    </div>
                     <div
                       class="c61"
                     />
@@ -2682,7 +2682,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <div
                       class="c53"
                     >
-                      <header
+                      <div
                         class="c64 c65"
                         id="customisation"
                       >
@@ -2694,7 +2694,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           />
                           Que dit votre convention collective ?
                         </h2>
-                      </header>
+                      </div>
                       <label
                         class="c68"
                         for="convention-search"
@@ -2901,7 +2901,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <div
               class="c4"
             >
-              <div
+              <header
                 class="c88"
               >
                 <strong
@@ -2912,7 +2912,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   />
                   Besoin de plus d’informations ?
                 </strong>
-              </div>
+              </header>
               <div
                 class="c91 c92"
               >
@@ -5806,7 +5806,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </div>
                   </div>
                   <section>
-                    <header
+                    <div
                       class="c59"
                     >
                       <h2
@@ -5817,7 +5817,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         />
                         Que dit le code du travail ?
                       </h2>
-                    </header>
+                    </div>
                     <div
                       class="c61"
                     />
@@ -5914,7 +5914,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <div
                       class="c53"
                     >
-                      <header
+                      <div
                         class="c64 c65"
                         id="customisation"
                       >
@@ -5926,7 +5926,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           />
                           Que dit votre convention collective ?
                         </h2>
-                      </header>
+                      </div>
                       <label
                         class="c68"
                         for="convention-search"
@@ -6133,7 +6133,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <div
               class="c4"
             >
-              <div
+              <header
                 class="c88"
               >
                 <strong
@@ -6144,7 +6144,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   />
                   Besoin de plus d’informations ?
                 </strong>
-              </div>
+              </header>
               <div
                 class="c91 c92"
               >

@@ -1514,7 +1514,7 @@ exports[`<Glossaire /> should render 1`] = `
               </li>
             </ul>
             <div>
-              <header
+              <div
                 class="c32"
                 id="ancre-A"
               >
@@ -1526,7 +1526,7 @@ exports[`<Glossaire /> should render 1`] = `
                   />
                   A
                 </h2>
-              </header>
+              </div>
               <ul
                 class="c35 c36"
               >
@@ -1556,7 +1556,7 @@ exports[`<Glossaire /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c40"
             >
               <strong
@@ -1567,7 +1567,7 @@ exports[`<Glossaire /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c42 c43"
             >
