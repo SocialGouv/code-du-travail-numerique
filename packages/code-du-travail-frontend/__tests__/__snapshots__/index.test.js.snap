@@ -2884,7 +2884,7 @@ exports[`<Home /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c63"
             >
               <strong
@@ -2895,7 +2895,7 @@ exports[`<Home /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c66 c67"
             >

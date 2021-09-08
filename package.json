@@ -11,7 +11,7 @@
     "dev": "lerna run dev --parallel",
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",
-    "dev:frontend:preprod-api": "API_URL=https://api-master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev",
+    "dev:frontend:preprod-api": "API_URL=https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "start": "lerna run start",

@@ -1550,7 +1550,7 @@ exports[`<Stats /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c41"
             >
               <strong
@@ -1561,7 +1561,7 @@ exports[`<Stats /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c43 c44"
             >

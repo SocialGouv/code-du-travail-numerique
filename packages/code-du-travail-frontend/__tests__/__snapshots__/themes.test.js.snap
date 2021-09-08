@@ -1465,7 +1465,7 @@ exports[`<Theme /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c43"
             >
               <strong
@@ -1476,7 +1476,7 @@ exports[`<Theme /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c45 c46"
             >
