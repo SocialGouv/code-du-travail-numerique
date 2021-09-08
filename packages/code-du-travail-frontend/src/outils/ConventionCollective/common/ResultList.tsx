@@ -29,10 +29,10 @@ export function ResultList({ query, children }: Props): JSX.Element {
 }
 
 export const ListItem: React.FC = ({ children }) => {
-  return <Li> {children}</Li>;
+  return <Div> {children}</Div>;
 };
 
-const Li = styled.li`
+const Div = styled.div`
   margin-left: 0;
   & + &::before {
     content: "";
