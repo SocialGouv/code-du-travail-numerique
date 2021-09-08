@@ -1,5 +1,7 @@
 import { extractMdxContentUrl } from "@cdt/data";
 import getConfig from "next/config";
+import Head from "next/head";
+import { withRouter } from "next/router";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
@@ -37,7 +39,16 @@ class PageContribution extends React.Component {
     return { data };
   }
 
-  function;
+  constructor(props) {
+    super(props);
+    this.state = { origin: "" };
+  }
+
+  componentDidMount() {
+    this.setState({
+      origin: window.location.origin,
+    });
+  }
 
   buildTitleAndDescription(breadcrumbs, conventionAnswer, title, description) {
     if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
@@ -81,24 +92,32 @@ class PageContribution extends React.Component {
       description
     );
     return (
-      <div>
-        <Layout>
-          <Metas title={metas.title} description={metas.description} />
-          <Answer
-            title={title}
-            relatedItems={relatedItems}
-            breadcrumbs={breadcrumbs}
-            emptyMessage="Cette question n'a pas été trouvée"
-          >
-            <Contribution
-              answers={answers}
-              content={(content && content._source) || {}}
-            />
-          </Answer>
-        </Layout>
-      </div>
+      <>
+        <Head>
+          <link
+            href={`${this.state.origin}${this.props.router.asPath}`}
+            rel="canonical"
+          />
+        </Head>
+        <div>
+          <Layout>
+            <Metas title={metas.title} description={metas.description} />
+            <Answer
+              title={title}
+              relatedItems={relatedItems}
+              breadcrumbs={breadcrumbs}
+              emptyMessage="Cette question n'a pas été trouvée"
+            >
+              <Contribution
+                answers={answers}
+                content={(content && content._source) || {}}
+              />
+            </Answer>
+          </Layout>
+        </div>
+      </>
     );
   }
 }
 
-export default PageContribution;
+export default withRouter(PageContribution);
