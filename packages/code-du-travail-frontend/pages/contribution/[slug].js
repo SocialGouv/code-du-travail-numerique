@@ -10,7 +10,7 @@ import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
 
 const {
-  publicRuntimeConfig: { API_URL },
+  publicRuntimeConfig: { FRONTEND_HOST, API_URL },
 } = getConfig();
 
 const fetchQuestion = ({ slug }) =>
@@ -37,17 +37,6 @@ class PageContribution extends React.Component {
     }
 
     return { data };
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = { origin: "" };
-  }
-
-  componentDidMount() {
-    this.setState({
-      origin: window.location.origin,
-    });
   }
 
   buildTitleAndDescription(breadcrumbs, conventionAnswer, title, description) {
@@ -95,7 +84,7 @@ class PageContribution extends React.Component {
       <>
         <Head>
           <link
-            href={`${this.state.origin}${this.props.router.asPath}`}
+            href={`${FRONTEND_HOST}${this.props.router.asPath}`}
             rel="canonical"
           />
         </Head>
