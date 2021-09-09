@@ -235,5 +235,9 @@ export const textarea = () => (
       <Label htmlFor="textarea">Textarea</Label>
       <Textarea name="textarea" id="textarea" />
     </Section>
+    <Section>
+      <Label htmlFor="textarea2">Textarea</Label>
+      <Textarea name="textarea2" id="textarea2" maxLength={40} showCounter />
+    </Section>
   </>
 );

@@ -593,6 +593,7 @@ exports[`<FicheSP /> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1717,30 +1718,36 @@ exports[`<FicheSP /> should render 1`] = `
               class="c4"
             >
               <div
-                class="c37 c38"
+                class="c37"
               >
-                <strong
-                  class="c39 c40"
+                <div
+                  class="c38"
                 >
-                  <div
-                    class="c41"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </strong>
-                <p
-                  class="c42"
-                >
-                  <button
-                    class="c43 c44 "
+                  <strong
+                    class="c39 c40"
                   >
-                    Non
-                  </button>
-                  <button
-                    class="c43 c44 "
+                    <div
+                      class="c41"
+                    />
+                    <span>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </span>
+                  </strong>
+                  <p
+                    class="c42"
                   >
-                    Oui
-                  </button>
-                </p>
+                    <button
+                      class="c43 c44 "
+                    >
+                      Non
+                    </button>
+                    <button
+                      class="c43 c44 "
+                    >
+                      Oui
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

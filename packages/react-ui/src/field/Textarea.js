@@ -1,15 +1,75 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
+import { Text } from "../Text";
 import { box, breakpoints, fonts, spacings } from "../theme.js";
+import { debounce } from "../utils/debounce";
 
-export const Textarea = ({ name, ...props }) => (
-  <StyledTextarea name={name} {...props} />
-);
+export const Textarea = ({
+  name,
+  maxLength,
+  onChange,
+  showCounter,
+  ...props
+}) => {
+  const [value, setValue] = useState("");
+  const [a11yCounter, setA11Counter] = useState(maxLength);
+  const hasOverflowed = maxLength ? maxLength - value.length <= 0 : false;
+
+  const a11yCounterUpdate = useMemo(
+    () => debounce(setA11Counter, 500),
+    [setA11Counter]
+  );
+
+  useEffect(() => {
+    return () => {
+      if (!hasOverflowed) return;
+      a11yCounterUpdate.cancel();
+    };
+  }, []);
+
+  const changeHandler = useCallback(
+    (event) => {
+      setValue(event.target.value);
+      if (onChange) {
+        onChange(event);
+      }
+      a11yCounterUpdate(maxLength - event.target.value.length);
+    },
+    [a11yCounterUpdate]
+  );
+  return (
+    <>
+      <StyledTextarea
+        name={name}
+        onChange={changeHandler}
+        maxLength={maxLength}
+        {...props}
+      />
+      {maxLength && showCounter && (
+        <div>
+          <Text
+            fontSize="tiny"
+            variant={hasOverflowed ? "error" : "placeholder"}
+          >
+            {Math.max(0, maxLength - value.length)} caractères restants
+          </Text>
+          <ScreenReaderOnly role="status">
+            {a11yCounter} caractères restants
+          </ScreenReaderOnly>
+        </div>
+      )}
+    </>
+  );
+};
 
 Textarea.propTypes = {
+  maxLength: PropTypes.number,
   name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  showCounter: PropTypes.string,
 };
 
 const StyledTextarea = styled.textarea`

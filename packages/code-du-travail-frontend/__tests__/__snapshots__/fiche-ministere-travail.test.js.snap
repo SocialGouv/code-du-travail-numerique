@@ -889,6 +889,7 @@ exports[`<FicheMT /> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2536,30 +2537,36 @@ exports[`<FicheMT /> should render 1`] = `
               class="c4"
             >
               <div
-                class="c66 c67"
+                class="c66"
               >
-                <strong
-                  class="c68 c69"
+                <div
+                  class="c67"
                 >
-                  <div
-                    class="c70"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </strong>
-                <p
-                  class="c71"
-                >
-                  <button
-                    class="c72 c73 "
+                  <strong
+                    class="c68 c69"
                   >
-                    Non
-                  </button>
-                  <button
-                    class="c72 c73 "
+                    <div
+                      class="c70"
+                    />
+                    <span>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </span>
+                  </strong>
+                  <p
+                    class="c71"
                   >
-                    Oui
-                  </button>
-                </p>
+                    <button
+                      class="c72 c73 "
+                    >
+                      Non
+                    </button>
+                    <button
+                      class="c72 c73 "
+                    >
+                      Oui
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -381,6 +381,7 @@ exports[`<Answer /> should renders 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1002,30 +1003,36 @@ exports[`<Answer /> should renders 1`] = `
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1531,6 +1538,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2283,30 +2291,36 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           class="c3"
         >
           <div
-            class="c35 c36"
+            class="c35"
           >
-            <strong
-              class="c37 c38"
+            <div
+              class="c36"
             >
-              <div
-                class="c39"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c40"
-            >
-              <button
-                class="c41 c42 "
+              <strong
+                class="c37 c38"
               >
-                Non
-              </button>
-              <button
-                class="c41 c42 "
+                <div
+                  class="c39"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c40"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c41 c42 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c41 c42 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -2696,6 +2710,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3317,30 +3332,36 @@ exports[`<Answer /> should renders back to results link 1`] = `
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -3796,6 +3817,7 @@ exports[`<Answer /> should renders related content 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -4461,30 +4483,36 @@ exports[`<Answer /> should renders related content 1`] = `
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -5027,6 +5055,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -5649,30 +5678,36 @@ exports[`<Answer /> should renders tooltip 1`] = `
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -6062,6 +6097,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -6684,30 +6720,36 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -7097,6 +7139,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -7720,30 +7763,36 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -8133,6 +8182,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -8751,30 +8801,36 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           class="c0"
         >
           <div
-            class="c25 c26"
+            class="c25"
           >
-            <strong
-              class="c27 c28"
+            <div
+              class="c26"
             >
-              <div
-                class="c29"
-              />
-              Avez-vous trouvé la réponse à votre question ?
-            </strong>
-            <p
-              class="c30"
-            >
-              <button
-                class="c31 c32 "
+              <strong
+                class="c27 c28"
               >
-                Non
-              </button>
-              <button
-                class="c31 c32 "
+                <div
+                  class="c29"
+                />
+                <span>
+                  Avez-vous trouvé la réponse à votre question ?
+                </span>
+              </strong>
+              <p
+                class="c30"
               >
-                Oui
-              </button>
-            </p>
+                <button
+                  class="c31 c32 "
+                >
+                  Non
+                </button>
+                <button
+                  class="c31 c32 "
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1052,6 +1052,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2866,30 +2867,36 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c4"
               >
                 <div
-                  class="c78 c79"
+                  class="c78"
                 >
-                  <strong
-                    class="c80 c81"
+                  <div
+                    class="c79"
                   >
-                    <div
-                      class="c67"
-                    />
-                    Avez-vous trouvé la réponse à votre question ?
-                  </strong>
-                  <p
-                    class="c82"
-                  >
-                    <button
-                      class="c83 c84 "
+                    <strong
+                      class="c80 c81"
                     >
-                      Non
-                    </button>
-                    <button
-                      class="c83 c84 "
+                      <div
+                        class="c67"
+                      />
+                      <span>
+                        Avez-vous trouvé la réponse à votre question ?
+                      </span>
+                    </strong>
+                    <p
+                      class="c82"
                     >
-                      Oui
-                    </button>
-                  </p>
+                      <button
+                        class="c83 c84 "
+                      >
+                        Non
+                      </button>
+                      <button
+                        class="c83 c84 "
+                      >
+                        Oui
+                      </button>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4306,6 +4313,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -6120,30 +6128,36 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c4"
               >
                 <div
-                  class="c78 c79"
+                  class="c78"
                 >
-                  <strong
-                    class="c80 c81"
+                  <div
+                    class="c79"
                   >
-                    <div
-                      class="c67"
-                    />
-                    Avez-vous trouvé la réponse à votre question ?
-                  </strong>
-                  <p
-                    class="c82"
-                  >
-                    <button
-                      class="c83 c84 "
+                    <strong
+                      class="c80 c81"
                     >
-                      Non
-                    </button>
-                    <button
-                      class="c83 c84 "
+                      <div
+                        class="c67"
+                      />
+                      <span>
+                        Avez-vous trouvé la réponse à votre question ?
+                      </span>
+                    </strong>
+                    <p
+                      class="c82"
                     >
-                      Oui
-                    </button>
-                  </p>
+                      <button
+                        class="c83 c84 "
+                      >
+                        Non
+                      </button>
+                      <button
+                        class="c83 c84 "
+                      >
+                        Oui
+                      </button>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
