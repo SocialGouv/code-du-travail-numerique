@@ -52,7 +52,7 @@ export const BurgerNav = ({ children, ...props }) => {
             variant="naked"
             small
             narrow
-            title="fermer la modal"
+            title="fermer la fenêtre modale"
             onClick={() => setOpen(false)}
           >
             <ScreenReaderOnly>fermer la modal</ScreenReaderOnly>

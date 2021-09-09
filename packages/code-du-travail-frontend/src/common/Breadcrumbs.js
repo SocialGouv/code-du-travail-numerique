@@ -11,7 +11,7 @@ const Breadcrumbs = ({ items = [] }) => {
     return null;
   }
   return (
-    <Nav aria-label="Breadcrumb">
+    <Nav aria-label="Fil d'ariane">
       <OverflowWrapper>
         <StyledContainer as="ol">
           {[

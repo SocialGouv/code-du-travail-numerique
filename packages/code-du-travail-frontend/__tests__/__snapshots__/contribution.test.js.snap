@@ -2262,7 +2262,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
         tabindex="-1"
       >
         <nav
-          aria-label="Breadcrumb"
+          aria-label="Fil d'ariane"
           class="c24"
         >
           <div
@@ -5523,7 +5523,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
         tabindex="-1"
       >
         <nav
-          aria-label="Breadcrumb"
+          aria-label="Fil d'ariane"
           class="c24"
         >
           <div

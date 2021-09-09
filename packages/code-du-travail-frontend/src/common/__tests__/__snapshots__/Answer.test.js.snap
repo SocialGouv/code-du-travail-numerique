@@ -1895,7 +1895,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 <div>
   <nav
-    aria-label="Breadcrumb"
+    aria-label="Fil d'ariane"
     class="c0"
   >
     <div

@@ -2042,7 +2042,7 @@ exports[`<FicheMT /> should render 1`] = `
       tabindex="-1"
     >
       <nav
-        aria-label="Breadcrumb"
+        aria-label="Fil d'ariane"
         class="c24"
       >
         <div
