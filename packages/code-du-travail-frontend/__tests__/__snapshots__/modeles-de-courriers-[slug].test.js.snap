@@ -980,6 +980,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2625,30 +2626,36 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               class="c4"
             >
               <div
-                class="c57 c68"
+                class="c57"
               >
-                <strong
-                  class="c69 c70"
+                <div
+                  class="c68"
                 >
-                  <div
-                    class="c71"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </strong>
-                <p
-                  class="c72"
-                >
-                  <button
-                    class="c73 c74 "
+                  <strong
+                    class="c69 c70"
                   >
-                    Non
-                  </button>
-                  <button
-                    class="c73 c74 "
+                    <div
+                      class="c71"
+                    />
+                    <span>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </span>
+                  </strong>
+                  <p
+                    class="c72"
                   >
-                    Oui
-                  </button>
-                </p>
+                    <button
+                      class="c73 c74 "
+                    >
+                      Non
+                    </button>
+                    <button
+                      class="c73 c74 "
+                    >
+                      Oui
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
