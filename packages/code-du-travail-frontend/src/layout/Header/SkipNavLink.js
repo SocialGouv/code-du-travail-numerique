@@ -4,19 +4,21 @@ import styled from "styled-components";
 
 export function SkipNavLink() {
   return (
-    <SkipNav>
-      <nav>
-        <Li>
-          <SkipLink type="inline" as="a" href="#navigation">
-            Allez à la navigation
-          </SkipLink>
-        </Li>
-        <Li>
-          <SkipLink href="#search">Allez à la recherche</SkipLink>
-        </Li>
-        <Li>
-          <SkipLink href="#content">Allez au contenu</SkipLink>
-        </Li>
+    <SkipNav as="div">
+      <nav aria-label="liens d'évitements" role="navigation">
+        <Ul>
+          <Li>
+            <SkipLink type="inline" as="a" href="#navigation">
+              Allez à la navigation
+            </SkipLink>
+          </Li>
+          <Li>
+            <SkipLink href="#search">Allez à la recherche</SkipLink>
+          </Li>
+          <Li>
+            <SkipLink href="#content">Allez au contenu</SkipLink>
+          </Li>
+        </Ul>
       </nav>
     </SkipNav>
   );
@@ -27,6 +29,12 @@ const SkipNav = styled(FlatList)`
   left: 0;
   position: fixed;
   z-index: 4;
+`;
+
+const Ul = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 `;
 
 const Li = styled.li`

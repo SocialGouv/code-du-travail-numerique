@@ -237,6 +237,21 @@ exports[`<Header /> should render 1`] = `
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 {
@@ -425,6 +440,18 @@ exports[`<Header /> should render 1`] = `
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:600px) {
@@ -647,8 +674,6 @@ exports[`<Header /> should render 1`] = `
         </a>
         <button
           class="c17 c18 c19"
-          id="navigation"
-          role="navigation"
         >
           <svg
             aria-hidden="true"

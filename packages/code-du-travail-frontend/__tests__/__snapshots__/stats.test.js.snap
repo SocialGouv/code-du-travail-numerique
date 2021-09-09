@@ -675,6 +675,21 @@ exports[`<Stats /> should render 1`] = `
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c2 {
@@ -1147,6 +1162,18 @@ exports[`<Stats /> should render 1`] = `
   }
 }
 
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:980px) {
+
+}
+
 @media (max-width:600px) {
   .c2 {
     height: 9rem;
@@ -1397,8 +1424,6 @@ exports[`<Stats /> should render 1`] = `
           </a>
           <button
             class="c19 c20 c21"
-            id="navigation"
-            role="navigation"
           >
             <svg
               aria-hidden="true"
