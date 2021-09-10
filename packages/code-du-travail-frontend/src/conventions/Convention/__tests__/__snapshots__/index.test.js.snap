@@ -5724,7 +5724,9 @@ exports[`<Convention /> renders 1`] = `
         value="1"
       />
       <button
+        aria-label="Recherchez dans la collection collective"
         class="c48 c49"
+        title="Lancer une recherche"
         type="submit"
       >
         <svg
