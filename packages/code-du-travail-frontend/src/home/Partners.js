@@ -7,7 +7,7 @@ export function Partners() {
   return (
     <Section variant="white">
       <Container>
-        <PageTitle as="div" stripe="left">
+        <PageTitle as="div" stripe="left" withoutHeader>
           Sites associés
         </PageTitle>
         <Flex>
