@@ -144,7 +144,7 @@ const Span = styled.span`
 `;
 
 const HelpButton = styled(Button)`
-  color: ${theme.colors.secondary};
+  color: ${({ theme }) => theme.secondary};
   text-decoration: underline;
 `;
 
