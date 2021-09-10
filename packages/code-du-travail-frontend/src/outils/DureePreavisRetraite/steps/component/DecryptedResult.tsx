@@ -26,9 +26,9 @@ const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
   return <b>pas de préavis</b>;
 };
 
-const ShowResultLabourAgreement: React.FC<{
+const ShowResultAgreement: React.FC<{
   result: PublicodesResult | null;
-  detail: LabourAgreement | null;
+  detail: Agreement | null;
 }> = ({ result, detail }) => {
   if (!result) {
     return <b>convention collective non renseignée</b>;
@@ -49,14 +49,14 @@ export enum NoticeUsed {
   none = "none",
 }
 
-type LabourAgreement = {
+type Agreement = {
   isSupported: boolean;
   notice: number;
 };
 
 type RootData = {
   isVoluntary: boolean;
-  labourAgreement: LabourAgreement | null;
+  agreement: Agreement | null;
   noticeUsed: NoticeUsed;
   seniorityLessThan6Months: boolean;
 };
@@ -67,12 +67,12 @@ export const createRootData = (
   legalResult: PublicodesResult,
   agreementResult: PublicodesResult | null
 ): RootData => {
-  let labourAgreement = null;
+  let agreement = null;
   if (data.ccn) {
     if (supportedCcn.includes(data.ccn.num)) {
-      labourAgreement = { isSupported: true, notice: agreementResult.value };
+      agreement = { isSupported: true, notice: agreementResult.value };
     } else {
-      labourAgreement = {
+      agreement = {
         isSupported: false,
         notice: agreementResult?.value ?? 0,
       };
@@ -91,7 +91,7 @@ export const createRootData = (
   }
   return {
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
-    labourAgreement,
+    agreement: agreement,
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
   };
@@ -100,26 +100,26 @@ export const createRootData = (
 export const getDescription = (data: RootData): string | null => {
   if (data.seniorityLessThan6Months) {
     switch (true) {
-      case data.noticeUsed === NoticeUsed.none && data.labourAgreement === null:
+      case data.noticeUsed === NoticeUsed.none && data.agreement === null:
         return "Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.none &&
-        data.labourAgreement?.isSupported === true:
+        data.agreement?.isSupported === true:
         return "Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.agreementLabor &&
-        data.labourAgreement?.isSupported === true:
+        data.agreement?.isSupported === true:
         return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
     }
     return null;
   }
 
-  if (data.labourAgreement === null) {
+  if (data.agreement === null) {
     return "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale.";
-  } else if (!data.labourAgreement.isSupported) {
+  } else if (!data.agreement.isSupported) {
     return "La convention collective n’ayant pas été traitée par nos services, la durée de préavis affichée correspond à la durée légale.";
   } else {
     switch (data.noticeUsed) {
       case NoticeUsed.legal:
-        if (data.labourAgreement.notice > 0) {
+        if (data.agreement.notice > 0) {
           return `La durée à appliquer pour le salarié est donc la durée légale, celle-ci étant plus ${
             data.isVoluntary ? "courte" : "longue"
           } que la durée prévue par la convention collective.`;
@@ -168,9 +168,9 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
       <Text>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
-        <ShowResultLabourAgreement
+        <ShowResultAgreement
           result={agreementResult}
-          detail={rootData.labourAgreement}
+          detail={rootData.agreement}
         />
       </Text>
       {description && (
