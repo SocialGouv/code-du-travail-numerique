@@ -164,6 +164,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
 
 <div>
   <nav
+    aria-label="Fil d'ariane"
     class="c0"
   >
     <div
@@ -172,10 +173,10 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
       <div
         class="c2"
       >
-        <div
+        <ol
           class="c3 c4"
         >
-          <div
+          <li
             class="c5"
           >
             <a
@@ -196,8 +197,8 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
               </svg>
               Accueil
             </a>
-          </div>
-          <div
+          </li>
+          <li
             class="c5"
           >
             <svg
@@ -218,8 +219,8 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             >
               item 1
             </a>
-          </div>
-          <div
+          </li>
+          <li
             class="c5"
           >
             <svg
@@ -240,8 +241,8 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             >
               item 2
             </a>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </div>
   </nav>

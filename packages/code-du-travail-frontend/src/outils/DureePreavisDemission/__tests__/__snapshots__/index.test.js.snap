@@ -474,7 +474,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             1/4
           </span>
         </span>
-        <ul
+        <ol
           class="c8"
         >
           <li
@@ -520,7 +520,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             </span>
             Durée du préavis
           </li>
-        </ul>
+        </ol>
       </div>
       <p>
         En cas de démission, le salarié ne peut pas quitter l’entreprise immédiatement après avoir informé l’employeur de ses intentions. Il doit rester dans l’entreprise durant une certaine période, qu’on appelle préavis ou parfois délai congé.
