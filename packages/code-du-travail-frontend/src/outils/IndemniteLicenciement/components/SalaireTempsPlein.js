@@ -17,7 +17,9 @@ function SalaireTempsPlein({ name }) {
         fields.length > 0 && (
           <Table>
             <Caption>
-              <Question required>Salaire mensuel brut</Question>
+              <Question required as="p">
+                Salaire mensuel brut
+              </Question>
               <SmallText>
                 Prendre en compte les primes et avantages en nature.
               </SmallText>
