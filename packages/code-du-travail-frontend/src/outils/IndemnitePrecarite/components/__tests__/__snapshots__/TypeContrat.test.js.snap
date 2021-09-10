@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeContrat /> should render 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`<TypeContrat /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +38,7 @@ exports[`<TypeContrat /> should render 1`] = `
   appearance: none;
 }
 
-.c3:before {
+.c4:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +53,12 @@ exports[`<TypeContrat /> should render 1`] = `
   content: "";
 }
 
-.c3:checked {
+.c4:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c3:checked:before {
+.c4:checked:before {
   display: block;
 }
 
@@ -66,9 +66,12 @@ exports[`<TypeContrat /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
+}
+
+.c1 {
+  font-weight: 600;
 }
 
 @media (max-width:600px) {
@@ -81,9 +84,13 @@ exports[`<TypeContrat /> should render 1`] = `
   <p
     class="c0"
   >
-    Quel est le type du contrat de travail ?
     <span
       class="c1"
+    >
+      Quel est le type du contrat de travail ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -91,11 +98,11 @@ exports[`<TypeContrat /> should render 1`] = `
     </span>
   </p>
   <label
-    class="c2"
+    class="c3"
     for="contrat-cdd"
   >
     <input
-      class="c3"
+      class="c4"
       id="contrat-cdd"
       name="contrat"
       type="radio"
@@ -104,11 +111,11 @@ exports[`<TypeContrat /> should render 1`] = `
     Contrat à durée déterminée (CDD)
   </label>
   <label
-    class="c2"
+    class="c3"
     for="contrat-ci"
   >
     <input
-      class="c3"
+      class="c4"
       id="contrat-ci"
       name="contrat"
       type="radio"

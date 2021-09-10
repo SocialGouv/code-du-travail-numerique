@@ -31,6 +31,12 @@ const usePublicodesHandler = ({
     situation: [],
   });
 
+  function handleExecute(rule: string): PublicodesResult {
+    engine.setSituation(buildSituation(data.situation));
+    const result = engine.evaluate(rule);
+    return { unit: result.unit, value: result.nodeValue };
+  }
+
   function newSituation(args: Record<string, string>): void {
     // Situation is an array to keep the order of the answers
     const currentSituation = data.situation;
@@ -94,6 +100,7 @@ const usePublicodesHandler = ({
   };
 
   return {
+    execute: handleExecute,
     getNotifications: () => getNotifications(engine),
     getReferences: () => getReferences(engine),
     missingArgs: data.missingArgs,
