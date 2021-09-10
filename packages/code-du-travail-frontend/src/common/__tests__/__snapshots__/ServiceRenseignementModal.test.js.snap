@@ -576,8 +576,9 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 />
               </span>
               <button
-                aria-label="Rechercher le service"
+                aria-label="Recherchez le service"
                 class="c11 c12"
+                title="Lancer une recherche"
                 type="submit"
               >
                 <svg

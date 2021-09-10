@@ -52,10 +52,10 @@ export const BurgerNav = ({ children, ...props }) => {
             variant="naked"
             small
             narrow
-            title="fermer la modale"
+            title="fermer la fenêtre modale"
             onClick={() => setOpen(false)}
           >
-            <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
+            <ScreenReaderOnly>fermer la modal</ScreenReaderOnly>
             <X aria-hidden="true" />
           </CloseButton>
         </StyledDialogContent>

@@ -980,6 +980,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1126,7 +1127,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .c96 {
@@ -1902,6 +1906,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 
 }
 
+<<<<<<< HEAD
 @media (max-width:980px) {
 
 }
@@ -1910,6 +1915,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 
 }
 
+=======
+>>>>>>> master
 @media (max-width:600px) {
   .c2 {
     height: 9rem;
@@ -2123,7 +2130,9 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               />
             </div>
             <button
+              aria-label="Lancer ma recherche"
               class="c14 c15"
+              title="Lancer ma recherche"
               type="submit"
             >
               <svg
@@ -2185,6 +2194,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
       tabindex="-1"
     >
       <nav
+        aria-label="Fil d'ariane"
         class="c24"
       >
         <div
@@ -2193,10 +2203,10 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <div
             class="c26"
           >
-            <div
+            <ol
               class="c4 c27"
             >
-              <div
+              <li
                 class="c28"
               >
                 <a
@@ -2217,8 +2227,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </svg>
                   Accueil
                 </a>
-              </div>
-              <div
+              </li>
+              <li
                 class="c28"
               >
                 <svg
@@ -2239,8 +2249,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   theme
                 </a>
-              </div>
-            </div>
+              </li>
+            </ol>
           </div>
         </div>
       </nav>
@@ -2650,30 +2660,36 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               class="c4"
             >
               <div
-                class="c57 c68"
+                class="c57"
               >
-                <strong
-                  class="c69 c70"
+                <div
+                  class="c68"
                 >
-                  <div
-                    class="c71"
-                  />
-                  Avez-vous trouvé la réponse à votre question ?
-                </strong>
-                <p
-                  class="c72"
-                >
-                  <button
-                    class="c73 c74 "
+                  <strong
+                    class="c69 c70"
                   >
-                    Non
-                  </button>
-                  <button
-                    class="c73 c74 "
+                    <div
+                      class="c71"
+                    />
+                    <span>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </span>
+                  </strong>
+                  <p
+                    class="c72"
                   >
-                    Oui
-                  </button>
-                </p>
+                    <button
+                      class="c73 c74 "
+                    >
+                      Non
+                    </button>
+                    <button
+                      class="c73 c74 "
+                    >
+                      Oui
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -2929,94 +2945,106 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
         </div>
-        <div
+        <ul
           class="c95"
         >
-          <a
-            aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://travail-emploi.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            travail-emploi.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c97"
-          >
-            |
-          </span>
-          <a
-            aria-label="service-public.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://www.service-public.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            service-public.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c97"
-          >
-            |
-          </span>
-          <a
-            aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://www.legifrance.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            legifrance.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c97"
-          >
-            |
-          </span>
-          <a
-            aria-label="data.gouv.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://www.data.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            data.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c97"
-          >
-            |
-          </span>
-          <a
-            aria-label="gouvernement.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://www.gouvernement.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            gouvernement.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c97"
-          >
-            |
-          </span>
-          <a
-            aria-label="cnil.fr (Nouvelle fenêtre)"
-            class="c93 c96"
-            href="https://www.cnil.fr/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            cnil.fr
-          </a>
-        </div>
+          <li>
+            <a
+              aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://travail-emploi.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              travail-emploi.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c97"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="service-public.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://www.service-public.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              service-public.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c97"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://www.legifrance.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              legifrance.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c97"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="data.gouv.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://www.data.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              data.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c97"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="gouvernement.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://www.gouvernement.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              gouvernement.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c97"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="cnil.fr (Nouvelle fenêtre)"
+              class="c93 c96"
+              href="https://www.cnil.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              cnil.fr
+            </a>
+          </li>
+        </ul>
       </footer>
     </div>
   </div>

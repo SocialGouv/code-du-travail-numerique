@@ -203,53 +203,67 @@ const Footer = () => {
           </Links>
         </NavSection>
         <GovernmentSection>
-          <StyledGovLink
-            href={"https://travail-emploi.gouv.fr"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            travail-emploi.gouv.fr
-          </StyledGovLink>
-          <Separator aria-hidden>|</Separator>
-          <StyledGovLink
-            href={"https://www.service-public.fr"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            service-public.fr
-          </StyledGovLink>
-          <Separator aria-hidden>|</Separator>
-          <StyledGovLink
-            href={"https://www.legifrance.gouv.fr"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            legifrance.gouv.fr
-          </StyledGovLink>
-          <Separator aria-hidden>|</Separator>
-          <StyledGovLink
-            href={"https://www.data.gouv.fr"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            data.gouv.fr
-          </StyledGovLink>
-          <Separator aria-hidden>|</Separator>
-          <StyledGovLink
-            href={"https://www.gouvernement.fr"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            gouvernement.fr
-          </StyledGovLink>
-          <Separator aria-hidden>|</Separator>
-          <StyledGovLink
-            href={"https://www.cnil.fr/"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            cnil.fr
-          </StyledGovLink>
+          <li>
+            <StyledGovLink
+              href={"https://travail-emploi.gouv.fr"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              travail-emploi.gouv.fr
+            </StyledGovLink>
+            <Separator aria-hidden>|</Separator>
+          </li>
+          <li>
+            <StyledGovLink
+              href={"https://www.service-public.fr"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              service-public.fr
+            </StyledGovLink>
+            <Separator aria-hidden>|</Separator>
+          </li>
+
+          <li>
+            <StyledGovLink
+              href={"https://www.legifrance.gouv.fr"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              legifrance.gouv.fr
+            </StyledGovLink>
+            <Separator aria-hidden>|</Separator>
+          </li>
+
+          <li>
+            <StyledGovLink
+              href={"https://www.data.gouv.fr"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              data.gouv.fr
+            </StyledGovLink>
+            <Separator aria-hidden>|</Separator>
+          </li>
+          <li>
+            <StyledGovLink
+              href={"https://www.gouvernement.fr"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              gouvernement.fr
+            </StyledGovLink>
+            <Separator aria-hidden>|</Separator>
+          </li>
+          <li>
+            <StyledGovLink
+              href={"https://www.cnil.fr/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cnil.fr
+            </StyledGovLink>
+          </li>
         </GovernmentSection>
       </StyledFooter>
     </OverflowWrapper>
@@ -362,12 +376,15 @@ const StyledLink = styled.a.attrs((props) => ({
   cursor: pointer;
 `;
 
-const GovernmentSection = styled.div`
+const GovernmentSection = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.bgTertiary};
+  background-color: ${({ theme }) => theme.bgSecondary};
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: ${spacings.base};
 `;
 
 const StyledGovLink = styled(StyledLink)`

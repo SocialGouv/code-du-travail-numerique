@@ -24,20 +24,11 @@ contrat salarié . travailleur handicapé:
 contrat salarié . départ à la retraite:
   valeur: mise à la retraite = non
 
-contrat salarié . préavis de retraite calculé: 0 mois
-
-contrat salarié . préavis de retraite:
-  variations:
-    - si: travailleur handicapé
-      alors:
-       le minimum de:
-         - contrat salarié . préavis de retraite calculé * 2
-         - 3 mois
-    - sinon: contrat salarié . préavis de retraite calculé
+contrat salarié . préavis de retraite: 0 mois
 
 contrat salarié . préavis de retraite . mise à la retraite:
   applicable si: mise à la retraite
-  remplace: contrat salarié . préavis de retraite calculé
+  remplace: contrat salarié . préavis de retraite
   variations:
     - si:
         toutes ces conditions:
@@ -46,7 +37,7 @@ contrat salarié . préavis de retraite . mise à la retraite:
       alors: contrat salarié . préavis de retraite collective
     - sinon:
         le maximum de:
-          - contrat salarié . préavis de retraite . tranches
+          - contrat salarié . préavis de retraite légale
           - contrat salarié . préavis de retraite collective
   références:
     Article L1237-6: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901180/2008-05-01
@@ -54,7 +45,7 @@ contrat salarié . préavis de retraite . mise à la retraite:
 
 contrat salarié . préavis de retraite . départ à la retraite:
   applicable si: départ à la retraite
-  remplace: contrat salarié . préavis de retraite calculé
+  remplace: contrat salarié . préavis de retraite
   variations:
     - si:
         toutes ces conditions:
@@ -63,11 +54,24 @@ contrat salarié . préavis de retraite . départ à la retraite:
       alors: contrat salarié . préavis de retraite collective
     - sinon:
         le minimum de:
-          - contrat salarié . préavis de retraite . tranches
+          - contrat salarié . préavis de retraite légale
           - contrat salarié . préavis de retraite collective
   références:
     Article L1237-10: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901184/2008-05-01/
     Article L1234-1: https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006901112/2008-05-01/#LEGIARTI000006901112
+
+contrat salarié . préavis de retraite légale:
+  titre: Préavis de retraite légale
+  valeur: contrat salarié . préavis de retraite . tranches
+
+contrat salarié . préavis de retraite légale pour travailleur handicapé:
+  applicable si: contrat salarié . travailleur handicapé
+  remplace: contrat salarié . préavis de retraite légale
+  le minimum de:
+    - contrat salarié . préavis de retraite . tranches * 2
+    - 3 mois
+  références:
+    Article L5213-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006903707/
 
 contrat salarié . préavis de retraite . tranches:
   titre: Tranches du préavis de départ dans le code du travail
@@ -79,6 +83,17 @@ contrat salarié . préavis de retraite . tranches:
       - montant: 1 mois
         plafond: 24 mois
       - montant: 2 mois
+
+contrat salarié . préavis de retraite collective pour travailleur handicapé:
+  applicable si: contrat salarié . travailleur handicapé
+  remplace: contrat salarié . préavis de retraite collective
+  variations:
+    - si: contrat salarié . préavis de retraite collective < 3 mois
+      alors:
+        le minimum de:
+          - contrat salarié . préavis de retraite collective * 2
+          - 3 mois
+    - sinon: contrat salarié . préavis de retraite collective
 
 contrat salarié . préavis de retraite collective: non
 

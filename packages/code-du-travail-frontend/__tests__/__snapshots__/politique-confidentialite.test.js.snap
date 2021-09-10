@@ -517,7 +517,10 @@ exports[`<CookiePolicy /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .c54 {
@@ -1021,6 +1024,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 }
 
+<<<<<<< HEAD
 @media (max-width:980px) {
 
 }
@@ -1029,6 +1033,8 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 }
 
+=======
+>>>>>>> master
 @media (max-width:600px) {
   .c2 {
     height: 9rem;
@@ -1242,7 +1248,9 @@ exports[`<CookiePolicy /> should render 1`] = `
               />
             </div>
             <button
+              aria-label="Lancer ma recherche"
               class="c14 c15"
+              title="Lancer ma recherche"
               type="submit"
             >
               <svg
@@ -1712,94 +1720,106 @@ exports[`<CookiePolicy /> should render 1`] = `
             </div>
           </div>
         </div>
-        <div
+        <ul
           class="c53"
         >
-          <a
-            aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://travail-emploi.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            travail-emploi.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c55"
-          >
-            |
-          </span>
-          <a
-            aria-label="service-public.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://www.service-public.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            service-public.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c55"
-          >
-            |
-          </span>
-          <a
-            aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://www.legifrance.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            legifrance.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c55"
-          >
-            |
-          </span>
-          <a
-            aria-label="data.gouv.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://www.data.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            data.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c55"
-          >
-            |
-          </span>
-          <a
-            aria-label="gouvernement.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://www.gouvernement.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            gouvernement.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c55"
-          >
-            |
-          </span>
-          <a
-            aria-label="cnil.fr (Nouvelle fenêtre)"
-            class="c51 c54"
-            href="https://www.cnil.fr/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            cnil.fr
-          </a>
-        </div>
+          <li>
+            <a
+              aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://travail-emploi.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              travail-emploi.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c55"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="service-public.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://www.service-public.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              service-public.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c55"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://www.legifrance.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              legifrance.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c55"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="data.gouv.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://www.data.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              data.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c55"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="gouvernement.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://www.gouvernement.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              gouvernement.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c55"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="cnil.fr (Nouvelle fenêtre)"
+              class="c51 c54"
+              href="https://www.cnil.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              cnil.fr
+            </a>
+          </li>
+        </ul>
       </footer>
     </div>
   </div>

@@ -91,7 +91,8 @@ function ServiceRenseignement() {
               small
               narrow
               variant="naked"
-              aria-label="Rechercher le service"
+              aria-label="Recherchez le service"
+              title="Lancer une recherche"
             >
               <StyledSearchIcon />
             </SubmitIcon>

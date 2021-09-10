@@ -582,7 +582,10 @@ exports[`<Stats /> should render 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #e4e8ef;
+  background-color: #f2f5fa;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .c58 {
@@ -1166,6 +1169,7 @@ exports[`<Stats /> should render 1`] = `
 
 }
 
+<<<<<<< HEAD
 @media (max-width:980px) {
 
 }
@@ -1174,6 +1178,8 @@ exports[`<Stats /> should render 1`] = `
 
 }
 
+=======
+>>>>>>> master
 @media (max-width:600px) {
   .c2 {
     height: 9rem;
@@ -1387,7 +1393,9 @@ exports[`<Stats /> should render 1`] = `
               />
             </div>
             <button
+              aria-label="Lancer ma recherche"
               class="c14 c15"
+              title="Lancer ma recherche"
               type="submit"
             >
               <svg
@@ -1475,10 +1483,10 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c31"
               >
-                <ul
+                <div
                   class="c32"
                 >
-                  <li
+                  <div
                     class="c33"
                   >
                     <div
@@ -1495,8 +1503,8 @@ exports[`<Stats /> should render 1`] = `
                         16
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1513,8 +1521,8 @@ exports[`<Stats /> should render 1`] = `
                         20
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1531,8 +1539,8 @@ exports[`<Stats /> should render 1`] = `
                         4
                       </div>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="c33"
                   >
                     <div
@@ -1549,8 +1557,8 @@ exports[`<Stats /> should render 1`] = `
                         10
                       </div>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <p>
@@ -1811,94 +1819,106 @@ exports[`<Stats /> should render 1`] = `
             </div>
           </div>
         </div>
-        <div
+        <ul
           class="c57"
         >
-          <a
-            aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://travail-emploi.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            travail-emploi.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c59"
-          >
-            |
-          </span>
-          <a
-            aria-label="service-public.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://www.service-public.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            service-public.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c59"
-          >
-            |
-          </span>
-          <a
-            aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://www.legifrance.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            legifrance.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c59"
-          >
-            |
-          </span>
-          <a
-            aria-label="data.gouv.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://www.data.gouv.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            data.gouv.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c59"
-          >
-            |
-          </span>
-          <a
-            aria-label="gouvernement.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://www.gouvernement.fr"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            gouvernement.fr
-          </a>
-          <span
-            aria-hidden="true"
-            class="c59"
-          >
-            |
-          </span>
-          <a
-            aria-label="cnil.fr (Nouvelle fenêtre)"
-            class="c55 c58"
-            href="https://www.cnil.fr/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            cnil.fr
-          </a>
-        </div>
+          <li>
+            <a
+              aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://travail-emploi.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              travail-emploi.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c59"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="service-public.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://www.service-public.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              service-public.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c59"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://www.legifrance.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              legifrance.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c59"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="data.gouv.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://www.data.gouv.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              data.gouv.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c59"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="gouvernement.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://www.gouvernement.fr"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              gouvernement.fr
+            </a>
+            <span
+              aria-hidden="true"
+              class="c59"
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <a
+              aria-label="cnil.fr (Nouvelle fenêtre)"
+              class="c55 c58"
+              href="https://www.cnil.fr/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              cnil.fr
+            </a>
+          </li>
+        </ul>
       </footer>
     </div>
   </div>

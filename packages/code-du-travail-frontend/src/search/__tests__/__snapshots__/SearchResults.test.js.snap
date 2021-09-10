@@ -1005,10 +1005,10 @@ exports[`<SearchResults/> should render results 1`] = `
           <div
             class="c27"
           >
-            <ul
+            <div
               class="c28"
             >
-              <li
+              <div
                 class="c29"
               >
                 <a
@@ -1035,8 +1035,8 @@ exports[`<SearchResults/> should render results 1`] = `
                     la description
                   </div>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -1057,10 +1057,10 @@ exports[`<SearchResults/> should render results 1`] = `
           <div
             class="c27"
           >
-            <ul
+            <div
               class="c28"
             >
-              <li
+              <div
                 class="c30"
               >
                 <a
@@ -1085,8 +1085,8 @@ exports[`<SearchResults/> should render results 1`] = `
                     </div>
                   </div>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
