@@ -12,11 +12,11 @@
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",
     "test:frontend": "yarn workspace @cdt/frontend test --watch",
+    "dev:frontend:preprod-api": "API_URL=https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "start": "lerna run start",
     "test": "lerna run test",
-    "test:frontend": "yarn build:ui && yarn workspace @cdt/frontend test --watch",
     "test:codecept": "cd optional/e2e/runners/puppeteer && yarn test && cd ../../../..",
     "jest:ui": "yarn workspace @cdt/frontend test -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/cdtn-ui jest -u",
     "prepare": "is-ci || husky install"

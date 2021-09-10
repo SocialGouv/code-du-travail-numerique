@@ -15,9 +15,16 @@ export const Title = ({
   subtitle,
   stripe,
   variant,
+  isHeader,
   ...props
 }) => (
-  <Header isFirst={isFirst} stripe={stripe} shift={shift} {...props}>
+  <Header
+    as={isHeader ? "header" : "div"}
+    isFirst={isFirst}
+    stripe={stripe}
+    shift={shift}
+    {...props}
+  >
     <StyledTitle stripe={stripe} as={as} shift={shift}>
       {stripe !== "none" && (
         <Stripe
@@ -40,6 +47,7 @@ Title.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
   isFirst: PropTypes.bool,
+  isHeader: PropTypes.bool,
   shift: PropTypes.string,
   stripe: PropTypes.oneOf(["left", "top", "none"]),
   subtitle: PropTypes.node,
@@ -48,6 +56,7 @@ Title.propTypes = {
 
 Title.defaultProps = {
   isFirst: false,
+  isHeader: false,
   stripe: "left",
   variant: "secondary",
 };

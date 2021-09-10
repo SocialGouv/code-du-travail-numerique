@@ -873,7 +873,7 @@ exports[`<Convention /> renders 1`] = `
 }
 
 <div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -889,7 +889,7 @@ exports[`<Convention /> renders 1`] = `
     >
       Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.
     </p>
-  </header>
+  </div>
   <div
     class="accordion"
     data-accordion-component="Accordion"
@@ -4621,7 +4621,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -4637,7 +4637,7 @@ exports[`<Convention /> renders 1`] = `
     >
       Consultez les articles de la convention collective qui s’appliquent à votre situation dans les thèmes sélectionnés ci-dessous.
     </p>
-  </header>
+  </div>
   <div
     class="c25"
     data-accordion-component="Accordion"
@@ -5656,7 +5656,7 @@ exports[`<Convention /> renders 1`] = `
       </div>
     </div>
   </div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -5672,7 +5672,7 @@ exports[`<Convention /> renders 1`] = `
     >
       Recherchez par mots clés dans le texte de la convention collective sur le site Légifrance.
     </p>
-  </header>
+  </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
     class="c43"

@@ -55,154 +55,152 @@ const Footer = () => {
         {router.pathname === "/" && <Partners />}
 
         <NavSection>
-          <nav>
-            <Links>
-              <Category>
-                <Heading as={StyledStrong} isFirst>
-                  Code du travail numérique
-                </Heading>
-                <StyledList>
-                  <StyledListItem>
-                    <Link passHref href="/droit-du-travail">
-                      <StyledLink>Le droit du travail</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/glossaire">
-                      <StyledLink>Glossaire</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/a-propos">
-                      <StyledLink>À propos</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/mentions-legales">
-                      <StyledLink>Mentions légales</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/accessibilite">
-                      <StyledLink>
-                        Accessibilité&nbsp;: partiellement conforme
+          <Links>
+            <Category>
+              <Heading as={StyledStrong} isFirst>
+                Code du travail numérique
+              </Heading>
+              <StyledList>
+                <StyledListItem>
+                  <Link passHref href="/droit-du-travail">
+                    <StyledLink>Le droit du travail</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/glossaire">
+                    <StyledLink>Glossaire</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/a-propos">
+                    <StyledLink>À propos</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/mentions-legales">
+                    <StyledLink>Mentions légales</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/accessibilite">
+                    <StyledLink>
+                      Accessibilité&nbsp;: partiellement conforme
+                    </StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/politique-confidentialite">
+                    <StyledLink>Politique de confidentialité</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/stats">
+                    <StyledLink>Statistiques d’utilisation</StyledLink>
+                  </Link>
+                </StyledListItem>
+                <StyledListItem>
+                  <Link passHref href="/integration">
+                    <StyledLink>
+                      Intégrer le Code du travail numérique
+                    </StyledLink>
+                  </Link>
+                </StyledListItem>
+              </StyledList>
+            </Category>
+            <Category>
+              <Heading as={StyledStrong} isFirst>
+                Aidez-nous à améliorer cet outil
+              </Heading>
+              <StyledList>
+                <StyledListItem>
+                  <ContactModal>
+                    {(openModal) => (
+                      <Button
+                        variant="navLink"
+                        onClick={() => {
+                          matopush([
+                            "trackEvent",
+                            "contact",
+                            "click_contact_cdtn_team",
+                            path,
+                          ]);
+                          openModal();
+                        }}
+                      >
+                        Contact
+                      </Button>
+                    )}
+                  </ContactModal>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink
+                    href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contribuer sur Github
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  {(() => {
+                    const packageVersion =
+                      publicRuntimeConfig.PACKAGE_VERSION || "";
+                    const isTag = packageVersion[0] === "v";
+                    const path = isTag
+                      ? "releases/tag"
+                      : packageVersion === "master"
+                      ? "commits"
+                      : "compare";
+                    return (
+                      <StyledLink
+                        href={`${GITHUB_REPO}/${path}/${packageVersion}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Journal des modifications
                       </StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/politique-confidentialite">
-                      <StyledLink>Politique de confidentialité</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/stats">
-                      <StyledLink>Statistiques d’utilisation</StyledLink>
-                    </Link>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <Link passHref href="/integration">
-                      <StyledLink>
-                        Intégrer le Code du travail numérique
-                      </StyledLink>
-                    </Link>
-                  </StyledListItem>
-                </StyledList>
-              </Category>
-              <Category>
-                <Heading as={StyledStrong} isFirst>
-                  Aidez-nous à améliorer cet outil
-                </Heading>
-                <StyledList>
-                  <StyledListItem>
-                    <ContactModal>
-                      {(openModal) => (
-                        <Button
-                          variant="navLink"
-                          onClick={() => {
-                            matopush([
-                              "trackEvent",
-                              "contact",
-                              "click_contact_cdtn_team",
-                              path,
-                            ]);
-                            openModal();
-                          }}
-                        >
-                          Contact
-                        </Button>
-                      )}
-                    </ContactModal>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <StyledLink
-                      href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Contribuer sur Github
-                    </StyledLink>
-                  </StyledListItem>
-                  <StyledListItem>
-                    {(() => {
-                      const packageVersion =
-                        publicRuntimeConfig.PACKAGE_VERSION || "";
-                      const isTag = packageVersion[0] === "v";
-                      const path = isTag
-                        ? "releases/tag"
-                        : packageVersion === "master"
-                        ? "commits"
-                        : "compare";
-                      return (
-                        <StyledLink
-                          href={`${GITHUB_REPO}/${path}/${packageVersion}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Journal des modifications
-                        </StyledLink>
-                      );
-                    })()}
-                  </StyledListItem>
-                </StyledList>
-              </Category>
-              <Category>
-                <Heading as={StyledStrong} isFirst>
-                  En collaboration avec
-                </Heading>
-                <StyledList>
-                  <StyledListItem>
-                    <StyledLink
-                      href={
-                        "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      La Direction Générale du Travail
-                    </StyledLink>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <StyledLink
-                      href={"https://fabrique.social.gouv.fr/"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      La fabrique des Ministères sociaux
-                    </StyledLink>
-                  </StyledListItem>
-                  <StyledListItem>
-                    <StyledLink
-                      href={"https://beta.gouv.fr/"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      beta.gouv.fr
-                    </StyledLink>
-                  </StyledListItem>
-                </StyledList>
-              </Category>
-            </Links>
-          </nav>
+                    );
+                  })()}
+                </StyledListItem>
+              </StyledList>
+            </Category>
+            <Category>
+              <Heading as={StyledStrong} isFirst>
+                En collaboration avec
+              </Heading>
+              <StyledList>
+                <StyledListItem>
+                  <StyledLink
+                    href={
+                      "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    La Direction Générale du Travail
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink
+                    href={"https://fabrique.social.gouv.fr/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    La fabrique des Ministères sociaux
+                  </StyledLink>
+                </StyledListItem>
+                <StyledListItem>
+                  <StyledLink
+                    href={"https://beta.gouv.fr/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    beta.gouv.fr
+                  </StyledLink>
+                </StyledListItem>
+              </StyledList>
+            </Category>
+          </Links>
         </NavSection>
         <GovernmentSection>
           <li>
