@@ -1041,7 +1041,6 @@ exports[`<Glossaire /> should render 1`] = `
 
 }
 
-<<<<<<< HEAD
 @media (max-width:980px) {
 
 }
@@ -1050,8 +1049,6 @@ exports[`<Glossaire /> should render 1`] = `
 
 }
 
-=======
->>>>>>> master
 @media (max-width:600px) {
   .c2 {
     height: 9rem;
