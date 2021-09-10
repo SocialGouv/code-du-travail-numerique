@@ -22,6 +22,7 @@ export {
   BurgerNavLink,
 } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
+export { DisclosureIcon } from "./DisclosureIcon/index.js";
 export { Dropdown } from "./Dropdown/index.js";
 export { FlatList } from "./FlatList/index.js";
 export { GlobalStyles } from "./GlobalStyles/index.js";
