@@ -222,7 +222,9 @@ exports[`<SearchBar /> should render 1`] = `
       />
     </div>
     <button
+      aria-label="Lancer ma recherche"
       class="c4 c5"
+      title="Lancer ma recherche"
       type="submit"
     >
       <svg
@@ -545,7 +547,9 @@ exports[`<SearchBar /> should render suggestions 1`] = `
       </div>
     </div>
     <button
+      aria-label="Lancer ma recherche"
       class="c6 c7"
+      title="Lancer ma recherche"
       type="submit"
     >
       <svg

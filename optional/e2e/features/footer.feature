@@ -13,7 +13,7 @@ Fonctionnalité: Footer
     Quand je clique sur "Contacter nos services en région"
     Alors je vois "Contact téléphonique"
     Quand je renseigne "75" dans le champ "departement"
-    Quand je clique sur "Rechercher le service"
+    Quand je clique sur "Recherchez le service"
     Alors le lien "https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75" pointe sur "https://idf.drieets.gouv.fr/Adresse-et-horaires-d-ouverture-de-l-unite-departementale-75"
     Quand je ferme la modale
 

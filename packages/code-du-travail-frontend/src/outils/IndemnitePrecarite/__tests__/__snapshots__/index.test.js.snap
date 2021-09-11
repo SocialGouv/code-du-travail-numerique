@@ -474,7 +474,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             1/5
           </span>
         </span>
-        <ul
+        <ol
           class="c8"
         >
           <li
@@ -530,7 +530,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             </span>
             Indemnité
           </li>
-        </ul>
+        </ol>
       </div>
       <p>
         Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité de fin de contrat ou de fin de mission (dite “prime de précarité”) d’un salarié en CDD ou en contrat d’intérim.

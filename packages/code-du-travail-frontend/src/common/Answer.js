@@ -75,13 +75,7 @@ function Answer({
             Partager ce contenu&nbsp;:&nbsp;
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
-          <Feedback
-            query={router.query.q}
-            sourceType={source && source.name}
-            sourceFilter={router.query.source}
-            url={router.asPath}
-            title={title}
-          />
+          <Feedback url={router.asPath} />
         </MainContent>
         {relatedItems.length > 0 && (
           <AsideContent sticky>

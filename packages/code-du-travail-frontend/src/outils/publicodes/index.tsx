@@ -39,6 +39,7 @@ export interface PublicodesResult {
 }
 
 export interface PublicodesContextInterface {
+  execute: (rule: string) => PublicodesResult;
   getNotifications: () => Notification[];
   getReferences: () => References[];
   result?: PublicodesResult;
@@ -48,6 +49,7 @@ export interface PublicodesContextInterface {
 }
 
 const PublicodesContext = createContext<PublicodesContextInterface>({
+  execute: () => null,
   getNotifications: () => [],
   getReferences: () => [],
   missingArgs: [],
@@ -77,6 +79,7 @@ export const PublicodesProvider: React.FC<
   }, [rules]);
 
   const {
+    execute,
     getNotifications,
     getReferences,
     result,
@@ -91,6 +94,7 @@ export const PublicodesProvider: React.FC<
   return (
     <PublicodesContext.Provider
       value={{
+        execute,
         getNotifications,
         getReferences,
         missingArgs,

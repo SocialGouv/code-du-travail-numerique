@@ -1,27 +1,26 @@
-import { Alert, Button, icons, theme } from "@socialgouv/cdtn-ui";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import styled from "styled-components";
 
-type Props = {
-  title: string;
-  children: React.ReactNode;
-};
+import { Alert } from "../Alert";
+import { Button } from "../Button";
+import { fonts, spacings } from "../theme";
 
-export function InfoBulle({ children, title }: Props): JSX.Element {
+export const DisclosureIcon = ({ icon, iconTitle, children }) => {
   const [isNoticeVisible, setIsNoticeVisible] = useState(false);
 
   return (
     <>
-      <InfoButton
-        title={title}
-        aria-label={title}
+      <DisclosureIconButton
+        title={icon}
+        aria-label={iconTitle}
         variant="navLink"
         size="small"
         type="button"
         onClick={() => setIsNoticeVisible(!isNoticeVisible)}
       >
-        <icons.HelpCircle size="20" aria-label="?" />
-      </InfoButton>
+        {icon}
+      </DisclosureIconButton>
       {isNoticeVisible && (
         <AlertWithMargin size="small" variant="secondary">
           {children}
@@ -29,14 +28,14 @@ export function InfoBulle({ children, title }: Props): JSX.Element {
       )}
     </>
   );
-}
+};
 
-const InfoButton = styled(Button)`
+const DisclosureIconButton = styled(Button)`
   display: inline-block;
   font-weight: 700;
-  font-size: ${theme.fonts.sizes.small};
+  font-size: ${fonts.sizes.small};
   color: ${({ theme }) => theme.secondary};
-  margin-left: ${theme.spacings.xsmall};
+  margin-left: ${spacings.xsmall};
   padding: 0.5rem;
   height: 2rem;
   width: 2rem;
@@ -44,5 +43,11 @@ const InfoButton = styled(Button)`
   bottom: -0.5rem;
 `;
 const AlertWithMargin = styled(Alert)`
-  margin-top: ${theme.spacings.base};
+  margin-top: ${spacings.base};
 `;
+
+DisclosureIcon.propTypes = {
+  children: PropTypes.node.isRequired,
+  icon: PropTypes.node.isRequired,
+  iconTitle: PropTypes.string.isRequired,
+};

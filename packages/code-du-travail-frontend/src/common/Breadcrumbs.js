@@ -11,11 +11,11 @@ const Breadcrumbs = ({ items = [] }) => {
     return null;
   }
   return (
-    <Nav>
+    <Nav aria-label="Fil d'ariane">
       <OverflowWrapper>
-        <StyledContainer>
+        <StyledContainer as="ol">
           {[
-            <NavItem key="home">
+            <NavItem key="home" as="li">
               <Link href="/" passHref>
                 <StyledLink title="Retour à l'accueil">
                   <StyledHomeIcon />
@@ -24,7 +24,7 @@ const Breadcrumbs = ({ items = [] }) => {
               </Link>
             </NavItem>,
             ...items.map(({ label, slug }) => (
-              <NavItem key={`${slug}`}>
+              <NavItem key={`${slug}`} as="li">
                 <StyledArrowRight />{" "}
                 <Link key={slug} href={slug} passHref>
                   <StyledLink>{label}</StyledLink>

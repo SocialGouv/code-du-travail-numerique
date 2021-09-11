@@ -103,8 +103,17 @@ Alors("je vois {string} suggestions", (num) => {
   I.seeNumberOfVisibleElements("//ul[@role='listbox']//li", parseInt(num, 10));
 });
 
-Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
+Alors("je vois {string} résultats sous le texte {string}", (num, title) => {
   const target = `following-sibling::*//li//a`;
+  const textMatcher = `text()[starts-with(., "${title}")]`;
+  I.seeNumberOfVisibleElements(
+    `//header[*[${textMatcher}]]/${target} | //div/*[${textMatcher}]/${target}`,
+    parseInt(num, 10)
+  );
+});
+
+Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
+  const target = `following-sibling::*//div//a`;
   const textMatcher = `text()[starts-with(., "${title}")]`;
   I.seeNumberOfVisibleElements(
     `//header[*[${textMatcher}]]/${target} | //div/*[${textMatcher}]/${target}`,
