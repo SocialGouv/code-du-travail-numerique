@@ -37,7 +37,7 @@ export const BurgerNav = ({ children, ...props }) => {
     };
   });
   if (isDesktop) {
-    return <Nav {...props}>{children}</Nav>;
+    return <Div {...props}>{children}</Div>;
   }
 
   return (
@@ -52,10 +52,10 @@ export const BurgerNav = ({ children, ...props }) => {
             variant="naked"
             small
             narrow
-            title="fermer la modale"
+            title="fermer la fenêtre modale"
             onClick={() => setOpen(false)}
           >
-            <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
+            <ScreenReaderOnly>fermer la modal</ScreenReaderOnly>
             <X aria-hidden="true" />
           </CloseButton>
         </StyledDialogContent>
@@ -68,7 +68,7 @@ BurgerNav.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const Nav = styled.nav`
+const Div = styled.div`
   display: flex;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
@@ -104,8 +104,10 @@ const StyledDialogOverlay = styled(DialogOverlay)`
 const StyledDialogContent = styled(DialogContent)`
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
-    width: 40vw;
-    height: calc(100vh - 2 * ${spacings.base});
+    width: 50vw;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
     margin: ${spacings.base};
     padding: ${spacings.larger} 0 ${spacings.base};
     overflow-y: auto;
@@ -117,6 +119,8 @@ const StyledDialogContent = styled(DialogContent)`
     width: calc(100% - 2 * ${spacings.base});
     height: auto;
     margin: ${spacings.base};
+    left: initial;
+    transform: initial;
   }
 `;
 

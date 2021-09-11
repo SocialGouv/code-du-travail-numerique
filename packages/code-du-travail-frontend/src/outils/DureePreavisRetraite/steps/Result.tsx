@@ -1,63 +1,45 @@
-import { Alert } from "@socialgouv/cdtn-ui";
+import { Accordion } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { A11yLink } from "../../../common/A11yLink";
-import Mdx from "../../../common/Mdx";
-import PubliSituation from "../../common/PubliSituation";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import PubliReferences from "../../common/PubliReferences";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
+import DecryptedResult from "./component/DecryptedResult";
+import ShowResult from "./component/ShowResult";
+import { Situation } from "./component/Situation";
+import WarningResult from "./component/WarningResult";
 
 function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
-  const notifications = publicodesContext.getNotifications();
-  const references = publicodesContext.getReferences();
+  const formValues = form.getState().values;
+
   return (
     <>
-      <SectionTitle>Durée du préavis</SectionTitle>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        départ à la retraite est estimée à&nbsp;
-        <Highlight>
-          {publicodesContext.result.value}{" "}
-          {publicodesContext.result.unit.numerators[0]}
-        </Highlight>
-        .
-      </p>
-      {notifications.length > 0 && (
-        <Alert>
-          {publicodesContext.getNotifications().map((notification) => (
-            <Mdx
-              key={notification.dottedName}
-              markdown={notification.description}
-            />
-          ))}
-        </Alert>
-      )}
-      <PubliSituation
-        situation={publicodesContext.situation}
-        form={form.getState().values}
+      <ShowResult publicodesContext={publicodesContext} />
+      <Accordion
+        items={[
+          {
+            body: (
+              <>
+                <Situation
+                  content={formValues}
+                  elements={publicodesContext.situation}
+                />
+                <DecryptedResult
+                  data={formValues}
+                  publicodesContext={publicodesContext}
+                />
+                <PubliReferences
+                  references={publicodesContext.getReferences()}
+                />
+              </>
+            ),
+            title: <p>Voir le détail du calcul</p>,
+          },
+        ]}
       />
-      {references.length > 0 && (
-        <>
-          <SectionTitle>Source</SectionTitle>
-          <ul>
-            {references.map(({ article, url }, id) => (
-              <li key={`${url}-${id}`}>
-                <A11yLink
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`Consultez l’${article.toLowerCase()}`}
-                >
-                  {article}
-                </A11yLink>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <WarningResult publicodesContext={publicodesContext} data={formValues} />
     </>
   );
 }

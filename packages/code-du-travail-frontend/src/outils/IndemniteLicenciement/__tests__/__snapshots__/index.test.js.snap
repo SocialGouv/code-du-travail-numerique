@@ -474,7 +474,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             1/5
           </span>
         </span>
-        <ul
+        <ol
           class="c8"
         >
           <li
@@ -530,7 +530,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             </span>
             Indemnité légale
           </li>
-        </ul>
+        </ol>
       </div>
       <p>
         Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité minimale de licenciement d’un salarié.

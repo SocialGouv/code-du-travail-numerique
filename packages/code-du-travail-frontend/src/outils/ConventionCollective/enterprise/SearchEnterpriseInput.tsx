@@ -9,8 +9,8 @@ import {
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
+import { InfoBulle } from "../../common/InfoBulle";
 import { SectionTitle } from "../../common/stepStyles";
-import { InfoBulle } from "../common/InfoBulle";
 
 type Props = {
   query?: string;
@@ -99,6 +99,7 @@ const InlineLabel = styled(Label)`
 
 const Box = styled.div`
   flex: 1;
+
   & + & {
     flex: 0 1 25rem;
     padding-left: ${theme.spacings.xmedium};

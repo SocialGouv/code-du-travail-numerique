@@ -18,6 +18,7 @@ metadata:
   labels:
     azure-pg-admin-user: code-du-travail-numerique
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -35,6 +36,7 @@ metadata:
   labels:
     app: api
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -56,6 +58,7 @@ spec:
       labels:
         app: api
         application: v1-2-3-code-du-travail-numerique
+        component: v1-2-3-code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
@@ -125,6 +128,7 @@ metadata:
   namespace: code-du-travail-numerique-85-preprod-dev42
   labels:
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -150,6 +154,7 @@ spec:
       name: api-secret
       labels:
         application: v1-2-3-code-du-travail-numerique
+        component: v1-2-3-code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
@@ -167,6 +172,7 @@ metadata:
     app.gitlab.com/env.name: preprod-dev42
   labels:
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -186,6 +192,7 @@ metadata:
   labels:
     app: api
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -219,6 +226,7 @@ metadata:
   labels:
     app: api
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -253,6 +261,7 @@ metadata:
   labels:
     app: www
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -274,6 +283,7 @@ spec:
       labels:
         app: www
         application: v1-2-3-code-du-travail-numerique
+        component: v1-2-3-code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
@@ -332,7 +342,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.39.1
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -355,6 +365,7 @@ metadata:
     app.gitlab.com/env.name: preprod-dev42
   labels:
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -375,6 +386,7 @@ metadata:
   labels:
     app: www
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -408,6 +420,7 @@ metadata:
   labels:
     app: www
     application: v1-2-3-code-du-travail-numerique
+    component: v1-2-3-code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard

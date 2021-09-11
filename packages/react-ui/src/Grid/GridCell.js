@@ -11,7 +11,7 @@ export const GridCell = (props) => {
 
 // The "-1" in width calculation fixes a redenring issue on IE11 causing tile
 // supposed to stay on the same line to go to the next line
-export const ListItem = styled.li`
+export const ListItem = styled.div`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;

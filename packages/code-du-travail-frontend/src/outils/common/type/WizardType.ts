@@ -6,6 +6,7 @@ export interface Step {
   label: string;
   name: string;
   skip?: (values: FormContent) => boolean;
+  annotation?: (props: WizardStepProps) => JSX.Element;
 }
 
 export interface State {
@@ -27,7 +28,7 @@ export interface WizardStepProps {
   dispatch: React.Dispatch<Action>;
 }
 
-interface ConventionCollective {
+export interface ConventionCollective {
   id: string;
   num: number;
   shortTitle: string;
@@ -37,5 +38,6 @@ interface ConventionCollective {
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;
+  seniorityGreaterThanTwoYears: boolean;
   infos?: Record<string, string>;
 };

@@ -29,7 +29,7 @@ export const StyledOverflowWrapper = styled(OverflowWrapper)`
   }
 `;
 
-export const List = styled.ul`
+export const List = styled.div`
   display: flex; /* Flex layout so items have equal height. */
   flex-wrap: wrap;
   align-content: stretch;
