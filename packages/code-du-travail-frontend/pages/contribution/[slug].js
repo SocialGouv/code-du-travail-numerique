@@ -8,6 +8,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
+import { getCanonicalUrl } from "../../src/utils";
 
 const {
   publicRuntimeConfig: { FRONTEND_HOST, API_URL },
@@ -84,7 +85,9 @@ class PageContribution extends React.Component {
       <>
         <Head>
           <link
-            href={`${FRONTEND_HOST}${this.props.router.asPath}`}
+            href={getCanonicalUrl(
+              `${FRONTEND_HOST}${this.props.router.asPath}`
+            )}
             rel="canonical"
           />
         </Head>
