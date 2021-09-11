@@ -90,8 +90,8 @@ export const createRootData = (
     noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
-    isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     agreement: agreement,
+    isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
   };
