@@ -11,48 +11,18 @@ import {
 import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
-import Lightbox from "react-image-lightbox";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
 import styled from "styled-components";
 import unified from "unified";
 
-import { useScrollBlock } from "../../hooks";
 import { A11yLink } from "../../src/common/A11yLink";
 import Answer from "../../src/common/Answer";
+import ImageWrapper from "../../src/common/ImageWrapper";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib/getFileUrl";
-
-const ImageWrapper = ({ altText, src }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [blockScroll, allowScroll] = useScrollBlock();
-
-  return (
-    <>
-      <img
-        src={src}
-        alt={altText}
-        style={{ cursor: "zoom-in" }}
-        onClick={() => {
-          setIsOpen(true);
-          blockScroll();
-        }}
-        aria-hidden="true"
-      />
-      {isOpen && (
-        <Lightbox
-          mainSrc={src}
-          onCloseRequest={() => {
-            setIsOpen(false);
-            allowScroll();
-          }}
-        />
-      )}
-    </>
-  );
-};
 
 const {
   publicRuntimeConfig: { API_URL },

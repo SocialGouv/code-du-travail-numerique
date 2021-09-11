@@ -1,18 +1,20 @@
 import { useRef } from "react";
 
-const safeDocument = typeof document !== "undefined" ? document : {};
+const safeDocument: Document =
+  typeof document !== "undefined" ? document : null;
 
 /**
  * Usage:
  * const [blockScroll, allowScroll] = useScrollBlock();
  */
-const useScrollBlock = () => {
-  const scrollBlocked = useRef();
+const useScrollBlock = (): [() => void, () => void] => {
+  const scrollBlocked = useRef(false);
   const html = safeDocument.documentElement;
   const { body } = safeDocument;
 
-  const blockScroll = () => {
+  const blockScroll = (): void => {
     if (!body || !body.style || scrollBlocked.current) return;
+    if (document == undefined) return;
 
     const scrollBarWidth = window.innerWidth - html.clientWidth;
     const bodyPaddingRight =
@@ -35,7 +37,7 @@ const useScrollBlock = () => {
     scrollBlocked.current = true;
   };
 
-  const allowScroll = () => {
+  const allowScroll = (): void => {
     if (!body || !body.style || !scrollBlocked.current) return;
 
     html.style.position = "";
@@ -49,4 +51,5 @@ const useScrollBlock = () => {
 
   return [blockScroll, allowScroll];
 };
+
 export default useScrollBlock;
