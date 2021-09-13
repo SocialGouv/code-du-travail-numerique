@@ -18,6 +18,7 @@ import unified from "unified";
 
 import { A11yLink } from "../../src/common/A11yLink";
 import Answer from "../../src/common/Answer";
+import ImageWrapper from "../../src/common/ImageWrapper";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
@@ -74,7 +75,7 @@ const Information = ({
         <>
           {type === "graphic" ? (
             <div key={name}>
-              <img src={toUrl(imgUrl)} alt={altText} />
+              <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
               <DownloadWrapper>
                 <Button
                   as="a"

@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "react-image-lightbox/style.css";
 
 import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
