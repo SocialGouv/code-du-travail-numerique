@@ -105,10 +105,10 @@
     "{pages,src}/**/*.{css,js}": [
       "yarn lint-css"
     ],
-    "{__tests__,pages,server,src}/**/*.js": [
+    "{__tests__,pages,server,src}/**/*.{js,ts}": [
       "yarn lint-js --fix"
     ],
-    "{__mocks__,test}/**/*.js": [
+    "{__mocks__,test}/**/*.{js,ts}": [
       "yarn lint-js --fix"
     ]
   },
