@@ -8,19 +8,22 @@ type PageInfo = {
 };
 
 class AtInternetService {
-  private atTag?: any;
+  private readonly atTag: any;
 
   constructor() {
     try {
       this.atTag = new ATInternet.Tracker.Tag();
     } catch (e) {
       console.error(`Unable to load AT internet.`, e);
+      this.atTag = null;
     }
   }
 
   sendPage(data: PageInfo): void {
-    this.atTag.page.set(data);
-    this.atTag.dispatch();
+    if (this.atTag) {
+      this.atTag.page.set(data);
+      this.atTag.dispatch();
+    }
   }
 }
 
