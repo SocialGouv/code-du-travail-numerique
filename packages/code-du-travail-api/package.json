@@ -54,7 +54,7 @@
     "supertest": "^6.1.6"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{ts,js}": [
       "yarn lint --fix"
     ]
   },

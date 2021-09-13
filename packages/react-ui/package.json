@@ -82,7 +82,7 @@
     "ui"
   ],
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{ts,js}": [
       "yarn lint-css",
       "yarn lint-js --fix"
     ]
