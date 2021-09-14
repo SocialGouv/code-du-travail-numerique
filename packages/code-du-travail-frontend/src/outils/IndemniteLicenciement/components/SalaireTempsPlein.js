@@ -71,6 +71,9 @@ function SalaireTempsPlein({ name }) {
                         <>
                           <Input
                             {...input}
+                            title={`Salaire mensuel brut pour le mois ${
+                              index + 1
+                            } (prendre en compte les primes et avantages en nature)`}
                             type="number"
                             id={`salary${index}`}
                             invalid={touched && invalid}
