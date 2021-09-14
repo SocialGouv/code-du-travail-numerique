@@ -46,7 +46,7 @@ contrat salarié . convention collective . automobiles . préavis de mise à la 
       - catégorie professionnelle = 'Ouvriers'
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 2.12: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191
+    Article 2.12 pour les ouvriers et employés: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191
 
 contrat salarié . convention collective . automobiles . préavis de mise à la retraite . ouvriers échelon 1 et 2:
   remplace: contrat salarié . préavis de retraite collective
@@ -92,7 +92,7 @@ contrat salarié . convention collective . automobiles . préavis de mise à la 
       - montant: 3 mois
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 4.10: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
+    Article 4.10 pour les agents de maîtrise et cadres: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
 
 contrat salarié . convention collective . automobiles . préavis de mise à la retraite . cadre:
   remplace: contrat salarié . préavis de retraite collective
@@ -103,7 +103,7 @@ contrat salarié . convention collective . automobiles . préavis de mise à la 
   valeur: 3 mois
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 4.10: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
+    Article 4.10 pour les agents de maîtrise et cadres: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
 
 contrat salarié . convention collective . automobiles . préavis de départ à la retraite . cadre:
   remplace: contrat salarié . préavis de retraite collective
@@ -114,7 +114,7 @@ contrat salarié . convention collective . automobiles . préavis de départ à 
   valeur: 3 mois
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 4.10: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
+    Article 4.10 pour les agents de maîtrise et cadres: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
 
 contrat salarié . convention collective . automobiles . préavis de départ à la retraite:
   applicable si: départ à la retraite
@@ -134,7 +134,7 @@ contrat salarié . convention collective . automobiles . préavis de départ à 
       - montant: 1 mois
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 2.12: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191
+    Article 2.12 pour les ouvriers et employés: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191
 
 contrat salarié . convention collective . automobiles . préavis de départ à la retraite . agents de maîtrise :
   remplace: contrat salarié . préavis de retraite collective
@@ -150,4 +150,4 @@ contrat salarié . convention collective . automobiles . préavis de départ à 
       - montant: 3 mois
   références:
     Article 1.23: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191
-    Article 4.10: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
+    Article 4.10 pour les agents de maîtrise et cadres: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191
