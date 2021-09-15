@@ -1,5 +1,8 @@
 FROM node:14.17-alpine3.13
 
+# used in CI tests
+RUN apk add --no-cache curl=~7
+
 WORKDIR /app
 
 COPY ./package.json .
