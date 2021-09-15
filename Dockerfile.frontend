@@ -22,7 +22,7 @@ COPY ./packages/code-du-travail-modeles/package.json /app/packages/code-du-trava
 RUN yarn --frozen-lockfile && yarn cache clean
 
 # fake CI env
-# ENV CI=true
+ENV CI=true
 
 COPY ./lerna.json .
 COPY ./packages .
