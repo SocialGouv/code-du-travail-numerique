@@ -15,7 +15,9 @@
 .master_based_stage: &master_based_stage
   variables:
     GIT_STRATEGY: none
-  image: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-frontend:$CI_COMMIT_SHA
+  image:
+    name: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-frontend:$CI_COMMIT_SHA
+    entrypoint: [""]
   needs:
     - Register frontend image
   before_script:
