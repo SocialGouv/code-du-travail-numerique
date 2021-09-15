@@ -16,8 +16,8 @@
   variables:
     GIT_STRATEGY: none
   image: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-frontend:$CI_COMMIT_SHA
-  # needs:
-  #   - Register socialgouv/cdtn base image
+  needs:
+    - Register frontend image
   before_script:
     - cd /app
 
@@ -93,7 +93,7 @@ Test @cdtn/api:
   <<: *master_based_stage
   needs:
     - Register elasticsearch image
-    #- Register socialgouv/cdtn base image
+    - Register socialgouv/cdtn base image
   services:
     - name: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
