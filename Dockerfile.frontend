@@ -4,28 +4,15 @@ FROM node:14.17-alpine3.13 as builder
 WORKDIR /app
 
 # root packages (lerna)
-COPY ./package.json /app/package.json
-COPY ./yarn.lock /app/yarn.lock
+COPY ./package.json .
+COPY ./yarn.lock .
 
-# packages needed for the frontend
-COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
-COPY ./packages/code-du-travail-data/prime-precarite/package.json /app/packages/code-du-travail-data/prime-precarite/package.json
-COPY ./packages/code-du-travail-data/simulateurs/package.json /app/packages/code-du-travail-data/simulateurs/package.json
-COPY ./packages/code-du-travail-data/tools/package.json /app/packages/code-du-travail-data/tools/package.json
-COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
-COPY ./packages/sources/package.json /app/packages/sources/package.json
-COPY ./packages/slugify/package.json /app/packages/slugify/package.json
-COPY ./packages/react-ui/package.json /app/packages/react-ui/package.json
-COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
-COPY ./packages/code-du-travail-modeles/package.json /app/packages/code-du-travail-modeles/package.json
+
+COPY ./lerna.json .
+COPY ./packages ./packages
 
 RUN yarn --frozen-lockfile && yarn cache clean
 
-# fake CI env
-ENV CI=true
-
-COPY ./lerna.json .
-COPY ./packages .
 
 # dont include API in frontend build
 RUN rm -rf ./packages/code-du-travail-api
