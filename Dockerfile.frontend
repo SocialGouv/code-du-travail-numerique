@@ -1,4 +1,4 @@
-FROM node:14.17-alpine3.13
+FROM node:14.17-alpine3.13 as builder
 
 # NOTE(douglasduteil): add `curl` in the master image
 # `curl` is very useful for later health check tests ;)
@@ -10,7 +10,7 @@ WORKDIR /app
 
 #
 
-COPY ./scripts /app/scripts
+# COPY ./scripts /app/scripts
 
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
@@ -42,3 +42,8 @@ COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
+
+#FROM node:14.17-alpine3.13
+
+
+ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]

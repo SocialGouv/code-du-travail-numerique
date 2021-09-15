@@ -14,12 +14,12 @@
 
 #
 
-Register socialgouv/cdtn base image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: .
-    IMAGE_NAME: cdtn-base
+# Register socialgouv/cdtn base image:
+#   <<: *register_stage
+#   stage: "Prepare"
+#   variables:
+#     CONTEXT: .
+#     IMAGE_NAME: cdtn-base
 
 Register elasticsearch image:
   <<: *register_stage
@@ -37,16 +37,12 @@ Register api image:
     CONTEXT: packages/code-du-travail-api
     DOCKER_BUILD_ARGS: >-
       --dockerfile ./packages/code-du-travail-api/Dockerfile
-      --build-arg REGISTRY=${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
-      --build-arg IMAGE_TAG=${CI_COMMIT_SHA}
     IMAGE_NAME: cdtn-api
 
 Register frontend image:
   <<: *register_stage
   variables:
-    CONTEXT: packages/code-du-travail-frontend
+    CONTEXT: .
     DOCKER_BUILD_ARGS: >-
-      --dockerfile ./packages/code-du-travail-frontend/Dockerfile
-      --build-arg REGISTRY=${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
-      --build-arg IMAGE_TAG=${CI_COMMIT_SHA}
+      --dockerfile ./Dockerfile.frontend
     IMAGE_NAME: cdtn-frontend
