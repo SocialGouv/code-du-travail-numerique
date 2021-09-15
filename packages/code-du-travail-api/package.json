@@ -5,14 +5,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "ncc build ./src/server/index.js -o dist --source-map",
+    "build": "npm run build:src && npm run build:test",
+    "build:test": "babel ./tests/** -d testsbuild --copy-files",
+    "build:src": "babel ./src/server/index.js -d dist",
     "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
-    "dev": "nodemon -r esm ./src/server/index.js",
-    "update-mock-data": "ES_INDEX_PREFIX=cdtn node -r esm tests/fetch_mock_data.js",
-    "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
+    "dev": "nodemon --exec babel-node ./src/server/index.js",
+    "update-mock-data": "npm run build && ES_INDEX_PREFIX=cdtn node testsbuild/fetch_mock_data.js",
+    "pretest": "npm run build && NODE_ENV=test node testsbuild/create_indexes.js",
     "test": "ES_INDEX_PREFIX=cdtn_test jest"
   },
   "repository": {
@@ -44,10 +46,14 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "@vercel/ncc": "^0.29.2",
+    "babel-jest": "^27.2.0",
     "eslint": "^7.31.0",
-    "esm": "^3.2.25",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "nodemon": "^2.0.12",
