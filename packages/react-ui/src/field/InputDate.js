@@ -5,9 +5,18 @@ import styled from "styled-components";
 import { breakpoints } from "../theme.js";
 import { Input } from "./Input.js";
 
-export const InputDate = ({ ...props }) => (
-  <StyledInputDate type="date" placeholder="JJ/MM/AAAA" {...props} />
-);
+export const InputDate = ({ ...props }) => {
+  return (
+    <StyledInputDate
+      type="date"
+      placeholder="JJ/MM/AAAA"
+      min="1900-01-01"
+      max="2099-12-31"
+      maxlength="11"
+      {...props}
+    />
+  );
+};
 
 InputDate.propTypes = {
   name: PropTypes.string.isRequired,

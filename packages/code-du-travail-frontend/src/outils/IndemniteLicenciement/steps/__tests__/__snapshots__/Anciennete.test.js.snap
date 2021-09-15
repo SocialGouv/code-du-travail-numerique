@@ -278,6 +278,8 @@ exports[`<Anciennete /> should render 1`] = `
         <input
           class="c7"
           id="1"
+          max="2099-12-31"
+          min="1900-01-01"
           name="dateEntree"
           placeholder=" jj/mm/yyyy"
           type="date"
@@ -311,6 +313,8 @@ exports[`<Anciennete /> should render 1`] = `
         <input
           class="c7"
           id="2"
+          max="2099-12-31"
+          min="1900-01-01"
           name="dateNotification"
           placeholder=" jj/mm/yyyy"
           type="date"
@@ -344,6 +348,8 @@ exports[`<Anciennete /> should render 1`] = `
         <input
           class="c7"
           id="3"
+          max="2099-12-31"
+          min="1900-01-01"
           name="dateSortie"
           placeholder=" jj/mm/yyyy"
           type="date"

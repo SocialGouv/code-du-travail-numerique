@@ -17,7 +17,9 @@ function SalaireTempsPlein({ name }) {
         fields.length > 0 && (
           <Table>
             <Caption>
-              <Question required>Salaire mensuel brut</Question>
+              <Question required as="p">
+                Salaire mensuel brut
+              </Question>
               <SmallText>
                 Prendre en compte les primes et avantages en nature.
               </SmallText>
@@ -69,6 +71,9 @@ function SalaireTempsPlein({ name }) {
                         <>
                           <Input
                             {...input}
+                            title={`Salaire mensuel brut pour le mois ${
+                              index + 1
+                            } (prendre en compte les primes et avantages en nature)`}
                             type="number"
                             id={`salary${index}`}
                             invalid={touched && invalid}
