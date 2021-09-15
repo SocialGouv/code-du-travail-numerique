@@ -92,7 +92,11 @@ Test @socialgouv/react-fiche-service-public:
 
 Test @cdtn/api:
   <<: *quality_stage
-  <<: *master_based_stage
+  image:
+    name: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-api:$CI_COMMIT_SHA
+    entrypoint: [""]
+  before_script:
+    - cd /app
   needs:
     - Register elasticsearch image
     - Register frontend image
@@ -123,7 +127,7 @@ Test @cdtn/api:
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
       [ "$retry" -eq "-1" ] && exit 1
     #
-    - yarn workspace @cdt/api test --coverage
+    - yarn test --coverage
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage
