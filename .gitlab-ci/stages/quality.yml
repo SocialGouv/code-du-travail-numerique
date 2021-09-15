@@ -93,7 +93,7 @@ Test @cdtn/api:
   <<: *master_based_stage
   needs:
     - Register elasticsearch image
-    - Register socialgouv/cdtn base image
+    - Register frontend image
   services:
     - name: $HARBOR_REGISTRY/$HARBOR_PROJECT/cdtn-elasticsearch:$CI_COMMIT_SHA
       alias: elasticsearch
