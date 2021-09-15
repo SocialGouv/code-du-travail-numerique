@@ -41,6 +41,7 @@ Register api image:
 
 Register frontend image:
   <<: *register_stage
+  stage: "Prepare"
   variables:
     CONTEXT: .
     DOCKER_BUILD_ARGS: >-
