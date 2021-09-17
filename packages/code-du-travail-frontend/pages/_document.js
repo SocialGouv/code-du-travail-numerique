@@ -48,6 +48,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
           <script src="/static/polyfill.min.js" />
           <script src="/static/webcomponents-polyfill/loader.js" />
+          <script src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>
