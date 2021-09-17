@@ -17,6 +17,13 @@ test("should transform a url to a canonical url", () => {
     "https://code.travail.gouv.fr/contribution/les-conges-10-pour-evenements-familiaux"
   );
   expect(parsedUrlWithOriginNumber).toBe(
-    "https://code.travail.gouv.fr/contribution/les-conges-pour-evenements-familiaux"
+    "https://code.travail.gouv.fr/contribution/les-conges-10-pour-evenements-familiaux"
+  );
+
+  const parsedUrlWithOriginNumberAtBeginning = getCanonicalUrl(
+    "https://code.travail.gouv.fr/contribution/24-les-conges-10-pour-evenements-familiaux"
+  );
+  expect(parsedUrlWithOriginNumberAtBeginning).toBe(
+    "https://code.travail.gouv.fr/contribution/les-conges-10-pour-evenements-familiaux"
   );
 });
