@@ -50,13 +50,11 @@ jobs:
         run: |
           yarn workspace @cdt/data lint
 
-      - name: Lint dockerfiles
-        run: |
-          for i in $(find . -name Dockerfile); do
-            echo ""
-            echo "[+] hadolint ${i}"
-            hadolint ${i}
-          done
+      - name: Lint Dockerfiles
+        uses: hadolint/hadolint-action@v1.5.0
+        with:
+          dockerfile: Dockerfile
+          recursive: true
 
       - name: Test @cdt/frontend
         run: |
