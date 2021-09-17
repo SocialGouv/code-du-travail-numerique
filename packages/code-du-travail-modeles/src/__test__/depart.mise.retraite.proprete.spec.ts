@@ -3,15 +3,12 @@ import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
 
-/**
-  TODO:
-  ${6}      | ${"Agents de propreté"}               | ${7}           | ${"jour"}
-  ${24}     | ${"Agents de propreté"}               | ${7}           | ${"jour"}
- */
 test.each`
   seniority | category                              | expectedNotice | expectedNoticeUnit
   ${0}      | ${"Agents de propreté"}               | ${0}           | ${"mois"}
   ${4}      | ${"Agents de propreté"}               | ${2}           | ${"jour"}
+  ${6}      | ${"Agents de propreté"}               | ${7}           | ${"jour"}
+  ${24}     | ${"Agents de propreté"}               | ${7}           | ${"jour"}
   ${0}      | ${"Employés"}                         | ${0}           | ${"mois"}
   ${3}      | ${"Employés"}                         | ${1}           | ${"mois"}
   ${6}      | ${"Employés"}                         | ${1}           | ${"mois"}
