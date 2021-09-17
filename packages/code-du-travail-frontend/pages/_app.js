@@ -57,12 +57,17 @@ export default class MyApp extends App {
       }
     }
 
-    return { pageProps };
+    return {
+      pageProps,
+      trackingEnabled: process.env.NODE_ENV === "production",
+    };
   }
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
-    initATInternetService();
+    if (this.props.trackingEnabled) {
+      initATInternetService();
+    }
   }
 
   componentDidCatch(error, errorInfo) {

@@ -27,9 +27,10 @@ class AtInternetService {
   }
 }
 
-export const ATService = new AtInternetService();
+export let ATService;
 
 export const initATInternetService = (): void => {
+  ATService = new AtInternetService();
   ATService.sendPage({ name: document.title, path: location.pathname });
   Router.events.on("routeChangeComplete", (path) => {
     const [pathname] = path.split("?");
