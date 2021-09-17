@@ -23,28 +23,28 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install deps
-        run:
-          - yarn install --prefer-offline --frozen-lockfile
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
 
       - name: Lint @cdt/api
-        run:
-          - yarn workspace @cdt/api lint
+        run: |
+          yarn workspace @cdt/api lint
 
       - name: Lint socialgouv/cdtn-ui
-        run:
-          - yarn workspace @socialgouv/cdtn-ui lint
+        run: |
+          yarn workspace @socialgouv/cdtn-ui lint
 
       - name: Lint socialgouv/react-fiche-service-public
-        run:
-          - yarn workspace @socialgouv/react-fiche-service-public lint
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public lint
 
       - name: Lint cdt/frontend
-        run:
-          - yarn workspace @cdt/frontend lint
+        run: |
+          yarn workspace @cdt/frontend lint
 
       - name: Lint cdt/data
-        run:
-          - yarn workspace @cdt/data lint
+        run: |
+          yarn workspace @cdt/data lint
 
       - name: Lint dockerfiles
         run: |
