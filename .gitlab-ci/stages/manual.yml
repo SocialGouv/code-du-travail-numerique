@@ -27,7 +27,7 @@ Release:
     - yarn --frozen-lockfile
     - yarn build:ui
   script:
-    - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --yes"}
+    - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --conventional-commits --yes"}
     - yarn lerna publish from-package --yes
 
 #
