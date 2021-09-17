@@ -8,7 +8,7 @@ Release:
   dependencies: []
   when: manual
   variables:
-    LERNA_ARGS: --force-publish --yes --conventional-graduate
+    LERNA_ARGS: --force-publish --yes
   except:
     refs:
       # Don't tag tags
