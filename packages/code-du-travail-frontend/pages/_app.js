@@ -59,7 +59,7 @@ export default class MyApp extends App {
 
     return {
       pageProps,
-      trackingEnabled: process.env.NODE_ENV === "production",
+      trackingEnabled: process.env.IS_PRODUCTION_DEPLOYMENT === "true",
     };
   }
 
