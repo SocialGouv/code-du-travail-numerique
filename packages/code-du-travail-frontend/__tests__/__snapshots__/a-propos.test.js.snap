@@ -1358,7 +1358,7 @@ exports[`<About /> should render 1`] = `
           <div
             class="c30"
           >
-            <div
+            <header
               class="c31"
             >
               <h2
@@ -1369,7 +1369,7 @@ exports[`<About /> should render 1`] = `
                 />
                 Qu’est-ce que le Code du travail numérique ?
               </h2>
-            </div>
+            </header>
             <p>
               Le Code du travail numérique est un service public en ligne et gratuit vous permettant d’obtenir des réponses personnalisées sur le droit de travail.
             </p>
@@ -1438,7 +1438,7 @@ exports[`<About /> should render 1`] = `
                 des modèles de courrier.
               </li>
             </ul>
-            <div
+            <header
               class="c31"
             >
               <h2
@@ -1449,7 +1449,7 @@ exports[`<About /> should render 1`] = `
                 />
                 Qui sommes-nous ?
               </h2>
-            </div>
+            </header>
             <h3
               class="c34"
             >
@@ -1523,7 +1523,7 @@ exports[`<About /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c38"
             >
               <strong
@@ -1534,7 +1534,7 @@ exports[`<About /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c40 c41"
             >

@@ -381,7 +381,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
             role="dialog"
             tabindex="-1"
           >
-            <div
+            <header
               class="c3"
             >
               <h2
@@ -392,7 +392,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
                 />
                 Accessibilité
               </h2>
-            </div>
+            </header>
             <h3
               class="c6"
             >

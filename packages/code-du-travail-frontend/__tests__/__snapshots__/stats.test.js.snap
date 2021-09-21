@@ -1480,10 +1480,10 @@ exports[`<Stats /> should render 1`] = `
               <div
                 class="c31"
               >
-                <div
+                <ul
                   class="c32"
                 >
-                  <div
+                  <li
                     class="c33"
                   >
                     <div
@@ -1500,8 +1500,8 @@ exports[`<Stats /> should render 1`] = `
                         16
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </li>
+                  <li
                     class="c33"
                   >
                     <div
@@ -1518,8 +1518,8 @@ exports[`<Stats /> should render 1`] = `
                         20
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </li>
+                  <li
                     class="c33"
                   >
                     <div
@@ -1536,8 +1536,8 @@ exports[`<Stats /> should render 1`] = `
                         4
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </li>
+                  <li
                     class="c33"
                   >
                     <div
@@ -1554,8 +1554,8 @@ exports[`<Stats /> should render 1`] = `
                         10
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <p>
@@ -1580,7 +1580,7 @@ exports[`<Stats /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c41"
             >
               <strong
@@ -1591,7 +1591,7 @@ exports[`<Stats /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c43 c44"
             >

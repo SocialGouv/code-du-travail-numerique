@@ -442,7 +442,7 @@ exports[`<Footer /> should render 1`] = `
         <div
           class="c4"
         >
-          <div
+          <header
             class="c5"
           >
             <strong
@@ -453,7 +453,7 @@ exports[`<Footer /> should render 1`] = `
               />
               Besoin de plus d’informations ?
             </strong>
-          </div>
+          </header>
           <div
             class="c8 c9"
           >

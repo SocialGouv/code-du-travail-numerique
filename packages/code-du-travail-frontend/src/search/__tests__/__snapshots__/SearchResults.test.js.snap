@@ -987,7 +987,7 @@ exports[`<SearchResults/> should render results 1`] = `
       <div
         class="c21"
       >
-        <div
+        <header
           class="c22"
         >
           <h2
@@ -998,17 +998,17 @@ exports[`<SearchResults/> should render results 1`] = `
             />
             Que dit le code du travail ?
           </h2>
-        </div>
+        </header>
         <div
           class="c25 c26"
         >
           <div
             class="c27"
           >
-            <div
+            <ul
               class="c28"
             >
-              <div
+              <li
                 class="c29"
               >
                 <a
@@ -1035,11 +1035,11 @@ exports[`<SearchResults/> should render results 1`] = `
                     la description
                   </div>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div
+        <header
           class="c22"
         >
           <h2
@@ -1050,17 +1050,17 @@ exports[`<SearchResults/> should render results 1`] = `
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
-        </div>
+        </header>
         <div
           class="c25 c26"
         >
           <div
             class="c27"
           >
-            <div
+            <ul
               class="c28"
             >
-              <div
+              <li
                 class="c30"
               >
                 <a
@@ -1085,8 +1085,8 @@ exports[`<SearchResults/> should render results 1`] = `
                     </div>
                   </div>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

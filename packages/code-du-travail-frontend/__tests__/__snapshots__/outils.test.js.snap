@@ -1593,10 +1593,10 @@ exports[`<Outils /> should render 1`] = `
             <div
               class="c31"
             >
-              <div
+              <ul
                 class="c32"
               >
-                <div
+                <li
                   class="c33"
                 >
                   <a
@@ -1693,8 +1693,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -1815,8 +1815,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -1911,8 +1911,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2015,8 +2015,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2141,8 +2141,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2261,8 +2261,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2367,8 +2367,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2469,8 +2469,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2589,8 +2589,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-                <div
+                </li>
+                <li
                   class="c33"
                 >
                   <a
@@ -2697,8 +2697,8 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                   </a>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -2717,7 +2717,7 @@ exports[`<Outils /> should render 1`] = `
           <div
             class="c4"
           >
-            <div
+            <header
               class="c51"
             >
               <strong
@@ -2728,7 +2728,7 @@ exports[`<Outils /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </div>
+            </header>
             <div
               class="c53 c54"
             >
