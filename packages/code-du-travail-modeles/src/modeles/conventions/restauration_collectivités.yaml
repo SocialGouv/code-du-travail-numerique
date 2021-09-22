@@ -1,0 +1,86 @@
+#Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+contrat salarié . convention collective . restauration collectivités:
+  description: Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+  applicable si: convention collective = 'IDCC1266'
+  valeur: oui
+  idcc: 1266
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Maîtrises: "'Maîtrises'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite:
+  applicable si: mise à la retraite
+  valeur: oui
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 8 jours
+        plafond: 6 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . maîtrises:
+  applicable si: catégorie professionnelle = 'Maîtrises'
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 24 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . départ à la retraite:
+  applicable si: départ à la retraite
+  valeur: oui
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . départ à la retraite . employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 8 jours
+        plafond: 6 mois
+      - montant: 1 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . départ à la retraite . maîtrises:
+  applicable si: catégorie professionnelle = 'Maîtrises'
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . départ à la retraite . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . cadres . notification:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - catégorie professionnelle = 'Cadres'
+      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+
+  type: notification
+  description: "Cette durée s’applique sauf s’il existe dans le contrat de travail des stipulations particulières."
+  valeur: oui
