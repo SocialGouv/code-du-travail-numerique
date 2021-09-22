@@ -3,7 +3,7 @@ contrat salarié . convention collective . cabinets médicaux:
   description: Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981
   applicable si: convention collective = 'IDCC1147'
   valeur: oui
-  idcc: 44
+  idcc: 1147
 
 contrat salarié . convention collective . cabinets médicaux . mise à la retraite:
   applicable si: mise à la retraite
