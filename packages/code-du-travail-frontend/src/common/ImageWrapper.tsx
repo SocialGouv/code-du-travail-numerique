@@ -37,7 +37,7 @@ const ImageWrapper = ({ altText, src }: Props): JSX.Element => {
 };
 
 const StyledImage = styled.img`
-  cursor: "zoom-in";
+  cursor: zoom-in;
 `;
 
 export default ImageWrapper;
