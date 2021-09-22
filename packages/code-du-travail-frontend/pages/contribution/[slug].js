@@ -1,14 +1,17 @@
 import { extractMdxContentUrl } from "@cdt/data";
 import getConfig from "next/config";
+import Head from "next/head";
+import { withRouter } from "next/router";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
+import { getCanonicalUrl } from "../../src/utils";
 
 const {
-  publicRuntimeConfig: { API_URL },
+  publicRuntimeConfig: { FRONTEND_HOST, API_URL },
 } = getConfig();
 
 const fetchQuestion = ({ slug }) =>
@@ -36,8 +39,6 @@ class PageContribution extends React.Component {
 
     return { data };
   }
-
-  function;
 
   buildTitleAndDescription(breadcrumbs, conventionAnswer, title, description) {
     if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
@@ -81,24 +82,34 @@ class PageContribution extends React.Component {
       description
     );
     return (
-      <div>
-        <Layout>
-          <Metas title={metas.title} description={metas.description} />
-          <Answer
-            title={title}
-            relatedItems={relatedItems}
-            breadcrumbs={breadcrumbs}
-            emptyMessage="Cette question n'a pas été trouvée"
-          >
-            <Contribution
-              answers={answers}
-              content={(content && content._source) || {}}
-            />
-          </Answer>
-        </Layout>
-      </div>
+      <>
+        <Head>
+          <link
+            href={getCanonicalUrl(
+              `${FRONTEND_HOST}${this.props.router.asPath}`
+            )}
+            rel="canonical"
+          />
+        </Head>
+        <div>
+          <Layout>
+            <Metas title={metas.title} description={metas.description} />
+            <Answer
+              title={title}
+              relatedItems={relatedItems}
+              breadcrumbs={breadcrumbs}
+              emptyMessage="Cette question n'a pas été trouvée"
+            >
+              <Contribution
+                answers={answers}
+                content={(content && content._source) || {}}
+              />
+            </Answer>
+          </Layout>
+        </div>
+      </>
     );
   }
 }
 
-export default PageContribution;
+export default withRouter(PageContribution);

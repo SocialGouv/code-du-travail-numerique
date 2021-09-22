@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-ui",
-  "version": "4.52.2",
+  "version": "4.53.0",
   "description": "Composants ReactJS",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/react-ui#react-ui-socialgouvreact-ui",
   "main": "lib/index.js",
@@ -82,7 +82,7 @@
     "ui"
   ],
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{ts,js}": [
       "yarn lint-css",
       "yarn lint-js --fix"
     ]

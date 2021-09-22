@@ -1,7 +1,6 @@
 import { useRef } from "react";
 
-const safeDocument: Document =
-  typeof document !== "undefined" ? document : null;
+const safeDocument: any = typeof document !== "undefined" ? document : {};
 
 /**
  * Usage:

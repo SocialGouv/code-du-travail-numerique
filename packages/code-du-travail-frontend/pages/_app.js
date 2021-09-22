@@ -11,6 +11,7 @@ import Head from "next/head";
 import React from "react";
 
 import { A11y } from "../src/a11y";
+import { initATInternetService } from "../src/AtInternetService";
 import { initPiwik } from "../src/piwik";
 import { initializeSentry, notifySentry } from "../src/sentry";
 import CustomError from "./_error";
@@ -58,11 +59,17 @@ export default class MyApp extends App {
       }
     }
 
-    return { pageProps };
+    return {
+      pageProps,
+      trackingEnabled: process.env.IS_PRODUCTION_DEPLOYMENT === "true",
+    };
   }
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    if (this.props.trackingEnabled) {
+      initATInternetService();
+    }
   }
 
   componentDidCatch(error, errorInfo) {
