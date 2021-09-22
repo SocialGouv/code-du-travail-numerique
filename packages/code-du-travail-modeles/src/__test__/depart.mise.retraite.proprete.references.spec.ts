@@ -29,15 +29,15 @@ const MiseRetraiteToutesCategoriesReferences = [
 ];
 
 test.each`
-  retirement  | category                              | expectedReferences
-  ${"départ"} | ${"Agents de propreté"}               | ${DepartRetraiteToutesCategoriesReferences}
-  ${"départ"} | ${"Employés"}                         | ${DepartRetraiteToutesCategoriesReferences}
-  ${"départ"} | ${"Techniciens & Agents de maîtrise"} | ${DepartRetraiteToutesCategoriesReferences}
-  ${"départ"} | ${"Cadres"}                           | ${DepartRetraiteToutesCategoriesReferences}
-  ${"mise"}   | ${"Agents de propreté"}               | ${MiseRetraiteToutesCategoriesReferences}
-  ${"mise"}   | ${"Employés"}                         | ${MiseRetraiteToutesCategoriesReferences}
-  ${"mise"}   | ${"Techniciens & Agents de maîtrise"} | ${MiseRetraiteToutesCategoriesReferences}
-  ${"mise"}   | ${"Cadres"}                           | ${MiseRetraiteToutesCategoriesReferences}
+  retirement  | category                                     | expectedReferences
+  ${"départ"} | ${"Agents de propreté"}                      | ${DepartRetraiteToutesCategoriesReferences}
+  ${"départ"} | ${"Employés"}                                | ${DepartRetraiteToutesCategoriesReferences}
+  ${"départ"} | ${"Techniciens et Agents de maîtrise (TAM)"} | ${DepartRetraiteToutesCategoriesReferences}
+  ${"départ"} | ${"Cadres"}                                  | ${DepartRetraiteToutesCategoriesReferences}
+  ${"mise"}   | ${"Agents de propreté"}                      | ${MiseRetraiteToutesCategoriesReferences}
+  ${"mise"}   | ${"Employés"}                                | ${MiseRetraiteToutesCategoriesReferences}
+  ${"mise"}   | ${"Techniciens et Agents de maîtrise (TAM)"} | ${MiseRetraiteToutesCategoriesReferences}
+  ${"mise"}   | ${"Cadres"}                                  | ${MiseRetraiteToutesCategoriesReferences}
 `(
   "Vérification des références juridiques pour un $category en $retirement à la retraite",
   ({ retirement, category, expectedReferences }) => {
@@ -46,7 +46,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC3043'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
-        "contrat salarié . convention collective . propreté entreprise . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle": `'${category}'`,
         "contrat salarié . travailleur handicapé": "non",
       })
     );
