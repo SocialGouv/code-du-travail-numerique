@@ -16,7 +16,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Ouvriers'",
-        "contrat salarié . convention collective . automobiles . échelon ouvrier":
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvrier . échelon":
           grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
@@ -46,7 +46,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Agents de maîtrise'",
-        "contrat salarié . convention collective . automobiles . échelon agents de maîtrise":
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . agents de maîtrise . échelon":
           grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
