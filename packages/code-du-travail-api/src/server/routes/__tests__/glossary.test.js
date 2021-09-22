@@ -1,7 +1,7 @@
+import router from "../glossary";
+
 const request = require("supertest");
 const Koa = require("koa");
-
-const router = require("../glossary");
 
 const app = new Koa();
 app.use(router.routes());

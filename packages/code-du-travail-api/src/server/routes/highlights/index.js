@@ -32,4 +32,4 @@ router.get("/highlights/:slug", async (ctx) => {
   ctx.body = response.body.hits.hits[0]._source.refs;
 });
 
-module.exports = router;
+export default router;

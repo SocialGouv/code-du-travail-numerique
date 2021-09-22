@@ -26,4 +26,4 @@ router.get("/docsCount", async (ctx) => {
   ctx.body = { ...aggregations };
 });
 
-module.exports = router;
+export default router;

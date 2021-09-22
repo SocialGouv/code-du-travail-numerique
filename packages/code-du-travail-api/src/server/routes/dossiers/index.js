@@ -35,4 +35,4 @@ router.get("/dossiers/:slug", async (ctx) => {
   };
 });
 
-module.exports = router;
+export default router;

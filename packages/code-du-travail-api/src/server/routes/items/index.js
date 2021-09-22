@@ -98,4 +98,4 @@ router.get("/items", async (ctx) => {
   ctx.body = { ...item };
 });
 
-module.exports = router;
+export default router;

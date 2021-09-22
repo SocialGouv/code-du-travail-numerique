@@ -30,4 +30,4 @@ router.get("/modeles", async (ctx) => {
   }
 });
 
-module.exports = router;
+export default router;

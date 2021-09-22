@@ -1,6 +1,8 @@
+import router from "../sheets-mt";
+
 const request = require("supertest");
 const Koa = require("koa");
-const router = require("../sheets-mt");
+
 require("./__mocking__/mockNLP");
 
 jest.mock("@socialgouv/cdtn-elasticsearch");

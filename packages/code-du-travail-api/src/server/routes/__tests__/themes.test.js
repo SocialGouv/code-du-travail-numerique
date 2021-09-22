@@ -1,6 +1,7 @@
+import router from "../themes";
+
 const request = require("supertest");
 const Koa = require("koa");
-const router = require("../themes");
 
 const app = new Koa();
 app.use(router.routes());

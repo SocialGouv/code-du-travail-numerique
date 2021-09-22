@@ -36,4 +36,4 @@ router.get("/suggest", async (ctx) => {
   }
 });
 
-module.exports = router;
+export default router;

@@ -24,4 +24,4 @@ const client = new Client(esClientConfig);
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
-module.exports = client;
+export default client;

@@ -1,6 +1,7 @@
+import router from "../version";
+
 const request = require("supertest");
 const Koa = require("koa");
-const router = require("../version");
 
 const app = new Koa();
 app.use(router.routes());

@@ -44,4 +44,4 @@ router.get("/version", async (ctx) => {
   }
 });
 
-module.exports = router;
+export default router;

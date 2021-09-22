@@ -68,4 +68,4 @@ router.get("/glossary/:slug", async (ctx) => {
   ctx.body = { ...term };
 });
 
-module.exports = router;
+export default router;

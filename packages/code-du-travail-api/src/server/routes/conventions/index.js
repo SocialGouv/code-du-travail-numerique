@@ -31,4 +31,4 @@ router.get("/conventions/:slug", async (ctx) => {
   ctx.body = { ...response.body.hits.hits[0]._source };
 });
 
-module.exports = router;
+export default router;

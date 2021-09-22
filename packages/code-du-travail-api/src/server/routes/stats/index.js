@@ -83,4 +83,4 @@ router.get("/stats", async (ctx) => {
   };
 });
 
-module.exports = router;
+export default router;

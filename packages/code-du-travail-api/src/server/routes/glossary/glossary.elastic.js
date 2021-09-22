@@ -12,4 +12,4 @@ function getGlossaryBody() {
   };
 }
 
-module.exports = getGlossaryBody;
+export default getGlossaryBody;

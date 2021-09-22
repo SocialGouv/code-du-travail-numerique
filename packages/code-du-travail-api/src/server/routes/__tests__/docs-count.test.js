@@ -1,6 +1,7 @@
+import routes from "../docs-count";
+
 const request = require("supertest");
 const Koa = require("koa");
-const routes = require("../docs-count");
 
 const app = new Koa();
 app.use(routes.routes());

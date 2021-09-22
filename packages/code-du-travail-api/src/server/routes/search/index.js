@@ -194,7 +194,7 @@ router.get("/search", async (ctx) => {
   };
 });
 
-module.exports = router;
+export default router;
 
 function extractHits(response) {
   if (response && response.hits) {

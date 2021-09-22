@@ -29,4 +29,4 @@ router.get("/idcc", async (ctx) => {
   ctx.body = { ...response.body };
 });
 
-module.exports = router;
+export default router;
