@@ -74,9 +74,6 @@ describe("Notifications", () => {
     ${5}      | ${"Maîtrises"}
     ${12}     | ${"Maîtrises"}
     ${24}     | ${"Maîtrises"}
-    ${5}      | ${"Cadres"}
-    ${12}     | ${"Cadres"}
-    ${24}     | ${"Cadres"}
   `(
     "Pour un $category possédant $seniority mois d'ancienneté lors d'une mise à la retraite, on attend 0 notification",
     ({ seniority, category }) => {
@@ -93,21 +90,29 @@ describe("Notifications", () => {
       expect(notifications).toHaveLength(0);
     }
   );
-  test("Pour un cadres lors d'une mise à la retraite, on attend une notification", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1266'",
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": 2,
-        "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle":
-          "'Cadres'",
-      })
-    );
+  test.each`
+    seniority
+    ${5}
+    ${12}
+    ${24}
+  `(
+    "Pour un cadres possédant $seniority mois d'ancienneté lors d'une mise à la retraite, on attend une notification",
+    ({ seniority }) => {
+      const notifications = getNotifications(
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1266'",
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle":
+            "'Cadres'",
+        })
+      );
 
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(
-      `Cette durée s’applique sauf s’il existe dans le contrat de travail des stipulations particulières.`
-    );
-  });
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(
+        `Cette durée s’applique sauf s’il existe dans le contrat de travail des stipulations particulières.`
+      );
+    }
+  );
 });
