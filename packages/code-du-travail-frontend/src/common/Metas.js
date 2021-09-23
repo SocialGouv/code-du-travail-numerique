@@ -17,21 +17,15 @@ export default function Metas({ title, description }) {
         name="viewport"
         content="width=device-width, initial-scale=1"
       />
-      <link
-        key="rel-stylesheet"
-        rel="stylesheet"
-        type="text/css"
-        href="/static/fonts.css"
-      />
-      <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
-
       <title>{title}</title>
+      <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
+      <meta key="desc" name="description" content={description} />
+
       <link
         key="canonical"
         href={`${FRONTEND_HOST}${router.asPath !== "/" ? router.asPath : ""}`}
         rel="canonical"
       />
-      <meta key="desc" name="description" content={description} />
       <meta key="twitter:card" name="twitter:card" content="summary" />
       <meta key="og:title" property="og:title" content={title} />
       <meta key="og:type" property="og:type" content="article" />
@@ -47,12 +41,6 @@ export default function Metas({ title, description }) {
         content="Code du travail numérique"
       />
       <meta key="og:locale" property="og:locale" content="fr" />
-      <script key="polyfill" src="/static/polyfill.min.js" />
-      <script
-        key="webcomponents"
-        src="/static/webcomponents-polyfill/loader.js"
-      />
-      <script key="smarttag" src="/static/smarttag.js" />
     </Head>
   );
 }

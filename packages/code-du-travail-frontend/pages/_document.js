@@ -42,7 +42,21 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr" prefix="og: http://ogp.me/ns#">
-        <Head />
+        <Head>
+          <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
+          <link
+            key="rel-stylesheet"
+            rel="stylesheet"
+            type="text/css"
+            href="/static/fonts.css"
+          />
+          <script key="polyfill" src="/static/polyfill.min.js" />
+          <script
+            key="webcomponents"
+            src="/static/webcomponents-polyfill/loader.js"
+          />
+          <script key="smarttag" src="/static/smarttag.js" />
+        </Head>
         <body>
           <noscript>
             Vous devez activer le JavaScript pour pouvoir profiter pleinement de
