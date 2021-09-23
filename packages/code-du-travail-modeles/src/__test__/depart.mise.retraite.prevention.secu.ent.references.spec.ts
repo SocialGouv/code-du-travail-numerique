@@ -93,13 +93,6 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category en $retirement à la retraite",
   ({ retirement, category, expectedReferences }) => {
-  console.log(engine.setSituation({
-    "contrat salarié . convention collective": "'IDCC1351'",
-    "contrat salarié . mise à la retraite":
-      retirement === "mise" ? "oui" : "non",
-    "contrat salarié . travailleur handicapé": "non",
-    "contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle": `'${category}'`,
-  }))
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1351'",
