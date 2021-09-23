@@ -9,7 +9,7 @@ export function toUrl(fileName: string): string {
     const [filename] = fileName.match(/[^/]+$/);
     return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
   } catch (error) {
-    return file;
+    return fileName;
   }
 }
 
