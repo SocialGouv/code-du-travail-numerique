@@ -17,10 +17,11 @@ const isItemOfAccordion = (element) =>
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
+    forcedElementType: PropTypes.string,
     headingLevel: PropTypes.number.isRequired,
   };
   render() {
-    const { data, headingLevel } = this.props;
+    const { data, headingLevel, forcedElementType } = this.props;
     const firstIndexOfAccordionItem =
       data.children.findIndex(isItemOfAccordion);
     const accordionItems = data.children
@@ -28,8 +29,19 @@ class AccordionWrapper extends React.PureComponent {
       .map((accordionItem) => {
         const title = (
           <Title level={headingLevel}>
-            {getText(
-              accordionItem.children.find((child) => child.name === "Titre")
+            {/* TODO: */}
+            {forcedElementType === "h2" ? (
+              <h2>
+                {getText(
+                  accordionItem.children.find((child) => child.name === "Titre")
+                )}
+              </h2>
+            ) : (
+              <p>
+                {getText(
+                  accordionItem.children.find((child) => child.name === "Titre")
+                )}
+              </p>
             )}
           </Title>
         );

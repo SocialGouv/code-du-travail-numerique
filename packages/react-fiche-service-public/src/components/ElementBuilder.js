@@ -72,7 +72,13 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
       return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
       if (data.children.find((child) => child.name === "Chapitre")) {
-        return <Accordion data={data} headingLevel={headingLevel} />;
+        return (
+          <Accordion
+            data={data}
+            headingLevel={headingLevel}
+            forcedElementType="h2"
+          />
+        );
       }
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
