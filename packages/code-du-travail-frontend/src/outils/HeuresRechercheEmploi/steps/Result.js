@@ -10,7 +10,7 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 
 function Duration({ situation }) {
   if (!situation.answer) {
@@ -31,9 +31,7 @@ function Duration({ situation }) {
   return (
     <>
       <p>
-        {wording}
-        <br />
-        <Highlight>{situation.answer}</Highlight>.
+        {wording}&nbsp;: <HighlightResult>{situation.answer}</HighlightResult>.
       </p>
       {situation.answer2 && (
         <>
@@ -86,7 +84,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
       <p>
-        <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+        <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
         {idcc > 0 && (
           <>
             <br />

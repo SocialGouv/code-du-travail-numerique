@@ -11,7 +11,7 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 
 function HdnToast({ ccn }) {
   return (
@@ -57,7 +57,7 @@ function StepResult({ form }) {
       <>
         <SectionTitle>Durée du préavis</SectionTitle>
         <p>
-          <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+          <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
         </p>
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
@@ -76,7 +76,8 @@ function StepResult({ form }) {
       <SectionTitle>Durée du préavis</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;<Highlight>{situation.answer}</Highlight>.
+        démission est estimée à&nbsp;
+        <HighlightResult>{situation.answer}</HighlightResult>.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>

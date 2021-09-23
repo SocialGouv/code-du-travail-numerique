@@ -1,8 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 
 import Mdx from "../../../../common/Mdx";
-import { Highlight, SectionTitle, SmallText } from "../../../common/stepStyles";
+import {
+  HighlightResult,
+  SectionTitle,
+  SmallText,
+} from "../../../common/stepStyles";
 import { PublicodesContextInterface } from "../../../publicodes";
 
 type Props = {
@@ -42,24 +45,17 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
         </HighlightResult>
       </p>
       {notifications.length > 0 && (
-        <Notification>
+        <SmallText>
           {publicodesContext.getNotifications().map((notification) => (
             <Mdx
               key={notification.dottedName}
               markdown={"\\* " + notification.description}
             />
           ))}
-        </Notification>
+        </SmallText>
       )}
     </>
   );
 };
-
-export const HighlightResult = styled(Highlight)`
-  font-weight: bold;
-  font-size: 1.5em;
-`;
-
-export const Notification = styled(SmallText)``;
 
 export default ShowResult;

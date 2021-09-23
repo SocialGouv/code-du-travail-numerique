@@ -11,7 +11,7 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 
 const { situations: allSituations } = data;
 
@@ -89,7 +89,7 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     if (durationCC === undefined) {
       return (
         <>
-          <Highlight>{duration}</Highlight>
+          <HighlightResult>{duration}</HighlightResult>
           <p>
             Le code du travail ne prévoit pas de durée de préavis de
             licenciement sauf, cas particuliers.
@@ -99,7 +99,7 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     } else if (parseInt(durationCC, 10) === 0) {
       return (
         <>
-          <Highlight>{duration}</Highlight>
+          <HighlightResult>{duration}</HighlightResult>
           <p>
             Le code du travail et la convention collective ne prévoient pas de
             préavis.
@@ -112,7 +112,8 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     <>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        licenciement est estimée à&nbsp;<Highlight>{duration}</Highlight>.
+        licenciement est estimée à&nbsp;
+        <HighlightResult>{duration}</HighlightResult>.
       </p>
     </>
   );

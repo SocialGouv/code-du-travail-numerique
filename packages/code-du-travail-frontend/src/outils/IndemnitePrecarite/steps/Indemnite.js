@@ -12,7 +12,7 @@ import {
   getRef,
   getSituationsFor,
 } from "../../common/situations.utils";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
 
@@ -149,8 +149,8 @@ function StepIndemnite({ form }) {
     <>
       <SectionTitle>Montant</SectionTitle>
       <p>
-        {bonusAltName} est estimée à&nbsp;
-        <Highlight>{indemnite}&nbsp;€</Highlight>.
+        {bonusAltName} est estimée à&nbsp;:&nbsp;
+        <HighlightResult>{indemnite}&nbsp;€</HighlightResult>.
       </p>
       <Disclaimer situation={situation} idcc={idcc} />
       <SectionTitle>Détails du calcul</SectionTitle>
