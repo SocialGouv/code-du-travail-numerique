@@ -21,7 +21,7 @@ class AccordionWrapper extends React.PureComponent {
     headingLevel: PropTypes.number.isRequired,
   };
   render() {
-    const { data, headingLevel, forcedElementType } = this.props;
+    const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem =
       data.children.findIndex(isItemOfAccordion);
     const accordionItems = data.children
@@ -30,7 +30,7 @@ class AccordionWrapper extends React.PureComponent {
         const title = (
           <Title level={headingLevel}>
             {/* TODO: */}
-            {forcedElementType === "h2" ? (
+            {/* {forcedElementType === "h2" ? (
               <h2>
                 {getText(
                   accordionItem.children.find((child) => child.name === "Titre")
@@ -42,6 +42,9 @@ class AccordionWrapper extends React.PureComponent {
                   accordionItem.children.find((child) => child.name === "Titre")
                 )}
               </p>
+            )} */}
+            {getText(
+              accordionItem.children.find((child) => child.name === "Titre")
             )}
           </Title>
         );
