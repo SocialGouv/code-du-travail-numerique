@@ -4,14 +4,12 @@ const {
   publicRuntimeConfig: { AZURE_BASE_URL, AZURE_CONTAINER },
 } = getConfig();
 
-export function toUrl(fileName: string): string {
-  try {
-    const [filename] = fileName.match(/[^/]+$/);
-    return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
-  } catch (error) {
-    return fileName;
-  }
-}
+export const toUrl = (file: string): string => {
+  if (!file) return "";
+  const index = file.lastIndexOf("/");
+  const filename = index !== -1 ? file.substring(index + 1) : file;
+  return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
+};
 
 export const removeQueryParameters = (url: string): string => {
   const index = url.indexOf("?");
