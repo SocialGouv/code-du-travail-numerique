@@ -1,7 +1,6 @@
 import getConfig from "next/config";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import PropTypes from "prop-types";
 import React from "react";
 
 import { removeQueryParameters } from "../lib";
@@ -10,7 +9,17 @@ const {
   publicRuntimeConfig: { FRONTEND_HOST },
 } = getConfig();
 
-export default function Metas({ title, description, overrideCanonical }) {
+type Props = {
+  title: string;
+  description: string;
+  overrideCanonical?: string;
+};
+
+export default function Metas({
+  title,
+  description,
+  overrideCanonical,
+}: Props): JSX.Element {
   const router = useRouter();
   return (
     <Head>
@@ -51,9 +60,3 @@ export default function Metas({ title, description, overrideCanonical }) {
     </Head>
   );
 }
-
-Metas.propTypes = {
-  description: PropTypes.string,
-  image: PropTypes.string,
-  title: PropTypes.string,
-};
