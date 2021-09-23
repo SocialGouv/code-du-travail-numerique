@@ -8,6 +8,11 @@ const {
   publicRuntimeConfig: { FRONTEND_HOST },
 } = getConfig();
 
+const removeQuery = (url) => {
+  const index = url.indexOf("?");
+  return index !== -1 ? url.substring(0, index) : url;
+};
+
 export default function Metas({ title, description }) {
   const router = useRouter();
   return (
@@ -21,11 +26,11 @@ export default function Metas({ title, description }) {
       <title>{title}</title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
-
-      <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <link
         key="canonical"
-        href={`${FRONTEND_HOST}${router.asPath !== "/" ? router.asPath : ""}`}
+        href={`${FRONTEND_HOST}${
+          router.asPath !== "/" ? removeQuery(router.asPath) : ""
+        }`}
         rel="canonical"
       />
       <meta key="twitter:card" name="twitter:card" content="summary" />

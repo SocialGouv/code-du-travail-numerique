@@ -1,7 +1,6 @@
 import { Container, Section } from "@socialgouv/cdtn-ui";
 import { FicheServicePublic } from "@socialgouv/react-fiche-service-public";
 import getConfig from "next/config";
-import Head from "next/head";
 import { withRouter } from "next/router";
 import React from "react";
 
@@ -48,9 +47,6 @@ class Fiche extends React.Component {
     return (
       <Layout>
         <Metas title={title} description={description} />
-        <Head>
-          <link rel="canonical" href={url} />
-        </Head>
         <Answer
           title={title}
           relatedItems={relatedItems}
