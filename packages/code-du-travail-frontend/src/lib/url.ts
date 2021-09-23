@@ -4,7 +4,7 @@ const {
   publicRuntimeConfig: { AZURE_BASE_URL, AZURE_CONTAINER },
 } = getConfig();
 
-export function toUrl(file?: any): any {
+export function toUrl(file: string): string {
   try {
     const [filename] = file.match(/[^/]+$/);
     return `${AZURE_BASE_URL}/${AZURE_CONTAINER}/${filename}`;
