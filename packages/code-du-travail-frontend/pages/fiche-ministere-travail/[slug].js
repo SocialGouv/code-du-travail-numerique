@@ -58,7 +58,7 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
   const untitledSection = sections.find((section) => !section.anchor);
   return (
     <Layout>
-      <Metas title={title} description={description} />
+      <Metas title={title} description={description} overrideCanonical={url} />
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}

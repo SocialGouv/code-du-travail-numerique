@@ -10,7 +10,7 @@ const {
   publicRuntimeConfig: { FRONTEND_HOST },
 } = getConfig();
 
-export default function Metas({ title, description }) {
+export default function Metas({ title, description, overrideCanonical }) {
   const router = useRouter();
   return (
     <Head>
@@ -25,9 +25,12 @@ export default function Metas({ title, description }) {
       <meta key="desc" name="description" content={description} />
       <link
         key="canonical"
-        href={`${FRONTEND_HOST}${
-          router.asPath !== "/" ? removeQueryParameters(router.asPath) : ""
-        }`}
+        href={
+          overrideCanonical ??
+          `${FRONTEND_HOST}${
+            router.asPath !== "/" ? removeQueryParameters(router.asPath) : ""
+          }`
+        }
         rel="canonical"
       />
       <meta key="twitter:card" name="twitter:card" content="summary" />

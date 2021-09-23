@@ -46,7 +46,11 @@ class Fiche extends React.Component {
     } = data;
     return (
       <Layout>
-        <Metas title={title} description={description} />
+        <Metas
+          title={title}
+          description={description}
+          overrideCanonical={url}
+        />
         <Answer
           title={title}
           relatedItems={relatedItems}
