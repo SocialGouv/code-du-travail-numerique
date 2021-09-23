@@ -1402,7 +1402,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <br />
               Tél. : 01 40 56 60 00
             </address>
-            <header
+            <div
               class="c31"
             >
               <h2
@@ -1413,11 +1413,11 @@ exports[`<MentionLegales /> should render 1`] = `
                 />
                 Directeur de la publication
               </h2>
-            </header>
+            </div>
             <p>
               Pierre RAMAIN, Directeur Général du Travail
             </p>
-            <header
+            <div
               class="c31"
             >
               <h2
@@ -1428,7 +1428,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 />
                 Hébergement
               </h2>
-            </header>
+            </div>
             <p>
               Ce site est hébergé par Microsoft Azure France (région France centre) :
             </p>
@@ -1453,7 +1453,7 @@ exports[`<MentionLegales /> should render 1`] = `
               </a>
               .
             </div>
-            <header
+            <div
               class="c31"
             >
               <h2
@@ -1464,7 +1464,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 />
                 Accessibilité
               </h2>
-            </header>
+            </div>
             <p>
               La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
             </p>
@@ -1500,7 +1500,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 http://references.modernisation.gouv.fr/accessibilite-numerique
               </a>
             </p>
-            <header
+            <div
               class="c31"
             >
               <h2
@@ -1511,7 +1511,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 />
                 Sécurité
               </h2>
-            </header>
+            </div>
             <p>
               Le site est protégé par un certificat électronique, matérialisé pour la grande majorité des navigateurs par un cadenas. Cette protection participe à la confidentialité des échanges.
             </p>
@@ -1532,7 +1532,7 @@ exports[`<MentionLegales /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c40"
             >
               <strong
@@ -1543,7 +1543,7 @@ exports[`<MentionLegales /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c42 c43"
             >

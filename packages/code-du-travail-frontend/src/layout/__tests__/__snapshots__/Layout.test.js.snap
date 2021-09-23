@@ -1171,7 +1171,7 @@ exports[`<Layout /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c28"
             >
               <strong
@@ -1182,7 +1182,7 @@ exports[`<Layout /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c31 c32"
             >

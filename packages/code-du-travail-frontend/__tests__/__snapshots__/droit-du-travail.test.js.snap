@@ -2454,7 +2454,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <div
               class="c32"
             >
-              <header
+              <div
                 class="c33"
               >
                 <h2
@@ -2465,7 +2465,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   />
                   Qu’est-ce que le droit du travail ?
                 </h2>
-              </header>
+              </div>
               <strong>
                 Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
               </strong>
@@ -2528,7 +2528,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <div
             class="c4 c44"
           >
-            <header
+            <div
               class="c45"
             >
               <h2
@@ -2539,7 +2539,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 />
                 Quels sont les textes à l’origine du droit du travail ?
               </h2>
-            </header>
+            </div>
             <p
               class="c47"
             >
@@ -3688,7 +3688,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
         <div
           class="c64"
         >
-          <header
+          <div
             class="c65"
           >
             <h2
@@ -3699,7 +3699,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               />
               Existe-t-il une hiérarchie entre les textes ?
             </h2>
-          </header>
+          </div>
           <p>
             Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
           </p>
@@ -4959,7 +4959,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c94"
             >
               <strong
@@ -4970,7 +4970,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c31 c96"
             >

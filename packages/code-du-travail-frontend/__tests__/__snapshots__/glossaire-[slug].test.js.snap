@@ -1413,7 +1413,7 @@ exports[`<Term /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c36"
             >
               <strong
@@ -1424,7 +1424,7 @@ exports[`<Term /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c38 c39"
             >

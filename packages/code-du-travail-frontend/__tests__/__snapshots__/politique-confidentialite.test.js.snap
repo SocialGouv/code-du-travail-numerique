@@ -1329,7 +1329,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <div
             class="c29"
           >
-            <header
+            <div
               class="c30"
             >
               <h2
@@ -1340,7 +1340,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 />
                 Traitement des données à caractère personnel
               </h2>
-            </header>
+            </div>
             <p>
               Le Code du travail numérique ne vous demande ni ne stocke d’information nominative.
             </p>
@@ -1393,7 +1393,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               </a>
               .
             </p>
-            <header
+            <div
               class="c30"
               id="cookie"
             >
@@ -1405,7 +1405,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 />
                 Utilisation de témoins de connexion (« cookies »)
               </h2>
-            </header>
+            </div>
             <p>
               Un cookie est un fichier déposé sur votre terminal lors de la visite d’un site. Il a pour but de collecter des informations relatives à votre navigation et de vous adresser des services adaptés à votre terminal (ordinateur, mobile ou tablette).
             </p>
@@ -1481,7 +1481,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <div
             class="c4"
           >
-            <header
+            <div
               class="c37"
             >
               <strong
@@ -1492,7 +1492,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 />
                 Besoin de plus d’informations ?
               </strong>
-            </header>
+            </div>
             <div
               class="c39 c40"
             >
