@@ -4,14 +4,11 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React from "react";
 
+import { removeQueryParameters } from "../lib";
+
 const {
   publicRuntimeConfig: { FRONTEND_HOST },
 } = getConfig();
-
-const removeQuery = (url) => {
-  const index = url.indexOf("?");
-  return index !== -1 ? url.substring(0, index) : url;
-};
 
 export default function Metas({ title, description }) {
   const router = useRouter();
@@ -29,7 +26,7 @@ export default function Metas({ title, description }) {
       <link
         key="canonical"
         href={`${FRONTEND_HOST}${
-          router.asPath !== "/" ? removeQuery(router.asPath) : ""
+          router.asPath !== "/" ? removeQueryParameters(router.asPath) : ""
         }`}
         rel="canonical"
       />
