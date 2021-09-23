@@ -17,10 +17,12 @@ export default function Metas({ title, description }) {
         name="viewport"
         content="width=device-width, initial-scale=1"
       />
+
       <title>{title}</title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
 
+      <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <link
         key="canonical"
         href={`${FRONTEND_HOST}${router.asPath !== "/" ? router.asPath : ""}`}

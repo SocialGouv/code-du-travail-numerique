@@ -43,7 +43,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
-          <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
           <link
             key="rel-stylesheet"
             rel="stylesheet"
