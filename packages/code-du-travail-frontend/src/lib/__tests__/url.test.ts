@@ -10,7 +10,7 @@ describe("toUrl", () => {
   });
 
   test("should return input if no match", () => {
-    expect(toUrl("")).toBe(undefined);
+    expect(toUrl("")).toBe("");
   });
 });
 
