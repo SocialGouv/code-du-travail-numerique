@@ -17,7 +17,7 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import { toUrl } from "../../src/lib/getFileUrl";
+import { toUrl } from "../../src/lib";
 
 const {
   publicRuntimeConfig: { API_URL },
