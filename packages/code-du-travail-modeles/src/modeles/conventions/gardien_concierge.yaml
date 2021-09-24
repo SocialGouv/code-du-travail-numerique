@@ -44,7 +44,7 @@ contrat salarié . convention collective . gardien concierge . mise à la retrai
       - montant: 1 mois
         plafond: 24 mois
       - montant: 2 mois
-  references:
+  références:
     Article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978485/?idConteneur=KALICONT000005635953
     Article 14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978399/?idConteneur=KALICONT000005635953
 
@@ -55,7 +55,7 @@ contrat salarié . convention collective . gardien concierge . mise à la retrai
       - mise à la retraite
   remplace: préavis de retraite collective
   valeur: 6 mois
-  references:
+  références:
     Article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978485/?idConteneur=KALICONT000005635953  
 
 contrat salarié . convention collective . gardien concierge . départ d'un sans logement et avec un coefficient inférieur ou égale à 602:
@@ -65,8 +65,8 @@ contrat salarié . convention collective . gardien concierge . départ d'un sans
       - départ à la retraite
       - logement = 'Non'
   remplace: préavis de retraite collective
-  valeur: 8 jour
-  references:
+  valeur: 8 jours
+  références:
     Article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978485/?idConteneur=KALICONT000005635953
     Article 14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978399/?idConteneur=KALICONT000005635953
 
@@ -78,7 +78,7 @@ contrat salarié . convention collective . gardien concierge . départ d'un sans
       - logement = 'Non'
   remplace: préavis de retraite collective
   valeur: 1 mois
-  references:
+  références:
     Article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978485/?idConteneur=KALICONT000005635953
     Article 14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978399/?idConteneur=KALICONT000005635954
 
@@ -89,6 +89,6 @@ contrat salarié . convention collective . gardien concierge . départ avec un l
       - logement = 'Oui'
   remplace: préavis de retraite collective
   valeur: 1 mois
-  references:
+  références:
     Article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978485/?idConteneur=KALICONT000005635953
     Article 14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000034978399/?idConteneur=KALICONT000005635955

@@ -5,7 +5,7 @@ const engine = new Engine(mergeModels());
 
 test.each`
   accommodation | coefficient | expectedResult | expectedPeriod
-  ${"Non"}      | ${602}      | ${8}           | ${"jour"}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}
   ${"Oui"}      | ${602}      | ${1}           | ${"mois"}
   ${"Oui"}      | ${603}      | ${1}           | ${"mois"}
