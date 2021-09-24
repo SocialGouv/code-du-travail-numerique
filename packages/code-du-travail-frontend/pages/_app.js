@@ -7,7 +7,6 @@ import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
-import Head from "next/head";
 import React from "react";
 
 import { A11y } from "../src/a11y";
@@ -91,12 +90,6 @@ export default class MyApp extends App {
       return (
         <ThemeProvider>
           <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-            </Head>
             <GlobalStyles />
             {pageProps.statusCode === 404 ? (
               <Custom404 />
@@ -111,12 +104,6 @@ export default class MyApp extends App {
       <React.StrictMode>
         <ThemeProvider>
           <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-              />
-            </Head>
             <GlobalStyles />
             <A11y />
             <Component {...pageProps} />
