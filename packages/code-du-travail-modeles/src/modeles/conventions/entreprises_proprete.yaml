@@ -42,7 +42,7 @@ contrat salarié . convention collective . entreprises de propreté . catégorie
     tranches:
       - montant: 0 jour
         plafond: 1 mois
-      - montant: 1 semaine
+      - montant: 7 jour
         plafond: 6 mois
       - montant: 1 mois
         plafond: 24 mois

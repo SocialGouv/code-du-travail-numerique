@@ -9,7 +9,7 @@ test.each`
   ${6}      | ${"Cadres"}             | ${1}           | ${"mois"}
   ${24}     | ${"Cadres"}             | ${2}           | ${"mois"}
   ${0}      | ${"Employés"}           | ${0}           | ${"mois"}
-  ${1}      | ${"Employés"}           | ${15}          | ${"jours"}
+  ${1}      | ${"Employés"}           | ${15}          | ${"jour"}
   ${6}      | ${"Employés"}           | ${1}           | ${"mois"}
   ${24}     | ${"Employés"}           | ${1}           | ${"mois"}
   ${5}      | ${"Agents de maîtrise"} | ${2}           | ${"mois"}
@@ -40,7 +40,7 @@ test.each`
   ${6}      | ${"Cadres"}             | ${3}           | ${"mois"}
   ${24}     | ${"Cadres"}             | ${3}           | ${"mois"}
   ${0}      | ${"Employés"}           | ${0}           | ${"mois"}
-  ${1}      | ${"Employés"}           | ${15}          | ${"jours"}
+  ${1}      | ${"Employés"}           | ${15}          | ${"jour"}
   ${6}      | ${"Employés"}           | ${1}           | ${"mois"}
   ${24}     | ${"Employés"}           | ${2}           | ${"mois"}
   ${5}      | ${"Agents de maîtrise"} | ${2}           | ${"mois"}

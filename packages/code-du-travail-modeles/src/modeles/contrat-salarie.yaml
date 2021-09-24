@@ -24,6 +24,10 @@ contrat salarié . travailleur handicapé:
 contrat salarié . départ à la retraite:
   valeur: mise à la retraite = non
 
+contrat salarié . préavis de retraite en jours:
+  valeur: préavis de retraite
+  unité: jour
+
 contrat salarié . préavis de retraite: 0 mois
 
 contrat salarié . préavis de retraite . mise à la retraite:
@@ -65,6 +69,10 @@ contrat salarié . préavis de retraite légale:
   titre: Préavis de retraite légale
   valeur: contrat salarié . préavis de retraite . tranches
 
+contrat salarié . préavis de retraite légale en jours:
+  valeur: contrat salarié . préavis de retraite légale
+  unité: jour
+
 contrat salarié . préavis de retraite légale pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite légale
@@ -94,11 +102,15 @@ contrat salarié . préavis de retraite collective pour travailleur handicapé:
       alors:
         variations:
           - si: contrat salarié . préavis de retraite collective * 2 > 3 mois
-            alors: 3 mois  
+            alors: 3 mois
           - sinon: contrat salarié . préavis de retraite collective * 2
     - sinon: contrat salarié . préavis de retraite collective
 
 contrat salarié . préavis de retraite collective: non
+
+contrat salarié . préavis de retraite collective en jours:
+  valeur: contrat salarié . préavis de retraite collective
+  unité: jour
 
 contrat salarié . convention collective:
   titre: Convention collective

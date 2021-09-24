@@ -1,6 +1,6 @@
 import { Notification } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
-import Engine, { Evaluation, Rule as PubliRule, Unit } from "publicodes";
+import Engine, { Rule as PubliRule } from "publicodes";
 import React, { createContext, useMemo } from "react";
 
 import usePublicodesHandler from "./Handler";
@@ -33,9 +33,17 @@ export interface SituationElement {
   value: string;
 }
 
+export enum PublicodesUnit {
+  DAY = "jour",
+  DAYS = "jours",
+  WEEK = "semaine",
+  WEEKS = "semaines",
+  MONTH = "mois",
+}
+
 export interface PublicodesResult {
-  value: Evaluation;
-  unit?: Unit;
+  value: string | number;
+  unit: PublicodesUnit;
 }
 
 export interface PublicodesContextInterface {

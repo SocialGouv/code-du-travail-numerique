@@ -41,7 +41,7 @@ test.each`
 test.each`
   seniority | category                                     | expectedNotice | expectedNoticeUnit
   ${0}      | ${"Agents de propreté"}                      | ${0}           | ${"mois"}
-  ${4}      | ${"Agents de propreté"}                      | ${1}           | ${"semaine"}
+  ${4}      | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
   ${6}      | ${"Agents de propreté"}                      | ${1}           | ${"mois"}
   ${24}     | ${"Agents de propreté"}                      | ${2}           | ${"mois"}
   ${0}      | ${"Employés"}                                | ${0}           | ${"mois"}

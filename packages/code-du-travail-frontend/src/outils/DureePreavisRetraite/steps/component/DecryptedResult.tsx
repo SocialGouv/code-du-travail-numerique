@@ -19,7 +19,7 @@ const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
   if (result.value > 0) {
     return (
       <b>
-        {result.value} {result.unit.numerators[0]}
+        {result.value} {result.unit}
       </b>
     );
   }
@@ -141,12 +141,12 @@ export const getDescription = (data: RootData): string | null => {
 
 const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   const legalResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite légale"
+    "contrat salarié . préavis de retraite légale en jours"
   );
   let agreementResult = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
-      "contrat salarié . préavis de retraite collective"
+      "contrat salarié . préavis de retraite collective en jours"
     );
   }
 
