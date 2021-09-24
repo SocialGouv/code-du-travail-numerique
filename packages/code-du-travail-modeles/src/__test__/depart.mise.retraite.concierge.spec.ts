@@ -4,27 +4,37 @@ import { mergeModels } from "../internal/merger";
 const engine = new Engine(mergeModels());
 
 test.each`
-  accommodation | coefficient | expectedResult | expectedPeriod
-  ${"Non"}      | ${602}      | ${8}           | ${"jours"}
-  ${"Non"}      | ${603}      | ${1}           | ${"mois"}
-  ${"Oui"}      | ${602}      | ${1}           | ${"mois"}
-  ${"Oui"}      | ${603}      | ${1}           | ${"mois"}
+  accommodation | coefficient | expectedResult | expectedPeriod | seniority
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${1}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${6}
+  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${24}
+  ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${1}
+  ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${6}
+  ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${24}
+  ${"Oui"}      | ${602}      | ${1}           | ${"mois"}      | ${1}
+  ${"Oui"}      | ${602}      | ${1}           | ${"mois"}      | ${6}
+  ${"Oui"}      | ${602}      | ${1}           | ${"mois"}      | ${24}
+  ${"Oui"}      | ${603}      | ${1}           | ${"mois"}      | ${1}
+  ${"Oui"}      | ${603}      | ${1}           | ${"mois"}      | ${6}
+  ${"Oui"}      | ${603}      | ${1}           | ${"mois"}      | ${24}
 `(
-  "Pour un salarié disposant de ce coefficient $coefficient et ayant un logement : $accommodation, son préavis de départ à la retraite devrait être $expectedResult $expectedPeriod",
-  ({ accommodation, coefficient, expectedResult, expectedPeriod }) => {
+  "Pour un salarié disposant d'une ancienneté $seniority de ce coefficient $coefficient et ayant un logement : $accommodation, son préavis de départ à la retraite devrait être $expectedResult $expectedPeriod",
+  ({ accommodation, coefficient, expectedResult, expectedPeriod, seniority }) => {
     const result = engine
       .setSituation({
         "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
-        "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+        "contrat salarié . convention collective . gardien concierge . coefficient":
+          coefficient,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
+    expect(result.missingVariables).toEqual({});
     expect(result.nodeValue).toEqual(expectedResult);
     expect(result.unit?.numerators).toEqual([expectedPeriod]);
-    expect(result.missingVariables).toEqual({});
   }
 );
 
@@ -47,8 +57,8 @@ test.each`
       })
       .evaluate("contrat salarié . préavis de retraite");
 
+    expect(result.missingVariables).toEqual({});
     expect(result.nodeValue).toEqual(expectedResult);
     expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
   }
 );
