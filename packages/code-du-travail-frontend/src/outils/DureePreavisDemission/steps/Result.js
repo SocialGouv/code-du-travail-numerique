@@ -17,7 +17,7 @@ import {
   WarningTitle,
 } from "../../DureePreavisRetraite/steps/component/WarningResult";
 
-function HdnToast({ ccn }) {
+function Disclaimer({ ccn }) {
   return (
     <Warning>
       <IconStripe centered icon={icons.Warning}>
@@ -73,7 +73,7 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        <HdnToast ccn={ccn} />
+        <Disclaimer ccn={ccn} />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
       </>
@@ -115,7 +115,7 @@ function StepResult({ form }) {
           },
         ]}
       />
-      <HdnToast />
+      <Disclaimer />
     </>
   );
 }
