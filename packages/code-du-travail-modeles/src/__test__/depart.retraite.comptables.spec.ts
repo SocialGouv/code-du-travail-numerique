@@ -30,10 +30,10 @@ test.each`
 
 test.each`
   seniority | category        | expectedNotice
-  ${4}      | ${"Assistants"} | ${0}
+  ${4}      | ${"Assistants"} | ${1}
   ${10}     | ${"Assistants"} | ${1}
   ${24}     | ${"Assistants"} | ${2}
-  ${5}      | ${"Autres"}     | ${0}
+  ${5}      | ${"Autres"}     | ${2}
   ${10}     | ${"Autres"}     | ${1}
   ${24}     | ${"Autres"}     | ${2}
 `(

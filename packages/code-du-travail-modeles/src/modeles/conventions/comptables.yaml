@@ -40,3 +40,27 @@ contrat salarié . convention collective . comptables . départ à la retraite:
   valeur: oui
   références:
     Article 6.2.4.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000029786918/?idConteneur=KALICONT000005635826
+
+contrat salarié . convention collective . comptables . départ à la retraite . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Assistants: "'Assistants'"
+      Autres salariés: "'Autres'"
+
+contrat salarié . convention collective . comptables . départ à la retraite . catégorie professionnelle . assistants:
+  applicable si: catégorie professionnelle = 'Assistants'
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+
+contrat salarié . convention collective . comptables . départ à la retraite . catégorie professionnelle . autres:
+  applicable si: catégorie professionnelle = 'Autres'
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
