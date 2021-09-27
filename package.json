@@ -17,7 +17,8 @@
     "lint": "lerna run lint",
     "start": "lerna run start",
     "test": "lerna run test",
-    "test:codecept": "cd optional/e2e/runners/puppeteer && yarn test && cd ../../../..",
+    "test:e2e": "cd optional/e2e/runners/puppeteer && yarn test",
+    "test:e2e:ui": "cd optional/e2e/runners/puppeteer && yarn test:ui",
     "jest:ui": "yarn workspace @cdt/frontend test -u && yarn workspace @socialgouv/react-fiche-service-public jest -u && yarn workspace @socialgouv/cdtn-ui jest -u",
     "prepare": "is-ci || husky install"
   },
