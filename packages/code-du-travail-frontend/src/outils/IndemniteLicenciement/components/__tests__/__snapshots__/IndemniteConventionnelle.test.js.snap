@@ -367,7 +367,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -621,7 +621,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -1129,7 +1129,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -1383,7 +1383,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>

@@ -182,7 +182,7 @@ exports[`<FormulaDetails /> should render 1`] = `
             <h2
               class="c7"
             >
-              Les éléments saisis
+              Éléments saisis
             </h2>
             <ul>
               <li>

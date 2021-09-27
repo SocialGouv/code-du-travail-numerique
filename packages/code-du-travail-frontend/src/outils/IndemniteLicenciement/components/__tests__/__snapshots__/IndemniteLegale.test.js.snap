@@ -215,7 +215,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
             <h2
               class="c0"
             >
-              Les éléments saisis
+              Éléments saisis
             </h2>
             <ul>
               <li>

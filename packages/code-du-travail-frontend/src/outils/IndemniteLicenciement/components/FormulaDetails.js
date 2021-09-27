@@ -15,7 +15,7 @@ function FormulaDetails({ infoCalcul: { labels, formula }, withSource }) {
           {
             body: (
               <>
-                <SectionTitle>Les éléments saisis</SectionTitle>
+                <SectionTitle>Éléments saisis</SectionTitle>
                 <ul>
                   {Object.entries(labels).map(([label, value], index) => (
                     <li key={index}>

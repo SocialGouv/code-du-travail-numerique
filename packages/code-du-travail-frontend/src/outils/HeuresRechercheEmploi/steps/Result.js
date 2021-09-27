@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Alert } from "@socialgouv/cdtn-ui";
+import { Accordion, icons, IconStripe } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
@@ -11,6 +11,10 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  Warning,
+  WarningTitle,
+} from "../../DureePreavisRetraite/steps/component/WarningResult";
 
 function Duration({ situation }) {
   if (!situation.answer) {
@@ -52,24 +56,29 @@ function Duration({ situation }) {
 }
 
 function Disclaimer({ duration }) {
-  if (!duration) {
-    return (
-      <Alert>
-        Un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence
-        autorisée pour rechercher un emploi pendant le préavis.
-      </Alert>
-    );
-  } else {
-    return (
-      <Alert>
-        Si un accord d’entreprise ou à défaut un usage dans la profession ou
-        l’entreprise plus récent prévoit des heures d’absence autorisée pour
-        rechercher un emploi pendant le préavis, le salarié en bénéficie si ces
-        mesures sont plus favorables que la convention collective.
-      </Alert>
-    );
-  }
+  return (
+    <Warning>
+      <IconStripe centered icon={icons.Warning}>
+        <WarningTitle>
+          Attention il peut exister une durée plus favorable
+        </WarningTitle>
+      </IconStripe>
+      {!duration ? (
+        <p>
+          Un accord d’entreprise ou à défaut un usage dans la profession ou
+          l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence
+          autorisée pour rechercher un emploi pendant le préavis.
+        </p>
+      ) : (
+        <p>
+          Si un accord d’entreprise ou à défaut un usage dans la profession ou
+          l’entreprise plus récent prévoit des heures d’absence autorisée pour
+          rechercher un emploi pendant le préavis, le salarié en bénéficie si
+          ces mesures sont plus favorables que la convention collective.
+        </p>
+      )}
+    </Warning>
+  );
 }
 
 function NoResult({ idcc, ccn, legalRefs }) {
@@ -103,21 +112,41 @@ function NoResult({ idcc, ccn, legalRefs }) {
         raisonnable pour rechercher un emploi pendant son préavis de
         licenciement.
       </p>
-      <Alert>
-        Une convention collective, un accord d’entreprise ou à défaut un usage
-        dans la profession ou l’entreprise peut prévoir que le salarié bénéficie
-        d’heures d’absence autorisée pour rechercher un emploi pendant le
-        préavis. Il peut s’agir du préavis en cas de rupture de la période
-        d’essai, de démission ou de licenciement.
-      </Alert>
-      <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
-      {recapSituation({
-        ...(ccn && {
-          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
-        }),
-      })}
-      <SectionTitle>Source</SectionTitle>
-      {legalRefs && getRef(legalRefs)}
+
+      <Accordion
+        items={[
+          {
+            body: (
+              <>
+                <SectionTitle>Éléments saisis</SectionTitle>
+                {recapSituation({
+                  ...(ccn && {
+                    "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+                  }),
+                })}
+                <SectionTitle>Source</SectionTitle>
+                {legalRefs && getRef(legalRefs)}
+              </>
+            ),
+            title: <p>Voir le détail du calcul</p>,
+          },
+        ]}
+      />
+      <Warning>
+        <IconStripe centered icon={icons.Warning}>
+          <WarningTitle>
+            Attention il peut exister une durée plus favorable
+          </WarningTitle>
+        </IconStripe>
+
+        <p>
+          Une convention collective, un accord d’entreprise ou à défaut un usage
+          dans la profession ou l’entreprise peut prévoir que le salarié
+          bénéficie d’heures d’absence autorisée pour rechercher un emploi
+          pendant le préavis. Il peut s’agir du préavis en cas de rupture de la
+          période d’essai, de démission ou de licenciement.
+        </p>
+      </Warning>
     </>
   );
 }
@@ -153,17 +182,29 @@ export function StepResult({ form }) {
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
       <Duration situation={situation} />
+      <Accordion
+        items={[
+          {
+            body: (
+              <>
+                <SectionTitle>Éléments saisis</SectionTitle>
+                {recapSituation({
+                  ...(ccn && {
+                    "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+                  }),
+                  "Type de rupture du contrat de travail": typeRupture,
+                  ...situation.criteria,
+                })}
+
+                <SectionTitle>Source</SectionTitle>
+                {situation.ref && situation.refUrl && getRef([situation])}
+              </>
+            ),
+            title: <p>Voir le détail du calcul</p>,
+          },
+        ]}
+      />
       <Disclaimer duration={situation.answer} />
-      <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
-      {recapSituation({
-        ...(ccn && {
-          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
-        }),
-        "Type de rupture du contrat de travail": typeRupture,
-        ...situation.criteria,
-      })}
-      <SectionTitle>Source</SectionTitle>
-      {situation.ref && situation.refUrl && getRef([situation])}
     </>
   );
 }

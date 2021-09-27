@@ -303,7 +303,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
               <h2
                 class="c4"
               >
-                Les éléments saisis
+                Éléments saisis
               </h2>
               <ul>
                 <li>

@@ -367,7 +367,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -1008,7 +1008,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -1568,7 +1568,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
@@ -2209,7 +2209,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
                 <h2
                   class="c0"
                 >
-                  Les éléments saisis
+                  Éléments saisis
                 </h2>
                 <ul>
                   <li>
