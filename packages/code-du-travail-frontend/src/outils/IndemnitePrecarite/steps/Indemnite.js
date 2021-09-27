@@ -12,7 +12,7 @@ import {
   getSituationsFor,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import { Disclaimer } from "../components/Disclaimer";
+import Disclaimer from "../components/Disclaimer";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
 

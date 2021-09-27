@@ -59,4 +59,4 @@ function Disclaimer({ situation, idcc }) {
   );
 }
 
-export { Disclaimer };
+export default Disclaimer;
