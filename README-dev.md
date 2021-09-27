@@ -46,16 +46,25 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 Run the frontend with our online latest API :
 
 ```sh
-API_URL=https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev
+yarn dev:frontend:preprod-api
 ```
 
 If you need to work on both frontend and api, don't provide API_URL as it will fallback to `http://localhost:1337/api/v1`
 
 ```sh
-yarn workspace @cdt/frontend dev
+yarn dev:frontend
 ```
 
 The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv-react-ui.netlify.com>
+
+##### Testing
+
+If you want to run e2e test, you have to run the frontend in a dedicated tab before running the tests.
+
+```sh
+yarn test:e2e # To run e2e test without any UI
+yarn test:e2e:ui # To run e2e test with CodeceptJS UI
+```
 
 #### Backend
 
