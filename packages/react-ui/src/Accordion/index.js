@@ -7,7 +7,13 @@ import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 import * as variants from "./components/variants/index.js";
 
-export const Accordion = ({ items, noTitle, variant, ...props }) => {
+export const Accordion = ({
+  items,
+  noTitle,
+  variant,
+  buttonWrapper,
+  ...props
+}) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
@@ -29,6 +35,7 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
                 index={index}
                 isLast={index === items.length - 1}
                 noTitle={noTitle}
+                defaultWrapper={buttonWrapper ? buttonWrapper : "div"}
               >
                 {getTextFromComponent(title)}
               </AccordionItemButton>
@@ -45,6 +52,7 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
 };
 
 Accordion.propTypes = {
+  buttonWrapper: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,

@@ -76,7 +76,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
           <Accordion
             data={data}
             headingLevel={headingLevel}
-            forcedElementType="h2"
+            buttonWrapper="h2"
           />
         );
       }
