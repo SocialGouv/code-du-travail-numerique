@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Toast } from "@socialgouv/cdtn-ui";
+import { Accordion, icons, IconStripe } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
@@ -12,23 +12,33 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  Warning,
+  WarningTitle,
+} from "../../DureePreavisRetraite/steps/component/WarningResult";
 
 function HdnToast({ ccn }) {
   return (
-    <Toast>
-      L’existence ou la durée du préavis de démission peut être prévue par une
-      convention collective, un accord d’entreprise ou à défaut, par un usage
-      dans l’entreprise.
+    <Warning>
+      <IconStripe centered icon={icons.Warning}>
+        <WarningTitle>
+          Attention il peut exister une autre durée de préavis
+        </WarningTitle>
+      </IconStripe>
+      <p>
+        L’existence ou la durée du préavis de démission peut être prévue par une
+        convention collective, un accord d’entreprise ou à défaut, par un usage
+        dans l’entreprise.
+      </p>
       {ccn && (
-        <>
-          <br />
+        <p>
           Vous pouvez faire une recherche par mots-clés dans{" "}
           <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
             <a>votre convention collective</a>
           </Link>
-        </>
+        </p>
       )}
-    </Toast>
+    </Warning>
   );
 }
 
@@ -85,16 +95,27 @@ function StepResult({ form }) {
           sauf, cas particuliers.
         </p>
       )}
+
+      <Accordion
+        items={[
+          {
+            body: (
+              <>
+                <SectionTitle>Éléments saisis</SectionTitle>
+                {recapSituation({
+                  "Convention collective": `${ccn.title} (${idcc})`,
+                  ...situation.criteria,
+                })}
+
+                <SectionTitle>Source</SectionTitle>
+                {getRef([refLegal, situation])}
+              </>
+            ),
+            title: <p>Voir le détail du calcul</p>,
+          },
+        ]}
+      />
       <HdnToast />
-      <SectionTitle>Détails</SectionTitle>
-      Éléments saisis&nbsp;:
-      <br />
-      {recapSituation({
-        "Convention collective": `${ccn.title} (${idcc})`,
-        ...situation.criteria,
-      })}
-      <SectionTitle>Source</SectionTitle>
-      {getRef([refLegal, situation])}
     </>
   );
 }
