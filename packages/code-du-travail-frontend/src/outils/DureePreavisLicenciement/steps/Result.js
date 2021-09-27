@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Toast } from "@socialgouv/cdtn-ui";
+import { Accordion, icons, IconStripe } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
@@ -12,76 +12,100 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  Warning,
+  WarningTitle,
+} from "../../DureePreavisRetraite/steps/component/WarningResult";
 
 const { situations: allSituations } = data;
 
-function DisclaimerToast({ durationCC, durationCDT, ccn }) {
+function DisclaimerText({ durationCC, durationCDT, ccn }) {
   if (durationCC === undefined) {
     if (parseInt(durationCDT, 10) === 0) {
       return (
-        <Toast>
-          L’existence et la durée du préavis de licenciement peuvent être
-          prévues dans la convention collective, un accord d’entreprise ou à
-          défaut par un usage dans l’entreprise.
+        <>
+          <p>
+            L’existence et la durée du préavis de licenciement peuvent être
+            prévues dans la convention collective, un accord d’entreprise ou à
+            défaut par un usage dans l’entreprise.
+          </p>
           {ccn && (
-            <>
-              <br />
+            <p>
               Vous pouvez faire une recherche par mots-clés dans{" "}
               <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
                 <a>votre convention collective</a>
               </Link>
-            </>
+            </p>
           )}
-        </Toast>
+        </>
       );
     } else {
       return (
-        <Toast>
-          Une durée de préavis de licenciement ou une condition d’ancienneté
-          plus favorable au salarié peut être prévue par une convention
-          collective, un accord de branche, un accord d’entreprise ou le contrat
-          de travail ou les usages.
+        <>
+          <p>
+            Une durée de préavis de licenciement ou une condition d’ancienneté
+            plus favorable au salarié peut être prévue par une convention
+            collective, un accord de branche, un accord d’entreprise ou le
+            contrat de travail ou les usages.
+          </p>
           {ccn && (
-            <>
-              <br />
+            <p>
               Vous pouvez faire une recherche par mots-clés dans{" "}
               <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
                 <a>votre convention collective</a>
               </Link>
-            </>
+            </p>
           )}
-        </Toast>
+        </>
       );
     }
   } else {
     if (parseInt(durationCDT, 10) > 0) {
       return (
-        <Toast>
+        <p>
           Une durée de préavis de licenciement ou une condition d’ancienneté
           plus favorable au salarié que ce que prévoit le code du travail peut
           être prévue par la loi pour certains cas particuliers, par un accord
           d’entreprise, le contrat de travail ou les usages.
-        </Toast>
+        </p>
       );
     } else if (parseInt(durationCC, 10) > 0) {
       return (
-        <Toast>
+        <p>
           L’existence ou la durée du préavis de licenciement peut aussi être
           prévue dans un accord d’entreprise ou à défaut par un usage dans
           l’entreprise.
-        </Toast>
+        </p>
       );
     } else {
       // both cc and legal === 0
       return (
-        <Toast>
+        <p>
           L’existence ou la durée du préavis de licenciement peut être prévue,
           par la loi pour certains cas particuliers, par un accord d’entreprise
           ou à défaut par un usage dans l’entreprise.
-        </Toast>
+        </p>
       );
     }
   }
+}
+
+function Disclaimer({ durationCC, durationCDT, ccn }) {
+  return (
+    <Warning>
+      <IconStripe centered icon={icons.Warning}>
+        <WarningTitle>
+          Attention il peut exister une durée plus favorable
+        </WarningTitle>
+      </IconStripe>
+
+      <DisclaimerText
+        durationCC={durationCC}
+        durationCDT={durationCDT}
+        ccn={ccn}
+      />
+    </Warning>
+  );
 }
 
 function DurationResult({ duration, durationCC, durationCDT }) {
@@ -109,13 +133,11 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     }
   }
   return (
-    <>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        licenciement est estimée à&nbsp;
-        <HighlightResult>{duration}</HighlightResult>.
-      </p>
-    </>
+    <p>
+      À partir des éléments que vous avez saisis, la durée du préavis de
+      licenciement est estimée à : <HighlightResult>{duration}</HighlightResult>
+      .
+    </p>
   );
 }
 
@@ -168,66 +190,76 @@ function StepResult({ form }) {
         durationCC={durationCC}
         durationCDT={durationCDT}
       />
-      <DisclaimerToast
-        durationCC={durationCC}
-        durationCDT={durationCDT}
-        ccn={ccn}
+
+      <Accordion
+        items={[
+          {
+            body: (
+              <>
+                <SectionTitle>Résultat</SectionTitle>
+                {idcc > 0 && (
+                  <p>
+                    Il s’agit de la durée la plus longue entre la durée légale
+                    prévue par le Code du travail et la durée conventionnelle
+                    prévue par la convention collective:
+                  </p>
+                )}
+                <ul>
+                  <li>
+                    Durée légale:{" "}
+                    {parseInt(durationCDT, 10) > 0 ? (
+                      <strong>{situationCDT.answer}</strong>
+                    ) : (
+                      "Aucun préavis."
+                    )}
+                  </li>
+                  <li>
+                    Durée conventionnelle:{" "}
+                    {situationCC ? (
+                      parseInt(durationCC, 10) > 0 ? (
+                        <strong>{situationCC.answer}</strong>
+                      ) : (
+                        "Aucun préavis."
+                      )
+                    ) : idcc === 0 ? (
+                      "La convention collective n'a pas été renseignée."
+                    ) : (
+                      "La convention collective n'a pas été traitée par nos services."
+                    )}
+                  </li>
+                </ul>
+                <SectionTitle>Éléments saisis</SectionTitle>
+                {recapSituation({
+                  "Ancienneté selon le code du travail": seniorityCDT,
+                  "Licenciement pour faute grave": seriousMisconduct
+                    ? "Oui"
+                    : "Non",
+                  "Reconnu en tant que travailleur handicapé": disabledWorker
+                    ? "Oui"
+                    : "Non",
+                  ...situationCDTCriteria,
+                })}
+                {situationCC && (
+                  <>
+                    {recapSituation({
+                      ...situationCCCriteria,
+                      ...(seniorityCC && {
+                        "Ancienneté selon la convention collective":
+                          seniorityCC,
+                      }),
+                      ...(ccn && { "Convention collective": ccn.title }),
+                    })}
+                    <SectionTitle>Source</SectionTitle>
+                    {situationCC.ref && situationCC.refUrl && getRef(refs)}
+                  </>
+                )}
+              </>
+            ),
+            title: <p>Voir le détail du calcul</p>,
+          },
+        ]}
       />
-      <SectionTitle>Détails</SectionTitle>
-      {idcc > 0 && (
-        <>
-          Il s’agit de la durée la plus longue entre la durée légale prévue par
-          le Code du travail et la durée conventionnelle prévue par la
-          convention collective:
-        </>
-      )}
-      <ul>
-        <li>
-          Durée légale:{" "}
-          {parseInt(durationCDT, 10) > 0 ? (
-            <strong>{situationCDT.answer}</strong>
-          ) : (
-            "Aucun préavis."
-          )}
-        </li>
-        <li>
-          Durée conventionnelle:{" "}
-          {situationCC ? (
-            parseInt(durationCC, 10) > 0 ? (
-              <strong>{situationCC.answer}</strong>
-            ) : (
-              "Aucun préavis."
-            )
-          ) : idcc === 0 ? (
-            "La convention collective n'a pas été renseignée."
-          ) : (
-            "La convention collective n'a pas été traitée par nos services."
-          )}
-        </li>
-      </ul>
-      Éléments saisis&nbsp;:
-      <br />
-      {recapSituation({
-        "Ancienneté selon le code du travail": seniorityCDT,
-        "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",
-        "Reconnu en tant que travailleur handicapé": disabledWorker
-          ? "Oui"
-          : "Non",
-        ...situationCDTCriteria,
-      })}
-      {situationCC && (
-        <>
-          {recapSituation({
-            ...situationCCCriteria,
-            ...(seniorityCC && {
-              "Ancienneté selon la convention collective": seniorityCC,
-            }),
-            ...(ccn && { "Convention collective": ccn.title }),
-          })}
-          <SectionTitle>Source</SectionTitle>
-          {situationCC.ref && situationCC.refUrl && getRef(refs)}
-        </>
-      )}
+      <Disclaimer durationCC={durationCC} durationCDT={durationCDT} ccn={ccn} />
     </>
   );
 }
