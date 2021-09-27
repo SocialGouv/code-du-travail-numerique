@@ -2360,11 +2360,11 @@ exports[`<FicheMT /> should render 1`] = `
                               points="9 18 15 12 9 6"
                             />
                           </svg>
-                          <div
+                          <h2
                             class="c59"
                           >
                             1) Visite d’information et de prévention : pour qui ?
-                          </div>
+                          </h2>
                         </div>
                       </div>
                       <div

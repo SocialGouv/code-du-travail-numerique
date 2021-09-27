@@ -69,7 +69,11 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
         breadcrumbs={breadcrumbs}
       >
         {untitledSection && <Html>{untitledSection.html}</Html>}
-        <Accordion preExpanded={[anchor]} items={titledSections} />
+        <Accordion
+          preExpanded={[anchor]}
+          items={titledSections}
+          buttonWrapper="h2"
+        />
       </StyledAnswer>
     </Layout>
   );

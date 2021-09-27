@@ -608,11 +608,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       De quoi s'agit-il ?
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -689,11 +689,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Conditions
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -813,11 +813,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Volonté de démissionner
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -921,11 +921,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Procédure
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -973,7 +973,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Modèle de document
                           </span>
                           <h3
-                            class="c20 c29"
+                            class="c29"
                           >
                             Lettre de démission du salarié
                           </h3>
@@ -1041,11 +1041,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Préavis
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -1341,11 +1341,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                         points="9 18 15 12 9 6"
                                       />
                                     </svg>
-                                    <div
+                                    <h3
                                       class="c18"
                                     >
                                       Accord de l'employeur
-                                    </div>
+                                    </h3>
                                   </div>
                                 </div>
                                 <div
@@ -1419,11 +1419,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                         points="9 18 15 12 9 6"
                                       />
                                     </svg>
-                                    <div
+                                    <h3
                                       class="c18"
                                     >
                                       Refus de l'employeur
-                                    </div>
+                                    </h3>
                                   </div>
                                 </div>
                                 <div
@@ -1572,11 +1572,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Indemnisation
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -1701,11 +1701,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         points="9 18 15 12 9 6"
                       />
                     </svg>
-                    <h2
+                    <h3
                       class="c18"
                     >
                       Documents remis au salarié
-                    </h2>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -1800,7 +1800,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             Modèle de document
           </span>
           <h3
-            class="c20 c29"
+            class="c29"
           >
             Lettre de démission du salarié
           </h3>

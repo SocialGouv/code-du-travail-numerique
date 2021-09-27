@@ -932,11 +932,11 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <div
+            <h3
               class="c7"
             >
               Congés et repos
-            </div>
+            </h3>
           </div>
         </div>
         <div
@@ -999,11 +999,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Jours fériés et ponts dans le secteur privé
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -1132,11 +1132,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -1330,11 +1330,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Les congés pour événements familiaux
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -1502,11 +1502,11 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <div
+            <h3
               class="c7"
             >
               Départ de l'entreprise
-            </div>
+            </h3>
           </div>
         </div>
         <div
@@ -1569,11 +1569,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Quelle est la durée de préavis en cas de licenciement ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -1749,11 +1749,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Quelle est la durée du préavis en cas de démission ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -1888,11 +1888,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Quelle est la durée de préavis en cas de départ à la retraite ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2037,11 +2037,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Quelle est la durée de préavis en cas de mise à la retraite ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2186,11 +2186,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2309,11 +2309,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2476,11 +2476,11 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <div
+            <h3
               class="c7"
             >
               Embauche et contrat de travail
-            </div>
+            </h3>
           </div>
         </div>
         <div
@@ -2543,11 +2543,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2674,11 +2674,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Comment déterminer l'ancienneté du salarié ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -2875,11 +2875,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3069,11 +3069,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3192,11 +3192,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                          Embauche en contrat d'extra (CDD d'usage)
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3285,11 +3285,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelles sont les conditions de cumul d'emplois ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3411,11 +3411,11 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <div
+            <h3
               class="c7"
             >
               Salaire et Rémunération
-            </div>
+            </h3>
           </div>
         </div>
         <div
@@ -3478,11 +3478,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3562,11 +3562,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quelles sont les primes prévues par la convention collective ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3709,11 +3709,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -3861,11 +3861,11 @@ exports[`<Convention /> renders 1`] = `
                 points="9 18 15 12 9 6"
               />
             </svg>
-            <div
+            <h3
               class="c7"
             >
               Santé, sécurité et conditions de travail
-            </div>
+            </h3>
           </div>
         </div>
         <div
@@ -3928,11 +3928,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div
@@ -4475,11 +4475,11 @@ exports[`<Convention /> renders 1`] = `
                           points="9 18 15 12 9 6"
                         />
                       </svg>
-                      <div
+                      <h4
                         class="c7"
                       >
                         En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-                      </div>
+                      </h4>
                     </div>
                   </div>
                   <div

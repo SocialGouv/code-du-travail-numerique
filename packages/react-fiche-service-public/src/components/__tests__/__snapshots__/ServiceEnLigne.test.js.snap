@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceEnLigne /> should render 1`] = `
-.c5 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c4 {
   display: block;
   margin: 0 0 1rem 0;
@@ -84,11 +73,11 @@ exports[`<ServiceEnLigne /> should render 1`] = `
   padding-right: 1rem;
 }
 
-.c6 {
+.c5 {
   margin: 0;
 }
 
-.c7 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -97,12 +86,6 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 
 .c1 {
   margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -132,14 +115,14 @@ exports[`<ServiceEnLigne /> should render 1`] = `
           Se retrouve dans en entête
         </span>
         <h3
-          class="c5 c6"
+          class="c5"
         >
           Texte qui se retrouve dans le lien
         </h3>
       </div>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       Source: 
       Source qui se retrouve sous le lien
