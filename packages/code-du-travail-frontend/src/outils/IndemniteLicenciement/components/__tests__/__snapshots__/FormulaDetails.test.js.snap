@@ -1,266 +1,392 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormulaDetails /> should render 1`] = `
-.c6 {
-  margin: 1.6rem 0;
+.c5 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
-.c7 {
+.c2 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c1,
+[aria-selected="true"] .c2 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c4 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:focus-within,
+.c0[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c3 {
+  margin: 2rem 0 2rem 1rem;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c1 {
-  display: block;
-  margin-bottom: 1.6rem;
+.c7 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
-.c0 {
-  margin-top: 2rem;
+@media (max-width:600px) {
+  .c4 {
+    padding: 1rem 0;
+  }
 }
 
-.c2 {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.c3 {
-  list-style-type: disc;
-}
-
-.c4 {
-  font-size: 1.4rem;
-}
-
-.c5 {
-  margin: 1.6rem 0;
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div>
-  <details
-    class="c0"
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
   >
-    <summary
-      class="c1"
-    >
-      Voir le détail du calcul
-    </summary>
-    <strong
-      class="c2"
-    >
-      Éléments saisis :
-    </strong>
-    <ul
-      class="c3"
-    >
-      <li
-        class="c4"
-      >
-        Value 2
-         : 
-        1
-      </li>
-      <li
-        class="c4"
-      >
-        value 1
-         : 
-        foo
-      </li>
-    </ul>
-    <strong
-      class="c2"
-    >
-      Formule :
-    </strong>
-    <div
-      class="c5"
-    >
+    <div>
       <div
-        class="c6"
+        class=""
+        data-accordion-component="AccordionItem"
+        index="0"
       >
         <div
-          class="c7"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <div>
-            <span
-              class="katex-display"
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c0"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="c1 c2"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span
-                class="katex"
-              >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c3"
+            >
+              Voir le détail du calcul
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-0"
+          class="c4"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="c5"
+          >
+            <p>
+              Voir le détail du calcul
+            </p>
+          </div>
+          <div
+            class="c6"
+          >
+            <h2
+              class="c7"
+            >
+              Les éléments saisis
+            </h2>
+            <ul>
+              <li>
+                Value 2
+                 : 
+                <strong>
+                  1
+                </strong>
+              </li>
+              <li>
+                value 1
+                 : 
+                <strong>
+                  foo
+                </strong>
+              </li>
+            </ul>
+            <h2
+              class="c7"
+            >
+              Formule
+            </h2>
+            <div
+              class="c8"
+            >
+              <div>
                 <span
-                  class="katex-mathml"
-                >
-                  <math
-                    display="block"
-                    xmlns="http://www.w3.org/1998/Math/MathML"
-                  >
-                    <semantics>
-                      <mrow>
-                        <mfrac>
-                          <mn>
-                            1
-                          </mn>
-                          <mn>
-                            3
-                          </mn>
-                        </mfrac>
-                        <mo>
-                          ×
-                        </mo>
-                        <mn>
-                          3.14
-                        </mn>
-                        <mi
-                          mathvariant="normal"
-                        >
-                          %
-                        </mi>
-                      </mrow>
-                      <annotation
-                        encoding="application/x-tex"
-                      >
-                        \\frac{1}{3} \\times 3.14\\%
-                      </annotation>
-                    </semantics>
-                  </math>
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="katex-html"
+                  class="katex-display"
                 >
                   <span
-                    class="base"
+                    class="katex"
                   >
                     <span
-                      class="strut"
-                      style="height:2.00744em;vertical-align:-0.686em;"
-                    />
+                      class="katex-mathml"
+                    >
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
+                        <semantics>
+                          <mrow>
+                            <mfrac>
+                              <mn>
+                                1
+                              </mn>
+                              <mn>
+                                3
+                              </mn>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mn>
+                              3.14
+                            </mn>
+                            <mi
+                              mathvariant="normal"
+                            >
+                              %
+                            </mi>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            \\frac{1}{3} \\times 3.14\\%
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
                     <span
-                      class="mord"
+                      aria-hidden="true"
+                      class="katex-html"
                     >
                       <span
-                        class="mopen nulldelimiter"
-                      />
-                      <span
-                        class="mfrac"
+                        class="base"
                       >
                         <span
-                          class="vlist-t vlist-t2"
+                          class="strut"
+                          style="height:2.00744em;vertical-align:-0.686em;"
+                        />
+                        <span
+                          class="mord"
                         >
                           <span
-                            class="vlist-r"
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
                           >
                             <span
-                              class="vlist"
-                              style="height:1.32144em;"
+                              class="vlist-t vlist-t2"
                             >
                               <span
-                                style="top:-2.314em;"
+                                class="vlist-r"
                               >
                                 <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="mord"
+                                  class="vlist"
+                                  style="height:1.32144em;"
                                 >
                                   <span
-                                    class="mord"
+                                    style="top:-2.314em;"
                                   >
-                                    3
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        3
+                                      </span>
+                                    </span>
                                   </span>
+                                  <span
+                                    style="top:-3.23em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="frac-line"
+                                      style="border-bottom-width:0.04em;"
+                                    />
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        1
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
                                 </span>
                               </span>
                               <span
-                                style="top:-3.23em;"
+                                class="vlist-r"
                               >
                                 <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="frac-line"
-                                  style="border-bottom-width:0.04em;"
-                                />
-                              </span>
-                              <span
-                                style="top:-3.677em;"
-                              >
-                                <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="mord"
+                                  class="vlist"
+                                  style="height:0.686em;"
                                 >
-                                  <span
-                                    class="mord"
-                                  >
-                                    1
-                                  </span>
+                                  <span />
                                 </span>
                               </span>
-                            </span>
-                            <span
-                              class="vlist-s"
-                            >
-                              ​
                             </span>
                           </span>
                           <span
-                            class="vlist-r"
-                          >
-                            <span
-                              class="vlist"
-                              style="height:0.686em;"
-                            >
-                              <span />
-                            </span>
-                          </span>
+                            class="mclose nulldelimiter"
+                          />
                         </span>
+                        <span
+                          class="mspace"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mspace"
+                          style="margin-right:0.2222222222222222em;"
+                        />
                       </span>
                       <span
-                        class="mclose nulldelimiter"
-                      />
-                    </span>
-                    <span
-                      class="mspace"
-                      style="margin-right:0.2222222222222222em;"
-                    />
-                    <span
-                      class="mbin"
-                    >
-                      ×
-                    </span>
-                    <span
-                      class="mspace"
-                      style="margin-right:0.2222222222222222em;"
-                    />
-                  </span>
-                  <span
-                    class="base"
-                  >
-                    <span
-                      class="strut"
-                      style="height:0.80556em;vertical-align:-0.05556em;"
-                    />
-                    <span
-                      class="mord"
-                    >
-                      3.14%
+                        class="base"
+                      >
+                        <span
+                          class="strut"
+                          style="height:0.80556em;vertical-align:-0.05556em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          3.14%
+                        </span>
+                      </span>
                     </span>
                   </span>
                 </span>
-              </span>
-            </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </details>
+  </div>
 </div>
 `;

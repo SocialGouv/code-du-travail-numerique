@@ -1,6 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteLegale /> should render 1`] = `
+.c8 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
+.c5 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c5 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c7 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c6 {
+  margin: 2rem 0 2rem 1rem;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -17,41 +98,27 @@ exports[`<IndemniteLegale /> should render 1`] = `
   white-space: pre-line;
 }
 
-.c8 {
-  margin: 1.6rem 0;
+.c2 {
+  font-size: 1.5em;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c3 {
-  display: block;
-  margin-bottom: 1.6rem;
+@media (max-width:600px) {
+  .c7 {
+    padding: 1rem 0;
+  }
 }
 
-.c2 {
-  margin-top: 2rem;
-}
-
-.c4 {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.c5 {
-  list-style-type: disc;
-}
-
-.c6 {
-  font-size: 1.4rem;
-}
-
-.c7 {
-  margin: 1.6rem 0;
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -67,245 +134,309 @@ exports[`<IndemniteLegale /> should render 1`] = `
     Indemnité légale
   </h2>
   <p>
-    Le code du travail prévoit un montant minimum de
+    Le code du travail prévoit un montant minimum de:
      
     <strong
-      class="c1"
+      class="c1 c2"
     >
       42,00
        € brut.
     </strong>
      
   </p>
-  <details
-    class="c2"
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
   >
-    <summary
-      class="c3"
-    >
-      Voir le détail du calcul
-    </summary>
-    <strong
-      class="c4"
-    >
-      Éléments saisis :
-    </strong>
-    <ul
-      class="c5"
-    >
-      <li
-        class="c6"
-      >
-        value
-         : 
-        1
-      </li>
-    </ul>
-    <strong
-      class="c4"
-    >
-      Formule :
-    </strong>
-    <div
-      class="c7"
-    >
+    <div>
       <div
-        class="c8"
+        class=""
+        data-accordion-component="AccordionItem"
+        index="0"
       >
         <div
-          class="c9"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <div>
-            <span
-              class="katex-display"
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c3"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="c4 c5"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span
-                class="katex"
-              >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c6"
+            >
+              Voir le détail du calcul
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-0"
+          class="c7"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="c8"
+          >
+            <p>
+              Voir le détail du calcul
+            </p>
+          </div>
+          <div
+            class="c9"
+          >
+            <h2
+              class="c0"
+            >
+              Les éléments saisis
+            </h2>
+            <ul>
+              <li>
+                value
+                 : 
+                <strong>
+                  1
+                </strong>
+              </li>
+            </ul>
+            <h2
+              class="c0"
+            >
+              Formule
+            </h2>
+            <div
+              class="c10"
+            >
+              <div>
                 <span
-                  class="katex-mathml"
-                >
-                  <math
-                    display="block"
-                    xmlns="http://www.w3.org/1998/Math/MathML"
-                  >
-                    <semantics>
-                      <mrow>
-                        <mfrac>
-                          <mn>
-                            13
-                          </mn>
-                          <mn>
-                            37
-                          </mn>
-                        </mfrac>
-                        <mo>
-                          ×
-                        </mo>
-                        <mn>
-                          3.14
-                        </mn>
-                      </mrow>
-                      <annotation
-                        encoding="application/x-tex"
-                      >
-                        \\frac{13}{37} \\times 3.14
-                      </annotation>
-                    </semantics>
-                  </math>
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="katex-html"
+                  class="katex-display"
                 >
                   <span
-                    class="base"
+                    class="katex"
                   >
                     <span
-                      class="strut"
-                      style="height:2.00744em;vertical-align:-0.686em;"
-                    />
+                      class="katex-mathml"
+                    >
+                      <math
+                        display="block"
+                        xmlns="http://www.w3.org/1998/Math/MathML"
+                      >
+                        <semantics>
+                          <mrow>
+                            <mfrac>
+                              <mn>
+                                13
+                              </mn>
+                              <mn>
+                                37
+                              </mn>
+                            </mfrac>
+                            <mo>
+                              ×
+                            </mo>
+                            <mn>
+                              3.14
+                            </mn>
+                          </mrow>
+                          <annotation
+                            encoding="application/x-tex"
+                          >
+                            \\frac{13}{37} \\times 3.14
+                          </annotation>
+                        </semantics>
+                      </math>
+                    </span>
                     <span
-                      class="mord"
+                      aria-hidden="true"
+                      class="katex-html"
                     >
                       <span
-                        class="mopen nulldelimiter"
-                      />
-                      <span
-                        class="mfrac"
+                        class="base"
                       >
                         <span
-                          class="vlist-t vlist-t2"
+                          class="strut"
+                          style="height:2.00744em;vertical-align:-0.686em;"
+                        />
+                        <span
+                          class="mord"
                         >
                           <span
-                            class="vlist-r"
+                            class="mopen nulldelimiter"
+                          />
+                          <span
+                            class="mfrac"
                           >
                             <span
-                              class="vlist"
-                              style="height:1.32144em;"
+                              class="vlist-t vlist-t2"
                             >
                               <span
-                                style="top:-2.314em;"
+                                class="vlist-r"
                               >
                                 <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="mord"
+                                  class="vlist"
+                                  style="height:1.32144em;"
                                 >
                                   <span
-                                    class="mord"
+                                    style="top:-2.314em;"
                                   >
-                                    37
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        37
+                                      </span>
+                                    </span>
                                   </span>
+                                  <span
+                                    style="top:-3.23em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="frac-line"
+                                      style="border-bottom-width:0.04em;"
+                                    />
+                                  </span>
+                                  <span
+                                    style="top:-3.677em;"
+                                  >
+                                    <span
+                                      class="pstrut"
+                                      style="height:3em;"
+                                    />
+                                    <span
+                                      class="mord"
+                                    >
+                                      <span
+                                        class="mord"
+                                      >
+                                        13
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span
+                                  class="vlist-s"
+                                >
+                                  ​
                                 </span>
                               </span>
                               <span
-                                style="top:-3.23em;"
+                                class="vlist-r"
                               >
                                 <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="frac-line"
-                                  style="border-bottom-width:0.04em;"
-                                />
-                              </span>
-                              <span
-                                style="top:-3.677em;"
-                              >
-                                <span
-                                  class="pstrut"
-                                  style="height:3em;"
-                                />
-                                <span
-                                  class="mord"
+                                  class="vlist"
+                                  style="height:0.686em;"
                                 >
-                                  <span
-                                    class="mord"
-                                  >
-                                    13
-                                  </span>
+                                  <span />
                                 </span>
                               </span>
-                            </span>
-                            <span
-                              class="vlist-s"
-                            >
-                              ​
                             </span>
                           </span>
                           <span
-                            class="vlist-r"
-                          >
-                            <span
-                              class="vlist"
-                              style="height:0.686em;"
-                            >
-                              <span />
-                            </span>
-                          </span>
+                            class="mclose nulldelimiter"
+                          />
                         </span>
+                        <span
+                          class="mspace"
+                          style="margin-right:0.2222222222222222em;"
+                        />
+                        <span
+                          class="mbin"
+                        >
+                          ×
+                        </span>
+                        <span
+                          class="mspace"
+                          style="margin-right:0.2222222222222222em;"
+                        />
                       </span>
                       <span
-                        class="mclose nulldelimiter"
-                      />
-                    </span>
-                    <span
-                      class="mspace"
-                      style="margin-right:0.2222222222222222em;"
-                    />
-                    <span
-                      class="mbin"
-                    >
-                      ×
-                    </span>
-                    <span
-                      class="mspace"
-                      style="margin-right:0.2222222222222222em;"
-                    />
-                  </span>
-                  <span
-                    class="base"
-                  >
-                    <span
-                      class="strut"
-                      style="height:0.64444em;vertical-align:0em;"
-                    />
-                    <span
-                      class="mord"
-                    >
-                      3.14
+                        class="base"
+                      >
+                        <span
+                          class="strut"
+                          style="height:0.64444em;vertical-align:0em;"
+                        />
+                        <span
+                          class="mord"
+                        >
+                          3.14
+                        </span>
+                      </span>
                     </span>
                   </span>
                 </span>
-              </span>
-            </span>
+              </div>
+            </div>
+            <h2
+              class="c0"
+            >
+              Sources
+            </h2>
+            <ul>
+              <li>
+                <a
+                  aria-label="Article L.1234-9 (nouvelle fenêtre)"
+                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Consultez l’article l.1234-9"
+                >
+                  Article L.1234-9
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Article R1234-1 à R1234-4 (nouvelle fenêtre)"
+                  href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Consultez l’article r1234-1 à r1234-4"
+                >
+                  Article R1234-1 à R1234-4
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </details>
-  <p>
-    Source :
-     
-    <a
-      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
-      rel="nofollow noopener"
-      title="voir l'article L.1234-9 du code du travail sur légifrance"
-    >
-      Article L.1234-9 du code du travail
-    </a>
-    ,
-    <a
-      href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
-      rel="nofollow noopener"
-      title="voir les articles R1234-1 à R1234-4 du code du travail sur légifrance"
-    >
-      Article R1234-1 à R1234-4 du code du travail
-    </a>
-  </p>
+  </div>
 </div>
 `;

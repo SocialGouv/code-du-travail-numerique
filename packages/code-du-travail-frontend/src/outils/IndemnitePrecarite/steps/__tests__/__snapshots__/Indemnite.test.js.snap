@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -11,16 +11,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 .c8 {
@@ -46,20 +42,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 1.5em;
+}
+
+.c4 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c4 {
+.c5 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5 {
+.c6 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c7 {
   margin: 1.6rem 0;
 }
 
@@ -77,9 +77,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   </h2>
   <p>
     La prime d'intervention
-     est estimée à 
+     est estimée à : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       180
        €
@@ -87,7 +87,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     Un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
   </div>
@@ -97,15 +97,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     Détails du calcul
   </h2>
   <strong
-    class="c3"
+    class="c4"
   >
     Éléments saisis :
   </strong>
   <ul
-    class="c4"
+    class="c5"
   >
     <li
-      class="c5"
+      class="c6"
     >
       convention collective
        : 
@@ -114,7 +114,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       </strong>
     </li>
     <li
-      class="c5"
+      class="c6"
     >
       total des salaires
        : 
@@ -124,286 +124,282 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </li>
   </ul>
   <strong
-    class="c3"
+    class="c4"
   >
     Calcul :
   </strong>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
-      <div
-        class="c8"
-      >
-        <div>
+      <div>
+        <span
+          class="katex-display"
+        >
           <span
-            class="katex-display"
+            class="katex"
           >
             <span
-              class="katex"
+              class="katex-mathml"
+            >
+              <math
+                display="block"
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <semantics>
+                  <mrow>
+                    <mfrac>
+                      <mn>
+                        6
+                      </mn>
+                      <mn>
+                        100
+                      </mn>
+                    </mfrac>
+                    <mo>
+                      ×
+                    </mo>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      o
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      S
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      i
+                    </mi>
+                    <mi>
+                      r
+                    </mi>
+                    <mi>
+                      e
+                    </mi>
+                    <mi>
+                      s
+                    </mi>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                  </mrow>
+                  <annotation
+                    encoding="application/x-tex"
+                  >
+                    \\frac{6}{100} \\times "totalSalaires"
+                  </annotation>
+                </semantics>
+              </math>
+            </span>
+            <span
+              aria-hidden="true"
+              class="katex-html"
             >
               <span
-                class="katex-mathml"
-              >
-                <math
-                  display="block"
-                  xmlns="http://www.w3.org/1998/Math/MathML"
-                >
-                  <semantics>
-                    <mrow>
-                      <mfrac>
-                        <mn>
-                          6
-                        </mn>
-                        <mn>
-                          100
-                        </mn>
-                      </mfrac>
-                      <mo>
-                        ×
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      \\frac{6}{100} \\times "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
+                class="base"
               >
                 <span
-                  class="base"
+                  class="strut"
+                  style="height:2.00744em;vertical-align:-0.686em;"
+                />
+                <span
+                  class="mord"
                 >
                   <span
-                    class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    class="mopen nulldelimiter"
                   />
                   <span
-                    class="mord"
+                    class="mfrac"
                   >
                     <span
-                      class="mopen nulldelimiter"
-                    />
-                    <span
-                      class="mfrac"
+                      class="vlist-t vlist-t2"
                     >
                       <span
-                        class="vlist-t vlist-t2"
+                        class="vlist-r"
                       >
                         <span
-                          class="vlist-r"
+                          class="vlist"
+                          style="height:1.32144em;"
                         >
                           <span
-                            class="vlist"
-                            style="height:1.32144em;"
+                            style="top:-2.314em;"
                           >
                             <span
-                              style="top:-2.314em;"
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
                             >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
                               <span
                                 class="mord"
                               >
-                                <span
-                                  class="mord"
-                                >
-                                  100
-                                </span>
-                              </span>
-                            </span>
-                            <span
-                              style="top:-3.23em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="frac-line"
-                                style="border-bottom-width:0.04em;"
-                              />
-                            </span>
-                            <span
-                              style="top:-3.677em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="mord"
-                              >
-                                <span
-                                  class="mord"
-                                >
-                                  6
-                                </span>
+                                100
                               </span>
                             </span>
                           </span>
                           <span
-                            class="vlist-s"
+                            style="top:-3.23em;"
                           >
-                            ​
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="frac-line"
+                              style="border-bottom-width:0.04em;"
+                            />
+                          </span>
+                          <span
+                            style="top:-3.677em;"
+                          >
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
+                            >
+                              <span
+                                class="mord"
+                              >
+                                6
+                              </span>
+                            </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-r"
+                          class="vlist-s"
                         >
-                          <span
-                            class="vlist"
-                            style="height:0.686em;"
-                          >
-                            <span />
-                          </span>
+                          ​
+                        </span>
+                      </span>
+                      <span
+                        class="vlist-r"
+                      >
+                        <span
+                          class="vlist"
+                          style="height:0.686em;"
+                        >
+                          <span />
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="mclose nulldelimiter"
-                    />
                   </span>
                   <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ×
-                  </span>
-                  <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    class="mclose nulldelimiter"
                   />
                 </span>
                 <span
-                  class="base"
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+                <span
+                  class="mbin"
                 >
-                  <span
-                    class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.05764em;"
-                  >
-                    lS
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    ai
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    res
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
+                  ×
+                </span>
+                <span
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+              </span>
+              <span
+                class="base"
+              >
+                <span
+                  class="strut"
+                  style="height:0.69444em;vertical-align:0em;"
+                />
+                <span
+                  class="mord"
+                >
+                  "
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  o
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.05764em;"
+                >
+                  lS
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.01968em;"
+                >
+                  l
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  ai
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  res
+                </span>
+                <span
+                  class="mord"
+                >
+                  "
                 </span>
               </span>
             </span>
           </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -462,7 +458,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -472,16 +468,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 .c8 {
@@ -507,20 +499,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 1.5em;
+}
+
+.c4 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c4 {
+.c5 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5 {
+.c6 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c7 {
   margin: 1.6rem 0;
 }
 
@@ -538,9 +534,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   </h2>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       300
        €
@@ -548,7 +544,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <p>
       Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
@@ -563,15 +559,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     Détails du calcul
   </h2>
   <strong
-    class="c3"
+    class="c4"
   >
     Éléments saisis :
   </strong>
   <ul
-    class="c4"
+    class="c5"
   >
     <li
-      class="c5"
+      class="c6"
     >
       convention collective
        : 
@@ -580,7 +576,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       </strong>
     </li>
     <li
-      class="c5"
+      class="c6"
     >
       total des salaires
        : 
@@ -590,286 +586,282 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </li>
   </ul>
   <strong
-    class="c3"
+    class="c4"
   >
     Calcul :
   </strong>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
-      <div
-        class="c8"
-      >
-        <div>
+      <div>
+        <span
+          class="katex-display"
+        >
           <span
-            class="katex-display"
+            class="katex"
           >
             <span
-              class="katex"
+              class="katex-mathml"
+            >
+              <math
+                display="block"
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <semantics>
+                  <mrow>
+                    <mfrac>
+                      <mn>
+                        10
+                      </mn>
+                      <mn>
+                        100
+                      </mn>
+                    </mfrac>
+                    <mo>
+                      ×
+                    </mo>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      o
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      S
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      i
+                    </mi>
+                    <mi>
+                      r
+                    </mi>
+                    <mi>
+                      e
+                    </mi>
+                    <mi>
+                      s
+                    </mi>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                  </mrow>
+                  <annotation
+                    encoding="application/x-tex"
+                  >
+                    \\frac{10}{100} \\times "totalSalaires"
+                  </annotation>
+                </semantics>
+              </math>
+            </span>
+            <span
+              aria-hidden="true"
+              class="katex-html"
             >
               <span
-                class="katex-mathml"
-              >
-                <math
-                  display="block"
-                  xmlns="http://www.w3.org/1998/Math/MathML"
-                >
-                  <semantics>
-                    <mrow>
-                      <mfrac>
-                        <mn>
-                          10
-                        </mn>
-                        <mn>
-                          100
-                        </mn>
-                      </mfrac>
-                      <mo>
-                        ×
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      \\frac{10}{100} \\times "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
+                class="base"
               >
                 <span
-                  class="base"
+                  class="strut"
+                  style="height:2.00744em;vertical-align:-0.686em;"
+                />
+                <span
+                  class="mord"
                 >
                   <span
-                    class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    class="mopen nulldelimiter"
                   />
                   <span
-                    class="mord"
+                    class="mfrac"
                   >
                     <span
-                      class="mopen nulldelimiter"
-                    />
-                    <span
-                      class="mfrac"
+                      class="vlist-t vlist-t2"
                     >
                       <span
-                        class="vlist-t vlist-t2"
+                        class="vlist-r"
                       >
                         <span
-                          class="vlist-r"
+                          class="vlist"
+                          style="height:1.32144em;"
                         >
                           <span
-                            class="vlist"
-                            style="height:1.32144em;"
+                            style="top:-2.314em;"
                           >
                             <span
-                              style="top:-2.314em;"
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
                             >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
                               <span
                                 class="mord"
                               >
-                                <span
-                                  class="mord"
-                                >
-                                  100
-                                </span>
-                              </span>
-                            </span>
-                            <span
-                              style="top:-3.23em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="frac-line"
-                                style="border-bottom-width:0.04em;"
-                              />
-                            </span>
-                            <span
-                              style="top:-3.677em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="mord"
-                              >
-                                <span
-                                  class="mord"
-                                >
-                                  10
-                                </span>
+                                100
                               </span>
                             </span>
                           </span>
                           <span
-                            class="vlist-s"
+                            style="top:-3.23em;"
                           >
-                            ​
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="frac-line"
+                              style="border-bottom-width:0.04em;"
+                            />
+                          </span>
+                          <span
+                            style="top:-3.677em;"
+                          >
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
+                            >
+                              <span
+                                class="mord"
+                              >
+                                10
+                              </span>
+                            </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-r"
+                          class="vlist-s"
                         >
-                          <span
-                            class="vlist"
-                            style="height:0.686em;"
-                          >
-                            <span />
-                          </span>
+                          ​
+                        </span>
+                      </span>
+                      <span
+                        class="vlist-r"
+                      >
+                        <span
+                          class="vlist"
+                          style="height:0.686em;"
+                        >
+                          <span />
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="mclose nulldelimiter"
-                    />
                   </span>
                   <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ×
-                  </span>
-                  <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    class="mclose nulldelimiter"
                   />
                 </span>
                 <span
-                  class="base"
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+                <span
+                  class="mbin"
                 >
-                  <span
-                    class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.05764em;"
-                  >
-                    lS
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    ai
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    res
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
+                  ×
+                </span>
+                <span
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+              </span>
+              <span
+                class="base"
+              >
+                <span
+                  class="strut"
+                  style="height:0.69444em;vertical-align:0em;"
+                />
+                <span
+                  class="mord"
+                >
+                  "
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  o
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.05764em;"
+                >
+                  lS
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.01968em;"
+                >
+                  l
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  ai
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  res
+                </span>
+                <span
+                  class="mord"
+                >
+                  "
                 </span>
               </span>
             </span>
           </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -917,7 +909,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -927,16 +919,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 .c8 {
@@ -962,20 +950,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 1.5em;
+}
+
+.c4 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c4 {
+.c5 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5 {
+.c6 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c7 {
   margin: 1.6rem 0;
 }
 
@@ -993,9 +985,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   </h2>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       300
        €
@@ -1003,7 +995,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     Un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu par l’accord d’entreprise, sauf si le contrat de travail prévoit un montant plus favorable pour le salarié.
     <br />
@@ -1015,15 +1007,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     Détails du calcul
   </h2>
   <strong
-    class="c3"
+    class="c4"
   >
     Éléments saisis :
   </strong>
   <ul
-    class="c4"
+    class="c5"
   >
     <li
-      class="c5"
+      class="c6"
     >
       convention collective
        : 
@@ -1032,7 +1024,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       </strong>
     </li>
     <li
-      class="c5"
+      class="c6"
     >
       total des salaires
        : 
@@ -1042,286 +1034,282 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </li>
   </ul>
   <strong
-    class="c3"
+    class="c4"
   >
     Calcul :
   </strong>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
-      <div
-        class="c8"
-      >
-        <div>
+      <div>
+        <span
+          class="katex-display"
+        >
           <span
-            class="katex-display"
+            class="katex"
           >
             <span
-              class="katex"
+              class="katex-mathml"
+            >
+              <math
+                display="block"
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <semantics>
+                  <mrow>
+                    <mfrac>
+                      <mn>
+                        10
+                      </mn>
+                      <mn>
+                        100
+                      </mn>
+                    </mfrac>
+                    <mo>
+                      ×
+                    </mo>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      o
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      S
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      i
+                    </mi>
+                    <mi>
+                      r
+                    </mi>
+                    <mi>
+                      e
+                    </mi>
+                    <mi>
+                      s
+                    </mi>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                  </mrow>
+                  <annotation
+                    encoding="application/x-tex"
+                  >
+                    \\frac{10}{100} \\times "totalSalaires"
+                  </annotation>
+                </semantics>
+              </math>
+            </span>
+            <span
+              aria-hidden="true"
+              class="katex-html"
             >
               <span
-                class="katex-mathml"
-              >
-                <math
-                  display="block"
-                  xmlns="http://www.w3.org/1998/Math/MathML"
-                >
-                  <semantics>
-                    <mrow>
-                      <mfrac>
-                        <mn>
-                          10
-                        </mn>
-                        <mn>
-                          100
-                        </mn>
-                      </mfrac>
-                      <mo>
-                        ×
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      \\frac{10}{100} \\times "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
+                class="base"
               >
                 <span
-                  class="base"
+                  class="strut"
+                  style="height:2.00744em;vertical-align:-0.686em;"
+                />
+                <span
+                  class="mord"
                 >
                   <span
-                    class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    class="mopen nulldelimiter"
                   />
                   <span
-                    class="mord"
+                    class="mfrac"
                   >
                     <span
-                      class="mopen nulldelimiter"
-                    />
-                    <span
-                      class="mfrac"
+                      class="vlist-t vlist-t2"
                     >
                       <span
-                        class="vlist-t vlist-t2"
+                        class="vlist-r"
                       >
                         <span
-                          class="vlist-r"
+                          class="vlist"
+                          style="height:1.32144em;"
                         >
                           <span
-                            class="vlist"
-                            style="height:1.32144em;"
+                            style="top:-2.314em;"
                           >
                             <span
-                              style="top:-2.314em;"
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
                             >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
                               <span
                                 class="mord"
                               >
-                                <span
-                                  class="mord"
-                                >
-                                  100
-                                </span>
-                              </span>
-                            </span>
-                            <span
-                              style="top:-3.23em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="frac-line"
-                                style="border-bottom-width:0.04em;"
-                              />
-                            </span>
-                            <span
-                              style="top:-3.677em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="mord"
-                              >
-                                <span
-                                  class="mord"
-                                >
-                                  10
-                                </span>
+                                100
                               </span>
                             </span>
                           </span>
                           <span
-                            class="vlist-s"
+                            style="top:-3.23em;"
                           >
-                            ​
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="frac-line"
+                              style="border-bottom-width:0.04em;"
+                            />
+                          </span>
+                          <span
+                            style="top:-3.677em;"
+                          >
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
+                            >
+                              <span
+                                class="mord"
+                              >
+                                10
+                              </span>
+                            </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-r"
+                          class="vlist-s"
                         >
-                          <span
-                            class="vlist"
-                            style="height:0.686em;"
-                          >
-                            <span />
-                          </span>
+                          ​
+                        </span>
+                      </span>
+                      <span
+                        class="vlist-r"
+                      >
+                        <span
+                          class="vlist"
+                          style="height:0.686em;"
+                        >
+                          <span />
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="mclose nulldelimiter"
-                    />
                   </span>
                   <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ×
-                  </span>
-                  <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    class="mclose nulldelimiter"
                   />
                 </span>
                 <span
-                  class="base"
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+                <span
+                  class="mbin"
                 >
-                  <span
-                    class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.05764em;"
-                  >
-                    lS
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    ai
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    res
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
+                  ×
+                </span>
+                <span
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+              </span>
+              <span
+                class="base"
+              >
+                <span
+                  class="strut"
+                  style="height:0.69444em;vertical-align:0em;"
+                />
+                <span
+                  class="mord"
+                >
+                  "
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  o
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.05764em;"
+                >
+                  lS
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.01968em;"
+                >
+                  l
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  ai
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  res
+                </span>
+                <span
+                  class="mord"
+                >
+                  "
                 </span>
               </span>
             </span>
           </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -1380,7 +1368,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1390,16 +1378,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 .c8 {
@@ -1425,20 +1409,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 1.5em;
+}
+
+.c4 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c4 {
+.c5 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5 {
+.c6 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c7 {
   margin: 1.6rem 0;
 }
 
@@ -1456,9 +1444,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   </h2>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       300
        €
@@ -1466,7 +1454,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <p>
       Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
@@ -1481,15 +1469,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     Détails du calcul
   </h2>
   <strong
-    class="c3"
+    class="c4"
   >
     Éléments saisis :
   </strong>
   <ul
-    class="c4"
+    class="c5"
   >
     <li
-      class="c5"
+      class="c6"
     >
       convention collective
        : 
@@ -1498,7 +1486,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       </strong>
     </li>
     <li
-      class="c5"
+      class="c6"
     >
       total des salaires
        : 
@@ -1508,286 +1496,282 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </li>
   </ul>
   <strong
-    class="c3"
+    class="c4"
   >
     Calcul :
   </strong>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
-      <div
-        class="c8"
-      >
-        <div>
+      <div>
+        <span
+          class="katex-display"
+        >
           <span
-            class="katex-display"
+            class="katex"
           >
             <span
-              class="katex"
+              class="katex-mathml"
+            >
+              <math
+                display="block"
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <semantics>
+                  <mrow>
+                    <mfrac>
+                      <mn>
+                        10
+                      </mn>
+                      <mn>
+                        100
+                      </mn>
+                    </mfrac>
+                    <mo>
+                      ×
+                    </mo>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      o
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      S
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      i
+                    </mi>
+                    <mi>
+                      r
+                    </mi>
+                    <mi>
+                      e
+                    </mi>
+                    <mi>
+                      s
+                    </mi>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                  </mrow>
+                  <annotation
+                    encoding="application/x-tex"
+                  >
+                    \\frac{10}{100} \\times "totalSalaires"
+                  </annotation>
+                </semantics>
+              </math>
+            </span>
+            <span
+              aria-hidden="true"
+              class="katex-html"
             >
               <span
-                class="katex-mathml"
-              >
-                <math
-                  display="block"
-                  xmlns="http://www.w3.org/1998/Math/MathML"
-                >
-                  <semantics>
-                    <mrow>
-                      <mfrac>
-                        <mn>
-                          10
-                        </mn>
-                        <mn>
-                          100
-                        </mn>
-                      </mfrac>
-                      <mo>
-                        ×
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      \\frac{10}{100} \\times "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
+                class="base"
               >
                 <span
-                  class="base"
+                  class="strut"
+                  style="height:2.00744em;vertical-align:-0.686em;"
+                />
+                <span
+                  class="mord"
                 >
                   <span
-                    class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    class="mopen nulldelimiter"
                   />
                   <span
-                    class="mord"
+                    class="mfrac"
                   >
                     <span
-                      class="mopen nulldelimiter"
-                    />
-                    <span
-                      class="mfrac"
+                      class="vlist-t vlist-t2"
                     >
                       <span
-                        class="vlist-t vlist-t2"
+                        class="vlist-r"
                       >
                         <span
-                          class="vlist-r"
+                          class="vlist"
+                          style="height:1.32144em;"
                         >
                           <span
-                            class="vlist"
-                            style="height:1.32144em;"
+                            style="top:-2.314em;"
                           >
                             <span
-                              style="top:-2.314em;"
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
                             >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
                               <span
                                 class="mord"
                               >
-                                <span
-                                  class="mord"
-                                >
-                                  100
-                                </span>
-                              </span>
-                            </span>
-                            <span
-                              style="top:-3.23em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="frac-line"
-                                style="border-bottom-width:0.04em;"
-                              />
-                            </span>
-                            <span
-                              style="top:-3.677em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="mord"
-                              >
-                                <span
-                                  class="mord"
-                                >
-                                  10
-                                </span>
+                                100
                               </span>
                             </span>
                           </span>
                           <span
-                            class="vlist-s"
+                            style="top:-3.23em;"
                           >
-                            ​
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="frac-line"
+                              style="border-bottom-width:0.04em;"
+                            />
+                          </span>
+                          <span
+                            style="top:-3.677em;"
+                          >
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
+                            >
+                              <span
+                                class="mord"
+                              >
+                                10
+                              </span>
+                            </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-r"
+                          class="vlist-s"
                         >
-                          <span
-                            class="vlist"
-                            style="height:0.686em;"
-                          >
-                            <span />
-                          </span>
+                          ​
+                        </span>
+                      </span>
+                      <span
+                        class="vlist-r"
+                      >
+                        <span
+                          class="vlist"
+                          style="height:0.686em;"
+                        >
+                          <span />
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="mclose nulldelimiter"
-                    />
                   </span>
                   <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ×
-                  </span>
-                  <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    class="mclose nulldelimiter"
                   />
                 </span>
                 <span
-                  class="base"
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+                <span
+                  class="mbin"
                 >
-                  <span
-                    class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.05764em;"
-                  >
-                    lS
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    ai
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    res
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
+                  ×
+                </span>
+                <span
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+              </span>
+              <span
+                class="base"
+              >
+                <span
+                  class="strut"
+                  style="height:0.69444em;vertical-align:0em;"
+                />
+                <span
+                  class="mord"
+                >
+                  "
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  o
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.05764em;"
+                >
+                  lS
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.01968em;"
+                >
+                  l
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  ai
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  res
+                </span>
+                <span
+                  class="mord"
+                >
+                  "
                 </span>
               </span>
             </span>
           </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -1835,7 +1819,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1845,16 +1829,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
-}
-
-.c7 {
-  margin: 1.6rem 0;
 }
 
 .c8 {
@@ -1880,20 +1860,24 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 1.5em;
+}
+
+.c4 {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-.c4 {
+.c5 {
   list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c5 {
+.c6 {
   font-size: 1.4rem;
 }
 
-.c6 {
+.c7 {
   margin: 1.6rem 0;
 }
 
@@ -1911,9 +1895,9 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   </h2>
   <p>
     La prime de précarité
-     est estimée à 
+     est estimée à : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       300
        €
@@ -1921,7 +1905,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <p>
       Une convention collective de branche étendue ou un accord d’entreprise peut prévoir un montant différent qu’il soit plus élevé ou plus faible que celui prévu par le code du travail.
@@ -1936,15 +1920,15 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     Détails du calcul
   </h2>
   <strong
-    class="c3"
+    class="c4"
   >
     Éléments saisis :
   </strong>
   <ul
-    class="c4"
+    class="c5"
   >
     <li
-      class="c5"
+      class="c6"
     >
       convention collective
        : 
@@ -1953,7 +1937,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       </strong>
     </li>
     <li
-      class="c5"
+      class="c6"
     >
       total des salaires
        : 
@@ -1963,286 +1947,282 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </li>
   </ul>
   <strong
-    class="c3"
+    class="c4"
   >
     Calcul :
   </strong>
   <div
-    class="c6"
+    class="c7"
   >
     <div
-      class="c7"
+      class="c8"
     >
-      <div
-        class="c8"
-      >
-        <div>
+      <div>
+        <span
+          class="katex-display"
+        >
           <span
-            class="katex-display"
+            class="katex"
           >
             <span
-              class="katex"
+              class="katex-mathml"
+            >
+              <math
+                display="block"
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <semantics>
+                  <mrow>
+                    <mfrac>
+                      <mn>
+                        10
+                      </mn>
+                      <mn>
+                        100
+                      </mn>
+                    </mfrac>
+                    <mo>
+                      ×
+                    </mo>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      o
+                    </mi>
+                    <mi>
+                      t
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      S
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      l
+                    </mi>
+                    <mi>
+                      a
+                    </mi>
+                    <mi>
+                      i
+                    </mi>
+                    <mi>
+                      r
+                    </mi>
+                    <mi>
+                      e
+                    </mi>
+                    <mi>
+                      s
+                    </mi>
+                    <mi
+                      mathvariant="normal"
+                    >
+                      "
+                    </mi>
+                  </mrow>
+                  <annotation
+                    encoding="application/x-tex"
+                  >
+                    \\frac{10}{100} \\times "totalSalaires"
+                  </annotation>
+                </semantics>
+              </math>
+            </span>
+            <span
+              aria-hidden="true"
+              class="katex-html"
             >
               <span
-                class="katex-mathml"
-              >
-                <math
-                  display="block"
-                  xmlns="http://www.w3.org/1998/Math/MathML"
-                >
-                  <semantics>
-                    <mrow>
-                      <mfrac>
-                        <mn>
-                          10
-                        </mn>
-                        <mn>
-                          100
-                        </mn>
-                      </mfrac>
-                      <mo>
-                        ×
-                      </mo>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        o
-                      </mi>
-                      <mi>
-                        t
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        S
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        l
-                      </mi>
-                      <mi>
-                        a
-                      </mi>
-                      <mi>
-                        i
-                      </mi>
-                      <mi>
-                        r
-                      </mi>
-                      <mi>
-                        e
-                      </mi>
-                      <mi>
-                        s
-                      </mi>
-                      <mi
-                        mathvariant="normal"
-                      >
-                        "
-                      </mi>
-                    </mrow>
-                    <annotation
-                      encoding="application/x-tex"
-                    >
-                      \\frac{10}{100} \\times "totalSalaires"
-                    </annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span
-                aria-hidden="true"
-                class="katex-html"
+                class="base"
               >
                 <span
-                  class="base"
+                  class="strut"
+                  style="height:2.00744em;vertical-align:-0.686em;"
+                />
+                <span
+                  class="mord"
                 >
                   <span
-                    class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    class="mopen nulldelimiter"
                   />
                   <span
-                    class="mord"
+                    class="mfrac"
                   >
                     <span
-                      class="mopen nulldelimiter"
-                    />
-                    <span
-                      class="mfrac"
+                      class="vlist-t vlist-t2"
                     >
                       <span
-                        class="vlist-t vlist-t2"
+                        class="vlist-r"
                       >
                         <span
-                          class="vlist-r"
+                          class="vlist"
+                          style="height:1.32144em;"
                         >
                           <span
-                            class="vlist"
-                            style="height:1.32144em;"
+                            style="top:-2.314em;"
                           >
                             <span
-                              style="top:-2.314em;"
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
                             >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
                               <span
                                 class="mord"
                               >
-                                <span
-                                  class="mord"
-                                >
-                                  100
-                                </span>
-                              </span>
-                            </span>
-                            <span
-                              style="top:-3.23em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="frac-line"
-                                style="border-bottom-width:0.04em;"
-                              />
-                            </span>
-                            <span
-                              style="top:-3.677em;"
-                            >
-                              <span
-                                class="pstrut"
-                                style="height:3em;"
-                              />
-                              <span
-                                class="mord"
-                              >
-                                <span
-                                  class="mord"
-                                >
-                                  10
-                                </span>
+                                100
                               </span>
                             </span>
                           </span>
                           <span
-                            class="vlist-s"
+                            style="top:-3.23em;"
                           >
-                            ​
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="frac-line"
+                              style="border-bottom-width:0.04em;"
+                            />
+                          </span>
+                          <span
+                            style="top:-3.677em;"
+                          >
+                            <span
+                              class="pstrut"
+                              style="height:3em;"
+                            />
+                            <span
+                              class="mord"
+                            >
+                              <span
+                                class="mord"
+                              >
+                                10
+                              </span>
+                            </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-r"
+                          class="vlist-s"
                         >
-                          <span
-                            class="vlist"
-                            style="height:0.686em;"
-                          >
-                            <span />
-                          </span>
+                          ​
+                        </span>
+                      </span>
+                      <span
+                        class="vlist-r"
+                      >
+                        <span
+                          class="vlist"
+                          style="height:0.686em;"
+                        >
+                          <span />
                         </span>
                       </span>
                     </span>
-                    <span
-                      class="mclose nulldelimiter"
-                    />
                   </span>
                   <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
-                  />
-                  <span
-                    class="mbin"
-                  >
-                    ×
-                  </span>
-                  <span
-                    class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    class="mclose nulldelimiter"
                   />
                 </span>
                 <span
-                  class="base"
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+                <span
+                  class="mbin"
                 >
-                  <span
-                    class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
-                  />
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    o
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    t
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.05764em;"
-                  >
-                    lS
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    a
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                    style="margin-right:0.01968em;"
-                  >
-                    l
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    ai
-                  </span>
-                  <span
-                    class="mord mathnormal"
-                  >
-                    res
-                  </span>
-                  <span
-                    class="mord"
-                  >
-                    "
-                  </span>
+                  ×
+                </span>
+                <span
+                  class="mspace"
+                  style="margin-right:0.2222222222222222em;"
+                />
+              </span>
+              <span
+                class="base"
+              >
+                <span
+                  class="strut"
+                  style="height:0.69444em;vertical-align:0em;"
+                />
+                <span
+                  class="mord"
+                >
+                  "
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  o
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  t
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.05764em;"
+                >
+                  lS
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  a
+                </span>
+                <span
+                  class="mord mathnormal"
+                  style="margin-right:0.01968em;"
+                >
+                  l
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  ai
+                </span>
+                <span
+                  class="mord mathnormal"
+                >
+                  res
+                </span>
+                <span
+                  class="mord"
+                >
+                  "
                 </span>
               </span>
             </span>
           </span>
-        </div>
+        </span>
       </div>
     </div>
   </div>

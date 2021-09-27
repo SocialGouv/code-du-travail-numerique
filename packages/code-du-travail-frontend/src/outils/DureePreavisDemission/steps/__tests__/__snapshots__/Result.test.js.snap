@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render CC answer 1`] = `
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -24,7 +24,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   animation: none;
 }
 
-.c3 {
+.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -52,8 +52,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media print {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -73,17 +77,17 @@ exports[`<StepResult /> should render CC answer 1`] = `
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       2 mois
     </strong>
     .
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <div
-      class="c3"
+      class="c4"
       role="alert"
     >
       L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
@@ -152,7 +156,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 `;
 
 exports[`<StepResult /> should render with no cc 1`] = `
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -175,7 +179,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   animation: none;
 }
 
-.c3 {
+.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -203,8 +207,12 @@ exports[`<StepResult /> should render with no cc 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media print {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -223,7 +231,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -234,10 +242,10 @@ exports[`<StepResult /> should render with no cc 1`] = `
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <div
-      class="c3"
+      class="c4"
       role="alert"
     >
       L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
@@ -265,7 +273,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
 `;
 
 exports[`<StepResult /> should render with unhandled cc 1`] = `
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -288,7 +296,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   animation: none;
 }
 
-.c3 {
+.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -316,8 +324,12 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media print {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -336,7 +348,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -347,10 +359,10 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <div
-      class="c3"
+      class="c4"
       role="alert"
     >
       L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.

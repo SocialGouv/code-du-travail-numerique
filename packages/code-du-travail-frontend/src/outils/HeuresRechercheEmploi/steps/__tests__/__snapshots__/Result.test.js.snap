@@ -99,7 +99,7 @@ exports[`<StepResult /> should render no results 1`] = `
 `;
 
 exports[`<StepResult /> should render with duration 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -109,11 +109,11 @@ exports[`<StepResult /> should render with duration 1`] = `
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -133,6 +133,10 @@ exports[`<StepResult /> should render with duration 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
@@ -147,9 +151,9 @@ exports[`<StepResult /> should render with duration 1`] = `
   </h2>
   <p>
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
-    <br />
+     : 
     <strong
-      class="c1"
+      class="c1 c2"
     >
       2 heures par jour
     </strong>
@@ -172,7 +176,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     Si un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent prévoit des heures d’absence autorisée pour rechercher un emploi pendant le préavis, le salarié en bénéficie si ces mesures sont plus favorables que la convention collective.
   </div>
@@ -226,7 +230,7 @@ exports[`<StepResult /> should render with duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -236,11 +240,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -260,6 +264,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
@@ -274,7 +282,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -285,7 +293,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
   </div>
@@ -317,7 +325,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c2 {
+.c3 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -327,11 +335,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -351,6 +359,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   white-space: pre-line;
 }
 
+.c2 {
+  font-size: 1.5em;
+}
+
 @media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
@@ -365,7 +377,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -384,7 +396,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
   </div>
