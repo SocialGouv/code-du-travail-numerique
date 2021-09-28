@@ -1,9 +1,8 @@
 import elasticsearchClient from "../../conf/elasticsearch.js";
+import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-
-const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const getHightlightsBody = require("./highlight.elastic");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";

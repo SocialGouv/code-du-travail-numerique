@@ -6,7 +6,6 @@ const [, major] = cdtnAdminVersion.match(/^(?:\^|~)?(\d+)/);
 if (!major) {
   throw new Error("[prefix]: cdtnAdminVersion major not found");
 }
-export default {
-  API_BASE_URL: "/api/v1",
-  CDTN_ADMIN_VERSION: `v${major}`,
-};
+
+export const API_BASE_URL = "/api/v1/";
+export const CDTN_ADMIN_VERSION = `v${major}`;

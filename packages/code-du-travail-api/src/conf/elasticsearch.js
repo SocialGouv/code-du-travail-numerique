@@ -1,4 +1,4 @@
-// https://github.com/elastic/elasticsearch-js
+// https://github.com/elastic/elasticsclearearch-js
 
 const winston = require("winston");
 const { Client } = require("@elastic/elasticsearch");

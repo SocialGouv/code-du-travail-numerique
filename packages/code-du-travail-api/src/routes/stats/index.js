@@ -1,7 +1,7 @@
 import elasticsearchClient from "../../conf/elasticsearch.js";
+import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
-const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const fetch = require("node-fetch");
 const { startOfDay, subMonths, max, format } = require("date-fns");
 
