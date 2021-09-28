@@ -20,8 +20,8 @@ switch (process.env.NODE_ENV) {
     break;
 }
 
-const client = new Client(esClientConfig);
-
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
+
+const client = new Client(esClientConfig);
 
 export default client;

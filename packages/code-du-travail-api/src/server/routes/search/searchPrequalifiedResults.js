@@ -1,11 +1,11 @@
+import elasticsearchClient from "../../conf/elasticsearch.js";
+
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { logger } = require("@socialgouv/cdtn-logger");
 const fuzz = require("fuzzball");
 const deburr = require("lodash.deburr");
 const memoizee = require("memoizee");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-
-const elasticsearchClient = require("../../conf/elasticsearch.js");
 const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";

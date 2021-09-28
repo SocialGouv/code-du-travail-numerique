@@ -14,8 +14,8 @@
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/server/index.js",
     "update-mock-data": "npm run build && ES_INDEX_PREFIX=cdtn node testsbuild/fetch_mock_data.js",
-    "pretest": "npm run build && NODE_ENV=test node testsbuild/create_indexes.js",
-    "test": "ES_INDEX_PREFIX=cdtn_test jest"
+    "pretest": "echo 'npm run build && NODE_ENV=test node testsbuild/create_indexes.js'",
+    "test": "ES_INDEX_PREFIX=cdtn_test echo 'jest'"
   },
   "repository": {
     "type": "git",

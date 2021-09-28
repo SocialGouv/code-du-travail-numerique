@@ -1,8 +1,9 @@
+import elasticsearchClient from "../../conf/elasticsearch.js";
+
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
-const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getVersionsBody = require("./versions.elastic");
 const memoizee = require("memoizee");
 

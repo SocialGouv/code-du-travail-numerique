@@ -1,9 +1,10 @@
+import elasticsearchClient from "../../conf/elasticsearch.js";
+
 const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
-const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getPrequalifiedResults = require("./searchPrequalifiedResults");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");

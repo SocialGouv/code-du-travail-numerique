@@ -1,10 +1,11 @@
+import elasticsearchClient from "../../conf/elasticsearch.js";
+
 const Router = require("koa-router");
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const fetch = require("node-fetch");
 const { startOfDay, subMonths, max, format } = require("date-fns");
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-const elasticsearchClient = require("../../conf/elasticsearch.js");
 const docsCountBody = require("../docs-count/docCount.elastic");
 
 const router = new Router({ prefix: API_BASE_URL });

@@ -1,23 +1,24 @@
+import { logger } from "@socialgouv/cdtn-logger";
+
+import conventionsRoutes from "./routes/conventions";
+import docsCountRoutes from "./routes/docs-count";
+import dossiersRoute from "./routes/dossiers";
+import glossaryRoute from "./routes/glossary";
+import highlightRoutes from "./routes/highlights";
+import idccRoutes from "./routes/idcc";
+import indexRoute from "./routes/index";
+import itemsRoutes from "./routes/items";
+import modelesRoutes from "./routes/modeles";
+import searchRoutes from "./routes/search";
+import sheetMTRoutes from "./routes/sheets-mt";
+import statsRoute from "./routes/stats";
+import suggestRoute from "./routes/suggest";
+import themesRoute from "./routes/themes";
+import versionRoutes from "./routes/version";
+
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
-
-const conventionsRoutes = require("./routes/conventions");
-const docsCountRoutes = require("./routes/docs-count");
-const highlightRoutes = require("./routes/highlights");
-const idccRoutes = require("./routes/idcc");
-const itemsRoutes = require("./routes/items");
-const modelesRoutes = require("./routes/modeles");
-const statsRoute = require("./routes/stats");
-const searchRoutes = require("./routes/search");
-const sheetMTRoutes = require("./routes/sheets-mt");
-const suggestRoute = require("./routes/suggest");
-const themesRoute = require("./routes/themes");
-const dossiersRoute = require("./routes/dossiers");
-const glossaryRoute = require("./routes/glossary");
-const versionRoutes = require("./routes/version");
-const indexRoute = require("./routes/index");
-const { logger } = require("@socialgouv/cdtn-logger");
 
 const app = new Koa();
 const PORT = process.env.PORT || 1337;

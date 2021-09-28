@@ -1,7 +1,7 @@
+import elasticsearchClient from "../../conf/elasticsearch.js";
+
 const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
-
-const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./searchBySourceSlug.elastic");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
@@ -25,26 +25,19 @@ const sources = [
 ];
 
 // select certain fields and add recommendation source (covisits or search)
-const mapSource = (reco) => ({
-  action,
-  description,
-  icon,
-  slug,
-  source,
-  subtitle,
-  title,
-  url,
-}) => ({
-  action,
-  description,
-  icon,
-  reco,
-  slug,
-  source,
-  subtitle,
-  title,
-  url,
-});
+const mapSource =
+  (reco) =>
+  ({ action, description, icon, slug, source, subtitle, title, url }) => ({
+    action,
+    description,
+    icon,
+    reco,
+    slug,
+    source,
+    subtitle,
+    title,
+    url,
+  });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
 async function getCovisitedItems({ covisits }) {
