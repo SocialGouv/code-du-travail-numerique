@@ -12,8 +12,8 @@
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/server/index.js",
     "update-mock-data": "babel-node src/tests/fetch_mock_data.js",
-    "pretest": "echo 'babel-node src/tests/create_indexes.js'",
-    "test": "echo 'jest'"
+    "pretest": "babel-node src/tests/create_indexes.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
