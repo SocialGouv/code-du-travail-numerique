@@ -5,7 +5,7 @@ import { writeFile as _writeFile } from "fs";
 import { join } from "path";
 import { promisify } from "util";
 
-import { CDTN_ADMIN_VERSION } from "../src/server/routes/v1.prefix";
+import { CDTN_ADMIN_VERSION } from "../server/routes/v1.prefix";
 import versions from "./versions.json";
 
 const writeFile = promisify(_writeFile);

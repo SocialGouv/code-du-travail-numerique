@@ -5,17 +5,15 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:src && npm run build:test",
-    "build:test": "babel ./tests/** -d testsbuild --copy-files",
-    "build:src": "babel ./src/server/index.js -d dist",
+    "build": "babel ./src/** -d dist --copy-files",
     "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/server/index.js",
-    "update-mock-data": "npm run build && ES_INDEX_PREFIX=cdtn node testsbuild/fetch_mock_data.js",
-    "pretest": "echo 'npm run build && NODE_ENV=test node testsbuild/create_indexes.js'",
-    "test": "ES_INDEX_PREFIX=cdtn_test echo 'jest'"
+    "update-mock-data": "babel-node src/tests/fetch_mock_data.js",
+    "pretest": "echo 'babel-node src/tests/create_indexes.js'",
+    "test": "echo 'jest'"
   },
   "repository": {
     "type": "git",
