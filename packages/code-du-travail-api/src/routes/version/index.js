@@ -32,7 +32,7 @@ const getVersions = memoizee(_getVersionsBody, {
  */
 router.get("/version", async (ctx) => {
   const version =
-    process.env.VERSION || require("../../../../package.json").version;
+    process.env.VERSION || require("../../../package.json").version;
 
   const response = await getVersions();
 

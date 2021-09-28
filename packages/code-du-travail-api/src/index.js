@@ -68,7 +68,7 @@ app.use(versionRoutes.routes());
 app.use(indexRoute.routes());
 
 if (process.env.NODE_ENV !== "production") {
-  logger.info("-- DEV MODE ---");
+  logger.info("--- DEV MODE ---");
 }
 
 // Server.
@@ -76,4 +76,4 @@ const server = app.listen(PORT, () => {
   logger.info(`Server listening on port: ${PORT}`);
 });
 
-module.exports = server;
+export default server;

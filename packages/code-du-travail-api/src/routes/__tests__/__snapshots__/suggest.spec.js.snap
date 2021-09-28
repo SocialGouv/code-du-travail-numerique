@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ensure results are only returned when enough characters passed 1`] = `Object {}`;
+exports[`ensure results are only returned when enough characters passed 1`] = `Array []`;
 
 exports[`fuzzy matching results are lower than exact matchs 1`] = `Object {}`;
 

@@ -6,14 +6,15 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel ./src/** -d dist --copy-files",
+    "build": "babel ./src/** -d dist --copy-files --extensions '.ts'",
     "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/index.js",
-    "pretest": "rimraf dist && babel-node src/tests/fetch_mock_data.js && babel-node src/tests/create_indexes.js",
-    "test": "jest"
+    "pretest": "babel-node src/tests/fetch_mock_data.js && babel-node src/tests/create_indexes.js",
+    "test": "jest",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -47,17 +48,21 @@
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/node": "^7.15.4",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.15.6",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-typescript": "^7.15.0",
     "@socialgouv/eslint-config-recommended": "^1.75.0",
+    "@types/node": "^16.10.1",
     "@vercel/ncc": "^0.29.2",
     "babel-jest": "^27.2.0",
     "eslint": "^7.31.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "nodemon": "^2.0.12",
-    "supertest": "^6.1.6"
+    "supertest": "^6.1.6",
+    "typescript": "^4.4.3"
   },
   "lint-staged": {
     "*.js": [
