@@ -28,7 +28,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
   grille:
     assiette: ancienneté
     tranches:
-      - montant: 8 jours
+      - montant: 8 jour
         plafond: 6 mois
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . maîtrises:
@@ -55,7 +55,7 @@ contrat salarié . convention collective . restauration collectivités . catégo
   grille:
     assiette: ancienneté
     tranches:
-      - montant: 8 jours
+      - montant: 8 jour
         plafond: 6 mois
       - montant: 1 mois
 

@@ -6,7 +6,7 @@ const engine = new Engine(mergeModels());
 describe("Mise à la retraite", () => {
   test.each`
     seniority | category       | expectedNotice | expectedUnit
-    ${4}      | ${"Employés"}  | ${8}           | ${"jours"}
+    ${4}      | ${"Employés"}  | ${8}           | ${"jour"}
     ${12}     | ${"Employés"}  | ${1}           | ${"mois"}
     ${24}     | ${"Employés"}  | ${2}           | ${"mois"}
     ${5}      | ${"Maîtrises"} | ${1}           | ${"mois"}
@@ -37,7 +37,7 @@ describe("Mise à la retraite", () => {
 describe("Départ à la retraite", () => {
   test.each`
     seniority | category       | expectedNotice | expectedUnit
-    ${4}      | ${"Employés"}  | ${8}           | ${"jours"}
+    ${4}      | ${"Employés"}  | ${8}           | ${"jour"}
     ${12}     | ${"Employés"}  | ${1}           | ${"mois"}
     ${24}     | ${"Employés"}  | ${1}           | ${"mois"}
     ${5}      | ${"Maîtrises"} | ${1}           | ${"mois"}
