@@ -38,9 +38,7 @@ contrat salarié . convention collective . cabinets médicaux . mise à la retra
 contrat salarié . convention collective . cabinets médicaux . mise à la retraite . catégorie professionnelle . non-cadres . notification:
   applicable si:
     toutes ces conditions:
-      - mise à la retraite
       - ancienneté < 6 mois
-      - catégorie professionnelle = 'Non-cadres'
       - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
 
   type: notification
