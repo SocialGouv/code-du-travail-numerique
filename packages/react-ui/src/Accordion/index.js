@@ -35,7 +35,7 @@ export const Accordion = ({
                 index={index}
                 isLast={index === items.length - 1}
                 noTitle={noTitle}
-                defaultWrapper={buttonWrapper ? buttonWrapper : "div"}
+                buttonWrapper={buttonWrapper}
               >
                 {getTextFromComponent(title)}
               </AccordionItemButton>
@@ -67,6 +67,7 @@ Accordion.propTypes = {
 };
 
 Accordion.defaultProps = {
+  buttonWrapper: "div",
   noTitle: false,
   preExpanded: [],
   variant: "base",
