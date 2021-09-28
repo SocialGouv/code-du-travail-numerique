@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "babel ./src/** -d dist --copy-files",
     "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
@@ -73,6 +74,9 @@
     ],
     "modulePathIgnorePatterns": [
       "__mocking__"
-    ]
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }
