@@ -1,146 +1,147 @@
 const utils = require("../search/utils");
+
 const arr1 = [
   {
     _source: {
-      whatever: "whatever",
+      algo: "ft",
       slug: "a",
       source: "a",
-      algo: "ft",
+      whatever: "whatever",
     },
   },
   {
     _source: {
-      whatever: "whatever",
+      algo: "ft",
       slug: "hey",
       source: "a",
-      algo: "ft",
+      whatever: "whatever",
     },
   },
 ];
 const arr2 = [
   {
     _source: {
-      whatever: "whatever",
+      algo: "sem",
       slug: "hey",
       source: "a",
-      algo: "sem",
+      whatever: "whatever",
     },
   },
   {
     _source: {
-      whatever: "whatever",
+      algo: "sem",
       slug: "c",
       source: "a",
-      algo: "sem",
+      whatever: "whatever",
     },
   },
 ];
 
 const tests = [
   {
+    expected: [
+      { score: 2, title: 1 },
+      { score: 4, title: 2 },
+    ],
     input: [
       [
         {
-          title: 1,
           score: 2,
+          title: 1,
         },
       ],
       [
         {
-          title: 2,
           score: 4,
+          title: 2,
         },
       ],
-    ],
-    expected: [
-      { title: 1, score: 2 },
-      { title: 2, score: 4 },
     ],
   },
   {
+    expected: [{ score: 2, title: 1 }],
     input: [
       [
         {
-          title: 1,
           score: 2,
+          title: 1,
         },
       ],
       [],
     ],
-    expected: [{ title: 1, score: 2 }],
   },
 ];
 
 const test_dupl = [
   {
-    input: arr1.concat(arr2),
     expected: [
       {
         _source: {
-          whatever: "whatever",
+          algo: "ft",
           slug: "a",
           source: "a",
-          algo: "ft",
+          whatever: "whatever",
         },
       },
       {
         _source: {
-          whatever: "whatever",
+          algo: "ft",
           slug: "hey",
           source: "a",
-          algo: "ft",
+          whatever: "whatever",
         },
       },
       {
         _source: {
-          whatever: "whatever",
+          algo: "sem",
           slug: "c",
           source: "a",
-          algo: "sem",
+          whatever: "whatever",
         },
       },
     ],
+    input: arr1.concat(arr2),
   },
 ];
 const test_mergePipe_result = [
   {
     _source: {
-      whatever: "whatever",
+      algo: "ft",
       slug: "a",
       source: "a",
-      algo: "ft",
+      whatever: "whatever",
     },
   },
   {
     _source: {
-      whatever: "whatever",
+      algo: "both",
       slug: "hey",
       source: "a",
-      algo: "both",
+      whatever: "whatever",
     },
   },
   {
     _source: {
-      whatever: "whatever",
+      algo: "sem",
       slug: "c",
       source: "a",
-      algo: "sem",
+      whatever: "whatever",
     },
   },
 ];
-test("test merge two", () => {
-  tests.forEach(t => {
+test("merge two", () => {
+  tests.forEach((t) => {
     expect(utils.merge(t.input[0], t.input[1], 10)).toEqual(t.expected);
   });
 });
 
-test("test remove duplicates", () => {
-  test_dupl.forEach(t => {
+test("remove duplicates", () => {
+  test_dupl.forEach((t) => {
     expect(utils.removeDuplicate(t.input)).toEqual(t.expected);
   });
 });
 
-test("test mergePipe", () => {
+test("mergePipe", () => {
   test_dupl.forEach(() => {
     expect(utils.mergePipe(arr1, arr2, 4)).toEqual(test_mergePipe_result);
   });

@@ -14,8 +14,8 @@
 
 ### Demos
 
--   Production : <https://code.travail.gouv.fr>
--   master (dev) : <https://master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/>
+- Production : <https://code.travail.gouv.fr>
+- master (dev) : <https://master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/>
 
 ## Installation
 
@@ -71,16 +71,9 @@ Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.o
 cp docker-compose.override.dev.yml docker-compose.override.yml
 ```
 
-To fill your ElasticSearch, you'll need to a local cdtn-admin endpoint :
-
-Then you can launch services using docker-compose
-
 ```sh
 # start elasticsearch
 docker-compose up elasticsearch
-
-# Launch indexing script : fill ElasticSearch
-yarn workspace @cdt/data start:dev
 
 # Start API in dev mode : runs on http://localhost:1337
 yarn workspace @cdt/api dev
@@ -92,24 +85,24 @@ To launch a local tf-serve instance, you can report to the README of our [servin
 
 You can also read the packages readme
 
--   [API README](./packages/code-du-travail-api/README.md)
--   [e2e README](./optional/e2e/README.md)
+- [API README](./packages/code-du-travail-api/README.md)
+- [e2e README](./optional/e2e/README.md)
 
 ## Contributions
 
--   See [code of conduct](./CODE_OF_CONDUCT.md)
--   Work on feature branches
--   Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+- See [code of conduct](./CODE_OF_CONDUCT.md)
+- Work on feature branches
+- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
 
 ### Issues
 
--   Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
--   nomenclature des labels :
+- Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
+- nomenclature des labels :
 
-    -   t : `t`ype of issue
-    -   p : name of `p`roduct (we differentiate ES and nav by themes for now)
-    -   s : `s`tatus of the issue
-    -   o : name of the dedicated t`o`ol
+  - t : `t`ype of issue
+  - p : name of `p`roduct (we differentiate ES and nav by themes for now)
+  - s : `s`tatus of the issue
+  - o : name of the dedicated t`o`ol
 
 ## License
 

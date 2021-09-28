@@ -5,7 +5,7 @@ import { writeFile as _writeFile } from "fs";
 import { join } from "path";
 import { promisify } from "util";
 
-import { CDTN_ADMIN_VERSION } from "../server/routes/v1.prefix";
+import prefix from "../routes/v1.prefix";
 import versions from "./versions.json";
 
 const writeFile = promisify(_writeFile);
@@ -103,7 +103,7 @@ const documentsSlugs = [
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 
 async function updateDocumentsData(slugs) {
-  const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
+  const index = `${ES_INDEX_PREFIX}-${prefix.CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
   const requests = slugs.reduce((state, slug) => {
     state.push({ index });
     state.push(getDocumentByUrlQuery(slug, []));
