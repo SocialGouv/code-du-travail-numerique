@@ -65,7 +65,7 @@
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/tests/process.env.mock.js"
+      "<rootDir>/src/tests/process.env.mock.js"
     ],
     "collectCoverageFrom": [
       "src/**/*.js",
