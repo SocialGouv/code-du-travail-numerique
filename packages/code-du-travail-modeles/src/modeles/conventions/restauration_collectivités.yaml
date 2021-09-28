@@ -73,14 +73,3 @@ contrat salarié . convention collective . restauration collectivités . catégo
   applicable si: catégorie professionnelle = 'Cadres'
   remplace: contrat salarié . préavis de retraite collective
   valeur: 3 mois
-
-contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . mise à la retraite . cadres . notification:
-  applicable si:
-    toutes ces conditions:
-      - mise à la retraite
-      - catégorie professionnelle = 'Cadres'
-      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
-
-  type: notification
-  description: "Cette durée s’applique sauf s’il existe dans le contrat de travail des stipulations particulières."
-  valeur: oui
