@@ -9,7 +9,7 @@ function IndemniteLegale({ indemnite, infoCalcul }) {
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
-        Le code du travail prévoit un montant minimum de:{" "}
+        Le code du travail prévoit un montant minimum de&nbsp;:{" "}
         <HighlightResult>
           {indemnite.toLocaleString("fr-FR", {
             maximumFractionDigits: 2,

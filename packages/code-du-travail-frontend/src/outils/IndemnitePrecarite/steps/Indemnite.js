@@ -1,6 +1,5 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 import { Accordion } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";
@@ -136,23 +135,21 @@ function StepIndemnite({ form }) {
       <p>
         En savoir plus sur la prime de précarité d’un{" "}
         {contractType === CONTRACT_TYPE.CDD ? (
-          <Link
-            href={
-              "/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
-            }
+          <A11yLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
           >
-            <A11yLink target="_blank" rel="noopener noreferrer">
-              salarié en CDD
-            </A11yLink>
-          </Link>
+            salarié en CDD
+          </A11yLink>
         ) : (
-          <Link
-            href={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
+          <A11yLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/fiche-service-public/contrat-de-travail-temporaire-interim"
           >
-            <A11yLink target="_blank" rel="noopener noreferrer">
-              salarié en contrat de travail temporaire (contrat d’intérim)
-            </A11yLink>
-          </Link>
+            salarié en contrat de travail temporaire (contrat d’intérim)
+          </A11yLink>
         )}
       </p>
     </>

@@ -134,7 +134,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
     Indemnité légale
   </h2>
   <p>
-    Le code du travail prévoit un montant minimum de:
+    Le code du travail prévoit un montant minimum de :
      
     <strong
       class="c1 c2"

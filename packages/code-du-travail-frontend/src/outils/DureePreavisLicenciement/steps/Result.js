@@ -5,6 +5,7 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
+import { isNotNearZero } from "../../common/math";
 import {
   filterSituations,
   getRef,
@@ -60,7 +61,7 @@ function DisclaimerText({ durationCC, durationCDT, ccn }) {
       );
     }
   } else {
-    if (parseInt(durationCDT, 10) > 0) {
+    if (isNotNearZero(durationCDT)) {
       return (
         <p>
           Une durée de préavis de licenciement ou une condition d’ancienneté
@@ -69,7 +70,7 @@ function DisclaimerText({ durationCC, durationCDT, ccn }) {
           d’entreprise, le contrat de travail ou les usages.
         </p>
       );
-    } else if (parseInt(durationCC, 10) > 0) {
+    } else if (isNotNearZero(durationCC)) {
       return (
         <p>
           L’existence ou la durée du préavis de licenciement peut aussi être
@@ -201,31 +202,29 @@ function StepResult({ form }) {
                   <p>
                     Il s’agit de la durée la plus longue entre la durée légale
                     prévue par le Code du travail et la durée conventionnelle
-                    prévue par la convention collective:
+                    prévue par la convention collective&nbsp;:
                   </p>
                 )}
                 <ul>
                   <li>
-                    Durée légale:{" "}
-                    {parseInt(durationCDT, 10) > 0 ? (
-                      <strong>{situationCDT.answer}</strong>
-                    ) : (
-                      "Aucun préavis."
-                    )}
+                    Durée légale&nbsp;:{" "}
+                    <strong>
+                      {isNotNearZero(durationCDT)
+                        ? situationCDT.answer
+                        : "Aucun préavis."}
+                    </strong>
                   </li>
                   <li>
-                    Durée conventionnelle:{" "}
-                    {situationCC ? (
-                      parseInt(durationCC, 10) > 0 ? (
-                        <strong>{situationCC.answer}</strong>
-                      ) : (
-                        "Aucun préavis."
-                      )
-                    ) : idcc === 0 ? (
-                      "La convention collective n'a pas été renseignée."
-                    ) : (
-                      "La convention collective n'a pas été traitée par nos services."
-                    )}
+                    Durée conventionnelle&nbsp;:{" "}
+                    <strong>
+                      {situationCC
+                        ? isNotNearZero(durationCC)
+                          ? situationCC.answer
+                          : "Aucun préavis."
+                        : idcc === 0
+                        ? "La convention collective n'a pas été renseignée."
+                        : "La convention collective n'a pas été traitée par nos services."}
+                    </strong>
                   </li>
                 </ul>
                 <SectionTitle>Éléments saisis</SectionTitle>
@@ -238,17 +237,16 @@ function StepResult({ form }) {
                     ? "Oui"
                     : "Non",
                   ...situationCDTCriteria,
+                  ...(situationCC && {
+                    ...situationCCCriteria,
+                    ...(seniorityCC && {
+                      "Ancienneté selon la convention collective": seniorityCC,
+                    }),
+                    ...(ccn && { "Convention collective": ccn.title }),
+                  }),
                 })}
                 {situationCC && (
                   <>
-                    {recapSituation({
-                      ...situationCCCriteria,
-                      ...(seniorityCC && {
-                        "Ancienneté selon la convention collective":
-                          seniorityCC,
-                      }),
-                      ...(ccn && { "Convention collective": ccn.title }),
-                    })}
                     <SectionTitle>Source</SectionTitle>
                     {situationCC.ref && situationCC.refUrl && getRef(refs)}
                   </>

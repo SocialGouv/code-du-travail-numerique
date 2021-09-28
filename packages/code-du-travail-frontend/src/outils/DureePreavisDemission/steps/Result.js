@@ -17,7 +17,7 @@ import {
   WarningTitle,
 } from "../../DureePreavisRetraite/steps/component/WarningResult";
 
-function Disclaimer({ ccn }) {
+function Disclaimer() {
   return (
     <Warning>
       <IconStripe centered icon={icons.Warning}>
@@ -30,14 +30,6 @@ function Disclaimer({ ccn }) {
         convention collective, un accord d’entreprise ou à défaut, par un usage
         dans l’entreprise.
       </p>
-      {ccn && (
-        <p>
-          Vous pouvez faire une recherche par mots-clés dans{" "}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-            <a>votre convention collective</a>
-          </Link>
-        </p>
-      )}
     </Warning>
   );
 }
@@ -73,6 +65,14 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
+        {possibleSituations.length === 0 && ccn && (
+          <p>
+            Vous pouvez faire une recherche par mots-clés dans{" "}
+            <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
+              <a>votre convention collective</a>
+            </Link>
+          </p>
+        )}
         <Disclaimer ccn={ccn} />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
@@ -86,7 +86,7 @@ function StepResult({ form }) {
       <SectionTitle>Durée du préavis</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;
+        démission est estimée à&nbsp;:{" "}
         <HighlightResult>{situation.answer}</HighlightResult>.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (

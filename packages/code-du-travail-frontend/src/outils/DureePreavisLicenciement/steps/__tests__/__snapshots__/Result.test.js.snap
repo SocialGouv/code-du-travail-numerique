@@ -286,18 +286,22 @@ exports[`<StepResult /> should render with O duration 1`] = `
               Résultat
             </h2>
             <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
             </p>
             <ul>
               <li>
-                Durée légale:
+                Durée légale :
                  
-                Aucun préavis.
+                <strong>
+                  Aucun préavis.
+                </strong>
               </li>
               <li>
-                Durée conventionnelle:
+                Durée conventionnelle :
                  
-                Aucun préavis.
+                <strong>
+                  Aucun préavis.
+                </strong>
               </li>
             </ul>
             <h2
@@ -327,8 +331,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
                   Non
                 </strong>
               </li>
-            </ul>
-            <ul>
               <li>
                 Catégorie professionnelle
                  : 
@@ -714,20 +716,22 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
               Résultat
             </h2>
             <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
             </p>
             <ul>
               <li>
-                Durée légale:
+                Durée légale :
                  
                 <strong>
                   1 mois
                 </strong>
               </li>
               <li>
-                Durée conventionnelle:
+                Durée conventionnelle :
                  
-                La convention collective n'a pas été traitée par nos services.
+                <strong>
+                  La convention collective n'a pas été traitée par nos services.
+                </strong>
               </li>
             </ul>
             <h2
@@ -1100,18 +1104,22 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
               Résultat
             </h2>
             <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
             </p>
             <ul>
               <li>
-                Durée légale:
+                Durée légale :
                  
-                Aucun préavis.
+                <strong>
+                  Aucun préavis.
+                </strong>
               </li>
               <li>
-                Durée conventionnelle:
+                Durée conventionnelle :
                  
-                La convention collective n'a pas été traitée par nos services.
+                <strong>
+                  La convention collective n'a pas été traitée par nos services.
+                </strong>
               </li>
             </ul>
             <h2
@@ -1486,16 +1494,18 @@ exports[`<StepResult /> should render with when no CC 1`] = `
             </h2>
             <ul>
               <li>
-                Durée légale:
+                Durée légale :
                  
                 <strong>
                   2 mois
                 </strong>
               </li>
               <li>
-                Durée conventionnelle:
+                Durée conventionnelle :
                  
-                La convention collective n'a pas été renseignée.
+                <strong>
+                  La convention collective n'a pas été renseignée.
+                </strong>
               </li>
             </ul>
             <h2
@@ -1860,20 +1870,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
               Résultat
             </h2>
             <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective:
+              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
             </p>
             <ul>
               <li>
-                Durée légale:
+                Durée légale :
                  
                 <strong>
                   2 mois
                 </strong>
               </li>
               <li>
-                Durée conventionnelle:
+                Durée conventionnelle :
                  
-                La convention collective n'a pas été traitée par nos services.
+                <strong>
+                  La convention collective n'a pas été traitée par nos services.
+                </strong>
               </li>
             </ul>
             <h2

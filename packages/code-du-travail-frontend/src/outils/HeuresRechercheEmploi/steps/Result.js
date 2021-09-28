@@ -92,18 +92,15 @@ function NoResult({ idcc, ccn, legalRefs }) {
       <SectionTitle>
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
-      <p>
-        <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
-        {idcc > 0 && (
-          <>
-            <br />
-            Vous pouvez faire une recherche par mots-clés dans{" "}
-            <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-              <a>votre convention collective</a>
-            </Link>
-          </>
-        )}
-      </p>
+      <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
+      {idcc > 0 && (
+        <p>
+          Vous pouvez faire une recherche par mots-clés dans{" "}
+          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
+            <a>votre convention collective</a>
+          </Link>
+        </p>
+      )}
       <p>
         Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
         pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe
@@ -112,7 +109,6 @@ function NoResult({ idcc, ccn, legalRefs }) {
         raisonnable pour rechercher un emploi pendant son préavis de
         licenciement.
       </p>
-
       <Accordion
         items={[
           {
@@ -120,9 +116,11 @@ function NoResult({ idcc, ccn, legalRefs }) {
               <>
                 <SectionTitle>Éléments saisis</SectionTitle>
                 {recapSituation({
-                  ...(ccn && {
-                    "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
-                  }),
+                  ...{
+                    "Convention collective": ccn
+                      ? `${ccn.shortTitle} (IDCC ${idcc})`
+                      : "La convention collective n'a pas été renseignée",
+                  },
                 })}
                 <SectionTitle>Source</SectionTitle>
                 {legalRefs && getRef(legalRefs)}

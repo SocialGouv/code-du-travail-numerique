@@ -953,15 +953,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
-  <p>
-    <strong
-      class="c1 c2"
-    >
-      Aucun résultat
-    </strong>
-     : 
-    la convention collective n’a pas été renseignée.
-  </p>
+  <strong
+    class="c1 c2"
+  >
+    Aucun résultat
+  </strong>
+   : 
+  la convention collective n’a pas été renseignée.
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
@@ -1038,7 +1036,15 @@ exports[`<StepResult /> should render with when no CC 1`] = `
             >
               Éléments saisis
             </h2>
-            <ul />
+            <ul>
+              <li>
+                Convention collective
+                 : 
+                <strong>
+                  La convention collective n'a pas été renseignée
+                </strong>
+              </li>
+            </ul>
             <h2
               class="c0"
             >
@@ -1308,15 +1314,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
+  <strong
+    class="c1 c2"
+  >
+    Aucun résultat
+  </strong>
+   : 
+  la convention collective n’a pas encore été traitée par nos services.
   <p>
-    <strong
-      class="c1 c2"
-    >
-      Aucun résultat
-    </strong>
-     : 
-    la convention collective n’a pas encore été traitée par nos services.
-    <br />
     Vous pouvez faire une recherche par mots-clés dans
      
     <a
