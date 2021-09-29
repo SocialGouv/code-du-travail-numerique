@@ -54,7 +54,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   grille:
     assiette: ancienneté
     tranches:
-      - montant: 2 semaines
+      - montant: 14 jour
         plafond: 6 mois
       - montant: 1 mois
         plafond: 24 mois
@@ -109,7 +109,7 @@ contrat salarié . convention collective . automobiles . catégorie professionne
   grille:
     assiette: catégorie professionnelle . ouvriers . échelon
     tranches:
-      - montant: 2 semaines
+      - montant: 14 jour
         plafond: 3
       - montant: 1 mois
   références:

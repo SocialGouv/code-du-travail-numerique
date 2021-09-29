@@ -5,13 +5,14 @@ const engine = new Engine(mergeModels());
 
 test.each`
   seniority | grade | expectedNotice | expectedUnit
-  ${5}      | ${1}  | ${2}           | ${"semaines"}
-  ${6}      | ${1}  | ${1}           | ${"mois"}
-  ${24}     | ${1}  | ${2}           | ${"mois"}
+  ${5}      | ${1}  | ${14}          | ${"jour"}
+  ${8}      | ${1}  | ${1}           | ${"mois"}
+  ${25}     | ${1}  | ${2}           | ${"mois"}
   ${1}      | ${3}  | ${1}           | ${"mois"}
-  ${24}     | ${3}  | ${2}           | ${"mois"}
+  ${8}      | ${3}  | ${1}           | ${"mois"}
+  ${25}     | ${3}  | ${2}           | ${"mois"}
 `(
-  "Pour un ouvriers avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de mise à la retraite doit être $expectedNotice $expectedUnit",
+  "Pour un ouvrier avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de mise à la retraite doit être $expectedNotice $expectedUnit",
   ({ seniority, grade, expectedNotice, expectedUnit }) => {
     const result = engine
       .setSituation({
@@ -19,7 +20,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Ouvriers'",
-        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvrier . échelon":
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon":
           grade,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
