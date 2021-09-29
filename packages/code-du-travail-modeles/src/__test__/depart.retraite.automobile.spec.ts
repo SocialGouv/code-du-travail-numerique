@@ -16,7 +16,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Ouvriers'",
-        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvrier . échelon":
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon":
           grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
