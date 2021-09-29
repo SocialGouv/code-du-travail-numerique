@@ -16,7 +16,7 @@ export default function IntegrationPage() {
     <Layout>
       <Metas
         title="Widget pour intégrer le Code du travail numérique à votre site"
-        description=" L’équipe du Code du travail numérique vous propose d’intégrer son moteur de recherche sur votre site grâce à un module (widget)."
+        description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
       />
 
       <Section>
