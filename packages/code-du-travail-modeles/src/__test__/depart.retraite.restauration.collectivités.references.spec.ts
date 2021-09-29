@@ -19,12 +19,16 @@ const AllRetraite = [
 ];
 
 test.each`
-  retirement  | expectedReferences
-  ${"mise"}   | ${MiseRetraiteReferences.concat(AllRetraite)}
-  ${"depart"} | ${DepartRetraiteReferences.concat(AllRetraite)}
+  retirement  | category       | expectedReferences
+  ${"mise"}   | ${"Employés"}  | ${MiseRetraiteReferences.concat(AllRetraite)}
+  ${"mise"}   | ${"Maîtrises"} | ${MiseRetraiteReferences.concat(AllRetraite)}
+  ${"mise"}   | ${"Cadres"}    | ${MiseRetraiteReferences.concat(AllRetraite)}
+  ${"depart"} | ${"Employés"}  | ${DepartRetraiteReferences.concat(AllRetraite)}
+  ${"depart"} | ${"Maîtrises"} | ${DepartRetraiteReferences.concat(AllRetraite)}
+  ${"depart"} | ${"Cadres"}    | ${DepartRetraiteReferences.concat(AllRetraite)}
 `(
-  "Vérification des références juridiques pour un employé en $retirement à la retraite",
-  ({ retirement, expectedReferences }) => {
+  "Vérification des références juridiques pour un $category en $retirement à la retraite",
+  ({ retirement, expectedReferences, category }) => {
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1266'",
@@ -32,6 +36,7 @@ test.each`
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": 5,
+        "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
       })
     );
 
