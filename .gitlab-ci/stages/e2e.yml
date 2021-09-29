@@ -39,7 +39,7 @@ Test on deployed branch:
     #
     - echo "${CODECEPT_BASEURL}"
     #
-    - CODECEPT_BASEURL=${CODECEPT_BASEURL} yarn test
+    - CODECEPT_BASEURL=${CODECEPT_BASEURL} yarn test:e2e
 
   artifacts:
     when: always
