@@ -28,7 +28,7 @@ test.each`
 
 test.each`
   seniority | expectedNotice | expectedUnit
-  ${2}      | ${1}           | ${"semaine"}
+  ${2}      | ${7}           | ${"jour"}
   ${6}      | ${1}           | ${"mois"}
   ${24}     | ${2}           | ${"mois"}
 `(
