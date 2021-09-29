@@ -15,8 +15,8 @@ export default function IntegrationPage() {
   return (
     <Layout>
       <Metas
-        title="widget - Code du travail numérique"
-        description="Intégrer le Code du travail numérique à votre site"
+        title="Widget pour intégrer le Code du travail numérique à votre site"
+        description=" L’équipe du Code du travail numérique vous propose d’intégrer son moteur de recherche sur votre site grâce à un module (widget)."
       />
 
       <Section>
@@ -58,7 +58,7 @@ export default function IntegrationPage() {
                         <code>&lt;body&gt;</code> de votre page&nbsp;:
                       </p>
                       <Code>
-                        <pre style={{ lineHeight: "125%", margin: 0 }}>
+                        <pre>
                           {`<script src="https://code.travail.gouv.fr/widget.js" async></script>`}
                         </pre>
                       </Code>
@@ -67,8 +67,10 @@ export default function IntegrationPage() {
                         souhaitez voir le module s’afficher&nbsp;:
                       </p>
                       <Code>
-                        <pre style={{ lineHeight: "125%", margin: 0 }}>
-                          {`<div id="cdtn-widget"></div>`}
+                        <pre>
+                          {`<div id="cdtn-widget">
+  <a href="https://code.travail.gouv.fr" class="cdtn-homelink">le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
+</div>`}
                         </pre>
                       </Code>
                     </>
@@ -135,4 +137,10 @@ const Code = styled.div`
   background: #ffffff;
   border: solid gray;
   border-width: 0.1em 0.1em 0.1em 0.8em;
+
+  pre {
+    line-height: 125%;
+    margin: 0;
+    white-space: pre-wrap;
+  }
 `;
