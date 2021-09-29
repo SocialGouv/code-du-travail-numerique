@@ -5,7 +5,11 @@ const engine = new Engine(mergeModels());
 
 test.each`
   seniority | grade | expectedNotice | expectedUnit
-  ${5}      | ${1}  | ${2}           | ${"semaines"}
+  ${5}      | ${1}  | ${14}          | ${"jour"}
+  ${10}     | ${1}  | ${14}          | ${"jour"}
+  ${24}     | ${1}  | ${14}          | ${"jour"}
+  ${5}      | ${3}  | ${1}           | ${"mois"}
+  ${10}     | ${3}  | ${1}           | ${"mois"}
   ${24}     | ${3}  | ${1}           | ${"mois"}
 `(
   "Pour un ouvrier avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de départ à la retraite doit être $expectedNotice $expectedUnit",
