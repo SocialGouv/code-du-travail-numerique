@@ -1,12 +1,12 @@
 {
-  "name": "@optional/e2e.runner.puppeteer",
+  "name": "@cdt/e2e",
   "version": "0.0.0",
   "description": "",
   "main": "codecept.conf.js",
   "scripts": {
     "lint": "eslint step_definitions/**/*.js",
-    "test": "codeceptjs run --features",
-    "test:ui": "codecept-ui --app"
+    "test:e2e": "codeceptjs run --features",
+    "test:e2e:ui": "codecept-ui --app"
   },
   "dependencies": {
     "@codeceptjs/ui": "^0.4.6",
