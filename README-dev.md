@@ -46,7 +46,7 @@ Note: environment file can be created using [scripts/setup-env.js](scripts/setup
 Run the frontend with our online latest API :
 
 ```sh
-API_URL=https://api-master-code-travail.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev
+API_URL=https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend dev
 ```
 
 If you need to work on both frontend and api, don't provide API_URL as it will fallback to `http://localhost:1337/api/v1`
