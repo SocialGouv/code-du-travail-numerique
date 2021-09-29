@@ -5,7 +5,7 @@ const engine = new Engine(mergeModels());
 
 test.each`
   seniority | expectedNotice | expectedUnit
-  ${3}      | ${1}           | ${"semaine"}
+  ${3}      | ${7}           | ${"jour"}
   ${6}      | ${1}           | ${"mois"}
   ${24}     | ${6}           | ${"mois"}
 `(
