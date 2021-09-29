@@ -6,14 +6,15 @@
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel ./src/** -d dist --copy-files",
-    "lint": "eslint src/**/*.{js,ts}",
+    "build": "babel ./src/** -d babel-dist --copy-files",
+    "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
+    "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/index.js",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
-    "pretest": "rimraf dist && NODE_ENV=test babel-node src/tests/create_indexes.js",
+    "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js",
     "test": "ES_INDEX_PREFIX=cdtn_test jest"
   },
   "repository": {

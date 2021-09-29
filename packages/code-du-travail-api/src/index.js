@@ -76,4 +76,4 @@ const server = app.listen(PORT, () => {
   logger.info(`Server listening on port: ${PORT}`);
 });
 
-export default server;
+module.exports = server;
