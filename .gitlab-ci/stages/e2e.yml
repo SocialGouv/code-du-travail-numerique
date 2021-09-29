@@ -14,7 +14,8 @@ Test on deployed branch:
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
-      - packages/code-du-travail-frontend-e2e/node_modules
+      - ./node_modules
+      - .packages/code-du-travail-frontend-e2e/node_modules
       - $CI_PROJECT_DIR/.yarn
   retry: 2
 
@@ -24,7 +25,6 @@ Test on deployed branch:
     - echo $CI_ENVIRONMENT_SLUG
     #- source ./.gitlab-ci/env.sh
     - CODECEPT_BASEURL=${CI_ENVIRONMENT_URL}
-    - cd ./packages/code-du-travail-frontend-e2e
     - |-
       retry=60;
       while
