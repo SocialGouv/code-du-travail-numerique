@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel ./src/** -d babel-dist --copy-files",
+    "build": "babel src -d babel-dist --copy-files",
     "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
     "lint": "eslint src/**/*.js",
     "precommit": "lint-staged",
