@@ -36,7 +36,10 @@ test.each`
 test.each`
   seniority | grade | expectedNotice
   ${1}      | ${17} | ${2}
+  ${10}     | ${17} | ${2}
+  ${24}     | ${17} | ${2}
   ${1}      | ${20} | ${3}
+  ${10}     | ${20} | ${3}
   ${24}     | ${20} | ${3}
 `(
   "Pour un agents de maîtrise avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de mise à la retraite doit être $expectedNotice mois",
