@@ -60,19 +60,27 @@ test.each`
   }
 );
 
-test("Pour un cadre (peu importe l'échellon ou l'ancienneté), son préavis de mise à la retraite doit être 3 mois", () => {
-  const result = engine
-    .setSituation({
-      "contrat salarié . convention collective": "'IDCC1090'",
-      "contrat salarié . ancienneté": 1,
-      "contrat salarié . convention collective . automobiles . catégorie professionnelle":
-        "'Cadres'",
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-    .evaluate("contrat salarié . préavis de retraite");
+test.each`
+  seniority
+  ${1}
+  ${10}
+  ${24}
+`(
+  "Pour un cadre de $seniority mois d'ancienneté, son préavis de mise à la retraite doit être 3 mois",
+  ({ seniority }) => {
+    const result = engine
+      .setSituation({
+        "contrat salarié . convention collective": "'IDCC1090'",
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle":
+          "'Cadres'",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
+      })
+      .evaluate("contrat salarié . préavis de retraite");
 
-  expect(result.nodeValue).toEqual(3);
-  expect(result.unit?.numerators).toEqual(["mois"]);
-  expect(result.missingVariables).toEqual({});
-});
+    expect(result.nodeValue).toEqual(3);
+    expect(result.unit?.numerators).toEqual(["mois"]);
+    expect(result.missingVariables).toEqual({});
+  }
+);
