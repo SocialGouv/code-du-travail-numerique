@@ -9,16 +9,24 @@ test.each`
   ${4}      | ${"Agents de propreté"}                      | ${2}           | ${"jour"}
   ${6}      | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
   ${24}     | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
+  ${25}     | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
+  ${42}     | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
   ${0}      | ${"Employés"}                                | ${0}           | ${"mois"}
   ${3}      | ${"Employés"}                                | ${1}           | ${"mois"}
   ${6}      | ${"Employés"}                                | ${1}           | ${"mois"}
   ${24}     | ${"Employés"}                                | ${1}           | ${"mois"}
+  ${25}     | ${"Employés"}                                | ${1}           | ${"mois"}
+  ${42}     | ${"Employés"}                                | ${1}           | ${"mois"}
   ${1}      | ${"Techniciens et Agents de maîtrise (TAM)"} | ${0}           | ${"mois"}
   ${12}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${1}           | ${"mois"}
-  ${24}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
+  ${24}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${1}           | ${"mois"}
+  ${25}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
+  ${42}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
   ${1}      | ${"Cadres"}                                  | ${3}           | ${"mois"}
   ${6}      | ${"Cadres"}                                  | ${1}           | ${"mois"}
   ${24}     | ${"Cadres"}                                  | ${2}           | ${"mois"}
+  ${25}     | ${"Cadres"}                                  | ${2}           | ${"mois"}
+  ${42}     | ${"Cadres"}                                  | ${2}           | ${"mois"}
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice $expectedNoticeUnit",
   ({ seniority, category, expectedNotice, expectedNoticeUnit }) => {
@@ -44,18 +52,26 @@ test.each`
   ${4}      | ${"Agents de propreté"}                      | ${7}           | ${"jour"}
   ${6}      | ${"Agents de propreté"}                      | ${1}           | ${"mois"}
   ${24}     | ${"Agents de propreté"}                      | ${2}           | ${"mois"}
+  ${25}     | ${"Agents de propreté"}                      | ${2}           | ${"mois"}
+  ${42}     | ${"Agents de propreté"}                      | ${2}           | ${"mois"}
   ${0}      | ${"Employés"}                                | ${0}           | ${"mois"}
   ${3}      | ${"Employés"}                                | ${1}           | ${"mois"}
   ${6}      | ${"Employés"}                                | ${1}           | ${"mois"}
   ${24}     | ${"Employés"}                                | ${2}           | ${"mois"}
+  ${25}     | ${"Employés"}                                | ${2}           | ${"mois"}
+  ${42}     | ${"Employés"}                                | ${2}           | ${"mois"}
   ${1}      | ${"Techniciens et Agents de maîtrise (TAM)"} | ${0}           | ${"mois"}
   ${2}      | ${"Techniciens et Agents de maîtrise (TAM)"} | ${1}           | ${"mois"}
   ${6}      | ${"Techniciens et Agents de maîtrise (TAM)"} | ${1}           | ${"mois"}
   ${12}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${1}           | ${"mois"}
   ${24}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
+  ${25}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
+  ${42}     | ${"Techniciens et Agents de maîtrise (TAM)"} | ${2}           | ${"mois"}
   ${1}      | ${"Cadres"}                                  | ${3}           | ${"mois"}
   ${6}      | ${"Cadres"}                                  | ${3}           | ${"mois"}
   ${24}     | ${"Cadres"}                                  | ${3}           | ${"mois"}
+  ${25}     | ${"Cadres"}                                  | ${3}           | ${"mois"}
+  ${42}     | ${"Cadres"}                                  | ${3}           | ${"mois"}
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice $expectedNoticeUnit",
   ({ seniority, category, expectedNotice, expectedNoticeUnit }) => {

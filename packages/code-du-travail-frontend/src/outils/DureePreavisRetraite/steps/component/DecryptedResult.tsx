@@ -9,6 +9,7 @@ import {
   PublicodesContextInterface,
   PublicodesResult,
 } from "../../../publicodes";
+import { generateNoticeUsed } from "../utils";
 
 type Props = {
   data: FormContent;
@@ -78,21 +79,10 @@ export const createRootData = (
       };
     }
   }
-  let noticeUsed = NoticeUsed.none;
-  if (
-    (legalResult.value > 0 && legalResult.value === agreementResult?.value) ??
-    -1
-  ) {
-    noticeUsed = NoticeUsed.same;
-  } else if (result.value > 0 && result.value === legalResult.value) {
-    noticeUsed = NoticeUsed.legal;
-  } else if (result.value > 0 && result.value === agreementResult.value) {
-    noticeUsed = NoticeUsed.agreementLabor;
-  }
   return {
     agreement: agreement,
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
-    noticeUsed,
+    noticeUsed: generateNoticeUsed(legalResult, agreementResult, result),
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
   };
 };

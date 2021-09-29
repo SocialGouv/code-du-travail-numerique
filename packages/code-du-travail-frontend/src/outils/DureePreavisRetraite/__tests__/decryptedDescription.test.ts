@@ -81,7 +81,7 @@ test.each`
   ${null} | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${null}
   ${null} | ${"mise"}   | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${null}
   ${123}  | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${agreementNotSupported}
-  ${292}  | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${{ value: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
+  ${292}  | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${{ value: 0 }} | ${NoticeUsed.same}           | ${getAgreementSupported(0)}
   ${292}  | ${"depart"} | ${"5"}    | ${{ value: 2 }} | ${{ value: 0 }} | ${{ value: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
   ${292}  | ${"mise"}   | ${"23"}   | ${{ value: 4 }} | ${{ value: 3 }} | ${{ value: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
   ${292}  | ${"mise"}   | ${"23"}   | ${{ value: 4 }} | ${{ value: 4 }} | ${{ value: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}

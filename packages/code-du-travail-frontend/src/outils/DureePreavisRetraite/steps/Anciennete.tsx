@@ -7,14 +7,24 @@ import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { usePublicodes } from "../../publicodes";
 import { mapToPublicodesSituation } from "../../publicodes/Utils";
+import { formatSeniority } from "./utils";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
   useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
+    try {
+      publicodesContext.setSituation(
+        mapToPublicodesSituation({
+          ...form.getState().values,
+          "contrat salarié - ancienneté": formatSeniority(
+            form.getState().values["contrat salarié - ancienneté"]
+          ),
+        } as any)
+      );
+    } catch {
+      // ignore
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form]);
 
@@ -48,6 +58,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           label="Quelle est l'ancienneté du salarié dans l’entreprise en mois&nbsp;?"
           inputType="number"
           validate={isPositiveNumber}
+          validateOnChange
           placeholder="0"
         />
       )}

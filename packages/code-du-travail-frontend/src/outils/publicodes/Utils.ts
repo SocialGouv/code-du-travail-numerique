@@ -53,9 +53,7 @@ export const convertDaysIntoBetterUnit = (
   }
   // Hack: publicodes round value when convert months to days.
   // So we loose accuracy, we just look if the value is a float or modulo 365 == 0
-  const isConvertibleIntoMonth =
-    (Number(parsedDay) === parsedDay && parsedDay % 1 !== 0) ||
-    parsedDay % 365 === 0;
+  const isConvertibleIntoMonth = isFloat(parsedDay) || parsedDay % 365 === 0;
   if (isConvertibleIntoMonth) {
     const parsedMonth = Math.round(parsedDay / (365 / 12));
     return {
@@ -68,3 +66,7 @@ export const convertDaysIntoBetterUnit = (
     value: parsedDay,
   };
 };
+
+export function isFloat(n: number): boolean {
+  return Number(n) === n && n % 1 !== 0;
+}

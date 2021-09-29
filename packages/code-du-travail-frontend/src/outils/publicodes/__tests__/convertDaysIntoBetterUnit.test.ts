@@ -18,6 +18,10 @@ describe("Testing the transformation of the unit from publicodes (in days) into 
     ${182.5}   | ${PublicodesUnit.MONTH} | ${6}
     ${365}     | ${PublicodesUnit.MONTH} | ${12}
     ${"730"}   | ${PublicodesUnit.MONTH} | ${24}
+    ${28}      | ${PublicodesUnit.WEEKS} | ${4}
+    ${30}      | ${PublicodesUnit.DAYS}  | ${30}
+    ${35}      | ${PublicodesUnit.WEEKS} | ${5}
+    ${45}      | ${PublicodesUnit.DAYS}  | ${45}
   `(
     "should return $expectedValue $expectedUnit for $input day(s)",
     ({ input, expectedUnit, expectedValue }) => {
