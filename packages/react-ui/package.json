@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-ui",
-  "version": "4.53.0",
+  "version": "4.53.1",
   "description": "Composants ReactJS",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/react-ui#react-ui-socialgouvreact-ui",
   "main": "lib/index.js",

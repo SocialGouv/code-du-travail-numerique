@@ -35,9 +35,9 @@ const nextConfig = {
     AZURE_BASE_URL: process.env.AZURE_BASE_URL,
     AZURE_CONTAINER: process.env.AZURE_CONTAINER,
     COMMIT: process.env.COMMIT,
-    FRONTEND_HOST:
-      `https://${process.env.FRONTEND_HOST}` ||
-      `http://localhost:${process.env.FRONTEND_PORT || 3000}`,
+    FRONTEND_HOST: process.env.FRONTEND_HOST
+      ? `https://${process.env.FRONTEND_HOST}`
+      : `http://localhost:${process.env.FRONTEND_PORT || 3000}`,
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
