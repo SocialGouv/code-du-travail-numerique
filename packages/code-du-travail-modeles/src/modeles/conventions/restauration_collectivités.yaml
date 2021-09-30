@@ -45,7 +45,8 @@ contrat salarié . convention collective . restauration collectivités . catégo
     assiette: ancienneté
     tranches:
       - montant: 1 mois
-        plafond: 24 mois
+        plafond: 25 mois
+      - montant: 2 mois
   références:
     Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
     Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
