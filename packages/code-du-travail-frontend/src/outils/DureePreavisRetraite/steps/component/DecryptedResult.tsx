@@ -19,7 +19,7 @@ const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
   if (result.value > 0) {
     return (
       <b>
-        {result.value} {result.unit.numerators[0]}
+        {result.value} {result.unit}
       </b>
     );
   }
@@ -70,23 +70,30 @@ export const createRootData = (
   let agreement = null;
   if (data.ccn) {
     if (supportedCcn.includes(data.ccn.num)) {
-      agreement = { isSupported: true, notice: agreementResult.value };
+      agreement = { isSupported: true, notice: agreementResult.valueInDays };
     } else {
       agreement = {
         isSupported: false,
-        notice: agreementResult?.value ?? 0,
+        notice: agreementResult?.valueInDays ?? 0,
       };
     }
   }
   let noticeUsed = NoticeUsed.none;
   if (
-    (legalResult.value > 0 && legalResult.value === agreementResult?.value) ??
+    (legalResult.valueInDays > 0 &&
+      legalResult.valueInDays === agreementResult?.valueInDays) ??
     -1
   ) {
     noticeUsed = NoticeUsed.same;
-  } else if (result.value > 0 && result.value === legalResult.value) {
+  } else if (
+    result.valueInDays > 0 &&
+    result.valueInDays === legalResult.valueInDays
+  ) {
     noticeUsed = NoticeUsed.legal;
-  } else if (result.value > 0 && result.value === agreementResult.value) {
+  } else if (
+    result.valueInDays > 0 &&
+    result.valueInDays === agreementResult.valueInDays
+  ) {
     noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
@@ -141,12 +148,12 @@ export const getDescription = (data: RootData): string | null => {
 
 const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   const legalResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite légale"
+    "contrat salarié . préavis de retraite légale en jours"
   );
   let agreementResult = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
-      "contrat salarié . préavis de retraite collective"
+      "contrat salarié . préavis de retraite collective en jours"
     );
   }
 
