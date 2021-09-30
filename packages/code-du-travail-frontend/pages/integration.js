@@ -59,7 +59,7 @@ export default function IntegrationPage() {
                       </p>
                       <Code>
                         <pre>
-                          {`<script src="https://code.travail.gouv.fr/widget.js" async></script>`}
+                          {`<script src="https://code.travail.gouv.fr/widget.js"></script>`}
                         </pre>
                       </Code>
                       <p>
