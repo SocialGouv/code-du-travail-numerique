@@ -52,7 +52,7 @@ function addWidget() {
       label {
         display: block;
         margin: .5rem 0 1rem;
-        font-family: Merriweather;
+        font-family: Merriweather,sans-serif;
         font-size: 1.125em;
       }
 
@@ -62,7 +62,7 @@ function addWidget() {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         background: white;
         border-radius:0.6rem;
-        box-shadow: rgba(121, 148, 212, 0.4) 0px 0.8rem 1.4rem;
+        box-shadow: rgba(121, 148, 212, 0.4) 0 0.8rem 1.4rem;
       }
 
       #search-logo {
@@ -76,9 +76,9 @@ function addWidget() {
       input {
         position: relative;
         z-index: 1;
-        margin: 0px;
+        margin: 0;
         padding: 2rem 4rem 2rem 5.2rem;
-        height: 5rem;
+        height: 4rem;
         width:100%;
         color: #3e486e;
         font-weight: normal;
@@ -94,9 +94,9 @@ function addWidget() {
       button {
         position: absolute;
         z-index: 2;
-        top: 0px;
-        right: 0px;
-        padding: 0px 0.8rem;
+        top: 0;
+        right: 0;
+        padding: 0 0.8rem;
         height:100%;
         display: flex;
         align-items: center;
@@ -127,7 +127,7 @@ function addWidget() {
           line-height:1.3;
         }
         #search-bar {
-          box-shadow: rgba(121, 148, 212, 0.4) 0px 0.5rem 1rem;
+          box-shadow: rgba(121, 148, 212, 0.4) 0 0.5rem 1rem;
         }
         #search-logo {
           height: 14px;
@@ -161,6 +161,7 @@ function addWidget() {
       <div id="search-bar">
         <img
           id="search-logo"
+          alt="Recherche"
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAoCAMAAADDs4S7AAAAw1BMVEX///////9wcMFAQKxgYLrv7/j0oKXpQEvwgIcAAJFAQK373+HlIC3hAA/sYGkQEJivr9z2sLS/v+P0n6X4wMPjEB4gIJ/f3/LucHifn9blHy3ykJb97/D5+fnm5ubg4ODz8/Ovr93a2dmcm5vBwcGQkM/t7e2ura27u7vnMDzT09P3v8MwMKWgoNbqUFpvb8F/f8ggIJ4fH55QULSAgMi/v+SPj8/f3/HPz+tQULNfX7rrUFr4v8PPz+r5z9Lzn6X2r7SE0oVPAAAAAnRSTlP/n4UHvp8AAAHaSURBVHgBvdZVgqswGIbhbyCpt6EGp+7u7rL/VZ3AuPwjTeh7gVw9aBLcswfAMP8Y43hXIPjLQlIzw38rwvGhaCz+qxJ/1oSFzyX90lL4orRPGsPnMomsP5rtQHan9yYcfFk0+M8HLQcqH7QIqJI+PEkHVFH9WgR0+btqBe2aDbqi/vfGCapUrlTz2rUaoZXrjWZWu9YitHanW9L/JBnxILuNMnraNRNE/SoGOrRhamSTn8m7xurahLO3pyPQRbOq2hQz+VMzxuYRIU8X33IhRW2Kpdys1jWLA6mZMHJL0CXUtPWmFranw8WytYIbh9qD/E6ztyvhDvubqdwJ5kC2cUCmpk2XciNqHECKzcJi5NR2goMqrfQH2Mt3g1VuRv/eXkUlbeZtd3jK/RNEDnRB9b97x3nNgVMzhk9r5A2o1Eeu/dZwv5Cd3ITFGsBqDaqYqiZ2j7vHuwT4ciI3hvX+nw4eCsdoUe+aa5drsV1KgrMJMTpq1Gy2tjiwnYWn9HJEVRPMcp+me1PbXC5nykP6balqE74a7kV4yremCHsNOb2MVNVOS+8b2bbE80f6HsNAo2YPvV2EPZ1HUvjQWUGjUMqSXbR/k7TlFr3E/qQZkR9bSIvuEvpl14f/nSicEPXggsEAAAAASUVORK5CYII="
         />
         <input
