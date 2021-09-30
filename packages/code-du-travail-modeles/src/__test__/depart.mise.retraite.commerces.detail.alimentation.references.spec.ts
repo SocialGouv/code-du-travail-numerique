@@ -15,7 +15,6 @@ const DepartRetraiteCadresReferences = [
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517573/?idConteneur=KALICONT000005635085",
   },
 ];
- 
 
 const MiseRetraiteOuvriersReferences = [
   ...MiseRetraiteReferences,
@@ -44,25 +43,41 @@ const MiseRetraiteCadresReferences = [
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517573/?idConteneur=KALICONT000005635085",
   },
 ];
- 
 
 test.each`
-  retirement  | category                              | expectedReferences
-  ${"départ"} | ${"Employés et ouvriers"}             | ${DepartRetraiteReferences}
-  ${"départ"} | ${"Techniciens & Agents de maîtrise"} | ${DepartRetraiteReferences}
-  ${"départ"} | ${"Cadres"}                           | ${DepartRetraiteCadresReferences}
-  ${"mise"}   | ${"Employés et ouvriers"}             | ${MiseRetraiteOuvriersReferences}
-  ${"mise"}   | ${"Techniciens & Agents de maîtrise"} | ${MiseRetraiteTechniciensReferences}
-  ${"mise"}   | ${"Cadres"}                           | ${MiseRetraiteCadresReferences}
+  category        | expectedReferences
+  ${"Non-cadres"} | ${DepartRetraiteReferences}
+  ${"Cadres"}     | ${DepartRetraiteCadresReferences}
 `(
-  "Vérification des références juridiques pour un $category en $retirement à la retraite",
-  ({ retirement, category, expectedReferences }) => {
+  "Vérification des références juridiques pour un $category en départ à la retraite",
+  ({ category, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2216'",
-        "contrat salarié . mise à la retraite":
-          retirement === "mise" ? "oui" : "non",
-        "contrat salarié . convention collective . commerce gros et detail alimentation . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . travailleur handicapé": "non",
+      })
+    );
+
+    expect(result).toHaveLength(expectedReferences.length);
+    expect(result).toEqual(expect.arrayContaining(expectedReferences));
+  }
+);
+
+test.each`
+  category                               | expectedReferences
+  ${"Employés et ouvriers"}              | ${MiseRetraiteOuvriersReferences}
+  ${"Techniciens et agents de maîtrise"} | ${MiseRetraiteTechniciensReferences}
+  ${"Cadres"}                            | ${MiseRetraiteCadresReferences}
+`(
+  "Vérification des références juridiques pour un $category en mise à la retraite",
+  ({ category, expectedReferences }) => {
+    const result = getReferences(
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC2216'",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
         "contrat salarié . travailleur handicapé": "non",
       })
     );

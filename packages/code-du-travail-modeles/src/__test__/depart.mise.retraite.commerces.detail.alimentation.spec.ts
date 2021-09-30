@@ -4,16 +4,13 @@ import { mergeModels } from "../internal/merger";
 const engine = new Engine(mergeModels());
 
 test.each`
-  seniority | category                              | expectedNotice
-  ${1}      | ${"Employés et ouvriers"}             | ${0}
-  ${6}      | ${"Employés et ouvriers"}             | ${1}
-  ${24}     | ${"Employés et ouvriers"}             | ${2}
-  ${1}      | ${"Techniciens & Agents de maîtrise"} | ${0}
-  ${6}      | ${"Techniciens & Agents de maîtrise"} | ${1}
-  ${24}     | ${"Techniciens & Agents de maîtrise"} | ${2}
-  ${1}      | ${"Cadres"}                           | ${6}
-  ${6}      | ${"Cadres"}                           | ${1}
-  ${24}     | ${"Cadres"}                           | ${2}
+  seniority | category        | expectedNotice
+  ${1}      | ${"Non-cadres"} | ${0}
+  ${6}      | ${"Non-cadres"} | ${1}
+  ${24}     | ${"Non-cadres"} | ${2}
+  ${1}      | ${"Cadres"}     | ${6}
+  ${6}      | ${"Cadres"}     | ${1}
+  ${24}     | ${"Cadres"}     | ${2}
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice $expectedNoticeUnit",
   ({ seniority, category, expectedNotice }) => {
@@ -23,7 +20,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . commerce gros et detail alimentation . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -34,16 +31,16 @@ test.each`
 );
 
 test.each`
-  seniority | category                              | expectedNotice
-  ${1}      | ${"Employés et ouvriers"}             | ${1}
-  ${6}      | ${"Employés et ouvriers"}             | ${1}
-  ${24}     | ${"Employés et ouvriers"}             | ${2}
-  ${1}      | ${"Techniciens & Agents de maîtrise"} | ${2}
-  ${6}      | ${"Techniciens & Agents de maîtrise"} | ${2}
-  ${24}     | ${"Techniciens & Agents de maîtrise"} | ${2}
-  ${1}      | ${"Cadres"}                           | ${6}
-  ${6}      | ${"Cadres"}                           | ${6}
-  ${24}     | ${"Cadres"}                           | ${6}
+  seniority | category                               | expectedNotice
+  ${1}      | ${"Employés et ouvriers"}              | ${1}
+  ${6}      | ${"Employés et ouvriers"}              | ${1}
+  ${24}     | ${"Employés et ouvriers"}              | ${2}
+  ${1}      | ${"Techniciens et agents de maîtrise"} | ${2}
+  ${6}      | ${"Techniciens et agents de maîtrise"} | ${2}
+  ${24}     | ${"Techniciens et agents de maîtrise"} | ${2}
+  ${1}      | ${"Cadres"}                            | ${6}
+  ${6}      | ${"Cadres"}                            | ${6}
+  ${24}     | ${"Cadres"}                            | ${6}
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice $expectedNoticeUnit",
   ({ seniority, category, expectedNotice }) => {
@@ -53,7 +50,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . commerce gros et detail alimentation . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
