@@ -1,6 +1,6 @@
 Test on deployed branch:
   stage: .post
-  image: ghcr.io/socialgouv/docker/code-du-travail-frontend-e2e:6.18.0
+  image: ghcr.io/socialgouv/docker/puppeteer:6.18.0
   except:
     refs:
       # Don't run on release
@@ -15,7 +15,7 @@ Test on deployed branch:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
       - ./node_modules
-      - .packages/code-du-travail-frontend-e2e/node_modules
+      - ./packages/code-du-travail-frontend-e2e/node_modules
       - $CI_PROJECT_DIR/.yarn
   retry: 2
 
