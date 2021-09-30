@@ -7,24 +7,14 @@ import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { usePublicodes } from "../../publicodes";
 import { mapToPublicodesSituation } from "../../publicodes/Utils";
-import { formatSeniority } from "./utils";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
 
   useEffect(() => {
-    try {
-      publicodesContext.setSituation(
-        mapToPublicodesSituation({
-          ...form.getState().values,
-          "contrat salarié - ancienneté": formatSeniority(
-            form.getState().values["contrat salarié - ancienneté"]
-          ),
-        } as any)
-      );
-    } catch {
-      // ignore
-    }
+    publicodesContext.setSituation(
+      mapToPublicodesSituation(form.getState().values)
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form]);
 

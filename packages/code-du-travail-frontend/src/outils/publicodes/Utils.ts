@@ -1,4 +1,5 @@
 import { FormContent } from "../common/type/WizardType";
+import { formatSeniority } from "../DureePreavisRetraite/steps/utils";
 import { PublicodesResult, PublicodesUnit } from "./index";
 
 /**
@@ -8,24 +9,26 @@ export const mapToPublicodesSituation = (
   form: FormContent
 ): Record<string, string> => {
   const { ccn, infos, seniorityGreaterThanTwoYears, ...formWithoutCcn } = form;
-  const seniority =
-    seniorityGreaterThanTwoYears === true
-      ? { "contrat salarié - ancienneté": "24" }
-      : {};
-  if (ccn) {
-    return {
-      "contrat salarié - convention collective": `'IDCC${ccn.num
-        .toString()
-        .padStart(4, "0")}'`,
-      ...infos,
-      ...formWithoutCcn,
-      ...seniority,
-    };
-  }
+  const seniority = {
+    "contrat salarié - ancienneté":
+      seniorityGreaterThanTwoYears === true
+        ? "25"
+        : formatSeniority(form["contrat salarié - ancienneté"]),
+  };
   return {
     ...infos,
     ...formWithoutCcn,
     ...seniority,
+    ...Object.assign(
+      {},
+      ccn
+        ? {
+            "contrat salarié - convention collective": `'IDCC${ccn.num
+              .toString()
+              .padStart(4, "0")}'`,
+          }
+        : {}
+    ),
   };
 };
 
