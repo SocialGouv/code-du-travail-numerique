@@ -22,7 +22,7 @@ import ImageWrapper from "../../src/common/ImageWrapper";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { toUrl } from "../../src/lib/getFileUrl";
+import { toUrl } from "../../src/lib";
 
 const {
   publicRuntimeConfig: { API_URL },
