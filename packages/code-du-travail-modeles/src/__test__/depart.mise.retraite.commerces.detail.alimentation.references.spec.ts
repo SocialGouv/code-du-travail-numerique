@@ -11,20 +11,16 @@ const engine = new Engine(mergeModels());
 const DepartRetraiteCadresReferences = [
   ...DepartRetraiteReferences,
   {
-    article: "Article 9 de l'annexe III",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517573/?idConteneur=KALICONT000005635085",
+    article: "Article 8 de l'annexe III",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
   },
 ];
 
 const MiseRetraiteOuvriersReferences = [
   ...MiseRetraiteReferences,
   {
-    article: "Article 3.12",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023307000/?idConteneur=KALICONT000005635085",
-  },
-  {
-    article: "Article 3 de l'annexe I",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517472/?idConteneur=KALICONT000005635085",
+    article: "Article 5 de l'annexe I",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517480",
   },
 ];
 
@@ -39,8 +35,8 @@ const MiseRetraiteTechniciensReferences = [
 const MiseRetraiteCadresReferences = [
   ...MiseRetraiteReferences,
   {
-    article: "Article 9 de l'annexe III",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517573/?idConteneur=KALICONT000005635085",
+    article: "Article 8 de l'annexe III",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
   },
 ];
 
