@@ -5,9 +5,9 @@ const engine = new Engine(mergeModels());
 
 test.each`
   accommodation | coefficient | expectedResult | expectedPeriod | seniority
-  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${1}
-  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${6}
-  ${"Non"}      | ${602}      | ${8}           | ${"jours"}     | ${24}
+  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${1}
+  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${6}
+  ${"Non"}      | ${602}      | ${8}           | ${"jour"}      | ${24}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${1}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${6}
   ${"Non"}      | ${603}      | ${1}           | ${"mois"}      | ${24}
@@ -19,7 +19,13 @@ test.each`
   ${"Oui"}      | ${603}      | ${1}           | ${"mois"}      | ${24}
 `(
   "Pour un salarié disposant d'une ancienneté $seniority de ce coefficient $coefficient et ayant un logement : $accommodation, son préavis de départ à la retraite devrait être $expectedResult $expectedPeriod",
-  ({ accommodation, coefficient, expectedResult, expectedPeriod, seniority }) => {
+  ({
+    accommodation,
+    coefficient,
+    expectedResult,
+    expectedPeriod,
+    seniority,
+  }) => {
     const result = engine
       .setSituation({
         "contrat salarié . convention collective": "'IDCC1043'",
