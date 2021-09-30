@@ -2736,10 +2736,10 @@
     eslint-plugin-simple-import-sort "~7.0.0"
     eslint-plugin-sort-keys-fix "~1.1.1"
 
-"@socialgouv/fiches-travail-data@^4.200.0":
-  version "4.200.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.200.0.tgz#4fcb9fff9dd439d8b352647e5895a099159b0f9b"
-  integrity sha512-KJPXKVmhPdFUVvOo4hHoaQF//WM6080oeBjiCmm9pbfGHQOyz1T6NUQ0qA6WFOZu8haEt8Kf1hTbQAYn1btqWg==
+"@socialgouv/fiches-travail-data@^4.206.0":
+  version "4.206.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.206.0.tgz#76e9ac91b6f5a3cc2739c92fb8258f32c343f74a"
+  integrity sha512-pEoeRDHURNnhg0rdN+vVxlQJtOD7e0ITZ/qg2s/OZDnvpsilNXT3FLiGXlZ8KCELacDgyCWHdHPcdGMIkeQE3g==
 
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
@@ -18402,9 +18402,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"

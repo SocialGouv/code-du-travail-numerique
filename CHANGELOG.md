@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.202.0 ([#3758](https://github.com/SocialGouv/code-du-travail-numerique/issues/3758)) ([0f1bf76](https://github.com/SocialGouv/code-du-travail-numerique/commit/0f1bf7606288252cdaa3236c21ba48e8fd0810c5))
+* **frontend:** add cannonical tag to all pages ([#3764](https://github.com/SocialGouv/code-du-travail-numerique/issues/3764)) ([6f8a5f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/6f8a5f3be36a32f3876b0885820c642d31343de0))
+* **frontend:** zoom and contribution error fixed ([#3771](https://github.com/SocialGouv/code-du-travail-numerique/issues/3771)) ([304e704](https://github.com/SocialGouv/code-du-travail-numerique/commit/304e704ba9f215cebbc41c97150a260bd3793741))
+
+
+
+
+
 # 4.53.0 (2021-09-17)
 
 

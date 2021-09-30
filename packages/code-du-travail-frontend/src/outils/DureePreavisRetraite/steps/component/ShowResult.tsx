@@ -33,7 +33,7 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
             <>
               {publicodesContext.result.value}
               &nbsp;
-              {publicodesContext.result.unit.numerators[0]}
+              {publicodesContext.result.unit}
             </>
           ) : (
             <>il n’y a pas de préavis à effectuer</>

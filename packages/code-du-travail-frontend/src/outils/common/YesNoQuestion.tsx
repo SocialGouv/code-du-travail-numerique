@@ -46,11 +46,10 @@ const YesNoQuestion = ({
         parse={(value) => value === "true"}
         name={name}
         value={false}
+        label="Non"
         validate={requiredBoolean}
       >
-        {(props) => (
-          <InputRadio id={`${name}-no`} label="Non" {...props.input} />
-        )}
+        {({ input }) => <InputRadio id={`${name}-no`} label="Non" {...input} />}
       </Field>
     </RadioContainer>
     <ErrorField name={name} />
