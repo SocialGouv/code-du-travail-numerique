@@ -77,15 +77,16 @@ test.each`
 );
 
 test.each`
-  ccnNum  | type        | seniority | result          | legalResult     | agreementResult | expectedNoticeUsed           | expectedAgreement
-  ${null} | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${null}
-  ${null} | ${"mise"}   | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${null}
-  ${123}  | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${null}         | ${NoticeUsed.none}           | ${agreementNotSupported}
-  ${292}  | ${"depart"} | ${"5"}    | ${{ value: 0 }} | ${{ value: 0 }} | ${{ value: 0 }} | ${NoticeUsed.same}           | ${getAgreementSupported(0)}
-  ${292}  | ${"depart"} | ${"5"}    | ${{ value: 2 }} | ${{ value: 0 }} | ${{ value: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
-  ${292}  | ${"mise"}   | ${"23"}   | ${{ value: 4 }} | ${{ value: 3 }} | ${{ value: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
-  ${292}  | ${"mise"}   | ${"23"}   | ${{ value: 4 }} | ${{ value: 4 }} | ${{ value: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}
-  ${292}  | ${"mise"}   | ${"23"}   | ${{ value: 4 }} | ${{ value: 4 }} | ${{ value: 4 }} | ${NoticeUsed.same}           | ${getAgreementSupported(4)}
+  ccnNum  | type        | seniority | result                | legalResult           | agreementResult       | expectedNoticeUsed           | expectedAgreement
+  ${null} | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
+  ${null} | ${"mise"}   | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
+  ${null} | ${"depart"} | ${"24"}   | ${{ valueInDays: 2 }} | ${{ valueInDays: 2 }} | ${null}               | ${NoticeUsed.legal}          | ${null}
+  ${123}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementNotSupported}
+  ${292}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
+  ${292}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 2 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
+  ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
+  ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}
+  ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.same}           | ${getAgreementSupported(4)}
 `(
   "Pour un employé en $type à la retraite, cc: $ccnNum, ancienneté: $seniority, résultat: $result, on doit obtenir l'ancienneté provenant de $expectedNoticeUsed",
   ({

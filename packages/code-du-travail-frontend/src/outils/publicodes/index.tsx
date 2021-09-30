@@ -42,8 +42,9 @@ export enum PublicodesUnit {
 }
 
 export interface PublicodesResult {
-  value: string | number;
+  value: number;
   unit: PublicodesUnit;
+  valueInDays: number;
 }
 
 export interface PublicodesContextInterface {

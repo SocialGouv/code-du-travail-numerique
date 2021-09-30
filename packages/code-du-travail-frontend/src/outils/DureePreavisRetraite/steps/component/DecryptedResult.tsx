@@ -9,7 +9,6 @@ import {
   PublicodesContextInterface,
   PublicodesResult,
 } from "../../../publicodes";
-import { generateNoticeUsed } from "../utils";
 
 type Props = {
   data: FormContent;
@@ -71,18 +70,36 @@ export const createRootData = (
   let agreement = null;
   if (data.ccn) {
     if (supportedCcn.includes(data.ccn.num)) {
-      agreement = { isSupported: true, notice: agreementResult.value };
+      agreement = { isSupported: true, notice: agreementResult.valueInDays };
     } else {
       agreement = {
         isSupported: false,
-        notice: agreementResult?.value ?? 0,
+        notice: agreementResult?.valueInDays ?? 0,
       };
     }
+  }
+  let noticeUsed = NoticeUsed.none;
+  if (
+    (legalResult.valueInDays > 0 &&
+      legalResult.valueInDays === agreementResult?.valueInDays) ??
+    -1
+  ) {
+    noticeUsed = NoticeUsed.same;
+  } else if (
+    result.valueInDays > 0 &&
+    result.valueInDays === legalResult.valueInDays
+  ) {
+    noticeUsed = NoticeUsed.legal;
+  } else if (
+    result.valueInDays > 0 &&
+    result.valueInDays === agreementResult.valueInDays
+  ) {
+    noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
     agreement: agreement,
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
-    noticeUsed: generateNoticeUsed(legalResult, agreementResult, result),
+    noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
   };
 };

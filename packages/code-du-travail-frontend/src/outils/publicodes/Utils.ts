@@ -49,6 +49,7 @@ export const convertDaysIntoBetterUnit = (
     return {
       unit: isWeek ? PublicodesUnit.WEEK : PublicodesUnit.WEEKS,
       value: parsedWeek,
+      valueInDays: parsedDay,
     };
   }
   // Hack: publicodes round value when convert months to days.
@@ -59,11 +60,13 @@ export const convertDaysIntoBetterUnit = (
     return {
       unit: PublicodesUnit.MONTH,
       value: parsedMonth,
+      valueInDays: parsedDay,
     };
   }
   return {
     unit: isDay ? PublicodesUnit.DAY : PublicodesUnit.DAYS,
     value: parsedDay,
+    valueInDays: parsedDay,
   };
 };
 
