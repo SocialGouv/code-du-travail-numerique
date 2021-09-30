@@ -1,7 +1,6 @@
 import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -51,7 +50,7 @@ test.each`
   ${5}      | ${"Ingénieurs et cadres"} | ${0}  | ${6}           | ${"mois"}
   ${6}      | ${"Ingénieurs et cadres"} | ${0}  | ${6}           | ${"mois"}
   ${24}     | ${"Ingénieurs et cadres"} | ${0}  | ${6}           | ${"mois"}
-  ${3}      | ${"Ouvriers"}             | ${0}  | ${1}           | ${"semaine"}
+  ${3}      | ${"Ouvriers"}             | ${0}  | ${7}           | ${"jour"}
   ${6}      | ${"Ouvriers"}             | ${0}  | ${1}           | ${"mois"}
   ${23}     | ${"Ouvriers"}             | ${0}  | ${1}           | ${"mois"}
   ${24}     | ${"Ouvriers"}             | ${0}  | ${2}           | ${"mois"}
