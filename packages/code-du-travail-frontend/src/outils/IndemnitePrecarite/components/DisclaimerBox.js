@@ -1,20 +1,11 @@
-import { icons, IconStripe } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import {
-  Warning,
-  WarningTitle,
-} from "../../DureePreavisRetraite/steps/component/WarningResult";
+import Disclaimer from "../../common/Disclaimer";
 
-function Disclaimer({ situation, idcc }) {
+function DisclaimerBox({ situation, idcc }) {
   if (idcc > 0 && situation.idcc > 0) {
     return (
-      <Warning>
-        <IconStripe centered icon={icons.Warning}>
-          <WarningTitle>
-            Attention il peut exister un montant plus favorable
-          </WarningTitle>
-        </IconStripe>
+      <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
         <p>
           Un accord d’entreprise peut prévoir un montant différent qu’il soit
           plus élevé ou plus faible. Dans ce cas, s’applique le montant prévu
@@ -30,17 +21,12 @@ function Disclaimer({ situation, idcc }) {
             formation, bilan de compétences).
           </p>
         )}
-      </Warning>
+      </Disclaimer>
     );
   }
   // case for no ccn provided or unhandled ccn
   return (
-    <Warning>
-      <IconStripe centered icon={icons.Warning}>
-        <WarningTitle>
-          Attention il peut exister un montant plus favorable
-        </WarningTitle>
-      </IconStripe>
+    <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
       <p>
         Une convention collective de branche étendue ou un accord d’entreprise
         peut prévoir un montant différent qu’il soit plus élevé ou plus faible
@@ -55,8 +41,8 @@ function Disclaimer({ situation, idcc }) {
         montant plus favorable pour le salarié. Il faut alors appliquer ce
         montant.
       </p>
-    </Warning>
+    </Disclaimer>
   );
 }
 
-export default Disclaimer;
+export default DisclaimerBox;

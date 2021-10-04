@@ -11,7 +11,7 @@ import {
   getSituationsFor,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import Disclaimer from "../components/Disclaimer";
+import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
 
@@ -130,7 +130,7 @@ function StepIndemnite({ form }) {
           },
         ]}
       />
-      <Disclaimer situation={situation} idcc={idcc} />
+      <DisclaimerBox situation={situation} idcc={idcc} />
 
       <p>
         En savoir plus sur la prime de précarité d’un{" "}

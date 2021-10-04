@@ -1,10 +1,11 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Accordion, icons, IconStripe } from "@socialgouv/cdtn-ui";
+import { Accordion } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
+import Disclaimer from "../../common/Disclaimer";
 import {
   filterSituations,
   getRef,
@@ -12,25 +13,16 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import {
-  Warning,
-  WarningTitle,
-} from "../../DureePreavisRetraite/steps/component/WarningResult";
 
-function Disclaimer() {
+function DisclaimerBox() {
   return (
-    <Warning>
-      <IconStripe centered icon={icons.Warning}>
-        <WarningTitle>
-          Attention il peut exister une autre durée de préavis
-        </WarningTitle>
-      </IconStripe>
+    <Disclaimer title={"Attention il peut exister une autre durée de préavis"}>
       <p>
         L’existence ou la durée du préavis de démission peut être prévue par une
         convention collective, un accord d’entreprise ou à défaut, par un usage
         dans l’entreprise.
       </p>
-    </Warning>
+    </Disclaimer>
   );
 }
 
@@ -73,7 +65,7 @@ function StepResult({ form }) {
             </Link>
           </p>
         )}
-        <Disclaimer ccn={ccn} />
+        <DisclaimerBox />
         <SectionTitle>Source</SectionTitle>
         {getRef([refLegal])}
       </>
@@ -115,7 +107,7 @@ function StepResult({ form }) {
           },
         ]}
       />
-      <Disclaimer />
+      <DisclaimerBox />
     </>
   );
 }

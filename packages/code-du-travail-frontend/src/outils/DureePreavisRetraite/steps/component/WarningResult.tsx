@@ -1,7 +1,8 @@
-import { Alert, icons, IconStripe, theme } from "@socialgouv/cdtn-ui";
+import { Alert, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
+import Disclaimer from "../../../common/Disclaimer";
 import { SmallText } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import { PublicodesContextInterface } from "../../../publicodes";
@@ -11,40 +12,38 @@ type Props = {
   data: FormContent;
 };
 
+const title = "Attention il peut exister une durée plus favorable";
 const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
   if (publicodesContext.result.value === 0) {
     if (data.ccn) {
       return (
-        <Warning>
-          <IconStripe centered icon={icons.Warning}>
-            <WarningTitle>
-              Attention il peut quand même exister une durée de préavis
-            </WarningTitle>
-          </IconStripe>
-          <p>
-            Un accord collectif d’entreprise, le contrat de travail ou un usage
-            peut prévoir une durée de préavis. Dans ce cas, cette durée doit
-            s’appliquer.
-            <br />
-            Nous vous conseillons de vérifiez cela.
-          </p>
-        </Warning>
+        <Disclaimer
+          title={"Attention il peut quand même exister une durée de préavis"}
+        >
+          <>
+            <p>
+              Un accord collectif d’entreprise, le contrat de travail ou un
+              usage peut prévoir une durée de préavis. Dans ce cas, cette durée
+              doit s’appliquer.
+            </p>
+            <p>Nous vous conseillons de vérifiez cela.</p>
+          </>
+        </Disclaimer>
       );
     } else {
       return (
-        <Warning>
-          <IconStripe centered icon={icons.Warning}>
-            <WarningTitle>
-              Attention il peut quand même exister une durée de préavis
-            </WarningTitle>
-          </IconStripe>
-          <p>
-            Une convention collective de branche, un accord collectif
-            d’entreprise, le contrat de travail ou un usage peut prévoir une
-            durée de préavis. Dans ce cas, cette durée doit s’appliquer. <br />
-            Nous vous conseillons de vérifiez cela.
-          </p>
-        </Warning>
+        <Disclaimer
+          title={"Attention il peut quand même exister une durée de préavis"}
+        >
+          <>
+            <p>
+              Une convention collective de branche, un accord collectif
+              d’entreprise, le contrat de travail ou un usage peut prévoir une
+              durée de préavis. Dans ce cas, cette durée doit s’appliquer.
+            </p>
+            <p>Nous vous conseillons de vérifiez cela.</p>
+          </>
+        </Disclaimer>
       );
     }
   }
@@ -54,39 +53,31 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
   if (type === "depart") {
     if (data.ccn) {
       return (
-        <Warning>
-          <IconStripe centered icon={icons.Warning}>
-            <WarningTitle>
-              Attention il peut exister une durée plus favorable
-            </WarningTitle>
-          </IconStripe>
-          <p>
-            Un accord collectif d’entreprise, le contrat de travail ou un usage
-            peut prévoir une durée de préavis<sup>*</sup> ou une condition
-            d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce
-            cas, c’est cette durée ou cette ancienneté plus favorable qui
-            s’applique au salarié.
-          </p>
-          <p>
-            <SmallText>
-              <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié
-              = durée plus courte.
-              <br />
-              <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-              salarié = condition d’ancienneté moins restrictive et conduisant à
-              une durée de préavis plus courte.
-            </SmallText>
-          </p>
-        </Warning>
+        <Disclaimer title={title}>
+          <>
+            <p>
+              Un accord collectif d’entreprise, le contrat de travail ou un
+              usage peut prévoir une durée de préavis<sup>*</sup> ou une
+              condition d’ancienneté<sup>*</sup> plus favorable pour le salarié.
+              Dans ce cas, c’est cette durée ou cette ancienneté plus favorable
+              qui s’applique au salarié.
+            </p>
+            <p>
+              <SmallText>
+                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
+                salarié = durée plus courte.
+                <br />
+                <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+                salarié = condition d’ancienneté moins restrictive et conduisant
+                à une durée de préavis plus courte.
+              </SmallText>
+            </p>
+          </>
+        </Disclaimer>
       );
     } else {
       return (
-        <Warning>
-          <IconStripe centered icon={icons.Warning}>
-            <WarningTitle>
-              Attention il peut exister une durée plus favorable
-            </WarningTitle>
-          </IconStripe>
+        <Disclaimer title={title}>
           <p>
             Une convention collective de branche, un accord collectif
             d’entreprise, le contrat de travail ou un usage peut prévoir une
@@ -105,19 +96,14 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
               une durée de préavis plus courte.
             </SmallText>
           </p>
-        </Warning>
+        </Disclaimer>
       );
     }
   }
 
   if (data.ccn) {
     return (
-      <Warning>
-        <IconStripe centered icon={icons.Warning}>
-          <WarningTitle>
-            Attention il peut exister une durée plus favorable
-          </WarningTitle>
-        </IconStripe>
+      <Disclaimer title={title}>
         <p>
           Un accord collectif d’entreprise, le contrat de travail ou un usage
           peut prévoir une durée de préavis<sup>*</sup> ou une condition
@@ -135,16 +121,11 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
             une durée de préavis plus longue.
           </SmallText>
         </p>
-      </Warning>
+      </Disclaimer>
     );
   } else {
     return (
-      <Warning>
-        <IconStripe centered icon={icons.Warning}>
-          <WarningTitle>
-            Attention il peut exister une durée plus favorable
-          </WarningTitle>
-        </IconStripe>
+      <Disclaimer title={title}>
         <p>
           Une convention collective de branche, un accord collectif
           d’entreprise, le contrat de travail ou un usage peut prévoir une durée
@@ -162,11 +143,10 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
             une durée de préavis plus longue.
           </SmallText>
         </p>
-      </Warning>
+      </Disclaimer>
     );
   }
 };
-
 const { fonts, spacings } = theme;
 
 export const Warning = styled(Alert)`

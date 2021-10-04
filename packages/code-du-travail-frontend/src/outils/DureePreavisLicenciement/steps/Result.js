@@ -1,10 +1,11 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Accordion, icons, IconStripe } from "@socialgouv/cdtn-ui";
+import { Accordion } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
+import Disclaimer from "../../common/Disclaimer";
 import { isNotNearZero } from "../../common/math";
 import {
   filterSituations,
@@ -13,10 +14,6 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import {
-  Warning,
-  WarningTitle,
-} from "../../DureePreavisRetraite/steps/component/WarningResult";
 
 const { situations: allSituations } = data;
 
@@ -91,21 +88,15 @@ function DisclaimerText({ durationCC, durationCDT, ccn }) {
   }
 }
 
-function Disclaimer({ durationCC, durationCDT, ccn }) {
+function DisclaimerBox({ durationCC, durationCDT, ccn }) {
   return (
-    <Warning>
-      <IconStripe centered icon={icons.Warning}>
-        <WarningTitle>
-          Attention il peut exister une durée plus favorable
-        </WarningTitle>
-      </IconStripe>
-
+    <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
       <DisclaimerText
         durationCC={durationCC}
         durationCDT={durationCDT}
         ccn={ccn}
       />
-    </Warning>
+    </Disclaimer>
   );
 }
 
@@ -257,7 +248,11 @@ function StepResult({ form }) {
           },
         ]}
       />
-      <Disclaimer durationCC={durationCC} durationCDT={durationCDT} ccn={ccn} />
+      <DisclaimerBox
+        durationCC={durationCC}
+        durationCDT={durationCDT}
+        ccn={ccn}
+      />
     </>
   );
 }
