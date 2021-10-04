@@ -9,6 +9,7 @@ import type {
   PublicodesResult,
   SituationElement,
 } from "./index";
+import { convertDaysIntoBetterUnit } from "./Utils";
 
 interface State {
   engine: Engine;
@@ -34,7 +35,7 @@ const usePublicodesHandler = ({
   function handleExecute(rule: string): PublicodesResult {
     engine.setSituation(buildSituation(data.situation));
     const result = engine.evaluate(rule);
-    return { unit: result.unit, value: result.nodeValue };
+    return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
   }
 
   function newSituation(args: Record<string, string>): void {
@@ -71,7 +72,7 @@ const usePublicodesHandler = ({
 
     setData({
       missingArgs: buildMissingArgs(result.missingVariables),
-      result: { unit: result.unit, value: result.nodeValue },
+      result: convertDaysIntoBetterUnit(result.nodeValue as unknown as string),
       situation: newSituation,
     });
   }
