@@ -38,6 +38,9 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           ),
           help: "",
         }}
+        onChange={() => {
+          form.change("contrat salarié - ancienneté", undefined);
+        }}
       />
       {form.getState().values.seniorityGreaterThanTwoYears === false && (
         <TextQuestion
@@ -45,6 +48,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           label="Quelle est l'ancienneté du salarié dans l’entreprise en mois&nbsp;?"
           inputType="number"
           validate={isPositiveNumber}
+          validateOnChange
           placeholder="0"
         />
       )}
