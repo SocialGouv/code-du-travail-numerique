@@ -53,8 +53,8 @@ export default class MyApp extends App {
     if (Component.getInitialProps) {
       try {
         const initialProps = await Component.getInitialProps(ctx);
-        if (initialProps.statusCode === 404) {
-          ctx.res.statusCode = 404;
+        if (initialProps.statusCode) {
+          ctx.res.statusCode = initialProps.statusCode;
         }
         pageProps = await Component.getInitialProps(ctx);
       } catch (err) {
