@@ -56,7 +56,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   grille:
     assiette: ancienneté
     tranches:
-      - montant: 1 semaine
+      - montant: 7 jour
         plafond: 6 mois
       - montant: 1 mois
         plafond: 24 mois
