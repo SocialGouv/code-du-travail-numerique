@@ -58,7 +58,7 @@ export default function IntegrationPage() {
                         <code>&lt;body&gt;</code> de votre page&nbsp;:
                       </p>
                       <Code>
-                        <pre>
+                        <pre style={{ lineHeight: "125%", margin: 0 }}>
                           {`<script src="https://code.travail.gouv.fr/widget.js"></script>`}
                         </pre>
                       </Code>
@@ -67,7 +67,7 @@ export default function IntegrationPage() {
                         souhaitez voir le module s’afficher&nbsp;:
                       </p>
                       <Code>
-                        <pre>
+                        <pre style={{ lineHeight: "125%", margin: 0 }}>
                           {`<div id="cdtn-widget">
   <a href="https://code.travail.gouv.fr" class="cdtn-homelink">le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
 </div>`}
@@ -137,10 +137,4 @@ const Code = styled.div`
   background: #ffffff;
   border: solid gray;
   border-width: 0.1em 0.1em 0.1em 0.8em;
-
-  pre {
-    line-height: 125%;
-    margin: 0;
-    white-space: pre-wrap;
-  }
 `;

@@ -147,7 +147,7 @@ function addWidget() {
         }
       }
     </style>
-    <a href="https://code.travail.gouv.fr" target="_blank" title="le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.">
+    <a href="https://code.travail.gouv.fr" target="_blank" title="Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.">
       <img
         id="cdtn-logo"
         alt="Le Code du travail numérique"
