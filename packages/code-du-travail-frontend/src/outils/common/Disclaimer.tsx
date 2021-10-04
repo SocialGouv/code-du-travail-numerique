@@ -1,6 +1,6 @@
+import { icons, IconStripe } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { icons, IconStripe } from "@socialgouv/cdtn-ui";
 import {
   Warning,
   WarningTitle,
