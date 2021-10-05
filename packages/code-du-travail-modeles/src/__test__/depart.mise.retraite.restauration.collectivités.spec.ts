@@ -1,20 +1,19 @@
 import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
-import { getNotifications } from "../utils/GetNotifications";
 
 const engine = new Engine(mergeModels());
 describe("Mise à la retraite", () => {
   test.each`
     seniority | category       | expectedNotice | expectedUnit
-    ${4}      | ${"Employés"}  | ${8}           | ${"jour"}
+    ${5}      | ${"Employés"}  | ${8}           | ${"jour"}
     ${12}     | ${"Employés"}  | ${1}           | ${"mois"}
-    ${24}     | ${"Employés"}  | ${2}           | ${"mois"}
+    ${25}     | ${"Employés"}  | ${2}           | ${"mois"}
     ${5}      | ${"Maîtrises"} | ${1}           | ${"mois"}
     ${12}     | ${"Maîtrises"} | ${1}           | ${"mois"}
-    ${24}     | ${"Maîtrises"} | ${2}           | ${"mois"}
+    ${25}     | ${"Maîtrises"} | ${2}           | ${"mois"}
     ${5}      | ${"Cadres"}    | ${3}           | ${"mois"}
     ${12}     | ${"Cadres"}    | ${3}           | ${"mois"}
-    ${24}     | ${"Cadres"}    | ${3}           | ${"mois"}
+    ${25}     | ${"Cadres"}    | ${3}           | ${"mois"}
   `(
     "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice $expectedUnit",
     ({ seniority, category, expectedNotice, expectedUnit }) => {
@@ -37,15 +36,15 @@ describe("Mise à la retraite", () => {
 describe("Départ à la retraite", () => {
   test.each`
     seniority | category       | expectedNotice | expectedUnit
-    ${4}      | ${"Employés"}  | ${8}           | ${"jour"}
+    ${5}      | ${"Employés"}  | ${8}           | ${"jour"}
     ${12}     | ${"Employés"}  | ${1}           | ${"mois"}
-    ${24}     | ${"Employés"}  | ${1}           | ${"mois"}
+    ${25}     | ${"Employés"}  | ${1}           | ${"mois"}
     ${5}      | ${"Maîtrises"} | ${1}           | ${"mois"}
     ${12}     | ${"Maîtrises"} | ${1}           | ${"mois"}
-    ${24}     | ${"Maîtrises"} | ${2}           | ${"mois"}
+    ${25}     | ${"Maîtrises"} | ${2}           | ${"mois"}
     ${5}      | ${"Cadres"}    | ${3}           | ${"mois"}
     ${12}     | ${"Cadres"}    | ${1}           | ${"mois"}
-    ${24}     | ${"Cadres"}    | ${2}           | ${"mois"}
+    ${25}     | ${"Cadres"}    | ${2}           | ${"mois"}
   `(
     "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice $expectedUnit",
     ({ seniority, category, expectedNotice, expectedUnit }) => {
