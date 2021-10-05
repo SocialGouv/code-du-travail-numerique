@@ -19,7 +19,9 @@
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && npx @svgr/cli --icon --no-dimensions -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "watch": "yarn build --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:update": "jest -u",
+    "dev": "rollup --config --watch"
   },
   "peerDependencies": {
     "prop-types": "15.x",

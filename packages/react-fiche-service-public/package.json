@@ -16,7 +16,9 @@
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "prepublishOnly": "yarn build",
-    "test": "jest"
+    "dev": "rollup --config --watch",
+    "test": "jest",
+    "test:update": "jest -u"
   },
   "dependencies": {
     "date-fns": "^2.22.1"
