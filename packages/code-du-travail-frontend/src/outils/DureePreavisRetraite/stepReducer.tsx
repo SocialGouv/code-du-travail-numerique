@@ -1,10 +1,12 @@
 import { Action, ActionName, State } from "../common/type/WizardType";
 import Steps from "./steps";
+import IntroAnnotation from "./steps/component/IntroAnnotation";
 
 export const initialState: State = {
   stepIndex: 0,
   steps: [
     {
+      annotation: IntroAnnotation,
       component: Steps.IntroductionStep,
       label: "Introduction",
       name: "intro",

@@ -22,6 +22,7 @@ export {
   BurgerNavLink,
 } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
+export { DisclosureIcon } from "./DisclosureIcon/index.js";
 export { Dropdown } from "./Dropdown/index.js";
 export { FlatList } from "./FlatList/index.js";
 export { GlobalStyles } from "./GlobalStyles/index.js";
@@ -41,6 +42,7 @@ export { Tag } from "./Tag/index.js";
 export { Text } from "./Text/index.js";
 export { Tile } from "./Tile/index.js";
 export { Toast } from "./Toast/index.js";
+export { Tooltip } from "./Tooltip/index.js";
 export { ViewMore } from "./ViewMore/index.js";
 
 // Fields

@@ -244,7 +244,7 @@ exports[`<StepList /> should render 1`] = `
         2/3
       </span>
     </span>
-    <ul
+    <ol
       class="c5"
     >
       <li
@@ -280,7 +280,7 @@ exports[`<StepList /> should render 1`] = `
         </span>
         Step Three
       </li>
-    </ul>
+    </ol>
   </div>
 </div>
 `;

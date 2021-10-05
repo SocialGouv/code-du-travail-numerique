@@ -9,6 +9,7 @@ import type {
   PublicodesResult,
   SituationElement,
 } from "./index";
+import { convertDaysIntoBetterUnit } from "./Utils";
 
 interface State {
   engine: Engine;
@@ -30,6 +31,12 @@ const usePublicodesHandler = ({
     result: null,
     situation: [],
   });
+
+  function handleExecute(rule: string): PublicodesResult {
+    engine.setSituation(buildSituation(data.situation));
+    const result = engine.evaluate(rule);
+    return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
+  }
 
   function newSituation(args: Record<string, string>): void {
     // Situation is an array to keep the order of the answers
@@ -65,7 +72,7 @@ const usePublicodesHandler = ({
 
     setData({
       missingArgs: buildMissingArgs(result.missingVariables),
-      result: { unit: result.unit, value: result.nodeValue },
+      result: convertDaysIntoBetterUnit(result.nodeValue as unknown as string),
       situation: newSituation,
     });
   }
@@ -94,6 +101,7 @@ const usePublicodesHandler = ({
   };
 
   return {
+    execute: handleExecute,
     getNotifications: () => getNotifications(engine),
     getReferences: () => getReferences(engine),
     missingArgs: data.missingArgs,

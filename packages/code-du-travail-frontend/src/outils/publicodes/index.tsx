@@ -1,6 +1,6 @@
 import { Notification } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
-import Engine, { Evaluation, Rule as PubliRule, Unit } from "publicodes";
+import Engine, { Rule as PubliRule } from "publicodes";
 import React, { createContext, useMemo } from "react";
 
 import usePublicodesHandler from "./Handler";
@@ -33,12 +33,22 @@ export interface SituationElement {
   value: string;
 }
 
+export enum PublicodesUnit {
+  DAY = "jour",
+  DAYS = "jours",
+  WEEK = "semaine",
+  WEEKS = "semaines",
+  MONTH = "mois",
+}
+
 export interface PublicodesResult {
-  value: Evaluation;
-  unit?: Unit;
+  value: number;
+  unit: PublicodesUnit;
+  valueInDays: number;
 }
 
 export interface PublicodesContextInterface {
+  execute: (rule: string) => PublicodesResult;
   getNotifications: () => Notification[];
   getReferences: () => References[];
   result?: PublicodesResult;
@@ -48,6 +58,7 @@ export interface PublicodesContextInterface {
 }
 
 const PublicodesContext = createContext<PublicodesContextInterface>({
+  execute: () => null,
   getNotifications: () => [],
   getReferences: () => [],
   missingArgs: [],
@@ -77,6 +88,7 @@ export const PublicodesProvider: React.FC<
   }, [rules]);
 
   const {
+    execute,
     getNotifications,
     getReferences,
     result,
@@ -91,6 +103,7 @@ export const PublicodesProvider: React.FC<
   return (
     <PublicodesContext.Provider
       value={{
+        execute,
         getNotifications,
         getReferences,
         missingArgs,

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCDD /> should render 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`<StepCDD /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +38,7 @@ exports[`<StepCDD /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +53,12 @@ exports[`<StepCDD /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -66,12 +66,15 @@ exports[`<StepCDD /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,9 +104,13 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
       <span
         class="c1"
+      >
+        Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -111,15 +118,15 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="finContratPeriodeDessai"
     >
       <label
-        class="c3"
+        class="c4"
         for="finContratPeriodeDessai-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="finContratPeriodeDessai-yes"
           name="finContratPeriodeDessai"
           type="radio"
@@ -128,11 +135,11 @@ exports[`<StepCDD /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="finContratPeriodeDessai-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="finContratPeriodeDessai-no"
           name="finContratPeriodeDessai"
           type="radio"
@@ -144,9 +151,13 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
       <span
         class="c1"
+      >
+        À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -154,15 +165,15 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="propositionCDIFindeContrat"
     >
       <label
-        class="c3"
+        class="c4"
         for="propositionCDIFindeContrat-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFindeContrat-yes"
           name="propositionCDIFindeContrat"
           type="radio"
@@ -171,11 +182,11 @@ exports[`<StepCDD /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="propositionCDIFindeContrat-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFindeContrat-no"
           name="propositionCDIFindeContrat"
           type="radio"
@@ -187,9 +198,13 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
       <span
         class="c1"
+      >
+        Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -197,15 +212,15 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="interruptionFauteGrave"
     >
       <label
-        class="c3"
+        class="c4"
         for="interruptionFauteGrave-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="interruptionFauteGrave-yes"
           name="interruptionFauteGrave"
           type="radio"
@@ -214,11 +229,11 @@ exports[`<StepCDD /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="interruptionFauteGrave-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="interruptionFauteGrave-no"
           name="interruptionFauteGrave"
           type="radio"
@@ -230,9 +245,13 @@ exports[`<StepCDD /> should render 1`] = `
     <p
       class="c0"
     >
-      Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
       <span
         class="c1"
+      >
+        Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
+      </span>
+      <span
+        class="c2"
         font-size="default"
         font-weight="400"
       >
@@ -240,15 +259,15 @@ exports[`<StepCDD /> should render 1`] = `
       </span>
     </p>
     <div
-      class="c2"
+      class="c3"
       data-testid="refusRenouvellementAuto"
     >
       <label
-        class="c3"
+        class="c4"
         for="refusRenouvellementAuto-yes"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusRenouvellementAuto-yes"
           name="refusRenouvellementAuto"
           type="radio"
@@ -257,11 +276,11 @@ exports[`<StepCDD /> should render 1`] = `
         Oui
       </label>
       <label
-        class="c3"
+        class="c4"
         for="refusRenouvellementAuto-no"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusRenouvellementAuto-no"
           name="refusRenouvellementAuto"
           type="radio"

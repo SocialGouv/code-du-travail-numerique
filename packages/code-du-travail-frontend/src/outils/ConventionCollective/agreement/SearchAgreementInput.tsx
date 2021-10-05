@@ -8,8 +8,8 @@ import {
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
+import { InfoBulle } from "../../common/InfoBulle";
 import { SectionTitle } from "../../common/stepStyles";
-import { InfoBulle } from "../common/InfoBulle";
 
 type Props = {
   query?: string;

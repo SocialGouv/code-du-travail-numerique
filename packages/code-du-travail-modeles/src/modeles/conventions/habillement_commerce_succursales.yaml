@@ -37,7 +37,7 @@ contrat salarié . convention collective . habillement commerce succursales . ca
     tranches:
       - montant: 0 mois
         plafond: 1 mois
-      - montant: 15 jours
+      - montant: 15 jour
         plafond: 6 mois
       - montant: 1 mois
         plafond: 24 mois
@@ -53,7 +53,7 @@ contrat salarié . convention collective . habillement commerce succursales . ca
     tranches:
       - montant: 0 mois
         plafond: 1 mois
-      - montant: 15 jours
+      - montant: 15 jour
         plafond: 6 mois
       - montant: 1 mois
   références:
