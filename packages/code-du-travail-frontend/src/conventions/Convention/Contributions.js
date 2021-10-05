@@ -49,7 +49,6 @@ function Contributions({ contributions, convention }) {
               convention.shortTitle,
               "pagecc_clickcontrib"
             )}
-            buttonWrapper="h4"
           />
         ),
         title: theme,
@@ -64,7 +63,7 @@ function Contributions({ contributions, convention }) {
       >
         Questions-réponses fréquentes
       </Title>
-      <Accordion items={themes} buttonWrapper="h3" />
+      <Accordion items={themes} />
     </>
   );
 }

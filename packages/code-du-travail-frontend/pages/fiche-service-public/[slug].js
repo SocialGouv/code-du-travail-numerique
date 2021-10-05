@@ -69,12 +69,7 @@ class Fiche extends React.Component {
           {
             // Without the check, the prop children of the Answer will evaluate to true
             // even if in the end, <FicheServicePublic /> returns null
-            raw && (
-              <FicheServicePublic
-                data={raw.children}
-                accordionButtonWrapper="h2"
-              />
-            )
+            raw && <FicheServicePublic data={raw.children} />
           }
         </Answer>
       </Layout>

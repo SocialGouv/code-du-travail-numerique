@@ -72,7 +72,6 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
         <Accordion
           preExpanded={[anchor]}
           items={titledSections}
-          buttonWrapper="h2"
         />
       </StyledAnswer>
     </Layout>

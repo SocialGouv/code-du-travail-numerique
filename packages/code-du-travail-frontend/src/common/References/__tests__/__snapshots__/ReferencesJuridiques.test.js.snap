@@ -248,7 +248,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <div
                 class="c5"
               >
-                Références juridiques concernées :
+                <div>
+                  Références juridiques concernées :
+                </div>
               </div>
             </div>
           </div>

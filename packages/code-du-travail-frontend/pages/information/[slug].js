@@ -122,7 +122,6 @@ const Information = ({
           id: name,
           title,
         }))}
-        buttonWrapper="h2"
       />
     );
   }

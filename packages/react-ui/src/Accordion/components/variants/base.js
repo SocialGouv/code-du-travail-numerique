@@ -39,21 +39,14 @@ export const ItemPanel = styled(AccordionItemPanel)`
   }
 `;
 
-export const ItemButton = ({
-  children,
-  noTitle = false,
-  buttonWrapper = "div",
-}) => (
+export const ItemButton = ({ children, noTitle = false }) => (
   <StyledAccordionItemButton>
     <VerticalArrow aria-hidden="true" />
-    <ButtonText noTitle={noTitle} as={buttonWrapper}>
-      {children}
-    </ButtonText>
+    <ButtonText noTitle={noTitle}>{children}</ButtonText>
   </StyledAccordionItemButton>
 );
 
 ItemButton.propTypes = {
-  buttonWrapper: PropTypes.string,
   children: PropTypes.node.isRequired,
   noTitle: PropTypes.bool,
 };

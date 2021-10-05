@@ -231,7 +231,18 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              titre 1
+              <div
+                class="c0"
+              >
+                <h2
+                  class="c1"
+                >
+                  <div
+                    class="c2"
+                  />
+                  titre 1
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -313,7 +324,18 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              titre 2
+              <div
+                class="c0"
+              >
+                <h2
+                  class="c1"
+                >
+                  <div
+                    class="c2"
+                  />
+                  titre 2
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -400,7 +422,18 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             <div
               class="c7"
             >
-              titre 3
+              <div
+                class="c0"
+              >
+                <h2
+                  class="c1"
+                >
+                  <div
+                    class="c2"
+                  />
+                  titre 3
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -618,7 +651,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              titre 1
+              <span>
+                titre 1
+              </span>
             </div>
           </div>
         </div>
@@ -633,11 +668,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           <div
             class="c7"
           >
-            <h5
-              class="c0"
-            >
+            <span>
               titre 1
-            </h5>
+            </span>
           </div>
           <div
             class="c8"
@@ -693,7 +726,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              titre 2
+              <span>
+                titre 2
+              </span>
             </div>
           </div>
         </div>
@@ -708,11 +743,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           <div
             class="c7"
           >
-            <h5
-              class="c0"
-            >
+            <span>
               titre 2
-            </h5>
+            </span>
           </div>
           <div
             class="c8"
@@ -773,7 +806,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             <div
               class="c5"
             >
-              titre 3
+              <span>
+                titre 3
+              </span>
             </div>
           </div>
         </div>
@@ -788,11 +823,9 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           <div
             class="c7"
           >
-            <h5
-              class="c0"
-            >
+            <span>
               titre 3
-            </h5>
+            </span>
           </div>
           <div
             class="c8"

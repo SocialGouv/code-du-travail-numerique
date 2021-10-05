@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
-import Title from "./Title.js";
+import Title from "./Title";
 
 const { spacings } = theme;
 
@@ -16,24 +16,31 @@ const isItemOfAccordion = (element) =>
 
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {
-    buttonWrapper: PropTypes.string,
     data: PropTypes.object.isRequired,
     headingLevel: PropTypes.number.isRequired,
   };
+
   render() {
-    const { data, headingLevel, buttonWrapper } = this.props;
+    const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem =
       data.children.findIndex(isItemOfAccordion);
     const accordionItems = data.children
       .filter(isItemOfAccordion)
       .map((accordionItem) => {
-        const title = (
-          <Title level={headingLevel}>
-            {getText(
-              accordionItem.children.find((child) => child.name === "Titre")
-            )}
-          </Title>
-        );
+        const title =
+          headingLevel === 0 ? (
+            <Title level={headingLevel}>
+              {getText(
+                accordionItem.children.find((child) => child.name === "Titre")
+              )}
+            </Title>
+          ) : (
+            <span>
+              {getText(
+                accordionItem.children.find((child) => child.name === "Titre")
+              )}
+            </span>
+          );
         const body = (
           <ElementBuilder
             data={accordionItem.children.filter(
@@ -71,10 +78,7 @@ class AccordionWrapper extends React.PureComponent {
       <>
         {beforeAccordionElements}
         {accordionItems.length > 0 && (
-          <StyledAccordion
-            items={accordionItems}
-            buttonWrapper={buttonWrapper}
-          />
+          <StyledAccordion items={accordionItems} />
         )}
         {afterAccordionElements}
       </>

@@ -19,12 +19,7 @@ const { spacings } = theme;
 // Beware, this one is recursive
 // parentAttributes only purpose for now is to pass a date to the title element
 // from the parent level (Avertissement element), we might remove it later
-export function ElementBuilder({
-  data,
-  headingLevel,
-  parentAttributes,
-  accordionButtonWrapper,
-}) {
+export function ElementBuilder({ data, headingLevel, parentAttributes }) {
   const seedId = useUIDSeed();
   // in cases where the parent's "$"/children is undefined while it should not
   // e.g. in a "Texte" element. It occurs sometimes.
@@ -37,7 +32,6 @@ export function ElementBuilder({
         data={child}
         headingLevel={headingLevel}
         parentAttributes={parentAttributes}
-        accordionButtonWrapper={accordionButtonWrapper}
       />
     ));
   }
@@ -50,13 +44,7 @@ export function ElementBuilder({
       if (data.attributes.affichage === "onglet") {
         return <Tabulator data={data} headingLevel={headingLevel} />;
       } else {
-        return (
-          <Accordion
-            data={data}
-            headingLevel={headingLevel}
-            buttonWrapper={accordionButtonWrapper}
-          />
-        );
+        return <Accordion data={data} headingLevel={headingLevel} />;
       }
     case "Introduction":
       if (ignoreParagraph(data)) {
@@ -84,13 +72,7 @@ export function ElementBuilder({
       return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
       if (data.children.find((child) => child.name === "Chapitre")) {
-        return (
-          <Accordion
-            data={data}
-            headingLevel={headingLevel}
-            buttonWrapper={accordionButtonWrapper}
-          />
-        );
+        return <Accordion data={data} headingLevel={headingLevel} />;
       }
       return (
         <ElementBuilder data={data.children} headingLevel={headingLevel} />
@@ -159,14 +141,12 @@ export function ElementBuilder({
 }
 
 ElementBuilder.propTypes = {
-  accordionButtonWrapper: PropTypes.string,
   data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   headingLevel: PropTypes.number,
   parentAttributes: PropTypes.object,
 };
 
 ElementBuilder.defaultProps = {
-  accordionButtonWrapper: "h3",
   headingLevel: 0,
   parentAttributes: {},
 };

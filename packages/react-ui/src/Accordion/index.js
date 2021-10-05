@@ -4,16 +4,9 @@ import { AccordionItemHeading } from "react-accessible-accordion";
 import styled from "styled-components";
 
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
-import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 import * as variants from "./components/variants/index.js";
 
-export const Accordion = ({
-  items,
-  noTitle,
-  variant,
-  buttonWrapper,
-  ...props
-}) => {
+export const Accordion = ({ items, noTitle, variant, ...props }) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
@@ -35,9 +28,8 @@ export const Accordion = ({
                 index={index}
                 isLast={index === items.length - 1}
                 noTitle={noTitle}
-                buttonWrapper={buttonWrapper}
               >
-                {getTextFromComponent(title)}
+                {title}
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
@@ -52,7 +44,6 @@ export const Accordion = ({
 };
 
 Accordion.propTypes = {
-  buttonWrapper: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,
@@ -67,7 +58,6 @@ Accordion.propTypes = {
 };
 
 Accordion.defaultProps = {
-  buttonWrapper: "div",
   noTitle: false,
   preExpanded: [],
   variant: "base",
@@ -77,6 +67,7 @@ const AccordionItemPanelContent = styled.div`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }

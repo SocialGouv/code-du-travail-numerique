@@ -2649,7 +2649,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les textes internationaux
+                              <h3>
+                                Les textes internationaux
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -2803,7 +2805,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les textes européens
+                              <h3>
+                                Les textes européens
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3002,7 +3006,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              La Constitution française
+                              <h3>
+                                La Constitution française
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3160,7 +3166,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Lois, ordonnances, décrets et arrêtés
+                              <h3>
+                                Lois, ordonnances, décrets et arrêtés
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3285,7 +3293,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les conventions et accords collectifs
+                              <h3>
+                                Les conventions et accords collectifs
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3407,7 +3417,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les usages et les engagements unilatéraux
+                              <h3>
+                                Les usages et les engagements unilatéraux
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3510,7 +3522,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Le règlement intérieur de l’entreprise
+                              <h3>
+                                Le règlement intérieur de l’entreprise
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3610,7 +3624,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Le contrat de travail
+                              <h3>
+                                Le contrat de travail
+                              </h3>
                             </div>
                           </div>
                           <svg
@@ -3816,7 +3832,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Les textes internationaux et européens
+                        <h3>
+                          Les textes internationaux et européens
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -3926,7 +3944,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        La Constitution
+                        <h3>
+                          La Constitution
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -4046,7 +4066,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Lois, ordonnances et décrets (Code du travail)
+                        <h3>
+                          Lois, ordonnances et décrets (Code du travail)
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -4139,7 +4161,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                Les conventions et accords collectifs doivent respecter le Code du travail
+                                <h5>
+                                  Les conventions et accords collectifs doivent respecter le Code du travail
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -4207,7 +4231,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                                <h5>
+                                  Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -4285,7 +4311,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                                <h5>
+                                  En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -4450,7 +4478,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Les conventions et accords collectifs
+                        <h3>
+                          Les conventions et accords collectifs
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -4675,7 +4705,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Les usages et les engagements unilatéraux
+                        <h3>
+                          Les usages et les engagements unilatéraux
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -4777,7 +4809,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Le règlement intérieur de l’entreprise
+                        <h3>
+                          Le règlement intérieur de l’entreprise
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
@@ -4889,7 +4923,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="c74"
                       >
-                        Le contrat de travail
+                        <h3>
+                          Le contrat de travail
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"

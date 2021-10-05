@@ -140,7 +140,9 @@ exports[`<Accordion /> renders 1`] = `
             <div
               class="c3"
             >
-              This is the title
+              <h3>
+                This is the title
+              </h3>
             </div>
           </div>
         </div>
@@ -311,7 +313,9 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
             <div
               class="c3"
             >
-              This is the title
+              <span>
+                This is the title
+              </span>
             </div>
           </div>
         </div>
@@ -482,7 +486,9 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
             <div
               class="c3"
             >
-              This is the title
+              <span>
+                This is the title
+              </span>
             </div>
           </div>
         </div>
@@ -653,7 +659,9 @@ exports[`<Accordion /> renders as h2 1`] = `
             <div
               class="c3"
             >
-              This is the title
+              <h2>
+                This is the title
+              </h2>
             </div>
           </div>
         </div>
