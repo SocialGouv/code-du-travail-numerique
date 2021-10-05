@@ -1,5 +1,4 @@
-const fetch = (...args) =>
-  import("node-fetch").then((mod) => mod.default(...args));
+import fetch from "node-fetch";
 
 const request = require("supertest");
 const Koa = require("koa");

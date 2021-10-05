@@ -1,5 +1,5 @@
-const fetch = (...args) =>
-  import("node-fetch").then((mod) => mod.default(...args));
+import fetch from "node-fetch";
+
 const Router = require("koa-router");
 const { API_BASE_URL, CDTN_ADMIN_VERSION } = require("../v1.prefix");
 const { startOfDay, subMonths, max, format } = require("date-fns");
