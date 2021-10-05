@@ -101,10 +101,10 @@ After running elasticsearch
 
 ```sh
 # To fill the database
-yarn workspace @cdt/api pretest
+yarn pretest:api
 
 # To run test
-yarn workspace @cdt/api test
+yarn test:api
 ```
 
 ## Howto

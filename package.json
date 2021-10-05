@@ -17,6 +17,8 @@
     "lint": "lerna run lint",
     "start": "lerna run start",
     "test": "lerna run test",
+    "pretest:api": "lerna run pretest --scope=@cdt/api",
+    "test:api": "lerna run test --scope=@cdt/api",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
     "test:e2e": "lerna run test:e2e --scope=@cdt/e2e --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
