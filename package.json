@@ -17,6 +17,7 @@
     "lint": "lerna run lint",
     "start": "lerna run start",
     "test": "lerna run test",
+    "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
     "test:e2e": "lerna run test:e2e --scope=@cdt/e2e --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
     "test:update": "lerna run build --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
