@@ -59,7 +59,7 @@ export default function IntegrationPage() {
                       </p>
                       <Code>
                         <pre style={{ lineHeight: "125%", margin: 0 }}>
-                          {`<script src="https://code.travail.gouv.fr/widget.js"></script>`}
+                          {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
                         </pre>
                       </Code>
                       <p>
@@ -69,7 +69,7 @@ export default function IntegrationPage() {
                       <Code>
                         <pre style={{ lineHeight: "125%", margin: 0 }}>
                           {`<div id="cdtn-widget">
-  <a href="https://code.travail.gouv.fr" class="cdtn-homelink">le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
+  <a href="https://code.travail.gouv.fr" class="cdtn-homelink">Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
 </div>`}
                         </pre>
                       </Code>

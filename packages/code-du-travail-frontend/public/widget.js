@@ -25,6 +25,7 @@ function addWidget() {
       }
       html, body {
         margin: 0;
+        overflow: hidden;
       }
       @font-face {
         font-family: "Merriweather";
@@ -194,7 +195,7 @@ function addWidget() {
 
     function measureHeight() {
       const height = root.getBoundingClientRect().height;
-      if (height != lastHeight) {
+      if (height !== lastHeight) {
         lastHeight = height;
         iframe.height = height;
       }
