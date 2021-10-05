@@ -26,7 +26,10 @@ contrat salarié . convention collective . gardien concierge . logement:
       Non: "'Non'"
 
 contrat salarié . convention collective . gardien concierge . coefficient:
-  applicable si: départ à la retraite
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - logement = 'Non'
   question: Quel est le coefficient du salarié ?
   titre: Coefficient
   cdtn:
