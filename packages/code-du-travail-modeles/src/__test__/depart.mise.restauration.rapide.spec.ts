@@ -8,7 +8,7 @@ import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 describe("restauration rapide", () => {
-  let CCReferences = [
+  const CCReferences = [
     {
       article: "Article 28",
       url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833486/?idConteneur=KALICONT000005635596",
