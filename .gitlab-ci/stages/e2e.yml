@@ -1,6 +1,6 @@
 Test on deployed branch:
   stage: .post
-  image: ghcr.io/socialgouv/docker/puppeteer:6.18.0
+  image: ghcr.io/socialgouv/docker/puppeteer:6.52.0
   except:
     refs:
       # Don't run on release
@@ -14,7 +14,8 @@ Test on deployed branch:
   cache:
     key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
     paths:
-      - optional/e2e/runners/puppeteer/node_modules
+      - ./node_modules
+      - ./packages/code-du-travail-frontend-e2e/node_modules
       - $CI_PROJECT_DIR/.yarn
   retry: 2
 
@@ -24,7 +25,6 @@ Test on deployed branch:
     - echo $CI_ENVIRONMENT_SLUG
     #- source ./.gitlab-ci/env.sh
     - CODECEPT_BASEURL=${CI_ENVIRONMENT_URL}
-    - cd ./optional/e2e/runners/puppeteer
     - |-
       retry=60;
       while
@@ -39,10 +39,10 @@ Test on deployed branch:
     #
     - echo "${CODECEPT_BASEURL}"
     #
-    - CODECEPT_BASEURL=${CODECEPT_BASEURL} yarn test
+    - CODECEPT_BASEURL=${CODECEPT_BASEURL} yarn test:e2e
 
   artifacts:
     when: always
     paths:
-      - ./optional/e2e/runners/puppeteer/output
+      - ./packages/code-du-travail-frontend-e2e/output
     expire_in: 1 week

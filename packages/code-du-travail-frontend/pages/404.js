@@ -1,5 +1,6 @@
 // https://nextjs.org/docs/advanced-features/custom-error-page
 import { Button, Container, icons as Icons, theme } from "@socialgouv/cdtn-ui";
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import styled from "styled-components";
@@ -14,28 +15,33 @@ export default function Custom404() {
     notifySentry(404);
   }, []);
   return (
-    <Layout>
-      <CenteredContainer>
-        <Suptitle>ERREUR 404</Suptitle>
-        <StyledOups />
-        <H1>Oups, nous ne trouvons pas cette page…</H1>
-        <div>
-          Vérifiez le lien de la page, il est peut être incorrect. Dans le cas
-          contraire, la page a été supprimée ou déplacée.
-        </div>
-        <Redirect>
-          <p>
-            Nous vous invitons à revenir sur notre page d’accueil et à effectuer
-            une recherche.
-          </p>
-          <Link href="/" passHref>
-            <Button variant="primary" as="a">
-              Revenir à la page d’accueil
-            </Button>
-          </Link>
-        </Redirect>
-      </CenteredContainer>
-    </Layout>
+    <>
+      <Head>
+        <title>Page non trouvée</title>
+      </Head>
+      <Layout>
+        <CenteredContainer>
+          <Suptitle>ERREUR 404</Suptitle>
+          <StyledOups />
+          <H1>Oups, nous ne trouvons pas cette page…</H1>
+          <div>
+            Vérifiez le lien de la page, il est peut être incorrect. Dans le cas
+            contraire, la page a été supprimée ou déplacée.
+          </div>
+          <Redirect>
+            <p>
+              Nous vous invitons à revenir sur notre page d’accueil et à
+              effectuer une recherche.
+            </p>
+            <Link href="/" passHref>
+              <Button variant="primary" as="a">
+                Revenir à la page d’accueil
+              </Button>
+            </Link>
+          </Redirect>
+        </CenteredContainer>
+      </Layout>
+    </>
   );
 }
 
