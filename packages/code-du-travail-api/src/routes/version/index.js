@@ -1,9 +1,10 @@
 import elasticsearchClient from "../../conf/elasticsearch.js";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
+const getVersionsBody = require("./versions.elastic");
+
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-const getVersionsBody = require("./versions.elastic");
 const memoizee = require("memoizee");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
