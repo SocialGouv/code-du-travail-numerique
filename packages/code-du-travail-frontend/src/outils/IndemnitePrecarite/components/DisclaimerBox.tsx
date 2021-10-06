@@ -2,7 +2,17 @@ import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
 
-function DisclaimerBox({ situation, idcc }) {
+type Props = {
+  situation: SituationElement;
+  idcc: number;
+};
+
+interface SituationElement {
+  idcc: number;
+  hasConventionalProvision: boolean;
+}
+
+const DisclaimerBox: React.FC<Props> = ({ situation, idcc }) => {
   if (idcc > 0 && situation.idcc > 0) {
     return (
       <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
@@ -43,6 +53,6 @@ function DisclaimerBox({ situation, idcc }) {
       </p>
     </Disclaimer>
   );
-}
+};
 
 export default DisclaimerBox;
