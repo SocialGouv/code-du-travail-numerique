@@ -99,6 +99,21 @@ Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
   );
 });
 
+Alors("je vois le bien le lien self canonique", async () => {
+  const currentUrl = await I.getCurrentUrl();
+  const href = await I.getCanonicalLink();
+  if (currentUrl !== href) {
+    require("assert").fail("Canonique non identique");
+  }
+});
+
+Alors("je vois le lien canonique suivant : {string}", async (url) => {
+  const xpath = locate("link")
+    .withAttr({ rel: "canonical" })
+    .withAttr({ href: url });
+  I.seeElement(xpath);
+});
+
 Alors("je vois {string} suggestions", (num) => {
   I.seeNumberOfVisibleElements("//ul[@role='listbox']//li", parseInt(num, 10));
 });
