@@ -136,6 +136,17 @@ exports[`<StepResult /> should render CC answer 1`] = `
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -154,17 +165,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -441,6 +441,17 @@ exports[`<StepResult /> should render with no cc 1`] = `
   flex: 1 1 auto;
 }
 
+.c4 {
+  margin-top: 3.2rem;
+}
+
+.c8 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -459,17 +470,6 @@ exports[`<StepResult /> should render with no cc 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c4 {
-  margin-top: 3.2rem;
-}
-
-.c8 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -624,6 +624,17 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   flex: 1 1 auto;
 }
 
+.c4 {
+  margin-top: 3.2rem;
+}
+
+.c8 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -642,17 +653,6 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c4 {
-  margin-top: 3.2rem;
-}
-
-.c8 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {

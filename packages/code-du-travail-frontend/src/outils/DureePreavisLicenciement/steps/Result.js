@@ -88,18 +88,6 @@ function DisclaimerText({ durationCC, durationCDT, ccn }) {
   }
 }
 
-function DisclaimerBox({ durationCC, durationCDT, ccn }) {
-  return (
-    <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
-      <DisclaimerText
-        durationCC={durationCC}
-        durationCDT={durationCDT}
-        ccn={ccn}
-      />
-    </Disclaimer>
-  );
-}
-
 function DurationResult({ duration, durationCC, durationCDT }) {
   if (parseInt(durationCDT, 10) === 0) {
     if (durationCC === undefined) {
@@ -248,11 +236,13 @@ function StepResult({ form }) {
           },
         ]}
       />
-      <DisclaimerBox
-        durationCC={durationCC}
-        durationCDT={durationCDT}
-        ccn={ccn}
-      />
+      <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
+        <DisclaimerText
+          durationCC={durationCC}
+          durationCDT={durationCDT}
+          ccn={ccn}
+        />
+      </Disclaimer>
     </>
   );
 }

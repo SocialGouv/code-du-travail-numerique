@@ -136,6 +136,17 @@ exports[`<StepIndemnite /> should render 1`] = `
   flex: 1 1 auto;
 }
 
+.c12 {
+  margin-top: 3.2rem;
+}
+
+.c16 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -154,17 +165,6 @@ exports[`<StepIndemnite /> should render 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 .c10 {

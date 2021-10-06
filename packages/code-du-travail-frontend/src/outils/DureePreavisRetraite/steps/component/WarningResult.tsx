@@ -1,6 +1,4 @@
-import { Alert, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 import Disclaimer from "../../../common/Disclaimer";
 import { SmallText } from "../../../common/stepStyles";
@@ -20,14 +18,12 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
         <Disclaimer
           title={"Attention il peut quand même exister une durée de préavis"}
         >
-          <>
-            <p>
-              Un accord collectif d’entreprise, le contrat de travail ou un
-              usage peut prévoir une durée de préavis. Dans ce cas, cette durée
-              doit s’appliquer.
-            </p>
-            <p>Nous vous conseillons de vérifiez cela.</p>
-          </>
+          <p>
+            Un accord collectif d’entreprise, le contrat de travail ou un usage
+            peut prévoir une durée de préavis. Dans ce cas, cette durée doit
+            s’appliquer.
+          </p>
+          <p>Nous vous conseillons de vérifiez cela.</p>
         </Disclaimer>
       );
     } else {
@@ -35,14 +31,12 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
         <Disclaimer
           title={"Attention il peut quand même exister une durée de préavis"}
         >
-          <>
-            <p>
-              Une convention collective de branche, un accord collectif
-              d’entreprise, le contrat de travail ou un usage peut prévoir une
-              durée de préavis. Dans ce cas, cette durée doit s’appliquer.
-            </p>
-            <p>Nous vous conseillons de vérifiez cela.</p>
-          </>
+          <p>
+            Une convention collective de branche, un accord collectif
+            d’entreprise, le contrat de travail ou un usage peut prévoir une
+            durée de préavis. Dans ce cas, cette durée doit s’appliquer.
+          </p>
+          <p>Nous vous conseillons de vérifiez cela.</p>
         </Disclaimer>
       );
     }
@@ -54,25 +48,23 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
     if (data.ccn) {
       return (
         <Disclaimer title={title}>
-          <>
-            <p>
-              Un accord collectif d’entreprise, le contrat de travail ou un
-              usage peut prévoir une durée de préavis<sup>*</sup> ou une
-              condition d’ancienneté<sup>*</sup> plus favorable pour le salarié.
-              Dans ce cas, c’est cette durée ou cette ancienneté plus favorable
-              qui s’applique au salarié.
-            </p>
-            <p>
-              <SmallText>
-                <sup>*</sup>&nbsp;durée de préavis plus favorable pour le
-                salarié = durée plus courte.
-                <br />
-                <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-                salarié = condition d’ancienneté moins restrictive et conduisant
-                à une durée de préavis plus courte.
-              </SmallText>
-            </p>
-          </>
+          <p>
+            Un accord collectif d’entreprise, le contrat de travail ou un usage
+            peut prévoir une durée de préavis<sup>*</sup> ou une condition
+            d’ancienneté<sup>*</sup> plus favorable pour le salarié. Dans ce
+            cas, c’est cette durée ou cette ancienneté plus favorable qui
+            s’applique au salarié.
+          </p>
+          <p>
+            <SmallText>
+              <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié
+              = durée plus courte.
+              <br />
+              <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+              salarié = condition d’ancienneté moins restrictive et conduisant à
+              une durée de préavis plus courte.
+            </SmallText>
+          </p>
         </Disclaimer>
       );
     } else {
@@ -147,17 +139,5 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
     );
   }
 };
-const { fonts, spacings } = theme;
-
-export const Warning = styled(Alert)`
-  margin-top: ${spacings.large};
-`;
-
-export const WarningTitle = styled.span`
-  color: ${({ theme }) => theme.altText};
-  font-weight: 600;
-  font-size: ${fonts.sizes.headings.small};
-  font-family: "Open Sans", sans-serif;
-`;
 
 export default WarningResult;

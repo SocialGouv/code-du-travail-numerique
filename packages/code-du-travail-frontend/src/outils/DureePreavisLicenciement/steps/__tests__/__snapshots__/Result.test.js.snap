@@ -136,6 +136,17 @@ exports[`<StepResult /> should render with O duration 1`] = `
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -154,17 +165,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -565,6 +565,17 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -583,17 +594,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -954,6 +954,17 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -972,17 +983,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -1342,6 +1342,17 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1360,17 +1371,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {
@@ -1719,6 +1719,17 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   flex: 1 1 auto;
 }
 
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
@@ -1737,17 +1748,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
 }
 
 @media (max-width:600px) {

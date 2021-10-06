@@ -1,10 +1,7 @@
-import { icons, IconStripe } from "@socialgouv/cdtn-ui";
+import { Alert, icons, IconStripe, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import {
-  Warning,
-  WarningTitle,
-} from "../DureePreavisRetraite/steps/component/WarningResult";
+import styled from "styled-components";
 
 type Props = {
   title: string;
@@ -19,4 +16,16 @@ const Disclaimer = ({ title, children }: Props): JSX.Element => (
     {children}
   </Warning>
 );
+const { fonts, spacings } = theme;
+
+const Warning = styled(Alert)`
+  margin-top: ${spacings.large};
+`;
+
+const WarningTitle = styled.span`
+  color: ${({ theme }) => theme.altText};
+  font-weight: 600;
+  font-size: ${fonts.sizes.headings.small};
+  font-family: "Open Sans", sans-serif;
+`;
 export default Disclaimer;
