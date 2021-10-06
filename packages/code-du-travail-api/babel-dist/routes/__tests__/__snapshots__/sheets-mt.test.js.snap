@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return content data for slug 5-questions-reponses-sur-la-sante-au-travail 1`] = `
+Object {
+  "_id": "23",
+  "_index": "cdtn_test-v1_documents",
+  "_score": 0,
+  "_source": Object {
+    "breadcrumbs": Array [
+      Object {
+        "label": "Santé, sécurité et conditions de travail",
+        "position": 6,
+        "slug": "/themes/sante-securite-et-conditions-de-travail",
+      },
+      Object {
+        "label": "Santé au travail",
+        "position": 3,
+        "slug": "/themes/sante-au-travail",
+      },
+      Object {
+        "label": "Inaptitude",
+        "position": 3,
+        "slug": "/themes/inaptitude",
+      },
+    ],
+    "cdtnId": "55a26a9073",
+    "date": "23/05/2017",
+    "description": "1) Visite d'information et de prévention : pour qui ? Depuis le 1er janvier 2017, la visite d'information et de prévention vient remplacer la (...)",
+    "intro": "",
+    "sections": Array [
+      Object {
+        "anchor": "t1-Visite-d-information-et-de-prevention-pour-qui",
+        "html": "<p>Depuis le 1er janvier 2017, la <strong>visite d’information et de prévention</strong> vient remplacer la traditionnelle visite médicale d’embauche qui devait être réalisée au plus tard avant la fin de la période d’essai.</p><p>Désormais, la visite doit être organisée dans un délai maximum de trois mois à compter de l’occupation effective du poste de travail (sauf cas de dispense). Néanmoins, pour certains salariés, comme les jeunes de moins de 18 ans ou les travailleurs de nuit, elle doit toujours avoir lieu avant la prise de fonction.</p><p><strong>Bon à savoir&nbsp;!</strong> Tout salarié affecté à un poste présentant des risques particuliers pour sa santé (exposition à l’amiante, au plomb, à des agents cancérogènes, etc.) doit passer, avant sa prise de fonction, <strong>un examen médical d’aptitude</strong> et non une simple visite d’information et de prévention.</p><p><strong>La visite d’information et de prévention</strong> permet d’interroger le salarié sur son état de santé, et d’envisager, si besoin, son orientation spécifique vers le médecin du travail. Elle vise aussi à informer le salarié sur les risques éventuels auxquels l’expose son poste de travail, et à le sensibiliser sur les moyens de prévention.</p><p><strong>Cette visite n’est pas toujours assurée par le médecin du travail lui-même</strong>. Le salarié peut être reçu par un professionnel de santé (par exemple, un infirmier) intervenant sous son autorité.. Toutefois, certains salariés comme par exemple les femmes enceintes, celles qui viennent d’accoucher ou allaitent leur enfant, ou encore les travailleurs handicapés, sont adressés au médecin du travail afin que leur soit proposé un suivi adapté à leur situation.</p><p><strong>Pour davantage de détails</strong> consultez <a href=\\"https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries\\" class=\\"spip_in\\" target=\\"_blank\\" rel=\\"nofollow, noopener\\">notre fiche sur le suivi de l’état de santé des salariés</a>.</p>",
+        "references": Array [],
+        "title": "1) Visite d’information et de prévention : pour qui ?",
+      },
+      Object {
+        "anchor": "t2-Medecine-du-travail-quel-delai-entre-deux-visites",
+        "html": "<p>Le Code du travail fixe à <strong>5 ans</strong> le délai maximum entre deux visites d’information et de prévention à la médecine du travail. Mais cet intervalle est <strong>ramené à trois ans</strong> pour les salariés dont <strong>l’état de santé, l’âge, les conditions de travail</strong> ou les <strong>risques professionnels</strong> auxquels ils sont exposés le nécessitent. Sont, par exemple, concernés par ce suivi adapté&nbsp;: les travailleurs handicapés, les salariés titulaires d’une pension d’invalidité et les travailleurs de nuit.</p><p><strong>Bon à savoir&nbsp;!</strong> Les salariés affectés à des <strong>postes à risques</strong> bénéficient d’un <strong>suivi renforcé</strong>. Le délai entre deux examens par le médecin du travail ne peut pas excéder quatre ans. Et, une visite intermédiaire est effectuée par un professionnel de santé au plus tard deux ans après la visite avec le médecin du travail.</p><p><strong>Pour davantage de détails</strong> consultez <a href=\\"https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries\\" class=\\"spip_in\\" target=\\"_blank\\" rel=\\"nofollow, noopener\\">notre fiche sur le suivi de l’état de santé des salariés</a>.</p>",
+        "references": Array [],
+        "title": "2) Médecine du travail : quel délai entre deux visites ?",
+      },
+      Object {
+        "anchor": "t3-Medecine-du-travail-quand-s-impose-une-visite-de-reprise-nbsp",
+        "html": "<p>Le salarié doit bénéficier d’un examen de reprise du travail&nbsp;: <br><img src=\\"https://travail-emploi.gouv.fr/plugins/site/themes/mass_theme_travail/v1/puce.gif\\" width=\\"8\\" height=\\"11\\" class=\\"puce\\" alt=\\"-\\">&nbsp;après un congé de maternité&nbsp;; <br><img src=\\"https://travail-emploi.gouv.fr/plugins/site/themes/mass_theme_travail/v1/puce.gif\\" width=\\"8\\" height=\\"11\\" class=\\"puce\\" alt=\\"-\\">&nbsp;après une absence pour cause de maladie professionnelle&nbsp;; <br><img src=\\"https://travail-emploi.gouv.fr/plugins/site/themes/mass_theme_travail/v1/puce.gif\\" width=\\"8\\" height=\\"11\\" class=\\"puce\\" alt=\\"-\\">&nbsp;après une absence d’au moins 30 jours pour cause d’accident du travail, de maladie ou d’accident non professionnel. <br class=\\"autobr\\">Concrètement, dès que l’employeur a connaissance de la date de la fin de l’arrêt de travail, il doit saisir le service de santé au travail qui organise cet examen de reprise. <br class=\\"autobr\\">La visite de reprise permet de vérifier que le poste de travail du salarié (ou le poste de reclassement auquel il doit être affecté) est compatible avec son état de santé. Cet examen peut être l’occasion de préconiser des aménagements ou des adaptations de poste ou encore d’émettre un avis d’inaptitude.</p><div class=\\"texteencadre-spip spip\\"><strong>Visite de préreprise</strong><br class=\\"autobr\\"><strong>Après un arrêt de travail de plus de trois mois</strong>, une visite de préreprise peut être organisée par le médecin du travail à l’initiative du médecin traitant, du médecin conseil de la sécurité sociale ou du salarié lui-même. Au cours de cette visite, le médecin du travail peut&nbsp;: <br><img src=\\"https://travail-emploi.gouv.fr/plugins/site/themes/mass_theme_travail/v1/puce.gif\\" width=\\"8\\" height=\\"11\\" class=\\"puce\\" alt=\\"-\\">&nbsp;recommander des aménagements et adaptations du poste de travail&nbsp;; <br><img src=\\"https://travail-emploi.gouv.fr/plugins/site/themes/mass_theme_travail/v1/puce.gif\\" width=\\"8\\" height=\\"11\\" class=\\"puce\\" alt=\\"-\\">&nbsp;préconiser un reclassement ou des formations professionnelles en vue de faciliter le reclassement du salarié ou sa réorientation professionnelle. <br class=\\"autobr\\">Le médecin du travail informe, sauf si le salarié s’y oppose, l’employeur et le médecin-conseil de ces recommandations afin que toutes les mesures soient mises en œuvre en vue de favoriser le maintien dans l’emploi.</div><p><strong>Pour davantage de détails</strong> consultez <a href=\\"https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries\\" class=\\"spip_in\\" target=\\"_blank\\" rel=\\"nofollow, noopener\\">notre fiche sur le suivi de l’état de santé des salariés</a>.</p>",
+        "references": Array [],
+        "title": "3) Médecine du travail : quand s’impose une visite de reprise ?",
+      },
+      Object {
+        "anchor": "t4-Constat-d-inaptitude-dans-quels-cas",
+        "html": "<p>L’état de santé d’un salarié peut nécessiter des changements dans son poste de travail (par exemple&nbsp;: lors de la reprise du travail après une longue maladie ou un accident).</p><p><strong>Avant d’envisager l’inaptitude d’un salarié à son poste</strong>, le médecin du travail doit avoir procédé (ou fait procéder par l’équipe pluridisciplinaire) à une étude de poste et échangé avec le salarié et l’employeur. <strong>Si aucune mesure d’aménagement, d’adaptation ou de transformation de ce poste n’est possible</strong>, le médecin du travail peut déclarer le salarié «&nbsp;inapte&nbsp;» à l’occuper.</p><p><strong>Bon à savoir&nbsp;! L’avis d’inaptitude</strong> est obligatoirement <strong>rendu par le médecin du travail</strong>, qui doit avoir réalisé <strong>au moins un examen médical du salarié</strong>. Cet avis mentionne les modalités de recours devant le Conseil des Prud’hommes si le salarié ou l’employeur souhaite le contester.</p><p><strong>Recherche d’un reclassement</strong>. Lorsque le salarié est <strong>déclaré inapte</strong> à reprendre son poste, l’employeur doit lui rechercher <strong>un autre emploi compatible</strong> avec les restrictions et préconisations du médecin du travail. L’emploi proposé doit être aussi comparable que possible à l’emploi précédemment occupé, au besoin par la mise en œuvre de mesures telles que mutations, aménagements, adaptations ou transformations de postes existants ou aménagement du temps de travail.</p><p>Si l’employeur est en mesure de justifier qu’il est dans <strong>l’impossibilité de reclasser le salarié</strong>, il peut le <strong>licencier pour «&nbsp;inaptitude&nbsp;»</strong>. Le licenciement peut également être décidé si le salarié refuse le nouveau poste proposé par l’employeur ou encore en cas d’impossibilité totale du salarié à reprendre un emploi (voir encadré ci-dessous).</p><div class=\\"texteencadre-spip spip\\">Si l’état de santé du salarié exclut toute reprise d’un emploi…<br class=\\"autobr\\">Si l’avis d’inaptitude mentionne expressément que tout maintien du salarié dans un emploi serait gravement préjudiciable à sa santé ou que son état de santé fait obstacle à tout reclassement dans un emploi, l’employeur n’est pas tenu de chercher un reclassement pour ce salarié. Il peut le licencier pour inaptitude.</div><p><strong>Bon à savoir&nbsp;!</strong> Le montant des indemnités versées au salarié lors de son licenciement varie selon que son inaptitude a une origine professionnelle (accident du travail ou maladie professionnelle) ou non.</p><p><strong>Pour davantage de détails</strong> consultez <a href=\\"https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/la-reconnaissance-de-l-inaptitude-medicale-au-travail-et-ses-consequences\\" class=\\"spip_in\\" target=\\"_blank\\" rel=\\"nofollow, noopener\\">notre fiche pratique sur la reconnaissance de l’inaptitude médicale au travail et ses conséquences</a></p>",
+        "references": Array [],
+        "title": "4) Constat d’inaptitude : dans quels cas ?",
+      },
+      Object {
+        "anchor": "t5-Quand-solliciter-le-medecin-du-travail",
+        "html": "<p>Tout salarié peut demander à voir le médecin du travail, sans risquer une sanction de son employeur. Il est d’ailleurs informé de cette possibilité lors de la visite d’information et de prévention qui a eu lieu au moment de son recrutement.</p><p><strong>Pour quels motifs&nbsp;?</strong> Ils sont très variés. Le salarié peut prendre l’initiative de rencontrer le médecin du travail pour évoquer avec lui tout problème de santé (physique ou psychologique) qui serait en relation avec son travail ou qui pourrait retentir sur son travail. Il peut aussi vouloir lui faire part d’un problème de harcèlement moral ou sexuel…</p><p><strong>Bon à savoir&nbsp;! </strong> L’employeur peut également demander, pour l’un de ses salariés, une visite chez le médecin du travail.</p><p><strong>Pour davantage de détails</strong> consultez <a href=\\"https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries\\" class=\\"spip_in\\" target=\\"_blank\\" rel=\\"nofollow, noopener\\">notre fiche sur le suivi de l’état de santé des salariés</a>.</p>",
+        "references": Array [],
+        "title": "5) Quand solliciter le médecin du travail ?",
+      },
+    ],
+    "slug": "5-questions-reponses-sur-la-sante-au-travail",
+    "title": "5 questions/réponses sur la santé au travail",
+    "url": "https://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/article/5-questions-reponses-sur-la-sante-au-travail",
+  },
+  "_type": "_doc",
+  "relatedItems": Array [
+    Object {
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "reco": "search",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
+    },
+    Object {
+      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+      "reco": "search",
+      "slug": "certificat-de-travail",
+      "source": "modeles_de_courriers",
+      "title": "Certificat de travail",
+    },
+    Object {
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "reco": "search",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+    },
+    Object {
+      "action": "Calculer",
+      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "reco": "search",
+      "slug": "heures-recherche-emploi",
+      "source": "outils",
+      "title": "Heures pour recherche d’emploi",
+    },
+  ],
+}
+`;

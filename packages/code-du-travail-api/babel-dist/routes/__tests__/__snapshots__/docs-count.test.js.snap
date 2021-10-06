@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`docsCount route 1`] = `
+Object {
+  "sources": Object {
+    "buckets": Array [
+      Object {
+        "doc_count": 2,
+        "key": "code_du_travail",
+      },
+      Object {
+        "doc_count": 4,
+        "key": "conventions_collectives",
+      },
+      Object {
+        "doc_count": 2,
+        "key": "external",
+      },
+      Object {
+        "doc_count": 2,
+        "key": "fiches_ministere_travail",
+      },
+      Object {
+        "doc_count": 4,
+        "key": "fiches_service_public",
+      },
+      Object {
+        "doc_count": 1,
+        "key": "glossary",
+      },
+      Object {
+        "doc_count": 3,
+        "key": "modeles_de_courriers",
+      },
+      Object {
+        "doc_count": 3,
+        "key": "outils",
+      },
+      Object {
+        "doc_count": 3,
+        "key": "themes",
+      },
+    ],
+    "doc_count_error_upper_bound": 0,
+    "sum_other_doc_count": 0,
+  },
+}
+`;

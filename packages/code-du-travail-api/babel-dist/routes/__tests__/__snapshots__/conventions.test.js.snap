@@ -1,0 +1,1109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns the agreement document from idcc 843 1`] = `
+Object {
+  "answers": Array [
+    Object {
+      "answer": "<p>Pour <strong>le personnel de fabrication, le personnel de vente et le personnel de services</strong>, la durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008 :</p>
+<ul>
+<li>La durée maximale de la période d'essai est égale à 30 jours.</li>
+</ul>
+<p>Pour <strong>les cadres en CDI</strong>, la durée de la période d'essai a été fixée par un avenant* conclu après le 26 juin 2008.</p>
+<ul>
+<li>La durée de la période d'essai est égale à 4 mois, renouvelable une fois pour une durée de 4 mois maximum.</li>
+</ul>
+<p>*<em>L'avenant a été conclu le 20 juillet 2010.</em></p>
+",
+      "index": 3,
+      "question": "Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678692",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678692",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873126",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873126",
+          "title": "Article 17",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873126/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>Pour <strong>le personnel de fabrication, le personnel de vente et le personnel de services</strong>, la période d'essai ne peut pas être renouvelée.</p>
+<p>Pour <strong>les cadres en CDI</strong>, la période d'essai peut être renouvelée une fois pour une durée de 4 mois maximum. La possibilité de renouveler la période d'essai doit être prévue par le contrat de travail. L'employeur et le salarié doivent donner leur accord au renouvellement par écrit (avenant au contrat de travail, etc.), avant la fin de la période d'essai initiale.</p>
+",
+      "index": 4,
+      "question": "La période d’essai peut-elle être renouvelée ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678692",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678692",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873126",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873126",
+          "title": "Article 17",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873126/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "la-periode-dessai-peut-elle-etre-renouvelee",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>L'employeur confirme au salarié son embauche par écrit (lettre d'engagement ou contrat de travail pour les cadres), si à la fin de la période d'essai, l'engagement devient définitif.</p>
+",
+      "index": 7,
+      "question": "Est-il obligatoire d'avoir un contrat de travail écrit et signé ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678692",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678692",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873128",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873128",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873128/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>Le contrat de travail ou la lettre d'engagement prévoit :</p>
+<ul>
+<li>La date d'entrée du salarié dans l' entreprise ;</li>
+<li>Sa date d'engagement définitif ;</li>
+<li>L'emploi exercé et son coefficient ;</li>
+<li>La durée de la période d'essai et, le cas échéant, son renouvellement.</li>
+</ul>
+",
+      "index": 8,
+      "question": "Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678692",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678692",
+          "title": "Annexe : Statut du personnel d'encadrement, article 1er",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678692/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873128",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873128",
+          "title": "Article 19",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873128/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>L'activité des sociétés de la branche ne figure pas dans la liste des secteurs d'activité prévue par la loi (article D. 1242-1 du code du travail) permettant le recours à un CDD d'usage. La convention collective ne comporte aucune disposition à ce sujet. L'entreprise ne peut pas embaucher des salariés en CDD d'usage.</p>
+",
+      "index": 15,
+      "question": "Embauche en contrat d'extra (CDD d'usage)",
+      "references": Array [],
+      "slug": "embauche-en-contrat-dextra-cdd-dusage",
+      "theme": "Embauche et contrat de travail",
+    },
+    Object {
+      "answer": "<p>En cas de démission, la durée du préavis est égale à :</p>
+<ul>
+<li>
+<p>Personnel de fabrication, personnel de vente et personnel de services :</p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ;</li>
+<li>Plus de 6 mois d'ancienneté : 2 semaines ;</li>
+</ul>
+</li>
+<li>
+<p>Cadres : 2 mois.</p>
+</li>
+</ul>
+",
+      "index": 20,
+      "question": "Quelle est la durée du préavis en cas de démission ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678849",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678849",
+          "title": "Annexe : Statut du personnel d'encadrement, article 6",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678849/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873152",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873153",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelle-est-la-duree-du-preavis-en-cas-de-demission",
+      "theme": "Départ de l’entreprise",
+    },
+    Object {
+      "answer": "<p>En cas de licenciement, la durée du préavis est égale à :</p>
+<ul>
+<li>
+<p>Personnel de fabrication, personnel de vente et personnel de services :</p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ;</li>
+<li>Plus de 6 mois et moins de 2 ans d'ancienneté : 1 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 2 mois ;</li>
+</ul>
+</li>
+<li>
+<p>Cadres :</p>
+<ul>
+<li>Moins de 2 ans d'ancienneté : 1,5 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 3 mois.</li>
+</ul>
+</li>
+</ul>
+",
+      "index": 23,
+      "question": "Quelle est la durée de préavis en cas de licenciement ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000038678849",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038678849",
+          "title": "Annexe : Statut du personnel d'encadrement, article 6",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038678849/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873152",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873153",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-licenciement",
+      "theme": "Départ de l’entreprise",
+    },
+    Object {
+      "answer": "<p>En cas de mise à la retraite, la durée du préavis est égale à :</p>
+<ul>
+<li>Moins de 6 mois d'ancienneté : 1 semaine ;</li>
+<li>Plus de 6 mois et moins de 2 ans d'ancienneté : 1 mois ;</li>
+<li>Plus de 2 ans d'ancienneté : 6 mois.</li>
+</ul>
+",
+      "index": 29,
+      "question": "Quelle est la durée de préavis en cas de mise à la retraite ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873156",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000030582626",
+          "title": "Article 34.2",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite",
+      "theme": "Départ de l’entreprise",
+    },
+    Object {
+      "answer": "<p>En cas de licenciement, le salarié a droit à 2 heures d'absence par jour pendant la dernière semaine du préavis, pour rechercher un emploi. Seules les heures utilisées sont rémunérées.</p>
+<p>Ces 2 heures sont fixées un jour par l' employeur et le suivant par le salarié. Ils peuvent décider de regrouper tout ou partie de ces heures.</p>
+<p>La convention collective ne prévoit pas un tel dispositif en cas de démission.</p>
+",
+      "index": 35,
+      "question": "Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873152",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873153",
+          "title": "Article 32",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis",
+      "theme": "Départ de l’entreprise",
+    },
+    Object {
+      "answer": "<p>La convention collective prévoit une prime d'ancienneté, aussi appelée prime de \\"fin d'année\\".</p>
+<p>Les salariés qui ont au moins 1 an d'ancienneté ont droit à une prime de fin d'année, à condition d'être occupés par l'entreprise le 31 décembre. Le montant de la prime est fixé en pourcentage du montant du salaire brut payé au salarié du 1er janvier au 31 décembre. Ce pourcentage est égal à 3,84 %.</p>
+<p>La prime doit être payée au plus tard le 15 janvier.</p>
+<p>Exceptionnellement, les salariés suivants qui ne sont pas occupés par l'entreprise le 31 décembre ont également droit à la prime :</p>
+<ul>
+<li>Salariés qui ont fait l'objet d'un licenciement économique en cours d'année ;</li>
+<li>Salariés qui ont quitté volontairement ou non l'entreprise pour bénéficier de leurs droits à la retraite ou à une préretraite.</li>
+</ul>
+<p>Dans ce cas, elle est calculée proportionnellement à leur temps de présence dans l'entreprise.</p>
+<p>Cette prime ne se cumule pas avec les avantages de même nature déjà accordés en fin d'année (par exemple : 13e mois partiel, étrennes, etc.).</p>
+",
+      "index": 39,
+      "question": "Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873202",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000021799679",
+          "title": "Article 42",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000021799679/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant",
+      "theme": "Salaire et Rémunération",
+    },
+    Object {
+      "answer": "<p>Le salarié a droit à une indemnité de départ à la retraite égale à :</p>
+<ul>
+<li>1 mois de salaire après 10 ans d'ancienneté ;</li>
+<li>1,5 mois de salaire après 15 ans d'ancienneté ;</li>
+<li>2 mois de salaire après 20 ans d'ancienneté ;</li>
+<li>2,5 mois de salaire après 25 ans d'ancienneté ;</li>
+<li>3 mois de salaire après 30 ans d'ancienneté ;</li>
+<li>3,5 mois de salaire après 35 ans d'ancienneté ;</li>
+<li>4 mois de salaire après 40 ans d'ancienneté.</li>
+</ul>
+<p>Le salaire de référence pour le calcul de l'indemnité est la formule la plus avantageuse pour le salarié entre :</p>
+<ul>
+<li>Le 1/12ème de la rémunération des 12 derniers mois précédant le départ en retraite ou,</li>
+<li>Le 1/3 des 3 derniers mois. Dans ce cas, toute prime ou gratification de caractère annuel ou exceptionnel versée pendant cette période est prise en compte proportionnellement.</li>
+</ul>
+<p>Enfin, le salarié qui a quitté la profession âgé d'au moins 55 ans et qui n'a pas été licencié suite à une inaptitude médicalement constatée, recevra une indemnité spéciale de départ à la retraite égale à la différence entre le montant de l'indemnité de départ en retraite et le montant de l'éventuelle indemnité de licenciement payée par son dernier employeur en boulangerie. Cette indemnité spéciale de départ en retraite est versée au salarié par l'organisme de prévoyance.</p>
+",
+      "index": 42,
+      "question": "À quelles indemnités peut prétendre un salarié qui part à la retraite ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873156",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000030582626",
+          "title": "Article 34.3",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "a-quelles-indemnites-peut-pretendre-un-salarie-qui-part-a-la-retraite",
+      "theme": "Départ de l’entreprise",
+    },
+    Object {
+      "answer": "<p>Le salarié a droit à un maintien de salaire pendant son arrêt de travail pour maladie dans les conditions suivantes.</p>
+<h4>1. Conditions du droit au maintien de salaire</h4>
+<p>Pour avoir droit au maintien de salaire pendant son arrêt de travail, le salarié doit avoir au moins 1 an d'ancienneté dans la profession. En cas de maladie professionnelle, d'accident du travail ou de trajet, aucune condition d'ancienneté ne s'applique.</p>
+<p>Le salarié doit être pris en charge par la sécurité sociale.</p>
+<h4>2. Durée et montant du maintien de salaire</h4>
+<p>Le salarié a droit au maintien de 90 % du salaire brut moyen des 3 derniers mois précédant l'arrêt de travail, à l'exclusion des primes exceptionnelles et des gratifications, et après déduction des indemnités journalières brutes versées par la sécurité sociale et un régime de prévoyance.</p>
+<p>Le salarié ne peut pas recevoir plus que 100 % du salaire net qu'il aurait perçu s'il avait travaillé.</p>
+<p>La durée du maintien de salaire est égale à :</p>
+<ul>
+<li>
+<p>En cas d'accident du travail, accident de trajet, maladie professionnelle : 180 jours, à partir du 1er jour d'indemnisation par la sécurité sociale ;</p>
+</li>
+<li>
+<p>En cas d'accident de la vie privée ayant entraîné un arrêt de plus de 45 jours et maladie reconnue par la sécurité sociale comme une affection de longue durée (A.L.D) : 180 jours, à partir du 4ème jour d'arrêt de travail.</p>
+</li>
+<li>
+<p>En cas d'accident de la vie privée ayant entraîné un arrêt de moins de 45 jours et maladie non reconnue par la sécurité sociale comme une affection de longue durée (ALD) : 180 jours, à partir du 8ème jour d'arrêt de travail.</p>
+</li>
+</ul>
+<p>Si plusieurs absences pour maladie, ou accident donnent droit à un maintien de salaire au cours d'une année civile, la durée d'indemnisation ne peut pas dépasser 180 jours d'indemnisation.</p>
+",
+      "index": 45,
+      "question": "En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873167",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000030582628",
+          "title": "Article 37",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582628/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire",
+      "theme": "Santé, sécurité et conditions de travail",
+    },
+    Object {
+      "answer": "<p>En cas de maladie, l'employeur ne peut pas licencier, pour une période de 6 mois, le salarié :</p>
+<ul>
+<li>Qui a au moins 2 ans d'ancienneté ,</li>
+<li>A condition qu'aucune incapacité constatée par le médecin compétent ne l'empêche d'occuper son emploi à son retour.</li>
+</ul>
+",
+      "index": 47,
+      "question": "En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873166",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873166",
+          "title": "Article 36",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873166/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi",
+      "theme": "Santé, sécurité et conditions de travail",
+    },
+    Object {
+      "answer": "<p>La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.</p>
+",
+      "index": 48,
+      "question": "Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?",
+      "references": Array [],
+      "slug": "quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres",
+      "theme": "Salaire et Rémunération",
+    },
+    Object {
+      "answer": "<p>Les salariés ont droit, sur justification, aux congés payés exceptionnels, pour les événements familiaux suivants :</p>
+<ul>
+<li>Mariage du salarié : 6 jours ;</li>
+<li>Conclusion par le salarié d'un PACS : 6 jours ;</li>
+<li>Naissance d'un enfant du salarié ou arrivée d'un enfant placé en vue de son adoption au foyer du salarié : 3 jours ;</li>
+<li>Annonce de la survenue d'un handicap chez un enfant : 2 jours ;</li>
+<li>Mariage d'un enfant du salarié : 1 jour ;</li>
+<li>Décès d'un enfant du salarié : 5 jours ;</li>
+<li>Décès du conjoint, du partenaire lié par un Pacs, du concubin, du père, de la mère, du beau-père, de la belle-mère, d'une sœur ou d'un frère : 3 jours ;</li>
+<li>Décès d'un grand-parent du salarié : 1 jour.</li>
+</ul>
+<p>A l'exception du mariage du salarié ou d'un PACS, le salarié a droit à un jour d'absence supplémentaire, si l'événement intervient à au moins 300 km du domicile du salarié. Cette distance correspond au trajet aller par l'itinéraire le plus court.</p>
+<p>Ces jours d'absence sont accordés sans condition d'ancienneté.</p>
+<p>Ils sont assimilés à des jours de travail effectif pour la détermination de la durée du congé annuel.</p>
+",
+      "index": 50,
+      "question": "Les congés pour événements familiaux",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873149",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000038353717",
+          "title": "Article 31",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000038353717/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "les-conges-pour-evenements-familiaux",
+      "theme": "Congés et repos",
+    },
+    Object {
+      "answer": "<p>Les principales primes prévues par la convention collective sont les suivantes :</p>
+<ul>
+<li>
+<p><strong>Indemnité de \\"chou blanc\\"</strong> : tout salarié qui vient pour travailler à l'heure convenue du début du travail, aura droit, s'il se trouve décommandé à ce moment précis, à une indemnité de 8 heures de salaire horaire minimum professionnel national dite indemnité de \\"chou blanc\\".</p>
+</li>
+<li>
+<p><a href=\\"https://code.travail.gouv.fr/contribution/quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant\\"><strong>Prime d'ancienneté</strong>,</a>aussi appelée prime de fin d'année.</p>
+</li>
+</ul>
+",
+      "index": 51,
+      "question": "Quelles sont les primes prévues par la convention collective ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873127",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873127",
+          "title": "Article 18",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873127/?idConteneur=KALICONT000005635886",
+        },
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873202",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000021799679",
+          "title": "Article 42",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000021799679/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "quelles-sont-les-primes-prevues-par-la-convention-collective",
+      "theme": "Salaire et Rémunération",
+    },
+    Object {
+      "answer": "<p>Le 1er mai est régi par la loi.</p>
+<p>Si l'un des 10 autres jours fériés n'est pas travaillé, la rémunération ne peut pas être diminuée.</p>
+<p>Si le salarié travaille un jour férié, le salaire reçu pour cette journée de travail sera doublé.</p>
+<p>Si un jour férié légal est inclus dans une période de congés payés, la période de ce congé sera prolongée d'une journée. La rémunération du salarié sera maintenue pendant cette prolongation.</p>
+",
+      "index": 52,
+      "question": "Jours fériés et ponts dans le secteur privé",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873145",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873145",
+          "title": "Article 27",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873145/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "jours-feries-et-ponts-dans-le-secteur-prive",
+      "theme": "Congés et repos",
+    },
+    Object {
+      "answer": "<p>Le salarié qui travaille le dimanche a droit à une majoration de 20%.</p>
+<p>Cette majoration est calculée sur le produit du salaire de base par le nombre d'heures effectuées le dimanche.</p>
+<p>Si le salarié n'est pas rémunéré à l'heure, le salaire horaire de référence est le salaire horaire minimum national de sa catégorie.</p>
+",
+      "index": 53,
+      "question": "Travail du dimanche : quelle contrepartie ?",
+      "references": Array [
+        Object {
+          "category": "agreement",
+          "dila_cid": "KALIARTI000005873146",
+          "dila_container_id": "KALICONT000005635886",
+          "dila_id": "KALIARTI000005873146",
+          "title": "Article 28",
+          "url": "https://beta.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873146/?idConteneur=KALICONT000005635886",
+        },
+      ],
+      "slug": "travail-du-dimanche-quelle-contrepartie",
+      "theme": "Congés et repos",
+    },
+  ],
+  "articlesByTheme": Array [
+    Object {
+      "articles": Array [
+        Object {
+          "cid": "KALIARTI000005873115",
+          "id": "KALIARTI000023263120",
+          "section": "Salaire horaire minimum professionnel",
+          "title": "10 (1)",
+        },
+        Object {
+          "cid": "KALIARTI000005873119",
+          "id": "KALIARTI000005873119",
+          "section": "Salariés non rémunérés à l'heure",
+          "title": "11",
+        },
+        Object {
+          "cid": "KALIARTI000005873120",
+          "id": "KALIARTI000005873120",
+          "section": "Application différée du salaire horaire minimum professionnel",
+          "title": "12",
+        },
+        Object {
+          "cid": "KALIARTI000005873121",
+          "id": "KALIARTI000005873121",
+          "section": "Révision du salaire horaire minimum professionnel",
+          "title": "13 (1)",
+        },
+        Object {
+          "cid": "KALIARTI000005873122",
+          "id": "KALIARTI000005873122",
+          "section": "Révision des salaires résultant des barèmes départementaux ou interdépartementaux ou régionaux",
+          "title": "14 (1)",
+        },
+      ],
+      "bloc": "1",
+    },
+    Object {
+      "articles": Array [
+        Object {
+          "cid": "KALIARTI000005873107",
+          "id": "KALIARTI000026570014",
+          "section": "Classification",
+          "title": "9",
+        },
+      ],
+      "bloc": "2",
+    },
+    Object {
+      "articles": Array [
+        Object {
+          "cid": "KALIARTI000005873130",
+          "id": "KALIARTI000030490180",
+          "section": "Durée du travail",
+          "title": "21",
+        },
+        Object {
+          "cid": "KALIARTI000005873132",
+          "id": "KALIARTI000005873133",
+          "section": "Heures supplémentaires",
+          "title": "22",
+        },
+        Object {
+          "cid": "KALIARTI000005873134",
+          "id": "KALIARTI000005873137",
+          "section": "Travail de nuit",
+          "title": "23 (1)",
+        },
+      ],
+      "bloc": "6",
+    },
+    Object {
+      "articles": Array [
+        Object {
+          "cid": "KALIARTI000005873126",
+          "id": "KALIARTI000005873126",
+          "section": "Période d'essai",
+          "title": "17",
+        },
+      ],
+      "bloc": "10",
+    },
+  ],
+  "breadcrumbs": Array [],
+  "cdtnId": "647c224c9b",
+  "contributions": true,
+  "date_publi": "1976-04-01T00:00:00.000Z",
+  "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+  "effectif": 134889,
+  "excludeFromSearch": false,
+  "id": "KALICONT000005635886",
+  "isPublished": true,
+  "longTitle": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+  "metaDescription": "Idcc 0843 : Boulangerie-pâtisserie (entreprises artisanales)",
+  "mtime": 1561491771,
+  "num": 843,
+  "shortTitle": "Boulangerie-pâtisserie (entreprises artisanales)",
+  "slug": "843-boulangerie-patisserie-entreprises-artisanales",
+  "source": "conventions_collectives",
+  "text": "IDCC 843: Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978. Boulangerie-pâtisserie (entreprises artisanales)",
+  "title": "Boulangerie-pâtisserie (entreprises artisanales)",
+  "title_vector": Array [
+    0.0155928126,
+    -0.0841808,
+    -0.0223097336,
+    0.0327914581,
+    -0.0630305484,
+    -0.0174151603,
+    -0.0393403,
+    -0.0445135348,
+    0.0457089692,
+    -0.0730995536,
+    -0.0417095274,
+    -0.0140595306,
+    -0.0493688211,
+    0.0417949408,
+    -0.00758211873,
+    0.0481400602,
+    0.00281714625,
+    -0.00869229157,
+    0.064493522,
+    -0.0188929699,
+    -0.059221793,
+    0.0259042289,
+    -0.05739576,
+    0.0754118,
+    0.0829626098,
+    -0.0119973086,
+    -0.0743765086,
+    -0.0215824153,
+    0.0790679,
+    -0.0497339144,
+    -0.031936232,
+    0.0496128537,
+    0.0668717399,
+    -0.0698923916,
+    0.0703954622,
+    -0.0461848,
+    -0.0512979142,
+    0.0360350721,
+    -0.0678584501,
+    0.0465394966,
+    -0.0804136246,
+    -0.0827269256,
+    0.0191724934,
+    0.0276966915,
+    0.0341319405,
+    -0.0700484514,
+    -0.0421924889,
+    0.00837110542,
+    0.0018957851,
+    -0.0708211139,
+    -0.0373217911,
+    0.0272687301,
+    0.00365709793,
+    -0.0152764348,
+    0.0210058801,
+    0.0364569798,
+    0.0470464602,
+    -0.0627570301,
+    0.0398940556,
+    -0.0140920263,
+    0.0280392934,
+    -0.0591841079,
+    -0.0225398857,
+    0.061453145,
+    -0.0364726149,
+    0.0789082721,
+    0.0178326424,
+    -0.00120474631,
+    0.0474354103,
+    -0.0488797501,
+    -0.00531136803,
+    0.0495660044,
+    0.0123682423,
+    0.00400953088,
+    -0.00379406,
+    0.0300053544,
+    0.0529155582,
+    -0.00601173798,
+    -0.0488025844,
+    -0.0226666667,
+    -0.0710828677,
+    0.00970147271,
+    0.04396905,
+    -0.00704635,
+    -0.0667809248,
+    -0.0208149254,
+    0.0194157604,
+    -0.00495203864,
+    0.0324800424,
+    0.0350854211,
+    0.0452981628,
+    -0.0532429107,
+    -0.0132028731,
+    0.00339874392,
+    0.062404722,
+    -0.069345288,
+    0.0654399097,
+    0.0301608071,
+    -0.0259961244,
+    0.0427294932,
+    0.0851236582,
+    -0.0778873,
+    -0.0269522127,
+    -0.0304073747,
+    -0.0440258197,
+    -0.058474008,
+    0.0270260759,
+    0.0820104629,
+    -0.0719473958,
+    -0.0435172357,
+    -0.015422794,
+    0.0158305876,
+    -0.0261063967,
+    0.0556658,
+    0.0486759916,
+    0.0713753402,
+    0.040500015,
+    0.0255081542,
+    -0.0292596035,
+    -0.00680264039,
+    -0.0117189651,
+    0.0498281121,
+    -0.0054060407,
+    0.0520178452,
+    -0.0300231837,
+    0.0263672322,
+    0.0679891333,
+    0.00107010826,
+    -0.0799188,
+    -0.0430855416,
+    0.0110277534,
+    0.0309530925,
+    -0.0581811704,
+    0.0835790038,
+    -0.09194,
+    0.0136624156,
+    0.0442607738,
+    0.0240350217,
+    0.0498726293,
+    0.0109527446,
+    0.0110564567,
+    -0.0505978502,
+    0.0665034801,
+    0.0802057087,
+    0.0757179707,
+    -0.0199800152,
+    -0.0449022874,
+    0.00951927528,
+    -0.0668370798,
+    -0.0523180589,
+    -0.0327125788,
+    0.0140168332,
+    -0.0194345284,
+    -0.0769572,
+    0.0305591896,
+    0.00631147809,
+    0.00779833877,
+    0.0226780046,
+    -0.0786697,
+    0.00297955237,
+    0.0299311318,
+    -0.0496138595,
+    0.0264154859,
+    0.020014327,
+    0.0381666571,
+    -0.0212389361,
+    0.00842549186,
+    0.0350535028,
+    -0.0115713514,
+    0.0316097401,
+    -0.0424602665,
+    0.0452505536,
+    0.0101411073,
+    0.0399751626,
+    -0.0241951011,
+    -0.0447984561,
+    -0.0537106432,
+    0.0642579421,
+    -0.0450347476,
+    -0.0414191224,
+    0.0443511494,
+    0.0283122305,
+    -0.0710040703,
+    0.0527697392,
+    0.00957945082,
+    0.0298299119,
+    0.0461204238,
+    -0.0338759087,
+    0.00014891148,
+    0.0633152723,
+    0.0552332476,
+    0.080693692,
+    0.0202046093,
+    0.0688253194,
+    -0.0133458246,
+    -0.0452379845,
+    0.00327328709,
+    -0.005875214,
+    0.0415890478,
+    0.0572269782,
+    0.0718735158,
+    -0.00947396737,
+    -0.0659645721,
+    0.0195175894,
+    0.0600469,
+    0.0180789381,
+    -0.0491531901,
+    0.0342604704,
+    -0.01196233,
+    -0.00716101332,
+    -0.061899364,
+    -0.0691793784,
+    -0.0369337834,
+    0.0444130488,
+    0.0208676327,
+    -0.0188880656,
+    0.0199227184,
+    0.0262268968,
+    -0.0188112427,
+    0.00886169914,
+    0.0467692,
+    0.0499264933,
+    0.0484408,
+    0.0847210512,
+    0.0337598026,
+    0.0202806722,
+    0.0144896153,
+    0.0824041963,
+    0.050660532,
+    0.0238039792,
+    0.0667033643,
+    0.0376632847,
+    -0.0723207146,
+    0.0129767163,
+    -0.0694823712,
+    -0.0126706809,
+    0.00227678264,
+    -0.0225090887,
+    -0.0841476321,
+    -0.0463743508,
+    0.0382203981,
+    -0.0715880245,
+    0.0349057168,
+    0.0797826499,
+    0.0272665564,
+    0.0498050898,
+    -0.0158200841,
+    0.0720980242,
+    0.0563890263,
+    -0.0648171,
+    -0.0705429763,
+    -0.0185307935,
+    -0.00576431444,
+    0.0166661721,
+    -0.003934165,
+    0.00858586,
+    0.0578511618,
+    -0.00161812711,
+    -0.0146580869,
+    0.0464098901,
+    -0.0176902805,
+    0.0117517021,
+    -0.080970332,
+    -0.046612788,
+    -0.0164821185,
+    0.0444992967,
+    -0.076570563,
+    -0.0198176764,
+    -0.03914693,
+    -0.0334241763,
+    -0.0032041287,
+    -0.0251204278,
+    -0.0597216897,
+    0.0256619789,
+    -0.0107396441,
+    0.0358570181,
+    0.0218149703,
+    0.0348474048,
+    -0.0702232793,
+    -0.0772466063,
+    0.0805899501,
+    0.0609187745,
+    -0.0842866823,
+    -0.0313760862,
+    0.0461403802,
+    -0.0082351137,
+    -0.0663915351,
+    -0.0590861365,
+    0.0409670249,
+    0.0460348874,
+    -0.0310063567,
+    0.0583893359,
+    -0.03981952,
+    0.00917434506,
+    0.0574071109,
+    -0.0872678235,
+    0.0306117851,
+    0.0650537759,
+    -0.0374864787,
+    0.0469339788,
+    -0.0683196932,
+    -0.015266777,
+    0.0579679683,
+    0.0296613537,
+    0.0439227112,
+    -0.0438001268,
+    0.0359334126,
+    -0.0523475595,
+    -0.040584214,
+    -0.00913182087,
+    0.000307486742,
+    -0.000876492,
+    -0.0383597426,
+    -0.0258191414,
+    -0.0787525922,
+    -0.0325654149,
+    0.0399938896,
+    -0.0676288307,
+    -0.0406338722,
+    0.0482681021,
+    -0.0368866362,
+    -0.00810340047,
+    0.0690544844,
+    -0.0128136715,
+    0.0457866788,
+    -0.0381216034,
+    -0.0084746182,
+    0.0320670195,
+    0.0378132463,
+    0.0144226188,
+    -0.059757296,
+    -0.0160991624,
+    -0.0156075554,
+    -0.0210289732,
+    -0.0683081597,
+    -0.06579981,
+    -0.0384426452,
+    0.0115786344,
+    0.0479454473,
+    -0.0265504345,
+    -0.0140996221,
+    0.018213138,
+    -0.0329572819,
+    0.00520315953,
+    0.0320619829,
+    -0.00273804809,
+    -0.00314271869,
+    -0.0255036987,
+    0.0482927412,
+    0.0137593523,
+    -0.0488793887,
+    -0.00929587241,
+    0.0125831943,
+    0.04679887,
+    0.0504095182,
+    -0.0746566802,
+    -0.0614016242,
+    -0.0193674583,
+    0.0633131489,
+    -0.0197226796,
+    0.0285669714,
+    -0.00439786,
+    -0.0413155518,
+    0.0720320717,
+    0.0617216974,
+    0.0118288,
+    -0.0233704243,
+    0.0482867584,
+    -0.0560452566,
+    -0.00338387094,
+    -0.0690550283,
+    -0.0357974693,
+    -0.0493431389,
+    0.000350985851,
+    0.038725391,
+    -0.0711713,
+    0.00926999375,
+    -0.0362027921,
+    -0.076241374,
+    0.0571459159,
+    0.0682601109,
+    0.0540084243,
+    -0.00860477053,
+    -0.0170399453,
+    0.0308368411,
+    -0.00752898026,
+    -0.0809829,
+    -0.0502355136,
+    0.00283317128,
+    -0.0269204788,
+    -0.0358345509,
+    -0.040988192,
+    0.0140555892,
+    0.0589559264,
+    -0.0293815061,
+    -0.0593312085,
+    -0.0379845686,
+    0.0105551528,
+    -0.0289365258,
+    -0.0353572555,
+    0.0376845673,
+    0.00970874075,
+    0.0595538728,
+    0.0218676142,
+    0.00958419219,
+    -0.0224377364,
+    0.057068035,
+    0.00169468008,
+    -0.0192537066,
+    0.0114355478,
+    0.0335985534,
+    -0.0469522402,
+    -0.0357218459,
+    0.0134917386,
+    -0.0209754,
+    0.00860803295,
+    0.039174173,
+    0.000591824122,
+    -0.056441579,
+    0.011404749,
+    -0.0217685793,
+    0.0214938577,
+    -0.0670706406,
+    0.0306606907,
+    -0.026784936,
+    -0.023578072,
+    0.00229378464,
+    -0.03996595,
+    -0.0733308122,
+    0.000515802065,
+    0.0179176573,
+    -0.0503490455,
+    0.0476181731,
+    -0.0271997564,
+    -0.0381766036,
+    0.0271026418,
+    -0.06806802,
+    -0.0421481,
+    0.0322055295,
+    0.0203011036,
+    0.0163768362,
+    0.00763455685,
+    0.0568873025,
+    0.0425887294,
+    0.0407195166,
+    0.087869823,
+    -0.0350491963,
+    -0.016038958,
+    -0.0541784726,
+    -0.00250816136,
+    0.00351725961,
+    0.0889705792,
+    -0.0442941897,
+    0.0593022853,
+    -0.0403546579,
+    -0.0504870676,
+    0.00700771483,
+    -0.0398528054,
+    -0.0166152511,
+    -0.0719394237,
+    -0.0416476913,
+    -0.0324832685,
+    0.0535957441,
+    0.00769396871,
+    -0.00214234041,
+    -0.0421772823,
+    -0.055986613,
+    -0.00628332095,
+    0.00120554899,
+    -0.017963944,
+    -0.0502392538,
+    0.0802084357,
+    -0.0760362223,
+    -0.038175419,
+    0.0350261331,
+    0.0385475196,
+    -0.0154161714,
+    -0.0447711162,
+    0.0323908478,
+    0.0451744124,
+    -0.0369615965,
+    -0.0260254443,
+    0.0139857791,
+    0.0077670454,
+    0.0105556473,
+    0.0514827296,
+    0.0891373605,
+    0.04592482,
+    -0.000145202983,
+    0.0311200619,
+    0.0311456043,
+    -0.0329067186,
+    0.00240020384,
+    0.0165917333,
+    0.0287805945,
+    0.0357971042,
+    0.00574632129,
+    0.0725547597,
+    0.0369419903,
+    0.0594865829,
+    -0.0760464892,
+    0.0157448035,
+    -0.0595721863,
+    -0.0598870926,
+    0.0177513398,
+    0.0279645137,
+    -0.0443007052,
+    -0.0270255823,
+    -0.0866066,
+    -0.0148033034,
+    0.0174665358,
+    0.0490171,
+  ],
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886",
+}
+`;
