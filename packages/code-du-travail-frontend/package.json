@@ -112,22 +112,5 @@
     "{__mocks__,test}/**/*.{js,ts}": [
       "yarn lint-js --fix"
     ]
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"
-    ],
-    "collectCoverageFrom": [
-      "!src/**/*mock.js",
-      "src/**/*.js"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/jest.setup.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/"
-    ]
   }
 }
