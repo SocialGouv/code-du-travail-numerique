@@ -17,6 +17,8 @@
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
     "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:update": "NODE_ENV=test jest -u",
     "generate-sitemap": "node -r esm ./scripts/generate-sitemap"
   },
   "dependencies": {
@@ -32,7 +34,7 @@
     "@socialgouv/cdtn-slugify": "^4.53.1",
     "@socialgouv/cdtn-sources": "^4.53.1",
     "@socialgouv/cdtn-ui": "^4.53.1",
-    "@socialgouv/fiches-travail-data": "^4.204.0",
+    "@socialgouv/fiches-travail-data": "^4.209.0",
     "@socialgouv/modeles-social": "^4.53.1",
     "@socialgouv/react-fiche-service-public": "^4.53.1",
     "@socialgouv/reference-article": "^1.0.1",
@@ -48,7 +50,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-helmet": "^6.1.0",
     "koa-router": "^10.0.0",
-    "lit-element": "2.5.1",
+    "lit-element": "3.0.0",
     "memoizee": "^0.4.15",
     "next": "^11.1.0",
     "next-transpile-modules": "^8.0.0",

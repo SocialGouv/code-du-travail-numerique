@@ -17,7 +17,7 @@ const SimulateurPreavisRetraite = ({
 }: Props): JSX.Element => (
   <PublicodesProvider
     rules={publicodesRules}
-    targetRule="contrat salarié . préavis de retraite"
+    targetRule="contrat salarié . préavis de retraite en jours"
   >
     <Wizard
       icon={icon}
