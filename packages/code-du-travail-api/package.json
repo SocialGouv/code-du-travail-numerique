@@ -5,10 +5,11 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "check-types": "tsc",
-    "check-types:watch": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
     "prebuild": "rimraf dist",
     "build": "babel src -d babel-dist --copy-files --extensions \".ts,.js\"",
+    "build:types": "tsc --emitDeclarationOnly",
     "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
     "lint": "eslint \"./src/**/*.js\" --fix",
     "precommit": "lint-staged",
