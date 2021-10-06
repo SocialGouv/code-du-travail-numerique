@@ -1,4 +1,4 @@
-import router from "../index.js";
+import router from "../index.ts";
 
 const request = require("supertest");
 const Koa = require("koa");
