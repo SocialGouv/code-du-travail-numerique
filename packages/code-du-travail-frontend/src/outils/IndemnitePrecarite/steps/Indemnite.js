@@ -36,6 +36,14 @@ function extractRefs(refs = []) {
   }));
 }
 
+function getConventionCollectiveText(ccn, situations) {
+  return ccn
+    ? situations.length > 0
+      ? ccn.title
+      : "La convention collective n'a pas été traitée par nos services."
+    : "La convention collective n'a pas été renseignée.";
+}
+
 function StepIndemnite({ form }) {
   const state = form.getState();
   const {
@@ -87,11 +95,7 @@ function StepIndemnite({ form }) {
   });
 
   const entries = Object.entries({
-    "Convention collective": ccn
-      ? situations.length > 0
-        ? ccn.title
-        : "La convention collective n'a pas été traitée par nos services."
-      : "La convention collective n'a pas été renseignée.",
+    "Convention collective": getConventionCollectiveText(ccn, situations),
     ...inputs,
   });
 

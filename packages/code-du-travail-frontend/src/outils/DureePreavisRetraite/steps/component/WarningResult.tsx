@@ -10,7 +10,6 @@ type Props = {
   data: FormContent;
 };
 
-const title = "Attention il peut exister une durée plus favorable";
 const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
   if (publicodesContext.result.value === 0) {
     if (data.ccn) {
@@ -43,6 +42,7 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
   }
   const type =
     data["contrat salarié - mise à la retraite"] === "oui" ? "mise" : "depart";
+  const title = "Attention il peut exister une durée plus favorable";
 
   if (type === "depart") {
     if (data.ccn) {

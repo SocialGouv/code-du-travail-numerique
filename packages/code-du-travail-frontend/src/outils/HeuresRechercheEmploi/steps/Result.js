@@ -56,18 +56,18 @@ function Disclaimer({ duration }) {
     <Disclaimer
       title={"Attention il peut exister une durée plus favorable"}
       text={
-        !duration ? (
-          <p>
-            Un accord d’entreprise ou à défaut un usage dans la profession ou
-            l’entreprise peut prévoir que le salarié bénéficie d’heures
-            d’absence autorisée pour rechercher un emploi pendant le préavis.
-          </p>
-        ) : (
+        duration ? (
           <p>
             Si un accord d’entreprise ou à défaut un usage dans la profession ou
             l’entreprise plus récent prévoit des heures d’absence autorisée pour
             rechercher un emploi pendant le préavis, le salarié en bénéficie si
             ces mesures sont plus favorables que la convention collective.
+          </p>
+        ) : (
+          <p>
+            Un accord d’entreprise ou à défaut un usage dans la profession ou
+            l’entreprise peut prévoir que le salarié bénéficie d’heures
+            d’absence autorisée pour rechercher un emploi pendant le préavis.
           </p>
         )
       }
