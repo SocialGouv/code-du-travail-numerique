@@ -8,6 +8,7 @@ import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 const DepartRetraite = [
+  ...DepartRetraiteReferences,
   {
     article: "Chapitre I Article 19. a",
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
@@ -19,6 +20,7 @@ const DepartRetraite = [
 ];
 
 const MiseRetraite = [
+  ...MiseRetraiteReferences,
   {
     article: "Chapitre I Article 19. b",
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
@@ -31,8 +33,8 @@ const MiseRetraite = [
 
 test.each`
   retirement  | expectedReferences
-  ${"mise"}   | ${MiseRetraiteReferences.concat(MiseRetraite)}
-  ${"depart"} | ${DepartRetraiteReferences.concat(DepartRetraite)}
+  ${"mise"}   | ${MiseRetraite}
+  ${"depart"} | ${DepartRetraite}
 `(
   "Vérification des références juridiques pour un employé en $retirement à la retraite",
   ({ retirement, expectedReferences }) => {

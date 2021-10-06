@@ -38,7 +38,6 @@ contrat salarié . convention collective . habillement textiles commerce de deta
 contrat salarié . convention collective . habillement textiles commerce de detail . départ à la retraite . notification:
   applicable si:
     toutes ces conditions:
-      - départ à la retraite
       - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
       - ancienneté < 6 mois
   type: notification
@@ -46,10 +45,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
 
 contrat salarié . convention collective . habillement textiles commerce de detail . mise à la retraite . notification:
-  applicable si:
-    toutes ces conditions:
-      - mise à la retraite
-      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+  applicable si: contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
   type: notification
   description: "Il s'agit d'un délai minimum."
   valeur: oui
