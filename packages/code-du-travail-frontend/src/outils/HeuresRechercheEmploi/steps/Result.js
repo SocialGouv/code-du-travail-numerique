@@ -4,6 +4,7 @@ import { Accordion } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
+import Disclaimer from "../../common/Disclaimer";
 import {
   filterSituations,
   getRef,
@@ -51,7 +52,7 @@ function Duration({ situation }) {
   );
 }
 
-function Disclaimer({ duration }) {
+function DisclaimerBox({ duration }) {
   return (
     <Disclaimer
       title={"Attention il peut exister une durée plus favorable"}
@@ -124,7 +125,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
           },
         ]}
       />
-      <Disclaimer
+      <DisclaimerBox
         title={"Attention il peut exister une durée plus favorable"}
         text={
           <p>
@@ -193,7 +194,7 @@ export function StepResult({ form }) {
           },
         ]}
       />
-      <Disclaimer duration={situation.answer} />
+      <DisclaimerBox duration={situation.answer} />
     </>
   );
 }
