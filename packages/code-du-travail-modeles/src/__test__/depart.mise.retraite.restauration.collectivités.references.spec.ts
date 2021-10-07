@@ -17,17 +17,20 @@ const AllRetraite = [
     url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418",
   },
 ];
-describe("Références", () => {
+const MiseRetraite = [...MiseRetraiteReferences, ...AllRetraite];
+const DepartRetraite = [...DepartRetraiteReferences, ...AllRetraite];
+
+describe("Vérification des références juridiques", () => {
   test.each`
     retirement  | category       | expectedReferences
-    ${"mise"}   | ${"Employés"}  | ${MiseRetraiteReferences.concat(AllRetraite)}
-    ${"mise"}   | ${"Maîtrises"} | ${MiseRetraiteReferences.concat(AllRetraite)}
-    ${"mise"}   | ${"Cadres"}    | ${MiseRetraiteReferences.concat(AllRetraite)}
-    ${"depart"} | ${"Employés"}  | ${DepartRetraiteReferences.concat(AllRetraite)}
-    ${"depart"} | ${"Maîtrises"} | ${DepartRetraiteReferences.concat(AllRetraite)}
-    ${"depart"} | ${"Cadres"}    | ${DepartRetraiteReferences.concat(AllRetraite)}
+    ${"mise"}   | ${"Employés"}  | ${MiseRetraite}
+    ${"mise"}   | ${"Maîtrises"} | ${MiseRetraite}
+    ${"mise"}   | ${"Cadres"}    | ${MiseRetraite}
+    ${"depart"} | ${"Employés"}  | ${DepartRetraite}
+    ${"depart"} | ${"Maîtrises"} | ${DepartRetraite}
+    ${"depart"} | ${"Cadres"}    | ${DepartRetraite}
   `(
-    "Vérification des références juridiques pour un $category en $retirement à la retraite",
+    "Pour un $category en $retirement à la retraite",
     ({ retirement, expectedReferences, category }) => {
       const result = getReferences(
         engine.setSituation({
