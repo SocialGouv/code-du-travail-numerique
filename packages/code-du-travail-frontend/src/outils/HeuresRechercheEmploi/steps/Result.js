@@ -1,18 +1,17 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Accordion } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
 
+import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
 import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes/Utils";
 
 function Duration({ situation }) {
   if (!situation.answer) {
@@ -89,14 +88,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
       <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
-      {idcc > 0 && (
-        <p>
-          Vous pouvez faire une recherche par mots-clés dans{" "}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-            <a>votre convention collective</a>
-          </Link>
-        </p>
-      )}
+      {idcc > 0 && <CCSearchInfo ccn={ccn} />}
       <p>
         Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
         pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe

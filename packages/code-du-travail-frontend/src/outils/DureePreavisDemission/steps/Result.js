@@ -1,19 +1,18 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Accordion } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
+import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
 import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes/Utils";
 
 function DisclaimerBox() {
   return (
@@ -58,14 +57,7 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        {possibleSituations.length === 0 && ccn && (
-          <p>
-            Vous pouvez faire une recherche par mots-clés dans{" "}
-            <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-              <a>votre convention collective</a>
-            </Link>
-          </p>
-        )}
+        {possibleSituations.length === 0 && <CCSearchInfo ccn={ccn} />}
         <DisclaimerBox />
         <PubliReferences references={formatRefs([refLegal])} />
       </>

@@ -1,8 +1,8 @@
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import Link from "next/link";
 import React from "react";
+
 import { isNotNearZero } from "../../common/math";
 import { ConventionCollective } from "../../common/type/WizardType";
+import CCSearchInfo from "../../common/CCSearchInfo";
 
 type Props = {
   durationCC: number;
@@ -20,14 +20,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
             prévues dans la convention collective, un accord d’entreprise ou à
             défaut par un usage dans l’entreprise.
           </p>
-          {ccn && (
-            <p>
-              Vous pouvez faire une recherche par mots-clés dans{" "}
-              <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-                <a>votre convention collective</a>
-              </Link>
-            </p>
-          )}
+          <CCSearchInfo ccn={ccn} />
         </>
       );
     } else {
@@ -39,14 +32,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
             collective, un accord de branche, un accord d’entreprise ou le
             contrat de travail ou les usages.
           </p>
-          {ccn && (
-            <p>
-              Vous pouvez faire une recherche par mots-clés dans{" "}
-              <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-                <a>votre convention collective</a>
-              </Link>
-            </p>
-          )}
+          <CCSearchInfo ccn={ccn} />
         </>
       );
     }

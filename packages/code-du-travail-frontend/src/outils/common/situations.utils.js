@@ -106,12 +106,6 @@ export function recapSituation(criteria) {
   );
 }
 
-export function formatRefs(refs) {
-  return refs.map((ref) => {
-    return { article: ref.ref, url: ref.refUrl };
-  });
-}
-
 export const getFormProps = ({ key, criteria, pastQuestions }) =>
   // list keys that no longer exist
   Object.keys(criteria)

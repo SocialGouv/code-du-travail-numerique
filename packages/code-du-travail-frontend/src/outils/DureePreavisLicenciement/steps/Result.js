@@ -8,11 +8,11 @@ import { isNotNearZero } from "../../common/math";
 import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes/Utils";
 import DisclaimerText from "./DisclaimerText";
 
 const { situations: allSituations } = data;

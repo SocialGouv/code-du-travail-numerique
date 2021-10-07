@@ -8,10 +8,10 @@ import { MathFormula } from "../../common/MathFormula";
 import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  formatRefs,
   getSituationsFor,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes/Utils";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";

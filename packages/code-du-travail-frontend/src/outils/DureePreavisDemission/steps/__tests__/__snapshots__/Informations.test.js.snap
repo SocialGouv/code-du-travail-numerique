@@ -14,7 +14,7 @@ exports[`<StepInformations /> should render 1`] = `
   <h2
     class="c0"
   >
-    Informations sur le statut du salarié
+    Statut du salarié
   </h2>
 </div>
 `;
@@ -147,7 +147,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   <h2
     class="c0"
   >
-    Informations sur le statut du salarié
+    Statut du salarié
   </h2>
   <div
     class="c1"
@@ -356,7 +356,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   <h2
     class="c0"
   >
-    Informations sur le statut du salarié
+    Statut du salarié
   </h2>
   <div
     class="c1"
