@@ -61,7 +61,7 @@ function StepIndemnite({ form }) {
   const situations = filterSituations(initialSituations, criteria);
   let rate = "10%";
   let bonusAltName = "La prime de précarité";
-  let legalRefs = [];
+  let legalRefs;
   let situation;
   switch (situations.length) {
     case 1: {
@@ -70,11 +70,11 @@ function StepIndemnite({ form }) {
         rate = situation.rate;
       }
       bonusAltName = situation.bonusLabel || bonusAltName;
-      if (idcc !== 0) {
-        legalRefs = extractRefs([situation, situationCdt]);
-      } else {
-        legalRefs = extractRefs([situationCdt]);
-      }
+
+      legalRefs = extractRefs(
+        idcc !== 0 ? [situation, situationCdt] : [situationCdt]
+      );
+
       break;
     }
     default: {
