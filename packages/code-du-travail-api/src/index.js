@@ -6,7 +6,7 @@ import dossiersRoute from "./routes/dossiers";
 import glossaryRoute from "./routes/glossary";
 import highlightRoutes from "./routes/highlights";
 import idccRoutes from "./routes/idcc";
-import indexRoute from "./routes/index.ts";
+import indexRoute from "./routes/index";
 import itemsRoutes from "./routes/items";
 import modelesRoutes from "./routes/modeles";
 import searchRoutes from "./routes/search";
