@@ -1,7 +1,5 @@
 import React from "react";
 
-import { A11yLink } from "../../common/A11yLink";
-
 const createValuesMatcher = (values) => (item) => {
   function swallowEqual(a, b) {
     return Object.entries(a).every(([key, value]) => {
@@ -11,6 +9,7 @@ const createValuesMatcher = (values) => (item) => {
       return `${b[key]}`.toLowerCase() === `${value}`.toLowerCase();
     });
   }
+
   return swallowEqual(values, item.criteria);
 };
 
@@ -107,23 +106,10 @@ export function recapSituation(criteria) {
   );
 }
 
-export function getRef(refs) {
-  return (
-    <ul>
-      {refs.map(({ ref, refUrl }) => (
-        <li key={refUrl}>
-          <A11yLink
-            href={refUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={`Consultez l’${ref.toLowerCase()}`}
-          >
-            {ref}
-          </A11yLink>
-        </li>
-      ))}
-    </ul>
-  );
+export function formatRefs(refs) {
+  return refs.map((ref) => {
+    return { article: ref.ref, url: ref.refUrl };
+  });
 }
 
 export const getFormProps = ({ key, criteria, pastQuestions }) =>

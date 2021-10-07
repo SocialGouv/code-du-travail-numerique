@@ -590,7 +590,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -1276,7 +1276,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -1954,7 +1954,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -2643,7 +2643,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -3321,7 +3321,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>

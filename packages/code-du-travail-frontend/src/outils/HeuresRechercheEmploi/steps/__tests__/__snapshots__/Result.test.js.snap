@@ -296,7 +296,7 @@ exports[`<StepResult /> should render no results 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -684,7 +684,7 @@ exports[`<StepResult /> should render with duration 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -1042,7 +1042,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>
@@ -1409,7 +1409,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>

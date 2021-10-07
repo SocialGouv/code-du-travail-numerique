@@ -5,9 +5,10 @@ import Link from "next/link";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
+import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  getRef,
+  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
@@ -117,8 +118,9 @@ function NoResult({ idcc, ccn, legalRefs }) {
                       : "La convention collective n'a pas été renseignée",
                   },
                 })}
-                <SectionTitle>Source</SectionTitle>
-                {legalRefs && getRef(legalRefs)}
+                <PubliReferences
+                  references={legalRefs && formatRefs(legalRefs)}
+                />
               </>
             ),
             title: <p>Voir le détail du calcul</p>,
@@ -186,8 +188,11 @@ export function StepResult({ form }) {
                   ...situation.criteria,
                 })}
 
-                <SectionTitle>Source</SectionTitle>
-                {situation.ref && situation.refUrl && getRef([situation])}
+                <PubliReferences
+                  references={
+                    situation.ref && situation.refUrl && formatRefs([situation])
+                  }
+                />
               </>
             ),
             title: <p>Voir le détail du calcul</p>,

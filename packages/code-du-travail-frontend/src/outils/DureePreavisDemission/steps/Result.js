@@ -6,9 +6,10 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
+import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  getRef,
+  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
@@ -66,8 +67,7 @@ function StepResult({ form }) {
           </p>
         )}
         <DisclaimerBox />
-        <SectionTitle>Source</SectionTitle>
-        {getRef([refLegal])}
+        <PubliReferences references={formatRefs([refLegal])} />
       </>
     );
   }
@@ -98,9 +98,9 @@ function StepResult({ form }) {
                   "Convention collective": `${ccn.title} (${idcc})`,
                   ...situation.criteria,
                 })}
-
-                <SectionTitle>Source</SectionTitle>
-                {getRef([refLegal, situation])}
+                <PubliReferences
+                  references={formatRefs([refLegal, situation])}
+                />
               </>
             ),
             title: <p>Voir le détail du calcul</p>,

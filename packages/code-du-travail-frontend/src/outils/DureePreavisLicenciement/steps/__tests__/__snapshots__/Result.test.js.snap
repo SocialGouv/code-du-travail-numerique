@@ -356,7 +356,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
             <h2
               class="c0"
             >
-              Source
+              Sources
             </h2>
             <ul>
               <li>

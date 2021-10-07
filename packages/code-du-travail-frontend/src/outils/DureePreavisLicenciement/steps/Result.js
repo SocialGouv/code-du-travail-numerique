@@ -5,9 +5,10 @@ import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
 import { isNotNearZero } from "../../common/math";
+import PubliReferences from "../../common/PubliReferences";
 import {
   filterSituations,
-  getRef,
+  formatRefs,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
@@ -173,10 +174,11 @@ function StepResult({ form }) {
                   }),
                 })}
                 {situationCC && (
-                  <>
-                    <SectionTitle>Source</SectionTitle>
-                    {situationCC.ref && situationCC.refUrl && getRef(refs)}
-                  </>
+                  <PubliReferences
+                    references={
+                      situationCC.ref && situationCC.refUrl && formatRefs(refs)
+                    }
+                  />
                 )}
               </>
             ),
