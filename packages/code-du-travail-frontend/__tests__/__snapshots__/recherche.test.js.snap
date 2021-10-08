@@ -1242,6 +1242,7 @@ exports[`<Recherche /> should render 1`] = `
           class="c9"
         >
           <button
+            aria-label="menu principal"
             class="c10 c11 c12"
           >
             <svg
