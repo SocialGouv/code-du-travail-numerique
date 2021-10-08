@@ -80,16 +80,9 @@ Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.o
 cp docker-compose.override.dev.yml docker-compose.override.yml
 ```
 
-To fill your ElasticSearch, you'll need to a local cdtn-admin endpoint :
-
-Then you can launch services using docker-compose
-
 ```sh
 # start elasticsearch
 docker-compose up elasticsearch
-
-# Launch indexing script : fill ElasticSearch
-yarn workspace @cdt/data start:dev
 
 # Start API in dev mode : runs on http://localhost:1337
 yarn workspace @cdt/api dev
