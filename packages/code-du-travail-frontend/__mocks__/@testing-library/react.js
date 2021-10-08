@@ -1,3 +1,4 @@
+/* eslint-disable import/export */
 import { theme } from "@socialgouv/cdtn-ui";
 import { render } from "@testing-library/react";
 import PropTypes from "prop-types";
