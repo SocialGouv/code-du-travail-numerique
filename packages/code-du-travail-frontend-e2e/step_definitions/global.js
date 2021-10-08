@@ -1,4 +1,5 @@
 const { Soit, Quand, Alors } = require("./_fr");
+const assert = require("assert");
 
 const { I } = inject();
 
@@ -103,7 +104,7 @@ Alors("je vois le bien le lien self canonique", async () => {
   const currentUrl = await I.getCurrentUrl();
   const href = await I.getCanonicalLink();
   if (currentUrl !== href) {
-    require("assert").fail("Canonique non identique");
+    assert.fail("Canonique non identique");
   }
 });
 
