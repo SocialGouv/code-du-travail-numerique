@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
 
@@ -17,11 +18,11 @@ describe("Mise à la retraite", () => {
     ({ seniority, category, expectedNotice, expectedUnit }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1147'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1147'",
+          "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -43,8 +44,8 @@ describe("Départ à la retraite", () => {
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1147'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1147'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         })
@@ -69,11 +70,11 @@ describe("Notifications", () => {
     ({ seniority, category }) => {
       const notifications = getNotifications(
         engine.setSituation({
+          "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1147'",
+          "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
         })
       );
 
@@ -84,12 +85,12 @@ describe("Notifications", () => {
   test("Pour un non-cadres possédant 2 mois d'ancienneté lors d'une mise à la retraite, on attend une notification", () => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1147'",
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": 2,
+        "contrat salarié . convention collective": "'IDCC1147'",
         "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle":
           "'Non-cadres'",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 

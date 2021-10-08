@@ -1,11 +1,11 @@
-import Engine from "publicodes";
+import type Engine from "publicodes";
 
-export type References = {
+export interface References {
   article: string;
   url: string;
-};
+}
 
-export function getReferences(engine: Engine): Array<References> {
+export function getReferences(engine: Engine): References[] {
   return Object.values(engine.getParsedRules())
     .filter(
       (rule) =>
