@@ -55,3 +55,12 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   applicable si: mise à la retraite
   remplace: préavis de retraite collective
   valeur: 2 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . notification:
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
+  type: notification
+  description: "Attention: L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail."
+  valeur: oui
