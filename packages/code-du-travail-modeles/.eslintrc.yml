@@ -1,0 +1,7 @@
+---
+extends:
+  - "@socialgouv/eslint-config-typescript"
+rules:
+  parserOptions:
+    ecmaVersion: 2020
+    sourceType: module
