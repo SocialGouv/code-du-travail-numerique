@@ -123,6 +123,7 @@ exports[`BurgerStyles renders 1`] = `
 
 <div>
   <button
+    aria-label="menu principal"
     class="c0 c1"
   >
     <svg
