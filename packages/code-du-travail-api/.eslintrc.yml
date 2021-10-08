@@ -1,11 +1,6 @@
 ---
 extends:
-  - "@socialgouv/eslint-config-recommended"
+  - "@socialgouv/eslint-config-typescript"
 rules:
   prefer-const: 2
   require-atomic-updates: off
-
-overrides:
-  - files: ["*.spec.js"]
-    env:
-      jest: true
