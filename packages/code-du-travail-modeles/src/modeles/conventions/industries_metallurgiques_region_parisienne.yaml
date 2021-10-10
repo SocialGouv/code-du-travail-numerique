@@ -3,7 +3,9 @@ contrat salarié . convention collective . industries métallurgiques région pa
   titre: Convention collective régionale des industries métallurgiques, mécaniques et connexes de la région parisienne du 16 juillet 1954.
   applicable si: convention collective = 'IDCC0054'
   valeur: oui
-  idcc: 54
+  cdtn:
+    idcc: 54
+    préavis-retraite: true
 
 contrat salarié . convention collective . industries métallurgiques région parisienne . préavis de retaite tranches:
   grille:

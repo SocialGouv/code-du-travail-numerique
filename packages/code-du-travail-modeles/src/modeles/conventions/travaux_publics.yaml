@@ -1,0 +1,7 @@
+contrat salarié . convention collective . travaux publics:
+  description: Convention collective nationale des employés, techniciens et agents de maîtrise des travaux publics du 12 juillet 2006.
+  applicable si: convention collective = 'IDCC2614'
+  valeur: oui
+  cdtn:
+    idcc: 2614
+    préavis-retraite: false

@@ -3,7 +3,9 @@ contrat salarié . convention collective . entreprises de propreté:
   description: Convention collective nationale des entreprises de propreté du 1er juillet 1994. Etendue par arrêté du 31 octobre 1994 JORF 5 novembre 1994.
   applicable si: convention collective = 'IDCC3043'
   valeur: oui
-  idcc: 3043
+  cdtn:
+    idcc: 3043
+    préavis-retraite: true
 
 contrat salarié . convention collective . entreprises de propreté . catégorie professionnelle:
   titre: Catégorie professionnelle
