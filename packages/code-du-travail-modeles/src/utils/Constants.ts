@@ -1,1 +1,3 @@
-export const supportedCcn: number[] = [1];
+import type { AgreementInfo } from "../internal/ExtractSupportedCc";
+
+export const supportedCcn: AgreementInfo[] = [];

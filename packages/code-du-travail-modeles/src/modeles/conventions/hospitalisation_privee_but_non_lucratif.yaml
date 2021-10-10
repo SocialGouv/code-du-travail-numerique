@@ -3,7 +3,9 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   titre: Convention collective nationale des établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
   applicable si: convention collective = 'IDCC0029'
   valeur: oui
-  idcc: 29
+  cdtn:
+    idcc: 29
+    préavis-retraite: true
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle:
   titre: Catégorie professionnelle
