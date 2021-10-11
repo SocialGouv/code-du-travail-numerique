@@ -49,7 +49,7 @@ describe("Convention collective 2098", () => {
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . geometres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -90,7 +90,7 @@ describe("Convention collective 2098", () => {
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . geometres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
