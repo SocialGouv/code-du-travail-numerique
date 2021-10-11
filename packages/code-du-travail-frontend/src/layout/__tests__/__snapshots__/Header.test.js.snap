@@ -675,6 +675,7 @@ exports[`<Header /> should render 1`] = `
           </svg>
         </a>
         <button
+          aria-label="menu principal"
           class="c17 c18 c19"
         >
           <svg
