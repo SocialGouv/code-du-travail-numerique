@@ -97,22 +97,29 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   );
 }
 
-const AgreementSearchWithContext = (props: Props): JSX.Element => {
+const AgreementSearchUI = (props: Props) => {
   const [enterprise, setEnterprise] = useState<Enterprise>(null);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
   });
+
+  return (
+    <NavProvider
+      enterprise={enterprise}
+      setEnterprise={setEnterprise}
+      searchParams={searchParams}
+      setSearchParams={setSearchParams}
+    >
+      <AgreementSearchTool {...props} />
+    </NavProvider>
+  );
+};
+
+const AgreementSearchWithContext = (props: Props): JSX.Element => {
   return (
     <TrackingProvider title={props.title}>
-      <NavProvider
-        enterprise={enterprise}
-        setEnterprise={setEnterprise}
-        searchParams={searchParams}
-        setSearchParams={setSearchParams}
-      >
-        <AgreementSearchTool {...props} />
-      </NavProvider>
+      <AgreementSearchUI {...props} />
     </TrackingProvider>
   );
 };
