@@ -97,7 +97,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   );
 }
 
-const AgreementSearchUI = (props: Props) => {
+const AgreementSearchUI = (props: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise>(null);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
