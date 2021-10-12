@@ -11,11 +11,11 @@ const engine = new Engine(mergeModels());
 const CommonReferences = [
   {
     article: "Article 34",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023759236/?idConteneur=KALICONT000005635413",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096649#KALIARTI000042096649",
   },
   {
     article: "Article 32",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023759231/?idConteneur=KALICONT000005635413",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655",
   },
 ];
 
@@ -29,8 +29,8 @@ const MiseRetraiteCcReferences = [
   ...CommonReferences,
 ];
 
-describe("Convention collective 1527", () => {
-  describe("Vérification des départs à la retraite et des références juridiques", () => {
+describe("Préavis de retraite de la CC 1527", () => {
+  describe("Départ à la retraite", () => {
     test.each`
       category                  | seniority | expectedResult
       ${"Employés et ouvriers"} | ${5}      | ${1}
@@ -84,7 +84,7 @@ describe("Convention collective 1527", () => {
     );
   });
 
-  describe("Vérification des mises à la retraite et des références juridiques", () => {
+  describe("Mise à la retraite", () => {
     test.each`
       category                  | seniority | expectedResult
       ${"Employés et ouvriers"} | ${5}      | ${1}
