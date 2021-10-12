@@ -7,7 +7,7 @@ import {
 import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
-describe("CC 1979", () => {
+describe("Prévis de retraite pour la CC 1979", () => {
   const CCReferences = [
     {
       article: "Article 33",
@@ -75,8 +75,8 @@ describe("CC 1979", () => {
       ${24}     | ${"Agents de maîtrise"} | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${25}     | ${"Agents de maîtrise"} | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${3}      | ${"Cadres"}             | ${1}           | ${"mois"}    | ${MiseRetraiteRefs}
-      ${8}      | ${"Cadres"}             | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
-      ${24}     | ${"Cadres"}             | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
+      ${8}      | ${"Cadres"}             | ${3}           | ${"mois"}    | ${MiseRetraiteRefs}
+      ${24}     | ${"Cadres"}             | ${3}           | ${"mois"}    | ${MiseRetraiteRefs}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis est $expectedNotice $expectedUnit",
       ({
