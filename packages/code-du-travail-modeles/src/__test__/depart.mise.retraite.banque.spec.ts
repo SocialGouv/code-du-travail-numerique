@@ -11,7 +11,7 @@ const engine = new Engine(mergeModels());
 const CommonReferences = [
   {
     article: "Article 32",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005787790/?idConteneur=KALICONT000005635780",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005787789#KALIARTI000005787789",
   },
 ];
 
@@ -25,8 +25,8 @@ const MiseRetraiteCcReferences = [
   ...CommonReferences,
 ];
 
-describe("Convention collective 2120", () => {
-  describe("Vérification des départs à la retraite et des références juridiques", () => {
+describe("Préavis de retraite de la CC 2120", () => {
+  describe("Départ à la retraite", () => {
     test.each`
       seniority | expectedResult
       ${5}      | ${0}
@@ -58,7 +58,7 @@ describe("Convention collective 2120", () => {
     );
   });
 
-  describe("Vérification des mises à la retraite et des références juridiques", () => {
+  describe("Mise à la retraite", () => {
     test.each`
       seniority | expectedResult
       ${5}      | ${3}
