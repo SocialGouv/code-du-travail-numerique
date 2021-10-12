@@ -153,7 +153,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -545,7 +545,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -573,7 +573,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
@@ -775,7 +775,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1167,7 +1167,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -1195,7 +1195,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
@@ -1397,7 +1397,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1789,7 +1789,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -1817,7 +1817,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
@@ -2019,7 +2019,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2411,7 +2411,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -2439,7 +2439,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
@@ -2628,7 +2628,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 .c13 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2988,7 +2988,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         <h2
           class="c12"
         >
-          <div
+          <span
             class="c13"
           />
           Que dit votre convention collective ?
@@ -3097,7 +3097,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
       <h2
         class="c1"
       >
-        <div
+        <span
           class="c2"
         />
         Que dit le code du travail ?
@@ -3303,7 +3303,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       <h2
         class="c1"
       >
-        <div
+        <span
           class="c2"
         />
         Que dit le code du travail ?

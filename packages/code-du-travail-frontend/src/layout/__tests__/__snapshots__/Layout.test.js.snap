@@ -1178,7 +1178,7 @@ exports[`<Layout /> should render 1`] = `
               <strong
                 class="c29"
               >
-                <div
+                <span
                   class="c30"
                 />
                 Besoin de plus d’informations ?

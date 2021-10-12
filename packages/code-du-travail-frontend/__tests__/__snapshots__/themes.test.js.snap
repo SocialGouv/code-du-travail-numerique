@@ -1436,7 +1436,7 @@ exports[`<Theme /> should render 1`] = `
             <h1
               class="c34"
             >
-              <div
+              <span
                 class="c35"
               />
               Contrat de travail
@@ -1503,7 +1503,7 @@ exports[`<Theme /> should render 1`] = `
               <strong
                 class="c44"
               >
-                <div
+                <span
                   class="c35"
                 />
                 Besoin de plus d’informations ?

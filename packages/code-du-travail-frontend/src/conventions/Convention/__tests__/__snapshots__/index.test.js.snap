@@ -879,7 +879,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Questions-réponses fréquentes
@@ -4627,7 +4627,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Articles de la convention collective
@@ -5662,7 +5662,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Recherche dans la convention collective

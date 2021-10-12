@@ -1355,7 +1355,7 @@ exports[`<Term /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Accord d'entreprise
@@ -1420,7 +1420,7 @@ exports[`<Term /> should render 1`] = `
               <strong
                 class="c37"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

@@ -349,7 +349,7 @@ exports[`<Highlights /> should render 1`] = `
         <h2
           class="c3"
         >
-          <div
+          <span
             class="c4"
           />
           À la une
