@@ -633,7 +633,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 .c71 {
   position: absolute;
   background-color: #f66663;
-  border-radius: 0;
+  border-radius: none;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2390,7 +2390,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   <h1
                     class="c47"
                   >
-                    <span
+                    <div
                       class="c48"
                     />
                     Courrier Epistolaire
@@ -2666,7 +2666,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   <strong
                     class="c69 c70"
                   >
-                    <span
+                    <div
                       class="c71"
                     />
                     <span>
@@ -2713,7 +2713,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 class="c79"
               >
-                <span
+                <div
                   class="c80"
                 />
                 Besoin de plus d’informations ?

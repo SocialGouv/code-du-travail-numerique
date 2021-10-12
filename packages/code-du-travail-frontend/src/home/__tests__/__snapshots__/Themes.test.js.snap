@@ -627,7 +627,7 @@ exports[`<Themes /> should render 1`] = `
             <h2
               class="c9"
             >
-              <span
+              <div
                 class="c10"
               />
               Thèmes
@@ -660,7 +660,7 @@ exports[`<Themes /> should render 1`] = `
                     <h2
                       class="c20"
                     >
-                      <span
+                      <div
                         class="c21"
                       />
                       Thèmes

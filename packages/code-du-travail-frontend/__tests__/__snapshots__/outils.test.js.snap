@@ -1582,7 +1582,7 @@ exports[`<Outils /> should render 1`] = `
             <h1
               class="c27"
             >
-              <span
+              <div
                 class="c28"
               />
               Retrouvez tous nos outils
@@ -2724,7 +2724,7 @@ exports[`<Outils /> should render 1`] = `
               <strong
                 class="c52"
               >
-                <span
+                <div
                   class="c28"
                 />
                 Besoin de plus d’informations ?

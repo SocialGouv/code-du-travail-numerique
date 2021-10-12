@@ -2455,7 +2455,7 @@ exports[`<Home /> should render 1`] = `
             <h2
               class="c36"
             >
-              <span
+              <div
                 class="c37"
               />
               Boîte à outils
@@ -2921,7 +2921,7 @@ exports[`<Home /> should render 1`] = `
               <strong
                 class="c64"
               >
-                <span
+                <div
                   class="c65"
                 />
                 Besoin de plus d’informations ?

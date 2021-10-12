@@ -537,7 +537,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 .c67 {
   position: absolute;
   background-color: #f66663;
-  border-radius: 0;
+  border-radius: none;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2506,7 +2506,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <span
+                      <div
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -2613,7 +2613,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <span
+                        <div
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -2722,7 +2722,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <span
+                          <div
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -2899,7 +2899,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <span
+                      <div
                         class="c67"
                       />
                       <span>
@@ -2946,7 +2946,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <span
+                  <div
                     class="c90"
                   />
                   Besoin de plus d’informations ?
@@ -3820,7 +3820,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 .c67 {
   position: absolute;
   background-color: #f66663;
-  border-radius: 0;
+  border-radius: none;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -5789,7 +5789,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <span
+                      <div
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -5896,7 +5896,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <span
+                        <div
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -6005,7 +6005,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <span
+                          <div
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -6182,7 +6182,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <span
+                      <div
                         class="c67"
                       />
                       <span>
@@ -6229,7 +6229,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <span
+                  <div
                     class="c90"
                   />
                   Besoin de plus d’informations ?

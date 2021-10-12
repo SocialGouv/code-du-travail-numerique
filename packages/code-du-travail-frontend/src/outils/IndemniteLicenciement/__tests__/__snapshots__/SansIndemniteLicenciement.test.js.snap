@@ -140,7 +140,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <h3
         class="c2"
       >
-        <span
+        <div
           class="c3"
         />
         Convention collective nationale de l’Animation

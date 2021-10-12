@@ -542,7 +542,7 @@ exports[`<FicheMT /> should render 1`] = `
 .c70 {
   position: absolute;
   background-color: #f66663;
-  border-radius: 0;
+  border-radius: none;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2264,7 +2264,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <h1
                     class="c48"
                   >
-                    <span
+                    <div
                       class="c49"
                     />
                     Fiche MT test
@@ -2569,7 +2569,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <strong
                     class="c68 c69"
                   >
-                    <span
+                    <div
                       class="c70"
                     />
                     <span>
@@ -2616,7 +2616,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 class="c78"
               >
-                <span
+                <div
                   class="c79"
                 />
                 Besoin de plus d’informations ?

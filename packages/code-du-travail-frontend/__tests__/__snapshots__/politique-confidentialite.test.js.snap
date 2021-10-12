@@ -1321,7 +1321,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             <h1
               class="c27"
             >
-              <span
+              <div
                 class="c28"
               />
               Politique de confidentialité
@@ -1336,7 +1336,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <h2
                 class="c31"
               >
-                <span
+                <div
                   class="c32"
                 />
                 Traitement des données à caractère personnel
@@ -1401,7 +1401,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <h2
                 class="c31"
               >
-                <span
+                <div
                   class="c32"
                 />
                 Utilisation de témoins de connexion (« cookies »)
@@ -1488,7 +1488,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <strong
                 class="c38"
               >
-                <span
+                <div
                   class="c28"
                 />
                 Besoin de plus d’informations ?

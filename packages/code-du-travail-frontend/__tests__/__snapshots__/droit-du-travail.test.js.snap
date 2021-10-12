@@ -2432,7 +2432,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h1
               class="c27"
             >
-              <span
+              <div
                 class="c28"
               />
               Le droit du travail
@@ -2461,7 +2461,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <h2
                   class="c34"
                 >
-                  <span
+                  <div
                     class="c35"
                   />
                   Qu’est-ce que le droit du travail ?
@@ -2535,7 +2535,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <h2
                 class="c46"
               >
-                <span
+                <div
                   class="c35"
                 />
                 Quels sont les textes à l’origine du droit du travail ?
@@ -3695,7 +3695,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h2
               class="c46"
             >
-              <span
+              <div
                 class="c35"
               />
               Existe-t-il une hiérarchie entre les textes ?
@@ -4966,7 +4966,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 class="c95"
               >
-                <span
+                <div
                   class="c28"
                 />
                 Besoin de plus d’informations ?

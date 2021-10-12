@@ -252,7 +252,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c32 {
   position: absolute;
   background-color: #7994d4;
-  border-radius: 0;
+  border-radius: none;
   top: 0;
   left: 50%;
   width: 5rem;
@@ -993,7 +993,7 @@ exports[`<SearchResults/> should render results 1`] = `
           <h2
             class="c23"
           >
-            <span
+            <div
               class="c24"
             />
             Que dit le code du travail ?
@@ -1045,7 +1045,7 @@ exports[`<SearchResults/> should render results 1`] = `
           <h2
             class="c23"
           >
-            <span
+            <div
               class="c24"
             />
             Les thèmes suivants peuvent vous intéresser
@@ -1070,7 +1070,7 @@ exports[`<SearchResults/> should render results 1`] = `
                   <div
                     class="c5"
                   >
-                    <span
+                    <div
                       class="c32"
                     />
                     <div

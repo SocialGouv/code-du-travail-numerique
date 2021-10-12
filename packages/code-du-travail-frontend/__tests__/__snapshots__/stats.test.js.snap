@@ -1466,7 +1466,7 @@ exports[`<Stats /> should render 1`] = `
             <h1
               class="c26"
             >
-              <span
+              <div
                 class="c27"
               />
               Statistiques du Code du travail numérique
@@ -1587,7 +1587,7 @@ exports[`<Stats /> should render 1`] = `
               <strong
                 class="c42"
               >
-                <span
+                <div
                   class="c27"
                 />
                 Besoin de plus d’informations ?

@@ -1345,7 +1345,7 @@ exports[`<About /> should render 1`] = `
             <h1
               class="c27"
             >
-              <span
+              <div
                 class="c28"
               />
               À propos
@@ -1365,7 +1365,7 @@ exports[`<About /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <span
+                <div
                   class="c33"
                 />
                 Qu’est-ce que le Code du travail numérique ?
@@ -1445,7 +1445,7 @@ exports[`<About /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <span
+                <div
                   class="c33"
                 />
                 Qui sommes-nous ?
@@ -1530,7 +1530,7 @@ exports[`<About /> should render 1`] = `
               <strong
                 class="c39"
               >
-                <span
+                <div
                   class="c28"
                 />
                 Besoin de plus d’informations ?
