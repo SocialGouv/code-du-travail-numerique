@@ -25,7 +25,7 @@ const MiseRetraiteCcReferences = [
   ...CommonReferences,
 ];
 
-describe("Convention collective 2098", () => {
+describe("Préavis de retraite de la CC 2098", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
       category                                     | seniority | expectedResult
