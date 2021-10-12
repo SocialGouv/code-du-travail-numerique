@@ -5,7 +5,7 @@ export const MiseRetraiteReferences = [
   },
   {
     article: "Article L1234-1",
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112/2",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
   },
 ];
 
@@ -16,6 +16,6 @@ export const DepartRetraiteReferences = [
   },
   {
     article: "Article L1234-1",
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112/2",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
   },
 ];
