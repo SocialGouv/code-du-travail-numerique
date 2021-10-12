@@ -36,8 +36,8 @@ const MiseRetraiteCCReferencesCharge = [
   },
 ];
 
-describe("Vérification des références juridiques pour le départ et la mise retraite de la CC 1486", () => {
-  test("Vérification des références juridiques pour un départ à la retraite", () => {
+describe("Références juridiques pour le préavis de retraite de la CC 1486", () => {
+  test("Départ à la retraite", () => {
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1486'",
@@ -54,21 +54,18 @@ describe("Vérification des références juridiques pour le départ et la mise r
     category                             | expectedReferences
     ${"Autres salariés"}                 | ${MiseRetraiteCCReferencesAutre}
     ${"Chargés d'enquête intermittents"} | ${MiseRetraiteCCReferencesCharge}
-  `(
-    "Vérification des références juridiques pour une mise à la retraite",
-    ({ category, expectedReferences }) => {
-      const result = getReferences(
-        engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1486'",
-          "contrat salarié . ancienneté": 6,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
-        })
-      );
+  `("Mise à la retraite", ({ category, expectedReferences }) => {
+    const result = getReferences(
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC1486'",
+        "contrat salarié . ancienneté": 6,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
+      })
+    );
 
-      expect(result).toHaveLength(expectedReferences.length);
-      expect(result).toEqual(expect.arrayContaining(expectedReferences));
-    }
-  );
+    expect(result).toHaveLength(expectedReferences.length);
+    expect(result).toEqual(expect.arrayContaining(expectedReferences));
+  });
 });
