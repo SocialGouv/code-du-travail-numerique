@@ -20,7 +20,7 @@ const DepartRetraiteCcReferences = [
 
 const MiseRetraiteCcReferences = [...MiseRetraiteReferences, CommonReference];
 
-describe("Convention collective 1518", () => {
+describe("Préavis de retraite de la CC 1518", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
       seniority | expectedResult
@@ -72,7 +72,7 @@ describe("Convention collective 1518", () => {
       ${"Animateurs techniciens et professeurs (niveaux A et B)"} | ${24}     | ${2}
       ${"Animateurs techniciens et professeurs (niveaux A et B)"} | ${25}     | ${2}
     `(
-      "Pour un employé de tel catégories : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1518'",
