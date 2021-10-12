@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   BurgerNav as RootBurgerNav,
   BurgerNavButton as NavButton,
@@ -8,6 +6,7 @@ import {
   theme,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
+import React from "react";
 import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
