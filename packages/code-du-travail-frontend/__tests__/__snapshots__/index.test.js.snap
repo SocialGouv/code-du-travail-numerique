@@ -2398,6 +2398,7 @@ exports[`<Home /> should render 1`] = `
                   y2="89492.9"
                 >
                   <stop
+                    offset="0"
                     stop-color="gray"
                     stop-opacity="0.25"
                   />
@@ -2421,6 +2422,7 @@ exports[`<Home /> should render 1`] = `
                   y2="51679.6"
                 >
                   <stop
+                    offset="0"
                     stop-color="gray"
                     stop-opacity="0.25"
                   />
