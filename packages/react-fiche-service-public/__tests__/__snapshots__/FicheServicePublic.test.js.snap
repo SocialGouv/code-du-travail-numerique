@@ -556,7 +556,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <h2
               class="c11"
             >
-              <div
+              <span
                 class="c12"
               />
               CDI

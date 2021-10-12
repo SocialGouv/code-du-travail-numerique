@@ -6,7 +6,7 @@ import { box } from "../theme.js";
 export const Stripe = styled.span`
   position: absolute;
   background-color: ${({ variant, theme }) => theme[variant]};
-  border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "none")};
+  border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "0")};
   ${({ position, length }) => {
     return css`
       top: ${position === "top" ? "0" : "50%"};

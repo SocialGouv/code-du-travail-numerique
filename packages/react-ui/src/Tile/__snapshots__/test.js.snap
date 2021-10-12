@@ -186,7 +186,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 .c2 {
   position: absolute;
   background-color: #7994d4;
-  border-radius: none;
+  border-radius: 0;
   top: 0;
   left: 50%;
   width: 5rem;

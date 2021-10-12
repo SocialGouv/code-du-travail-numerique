@@ -542,7 +542,7 @@ exports[`<FicheMT /> should render 1`] = `
 .c70 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -681,7 +681,6 @@ exports[`<FicheMT /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -708,7 +707,6 @@ exports[`<FicheMT /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -2146,7 +2144,6 @@ exports[`<FicheMT /> should render 1`] = `
                   >
                     <button
                       class="c39 no-after"
-                      spacing="left"
                       title="Partager sur Facebook"
                       type="button"
                     >
@@ -2169,7 +2166,6 @@ exports[`<FicheMT /> should render 1`] = `
                     <a
                       class="c42"
                       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                      spacing="left"
                       title="Envoyer par email"
                     >
                       <div
@@ -2194,7 +2190,6 @@ exports[`<FicheMT /> should render 1`] = `
                     </a>
                     <button
                       class="c39"
-                      spacing="left"
                       title="Partager sur LinkedIn"
                     >
                       <div
@@ -2218,7 +2213,6 @@ exports[`<FicheMT /> should render 1`] = `
                     >
                       <button
                         class="c39"
-                        spacing="left"
                         title="Plus d’options"
                       >
                         <div
@@ -2447,7 +2441,6 @@ exports[`<FicheMT /> should render 1`] = `
             >
               <button
                 class="c39 no-after"
-                spacing="left"
                 title="Partager sur Facebook"
                 type="button"
               >
@@ -2470,7 +2463,6 @@ exports[`<FicheMT /> should render 1`] = `
               <a
                 class="c42"
                 href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                spacing="left"
                 title="Envoyer par email"
               >
                 <div
@@ -2495,7 +2487,6 @@ exports[`<FicheMT /> should render 1`] = `
               </a>
               <button
                 class="c39"
-                spacing="left"
                 title="Partager sur LinkedIn"
               >
                 <div
@@ -2519,7 +2510,6 @@ exports[`<FicheMT /> should render 1`] = `
               >
                 <button
                   class="c39"
-                  spacing="left"
                   title="Plus d’options"
                 >
                   <div

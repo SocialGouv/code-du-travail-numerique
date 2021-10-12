@@ -21,7 +21,6 @@ export const Share = ({ title, metaDescription }) => {
   return (
     <Flex>
       <StyledButton
-        spacing="left"
         type="button"
         className="no-after"
         title="Partager sur Facebook"
@@ -46,7 +45,6 @@ export const Share = ({ title, metaDescription }) => {
         )}&body=${`${encodeURIComponent(
           `${metaDescription}\n\n${currentPageUrl}`
         )}`}`}
-        spacing="left"
         title="Envoyer par email"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
@@ -57,7 +55,6 @@ export const Share = ({ title, metaDescription }) => {
         </Circle>
       </StyledLink>
       <StyledButton
-        spacing="left"
         title="Partager sur LinkedIn"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
@@ -77,7 +74,6 @@ export const Share = ({ title, metaDescription }) => {
       <Dropdown
         opener={(showDropdown) => (
           <StyledButton
-            spacing="left"
             title="Plus d’options"
             onClick={async () => {
               matopush([
@@ -230,7 +226,7 @@ const Circle = styled.div`
   border-radius: 50%;
 `;
 
-const StyledIcon = styled.div`
+const StyledIcon = styled.span`
   display: block;
   width: 2rem;
   height: 2rem;

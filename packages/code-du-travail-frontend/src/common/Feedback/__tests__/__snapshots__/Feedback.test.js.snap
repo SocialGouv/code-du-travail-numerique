@@ -96,7 +96,7 @@ exports[`<Feedback/> should render 1`] = `
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -493,7 +493,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1086,7 +1086,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;

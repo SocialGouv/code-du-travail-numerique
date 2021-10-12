@@ -252,7 +252,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c32 {
   position: absolute;
   background-color: #7994d4;
-  border-radius: none;
+  border-radius: 0;
   top: 0;
   left: 50%;
   width: 5rem;

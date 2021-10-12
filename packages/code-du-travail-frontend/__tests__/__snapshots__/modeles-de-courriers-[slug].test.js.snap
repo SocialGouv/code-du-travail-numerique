@@ -633,7 +633,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 .c71 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -772,7 +772,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -799,7 +798,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -2272,7 +2270,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   >
                     <button
                       class="c38 no-after"
-                      spacing="left"
                       title="Partager sur Facebook"
                       type="button"
                     >
@@ -2295,7 +2292,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <a
                       class="c41"
                       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                      spacing="left"
                       title="Envoyer par email"
                     >
                       <div
@@ -2320,7 +2316,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </a>
                     <button
                       class="c38"
-                      spacing="left"
                       title="Partager sur LinkedIn"
                     >
                       <div
@@ -2344,7 +2339,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     >
                       <button
                         class="c38"
-                        spacing="left"
                         title="Plus d’options"
                       >
                         <div
@@ -2544,7 +2538,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             >
               <button
                 class="c38 no-after"
-                spacing="left"
                 title="Partager sur Facebook"
                 type="button"
               >
@@ -2567,7 +2560,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <a
                 class="c41"
                 href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                spacing="left"
                 title="Envoyer par email"
               >
                 <div
@@ -2592,7 +2584,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </a>
               <button
                 class="c38"
-                spacing="left"
                 title="Partager sur LinkedIn"
               >
                 <div
@@ -2616,7 +2607,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               >
                 <button
                   class="c38"
-                  spacing="left"
                   title="Plus d’options"
                 >
                   <div

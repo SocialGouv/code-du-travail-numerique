@@ -26,7 +26,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -53,7 +52,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -112,7 +110,6 @@ exports[`<Share /> renders 1`] = `
   >
     <button
       class="c1 no-after"
-      spacing="left"
       title="Partager sur Facebook"
       type="button"
     >
@@ -135,7 +132,6 @@ exports[`<Share /> renders 1`] = `
     <a
       class="c4"
       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-      spacing="left"
       title="Envoyer par email"
     >
       <div
@@ -160,7 +156,6 @@ exports[`<Share /> renders 1`] = `
     </a>
     <button
       class="c1"
-      spacing="left"
       title="Partager sur LinkedIn"
     >
       <div
@@ -184,7 +179,6 @@ exports[`<Share /> renders 1`] = `
     >
       <button
         class="c1"
-        spacing="left"
         title="Plus d’options"
       >
         <div
