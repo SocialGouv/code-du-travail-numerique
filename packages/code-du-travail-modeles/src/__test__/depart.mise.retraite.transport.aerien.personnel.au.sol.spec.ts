@@ -1,6 +1,5 @@
 import Engine from "publicodes";
 import { mergeModels } from "../internal/merger";
-import { getNotifications } from "../utils/GetNotifications";
 
 const engine = new Engine(mergeModels());
 
@@ -44,7 +43,6 @@ test.each`
     expect(result.missingVariables).toEqual({});
   }
 );
-
 
 test.each`
   seniority | category                | expectedNotice

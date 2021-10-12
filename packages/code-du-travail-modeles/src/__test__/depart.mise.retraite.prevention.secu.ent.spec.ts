@@ -1,5 +1,4 @@
 import Engine from "publicodes";
-import { getNotifications } from "../utils/GetNotifications";
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
