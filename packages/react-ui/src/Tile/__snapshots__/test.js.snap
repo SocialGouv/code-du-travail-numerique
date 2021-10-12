@@ -300,7 +300,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
     <div
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       <div
