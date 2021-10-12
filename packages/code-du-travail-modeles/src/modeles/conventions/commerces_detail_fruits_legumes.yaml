@@ -3,8 +3,6 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   applicable si: convention collective = 'IDCC1505'
   valeur: oui
   idcc: 1505
-  références:
-    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle:
   titre: Catégorie professionnelle
@@ -19,6 +17,8 @@ contrat salarié . convention collective . commerces de détail fruits et légum
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise:
   applicable si: catégorie professionnelle = 'Agents de maîtrise (Niveaux N5 et N6)'
   valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise . départ ou mise à la retraite:
   applicable si:
@@ -31,6 +31,8 @@ contrat salarié . convention collective . commerces de détail fruits et légum
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers, Employés (Niveaux N1 à N4)'
   valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers . départ à la retraite:
   applicable si: départ à la retraite
@@ -45,6 +47,8 @@ contrat salarié . convention collective . commerces de détail fruits et légum
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres:
   applicable si: catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
   valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres . départ à la retraite:
   applicable si: départ à la retraite
