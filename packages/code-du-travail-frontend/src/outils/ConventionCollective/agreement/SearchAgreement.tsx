@@ -1,10 +1,10 @@
 import React, { ForwardedRef, useState } from "react";
 
 import { Agreement } from "../../../conventions/Search/api/agreements.service";
+import { searchEnterprises } from "../../../conventions/Search/api/enterprises.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
-import { searchEnterprises } from "../../../conventions/Search/api/enterprises.service";
 
 type Props = {
   renderResults: (

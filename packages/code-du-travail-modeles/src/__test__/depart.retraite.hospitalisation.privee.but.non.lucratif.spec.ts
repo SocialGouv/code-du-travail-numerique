@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
 
@@ -38,11 +39,11 @@ test.each`
   ({ seniority, category, expectedNotice }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -65,12 +66,13 @@ test.each`
   ({ seniority, coefficient, expectedNotice }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Cadres administratifs et de gestion'`,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient":
+          coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Cadres administratifs et de gestion'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -120,12 +122,13 @@ test.each`
   ({ seniority, category, coefficient }) => {
     const notifications = getNotifications(
       engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient":
+          coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
       })
     );
 

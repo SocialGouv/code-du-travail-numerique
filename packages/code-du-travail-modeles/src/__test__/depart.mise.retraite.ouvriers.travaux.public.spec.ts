@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -38,8 +39,8 @@ describe("Convention collective 1702", () => {
       "Pour un employé possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, expectedResult }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1702'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1702'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         });
@@ -70,8 +71,8 @@ describe("Convention collective 1702", () => {
       "Pour un employé possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, expectedResult }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1702'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1702'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
         });

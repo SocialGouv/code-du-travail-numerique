@@ -1,11 +1,12 @@
-import Engine, { RuleNode } from "publicodes";
+import type { RuleNode } from "publicodes";
+import type Engine from "publicodes";
 
 export type Notification = {
   dottedName: RuleNode["dottedName"];
   description: RuleNode["rawNode"]["description"];
 };
 
-export function getNotifications(engine: Engine): Array<Notification> {
+export function getNotifications(engine: Engine): Notification[] {
   return Object.values(engine.getParsedRules())
     .filter(
       (rule) =>
@@ -13,7 +14,7 @@ export function getNotifications(engine: Engine): Array<Notification> {
         !!engine.evaluate(rule.dottedName).nodeValue
     )
     .map(({ dottedName, rawNode: { description } }) => ({
-      dottedName,
       description,
+      dottedName,
     }));
 }

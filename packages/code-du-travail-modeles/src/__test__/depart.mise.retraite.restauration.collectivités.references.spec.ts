@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 const AllRetraite = [
@@ -34,12 +35,12 @@ describe("Vérification des références juridiques", () => {
     ({ retirement, expectedReferences, category }) => {
       const result = getReferences(
         engine.setSituation({
+          "contrat salarié . ancienneté": 5,
           "contrat salarié . convention collective": "'IDCC1266'",
+          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite":
             retirement === "mise" ? "oui" : "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . ancienneté": 5,
-          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
         })
       );
 

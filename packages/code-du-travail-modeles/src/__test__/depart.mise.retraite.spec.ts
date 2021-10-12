@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -17,8 +18,8 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "''",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -44,8 +45,8 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "''",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })

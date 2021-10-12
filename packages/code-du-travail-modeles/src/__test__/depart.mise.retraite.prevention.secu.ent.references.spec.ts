@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -96,10 +97,10 @@ test.each`
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1351'",
+        "contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle": `'${category}'`,
       })
     );
 

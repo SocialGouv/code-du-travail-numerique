@@ -1,5 +1,5 @@
-import path from "path";
 import fs from "fs";
+import path from "path";
 import yaml from "yaml";
 
 const publicodesDir = path.resolve(__dirname, "../../src/modeles");
@@ -24,7 +24,7 @@ function concatenateFilesInDir(
         return filename.endsWith(".yaml") &&
           (filename === "contrat-salarie.yaml" ||
             includedCcFiles === undefined ||
-            includedCcFiles?.includes(filename))
+            includedCcFiles.includes(filename))
           ? fs.readFileSync(fullpath).toString()
           : "";
       }

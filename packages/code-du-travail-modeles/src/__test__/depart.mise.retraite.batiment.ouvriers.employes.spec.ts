@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -34,8 +35,8 @@ describe("Vérification des départs à la retraite, mise à la retraite et des 
     "Pour un employé possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
     ({ retirement, seniority, expectedResult, expectedReferences }) => {
       const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1596'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1596'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
