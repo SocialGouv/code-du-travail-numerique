@@ -5,10 +5,10 @@ import styled from "styled-components";
 export function SkipNavLink() {
   return (
     <SkipNav as="div">
-      <nav aria-label="liens d'évitements" role="navigation">
+      <nav aria-label="liens d'évitements">
         <Ul>
           <Li>
-            <SkipLink type="inline" as="a" href="#navigation">
+            <SkipLink as="a" href="#navigation">
               Allez à la navigation
             </SkipLink>
           </Li>
@@ -48,6 +48,7 @@ const SkipLink = styled.a`
   display: inline-block;
   left: -7000px;
   position: absolute;
+
   :focus {
     color: ${({ theme }) => theme.white};
     left: 0;

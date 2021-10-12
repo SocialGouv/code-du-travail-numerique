@@ -30,7 +30,6 @@ export const Header = ({ currentPage = "" }) => {
   const isContentPage = currentPage !== "home" && currentPage !== "search";
   return (
     <StyledHeader
-      role="banner"
       overThreshold={overThreshold}
       floating={floating}
       showFloatingMenu={showFloatingMenu}

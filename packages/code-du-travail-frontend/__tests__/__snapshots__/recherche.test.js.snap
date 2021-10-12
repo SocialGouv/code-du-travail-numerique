@@ -1193,7 +1193,6 @@ exports[`<Recherche /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1265,7 +1264,6 @@ exports[`<Recherche /> should render 1`] = `
     <main
       class="c14"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1277,7 +1275,7 @@ exports[`<Recherche /> should render 1`] = `
           <h1
             class="c17"
           >
-            <div
+            <span
               class="c18"
             />
             Recherche
@@ -1296,7 +1294,6 @@ exports[`<Recherche /> should render 1`] = `
             >
               <label
                 for="search-input"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1363,7 +1360,7 @@ exports[`<Recherche /> should render 1`] = `
             <strong
               class="c30"
             >
-              <div
+              <span
                 class="c31"
               />
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
@@ -1392,7 +1389,6 @@ exports[`<Recherche /> should render 1`] = `
     >
       <footer
         class="c36"
-        role="contentinfo"
       >
         <div
           class="c27 c37"
@@ -1406,7 +1402,7 @@ exports[`<Recherche /> should render 1`] = `
               <strong
                 class="c39"
               >
-                <div
+                <span
                   class="c18"
                 />
                 Besoin de plus d’informations ?

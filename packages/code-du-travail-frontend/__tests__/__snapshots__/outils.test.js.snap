@@ -1416,7 +1416,6 @@ exports[`<Outils /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1474,7 +1473,6 @@ exports[`<Outils /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1567,7 +1565,6 @@ exports[`<Outils /> should render 1`] = `
     <main
       class="c24"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1582,7 +1579,7 @@ exports[`<Outils /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Retrouvez tous nos outils
@@ -2710,7 +2707,6 @@ exports[`<Outils /> should render 1`] = `
     >
       <footer
         class="c49"
-        role="contentinfo"
       >
         <div
           class="c25 c50"
@@ -2724,7 +2720,7 @@ exports[`<Outils /> should render 1`] = `
               <strong
                 class="c52"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

@@ -2266,7 +2266,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -2324,7 +2323,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2417,7 +2415,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     <main
       class="c24"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -2432,7 +2429,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Le droit du travail
@@ -2461,7 +2458,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <h2
                   class="c34"
                 >
-                  <div
+                  <span
                     class="c35"
                   />
                   Qu’est-ce que le droit du travail ?
@@ -2535,7 +2532,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <h2
                 class="c46"
               >
-                <div
+                <span
                   class="c35"
                 />
                 Quels sont les textes à l’origine du droit du travail ?
@@ -3695,7 +3692,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h2
               class="c46"
             >
-              <div
+              <span
                 class="c35"
               />
               Existe-t-il une hiérarchie entre les textes ?
@@ -4952,7 +4949,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     >
       <footer
         class="c92"
-        role="contentinfo"
       >
         <div
           class="c25 c93"
@@ -4966,7 +4962,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 class="c95"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

@@ -74,9 +74,7 @@ const SearchBar = ({
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
-        <label htmlFor={inputId} id="search">
-          Rechercher
-        </label>
+        <label htmlFor={inputId}>Rechercher</label>
       </ScreenReaderOnly>
       {hasButton && !hasSearchIcon && <SearchIconLeft />}
       <SearchInput
@@ -173,9 +171,11 @@ const SearchInput = styled(DocumentSuggester)`
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
   appearance: none;
+
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     height: 5.4rem;
     padding: ${({ hasButton }) =>

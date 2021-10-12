@@ -16,7 +16,7 @@ export const BurgerNav = ({ currentPage }) => (
     <AccessibilityModal>
       {(openModal) => <NavButton onClick={openModal}>Accessibilité</NavButton>}
     </AccessibilityModal>
-    <Nav id="navigation" role="navigation" aria-label="Navigation du site">
+    <Nav id="navigation" aria-label="Navigation du site">
       <Ul>
         <Li>
           {currentPage !== "tools" ? (

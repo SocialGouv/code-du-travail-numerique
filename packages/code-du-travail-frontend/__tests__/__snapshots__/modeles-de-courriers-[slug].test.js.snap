@@ -2037,7 +2037,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -2095,7 +2094,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2188,7 +2186,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <nav
@@ -2390,7 +2387,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   <h1
                     class="c47"
                   >
-                    <div
+                    <span
                       class="c48"
                     />
                     Courrier Epistolaire
@@ -2666,7 +2663,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   <strong
                     class="c69 c70"
                   >
-                    <div
+                    <span
                       class="c71"
                     />
                     <span>
@@ -2699,7 +2696,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
     >
       <footer
         class="c76"
-        role="contentinfo"
       >
         <div
           class="c56 c77"
@@ -2713,7 +2709,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 class="c79"
               >
-                <div
+                <span
                   class="c80"
                 />
                 Besoin de plus d’informations ?

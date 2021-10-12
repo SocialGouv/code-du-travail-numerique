@@ -2131,7 +2131,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       />
       <header
         class="c2"
-        role="banner"
       >
         <div
           class="c3"
@@ -2189,7 +2188,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               >
                 <label
                   for="floating-search"
-                  id="search"
                 >
                   Rechercher
                 </label>
@@ -2282,7 +2280,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       <main
         class="c23"
         id="content"
-        role="main"
         tabindex="-1"
       >
         <nav
@@ -2506,7 +2503,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <div
+                      <span
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -2613,7 +2610,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <div
+                        <span
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -2722,7 +2719,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <div
+                          <span
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -2899,7 +2896,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <div
+                      <span
                         class="c67"
                       />
                       <span>
@@ -2932,7 +2929,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       >
         <footer
           class="c86"
-          role="contentinfo"
         >
           <div
             class="c62 c87"
@@ -2946,7 +2942,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <div
+                  <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
@@ -5414,7 +5410,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       />
       <header
         class="c2"
-        role="banner"
       >
         <div
           class="c3"
@@ -5472,7 +5467,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               >
                 <label
                   for="floating-search"
-                  id="search"
                 >
                   Rechercher
                 </label>
@@ -5565,7 +5559,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       <main
         class="c23"
         id="content"
-        role="main"
         tabindex="-1"
       >
         <nav
@@ -5789,7 +5782,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <div
+                      <span
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -5896,7 +5889,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <div
+                        <span
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -6005,7 +5998,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <div
+                          <span
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -6182,7 +6175,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <div
+                      <span
                         class="c67"
                       />
                       <span>
@@ -6215,7 +6208,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       >
         <footer
           class="c86"
-          role="contentinfo"
         >
           <div
             class="c62 c87"
@@ -6229,7 +6221,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <div
+                  <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?

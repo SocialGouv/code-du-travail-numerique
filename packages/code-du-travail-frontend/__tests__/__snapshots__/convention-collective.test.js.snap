@@ -624,7 +624,7 @@ exports[`<ConventionCollective /> should render 1`] = `
               <strong
                 class="c16 c17"
               >
-                <div
+                <span
                   class="c18"
                 />
                 <span>

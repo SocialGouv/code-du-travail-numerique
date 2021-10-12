@@ -1911,7 +1911,6 @@ exports[`<FicheMT /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1969,7 +1968,6 @@ exports[`<FicheMT /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2062,7 +2060,6 @@ exports[`<FicheMT /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <nav
@@ -2264,7 +2261,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <h1
                     class="c48"
                   >
-                    <div
+                    <span
                       class="c49"
                     />
                     Fiche MT test
@@ -2569,7 +2566,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <strong
                     class="c68 c69"
                   >
-                    <div
+                    <span
                       class="c70"
                     />
                     <span>
@@ -2602,7 +2599,6 @@ exports[`<FicheMT /> should render 1`] = `
     >
       <footer
         class="c75"
-        role="contentinfo"
       >
         <div
           class="c64 c76"
@@ -2616,7 +2612,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 class="c78"
               >
-                <div
+                <span
                   class="c79"
                 />
                 Besoin de plus d’informations ?

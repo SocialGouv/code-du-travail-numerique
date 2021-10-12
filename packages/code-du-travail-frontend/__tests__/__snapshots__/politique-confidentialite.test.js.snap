@@ -1155,7 +1155,6 @@ exports[`<CookiePolicy /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1213,7 +1212,6 @@ exports[`<CookiePolicy /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1306,7 +1304,6 @@ exports[`<CookiePolicy /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1321,7 +1318,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Politique de confidentialité
@@ -1336,7 +1333,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <h2
                 class="c31"
               >
-                <div
+                <span
                   class="c32"
                 />
                 Traitement des données à caractère personnel
@@ -1401,7 +1398,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <h2
                 class="c31"
               >
-                <div
+                <span
                   class="c32"
                 />
                 Utilisation de témoins de connexion (« cookies »)
@@ -1474,7 +1471,6 @@ exports[`<CookiePolicy /> should render 1`] = `
     >
       <footer
         class="c35"
-        role="contentinfo"
       >
         <div
           class="c24 c36"
@@ -1488,7 +1484,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <strong
                 class="c38"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

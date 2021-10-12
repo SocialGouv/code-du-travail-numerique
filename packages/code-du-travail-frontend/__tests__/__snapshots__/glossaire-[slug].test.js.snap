@@ -1189,7 +1189,6 @@ exports[`<Term /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1247,7 +1246,6 @@ exports[`<Term /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1340,7 +1338,6 @@ exports[`<Term /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1355,7 +1352,7 @@ exports[`<Term /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Accord d'entreprise
@@ -1406,7 +1403,6 @@ exports[`<Term /> should render 1`] = `
     >
       <footer
         class="c34"
-        role="contentinfo"
       >
         <div
           class="c24 c35"
@@ -1420,7 +1416,7 @@ exports[`<Term /> should render 1`] = `
               <strong
                 class="c37"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

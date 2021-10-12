@@ -998,7 +998,6 @@ exports[`<Layout /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1056,7 +1055,6 @@ exports[`<Layout /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1149,7 +1147,6 @@ exports[`<Layout /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <h1>
@@ -1164,7 +1161,6 @@ exports[`<Layout /> should render 1`] = `
     >
       <footer
         class="c25"
-        role="contentinfo"
       >
         <div
           class="c26 c27"
@@ -1178,7 +1174,7 @@ exports[`<Layout /> should render 1`] = `
               <strong
                 class="c29"
               >
-                <div
+                <span
                   class="c30"
                 />
                 Besoin de plus d’informations ?

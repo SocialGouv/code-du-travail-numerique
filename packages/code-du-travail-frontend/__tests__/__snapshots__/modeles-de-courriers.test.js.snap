@@ -1279,7 +1279,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1337,7 +1336,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1430,7 +1428,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1445,7 +1442,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Modèles de documents
@@ -1638,7 +1635,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     >
       <footer
         class="c47"
-        role="contentinfo"
       >
         <div
           class="c24 c48"
@@ -1652,7 +1648,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <strong
                 class="c50"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

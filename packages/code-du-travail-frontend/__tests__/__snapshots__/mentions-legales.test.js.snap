@@ -1205,7 +1205,6 @@ exports[`<MentionLegales /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1263,7 +1262,6 @@ exports[`<MentionLegales /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1356,7 +1354,6 @@ exports[`<MentionLegales /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1371,7 +1368,7 @@ exports[`<MentionLegales /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Mentions légales
@@ -1409,7 +1406,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Directeur de la publication
@@ -1424,7 +1421,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Hébergement
@@ -1460,7 +1457,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Accessibilité
@@ -1507,7 +1504,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Sécurité
@@ -1525,7 +1522,6 @@ exports[`<MentionLegales /> should render 1`] = `
     >
       <footer
         class="c38"
-        role="contentinfo"
       >
         <div
           class="c24 c39"
@@ -1539,7 +1535,7 @@ exports[`<MentionLegales /> should render 1`] = `
               <strong
                 class="c41"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

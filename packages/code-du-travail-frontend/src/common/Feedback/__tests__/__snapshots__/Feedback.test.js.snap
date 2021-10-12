@@ -293,7 +293,7 @@ exports[`<Feedback/> should render 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span>
@@ -836,7 +836,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span
@@ -1357,7 +1357,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span

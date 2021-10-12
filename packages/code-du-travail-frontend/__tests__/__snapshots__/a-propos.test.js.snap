@@ -1179,7 +1179,6 @@ exports[`<About /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1237,7 +1236,6 @@ exports[`<About /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1330,7 +1328,6 @@ exports[`<About /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1345,7 +1342,7 @@ exports[`<About /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               À propos
@@ -1365,7 +1362,7 @@ exports[`<About /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Qu’est-ce que le Code du travail numérique ?
@@ -1445,7 +1442,7 @@ exports[`<About /> should render 1`] = `
               <h2
                 class="c32"
               >
-                <div
+                <span
                   class="c33"
                 />
                 Qui sommes-nous ?
@@ -1516,7 +1513,6 @@ exports[`<About /> should render 1`] = `
     >
       <footer
         class="c36"
-        role="contentinfo"
       >
         <div
           class="c24 c37"
@@ -1530,7 +1526,7 @@ exports[`<About /> should render 1`] = `
               <strong
                 class="c39"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

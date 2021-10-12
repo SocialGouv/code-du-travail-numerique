@@ -1591,7 +1591,6 @@ exports[`<Home /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1663,7 +1662,6 @@ exports[`<Home /> should render 1`] = `
     <main
       class="c15"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -1712,7 +1710,6 @@ exports[`<Home /> should render 1`] = `
               >
                 <label
                   for="searchbar"
-                  id="search"
                 >
                   Rechercher
                 </label>
@@ -2455,7 +2452,7 @@ exports[`<Home /> should render 1`] = `
             <h2
               class="c36"
             >
-              <div
+              <span
                 class="c37"
               />
               Boîte à outils
@@ -2907,7 +2904,6 @@ exports[`<Home /> should render 1`] = `
     >
       <footer
         class="c61"
-        role="contentinfo"
       >
         <div
           class="c16 c62"
@@ -2921,7 +2917,7 @@ exports[`<Home /> should render 1`] = `
               <strong
                 class="c64"
               >
-                <div
+                <span
                   class="c65"
                 />
                 Besoin de plus d’informations ?
