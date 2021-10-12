@@ -1,6 +1,6 @@
 const router = require("koa-router")();
 
-router.get("/", async (ctx: any) => {
+router.get("/", async (ctx) => {
   ctx.body = { message: "running" };
 });
 
