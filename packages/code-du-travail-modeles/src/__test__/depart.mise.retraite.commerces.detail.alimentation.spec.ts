@@ -3,7 +3,7 @@ import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
 
-describe("CC 1505", () => {
+describe("Préavis de retraite pour la CC 1505", () => {
   describe("Départ à la retraite", () => {
     test.each`
       seniority | category        | expectedNotice
