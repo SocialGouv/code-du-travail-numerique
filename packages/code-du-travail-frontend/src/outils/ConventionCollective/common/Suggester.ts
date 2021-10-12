@@ -1,4 +1,5 @@
 import { Reducer, useEffect, useReducer } from "react";
+import { TrackingContext } from "./TrackingContext";
 
 export enum Status {
   idle = "idle",
@@ -70,9 +71,15 @@ type Fetcher<Result> = (query: string, address?: string) => Promise<Result>;
  * a factory function that return a suggesterHook that
  * use fetcher to return result
  * @param fetcher an async function that should receive only one argument
+ * @param eventName name of the to be sent to matomo
+ * @param trackingContext tracking context to keep track of user attempts
  * @returns a hook function
  */
-export function createSuggesterHook<Result>(fetcher: Fetcher<Result>) {
+export function createSuggesterHook<Result>(
+  fetcher: Fetcher<Result>,
+  eventName: string,
+  trackingContext: TrackingContext
+) {
   return function (query: string, address?: string): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
@@ -90,6 +97,14 @@ export function createSuggesterHook<Result>(fetcher: Fetcher<Result>) {
           if (shouldCancel) {
             return;
           }
+
+          trackingContext.trackEvent(
+            eventName,
+            trackingContext.title,
+            JSON.stringify({ address, query }),
+            trackingContext.uuid
+          );
+
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
           dispatch({ payload: error, type: Actions.failure });
