@@ -14,5 +14,6 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/no-unnecessary-condition": "warn",
+    "@typescript-eslint/consistent-type-definitions": "off",
   },
 };

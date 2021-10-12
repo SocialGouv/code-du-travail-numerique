@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 describe("restauration rapide", () => {
@@ -50,11 +51,11 @@ describe("restauration rapide", () => {
         expectedReferences,
       }) => {
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1501'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1501'",
+          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -98,11 +99,11 @@ describe("restauration rapide", () => {
         expectedReferences,
       }) => {
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1501'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1501'",
+          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");

@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -16,10 +17,10 @@ describe("Préavis retraite pour la CC 1486", () => {
       ({ expectedResult, seniority }) => {
         const result = engine
           .setSituation({
+            "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
-            "contrat salarié . ancienneté": seniority,
           })
           .evaluate("contrat salarié . préavis de retraite");
 
@@ -45,11 +46,11 @@ describe("Préavis retraite pour la CC 1486", () => {
         ({ seniority, category, expectedResult }) => {
           const result = engine
             .setSituation({
-              "contrat salarié . convention collective": "'IDCC1486'",
               "contrat salarié . ancienneté": seniority,
+              "contrat salarié . convention collective": "'IDCC1486'",
+              "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
               "contrat salarié . mise à la retraite": "oui",
               "contrat salarié . travailleur handicapé": "non",
-              "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
             })
             .evaluate("contrat salarié . préavis de retraite");
 

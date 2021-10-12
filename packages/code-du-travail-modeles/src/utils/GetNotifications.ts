@@ -1,10 +1,10 @@
 import type { RuleNode } from "publicodes";
 import type Engine from "publicodes";
 
-export interface Notification {
+export type Notification = {
   dottedName: RuleNode["dottedName"];
   description: RuleNode["rawNode"]["description"];
-}
+};
 
 export function getNotifications(engine: Engine): Notification[] {
   return Object.values(engine.getParsedRules())
