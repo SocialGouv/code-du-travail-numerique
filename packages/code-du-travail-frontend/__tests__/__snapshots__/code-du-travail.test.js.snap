@@ -525,6 +525,14 @@ exports[`<CodeDuTravail /> should render 1`] = `
   color: #f66663;
 }
 
+.c30.spacing-left {
+  margin-left: 1rem;
+}
+
+.c30.spacing-top {
+  margin-top: 1rem;
+}
+
 .c33 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -551,6 +559,14 @@ exports[`<CodeDuTravail /> should render 1`] = `
 .c33:hover,
 .c33:focus {
   color: #f66663;
+}
+
+.c33.spacing-left {
+  margin-left: 1rem;
+}
+
+.c33.spacing-top {
+  margin-top: 1rem;
 }
 
 .c31 {
@@ -1618,12 +1634,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
               class="c29"
             >
               <button
-                class="c30 no-after"
-                data-spacing="left"
+                class="c30 no-after spacing-left"
                 title="Partager sur Facebook"
                 type="button"
               >
-                <div
+                <span
                   class="c31"
                 >
                   <svg
@@ -1637,15 +1652,14 @@ exports[`<CodeDuTravail /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </button>
               <a
-                class="c33"
-                data-spacing="left"
+                class="c33 spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
-                <div
+                <span
                   class="c31"
                 >
                   <svg
@@ -1663,14 +1677,13 @@ exports[`<CodeDuTravail /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </a>
               <button
-                class="c30"
-                data-spacing="left"
+                class="c30 spacing-left"
                 title="Partager sur LinkedIn"
               >
-                <div
+                <span
                   class="c31"
                 >
                   <svg
@@ -1684,17 +1697,16 @@ exports[`<CodeDuTravail /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </button>
               <div
                 class="c34"
               >
                 <button
-                  class="c30"
-                  data-spacing="left"
+                  class="c30 spacing-left"
                   title="Plus d’options"
                 >
-                  <div
+                  <span
                     class="c31"
                   >
                     <svg
@@ -1718,7 +1730,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                         stroke-width="1.5"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
             </div>

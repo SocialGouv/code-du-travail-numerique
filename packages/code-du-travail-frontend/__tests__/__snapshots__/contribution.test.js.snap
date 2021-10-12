@@ -860,6 +860,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #f66663;
 }
 
+.c38.spacing-left {
+  margin-left: 1rem;
+}
+
+.c38.spacing-top {
+  margin-top: 1rem;
+}
+
 .c41 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -886,6 +894,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 .c41:hover,
 .c41:focus {
   color: #f66663;
+}
+
+.c41.spacing-left {
+  margin-left: 1rem;
+}
+
+.c41.spacing-top {
+  margin-top: 1rem;
 }
 
 .c39 {
@@ -2385,12 +2401,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       class="c37"
                     >
                       <button
-                        class="c38 no-after"
-                        data-spacing="left"
+                        class="c38 no-after spacing-left"
                         title="Partager sur Facebook"
                         type="button"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2404,15 +2419,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <a
-                        class="c41"
-                        data-spacing="left"
+                        class="c41 spacing-left"
                         href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                         title="Envoyer par email"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2430,14 +2444,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </a>
                       <button
-                        class="c38"
-                        data-spacing="left"
+                        class="c38 spacing-left"
                         title="Partager sur LinkedIn"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2451,17 +2464,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <div
                         class="c42"
                       >
                         <button
-                          class="c38"
-                          data-spacing="left"
+                          class="c38 spacing-left"
                           title="Plus d’options"
                         >
-                          <div
+                          <span
                             class="c39"
                           >
                             <svg
@@ -2485,7 +2497,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                                 stroke-width="1.5"
                               />
                             </svg>
-                          </div>
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -2774,12 +2786,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c37"
               >
                 <button
-                  class="c38 no-after"
-                  data-spacing="left"
+                  class="c38 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2793,15 +2804,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c41"
-                  data-spacing="left"
+                  class="c41 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2819,14 +2829,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c38"
-                  data-spacing="left"
+                  class="c38 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2840,17 +2849,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c42"
                 >
                   <button
-                    class="c38"
-                    data-spacing="left"
+                    class="c38 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c39"
                     >
                       <svg
@@ -2874,7 +2882,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -4137,6 +4145,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #f66663;
 }
 
+.c38.spacing-left {
+  margin-left: 1rem;
+}
+
+.c38.spacing-top {
+  margin-top: 1rem;
+}
+
 .c41 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4163,6 +4179,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 .c41:hover,
 .c41:focus {
   color: #f66663;
+}
+
+.c41.spacing-left {
+  margin-left: 1rem;
+}
+
+.c41.spacing-top {
+  margin-top: 1rem;
 }
 
 .c39 {
@@ -5662,12 +5686,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       class="c37"
                     >
                       <button
-                        class="c38 no-after"
-                        data-spacing="left"
+                        class="c38 no-after spacing-left"
                         title="Partager sur Facebook"
                         type="button"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5681,15 +5704,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <a
-                        class="c41"
-                        data-spacing="left"
+                        class="c41 spacing-left"
                         href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                         title="Envoyer par email"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5707,14 +5729,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </a>
                       <button
-                        class="c38"
-                        data-spacing="left"
+                        class="c38 spacing-left"
                         title="Partager sur LinkedIn"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5728,17 +5749,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <div
                         class="c42"
                       >
                         <button
-                          class="c38"
-                          data-spacing="left"
+                          class="c38 spacing-left"
                           title="Plus d’options"
                         >
-                          <div
+                          <span
                             class="c39"
                           >
                             <svg
@@ -5762,7 +5782,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                                 stroke-width="1.5"
                               />
                             </svg>
-                          </div>
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -6051,12 +6071,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c37"
               >
                 <button
-                  class="c38 no-after"
-                  data-spacing="left"
+                  class="c38 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6070,15 +6089,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c41"
-                  data-spacing="left"
+                  class="c41 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6096,14 +6114,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c38"
-                  data-spacing="left"
+                  class="c38 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6117,17 +6134,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c42"
                 >
                   <button
-                    class="c38"
-                    data-spacing="left"
+                    class="c38 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c39"
                     >
                       <svg
@@ -6151,7 +6167,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>

@@ -21,9 +21,8 @@ export const Share = ({ title, metaDescription }) => {
   return (
     <Flex>
       <StyledButton
-        data-spacing="left"
         type="button"
-        className="no-after"
+        className="no-after spacing-left"
         title="Partager sur Facebook"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "facebook"]);
@@ -46,7 +45,7 @@ export const Share = ({ title, metaDescription }) => {
         )}&body=${`${encodeURIComponent(
           `${metaDescription}\n\n${currentPageUrl}`
         )}`}`}
-        data-spacing="left"
+        className="spacing-left"
         title="Envoyer par email"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
@@ -57,7 +56,7 @@ export const Share = ({ title, metaDescription }) => {
         </Circle>
       </StyledLink>
       <StyledButton
-        data-spacing="left"
+        className="spacing-left"
         title="Partager sur LinkedIn"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
@@ -77,7 +76,7 @@ export const Share = ({ title, metaDescription }) => {
       <Dropdown
         opener={(showDropdown) => (
           <StyledButton
-            data-spacing="left"
+            className="spacing-left"
             title="Plus d’options"
             onClick={async () => {
               matopush([
@@ -109,7 +108,7 @@ export const Share = ({ title, metaDescription }) => {
       >
         <Center>Plus d’options</Center>
         <StyledButton
-          data-spacing="top"
+          className="spacing-top"
           title="Partager sur Twitter"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
@@ -128,7 +127,7 @@ export const Share = ({ title, metaDescription }) => {
           <ActionLabel>Partager&nbsp;sur&nbsp;Twitter</ActionLabel>
         </StyledButton>
         <StyledButton
-          data-spacing="top"
+          className="spacing-top"
           title="Copier le lien"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "copier"]);
@@ -155,7 +154,7 @@ export const Share = ({ title, metaDescription }) => {
         </StyledButton>
         <HiddenInput tabIndex="-1" ref={hiddenInputRef} />
         <StyledButton
-          data-spacing="top"
+          className="spacing-top"
           title="Envoyer par Whatsapp"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
@@ -192,10 +191,6 @@ const commonActionStyles = css`
   display: flex;
   align-items: center;
   padding: 0;
-  ${({ spacing }) => {
-    if (spacing === "left") return `margin-left: ${spacings.small};`;
-    if (spacing === "top") return `margin-top: ${spacings.small};`;
-  }};
   color: ${({ theme }) => theme.secondary};
   font-weight: bold;
   font-size: ${fonts.sizes.default};
@@ -207,6 +202,12 @@ const commonActionStyles = css`
   :hover,
   :focus {
     color: ${({ theme }) => theme.primary};
+  }
+  &.spacing-left {
+    margin-left: ${spacings.small};
+  }
+  &.spacing-top {
+    margin-top: ${spacings.small};
   }
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
@@ -222,7 +223,7 @@ const StyledLink = styled.a`
   text-decoration: none;
 `;
 
-const Circle = styled.div`
+const Circle = styled.span`
   flex: 0 0 auto;
   padding: ${spacings.xsmall};
   background-color: transparent;
@@ -230,17 +231,17 @@ const Circle = styled.div`
   border-radius: 50%;
 `;
 
-const StyledIcon = styled.div`
+const StyledIcon = styled.span`
   display: block;
   width: 2rem;
   height: 2rem;
 `;
 
-const Center = styled.div`
+const Center = styled.span`
   text-align: center;
 `;
 
-const ActionLabel = styled.div`
+const ActionLabel = styled.span`
   margin-left: ${spacings.small};
 `;
 
