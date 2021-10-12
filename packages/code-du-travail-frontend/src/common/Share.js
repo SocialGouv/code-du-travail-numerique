@@ -21,6 +21,7 @@ export const Share = ({ title, metaDescription }) => {
   return (
     <Flex>
       <StyledButton
+        data-spacing="left"
         type="button"
         className="no-after"
         title="Partager sur Facebook"
@@ -45,6 +46,7 @@ export const Share = ({ title, metaDescription }) => {
         )}&body=${`${encodeURIComponent(
           `${metaDescription}\n\n${currentPageUrl}`
         )}`}`}
+        data-spacing="left"
         title="Envoyer par email"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "email"]);
@@ -55,6 +57,7 @@ export const Share = ({ title, metaDescription }) => {
         </Circle>
       </StyledLink>
       <StyledButton
+        data-spacing="left"
         title="Partager sur LinkedIn"
         onClick={() => {
           matopush(["trackEvent", "clic_share", currentPageUrl, "linkedin"]);
@@ -74,6 +77,7 @@ export const Share = ({ title, metaDescription }) => {
       <Dropdown
         opener={(showDropdown) => (
           <StyledButton
+            data-spacing="left"
             title="Plus d’options"
             onClick={async () => {
               matopush([
@@ -105,7 +109,7 @@ export const Share = ({ title, metaDescription }) => {
       >
         <Center>Plus d’options</Center>
         <StyledButton
-          spacing="top"
+          data-spacing="top"
           title="Partager sur Twitter"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "twitter"]);
@@ -124,7 +128,7 @@ export const Share = ({ title, metaDescription }) => {
           <ActionLabel>Partager&nbsp;sur&nbsp;Twitter</ActionLabel>
         </StyledButton>
         <StyledButton
-          spacing="top"
+          data-spacing="top"
           title="Copier le lien"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "copier"]);
@@ -151,7 +155,7 @@ export const Share = ({ title, metaDescription }) => {
         </StyledButton>
         <HiddenInput tabIndex="-1" ref={hiddenInputRef} />
         <StyledButton
-          spacing="top"
+          data-spacing="top"
           title="Envoyer par Whatsapp"
           onClick={() => {
             matopush(["trackEvent", "clic_share", currentPageUrl, "whatsapp"]);
@@ -226,7 +230,7 @@ const Circle = styled.div`
   border-radius: 50%;
 `;
 
-const StyledIcon = styled.span`
+const StyledIcon = styled.div`
   display: block;
   width: 2rem;
   height: 2rem;

@@ -503,6 +503,7 @@ exports[`<ConventionCollective /> should render 1`] = `
         >
           <button
             class="c7 no-after"
+            data-spacing="left"
             title="Partager sur Facebook"
             type="button"
           >
@@ -524,6 +525,7 @@ exports[`<ConventionCollective /> should render 1`] = `
           </button>
           <a
             class="c10"
+            data-spacing="left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
@@ -549,6 +551,7 @@ exports[`<ConventionCollective /> should render 1`] = `
           </a>
           <button
             class="c7"
+            data-spacing="left"
             title="Partager sur LinkedIn"
           >
             <div
@@ -572,6 +575,7 @@ exports[`<ConventionCollective /> should render 1`] = `
           >
             <button
               class="c7"
+              data-spacing="left"
               title="Plus d’options"
             >
               <div

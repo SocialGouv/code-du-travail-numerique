@@ -110,6 +110,7 @@ exports[`<Share /> renders 1`] = `
   >
     <button
       class="c1 no-after"
+      data-spacing="left"
       title="Partager sur Facebook"
       type="button"
     >
@@ -131,6 +132,7 @@ exports[`<Share /> renders 1`] = `
     </button>
     <a
       class="c4"
+      data-spacing="left"
       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
       title="Envoyer par email"
     >
@@ -156,6 +158,7 @@ exports[`<Share /> renders 1`] = `
     </a>
     <button
       class="c1"
+      data-spacing="left"
       title="Partager sur LinkedIn"
     >
       <div
@@ -179,6 +182,7 @@ exports[`<Share /> renders 1`] = `
     >
       <button
         class="c1"
+        data-spacing="left"
         title="Plus d’options"
       >
         <div
