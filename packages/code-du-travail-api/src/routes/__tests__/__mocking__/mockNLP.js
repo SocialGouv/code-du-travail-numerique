@@ -8,8 +8,8 @@ const {
 
 // mock fetch function to return vector for démission
 jest.mock("@socialgouv/cdtn-elasticsearch");
-vectorizeQuery.mockImplementation((req) => {
-  let data;
+vectorizeQuery.mockImplementation(async (req) => {
+  let data = null;
   switch (req) {
     case "démission":
       data = demissionVector;

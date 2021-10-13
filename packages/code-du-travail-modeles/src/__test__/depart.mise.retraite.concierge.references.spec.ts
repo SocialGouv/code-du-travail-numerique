@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -92,11 +93,11 @@ test.each`
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1043'",
+        "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+        "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
-        "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
-        "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
         "contrat salarié . travailleur handicapé": "non",
       })
     );

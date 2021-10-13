@@ -59,7 +59,7 @@ function Outils({
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
-  });
+  }, [title]);
   const router = useRouter();
   return (
     <Layout>

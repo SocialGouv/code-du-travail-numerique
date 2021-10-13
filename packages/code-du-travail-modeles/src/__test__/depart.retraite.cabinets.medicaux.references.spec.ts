@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -25,12 +26,12 @@ test.each`
   ({ retirement, expectedReferences, category }) => {
     const result = getReferences(
       engine.setSituation({
+        "contrat salarié . ancienneté": 5,
         "contrat salarié . convention collective": "'IDCC1147'",
+        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . ancienneté": 5,
       })
     );
 

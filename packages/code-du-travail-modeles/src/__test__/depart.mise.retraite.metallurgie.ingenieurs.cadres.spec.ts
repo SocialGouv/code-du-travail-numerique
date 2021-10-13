@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
 
@@ -60,8 +61,8 @@ test.each`
   ({ seniority }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -81,8 +82,8 @@ test.each`
   ({ seniority }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0650'",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })

@@ -1,4 +1,4 @@
-const Helper = codecept_helper;
+const Helper = require("@codeceptjs/helper");
 
 class FocusHelper extends Helper {
   async resetInputFocus(selector) {
