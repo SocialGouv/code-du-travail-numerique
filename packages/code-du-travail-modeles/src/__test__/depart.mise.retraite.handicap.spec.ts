@@ -1,6 +1,7 @@
 import Engine from "publicodes";
-import { getNotifications } from "../utils/GetNotifications";
+
 import { mergeModels } from "../internal/merger";
+import { getNotifications } from "../utils/GetNotifications";
 
 const engine = new Engine(mergeModels());
 
@@ -30,8 +31,8 @@ test.each`
   ({ seniority, category, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
@@ -70,8 +71,8 @@ test.each`
   ({ seniority, category, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
@@ -110,8 +111,8 @@ test.each`
   ({ seniority, category }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
@@ -151,8 +152,8 @@ test.each`
   ({ seniority, category }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . départ à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",

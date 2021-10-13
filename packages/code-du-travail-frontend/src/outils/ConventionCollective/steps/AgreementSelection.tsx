@@ -7,7 +7,6 @@ import styled from "styled-components";
 import { SectionTitle } from "../../common/stepStyles";
 import { AgreementTile } from "../agreement/AgreementTile";
 import { useNavContext } from "../common/NavContext";
-import { useTrackingContext } from "../common/TrackingContext";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;

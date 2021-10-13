@@ -2259,6 +2259,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </svg>
             </a>
             <button
+              aria-label="menu principal"
               class="c19 c20 c21"
             >
               <svg
@@ -5541,6 +5542,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </svg>
             </a>
             <button
+              aria-label="menu principal"
               class="c19 c20 c21"
             >
               <svg

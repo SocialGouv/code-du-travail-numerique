@@ -1544,6 +1544,7 @@ exports[`<Outils /> should render 1`] = `
             </svg>
           </a>
           <button
+            aria-label="menu principal"
             class="c14 c20 c21 c22"
           >
             <svg

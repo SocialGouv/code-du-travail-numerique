@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -16,8 +17,8 @@ test.each`
   ({ seniority, grade, expectedNotice, expectedUnit }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Ouvriers'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon":
@@ -46,8 +47,8 @@ test.each`
   ({ seniority, grade, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Agents de maîtrise'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle . agents de maîtrise . échelon":
@@ -73,8 +74,8 @@ test.each`
   ({ expectedNotice, seniority }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . mise à la retraite": "non",
