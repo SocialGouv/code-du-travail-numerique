@@ -1,6 +1,7 @@
 import Engine from "publicodes";
-import { mergeModels } from "../internal/merger";
+
 import { extractImplementedCc } from "../internal/ExtractSupportedCc";
+import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(
   mergeModels([
@@ -19,7 +20,7 @@ test("Extract all supported CC from the YAML modeles", () => {
 test("Check all convention collective has a IDCC property", () => {
   Object.values(engine.getParsedRules())
     .filter((rule) => {
-      // @ts-ignore
+      // @ts-expect-error
       const applicableSi = rule.rawNode["applicable si"];
       if (applicableSi !== undefined && typeof applicableSi === "string") {
         return applicableSi.startsWith("convention collective = 'IDCC");
@@ -28,7 +29,7 @@ test("Check all convention collective has a IDCC property", () => {
       }
     })
     .forEach((rule) => {
-      // @ts-ignore
-      expect(rule.rawNode["idcc"]).not.toBeUndefined();
+      // @ts-expect-error
+      expect(rule.rawNode.idcc).not.toBeUndefined();
     });
 });

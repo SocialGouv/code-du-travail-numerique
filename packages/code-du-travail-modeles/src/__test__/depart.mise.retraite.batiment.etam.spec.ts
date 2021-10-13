@@ -1,6 +1,6 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
-import { getNotifications } from "../utils/GetNotifications";
 
 const engine = new Engine(mergeModels());
 
@@ -11,11 +11,11 @@ test.each`
   ${24}     | ${3}
 `(
   "Pour un employé dans la convention collective Bâtiment Etam possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
-  ({ seniority, expectedNotice, expectedUnit }) => {
+  ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -37,8 +37,8 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })

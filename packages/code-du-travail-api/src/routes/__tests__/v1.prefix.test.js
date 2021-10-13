@@ -1,6 +1,6 @@
 import { CDTN_ADMIN_VERSION } from "../v1.prefix";
 
-test("prefix", async () => {
+test("prefix", () => {
   jest.mock("../../../package.json", () => ({
     dependencies: { "@socialgouv/cdtn-elasticsearch": "^1.2.3" },
   }));
