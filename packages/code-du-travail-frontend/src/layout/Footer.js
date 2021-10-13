@@ -61,50 +61,50 @@ const Footer = () => {
                 Code du travail numérique
               </Heading>
               <StyledList>
-                <StyledListItem>
+                <li>
                   <Link passHref href="/droit-du-travail">
                     <StyledLink>Le droit du travail</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/glossaire">
                     <StyledLink>Glossaire</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/a-propos">
                     <StyledLink>À propos</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/mentions-legales">
                     <StyledLink>Mentions légales</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/accessibilite">
                     <StyledLink>
                       Accessibilité&nbsp;: partiellement conforme
                     </StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/politique-confidentialite">
                     <StyledLink>Politique de confidentialité</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/stats">
                     <StyledLink>Statistiques d’utilisation</StyledLink>
                   </Link>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <Link passHref href="/integration">
                     <StyledLink>
                       Intégrer le Code du travail numérique
                     </StyledLink>
                   </Link>
-                </StyledListItem>
+                </li>
               </StyledList>
             </Category>
             <Category>
@@ -112,7 +112,7 @@ const Footer = () => {
                 Aidez-nous à améliorer cet outil
               </Heading>
               <StyledList>
-                <StyledListItem>
+                <li>
                   <ContactModal>
                     {(openModal) => (
                       <Button
@@ -131,8 +131,8 @@ const Footer = () => {
                       </Button>
                     )}
                   </ContactModal>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <StyledLink
                     href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
                     target="_blank"
@@ -140,8 +140,8 @@ const Footer = () => {
                   >
                     Contribuer sur Github
                   </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   {(() => {
                     const packageVersion =
                       publicRuntimeConfig.PACKAGE_VERSION || "";
@@ -161,7 +161,7 @@ const Footer = () => {
                       </StyledLink>
                     );
                   })()}
-                </StyledListItem>
+                </li>
               </StyledList>
             </Category>
             <Category>
@@ -169,7 +169,7 @@ const Footer = () => {
                 En collaboration avec
               </Heading>
               <StyledList>
-                <StyledListItem>
+                <li>
                   <StyledLink
                     href={
                       "https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
@@ -179,8 +179,8 @@ const Footer = () => {
                   >
                     La Direction Générale du Travail
                   </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <StyledLink
                     href={"https://fabrique.social.gouv.fr/"}
                     target="_blank"
@@ -188,8 +188,8 @@ const Footer = () => {
                   >
                     La fabrique des Ministères sociaux
                   </StyledLink>
-                </StyledListItem>
-                <StyledListItem>
+                </li>
+                <li>
                   <StyledLink
                     href={"https://beta.gouv.fr/"}
                     target="_blank"
@@ -197,7 +197,7 @@ const Footer = () => {
                   >
                     beta.gouv.fr
                   </StyledLink>
-                </StyledListItem>
+                </li>
               </StyledList>
             </Category>
           </Links>
@@ -362,10 +362,6 @@ const StyledStrong = styled.strong`
   }
 `;
 
-const StyledListItem = styled.li`
-  margin: ${spacings.tiny} 0;
-`;
-
 const StyledLink = styled.a.attrs((props) => ({
   ...(props.target === "_blank" && {
     "aria-label": `${props.children} (Nouvelle fenêtre)`,
@@ -374,6 +370,7 @@ const StyledLink = styled.a.attrs((props) => ({
   font-weight: normal;
   text-decoration: none;
   cursor: pointer;
+  padding: ${spacings.tiny} 0;
 `;
 
 const GovernmentSection = styled.ul`

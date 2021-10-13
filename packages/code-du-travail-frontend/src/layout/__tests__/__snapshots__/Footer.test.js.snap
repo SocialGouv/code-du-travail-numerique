@@ -85,7 +85,7 @@ exports[`<Footer /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c21 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -130,9 +130,9 @@ exports[`<Footer /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c21:focus,
-.c21:hover,
-.c21:active {
+.c20:focus,
+.c20:hover,
+.c20:active {
   color: #f66663;
 }
 
@@ -251,17 +251,14 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c19 {
-  margin: 0.4rem 0;
-}
-
-.c20 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,11 +280,11 @@ exports[`<Footer /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c23 {
+.c22 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c24 {
+.c23 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -346,13 +343,13 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c20 {
     display: none;
   }
 }
@@ -423,7 +420,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c24 {
+  .c23 {
     display: none;
   }
 }
@@ -493,81 +490,65 @@ exports[`<Footer /> should render 1`] = `
             <ul
               class="c17 c18"
             >
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/droit-du-travail"
                 >
                   Le droit du travail
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/glossaire"
                 >
                   Glossaire
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/a-propos"
                 >
                   À propos
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/mentions-legales"
                 >
                   Mentions légales
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/accessibilite"
                 >
                   Accessibilité : partiellement conforme
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/politique-confidentialite"
                 >
                   Politique de confidentialité
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/stats"
                 >
                   Statistiques d’utilisation
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
-                  class="c20"
+                  class="c19"
                   href="/integration"
                 >
                   Intégrer le Code du travail numérique
@@ -586,21 +567,17 @@ exports[`<Footer /> should render 1`] = `
             <ul
               class="c17 c18"
             >
-              <li
-                class="c19"
-              >
+              <li>
                 <button
-                  class="c21"
+                  class="c20"
                 >
                   Contact
                 </button>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
                   aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                  class="c20"
+                  class="c19"
                   href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -608,12 +585,10 @@ exports[`<Footer /> should render 1`] = `
                   Contribuer sur Github
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
                   aria-label="Journal des modifications (Nouvelle fenêtre)"
-                  class="c20"
+                  class="c19"
                   href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -634,12 +609,10 @@ exports[`<Footer /> should render 1`] = `
             <ul
               class="c17 c18"
             >
-              <li
-                class="c19"
-              >
+              <li>
                 <a
                   aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                  class="c20"
+                  class="c19"
                   href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -647,12 +620,10 @@ exports[`<Footer /> should render 1`] = `
                   La Direction Générale du Travail
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
                   aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                  class="c20"
+                  class="c19"
                   href="https://fabrique.social.gouv.fr/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -660,12 +631,10 @@ exports[`<Footer /> should render 1`] = `
                   La fabrique des Ministères sociaux
                 </a>
               </li>
-              <li
-                class="c19"
-              >
+              <li>
                 <a
                   aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                  class="c20"
+                  class="c19"
                   href="https://beta.gouv.fr/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -678,12 +647,12 @@ exports[`<Footer /> should render 1`] = `
         </div>
       </div>
       <ul
-        class="c22"
+        class="c21"
       >
         <li>
           <a
             aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://travail-emploi.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -692,7 +661,7 @@ exports[`<Footer /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c24"
+            class="c23"
           >
             |
           </span>
@@ -700,7 +669,7 @@ exports[`<Footer /> should render 1`] = `
         <li>
           <a
             aria-label="service-public.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://www.service-public.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -709,7 +678,7 @@ exports[`<Footer /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c24"
+            class="c23"
           >
             |
           </span>
@@ -717,7 +686,7 @@ exports[`<Footer /> should render 1`] = `
         <li>
           <a
             aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://www.legifrance.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -726,7 +695,7 @@ exports[`<Footer /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c24"
+            class="c23"
           >
             |
           </span>
@@ -734,7 +703,7 @@ exports[`<Footer /> should render 1`] = `
         <li>
           <a
             aria-label="data.gouv.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://www.data.gouv.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -743,7 +712,7 @@ exports[`<Footer /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c24"
+            class="c23"
           >
             |
           </span>
@@ -751,7 +720,7 @@ exports[`<Footer /> should render 1`] = `
         <li>
           <a
             aria-label="gouvernement.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://www.gouvernement.fr"
             rel="noopener noreferrer"
             target="_blank"
@@ -760,7 +729,7 @@ exports[`<Footer /> should render 1`] = `
           </a>
           <span
             aria-hidden="true"
-            class="c24"
+            class="c23"
           >
             |
           </span>
@@ -768,7 +737,7 @@ exports[`<Footer /> should render 1`] = `
         <li>
           <a
             aria-label="cnil.fr (Nouvelle fenêtre)"
-            class="c20 c23"
+            class="c19 c22"
             href="https://www.cnil.fr/"
             rel="noopener noreferrer"
             target="_blank"

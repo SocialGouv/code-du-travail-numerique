@@ -167,7 +167,6 @@ exports[`<SearchHero /> should render 1`] = `
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
-  padding: inherit;
 }
 
 .c1 {

@@ -189,8 +189,7 @@ const SubmitButton = styled(Button)`
   position: absolute;
   top: ${spacings.xsmall};
   right: ${spacings.xsmall};
-  padding: ${({ hasSearchIcon }) =>
-    hasSearchIcon ? `0 ${spacings.base}` : "inherit"};
+  ${({ hasSearchIcon }) => hasSearchIcon && `padding: 0 ${spacings.base};`};
   @media (max-width: ${breakpoints.mobile}) {
     position: static;
     margin-top: ${spacings.small};
