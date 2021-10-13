@@ -20,7 +20,7 @@ const DepartRetraiteCcReferences = [
 
 const MiseRetraiteCcReferences = [...MiseRetraiteReferences, CommonReference];
 
-describe("Convention collective 2264", () => {
+describe("Préavis de retraite de la CC 2264", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
       seniority | expectedResult
@@ -58,14 +58,14 @@ describe("Convention collective 2264", () => {
       ${"Cadres"}     | ${5}      | ${3}
       ${"Cadres"}     | ${6}      | ${3}
       ${"Cadres"}     | ${24}     | ${3}
-      ${"Cadres"}     | ${119}    | ${3}
-      ${"Cadres"}     | ${120}    | ${6}
+      ${"Cadres"}     | ${59}     | ${3}
+      ${"Cadres"}     | ${60}     | ${6}
       ${"Non-cadres"} | ${5}      | ${3}
       ${"Non-cadres"} | ${6}      | ${3}
       ${"Non-cadres"} | ${24}     | ${3}
-      ${"Non-cadres"} | ${120}    | ${3}
+      ${"Non-cadres"} | ${60}     | ${3}
     `(
-      "Pour un employé de tel catégories : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2264'",

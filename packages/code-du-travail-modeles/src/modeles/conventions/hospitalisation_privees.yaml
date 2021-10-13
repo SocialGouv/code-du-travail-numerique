@@ -23,7 +23,7 @@ contrat salarié . convention collective . hospitalisation privées . catégorie
     assiette: ancienneté
     tranches:
       - montant: 3 mois
-        plafond: 120 mois
+        plafond: 60 mois
       - montant: 6 mois
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle . non cadres:
