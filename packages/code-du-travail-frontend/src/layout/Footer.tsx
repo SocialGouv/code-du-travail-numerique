@@ -24,7 +24,7 @@ const { publicRuntimeConfig } = getConfig();
 
 const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   const router = useRouter();
   const path = router.asPath;
 
