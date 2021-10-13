@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 function originIsValid(origin) {
-  return validOrigins.indexOf(origin) !== -1;
+  return validOrigins.includes(origin);
 }
 
 function verifyOrigin(ctx) {

@@ -3,7 +3,7 @@ import { v4 as generateUUID } from "uuid";
 
 import { matopush } from "../../../piwik";
 
-type TrackingContext = {
+export type TrackingContext = {
   trackEvent: (
     category: string,
     action: string,

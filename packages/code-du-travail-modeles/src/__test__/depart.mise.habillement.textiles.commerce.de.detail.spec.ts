@@ -1,6 +1,7 @@
 import Engine from "publicodes";
-import { mergeModels } from "../internal/merger";
+
 import { getNotifications } from "../index";
+import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
 describe("Départ à la retraite", () => {
@@ -14,8 +15,8 @@ describe("Départ à la retraite", () => {
     ({ seniority, expectedNotice, expectedUnit }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         })
@@ -39,8 +40,8 @@ describe("Mise à la retraite", () => {
     ({ seniority, expectedNotice, expectedUnit }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
         })
@@ -62,8 +63,8 @@ describe("Notifications", () => {
     ({ seniority }) => {
       const notifications = getNotifications(
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         })
@@ -75,8 +76,8 @@ describe("Notifications", () => {
   test("Pour un employé possédant 2 mois d'ancienneté en départ à la retraite, on ne doit pas afficher de notification", () => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1483'",
         "contrat salarié . ancienneté": 2,
+        "contrat salarié . convention collective": "'IDCC1483'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -95,8 +96,8 @@ describe("Notifications", () => {
     ({ seniority }) => {
       const notifications = getNotifications(
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
         })

@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -17,12 +18,12 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Cadres'",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -46,12 +47,12 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Cadres'",
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -73,13 +74,14 @@ test.each`
   ({ seniority, coefficient, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
+          coefficient,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -102,13 +104,14 @@ test.each`
   ({ seniority, coefficient, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
+          coefficient,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 

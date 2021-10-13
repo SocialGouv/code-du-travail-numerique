@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
 
@@ -25,12 +26,14 @@ test.each`
   ({ seniority, group, afterFirstJuly, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0176'",
+        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+          afterFirstJuly,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -63,12 +66,14 @@ test.each`
   ({ seniority, group, afterFirstJuly, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0176'",
+        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+          afterFirstJuly,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -88,13 +93,14 @@ test.each`
   ({ group }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
           "oui",
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 
@@ -121,12 +127,14 @@ test.each`
   ({ seniority, group, afterFirstJuly }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0176'",
+        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+          afterFirstJuly,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
     );
 
@@ -144,13 +152,14 @@ test.each`
   ({ group }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
+        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
           "oui",
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
       })
     );
 
@@ -164,13 +173,13 @@ test.each`
 test("Pour une mise à la retraite avec un contract conclu avant le 1er juillet 2009 et un groupe de 3, on attend une notification.", () => {
   const notifications = getNotifications(
     engine.setSituation({
-      "contrat salarié . convention collective": "'IDCC0176'",
       "contrat salarié . ancienneté": 3,
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
+      "contrat salarié . convention collective": "'IDCC0176'",
       "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
         "non",
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 3,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
     })
   );
 
@@ -192,12 +201,14 @@ test.each`
   ({ group, afterFirstJuly }) => {
     const notifications = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0176'",
         "contrat salarié . ancienneté": 3,
+        "contrat salarié . convention collective": "'IDCC0176'",
+        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+          afterFirstJuly,
+        "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+          group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019": afterFirstJuly,
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": group,
       })
     );
 

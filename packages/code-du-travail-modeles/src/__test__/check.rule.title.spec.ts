@@ -1,7 +1,9 @@
-import Engine from "publicodes";
-import { mergeModels } from "../internal/merger";
 import "./matchers/PubliMatcher";
+
+import Engine from "publicodes";
+
 import { extractCcnIds } from "../internal/extractor";
+import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
 const allCc = extractCcnIds(engine).concat("");

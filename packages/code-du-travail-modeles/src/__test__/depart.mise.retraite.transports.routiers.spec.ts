@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getNotifications } from "../utils/GetNotifications";
 
@@ -31,11 +32,11 @@ test.each`
   ({ seniority, category, expectedNotice }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -72,12 +73,13 @@ test.each`
   ({ seniority, category, group, expectedNotice, expectedUnit }) => {
     const result = engine
       .setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
+          group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -90,12 +92,12 @@ test.each`
 test("Pour un employé dans les transports routiers avec la catgorie TAM dans le groupe 6 lors d'une mise à la retraite, on attend la notification", () => {
   const notifications = getNotifications(
     engine.setSituation({
-      "contrat salarié . convention collective": "'IDCC0016'",
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
       "contrat salarié . ancienneté": 5,
+      "contrat salarié . convention collective": "'IDCC0016'",
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'TAM'`,
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": 6,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
     })
   );
   expect(notifications).toHaveLength(1);
@@ -129,12 +131,13 @@ test.each`
   ({ seniority, group, category }) => {
     const notifications = getNotifications(
       engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
+          group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
       })
     );
 
