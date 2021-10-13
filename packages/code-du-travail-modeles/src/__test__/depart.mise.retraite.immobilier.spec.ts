@@ -39,6 +39,8 @@ describe("Préavis de retraite de la CC 1527", () => {
       ${"Employés et ouvriers"} | ${25}     | ${2}
       ${"Agents de maîtrise"}   | ${5}      | ${1}
       ${"Agents de maîtrise"}   | ${6}      | ${1}
+      ${"Agents de maîtrise"}   | ${11}     | ${1}
+      ${"Agents de maîtrise"}   | ${12}     | ${1}
       ${"Agents de maîtrise"}   | ${24}     | ${2}
       ${"Agents de maîtrise"}   | ${25}     | ${2}
       ${"Cadres non-VRP"}       | ${5}      | ${3}
@@ -47,6 +49,8 @@ describe("Préavis de retraite de la CC 1527", () => {
       ${"Cadres non-VRP"}       | ${25}     | ${2}
       ${"Cadres VRP"}           | ${5}      | ${1}
       ${"Cadres VRP"}           | ${6}      | ${1}
+      ${"Cadres VRP"}           | ${11}     | ${1}
+      ${"Cadres VRP"}           | ${12}     | ${1}
       ${"Cadres VRP"}           | ${24}     | ${2}
       ${"Cadres VRP"}           | ${25}     | ${2}
       ${"Négociateur non-VRP"}  | ${5}      | ${1}
@@ -55,11 +59,13 @@ describe("Préavis de retraite de la CC 1527", () => {
       ${"Négociateur non-VRP"}  | ${25}     | ${2}
       ${"Négociateur VRP"}      | ${5}      | ${1}
       ${"Négociateur VRP"}      | ${6}      | ${1}
+      ${"Négociateur VRP"}      | ${11}     | ${1}
+      ${"Négociateur VRP"}      | ${12}     | ${1}
       ${"Négociateur VRP"}      | ${15}     | ${1}
       ${"Négociateur VRP"}      | ${24}     | ${2}
       ${"Négociateur VRP"}      | ${25}     | ${2}
     `(
-      "Pour un employé de tel catégorie : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, expectedResult, category }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1527'",
@@ -93,6 +99,8 @@ describe("Préavis de retraite de la CC 1527", () => {
       ${"Employés et ouvriers"} | ${25}     | ${2}
       ${"Agents de maîtrise"}   | ${5}      | ${1}
       ${"Agents de maîtrise"}   | ${6}      | ${1}
+      ${"Agents de maîtrise"}   | ${11}     | ${1}
+      ${"Agents de maîtrise"}   | ${12}     | ${2}
       ${"Agents de maîtrise"}   | ${24}     | ${2}
       ${"Agents de maîtrise"}   | ${25}     | ${2}
       ${"Cadres non-VRP"}       | ${5}      | ${3}
@@ -113,7 +121,7 @@ describe("Préavis de retraite de la CC 1527", () => {
       ${"Négociateur VRP"}      | ${24}     | ${3}
       ${"Négociateur VRP"}      | ${25}     | ${3}
     `(
-      "Pour un employé de tel catégorie : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1527'",

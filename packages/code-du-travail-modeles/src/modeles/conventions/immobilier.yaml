@@ -18,12 +18,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
       Négociateur VRP: "'Négociateur VRP'"
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . employés:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Employés et ouvriers'
-      - une de ces conditions:
-          - départ à la retraite
-          - mise à la retraite
+  applicable si: catégorie professionnelle = 'Employés et ouvriers'
   remplace: préavis de retraite collective
   grille:
     assiette: ancienneté
@@ -36,12 +31,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
     Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . agents de maîtrise:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Agents de maîtrise'
-      - une de ces conditions:
-          - départ à la retraite
-          - mise à la retraite
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
   remplace: préavis de retraite collective
   grille:
     assiette: ancienneté
@@ -54,12 +44,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
     Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . cadres non vrp:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Cadres non-VRP'
-      - une de ces conditions:
-          - départ à la retraite
-          - mise à la retraite
+  applicable si: catégorie professionnelle = 'Cadres non-VRP'
   remplace: préavis de retraite collective
   valeur: 3 mois
   références:
@@ -94,12 +79,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
     Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . négociateur non vrp:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Négociateur non-VRP'
-      - une de ces conditions:
-          - départ à la retraite
-          - mise à la retraite
+  applicable si: catégorie professionnelle = 'Négociateur non-VRP'
   remplace: préavis de retraite collective
   grille:
     assiette: ancienneté
@@ -112,12 +92,7 @@ contrat salarié . convention collective . immobilier . catégorie professionnel
     Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle . négociateur vrp:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Négociateur VRP'
-      - une de ces conditions:
-          - départ à la retraite
-          - mise à la retraite
+  applicable si: catégorie professionnelle = 'Négociateur VRP'
   remplace: préavis de retraite collective
   grille:
     assiette: ancienneté
