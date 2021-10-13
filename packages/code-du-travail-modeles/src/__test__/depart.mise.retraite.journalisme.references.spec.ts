@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -36,8 +37,8 @@ test.each`
   ({ retirement, seniority, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1480'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1480'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",

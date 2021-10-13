@@ -147,7 +147,7 @@ async function updateDocumentsData(slugs) {
 }
 
 if (module === require.main) {
-  updateDocumentsData(documentsSlugs).catch((error) =>
-    console.error("›››" + error)
-  );
+  updateDocumentsData(documentsSlugs).catch((error) => {
+    console.error("›››" + error);
+  });
 }

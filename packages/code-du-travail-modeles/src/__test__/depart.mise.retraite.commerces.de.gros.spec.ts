@@ -1,6 +1,7 @@
 import Engine from "publicodes";
-import { mergeModels } from "../internal/merger";
+
 import { getNotifications } from "../index";
+import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
 
@@ -14,8 +15,8 @@ test.each`
   ({ seniority, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -49,11 +50,11 @@ test.each`
   ({ seniority, category, expectedNotice }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0573'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -73,8 +74,8 @@ test.each`
   ({ seniority }) => {
     const result = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -106,11 +107,11 @@ test.each`
   ({ seniority, category }) => {
     const result = getNotifications(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0573'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0573'",
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
       })
     );
 

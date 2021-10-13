@@ -1,3 +1,4 @@
+import { getRouteBySource } from "@socialgouv/cdtn-sources";
 // merge by one of each
 
 const merge = (res1, res2, max_result) => {
@@ -16,7 +17,8 @@ const merge = (res1, res2, max_result) => {
 };
 
 // Remove Duplicates
-const predicateFn = ({ _source: { source, slug } }) => `${source}/${slug}`;
+const predicateFn = ({ _source: { source, slug } }) =>
+  `${getRouteBySource(source) || source}/${slug}`;
 
 const removeDuplicate = (arr, predicate = predicateFn) =>
   arr.flatMap((a, index) => {

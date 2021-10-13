@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -19,11 +20,11 @@ describe("Mise à la retraite", () => {
     ({ seniority, category, expectedNotice, expectedUnit }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1266'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1266'",
+          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -50,11 +51,11 @@ describe("Départ à la retraite", () => {
     ({ seniority, category, expectedNotice, expectedUnit }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . convention collective": "'IDCC1266'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1266'",
+          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
         })
         .evaluate("contrat salarié . préavis de retraite");
 

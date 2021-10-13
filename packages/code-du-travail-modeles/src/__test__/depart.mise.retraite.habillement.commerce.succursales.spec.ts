@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -20,11 +21,11 @@ test.each`
   ({ seniority, category, expectedNotice, expectedUnit }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0675'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -51,11 +52,11 @@ test.each`
   ({ seniority, category, expectedNotice, expectedUnit }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC0675'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
