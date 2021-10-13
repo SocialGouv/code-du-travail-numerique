@@ -4,11 +4,6 @@ contrat salarié . convention collective . éducation et loisirs:
   valeur: oui
   idcc: 1518
 
-contrat salarié . convention collective . éducation et loisirs . départ à la retraite:
-  applicable si: départ à la retraite
-  références:
-    Article 4.4.1, Article 4.4.3 et Article 4.4.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000038525633?idConteneur=KALICONT000005635177
-
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle:
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
