@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -69,11 +70,11 @@ test.each`
   ({ retirement, category, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . ancienneté": 4,
+        "contrat salarié . convention collective": "'IDCC1090'",
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
-        "contrat salarié . convention collective . automobiles . catégorie professionnelle": `'${category}'`,
         "contrat salarié . travailleur handicapé": "non",
       })
     );

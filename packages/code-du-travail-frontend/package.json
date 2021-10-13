@@ -34,7 +34,7 @@
     "@socialgouv/cdtn-slugify": "^4.53.1",
     "@socialgouv/cdtn-sources": "^4.53.1",
     "@socialgouv/cdtn-ui": "^4.53.1",
-    "@socialgouv/fiches-travail-data": "^4.212.0",
+    "@socialgouv/fiches-travail-data": "^4.215.0",
     "@socialgouv/modeles-social": "^4.53.1",
     "@socialgouv/react-fiche-service-public": "^4.53.1",
     "@socialgouv/reference-article": "^1.0.1",
@@ -108,10 +108,10 @@
     "{pages,src}/**/*.{css,js}": [
       "yarn lint-css"
     ],
-    "{__tests__,pages,server,src}/**/*.{js,ts}": [
+    "{__tests__,pages,server,src}/**/*.{js,ts,tsx,jsx}": [
       "yarn lint-js --fix"
     ],
-    "{__mocks__,test}/**/*.{js,ts}": [
+    "{__mocks__,test}/**/*.{js,ts,tsx,jsx}": [
       "yarn lint-js --fix"
     ]
   },

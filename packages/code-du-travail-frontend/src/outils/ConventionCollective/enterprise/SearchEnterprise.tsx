@@ -1,5 +1,4 @@
-import pDebounce from "p-debounce";
-import React, { ForwardedRef, useEffect, useMemo } from "react";
+import React, { ForwardedRef } from "react";
 
 import {
   Enterprise,
@@ -23,31 +22,24 @@ export type SearchParams = {
   query: string;
 };
 
-const useEnterpriseSuggester = createSuggesterHook(searchEnterprises);
-
 export function SearchEnterprise({
   renderResults,
   inputRef,
 }: Props): JSX.Element {
   const { searchParams, setSearchParams } = useNavContext();
+
+  const trackingContext = useTrackingContext();
+
+  const useEnterpriseSuggester = createSuggesterHook(
+    searchEnterprises,
+    "enterprise_search",
+    trackingContext
+  );
+
   const state = useEnterpriseSuggester(
     searchParams.query,
     searchParams.address
   );
-  const { trackEvent, title, uuid } = useTrackingContext();
-  const debouncedTrackEvent = useMemo(
-    () => pDebounce(trackEvent, 1000),
-    [trackEvent]
-  );
-  const { query, address } = searchParams;
-
-  useEffect(() => {
-    let fullquery = query;
-    if (address) {
-      fullquery += `##${address}`;
-    }
-    debouncedTrackEvent("enterprise_search", title, fullquery, uuid);
-  }, [query, address, debouncedTrackEvent, title, uuid]);
 
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;

@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -50,8 +51,8 @@ test.each`
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2216'",
-        "contrat salarié . mise à la retraite": "non",
         "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
     );
@@ -72,8 +73,8 @@ test.each`
     const result = getReferences(
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2216'",
-        "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })
     );

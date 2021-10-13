@@ -36,7 +36,12 @@ export function EnterpriseButton({
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("enterprise_select", title, `${label}##${siren}`, uuid);
+    trackEvent(
+      "enterprise_select",
+      title,
+      JSON.stringify({ label, siren }),
+      uuid
+    );
     onClick(enterprise);
   };
   const showTitleWithHighlight = label === simpleLabel;
