@@ -62,7 +62,7 @@ const MiseRetraiteCatBReferences = [
   },
 ];
 
-describe("Vérification juridiques de la CC 1505", () => {
+describe("Vérification juridiques de la CC 1043", () => {
   describe("Départ à la retraite", () => {
     test.each`
       category         | accommodation | coefficient | expectedReferences
