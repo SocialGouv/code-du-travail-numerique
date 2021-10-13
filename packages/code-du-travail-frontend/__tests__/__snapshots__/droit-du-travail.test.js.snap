@@ -4105,7 +4105,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class=""
                           data-accordion-component="AccordionItem"
-                          index="0"
                         >
                           <div
                             aria-level="3"
@@ -4174,7 +4173,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="1"
                         >
                           <div
                             aria-level="3"
@@ -4253,7 +4251,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="2"
                         >
                           <div
                             aria-level="3"

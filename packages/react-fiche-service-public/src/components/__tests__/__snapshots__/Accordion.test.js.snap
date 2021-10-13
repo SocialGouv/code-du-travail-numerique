@@ -194,7 +194,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -277,7 +276,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         class="c11"
         data-accordion-component="AccordionItem"
-        index="1"
       >
         <div
           aria-level="3"
@@ -365,7 +363,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       <div
         class="c11"
         data-accordion-component="AccordionItem"
-        index="2"
       >
         <div
           aria-level="3"
@@ -584,7 +581,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -660,7 +656,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         class="c9"
         data-accordion-component="AccordionItem"
-        index="1"
       >
         <div
           aria-level="3"
@@ -741,7 +736,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       <div
         class="c9"
         data-accordion-component="AccordionItem"
-        index="2"
       >
         <div
           aria-level="3"

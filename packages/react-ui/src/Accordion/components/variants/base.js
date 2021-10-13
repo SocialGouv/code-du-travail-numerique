@@ -21,7 +21,7 @@ import { VerticalArrow } from "../VerticalArrow/index.js";
 export const Accordion = RootAccordion;
 
 // eslint-disable-next-line
-export const Item = styled(({ isLast, ...rest }) => {
+export const Item = styled(({ index, isLast, ...rest }) => {
   return <AccordionItem {...rest} />;
 })`
   ${({ index, theme }) =>
@@ -57,6 +57,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   justify-content: flex-start;
   overflow: hidden;
   cursor: pointer;
+
   &:hover,
   &:focus,
   &:focus-within,
