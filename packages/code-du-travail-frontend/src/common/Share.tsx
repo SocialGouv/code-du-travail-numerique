@@ -9,7 +9,12 @@ const { copyToClipboard } = utils;
 const POPUP_OPTIONS =
   "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600";
 
-export const Share = ({ title, metaDescription }) => {
+type Props = {
+  title: string;
+  metaDescription: string;
+};
+
+export const Share = ({ title, metaDescription }: Props): JSX.Element => {
   const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
@@ -199,16 +204,20 @@ const commonActionStyles = css`
   border: none;
   cursor: pointer;
   transition: color 0.3s linear;
+
   :hover,
   :focus {
     color: ${({ theme }) => theme.primary};
   }
+
   &.spacing-left {
     margin-left: ${spacings.small};
   }
+
   &.spacing-top {
     margin-top: ${spacings.small};
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.small};
   }
