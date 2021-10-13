@@ -33,9 +33,6 @@ exports.config = {
     },
   },
   hooks: [],
-  include: {
-    I: "./steps_file.js",
-  },
   mocha: {},
   name: "code-du-travail-numerique",
   output: "./output",
