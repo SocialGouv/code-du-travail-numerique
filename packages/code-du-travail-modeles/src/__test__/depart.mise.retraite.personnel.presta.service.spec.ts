@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -42,14 +43,14 @@ describe("Préavis de retraite de la CC 2098", () => {
       ${"Cadres"}                                  | ${24}     | ${2}
       ${"Cadres"}                                  | ${25}     | ${2}
     `(
-      "Pour un employé de tel catégorie : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, expectedResult, category }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2098'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC2098'",
+          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -83,14 +84,14 @@ describe("Préavis de retraite de la CC 2098", () => {
       ${"Cadres"}                                  | ${24}     | ${3}
       ${"Cadres"}                                  | ${25}     | ${3}
     `(
-      "Pour un employé de tel catégorie : $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2098'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC2098'",
+          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

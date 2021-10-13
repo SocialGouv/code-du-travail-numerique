@@ -36,12 +36,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
       - montant: 2 mois
 
 contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . tam:
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Techniciens et agents de maîtrise (TAM)'
-      - une de ces conditions:
-          - mise à la retraite
-          - départ à la retraite
+  applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise (TAM)'
   remplace: préavis de retraite collective
   valeur: 2 mois
   références:
