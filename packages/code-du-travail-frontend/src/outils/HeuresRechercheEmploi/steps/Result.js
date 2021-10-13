@@ -1,10 +1,10 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
-import { Accordion } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
 import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import {
   filterSituations,
   getSituationsFor,
@@ -97,28 +97,17 @@ function NoResult({ idcc, ccn, legalRefs }) {
         raisonnable pour rechercher un emploi pendant son préavis de
         licenciement.
       </p>
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <SectionTitle>Éléments saisis</SectionTitle>
-                {recapSituation({
-                  ...{
-                    "Convention collective": ccn
-                      ? `${ccn.shortTitle} (IDCC ${idcc})`
-                      : "La convention collective n'a pas été renseignée",
-                  },
-                })}
-                <PubliReferences
-                  references={legalRefs && formatRefs(legalRefs)}
-                />
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
+      <ShowDetails>
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {recapSituation({
+          ...{
+            "Convention collective": ccn
+              ? `${ccn.shortTitle} (IDCC ${idcc})`
+              : "La convention collective n'a pas été renseignée",
           },
-        ]}
-      />
+        })}
+        <PubliReferences references={legalRefs && formatRefs(legalRefs)} />
+      </ShowDetails>
       <DisclaimerBox
         title={"Attention il peut exister une durée plus favorable"}
         text={
@@ -166,31 +155,22 @@ export function StepResult({ form }) {
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
       <Duration situation={situation} />
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <SectionTitle>Éléments saisis</SectionTitle>
-                {recapSituation({
-                  ...(ccn && {
-                    "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
-                  }),
-                  "Type de rupture du contrat de travail": typeRupture,
-                  ...situation.criteria,
-                })}
+      <ShowDetails>
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {recapSituation({
+          ...(ccn && {
+            "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+          }),
+          "Type de rupture du contrat de travail": typeRupture,
+          ...situation.criteria,
+        })}
 
-                <PubliReferences
-                  references={
-                    situation.ref && situation.refUrl && formatRefs([situation])
-                  }
-                />
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
-          },
-        ]}
-      />
+        <PubliReferences
+          references={
+            situation.ref && situation.refUrl && formatRefs([situation])
+          }
+        />
+      </ShowDetails>
       <DisclaimerBox duration={situation.answer} />
     </>
   );

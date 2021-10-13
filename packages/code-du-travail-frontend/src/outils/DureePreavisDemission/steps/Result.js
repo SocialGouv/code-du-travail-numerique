@@ -1,11 +1,11 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
-import { Accordion } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
 import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import {
   filterSituations,
   getSituationsFor,
@@ -80,25 +80,15 @@ function StepResult({ form }) {
         </p>
       )}
 
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <SectionTitle>Éléments saisis</SectionTitle>
-                {recapSituation({
-                  "Convention collective": `${ccn.title} (${idcc})`,
-                  ...situation.criteria,
-                })}
-                <PubliReferences
-                  references={formatRefs([refLegal, situation])}
-                />
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
-          },
-        ]}
-      />
+      <ShowDetails>
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {recapSituation({
+          "Convention collective": `${ccn.title} (${idcc})`,
+          ...situation.criteria,
+        })}
+        <PubliReferences references={formatRefs([refLegal, situation])} />
+      </ShowDetails>
+
       <DisclaimerBox />
     </>
   );

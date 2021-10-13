@@ -1,11 +1,11 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-import { Accordion } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
 import { isNotNearZero } from "../../common/math";
 import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import {
   filterSituations,
   getSituationsFor,
@@ -143,49 +143,38 @@ function StepResult({ form }) {
         durationCDT={durationCDT}
       />
 
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <DisplayResult
-                  idcc={idcc}
-                  durationCC={durationCC}
-                  durationCDT={durationCDT}
-                  situationCDT={situationCDT}
-                  situationCC={situationCC}
-                />
-                <SectionTitle>Éléments saisis</SectionTitle>
-                {recapSituation({
-                  "Ancienneté selon le code du travail": seniorityCDT,
-                  "Licenciement pour faute grave": seriousMisconduct
-                    ? "Oui"
-                    : "Non",
-                  "Reconnu en tant que travailleur handicapé": disabledWorker
-                    ? "Oui"
-                    : "Non",
-                  ...situationCDTCriteria,
-                  ...(situationCC && {
-                    ...situationCCCriteria,
-                    ...(seniorityCC && {
-                      "Ancienneté selon la convention collective": seniorityCC,
-                    }),
-                    ...(ccn && { "Convention collective": ccn.title }),
-                  }),
-                })}
-                {situationCC && (
-                  <PubliReferences
-                    references={
-                      situationCC.ref && situationCC.refUrl && formatRefs(refs)
-                    }
-                  />
-                )}
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
-          },
-        ]}
-      />
+      <ShowDetails>
+        <DisplayResult
+          idcc={idcc}
+          durationCC={durationCC}
+          durationCDT={durationCDT}
+          situationCDT={situationCDT}
+          situationCC={situationCC}
+        />
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {recapSituation({
+          "Ancienneté selon le code du travail": seniorityCDT,
+          "Licenciement pour faute grave": seriousMisconduct ? "Oui" : "Non",
+          "Reconnu en tant que travailleur handicapé": disabledWorker
+            ? "Oui"
+            : "Non",
+          ...situationCDTCriteria,
+          ...(situationCC && {
+            ...situationCCCriteria,
+            ...(seniorityCC && {
+              "Ancienneté selon la convention collective": seniorityCC,
+            }),
+            ...(ccn && { "Convention collective": ccn.title }),
+          }),
+        })}
+        {situationCC && (
+          <PubliReferences
+            references={
+              situationCC.ref && situationCC.refUrl && formatRefs(refs)
+            }
+          />
+        )}
+      </ShowDetails>
       <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
         <DisclaimerText
           durationCC={durationCC}

@@ -1,7 +1,7 @@
-import { Accordion } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
 import DecryptedResult from "./component/DecryptedResult";
@@ -17,28 +17,17 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
   return (
     <>
       <ShowResult publicodesContext={publicodesContext} />
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <Situation
-                  content={formValues}
-                  elements={publicodesContext.situation}
-                />
-                <DecryptedResult
-                  data={formValues}
-                  publicodesContext={publicodesContext}
-                />
-                <PubliReferences
-                  references={publicodesContext.getReferences()}
-                />
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
-          },
-        ]}
-      />
+      <ShowDetails>
+        <Situation
+          content={formValues}
+          elements={publicodesContext.situation}
+        />
+        <DecryptedResult
+          data={formValues}
+          publicodesContext={publicodesContext}
+        />
+        <PubliReferences references={publicodesContext.getReferences()} />
+      </ShowDetails>
       <WarningResult publicodesContext={publicodesContext} data={formValues} />
     </>
   );

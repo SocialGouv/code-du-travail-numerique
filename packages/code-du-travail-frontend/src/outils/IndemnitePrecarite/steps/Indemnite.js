@@ -1,11 +1,11 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
-import { Accordion } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { MathFormula } from "../../common/MathFormula";
 import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import {
   filterSituations,
   getSituationsFor,
@@ -108,32 +108,23 @@ function StepIndemnite({ form }) {
         <HighlightResult>{indemnite}&nbsp;€</HighlightResult>.
       </p>
 
-      <Accordion
-        items={[
-          {
-            body: (
-              <>
-                <SectionTitle>Éléments saisis</SectionTitle>
-                {entries.length > 0 && (
-                  <ul>
-                    {entries.map(([label, value], index) => (
-                      <li key={index}>
-                        {label}&nbsp;: <strong>{value}</strong>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <SectionTitle>Formule</SectionTitle>
-                <ErrorBoundary>
-                  <MathFormula formula={formula} />
-                </ErrorBoundary>
-                <PubliReferences references={formatRefs(legalRefs)} />
-              </>
-            ),
-            title: <p>Voir le détail du calcul</p>,
-          },
-        ]}
-      />
+      <ShowDetails>
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {entries.length > 0 && (
+          <ul>
+            {entries.map(([label, value], index) => (
+              <li key={index}>
+                {label}&nbsp;: <strong>{value}</strong>
+              </li>
+            ))}
+          </ul>
+        )}
+        <SectionTitle>Formule</SectionTitle>
+        <ErrorBoundary>
+          <MathFormula formula={formula} />
+        </ErrorBoundary>
+        <PubliReferences references={formatRefs(legalRefs)} />
+      </ShowDetails>
       <DisclaimerBox situation={situation} idcc={idcc} />
 
       <p>
