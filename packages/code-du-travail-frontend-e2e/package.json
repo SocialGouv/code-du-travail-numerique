@@ -4,7 +4,7 @@
   "description": "",
   "main": "codecept.conf.js",
   "scripts": {
-    "lint": "eslint step_definitions/**/*.js",
+    "lint": "eslint . --ext .js --fix",
     "test:e2e": "codeceptjs run --features",
     "test:e2e:ui": "codecept-ui --app"
   },
@@ -14,6 +14,7 @@
     "puppeteer": "^10.4.0"
   },
   "devDependencies": {
+    "@codeceptjs/helper": "^1.0.2",
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "eslint": "^7.31.0"
   },

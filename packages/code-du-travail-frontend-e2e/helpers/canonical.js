@@ -1,6 +1,4 @@
-"use strict";
-
-const Helper = codecept_helper;
+const Helper = require("@codeceptjs/helper");
 
 class CurrentCanonicalLink extends Helper {
   async getCanonicalLink() {
