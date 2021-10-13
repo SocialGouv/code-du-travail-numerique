@@ -18,6 +18,9 @@ switch (process.env.NODE_ENV) {
   case "production":
     esClientConfig.auth = { apiKey: process.env.ELASTICSEARCH_TOKEN_API };
     break;
+  default:
+    logger.level = winston.warn;
+    break;
 }
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);

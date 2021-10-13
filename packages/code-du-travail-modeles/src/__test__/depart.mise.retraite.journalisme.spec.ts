@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -16,8 +17,8 @@ test.each`
   ({ retirement, seniority, expectedResult }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1480'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1480'",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",

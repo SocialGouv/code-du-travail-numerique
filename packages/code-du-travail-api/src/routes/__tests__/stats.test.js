@@ -9,7 +9,7 @@ app.use(router.routes());
 
 // mock fetch function to return vector for démission
 jest.mock("node-fetch");
-fetch.mockImplementation((url) => {
+fetch.mockImplementation(async (url) => {
   if (/VisitsSummary\.getVisits/.test(url)) {
     return Promise.resolve({
       json: () => ({ value: 20 }),

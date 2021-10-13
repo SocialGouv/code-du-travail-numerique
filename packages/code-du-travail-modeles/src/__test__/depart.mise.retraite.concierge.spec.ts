@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 
 const engine = new Engine(mergeModels());
@@ -28,13 +29,13 @@ test.each`
   }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1043'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+        "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . convention collective . gardien concierge . coefficient":
           coefficient,
+        "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -55,11 +56,11 @@ test.each`
   ({ seniority, category, expectedResult }) => {
     const result = engine
       .setSituation({
-        "contrat salarié . convention collective": "'IDCC1043'",
         "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1043'",
+        "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
       })
       .evaluate("contrat salarié . préavis de retraite");
 
