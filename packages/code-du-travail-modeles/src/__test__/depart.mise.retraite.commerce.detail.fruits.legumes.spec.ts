@@ -100,34 +100,56 @@ describe("Vérification juridique pour la CC 1505", () => {
     const notification = [
       "Attention: L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail.",
     ];
-    test.each`
-      seniority | category                                   | expectedNotification
-      ${5}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}  | ${[]}
-      ${6}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}  | ${[]}
-      ${24}     | ${"Ouvriers, Employés (Niveaux N1 à N4)"}  | ${[]}
-      ${5}      | ${"Agents de maîtrise (Niveaux N5 et N6)"} | ${[]}
-      ${6}      | ${"Agents de maîtrise (Niveaux N5 et N6)"} | ${[]}
-      ${24}     | ${"Agents de maîtrise (Niveaux N5 et N6)"} | ${[]}
-      ${5}      | ${"Cadres (Niveaux N7 et N8)"}             | ${notification}
-      ${6}      | ${"Cadres (Niveaux N7 et N8)"}             | ${notification}
-      ${24}     | ${"Cadres (Niveaux N7 et N8)"}             | ${notification}
-    `(
-      "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
-      ({ seniority, category, expectedNotification }) => {
-        const result = getNotifications(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC1505'",
-            "contrat salarié . ancienneté": seniority,
-            "contrat salarié . départ à la retraite": "oui",
-            "contrat salarié . travailleur handicapé": "non",
-            "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-          })
-        );
+    describe("Aucune notification à afficher", () => {
+      test.each`
+        seniority | category
+        ${5}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
+        ${6}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
+        ${24}     | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
+        ${5}      | ${"Agents de maîtrise (Niveaux N5 et N6)"}
+        ${6}      | ${"Agents de maîtrise (Niveaux N5 et N6)"}
+        ${24}     | ${"Agents de maîtrise (Niveaux N5 et N6)"}
+      `(
+        "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
+        ({ seniority, category }) => {
+          const result = getNotifications(
+            engine.setSituation({
+              "contrat salarié . convention collective": "'IDCC1505'",
+              "contrat salarié . ancienneté": seniority,
+              "contrat salarié . départ à la retraite": "oui",
+              "contrat salarié . travailleur handicapé": "non",
+              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            })
+          );
 
-        expect(result).toHaveLength(expectedNotification.length);
-        if (result.length > 0)
+          expect(result).toHaveLength(0);
+        }
+      );
+    });
+
+    describe("Une notification à afficher", () => {
+      test.each`
+        seniority | category                       | expectedNotification
+        ${5}      | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
+        ${6}      | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
+        ${24}     | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
+      `(
+        "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
+        ({ seniority, category, expectedNotification }) => {
+          const result = getNotifications(
+            engine.setSituation({
+              "contrat salarié . convention collective": "'IDCC1505'",
+              "contrat salarié . ancienneté": seniority,
+              "contrat salarié . départ à la retraite": "oui",
+              "contrat salarié . travailleur handicapé": "non",
+              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            })
+          );
+
+          expect(result).toHaveLength(expectedNotification.length);
           expect(result[0].description).toBe(expectedNotification[0]);
-      }
-    );
+        }
+      );
+    });
   });
 });
