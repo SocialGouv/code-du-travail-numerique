@@ -15,11 +15,6 @@ const CommonReferences = [
   },
 ];
 
-const DepartRetraiteCcReferences = [
-  ...DepartRetraiteReferences,
-  ...CommonReferences,
-];
-
 const MiseRetraiteCcReferences = [
   ...MiseRetraiteReferences,
   ...CommonReferences,
@@ -50,9 +45,9 @@ describe("Préavis de retraite de la CC 2120", () => {
         expect(result.nodeValue).toEqual(expectedResult);
         expect(result.unit?.numerators).toEqual(["mois"]);
         expect(result.missingVariables).toEqual({});
-        expect(references).toHaveLength(DepartRetraiteCcReferences.length);
+        expect(references).toHaveLength(DepartRetraiteReferences.length);
         expect(references).toEqual(
-          expect.arrayContaining(DepartRetraiteCcReferences)
+          expect.arrayContaining(DepartRetraiteReferences)
         );
       }
     );

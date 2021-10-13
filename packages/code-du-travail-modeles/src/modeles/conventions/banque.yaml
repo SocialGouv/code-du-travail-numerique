@@ -10,8 +10,3 @@ contrat salarié . convention collective . banque . mise à la retraite:
   valeur: 3 mois
   références:
     Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005787789#KALIARTI000005787789
-
-contrat salarié . convention collective . banque . départ à la retraite:
-  applicable si: départ à la retraite
-  références:
-    Article 32: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005787789#KALIARTI000005787789
