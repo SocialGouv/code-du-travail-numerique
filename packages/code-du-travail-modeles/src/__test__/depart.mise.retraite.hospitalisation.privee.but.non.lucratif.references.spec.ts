@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -11,16 +12,14 @@ const engine = new Engine(mergeModels());
 const Article_15_03_1_3 = [
   {
     article: "Article 15.03.1.3",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
   },
 ];
 
 const Article_15_02_2_1 = [
   {
     article: "Article 15.02.2.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
   },
 ];
 
@@ -40,12 +39,12 @@ test.each`
   ({ retirement, category, seniority, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
-        "contrat salarié . ancienneté": seniority,
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
       })
     );
 

@@ -6,7 +6,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
     "build": "lerna run build",
-    "build:ui": "lerna run build --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public}",
+    "build:ui": "lerna run build --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
     "dev:api": "lerna run dev --scope=@cdt/api",
@@ -22,7 +22,7 @@
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
     "test:e2e": "lerna run test:e2e --scope=@cdt/e2e --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
-    "test:update": "lerna run build --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
+    "test:update": "lerna run test:update --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
     "prepare": "is-ci || husky install"
   },
   "repository": {

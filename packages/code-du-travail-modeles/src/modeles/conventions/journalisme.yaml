@@ -1,0 +1,16 @@
+# Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988)
+contrat salarié . convention collective . journalisme:
+  description: Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988)
+  applicable si: convention collective = 'IDCC1480'
+  valeur: oui
+  idcc: 1480
+
+contrat salarié . convention collective . journalisme . mise ou départ à la retraite:
+  applicable si:
+    une de ces conditions:
+      - mise à la retraite
+      - départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 51: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005786650/?idConteneur=KALICONT000005635444

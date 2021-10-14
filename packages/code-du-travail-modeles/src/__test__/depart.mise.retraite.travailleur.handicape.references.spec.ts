@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -22,11 +23,11 @@ test.each`
   ({ retirement, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "''",
         "contrat salarié . ancienneté": "24",
-        "contrat salarié . travailleur handicapé": "oui",
+        "contrat salarié . convention collective": "''",
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
+        "contrat salarié . travailleur handicapé": "oui",
       })
     );
 

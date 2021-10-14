@@ -3,17 +3,23 @@
   "version": "4.53.1",
   "description": "",
   "private": true,
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "ncc build ./src/server/index.js -o dist --source-map",
-    "lint": "eslint src/**/*.js",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "prebuild": "rimraf dist",
+    "build": "babel src -d babel-dist --copy-files --extensions \".ts,.js\"",
+    "build:types": "tsc --emitDeclarationOnly",
+    "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
+    "lint": "eslint \"./src/**/*.{js,ts}\"",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
-    "dev": "nodemon -r esm ./src/server/index.js",
-    "update-mock-data": "ES_INDEX_PREFIX=cdtn node -r esm tests/fetch_mock_data.js",
-    "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
-    "test": "ES_INDEX_PREFIX=cdtn_test jest"
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
+    "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js",
+    "test": "ES_INDEX_PREFIX=cdtn_test jest",
+    "clean": "rimraf dist && rimraf babel-dist"
   },
   "repository": {
     "type": "git",
@@ -44,30 +50,40 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^1.75.0",
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@socialgouv/eslint-config-typescript": "^1.93.0",
     "@vercel/ncc": "^0.29.2",
+    "babel-jest": "^27.2.0",
     "eslint": "^7.31.0",
-    "esm": "^3.2.25",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "nodemon": "^2.0.12",
-    "supertest": "^6.1.6"
+    "rimraf": "^3.0.2",
+    "supertest": "^6.1.6",
+    "typescript": "^4.4.3"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,ts}": [
       "yarn lint --fix"
     ]
   },
   "jest": {
     "setupFiles": [
-      "<rootDir>/tests/process.env.mock.js"
+      "<rootDir>/src/tests/process.env.mock.js"
     ],
     "collectCoverageFrom": [
-      "src/**/*.js",
-      "lib/**/*.js"
+      "src/**/*.js"
     ],
     "modulePathIgnorePatterns": [
       "__mocking__"
-    ]
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }

@@ -42,7 +42,12 @@ export const BurgerNav = ({ children, ...props }) => {
 
   return (
     <>
-      <OpenButton variant="naked" onClick={() => setOpen(true)} {...props}>
+      <OpenButton
+        variant="naked"
+        aria-label="menu principal"
+        onClick={() => setOpen(true)}
+        {...props}
+      >
         <StyledBurgerIcon />
       </OpenButton>
       <StyledDialogOverlay isOpen={isOpen} onDismiss={() => setOpen(false)}>

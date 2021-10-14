@@ -1,11 +1,11 @@
 /* Générateur des modèles sociales */
-import { mergeModels } from "./internal/merger";
-
-import path from "path";
 import fs from "fs";
 import fse from "fs-extra";
-import { extractImplementedCc } from "./internal/ExtractSupportedCc";
+import path from "path";
 import Engine from "publicodes";
+
+import { extractImplementedCc } from "./internal/ExtractSupportedCc";
+import { mergeModels } from "./internal/merger";
 
 const inDir = path.resolve(__dirname, "../bin");
 const outDir = path.resolve(__dirname, "../lib");

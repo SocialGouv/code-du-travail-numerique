@@ -1,55 +1,49 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
 const MiseAlaRetraiteNonCadres = [
   {
     article: "Article 16",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
   },
 ];
 const MiseAlaRetraiteCadres = [
   {
     article: "Annexe n° 6 Dispositions spéciales aux cadres, article 9",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407",
   },
 ];
 
 const DepartRetraiteNonCadres = [
   {
     article: "Article 16",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
   },
   {
     article: "Article 18",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407",
   },
 ];
 const DepartRetraiteCadres = [
   {
     article: "Article 16",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863125/?idConteneur=KALICONT000005635407",
   },
   {
     article: "Article 18",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005863127/?idConteneur=KALICONT000005635407",
   },
   {
     article: "Annexe n° 6 Dispositions spéciales aux cadres, article 9",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407",
   },
 ];
 
@@ -72,12 +66,13 @@ test.each`
   ({ retirement, category, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . ancienneté": 6,
+        "contrat salarié . convention collective": "'IDCC0413'",
+        "contrat salarié . convention collective . établissement handicap . catégorie professionnelle":
+          category,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": category,
       })
     );
 

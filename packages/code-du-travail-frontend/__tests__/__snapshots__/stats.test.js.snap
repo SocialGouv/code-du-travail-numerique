@@ -1428,6 +1428,7 @@ exports[`<Stats /> should render 1`] = `
             </svg>
           </a>
           <button
+            aria-label="menu principal"
             class="c19 c20 c21"
           >
             <svg
