@@ -22,7 +22,7 @@
   "scripts": {
     "prebuild": "tsc",
     "test": "jest",
-    "lint": "eslint \"./src/**/*.{js,ts}\" --fix",
+    "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'tsc && node bin/build.js' --watch 'src' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "node bin/build.js",
