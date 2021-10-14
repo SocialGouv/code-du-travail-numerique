@@ -55,16 +55,16 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
             cas, c’est cette durée ou cette ancienneté plus favorable qui
             s’applique au salarié.
           </p>
-          <p>
-            <SmallText>
-              <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié
-              = durée plus courte.
-              <br />
-              <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-              salarié = condition d’ancienneté moins restrictive et conduisant à
-              une durée de préavis plus courte.
-            </SmallText>
-          </p>
+
+          <SmallText>
+            <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
+            durée plus courte.
+          </SmallText>
+          <SmallText>
+            <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+            salarié = condition d’ancienneté moins restrictive et conduisant à
+            une durée de préavis plus courte.
+          </SmallText>
         </Disclaimer>
       );
     } else {
@@ -78,16 +78,16 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
             cette durée ou cette ancienneté plus favorable qui s’applique au
             salarié.
           </p>
-          <p>
-            <SmallText>
-              <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié
-              = durée plus courte.
-              <br />
-              <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-              salarié = condition d’ancienneté moins restrictive et conduisant à
-              une durée de préavis plus courte.
-            </SmallText>
-          </p>
+
+          <SmallText>
+            <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
+            durée plus courte.
+          </SmallText>
+          <SmallText>
+            <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+            salarié = condition d’ancienneté moins restrictive et conduisant à
+            une durée de préavis plus courte.
+          </SmallText>
         </Disclaimer>
       );
     }
@@ -103,16 +103,16 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
           c’est cette durée ou cette ancienneté plus favorable qui s’applique au
           salarié.
         </p>
-        <p>
-          <SmallText>
-            <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
-            durée plus longue.
-            <br />
-            <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-            salarié = condition d’ancienneté moins restrictive et conduisant à
-            une durée de préavis plus longue.
-          </SmallText>
-        </p>
+
+        <SmallText>
+          <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
+          durée plus longue.
+        </SmallText>
+        <SmallText>
+          <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+          salarié = condition d’ancienneté moins restrictive et conduisant à une
+          durée de préavis plus longue.
+        </SmallText>
       </Disclaimer>
     );
   } else {
@@ -125,16 +125,16 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
           <sup>*</sup> plus favorable pour le salarié. Dans ce cas, c’est cette
           durée ou cette ancienneté plus favorable qui s’applique au salarié.
         </p>
-        <p>
-          <SmallText>
-            <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
-            durée plus longue.
-            <br />
-            <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
-            salarié = condition d’ancienneté moins restrictive et conduisant à
-            une durée de préavis plus longue.
-          </SmallText>
-        </p>
+
+        <SmallText>
+          <sup>*</sup>&nbsp;durée de préavis plus favorable pour le salarié =
+          durée plus longue.
+        </SmallText>
+        <SmallText>
+          <sup>*</sup>&nbsp;condition d’ancienneté plus favorable pour le
+          salarié = condition d’ancienneté moins restrictive et conduisant à une
+          durée de préavis plus longue.
+        </SmallText>
       </Disclaimer>
     );
   }
