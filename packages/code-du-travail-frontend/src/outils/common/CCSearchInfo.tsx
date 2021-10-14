@@ -1,6 +1,7 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import Link from "next/link";
 import React from "react";
+
 import { ConventionCollective } from "./type/WizardType";
 
 type Props = {

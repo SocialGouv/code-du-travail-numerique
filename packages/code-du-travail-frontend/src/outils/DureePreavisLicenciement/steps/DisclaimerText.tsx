@@ -1,8 +1,8 @@
 import React from "react";
 
+import CCSearchInfo from "../../common/CCSearchInfo";
 import { isNotNearZero } from "../../common/math";
 import { ConventionCollective } from "../../common/type/WizardType";
-import CCSearchInfo from "../../common/CCSearchInfo";
 
 type Props = {
   durationCC: number;
