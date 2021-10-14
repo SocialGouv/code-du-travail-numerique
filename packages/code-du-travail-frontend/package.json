@@ -8,7 +8,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node server/server.js",
-    "lint-js": "eslint ./**/*.{js,ts,tsx,jsx} --no-error-on-unmatched-pattern",
+    "lint-js": "eslint .{src,pages,public,test,server}/**/*.{js,ts,tsx,jsx} --no-error-on-unmatched-pattern",
     "lint-css": "stylelint 'src/**/*.{js,ts,tsx,jsx}' 'src/**/*.css' 'pages/**/*.{js,ts,tsx,jsx}'",
     "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
