@@ -5,6 +5,14 @@ import React, { useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
+import {
+  ANCIENNETE_MOINS_2_ANS,
+  ANCIENNETE_PLUS_2_ANS,
+  DEPART_RETRAITE,
+  MISE_RETRAITE,
+  OUTIL,
+  TRACK_EVENT,
+} from "../../lib/tracking";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
@@ -104,6 +112,31 @@ function Wizard({
 
   const Annotation = steps[stepIndex].annotation;
 
+  const onClickNext = (form) => {
+    switch (steps[stepIndex].name) {
+      case initialState.steps[1].name: // "origine"
+        matopush([
+          TRACK_EVENT,
+          OUTIL,
+          form.getState().values.seniorityGreaterThanTwoYears === false
+            ? MISE_RETRAITE
+            : DEPART_RETRAITE,
+        ]);
+        break;
+      case initialState.steps[4].name: // "anciennete"
+        matopush([
+          TRACK_EVENT,
+          OUTIL,
+          form.getState().values.seniorityGreaterThanTwoYears
+            ? ANCIENNETE_PLUS_2_ANS
+            : ANCIENNETE_MOINS_2_ANS,
+        ]);
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
     <Wrapper variant="main">
       <Form
@@ -136,6 +169,7 @@ function Wizard({
                   nextVisible={nextVisible}
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
+                  onNext={() => onClickNext(form)}
                 />
 
                 {Annotation && (
