@@ -1,3 +1,5 @@
+import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
+
 import { FormContent } from "../common/type/WizardType";
 import { formatSeniority } from "../DureePreavisRetraite/steps/utils";
 import { PublicodesResult, PublicodesUnit } from "./index";
@@ -75,4 +77,15 @@ export const convertDaysIntoBetterUnit = (
 
 export function isFloat(n: number): boolean {
   return Number(n) === n && n % 1 !== 0;
+}
+
+type OldReference = {
+  ref: string;
+  refUrl: string;
+};
+
+export function formatRefs(refs: Array<OldReference>): Array<References> {
+  return refs.map((ref) => {
+    return { article: ref.ref, url: ref.refUrl };
+  });
 }

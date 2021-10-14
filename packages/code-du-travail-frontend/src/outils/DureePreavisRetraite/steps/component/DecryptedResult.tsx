@@ -1,7 +1,6 @@
-import { Text, theme } from "@socialgouv/cdtn-ui";
+import { Text } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social/lib/constants";
 import React from "react";
-import styled from "styled-components";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
@@ -180,18 +179,9 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
           detail={rootData.agreement}
         />
       </Text>
-      {description && (
-        <TextInformation>
-          <Text variant="secondary">{description}</Text>
-        </TextInformation>
-      )}
+      {description && <Text>{description}</Text>}
     </>
   );
 };
 
-const { spacings } = theme;
-
-const TextInformation = styled.p`
-  margin-top: ${spacings.small};
-`;
 export default DecryptedResult;

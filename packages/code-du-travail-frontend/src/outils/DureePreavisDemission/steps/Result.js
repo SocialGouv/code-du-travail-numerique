@@ -1,34 +1,28 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
-import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Toast } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
+import CCSearchInfo from "../../common/CCSearchInfo";
+import Disclaimer from "../../common/Disclaimer";
+import PubliReferences from "../../common/PubliReferences";
+import ShowDetails from "../../common/ShowDetails";
 import {
   filterSituations,
-  getRef,
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes/Utils";
 
-function HdnToast({ ccn }) {
+function DisclaimerBox() {
   return (
-    <Toast>
-      L’existence ou la durée du préavis de démission peut être prévue par une
-      convention collective, un accord d’entreprise ou à défaut, par un usage
-      dans l’entreprise.
-      {ccn && (
-        <>
-          <br />
-          Vous pouvez faire une recherche par mots-clés dans{" "}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-            <a>votre convention collective</a>
-          </Link>
-        </>
-      )}
-    </Toast>
+    <Disclaimer title={"Attention il peut exister une autre durée de préavis"}>
+      <p>
+        L’existence ou la durée du préavis de démission peut être prévue par une
+        convention collective, un accord d’entreprise ou à défaut, par un usage
+        dans l’entreprise.
+      </p>
+    </Disclaimer>
   );
 }
 
@@ -57,15 +51,15 @@ function StepResult({ form }) {
       <>
         <SectionTitle>Durée du préavis</SectionTitle>
         <p>
-          <Highlight>Aucun résultat</Highlight>&nbsp;:&nbsp;{reason}
+          <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
         </p>
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        <HdnToast ccn={ccn} />
-        <SectionTitle>Source</SectionTitle>
-        {getRef([refLegal])}
+        {possibleSituations.length === 0 && <CCSearchInfo ccn={ccn} />}
+        <DisclaimerBox />
+        <PubliReferences references={formatRefs([refLegal])} />
       </>
     );
   }
@@ -76,7 +70,8 @@ function StepResult({ form }) {
       <SectionTitle>Durée du préavis</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;<Highlight>{situation.answer}</Highlight>.
+        démission est estimée à&nbsp;:{" "}
+        <HighlightResult>{situation.answer}</HighlightResult>.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>
@@ -84,16 +79,17 @@ function StepResult({ form }) {
           sauf, cas particuliers.
         </p>
       )}
-      <HdnToast />
-      <SectionTitle>Détails</SectionTitle>
-      Éléments saisis&nbsp;:
-      <br />
-      {recapSituation({
-        "Convention collective": `${ccn.title} (${idcc})`,
-        ...situation.criteria,
-      })}
-      <SectionTitle>Source</SectionTitle>
-      {getRef([refLegal, situation])}
+
+      <ShowDetails>
+        <SectionTitle>Éléments saisis</SectionTitle>
+        {recapSituation({
+          "Convention collective": `${ccn.title} (${idcc})`,
+          ...situation.criteria,
+        })}
+        <PubliReferences references={formatRefs([refLegal, situation])} />
+      </ShowDetails>
+
+      <DisclaimerBox />
     </>
   );
 }
