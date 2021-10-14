@@ -351,6 +351,9 @@ exports[`<StepResult /> should render no results 1`] = `
         </span>
       </div>
     </div>
+    <p>
+      Un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis.
+    </p>
   </div>
 </div>
 `;
@@ -739,6 +742,9 @@ exports[`<StepResult /> should render with duration 1`] = `
         </span>
       </div>
     </div>
+    <p>
+      Si un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise plus récent prévoit des heures d’absence autorisée pour rechercher un emploi pendant le préavis, le salarié en bénéficie si ces mesures sont plus favorables que la convention collective.
+    </p>
   </div>
 </div>
 `;
@@ -1097,6 +1103,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </span>
       </div>
     </div>
+    <p>
+      Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
+    </p>
   </div>
 </div>
 `;
@@ -1464,6 +1473,9 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </span>
       </div>
     </div>
+    <p>
+      Une convention collective, un accord d’entreprise ou à défaut un usage dans la profession ou l’entreprise peut prévoir que le salarié bénéficie d’heures d’absence autorisée pour rechercher un emploi pendant le préavis. Il peut s’agir du préavis en cas de rupture de la période d’essai, de démission ou de licenciement.
+    </p>
   </div>
 </div>
 `;
