@@ -118,7 +118,8 @@ function Wizard({
         matopush([
           TRACK_EVENT,
           OUTIL,
-          form.getState().values.seniorityGreaterThanTwoYears === false
+          form.getState().values["contrat salarié - mise à la retraite"] ===
+          "oui"
             ? MISE_RETRAITE
             : DEPART_RETRAITE,
         ]);
