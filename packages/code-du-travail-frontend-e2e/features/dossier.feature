@@ -13,5 +13,5 @@ Fonctionnalité: Dossier Coronavirus
     Alors je vois "Sommaire"
 
     Quand je clique sur "Covid-19 : Les mesures de protection"
-    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise (Protocole national)" apparaisse
+    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise (Protocole national [infographie])" apparaisse
     Alors je vois "Cette page a été rédigée à partir du Protocole national pour assurer la santé et la sécurité des salariés en entreprise face à l’épidémie de COVID-19 ainsi que du guide employeur associé."
