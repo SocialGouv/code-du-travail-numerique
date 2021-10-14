@@ -191,7 +191,9 @@ function Wizard({
                   process.env.NODE_ENV !== "test" && (
                     <details>
                       <summary>state</summary>
-                      <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                      <pre>
+                        {JSON.stringify(form.getState().values, null, 2)}
+                      </pre>
                     </details>
                   )}
               </StyledForm>
