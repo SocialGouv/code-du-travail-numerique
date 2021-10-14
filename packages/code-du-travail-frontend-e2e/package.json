@@ -4,6 +4,7 @@
   "description": "",
   "main": "codecept.conf.js",
   "scripts": {
+    "precommit": "lint-staged",
     "lint": "eslint ./**/*.js",
     "test:e2e": "codeceptjs run --features",
     "test:e2e:ui": "codecept-ui --app"
@@ -16,7 +17,13 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^1.75.0",
-    "eslint": "^7.31.0"
+    "eslint": "^7.31.0",
+    "lint-staged": "^11.2.3"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "yarn lint --fix"
+    ]
   },
   "license": "Apache-2.0"
 }

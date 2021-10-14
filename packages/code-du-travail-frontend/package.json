@@ -8,8 +8,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node server/server.js",
-    "lint-js": "eslint src pages __tests__ __mocks__",
-    "lint-css": "stylelint 'src/**/*.js' 'src/**/*.css' 'pages/**/*.js'",
+    "lint-js": "eslint ./**/*.{js,ts,tsx,jsx} --no-error-on-unmatched-pattern",
+    "lint-css": "stylelint 'src/**/*.{js,ts,tsx,jsx}' 'src/**/*.css' 'pages/**/*.{js,ts,tsx,jsx}'",
     "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
@@ -105,13 +105,10 @@
     "supertest": "^6.1.6"
   },
   "lint-staged": {
-    "{pages,src}/**/*.{css,js}": [
+    "{pages,src}/**/*.{css,js,ts,tsx,jsx}": [
       "yarn lint-css"
     ],
-    "{__tests__,pages,server,src}/**/*.{js,ts,tsx,jsx}": [
-      "yarn lint-js --fix"
-    ],
-    "{__mocks__,test}/**/*.{js,ts,tsx,jsx}": [
+    "{__mocks__,test,__tests__,pages,server,src}/**/*.{js,ts,tsx,jsx}": [
       "yarn lint-js --fix"
     ]
   },

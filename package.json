@@ -15,6 +15,7 @@
     "dev:frontend:preprod-api": "API_URL=https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
+    "lint:fix": "lerna run lint -- --fix",
     "start": "lerna run start",
     "test": "lerna run test",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",

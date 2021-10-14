@@ -1,11 +1,12 @@
 import Engine from "publicodes";
+
+import { getNotifications } from "..";
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
-import { getNotifications } from "..";
 
 const ArticleCc = {
   article: "Article 3.10.3",
@@ -38,11 +39,11 @@ describe("Vérification juridique pour la CC 1505", () => {
       "Pour un $category disposant d'une ancienneté $seniority, son préavis devrait être $expectedResult mois",
       ({ expectedResult, seniority, category, expectedReferences }) => {
         const situation = engine.setSituation({
+          "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1505'",
+          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -76,11 +77,11 @@ describe("Vérification juridique pour la CC 1505", () => {
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult, expectedReferences }) => {
         const situation = engine.setSituation({
+          "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1505'",
+          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
         });
 
         const result = situation.evaluate(
@@ -114,11 +115,11 @@ describe("Vérification juridique pour la CC 1505", () => {
         ({ seniority, category }) => {
           const result = getNotifications(
             engine.setSituation({
-              "contrat salarié . convention collective": "'IDCC1505'",
               "contrat salarié . ancienneté": seniority,
+              "contrat salarié . convention collective": "'IDCC1505'",
+              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
               "contrat salarié . départ à la retraite": "oui",
               "contrat salarié . travailleur handicapé": "non",
-              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
             })
           );
 
@@ -138,11 +139,11 @@ describe("Vérification juridique pour la CC 1505", () => {
         ({ seniority, category, expectedNotification }) => {
           const result = getNotifications(
             engine.setSituation({
-              "contrat salarié . convention collective": "'IDCC1505'",
               "contrat salarié . ancienneté": seniority,
+              "contrat salarié . convention collective": "'IDCC1505'",
+              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
               "contrat salarié . départ à la retraite": "oui",
               "contrat salarié . travailleur handicapé": "non",
-              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
             })
           );
 
