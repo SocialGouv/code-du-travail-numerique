@@ -3,7 +3,9 @@ contrat salarié . convention collective . prevention sécurité entreprise:
   description: Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985).
   applicable si: convention collective = 'IDCC1351'
   valeur: oui
-  idcc: 1351
+  cdtn:
+    idcc: 1351
+    préavis-retraite: true
 
 contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle:
   titre: Catégorie professionnelle

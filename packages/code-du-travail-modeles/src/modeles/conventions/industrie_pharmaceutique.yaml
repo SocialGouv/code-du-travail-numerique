@@ -3,7 +3,9 @@ contrat salarié . convention collective . industrie pharmaceutique:
   titre: Convention collective nationale de l'industrie pharmaceutique
   applicable si: convention collective = 'IDCC0176'
   valeur: oui
-  idcc: 176
+  cdtn:
+    idcc: 176
+    préavis-retraite: true
 
 contrat salarié . convention collective . industrie pharmaceutique . groupe:
   titre: Groupe
