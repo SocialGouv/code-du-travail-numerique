@@ -203,6 +203,10 @@ exports[`<SearchHero /> should render 1`] = `
 .c7 {
   margin-top: 0.8rem;
   margin-bottom: 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c6 {
@@ -229,6 +233,7 @@ exports[`<SearchHero /> should render 1`] = `
 
 .c8 {
   display: block;
+  margin-top: 0;
   margin-bottom: 0.8rem;
   color: #3e486e;
   font-weight: bold;
@@ -398,11 +403,11 @@ exports[`<SearchHero /> should render 1`] = `
             le Code du travail numérique
           </span>
         </h1>
-        <p
+        <h2
           class="c7"
         >
-          Obtenez des réponses aux questions que vous vous posez sur le droit du travail.
-        </p>
+          Obtenez les réponses à vos questions sur le droit du travail.
+        </h2>
       </header>
       <label
         class="c8"
@@ -467,7 +472,9 @@ exports[`<SearchHero /> should render 1`] = `
             />
           </div>
           <button
+            aria-label="Lancer ma recherche"
             class="c16 c17"
+            title="Lancer ma recherche"
             type="submit"
           >
             Rechercher

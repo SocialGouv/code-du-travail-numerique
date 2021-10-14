@@ -1,14 +1,16 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import "react-image-lightbox/style.css";
 
 import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
-import Head from "next/head";
 import React from "react";
 
 import { A11y } from "../src/a11y";
+import { initATInternetService } from "../src/AtInternetService";
 import { initPiwik } from "../src/piwik";
 import { initializeSentry, notifySentry } from "../src/sentry";
 import CustomError from "./_error";
@@ -50,17 +52,28 @@ export default class MyApp extends App {
 
     if (Component.getInitialProps) {
       try {
+        const initialProps = await Component.getInitialProps(ctx);
+        if (initialProps.statusCode) {
+          ctx.res.statusCode = initialProps.statusCode;
+        }
         pageProps = await Component.getInitialProps(ctx);
       } catch (err) {
+        ctx.res.statusCode = 500;
         pageProps = { message: err.message, statusCode: 500 };
       }
     }
 
-    return { pageProps };
+    return {
+      pageProps,
+      trackingEnabled: process.env.IS_PRODUCTION_DEPLOYMENT === "true",
+    };
   }
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    if (this.props.trackingEnabled) {
+      initATInternetService();
+    }
   }
 
   componentDidCatch(error, errorInfo) {
@@ -82,12 +95,6 @@ export default class MyApp extends App {
       return (
         <ThemeProvider>
           <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-            </Head>
             <GlobalStyles />
             {pageProps.statusCode === 404 ? (
               <Custom404 />
@@ -102,12 +109,6 @@ export default class MyApp extends App {
       <React.StrictMode>
         <ThemeProvider>
           <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-              />
-            </Head>
             <GlobalStyles />
             <A11y />
             <Component {...pageProps} />

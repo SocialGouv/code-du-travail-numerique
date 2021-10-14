@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.52.2",
+  "version": "4.53.1",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -16,7 +16,9 @@
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "prepublishOnly": "yarn build",
-    "test": "jest"
+    "dev": "rollup --config --watch",
+    "test": "jest",
+    "test:update": "jest -u"
   },
   "dependencies": {
     "date-fns": "^2.23.0"

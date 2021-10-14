@@ -52,7 +52,7 @@ export const Header = ({ currentPage = "" }) => {
         </Link>
         {(overThreshold || isContentPage) && (
           <SearchBarWrapper overThreshold={overThreshold}>
-            <SearchBar />
+            <SearchBar inputId="floating-search" />
           </SearchBarWrapper>
         )}
 

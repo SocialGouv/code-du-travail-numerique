@@ -1,5 +1,6 @@
 import { extractMdxContentUrl } from "@cdt/data";
 import getConfig from "next/config";
+import { withRouter } from "next/router";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
@@ -36,8 +37,6 @@ class PageContribution extends React.Component {
 
     return { data };
   }
-
-  function;
 
   buildTitleAndDescription(breadcrumbs, conventionAnswer, title, description) {
     if (breadcrumbs && breadcrumbs.length > 0 && conventionAnswer) {
@@ -101,4 +100,4 @@ class PageContribution extends React.Component {
   }
 }
 
-export default PageContribution;
+export default withRouter(PageContribution);

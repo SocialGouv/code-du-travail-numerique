@@ -15,10 +15,7 @@ const SearchHero = () => (
           Bienvenue sur <br />
           <Span>le Code du travail numérique</Span>
         </H1>
-        <P>
-          Obtenez des réponses aux questions que vous vous posez sur le droit du
-          travail.
-        </P>
+        <H2>Obtenez les réponses à vos questions sur le droit du travail.</H2>
       </Header>
       <Label id="search" htmlFor={SEARCH_ID}>
         Recherchez par mots-clés
@@ -82,9 +79,13 @@ const H1 = styled.h1`
   }
 `;
 
-const P = styled.p`
+const H2 = styled.h2`
   margin-top: ${spacings.xsmall};
   margin-bottom: ${spacings.large};
+  font-size: ${fonts.sizes.default};
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  line-height: ${fonts.lineHeight};
 `;
 
 const Span = styled.span`
@@ -123,6 +124,7 @@ const StyledWorkers = styled(icons.WorkersHero)`
 
 const Label = styled.label`
   display: block;
+  margin-top: 0;
   margin-bottom: ${spacings.xsmall};
   color: ${({ theme }) => theme.paragraph};
   font-weight: bold;

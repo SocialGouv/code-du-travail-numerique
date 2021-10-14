@@ -43,11 +43,18 @@ export default class MyDocument extends Document {
     return (
       <Html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
-          <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
-          <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <script src="/static/polyfill.min.js" />
-          <script src="/static/webcomponents-polyfill/loader.js" />
+          <link
+            key="rel-stylesheet"
+            rel="stylesheet"
+            type="text/css"
+            href="/static/fonts.css"
+          />
+          <script key="polyfill" src="/static/polyfill.min.js" />
+          <script
+            key="webcomponents"
+            src="/static/webcomponents-polyfill/loader.js"
+          />
+          <script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>

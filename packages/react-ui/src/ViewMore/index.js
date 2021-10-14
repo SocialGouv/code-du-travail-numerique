@@ -55,7 +55,9 @@ ViewMore.propTypes = {
 };
 
 const defaultRenderProp = (onClick) => (
-  <StyledButton onClick={onClick}>Voir plus</StyledButton>
+  <StyledButton type="button" onClick={onClick}>
+    Voir plus
+  </StyledButton>
 );
 
 ViewMore.defaultProps = {

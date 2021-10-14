@@ -74,3 +74,16 @@
 		/* from https://fonts.gstatic.com/s/opensans/v17/memnYaGs126MiZpBA-UFUKXGUdhrIqY.ttf */
 		url('/static/assets/fonts/Open_Sans_600i.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/static/assets/fonts/Open_Sans_400i.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('/static/assets/fonts/Open_Sans_400i.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/static/assets/fonts/Open_Sans_400i.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/static/assets/fonts/Open_Sans_400i.woff') format('woff'), /* Modern Browsers */
+  url('/static/assets/fonts/Open_Sans_400i.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/static/assets/fonts/Open_Sans_400i.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<YesNoQuestion /> should render 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +38,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +53,12 @@ exports[`<YesNoQuestion /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -66,12 +66,15 @@ exports[`<YesNoQuestion /> should render 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,9 +103,13 @@ exports[`<YesNoQuestion /> should render 1`] = `
   <p
     class="c0"
   >
-    lorem ipsum ?
     <span
       class="c1"
+    >
+      lorem ipsum ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -110,14 +117,14 @@ exports[`<YesNoQuestion /> should render 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="test-yes"
     >
       <input
-        class="c4"
+        class="c5"
         id="test-yes"
         name="test"
         type="radio"
@@ -126,11 +133,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="test-no"
     >
       <input
-        class="c4"
+        class="c5"
         id="test-no"
         name="test"
         type="radio"

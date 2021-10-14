@@ -291,7 +291,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       <div
         class="c7"
       >
-        <header
+        <div
           class="c8"
         >
           <h2
@@ -302,7 +302,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
             />
             CDI
           </h2>
-        </header>
+        </div>
       </div>
       <div
         class="c11"

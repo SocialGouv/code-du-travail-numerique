@@ -1,9 +1,9 @@
-import Engine from "publicodes";
+import type Engine from "publicodes";
 
-export function extractCcnIds(engine: Engine): Array<String> {
+export function extractCcnIds(engine: Engine): string[] {
   return Object.values(engine.getParsedRules())
     .flatMap((rule) => {
-      // @ts-ignore
+      // @ts-expect-error
       const applicableSi = rule.rawNode["applicable si"];
       return applicableSi && typeof applicableSi == "string"
         ? [applicableSi]

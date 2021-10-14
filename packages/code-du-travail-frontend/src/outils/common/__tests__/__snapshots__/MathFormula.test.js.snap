@@ -2,10 +2,6 @@
 
 exports[`<MathFormula /> renders 1`] = `
 .c0 {
-  margin: 1.6rem 0;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,263 +12,259 @@ exports[`<MathFormula /> renders 1`] = `
   <div
     class="c0"
   >
-    <div
-      class="c1"
-    >
-      <div>
+    <div>
+      <span
+        class="katex-display"
+      >
         <span
-          class="katex-display"
+          class="katex"
         >
           <span
-            class="katex"
+            class="katex-mathml"
+          >
+            <math
+              display="block"
+              xmlns="http://www.w3.org/1998/Math/MathML"
+            >
+              <semantics>
+                <mrow>
+                  <mfrac>
+                    <mn>
+                      1
+                    </mn>
+                    <mn>
+                      4
+                    </mn>
+                  </mfrac>
+                  <mo>
+                    ×
+                  </mo>
+                  <mi>
+                    S
+                  </mi>
+                  <mi>
+                    r
+                  </mi>
+                  <mi>
+                    e
+                  </mi>
+                  <mi>
+                    f
+                  </mi>
+                  <mo>
+                    ×
+                  </mo>
+                  <mi>
+                    A
+                  </mi>
+                  <mo>
+                    ×
+                  </mo>
+                  <mn>
+                    2
+                  </mn>
+                </mrow>
+                <annotation
+                  encoding="application/x-tex"
+                >
+                  \\frac{1}{4} \\times Sref \\times A \\times 2
+                </annotation>
+              </semantics>
+            </math>
+          </span>
+          <span
+            aria-hidden="true"
+            class="katex-html"
           >
             <span
-              class="katex-mathml"
-            >
-              <math
-                display="block"
-                xmlns="http://www.w3.org/1998/Math/MathML"
-              >
-                <semantics>
-                  <mrow>
-                    <mfrac>
-                      <mn>
-                        1
-                      </mn>
-                      <mn>
-                        4
-                      </mn>
-                    </mfrac>
-                    <mo>
-                      ×
-                    </mo>
-                    <mi>
-                      S
-                    </mi>
-                    <mi>
-                      r
-                    </mi>
-                    <mi>
-                      e
-                    </mi>
-                    <mi>
-                      f
-                    </mi>
-                    <mo>
-                      ×
-                    </mo>
-                    <mi>
-                      A
-                    </mi>
-                    <mo>
-                      ×
-                    </mo>
-                    <mn>
-                      2
-                    </mn>
-                  </mrow>
-                  <annotation
-                    encoding="application/x-tex"
-                  >
-                    \\frac{1}{4} \\times Sref \\times A \\times 2
-                  </annotation>
-                </semantics>
-              </math>
-            </span>
-            <span
-              aria-hidden="true"
-              class="katex-html"
+              class="base"
             >
               <span
-                class="base"
+                class="strut"
+                style="height:2.00744em;vertical-align:-0.686em;"
+              />
+              <span
+                class="mord"
               >
                 <span
-                  class="strut"
-                  style="height:2.00744em;vertical-align:-0.686em;"
+                  class="mopen nulldelimiter"
                 />
                 <span
-                  class="mord"
+                  class="mfrac"
                 >
                   <span
-                    class="mopen nulldelimiter"
-                  />
-                  <span
-                    class="mfrac"
+                    class="vlist-t vlist-t2"
                   >
                     <span
-                      class="vlist-t vlist-t2"
+                      class="vlist-r"
                     >
                       <span
-                        class="vlist-r"
+                        class="vlist"
+                        style="height:1.32144em;"
                       >
                         <span
-                          class="vlist"
-                          style="height:1.32144em;"
+                          style="top:-2.314em;"
                         >
                           <span
-                            style="top:-2.314em;"
+                            class="pstrut"
+                            style="height:3em;"
+                          />
+                          <span
+                            class="mord"
                           >
-                            <span
-                              class="pstrut"
-                              style="height:3em;"
-                            />
                             <span
                               class="mord"
                             >
-                              <span
-                                class="mord"
-                              >
-                                4
-                              </span>
-                            </span>
-                          </span>
-                          <span
-                            style="top:-3.23em;"
-                          >
-                            <span
-                              class="pstrut"
-                              style="height:3em;"
-                            />
-                            <span
-                              class="frac-line"
-                              style="border-bottom-width:0.04em;"
-                            />
-                          </span>
-                          <span
-                            style="top:-3.677em;"
-                          >
-                            <span
-                              class="pstrut"
-                              style="height:3em;"
-                            />
-                            <span
-                              class="mord"
-                            >
-                              <span
-                                class="mord"
-                              >
-                                1
-                              </span>
+                              4
                             </span>
                           </span>
                         </span>
                         <span
-                          class="vlist-s"
+                          style="top:-3.23em;"
                         >
-                          ​
+                          <span
+                            class="pstrut"
+                            style="height:3em;"
+                          />
+                          <span
+                            class="frac-line"
+                            style="border-bottom-width:0.04em;"
+                          />
+                        </span>
+                        <span
+                          style="top:-3.677em;"
+                        >
+                          <span
+                            class="pstrut"
+                            style="height:3em;"
+                          />
+                          <span
+                            class="mord"
+                          >
+                            <span
+                              class="mord"
+                            >
+                              1
+                            </span>
+                          </span>
                         </span>
                       </span>
                       <span
-                        class="vlist-r"
+                        class="vlist-s"
                       >
-                        <span
-                          class="vlist"
-                          style="height:0.686em;"
-                        >
-                          <span />
-                        </span>
+                        ​
+                      </span>
+                    </span>
+                    <span
+                      class="vlist-r"
+                    >
+                      <span
+                        class="vlist"
+                        style="height:0.686em;"
+                      >
+                        <span />
                       </span>
                     </span>
                   </span>
-                  <span
-                    class="mclose nulldelimiter"
-                  />
                 </span>
                 <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
-                />
-                <span
-                  class="mbin"
-                >
-                  ×
-                </span>
-                <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
+                  class="mclose nulldelimiter"
                 />
               </span>
               <span
-                class="base"
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+              <span
+                class="mbin"
               >
-                <span
-                  class="strut"
-                  style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                />
-                <span
-                  class="mord mathnormal"
-                  style="margin-right:0.05764em;"
-                >
-                  S
-                </span>
-                <span
-                  class="mord mathnormal"
-                >
-                  re
-                </span>
-                <span
-                  class="mord mathnormal"
-                  style="margin-right:0.10764em;"
-                >
-                  f
-                </span>
-                <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
-                />
-                <span
-                  class="mbin"
-                >
-                  ×
-                </span>
-                <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
-                />
+                ×
               </span>
               <span
-                class="base"
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+            </span>
+            <span
+              class="base"
+            >
+              <span
+                class="strut"
+                style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+              />
+              <span
+                class="mord mathnormal"
+                style="margin-right:0.05764em;"
               >
-                <span
-                  class="strut"
-                  style="height:0.76666em;vertical-align:-0.08333em;"
-                />
-                <span
-                  class="mord mathnormal"
-                >
-                  A
-                </span>
-                <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
-                />
-                <span
-                  class="mbin"
-                >
-                  ×
-                </span>
-                <span
-                  class="mspace"
-                  style="margin-right:0.2222222222222222em;"
-                />
+                S
               </span>
               <span
-                class="base"
+                class="mord mathnormal"
               >
-                <span
-                  class="strut"
-                  style="height:0.64444em;vertical-align:0em;"
-                />
-                <span
-                  class="mord"
-                >
-                  2
-                </span>
+                re
+              </span>
+              <span
+                class="mord mathnormal"
+                style="margin-right:0.10764em;"
+              >
+                f
+              </span>
+              <span
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+              <span
+                class="mbin"
+              >
+                ×
+              </span>
+              <span
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+            </span>
+            <span
+              class="base"
+            >
+              <span
+                class="strut"
+                style="height:0.76666em;vertical-align:-0.08333em;"
+              />
+              <span
+                class="mord mathnormal"
+              >
+                A
+              </span>
+              <span
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+              <span
+                class="mbin"
+              >
+                ×
+              </span>
+              <span
+                class="mspace"
+                style="margin-right:0.2222222222222222em;"
+              />
+            </span>
+            <span
+              class="base"
+            >
+              <span
+                class="strut"
+                style="height:0.64444em;vertical-align:0em;"
+              />
+              <span
+                class="mord"
+              >
+                2
               </span>
             </span>
           </span>
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>

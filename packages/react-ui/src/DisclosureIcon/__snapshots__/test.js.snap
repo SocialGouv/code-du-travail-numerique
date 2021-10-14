@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> renders simple tooltip 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c0:focus,
+.c0:hover,
+.c0:active {
+  color: #f66663;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #7994d4;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  bottom: -0.5rem;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c0 {
+    display: none;
+  }
+}
+
+<div>
+  <button
+    aria-label="Find out what lies beneath"
+    class="c0 c1"
+    title="[object Object]"
+    type="button"
+  >
+    <svg
+      aria-label="?"
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+      />
+      <path
+        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+      />
+      <line
+        x1="12"
+        x2="12.01"
+        y1="17"
+        y2="17"
+      />
+    </svg>
+  </button>
+</div>
+`;

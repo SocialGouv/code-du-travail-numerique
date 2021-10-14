@@ -160,10 +160,10 @@ exports[`<Grid /> should render 1`] = `
     <div
       class="c2"
     >
-      <ul
+      <div
         class="c3"
       >
-        <li
+        <div
           class="c4"
         >
           <div>
@@ -174,8 +174,8 @@ exports[`<Grid /> should render 1`] = `
               contenu 1
             </p>
           </div>
-        </li>
-        <li
+        </div>
+        <div
           class="c4"
         >
           <div>
@@ -186,8 +186,8 @@ exports[`<Grid /> should render 1`] = `
               contenu 2
             </p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -353,10 +353,10 @@ exports[`<Grid /> should render 5columns 1`] = `
     <div
       class="c2"
     >
-      <ul
+      <div
         class="c3"
       >
-        <li
+        <div
           class="c4"
         >
           <div>
@@ -367,8 +367,8 @@ exports[`<Grid /> should render 5columns 1`] = `
               contenu 1
             </p>
           </div>
-        </li>
-        <li
+        </div>
+        <div
           class="c4"
         >
           <div>
@@ -379,8 +379,8 @@ exports[`<Grid /> should render 5columns 1`] = `
               contenu 2
             </p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

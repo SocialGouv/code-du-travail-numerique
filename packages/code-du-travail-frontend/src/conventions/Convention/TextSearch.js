@@ -53,7 +53,14 @@ export function TextSearch({ containerId, convention }) {
           <input type="hidden" name="searchType" value="ALL" />
           <input type="hidden" name="tab_selection" value="kali" />
           <input type="hidden" name="page" value="1" />
-          <SubmitIcon type="submit" small narrow variant="naked">
+          <SubmitIcon
+            type="submit"
+            small
+            narrow
+            variant="naked"
+            aria-label="Recherchez dans la collection collective"
+            title="Lancer une recherche"
+          >
             <StyledSearchIcon aria-label="rechercher (nouvelle fenêtre)" />
           </SubmitIcon>
         </Box>

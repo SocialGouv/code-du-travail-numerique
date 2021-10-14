@@ -14,9 +14,16 @@ export const PageTitle = ({
   shift = "",
   subtitle,
   variant,
+  withoutHeader,
   ...props
 }) => (
-  <Header pageTitle stripe={stripe} shift={shift} {...props}>
+  <Header
+    as={withoutHeader ? "div" : "header"}
+    pageTitle
+    stripe={stripe}
+    shift={shift}
+    {...props}
+  >
     <StyledPageTitle stripe={stripe} as={as} shift={shift}>
       <Stripe
         rounded={variant !== "primary"}
@@ -40,11 +47,13 @@ PageTitle.propTypes = {
   stripe: PropTypes.oneOf(["left", "top"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
+  withoutHeader: PropTypes.bool,
 };
 
 PageTitle.defaultProps = {
   stripe: "top",
   variant: "secondary",
+  withoutHeader: false,
 };
 
 const StyledPageTitle = styled.h1`

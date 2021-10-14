@@ -1,7 +1,6 @@
 import { Accordion } from "@socialgouv/cdtn-ui";
 import { decode } from "@socialgouv/fiches-travail-data";
 import getConfig from "next/config";
-import Head from "next/head";
 import { withRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -59,10 +58,7 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
   const untitledSection = sections.find((section) => !section.anchor);
   return (
     <Layout>
-      <Metas title={title} description={description} />
-      <Head>
-        <link rel="canonical" href={url} />
-      </Head>
+      <Metas title={title} description={description} overrideCanonical={url} />
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}
@@ -97,6 +93,7 @@ const TabContent = styled(Html)`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }

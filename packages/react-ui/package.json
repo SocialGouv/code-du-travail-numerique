@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-ui",
-  "version": "4.52.2",
+  "version": "4.53.1",
   "description": "Composants ReactJS",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/react-ui#react-ui-socialgouvreact-ui",
   "main": "lib/index.js",
@@ -19,7 +19,9 @@
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && npx @svgr/cli --icon --no-dimensions -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "watch": "yarn build --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:update": "jest -u",
+    "dev": "rollup --config --watch"
   },
   "peerDependencies": {
     "prop-types": "15.x",
@@ -82,7 +84,7 @@
     "ui"
   ],
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{ts,js}": [
       "yarn lint-css",
       "yarn lint-js --fix"
     ]

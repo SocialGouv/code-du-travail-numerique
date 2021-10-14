@@ -3,17 +3,12 @@ import React from "react";
 import { RuleType, SituationElement } from "../publicodes";
 import { reverseValues } from "../publicodes/Utils";
 import { SectionTitle } from "./stepStyles";
-import { FormContent } from "./type/WizardType";
 
 type PublicodesInputProps = {
   element: SituationElement;
-  form: FormContent;
 };
 
-function SituationInput({ element, form }: PublicodesInputProps): JSX.Element {
-  if (element.name === "contrat salarié - convention collective") {
-    return <>{form.ccn.shortTitle}</>;
-  }
+const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
   switch (element.rawNode.cdtn?.type) {
     case RuleType.Liste:
       return <>{reverseValues(element.rawNode.cdtn.valeurs)[element.value]}</>;
@@ -25,26 +20,40 @@ function SituationInput({ element, form }: PublicodesInputProps): JSX.Element {
       {element.value} {element.rawNode.unité}
     </>
   );
-}
+};
 
 type Props = {
   situation: SituationElement[];
-  form: FormContent;
+  annotations?: JSX.Element[];
+  onOverrideInput?: (element: SituationElement) => JSX.Element;
 };
 
-const PubliSituation: React.FC<Props> = ({ situation, form }) => (
+const PubliSituation = ({
+  situation,
+  annotations,
+  onOverrideInput,
+}: Props): JSX.Element => (
   <>
-    <SectionTitle>Récapitulatif des éléments saisis</SectionTitle>
+    <SectionTitle>Les éléments saisis</SectionTitle>
     <ul>
-      {situation.map((element) => (
-        <li key={element.name}>
-          {element.rawNode.titre}:{" "}
-          <b>
-            <SituationInput element={element} form={form} />
-          </b>
-        </li>
-      ))}
+      {situation.map((element) => {
+        const overriden = onOverrideInput && onOverrideInput(element);
+        return (
+          <li key={element.name}>
+            {element.rawNode.titre}:{" "}
+            <b>
+              {overriden ? overriden : <SituationInput element={element} />}
+            </b>
+          </li>
+        );
+      })}
     </ul>
+    {annotations &&
+      annotations.map((annotation, index) => (
+        <p key={index}>
+          <i>*&nbsp;{annotation}</i>
+        </p>
+      ))}
   </>
 );
 

@@ -53,7 +53,7 @@ exports[`<Title /> renders a H2 title 1`] = `
 }
 
 <div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -64,7 +64,7 @@ exports[`<Title /> renders a H2 title 1`] = `
       />
       Lorem Ipsum
     </h2>
-  </header>
+  </div>
 </div>
 `;
 
@@ -121,7 +121,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 }
 
 <div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -132,7 +132,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
       />
       Lorem Ipsum
     </h2>
-  </header>
+  </div>
 </div>
 `;
 
@@ -168,7 +168,7 @@ exports[`<Title /> renders a unstriped H2 title 1`] = `
 }
 
 <div>
-  <header
+  <div
     class="c0"
   >
     <h2
@@ -176,6 +176,6 @@ exports[`<Title /> renders a unstriped H2 title 1`] = `
     >
       Lorem Ipsum
     </h2>
-  </header>
+  </div>
 </div>
 `;

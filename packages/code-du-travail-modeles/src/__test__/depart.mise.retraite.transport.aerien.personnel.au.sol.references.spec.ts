@@ -1,18 +1,18 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
 const OuvriersReferences = [
   {
     article: "Annexe III article 15",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -21,8 +21,7 @@ const EmployeesReferences = OuvriersReferences;
 const TechniciensReferences = [
   {
     article: "Annexe II article 11",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -31,8 +30,7 @@ const AgentDeMaitriseReferences = TechniciensReferences;
 const CadresReferences = [
   {
     article: "Annexe I article 10",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -53,12 +51,12 @@ test.each`
   ({ retirement, category, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0275'",
         "contrat salarié . ancienneté": 5,
+        "contrat salarié . convention collective": "'IDCC0275'",
+        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle": `'${category}'`,
       })
     );
 
