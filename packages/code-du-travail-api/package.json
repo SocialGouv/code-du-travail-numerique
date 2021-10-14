@@ -36,15 +36,9 @@
     "@koa/cors": "^3.1.0",
     "@socialgouv/cdtn-elasticsearch": "^1.8.10",
     "@socialgouv/cdtn-logger": "^1.8.10",
-<<<<<<< HEAD
     "@socialgouv/cdtn-sources": "^4.52.1",
     "date-fns": "^2.23.0",
     "elastic-apm-node": "^3.19.0",
-=======
-    "@socialgouv/cdtn-sources": "^4.53.1",
-    "date-fns": "^2.22.1",
-    "elastic-apm-node": "^3.17.0",
->>>>>>> master
     "fuzzball": "^2.0.2",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
