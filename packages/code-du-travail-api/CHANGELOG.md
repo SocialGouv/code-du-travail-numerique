@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# 4.53.0 (2021-09-17)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#3700](https://github.com/SocialGouv/code-du-travail-numerique/issues/3700)) ([1ae3000](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ae3000d23d1288bb4a3fddda673caed55d03d04))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.181.0 ([#3638](https://github.com/SocialGouv/code-du-travail-numerique/issues/3638)) ([6a97857](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a97857d35b493b11ab98fffe990c6087c471de3))
+* **deps:** update dependency fuzzball to v2 ([#3665](https://github.com/SocialGouv/code-du-travail-numerique/issues/3665)) ([3425aca](https://github.com/SocialGouv/code-du-travail-numerique/commit/3425aca50ec1661612fc1e94ff9bc277a2ed43e3))
+
+
+
+
+
 ## [4.52.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.1...v4.52.2) (2021-08-02)
 
 

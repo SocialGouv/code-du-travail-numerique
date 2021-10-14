@@ -1,10 +1,7 @@
-import pDebounce from "p-debounce";
-import React, { ForwardedRef, useEffect, useMemo, useState } from "react";
+import React, { ForwardedRef, useState } from "react";
 
-import {
-  Agreement,
-  searchAgreements,
-} from "../../../conventions/Search/api/agreements.service";
+import { Agreement } from "../../../conventions/Search/api/agreements.service";
+import { searchEnterprises } from "../../../conventions/Search/api/enterprises.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
@@ -17,22 +14,20 @@ type Props = {
   inputRef: ForwardedRef<HTMLFormElement>;
 };
 
-const useAgreementSuggester = createSuggesterHook(searchAgreements);
-
 export function SearchAgreement({
   renderResults,
   inputRef,
 }: Props): JSX.Element {
   const [query, setQuery] = useState("");
-  const state = useAgreementSuggester(query);
-  const { trackEvent, title, uuid } = useTrackingContext();
-  const debouncedTrackEvent = useMemo(
-    () => pDebounce(trackEvent, 500),
-    [trackEvent]
+  const trackingContext = useTrackingContext();
+
+  const useAgreementSuggester = createSuggesterHook(
+    searchEnterprises,
+    "cc_search",
+    trackingContext
   );
-  useEffect(() => {
-    debouncedTrackEvent("cc_search", title, query, uuid);
-  }, [query, debouncedTrackEvent, title, uuid]);
+
+  const state = useAgreementSuggester(query);
 
   const searchInputHandler = (keyEvent) => {
     const value = keyEvent.target.value;

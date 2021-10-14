@@ -102,6 +102,8 @@ function Wizard({
 
   const Step = steps[stepIndex].component;
 
+  const Annotation = steps[stepIndex].annotation;
+
   return (
     <Wrapper variant="main">
       <Form
@@ -135,6 +137,12 @@ function Wizard({
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                 />
+
+                {Annotation && (
+                  <p>
+                    <Annotation />
+                  </p>
+                )}
                 {process.env.NODE_ENV !== "production" &&
                   process.env.NODE_ENV !== "test" && (
                     <details>

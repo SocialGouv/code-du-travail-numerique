@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepSalaires /> should render lastSalaires 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
@@ -107,7 +107,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   color: #9298af;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,7 +116,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -137,7 +137,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,12 +152,12 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -165,21 +165,15 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c7 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.c1 {
   font-weight: 600;
-  font-size: 1.8rem;
-  cursor: pointer;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -204,17 +198,17 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   font-style: italic;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   text-align: left;
 }
 
-.c5 tr > td:nth-child(2) {
+.c6 tr > td:nth-child(2) {
   width: 80%;
   text-align: left;
 }
 
-.c6 {
+.c7 {
   text-align: left;
 }
 
@@ -242,17 +236,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 
-  .c5 tr > td:nth-child(2) {
+  .c6 tr > td:nth-child(2) {
     width: 60%;
   }
 }
@@ -261,9 +249,13 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   <p
     class="c0"
   >
-    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       class="c1"
+    >
+      Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -271,14 +263,14 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-yes"
     >
       <input
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-yes"
         name="hasTempsPartiel"
         type="radio"
@@ -287,12 +279,12 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-no"
     >
       <input
         checked=""
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-no"
         name="hasTempsPartiel"
         type="radio"
@@ -304,9 +296,13 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   <p
     class="c0"
   >
-    Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
       class="c1"
+    >
+      Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -314,14 +310,14 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="hasSameSalaire-yes"
     >
       <input
-        class="c4"
+        class="c5"
         id="hasSameSalaire-yes"
         name="hasSameSalaire"
         type="radio"
@@ -330,12 +326,12 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="hasSameSalaire-no"
     >
       <input
         checked=""
-        class="c4"
+        class="c5"
         id="hasSameSalaire-no"
         name="hasSameSalaire"
         type="radio"
@@ -345,23 +341,27 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </label>
   </div>
   <table
-    class="c5"
+    class="c6"
   >
     <caption
-      class="c6"
+      class="c7"
     >
-      <label
-        class="c7"
+      <p
+        class="c0"
       >
-        Salaire mensuel brut
         <span
           class="c1"
+        >
+          Salaire mensuel brut
+        </span>
+        <span
+          class="c2"
           font-size="default"
           font-weight="400"
         >
            (obligatoire)
         </span>
-      </label>
+      </p>
       <p
         class="c8"
       >
@@ -399,6 +399,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary0"
               name="salaires[0].salary"
+              title="Salaire mensuel brut pour le mois 1 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -435,6 +436,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary1"
               name="salaires[1].salary"
+              title="Salaire mensuel brut pour le mois 2 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -471,6 +473,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary2"
               name="salaires[2].salary"
+              title="Salaire mensuel brut pour le mois 3 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -507,6 +510,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary3"
               name="salaires[3].salary"
+              title="Salaire mensuel brut pour le mois 4 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -543,6 +547,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary4"
               name="salaires[4].salary"
+              title="Salaire mensuel brut pour le mois 5 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -579,6 +584,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary5"
               name="salaires[5].salary"
+              title="Salaire mensuel brut pour le mois 6 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -615,6 +621,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary6"
               name="salaires[6].salary"
+              title="Salaire mensuel brut pour le mois 7 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -651,6 +658,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary7"
               name="salaires[7].salary"
+              title="Salaire mensuel brut pour le mois 8 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -687,6 +695,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary8"
               name="salaires[8].salary"
+              title="Salaire mensuel brut pour le mois 9 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -723,6 +732,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary9"
               name="salaires[9].salary"
+              title="Salaire mensuel brut pour le mois 10 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -759,6 +769,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary10"
               name="salaires[10].salary"
+              title="Salaire mensuel brut pour le mois 11 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -795,6 +806,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
               class="c11"
               id="salary11"
               name="salaires[11].salary"
+              title="Salaire mensuel brut pour le mois 12 (prendre en compte les primes et avantages en nature)"
               type="number"
               value=""
             />
@@ -821,19 +833,19 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 `;
 
 exports[`<StepSalaires /> should render same salaire 1`] = `
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   position: relative;
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -855,15 +867,15 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   appearance: none;
 }
 
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8::-webkit-calendar-picker-indicator {
+.c9::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -876,47 +888,47 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c8:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #9298af;
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c8::placeholder {
+.c9::placeholder {
   color: #9298af;
 }
 
-.c8:focus {
+.c9:focus {
   border-color: #7994d4;
 }
 
-.c8:focus::-webkit-input-placeholder {
+.c9:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::-moz-placeholder {
+.c9:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c8:focus:-ms-input-placeholder {
+.c9:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c8:focus::placeholder {
+.c9:focus::placeholder {
   color: transparent;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -927,7 +939,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   color: #9298af;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -936,7 +948,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -957,7 +969,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -972,12 +984,12 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -985,21 +997,23 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c5 {
+.c6 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1018,20 +1032,20 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   margin-bottom: 2rem;
 }
 
-.c6 {
+.c7 {
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
@@ -1044,7 +1058,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -1053,9 +1067,13 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <p
     class="c0"
   >
-    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       class="c1"
+    >
+      Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -1063,14 +1081,14 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-yes"
     >
       <input
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-yes"
         name="hasTempsPartiel"
         type="radio"
@@ -1079,12 +1097,12 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-no"
     >
       <input
         checked=""
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-no"
         name="hasTempsPartiel"
         type="radio"
@@ -1096,9 +1114,13 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   <p
     class="c0"
   >
-    Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
     <span
       class="c1"
+    >
+      Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -1106,15 +1128,15 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="hasSameSalaire-yes"
     >
       <input
         checked=""
-        class="c4"
+        class="c5"
         id="hasSameSalaire-yes"
         name="hasSameSalaire"
         type="radio"
@@ -1123,11 +1145,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="hasSameSalaire-no"
     >
       <input
-        class="c4"
+        class="c5"
         id="hasSameSalaire-no"
         name="hasSameSalaire"
         type="radio"
@@ -1137,11 +1159,16 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </label>
   </div>
   <label
-    class="c5"
+    class="c6"
+    for="salaire"
   >
-    Quel a été le montant du salaire mensuel brut ?
     <span
       class="c1"
+    >
+      Quel a été le montant du salaire mensuel brut ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -1149,21 +1176,21 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
   </label>
   <p
-    class="c6"
+    class="c7"
   >
     Prendre en compte les primes et avantages en nature.
   </p>
   <span
-    class="c7"
+    class="c8"
   >
     <input
-      class="c8"
+      class="c9"
       name="salaire"
       type="number"
       value="3000"
     />
     <div
-      class="c9"
+      class="c10"
     >
       <svg
         aria-hidden="true"
@@ -1181,7 +1208,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 `;
 
 exports[`<StepSalaires /> should render tempsPartiel 1`] = `
-.c19 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1219,16 +1246,16 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c20:link,
+.c20:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):active,
+.c20:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1237,7 +1264,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   border-color: transparent;
 }
 
-.c19[disabled] {
+.c20[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -1245,113 +1272,30 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   cursor: not-allowed;
 }
 
-.c1 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   color: #7994d4;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.c15 {
+.c16 {
   position: relative;
   display: inline-block;
-}
-
-.c16 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c16::-webkit-outer-spin-button,
-.c16::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c16::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c16:invalid {
-  border-color: #eb5757;
-}
-
-.c16::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c16::-moz-placeholder {
-  color: #9298af;
-}
-
-.c16:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c16::placeholder {
-  color: #9298af;
-}
-
-.c16:focus {
-  border-color: #7994d4;
-}
-
-.c16:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c16:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c16:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c16:focus::placeholder {
-  color: transparent;
 }
 
 .c17 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
-  padding-right: 5rem;
+  padding-right: 2rem;
   color: #3e486e;
   font-weight: normal;
   font-size: 1.6rem;
@@ -1431,6 +1375,89 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 .c18 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c18::-webkit-outer-spin-button,
+.c18::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c18::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c18:invalid {
+  border-color: #eb5757;
+}
+
+.c18::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c18::-moz-placeholder {
+  color: #9298af;
+}
+
+.c18:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c18::placeholder {
+  color: #9298af;
+}
+
+.c18:focus {
+  border-color: #7994d4;
+}
+
+.c18:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c18:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c18:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c18:focus::placeholder {
+  color: transparent;
+}
+
+.c19 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1441,7 +1468,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   color: #9298af;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1455,7 +1482,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1464,7 +1491,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -1485,7 +1512,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1500,16 +1527,16 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1529,7 +1556,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   text-align: center;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -1539,7 +1566,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   pointer-events: none;
 }
 
-.c13 {
+.c14 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -1560,21 +1587,21 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   appearance: none;
 }
 
-.c13::-ms-expand {
+.c14::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c13 *::-ms-backdrop,
-.c13 {
+.c14 *::-ms-backdrop,
+.c14 {
   padding-right: 1.6rem;
 }
 
-.c13:invalid {
+.c14:invalid {
   border-color: #eb5757;
 }
 
-.c13:disabled {
+.c14:disabled {
   background-color: #e4e8ef;
 }
 
@@ -1582,12 +1609,15 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
 }
 
-.c2 {
+.c1 {
+  font-weight: 600;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1606,7 +1636,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   margin-bottom: 2rem;
 }
 
-.c22 {
+.c23 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -1614,19 +1644,19 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   padding-left: 0;
 }
 
-.c21 {
+.c22 {
   width: 2rem;
   margin-left: 0.4rem;
   color: #f66663;
 }
 
-.c23 {
+.c24 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
 }
 
-.c8 {
+.c9 {
   display: -ms-grid;
   -ms-grid-rows: auto auto;
   -ms-grid-columns: 2fr 1fr 1fr 13rem;
@@ -1637,113 +1667,113 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   margin-bottom: 1.6rem;
 }
 
-.c8 > *:nth-child(1) {
+.c9 > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-row: 1;
   grid-column: 1;
 }
 
-.c8 > *:nth-child(2) {
+.c9 > *:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-row: 2;
   grid-column: 1;
 }
 
-.c8 > *:nth-child(3) {
+.c9 > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-row: 1;
   grid-column: 2;
 }
 
-.c8 > *:nth-child(4) {
+.c9 > *:nth-child(4) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-row: 2;
   grid-column: 2;
 }
 
-.c8 > *:nth-child(5) {
+.c9 > *:nth-child(5) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-row: 1;
   grid-column: 3;
 }
 
-.c8 > *:nth-child(6) {
+.c9 > *:nth-child(6) {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-row: 2;
   grid-column: 3;
 }
 
-.c8 > *:nth-child(7) {
+.c9 > *:nth-child(7) {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
   grid-row: 2;
   grid-column: 4;
 }
 
-.c5 {
+.c6 {
   position: relative;
 }
 
-.c6 {
+.c7 {
   margin-bottom: 1.6rem;
   padding-top: 1rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c10 {
+.c11 {
   margin-right: 1.6rem;
 }
 
-.c20 {
+.c21 {
   margin-top: 0.8rem;
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
   .c16 {
-    padding: 0 1rem;
-    padding-right: 2rem;
+    width: 100%;
   }
 }
 
 @media (max-width:600px) {
   .c17 {
     padding: 0 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 100%;
   }
 }
@@ -1755,21 +1785,21 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     display: block;
     margin-bottom: 3.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     margin-right: 0;
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     position: absolute;
     top: 0;
     right: 0;
@@ -1781,9 +1811,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   <p
     class="c0"
   >
-    Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
     <span
       class="c1"
+    >
+      Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?
+    </span>
+    <span
+      class="c2"
       font-size="default"
       font-weight="400"
     >
@@ -1791,15 +1825,15 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </span>
   </p>
   <div
-    class="c2"
+    class="c3"
   >
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-yes"
     >
       <input
         checked=""
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-yes"
         name="hasTempsPartiel"
         type="radio"
@@ -1808,11 +1842,11 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       Oui
     </label>
     <label
-      class="c3"
+      class="c4"
       for="hasTempsPartiel-no"
     >
       <input
-        class="c4"
+        class="c5"
         id="hasTempsPartiel-no"
         name="hasTempsPartiel"
         type="radio"
@@ -1824,16 +1858,20 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   <p
     class="c0"
   >
-    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
+    <span
+      class="c1"
+    >
+      Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
+    </span>
   </p>
   <div
-    class="c5"
+    class="c6"
   >
     <div
-      class="c6"
+      class="c7"
     >
       <span
-        class="c7"
+        class="c8"
         font-size="hsmall"
         font-weight="400"
       >
@@ -1842,22 +1880,22 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       </span>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[0].type"
       >
         Type de durée de travail
       </label>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11 c12"
+          class="c12 c13"
         >
           <select
-            class="c13"
+            class="c14"
             name="salairePeriods[0].type"
           >
             <option>
@@ -1869,7 +1907,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
           </select>
           <div
             aria-hidden="true"
-            class="c14"
+            class="c15"
           >
             <svg
               aria-hidden="true"
@@ -1899,19 +1937,19 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </div>
       </div>
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[0].duration"
       >
         Durée (en mois)
       </label>
       <div
-        class="c10"
+        class="c11"
       >
         <span
-          class="c15"
+          class="c16"
         >
           <input
-            class="c16"
+            class="c17"
             id="salairePeriods[0].duration"
             name="salairePeriods[0].duration"
             type="number"
@@ -1920,24 +1958,24 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[0].salary"
       >
         Rémunération
       </label>
       <div>
         <span
-          class="c15"
+          class="c16"
         >
           <input
-            class="c17"
+            class="c18"
             id="salairePeriods[0].salary"
             name="salairePeriods[0].salary"
             type="number"
             value="2000"
           />
           <div
-            class="c18"
+            class="c19"
           >
             <svg
               aria-hidden="true"
@@ -1953,13 +1991,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <button
-        class="c19 c20"
+        class="c20 c21"
         type="button"
       >
         Supprimer
         <svg
           aria-hidden="true"
-          class="c21"
+          class="c22"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -1974,13 +2012,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </div>
   </div>
   <div
-    class="c5"
+    class="c6"
   >
     <div
-      class="c6"
+      class="c7"
     >
       <span
-        class="c7"
+        class="c8"
         font-size="hsmall"
         font-weight="400"
       >
@@ -1989,22 +2027,22 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       </span>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[1].type"
       >
         Type de durée de travail
       </label>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11 c12"
+          class="c12 c13"
         >
           <select
-            class="c13"
+            class="c14"
             name="salairePeriods[1].type"
           >
             <option>
@@ -2016,7 +2054,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
           </select>
           <div
             aria-hidden="true"
-            class="c14"
+            class="c15"
           >
             <svg
               aria-hidden="true"
@@ -2046,19 +2084,19 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </div>
       </div>
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[1].duration"
       >
         Durée (en mois)
       </label>
       <div
-        class="c10"
+        class="c11"
       >
         <span
-          class="c15"
+          class="c16"
         >
           <input
-            class="c16"
+            class="c17"
             id="salairePeriods[1].duration"
             name="salairePeriods[1].duration"
             type="number"
@@ -2067,24 +2105,24 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <label
-        class="c9"
+        class="c10"
         for="salairePeriods[1].salary"
       >
         Rémunération
       </label>
       <div>
         <span
-          class="c15"
+          class="c16"
         >
           <input
-            class="c17"
+            class="c18"
             id="salairePeriods[1].salary"
             name="salairePeriods[1].salary"
             type="number"
             value="1000"
           />
           <div
-            class="c18"
+            class="c19"
           >
             <svg
               aria-hidden="true"
@@ -2100,13 +2138,13 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
         </span>
       </div>
       <button
-        class="c19 c20"
+        class="c20 c21"
         type="button"
       >
         Supprimer
         <svg
           aria-hidden="true"
-          class="c21"
+          class="c22"
           fill="none"
           viewBox="0 0 32 32"
         >
@@ -2121,12 +2159,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </div>
   </div>
   <button
-    class="c19 c22"
+    class="c20 c23"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c23"
+      class="c24"
       fill="none"
       viewBox="0 0 16 16"
     >

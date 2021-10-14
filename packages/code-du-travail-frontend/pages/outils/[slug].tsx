@@ -4,9 +4,11 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import { Feedback } from "../../src/common/Feedback";
 import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
@@ -57,7 +59,8 @@ function Outils({
   const Tool = toolsBySlug[slug];
   useEffect(() => {
     matopush(["trackEvent", "outil", `view_step_${title}`, "start"]);
-  });
+  }, [title]);
+  const router = useRouter();
   return (
     <Layout>
       <Metas
@@ -73,6 +76,7 @@ function Outils({
             </ShareContainer>
           </Flex>
           <RelatedItems items={relatedItems} />
+          <Feedback url={router.asPath} />
         </Container>
       </StyledSection>
     </Layout>

@@ -1,32 +1,30 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
 const CadreReferences = [
   {
     article: 'Articles 17 de l\'avenant "Cadres"',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851149/?idConteneur=KALICONT000005635617",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851149/?idConteneur=KALICONT000005635617",
   },
 ];
 const RetraiteEmployesReferences = [
   {
     article: "Article 38",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851078/?idConteneur=KALICONT000005635617",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851078/?idConteneur=KALICONT000005635617",
   },
 ];
 const RetraiteAgentsMaitriseReferences = [
   {
     article: "Article 9 de l'avenant maitrise",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851119/?idConteneur=KALICONT000005635617",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851119/?idConteneur=KALICONT000005635617",
   },
 ];
 
@@ -43,12 +41,12 @@ test.each`
   ({ retirement, category, expectedReferences }) => {
     const result = getReferences(
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0675'",
         "contrat salarié . ancienneté": 6,
+        "contrat salarié . convention collective": "'IDCC0675'",
+        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle": `'${category}'`,
       })
     );
 

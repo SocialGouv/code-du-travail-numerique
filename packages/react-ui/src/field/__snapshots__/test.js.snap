@@ -299,6 +299,8 @@ exports[`<InputDate /> should render input date field 1`] = `
   >
     <input
       class="c2"
+      max="2099-12-31"
+      min="1900-01-01"
       name="input_date"
       placeholder="JJ/MM/AAAA"
       type="date"

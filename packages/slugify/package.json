@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-slugify",
-  "version": "4.52.1",
+  "version": "4.53.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -30,6 +30,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@types/jest": "^26.0.24"
+    "@types/jest": "^27.0.1"
   }
 }

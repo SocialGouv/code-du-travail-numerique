@@ -22,23 +22,13 @@ afterEach(flushEvents);
 describe("<Feedback/>", () => {
   it("should render", () => {
     const { container } = render(
-      <Feedback
-        query="Query"
-        sourceType="Fiches Service Public"
-        sourceFilter="fiches"
-        url="http://server/fiches/fiche1"
-      />
+      <Feedback url="http://server/fiches/fiche1" />
     );
     expect(container).toMatchSnapshot();
   });
   it("should render form once user answer yes", () => {
     const { container, getByText } = render(
-      <Feedback
-        query="Query"
-        sourceType="Fiches Service Public"
-        sourceFilter="fiches"
-        url="http://server/fiches/fiche1"
-      />
+      <Feedback url="http://server/fiches/fiche1" />
     );
     const button = getByText(/oui/i);
     button.click();
@@ -46,12 +36,7 @@ describe("<Feedback/>", () => {
   });
   it("should render form once user answer no", () => {
     const { container, getByText } = render(
-      <Feedback
-        query="Query"
-        sourceType="Fiches Service Public"
-        sourceFilter="fiches"
-        url="http://server/fiches/fiche1"
-      />
+      <Feedback url="http://server/fiches/fiche1" />
     );
     const button = getByText(/non/i);
     button.click();
@@ -59,12 +44,7 @@ describe("<Feedback/>", () => {
   });
   it("should send piwik event when click yes", () => {
     const { getByText } = render(
-      <Feedback
-        query="Query"
-        sourceType="Fiches Service Public"
-        sourceFilter="fiches"
-        url="http://server/fiches/fiche1"
-      />
+      <Feedback url="http://server/fiches/fiche1" />
     );
     const button = getByText(/oui/i);
     button.click();
@@ -73,12 +53,7 @@ describe("<Feedback/>", () => {
   });
   it("should send piwik event when click no", () => {
     const { getByText } = render(
-      <Feedback
-        query="Query"
-        sourceType="Fiches Service Public"
-        sourceFilter="fiches"
-        url="http://server/fiches/fiche1"
-      />
+      <Feedback url="http://server/fiches/fiche1" />
     );
     const button = getByText(/non/i);
     button.click();

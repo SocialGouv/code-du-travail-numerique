@@ -78,7 +78,7 @@ function StepSalaires({ form }) {
                         >
                           {({ input, meta: { touched, error, invalid } }) => (
                             <>
-                              <Question required>
+                              <Question required htmlFor="salaire">
                                 Quel a été le montant du salaire mensuel
                                 brut&nbsp;?
                               </Question>

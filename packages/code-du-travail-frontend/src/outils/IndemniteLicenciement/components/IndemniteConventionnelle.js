@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { Highlight, SectionTitle } from "../../common/stepStyles";
+import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 import { FormulaDetails } from "./FormulaDetails";
 import { Montant } from "./Montant";
 
@@ -28,7 +28,7 @@ function IndemniteCCn({
           <p>
             À partir des éléments que vous avez saisis, l’indemnité de
             licenciement est estimée à&nbsp;
-            <Highlight>
+            <HighlightResult>
               {Math.max(
                 indemniteLegale,
                 indemniteConventionnelle
@@ -37,7 +37,7 @@ function IndemniteCCn({
                 minimumFractionDigits: 2,
               })}
               &nbsp;€ brut
-            </Highlight>
+            </HighlightResult>
             .
           </p>
           <SectionTitle>Détails</SectionTitle>
@@ -56,25 +56,7 @@ function IndemniteCCn({
                     : 1
                 }
               />
-              <FormulaDetails infoCalcul={infoCalculLegal} />
-              <p>
-                Source&nbsp;:{" "}
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
-                  title="voir l'article L.1234-9 du code du travail sur légifrance"
-                >
-                  Article L.1234-9 du code du travail
-                </a>
-                ,
-                <a
-                  rel="nofollow noopener"
-                  href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
-                  title="voir les articles R1234-1 à R1234-4 du code du travail sur légifrance"
-                >
-                  Article R1234-1 à R1234-4 du code du travail
-                </a>
-              </p>
+              <FormulaDetails infoCalcul={infoCalculLegal} withSource />
             </div>
             <div>
               <RowTitle>Votre indemnite conventionnelle</RowTitle>

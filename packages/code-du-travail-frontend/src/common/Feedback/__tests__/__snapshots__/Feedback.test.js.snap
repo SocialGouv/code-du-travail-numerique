@@ -141,6 +141,7 @@ exports[`<Feedback/> should render 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -284,30 +285,36 @@ exports[`<Feedback/> should render 1`] = `
       class="c2"
     >
       <div
-        class="c3 c4"
+        class="c3"
       >
-        <strong
-          class="c5 c6"
+        <div
+          class="c4"
         >
-          <div
-            class="c7"
-          />
-          Avez-vous trouvé la réponse à votre question ?
-        </strong>
-        <p
-          class="c8"
-        >
-          <button
-            class="c9 c10 "
+          <strong
+            class="c5 c6"
           >
-            Non
-          </button>
-          <button
-            class="c9 c10 "
+            <div
+              class="c7"
+            />
+            <span>
+              Avez-vous trouvé la réponse à votre question ?
+            </span>
+          </strong>
+          <p
+            class="c8"
           >
-            Oui
-          </button>
-        </p>
+            <button
+              class="c9 c10 "
+            >
+              Non
+            </button>
+            <button
+              class="c9 c10 "
+            >
+              Oui
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -343,7 +350,84 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c16 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
+.c19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+  will-change: transform;
+}
+
+.c19:link,
+.c19:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c19[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -384,14 +468,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c10:focus,
-.c10:hover,
-.c10:active {
+.c21:focus,
+.c21:hover,
+.c21:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12 {
+.c23 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -400,7 +484,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: transform 250ms linear;
 }
 
-.c9:hover .c11 {
+.c18:hover .c22 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -419,6 +503,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateY(-50%);
 }
 
+.c15 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: block;
@@ -430,6 +521,127 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c11 {
+  position: relative;
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c11:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 3);
+  height: calc(1.6rem / 1.7);
+  border: 1px solid #fff;
+  border-width: 0 calc(1.6rem / 10) calc(1.6rem / 10) 0;
+  -webkit-transform: translate(-50%,-60%) rotate(45deg);
+  -ms-transform: translate(-50%,-60%) rotate(45deg);
+  transform: translate(-50%,-60%) rotate(45deg);
+  content: "";
+}
+
+.c11:checked {
+  background-color: #f66663;
+}
+
+.c11:checked:before {
+  display: block;
+}
+
+.c13 {
+  width: 100%;
+  min-height: 12rem;
+  padding: 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c13::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c13::-moz-placeholder {
+  color: #9298af;
+}
+
+.c13:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c13::placeholder {
+  color: #9298af;
+}
+
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c13:focus {
+  border-color: #7994d4;
+}
+
+.c13:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c13:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c13:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c13:focus::placeholder {
+  color: transparent;
+}
+
+.c8 {
+  border: none;
+  padding: 0;
+}
+
+.c9 {
+  font-weight: 600;
+  padding: 1rem 0;
 }
 
 .c4 {
@@ -454,15 +666,28 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.c8 {
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
+.c20 + .c20 {
+  margin-left: 4rem;
+}
+
+.c14 {
+  max-width: 100%;
+}
+
+.c12 {
+  font-weight: 600;
+  display: block;
+  margin: 2rem 0 1rem 0;
+}
+
+.c17 {
+  margin: 3.2rem 0;
 }
 
 @media (max-width:600px) {
@@ -510,13 +735,25 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c19 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c21 {
     display: none;
   }
 }
@@ -531,6 +768,12 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 @media (max-width:600px) {
   .c6 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    width: 100%;
   }
 }
 
@@ -572,12 +815,8 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-
-}
-
-@media (max-width:1180px) {
-  .c8 {
-    margin-top: 0;
+  .c20 + .c20 {
+    margin-left: 0;
   }
 }
 
@@ -589,28 +828,139 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
       class="c2"
     >
       <div
-        class="c3 c4"
+        class="c3"
       >
-        <strong
-          class="c5 c6"
+        <div
+          class="c4"
         >
-          <div
-            class="c7"
+          <strong
+            class="c5 c6"
+          >
+            <div
+              class="c7"
+            />
+            <span
+              role="status"
+            >
+              Merci pour votre réponse.
+            </span>
+          </strong>
+        </div>
+        <form>
+          <fieldset
+            class="c8"
+          >
+            <legend
+              class="c9"
+            >
+              Pouvez-vous nous en dire plus ?
+            </legend>
+            <label
+              class="c10"
+              for="unclear"
+            >
+              <input
+                class="c11"
+                id="unclear"
+                name="category"
+                type="checkbox"
+                value="unclear"
+              />
+              Les informations ne sont pas claires.
+            </label>
+            <label
+              class="c10"
+              for="unrelated"
+            >
+              <input
+                class="c11"
+                id="unrelated"
+                name="category"
+                type="checkbox"
+                value="unrelated"
+              />
+              Cette page ne correspond pas à ma recherche ou à ma situation.
+            </label>
+            <label
+              class="c10"
+              for="unsatisfied"
+            >
+              <input
+                class="c11"
+                id="unsatisfied"
+                name="category"
+                type="checkbox"
+                value="unsatisfied"
+              />
+              Je ne suis pas satisfait de cette réglementation.
+            </label>
+            <label
+              class="c10"
+              for="wrong"
+            >
+              <input
+                class="c11"
+                id="wrong"
+                name="category"
+                type="checkbox"
+                value="wrong"
+              />
+              Les informations me semblent fausses.
+            </label>
+          </fieldset>
+          <label
+            class="c12"
+            for="suggestion"
+          >
+            Faire une suggestion pour améliorer cette page
+          </label>
+          <textarea
+            class="c13 c14"
+            cols="50"
+            id="suggestion"
+            maxlength="150"
+            name="suggestion"
+            placeholder="Une idée, une suggestion..."
+            rows="3"
           />
-          Avez-vous trouvé la réponse à votre question ?
-        </strong>
-        <p
-          class="c8"
-        >
-          Merci pour votre réponse. Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
+          <div>
+            <span
+              class="c15"
+              font-size="tiny"
+              font-weight="400"
+            >
+              150
+               caractères restants
+            </span>
+            <div
+              class="c16"
+              role="status"
+            >
+              150
+               caractères restants
+            </div>
+          </div>
+          <div
+            class="c17"
+          >
+            <button
+              class="c18 c19 c20 "
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
+        <p>
+          Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="c9 c10"
+            class="c18 c21"
+            type="button"
           >
-            services du ministère du Travail en région
+            les services du ministère du Travail en région
             <svg
               aria-hidden="true"
-              class="c11 c12"
+              class="c22 c23"
               fill="none"
               viewBox="0 0 28 15"
             >
@@ -620,7 +970,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               />
             </svg>
           </button>
-          .
         </p>
       </div>
     </div>
@@ -657,6 +1006,83 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   margin-bottom: 0;
 }
 
+.c12 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
+.c14 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
+  opacity: 1;
+  will-change: transform;
+}
+
+.c14:link,
+.c14:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e486e;
+}
+
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
+  opacity: 1;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background: #fff;
+  border-color: #dee5ef;
+}
+
+.c14[disabled] {
+  background-color: #e4e8ef;
+  border-color: #e4e8ef;
+  color: #9298af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .c7 {
   position: absolute;
   background-color: #f66663;
@@ -670,6 +1096,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   transform: translateY(-50%);
 }
 
+.c11 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c6 {
   position: relative;
   display: block;
@@ -681,6 +1114,67 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   line-height: 1.625;
   margin-left: -2.4rem;
   padding-left: 2.4rem;
+}
+
+.c9 {
+  width: 100%;
+  min-height: 12rem;
+  padding: 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c9::-moz-placeholder {
+  color: #9298af;
+}
+
+.c9:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c9::placeholder {
+  color: #9298af;
+}
+
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9:focus {
+  border-color: #7994d4;
+}
+
+.c9:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c9:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c9:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c9:focus::placeholder {
+  color: transparent;
 }
 
 .c4 {
@@ -705,15 +1199,28 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  margin-top: 0;
   margin-bottom: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
+.c15 + .c15 {
+  margin-left: 4rem;
+}
+
+.c10 {
+  max-width: 100%;
+}
+
 .c8 {
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
+  font-weight: 600;
+  display: block;
+  margin: 2rem 0 1rem 0;
+}
+
+.c13 {
+  margin: 3.2rem 0;
 }
 
 @media (max-width:600px) {
@@ -761,6 +1268,18 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -770,6 +1289,12 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 @media (max-width:600px) {
   .c6 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    width: 100%;
   }
 }
 
@@ -811,12 +1336,8 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
-
-}
-
-@media (max-width:1180px) {
-  .c8 {
-    margin-top: 0;
+  .c15 + .c15 {
+    margin-left: 0;
   }
 }
 
@@ -828,21 +1349,67 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
       class="c2"
     >
       <div
-        class="c3 c4"
+        class="c3"
       >
-        <strong
-          class="c5 c6"
+        <div
+          class="c4"
         >
-          <div
-            class="c7"
+          <strong
+            class="c5 c6"
+          >
+            <div
+              class="c7"
+            />
+            <span
+              role="status"
+            >
+              Merci pour votre réponse.
+            </span>
+          </strong>
+        </div>
+        <form>
+          <label
+            class="c8"
+            for="suggestion"
+          >
+            Faire une suggestion pour améliorer cette page
+          </label>
+          <textarea
+            class="c9 c10"
+            cols="50"
+            id="suggestion"
+            maxlength="150"
+            name="suggestion"
+            placeholder="Une idée, une suggestion..."
+            rows="3"
           />
-          Avez-vous trouvé la réponse à votre question ?
-        </strong>
-        <p
-          class="c8"
-        >
-          Merci pour votre réponse.
-        </p>
+          <div>
+            <span
+              class="c11"
+              font-size="tiny"
+              font-weight="400"
+            >
+              150
+               caractères restants
+            </span>
+            <div
+              class="c12"
+              role="status"
+            >
+              150
+               caractères restants
+            </div>
+          </div>
+          <div
+            class="c13"
+          >
+            <button
+              class="c14 c15 "
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
