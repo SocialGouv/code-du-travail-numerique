@@ -11,20 +11,14 @@ type Props = {
   printVisible: () => void;
   previousVisible: boolean;
   onNext: () => void;
-} & typeof defaultProps;
-
-const defaultProps = {
-  hasError: false,
-  nextVisible: true,
-  previousVisible: true,
 };
 
 export const PrevNextBar: FunctionComponent<Props> = ({
   onPrev,
-  hasError,
-  nextVisible,
+  hasError = false,
+  nextVisible = true,
   printVisible,
-  previousVisible,
+  previousVisible = true,
   onNext,
 }) => {
   return (
