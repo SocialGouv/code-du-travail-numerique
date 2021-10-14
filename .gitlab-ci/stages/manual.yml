@@ -25,7 +25,7 @@ Release:
     - git config user.email "${CI_GIT_AUTHOR_EMAIL}"
     - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${PROJECT_PATH}.git
     - yarn --frozen-lockfile
-    - yarn build:ui
+    - yarn build:npm
   script:
     - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --yes"}
     - yarn lerna publish from-package --yes
