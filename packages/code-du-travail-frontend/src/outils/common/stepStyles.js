@@ -37,6 +37,10 @@ export const Highlight = styled.strong`
   }
 `;
 
+export const HighlightResult = styled(Highlight)`
+  font-size: 1.5em;
+`;
+
 export const SmallText = styled.p`
   color: ${colors.paragraph};
   font-size: ${fonts.sizes.small};
