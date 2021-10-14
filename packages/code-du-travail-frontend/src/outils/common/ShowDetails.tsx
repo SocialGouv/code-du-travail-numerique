@@ -9,7 +9,7 @@ const ShowDetails = ({ children }: Props): JSX.Element => (
   <Accordion
     items={[
       {
-        body: { children },
+        body: children,
         title: <p>Voir le détail du calcul</p>,
       },
     ]}

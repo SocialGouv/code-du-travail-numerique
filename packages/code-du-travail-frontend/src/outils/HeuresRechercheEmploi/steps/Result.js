@@ -171,7 +171,7 @@ export function StepResult({ form }) {
           }
         />
       </ShowDetails>
-      <DisclaimerBox duration={situation.answer} />
+      <DisclaimerBox duration={situation.answer} />;
     </>
   );
 }
