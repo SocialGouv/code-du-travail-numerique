@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
+
+
+### Features
+
+* **api:** add babel as processor instead of esm ([#3749](https://github.com/SocialGouv/code-du-travail-numerique/issues/3749)) ([25933f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/25933f55cc07dba39716f0c227834da0c66c419f))
+
+
+
+
+
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 **Note:** Version bump only for package @socialgouv/cdtn-sources

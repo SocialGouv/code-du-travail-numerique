@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **data:** linter and reference about Code du travail ([#3831](https://github.com/SocialGouv/code-du-travail-numerique/issues/3831)) ([0cb2fbf](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cb2fbf4f0adba1ea6aea52e5265c349f0f4946b))
+* **data:** linter is now effective ([#3859](https://github.com/SocialGouv/code-du-travail-numerique/issues/3859)) ([e7d046c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7d046c6a730785cc10b33ca0783afeb212557f6))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.207.0 ([#3795](https://github.com/SocialGouv/code-du-travail-numerique/issues/3795)) ([c4aa8a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4aa8a9ad609b71b8b8e3ccac77c1c039eece53a))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.208.0 ([#3800](https://github.com/SocialGouv/code-du-travail-numerique/issues/3800)) ([276e11b](https://github.com/SocialGouv/code-du-travail-numerique/commit/276e11ba415f423ac3493abd04905460619807db))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.209.0 ([#3810](https://github.com/SocialGouv/code-du-travail-numerique/issues/3810)) ([fa44f51](https://github.com/SocialGouv/code-du-travail-numerique/commit/fa44f516af403b4d61d205f955248f23b9d45294))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.210.0 ([#3815](https://github.com/SocialGouv/code-du-travail-numerique/issues/3815)) ([1ad8124](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ad81245f69244b7cf17e1a1f69b43c7cc4bfd84))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.211.0 ([#3820](https://github.com/SocialGouv/code-du-travail-numerique/issues/3820)) ([49c79db](https://github.com/SocialGouv/code-du-travail-numerique/commit/49c79dbfa33333d5192984047e2fbdcc55e5a97e))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.212.0 ([#3829](https://github.com/SocialGouv/code-du-travail-numerique/issues/3829)) ([59a1b2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/59a1b2c242eb551f79b96942b6f14fe395cdd3a7))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.213.0 ([#3835](https://github.com/SocialGouv/code-du-travail-numerique/issues/3835)) ([89b3faf](https://github.com/SocialGouv/code-du-travail-numerique/commit/89b3faf522c43b062954ae3d2ab694f2bdb18a48))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.214.0 ([#3842](https://github.com/SocialGouv/code-du-travail-numerique/issues/3842)) ([5564868](https://github.com/SocialGouv/code-du-travail-numerique/commit/5564868d89b0533c8f8c5bcc06babf7dc94084b8))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.215.0 ([#3852](https://github.com/SocialGouv/code-du-travail-numerique/issues/3852)) ([a9aa917](https://github.com/SocialGouv/code-du-travail-numerique/commit/a9aa917a91efc882d2974c61b63f819d622aa1b6))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.216.0 ([#3863](https://github.com/SocialGouv/code-du-travail-numerique/issues/3863)) ([be3a614](https://github.com/SocialGouv/code-du-travail-numerique/commit/be3a61478e8e6bd624dff6f615ed1c7fbbdd9904))
+* **deps:** update dependency lit-element to v3 ([#3796](https://github.com/SocialGouv/code-du-travail-numerique/issues/3796)) ([1369c52](https://github.com/SocialGouv/code-du-travail-numerique/commit/1369c5295fc3a42ff52c4155c77b6d42bc832161))
+* **deps:** update dependency puppeteer to v10 ([#3714](https://github.com/SocialGouv/code-du-travail-numerique/issues/3714)) ([5a37495](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a37495388ded125b0efcb23bdee2849785ca0e5))
+* **events:** debounce cc search events - 3814 ([#3840](https://github.com/SocialGouv/code-du-travail-numerique/issues/3840)) ([a2f4453](https://github.com/SocialGouv/code-du-travail-numerique/commit/a2f44531d0beddf8d6f6f6b731c9afde10f01cee))
+* **frontend:** Add status code to 404, and other pages ([#3801](https://github.com/SocialGouv/code-du-travail-numerique/issues/3801)) ([5309fba](https://github.com/SocialGouv/code-du-travail-numerique/commit/5309fba9ec39ed9f5f0f4af09e111065af6515d3))
+* **package.json:** update command ([#3805](https://github.com/SocialGouv/code-du-travail-numerique/issues/3805)) ([e48018b](https://github.com/SocialGouv/code-du-travail-numerique/commit/e48018ba7e093928d16185c66c1070c5e14ce315))
+* **package.json:** update command ([#3816](https://github.com/SocialGouv/code-du-travail-numerique/issues/3816)) ([661321c](https://github.com/SocialGouv/code-du-travail-numerique/commit/661321c8b573fece484865dd9c1382860e487d5d))
+* **search:** fix deduplication between PQ and Search ([#3850](https://github.com/SocialGouv/code-du-travail-numerique/issues/3850)) ([c6a3585](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6a3585b8f1a0b167bdcdd28fd9b374088125ced))
+* **ui:** add label to burger menu (accessibility) ([#3830](https://github.com/SocialGouv/code-du-travail-numerique/issues/3830)) ([6ebe2b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ebe2b9f8b4fbbd34210d7cf37a5dddf40df6560))
+
+
+### Features
+
+* add lint-staged ([#3866](https://github.com/SocialGouv/code-du-travail-numerique/issues/3866)) ([c6f63ef](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6f63efcc6c72aafa4f9b5c39b32cfc8872be8b9))
+* **api:** add babel as processor instead of esm ([#3749](https://github.com/SocialGouv/code-du-travail-numerique/issues/3749)) ([25933f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/25933f55cc07dba39716f0c227834da0c66c419f))
+* **cc:** add 1480 ([#3807](https://github.com/SocialGouv/code-du-travail-numerique/issues/3807)) ([e2e4677](https://github.com/SocialGouv/code-du-travail-numerique/commit/e2e4677c506183f71e0fd25e7b578caa7c458242))
+* **e2e:** add codecept ui to view more easily test e2e ([#3781](https://github.com/SocialGouv/code-du-travail-numerique/issues/3781)) ([7d7a555](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d7a5554349b2cdb08d93ea665e76bfbab02c90c))
+* **modeles:** add 1486 cc retirement ([#3818](https://github.com/SocialGouv/code-du-travail-numerique/issues/3818)) ([98717ff](https://github.com/SocialGouv/code-du-travail-numerique/commit/98717ff0d9d2eecb8f8899b118c824fe4f6205a2))
+* **modeles:** add cc 1043 retirement ([#3776](https://github.com/SocialGouv/code-du-travail-numerique/issues/3776)) ([986badf](https://github.com/SocialGouv/code-du-travail-numerique/commit/986badf2b1a66cbc89f9c3c4f4abb8e34b29b7df))
+* **modeles:** add cc 1351 retirement ([#3778](https://github.com/SocialGouv/code-du-travail-numerique/issues/3778)) ([44b3410](https://github.com/SocialGouv/code-du-travail-numerique/commit/44b34104542ad1a1c9d43465a4d26a2e19a0e360))
+* **modeles:** add cc 1505 retirement ([#3822](https://github.com/SocialGouv/code-du-travail-numerique/issues/3822)) ([65328c3](https://github.com/SocialGouv/code-du-travail-numerique/commit/65328c3c6fdaa3d527b915f4fbd1d4c71f9eb0ea))
+* **modeles:** add cc 1527 retirement ([#3834](https://github.com/SocialGouv/code-du-travail-numerique/issues/3834)) ([0a7caaa](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a7caaa6633644a0070720604777156d637ed64b))
+* **modeles:** add cc 1596 ([#3823](https://github.com/SocialGouv/code-du-travail-numerique/issues/3823)) ([2663e1a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2663e1ad36668d8ebb361873f7042e671911d16b))
+* **modeles:** add cc 1597 ([#3824](https://github.com/SocialGouv/code-du-travail-numerique/issues/3824)) ([1e46133](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e461333acc540ecd90c3c208b4c555dd29ecf55))
+* **modeles:** add cc 1720 ([#3837](https://github.com/SocialGouv/code-du-travail-numerique/issues/3837)) ([9fe81ca](https://github.com/SocialGouv/code-du-travail-numerique/commit/9fe81ca829da9d317de343cdca12d65673eaf5db))
+* **modeles:** add cc 2098 retirement ([#3836](https://github.com/SocialGouv/code-du-travail-numerique/issues/3836)) ([dbbef90](https://github.com/SocialGouv/code-du-travail-numerique/commit/dbbef906e5d711cdb473db733515752ee83647c9))
+* **modeles:** add cc 2120 retirement ([#3838](https://github.com/SocialGouv/code-du-travail-numerique/issues/3838)) ([51d1154](https://github.com/SocialGouv/code-du-travail-numerique/commit/51d1154e35e7ea4255301eef514916c55b08e0f8))
+* **modeles:** add cc 2216 ([#3754](https://github.com/SocialGouv/code-du-travail-numerique/issues/3754)) ([85ede1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/85ede1ed0cd193db8c10e188b726120e2276f859))
+* **modeles:** add cc 3043 retirement ([#3748](https://github.com/SocialGouv/code-du-travail-numerique/issues/3748)) ([72133d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/72133d2d7e6cffc2880524c63502e0d47c47cdd4))
+* **pipeline:** ts to js ([#3827](https://github.com/SocialGouv/code-du-travail-numerique/issues/3827)) ([2042d3a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2042d3a396fe692669360725efe846cc8e188983))
+* **simulator:** add CC 1147 ([#3774](https://github.com/SocialGouv/code-du-travail-numerique/issues/3774)) ([b9761ad](https://github.com/SocialGouv/code-du-travail-numerique/commit/b9761ad5d56fcc619287c338f1f7bcd25340bef4))
+* **simulator:** add CC 1266 ([#3775](https://github.com/SocialGouv/code-du-travail-numerique/issues/3775)) ([8901b08](https://github.com/SocialGouv/code-du-travail-numerique/commit/8901b084709f777dc9c63d6b8331db3c0e4422cf))
+* **simulator:** add cc 1483 ([#3806](https://github.com/SocialGouv/code-du-travail-numerique/issues/3806)) ([c39d117](https://github.com/SocialGouv/code-du-travail-numerique/commit/c39d1179e6c403cdffc2e548dc3fe6f0b5521ae0))
+* **simulator:** Add CC 1501 ([#3817](https://github.com/SocialGouv/code-du-travail-numerique/issues/3817)) ([98b7082](https://github.com/SocialGouv/code-du-travail-numerique/commit/98b7082ef9cc4791f1ace8276f2076ef1b4edfd5))
+* **simulator:** add CC 2609  ([#3763](https://github.com/SocialGouv/code-du-travail-numerique/issues/3763)) ([db5a85e](https://github.com/SocialGouv/code-du-travail-numerique/commit/db5a85ec82ac58a60baa9276bb6cf53f928fdac8))
+* **simulator:** add CC 787 ([#3773](https://github.com/SocialGouv/code-du-travail-numerique/issues/3773)) ([e09ef52](https://github.com/SocialGouv/code-du-travail-numerique/commit/e09ef5201551771ed654613ac1a29c53ae08655b))
+* **simulator:** update description's text for simulator "preavis de retraire" ([#3849](https://github.com/SocialGouv/code-du-travail-numerique/issues/3849)) ([5213e1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/5213e1e2997c334fab534ef9b099b99a04f0d40e))
+* **simulators:** add CC 1090 & CC 843 ([#3751](https://github.com/SocialGouv/code-du-travail-numerique/issues/3751)) ([f575e75](https://github.com/SocialGouv/code-du-travail-numerique/commit/f575e75022f02c09d6f2304f2f3ca764a6afd527))
+* **widget:** Add backlink to widget code snippet (SEO purpose) ([#3791](https://github.com/SocialGouv/code-du-travail-numerique/issues/3791)) ([7776d37](https://github.com/SocialGouv/code-du-travail-numerique/commit/7776d379e2f024ef84b3886dc0704db03cc37e7a))
+
+
+
+
+
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 
