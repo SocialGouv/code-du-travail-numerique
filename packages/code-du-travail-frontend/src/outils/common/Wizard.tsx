@@ -14,6 +14,7 @@ import {
   TRACK_EVENT,
 } from "../../lib/tracking";
 import { matopush } from "../../piwik";
+import { getAgreementStatus } from "../DureePreavisRetraite/utils";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 
@@ -31,6 +32,7 @@ function Wizard({
   const { stepIndex, steps } = state;
 
   const setStepIndex = (index) =>
+    //@ts-ignore
     dispatch({ payload: index, type: "setStepIndex" });
 
   useEffect(() => {
@@ -38,6 +40,7 @@ function Wizard({
     // We only focus on wizzard after wizzard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
+      //@ts-ignore
       node.focus();
     }
     if (window) {
@@ -48,6 +51,7 @@ function Wizard({
   const prevStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.max(0, nextStepIndex - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -64,6 +68,7 @@ function Wizard({
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -89,6 +94,7 @@ function Wizard({
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
+      //@ts-ignore
       dispatch({
         type: "reset",
       });
@@ -123,6 +129,9 @@ function Wizard({
             ? MISE_RETRAITE
             : DEPART_RETRAITE,
         ]);
+        break;
+      case initialState.steps[2].name: // "ccn"
+        // console.log(getAgreementStatus(form.getState().values.ccn));
         break;
       case initialState.steps[4].name: // "anciennete"
         matopush([
