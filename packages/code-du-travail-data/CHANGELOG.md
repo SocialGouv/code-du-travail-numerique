@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **data:** linter and reference about Code du travail ([#3831](https://github.com/SocialGouv/code-du-travail-numerique/issues/3831)) ([0cb2fbf](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cb2fbf4f0adba1ea6aea52e5265c349f0f4946b))
+* **data:** linter is now effective ([#3859](https://github.com/SocialGouv/code-du-travail-numerique/issues/3859)) ([e7d046c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7d046c6a730785cc10b33ca0783afeb212557f6))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
+
+
+
+
+
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 **Note:** Version bump only for package @cdt/data
