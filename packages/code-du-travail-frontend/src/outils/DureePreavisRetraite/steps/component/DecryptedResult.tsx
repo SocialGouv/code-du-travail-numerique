@@ -179,7 +179,12 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
           detail={rootData.agreement}
         />
       </Text>
-      {description && <Text>{description}</Text>}
+      {description && (
+        <>
+          <br />
+          <Text>{description}</Text>
+        </>
+      )}
     </>
   );
 };
