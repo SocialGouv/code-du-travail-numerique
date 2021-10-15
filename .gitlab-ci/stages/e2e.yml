@@ -1,6 +1,6 @@
 Test on deployed branch:
   stage: .post
-  image: ghcr.io/socialgouv/docker/puppeteer:6.52.0
+  image: ghcr.io/socialgouv/docker/puppeteer
   except:
     refs:
       # Don't run on release
@@ -28,6 +28,8 @@ Test on deployed branch:
       [ "$retry" -eq "-1" ] && exit 1
 
   script:
+    - yarn config set cache-folder $CI_PROJECT_DIR/.yarn
+
     - yarn --frozen-lockfile
     #
     - echo "${CODECEPT_BASEURL}"
@@ -37,5 +39,11 @@ Test on deployed branch:
   artifacts:
     when: always
     paths:
-      - ./packages/code-du-travail-frontend-e2e/output
+      - packages/code-du-travail-frontend-e2e/output
     expire_in: 1 week
+
+  cache:
+    key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - packages/code-du-travail-frontend-e2e/node_modules
+      - $CI_PROJECT_DIR/.yarn
