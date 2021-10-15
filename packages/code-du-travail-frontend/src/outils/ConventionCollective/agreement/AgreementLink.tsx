@@ -17,16 +17,17 @@ export function AgreementLink({
   agreement,
   isFirst,
 }: AgreementItemProps): JSX.Element {
-  const { num, shortTitle } = agreement;
+  // @ts-ignore
+  const { idcc, shortTitle, url } = agreement.conventions[0];
   const { trackEvent, title, uuid } = useTrackingContext();
   const clickHandler = () => {
-    trackEvent("cc_select_p1", title, `idcc${num.toString()}`, uuid);
+    trackEvent("cc_select_p1", title, `idcc${idcc.toString()}`, uuid);
   };
-
+  console.log(agreement);
   return (
-    <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
+    <Link href={`/${getRouteBySource(SOURCES.CCN)}/${url}`} passHref>
       <ResultItem as="a" isFirst={isFirst} onClick={clickHandler}>
-        {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        {shortTitle} <IDCC>(IDCC {formatIdcc(idcc)})</IDCC>
       </ResultItem>
     </Link>
   );
