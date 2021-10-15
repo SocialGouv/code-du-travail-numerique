@@ -8,12 +8,15 @@ import styled from "styled-components";
 import {
   ANCIENNETE_MOINS_2_ANS,
   ANCIENNETE_PLUS_2_ANS,
+  CC_TREATED,
+  CC_UNTREATED,
   DEPART_RETRAITE,
   MISE_RETRAITE,
   OUTIL,
   TRACK_EVENT,
 } from "../../lib/tracking";
 import { matopush } from "../../piwik";
+import { AgreementStatus } from "../DureePreavisRetraite/steps/component/DecryptedResult";
 import { getAgreementStatus } from "../DureePreavisRetraite/utils";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
@@ -129,9 +132,6 @@ function Wizard({
             ? MISE_RETRAITE
             : DEPART_RETRAITE,
         ]);
-        break;
-      case initialState.steps[2].name: // "ccn"
-        // console.log(getAgreementStatus(form.getState().values.ccn));
         break;
       case initialState.steps[4].name: // "anciennete"
         matopush([
