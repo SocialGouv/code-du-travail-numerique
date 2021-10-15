@@ -22,7 +22,7 @@ export function SearchAgreement({
   const trackingContext = useTrackingContext();
 
   const useAgreementSuggester = createSuggesterHook(
-    searchEnterprises,
+    searchAgreements,
     "cc_search",
     trackingContext
   );
