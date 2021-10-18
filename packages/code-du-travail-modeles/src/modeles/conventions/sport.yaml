@@ -1,0 +1,7 @@
+contrat salarié . convention collective . sport:
+  description: Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006.
+  applicable si: convention collective = 'IDCC2511'
+  valeur: oui
+  cdtn:
+    idcc: 2511
+    préavis-retraite: false
