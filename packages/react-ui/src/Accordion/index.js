@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 import * as variants from "./components/variants/index.js";
+import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
 
 export const Accordion = ({ items, noTitle, variant, ...props }) => {
   /* eslint-disable import/namespace */
@@ -68,7 +69,10 @@ const AccordionItemPanelContent = styled.div`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }
 `;
+
+export { AccordionArrow };
