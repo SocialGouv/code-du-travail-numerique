@@ -7,7 +7,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c30 {
+.c31 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,10 +15,110 @@ exports[`<DroitDuTravail /> should render 1`] = `
   max-width: 74rem;
 }
 
+.c64 {
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 74rem;
+}
+
 .c25 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
+}
+
+.c42 {
+  position: relative;
+  margin: 5rem 0;
+  padding: 3.2rem 0;
+  min-height: 10rem;
+  color: #3e486e;
+}
+
+.c43 {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  background-color: #f2f5fa;
+  border-radius: 0 10rem 10rem 0;
+  content: "";
+}
+
+.c44 {
+  padding-right: calc( 30% - (100% - 124rem) / 2 + 2rem );
+}
+
+.c48 {
+  position: relative;
+  z-index: 0;
+}
+
+.c32 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.c32:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  content: "";
+}
+
+.c32 > *:first-child {
+  margin-top: 0;
+}
+
+.c32 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c36 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+}
+
+.c36 > *:first-child {
+  margin-top: 0;
+}
+
+.c36 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c62 {
+  padding: 2rem 2.4rem;
+  color: #3e486e;
+  border-radius: 0.6rem;
+  border: 1px solid #bbcadf;
+  background-color: #fff;
+}
+
+.c62 > *:first-child {
+  margin-top: 0;
+}
+
+.c62 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -34,7 +134,562 @@ exports[`<DroitDuTravail /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c14 {
+.c57 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c56,
+[aria-selected="true"] .c57 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c84 {
+  border-top: 1px solid #bbcadf;
+}
+
+.c83 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
+}
+
+.c81 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c81:hover,
+.c81:focus,
+.c81:focus-within,
+.c81[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c82 {
+  margin: 2rem 0 2rem 1rem;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c66 {
+  position: relative;
+}
+
+.c66:after {
+  position: absolute;
+  bottom: -1.4rem;
+  left: calc(50% + 8rem / 2);
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid #f2f5fa;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 2.5rem solid transparent;
+  -webkit-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
+  transform: translateX(-1.5rem);
+  content: "";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c76 {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.c76:after {
+  position: absolute;
+  bottom: -1.4rem;
+  left: calc(50% + 8rem / 2);
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid #f2f5fa;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 2.5rem solid transparent;
+  -webkit-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
+  transform: translateX(-1.5rem);
+  content: "";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c89 {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.c89:after {
+  position: absolute;
+  bottom: -1.4rem;
+  left: calc(50% + 8rem / 2);
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid #f2f5fa;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 2.5rem solid transparent;
+  -webkit-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
+  transform: translateX(-1.5rem);
+  content: "";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+}
+
+.c75 {
+  margin-left: 8rem;
+  padding: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-top: transparent;
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.c67 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  cursor: pointer;
+}
+
+.c68 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c68:before {
+  position: absolute;
+  top: -1.6rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(1.6rem + 4.5rem);
+  background-color: #7994d4;
+  content: "";
+  display: none;
+}
+
+.c68:after {
+  position: absolute;
+  top: 4rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(100% - 4rem);
+  background-color: #7994d4;
+  content: "";
+}
+
+.c77 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c77:before {
+  position: absolute;
+  top: -1.6rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(1.6rem + 4.5rem);
+  background-color: #7994d4;
+  content: "";
+}
+
+.c77:after {
+  position: absolute;
+  top: 4rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(100% - 4rem);
+  background-color: #7994d4;
+  content: "";
+}
+
+.c90 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c90:before {
+  position: absolute;
+  top: -1.6rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(1.6rem + 4.5rem);
+  background-color: #7994d4;
+  content: "";
+}
+
+.c90:after {
+  position: absolute;
+  top: 4rem;
+  left: calc(4rem / 2 - 0.3rem / 2);
+  z-index: -1;
+  width: 0.3rem;
+  height: calc(100% - 4rem);
+  background-color: #7994d4;
+  content: "";
+  display: none;
+}
+
+.c69 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: #7994d4;
+  border-radius: 50%;
+}
+
+.c70 {
+  position: relative;
+  height: 0.1rem;
+  background-color: #7994d4;
+  width: calc(8rem - 4rem - 0.4rem);
+  margin-left: 0.4rem;
+}
+
+.c70:before {
+  top: calc( (0.4rem + 4rem) / -2 - 1.5 * 0.1rem );
+  left: calc(-1 * 0.4rem - 4rem / 2);
+  width: calc(0.4rem + 4rem / 2);
+  height: calc((0.4rem) * 2 + 4rem);
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+
+.c70:before {
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  border: 0.1rem solid #7994d4;
+  content: "";
+}
+
+.c72 {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2.4rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+[aria-expanded="true"] .c71,
+[aria-selected="true"] .c72 {
+  border-bottom: 1px solid transparent;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c72:before {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid #fff;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 2.5rem solid transparent;
+  -webkit-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
+  transform: translateX(-1.5rem);
+  content: "";
+  display: none;
+}
+
+.c78 {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2.4rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+[aria-expanded="true"] .c71,
+[aria-selected="true"] .c78 {
+  border-bottom: 1px solid transparent;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c78:before {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid #fff;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 2.5rem solid transparent;
+  -webkit-transform: translateX(-1.5rem);
+  -ms-transform: translateX(-1.5rem);
+  transform: translateX(-1.5rem);
+  content: "";
+}
+
+.c73 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin-right: 2rem;
+}
+
+.c74 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c50 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c50 > div {
+  width: calc(50% - (2rem / 2));
+}
+
+.c50 > div:nth-child(odd) {
+  margin-right: 2rem;
+}
+
+.c51 {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+}
+
+.c60 {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+}
+
+.c61 {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  margin-top: 2rem;
+}
+
+.c58 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 0.35s ease-in;
+  animation: iHsNqv 0.35s ease-in;
+}
+
+.c52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2.4rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c52:hover,
+.c52:focus,
+.c52:focus-within,
+.c52[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c53 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c54 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 7.2rem;
+  height: 7.2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  background-color: #f2f5fa;
+  border-radius: 50%;
+}
+
+.c55 {
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c59 > *:first-child {
+  margin-top: 0;
+}
+
+.c59 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -72,16 +727,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   will-change: transform;
 }
 
-.c14:link,
-.c14:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -90,7 +745,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: transparent;
 }
 
-.c14[disabled] {
+.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -98,7 +753,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c42 {
+.c107 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -143,13 +798,61 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c42:focus,
-.c42:hover,
-.c42:active {
+.c107:focus,
+.c107:hover,
+.c107:active {
   color: #f66663;
 }
 
-.c32 {
+.c86 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.c86:focus,
+.c86:hover,
+.c86:active {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c97 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -187,16 +890,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   will-change: transform;
 }
 
-.c32:link,
-.c32:visited {
+.c97:link,
+.c97:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c32:not([disabled]):hover,
-.c32:not([disabled]):active,
-.c32:not([disabled]):focus {
+.c97:not([disabled]):hover,
+.c97:not([disabled]):active,
+.c97:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -205,7 +908,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c32[disabled] {
+.c97[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -213,7 +916,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c19 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -251,16 +954,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c20:link,
+.c20:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):active,
+.c20:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -269,7 +972,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: transparent;
 }
 
-.c19[disabled] {
+.c20[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -277,24 +980,71 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c20 {
+.c88 {
+  width: 2.6rem;
+  height: 1.4rem;
+  margin: 0 0.4rem 0 1rem;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.c14:hover .c87 {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c21 {
   height: auto;
   padding: 0;
 }
 
-.c22 {
+.c23 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c39 {
+.c104 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c29 {
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c38 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.c38 svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.c39 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c28 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -307,7 +1057,31 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c38 {
+.c35 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c79 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c103 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -318,14 +1092,92 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c27 {
+.c40 {
+  margin: 0 0 1rem 0;
+  color: #f66663;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c26 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  text-align: center;
+}
+
+.c33 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  margin-left: -4rem;
+  text-align: left;
+}
+
+.c45 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  text-align: left;
+}
+
+.c65 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  text-align: left;
+}
+
+.c94 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c28 {
+.c29 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.c27 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c34 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 4rem;
+  text-align: left;
+}
+
+.c46 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 2.8rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-left: 3.2rem;
+  text-align: left;
+}
+
+.c95 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -337,13 +1189,42 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: center;
 }
 
-.c23 {
+.c85 {
+  margin: 1rem 0 0 0;
+}
+
+.c80 {
+  margin-bottom: 2.4rem;
+}
+
+.c47 {
+  max-width: 76rem;
+}
+
+.c49 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.c63 {
+  max-width: 66rem;
+}
+
+.c91 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c24 {
+.c92 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -351,7 +1232,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c24:before {
+.c92:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -363,27 +1244,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c26 {
+.c93 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c31 {
+.c96 {
   margin-bottom: 2rem;
 }
 
-.c33 {
+.c98 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c34 {
+.c99 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c35 {
+.c100 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,15 +1275,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c36 + .c36 {
+.c101 + .c101 {
   padding-left: 1.6rem;
 }
 
-.c37 {
+.c102 {
   font-size: 1.6rem;
 }
 
-.c41 {
+.c106 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -410,7 +1291,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding: 0.4rem 0;
 }
 
-.c43 {
+.c108 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,11 +1313,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c44 {
+.c109 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c45 {
+.c110 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -464,7 +1345,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   flex-grow: 1;
 }
 
-.c16 {
+.c17 {
   width: 3rem;
   height: 3rem;
 }
@@ -509,7 +1390,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #9298af;
 }
 
-.c15 {
+.c16 {
   position: absolute;
   top: 0;
   right: 0;
@@ -518,7 +1399,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #7994d4;
 }
 
-.c21 {
+.c22 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
@@ -609,7 +1490,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #f66663;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -627,7 +1508,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   justify-content: flex-end;
 }
 
-.c18 {
+.c19 {
   display: none;
   color: #7994d4;
 }
@@ -661,6 +1542,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
+.c24 {
+  position: relative;
+  margin-top: 6rem;
+}
+
+.c41 {
+  margin: 0;
+}
+
 @media (max-width:600px) {
   .c4 {
     padding: 0 1rem;
@@ -675,24 +1565,29 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     padding: 0;
   }
 }
 
 @media print {
-  .c30 {
+  .c31 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-
+  .c64 {
+    padding: 0 1rem;
+  }
 }
 
 @media print {
-
+  .c64 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media (max-width:600px) {
@@ -702,201 +1597,328 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-
+  .c43 {
+    right: 2rem;
+  }
 }
 
 @media (max-width:1180px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
+  .c44 {
+    padding-right: calc(30% + 2rem);
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
-    font-size: 1.4rem;
+  .c44 {
+    padding-right: calc(2rem + 1rem);
   }
 }
 
 @media print {
-  .c42 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-  .c32 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c32 {
+  .c32:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
   .c32 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c32 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c36 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c62 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c62 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c83 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c82 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c66:after {
+    left: calc(50% + 4.6rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c76 {
+    margin-top: 0.4rem;
+  }
+
+  .c76:after {
+    left: calc(50% + 4.6rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c89 {
+    margin-top: 0.4rem;
+  }
+
+  .c89:after {
+    left: calc(50% + 4.6rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c75 {
+    margin-left: 4.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c68:before {
+    top: -0.4rem;
+    height: calc(0.4rem + 5rem);
+  }
+
+  .c68,
+  .c68:before,
+  .c68:after {
+    left: calc(3rem / 2 - 0.3rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c77:before {
+    top: -0.4rem;
+    height: calc(0.4rem + 5rem);
+  }
+
+  .c77,
+  .c77:before,
+  .c77:after {
+    left: calc(3rem / 2 - 0.3rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c90:before {
+    top: -0.4rem;
+    height: calc(0.4rem + 5rem);
+  }
+
+  .c90,
+  .c90:before,
+  .c90:after {
+    left: calc(3rem / 2 - 0.3rem / 2);
+  }
+}
+
+@media (max-width:600px) {
+  .c69 {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c70 {
+    width: calc(4.6rem - 3rem - 0.3rem);
+    margin-left: 0.3rem;
+  }
+
+  .c70:before {
+    top: calc( (0.3rem + 3rem) / -2 - 1.5 * 0.1rem );
+    left: calc(-1 * 0.3rem - 3rem / 2);
+    width: calc(0.3rem + 3rem / 2);
+    height: calc((0.3rem) * 2 + 3rem);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c72 {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c78 {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c73 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c74 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c50 > div {
+    width: 100%;
+  }
+
+  .c50 > div:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:980px) {
+  .c60 {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c60 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c61 {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c61 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c58 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c52 {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c55 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c15 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c107 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c107 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c86 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c86 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c97 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c97 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c97 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     padding: 0 3rem;
   }
 }
@@ -906,7 +1928,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     width: 4.2rem;
     height: 4.2rem;
   }
@@ -917,101 +1939,142 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
   .c38 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c38 svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c79 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-
+  .c103 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c40 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c26 {
+    margin-bottom: 3.2rem;
+    margin-left: auto;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c33 {
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+  }
 }
 
 @media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c27 {
+  .c45 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-
+  .c65 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c94 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c29 {
+    padding-left: 0;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c27 {
+    font-size: 2.6rem;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c34 {
+    padding-left: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
-
+  .c34 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c46 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c95 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:980px) {
-
+  .c49 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 
 @media print {
-  .c24 {
+  .c92 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c93 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c99 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c100 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1019,26 +2082,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 + .c36 {
+  .c101 + .c101 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c105 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c102 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c45 {
+  .c110 {
     display: none;
   }
 }
@@ -1127,13 +2190,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c18 {
+  .c19 {
     display: block;
     width: 3.4rem;
     height: 3.4rem;
@@ -1142,7 +2205,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 2.2rem;
     height: 2.2rem;
     margin-left: 1rem;
@@ -1180,11 +2243,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-
+  .c24 {
+    margin-top: 3.2rem;
+  }
 }
 
 @media (max-width:1180px) {
-
+  .c30 {
+    display: none;
+  }
 }
 
 <div>
@@ -1285,13 +2352,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="c14 c15"
+              class="c14 c15 c16"
               title="Lancer ma recherche"
               type="submit"
             >
               <svg
                 aria-hidden="true"
-                class="c16"
+                class="c17"
                 fill="none"
                 viewBox="0 0 32 32"
               >
@@ -1304,10 +2371,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </form>
         </div>
         <div
-          class="c17"
+          class="c18"
         >
           <a
-            class="c18"
+            class="c19"
             href="/recherche"
           >
             <svg
@@ -1323,11 +2390,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </a>
           <button
             aria-label="menu principal"
-            class="c19 c20 c21"
+            class="c14 c20 c21 c22"
           >
             <svg
               aria-hidden="true"
-              class="c22"
+              class="c23"
               fill="none"
               viewBox="0 0 32 32"
             >
@@ -1342,45 +2409,2571 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </div>
       </div>
     </header>
-    <i>
-      Une erreur est survenue
-    </i>
-    <div
-      class="c23"
+    <main
+      class="c24"
+      id="content"
+      tabindex="-1"
     >
-      <footer
-        class="c24"
+      <div
+        class="c25"
       >
         <div
-          class="c25 c26"
+          class="c4"
+        >
+          <header
+            class="c26"
+          >
+            <h1
+              class="c27"
+            >
+              <span
+                class="c28"
+              />
+              Le droit du travail
+            </h1>
+            <p
+              class="c29"
+            >
+              <span>
+                Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
+                <br
+                  class="c30"
+                />
+                ainsi que leur articulation.
+              </span>
+            </p>
+          </header>
+          <div
+            class="c31"
+          >
+            <div
+              class="c32"
+            >
+              <div
+                class="c33"
+              >
+                <h2
+                  class="c34"
+                >
+                  <span
+                    class="c35"
+                  />
+                  Qu’est-ce que le droit du travail ?
+                </h2>
+              </div>
+              <strong>
+                Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
+              </strong>
+              <p>
+                Le droit du travail organise les relations professionnelles de travail entre l’employeur et le salarié individuellement et la collectivité des salariés. Il encadre de nombreux domaines tels que le contrat de travail, la rémunération, la durée du travail, les congés, la discipline, le licenciement, l’emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
+              </p>
+              <p>
+                Le droit du travail est un droit en constante évolution car il comprend des enjeux sociaux, économiques et politiques forts.
+              </p>
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  <div
+                    class="c38"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      viewBox="0 0 52 52"
+                    >
+                      <path
+                        d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+                        fill="#3E486E"
+                        stroke="#4E6896"
+                      />
+                      <path
+                        d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+                        fill="#FF7067"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="c39"
+                  >
+                    <div
+                      class="c40"
+                    >
+                      Le droit du travail, ce n’est pas…
+                    </div>
+                    <p
+                      class="c41"
+                    >
+                      Le droit du travail ne concerne pas les travailleurs qui sont soumis au droit public (par exemple, les fonctionnaires), les travailleurs indépendants (artisan, commerçant, professions libérales…), les bénévoles et les dirigeants d’entreprise.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c42"
+        >
+          <div
+            class="c43"
+          />
+          <div
+            class="c4 c44"
+          >
+            <div
+              class="c45"
+            >
+              <h2
+                class="c46"
+              >
+                <span
+                  class="c35"
+                />
+                Quels sont les textes à l’origine du droit du travail ?
+              </h2>
+            </div>
+            <p
+              class="c47"
+            >
+              Le droit du travail est construit par de nombreux textes juridiques dont les sources sont diverses : sources internationales, sources européennes et sources nationales. Vous trouverez les textes participant à la construction du droit du travail en France ci-dessous.
+            </p>
+          </div>
+          <div
+            class="c48"
+          >
+            <div
+              class="c4"
+            >
+              <div
+                class="c49"
+              >
+                <div
+                  class="c50"
+                  data-accordion-component="Accordion"
+                >
+                  <div>
+                    <div
+                      class="c51"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-0"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-0"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M13.277 8.185c-1.499 1.503-2.458 3.438-4.116 4.817-.475.396-.99.753-1.5 1.27.419-2.966 2.396-5.698 5.613-6.087h.003zm25.447 0c1.499 1.503 2.458 3.438 4.113 4.817.474.396.99.753 1.5 1.27-.42-2.966-2.397-5.698-5.613-6.087z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M9.119 10.16C6.897 11.343 7.317 14.206 6.541 16l.072.013c.737-1.772 3.586-2.193 4.4-4.209-.055 3.748-3.932 4.45-5.506 7.33-.102-3.32-.829-7.807 3.612-8.975zm33.763 0c2.222 1.184 1.802 4.048 2.578 5.84l-.072.014c-.737-1.772-3.586-2.193-4.4-4.209.055 3.748 3.932 4.45 5.506 7.33.102-3.32.828-7.808-3.612-8.976v.001z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M5.239 13.416c-1.197 2.184.08 4.34-.36 7.974.019.02.019.085.09.061.692-3.164 3.324-3.676 4.015-5.258-.474 3.587-3.648 5.375-4.196 8.629-.153-1.687-3.914-7.2.45-11.405v-.001zm41.524 0c1.196 2.184-.08 4.34.36 7.974-.02.02-.02.085-.09.061-.692-3.164-3.325-3.676-4.016-5.258.475 3.587 3.648 5.375 4.197 8.629.152-1.687 3.914-7.2-.451-11.405v-.001z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M2.73 19.474c-.473 2.314 1.692 5.043 2.241 8.224.039.014.066-.02.08-.046-.183-2.456.527-3.632 1.785-5.457.306-.498.483-1.047.636-1.61.62.833.03 2.657-.618 4.947-.458 1.615-1.112 2.984-.932 5.388-.795-.967-3.156-3.872-3.375-5-.695-2.175-.825-4.35.184-6.444v-.002zm46.54 0c.474 2.314-1.69 5.043-2.24 8.224-.038.014-.065-.02-.08-.046.184-2.456-.527-3.632-1.784-5.457-.306-.498-.483-1.047-.636-1.61-.62.833-.03 2.657.617 4.947.457 1.616 1.111 2.98.93 5.387.796-.967 3.157-3.872 3.376-5 .695-2.175.825-4.35-.184-6.444h.002z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M2.134 26.517c.3 2.616 3.569 4.604 4.962 7.009.04.014.053-.02.056-.043-1.374-2.871.205-5.009.15-7.402 1.662 3.659.29 6.343 2.19 10.411-4.773-2.516-8.09-5.45-7.358-9.974zm47.733-.001c-.3 2.616-3.57 4.604-4.962 7.008-.04.015-.053-.018-.056-.042 1.373-2.873-.204-5.01-.15-7.403-1.662 3.66-.29 6.344-2.19 10.412 4.772-2.514 8.09-5.448 7.358-9.972v-.003z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M3.619 32.992c.403.943 1.431 1.91 2.783 2.704 1.712 1.003 3.4 1.349 4.994 2.873-1.526-1.809-1.832-3.428-2.541-7.783 1.284 1.237 2.013 2.791 2.658 4.591.604 1.692.94 3.607 2.591 4.994-1.24-.505-3.885-.555-6.063-1.62-2.321-1.132-3.963-3.307-4.422-5.759zm44.763 0c-.403.943-1.432 1.91-2.783 2.704-1.712 1.003-3.4 1.349-4.995 2.873 1.53-1.809 1.833-3.428 2.543-7.783-1.284 1.237-2.014 2.791-2.659 4.591-.604 1.692-.939 3.607-2.59 4.994 1.24-.505 3.885-.555 6.062-1.62 2.318-1.132 3.96-3.307 4.419-5.759h.003z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.117 38.725c2.53 2.634 6.824 1.723 9.156 2.315-2.497-1.128-3.155-3.338-4.193-5.326 2.533.977 3.842 4.913 8.342 5.664-2.372.298-5.276 2.04-9.102 1.047-1.908-.61-3.256-1.782-4.204-3.699l.001-.001zm37.766 0c-2.529 2.634-6.823 1.723-9.156 2.315 2.497-1.128 3.156-3.338 4.194-5.326-2.534.977-3.843 4.913-8.342 5.664 2.371.298 5.276 2.04 9.102 1.047 1.908-.61 3.256-1.782 4.203-3.699v-.001z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M38.195 44.908c-2.525.96-5.215.139-7.192-1.392-.899-.591-2.613-1.789-3.848-1.444 1.918.91 3.527 2.094 5.164 3.695-.278.316-.693.659-1.027.932-1.568-1.73-3.317-3.255-5.267-4.224-1.618.657-4.202 2.866-5.283 4.234l-1.082-.954c1.626-1.663 3.265-2.714 5.223-3.643-1.878-.44-2.927.771-4.297 1.697-1.7 1.202-4.38 2.032-6.444 1.208-1.1-.433-2.273-1.092-3.027-2.156 1.611 1.135 4.666.915 6.5.182 2.47-1.096 4.973-2.49 8.403-1.38 2.61-.885 5.14-.258 7.498 1.025 2.49 1.088 4.761 1.556 7.341.195-.805 1.026-1.52 1.622-2.658 2.03l-.004-.005z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M26 10c7.732 0 14 6.268 14 14s-6.268 14-14 14-14-6.268-14-14c0-2.192.503-4.264 1.4-6.11a1 1 0 00-1.8-.873A15.94 15.94 0 0010 24c0 8.837 7.163 16 16 16s16-7.163 16-16S34.837 8 26 8a15.94 15.94 0 00-6.934 1.577 1 1 0 10.868 1.802A13.94 13.94 0 0126 10z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  d="M15 13a1 1 0 102 0 1 1 0 00-2 0z"
+                                  fill="#FF7067"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Les textes internationaux
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-0"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-0"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Les textes internationaux
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            Le droit du travail en France est influencé par les textes de
+                             
+                            <a
+                              aria-label="l’Organisation internationale du travail (nouvelle fenêtre)"
+                              href="https://www.ilo.org/global/lang--fr/index.htm"
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                            >
+                              l’Organisation internationale du travail
+                            </a>
+                             
+                            (OIT), agence des Nations Unies pour le monde du travail. L’OIT rédige des recommandations et des conventions.
+                          </p>
+                          <p>
+                            Les conventions de l’OIT sont les principaux textes qui ont un effet sur le droit du travail français. Ces conventions traitent de nombreux sujets comme le travail des enfants, les activités syndicales, le travail forcé, l’emploi, le chômage, la rémunération, le rôle de l’inspection du travail.
+                          </p>
+                          <p>
+                            <i>
+                              Exemple de convention :
+                               
+                              <a
+                                aria-label="la Convention n°158 de l’OIT sur le licenciement (nouvelle fenêtre)"
+                                href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                la Convention n°158 de l’OIT sur le licenciement
+                              </a>
+                              .
+                            </i>
+                          </p>
+                          <p>
+                            Il existe également d’autres traités internationaux qui ont une influence sur le droit du travail français.
+                          </p>
+                          <p>
+                            <i>
+                              Exemples :
+                               
+                              <a
+                                aria-label="Le Pacte international relatif aux droits civils et politiques de 1966 (nouvelle fenêtre)"
+                                href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                Le Pacte international relatif aux droits civils et politiques de 1966
+                              </a>
+                               
+                              et
+                               
+                              <a
+                                aria-label="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966 (nouvelle fenêtre)"
+                                href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                le Pacte international relatif aux droits économiques, sociaux et culturels de 1966
+                              </a>
+                              .
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c60"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-1"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-1"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  d="M26.274 12l-.549 1.647h-1.647l1.098 1.098-.549 1.647 1.648-1.098 1.647 1.098-.55-1.647 1.099-1.098h-1.648L26.274 12zm9.883 18.118l-.55 1.647h-1.646l1.098 1.098-.55 1.647 1.648-1.098 1.647 1.098-.55-1.647 1.099-1.098h-1.647l-.55-1.647zM19.686 13.647l-.549 1.647H17.49l1.098 1.098-.549 1.647 1.647-1.098 1.647 1.098-.549-1.647 1.098-1.098h-1.647l-.549-1.647zm-3.843 4.393l-.549 1.646h-1.647l1.098 1.098-.549 1.648 1.647-1.099 1.647 1.099-.549-1.648 1.098-1.098h-1.647l-.549-1.647zm-1.647 6.038l-.549 1.647H12l1.098 1.098-.549 1.647 1.647-1.098 1.647 1.098-.549-1.647 1.098-1.098h-1.647l-.549-1.647zm1.647 6.04l-.549 1.647h-1.647l1.098 1.098-.549 1.647 1.647-1.098 1.647 1.098-.549-1.647 1.098-1.098h-1.647l-.549-1.647zm4.392 3.842l-.549 1.648H18.04l1.098 1.098-.549 1.647 1.647-1.098 1.647 1.098-.549-1.647 1.098-1.098h-1.647l-.549-1.647zm6.039 1.648l-.549 1.647h-1.647l1.098 1.098L24.627 40l1.648-1.098L27.921 40l-.55-1.647 1.099-1.098h-1.648l-.549-1.647zm5.491-1.648l-.55 1.648H29.57l1.098 1.098-.55 1.647 1.648-1.098 1.647 1.098-.55-1.647 1.099-1.098h-1.647l-.55-1.647zm6.039-9.882l-.55 1.647h-1.646l1.098 1.098-.55 1.647 1.648-1.098 1.647 1.098-.549-1.647L40 25.725h-1.647l-.55-1.647zm-1.647-6.038l-.55 1.646h-1.646l1.098 1.098-.55 1.648 1.648-1.099 1.647 1.099-.55-1.648 1.099-1.098h-1.647l-.55-1.647zm-3.843-4.393l-.55 1.647h-1.646l1.098 1.098-.55 1.647 1.648-1.098 1.647 1.098-.55-1.647 1.099-1.098h-1.647l-.55-1.647z"
+                                  fill="#FF7067"
+                                />
+                                <path
+                                  d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
+                                  fill="#4E6896"
+                                />
+                                <path
+                                  d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
+                                  fill="#4E6896"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Les textes européens
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-1"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-1"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Les textes européens
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            Le droit du travail français est influencé par
+                             
+                            <a
+                              aria-label="l’Union Européenne (nouvelle fenêtre)"
+                              href="https://europa.eu/european-union/index_fr"
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                            >
+                              l’Union Européenne
+                            </a>
+                             
+                            et par
+                             
+                            <a
+                              aria-label="le Conseil de l’Europe (nouvelle fenêtre)"
+                              href="https://www.coe.int/fr/"
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                            >
+                              le Conseil de l’Europe
+                            </a>
+                            .
+                          </p>
+                          <p>
+                            L’Union Européenne élabore différents types de textes :
+                          </p>
+                          <ul>
+                            <li>
+                              des traités
+                            </li>
+                            <li>
+                              des règlements
+                            </li>
+                            <li>
+                              des directives
+                            </li>
+                            <li>
+                              des accords collectifs européens négociés par
+                               
+                              <a
+                                aria-label="la Confédération européenne des syndicats (CES) (nouvelle fenêtre)"
+                                href="https://www.etuc.org/fr"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                la Confédération européenne des syndicats (CES)
+                              </a>
+                              ,
+                               
+                              <a
+                                aria-label="Business Europe (nouvelle fenêtre)"
+                                href="https://www.businesseurope.eu/"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                Business Europe
+                              </a>
+                               
+                              et
+                               
+                              <a
+                                aria-label="le Centre européen des entreprises à participation publique (nouvelle fenêtre)"
+                                href="https://www.ceep.eu/"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                le Centre européen des entreprises à participation publique
+                              </a>
+                               
+                              (CEEP)
+                            </li>
+                          </ul>
+                          <p>
+                            Le Conseil de l’Europe, organisation intergouvernementale distincte de l’Union Européenne, a adopté 2 textes importants en droit du travail :
+                          </p>
+                          <ul>
+                            <li>
+                              <a
+                                aria-label="La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales (nouvelle fenêtre)"
+                                href="https://www.echr.coe.int/Pages/home.aspx?p=basictexts&c=fre"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales
+                              </a>
+                               
+                              qui évoque des droits civils et politiques comme par exemple la liberté syndicale, l’interdiction du travail forcé, des discriminations, le respect de la vie privée et familiale.
+                            </li>
+                            <li>
+                              <a
+                                aria-label="La Charte sociale européenne (nouvelle fenêtre)"
+                                href="https://www.coe.int/en/web/european-social-charter"
+                                rel="noopener noreferrer nofollow"
+                                target="_blank"
+                              >
+                                La Charte sociale européenne
+                              </a>
+                               
+                              qui concerne les droits sociaux et économiques dans les domaines notamment de l’emploi et des conditions de travail.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-2"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-2"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M24.795 4.4a2 2 0 012.413.01L46 18.751v4.495a2 2 0 01-2 2h-2v17h2a2 2 0 012 2v5H6v-5a2 2 0 012-2h2v-17H8a2 2 0 01-2-2v-4.492l6.89-5.3a1 1 0 011.22 1.585l-4.17 3.207h32.101L25.995 6 20.6 10.046a1 1 0 01-1.2-1.6L24.795 4.4zM44 20.246H8v3h36v-3zm-16 5h-3.5v17H28v-17zm2 17v-17h5v17h-5zm7 0h3v-17h-3v17zm-14.5 0v-17h-5v17h5zm-7 0v-17H12v17h3.5zm-7.5 2v3h36v-3H8z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M19.4 8.446L24.795 4.4a2 2 0 012.413.01L46 18.751v4.495a2 2 0 01-2 2H8a2 2 0 01-2-2v-4.492l6.89-5.3a1 1 0 011.22 1.585l-4.17 3.207h32.101L25.995 6 20.6 10.046a1 1 0 01-1.2-1.6zm24.6 11.8H8v3h36v-3z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  d="M17 12.246a1 1 0 100-2 1 1 0 000 2z"
+                                  fill="#FF7067"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              La Constitution française
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-2"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-2"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            La Constitution française
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            Texte le plus important du système juridique français,
+                             
+                            <a
+                              aria-label="la Constitution du 4 octobre 1958 (nouvelle fenêtre)"
+                              href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+                              rel="noopener noreferrer nofollow"
+                              target="_blank"
+                            >
+                              la Constitution du 4 octobre 1958
+                            </a>
+                             
+                            est le texte fondateur de la Vème République. La Constitution a pour objectif d’organiser les pouvoirs publics, de définir leur rôle et leurs relations entre eux.
+                          </p>
+                          <p>
+                            Dans son préambule la Constitution de 1958 renvoie explicitement à 3 autres textes fondamentaux :
+                             
+                            <a
+                              aria-label="la Déclaration des Droits de l’Homme et du Citoyen de 1789 (nouvelle fenêtre)"
+                              href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              la Déclaration des Droits de l’Homme et du Citoyen de 1789
+                            </a>
+                            ,
+                             
+                            <a
+                              aria-label="le Préambule de la Constitution du 27 octobre 1946 (nouvelle fenêtre)"
+                              href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              le Préambule de la Constitution du 27 octobre 1946
+                            </a>
+                             
+                            et
+                             
+                            <a
+                              aria-label="la Charte de l’environnement de 2004 (nouvelle fenêtre)"
+                              href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              la Charte de l’environnement de 2004
+                            </a>
+                            .
+                          </p>
+                          <p>
+                            Ces textes, qui forment le bloc de constitutionnalité, énoncent des principes fondamentaux en droit du travail comme par exemple l’égalité entre les femmes et les hommes, le droit à la protection de la santé, le droit à être représenté par des délégués, la liberté syndicale, le droit de grève, le droit à une formation professionnelle, le droit d’obtenir un emploi et l’absence de discrimination.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-3"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-3"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M16 2L5 13v2c0 1 .398 1 1.076 1h9.693C17.553 16 19 14.657 19 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H16zm-.23 12H7L17 4v9c0 .552-.636 1-1.23 1z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  d="M26 50v-2H8a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM6 20a1 1 0 100-2 1 1 0 000 2z"
+                                  fill="#4E6896"
+                                />
+                                <path
+                                  d="M24.053 13C23.47 13 23 13.448 23 14s.471 1 1.053 1h7.894C32.53 15 33 14.552 33 14s-.471-1-1.053-1h-7.894zM13 20c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H14.053C13.47 21 13 20.552 13 20z"
+                                  fill="#FF7067"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M32.556 36.044h1.309l15.608 8.915a2.755 2.755 0 011.282 1.634l.123.429A3.121 3.121 0 0147.876 51a4.345 4.345 0 01-2.41-.73L30.145 40.063l2.412-4.018zm.96 1.833l-.99 1.65 13.92 9.275c.423.283.92.433 1.43.433.901 0 1.552-.862 1.304-1.728l-.122-.429a.99.99 0 00-.461-.587l-15.082-8.614z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M25.027 26.244A1.805 1.805 0 0126.777 24c.523 0 1.034.15 1.474.433l7.222 4.64c.324.208.608.472.84.78l.054.073c.955 1.273.163 3.054-1.337 3.272a6.471 6.471 0 01-.466 1.69l-.146.338a24.67 24.67 0 01-2.941 5.085l-.961 1.28a6.317 6.317 0 01-1.741 1.588v.424c0 .845-.54 1.596-1.343 1.863a3.046 3.046 0 01-2.61-.328l-6.401-4.113a3.164 3.164 0 01-1.36-1.894 2.023 2.023 0 011.963-2.514c.104-.962.38-1.9.815-2.771l.094-.189a28.445 28.445 0 013.591-5.488 7.016 7.016 0 011.627-1.429l-.124-.496zm1.111 1.96a5.25 5.25 0 00-1.257 1.095 26.672 26.672 0 00-3.368 5.148l-.095.188a6.403 6.403 0 00-.66 2.394l7.163 4.602a4.554 4.554 0 001.182-1.098l.961-1.28a22.908 22.908 0 002.731-4.722l.146-.339c.19-.442.31-.91.357-1.387l-7.16-4.6zm.871 14.94l-7.41-4.762h-.574a.258.258 0 00-.25.321c.086.346.3.645.6.837l6.402 4.114c.326.21.73.26 1.097.137a.198.198 0 00.135-.188v-.46zm-.067-16.52l7.521 4.832h.256a.294.294 0 00.235-.47l-.054-.074a1.47 1.47 0 00-.382-.354l-7.222-4.64a.96.96 0 00-.519-.153.031.031 0 00-.015.003.044.044 0 00-.014.012.046.046 0 00-.009.017.038.038 0 00.001.018l.202.808z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Lois, ordonnances, décrets et arrêtés
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-3"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-3"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Lois, ordonnances, décrets et arrêtés
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            La loi est votée par le Parlement et fixe les principes fondamentaux du droit du travail et de la sécurité sociale.
+                          </p>
+                          <p>
+                            L’ordonnance est un texte écrit par le Gouvernement après que le Parlement l’y ait autorisé. L’ordonnance a valeur de loi lorsque le Parlement l’approuve en votant une loi de ratification. Si le Parlement n’approuve pas l’ordonnance alors l’ordonnance n’est plus applicable.
+                          </p>
+                          <p>
+                            Le décret est un texte adopté par le Président de la République ou le Premier ministre. Généralement en droit du travail, les décrets viennent préciser une loi.
+                          </p>
+                          <p>
+                            L’essentiel des lois, des ordonnances et des décrets en droit du travail se trouve dans le Code du travail. Il existe des règles applicables en droit du travail qui se trouvent dans d’autres codes que le Code du travail comme par exemple le Code civil, le Code de l’action sociale ou le Code de la sécurité sociale, le code des transports ou le code rural et de la pêche maritime.
+                          </p>
+                          <p>
+                            L’arrêté est un texte pris par une autorité administrative autre que le Président de la République et le Premier Ministre : il peut ainsi être pris par les ministres, les préfets, les maires…
+                          </p>
+                          <p>
+                            <i>
+                              Exemple : arrêté préfectoral déterminant la zone touristique permettant l’ouverture le dimanche ou arrêté ministériel fixant le modèle de l’avis d’inaptitude.
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-4"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-4"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M7.51 28.541a1.3 1.3 0 011.756-1.217l5.876 2.204a3.027 3.027 0 011.949 2.53l5.14-.298c.3-.018.702 0 1.106.179.172.076.343.167.513.27l-1.036 1.711a2.622 2.622 0 00-.289-.154c.003.002-.006-.003-.037-.007a.786.786 0 00-.142-.002l-5.7.33-2.773 6.822 9.061 7.163c.628.496 1.34.879 2.1 1.128l.507.166-2.447-2.409a1 1 0 011.403-1.425l3.363 3.31c.43.114.883.028 1.238-.218l-3.26-3.21a1 1 0 011.402-1.425l3.628 3.57h.064a2 2 0 001.3-.48L28.19 43.1a1 1 0 011.403-1.426l4.327 4.26.395-.078a.6.6 0 00.29-1.03 1813.772 1813.772 0 00-3.664-3.359c-2.172-1.988-3.877-3.548-5.129-4.74l1.38-1.449c1.237 1.179 2.917 2.717 5.077 4.693 1.103 1.01 2.331 2.134 3.69 3.383a2.6 2.6 0 01-1.258 4.465l-.54.106-.046.06a4 4 0 01-3.124 1.575 3.506 3.506 0 01-3.377 1.276l-.09.088a1.969 1.969 0 01-1.38.566 3.42 3.42 0 01-1.068-.17l-.664-.218a8.812 8.812 0 01-2.717-1.46l-8.735-6.905a3 3 0 01-2.268 1.036H8.81a1.3 1.3 0 01-1.3-1.3v-13.93zm7.52 4.207a1.027 1.027 0 00-.59-1.347l-4.93-1.85v12.22h1.181a1 1 0 00.926-.623l3.413-8.4z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M42 31.105l-4.729 1.81a1 1 0 00-.611.689l-.063.245 3.01 8.52c.32.582.931.946 1.597.946h.797v-12.21zm-4.515 11.26l-2.677-7.578-.944-.155a8.821 8.821 0 01-1.805-.497l-.614-.242a8.691 8.691 0 01-1.238-.604l-.459-.272a5.659 5.659 0 00-5.146-.312 1.942 1.942 0 00-.49.308l-1.294 1.116a7.23 7.23 0 00-1.98 2.756v.005l-.079.382a.474.474 0 00.374.56l.07.014a.695.695 0 00.35-.022l.414-.136a.533.533 0 00.207-.126l.711-.7a4.068 4.068 0 011.882-1.051c.367-.09.711-.252 1.015-.476l.947-.7 1.188 1.61-.947.699a4.86 4.86 0 01-1.725.809 2.069 2.069 0 00-.957.534l-.71.7c-.279.274-.617.48-.988.602l-.413.136a2.696 2.696 0 01-1.361.083l-.07-.014a2.474 2.474 0 01-1.947-2.92l.078-.382c.025-.123.062-.243.109-.36a9.23 9.23 0 012.527-3.518l1.294-1.116a3.95 3.95 0 01.993-.625 7.659 7.659 0 016.966.422l.459.272c.304.18.623.335.952.465l.615.242c.45.177.918.306 1.395.385l.645.105a3 3 0 011.724-1.716l5.951-2.278a1.1 1.1 0 011.494 1.027v14.418a1.1 1.1 0 01-1.1 1.1h-1.697a3.82 3.82 0 01-2.765-1.184l-1.553 1.02-1.097-1.672 1.696-1.114zM21.273 6.884a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.007a.75.75 0 01-.75-.75zm0 4.092a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.008a.75.75 0 01-.75-.75zm0 4.093a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.008a.75.75 0 01-.75-.75zm0 6.8a.75.75 0 01.75-.75h4.062a.75.75 0 010 1.5h-4.063a.75.75 0 01-.75-.75z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M16.496 3a2 2 0 012-2h15.55a2 2 0 012 2v12.446a1 1 0 11-2 0V3h-15.55v22.554h15.55V24.8a1 1 0 012 0v.754a2 2 0 01-2 2h-15.55a2 2 0 01-2-2V3z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M39.115 16.698a.75.75 0 01-.056 1.06L35.231 21.2a.85.85 0 01-1.178-.04l-1.883-1.935a.75.75 0 011.075-1.046l1.447 1.487 3.364-3.025a.75.75 0 011.06.056z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Les conventions et accords collectifs
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-4"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-4"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Les conventions et accords collectifs
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            Les conventions et accords collectifs de travail sont des textes négociés entre un ou plusieurs employeurs et un ou plusieurs syndicats de salariés.
+                          </p>
+                          <p>
+                            La différence entre les deux textes vient de leur contenu. La convention collective porte sur l’ensemble des conditions d’emploi, de travail et des garanties sociales des salariés. L’accord collectif concerne un seul ou quelques thèmes des conditions d’emploi, de travail et des garanties sociales des salariés.
+                          </p>
+                          <p>
+                            Ces textes peuvent être conclus à différents niveaux : au niveau interprofessionnel, au niveau d’une branche professionnelle, au niveau d’un groupe, au niveau d’une entreprise ou au niveau d’un établissement.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-5"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-5"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  d="M5 14.117a2 2 0 00-2 2v19.504a2 2 0 002 2h4.935v-2H5V16.117h13.376V18h2v-1.883a2 2 0 00-2-2H5z"
+                                  fill="#FF7067"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M6.934 20.74c0-.41.296-.74.662-.74h6.675c.366 0 .663.33.663.74 0 .407-.297.738-.663.738H7.596c-.366 0-.662-.33-.662-.739zm0 3.223c0-.409.296-.74.662-.74h6.675c.366 0 .663.331.663.74 0 .408-.297.739-.663.739H7.596c-.366 0-.662-.331-.662-.74zm0 4.298c0-.408.296-.74.662-.74h2.91c.366 0 .663.332.663.74s-.297.739-.663.739h-2.91c-.366 0-.662-.33-.662-.74zm17.299 3.389c2.968 0 5.454-2.476 5.454-5.63 0-3.156-2.486-5.632-5.454-5.632-2.969 0-5.455 2.476-5.455 5.631 0 3.155 2.486 5.632 5.455 5.632zm0 2c4.117 0 7.454-3.416 7.454-7.63 0-4.216-3.337-7.632-7.454-7.632-4.117 0-7.455 3.416-7.455 7.631s3.338 7.632 7.455 7.632z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.757 35.383a11 11 0 017.255-2.732h8.443a11 11 0 017.255 2.732l.283.248a6.94 6.94 0 011.238 1.43 11.395 11.395 0 011.846 6.217v6.636H9.39v-6.74c0-2.14.621-4.233 1.789-6.026a7.697 7.697 0 011.373-1.586l.205-.18zm7.255-.732a9 9 0 00-5.936 2.235l-.205.18a5.72 5.72 0 00-1.016 1.173 9.044 9.044 0 00-1.465 4.935v4.74h25.687v-4.636c0-1.82-.529-3.601-1.522-5.126a4.941 4.941 0 00-.881-1.018l-.283-.248a9 9 0 00-5.936-2.235h-8.443z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M22.71 32.396l1.524.283 1.524-.283 2.12 11.425-3.644 2.985-3.645-2.985 2.121-11.425zm1.524 1.654l-1.68 9.053 1.68 1.376 1.68-1.376-1.68-9.053z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M38.656 5c-1.179 0-2.34.283-3.387.825l-.502.26a5.244 5.244 0 00-2.832 4.656v.252a5.243 5.243 0 002.832 4.657l.743.384a1.853 1.853 0 01.928 2.16l-.074.258 1.474-1.085a4 4 0 011.983-.76l2.437-.237a7.102 7.102 0 002.109-.54l.638-.274a4.833 4.833 0 002.93-4.442v-.247a5.673 5.673 0 00-.903-3.07l-.102-.159A5.75 5.75 0 0042.093 5h-3.438zm-4.306-.951A9.365 9.365 0 0138.656 3h3.438a7.751 7.751 0 016.517 3.555l.102.16a7.672 7.672 0 011.222 4.152v.247a6.833 6.833 0 01-4.142 6.28l-.639.274a9.1 9.1 0 01-2.703.693l-2.436.237a2 2 0 00-.992.38l-3.607 2.653c-.846.623-2-.182-1.708-1.191l.775-2.685-.636-.33a7.243 7.243 0 01-3.912-6.432v-.252a7.243 7.243 0 013.912-6.432l.503-.26z"
+                                  fill="#FF7067"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  d="M37.153 10.587c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09zm8.521 0c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09zm-4.26 0c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09z"
+                                  fill="#4E6896"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Les usages et les engagements unilatéraux
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-5"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-5"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Les usages et les engagements unilatéraux
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            L’usage d’entreprise est une pratique répétée de l’employeur attribuant un avantage aux salariés ou à un groupe de salariés de l’entreprise sans que la loi, la convention collective ou le contrat de travail ne le lui impose.
+                          </p>
+                          <p>
+                            Il existe également des usages au niveau de certaines professions ou de certaines localités.
+                          </p>
+                          <p>
+                            L’engagement unilatéral de l’employeur est un engagement écrit de l’employeur d’accorder un avantage aux salariés.
+                          </p>
+                          <p>
+                            <i>
+                              Exemples : on peut trouver de tels engagements dans une note de service, un procès-verbal de désaccord…
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-6"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-6"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  d="M43.847 0H13.448A6.455 6.455 0 007 6.448v39.104A6.455 6.455 0 0013.448 52h30.4c.638 0 1.155-.517 1.155-1.156L45 50.772c.001-.024.003-.048.003-.073V1.156C45.003.517 44.486 0 43.847 0zM12 50c-1.72-.502-3-2.568-3-4.448V11c.5 1 1.59 1.708 3 1.908V50zm1.448-39C11.167 11 9 8.73 9 6.448 9 4.168 11.167 2 13.448 2H40.5C39 2 37 4.5 37 6.5s2.5 4.5 4 4.5H13.448zM35 13.014v6.663l-1.31-1.045a1.155 1.155 0 00-1.381 0l-1.344 1.043V13l4.035.014zm8 36.972L14 50V13.014h15v8.979a1.157 1.157 0 001.847.926L33 21l2.154 1.892A1.156 1.156 0 0037 21.965V13h6v36.986zm0-39.58c-1 0-4.5-1.01-4.5-3.958C38.5 3.5 42 2.5 43 2.463v7.943z"
+                                  fill="#4E6896"
+                                />
+                                <path
+                                  d="M20 32a1 1 0 011-1h15a1 1 0 110 2H21a1 1 0 01-1-1zm-2 5a1 1 0 011-1h19a1 1 0 110 2H19a1 1 0 01-1-1z"
+                                  fill="#FF7067"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Le règlement intérieur de l’entreprise
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-6"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-6"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Le règlement intérieur de l’entreprise
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant la discipline, la santé et la sécurité dans l’entreprise.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="c61"
+                      data-accordion-component="AccordionItem"
+                    >
+                      <div
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
+                      >
+                        <div
+                          aria-controls="accordion__panel-raa-7"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c52"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-raa-7"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="c53"
+                          >
+                            <div
+                              class="c54"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                fill="none"
+                                viewBox="0 0 52 52"
+                              >
+                                <path
+                                  d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
+                                  fill="#4E6896"
+                                />
+                                <path
+                                  d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                                  fill="#4E6896"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
+                                  fill="#4E6896"
+                                  fill-rule="evenodd"
+                                />
+                                <path
+                                  d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
+                                  fill="#FF7067"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="c55"
+                            >
+                              Le contrat de travail
+                            </div>
+                          </div>
+                          <svg
+                            aria-hidden="true"
+                            class="c56 c57"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline
+                              points="9 18 15 12 9 6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        aria-labelledby="accordion__heading-raa-7"
+                        class="c58"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-raa-7"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3>
+                            Le contrat de travail
+                          </h3>
+                        </div>
+                        <div
+                          class="c59"
+                        >
+                          <p>
+                            Le contrat de travail existe dès l’instant où une personne (le salarié) s’engage à travailler, moyennant rémunération, pour le compte et sous la direction d’une autre personne (l’employeur).
+                          </p>
+                          <p>
+                            Le contrat de travail doit en général être écrit. Il précise la rémunération, la qualification, la durée du travail et, plus généralement, les attributions du salarié.
+                          </p>
+                          <p>
+                            Il entraîne un certain nombre d’obligations, tant pour le salarié que pour l’employeur.
+                          </p>
+                          <p>
+                            Il existe différents types de contrat de travail selon leur durée, l’activité de l’employeur ou la nature du travail confié au salarié.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="c31"
+              >
+                <div
+                  class="c62 c63"
+                >
+                  La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c64"
+        >
+          <div
+            class="c65"
+          >
+            <h2
+              class="c46"
+            >
+              <span
+                class="c35"
+              />
+              Existe-t-il une hiérarchie entre les textes ?
+            </h2>
+          </div>
+          <p>
+            Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
+          </p>
+          <p>
+            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant 
+            <strong>
+              la hiérarchie des textes entre eux
+            </strong>
+            .
+          </p>
+          <div
+            class="accordion"
+            data-accordion-component="Accordion"
+          >
+            <div>
+              <div
+                class="c66"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-8"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-8"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c68"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        1
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c72"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M13.277 8.185c-1.499 1.503-2.458 3.438-4.116 4.817-.475.396-.99.753-1.5 1.27.419-2.966 2.396-5.698 5.613-6.087h.003zm25.447 0c1.499 1.503 2.458 3.438 4.113 4.817.474.396.99.753 1.5 1.27-.42-2.966-2.397-5.698-5.613-6.087z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M9.119 10.16C6.897 11.343 7.317 14.206 6.541 16l.072.013c.737-1.772 3.586-2.193 4.4-4.209-.055 3.748-3.932 4.45-5.506 7.33-.102-3.32-.829-7.807 3.612-8.975zm33.763 0c2.222 1.184 1.802 4.048 2.578 5.84l-.072.014c-.737-1.772-3.586-2.193-4.4-4.209.055 3.748 3.932 4.45 5.506 7.33.102-3.32.828-7.808-3.612-8.976v.001z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M5.239 13.416c-1.197 2.184.08 4.34-.36 7.974.019.02.019.085.09.061.692-3.164 3.324-3.676 4.015-5.258-.474 3.587-3.648 5.375-4.196 8.629-.153-1.687-3.914-7.2.45-11.405v-.001zm41.524 0c1.196 2.184-.08 4.34.36 7.974-.02.02-.02.085-.09.061-.692-3.164-3.325-3.676-4.016-5.258.475 3.587 3.648 5.375 4.197 8.629.152-1.687 3.914-7.2-.451-11.405v-.001z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M2.73 19.474c-.473 2.314 1.692 5.043 2.241 8.224.039.014.066-.02.08-.046-.183-2.456.527-3.632 1.785-5.457.306-.498.483-1.047.636-1.61.62.833.03 2.657-.618 4.947-.458 1.615-1.112 2.984-.932 5.388-.795-.967-3.156-3.872-3.375-5-.695-2.175-.825-4.35.184-6.444v-.002zm46.54 0c.474 2.314-1.69 5.043-2.24 8.224-.038.014-.065-.02-.08-.046.184-2.456-.527-3.632-1.784-5.457-.306-.498-.483-1.047-.636-1.61-.62.833-.03 2.657.617 4.947.457 1.616 1.111 2.98.93 5.387.796-.967 3.157-3.872 3.376-5 .695-2.175.825-4.35-.184-6.444h.002z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M2.134 26.517c.3 2.616 3.569 4.604 4.962 7.009.04.014.053-.02.056-.043-1.374-2.871.205-5.009.15-7.402 1.662 3.659.29 6.343 2.19 10.411-4.773-2.516-8.09-5.45-7.358-9.974zm47.733-.001c-.3 2.616-3.57 4.604-4.962 7.008-.04.015-.053-.018-.056-.042 1.373-2.873-.204-5.01-.15-7.403-1.662 3.66-.29 6.344-2.19 10.412 4.772-2.514 8.09-5.448 7.358-9.972v-.003z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M3.619 32.992c.403.943 1.431 1.91 2.783 2.704 1.712 1.003 3.4 1.349 4.994 2.873-1.526-1.809-1.832-3.428-2.541-7.783 1.284 1.237 2.013 2.791 2.658 4.591.604 1.692.94 3.607 2.591 4.994-1.24-.505-3.885-.555-6.063-1.62-2.321-1.132-3.963-3.307-4.422-5.759zm44.763 0c-.403.943-1.432 1.91-2.783 2.704-1.712 1.003-3.4 1.349-4.995 2.873 1.53-1.809 1.833-3.428 2.543-7.783-1.284 1.237-2.014 2.791-2.659 4.591-.604 1.692-.939 3.607-2.59 4.994 1.24-.505 3.885-.555 6.062-1.62 2.318-1.132 3.96-3.307 4.419-5.759h.003z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M7.117 38.725c2.53 2.634 6.824 1.723 9.156 2.315-2.497-1.128-3.155-3.338-4.193-5.326 2.533.977 3.842 4.913 8.342 5.664-2.372.298-5.276 2.04-9.102 1.047-1.908-.61-3.256-1.782-4.204-3.699l.001-.001zm37.766 0c-2.529 2.634-6.823 1.723-9.156 2.315 2.497-1.128 3.156-3.338 4.194-5.326-2.534.977-3.843 4.913-8.342 5.664 2.371.298 5.276 2.04 9.102 1.047 1.908-.61 3.256-1.782 4.203-3.699v-.001z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M38.195 44.908c-2.525.96-5.215.139-7.192-1.392-.899-.591-2.613-1.789-3.848-1.444 1.918.91 3.527 2.094 5.164 3.695-.278.316-.693.659-1.027.932-1.568-1.73-3.317-3.255-5.267-4.224-1.618.657-4.202 2.866-5.283 4.234l-1.082-.954c1.626-1.663 3.265-2.714 5.223-3.643-1.878-.44-2.927.771-4.297 1.697-1.7 1.202-4.38 2.032-6.444 1.208-1.1-.433-2.273-1.092-3.027-2.156 1.611 1.135 4.666.915 6.5.182 2.47-1.096 4.973-2.49 8.403-1.38 2.61-.885 5.14-.258 7.498 1.025 2.49 1.088 4.761 1.556 7.341.195-.805 1.026-1.52 1.622-2.658 2.03l-.004-.005z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M26 10c7.732 0 14 6.268 14 14s-6.268 14-14 14-14-6.268-14-14c0-2.192.503-4.264 1.4-6.11a1 1 0 00-1.8-.873A15.94 15.94 0 0010 24c0 8.837 7.163 16 16 16s16-7.163 16-16S34.837 8 26 8a15.94 15.94 0 00-6.934 1.577 1 1 0 10.868 1.802A13.94 13.94 0 0126 10z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M15 13a1 1 0 102 0 1 1 0 00-2 0z"
+                            fill="#FF7067"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Les textes internationaux et européens
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-8"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-8"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Les textes internationaux et européens
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    Les textes nationaux doivent être conformes aux textes internationaux et européens.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c76"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-9"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-9"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c77"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        2
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M24.795 4.4a2 2 0 012.413.01L46 18.751v4.495a2 2 0 01-2 2h-2v17h2a2 2 0 012 2v5H6v-5a2 2 0 012-2h2v-17H8a2 2 0 01-2-2v-4.492l6.89-5.3a1 1 0 011.22 1.585l-4.17 3.207h32.101L25.995 6 20.6 10.046a1 1 0 01-1.2-1.6L24.795 4.4zM44 20.246H8v3h36v-3zm-16 5h-3.5v17H28v-17zm2 17v-17h5v17h-5zm7 0h3v-17h-3v17zm-14.5 0v-17h-5v17h5zm-7 0v-17H12v17h3.5zm-7.5 2v3h36v-3H8z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M19.4 8.446L24.795 4.4a2 2 0 012.413.01L46 18.751v4.495a2 2 0 01-2 2H8a2 2 0 01-2-2v-4.492l6.89-5.3a1 1 0 011.22 1.585l-4.17 3.207h32.101L25.995 6 20.6 10.046a1 1 0 01-1.2-1.6zm24.6 11.8H8v3h36v-3z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M17 12.246a1 1 0 100-2 1 1 0 000 2z"
+                            fill="#FF7067"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        La Constitution
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-9"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-9"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      La Constitution
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c76"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-10"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-10"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c77"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        3
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M16 2L5 13v2c0 1 .398 1 1.076 1h9.693C17.553 16 19 14.657 19 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H16zm-.23 12H7L17 4v9c0 .552-.636 1-1.23 1z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M26 50v-2H8a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM6 20a1 1 0 100-2 1 1 0 000 2z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            d="M24.053 13C23.47 13 23 13.448 23 14s.471 1 1.053 1h7.894C32.53 15 33 14.552 33 14s-.471-1-1.053-1h-7.894zM13 20c0-.552.471-1 1.053-1h17.894c.582 0 1.053.448 1.053 1s-.471 1-1.053 1H14.053C13.47 21 13 20.552 13 20z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M32.556 36.044h1.309l15.608 8.915a2.755 2.755 0 011.282 1.634l.123.429A3.121 3.121 0 0147.876 51a4.345 4.345 0 01-2.41-.73L30.145 40.063l2.412-4.018zm.96 1.833l-.99 1.65 13.92 9.275c.423.283.92.433 1.43.433.901 0 1.552-.862 1.304-1.728l-.122-.429a.99.99 0 00-.461-.587l-15.082-8.614z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M25.027 26.244A1.805 1.805 0 0126.777 24c.523 0 1.034.15 1.474.433l7.222 4.64c.324.208.608.472.84.78l.054.073c.955 1.273.163 3.054-1.337 3.272a6.471 6.471 0 01-.466 1.69l-.146.338a24.67 24.67 0 01-2.941 5.085l-.961 1.28a6.317 6.317 0 01-1.741 1.588v.424c0 .845-.54 1.596-1.343 1.863a3.046 3.046 0 01-2.61-.328l-6.401-4.113a3.164 3.164 0 01-1.36-1.894 2.023 2.023 0 011.963-2.514c.104-.962.38-1.9.815-2.771l.094-.189a28.445 28.445 0 013.591-5.488 7.016 7.016 0 011.627-1.429l-.124-.496zm1.111 1.96a5.25 5.25 0 00-1.257 1.095 26.672 26.672 0 00-3.368 5.148l-.095.188a6.403 6.403 0 00-.66 2.394l7.163 4.602a4.554 4.554 0 001.182-1.098l.961-1.28a22.908 22.908 0 002.731-4.722l.146-.339c.19-.442.31-.91.357-1.387l-7.16-4.6zm.871 14.94l-7.41-4.762h-.574a.258.258 0 00-.25.321c.086.346.3.645.6.837l6.402 4.114c.326.21.73.26 1.097.137a.198.198 0 00.135-.188v-.46zm-.067-16.52l7.521 4.832h.256a.294.294 0 00.235-.47l-.054-.074a1.47 1.47 0 00-.382-.354l-7.222-4.64a.96.96 0 00-.519-.153.031.031 0 00-.015.003.044.044 0 00-.014.012.046.046 0 00-.009.017.038.038 0 00.001.018l.202.808z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Lois, ordonnances et décrets (Code du travail)
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-10"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-10"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Lois, ordonnances et décrets (Code du travail)
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    <h4
+                      class="c79"
+                    >
+                      Hiérarchie entre le Code du travail et les conventions et accords collectifs
+                    </h4>
+                    <p>
+                      Il n’y a pas de règle de hiérarchie unique pour tous les articles du Code du travail. Il existe 3 hiérarchies possibles :
+                    </p>
+                    <div
+                      class="c80"
+                      data-accordion-component="Accordion"
+                    >
+                      <div>
+                        <div
+                          class=""
+                          data-accordion-component="AccordionItem"
+                        >
+                          <div
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
+                          >
+                            <div
+                              aria-controls="accordion__panel-raa-11"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c81"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-raa-11"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="c56 c57"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <div
+                                class="c82"
+                              >
+                                Les conventions et accords collectifs doivent respecter le Code du travail
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-raa-11"
+                            class="c83"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-raa-11"
+                          >
+                            <div
+                              class="c11"
+                            >
+                              <h5>
+                                Les conventions et accords collectifs doivent respecter le Code du travail
+                              </h5>
+                            </div>
+                            <div
+                              class="c59"
+                            >
+                              Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="c84"
+                          data-accordion-component="AccordionItem"
+                        >
+                          <div
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
+                          >
+                            <div
+                              aria-controls="accordion__panel-raa-12"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c81"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-raa-12"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="c56 c57"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <div
+                                class="c82"
+                              >
+                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-raa-12"
+                            class="c83"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-raa-12"
+                          >
+                            <div
+                              class="c11"
+                            >
+                              <h5>
+                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                              </h5>
+                            </div>
+                            <div
+                              class="c59"
+                            >
+                              <p>
+                                Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
+                              </p>
+                              <i>
+                                Exemple :
+                                <ul>
+                                  <li>
+                                    le taux de majoration des heures supplémentaires. Un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
+                                  </li>
+                                </ul>
+                              </i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="c84"
+                          data-accordion-component="AccordionItem"
+                        >
+                          <div
+                            aria-level="3"
+                            class="accordion__heading"
+                            data-accordion-component="AccordionItemHeading"
+                            role="heading"
+                          >
+                            <div
+                              aria-controls="accordion__panel-raa-13"
+                              aria-disabled="false"
+                              aria-expanded="false"
+                              class="c81"
+                              data-accordion-component="AccordionItemButton"
+                              id="accordion__heading-raa-13"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="c56 c57"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polyline
+                                  points="9 18 15 12 9 6"
+                                />
+                              </svg>
+                              <div
+                                class="c82"
+                              >
+                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            aria-labelledby="accordion__heading-raa-13"
+                            class="c83"
+                            data-accordion-component="AccordionItemPanel"
+                            hidden=""
+                            id="accordion__panel-raa-13"
+                          >
+                            <div
+                              class="c11"
+                            >
+                              <h5>
+                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                              </h5>
+                            </div>
+                            <div
+                              class="c59"
+                            >
+                              <p>
+                                Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
+                              </p>
+                              <i>
+                                Exemple :
+                                <ul>
+                                  <li>
+                                    le taux de majoration des heures supplémentaires. En l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
+                                  </li>
+                                </ul>
+                              </i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="c62"
+                    >
+                      <div
+                        class="c37"
+                      >
+                        <div
+                          class="c38"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            fill="none"
+                            viewBox="0 0 52 52"
+                          >
+                            <path
+                              d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+                              fill="#3E486E"
+                              stroke="#4E6896"
+                            />
+                            <path
+                              d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+                              fill="#FF7067"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="c39"
+                        >
+                          <h4
+                            class="c40"
+                          >
+                            Attention à certaines règles du Code du travail
+                          </h4>
+                          <p
+                            class="c85"
+                          >
+                            Il existe des règles du Code du travail auxquelles tous les textes situés en bas ne peuvent pas déroger même si les textes sont plus avantageux pour le salarié. La loi interdit toute dérogation possible. Les textes situés en bas doivent purement et simplement respecter ces règles.
+                          </p>
+                          <p
+                            class="c85"
+                          >
+                            <i>
+                              Exemple : la règle selon laquelle le Conseil des prud’hommes est le seul compétent pour les contentieux liés au travail.
+                            </i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="hierarchie"
+            >
+              <div
+                class="c76"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-hierarchie"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-hierarchie"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c77"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        4
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M7.51 28.541a1.3 1.3 0 011.756-1.217l5.876 2.204a3.027 3.027 0 011.949 2.53l5.14-.298c.3-.018.702 0 1.106.179.172.076.343.167.513.27l-1.036 1.711a2.622 2.622 0 00-.289-.154c.003.002-.006-.003-.037-.007a.786.786 0 00-.142-.002l-5.7.33-2.773 6.822 9.061 7.163c.628.496 1.34.879 2.1 1.128l.507.166-2.447-2.409a1 1 0 011.403-1.425l3.363 3.31c.43.114.883.028 1.238-.218l-3.26-3.21a1 1 0 011.402-1.425l3.628 3.57h.064a2 2 0 001.3-.48L28.19 43.1a1 1 0 011.403-1.426l4.327 4.26.395-.078a.6.6 0 00.29-1.03 1813.772 1813.772 0 00-3.664-3.359c-2.172-1.988-3.877-3.548-5.129-4.74l1.38-1.449c1.237 1.179 2.917 2.717 5.077 4.693 1.103 1.01 2.331 2.134 3.69 3.383a2.6 2.6 0 01-1.258 4.465l-.54.106-.046.06a4 4 0 01-3.124 1.575 3.506 3.506 0 01-3.377 1.276l-.09.088a1.969 1.969 0 01-1.38.566 3.42 3.42 0 01-1.068-.17l-.664-.218a8.812 8.812 0 01-2.717-1.46l-8.735-6.905a3 3 0 01-2.268 1.036H8.81a1.3 1.3 0 01-1.3-1.3v-13.93zm7.52 4.207a1.027 1.027 0 00-.59-1.347l-4.93-1.85v12.22h1.181a1 1 0 00.926-.623l3.413-8.4z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M42 31.105l-4.729 1.81a1 1 0 00-.611.689l-.063.245 3.01 8.52c.32.582.931.946 1.597.946h.797v-12.21zm-4.515 11.26l-2.677-7.578-.944-.155a8.821 8.821 0 01-1.805-.497l-.614-.242a8.691 8.691 0 01-1.238-.604l-.459-.272a5.659 5.659 0 00-5.146-.312 1.942 1.942 0 00-.49.308l-1.294 1.116a7.23 7.23 0 00-1.98 2.756v.005l-.079.382a.474.474 0 00.374.56l.07.014a.695.695 0 00.35-.022l.414-.136a.533.533 0 00.207-.126l.711-.7a4.068 4.068 0 011.882-1.051c.367-.09.711-.252 1.015-.476l.947-.7 1.188 1.61-.947.699a4.86 4.86 0 01-1.725.809 2.069 2.069 0 00-.957.534l-.71.7c-.279.274-.617.48-.988.602l-.413.136a2.696 2.696 0 01-1.361.083l-.07-.014a2.474 2.474 0 01-1.947-2.92l.078-.382c.025-.123.062-.243.109-.36a9.23 9.23 0 012.527-3.518l1.294-1.116a3.95 3.95 0 01.993-.625 7.659 7.659 0 016.966.422l.459.272c.304.18.623.335.952.465l.615.242c.45.177.918.306 1.395.385l.645.105a3 3 0 011.724-1.716l5.951-2.278a1.1 1.1 0 011.494 1.027v14.418a1.1 1.1 0 01-1.1 1.1h-1.697a3.82 3.82 0 01-2.765-1.184l-1.553 1.02-1.097-1.672 1.696-1.114zM21.273 6.884a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.007a.75.75 0 01-.75-.75zm0 4.092a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.008a.75.75 0 01-.75-.75zm0 4.093a.75.75 0 01.75-.75h9.007a.75.75 0 010 1.5h-9.008a.75.75 0 01-.75-.75zm0 6.8a.75.75 0 01.75-.75h4.062a.75.75 0 010 1.5h-4.063a.75.75 0 01-.75-.75z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M16.496 3a2 2 0 012-2h15.55a2 2 0 012 2v12.446a1 1 0 11-2 0V3h-15.55v22.554h15.55V24.8a1 1 0 012 0v.754a2 2 0 01-2 2h-15.55a2 2 0 01-2-2V3z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M39.115 16.698a.75.75 0 01-.056 1.06L35.231 21.2a.85.85 0 01-1.178-.04l-1.883-1.935a.75.75 0 011.075-1.046l1.447 1.487 3.364-3.025a.75.75 0 011.06.056z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Les conventions et accords collectifs
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-hierarchie"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-hierarchie"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Les conventions et accords collectifs
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    <p>
+                      La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
+                    </p>
+                    <h4
+                      class="c79"
+                    >
+                      Hiérarchie entre convention collective de branche et accord d’entreprise
+                    </h4>
+                    <p>
+                      Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention collective de branche. Cela signifie que même si l’accord d’entreprise prévoit des règles différentes, voire plus désavantageuses, que la convention collective de branche, ce sera lui qui s’appliqura au salarié et non la convention collective de branche.
+                    </p>
+                    <div
+                      class="c62"
+                    >
+                      <div
+                        class="c37"
+                      >
+                        <div
+                          class="c38"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            fill="none"
+                            viewBox="0 0 52 52"
+                          >
+                            <path
+                              d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+                              fill="#3E486E"
+                              stroke="#4E6896"
+                            />
+                            <path
+                              d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+                              fill="#FF7067"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="c39"
+                        >
+                          Ce principe ne s’applique pas dans
+                           
+                          <button
+                            class="c14 c86"
+                          >
+                            13 matières
+                            <svg
+                              aria-hidden="true"
+                              class="c87 c88"
+                              fill="none"
+                              viewBox="0 0 28 15"
+                            >
+                              <path
+                                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                           
+                          où la loi reconnaît la primauté à la convention collective de branche et
+                           
+                          <button
+                            class="c14 c86"
+                          >
+                            4 matières
+                            <svg
+                              aria-hidden="true"
+                              class="c87 c88"
+                              fill="none"
+                              viewBox="0 0 28 15"
+                            >
+                              <path
+                                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
+                           
+                          où la branche elle-même peut reconnaître sa primauté, sauf si l’accord d’entreprise a des garanties au moins équivalentes.
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      Ces règles sont les mêmes pour la hiérarchie entre convention collective de branche et accord de groupe ou accord d’établissement.
+                    </p>
+                    <h4
+                      class="c79"
+                    >
+                      Hiérarchie entre accord de groupe et accord d’entreprise
+                    </h4>
+                    <p>
+                      L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
+                    </p>
+                    <h4
+                      class="c79"
+                    >
+                      Hiérarchie entre accord d’entreprise et accord d’établissement
+                    </h4>
+                    <p>
+                      L’accord d’entreprise s’applique en priorité par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors l’accord le plus avantageux pour le salarié s’applique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c76"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-15"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-15"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c77"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        5
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            d="M5 14.117a2 2 0 00-2 2v19.504a2 2 0 002 2h4.935v-2H5V16.117h13.376V18h2v-1.883a2 2 0 00-2-2H5z"
+                            fill="#FF7067"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M6.934 20.74c0-.41.296-.74.662-.74h6.675c.366 0 .663.33.663.74 0 .407-.297.738-.663.738H7.596c-.366 0-.662-.33-.662-.739zm0 3.223c0-.409.296-.74.662-.74h6.675c.366 0 .663.331.663.74 0 .408-.297.739-.663.739H7.596c-.366 0-.662-.331-.662-.74zm0 4.298c0-.408.296-.74.662-.74h2.91c.366 0 .663.332.663.74s-.297.739-.663.739h-2.91c-.366 0-.662-.33-.662-.74zm17.299 3.389c2.968 0 5.454-2.476 5.454-5.63 0-3.156-2.486-5.632-5.454-5.632-2.969 0-5.455 2.476-5.455 5.631 0 3.155 2.486 5.632 5.455 5.632zm0 2c4.117 0 7.454-3.416 7.454-7.63 0-4.216-3.337-7.632-7.454-7.632-4.117 0-7.455 3.416-7.455 7.631s3.338 7.632 7.455 7.632z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.757 35.383a11 11 0 017.255-2.732h8.443a11 11 0 017.255 2.732l.283.248a6.94 6.94 0 011.238 1.43 11.395 11.395 0 011.846 6.217v6.636H9.39v-6.74c0-2.14.621-4.233 1.789-6.026a7.697 7.697 0 011.373-1.586l.205-.18zm7.255-.732a9 9 0 00-5.936 2.235l-.205.18a5.72 5.72 0 00-1.016 1.173 9.044 9.044 0 00-1.465 4.935v4.74h25.687v-4.636c0-1.82-.529-3.601-1.522-5.126a4.941 4.941 0 00-.881-1.018l-.283-.248a9 9 0 00-5.936-2.235h-8.443z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M22.71 32.396l1.524.283 1.524-.283 2.12 11.425-3.644 2.985-3.645-2.985 2.121-11.425zm1.524 1.654l-1.68 9.053 1.68 1.376 1.68-1.376-1.68-9.053z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M38.656 5c-1.179 0-2.34.283-3.387.825l-.502.26a5.244 5.244 0 00-2.832 4.656v.252a5.243 5.243 0 002.832 4.657l.743.384a1.853 1.853 0 01.928 2.16l-.074.258 1.474-1.085a4 4 0 011.983-.76l2.437-.237a7.102 7.102 0 002.109-.54l.638-.274a4.833 4.833 0 002.93-4.442v-.247a5.673 5.673 0 00-.903-3.07l-.102-.159A5.75 5.75 0 0042.093 5h-3.438zm-4.306-.951A9.365 9.365 0 0138.656 3h3.438a7.751 7.751 0 016.517 3.555l.102.16a7.672 7.672 0 011.222 4.152v.247a6.833 6.833 0 01-4.142 6.28l-.639.274a9.1 9.1 0 01-2.703.693l-2.436.237a2 2 0 00-.992.38l-3.607 2.653c-.846.623-2-.182-1.708-1.191l.775-2.685-.636-.33a7.243 7.243 0 01-3.912-6.432v-.252a7.243 7.243 0 013.912-6.432l.503-.26z"
+                            fill="#FF7067"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M37.153 10.587c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09zm8.521 0c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09zm-4.26 0c0 .602-.477 1.09-1.065 1.09a1.078 1.078 0 01-1.065-1.09c0-.602.477-1.09 1.065-1.09s1.065.488 1.065 1.09z"
+                            fill="#4E6896"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Les usages et les engagements unilatéraux
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-15"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-15"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Les usages et les engagements unilatéraux
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c76"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-16"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-16"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c77"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        6
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            d="M43.847 0H13.448A6.455 6.455 0 007 6.448v39.104A6.455 6.455 0 0013.448 52h30.4c.638 0 1.155-.517 1.155-1.156L45 50.772c.001-.024.003-.048.003-.073V1.156C45.003.517 44.486 0 43.847 0zM12 50c-1.72-.502-3-2.568-3-4.448V11c.5 1 1.59 1.708 3 1.908V50zm1.448-39C11.167 11 9 8.73 9 6.448 9 4.168 11.167 2 13.448 2H40.5C39 2 37 4.5 37 6.5s2.5 4.5 4 4.5H13.448zM35 13.014v6.663l-1.31-1.045a1.155 1.155 0 00-1.381 0l-1.344 1.043V13l4.035.014zm8 36.972L14 50V13.014h15v8.979a1.157 1.157 0 001.847.926L33 21l2.154 1.892A1.156 1.156 0 0037 21.965V13h6v36.986zm0-39.58c-1 0-4.5-1.01-4.5-3.958C38.5 3.5 42 2.5 43 2.463v7.943z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            d="M20 32a1 1 0 011-1h15a1 1 0 110 2H21a1 1 0 01-1-1zm-2 5a1 1 0 011-1h19a1 1 0 110 2H19a1 1 0 01-1-1z"
+                            fill="#FF7067"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Le règlement intérieur de l’entreprise
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-16"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-16"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Le règlement intérieur de l’entreprise
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="c89"
+                data-accordion-component="AccordionItem"
+              >
+                <div
+                  aria-level="3"
+                  class="accordion__heading"
+                  data-accordion-component="AccordionItemHeading"
+                  role="heading"
+                >
+                  <div
+                    aria-controls="accordion__panel-raa-17"
+                    aria-disabled="false"
+                    aria-expanded="false"
+                    class="c67"
+                    data-accordion-component="AccordionItemButton"
+                    id="accordion__heading-raa-17"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="c90"
+                    >
+                      <div
+                        class="c69"
+                      >
+                        7
+                      </div>
+                      <div
+                        class="c70"
+                      />
+                    </div>
+                    <div
+                      class="c71 c78"
+                    >
+                      <div
+                        class="c73"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          viewBox="0 0 52 52"
+                        >
+                          <path
+                            d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            d="M7.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297zm13.063 18.297a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.255-1.255a1.016 1.016 0 00-1.437 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437zm.06-8a1.016 1.016 0 00-1.436 0l-2.7 2.7-1.256-1.255a1.016 1.016 0 00-1.436 1.436l1.974 1.974a1.016 1.016 0 001.436 0l3.418-3.418a1.016 1.016 0 000-1.437z"
+                            fill="#4E6896"
+                          />
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.016 10h10c.56 0 1.015.455 1.015 1.016v9.968c0 .561-.454 1.016-1.015 1.016h-10A1.016 1.016 0 0111 20.984v-9.968c0-.561.455-1.016 1.016-1.016zM21 19.969h-7.969V12.03H21v7.938z"
+                            fill="#4E6896"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            d="M29.016 11h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm0 8h9.109a1.016 1.016 0 010 2.031h-9.11a1.016 1.016 0 010-2.031zm8.96 10H26.024C25.46 29 25 29.448 25 30s.459 1 1.024 1h11.952C38.54 31 39 30.552 39 30s-.459-1-1.024-1zm0 9H26.024C25.46 38 25 38.448 25 39s.459 1 1.024 1h11.952C38.54 40 39 39.552 39 39s-.459-1-1.024-1zm.149-23h-9.11a1.016 1.016 0 000 2.031h9.11a1.016 1.016 0 000-2.031z"
+                            fill="#FF7067"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c74"
+                      >
+                        Le contrat de travail
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="c56 c57"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline
+                          points="9 18 15 12 9 6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  aria-labelledby="accordion__heading-raa-17"
+                  class="c75"
+                  data-accordion-component="AccordionItemPanel"
+                  hidden=""
+                  id="accordion__panel-raa-17"
+                >
+                  <div
+                    class="c11"
+                  >
+                    <h3>
+                      Le contrat de travail
+                    </h3>
+                  </div>
+                  <div
+                    class="c59"
+                  >
+                    Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="c91"
+    >
+      <footer
+        class="c92"
+      >
+        <div
+          class="c25 c93"
         >
           <div
             class="c4"
           >
             <div
-              class="c27"
+              class="c94"
             >
               <strong
-                class="c28"
+                class="c95"
               >
                 <span
-                  class="c29"
+                  class="c28"
                 />
                 Besoin de plus d’informations ?
               </strong>
             </div>
             <div
-              class="c30 c31"
+              class="c31 c96"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c32"
+              class="c14 c97"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c33"
+                class="c98"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1393,25 +4986,25 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c25 c34"
+          class="c25 c99"
         >
           <div
-            class="c4 c35"
+            class="c4 c100"
           >
             <div
-              class="c36 "
+              class="c101 "
             >
               <strong
-                class="c37 c38"
+                class="c102 c103"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c39 c40"
+                class="c104 c105"
               >
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -1419,7 +5012,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/glossaire"
                   >
                     Glossaire
@@ -1427,7 +5020,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/a-propos"
                   >
                     À propos
@@ -1435,7 +5028,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -1443,7 +5036,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -1451,7 +5044,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -1459,7 +5052,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -1467,7 +5060,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c41"
+                    class="c106"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -1476,19 +5069,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c36 "
+              class="c101 "
             >
               <strong
-                class="c37 c38"
+                class="c102 c103"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c39 c40"
+                class="c104 c105"
               >
                 <li>
                   <button
-                    class="c42"
+                    class="c14 c107"
                   >
                     Contact
                   </button>
@@ -1496,7 +5089,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c41"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1507,7 +5100,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c41"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1518,20 +5111,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c36 "
+              class="c101 "
             >
               <strong
-                class="c37 c38"
+                class="c102 c103"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c39 c40"
+                class="c104 c105"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c41"
+                    class="c106"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1542,7 +5135,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c41"
+                    class="c106"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1553,7 +5146,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c41"
+                    class="c106"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1566,12 +5159,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c43"
+          class="c108"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1580,7 +5173,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c45"
+              class="c110"
             >
               |
             </span>
@@ -1588,7 +5181,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1597,7 +5190,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c45"
+              class="c110"
             >
               |
             </span>
@@ -1605,7 +5198,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1614,7 +5207,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c45"
+              class="c110"
             >
               |
             </span>
@@ -1622,7 +5215,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1631,7 +5224,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c45"
+              class="c110"
             >
               |
             </span>
@@ -1639,7 +5232,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1648,7 +5241,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c45"
+              class="c110"
             >
               |
             </span>
@@ -1656,7 +5249,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c41 c44"
+              class="c106 c109"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

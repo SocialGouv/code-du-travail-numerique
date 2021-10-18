@@ -19,7 +19,7 @@ import {
 import { VerticalArrow } from "../VerticalArrow/index.js";
 
 export const Accordion = RootAccordion;
-export const Item = styled(({ props }) => {
+export const Item = styled(({ ...props }) => {
   // eslint-disable-next-line no-unused-vars
   const { index, isLast, ...cleanAccordionItemProps } = props;
   return <AccordionItem {...cleanAccordionItemProps} />;
