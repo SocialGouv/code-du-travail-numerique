@@ -1,4 +1,4 @@
-import { Text } from "@socialgouv/cdtn-ui";
+import { Paragraph, Text } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social/lib/constants";
 import React from "react";
 
@@ -179,12 +179,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
           detail={rootData.agreement}
         />
       </Text>
-      {description && (
-        <>
-          <br />
-          <Text>{description}</Text>
-        </>
-      )}
+      {description && <Paragraph>{description}</Paragraph>}
     </>
   );
 };

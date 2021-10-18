@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { fonts } from "../theme.js";
 
-export const Text = styled.span`
+const sharedStyle = css`
   ${({ variant, fontSize, fontWeight, theme }) => {
     const color = variant ? theme[variant] : theme.paragraph;
     const fontSizeTheme = fontSize.startsWith("h")
@@ -19,7 +19,16 @@ export const Text = styled.span`
   }}
 `;
 
-Text.propTypes = {
+export const Text = styled.span`
+  ${sharedStyle}
+`;
+
+export const Paragraph = styled.p`
+  ${sharedStyle}
+  margin: 0;
+`;
+
+const propTypes = {
   fontSize: PropTypes.oneOf([
     "default",
     "tiny",
@@ -33,7 +42,13 @@ Text.propTypes = {
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
   variant: PropTypes.oneOf(["primary", "secondary"]),
 };
-Text.defaultProps = {
+
+const defaultProps = {
   fontSize: "default",
   fontWeight: "400",
 };
+
+Text.propTypes = propTypes;
+Text.defaultProps = defaultProps;
+Paragraph.propTypes = propTypes;
+Paragraph.defaultProps = defaultProps;
