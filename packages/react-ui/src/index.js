@@ -11,7 +11,7 @@ export { Container } from "./layout/Container/index.js";
 export { Section } from "./layout/Section/index.js";
 export { Wrapper } from "./layout/Wrapper/index.js";
 // Components
-export { Accordion } from "./Accordion/index.js";
+export { Accordion, AccordionArrow } from "./Accordion/index.js";
 export { Alert, AlertWithIcon } from "./Alert/index.js";
 export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
