@@ -3,7 +3,9 @@ contrat salarié . convention collective . batiment etam:
   description: Convention collective nationale des employés, techniciens et agents de maîtrise du bâtiment du 12 juillet 2006.
   applicable si: convention collective = 'IDCC2609'
   valeur: oui
-  idcc: 2609
+  cdtn:
+    idcc: 2609
+    préavis-retraite: true
 
 contrat salarié . convention collective . batiment etam . préavis de mise à la retraite:
   remplace: contrat salarié . préavis de retraite collective
