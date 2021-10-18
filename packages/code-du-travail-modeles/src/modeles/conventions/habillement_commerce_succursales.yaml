@@ -3,7 +3,9 @@ contrat salarié . convention collective . habillement commerce succursales:
   titre: Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.
   applicable si: convention collective = 'IDCC0675'
   valeur: oui
-  idcc: 675
+  cdtn:
+    idcc: 675
+    préavis-retraite: true
 
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?

@@ -3,7 +3,9 @@ contrat salarié . convention collective . comptables:
   description: Convention collective nationale des cabinets d'experts-comptables et de commissaires aux comptes du 9 décembre 1974. Etendue par arrêté du 30 mai 1975 JONC 12 juin 1975.
   applicable si: convention collective = 'IDCC0787'
   valeur: oui
-  idcc: 787
+  cdtn:
+    idcc: 787
+    préavis-retraite: true
 
 contrat salarié . convention collective . comptables . mise à la retraite:
   applicable si: mise à la retraite

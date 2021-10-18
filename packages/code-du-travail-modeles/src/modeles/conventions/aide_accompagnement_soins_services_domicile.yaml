@@ -1,0 +1,7 @@
+contrat salarié . convention collective . bad:
+  description: Convention collective nationale de la branche de l'aide, de l'accompagnement, des soins et des services à domicile du 21 mai 2010 (BAD).
+  applicable si: convention collective = 'IDCC2941'
+  valeur: oui
+  cdtn:
+    idcc: 2941
+    préavis-retraite: false

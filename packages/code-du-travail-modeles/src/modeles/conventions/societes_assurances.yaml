@@ -1,0 +1,7 @@
+contrat salarié . convention collective . sociétés d'assurances:
+  description: Convention collective nationale des sociétés d'assurances du 27 mai 1992.
+  applicable si: convention collective = 'IDCC1672'
+  valeur: oui
+  cdtn:
+    idcc: 1672
+    préavis-retraite: false
