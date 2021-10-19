@@ -5,7 +5,7 @@ contrat salarié . convention collective . automobiles:
   valeur: oui
   cdtn:
     idcc: 1090
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . automobiles . catégorie professionnelle:
   titre: Catégorie professionnelle

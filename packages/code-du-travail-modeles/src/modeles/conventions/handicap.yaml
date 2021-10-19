@@ -5,7 +5,7 @@ contrat salarié . convention collective . établissement handicap:
   valeur: oui
   cdtn:
     idcc: 413
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?
@@ -98,7 +98,6 @@ contrat salarié . convention collective . établissement handicap . catégorie 
       - montant: 6 mois
   références:
     Annexe n° 6 Dispositions spéciales aux cadres, article 9: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837394?idConteneur=KALICONT000005635407
-
 
 contrat salarié . convention collective . établissement handicap . notification:
   type: notification

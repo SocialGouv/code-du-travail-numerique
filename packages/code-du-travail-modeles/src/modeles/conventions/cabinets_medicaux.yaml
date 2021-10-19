@@ -5,7 +5,7 @@ contrat salarié . convention collective . cabinets médicaux:
   valeur: oui
   cdtn:
     idcc: 1147
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle:
   applicable si: mise à la retraite

@@ -1,4 +1,5 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
 import { getReferences } from "../utils/GetReferences";
 import {
@@ -31,8 +32,8 @@ describe("Préavis de retraite de la CC 2264", () => {
       "Pour un employé possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, expectedResult }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         });
@@ -68,11 +69,11 @@ describe("Préavis de retraite de la CC 2264", () => {
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC2264'",
+          "contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle": `'${category}'`,
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

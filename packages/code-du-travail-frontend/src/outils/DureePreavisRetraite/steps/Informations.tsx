@@ -7,6 +7,7 @@ const excludedRules = [
   "contrat salarié - ancienneté",
   "contrat salarié - convention collective",
   "contrat salarié - mise à la retraite",
+  "contrat salarié - convention collective - ancienneté",
 ];
 
 const Informations = (props: WizardStepProps): JSX.Element => (

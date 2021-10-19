@@ -4,4 +4,4 @@ contrat salarié . convention collective . commerces de detail non alimentaires:
   valeur: oui
   cdtn:
     idcc: 1517
-    préavis-retraite: false
+    preavisRetraite: false

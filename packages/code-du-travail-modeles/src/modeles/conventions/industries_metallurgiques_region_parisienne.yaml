@@ -5,7 +5,7 @@ contrat salarié . convention collective . industries métallurgiques région pa
   valeur: oui
   cdtn:
     idcc: 54
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . industries métallurgiques région parisienne . préavis de retaite tranches:
   grille:

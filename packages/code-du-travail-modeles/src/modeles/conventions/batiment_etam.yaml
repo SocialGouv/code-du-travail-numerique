@@ -5,7 +5,7 @@ contrat salarié . convention collective . batiment etam:
   valeur: oui
   cdtn:
     idcc: 2609
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . batiment etam . préavis de mise à la retraite:
   remplace: contrat salarié . préavis de retraite collective

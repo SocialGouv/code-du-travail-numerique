@@ -2,7 +2,9 @@ contrat salarié . convention collective . batiment ouvriers employés:
   description: Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 (c'est-à-dire occupant jusqu'à 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018)
   applicable si: convention collective = 'IDCC1596'
   valeur: oui
-  idcc: 1596
+  cdtn:
+    idcc: 1596
+    preavisRetraite: true
 
 contrat salarié . convention collective . batiment ouvriers employés . mise ou départ à la retraite:
   applicable si:

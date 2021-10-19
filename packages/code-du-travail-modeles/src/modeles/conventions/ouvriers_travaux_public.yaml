@@ -2,7 +2,9 @@ contrat salarié . convention collective . ouvriers travaux public:
   description: Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992
   applicable si: convention collective = 'IDCC1702'
   valeur: oui
-  idcc: 1702
+  cdtn:
+    idcc: 1702
+    preavisRetraite: true
 
 contrat salarié . convention collective . ouvriers travaux public . mise ou départ à la retraite:
   applicable si:

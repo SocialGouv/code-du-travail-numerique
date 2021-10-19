@@ -5,7 +5,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation:
   valeur: oui
   cdtn:
     idcc: 2216
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite:
   applicable si: mise à la retraite

@@ -2,7 +2,9 @@ contrat salarié . convention collective . banque:
   description: Convention collective nationale de la banque du 10 janvier 2000. Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
   applicable si: convention collective = 'IDCC2120'
   valeur: oui
-  idcc: 2120
+  cdtn:
+    idcc: 2120
+    preavisRetraite: true
 
 contrat salarié . convention collective . banque . mise à la retraite:
   applicable si: mise à la retraite

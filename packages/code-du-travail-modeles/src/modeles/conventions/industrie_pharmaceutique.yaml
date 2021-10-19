@@ -5,7 +5,7 @@ contrat salarié . convention collective . industrie pharmaceutique:
   valeur: oui
   cdtn:
     idcc: 176
-    préavis-retraite: true
+    preavisRetraite: true
 
 contrat salarié . convention collective . industrie pharmaceutique . groupe:
   titre: Groupe

@@ -2,7 +2,9 @@ contrat salarié . convention collective . batiment ouvriers employés bis:
   description: Nouvelle convention collective nationale des ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 (c'est-à-dire occupant plus de 10 salariés) du 7 mars 2018 (Avenant du 7 mars 2018)
   applicable si: convention collective = 'IDCC1597'
   valeur: oui
-  idcc: 1597
+  cdtn:
+    idcc: 1597
+    preavisRetraite: true
 
 contrat salarié . convention collective . batiment ouvriers employés bis . mise ou départ à la retraite:
   applicable si:

@@ -2,7 +2,9 @@ contrat salarié . convention collective . hotels cafes restaurants:
   description: Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
   applicable si: convention collective = 'IDCC1979'
   valeur: oui
-  idcc: 1979
+  cdtn:
+    idcc: 1979
+    preavisRetraite: true
 
 contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle:
   titre: Catégorie professionnelle

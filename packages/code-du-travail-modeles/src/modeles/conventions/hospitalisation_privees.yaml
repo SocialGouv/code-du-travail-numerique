@@ -2,9 +2,15 @@ contrat salarié . convention collective . hospitalisation privées:
   description: Convention collective nationale de l'hospitalisation privée du 18 avril 2002.
   applicable si: convention collective = 'IDCC2264'
   valeur: oui
-  idcc: 2264
   références:
     Article 50.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005802016/?idConteneur=KALICONT000005635813
+  cdtn:
+    type: "override"
+    property: "seniorityMaximum"
+    value: "61"
+    question: "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise ?"
+    idcc: 2264
+    preavisRetraite: true
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
   applicable si: mise à la retraite

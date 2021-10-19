@@ -54,7 +54,11 @@ const YesNoQuestion = ({
     </RadioContainer>
     <ErrorField name={name} />
     {onChange && (
-      <OnChange name={name}>{(values) => onChange(values)}</OnChange>
+      <OnChange name={name}>
+        {(values) => {
+          onChange(values);
+        }}
+      </OnChange>
     )}
   </>
 );
