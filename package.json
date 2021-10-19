@@ -8,6 +8,7 @@
     "build": "lerna run build",
     "build:ui": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/frontend}",
     "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public}",
+    "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
     "dev:api": "lerna run dev --scope=@cdt/api",
