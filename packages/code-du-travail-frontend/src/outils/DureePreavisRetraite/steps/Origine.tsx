@@ -58,7 +58,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             "oui" && (
             <StyledAlert variant="primary">
               <TitleAlert variant="primary" fontSize="hsmall" fontWeight="700">
-                A noter
+                À noter
               </TitleAlert>
               <br />
               L&apos;employeur qui décide une mise à la retraite doit en avoir

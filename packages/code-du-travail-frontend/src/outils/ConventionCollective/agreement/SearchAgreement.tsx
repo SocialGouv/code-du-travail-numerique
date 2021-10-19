@@ -1,7 +1,9 @@
 import React, { ForwardedRef, useState } from "react";
 
-import { Agreement } from "../../../conventions/Search/api/agreements.service";
-import { searchEnterprises } from "../../../conventions/Search/api/enterprises.service";
+import {
+  Agreement,
+  searchAgreements,
+} from "../../../conventions/Search/api/agreements.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
@@ -22,7 +24,7 @@ export function SearchAgreement({
   const trackingContext = useTrackingContext();
 
   const useAgreementSuggester = createSuggesterHook(
-    searchEnterprises,
+    searchAgreements,
     "cc_search",
     trackingContext
   );

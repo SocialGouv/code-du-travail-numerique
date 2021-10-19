@@ -1,5 +1,5 @@
 import { Text } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social/lib/constants";
+import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import PubliSituation from "../../../common/PubliSituation";

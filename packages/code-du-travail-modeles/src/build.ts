@@ -32,7 +32,7 @@ function copyJSFile() {
     path.resolve(inDir, "index.d.ts"),
     path.resolve(outDir, "index.d.ts")
   );
-  fse.copy(`${inDir}/utils`, `${outDir}/utils`);
+  fse.copySync(`${inDir}/utils`, `${outDir}/utils`);
 }
 
 function writeSupportedCCFile() {
@@ -43,13 +43,9 @@ function writeSupportedCCFile() {
     'Object.defineProperty(exports, "__esModule", { value: true });\n' +
     "exports.supportedCcn = void 0;\n" +
     `exports.supportedCcn = ${JSON.stringify(ccn, null, 2)};`;
-  fs.writeFileSync(path.resolve(outDir, "constants.js"), jsString);
-  fs.writeFileSync(
-    path.resolve(outDir, "constants.d.ts"),
-    "export declare const supportedCcn: number[];"
-  );
+  fs.writeFileSync(path.resolve(outDir, "utils/Constants.js"), jsString);
 }
 
-writeSupportedCCFile();
 copyJSFile();
+writeSupportedCCFile();
 writeJsonModel();

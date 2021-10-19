@@ -1,0 +1,7 @@
+contrat salarié . convention collective . animation:
+  description: Convention collective nationale des métiers de l'éducation, de la culture, des loisirs et de l'animation agissant pour l'utilité sociale et environnementale, au service des territoires (ÉCLAT) du 28 juin 1988.
+  applicable si: convention collective = 'IDCC1518'
+  valeur: oui
+  cdtn:
+    idcc: 1518
+    préavis-retraite: false

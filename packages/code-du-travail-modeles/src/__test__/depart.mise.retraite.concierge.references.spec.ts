@@ -81,10 +81,10 @@ describe("Vérification juridiques de la CC 1043", () => {
         const result = getReferences(
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC1043'",
-            "contrat salarié . mise à la retraite": "non",
             "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
             "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+            "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
           })
         );
@@ -112,10 +112,10 @@ describe("Vérification juridiques de la CC 1043", () => {
         const result = getReferences(
           engine.setSituation({
             "contrat salarié . convention collective": "'IDCC1043'",
-            "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
             "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+            "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . travailleur handicapé": "non",
           })
         );

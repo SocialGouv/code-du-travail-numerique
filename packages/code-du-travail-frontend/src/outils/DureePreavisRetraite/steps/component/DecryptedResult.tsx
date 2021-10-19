@@ -1,7 +1,7 @@
-import { Text, theme } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social/lib/constants";
+import { Text } from "@socialgouv/cdtn-ui";
+import { supportedCcn } from "@socialgouv/modeles-social";
+import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
-import styled from "styled-components";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
@@ -36,7 +36,7 @@ const ShowResultAgreement: React.FC<{
   if (result && result.value > 0) {
     return <ShowResult result={result} />;
   }
-  if (detail?.isSupported) {
+  if (detail?.status === AgreementStatus.Supported) {
     return <b>pas de préavis</b>;
   }
   return <b>convention collective non traitée</b>;
@@ -49,8 +49,14 @@ export enum NoticeUsed {
   none = "none",
 }
 
+export enum AgreementStatus {
+  Supported = "Supported",
+  Planned = "Planned",
+  NotSupported = "NotSupported",
+}
+
 type Agreement = {
-  isSupported: boolean;
+  status: AgreementStatus;
   notice: number;
 };
 
@@ -65,18 +71,22 @@ export const createRootData = (
   data: FormContent,
   result: PublicodesResult,
   legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null
+  agreementResult: PublicodesResult | null,
+  supportedCcn: AgreementInfo[]
 ): RootData => {
-  let agreement = null;
+  let agreement: Agreement | null = null;
   if (data.ccn) {
-    if (supportedCcn.includes(data.ccn.num)) {
-      agreement = { isSupported: true, notice: agreementResult.valueInDays };
-    } else {
-      agreement = {
-        isSupported: false,
-        notice: agreementResult?.valueInDays ?? 0,
-      };
-    }
+    const agreementFound = supportedCcn.find(
+      (item) => item.idcc === data.ccn.num
+    );
+    agreement = {
+      notice: agreementResult?.valueInDays ?? 0,
+      status: agreementFound
+        ? agreementFound.preavisRetraite
+          ? AgreementStatus.Supported
+          : AgreementStatus.Planned
+        : AgreementStatus.NotSupported,
+    };
   }
   let noticeUsed = NoticeUsed.none;
   if (
@@ -110,10 +120,10 @@ export const getDescription = (data: RootData): string | null => {
       case data.noticeUsed === NoticeUsed.none && data.agreement === null:
         return "Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.none &&
-        data.agreement?.isSupported === true:
+        data.agreement?.status === AgreementStatus.Supported:
         return "Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.agreementLabor &&
-        data.agreement?.isSupported === true:
+        data.agreement?.status === AgreementStatus.Supported:
         return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
     }
     return null;
@@ -121,7 +131,9 @@ export const getDescription = (data: RootData): string | null => {
 
   if (data.agreement === null) {
     return "La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale.";
-  } else if (!data.agreement.isSupported) {
+  } else if (data.agreement.status === AgreementStatus.Planned) {
+    return "La convention collective n’ayant pas été traitée pour le moment par nos services, la durée de préavis affichée correspond à la durée légale.";
+  } else if (data.agreement.status === AgreementStatus.NotSupported) {
     return "La convention collective n’ayant pas été traitée par nos services, la durée de préavis affichée correspond à la durée légale.";
   } else {
     switch (data.noticeUsed) {
@@ -161,7 +173,8 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
     data,
     publicodesContext.result,
     legalResult,
-    agreementResult
+    agreementResult,
+    supportedCcn
   );
   const description = getDescription(rootData);
   return (
@@ -180,18 +193,9 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
           detail={rootData.agreement}
         />
       </Text>
-      {description && (
-        <TextInformation>
-          <Text variant="secondary">{description}</Text>
-        </TextInformation>
-      )}
+      {description && <Text>{description}</Text>}
     </>
   );
 };
 
-const { spacings } = theme;
-
-const TextInformation = styled.p`
-  margin-top: ${spacings.small};
-`;
 export default DecryptedResult;
