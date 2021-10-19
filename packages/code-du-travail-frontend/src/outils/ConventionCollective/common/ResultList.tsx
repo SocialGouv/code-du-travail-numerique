@@ -36,11 +36,7 @@ const Div = styled.div`
   margin-left: 0;
   & + &::before {
     content: "";
-    // position: absolute;
     display: block;
-    // left: 0;
-    // right: 0;
-    // top: 0px;
     margin: 0 ${theme.spacings.xmedium};
     border-top: 1px solid ${({ theme }) => theme.border};
   }

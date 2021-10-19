@@ -13,9 +13,14 @@ import { required } from "./validators";
 
 export const CONVENTION_NAME = "ccn";
 
+type IdccInfo = {
+  idcc: number;
+  fullySupported: boolean;
+};
+
 type Props = {
   form: FormApi<FormContent>;
-  supportedCcn?: Array<number>;
+  supportedCcn?: IdccInfo[];
   isOptional: boolean;
 };
 
@@ -48,6 +53,52 @@ function StepInfoCCn({
     });
     // eslint-disable-next-line
   }, [storedConvention]);
+
+  const ShowIdccInfo = ({
+    currentIdcc,
+    supportedCcn,
+  }: {
+    currentIdcc: number | undefined;
+    supportedCcn: IdccInfo[];
+  }): JSX.Element => {
+    if (currentIdcc) {
+      const idccInfo = supportedCcn.find((item) => item.idcc == currentIdcc);
+      if (!idccInfo) {
+        return (
+          <Alert variant="primary">
+            <p>
+              <Text variant="primary" fontSize="hsmall" fontWeight="700">
+                À noter: convention collective non traitée
+              </Text>
+            </p>
+            La convention collective sélectionnée n&apos;a pas été traitée par
+            nos services. Vous pouvez poursuivre la simulation pour connaitre la
+            durée prévue par le code du travail mais nous vous conseillons de
+            vérifier si votre convention collective prévoit un délai plus
+            favorable qui vous serait applicable.
+          </Alert>
+        );
+      }
+      if (!idccInfo.fullySupported) {
+        return (
+          <Alert variant="primary">
+            <p>
+              <Text variant="primary" fontSize="hsmall" fontWeight="700">
+                À noter: convention prochainement traitée
+              </Text>
+            </p>
+            Cette convention collective n&apos;est pas encore traitée par nos
+            services mais le sera très prochainement. Vous pouvez poursuivre la
+            simulation pour connaitre la durée prévue par le code du travail
+            mais nous vous conseillons de vérifier si votre convention
+            collective prévoit un délai plus favorable qui vous serait
+            applicable.
+          </Alert>
+        );
+      }
+    }
+    return <></>;
+  };
   return (
     <>
       <Field
@@ -74,24 +125,11 @@ function StepInfoCCn({
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
-                {supportedCcn && !supportedCcn.includes(input.value.num) && (
-                  <Alert variant="primary">
-                    <p>
-                      <Text
-                        variant="primary"
-                        fontSize="hsmall"
-                        fontWeight="700"
-                      >
-                        A noter
-                      </Text>
-                    </p>
-                    La convention collective sélectionnée n&apos;a pas été
-                    traitée par nos services. Vous pouvez poursuivre la
-                    simulation pour connaitre la durée prévue par le code du
-                    travail mais nous vous conseillons de vérifier si votre
-                    convention collective prévoit un délai plus favorable qui
-                    vous serait applicable.
-                  </Alert>
+                {supportedCcn && (
+                  <ShowIdccInfo
+                    currentIdcc={input.value.num}
+                    supportedCcn={supportedCcn}
+                  />
                 )}
               </>
             );

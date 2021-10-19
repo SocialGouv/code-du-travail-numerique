@@ -3,7 +3,9 @@ contrat salarié . convention collective . gardien concierge:
   description: Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention).
   applicable si: convention collective = 'IDCC1043'
   valeur: oui
-  idcc: 1043
+  cdtn:
+    idcc: 1043
+    préavis-retraite: true
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle:
   applicable si: mise à la retraite

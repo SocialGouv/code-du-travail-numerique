@@ -1,0 +1,29 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.54.1](https://github.com/socialgouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
+
+
+### Bug Fixes
+
+* **pipeline:** correction ([#3878](https://github.com/socialgouv/code-du-travail-numerique/issues/3878)) ([3ff3e4d](https://github.com/socialgouv/code-du-travail-numerique/commit/3ff3e4d5911646c45b454ac01a7f99cc9e26c4fe))
+* use ccn own api to search agreement ([#3877](https://github.com/socialgouv/code-du-travail-numerique/issues/3877)) ([1d657d8](https://github.com/socialgouv/code-du-travail-numerique/commit/1d657d8d97d209fe9e4abff6ea16405e32175e95))
+
+
+
+
+
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer to v10 ([#3714](https://github.com/socialgouv/code-du-travail-numerique/issues/3714)) ([5a37495](https://github.com/socialgouv/code-du-travail-numerique/commit/5a37495388ded125b0efcb23bdee2849785ca0e5))
+
+
+### Features
+
+* add lint-staged ([#3866](https://github.com/socialgouv/code-du-travail-numerique/issues/3866)) ([c6f63ef](https://github.com/socialgouv/code-du-travail-numerique/commit/c6f63efcc6c72aafa4f9b5c39b32cfc8872be8b9))
+* **e2e:** add codecept ui to view more easily test e2e ([#3781](https://github.com/socialgouv/code-du-travail-numerique/issues/3781)) ([7d7a555](https://github.com/socialgouv/code-du-travail-numerique/commit/7d7a5554349b2cdb08d93ea665e76bfbab02c90c))
