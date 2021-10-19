@@ -13,3 +13,5 @@ Scénario:
   Soit un utilisateur sur la page "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd"
   Alors je vois le lien self canonique
 
+  Soit un utilisateur sur la page "/contribution/1090-quelle-peut-etre-la-duree-maximale-dun-cdd"
+  Alors je vois le lien self canonique
