@@ -65,13 +65,11 @@ async function getKoaServer({ nextApp }) {
         "*.fabrique.social.gouv.fr",
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.fr",
-        "https://ad.doubleclick.net",
         AZURE_BASE_URL,
       ],
       scriptSrc: [
         "'self'",
         "https://mon-entreprise.fr",
-        "https://www.googletagmanager.com",
         "*.fabrique.social.gouv.fr",
         "https://cdnjs.cloudflare.com",
       ],
