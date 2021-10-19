@@ -180,19 +180,18 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   return (
     <>
       <SectionTitle>Le résultat décrypté</SectionTitle>
-      <Text>
+      <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult result={legalResult} />
-      </Text>
-      <br />
-      <Text>
+      </Paragraph>
+      <Paragraph>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
         />
-      </Text>
+      </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}
     </>
   );

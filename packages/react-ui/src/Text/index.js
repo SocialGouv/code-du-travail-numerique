@@ -25,7 +25,7 @@ export const Text = styled.span`
 
 export const Paragraph = styled.p`
   ${sharedStyle}
-  margin: 0;
+  margin: ${({ noMargin }) => noMargin && "0"};
 `;
 
 const propTypes = {
