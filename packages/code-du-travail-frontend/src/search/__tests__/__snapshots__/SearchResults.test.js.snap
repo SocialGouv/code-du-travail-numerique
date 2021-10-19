@@ -1033,7 +1033,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     <div
                       class="c6"
                     >
-
+                      
                       <h3
                         class="c8"
                       >
@@ -1088,7 +1088,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     <div
                       class="c6"
                     >
-
+                      
                       <h3
                         class="c8"
                       >

@@ -257,7 +257,9 @@ exports[`<StepResult /> should render with O duration 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -686,7 +688,9 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -1073,7 +1077,9 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -1461,7 +1467,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -1837,7 +1845,9 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>

@@ -65,7 +65,6 @@ Accordion.propTypes = {
 };
 
 Accordion.defaultProps = {
-  noTitle: false,
   preExpanded: [],
   variant: "base",
 };

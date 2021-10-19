@@ -611,9 +611,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        De quoi s'agit-il ?
-                      </span>
+                      De quoi s'agit-il ?
                     </div>
                   </div>
                 </div>
@@ -628,9 +626,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      De quoi s'agit-il ?
-                    </span>
+                    De quoi s'agit-il ?
                   </div>
                   <div
                     class="c20"
@@ -692,9 +688,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Conditions
-                      </span>
+                      Conditions
                     </div>
                   </div>
                 </div>
@@ -709,9 +703,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Conditions
-                    </span>
+                    Conditions
                   </div>
                   <div
                     class="c20"
@@ -816,9 +808,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Volonté de démissionner
-                      </span>
+                      Volonté de démissionner
                     </div>
                   </div>
                 </div>
@@ -833,9 +823,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Volonté de démissionner
-                    </span>
+                    Volonté de démissionner
                   </div>
                   <div
                     class="c20"
@@ -924,9 +912,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Procédure
-                      </span>
+                      Procédure
                     </div>
                   </div>
                 </div>
@@ -941,9 +927,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Procédure
-                    </span>
+                    Procédure
                   </div>
                   <div
                     class="c20"
@@ -1044,9 +1028,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Préavis
-                      </span>
+                      Préavis
                     </div>
                   </div>
                 </div>
@@ -1061,9 +1043,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Préavis
-                    </span>
+                    Préavis
                   </div>
                   <div
                     class="c20"
@@ -1309,7 +1289,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 data-accordion-component="AccordionItem"
                               >
                                 <div
-                                  aria-level="3"
+                                  aria-level="6"
                                   class="accordion__heading"
                                   data-accordion-component="AccordionItemHeading"
                                   role="heading"
@@ -1344,9 +1324,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c18"
                                     >
-                                      <span>
-                                        Accord de l'employeur
-                                      </span>
+                                      Accord de l'employeur
                                     </div>
                                   </div>
                                 </div>
@@ -1361,9 +1339,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   <div
                                     class="c9"
                                   >
-                                    <span>
-                                      Accord de l'employeur
-                                    </span>
+                                    Accord de l'employeur
                                   </div>
                                   <div
                                     class="c20"
@@ -1387,7 +1363,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 data-accordion-component="AccordionItem"
                               >
                                 <div
-                                  aria-level="3"
+                                  aria-level="6"
                                   class="accordion__heading"
                                   data-accordion-component="AccordionItemHeading"
                                   role="heading"
@@ -1422,9 +1398,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c18"
                                     >
-                                      <span>
-                                        Refus de l'employeur
-                                      </span>
+                                      Refus de l'employeur
                                     </div>
                                   </div>
                                 </div>
@@ -1439,9 +1413,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   <div
                                     class="c9"
                                   >
-                                    <span>
-                                      Refus de l'employeur
-                                    </span>
+                                    Refus de l'employeur
                                   </div>
                                   <div
                                     class="c20"
@@ -1575,9 +1547,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Indemnisation
-                      </span>
+                      Indemnisation
                     </div>
                   </div>
                 </div>
@@ -1592,9 +1562,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Indemnisation
-                    </span>
+                    Indemnisation
                   </div>
                   <div
                     class="c20"
@@ -1704,9 +1672,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c18"
                     >
-                      <span>
-                        Documents remis au salarié
-                      </span>
+                      Documents remis au salarié
                     </div>
                   </div>
                 </div>
@@ -1721,9 +1687,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="c9"
                   >
-                    <span>
-                      Documents remis au salarié
-                    </span>
+                    Documents remis au salarié
                   </div>
                   <div
                     class="c20"

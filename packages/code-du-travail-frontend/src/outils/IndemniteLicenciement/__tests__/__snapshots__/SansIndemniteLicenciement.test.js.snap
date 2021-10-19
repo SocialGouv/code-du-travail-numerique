@@ -277,7 +277,9 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
               <div
                 class="c10"
               >
-                Voir le détail du calcul
+                <p>
+                  Voir le détail du calcul
+                </p>
               </div>
             </div>
           </div>

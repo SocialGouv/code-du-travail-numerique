@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
-import Title from "./Title";
 
 const { spacings } = theme;
 
