@@ -40,6 +40,7 @@ export function getOptions(possibleSituations, nextQuestionKey) {
     .sort(orderCriteria)
     .map(formatOption);
 }
+
 export function orderCriteria(a, b) {
   const [, numA] = a.match(/([0-9]+)\|/) || [];
   const [, numB] = b.match(/([0-9]+)\|/) || [];
@@ -86,7 +87,9 @@ export function getSituationsFor(data, obj) {
 
 export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(
-    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+    (situation) =>
+      Object.keys(situation.criteria).length &&
+      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
 };
