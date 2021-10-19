@@ -240,7 +240,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         <div
           class=""
           data-accordion-component="AccordionItem"
-          index="0"
         >
           <div
             aria-level="3"
