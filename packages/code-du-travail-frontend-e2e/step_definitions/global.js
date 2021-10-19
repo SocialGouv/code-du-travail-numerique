@@ -100,8 +100,9 @@ Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
   );
 });
 
-Alors("je vois le lien self canonique", async () => {
-  const currentUrl = await I.getCurrentUrl();
+Alors("je vois le lien canonique {string}", async (url) => {
+  const baseUrl = await I.getBaseUrl();
+  const currentUrl = baseUrl + url;
   const href = await I.getCanonicalLink();
   if (currentUrl !== href) {
     assert.fail("Canonique non identique");
