@@ -24,7 +24,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
     supportedCcn.map((cc: AgreementInfo) => {
       if (
         cc.idcc === form.getState().values.ccn.num &&
-        cc.cdtnInfo.type === AgreementType.OVERRIDE
+        cc.cdtnInfo.type === AgreementType.OVERRIDE_ANCIENNETE
       ) {
         setOverrideQuestion(cc.cdtnInfo);
         form.change("seniorityValue", cc.cdtnInfo.value);

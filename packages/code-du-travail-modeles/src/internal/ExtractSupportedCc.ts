@@ -12,7 +12,7 @@ export type AgreementInfo = {
 };
 
 export enum AgreementType {
-  OVERRIDE = "override",
+  OVERRIDE_ANCIENNETE = "overrideSeniority",
 }
 
 export type AgreementCdtnInfo = {
