@@ -1,10 +1,5 @@
 # CDTN REACT UI (@socialgouv/cdtn-ui)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a6e5ebcd-e0bc-4eda-b416-fc8ddf217310/deploy-status)](https://app.netlify.com/sites/socialgouv-react-ui/deploys)
-https://socialgouv-react-ui.netlify.com/
-
-Build is automatically triggered by netlify everytime a changed is pushed to the master branch.
-
 ## Using components
 
 This one is pretty straightforward
