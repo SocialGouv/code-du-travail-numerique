@@ -27,20 +27,9 @@ class AccordionWrapper extends React.PureComponent {
     const accordionItems = data.children
       .filter(isItemOfAccordion)
       .map((accordionItem) => {
-        const title =
-          headingLevel === 0 ? (
-            <Title level={headingLevel}>
-              {getText(
-                accordionItem.children.find((child) => child.name === "Titre")
-              )}
-            </Title>
-          ) : (
-            <span>
-              {getText(
-                accordionItem.children.find((child) => child.name === "Titre")
-              )}
-            </span>
-          );
+        const title = getText(
+          accordionItem.children.find((child) => child.name === "Titre")
+        );
         const body = (
           <ElementBuilder
             data={accordionItem.children.filter(
@@ -78,7 +67,10 @@ class AccordionWrapper extends React.PureComponent {
       <>
         {beforeAccordionElements}
         {accordionItems.length > 0 && (
-          <StyledAccordion items={accordionItems} />
+          <StyledAccordion
+            items={accordionItems}
+            titleLevel={headingLevel + 2}
+          />
         )}
         {afterAccordionElements}
       </>

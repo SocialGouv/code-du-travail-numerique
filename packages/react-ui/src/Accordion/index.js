@@ -6,7 +6,13 @@ import styled from "styled-components";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import * as variants from "./components/variants/index.js";
 
-export const Accordion = ({ items, noTitle, variant, ...props }) => {
+export const Accordion = ({
+  items,
+  disableStyles,
+  variant,
+  titleLevel,
+  ...props
+}) => {
   /* eslint-disable import/namespace */
   const AccordionVariant = variants[variant].Accordion;
   const AccordionItem = variants[variant].Item;
@@ -22,12 +28,12 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
             uuid={id}
             isLast={index === items.length - 1}
           >
-            <AccordionItemHeading>
+            <AccordionItemHeading aria-level={titleLevel}>
               <AccordionItemButton
                 icon={icon}
                 index={index}
                 isLast={index === items.length - 1}
-                noTitle={noTitle}
+                disableStyles={disableStyles}
               >
                 {title}
               </AccordionItemButton>
@@ -44,16 +50,17 @@ export const Accordion = ({ items, noTitle, variant, ...props }) => {
 };
 
 Accordion.propTypes = {
+  disableStyles: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.node.isRequired,
       icon: PropTypes.elementType,
       id: PropTypes.string,
-      title: PropTypes.node.isRequired,
+      title: PropTypes.string.isRequired,
     })
   ).isRequired,
-  noTitle: PropTypes.bool,
   preExpanded: PropTypes.arrayOf(PropTypes.string),
+  titleLevel: PropTypes.number.isRequired,
   variant: PropTypes.oneOf(["base", "tile", "hierarchy"]),
 };
 
