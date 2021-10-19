@@ -3,7 +3,9 @@ contrat salarié . convention collective . transports routiers:
   description: Convention collective nationale des transports routiers
   applicable si: convention collective = 'IDCC0016'
   valeur: oui
-  idcc: 16
+  cdtn:
+    idcc: 16
+    préavis-retraite: true
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle:
   titre: Catégorie professionnelle
