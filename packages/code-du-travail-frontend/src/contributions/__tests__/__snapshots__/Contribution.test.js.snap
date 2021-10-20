@@ -579,29 +579,25 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -1204,29 +1200,25 @@ exports[`<Contribution /> should render answer references 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -1829,29 +1821,25 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -2454,29 +2442,25 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -3006,29 +2990,25 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c14"
+        for="convention-search"
       >
-        <label
-          class="c14"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c15 c16"
-        >
-          <input
-            class="c17"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c15 c16"
+      >
+        <input
+          class="c17"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c18"
       >
