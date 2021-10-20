@@ -14,8 +14,6 @@ import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/H
 
 import getApiManifests from "./api";
 
-ok(process.env.CI_ENVIRONMENT_URL, "Missing CI_ENVIRONMENT_URL");
-
 // all probes httpGet
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   path: "/health",
