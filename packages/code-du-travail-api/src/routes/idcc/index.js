@@ -22,7 +22,14 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} Results.
  */
 router.get("/idcc", async (ctx) => {
-  const body = getIdccBody({ query: ctx.request.query.q });
+  const query = ctx.request.query.q;
+
+  // if only digit we make it a pure idcc search (like 1234)
+  const idccQuery = /^\d+$/.test(query) ? query : undefined;
+
+  const body = getIdccBody({ query, idccQuery });
+
+  // search by idcc if only digits
 
   const response = await elasticsearchClient.search({ body, index });
   ctx.body = { ...response.body };
