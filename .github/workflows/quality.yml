@@ -140,7 +140,6 @@ jobs:
   services-de-renseignement:
     name: Test service de renseignement
     runs-on: ubuntu-latest
-    needs: [checkout]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
