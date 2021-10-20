@@ -26,8 +26,8 @@ function getIdccBody({ query, idccQuery }) {
                 ? {
                     term: {
                       num: {
-                        value: idccQuery,
                         boost: 10,
+                        value: idccQuery,
                       },
                     },
                   }
