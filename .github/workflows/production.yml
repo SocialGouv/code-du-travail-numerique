@@ -14,21 +14,25 @@ jobs:
   ## BUILD AND REGISTER DOCKER IMAGE
   ##############################################################################
   register:
-    name: Build & Register docker images
+    name: Build & Register images
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        images: ["code-du-travail-frontend", "code-du-travail-api"]
     steps:
-      - name: Register docker image from api and frontend
+      - name: Register docker image for api
         uses: SocialGouv/actions/autodevops-build-register@v1
         with:
           project: "cdtn"
-          imageName: cdtn/${{ matrix.images }}
+          imageName: cdtn/code-du-travail-api
           token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./packages/${{ matrix.images }}/Dockerfile"
-          dockercontext: "./packages/${{ matrix.images }}"
+          dockerfile: "./packages/code-du-travail-api/Dockerfile"
+          dockercontext: "./packages/code-du-travail-api"
+      - name: Register docker image for frontend
+        uses: SocialGouv/actions/autodevops-build-register@v1
+        with:
+          project: "cdtn"
+          imageName: cdtn/code-du-travail-frontend
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "./"
 
   ##############################################################################
   ## GENERATE PREPRODUCTION MANIFESTS
