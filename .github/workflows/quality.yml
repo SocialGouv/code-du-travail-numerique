@@ -3,9 +3,34 @@ name: Code quality
 on: [push]
 
 jobs:
+  register-elastic:
+    name: Register elasticsearch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SocialGouv/actions/autodevops-build-register@v1
+        with:
+          project: "cdtn"
+          imageName: cdtn/elasticsearch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./docker/elasticsearch/Dockerfile"
+          dockercontext: "./docker/elasticsearch"
+
   build:
     name: Build code
     runs-on: ubuntu-latest
+    needs: [register-elastic]
+    services:
+      elasticsearch:
+        image: ghcr.io/socialgouv/cdtn/elasticsearch:sha-${{ github.sha }}
+        ports:
+          - 9200:9200
+        env:
+          ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+        options: >-
+          --health-cmd "curl -sS http://localhost:9200/_cat/health?h=status"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 6
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,49 +50,36 @@ jobs:
       - name: Build
         run: |
           yarn build
-      - name: Temporarily save build
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-artifact
-          path: .
-          retention-days: 1
-
-  register-elastic:
-    name: Register elasticsearch
-    runs-on: ubuntu-latest
-    steps:
-      - uses: SocialGouv/actions/autodevops-build-register@v1
-        with:
-          project: "cdtn"
-          imageName: cdtn/elasticsearch
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./docker/elasticsearch/Dockerfile"
-          dockercontext: "./docker/elasticsearch"
-
-  api:
-    name: Lint & test api
-    needs: [build, register-elastic]
-    runs-on: ubuntu-latest
-    services:
-      elasticsearch:
-        image: ghcr.io/socialgouv/cdtn/elasticsearch:sha-${{ github.sha }}
-        ports:
-          - 9200:9200
-        env:
-          ES_JAVA_OPTS: "-Xms256m -Xmx256m"
-        options: >-
-          --health-cmd "curl -sS http://localhost:9200/_cat/health?h=status"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 6
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Retrieve saved build
-        uses: actions/download-artifact@v2
-        with:
-          name: build-artifact
-          path: .
+      - name: Lint socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui lint
+      - name: Test @socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui test
+      - name: Lint @socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public lint
+      - name: Test @socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public test
+      - name: Lint @cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend lint
+      - name: Test @cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend test
+      - name: Lint @cdt/data
+        run: |
+          yarn workspace @cdt/data lint
+      - name: Test @cdt/data
+        run: |
+          yarn workspace @cdt/data test
+      - name: Lint @socialgouv/modeles-social
+        run: |
+          yarn workspace @socialgouv/modeles-social lint
+      - name: Test @socialgouv/modeles-social
+        run: |
+          yarn workspace @socialgouv/modeles-social test
       - name: Lint @cdt/api
         run: |
           yarn workspace @cdt/api lint
@@ -76,78 +88,6 @@ jobs:
           ELASTICSEARCH_URL: http://localhost:9200
         run: |
           yarn workspace @cdt/api test --coverage
-
-  ui:
-    name: Lint & test @socialgouv/cdtn-ui
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Retrieve saved build
-        uses: actions/download-artifact@v2
-        with:
-          name: build-artifact
-          path: .
-      - name: Lint socialgouv/cdtn-ui
-        run: |
-          yarn workspace @socialgouv/cdtn-ui lint
-      - name: Test @socialgouv/cdtn-ui
-        run: |
-          yarn workspace @socialgouv/cdtn-ui test
-
-  react-fiche-service-public:
-    name: Lint & test @socialgouv/react-fiche-service-public
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Retrieve saved build
-        uses: actions/download-artifact@v2
-        with:
-          name: build-artifact
-          path: .
-      - name: Lint @socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public lint
-      - name: Test @socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public test
-
-  frontend:
-    name: Lint & test @cdt/frontend
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint @cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend lint
-      - name: Test @cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend test
-
-  data:
-    name: Lint & test @cdt/data
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint @cdt/data
-        run: |
-          yarn workspace @cdt/data lint
-      - name: Test @cdt/data
-        run: |
-          yarn workspace @cdt/data test
-
-  modeles:
-    name: Lint & test @socialgouv/modeles-social
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint @socialgouv/modeles-social
-        run: |
-          yarn workspace @socialgouv/modeles-social lint
-      - name: Test @socialgouv/modeles-social
-        run: |
-          yarn workspace @socialgouv/modeles-social test
 
   docker:
     name: Lint Dockerfile
