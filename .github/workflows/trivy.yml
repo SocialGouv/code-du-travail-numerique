@@ -34,6 +34,7 @@ jobs:
   trivy:
     name: Run trivy
     runs-on: ubuntu-18.04
+    needs: [register-api, register-frontend]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
