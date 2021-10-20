@@ -43,8 +43,8 @@ const SubThemes = ({ children = [] }) => {
 const ThemesPage = ({ children = [] }) => (
   <Layout currentPage="themes">
     <Metas
-      title={`Thèmes - Code du travail numérique`}
-      description={`Explorez les contenus autour des thèmes`}
+      title="Thèmes"
+      description="Explorez les contenus autour des thèmes"
     />
     <Section>
       <Container>

@@ -41,7 +41,7 @@ class Theme extends React.Component {
     return (
       <Layout>
         <Metas
-          title={`${theme.title} - Code du travail numérique`}
+          title={theme.title}
           description={`Explorez les contenus autour du thème ${theme.title}`}
         />
         <Breadcrumbs items={theme.breadcrumbs} />

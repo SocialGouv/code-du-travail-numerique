@@ -25,7 +25,7 @@ const Stats = ({ data }) => {
   return (
     <Layout>
       <Metas
-        title="Statistiques - Code du travail numérique"
+        title="Statistiques"
         description="Statistiques d’utilisation du Code du travail numérique"
       />
       <Section>

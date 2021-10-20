@@ -29,7 +29,7 @@ export default function Metas({
         content="width=device-width, initial-scale=1"
       />
 
-      <title>{title}</title>
+      <title>{`${title} - Code du travail numérique`}</title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
       <link
