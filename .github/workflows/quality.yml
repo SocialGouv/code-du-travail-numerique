@@ -31,6 +31,18 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 6
+    strategy:
+      fail-fast: false
+      matrix:
+        # run 4 copies of the current job in parallel
+        repositories:
+          [
+            "@socialgouv/cdtn-ui",
+            "@socialgouv/react-fiche-service-public",
+            "@cdt/frontend",
+            "@cdt/data",
+            "@socialgouv/modeles-social",
+          ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -52,34 +64,10 @@ jobs:
           yarn build
       - name: Lint socialgouv/cdtn-ui
         run: |
-          yarn workspace @socialgouv/cdtn-ui lint
-      - name: Test @socialgouv/cdtn-ui
+          yarn workspace ${{ matrix.repositories }} lint
+      - name: Test ${{ matrix.repositories }}
         run: |
-          yarn workspace @socialgouv/cdtn-ui test
-      - name: Lint @socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public lint
-      - name: Test @socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public test
-      - name: Lint @cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend lint
-      - name: Test @cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend test
-      - name: Lint @cdt/data
-        run: |
-          yarn workspace @cdt/data lint
-      - name: Test @cdt/data
-        run: |
-          yarn workspace @cdt/data test
-      - name: Lint @socialgouv/modeles-social
-        run: |
-          yarn workspace @socialgouv/modeles-social lint
-      - name: Test @socialgouv/modeles-social
-        run: |
-          yarn workspace @socialgouv/modeles-social test
+          yarn workspace ${{ matrix.repositories }} test
       - name: Lint @cdt/api
         run: |
           yarn workspace @cdt/api lint
