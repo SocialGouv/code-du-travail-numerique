@@ -24,6 +24,7 @@ nextApp.prepare().then(async () => {
   });
 
   server.listen(PORT, () => {
+    //eslint-disable-next-line no-console
     console.log(`
   › Ready on ${FRONTEND_HOST}
 
