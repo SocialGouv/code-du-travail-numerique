@@ -44,6 +44,8 @@ export const Header = ({ currentPage = "" }) => {
           >
             <MinistereTravail
               overThreshold={overThreshold}
+              width="135"
+              height="115"
               src={"/static/assets/img/logo-rf.svg"}
               alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             />
