@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 17
+          extra_plugins: |
+            @semantic-release/changelog@5.0.1
+            @semantic-release/git@9.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
