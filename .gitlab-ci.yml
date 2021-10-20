@@ -17,7 +17,6 @@ include:
     ref: v23.3.0
   #
   - /.gitlab-ci/variables.yml
-  - /.gitlab-ci/stages/quality.yml
   - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/manual.yml
   - /.gitlab-ci/stages/scan.yml
