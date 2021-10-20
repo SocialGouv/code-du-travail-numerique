@@ -59,10 +59,10 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
-      - name: Build
+      - name: Build code
         run: |
           yarn build
-      - name: Lint socialgouv/cdtn-ui
+      - name: Lint ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} lint
       - name: Test ${{ matrix.repositories }}
