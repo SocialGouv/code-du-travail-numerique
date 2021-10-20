@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 
@@ -44,12 +45,12 @@ describe("Préavis de départ à la retraite", () => {
     "Pour un ouvrier ou employé de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau":
           level,
+        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+        "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -75,10 +76,10 @@ describe("Préavis de départ à la retraite", () => {
     "Pour un $category de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, category, expectedNotice, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -106,12 +107,12 @@ describe("Préavis de mise à la retraite", () => {
     "Pour un Ouvriers et Employés de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau":
           level,
+        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+        "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -137,12 +138,12 @@ describe("Préavis de mise à la retraite", () => {
     "Pour un Techniciens et agents de maîtrise de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Techniciens et agents de maîtrise'`,
+        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . convention collective . sedima . Techniciens et agents de maîtrise . niveau":
           level,
+        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Techniciens et agents de maîtrise'`,
+        "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -165,10 +166,10 @@ describe("Préavis de mise à la retraite", () => {
     "Pour un Cadres possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice, expectedReferences }) => {
       engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . ancienneté": seniority,
-        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . convention collective": "'IDCC1404'",
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Cadres'`,
+        "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
