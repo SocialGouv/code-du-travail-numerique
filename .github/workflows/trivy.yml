@@ -48,7 +48,6 @@ jobs:
         with:
           image-ref: "ghcr.io/socialgouv/cdtn/code-du-travail-frontend:sha-${{ github.sha }}"
           format: "table"
-          exit-code: "1"
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
@@ -62,7 +61,6 @@ jobs:
         with:
           image-ref: "ghcr.io/socialgouv/cdtn/code-du-travail-api:sha-${{ github.sha }}"
           format: "table"
-          exit-code: "1"
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
