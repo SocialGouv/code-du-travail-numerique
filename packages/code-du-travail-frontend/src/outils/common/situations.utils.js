@@ -85,10 +85,12 @@ export function getSituationsFor(data, obj) {
   );
 }
 
+const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+
 export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(
     (situation) =>
-      Object.keys(situation.criteria).length &&
+      isNotEmpty(situation.criteria) &&
       parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
