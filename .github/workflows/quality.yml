@@ -4,8 +4,8 @@ on:
   - push
 
 jobs:
-  quality:
-    name: Quality checks
+  build:
+    name: Build code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -15,14 +15,15 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v2
+      - name: Use cache
+        uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
 
@@ -30,49 +31,8 @@ jobs:
         run: |
           yarn build
 
-      - name: Lint @cdt/api
-        run: |
-          yarn workspace @cdt/api lint
-
-      - name: Lint socialgouv/cdtn-ui
-        run: |
-          yarn workspace @socialgouv/cdtn-ui lint
-
-      - name: Lint socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public lint
-
-      - name: Lint cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend lint
-
-      - name: Lint cdt/data
-        run: |
-          yarn workspace @cdt/data lint
-
-      - name: Lint Dockerfiles
-        uses: hadolint/hadolint-action@v1.6.0
-        with:
-          recursive: true
-
-      - name: Test @cdt/frontend
-        run: |
-          yarn workspace @cdt/frontend test
-
-      - name: Test @socialgouv/cdtn-ui
-        run: |
-          yarn workspace @socialgouv/cdtn-ui test
-
-      - name: Test @socialgouv/react-fiche-service-public
-        run: |
-          yarn workspace @socialgouv/react-fiche-service-public test
-
-      - name: Test SDR urls
-        run: |
-          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
-
-  register-docker-image:
-    name: Register docker image
+  register-elastic:
+    name: Register elasticsearch
     runs-on: ubuntu-latest
     steps:
       - uses: SocialGouv/actions/autodevops-build-register@v1
@@ -83,9 +43,9 @@ jobs:
           dockerfile: "./docker/elasticsearch/Dockerfile"
           dockercontext: "./docker/elasticsearch"
 
-  test-api:
-    name: Test CDTN API
-    needs: [register-docker-image]
+  api:
+    name: Lint & test api
+    needs: [build, register-elastic]
     runs-on: ubuntu-latest
     services:
       elasticsearch:
@@ -99,32 +59,89 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 6
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install deps
+      - name: Lint @cdt/api
         run: |
-          cd packages/code-du-travail-api
-          yarn install --prefer-offline --frozen-lockfile
-
-      - name: Build @cdt/api
-        run: yarn workspace @cdt/api build
+          yarn workspace @cdt/api lint
       - name: Test @cdt/api
         env:
           ELASTICSEARCH_URL: http://localhost:9200
         run: |
           yarn workspace @cdt/api test --coverage
 
+  ui:
+    name: Lint & test @socialgouv/cdtn-ui
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui lint
+      - name: Test @socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui test
 
+  react-fiche-service-public:
+    name: Lint & test @socialgouv/react-fiche-service-public
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint @socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public lint
+      - name: Test @socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public test
+
+  frontend:
+    name: Lint & test @cdt/frontend
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint @cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend lint
+      - name: Test @cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend test
+
+  data:
+    name: Lint & test @cdt/data
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint @cdt/data
+        run: |
+          yarn workspace @cdt/data lint
+      - name: Test @cdt/data
+        run: |
+          yarn workspace @cdt/data test
+
+  modeles:
+    name: Lint & test @socialgouv/modeles-social
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint @socialgouv/modeles-social
+        run: |
+          yarn workspace @socialgouv/modeles-social lint
+      - name: Test @socialgouv/modeles-social
+        run: |
+          yarn workspace @socialgouv/modeles-social test
+
+  docker:
+    name: Lint Dockerfile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v1.6.0
+        with:
+          recursive: true
+
+  services-de-renseignement:
+    name: Test service de renseignement
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test SDR urls
+        run: |
+          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
