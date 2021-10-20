@@ -32,9 +32,7 @@ exports[`<TableOfContent /> renders with nav items 1`] = `
 }
 
 <div>
-  <div
-    ids=""
-  >
+  <div>
     <a
       class="c0"
       href="#it-works-1"
@@ -69,8 +67,6 @@ exports[`<TableOfContent /> renders with nav items 1`] = `
 
 exports[`<TableOfContent /> renders without nav items 1`] = `
 <div>
-  <div
-    ids=""
-  />
+  <div />
 </div>
 `;

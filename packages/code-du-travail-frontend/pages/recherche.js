@@ -9,7 +9,6 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Head from "next/head";
-import Link from "next/link";
 import { withRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
@@ -33,6 +32,10 @@ class SearchPage extends React.Component {
     const { router, items = { articles: [], documents: [], themes: [] } } =
       this.props;
     const { q: query = "" } = router.query;
+    const goToThemes = (e) => {
+      e.preventDefault();
+      router.push("/themes");
+    };
     return (
       <Layout
         currentPage="search"
@@ -80,11 +83,9 @@ class SearchPage extends React.Component {
                     &hellip;
                   </Heading>
                   <StyledContent>
-                    <Link href="/themes" passHref>
-                      <StyledLink variant="flat" as={Button}>
-                        Consulter les thèmes
-                      </StyledLink>
-                    </Link>
+                    <Button variant="flat" onClick={goToThemes}>
+                      Consulter les thèmes
+                    </Button>
                     <ConventionModal>
                       {(openModal) => (
                         <Button variant="flat" onClick={openModal}>
@@ -102,6 +103,7 @@ class SearchPage extends React.Component {
     );
   }
 }
+
 export default withRouter(SearchPage);
 
 const { breakpoints, spacings } = theme;
@@ -118,11 +120,11 @@ const StyledWrapper = styled(Wrapper)`
 const StyledContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
 
-const StyledLink = styled.a`
-  margin-right: ${spacings.medium};
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-bottom: ${spacings.medium};
+  button {
+    margin-right: ${spacings.medium};
+    @media (max-width: ${breakpoints.mobile}) {
+      margin-bottom: ${spacings.medium};
+    }
   }
 `;
