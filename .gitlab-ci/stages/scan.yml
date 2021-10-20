@@ -1,0 +1,21 @@
+#
+
+Snyk docker scan:
+  stage: "Deploy"
+  image: snyk/snyk-cli:docker
+  services:
+    - docker:$DOCKER_VERSION-dind
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+  dependencies: []
+  when: manual
+  needs:
+    - Register api image
+    - Register frontend image
+  allow_failure: true
+  before_script:
+    - source .gitlab-ci/env.sh
+  script:
+    - ./scripts/snyk-docker-scan.sh

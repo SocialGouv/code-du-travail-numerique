@@ -11,36 +11,42 @@ import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
 
-export const BurgerNav = ({ currentPage }) => (
-  <StyledBurgerNav>
-    <AccessibilityModal>
-      {(openModal) => <NavButton onClick={openModal}>Accessibilité</NavButton>}
-    </AccessibilityModal>
-    <Nav id="navigation" role="navigation" aria-label="Navigation du site">
-      <Ul>
-        <Li>
-          {currentPage !== "tools" ? (
-            <Link href="/outils" passHref>
-              <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
-            </Link>
-          ) : (
-            <NavCurrent>Boîte&nbsp;à&nbsp;outils</NavCurrent>
-          )}
-        </Li>
-        <Li>
-          {currentPage !== "themes" ? (
-            <Link href="/themes" passHref>
-              <NavAnchor>Thèmes</NavAnchor>
-            </Link>
-          ) : (
-            <NavCurrent>Thèmes</NavCurrent>
-          )}
-        </Li>
-      </Ul>
-    </Nav>
-  </StyledBurgerNav>
-);
-
+type Props = {
+  currentPage: string;
+};
+const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
+  return (
+    <StyledBurgerNav>
+      <AccessibilityModal>
+        {(openModal) => (
+          <NavButton onClick={openModal}>Accessibilité</NavButton>
+        )}
+      </AccessibilityModal>
+      <Nav id="navigation" aria-label="Navigation du site">
+        <Ul>
+          <Li>
+            {currentPage !== "tools" ? (
+              <Link href="/outils" passHref>
+                <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
+              </Link>
+            ) : (
+              <NavCurrent>Boîte&nbsp;à&nbsp;outils</NavCurrent>
+            )}
+          </Li>
+          <Li>
+            {currentPage !== "themes" ? (
+              <Link href="/themes" passHref>
+                <NavAnchor>Thèmes</NavAnchor>
+              </Link>
+            ) : (
+              <NavCurrent>Thèmes</NavCurrent>
+            )}
+          </Li>
+        </Ul>
+      </Nav>
+    </StyledBurgerNav>
+  );
+};
 const { breakpoints } = theme;
 
 const StyledBurgerNav = styled(RootBurgerNav)`
@@ -86,3 +92,5 @@ const Li = styled.li`
     height: auto;
   }
 `;
+
+export default HeaderBurgerNav;

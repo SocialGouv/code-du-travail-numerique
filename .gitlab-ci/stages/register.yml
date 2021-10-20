@@ -1,0 +1,44 @@
+#
+
+.register_stage: &register_stage
+  extends: .base_register_kaniko_stage
+  interruptible: true
+  stage: "Registration"
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
+
+#
+
+Register socialgouv/cdtn base image:
+  <<: *register_stage
+  stage: "Prepare"
+  variables:
+    CONTEXT: .
+    IMAGE_NAME: cdtn-base
+
+#
+
+Register api image:
+  <<: *register_stage
+  variables:
+    CONTEXT: packages/code-du-travail-api
+    DOCKER_BUILD_ARGS: >-
+      --dockerfile ./packages/code-du-travail-api/Dockerfile
+      --build-arg REGISTRY=${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
+      --build-arg IMAGE_TAG=${CI_COMMIT_SHA}
+    IMAGE_NAME: cdtn-api
+
+Register frontend image:
+  <<: *register_stage
+  variables:
+    CONTEXT: packages/code-du-travail-frontend
+    DOCKER_BUILD_ARGS: >-
+      --dockerfile ./packages/code-du-travail-frontend/Dockerfile
+      --build-arg REGISTRY=${HARBOR_REGISTRY}/${HARBOR_PROJECT}/cdtn-base
+      --build-arg IMAGE_TAG=${CI_COMMIT_SHA}
+    IMAGE_NAME: cdtn-frontend

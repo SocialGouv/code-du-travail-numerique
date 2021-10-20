@@ -556,7 +556,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             <h2
               class="c11"
             >
-              <div
+              <span
                 class="c12"
               />
               CDI
@@ -574,7 +574,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class=""
                 data-accordion-component="AccordionItem"
-                index="0"
               >
                 <div
                   aria-level="3"
@@ -656,7 +655,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="1"
               >
                 <div
                   aria-level="3"
@@ -781,7 +779,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="2"
               >
                 <div
                   aria-level="3"
@@ -890,7 +887,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="3"
               >
                 <div
                   aria-level="3"
@@ -1011,7 +1007,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="4"
               >
                 <div
                   aria-level="3"
@@ -1312,7 +1307,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               <div
                                 class=""
                                 data-accordion-component="AccordionItem"
-                                index="0"
                               >
                                 <div
                                   aria-level="3"
@@ -1391,7 +1385,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               <div
                                 class="c22"
                                 data-accordion-component="AccordionItem"
-                                index="1"
                               >
                                 <div
                                   aria-level="3"
@@ -1545,7 +1538,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="5"
               >
                 <div
                   aria-level="3"
@@ -1675,7 +1667,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
               <div
                 class="c22"
                 data-accordion-component="AccordionItem"
-                index="6"
               >
                 <div
                   aria-level="3"

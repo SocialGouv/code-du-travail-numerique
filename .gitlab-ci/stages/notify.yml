@@ -1,0 +1,73 @@
+#
+
+include:
+  - project: SocialGouv/gitlab-ci-yml
+    file: /base_notify_github_stage.yml
+    ref: v9.1.1
+
+#
+
+.notify_stage:
+  stage: Notify Finished Deployment
+  image: ghcr.io/socialgouv/docker/git-deploy:6.17.0
+  dependencies:
+    - Notify Starting Deployment
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - HOST=${CI_ENVIRONMENT_URL}
+
+#
+
+.notify_dev:
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}${AUTO_DEVOPS_DEV_ENVIRONMENT_NAME}
+    url: https://${CI_ENVIRONMENT_SLUG}-${CI_PROJECT_NAME}.${KUBE_INGRESS_BASE_DOMAIN}
+  except:
+    variables:
+      # Don't run when deploying in production an existing image
+      - $PRODUCTION
+      # Don't register a base image for release commit
+      # that only bump version / udpate changelog
+      - $CI_COMMIT_MESSAGE =~ /^chore(release):*/
+
+.notify_prod:
+  environment:
+    name: ${AUTO_DEVOPS_PROD_ENVIRONMENT_NAME}
+    url: https://code.travail.gouv.fr
+  only:
+    variables:
+      - $PRODUCTION
+#
+
+Notify Starting Deployment:
+  extends:
+    - .base_notify_pending_stage
+    - .notify_stage
+  stage: Deploy
+  dependencies: []
+
+#
+
+Notify Fail (dev):
+  extends:
+    - .base_notify_fail_stage
+    - .notify_stage
+    - .notify_dev
+
+Notify Fail (prod):
+  extends:
+    - .base_notify_fail_stage
+    - .notify_stage
+    - .notify_prod
+
+Notify Success (dev):
+  extends:
+    - .base_notify_success_stage
+    - .notify_stage
+    - .notify_dev
+
+Notify Success (prod):
+  extends:
+    - .base_notify_success_stage
+    - .notify_stage
+    - .notify_prod

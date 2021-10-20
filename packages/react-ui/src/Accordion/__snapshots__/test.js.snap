@@ -103,7 +103,6 @@ exports[`<Accordion /> renders 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -275,7 +274,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -447,7 +445,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -619,7 +616,6 @@ exports[`<Accordion /> renders as h2 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"

@@ -387,7 +387,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               <h2
                 class="c4"
               >
-                <div
+                <span
                   class="c5"
                 />
                 Accessibilité
