@@ -547,7 +547,6 @@ exports[`<Header /> should render 1`] = `
 <div>
   <header
     class="c0"
-    role="banner"
   >
     <div
       class="c1"
@@ -605,7 +604,6 @@ exports[`<Header /> should render 1`] = `
           >
             <label
               for="floating-search"
-              id="search"
             >
               Rechercher
             </label>

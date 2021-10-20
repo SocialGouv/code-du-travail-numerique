@@ -220,7 +220,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -650,7 +649,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -1038,7 +1036,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -1427,7 +1424,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -1804,7 +1800,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
