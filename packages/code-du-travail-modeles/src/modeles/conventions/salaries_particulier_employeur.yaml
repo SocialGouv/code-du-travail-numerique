@@ -1,0 +1,7 @@
+contrat salarié . convention collective . salariés du particulier employeur:
+  description: Convention collective nationale des salariés du particulier employeur du 24 novembre 1999.
+  applicable si: convention collective = 'IDCC2111'
+  valeur: oui
+  cdtn:
+    idcc: 2111
+    préavis-retraite: false

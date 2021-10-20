@@ -1,0 +1,7 @@
+contrat salarié . convention collective . commerces de detail non alimentaires:
+  description: "Convention collective nationale des commerces de détail non alimentaires : antiquités, brocante, galeries d'art (œuvres d'art), arts de la table, coutellerie, droguerie, équipement du foyer, bazars, commerces ménagers, modélisme, jeux, jouets, puérinatalité et maroquinerie du 9 mai 2012 (avenant du 9 mai 2012)."
+  applicable si: convention collective = 'IDCC1517'
+  valeur: oui
+  cdtn:
+    idcc: 1517
+    préavis-retraite: false
