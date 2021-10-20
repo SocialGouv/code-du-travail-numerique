@@ -25,7 +25,10 @@ function getIdccBody({ query, idccQuery }) {
               idccQuery
                 ? {
                     term: {
-                      "num.text": idccQuery,
+                      num: {
+                        value: idccQuery,
+                        boost: 10,
+                      },
                     },
                   }
                 : undefined,
