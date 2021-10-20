@@ -753,7 +753,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c108 {
+.c107 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -798,9 +798,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c108:focus,
-.c108:hover,
-.c108:active {
+.c107:focus,
+.c107:hover,
+.c107:active {
   color: #f66663;
 }
 
@@ -1284,17 +1284,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c106 {
-  margin: 0.4rem 0;
-}
-
-.c107 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c109 {
+.c108 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1316,11 +1313,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c110 {
+.c109 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c111 {
+.c110 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1867,13 +1864,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c108 {
+  .c107 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c108 {
+  .c107 {
     display: none;
   }
 }
@@ -2104,7 +2101,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c111 {
+  .c110 {
     display: none;
   }
 }
@@ -2266,7 +2263,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -2324,7 +2320,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2417,7 +2412,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     <main
       class="c24"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -4952,7 +4946,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     >
       <footer
         class="c92"
-        role="contentinfo"
       >
         <div
           class="c25 c93"
@@ -5012,81 +5005,65 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/stats"
                   >
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -5105,21 +5082,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <button
-                    class="c14 c108"
+                    class="c14 c107"
                   >
                     Contact
                   </button>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5127,12 +5100,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     Contribuer sur Github
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5153,12 +5124,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5166,12 +5135,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     La Direction Générale du Travail
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5179,12 +5146,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     La fabrique des Ministères sociaux
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5197,12 +5162,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c109"
+          class="c108"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5211,7 +5176,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5219,7 +5184,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5228,7 +5193,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5236,7 +5201,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5245,7 +5210,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5253,7 +5218,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5262,7 +5227,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5270,7 +5235,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5279,7 +5244,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5287,7 +5252,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

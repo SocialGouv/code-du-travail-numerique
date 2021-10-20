@@ -52,7 +52,7 @@ exports[`<PageTitle /> renders a H1 page title 1`] = `
     <h1
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Lorem Ipsum
@@ -119,7 +119,7 @@ exports[`<PageTitle /> renders a left striped shifted H1 page title 1`] = `
     <h1
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Lorem Ipsum

@@ -98,7 +98,7 @@ exports[`<Layout /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c44 {
+.c43 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -143,9 +143,9 @@ exports[`<Layout /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c44:focus,
-.c44:hover,
-.c44:active {
+.c43:focus,
+.c43:hover,
+.c43:active {
   color: #f66663;
 }
 
@@ -403,17 +403,14 @@ exports[`<Layout /> should render 1`] = `
 }
 
 .c42 {
-  margin: 0.4rem 0;
-}
-
-.c43 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c45 {
+.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -435,11 +432,11 @@ exports[`<Layout /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c46 {
+.c45 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c47 {
+.c46 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -714,13 +711,13 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c43 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c44 {
+  .c43 {
     display: none;
   }
 }
@@ -842,7 +839,7 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c47 {
+  .c46 {
     display: none;
   }
 }
@@ -998,7 +995,6 @@ exports[`<Layout /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1056,7 +1052,6 @@ exports[`<Layout /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -1149,7 +1144,6 @@ exports[`<Layout /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <h1>
@@ -1164,7 +1158,6 @@ exports[`<Layout /> should render 1`] = `
     >
       <footer
         class="c25"
-        role="contentinfo"
       >
         <div
           class="c26 c27"
@@ -1224,81 +1217,65 @@ exports[`<Layout /> should render 1`] = `
               <ul
                 class="c40 c41"
               >
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/stats"
                   >
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
-                    class="c43"
+                    class="c42"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -1317,21 +1294,17 @@ exports[`<Layout /> should render 1`] = `
               <ul
                 class="c40 c41"
               >
-                <li
-                  class="c42"
-                >
+                <li>
                   <button
-                    class="c44"
+                    class="c43"
                   >
                     Contact
                   </button>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c43"
+                    class="c42"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1339,12 +1312,10 @@ exports[`<Layout /> should render 1`] = `
                     Contribuer sur Github
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c43"
+                    class="c42"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1365,12 +1336,10 @@ exports[`<Layout /> should render 1`] = `
               <ul
                 class="c40 c41"
               >
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c43"
+                    class="c42"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1378,12 +1347,10 @@ exports[`<Layout /> should render 1`] = `
                     La Direction Générale du Travail
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c43"
+                    class="c42"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1391,12 +1358,10 @@ exports[`<Layout /> should render 1`] = `
                     La fabrique des Ministères sociaux
                   </a>
                 </li>
-                <li
-                  class="c42"
-                >
+                <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c43"
+                    class="c42"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1409,12 +1374,12 @@ exports[`<Layout /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c45"
+          class="c44"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1423,7 +1388,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c47"
+              class="c46"
             >
               |
             </span>
@@ -1431,7 +1396,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1440,7 +1405,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c47"
+              class="c46"
             >
               |
             </span>
@@ -1448,7 +1413,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1457,7 +1422,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c47"
+              class="c46"
             >
               |
             </span>
@@ -1465,7 +1430,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1474,7 +1439,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c47"
+              class="c46"
             >
               |
             </span>
@@ -1482,7 +1447,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1491,7 +1456,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c47"
+              class="c46"
             >
               |
             </span>
@@ -1499,7 +1464,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c43 c46"
+              class="c42 c45"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

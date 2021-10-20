@@ -94,7 +94,6 @@ exports[`<Article /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -111,6 +110,14 @@ exports[`<Article /> should render 1`] = `
   color: #f66663;
 }
 
+.c5.spacing-left {
+  margin-left: 1rem;
+}
+
+.c5.spacing-top {
+  margin-top: 1rem;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -121,7 +128,6 @@ exports[`<Article /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -138,6 +144,14 @@ exports[`<Article /> should render 1`] = `
 .c8:hover,
 .c8:focus {
   color: #f66663;
+}
+
+.c8.spacing-left {
+  margin-left: 1rem;
+}
+
+.c8.spacing-top {
+  margin-top: 1rem;
 }
 
 .c6 {
@@ -344,12 +358,11 @@ exports[`<Article /> should render 1`] = `
             class="c4"
           >
             <button
-              class="c5 no-after"
-              spacing="left"
+              class="c5 no-after spacing-left"
               title="Partager sur Facebook"
               type="button"
             >
-              <div
+              <span
                 class="c6"
               >
                 <svg
@@ -363,15 +376,14 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
             <a
-              class="c8"
+              class="c8 spacing-left"
               href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Contrat%20de%20travail%20et%20formalit%C3%A9s%20d'embauche%20de%20l'assistante%20maternelle&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-              spacing="left"
               title="Envoyer par email"
             >
-              <div
+              <span
                 class="c6"
               >
                 <svg
@@ -389,14 +401,13 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-              </div>
+              </span>
             </a>
             <button
-              class="c5"
-              spacing="left"
+              class="c5 spacing-left"
               title="Partager sur LinkedIn"
             >
-              <div
+              <span
                 class="c6"
               >
                 <svg
@@ -410,17 +421,16 @@ exports[`<Article /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
             <div
               class="c9"
             >
               <button
-                class="c5"
-                spacing="left"
+                class="c5 spacing-left"
                 title="Plus d’options"
               >
-                <div
+                <span
                   class="c6"
                 >
                   <svg
@@ -444,7 +454,7 @@ exports[`<Article /> should render 1`] = `
                       stroke-width="1.5"
                     />
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </div>

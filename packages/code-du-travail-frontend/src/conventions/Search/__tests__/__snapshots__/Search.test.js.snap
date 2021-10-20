@@ -283,61 +283,64 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="xxxx"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
+    <label
+      class="c0"
+      for="convention-search"
     >
-      <h3
-        class="c7"
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="xxxx"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5 c6 "
       >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
+        <h3
+          class="c7"
         >
-          <button
-            class="c11 c12"
+          CONVENTIONS COLLECTIVES (1
+           
+          résultat)
+        </h3>
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9 c10"
           >
-            small title 1
-             
-            <span
-              class="c13"
+            <button
+              class="c11 c12"
             >
-              (IDCC 
-              0275
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+              small title 1
+               
+              <span
+                class="c13"
+              >
+                (IDCC 
+                0275
+                )
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c14"
   >
@@ -558,26 +561,29 @@ exports[`<Search /> should render 1`] = `
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value=""
-    />
-  </span>
-  
+    <label
+      class="c0"
+      for="convention-search"
+    >
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value=""
+      />
+    </span>
+    
+  </form>
   <p
     class="c4"
   >
@@ -802,32 +808,35 @@ exports[`<Search /> should show no results when no result 1`] = `
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="9999"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      Aucun résultat n’a été trouvé.
+    <label
+      class="c0"
+      for="convention-search"
+    >
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="9999"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div>
+        Aucun résultat n’a été trouvé.
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c5"
   >
@@ -1052,50 +1061,52 @@ exports[`<Search /> should show spinner when loading 1`] = `
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="8888"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      <svg
-        aria-labelledby="title desc"
-        class="__react-svg-spinner_circle"
-        height="1em"
-        role="img"
-        style="animation-duration: 750ms;"
-        viewBox="0 0 32 32"
-        width="1em"
-      >
-        <title
-          id="title"
+    <label
+      class="c0"
+      for="convention-search"
+    >
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="8888"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div>
+        <svg
+          aria-labelledby="title desc"
+          class="__react-svg-spinner_circle"
+          height="1em"
+          role="img"
+          style="animation-duration: 750ms;"
+          viewBox="0 0 32 32"
+          width="1em"
         >
-          Circle loading spinner
-        </title>
-        <desc
-          id="desc"
-        >
-          Image of a partial circle indicating "loading."
-        </desc>
-        <style>
-          
+          <title
+            id="title"
+          >
+            Circle loading spinner
+          </title>
+          <desc
+            id="desc"
+          >
+            Image of a partial circle indicating "loading."
+          </desc>
+          <style>
+            
       .__react-svg-spinner_circle{
           transition-property: transform;
           animation-name: __react-svg-spinner_infinite-spin;
@@ -1107,22 +1118,23 @@ exports[`<Search /> should show spinner when loading 1`] = `
           to {transform: rotate(360deg)}
       }
     
-        </style>
-        <circle
-          cx="16"
-          cy="16"
-          fill="none"
-          r="12"
-          role="presentation"
-          stroke="rgba(0,0,0,0.4)"
-          stroke-dasharray="43.982297150257104"
-          stroke-linecap="round"
-          stroke-width="4"
-        />
-      </svg>
-       Recherche des convention collectives...
+          </style>
+          <circle
+            cx="16"
+            cy="16"
+            fill="none"
+            r="12"
+            role="presentation"
+            stroke="rgba(0,0,0,0.4)"
+            stroke-dasharray="43.982297150257104"
+            stroke-linecap="round"
+            stroke-width="4"
+          />
+        </svg>
+         Recherche des convention collectives...
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c5"
   >
@@ -1161,7 +1173,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1206,9 +1218,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c16:focus,
+.c16:hover,
+.c16:active {
   color: #f66663;
 }
 
@@ -1331,7 +1343,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c11 {
   display: block;
   padding: 1.6rem 0;
   padding-top: 0;
@@ -1342,7 +1354,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-decoration: none;
 }
 
-.c14 {
+.c13 {
   display: block;
   padding: 1.6rem 0;
   color: #7994d4;
@@ -1352,7 +1364,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-decoration: none;
 }
 
-.c13 {
+.c12 {
   font-weight: normal;
 }
 
@@ -1373,11 +1385,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   width: 100%;
 }
 
-.c15 {
+.c14 {
   margin-top: 2.4rem;
 }
 
-.c16 {
+.c15 {
   display: block;
   margin-top: 1.6rem;
 }
@@ -1406,13 +1418,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c16 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c16 {
     display: none;
   }
 }
@@ -1437,89 +1449,94 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="1234"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
+    <label
+      class="c0"
+      for="convention-search"
     >
-      <h3
-        class="c7"
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="1234"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5 c6 "
       >
-        CONVENTIONS COLLECTIVES (2
-         
-        résultats)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
+        <h3
+          class="c7"
         >
-          <button
-            class="c11 c12"
-          >
-            small titre
-             
-            <span
-              class="c13"
-            >
-              (IDCC 
-              0275
-              )
-            </span>
-          </button>
-        </li>
-        <li
-          class="c9 c10"
+          CONVENTIONS COLLECTIVES (2
+           
+          résultats)
+        </h3>
+        <ul
+          class="c8"
         >
-          <button
-            class="c11 c14"
+          <li
+            class="c9 c10"
           >
-            smaller convention 2
-             
-            <span
-              class="c13"
+            <a
+              class="c11"
+              href="/convention-collective/275-small-titre"
             >
-              (IDCC 
-              0276
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+              small titre
+               
+              <span
+                class="c12"
+              >
+                (IDCC 
+                0275
+                )
+              </span>
+            </a>
+          </li>
+          <li
+            class="c9 c10"
+          >
+            <a
+              class="c13"
+              href="/convention-collective/276-smaller-convention-2"
+            >
+              smaller convention 2
+               
+              <span
+                class="c12"
+              >
+                (IDCC 
+                0276
+                )
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </form>
   <p
-    class="c15"
+    class="c14"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c16"
+      class="c15"
     >
       Consultez
        
       <button
-        class="c11 c17"
+        class="c16 c17"
         type="button"
       >
         notre aide
@@ -1547,7 +1564,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   margin-bottom: 0;
 }
 
-.c11 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1592,9 +1609,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c15:focus,
+.c15:hover,
+.c15:active {
   color: #f66663;
 }
 
@@ -1717,7 +1734,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   cursor: pointer;
 }
 
-.c12 {
+.c11 {
   display: block;
   padding: 1.6rem 0;
   padding-top: 0;
@@ -1728,7 +1745,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   text-decoration: none;
 }
 
-.c13 {
+.c12 {
   font-weight: normal;
 }
 
@@ -1749,11 +1766,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   width: 100%;
 }
 
-.c14 {
+.c13 {
   margin-top: 2.4rem;
 }
 
-.c15 {
+.c14 {
   display: block;
   margin-top: 1.6rem;
 }
@@ -1782,13 +1799,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c15 {
     display: none;
   }
 }
@@ -1813,72 +1830,76 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="4567"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
+    <label
+      class="c0"
+      for="convention-search"
     >
-      <h3
-        class="c7"
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="4567"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5 c6 "
       >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
+        <h3
+          class="c7"
         >
-          <button
-            class="c11 c12"
+          CONVENTIONS COLLECTIVES (1
+           
+          résultat)
+        </h3>
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9 c10"
           >
-            smaller convention 2
-             
-            <span
-              class="c13"
+            <a
+              class="c11"
+              href="/convention-collective/4567-smaller-convention-2"
             >
-              (IDCC 
-              4567
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+              smaller convention 2
+               
+              <span
+                class="c12"
+              >
+                (IDCC 
+                4567
+                )
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </form>
   <p
-    class="c14"
+    class="c13"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c15"
+      class="c14"
     >
       Consultez
        
       <button
-        class="c11 c16"
+        class="c15 c16"
         type="button"
       >
         notre aide
@@ -2176,65 +2197,68 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="012345678"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
+    <label
+      class="c0"
+      for="convention-search"
     >
-      <h3
-        class="c7"
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="012345678"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5 c6 "
       >
-        ENTREPRISES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
+        <h3
+          class="c7"
         >
-          <div
-            class="c11"
+          ENTREPRISES (1
+           
+          résultat)
+        </h3>
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9 c10"
           >
-            Entreprise 2 93100 Commune test 1
-          </div>
-          <button
-            class="c12 c13"
-          >
-             
-            <span
-              class="c14"
+            <div
+              class="c11"
             >
-              (IDCC 
-              0843
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+              Entreprise 2 93100 Commune test 1
+            </div>
+            <button
+              class="c12 c13"
+            >
+               
+              <span
+                class="c14"
+              >
+                (IDCC 
+                0843
+                )
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c15"
   >
@@ -2459,32 +2483,35 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="01234567891011"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div>
-      Le service de recherche est indisponible.
+    <label
+      class="c0"
+      for="convention-search"
+    >
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
+    >
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="01234567891011"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div>
+        Le service de recherche est indisponible.
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c5"
   >
@@ -2804,98 +2831,101 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 <div>
-  <label
-    class="c0"
-    for="convention-search"
+  <form
+    role="search"
   >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="c1 c2"
-  >
-    <input
-      class="c3"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      role="search"
-      type="search"
-      value="hello"
-    />
-  </span>
-  <div
-    class="c4"
-  >
-    <div
-      class="c5 c6 "
+    <label
+      class="c0"
+      for="convention-search"
     >
-      <h3
-        class="c7"
-      >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
-        >
-          <button
-            class="c11 c12"
-          >
-            titre convention 1
-             
-            <span
-              class="c13"
-            >
-              (IDCC 
-              0275
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
-    <div
-      class="c5 c6 "
+      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+    </label>
+    <span
+      class="c1 c2"
     >
-      <h3
-        class="c7"
+      <input
+        class="c3"
+        id="convention-search"
+        name="q"
+        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+        type="search"
+        value="hello"
+      />
+    </span>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5 c6 "
       >
-        ENTREPRISES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="c8"
-      >
-        <li
-          class="c9 c10"
+        <h3
+          class="c7"
         >
-          <div
-            class="c14"
+          CONVENTIONS COLLECTIVES (1
+           
+          résultat)
+        </h3>
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9 c10"
           >
-            Entreprise 1 93100 Commune test
-          </div>
-          <button
-            class="c11 c15"
-          >
-            Short Convention 1
-             
-            <span
-              class="c13"
+            <button
+              class="c11 c12"
             >
-              (IDCC 
-              0843
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+              titre convention 1
+               
+              <span
+                class="c13"
+              >
+                (IDCC 
+                0275
+                )
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c5 c6 "
+      >
+        <h3
+          class="c7"
+        >
+          ENTREPRISES (1
+           
+          résultat)
+        </h3>
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9 c10"
+          >
+            <div
+              class="c14"
+            >
+              Entreprise 1 93100 Commune test
+            </div>
+            <button
+              class="c11 c15"
+            >
+              Short Convention 1
+               
+              <span
+                class="c13"
+              >
+                (IDCC 
+                0843
+                )
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </form>
   <p
     class="c16"
   >

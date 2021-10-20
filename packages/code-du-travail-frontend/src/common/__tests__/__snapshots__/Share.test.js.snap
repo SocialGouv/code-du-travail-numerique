@@ -26,7 +26,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -43,6 +42,14 @@ exports[`<Share /> renders 1`] = `
   color: #f66663;
 }
 
+.c1.spacing-left {
+  margin-left: 1rem;
+}
+
+.c1.spacing-top {
+  margin-top: 1rem;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,7 +60,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -70,6 +76,14 @@ exports[`<Share /> renders 1`] = `
 .c4:hover,
 .c4:focus {
   color: #f66663;
+}
+
+.c4.spacing-left {
+  margin-left: 1rem;
+}
+
+.c4.spacing-top {
+  margin-top: 1rem;
 }
 
 .c2 {
@@ -111,12 +125,11 @@ exports[`<Share /> renders 1`] = `
     class="c0"
   >
     <button
-      class="c1 no-after"
-      spacing="left"
+      class="c1 no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -130,15 +143,14 @@ exports[`<Share /> renders 1`] = `
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </button>
     <a
-      class="c4"
+      class="c4 spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-      spacing="left"
       title="Envoyer par email"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -156,14 +168,13 @@ exports[`<Share /> renders 1`] = `
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </a>
     <button
-      class="c1"
-      spacing="left"
+      class="c1 spacing-left"
       title="Partager sur LinkedIn"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -177,17 +188,16 @@ exports[`<Share /> renders 1`] = `
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </button>
     <div
       class="c5"
     >
       <button
-        class="c1"
-        spacing="left"
+        class="c1 spacing-left"
         title="Plus d’options"
       >
-        <div
+        <span
           class="c2"
         >
           <svg
@@ -211,7 +221,7 @@ exports[`<Share /> renders 1`] = `
               stroke-width="1.5"
             />
           </svg>
-        </div>
+        </span>
       </button>
     </div>
   </div>

@@ -625,7 +625,7 @@ function SvgWorkersHero(props) {
           y2={89492.9}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="gray" stopOpacity={0.25} />
+          <stop offset={0} stopColor="gray" stopOpacity={0.25} />
           <stop offset={0.54} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
@@ -637,7 +637,7 @@ function SvgWorkersHero(props) {
           y2={51679.6}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="gray" stopOpacity={0.25} />
+          <stop offset={0} stopColor="gray" stopOpacity={0.25} />
           <stop offset={0.54} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>

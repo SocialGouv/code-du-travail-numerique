@@ -43,7 +43,7 @@ function writeSupportedCCFile() {
     'Object.defineProperty(exports, "__esModule", { value: true });\n' +
     "exports.supportedCcn = void 0;\n" +
     `exports.supportedCcn = ${JSON.stringify(ccn, null, 2)};`;
-  fs.writeFileSync(path.resolve(outDir, "utils/constants.js"), jsString);
+  fs.writeFileSync(path.resolve(outDir, "utils/Constants.js"), jsString);
 }
 
 copyJSFile();
