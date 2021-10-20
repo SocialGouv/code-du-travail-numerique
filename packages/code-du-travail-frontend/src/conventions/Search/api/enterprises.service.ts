@@ -63,9 +63,15 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${ENTERPRISE_API_URL}/search?q=${encodeURIComponent(query)}${
-    address ? `&a=${encodeURIComponent(address)}` : ""
-  }&onlyWithConvention=true`;
+  const url = `${ENTERPRISE_API_URL}/search?query=${encodeURIComponent(
+    query
+  )}&q=${encodeURIComponent(query)}${
+    address
+      ? `&address=${encodeURIComponent(address)}&a=${encodeURIComponent(
+          address
+        )}`
+      : ""
+  }&onlyWithConvention=true&employer=true&open=true`;
 
   // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
   //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;
