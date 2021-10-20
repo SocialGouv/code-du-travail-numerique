@@ -153,7 +153,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -545,7 +545,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -573,32 +573,35 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
-      <label
-        class="c17"
-        for="convention-search"
+      <form
+        role="search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-      </label>
-      <span
-        class="c18 c19"
-      >
-        <input
-          class="c20"
-          id="convention-search"
-          name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-          role="search"
-          type="search"
-          value=""
-        />
-      </span>
-      
+        <label
+          class="c17"
+          for="convention-search"
+        >
+          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        </label>
+        <span
+          class="c18 c19"
+        >
+          <input
+            class="c20"
+            id="convention-search"
+            name="q"
+            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+            type="search"
+            value=""
+          />
+        </span>
+        
+      </form>
       <p
         class="c21"
       >
@@ -775,7 +778,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1167,7 +1170,7 @@ exports[`<Contribution /> should render answer references 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -1195,32 +1198,35 @@ exports[`<Contribution /> should render answer references 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
-      <label
-        class="c17"
-        for="convention-search"
+      <form
+        role="search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-      </label>
-      <span
-        class="c18 c19"
-      >
-        <input
-          class="c20"
-          id="convention-search"
-          name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-          role="search"
-          type="search"
-          value=""
-        />
-      </span>
-      
+        <label
+          class="c17"
+          for="convention-search"
+        >
+          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        </label>
+        <span
+          class="c18 c19"
+        >
+          <input
+            class="c20"
+            id="convention-search"
+            name="q"
+            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+            type="search"
+            value=""
+          />
+        </span>
+        
+      </form>
       <p
         class="c21"
       >
@@ -1397,7 +1403,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1789,7 +1795,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -1817,32 +1823,35 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
-      <label
-        class="c17"
-        for="convention-search"
+      <form
+        role="search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-      </label>
-      <span
-        class="c18 c19"
-      >
-        <input
-          class="c20"
-          id="convention-search"
-          name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-          role="search"
-          type="search"
-          value=""
-        />
-      </span>
-      
+        <label
+          class="c17"
+          for="convention-search"
+        >
+          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        </label>
+        <span
+          class="c18 c19"
+        >
+          <input
+            class="c20"
+            id="convention-search"
+            name="q"
+            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+            type="search"
+            value=""
+          />
+        </span>
+        
+      </form>
       <p
         class="c21"
       >
@@ -2019,7 +2028,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 .c16 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2411,7 +2420,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       <h2
         class="c9"
       >
-        <div
+        <span
           class="c10"
         />
         Que dit le code du travail ?
@@ -2439,32 +2448,35 @@ exports[`<Contribution /> should render with both answers 1`] = `
         <h2
           class="c15"
         >
-          <div
+          <span
             class="c16"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
-      <label
-        class="c17"
-        for="convention-search"
+      <form
+        role="search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-      </label>
-      <span
-        class="c18 c19"
-      >
-        <input
-          class="c20"
-          id="convention-search"
-          name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-          role="search"
-          type="search"
-          value=""
-        />
-      </span>
-      
+        <label
+          class="c17"
+          for="convention-search"
+        >
+          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        </label>
+        <span
+          class="c18 c19"
+        >
+          <input
+            class="c20"
+            id="convention-search"
+            name="q"
+            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+            type="search"
+            value=""
+          />
+        </span>
+        
+      </form>
       <p
         class="c21"
       >
@@ -2628,7 +2640,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 .c13 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2988,32 +3000,35 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         <h2
           class="c12"
         >
-          <div
+          <span
             class="c13"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
-      <label
-        class="c14"
-        for="convention-search"
+      <form
+        role="search"
       >
-        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-      </label>
-      <span
-        class="c15 c16"
-      >
-        <input
-          class="c17"
-          id="convention-search"
-          name="q"
-          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-          role="search"
-          type="search"
-          value=""
-        />
-      </span>
-      
+        <label
+          class="c14"
+          for="convention-search"
+        >
+          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+        </label>
+        <span
+          class="c15 c16"
+        >
+          <input
+            class="c17"
+            id="convention-search"
+            name="q"
+            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+            type="search"
+            value=""
+          />
+        </span>
+        
+      </form>
       <p
         class="c18"
       >
@@ -3097,7 +3112,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
       <h2
         class="c1"
       >
-        <div
+        <span
           class="c2"
         />
         Que dit le code du travail ?
@@ -3303,7 +3318,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       <h2
         class="c1"
       >
-        <div
+        <span
           class="c2"
         />
         Que dit le code du travail ?

@@ -394,26 +394,29 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             role="dialog"
             tabindex="-1"
           >
-            <label
-              class="c2"
-              for="convention-search"
+            <form
+              role="search"
             >
-              Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-            </label>
-            <span
-              class="c3 c4"
-            >
-              <input
-                class="c5"
-                id="convention-search"
-                name="q"
-                placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                role="search"
-                type="search"
-                value=""
-              />
-            </span>
-            
+              <label
+                class="c2"
+                for="convention-search"
+              >
+                Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+              </label>
+              <span
+                class="c3 c4"
+              >
+                <input
+                  class="c5"
+                  id="convention-search"
+                  name="q"
+                  placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+                  type="search"
+                  value=""
+                />
+              </span>
+              
+            </form>
             <p
               class="c6"
             >
