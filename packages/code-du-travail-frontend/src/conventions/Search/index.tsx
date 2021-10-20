@@ -7,11 +7,9 @@ import styled from "styled-components";
 import { v4 as generateUUID } from "uuid";
 
 import {
-  CC_TREATED,
-  CC_UNTREATED,
-  OUTIL,
-  TRACK_EVENT,
-} from "../../lib/tracking";
+  MatomoCommonEvent,
+  MatomoConventionCollectiveEvent,
+} from "../../outils/common/type/matomo";
 import { AgreementStatus } from "../../outils/DureePreavisRetraite/steps/component/DecryptedResult";
 import { getAgreementStatus } from "../../outils/DureePreavisRetraite/utils";
 import { matopush } from "../../piwik";
@@ -47,9 +45,19 @@ const Search = ({ onSelectConvention }) => {
   const onSelectLocalConvention = (ccn) => {
     const agreementStatus = getAgreementStatus(ccn);
     if (agreementStatus === AgreementStatus.Supported) {
-      matopush([TRACK_EVENT, OUTIL, `${CC_TREATED}_${ccn.num}`]);
+      matopush([
+        MatomoCommonEvent.TRACK_EVENT,
+        MatomoCommonEvent.OUTIL,
+        MatomoConventionCollectiveEvent.CC_TREATED,
+        ccn.num,
+      ]);
     } else {
-      matopush([TRACK_EVENT, OUTIL, `${CC_UNTREATED}_${ccn.num}`]);
+      matopush([
+        MatomoCommonEvent.TRACK_EVENT,
+        MatomoCommonEvent.OUTIL,
+        MatomoConventionCollectiveEvent.CC_UNTREATED,
+        ccn.num,
+      ]);
     }
     onSelectConvention(ccn);
   };
@@ -95,7 +103,7 @@ const Search = ({ onSelectConvention }) => {
                         convention={convention}
                         isFirst={index === 0}
                         key={convention.slug}
-                        onClick={onSelectConvention}
+                        onClick={onSelectLocalConvention}
                       />
                     ))}
                   />
@@ -108,7 +116,7 @@ const Search = ({ onSelectConvention }) => {
                       <CompanyTile
                         {...entreprise}
                         key={entreprise.siret}
-                        onClick={onSelectConvention}
+                        onClick={onSelectLocalConvention}
                       />
                     ))}
                   />

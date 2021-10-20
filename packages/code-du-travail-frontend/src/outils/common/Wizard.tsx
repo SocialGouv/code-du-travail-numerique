@@ -5,21 +5,10 @@ import React, { useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import {
-  ANCIENNETE_MOINS_2_ANS,
-  ANCIENNETE_PLUS_2_ANS,
-  CC_TREATED,
-  CC_UNTREATED,
-  DEPART_RETRAITE,
-  MISE_RETRAITE,
-  OUTIL,
-  TRACK_EVENT,
-} from "../../lib/tracking";
 import { matopush } from "../../piwik";
-import { AgreementStatus } from "../DureePreavisRetraite/steps/component/DecryptedResult";
-import { getAgreementStatus } from "../DureePreavisRetraite/utils";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
+import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
 
 const anchorRef = React.createRef();
 
@@ -125,21 +114,21 @@ function Wizard({
     switch (steps[stepIndex].name) {
       case initialState.steps[1].name: // "origine"
         matopush([
-          TRACK_EVENT,
-          OUTIL,
+          MatomoCommonEvent.TRACK_EVENT,
+          MatomoCommonEvent.OUTIL,
           form.getState().values["contrat salarié - mise à la retraite"] ===
           "oui"
-            ? MISE_RETRAITE
-            : DEPART_RETRAITE,
+            ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
+            : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
         ]);
         break;
       case initialState.steps[4].name: // "anciennete"
         matopush([
-          TRACK_EVENT,
-          OUTIL,
+          MatomoCommonEvent.TRACK_EVENT,
+          MatomoCommonEvent.OUTIL,
           form.getState().values.seniorityGreaterThanTwoYears
-            ? ANCIENNETE_PLUS_2_ANS
-            : ANCIENNETE_MOINS_2_ANS,
+            ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
+            : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
         ]);
         break;
       default:
