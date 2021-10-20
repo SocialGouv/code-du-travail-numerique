@@ -1,4 +1,4 @@
-name: Trivy
+name: Trivy vulnerability scanner
 on:
   push:
     branches:
@@ -35,31 +35,20 @@ jobs:
     name: Run trivy
     runs-on: ubuntu-18.04
     needs: [register-api, register-frontend]
+    strategy:
+      fail-fast: false
+      matrix:
+        images: ["code-du-travail-frontend", "code-du-travail-api"]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Build code-du-travail-frontend from Dockerfile
+      - name: Build ${{ matrix.images }} from Dockerfile
         run: |
-          docker build -t ghcr.io/socialgouv/cdtn/code-du-travail-frontend:sha-${{ github.sha }} .
-
+          docker build -t ghcr.io/socialgouv/cdtn/${{ matrix.images }}:sha-${{ github.sha }} .
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: "ghcr.io/socialgouv/cdtn/code-du-travail-frontend:sha-${{ github.sha }}"
-          format: "table"
-          ignore-unfixed: true
-          vuln-type: "os,library"
-          severity: "CRITICAL,HIGH"
-
-      - name: Build code-du-travail-api from Dockerfile
-        run: |
-          docker build -t ghcr.io/socialgouv/cdtn/code-du-travail-api:sha-${{ github.sha }} .
-
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: "ghcr.io/socialgouv/cdtn/code-du-travail-api:sha-${{ github.sha }}"
+          image-ref: "ghcr.io/socialgouv/cdtn/${{ matrix.images }}:sha-${{ github.sha }}"
           format: "table"
           ignore-unfixed: true
           vuln-type: "os,library"

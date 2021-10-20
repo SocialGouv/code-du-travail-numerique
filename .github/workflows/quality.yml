@@ -16,7 +16,7 @@ jobs:
           dockercontext: "./docker/elasticsearch"
 
   build:
-    name: Build code
+    name: Build, lint and test
     runs-on: ubuntu-latest
     needs: [register-elastic]
     services:
@@ -34,7 +34,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # run 4 copies of the current job in parallel
         repositories:
           [
             "@socialgouv/cdtn-ui",
