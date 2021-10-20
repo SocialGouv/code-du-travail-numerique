@@ -25,6 +25,12 @@ jobs:
       - name: Build
         run: |
           yarn build
+      - name: Temporarily save build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: path/to/artifact
+          retention-days: 1
 
   register-elastic:
     name: Register elasticsearch
@@ -55,6 +61,13 @@ jobs:
           --health-timeout 5s
           --health-retries 6
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Retrieve saved build
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: path/to/artifact
       - name: Lint @cdt/api
         run: |
           yarn workspace @cdt/api lint
@@ -69,8 +82,13 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
+      - name: Retrieve saved build
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: path/to/artifact
       - name: Lint socialgouv/cdtn-ui
         run: |
           yarn workspace @socialgouv/cdtn-ui lint
@@ -83,6 +101,11 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
+      - name: Retrieve saved build
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: path/to/artifact
       - name: Lint @socialgouv/react-fiche-service-public
         run: |
           yarn workspace @socialgouv/react-fiche-service-public lint
@@ -138,7 +161,7 @@ jobs:
           recursive: true
 
   services-de-renseignement:
-    name: Test service de renseignement
+    name: Get url from service de renseignement
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
