@@ -3,7 +3,9 @@ contrat salarié . convention collective . plasturgie:
   description: Convention collective nationale plasturgie
   applicable si: convention collective = 'IDCC0292'
   valeur: oui
-  idcc: 292
+  cdtn:
+    idcc: 292
+    préavis-retraite: true
 
 contrat salarié . convention collective . plasturgie . catégorie professionnelle:
   titre: Catégorie professionnelle

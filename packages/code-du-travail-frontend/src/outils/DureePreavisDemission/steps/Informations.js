@@ -41,7 +41,7 @@ function StepInformations({ form }) {
 
   return (
     <>
-      <SectionTitle>Informations sur le statut du salarié</SectionTitle>
+      <SectionTitle>Statut du salarié</SectionTitle>
       {pastQuestions.map(([key, answers]) => (
         <SelectQuestion
           key={key}

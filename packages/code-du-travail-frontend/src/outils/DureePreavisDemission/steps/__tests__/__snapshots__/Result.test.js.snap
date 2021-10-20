@@ -1,39 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render CC answer 1`] = `
-.c2 {
+.c8 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
+.c5 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
-  color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c5 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c7 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
 }
 
 .c3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c6 {
+  margin: 2rem 0 2rem 1rem;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c10 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c10 > *:first-child {
+  margin-top: 0;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c13 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.c13 svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.c14 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c11 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c0 {
@@ -52,9 +163,32 @@ exports[`<StepResult /> should render CC answer 1`] = `
   white-space: pre-line;
 }
 
-@media print {
-  .c2 {
-    display: none;
+.c2 {
+  font-size: 1.5em;
+}
+
+@media (max-width:600px) {
+  .c7 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c13 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -71,120 +205,251 @@ exports[`<StepResult /> should render CC answer 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à 
+    À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à :
+     
     <strong
-      class="c1"
+      class="c1 c2"
     >
       2 mois
     </strong>
     .
   </p>
   <div
-    class="c2"
+    class="accordion"
+    data-accordion-component="Accordion"
   >
-    <div
-      class="c3"
-      role="alert"
-    >
-      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    <div>
+      <div
+        class=""
+        data-accordion-component="AccordionItem"
+        index="0"
+      >
+        <div
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c3"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="c4 c5"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c6"
+            >
+              Voir le détail du calcul
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-0"
+          class="c7"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="c8"
+          >
+            <p>
+              Voir le détail du calcul
+            </p>
+          </div>
+          <div
+            class="c9"
+          >
+            <h2
+              class="c0"
+            >
+              Éléments saisis
+            </h2>
+            <ul>
+              <li>
+                Convention collective
+                 : 
+                <strong>
+                  Plasturgie (292)
+                </strong>
+              </li>
+              <li>
+                Catégorie professionnelle
+                 : 
+                <strong>
+                  Collaborateurs
+                </strong>
+              </li>
+              <li>
+                Coefficient
+                 : 
+                <strong>
+                  800 à 830 inclus
+                </strong>
+              </li>
+            </ul>
+            <h2
+              class="c0"
+            >
+              Sources
+            </h2>
+            <ul>
+              <li>
+                <a
+                  aria-label=" Article L.1237-1 du code du travail (nouvelle fenêtre)"
+                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Consultez l’ article l.1237-1 du code du travail"
+                >
+                   Article L.1237-1 du code du travail
+                </a>
+              </li>
+              <li>
+                <a
+                  aria-label="Article 15 (nouvelle fenêtre)"
+                  href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Consultez l’article 15"
+                >
+                  Article 15
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <h2
-    class="c0"
+  <div
+    class="c10 c11"
   >
-    Détails
-  </h2>
-  Éléments saisis :
-  <br />
-  <ul>
-    <li>
-      Convention collective
-       : 
-      <strong>
-        Plasturgie (292)
-      </strong>
-    </li>
-    <li>
-      Catégorie professionnelle
-       : 
-      <strong>
-        Collaborateurs
-      </strong>
-    </li>
-    <li>
-      Coefficient
-       : 
-      <strong>
-        800 à 830 inclus
-      </strong>
-    </li>
-  </ul>
-  <h2
-    class="c0"
-  >
-    Source
-  </h2>
-  <ul>
-    <li>
-      <a
-        aria-label=" Article L.1237-1 du code du travail (nouvelle fenêtre)"
-        href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’ article l.1237-1 du code du travail"
+    <div
+      class="c12"
+    >
+      <div
+        class="c13"
       >
-         Article L.1237-1 du code du travail
-      </a>
-    </li>
-    <li>
-      <a
-        aria-label="Article 15 (nouvelle fenêtre)"
-        href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Consultez l’article 15"
+        <svg
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 52 52"
+        >
+          <path
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            fill="#3E486E"
+            stroke="#4E6896"
+          />
+          <path
+            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            fill="#FF7067"
+          />
+        </svg>
+      </div>
+      <div
+        class="c14"
       >
-        Article 15
-      </a>
-    </li>
-  </ul>
+        <span
+          class="c15"
+        >
+          Attention il peut exister une autre durée de préavis
+        </span>
+      </div>
+    </div>
+    <p>
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    </p>
+  </div>
 </div>
 `;
 
 exports[`<StepResult /> should render with no cc 1`] = `
-.c2 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
+.c3 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
 }
 
-.c3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c6 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.c6 svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.c7 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c4 {
+  margin-top: 3.2rem;
+}
+
+.c8 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c0 {
@@ -203,9 +468,20 @@ exports[`<StepResult /> should render with no cc 1`] = `
   white-space: pre-line;
 }
 
-@media print {
-  .c2 {
-    display: none;
+.c2 {
+  font-size: 1.5em;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c6 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -223,7 +499,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -234,19 +510,48 @@ exports[`<StepResult /> should render with no cc 1`] = `
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>
   <div
-    class="c2"
+    class="c3 c4"
   >
     <div
-      class="c3"
-      role="alert"
+      class="c5"
     >
-      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+      <div
+        class="c6"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 52 52"
+        >
+          <path
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            fill="#3E486E"
+            stroke="#4E6896"
+          />
+          <path
+            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            fill="#FF7067"
+          />
+        </svg>
+      </div>
+      <div
+        class="c7"
+      >
+        <span
+          class="c8"
+        >
+          Attention il peut exister une autre durée de préavis
+        </span>
+      </div>
     </div>
+    <p>
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    </p>
   </div>
   <h2
     class="c0"
   >
-    Source
+    Sources
   </h2>
   <ul>
     <li>
@@ -265,39 +570,69 @@ exports[`<StepResult /> should render with no cc 1`] = `
 `;
 
 exports[`<StepResult /> should render with unhandled cc 1`] = `
-.c2 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: auto;
-  min-height: 48px;
+.c3 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-  background-color: #fff;
-  border-color: #7994d4;
-  border-style: solid;
-  border-width: 2px;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
   border-radius: 0.6rem;
-  box-shadow: none;
-  -webkit-animation: none;
-  animation: none;
 }
 
-.c3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem 1.6rem;
-  text-align: left;
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c6 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.c6 svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.c7 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c4 {
+  margin-top: 3.2rem;
+}
+
+.c8 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c0 {
@@ -316,9 +651,20 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   white-space: pre-line;
 }
 
-@media print {
-  .c2 {
-    display: none;
+.c2 {
+  font-size: 1.5em;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c6 svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -336,7 +682,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   </h2>
   <p>
     <strong
-      class="c1"
+      class="c1 c2"
     >
       Aucun résultat
     </strong>
@@ -346,28 +692,58 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   <p>
     Le code du travail ne prévoit pas de durée de préavis de démission sauf, cas particuliers.
   </p>
+  <p>
+    Vous pouvez faire une recherche par mots-clés dans
+     
+    <a
+      href="/convention-collective/1561-cordonnerie-multiservice"
+    >
+      votre convention collective
+    </a>
+  </p>
   <div
-    class="c2"
+    class="c3 c4"
   >
     <div
-      class="c3"
-      role="alert"
+      class="c5"
     >
-      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
-      <br />
-      Vous pouvez faire une recherche par mots-clés dans
-       
-      <a
-        href="/convention-collective/1561-cordonnerie-multiservice"
+      <div
+        class="c6"
       >
-        votre convention collective
-      </a>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 52 52"
+        >
+          <path
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            fill="#3E486E"
+            stroke="#4E6896"
+          />
+          <path
+            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            fill="#FF7067"
+          />
+        </svg>
+      </div>
+      <div
+        class="c7"
+      >
+        <span
+          class="c8"
+        >
+          Attention il peut exister une autre durée de préavis
+        </span>
+      </div>
     </div>
+    <p>
+      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    </p>
   </div>
   <h2
     class="c0"
   >
-    Source
+    Sources
   </h2>
   <ul>
     <li>
