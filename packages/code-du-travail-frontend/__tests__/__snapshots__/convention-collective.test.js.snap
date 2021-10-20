@@ -118,7 +118,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c18 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -634,7 +634,7 @@ exports[`<ConventionCollective /> should render 1`] = `
               <strong
                 class="c16 c17"
               >
-                <div
+                <span
                   class="c18"
                 />
                 <span>

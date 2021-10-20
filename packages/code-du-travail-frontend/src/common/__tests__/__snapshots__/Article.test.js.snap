@@ -465,7 +465,7 @@ exports[`<Article /> should render 1`] = `
           <h1
             class="c12"
           >
-            <div
+            <span
               class="c13"
             />
             Contrat de travail et formalités d'embauche de l'assistante maternelle

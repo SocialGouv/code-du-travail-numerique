@@ -1439,7 +1439,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Modèles de documents
@@ -1645,7 +1645,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <strong
                 class="c50"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

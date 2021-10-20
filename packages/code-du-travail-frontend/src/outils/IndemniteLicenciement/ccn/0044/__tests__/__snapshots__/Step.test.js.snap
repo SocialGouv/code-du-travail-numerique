@@ -249,7 +249,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     <h3
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Chimie
@@ -901,7 +901,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     <h3
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Chimie
@@ -1377,7 +1377,7 @@ exports[`<Step /> should render 1`] = `
     <h3
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Chimie

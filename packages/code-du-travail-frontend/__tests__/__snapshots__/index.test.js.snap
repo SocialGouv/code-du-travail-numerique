@@ -2394,6 +2394,7 @@ exports[`<Home /> should render 1`] = `
                   y2="89492.9"
                 >
                   <stop
+                    offset="0"
                     stop-color="gray"
                     stop-opacity="0.25"
                   />
@@ -2417,6 +2418,7 @@ exports[`<Home /> should render 1`] = `
                   y2="51679.6"
                 >
                   <stop
+                    offset="0"
                     stop-color="gray"
                     stop-opacity="0.25"
                   />
@@ -2448,7 +2450,7 @@ exports[`<Home /> should render 1`] = `
             <h2
               class="c36"
             >
-              <div
+              <span
                 class="c37"
               />
               Boîte à outils
@@ -2913,7 +2915,7 @@ exports[`<Home /> should render 1`] = `
               <strong
                 class="c64"
               >
-                <div
+                <span
                   class="c65"
                 />
                 Besoin de plus d’informations ?

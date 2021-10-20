@@ -444,7 +444,7 @@ exports[`<Footer /> should render 1`] = `
             <strong
               class="c6"
             >
-              <div
+              <span
                 class="c7"
               />
               Besoin de plus d’informations ?

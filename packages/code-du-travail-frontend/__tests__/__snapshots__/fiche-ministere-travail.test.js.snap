@@ -542,7 +542,7 @@ exports[`<FicheMT /> should render 1`] = `
 .c70 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2268,7 +2268,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <h1
                     class="c48"
                   >
-                    <div
+                    <span
                       class="c49"
                     />
                     Fiche MT test
@@ -2326,7 +2326,6 @@ exports[`<FicheMT /> should render 1`] = `
                     <div
                       class=""
                       data-accordion-component="AccordionItem"
-                      index="0"
                     >
                       <div
                         aria-level="3"
@@ -2569,7 +2568,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <strong
                     class="c68 c69"
                   >
-                    <div
+                    <span
                       class="c70"
                     />
                     <span>
@@ -2615,7 +2614,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 class="c78"
               >
-                <div
+                <span
                   class="c79"
                 />
                 Besoin de plus d’informations ?

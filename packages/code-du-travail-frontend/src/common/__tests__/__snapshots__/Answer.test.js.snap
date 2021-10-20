@@ -160,7 +160,7 @@ exports[`<Answer /> should renders 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -837,7 +837,7 @@ exports[`<Answer /> should renders 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -1017,7 +1017,7 @@ exports[`<Answer /> should renders 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -1240,7 +1240,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c39 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2131,7 +2131,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <h1
                 class="c24"
               >
-                <div
+                <span
                   class="c25"
                 />
                 Article du code
@@ -2311,7 +2311,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <strong
                 class="c37 c38"
               >
-                <div
+                <span
                   class="c39"
                 />
                 <span>
@@ -2501,7 +2501,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -3178,7 +3178,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -3358,7 +3358,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -3594,7 +3594,7 @@ exports[`<Answer /> should renders related content 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -4338,7 +4338,7 @@ exports[`<Answer /> should renders related content 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -4515,7 +4515,7 @@ exports[`<Answer /> should renders related content 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -4858,7 +4858,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -5535,7 +5535,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -5716,7 +5716,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -5906,7 +5906,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -6583,7 +6583,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -6764,7 +6764,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -6954,7 +6954,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -7631,7 +7631,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -7813,7 +7813,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -8003,7 +8003,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -8680,7 +8680,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -8857,7 +8857,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>

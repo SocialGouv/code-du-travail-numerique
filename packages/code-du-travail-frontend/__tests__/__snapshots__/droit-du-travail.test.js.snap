@@ -2426,7 +2426,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Le droit du travail
@@ -2455,7 +2455,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <h2
                   class="c34"
                 >
-                  <div
+                  <span
                     class="c35"
                   />
                   Qu’est-ce que le droit du travail ?
@@ -2529,7 +2529,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <h2
                 class="c46"
               >
-                <div
+                <span
                   class="c35"
                 />
                 Quels sont les textes à l’origine du droit du travail ?
@@ -3689,7 +3689,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h2
               class="c46"
             >
-              <div
+              <span
                 class="c35"
               />
               Existe-t-il une hiérarchie entre les textes ?
@@ -4102,7 +4102,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class=""
                           data-accordion-component="AccordionItem"
-                          index="0"
                         >
                           <div
                             aria-level="3"
@@ -4171,7 +4170,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="1"
                         >
                           <div
                             aria-level="3"
@@ -4250,7 +4248,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="2"
                         >
                           <div
                             aria-level="3"
@@ -4959,7 +4956,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 class="c95"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

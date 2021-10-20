@@ -399,7 +399,7 @@ exports[`<FicheSP /> should render 1`] = `
 .c41 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1754,7 +1754,7 @@ exports[`<FicheSP /> should render 1`] = `
                   <strong
                     class="c39 c40"
                   >
-                    <div
+                    <span
                       class="c41"
                     />
                     <span>
@@ -1800,7 +1800,7 @@ exports[`<FicheSP /> should render 1`] = `
               <strong
                 class="c49"
               >
-                <div
+                <span
                   class="c50"
                 />
                 Besoin de plus d’informations ?

@@ -1338,7 +1338,7 @@ exports[`<Glossaire /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Glossaire
@@ -1546,7 +1546,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <h2
                   class="c33"
                 >
-                  <div
+                  <span
                     class="c34"
                   />
                   A
@@ -1586,7 +1586,7 @@ exports[`<Glossaire /> should render 1`] = `
               <strong
                 class="c41"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?

@@ -397,7 +397,7 @@ exports[`<Recherche /> should render 1`] = `
 .c31 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1272,7 +1272,7 @@ exports[`<Recherche /> should render 1`] = `
           <h1
             class="c17"
           >
-            <div
+            <span
               class="c18"
             />
             Recherche
@@ -1357,7 +1357,7 @@ exports[`<Recherche /> should render 1`] = `
             <strong
               class="c30"
             >
-              <div
+              <span
                 class="c31"
               />
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
@@ -1398,7 +1398,7 @@ exports[`<Recherche /> should render 1`] = `
               <strong
                 class="c38"
               >
-                <div
+                <span
                   class="c18"
                 />
                 Besoin de plus d’informations ?
