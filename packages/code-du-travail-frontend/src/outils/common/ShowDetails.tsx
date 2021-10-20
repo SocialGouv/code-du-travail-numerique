@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { matopush } from "../../piwik";
+import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
 
 type Props = {
   children: React.ReactNode;
@@ -16,7 +17,11 @@ const ShowDetails = ({ children }: Props): JSX.Element => {
   function toggleAccordion() {
     setActive(!active);
     setHeight(!active ? `${contentSpace.current.scrollHeight}px` : "0");
-    matopush(["TRACK_EVENT", "OUTIL", ""]); // TODO replace with events
+    matopush([
+      MatomoCommonEvent.TRACK_EVENT,
+      MatomoCommonEvent.OUTIL,
+      MatomoPreavisRetraiteEvent.CLICK_CALCUL_DETAIL,
+    ]);
   }
 
   return (
