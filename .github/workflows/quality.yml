@@ -42,6 +42,7 @@ jobs:
             "@cdt/frontend",
             "@cdt/data",
             "@socialgouv/modeles-social",
+            "@cdt/api",
           ]
     steps:
       - name: Checkout repository
@@ -68,14 +69,8 @@ jobs:
       - name: Test ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} test
-      - name: Lint @cdt/api
-        run: |
-          yarn workspace @cdt/api lint
-      - name: Test @cdt/api
         env:
           ELASTICSEARCH_URL: http://localhost:9200
-        run: |
-          yarn workspace @cdt/api test --coverage
 
   docker:
     name: Lint Dockerfile
