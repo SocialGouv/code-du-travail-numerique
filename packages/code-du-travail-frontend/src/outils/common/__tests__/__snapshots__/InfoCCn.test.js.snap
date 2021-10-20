@@ -241,26 +241,29 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
          (obligatoire)
       </span>
     </p>
-    <label
-      class="c3"
-      for="convention-search"
+    <form
+      role="search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-    </label>
-    <span
-      class="c4 c5"
-    >
-      <input
-        class="c6"
-        id="convention-search"
-        name="q"
-        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-        role="search"
-        type="search"
-        value=""
-      />
-    </span>
-    
+      <label
+        class="c3"
+        for="convention-search"
+      >
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c4 c5"
+      >
+        <input
+          class="c6"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
+    </form>
     <p
       class="c7"
     >
@@ -513,26 +516,29 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
         Quelle est la convention collective applicable au salarié ?
       </span>
     </p>
-    <label
-      class="c2"
-      for="convention-search"
+    <form
+      role="search"
     >
-      Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-    </label>
-    <span
-      class="c3 c4"
-    >
-      <input
-        class="c5"
-        id="convention-search"
-        name="q"
-        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-        role="search"
-        type="search"
-        value=""
-      />
-    </span>
-    
+      <label
+        class="c2"
+        for="convention-search"
+      >
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c3 c4"
+      >
+        <input
+          class="c5"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
+    </form>
     <p
       class="c6"
     >

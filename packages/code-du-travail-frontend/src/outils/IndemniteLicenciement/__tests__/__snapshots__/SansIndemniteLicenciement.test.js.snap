@@ -207,7 +207,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <h3
         class="c2"
       >
-        <div
+        <span
           class="c3"
         />
         Convention collective nationale de l’Animation
@@ -240,7 +240,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         <div
           class=""
           data-accordion-component="AccordionItem"
-          index="0"
         >
           <div
             aria-level="3"

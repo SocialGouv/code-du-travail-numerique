@@ -304,7 +304,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -558,7 +557,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -1066,7 +1064,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -1320,7 +1317,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
