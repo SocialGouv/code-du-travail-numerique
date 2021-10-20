@@ -30,15 +30,6 @@ jobs:
           imageName: ${{ env.project }}/app
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Hasura
-        uses: SocialGouv/actions/autodevops-build-register@v1
-        with:
-          dockercontext: ./hasura
-          project: ${{ env.project }}
-          dockerfile: ./hasura/Dockerfile
-          token: ${{ secrets.GITHUB_TOKEN }}
-          imageName: ${{ env.project }}/hasura
-
   ##############################################################################
   ## GENERATE KUBERNETES MANIFESTS
   ##############################################################################
