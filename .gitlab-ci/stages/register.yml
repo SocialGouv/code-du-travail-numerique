@@ -21,14 +21,6 @@ Register socialgouv/cdtn base image:
     CONTEXT: .
     IMAGE_NAME: cdtn-base
 
-Register elasticsearch image:
-  <<: *register_stage
-  stage: "Prepare"
-  variables:
-    CONTEXT: ./docker/elasticsearch
-    DOCKER_BUILD_ARGS: >-
-      --dockerfile ./docker/elasticsearch/Dockerfile
-    IMAGE_NAME: cdtn-elasticsearch
 #
 
 Register api image:

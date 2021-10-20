@@ -1,0 +1,130 @@
+name: Code quality
+
+on:
+  - push
+
+jobs:
+  quality:
+    name: Quality checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install deps
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Lint @cdt/api
+        run: |
+          yarn workspace @cdt/api lint
+
+      - name: Lint socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui lint
+
+      - name: Lint socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public lint
+
+      - name: Lint cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend lint
+
+      - name: Lint cdt/data
+        run: |
+          yarn workspace @cdt/data lint
+
+      - name: Lint Dockerfiles
+        uses: hadolint/hadolint-action@v1.6.0
+        with:
+          recursive: true
+
+      - name: Test @cdt/frontend
+        run: |
+          yarn workspace @cdt/frontend test
+
+      - name: Test @socialgouv/cdtn-ui
+        run: |
+          yarn workspace @socialgouv/cdtn-ui test
+
+      - name: Test @socialgouv/react-fiche-service-public
+        run: |
+          yarn workspace @socialgouv/react-fiche-service-public test
+
+      - name: Test SDR urls
+        run: |
+          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
+
+  register-docker-image:
+    name: Register docker image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SocialGouv/actions/autodevops-build-register@v1
+        with:
+          project: "cdtn"
+          imageName: cdtn/elasticsearch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./docker/elasticsearch/Dockerfile"
+          dockercontext: "./docker/elasticsearch"
+
+  test-api:
+    name: Test CDTN API
+    needs: [register-docker-image]
+    runs-on: ubuntu-latest
+    services:
+      elasticsearch:
+        image: ghcr.io/socialgouv/cdtn/elasticsearch:sha-${{ github.sha }}
+        ports:
+          - 9200:9200
+        env:
+          ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+        options: >-
+          --health-cmd "curl -sS http://localhost:9200/_cat/health?h=status"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 6
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install deps
+        run: |
+          cd packages/code-du-travail-api
+          yarn install --prefer-offline --frozen-lockfile
+
+      - name: Build @cdt/api
+        run: yarn workspace @cdt/api build
+      - name: Test @cdt/api
+        env:
+          ELASTICSEARCH_URL: http://localhost:9200
+        run: |
+          yarn workspace @cdt/api test --coverage
+
+
