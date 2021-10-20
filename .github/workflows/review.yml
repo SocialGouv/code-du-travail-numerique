@@ -18,17 +18,19 @@ jobs:
   register:
     name: Build & Register
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        images: ["code-du-travail-frontend", "code-du-travail-api"]
     steps:
-      - name: Get project name
-        run: |
-          echo "project=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-
-      - name: Application
+      - name: Register docker image from api and frontend
         uses: SocialGouv/actions/autodevops-build-register@v1
         with:
-          project: ${{ env.project }}
-          imageName: ${{ env.project }}/app
+          project: "cdtn"
+          imageName: cdtn/{{ matrix.images }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./packages/{{ matrix.images }}/Dockerfile"
+          dockercontext: "./packages/{{ matrix.images }}"
 
   ##############################################################################
   ## GENERATE KUBERNETES MANIFESTS
