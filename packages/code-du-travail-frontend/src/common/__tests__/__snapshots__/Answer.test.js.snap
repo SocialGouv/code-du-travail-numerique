@@ -160,7 +160,7 @@ exports[`<Answer /> should renders 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -245,7 +245,6 @@ exports[`<Answer /> should renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -262,6 +261,14 @@ exports[`<Answer /> should renders 1`] = `
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -272,7 +279,6 @@ exports[`<Answer /> should renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -289,6 +295,14 @@ exports[`<Answer /> should renders 1`] = `
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -716,12 +730,11 @@ exports[`<Answer /> should renders 1`] = `
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -735,15 +748,14 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -761,14 +773,13 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -782,17 +793,16 @@ exports[`<Answer /> should renders 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -816,7 +826,7 @@ exports[`<Answer /> should renders 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -827,7 +837,7 @@ exports[`<Answer /> should renders 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -891,12 +901,11 @@ exports[`<Answer /> should renders 1`] = `
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -910,15 +919,14 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -936,14 +944,13 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -957,17 +964,16 @@ exports[`<Answer /> should renders 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -991,7 +997,7 @@ exports[`<Answer /> should renders 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -1011,7 +1017,7 @@ exports[`<Answer /> should renders 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -1234,7 +1240,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c39 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1330,7 +1336,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -1347,6 +1352,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   color: #f66663;
 }
 
+.c15.spacing-left {
+  margin-left: 1rem;
+}
+
+.c15.spacing-top {
+  margin-top: 1rem;
+}
+
 .c18 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1357,7 +1370,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -1374,6 +1386,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 .c18:hover,
 .c18:focus {
   color: #f66663;
+}
+
+.c18.spacing-left {
+  margin-left: 1rem;
+}
+
+.c18.spacing-top {
+  margin-top: 1rem;
 }
 
 .c16 {
@@ -1999,12 +2019,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c14"
               >
                 <button
-                  class="c15 no-after"
-                  spacing="left"
+                  class="c15 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c16"
                   >
                     <svg
@@ -2018,15 +2037,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c18"
+                  class="c18 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c16"
                   >
                     <svg
@@ -2044,14 +2062,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c15"
-                  spacing="left"
+                  class="c15 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c16"
                   >
                     <svg
@@ -2065,17 +2082,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c19"
                 >
                   <button
-                    class="c15"
-                    spacing="left"
+                    class="c15 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c16"
                     >
                       <svg
@@ -2099,7 +2115,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -2115,7 +2131,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <h1
                 class="c24"
               >
-                <div
+                <span
                   class="c25"
                 />
                 Article du code
@@ -2179,12 +2195,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
           class="c14"
         >
           <button
-            class="c15 no-after"
-            spacing="left"
+            class="c15 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c16"
             >
               <svg
@@ -2198,15 +2213,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c18"
+            class="c18 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c16"
             >
               <svg
@@ -2224,14 +2238,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c15"
-            spacing="left"
+            class="c15 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c16"
             >
               <svg
@@ -2245,17 +2258,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c19"
           >
             <button
-              class="c15"
-              spacing="left"
+              class="c15 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c16"
               >
                 <svg
@@ -2279,7 +2291,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -2299,7 +2311,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               <strong
                 class="c37 c38"
               >
-                <div
+                <span
                   class="c39"
                 />
                 <span>
@@ -2489,7 +2501,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -2574,7 +2586,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -2591,6 +2602,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2601,7 +2620,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -2618,6 +2636,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -3045,12 +3071,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -3064,15 +3089,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -3090,14 +3114,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -3111,17 +3134,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -3145,7 +3167,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -3156,7 +3178,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -3220,12 +3242,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -3239,15 +3260,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -3265,14 +3285,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -3286,17 +3305,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -3320,7 +3338,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -3340,7 +3358,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -3576,7 +3594,7 @@ exports[`<Answer /> should renders related content 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -3681,7 +3699,6 @@ exports[`<Answer /> should renders related content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -3698,6 +3715,14 @@ exports[`<Answer /> should renders related content 1`] = `
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3708,7 +3733,6 @@ exports[`<Answer /> should renders related content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -3725,6 +3749,14 @@ exports[`<Answer /> should renders related content 1`] = `
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -4199,12 +4231,11 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -4218,15 +4249,14 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -4244,14 +4274,13 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -4265,17 +4294,16 @@ exports[`<Answer /> should renders related content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -4299,7 +4327,7 @@ exports[`<Answer /> should renders related content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -4310,7 +4338,7 @@ exports[`<Answer /> should renders related content 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -4371,12 +4399,11 @@ exports[`<Answer /> should renders related content 1`] = `
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -4390,15 +4417,14 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -4416,14 +4442,13 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -4437,17 +4462,16 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -4471,7 +4495,7 @@ exports[`<Answer /> should renders related content 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -4491,7 +4515,7 @@ exports[`<Answer /> should renders related content 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -4834,7 +4858,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -4919,7 +4943,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -4936,6 +4959,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4946,7 +4977,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -4963,6 +4993,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -5390,12 +5428,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -5409,15 +5446,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -5435,14 +5471,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -5456,17 +5491,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -5490,7 +5524,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -5501,7 +5535,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -5566,12 +5600,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -5585,15 +5618,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -5611,14 +5643,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -5632,17 +5663,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -5666,7 +5696,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -5686,7 +5716,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -5876,7 +5906,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -5961,7 +5991,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -5978,6 +6007,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5988,7 +6025,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -6005,6 +6041,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -6432,12 +6476,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -6451,15 +6494,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -6477,14 +6519,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -6498,17 +6539,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -6532,7 +6572,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -6543,7 +6583,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -6608,12 +6648,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -6627,15 +6666,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -6653,14 +6691,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -6674,17 +6711,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -6708,7 +6744,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -6728,7 +6764,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -6918,7 +6954,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -7003,7 +7039,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -7020,6 +7055,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7030,7 +7073,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -7047,6 +7089,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -7474,12 +7524,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -7493,15 +7542,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -7519,14 +7567,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -7540,17 +7587,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -7574,7 +7620,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -7585,7 +7631,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -7651,12 +7697,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -7670,15 +7715,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -7696,14 +7740,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -7717,17 +7760,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -7751,7 +7793,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -7771,7 +7813,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>
@@ -7961,7 +8003,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 .c29 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -8046,7 +8088,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -8063,6 +8104,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   color: #f66663;
 }
 
+.c7.spacing-left {
+  margin-left: 1rem;
+}
+
+.c7.spacing-top {
+  margin-top: 1rem;
+}
+
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8073,7 +8122,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -8090,6 +8138,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 .c10:hover,
 .c10:focus {
   color: #f66663;
+}
+
+.c10.spacing-left {
+  margin-left: 1rem;
+}
+
+.c10.spacing-top {
+  margin-top: 1rem;
 }
 
 .c8 {
@@ -8517,12 +8573,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="c6"
               >
                 <button
-                  class="c7 no-after"
-                  spacing="left"
+                  class="c7 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -8536,15 +8591,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c10"
+                  class="c10 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -8562,14 +8616,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c7"
-                  spacing="left"
+                  class="c7 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c8"
                   >
                     <svg
@@ -8583,17 +8636,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c11"
                 >
                   <button
-                    class="c7"
-                    spacing="left"
+                    class="c7 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c8"
                     >
                       <svg
@@ -8617,7 +8669,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -8628,7 +8680,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <h1
                 class="c14"
               >
-                <div
+                <span
                   class="c15"
                 />
                 Article du code
@@ -8689,12 +8741,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
           class="c6"
         >
           <button
-            class="c7 no-after"
-            spacing="left"
+            class="c7 no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -8708,15 +8759,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
-            class="c10"
+            class="c10 spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-            spacing="left"
             title="Envoyer par email"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -8734,14 +8784,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <button
-            class="c7"
-            spacing="left"
+            class="c7 spacing-left"
             title="Partager sur LinkedIn"
           >
-            <div
+            <span
               class="c8"
             >
               <svg
@@ -8755,17 +8804,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <div
             class="c11"
           >
             <button
-              class="c7"
-              spacing="left"
+              class="c7 spacing-left"
               title="Plus d’options"
             >
-              <div
+              <span
                 class="c8"
               >
                 <svg
@@ -8789,7 +8837,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                     stroke-width="1.5"
                   />
                 </svg>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -8809,7 +8857,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               <strong
                 class="c27 c28"
               >
-                <div
+                <span
                   class="c29"
                 />
                 <span>

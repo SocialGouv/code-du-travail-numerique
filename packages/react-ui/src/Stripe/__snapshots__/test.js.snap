@@ -4,7 +4,7 @@ exports[`<Table /> renders 1`] = `
 .c0 {
   position: absolute;
   background-color: #7994d4;
-  border-radius: none;
+  border-radius: 0;
   top: 0;
   left: 50%;
   width: 7rem;
@@ -15,7 +15,7 @@ exports[`<Table /> renders 1`] = `
 }
 
 <div>
-  <div
+  <span
     class="c0"
   />
 </div>
@@ -36,7 +36,7 @@ exports[`<Table /> renders with correct styles 1`] = `
 }
 
 <div>
-  <div
+  <span
     class="c0"
   />
 </div>

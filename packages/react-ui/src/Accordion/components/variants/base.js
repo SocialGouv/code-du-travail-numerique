@@ -19,10 +19,10 @@ import {
 import { VerticalArrow } from "../VerticalArrow/index.js";
 
 export const Accordion = RootAccordion;
-
-// eslint-disable-next-line
-export const Item = styled(({ isLast, ...rest }) => {
-  return <AccordionItem {...rest} />;
+export const Item = styled(({ ...props }) => {
+  // eslint-disable-next-line no-unused-vars
+  const { index, isLast, ...cleanAccordionItemProps } = props;
+  return <AccordionItem {...cleanAccordionItemProps} />;
 })`
   ${({ index, theme }) =>
     index > 0 &&
@@ -57,6 +57,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   justify-content: flex-start;
   overflow: hidden;
   cursor: pointer;
+
   &:hover,
   &:focus,
   &:focus-within,

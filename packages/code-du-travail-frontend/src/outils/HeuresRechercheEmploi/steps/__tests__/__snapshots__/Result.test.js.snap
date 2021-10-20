@@ -198,7 +198,6 @@ exports[`<StepResult /> should render no results 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -596,7 +595,6 @@ exports[`<StepResult /> should render with duration 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -971,7 +969,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -1341,7 +1338,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
