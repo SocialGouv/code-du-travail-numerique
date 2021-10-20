@@ -1,0 +1,9 @@
+- name: Deploy Storybook
+  on:
+    push:
+      branches: [master]
+  run: |
+    git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+    npm run storybook:deploy -- -u "github-actions-bot <support+actions@github.com>"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
