@@ -1,9 +1,16 @@
-- name: Deploy Storybook
-  on:
-    push:
-      branches: [master]
-  run: |
-    git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-    npm run storybook:deploy -- -u "github-actions-bot <support+actions@github.com>"
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: Storybook
+on:
+  push:
+    branches: [master]
+
+jobs:
+  storybook:
+    name: Deployment storybook on gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run storybook:deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
