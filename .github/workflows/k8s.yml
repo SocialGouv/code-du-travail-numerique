@@ -9,7 +9,7 @@ defaults:
 
 jobs:
   build:
-    name: Build and test .k8s
+    name: Test .k8s
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
