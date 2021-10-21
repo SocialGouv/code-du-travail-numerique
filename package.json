@@ -22,6 +22,7 @@
     "start": "lerna run start",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui", 
+    "storybook:deploy:action": "lerna run deploy-storybook:action --scope=@socialgouv/cdtn-ui",
     "test": "lerna run test",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
     "test:e2e": "yarn dev:frontend:preprod-api & lerna run test:e2e --scope=@cdt/e2e --stream",
