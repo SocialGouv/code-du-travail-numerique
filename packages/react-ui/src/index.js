@@ -39,7 +39,7 @@ export { Table } from "./Table/index.js";
 export { TableOfContent } from "./TableOfContent/index.js";
 export { Tabs } from "./Tabs/index.js";
 export { Tag } from "./Tag/index.js";
-export { Text } from "./Text/index.js";
+export { Paragraph, Text } from "./Text/index.js";
 export { Tile } from "./Tile/index.js";
 export { Toast } from "./Toast/index.js";
 export { Tooltip } from "./Tooltip/index.js";

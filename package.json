@@ -8,6 +8,7 @@
     "build": "lerna run build",
     "build:ui": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/frontend}",
     "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public}",
+    "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
     "dev:api": "lerna run dev --scope=@cdt/api --stream",
@@ -19,11 +20,13 @@
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
     "start": "lerna run start",
+    "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
+    "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui", 
     "test": "lerna run test",
     "test:modeles": "lerna exec --scope=@socialgouv/modeles-social -- yarn test",
     "test:e2e": "yarn dev:frontend:preprod-api & lerna run test:e2e --scope=@cdt/e2e --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
-    "test:update": "lerna run test:update --parallel --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
+    "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend}",
     "prepare": "is-ci || husky install"
   },
   "repository": {
