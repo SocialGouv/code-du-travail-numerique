@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import * as variants from "./components/variants/index.js";
+import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
 
 export const Accordion = ({
   items,
@@ -78,3 +79,5 @@ const AccordionItemPanelContent = styled.div`
     margin-bottom: 0;
   }
 `;
+
+export { AccordionArrow };

@@ -11,7 +11,7 @@ export { Container } from "./layout/Container/index.js";
 export { Section } from "./layout/Section/index.js";
 export { Wrapper } from "./layout/Wrapper/index.js";
 // Components
-export { Accordion } from "./Accordion/index.js";
+export { Accordion, AccordionArrow } from "./Accordion/index.js";
 export { Alert, AlertWithIcon } from "./Alert/index.js";
 export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
@@ -22,6 +22,7 @@ export {
   BurgerNavLink,
 } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
+export { Collapse } from "./Collapse/index.js";
 export { DisclosureIcon } from "./DisclosureIcon/index.js";
 export { Dropdown } from "./Dropdown/index.js";
 export { FlatList } from "./FlatList/index.js";

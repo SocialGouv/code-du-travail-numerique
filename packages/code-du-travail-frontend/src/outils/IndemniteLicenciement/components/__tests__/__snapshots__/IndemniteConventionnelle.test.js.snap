@@ -46,19 +46,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
-.c13 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c10 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -80,10 +67,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   transform: rotate(90deg);
 }
 
+.c11 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c12 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
 }
 
 .c8 {
@@ -91,16 +88,17 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
   cursor: pointer;
+  margin-top: 40px;
 }
 
 .c8:hover,
@@ -108,23 +106,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
-}
-
-.c11 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c14 > *:first-child {
-  margin-top: 0;
-}
-
-.c14 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c0 {
@@ -147,7 +128,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   font-size: 1.5em;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,7 +152,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   border-radius: 0.6rem;
 }
 
-.c16 {
+.c14 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -200,18 +181,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 @media (max-width:600px) {
-  .c12 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
   }
@@ -232,7 +201,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c14 {
     width: calc(100% * 1);
   }
 }
@@ -296,239 +265,201 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
            € brut
         </span>
       </div>
-      <div
-        class="accordion"
-        data-accordion-component="Accordion"
-      >
-        <div>
-          <div
-            class=""
-            data-accordion-component="AccordionItem"
+      <div>
+        <div
+          aria-expanded="false"
+          class="c8"
+          role="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c9 c10"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-raa-0"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c8"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-0"
-                role="button"
-                tabindex="0"
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <span
+            class="c11"
+            font-size="hsmall"
+            font-weight="600"
+          >
+            Voir le détail du calcul
+          </span>
+        </div>
+        <div
+          class="c12"
+        >
+          <h2
+            class="c0"
+          >
+            Éléments saisis
+          </h2>
+          <ul>
+            <li>
+              anciennete (A)
+               : 
+              <strong>
+                32
+              </strong>
+            </li>
+            <li>
+              salaire ref (Sref)
+               : 
+              <strong>
+                42
+              </strong>
+            </li>
+          </ul>
+          <h2
+            class="c0"
+          >
+            Formule
+          </h2>
+          <div
+            class="c13"
+          >
+            <div>
+              <span
+                class="katex-display"
               >
-                <svg
-                  aria-hidden="true"
-                  class="c9 c10"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="katex"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <div
-                  class="c11"
-                >
-                  <p>
-                    Voir le détail du calcul
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-raa-0"
-              class="c12"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-raa-0"
-            >
-              <div
-                class="c13"
-              >
-                <p>
-                  Voir le détail du calcul
-                </p>
-              </div>
-              <div
-                class="c14"
-              >
-                <h2
-                  class="c0"
-                >
-                  Éléments saisis
-                </h2>
-                <ul>
-                  <li>
-                    anciennete (A)
-                     : 
-                    <strong>
-                      32
-                    </strong>
-                  </li>
-                  <li>
-                    salaire ref (Sref)
-                     : 
-                    <strong>
-                      42
-                    </strong>
-                  </li>
-                </ul>
-                <h2
-                  class="c0"
-                >
-                  Formule
-                </h2>
-                <div
-                  class="c15"
-                >
-                  <div>
+                  <span
+                    class="katex-mathml"
+                  >
+                    <math
+                      display="block"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                    >
+                      <semantics>
+                        <mrow>
+                          <mi>
+                            S
+                          </mi>
+                          <mi>
+                            r
+                          </mi>
+                          <mi>
+                            e
+                          </mi>
+                          <mi>
+                            f
+                          </mi>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            A
+                          </mi>
+                        </mrow>
+                        <annotation
+                          encoding="application/x-tex"
+                        >
+                          Sref \\times A
+                        </annotation>
+                      </semantics>
+                    </math>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="katex-html"
+                  >
                     <span
-                      class="katex-display"
+                      class="base"
                     >
                       <span
-                        class="katex"
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.05764em;"
                       >
-                        <span
-                          class="katex-mathml"
-                        >
-                          <math
-                            display="block"
-                            xmlns="http://www.w3.org/1998/Math/MathML"
-                          >
-                            <semantics>
-                              <mrow>
-                                <mi>
-                                  S
-                                </mi>
-                                <mi>
-                                  r
-                                </mi>
-                                <mi>
-                                  e
-                                </mi>
-                                <mi>
-                                  f
-                                </mi>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  A
-                                </mi>
-                              </mrow>
-                              <annotation
-                                encoding="application/x-tex"
-                              >
-                                Sref \\times A
-                              </annotation>
-                            </semantics>
-                          </math>
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          class="katex-html"
-                        >
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.05764em;"
-                            >
-                              S
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              re
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.68333em;vertical-align:0em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                            >
-                              A
-                            </span>
-                          </span>
-                        </span>
+                        S
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        re
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.68333em;vertical-align:0em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                      >
+                        A
                       </span>
                     </span>
-                  </div>
-                </div>
-                <h2
-                  class="c0"
-                >
-                  Sources
-                </h2>
-                <ul>
-                  <li>
-                    <a
-                      aria-label="Article L.1234-9 (nouvelle fenêtre)"
-                      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="Consultez l’article l.1234-9"
-                    >
-                      Article L.1234-9
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      aria-label="Article R1234-1 à R1234-4 (nouvelle fenêtre)"
-                      href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="Consultez l’article r1234-1 à r1234-4"
-                    >
-                      Article R1234-1 à R1234-4
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                  </span>
+                </span>
+              </span>
             </div>
           </div>
+          <h2
+            class="c0"
+          >
+            Sources
+          </h2>
+          <ul>
+            <li>
+              <a
+                aria-label="Article L.1234-9 (nouvelle fenêtre)"
+                href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Consultez l’article l.1234-9"
+              >
+                Article L.1234-9
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Article R1234-1 à R1234-4 (nouvelle fenêtre)"
+                href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Consultez l’article r1234-1 à r1234-4"
+              >
+                Article R1234-1 à R1234-4
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -542,7 +473,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         class="c5"
       >
         <div
-          class="c16"
+          class="c14"
         />
         <span
           class="c7"
@@ -551,252 +482,214 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
            € brut
         </span>
       </div>
-      <div
-        class="accordion"
-        data-accordion-component="Accordion"
-      >
-        <div>
-          <div
-            class=""
-            data-accordion-component="AccordionItem"
+      <div>
+        <div
+          aria-expanded="false"
+          class="c8"
+          role="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c9 c10"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-raa-1"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c8"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-1"
-                role="button"
-                tabindex="0"
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <span
+            class="c11"
+            font-size="hsmall"
+            font-weight="600"
+          >
+            Voir le détail du calcul
+          </span>
+        </div>
+        <div
+          class="c12"
+        >
+          <h2
+            class="c0"
+          >
+            Éléments saisis
+          </h2>
+          <ul>
+            <li>
+              foo
+               : 
+              <strong>
+                bar
+              </strong>
+            </li>
+            <li>
+              salaire de ref (Sref)
+               : 
+              <strong>
+                1337
+              </strong>
+            </li>
+          </ul>
+          <h2
+            class="c0"
+          >
+            Formule
+          </h2>
+          <div
+            class="c13"
+          >
+            <div>
+              <span
+                class="katex-display"
               >
-                <svg
-                  aria-hidden="true"
-                  class="c9 c10"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="katex"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <div
-                  class="c11"
-                >
-                  <p>
-                    Voir le détail du calcul
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-raa-1"
-              class="c12"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-raa-1"
-            >
-              <div
-                class="c13"
-              >
-                <p>
-                  Voir le détail du calcul
-                </p>
-              </div>
-              <div
-                class="c14"
-              >
-                <h2
-                  class="c0"
-                >
-                  Éléments saisis
-                </h2>
-                <ul>
-                  <li>
-                    foo
-                     : 
-                    <strong>
-                      bar
-                    </strong>
-                  </li>
-                  <li>
-                    salaire de ref (Sref)
-                     : 
-                    <strong>
-                      1337
-                    </strong>
-                  </li>
-                </ul>
-                <h2
-                  class="c0"
-                >
-                  Formule
-                </h2>
-                <div
-                  class="c15"
-                >
-                  <div>
+                  <span
+                    class="katex-mathml"
+                  >
+                    <math
+                      display="block"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                    >
+                      <semantics>
+                        <mrow>
+                          <mn>
+                            1337
+                          </mn>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            S
+                          </mi>
+                          <mi>
+                            r
+                          </mi>
+                          <mi>
+                            e
+                          </mi>
+                          <mi>
+                            f
+                          </mi>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            f
+                          </mi>
+                          <mi>
+                            o
+                          </mi>
+                          <mi>
+                            o
+                          </mi>
+                        </mrow>
+                        <annotation
+                          encoding="application/x-tex"
+                        >
+                          1337 \\times Sref \\times foo
+                        </annotation>
+                      </semantics>
+                    </math>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="katex-html"
+                  >
                     <span
-                      class="katex-display"
+                      class="base"
                     >
                       <span
-                        class="katex"
+                        class="strut"
+                        style="height:0.72777em;vertical-align:-0.08333em;"
+                      />
+                      <span
+                        class="mord"
                       >
-                        <span
-                          class="katex-mathml"
-                        >
-                          <math
-                            display="block"
-                            xmlns="http://www.w3.org/1998/Math/MathML"
-                          >
-                            <semantics>
-                              <mrow>
-                                <mn>
-                                  1337
-                                </mn>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  S
-                                </mi>
-                                <mi>
-                                  r
-                                </mi>
-                                <mi>
-                                  e
-                                </mi>
-                                <mi>
-                                  f
-                                </mi>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  f
-                                </mi>
-                                <mi>
-                                  o
-                                </mi>
-                                <mi>
-                                  o
-                                </mi>
-                              </mrow>
-                              <annotation
-                                encoding="application/x-tex"
-                              >
-                                1337 \\times Sref \\times foo
-                              </annotation>
-                            </semantics>
-                          </math>
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          class="katex-html"
-                        >
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.72777em;vertical-align:-0.08333em;"
-                            />
-                            <span
-                              class="mord"
-                            >
-                              1337
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.05764em;"
-                            >
-                              S
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              re
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              oo
-                            </span>
-                          </span>
-                        </span>
+                        1337
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.05764em;"
+                      >
+                        S
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        re
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        oo
                       </span>
                     </span>
-                  </div>
-                </div>
-              </div>
+                  </span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -810,19 +703,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
-.c13 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c10 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -844,10 +724,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   transform: rotate(90deg);
 }
 
+.c11 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c12 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
 }
 
 .c8 {
@@ -855,16 +745,17 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
   cursor: pointer;
+  margin-top: 40px;
 }
 
 .c8:hover,
@@ -872,23 +763,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
-}
-
-.c11 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c14 > *:first-child {
-  margin-top: 0;
-}
-
-.c14 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c0 {
@@ -911,7 +785,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   font-size: 1.5em;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -935,7 +809,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   border-radius: 0.6rem;
 }
 
-.c16 {
+.c14 {
   width: calc(50% * 0.5348);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -964,18 +838,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 @media (max-width:600px) {
-  .c12 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c1 {
     font-size: 1.6rem;
   }
@@ -996,7 +858,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c14 {
     width: calc(100% * 0.5348);
   }
 }
@@ -1060,239 +922,201 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
            € brut
         </span>
       </div>
-      <div
-        class="accordion"
-        data-accordion-component="Accordion"
-      >
-        <div>
-          <div
-            class=""
-            data-accordion-component="AccordionItem"
+      <div>
+        <div
+          aria-expanded="false"
+          class="c8"
+          role="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c9 c10"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-raa-2"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c8"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-2"
-                role="button"
-                tabindex="0"
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <span
+            class="c11"
+            font-size="hsmall"
+            font-weight="600"
+          >
+            Voir le détail du calcul
+          </span>
+        </div>
+        <div
+          class="c12"
+        >
+          <h2
+            class="c0"
+          >
+            Éléments saisis
+          </h2>
+          <ul>
+            <li>
+              anciennete (A)
+               : 
+              <strong>
+                32
+              </strong>
+            </li>
+            <li>
+              salaire ref (Sref)
+               : 
+              <strong>
+                42
+              </strong>
+            </li>
+          </ul>
+          <h2
+            class="c0"
+          >
+            Formule
+          </h2>
+          <div
+            class="c13"
+          >
+            <div>
+              <span
+                class="katex-display"
               >
-                <svg
-                  aria-hidden="true"
-                  class="c9 c10"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="katex"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <div
-                  class="c11"
-                >
-                  <p>
-                    Voir le détail du calcul
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-raa-2"
-              class="c12"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-raa-2"
-            >
-              <div
-                class="c13"
-              >
-                <p>
-                  Voir le détail du calcul
-                </p>
-              </div>
-              <div
-                class="c14"
-              >
-                <h2
-                  class="c0"
-                >
-                  Éléments saisis
-                </h2>
-                <ul>
-                  <li>
-                    anciennete (A)
-                     : 
-                    <strong>
-                      32
-                    </strong>
-                  </li>
-                  <li>
-                    salaire ref (Sref)
-                     : 
-                    <strong>
-                      42
-                    </strong>
-                  </li>
-                </ul>
-                <h2
-                  class="c0"
-                >
-                  Formule
-                </h2>
-                <div
-                  class="c15"
-                >
-                  <div>
+                  <span
+                    class="katex-mathml"
+                  >
+                    <math
+                      display="block"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                    >
+                      <semantics>
+                        <mrow>
+                          <mi>
+                            S
+                          </mi>
+                          <mi>
+                            r
+                          </mi>
+                          <mi>
+                            e
+                          </mi>
+                          <mi>
+                            f
+                          </mi>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            A
+                          </mi>
+                        </mrow>
+                        <annotation
+                          encoding="application/x-tex"
+                        >
+                          Sref \\times A
+                        </annotation>
+                      </semantics>
+                    </math>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="katex-html"
+                  >
                     <span
-                      class="katex-display"
+                      class="base"
                     >
                       <span
-                        class="katex"
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.05764em;"
                       >
-                        <span
-                          class="katex-mathml"
-                        >
-                          <math
-                            display="block"
-                            xmlns="http://www.w3.org/1998/Math/MathML"
-                          >
-                            <semantics>
-                              <mrow>
-                                <mi>
-                                  S
-                                </mi>
-                                <mi>
-                                  r
-                                </mi>
-                                <mi>
-                                  e
-                                </mi>
-                                <mi>
-                                  f
-                                </mi>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  A
-                                </mi>
-                              </mrow>
-                              <annotation
-                                encoding="application/x-tex"
-                              >
-                                Sref \\times A
-                              </annotation>
-                            </semantics>
-                          </math>
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          class="katex-html"
-                        >
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.05764em;"
-                            >
-                              S
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              re
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.68333em;vertical-align:0em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                            >
-                              A
-                            </span>
-                          </span>
-                        </span>
+                        S
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        re
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.68333em;vertical-align:0em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                      >
+                        A
                       </span>
                     </span>
-                  </div>
-                </div>
-                <h2
-                  class="c0"
-                >
-                  Sources
-                </h2>
-                <ul>
-                  <li>
-                    <a
-                      aria-label="Article L.1234-9 (nouvelle fenêtre)"
-                      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="Consultez l’article l.1234-9"
-                    >
-                      Article L.1234-9
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      aria-label="Article R1234-1 à R1234-4 (nouvelle fenêtre)"
-                      href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      title="Consultez l’article r1234-1 à r1234-4"
-                    >
-                      Article R1234-1 à R1234-4
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                  </span>
+                </span>
+              </span>
             </div>
           </div>
+          <h2
+            class="c0"
+          >
+            Sources
+          </h2>
+          <ul>
+            <li>
+              <a
+                aria-label="Article L.1234-9 (nouvelle fenêtre)"
+                href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Consultez l’article l.1234-9"
+              >
+                Article L.1234-9
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Article R1234-1 à R1234-4 (nouvelle fenêtre)"
+                href="https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Consultez l’article r1234-1 à r1234-4"
+              >
+                Article R1234-1 à R1234-4
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1306,7 +1130,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         class="c5"
       >
         <div
-          class="c16"
+          class="c14"
         />
         <span
           class="c7"
@@ -1315,252 +1139,214 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
            € brut
         </span>
       </div>
-      <div
-        class="accordion"
-        data-accordion-component="Accordion"
-      >
-        <div>
-          <div
-            class=""
-            data-accordion-component="AccordionItem"
+      <div>
+        <div
+          aria-expanded="false"
+          class="c8"
+          role="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c9 c10"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div
-              aria-level="3"
-              class="accordion__heading"
-              data-accordion-component="AccordionItemHeading"
-              role="heading"
-            >
-              <div
-                aria-controls="accordion__panel-raa-3"
-                aria-disabled="false"
-                aria-expanded="false"
-                class="c8"
-                data-accordion-component="AccordionItemButton"
-                id="accordion__heading-raa-3"
-                role="button"
-                tabindex="0"
+            <polyline
+              points="9 18 15 12 9 6"
+            />
+          </svg>
+          <span
+            class="c11"
+            font-size="hsmall"
+            font-weight="600"
+          >
+            Voir le détail du calcul
+          </span>
+        </div>
+        <div
+          class="c12"
+        >
+          <h2
+            class="c0"
+          >
+            Éléments saisis
+          </h2>
+          <ul>
+            <li>
+              foo
+               : 
+              <strong>
+                bar
+              </strong>
+            </li>
+            <li>
+              salaire de ref (Sref)
+               : 
+              <strong>
+                1337
+              </strong>
+            </li>
+          </ul>
+          <h2
+            class="c0"
+          >
+            Formule
+          </h2>
+          <div
+            class="c13"
+          >
+            <div>
+              <span
+                class="katex-display"
               >
-                <svg
-                  aria-hidden="true"
-                  class="c9 c10"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="katex"
                 >
-                  <polyline
-                    points="9 18 15 12 9 6"
-                  />
-                </svg>
-                <div
-                  class="c11"
-                >
-                  <p>
-                    Voir le détail du calcul
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              aria-labelledby="accordion__heading-raa-3"
-              class="c12"
-              data-accordion-component="AccordionItemPanel"
-              hidden=""
-              id="accordion__panel-raa-3"
-            >
-              <div
-                class="c13"
-              >
-                <p>
-                  Voir le détail du calcul
-                </p>
-              </div>
-              <div
-                class="c14"
-              >
-                <h2
-                  class="c0"
-                >
-                  Éléments saisis
-                </h2>
-                <ul>
-                  <li>
-                    foo
-                     : 
-                    <strong>
-                      bar
-                    </strong>
-                  </li>
-                  <li>
-                    salaire de ref (Sref)
-                     : 
-                    <strong>
-                      1337
-                    </strong>
-                  </li>
-                </ul>
-                <h2
-                  class="c0"
-                >
-                  Formule
-                </h2>
-                <div
-                  class="c15"
-                >
-                  <div>
+                  <span
+                    class="katex-mathml"
+                  >
+                    <math
+                      display="block"
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                    >
+                      <semantics>
+                        <mrow>
+                          <mn>
+                            1337
+                          </mn>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            S
+                          </mi>
+                          <mi>
+                            r
+                          </mi>
+                          <mi>
+                            e
+                          </mi>
+                          <mi>
+                            f
+                          </mi>
+                          <mo>
+                            ×
+                          </mo>
+                          <mi>
+                            f
+                          </mi>
+                          <mi>
+                            o
+                          </mi>
+                          <mi>
+                            o
+                          </mi>
+                        </mrow>
+                        <annotation
+                          encoding="application/x-tex"
+                        >
+                          1337 \\times Sref \\times foo
+                        </annotation>
+                      </semantics>
+                    </math>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="katex-html"
+                  >
                     <span
-                      class="katex-display"
+                      class="base"
                     >
                       <span
-                        class="katex"
+                        class="strut"
+                        style="height:0.72777em;vertical-align:-0.08333em;"
+                      />
+                      <span
+                        class="mord"
                       >
-                        <span
-                          class="katex-mathml"
-                        >
-                          <math
-                            display="block"
-                            xmlns="http://www.w3.org/1998/Math/MathML"
-                          >
-                            <semantics>
-                              <mrow>
-                                <mn>
-                                  1337
-                                </mn>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  S
-                                </mi>
-                                <mi>
-                                  r
-                                </mi>
-                                <mi>
-                                  e
-                                </mi>
-                                <mi>
-                                  f
-                                </mi>
-                                <mo>
-                                  ×
-                                </mo>
-                                <mi>
-                                  f
-                                </mi>
-                                <mi>
-                                  o
-                                </mi>
-                                <mi>
-                                  o
-                                </mi>
-                              </mrow>
-                              <annotation
-                                encoding="application/x-tex"
-                              >
-                                1337 \\times Sref \\times foo
-                              </annotation>
-                            </semantics>
-                          </math>
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          class="katex-html"
-                        >
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.72777em;vertical-align:-0.08333em;"
-                            />
-                            <span
-                              class="mord"
-                            >
-                              1337
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.05764em;"
-                            >
-                              S
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              re
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                            <span
-                              class="mbin"
-                            >
-                              ×
-                            </span>
-                            <span
-                              class="mspace"
-                              style="margin-right:0.2222222222222222em;"
-                            />
-                          </span>
-                          <span
-                            class="base"
-                          >
-                            <span
-                              class="strut"
-                              style="height:0.8888799999999999em;vertical-align:-0.19444em;"
-                            />
-                            <span
-                              class="mord mathnormal"
-                              style="margin-right:0.10764em;"
-                            >
-                              f
-                            </span>
-                            <span
-                              class="mord mathnormal"
-                            >
-                              oo
-                            </span>
-                          </span>
-                        </span>
+                        1337
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.05764em;"
+                      >
+                        S
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        re
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                      <span
+                        class="mbin"
+                      >
+                        ×
+                      </span>
+                      <span
+                        class="mspace"
+                        style="margin-right:0.2222222222222222em;"
+                      />
+                    </span>
+                    <span
+                      class="base"
+                    >
+                      <span
+                        class="strut"
+                        style="height:0.8888799999999999em;vertical-align:-0.19444em;"
+                      />
+                      <span
+                        class="mord mathnormal"
+                        style="margin-right:0.10764em;"
+                      >
+                        f
+                      </span>
+                      <span
+                        class="mord mathnormal"
+                      >
+                        oo
                       </span>
                     </span>
-                  </div>
-                </div>
-              </div>
+                  </span>
+                </span>
+              </span>
             </div>
           </div>
         </div>
