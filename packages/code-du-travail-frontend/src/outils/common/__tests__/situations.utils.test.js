@@ -129,6 +129,9 @@ describe("situations", () => {
     it("should return true if there no matching cc", () => {
       expect(isNotYetProcessed(data, "toto")).toBe(true);
     });
+    it("should return true if there matching cc but only with empty criteria", () => {
+      expect(isNotYetProcessed(data, "30")).toBe(true);
+    });
     it("should return false if there matching cc", () => {
       expect(isNotYetProcessed(data, "20")).toBe(false);
     });
