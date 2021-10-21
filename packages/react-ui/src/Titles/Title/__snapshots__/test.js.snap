@@ -59,7 +59,7 @@ exports[`<Title /> renders a H2 title 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Lorem Ipsum
@@ -127,7 +127,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Lorem Ipsum

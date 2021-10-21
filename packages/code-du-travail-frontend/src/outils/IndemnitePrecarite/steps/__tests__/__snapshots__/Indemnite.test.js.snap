@@ -230,7 +230,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -268,7 +267,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -916,7 +917,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -954,7 +954,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -1594,7 +1596,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -1632,7 +1633,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -2283,7 +2286,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -2321,7 +2323,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>
@@ -2961,7 +2965,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -2999,7 +3002,9 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>

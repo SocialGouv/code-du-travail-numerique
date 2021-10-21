@@ -879,7 +879,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Questions-réponses fréquentes
@@ -898,7 +898,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -966,10 +965,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class=""
                   data-accordion-component="AccordionItem"
-                  index="0"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1100,10 +1098,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="1"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1299,10 +1296,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="2"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1472,7 +1468,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="1"
       >
         <div
           aria-level="3"
@@ -1540,10 +1535,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class=""
                   data-accordion-component="AccordionItem"
-                  index="0"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1721,10 +1715,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="1"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1861,10 +1854,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="2"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2011,10 +2003,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="3"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2161,10 +2152,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="4"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2285,10 +2275,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="5"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2453,7 +2442,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="2"
       >
         <div
           aria-level="3"
@@ -2521,10 +2509,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class=""
                   data-accordion-component="AccordionItem"
-                  index="0"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2653,10 +2640,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="1"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2855,10 +2841,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="2"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3050,10 +3035,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="3"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3174,10 +3158,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="4"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3268,10 +3251,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="5"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3395,7 +3377,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="3"
       >
         <div
           aria-level="3"
@@ -3463,10 +3444,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class=""
                   data-accordion-component="AccordionItem"
-                  index="0"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3548,10 +3528,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="1"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3696,10 +3675,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="2"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3849,7 +3827,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="4"
       >
         <div
           aria-level="3"
@@ -3917,10 +3894,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class=""
                   data-accordion-component="AccordionItem"
-                  index="0"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -4246,10 +4222,9 @@ exports[`<Convention /> renders 1`] = `
                             <div
                               class=""
                               data-accordion-component="AccordionItem"
-                              index="0"
                             >
                               <div
-                                aria-level="3"
+                                aria-level="2"
                                 class="accordion__heading"
                                 data-accordion-component="AccordionItemHeading"
                                 role="heading"
@@ -4284,7 +4259,9 @@ exports[`<Convention /> renders 1`] = `
                                   <div
                                     class="c24"
                                   >
-                                    Références juridiques concernées :
+                                    <div>
+                                      Références juridiques concernées :
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -4466,10 +4443,9 @@ exports[`<Convention /> renders 1`] = `
                 <div
                   class="c22"
                   data-accordion-component="AccordionItem"
-                  index="1"
                 >
                   <div
-                    aria-level="3"
+                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -4627,7 +4603,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Articles de la convention collective
@@ -4735,7 +4711,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -4933,7 +4908,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="1"
       >
         <div
           aria-level="3"
@@ -5371,7 +5345,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="c22"
         data-accordion-component="AccordionItem"
-        index="2"
       >
         <div
           aria-level="3"
@@ -5662,7 +5635,7 @@ exports[`<Convention /> renders 1`] = `
     <h2
       class="c1"
     >
-      <div
+      <span
         class="c2"
       />
       Recherche dans la convention collective

@@ -753,7 +753,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c108 {
+.c107 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -798,9 +798,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c108:focus,
-.c108:hover,
-.c108:active {
+.c107:focus,
+.c107:hover,
+.c107:active {
   color: #f66663;
 }
 
@@ -1284,17 +1284,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c106 {
-  margin: 0.4rem 0;
-}
-
-.c107 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c109 {
+.c108 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1316,11 +1313,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c110 {
+.c109 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c111 {
+.c110 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1867,13 +1864,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c108 {
+  .c107 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c108 {
+  .c107 {
     display: none;
   }
 }
@@ -2104,7 +2101,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c111 {
+  .c110 {
     display: none;
   }
 }
@@ -2266,7 +2263,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -2324,7 +2320,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2417,7 +2412,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     <main
       class="c24"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <div
@@ -2432,7 +2426,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h1
               class="c27"
             >
-              <div
+              <span
                 class="c28"
               />
               Le droit du travail
@@ -2461,7 +2455,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <h2
                   class="c34"
                 >
-                  <div
+                  <span
                     class="c35"
                   />
                   Qu’est-ce que le droit du travail ?
@@ -2535,7 +2529,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <h2
                 class="c46"
               >
-                <div
+                <span
                   class="c35"
                 />
                 Quels sont les textes à l’origine du droit du travail ?
@@ -2688,9 +2682,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Les textes internationaux
-                          </h3>
+                          Les textes internationaux
                         </div>
                         <div
                           class="c59"
@@ -2842,9 +2834,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Les textes européens
-                          </h3>
+                          Les textes européens
                         </div>
                         <div
                           class="c59"
@@ -3041,9 +3031,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            La Constitution française
-                          </h3>
+                          La Constitution française
                         </div>
                         <div
                           class="c59"
@@ -3199,9 +3187,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Lois, ordonnances, décrets et arrêtés
-                          </h3>
+                          Lois, ordonnances, décrets et arrêtés
                         </div>
                         <div
                           class="c59"
@@ -3324,9 +3310,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Les conventions et accords collectifs
-                          </h3>
+                          Les conventions et accords collectifs
                         </div>
                         <div
                           class="c59"
@@ -3446,9 +3430,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Les usages et les engagements unilatéraux
-                          </h3>
+                          Les usages et les engagements unilatéraux
                         </div>
                         <div
                           class="c59"
@@ -3549,9 +3531,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Le règlement intérieur de l’entreprise
-                          </h3>
+                          Le règlement intérieur de l’entreprise
                         </div>
                         <div
                           class="c59"
@@ -3649,9 +3629,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h3>
-                            Le contrat de travail
-                          </h3>
+                          Le contrat de travail
                         </div>
                         <div
                           class="c59"
@@ -3695,7 +3673,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <h2
               class="c46"
             >
-              <div
+              <span
                 class="c35"
               />
               Existe-t-il une hiérarchie entre les textes ?
@@ -3855,9 +3833,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Les textes internationaux et européens
-                    </h3>
+                    Les textes internationaux et européens
                   </div>
                   <div
                     class="c59"
@@ -3965,9 +3941,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      La Constitution
-                    </h3>
+                    La Constitution
                   </div>
                   <div
                     class="c59"
@@ -4085,9 +4059,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Lois, ordonnances et décrets (Code du travail)
-                    </h3>
+                    Lois, ordonnances et décrets (Code du travail)
                   </div>
                   <div
                     class="c59"
@@ -4108,10 +4080,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class=""
                           data-accordion-component="AccordionItem"
-                          index="0"
                         >
                           <div
-                            aria-level="3"
+                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
@@ -4161,9 +4132,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c11"
                             >
-                              <h5>
-                                Les conventions et accords collectifs doivent respecter le Code du travail
-                              </h5>
+                              Les conventions et accords collectifs doivent respecter le Code du travail
                             </div>
                             <div
                               class="c59"
@@ -4177,10 +4146,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="1"
                         >
                           <div
-                            aria-level="3"
+                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
@@ -4230,9 +4198,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c11"
                             >
-                              <h5>
-                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
-                              </h5>
+                              Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
                             </div>
                             <div
                               class="c59"
@@ -4256,10 +4222,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c84"
                           data-accordion-component="AccordionItem"
-                          index="2"
                         >
                           <div
-                            aria-level="3"
+                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
@@ -4309,9 +4274,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c11"
                             >
-                              <h5>
-                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
-                              </h5>
+                              En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
                             </div>
                             <div
                               class="c59"
@@ -4492,9 +4455,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Les conventions et accords collectifs
-                    </h3>
+                    Les conventions et accords collectifs
                   </div>
                   <div
                     class="c59"
@@ -4717,9 +4678,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Les usages et les engagements unilatéraux
-                    </h3>
+                    Les usages et les engagements unilatéraux
                   </div>
                   <div
                     class="c59"
@@ -4819,9 +4778,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Le règlement intérieur de l’entreprise
-                    </h3>
+                    Le règlement intérieur de l’entreprise
                   </div>
                   <div
                     class="c59"
@@ -4931,9 +4888,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c11"
                   >
-                    <h3>
-                      Le contrat de travail
-                    </h3>
+                    Le contrat de travail
                   </div>
                   <div
                     class="c59"
@@ -4952,7 +4907,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
     >
       <footer
         class="c92"
-        role="contentinfo"
       >
         <div
           class="c25 c93"
@@ -4966,7 +4920,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 class="c95"
               >
-                <div
+                <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
@@ -5012,81 +4966,65 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/stats"
                   >
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
-                    class="c107"
+                    class="c106"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -5105,21 +5043,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <button
-                    class="c14 c108"
+                    class="c14 c107"
                   >
                     Contact
                   </button>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5127,12 +5061,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     Contribuer sur Github
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5153,12 +5085,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <ul
                 class="c104 c105"
               >
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5166,12 +5096,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     La Direction Générale du Travail
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5179,12 +5107,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     La fabrique des Ministères sociaux
                   </a>
                 </li>
-                <li
-                  class="c106"
-                >
+                <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c107"
+                    class="c106"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5197,12 +5123,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c109"
+          class="c108"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5211,7 +5137,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5219,7 +5145,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5228,7 +5154,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5236,7 +5162,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5245,7 +5171,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5253,7 +5179,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5262,7 +5188,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5270,7 +5196,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5279,7 +5205,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c110"
             >
               |
             </span>
@@ -5287,7 +5213,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c107 c110"
+              class="c106 c109"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

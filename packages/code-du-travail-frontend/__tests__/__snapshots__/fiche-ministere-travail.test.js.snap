@@ -229,7 +229,7 @@ exports[`<FicheMT /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c93 {
+.c92 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -274,9 +274,9 @@ exports[`<FicheMT /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c93:focus,
-.c93:hover,
-.c93:active {
+.c92:focus,
+.c92:hover,
+.c92:active {
   color: #f66663;
 }
 
@@ -542,7 +542,7 @@ exports[`<FicheMT /> should render 1`] = `
 .c70 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -681,7 +681,6 @@ exports[`<FicheMT /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -698,6 +697,14 @@ exports[`<FicheMT /> should render 1`] = `
   color: #f66663;
 }
 
+.c39.spacing-left {
+  margin-left: 1rem;
+}
+
+.c39.spacing-top {
+  margin-top: 1rem;
+}
+
 .c42 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -708,7 +715,6 @@ exports[`<FicheMT /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -725,6 +731,14 @@ exports[`<FicheMT /> should render 1`] = `
 .c42:hover,
 .c42:focus {
   color: #f66663;
+}
+
+.c42.spacing-left {
+  margin-left: 1rem;
+}
+
+.c42.spacing-top {
+  margin-top: 1rem;
 }
 
 .c40 {
@@ -1010,17 +1024,14 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 .c91 {
-  margin: 0.4rem 0;
-}
-
-.c92 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c94 {
+.c93 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1042,11 +1053,11 @@ exports[`<FicheMT /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c95 {
+.c94 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c96 {
+.c95 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1391,13 +1402,13 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c92 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c93 {
+  .c92 {
     display: none;
   }
 }
@@ -1755,7 +1766,7 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c96 {
+  .c95 {
     display: none;
   }
 }
@@ -1911,7 +1922,6 @@ exports[`<FicheMT /> should render 1`] = `
     />
     <header
       class="c2"
-      role="banner"
     >
       <div
         class="c3"
@@ -1969,7 +1979,6 @@ exports[`<FicheMT /> should render 1`] = `
             >
               <label
                 for="floating-search"
-                id="search"
               >
                 Rechercher
               </label>
@@ -2062,7 +2071,6 @@ exports[`<FicheMT /> should render 1`] = `
     <main
       class="c23"
       id="content"
-      role="main"
       tabindex="-1"
     >
       <nav
@@ -2148,12 +2156,11 @@ exports[`<FicheMT /> should render 1`] = `
                     class="c38"
                   >
                     <button
-                      class="c39 no-after"
-                      spacing="left"
+                      class="c39 no-after spacing-left"
                       title="Partager sur Facebook"
                       type="button"
                     >
-                      <div
+                      <span
                         class="c40"
                       >
                         <svg
@@ -2167,15 +2174,14 @@ exports[`<FicheMT /> should render 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                      </div>
+                      </span>
                     </button>
                     <a
-                      class="c42"
+                      class="c42 spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                      spacing="left"
                       title="Envoyer par email"
                     >
-                      <div
+                      <span
                         class="c40"
                       >
                         <svg
@@ -2193,14 +2199,13 @@ exports[`<FicheMT /> should render 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                      </div>
+                      </span>
                     </a>
                     <button
-                      class="c39"
-                      spacing="left"
+                      class="c39 spacing-left"
                       title="Partager sur LinkedIn"
                     >
-                      <div
+                      <span
                         class="c40"
                       >
                         <svg
@@ -2214,17 +2219,16 @@ exports[`<FicheMT /> should render 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                      </div>
+                      </span>
                     </button>
                     <div
                       class="c43"
                     >
                       <button
-                        class="c39"
-                        spacing="left"
+                        class="c39 spacing-left"
                         title="Plus d’options"
                       >
-                        <div
+                        <span
                           class="c40"
                         >
                           <svg
@@ -2248,7 +2252,7 @@ exports[`<FicheMT /> should render 1`] = `
                               stroke-width="1.5"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                     </div>
                   </div>
@@ -2264,7 +2268,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <h1
                     class="c48"
                   >
-                    <div
+                    <span
                       class="c49"
                     />
                     Fiche MT test
@@ -2322,10 +2326,9 @@ exports[`<FicheMT /> should render 1`] = `
                     <div
                       class=""
                       data-accordion-component="AccordionItem"
-                      index="0"
                     >
                       <div
-                        aria-level="3"
+                        aria-level="2"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
                         role="heading"
@@ -2375,9 +2378,7 @@ exports[`<FicheMT /> should render 1`] = `
                         <div
                           class="c11"
                         >
-                          <h2>
-                            1) Visite d’information et de prévention : pour qui ?
-                          </h2>
+                          1) Visite d’information et de prévention : pour qui ?
                         </div>
                         <div
                           class="c61"
@@ -2449,12 +2450,11 @@ exports[`<FicheMT /> should render 1`] = `
               class="c38"
             >
               <button
-                class="c39 no-after"
-                spacing="left"
+                class="c39 no-after spacing-left"
                 title="Partager sur Facebook"
                 type="button"
               >
-                <div
+                <span
                   class="c40"
                 >
                   <svg
@@ -2468,15 +2468,14 @@ exports[`<FicheMT /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </button>
               <a
-                class="c42"
+                class="c42 spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                spacing="left"
                 title="Envoyer par email"
               >
-                <div
+                <span
                   class="c40"
                 >
                   <svg
@@ -2494,14 +2493,13 @@ exports[`<FicheMT /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </a>
               <button
-                class="c39"
-                spacing="left"
+                class="c39 spacing-left"
                 title="Partager sur LinkedIn"
               >
-                <div
+                <span
                   class="c40"
                 >
                   <svg
@@ -2515,17 +2513,16 @@ exports[`<FicheMT /> should render 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </span>
               </button>
               <div
                 class="c43"
               >
                 <button
-                  class="c39"
-                  spacing="left"
+                  class="c39 spacing-left"
                   title="Plus d’options"
                 >
-                  <div
+                  <span
                     class="c40"
                   >
                     <svg
@@ -2549,7 +2546,7 @@ exports[`<FicheMT /> should render 1`] = `
                         stroke-width="1.5"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
               </div>
             </div>
@@ -2569,7 +2566,7 @@ exports[`<FicheMT /> should render 1`] = `
                   <strong
                     class="c68 c69"
                   >
-                    <div
+                    <span
                       class="c70"
                     />
                     <span>
@@ -2602,7 +2599,6 @@ exports[`<FicheMT /> should render 1`] = `
     >
       <footer
         class="c75"
-        role="contentinfo"
       >
         <div
           class="c64 c76"
@@ -2616,7 +2612,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 class="c78"
               >
-                <div
+                <span
                   class="c79"
                 />
                 Besoin de plus d’informations ?
@@ -2662,81 +2658,65 @@ exports[`<FicheMT /> should render 1`] = `
               <ul
                 class="c89 c90"
               >
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/glossaire"
                   >
                     Glossaire
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/a-propos"
                   >
                     À propos
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/mentions-legales"
                   >
                     Mentions légales
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/stats"
                   >
                     Statistiques d’utilisation
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
-                    class="c92"
+                    class="c91"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -2755,21 +2735,17 @@ exports[`<FicheMT /> should render 1`] = `
               <ul
                 class="c89 c90"
               >
-                <li
-                  class="c91"
-                >
+                <li>
                   <button
-                    class="c93"
+                    class="c92"
                   >
                     Contact
                   </button>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c92"
+                    class="c91"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2777,12 +2753,10 @@ exports[`<FicheMT /> should render 1`] = `
                     Contribuer sur Github
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c92"
+                    class="c91"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2803,12 +2777,10 @@ exports[`<FicheMT /> should render 1`] = `
               <ul
                 class="c89 c90"
               >
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c92"
+                    class="c91"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2816,12 +2788,10 @@ exports[`<FicheMT /> should render 1`] = `
                     La Direction Générale du Travail
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c92"
+                    class="c91"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2829,12 +2799,10 @@ exports[`<FicheMT /> should render 1`] = `
                     La fabrique des Ministères sociaux
                   </a>
                 </li>
-                <li
-                  class="c91"
-                >
+                <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c92"
+                    class="c91"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2847,12 +2815,12 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c94"
+          class="c93"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2861,7 +2829,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c95"
             >
               |
             </span>
@@ -2869,7 +2837,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2878,7 +2846,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c95"
             >
               |
             </span>
@@ -2886,7 +2854,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2895,7 +2863,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c95"
             >
               |
             </span>
@@ -2903,7 +2871,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2912,7 +2880,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c95"
             >
               |
             </span>
@@ -2920,7 +2888,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2929,7 +2897,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c95"
             >
               |
             </span>
@@ -2937,7 +2905,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c91 c94"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

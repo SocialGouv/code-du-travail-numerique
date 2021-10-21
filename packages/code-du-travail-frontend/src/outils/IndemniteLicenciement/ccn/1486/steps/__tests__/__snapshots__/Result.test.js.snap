@@ -304,7 +304,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -342,7 +341,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -945,7 +946,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -983,7 +983,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -1505,7 +1507,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -1543,7 +1544,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -2146,7 +2149,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -2184,7 +2186,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>

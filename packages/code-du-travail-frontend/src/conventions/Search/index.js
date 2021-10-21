@@ -41,63 +41,64 @@ const Search = ({ onSelectConvention }) => {
 
   return (
     <>
-      <Label htmlFor="convention-search">
-        Renseignez le nom de votre convention collective, le nom de votre
-        entreprise ou son SIRET.
-      </Label>
-      <BlockInput
-        role="search"
-        placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-        value={query}
-        type="search"
-        name="q"
-        id="convention-search"
-        onChange={onInputChange}
-      />
-      {query && (
-        <ResultsContainer>
-          {status === "loading" && (
-            <div>
-              <Spinner /> Recherche des convention collectives...
-            </div>
-          )}
-          {status === "error" && (
-            <div>Le service de recherche est indisponible.</div>
-          )}
-          {status === "empty" && <div>Aucun résultat n’a été trouvé.</div>}
-          {status === "success" && (
-            <>
-              {conventions.length !== 0 && (
-                <ResultList
-                  title="CONVENTIONS COLLECTIVES"
-                  query={query}
-                  items={conventions.map((convention, index) => (
-                    <ConventionLink
-                      convention={convention}
-                      isFirst={index === 0}
-                      key={convention.slug}
-                      onClick={onSelectConvention}
-                    />
-                  ))}
-                />
-              )}
-              {entreprises.length !== 0 && (
-                <ResultList
-                  title="ENTREPRISES"
-                  query={query}
-                  items={entreprises.map((entreprise) => (
-                    <CompanyTile
-                      {...entreprise}
-                      key={entreprise.siret}
-                      onClick={onSelectConvention}
-                    />
-                  ))}
-                />
-              )}
-            </>
-          )}
-        </ResultsContainer>
-      )}
+      <form role="search">
+        <Label htmlFor="convention-search">
+          Renseignez le nom de votre convention collective, le nom de votre
+          entreprise ou son SIRET.
+        </Label>
+        <BlockInput
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          value={query}
+          type="search"
+          name="q"
+          id="convention-search"
+          onChange={onInputChange}
+        />
+        {query && (
+          <ResultsContainer>
+            {status === "loading" && (
+              <div>
+                <Spinner /> Recherche des convention collectives...
+              </div>
+            )}
+            {status === "error" && (
+              <div>Le service de recherche est indisponible.</div>
+            )}
+            {status === "empty" && <div>Aucun résultat n’a été trouvé.</div>}
+            {status === "success" && (
+              <>
+                {conventions.length !== 0 && (
+                  <ResultList
+                    title="CONVENTIONS COLLECTIVES"
+                    query={query}
+                    items={conventions.map((convention, index) => (
+                      <ConventionLink
+                        convention={convention}
+                        isFirst={index === 0}
+                        key={convention.slug}
+                        onClick={onSelectConvention}
+                      />
+                    ))}
+                  />
+                )}
+                {entreprises.length !== 0 && (
+                  <ResultList
+                    title="ENTREPRISES"
+                    query={query}
+                    items={entreprises.map((entreprise) => (
+                      <CompanyTile
+                        {...entreprise}
+                        key={entreprise.siret}
+                        onClick={onSelectConvention}
+                      />
+                    ))}
+                  />
+                )}
+              </>
+            )}
+          </ResultsContainer>
+        )}
+      </form>
       <P>
         Vous ne connaissez pas ou ne trouvez pas votre convention
         collective&nbsp;?
@@ -144,7 +145,7 @@ const Span = styled.span`
 `;
 
 const HelpButton = styled(Button)`
-  color: ${theme.colors.secondary};
+  color: ${({ theme }) => theme.secondary};
   text-decoration: underline;
 `;
 

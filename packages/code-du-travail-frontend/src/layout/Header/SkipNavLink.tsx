@@ -2,13 +2,13 @@ import { FlatList, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-export function SkipNavLink() {
+const SkipNavLink = (): JSX.Element => {
   return (
     <SkipNav as="div">
-      <nav aria-label="liens d'évitements" role="navigation">
+      <nav aria-label="liens d'évitements">
         <Ul>
           <Li>
-            <SkipLink type="inline" as="a" href="#navigation">
+            <SkipLink as="a" href="#navigation">
               Allez à la navigation
             </SkipLink>
           </Li>
@@ -22,7 +22,7 @@ export function SkipNavLink() {
       </nav>
     </SkipNav>
   );
-}
+};
 
 const SkipNav = styled(FlatList)`
   top: 0;
@@ -48,9 +48,12 @@ const SkipLink = styled.a`
   display: inline-block;
   left: -7000px;
   position: absolute;
+
   :focus {
     color: ${({ theme }) => theme.white};
     left: 0;
     position: relative;
   }
 `;
+
+export default SkipNavLink;

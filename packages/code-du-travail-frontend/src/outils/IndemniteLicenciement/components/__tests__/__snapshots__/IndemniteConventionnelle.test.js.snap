@@ -304,7 +304,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -342,7 +341,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -558,7 +559,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -596,7 +596,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -1066,7 +1068,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -1104,7 +1105,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
@@ -1320,7 +1323,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           <div
             class=""
             data-accordion-component="AccordionItem"
-            index="0"
           >
             <div
               aria-level="3"
@@ -1358,7 +1360,9 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
                 <div
                   class="c11"
                 >
-                  Voir le détail du calcul
+                  <p>
+                    Voir le détail du calcul
+                  </p>
                 </div>
               </div>
             </div>
