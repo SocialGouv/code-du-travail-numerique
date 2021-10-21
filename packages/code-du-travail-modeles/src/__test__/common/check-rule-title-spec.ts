@@ -1,4 +1,4 @@
-import "./matchers/PubliMatcher";
+import "../matchers/PubliMatcher";
 
 import Engine from "publicodes";
 
