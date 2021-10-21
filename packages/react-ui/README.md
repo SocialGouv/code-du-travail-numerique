@@ -1,5 +1,7 @@
 # CDTN REACT UI (@socialgouv/cdtn-ui)
 
+Build is automatically triggered by a github action everytime a changed is pushed to the master branch. Please checkout [here](https://socialgouv.github.io/code-du-travail-numerique/) the changes!
+
 ## Using components
 
 This one is pretty straightforward
