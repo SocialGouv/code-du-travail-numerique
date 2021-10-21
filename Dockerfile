@@ -44,4 +44,3 @@ COPY ./packages /app/packages
 
 RUN yarn build
 
-CMD [ "yarn", "workspace", "@cdt/frontend", "start" ]
