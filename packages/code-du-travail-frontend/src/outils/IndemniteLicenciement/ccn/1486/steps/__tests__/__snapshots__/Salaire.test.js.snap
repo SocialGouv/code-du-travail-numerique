@@ -518,6 +518,13 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 `;
 
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
+.c5 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c9 {
   position: relative;
   overflow: hidden;
@@ -587,13 +594,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 .c11 tfoot {
   vertical-align: top;
-}
-
-.c5 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 .c0 {

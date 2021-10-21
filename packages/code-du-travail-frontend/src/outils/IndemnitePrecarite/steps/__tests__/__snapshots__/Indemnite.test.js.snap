@@ -1,24 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -38,6 +20,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c6 {
@@ -619,24 +619,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -656,6 +638,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c6 {
@@ -1229,24 +1229,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1266,6 +1248,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c6 {
@@ -1850,24 +1850,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1887,6 +1869,24 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c6 {
@@ -2460,24 +2460,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -2497,6 +2479,24 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c6 {
