@@ -1484,11 +1484,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Contenus référencés
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1502,11 +1502,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Visites
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1520,11 +1520,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Recherches
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1538,11 +1538,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Consultations
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >

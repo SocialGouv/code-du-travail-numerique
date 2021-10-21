@@ -34,7 +34,7 @@ exports[`<Home /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c45 {
+.c46 {
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@ exports[`<Home /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c45:before {
+.c46:before {
   position: absolute;
   display: block;
   width: 0;
@@ -56,7 +56,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c46 {
+.c47 {
   position: absolute;
   top: 0;
   right: 0;
@@ -491,17 +491,6 @@ exports[`<Home /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c50 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c74 {
   position: relative;
   display: block;
@@ -564,7 +553,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c48 {
+.c49 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -574,13 +563,13 @@ exports[`<Home /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c47 {
+.c48 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c49 {
+.c50 {
   padding-right: 1rem;
 }
 
@@ -651,6 +640,12 @@ exports[`<Home /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
+}
+
+.c45 h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c54 {
@@ -1261,12 +1256,6 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c74 {
     font-size: 1.6rem;
   }
@@ -1314,6 +1303,12 @@ exports[`<Home /> should render 1`] = `
 @media (max-width:600px) {
   .c64 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c45 h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -2474,14 +2469,14 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/convention-collective"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
@@ -2504,10 +2499,10 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
@@ -2531,11 +2526,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Trouver sa convention collective
                         </h3>
@@ -2576,14 +2571,14 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/preavis-demission"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
@@ -2606,10 +2601,10 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
@@ -2627,11 +2622,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Préavis de démission
                         </h3>
@@ -2672,14 +2667,14 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/simulateur-embauche"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
@@ -2702,10 +2697,10 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
@@ -2731,11 +2726,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Salaire brut/net
                         </h3>
@@ -2776,14 +2771,14 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/modeles-de-courriers"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
@@ -2806,10 +2801,10 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
@@ -2829,14 +2824,14 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
-                        <h3
-                          class="c50 c51"
+                        <h2
+                          class="c51"
                         >
                           Modèles de documents
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div

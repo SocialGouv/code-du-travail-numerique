@@ -46,6 +46,7 @@ export default function IntegrationPage() {
               module à votre site :
             </p>
             <Accordion
+              titleLevel={2}
               preExpanded={["id-js"]}
               items={[
                 {
