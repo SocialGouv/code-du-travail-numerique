@@ -1,10 +1,11 @@
 import Engine from "publicodes";
+
 import { mergeModels } from "../internal/merger";
+import { getReferences } from "../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "./common/LegalReferences";
-import { getReferences } from "../utils/GetReferences";
 
 const engine = new Engine(mergeModels());
 describe("Prévis de retraite pour la CC 1979", () => {
@@ -45,11 +46,11 @@ describe("Prévis de retraite pour la CC 1979", () => {
         expectedReferences,
       }) => {
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1979'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1979'",
+          "contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle": `'${category}'`,
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -87,11 +88,11 @@ describe("Prévis de retraite pour la CC 1979", () => {
         expectedReferences,
       }) => {
         engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1979'",
           "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1979'",
+          "contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "contrat salarié . convention collective . hotels cafes restaurants . catégorie professionnelle": `'${category}'`,
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");
