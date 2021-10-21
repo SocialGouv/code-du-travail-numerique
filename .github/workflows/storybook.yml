@@ -1,4 +1,5 @@
 name: Storybook
+
 on:
   push:
     branches: [master]
@@ -8,9 +9,24 @@ jobs:
     name: Deployment storybook on gh-pages
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
       - name: Deploy
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run storybook:deploy -- -u "github-actions-bot <support+actions@github.com>"
+          yarn storybook:deploy:action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
