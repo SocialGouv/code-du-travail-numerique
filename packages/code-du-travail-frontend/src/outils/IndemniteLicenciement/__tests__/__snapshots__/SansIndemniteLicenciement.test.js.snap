@@ -28,6 +28,47 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   transform: rotate(90deg);
 }
 
+.c10 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c11 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7[aria-expanded="true"] {
+  color: #3e486e;
+}
+
 .c3 {
   position: absolute;
   background-color: #7994d4;
@@ -39,13 +80,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c10 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
 }
 
 .c1 {
@@ -92,40 +126,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c11 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:focus-within,
-.c7[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {

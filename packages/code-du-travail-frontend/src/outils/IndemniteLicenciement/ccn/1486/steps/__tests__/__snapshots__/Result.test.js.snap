@@ -29,6 +29,40 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-weight: 600;
 }
 
+.c12 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c8:hover,
+.c8:focus,
+.c8:focus-within,
+.c8[aria-expanded="true"] {
+  color: #3e486e;
+}
+
 .c15 {
   position: relative;
   display: -webkit-inline-box;
@@ -89,40 +123,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c12 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c8:hover,
-.c8:focus,
-.c8:focus-within,
-.c8[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 .c5 {
@@ -1170,33 +1170,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
   font-weight: 600;
 }
 
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c12 {
   overflow: auto;
   max-height: 0px;
@@ -1229,6 +1202,33 @@ exports[`<Result /> renders legal indemnite 1`] = `
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c2 {
+  font-size: 1.5em;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c5 {

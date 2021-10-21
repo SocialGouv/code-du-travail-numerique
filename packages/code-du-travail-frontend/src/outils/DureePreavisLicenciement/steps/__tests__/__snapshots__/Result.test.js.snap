@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render with O duration 1`] = `
+.c8 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -22,22 +40,45 @@ exports[`<StepResult /> should render with O duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c7 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
 }
 
 .c10 {
@@ -76,13 +117,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
   flex: 1 1 auto;
 }
 
-.c6 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .c9 {
   margin-top: 3.2rem;
 }
@@ -112,40 +146,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c7 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {
@@ -362,6 +362,24 @@ exports[`<StepResult /> should render with O duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
+.c8 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -383,22 +401,45 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   transform: rotate(90deg);
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c7 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
 }
 
 .c10 {
@@ -437,13 +478,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   flex: 1 1 auto;
 }
 
-.c6 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .c9 {
   margin-top: 3.2rem;
 }
@@ -473,40 +507,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c7 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {
@@ -683,6 +683,24 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 `;
 
 exports[`<StepResult /> should render with only CC duration 1`] = `
+.c8 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -704,22 +722,45 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c7 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
 }
 
 .c10 {
@@ -758,13 +799,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   flex: 1 1 auto;
 }
 
-.c6 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .c9 {
   margin-top: 3.2rem;
 }
@@ -794,40 +828,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c7 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {
@@ -1003,6 +1003,24 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
+.c8 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1024,22 +1042,45 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c7 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
 }
 
 .c10 {
@@ -1078,13 +1119,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   flex: 1 1 auto;
 }
 
-.c6 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .c9 {
   margin-top: 3.2rem;
 }
@@ -1114,40 +1148,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c7 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {
@@ -1312,6 +1312,24 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
+.c8 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1333,22 +1351,45 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c7 {
+  overflow: auto;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.6rem;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
 }
 
 .c10 {
@@ -1387,13 +1428,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   flex: 1 1 auto;
 }
 
-.c6 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .c9 {
   margin-top: 3.2rem;
 }
@@ -1423,40 +1457,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c2 {
   font-size: 1.5em;
-}
-
-.c7 {
-  overflow: auto;
-  max-height: 0px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
 }
 
 @media (max-width:600px) {

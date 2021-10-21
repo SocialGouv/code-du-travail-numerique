@@ -74,33 +74,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   font-weight: 600;
 }
 
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c12 {
   overflow: auto;
   max-height: 0px;
@@ -133,6 +106,33 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c2 {
+  font-size: 1.5em;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c5 {
@@ -731,33 +731,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   font-weight: 600;
 }
 
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c12 {
   overflow: auto;
   max-height: 0px;
@@ -790,6 +763,33 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c2 {
+  font-size: 1.5em;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c5 {

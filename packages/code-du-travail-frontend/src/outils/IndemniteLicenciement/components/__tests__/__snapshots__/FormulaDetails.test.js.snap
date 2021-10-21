@@ -29,22 +29,6 @@ exports[`<FormulaDetails /> should render 1`] = `
   font-weight: 600;
 }
 
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c5 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
 .c4 {
   overflow: auto;
   max-height: 0px;
@@ -77,6 +61,22 @@ exports[`<FormulaDetails /> should render 1`] = `
 .c0:focus-within,
 .c0[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  margin-top: 3.2rem;
+  margin-bottom: 2rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 <div>
