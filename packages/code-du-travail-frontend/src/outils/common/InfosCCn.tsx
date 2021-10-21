@@ -68,7 +68,7 @@ function StepInfoCCn({
           <Alert variant="primary">
             <p>
               <Text variant="primary" fontSize="hsmall" fontWeight="700">
-                À noter: convention collective non traitée
+                À noter&nbsp;: convention collective non traitée
               </Text>
             </p>
             La convention collective sélectionnée n&apos;a pas été traitée par
@@ -84,7 +84,7 @@ function StepInfoCCn({
           <Alert variant="primary">
             <p>
               <Text variant="primary" fontSize="hsmall" fontWeight="700">
-                À noter: convention prochainement traitée
+                À noter&nbsp;: convention prochainement traitée
               </Text>
             </p>
             Cette convention collective n&apos;est pas encore traitée par nos
