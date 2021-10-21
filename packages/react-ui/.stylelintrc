@@ -6,16 +6,24 @@
     "stylelint-config-recommended",
     "stylelint-config-styled-components"
   ],
-  "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-config-rational-order/plugin"
+  ],
   "rules": {
-    "order/properties-order": [[], { severity: "warning" }],
+    "order/properties-order": [
+      [],
+      {
+        "severity": "warning"
+      }
+    ],
     "plugin/rational-order": [
       true,
       {
         "border-in-box-model": false,
         "empty-line-between-groups": false,
-        severity: "warning",
-      },
+        "severity": "warning"
+      }
     ]
   }
 }

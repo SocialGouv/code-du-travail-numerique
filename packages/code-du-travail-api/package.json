@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
-    "dev": "nodemon --exec babel-node ./src/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js --extensions \".ts,.js\"",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js",
     "test": "ES_INDEX_PREFIX=cdtn_test jest",

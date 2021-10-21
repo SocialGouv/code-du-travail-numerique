@@ -28,7 +28,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Highlight = styled.strong`
-  color: ${colors.primary};
+  color: ${({ theme }) => theme.primary};
   font-weight: 700;
   font-size: ${fonts.sizes.headings.small};
   white-space: pre-line;

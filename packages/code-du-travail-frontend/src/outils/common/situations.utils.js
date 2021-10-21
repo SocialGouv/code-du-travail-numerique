@@ -40,6 +40,7 @@ export function getOptions(possibleSituations, nextQuestionKey) {
     .sort(orderCriteria)
     .map(formatOption);
 }
+
 export function orderCriteria(a, b) {
   const [, numA] = a.match(/([0-9]+)\|/) || [];
   const [, numB] = b.match(/([0-9]+)\|/) || [];
@@ -84,9 +85,13 @@ export function getSituationsFor(data, obj) {
   );
 }
 
+const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+
 export const isNotYetProcessed = (data, idcc) => {
   const situtation = data.filter(
-    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+    (situation) =>
+      isNotEmpty(situation.criteria) &&
+      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
 };

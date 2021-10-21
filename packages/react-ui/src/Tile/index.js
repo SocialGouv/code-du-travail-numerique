@@ -10,7 +10,17 @@ import { Subtitle } from "../Titles/Subtitle/index.js";
 
 export const Tile = React.forwardRef(
   (
-    { children, custom, icon: Icon, striped, subtitle, title, wide, ...props },
+    {
+      children,
+      custom,
+      icon: Icon,
+      striped,
+      subtitle,
+      title,
+      wide,
+      titleTagType,
+      ...props
+    },
     ref
   ) => (
     <StyledTile
@@ -31,7 +41,7 @@ export const Tile = React.forwardRef(
           {subtitle && (
             <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
           )}
-          {title && <StyledHeading>{title}</StyledHeading>}
+          {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
         </HeadingWrapper>
       </TopWrapper>
       {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
@@ -49,6 +59,7 @@ Tile.propTypes = {
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
   title: PropTypes.string,
+  titleTagType: PropTypes.string,
   wide: PropTypes.bool,
 };
 
@@ -59,6 +70,7 @@ Tile.defaultProps = {
   striped: false,
   subtitle: "",
   title: "",
+  titleTagType: "h3",
   wide: false,
 };
 
