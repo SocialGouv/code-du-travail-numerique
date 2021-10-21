@@ -1,7 +1,8 @@
-import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { icons, IconStripe, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
+import { Clock } from "react-feather";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
@@ -19,6 +20,7 @@ function Wizard({
   icon,
   Rules = null,
   stepReducer = (step) => step,
+  duration,
 }) {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
@@ -150,6 +152,7 @@ function Wizard({
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
                 <WizardTitle title={title} icon={icon} />
+                {stepIndex === 0 && <WizardDuration duration={duration} />}
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
@@ -189,6 +192,7 @@ function Wizard({
 
 Wizard.propTypes = {
   Rules: PropTypes.func,
+  duration: PropTypes.string,
   icon: PropTypes.string,
   initialState: PropTypes.shape({
     stepIndex: PropTypes.number,
@@ -219,6 +223,16 @@ function WizardTitle({ title, icon }) {
   );
 }
 
+function WizardDuration({ duration }) {
+  return (
+    <ToolDuration>
+      <IconStripe small icon={Clock}>
+        <small>Durée&nbsp;: {duration}</small>
+      </IconStripe>
+    </ToolDuration>
+  );
+}
+
 export { Wizard, WizardTitle };
 
 const { breakpoints, spacings } = theme;
@@ -240,6 +254,19 @@ const ToolTitle = styled.h1`
   margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: ${spacings.base};
+    padding: ${spacings.base} 0 ${spacings.small} 0;
+    border-bottom: 0;
+  }
+`;
+
+const ToolDuration = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 0;
+  padding-bottom: 0;
   @media (max-width: ${breakpoints.tablet}) {
     margin-bottom: ${spacings.base};
     padding: ${spacings.base} 0 ${spacings.small} 0;

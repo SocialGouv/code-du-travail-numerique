@@ -22,6 +22,7 @@ const SimulateurPreavisRetraite = ({
     <Wizard
       icon={icon}
       title={title}
+      duration="5 minutes"
       initialState={initialState}
       // @ts-ignore
       stepReducer={stepReducer}
