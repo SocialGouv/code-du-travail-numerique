@@ -37,8 +37,10 @@ RUN yarn --frozen-lockfile && yarn cache clean
 
 # fake CI env
 ENV CI=true
+ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
+

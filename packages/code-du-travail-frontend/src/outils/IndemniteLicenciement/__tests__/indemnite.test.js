@@ -125,6 +125,30 @@ const tests = [
   },
   {
     data: {
+      anciennete: 26 / 12,
+      dateNotification: "2018-10-22",
+      hasTempsPartiel: false,
+      primes: [{ prime: 2500 }],
+      salaires: [
+        { salary: 3000 },
+        { salary: 2500 },
+        { salary: 2500 },
+        { salary: 1700 },
+        { salary: 1700 },
+        { salary: 1700 },
+        { salary: 1700 },
+        { salary: 2500 },
+        { salary: 1700 },
+        { salary: 1700 },
+        { salary: 1700 },
+        { salary: 1700 },
+      ],
+    },
+    expected: 1105.9,
+    title: "prime + 3 mois plus favorable, 26m, 2018-10-22",
+  },
+  {
+    data: {
       anciennete: 15 / 12,
       dateNotification: "2019-01-01",
       hasTempsPartiel: true,
