@@ -27,9 +27,6 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
-      - name: Build code
-        run: |
-          yarn build
       - name: Test .k8s
         run: |
           yarn test
