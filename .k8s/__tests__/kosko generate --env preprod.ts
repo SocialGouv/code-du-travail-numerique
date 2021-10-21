@@ -1,5 +1,3 @@
-//
-
 import { getEnvManifests } from "@socialgouv/kosko-charts/testing";
 import { project } from "@socialgouv/kosko-charts/testing/fake/gitlab-ci.env";
 
