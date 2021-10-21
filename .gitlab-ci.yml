@@ -19,7 +19,6 @@ include:
   - /.gitlab-ci/variables.yml
   - /.gitlab-ci/stages/register.yml
   - /.gitlab-ci/stages/manual.yml
-  - /.gitlab-ci/stages/scan.yml
   - /.gitlab-ci/stages/notify.yml
   - /.gitlab-ci/stages/e2e.yml
 
@@ -41,14 +40,6 @@ stages:
     - if: $CI_COMMIT_MESSAGE =~ /^chore(release):*/
       when: never
     - when: always
-
-k8s test:
-  stage: Prepare
-  interruptible: true
-  needs: []
-  extends:
-    - .base_kosko_k8s_test
-    - .base_stage
 
 🚀 Review:
   extends:
