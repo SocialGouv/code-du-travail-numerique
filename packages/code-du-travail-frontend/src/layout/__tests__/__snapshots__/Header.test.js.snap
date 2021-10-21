@@ -565,7 +565,9 @@ exports[`<Header /> should render 1`] = `
         <img
           alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
           class="c5"
+          height="115"
           src="/static/assets/img/logo-rf.svg"
+          width="135"
         />
         <svg
           aria-label="Code du travail numérique"
