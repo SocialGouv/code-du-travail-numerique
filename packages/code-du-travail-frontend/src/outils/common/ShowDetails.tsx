@@ -39,7 +39,7 @@ const ShowDetails = ({ children }: Props): JSX.Element => {
       </StyledLink>
       <ResultsWithTransition
         active={active}
-        maxHeight={`${height}`}
+        maxHeight={height}
         ref={contentSpace}
       >
         {children}
