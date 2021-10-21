@@ -2734,29 +2734,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           Que dit votre convention collective ?
                         </h2>
                       </div>
-                      <form
-                        role="search"
+                      <label
+                        class="c68"
+                        for="convention-search"
                       >
-                        <label
-                          class="c68"
-                          for="convention-search"
-                        >
-                          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-                        </label>
-                        <span
-                          class="c69 c70"
-                        >
-                          <input
-                            class="c71"
-                            id="convention-search"
-                            name="q"
-                            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                            type="search"
-                            value=""
-                          />
-                        </span>
-                        
-                      </form>
+                        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+                      </label>
+                      <span
+                        class="c69 c70"
+                      >
+                        <input
+                          class="c71"
+                          id="convention-search"
+                          name="q"
+                          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+                          type="search"
+                          value=""
+                        />
+                      </span>
+                      
                       <p
                         class="c72"
                       >
@@ -5993,29 +5989,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           Que dit votre convention collective ?
                         </h2>
                       </div>
-                      <form
-                        role="search"
+                      <label
+                        class="c68"
+                        for="convention-search"
                       >
-                        <label
-                          class="c68"
-                          for="convention-search"
-                        >
-                          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-                        </label>
-                        <span
-                          class="c69 c70"
-                        >
-                          <input
-                            class="c71"
-                            id="convention-search"
-                            name="q"
-                            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                            type="search"
-                            value=""
-                          />
-                        </span>
-                        
-                      </form>
+                        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+                      </label>
+                      <span
+                        class="c69 c70"
+                      >
+                        <input
+                          class="c71"
+                          id="convention-search"
+                          name="q"
+                          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+                          type="search"
+                          value=""
+                        />
+                      </span>
+                      
                       <p
                         class="c72"
                       >
