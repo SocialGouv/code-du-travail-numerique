@@ -40,7 +40,7 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-api:1.2.3
+        - image: ghcr.io/socialgouv/cdtn/code-du-travail-api/app:v1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -296,7 +296,7 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-frontend:1.2.3
+        - image: ghcr.io/socialgouv/cdtn/code-du-travail-frontend/app:v1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:

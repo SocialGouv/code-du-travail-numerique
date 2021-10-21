@@ -2,11 +2,11 @@ import env from "@kosko/env";
 import { ok } from "assert";
 
 import { create } from "@socialgouv/kosko-charts/components/app";
-import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImagePath";
 
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
+import environments from "@socialgouv/kosko-charts/environments";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX;
 
@@ -15,12 +15,16 @@ const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   port: "http",
 };
 
+const ciEnv = environments(process.env);
+
 export default async () => {
   const manifests = await create("api", {
     env,
     config: {
       subDomainPrefix: env.env === "prod" ? "api." : "api-",
-      image: getHarborImagePath({ name: "cdtn-api" }),
+      image: `ghcr.io/socialgouv/cdtn/code-du-travail-api/app:${
+        ciEnv.tag || ciEnv.sha
+      }`,
       containerPort: 1337,
       container: {
         livenessProbe: {

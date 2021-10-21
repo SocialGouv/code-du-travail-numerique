@@ -5,12 +5,12 @@ import { create } from "@socialgouv/kosko-charts/components/app";
 import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
 import { addEnv } from "@socialgouv/kosko-charts/utils/addEnv";
 import { getIngressHost } from "@socialgouv/kosko-charts/utils/getIngressHost";
-import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImagePath";
 
 import { EnvVar } from "kubernetes-models/v1/EnvVar";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
+import environments from "@socialgouv/kosko-charts/environments";
 
 import getApiManifests from "./api";
 
@@ -19,6 +19,8 @@ const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   path: "/health",
   port: "http",
 };
+
+const ciEnv = environments(process.env);
 
 export default async () => {
   // extract computed url from API manifests for the frontend
@@ -34,7 +36,9 @@ export default async () => {
     env,
     config: {
       containerPort: 3000,
-      image: getHarborImagePath({ name: "cdtn-frontend" }),
+      image: `ghcr.io/socialgouv/cdtn/code-du-travail-frontend/app:${
+        ciEnv.tag || ciEnv.sha
+      }`,
       ...(env.env === "prod" ? productionConfig : {}),
       container: {
         livenessProbe: {
