@@ -1,17 +1,26 @@
 import { Button, icons, theme } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
 import printResult from "./printResult";
 
-function PrevNextBar({
+type Props = {
+  onPrev: () => void;
+  hasError: boolean;
+  nextVisible: boolean;
+  printVisible: () => void;
+  previousVisible: boolean;
+  onNext: () => void;
+};
+
+export const PrevNextBar: FunctionComponent<Props> = ({
   onPrev,
-  hasError,
-  nextVisible,
+  hasError = false,
+  nextVisible = true,
   printVisible,
-  previousVisible,
-}) {
+  previousVisible = true,
+  onNext,
+}) => {
   return (
     <>
       <StyledDiv>
@@ -27,7 +36,7 @@ function PrevNextBar({
           </StyledButton>
         )}
         {nextVisible && previousVisible && (
-          <StyledButton disabled={hasError} variant="primary">
+          <StyledButton disabled={hasError} variant="primary" onClick={onNext}>
             Suivant
             <ArrowIcon />
           </StyledButton>
@@ -40,22 +49,7 @@ function PrevNextBar({
       </StyledDiv>
     </>
   );
-}
-
-PrevNextBar.propTypes = {
-  hasError: PropTypes.bool,
-  nextVisible: PropTypes.bool,
-  onPrev: PropTypes.func,
-  previousVisible: PropTypes.bool,
 };
-PrevNextBar.defaultProps = {
-  hasError: false,
-  nextVisible: true,
-  onPrev: () => {},
-  previousVisible: true,
-};
-
-export { PrevNextBar };
 
 const { breakpoints, spacings } = theme;
 

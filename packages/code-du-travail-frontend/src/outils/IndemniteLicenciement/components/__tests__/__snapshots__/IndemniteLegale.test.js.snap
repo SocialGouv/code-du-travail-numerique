@@ -189,7 +189,9 @@ exports[`<IndemniteLegale /> should render 1`] = `
             <div
               class="c6"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>

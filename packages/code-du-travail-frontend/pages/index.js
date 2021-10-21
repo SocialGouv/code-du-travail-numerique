@@ -33,6 +33,7 @@ export const DocumentsTile = (
       custom
       icon={icons.Document}
       title="Modèles de documents"
+      titleTagType="h2"
     >
       Téléchargez et utilisez des modèles de lettres et de documents
       personnalisables

@@ -15,8 +15,10 @@ class References extends React.PureComponent {
       <>
         {references.length > accordionDisplay ? (
           <StyledWrapper variant="light" {...props}>
+            {/* FIXME: utiliser un composant show/hide simple qui ne requiert pas de heading level */}
             <Accordion
-              noTitle
+              titleLevel={2}
+              disableStyles
               items={[
                 {
                   body: <ReferenceList references={references} />,

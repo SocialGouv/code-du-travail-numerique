@@ -156,7 +156,9 @@ exports[`<FormulaDetails /> should render 1`] = `
             <div
               class="c3"
             >
-              Voir le détail du calcul
+              <p>
+                Voir le détail du calcul
+              </p>
             </div>
           </div>
         </div>

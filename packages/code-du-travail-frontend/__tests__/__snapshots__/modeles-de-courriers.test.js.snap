@@ -1551,7 +1551,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   >
                     
                     <h3
-                      class="c37 c44"
+                      class="c44"
                     >
                       Rupture de période d’essai à l'initiative de l'employeur
                     </h3>
@@ -1610,7 +1610,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   >
                     
                     <h3
-                      class="c37 c44"
+                      class="c44"
                     >
                       Demande de rendez-vous en vue d’une rupture conventionnelle
                     </h3>

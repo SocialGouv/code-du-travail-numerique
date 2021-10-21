@@ -46,10 +46,11 @@ const ContentMT = ({ intro, sections }) => {
       )}
       {sections && (
         <Accordion
+          levelTitle={3}
           items={sections.map((section) => ({
             body: <TabContent>{section.html}</TabContent>,
             id: section.anchor,
-            title: <h3>{section.title}</h3>,
+            title: section.title,
           }))}
         />
       )}
