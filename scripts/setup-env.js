@@ -12,7 +12,7 @@ async function main() {
     await promisedAccess("./dockerenv");
     // Running inside a docker instance, dont modify files
     return;
-  } catch (e) { }
+  } catch (err) {}
 
   try {
     await promisedAccess("./.env");
