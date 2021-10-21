@@ -1,6 +1,8 @@
 name: Storybook
 
-on: push
+on:
+  push:
+    branches: [master]
 
 jobs:
   storybook:
