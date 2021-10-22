@@ -1,10 +1,15 @@
 name: Security vulnerability scanner
+
 on:
   push:
     branches:
       - "**"
     tags-ignore:
       - v*
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.ref }}
 
 jobs:
   register:

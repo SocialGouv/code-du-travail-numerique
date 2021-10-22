@@ -2,6 +2,10 @@ name: Kubernetes manifests tests
 
 on: [push]
 
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.ref }}
+
 defaults:
   run:
     shell: bash

@@ -2,6 +2,10 @@ name: Code quality
 
 on: [push]
 
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.ref }}
+
 jobs:
   register-elastic:
     name: Register elasticsearch
