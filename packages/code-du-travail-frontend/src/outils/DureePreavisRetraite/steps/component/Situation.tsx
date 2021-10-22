@@ -20,7 +20,7 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
       element.name === "contrat salarié - ancienneté" &&
       content.seniorityGreaterThanTwoYears === true
     ) {
-      return <>Plus de 2 ans (exclu)</>;
+      return <>Plus de 2 ans</>;
     }
     if (
       element.name === "contrat salarié - travailleur handicapé" &&
