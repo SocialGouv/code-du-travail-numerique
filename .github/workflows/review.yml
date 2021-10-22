@@ -99,7 +99,7 @@ jobs:
         uses: mikefarah/yq@v4.13.4
         id: url
         with:
-          cmd: yq e -N '.spec.rules[] .host' "manifest-dev.yaml" | grep -v null | sed -e s/^/\ \ 🚀\ https\:\\/\\//
+          cmd: $(cat manifest-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
       - name: Run test e2e
         run: |
           echo ${{ steps.url.outputs.result }}
