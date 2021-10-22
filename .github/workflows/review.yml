@@ -99,8 +99,7 @@ jobs:
         uses: mikefarah/yq@v4.13.4
         id: url
         with:
-          cmd: $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
       - name: Run test e2e
         run: |
-          echo ${{ steps.url.outputs.result }}
-          CODECEPT_BASEURL=${{ steps.url.outputs.result }} yarn test:e2e
+          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
