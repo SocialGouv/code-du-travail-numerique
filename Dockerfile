@@ -43,12 +43,11 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-COPY --from=dist ./packages/code-du-travail-frontend /app/packages/code-du-travail-frontend 
+COPY --from=dist . /app/
 
 COPY --from=node_modules node_modules /app/node_modules
 
 COPY . /app
 
-ENV API_URL https://api-preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/api/v1
 
-CMD [ "yarn", "start:prod"]
+CMD [ "yarn", "start"]
