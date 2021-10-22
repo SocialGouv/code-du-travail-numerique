@@ -32,6 +32,10 @@ jobs:
     name: Preproduction manifests
     runs-on: ubuntu-latest
     steps:
+      - name: Install
+        shell: bash
+        run: |
+          yarn add @socialgouv/kosko-charts
       - name: Get k8s infos
         id: k8s
         shell: bash
