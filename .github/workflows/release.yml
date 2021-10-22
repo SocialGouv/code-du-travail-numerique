@@ -1,6 +1,6 @@
 name: Release
 
-on: push
+on: workflow_dispatch
 
 concurrency:
   cancel-in-progress: true
