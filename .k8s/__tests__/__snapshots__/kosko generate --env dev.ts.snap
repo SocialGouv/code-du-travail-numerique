@@ -112,7 +112,7 @@ spec:
             - name: ELASTIC_APM_ENVIRONMENT
               value: cdtn-undefined
             - name: ES_INDEX_PREFIX
-              value: cdtn-prod
+              value: cdtn-preprod
             - name: VERSION
           envFrom:
             - secretRef:
