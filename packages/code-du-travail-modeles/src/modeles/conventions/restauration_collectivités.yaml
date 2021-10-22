@@ -8,6 +8,7 @@ contrat salarié . convention collective . restauration collectivités:
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le bulletin de salaire.
   cdtn:
     type: liste
     valeurs:

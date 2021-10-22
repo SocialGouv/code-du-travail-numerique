@@ -13,22 +13,40 @@ interface Props {
 }
 
 const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
+  const tooltip = rule.description
+    ? {
+        content: <p>{rule.description}</p>,
+        help: rule.titre ? rule.titre : "Plus d'informations",
+      }
+    : null;
+
   switch (rule?.cdtn?.type) {
     case RuleType.Liste:
       return (
         <SelectQuestion
           name={name}
           label={rule.question}
-          subLabel={rule.description}
           options={reverseValues(rule.cdtn.valeurs)}
           onChange={onChange}
+          tooltip={tooltip}
         />
       );
     case RuleType.OuiNon:
-      return <YesNoPubliQuestion name={name} label={rule.question} />;
+      return (
+        <YesNoPubliQuestion
+          name={name}
+          label={rule.question}
+          tooltip={tooltip}
+        />
+      );
     default:
       return (
-        <TextQuestion name={name} label={rule.question} validate={undefined} />
+        <TextQuestion
+          name={name}
+          label={rule.question}
+          tooltip={tooltip}
+          validate={undefined}
+        />
       );
   }
 };

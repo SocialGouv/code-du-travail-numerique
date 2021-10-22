@@ -1,17 +1,22 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
 import React from "react";
 import { Field } from "react-final-form";
 
 import { ErrorField } from "./ErrorField";
-import { Question } from "./Question";
+import { Question, Tooltip } from "./Question";
 import { RadioContainer } from "./stepStyles";
 import { required } from "./validators";
 
-function YesNoPubliQuestion({ name, label }) {
+type Props = {
+  name: string;
+  label: string | JSX.Element;
+  tooltip?: Tooltip;
+};
+
+const YesNoPubliQuestion = ({ name, label, tooltip }: Props): JSX.Element => {
   return (
     <>
-      <Question as="p" required>
+      <Question as="p" tooltip={tooltip} required>
         {label}
       </Question>
       <RadioContainer>
@@ -25,11 +30,6 @@ function YesNoPubliQuestion({ name, label }) {
       </RadioContainer>
     </>
   );
-}
-
-YesNoPubliQuestion.propTypes = {
-  label: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 };
 
 export { YesNoPubliQuestion };
