@@ -34,7 +34,7 @@ export default async () => {
     config: {
       containerPort: 3000,
       image: getGithubRegistryImagePath({
-        name: "cdtn/code-du-travail-frontend",
+        name: "code-du-travail-frontend",
         project: "cdtn",
       }),
       ...(env.env === "prod" ? productionConfig : {}),

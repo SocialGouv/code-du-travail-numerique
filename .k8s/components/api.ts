@@ -20,7 +20,7 @@ export default async () => {
     config: {
       subDomainPrefix: env.env === "prod" ? "api." : "api-",
       image: getGithubRegistryImagePath({
-        name: "cdtn/code-du-travail-api",
+        name: "code-du-travail-api",
         project: "cdtn",
       }),
       containerPort: 1337,
