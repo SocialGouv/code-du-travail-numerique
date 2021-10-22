@@ -523,6 +523,7 @@ metadata:
     app.kubernetes.io/component: redirect
     app.kubernetes.io/name: cdtn
   name: cdtn-redirect
+  namespace: cdtn
 spec:
   rules:
     - host: www.code.travail.gouv.fr
