@@ -110,10 +110,10 @@ spec:
             timeoutSeconds: 15
           env:
             - name: ELASTIC_APM_ENVIRONMENT
-              value: cdtn-undefined
             - name: ES_INDEX_PREFIX
               value: cdtn-preprod
             - name: VERSION
+              value: refs/heads/mybranch
           envFrom:
             - secretRef:
                 name: api-secret

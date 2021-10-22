@@ -83,10 +83,10 @@ spec:
             timeoutSeconds: 15
           env:
             - name: ELASTIC_APM_ENVIRONMENT
-              value: cdtn-undefined
             - name: ES_INDEX_PREFIX
               value: cdtn-prod
             - name: VERSION
+              value: refs/tags/v1.2.3
           envFrom:
             - secretRef:
                 name: api-secret
