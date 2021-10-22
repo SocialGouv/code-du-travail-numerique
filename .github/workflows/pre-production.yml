@@ -1,6 +1,9 @@
 name: Pre-production
 
-on: push
+on:
+  push:
+    tags:
+      - v*
 
 concurrency:
   group: pre-production
