@@ -1,6 +1,8 @@
 # dist
 FROM node:14.17-alpine3.13 AS dist
 
+WORKDIR /
+
 # Copy all package.json
 COPY ./package.json ./package.json
 COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
@@ -27,6 +29,8 @@ RUN yarn build
 
 # node_modules
 FROM node:14.17-alpine3.13 AS node_modules
+
+WORKDIR /
 
 COPY package.json ./
 

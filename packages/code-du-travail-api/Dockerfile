@@ -1,6 +1,8 @@
 # dist
 FROM node:14.17-alpine3.13 AS dist
 
+WORKDIR /
+
 COPY package.json ./
 
 RUN yarn install
@@ -11,6 +13,8 @@ RUN yarn build
 
 # node_modules
 FROM node:14.17-alpine3.13 AS node_modules
+
+WORKDIR /
 
 COPY package.json ./
 
