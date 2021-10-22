@@ -38,6 +38,7 @@ describe("Validation de la phrase explicative pour un employé avec moins de 6 m
     ({ isVoluntary, agreement, noticeUsed, expectedDescription }) => {
       const description = getDescription({
         agreement,
+        handicap: false,
         isVoluntary,
         noticeUsed,
         seniorityLessThan6Months: true,
@@ -63,6 +64,7 @@ describe("Validation de la phrase explicative pour un employé en départ à la 
     ({ agreement, noticeUsed, expectedDescription }) => {
       const description = getDescription({
         agreement,
+        handicap: false,
         isVoluntary: true,
         noticeUsed,
         seniorityLessThan6Months: false,
@@ -88,6 +90,7 @@ describe("Validation de la phrase explicative pour un employé en mise à la ret
     ({ agreement, noticeUsed, expectedDescription }) => {
       const description = getDescription({
         agreement,
+        handicap: false,
         isVoluntary: false,
         noticeUsed,
         seniorityLessThan6Months: false,
@@ -111,22 +114,23 @@ describe("Validation de l'aggregation des données", () => {
   ];
 
   test.each`
-    ccnNum  | type        | seniority | result                | legalResult           | agreementResult       | expectedNoticeUsed           | expectedAgreement
-    ${null} | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
-    ${null} | ${"mise"}   | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
-    ${null} | ${"depart"} | ${"24"}   | ${{ valueInDays: 2 }} | ${{ valueInDays: 2 }} | ${null}               | ${NoticeUsed.legal}          | ${null}
-    ${123}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementNotSupported}
-    ${321}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementPlanned}
-    ${292}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
-    ${292}  | ${"depart"} | ${"5"}    | ${{ valueInDays: 2 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
-    ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
-    ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}
-    ${292}  | ${"mise"}   | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.same}           | ${getAgreementSupported(4)}
+    ccnNum  | type        | handicap | seniority | result                | legalResult           | agreementResult       | expectedNoticeUsed           | expectedAgreement
+    ${null} | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
+    ${null} | ${"mise"}   | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
+    ${null} | ${"depart"} | ${"oui"} | ${"24"}   | ${{ valueInDays: 2 }} | ${{ valueInDays: 2 }} | ${null}               | ${NoticeUsed.legal}          | ${null}
+    ${123}  | ${"depart"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementNotSupported}
+    ${321}  | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementPlanned}
+    ${292}  | ${"depart"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
+    ${292}  | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 2 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
+    ${292}  | ${"mise"}   | ${"non"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
+    ${292}  | ${"mise"}   | ${"oui"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}
+    ${292}  | ${"mise"}   | ${"non"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.same}           | ${getAgreementSupported(4)}
   `(
     "Pour un employé en $type à la retraite, cc: $ccnNum, ancienneté: $seniority, résultat: $result, on doit obtenir l'ancienneté provenant de $expectedNoticeUsed",
     ({
       ccnNum,
       type,
+      handicap,
       seniority,
       result,
       legalResult,
@@ -148,6 +152,7 @@ describe("Validation de l'aggregation des données", () => {
         ccn,
         "contrat salarié - ancienneté": seniority,
         "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
+        infos: { "contrat salarié - travailleur handicapé": handicap },
         seniorityGreaterThanTwoYears: true,
       };
       const rootData = createRootData(
@@ -162,6 +167,7 @@ describe("Validation de l'aggregation des données", () => {
       expect(rootData.seniorityLessThan6Months).toEqual(seniority < 6);
       expect(rootData.noticeUsed).toEqual(expectedNoticeUsed);
       expect(rootData.agreement).toEqual(expectedAgreement);
+      expect(rootData.handicap).toEqual(handicap === "oui");
     }
   );
 });

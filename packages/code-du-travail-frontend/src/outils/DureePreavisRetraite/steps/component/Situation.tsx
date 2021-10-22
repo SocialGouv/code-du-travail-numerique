@@ -49,13 +49,6 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
             </Text>,
           ];
         }
-        return [
-          <Text key="handicap">
-            Le salarié étant reconnu en tant que travailleur handicapé, la durée
-            du préavis de mise à la retraite est doublée mais ne peut pas
-            dépasser un maximum de 3 mois.
-          </Text>,
-        ];
       }
 
       return [

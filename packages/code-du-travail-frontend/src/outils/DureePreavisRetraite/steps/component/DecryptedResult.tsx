@@ -1,4 +1,4 @@
-import { Paragraph, Text } from "@socialgouv/cdtn-ui";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
@@ -61,8 +61,9 @@ type Agreement = {
 };
 
 type RootData = {
-  isVoluntary: boolean;
   agreement: Agreement | null;
+  handicap: boolean;
+  isVoluntary: boolean;
   noticeUsed: NoticeUsed;
   seniorityLessThan6Months: boolean;
 };
@@ -108,6 +109,7 @@ export const createRootData = (
   }
   return {
     agreement: agreement,
+    handicap: data.infos["contrat salarié - travailleur handicapé"] === "oui",
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
@@ -192,6 +194,14 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}
+      {rootData.handicap && (
+        <Paragraph>
+          <i>
+            *&nbsp;Ce résultat tient compte de la majoration pour les
+            travailleurs handicapés.
+          </i>
+        </Paragraph>
+      )}
     </>
   );
 };
