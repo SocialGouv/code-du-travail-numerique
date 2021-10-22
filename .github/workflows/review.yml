@@ -91,7 +91,16 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --prefer-offline --frozen-lockfile
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v2
+        with:
+          name: manifests-dev.yml
+      - name: Get deployment url
+        uses: mikefarah/yq@v4.13.4
+        id: url
+        with:
+          cmd: yq e -N '.spec.rules[] .host' "manifest-dev.yaml" | grep -v null | sed -e s/^/\ \ 🚀\ https\:\\/\\//
       - name: Run test e2e
         run: |
-          echo "${{ secrets.SOCIALGOUV_BASE_DOMAIN }}"
-          CODECEPT_BASEURL="${{ github.event.deploy.url }}" yarn test:e2e
+          echo ${{ steps.url.outputs.result }}
+          CODECEPT_BASEURL=${{ steps.url.outputs.result }} yarn test:e2e
