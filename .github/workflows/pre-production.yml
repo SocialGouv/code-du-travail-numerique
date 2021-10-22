@@ -51,7 +51,7 @@ jobs:
     needs: [register, manifests]
     environment:
       name: preproduction
-      url: https://preprod-code-du-travail-numerique.dev.fabrique.social.gouv.fr/
+      url: https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
