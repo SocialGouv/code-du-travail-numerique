@@ -94,12 +94,12 @@ jobs:
       - name: Download k8s manifests
         uses: actions/download-artifact@v2
         with:
-          name: manifest-dev.yml
+          name: manifests-dev.yml
       - name: Get deployment url
         uses: mikefarah/yq@v4.13.4
         id: url
         with:
-          cmd: $(cat manifest-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+          cmd: $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
       - name: Run test e2e
         run: |
           echo ${{ steps.url.outputs.result }}
