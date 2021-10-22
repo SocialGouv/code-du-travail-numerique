@@ -64,7 +64,7 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: ghcr.io/socialgouv/cdtn/code-du-travail-api/app:v1.2.3
+        - image: ghcr.io/socialgouv/cdtn/cdtn/code-du-travail-api:v1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -289,7 +289,7 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: ghcr.io/socialgouv/cdtn/code-du-travail-frontend/app:v1.2.3
+        - image: ghcr.io/socialgouv/cdtn/cdtn/code-du-travail-frontend:v1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:

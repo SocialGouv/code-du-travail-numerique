@@ -65,8 +65,7 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: >-
-            ghcr.io/socialgouv/cdtn/code-du-travail-api/app:0123456789abcdefghijklmnopqrstuvwxyz0123
+        - image: 'ghcr.io/socialgouv/cdtn/cdtn/code-du-travail-api:'
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -292,8 +291,7 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: >-
-            ghcr.io/socialgouv/cdtn/code-du-travail-frontend/app:0123456789abcdefghijklmnopqrstuvwxyz0123
+        - image: 'ghcr.io/socialgouv/cdtn/cdtn/code-du-travail-frontend:'
           livenessProbe:
             failureThreshold: 6
             httpGet:
