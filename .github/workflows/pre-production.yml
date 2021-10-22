@@ -1,6 +1,6 @@
 name: Pre-production
 
-on: workflow_dispatch
+on: push
 
 concurrency:
   group: pre-production
