@@ -61,7 +61,8 @@ jobs:
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
         env:
-          ES_INDEX_PREFIX: cdtn-${{ steps.k8s.outputs.branch }}
+          ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
+          ES_INDEX_PREFIX: cdtn-preprod
 
   ##############################################################################
   ## DEPLOY APPLICATION OVER KUBERNETES

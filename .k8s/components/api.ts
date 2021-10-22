@@ -7,8 +7,6 @@ import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX;
-
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   path: "/api/v1/version",
   port: "http",
@@ -53,15 +51,15 @@ export default async () => {
         env: [
           {
             name: "ELASTIC_APM_ENVIRONMENT",
-            value: `cdtn-${process.env.CI_ENVIRONMENT_SLUG}`,
+            value: process.env.ELASTIC_APM_ENVIRONMENT,
           },
           {
             name: "ES_INDEX_PREFIX",
-            value: ES_INDEX_PREFIX,
+            value: process.env.ES_INDEX_PREFIX,
           },
           {
             name: "VERSION",
-            value: process.env.CI_COMMIT_REF_NAME,
+            value: process.env.GITHUB_REF,
           },
         ],
       },
