@@ -45,7 +45,6 @@ jobs:
           environment: "preprod"
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvbaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
-          KUBE_NAMESPACE: "cdtn-preprod"
 
   ##############################################################################
   ## DEPLOY PREPRODUCTION APPLICATION
@@ -83,6 +82,7 @@ jobs:
           environment: "prod"
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
           KUBE_NAMESPACE: "cdtn"
 
       - name: Use autodevops deployment
