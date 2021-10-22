@@ -35,17 +35,6 @@ jobs:
     name: Preproduction manifests
     runs-on: ubuntu-latest
     steps:
-      - name: Install
-        shell: bash
-        run: |
-          yarn add @socialgouv/kosko-charts
-      - name: Get k8s infos
-        id: k8s
-        shell: bash
-        run: |
-          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
-          BRANCH=$(node -e "console.log(require('@socialgouv/kosko-charts/utils/environmentSlug').generate('${RAW_BRANCH}'))")
-          echo "::set-output name=branch::$(echo ${BRANCH})"
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
@@ -53,7 +42,7 @@ jobs:
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
         env:
-          ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
+          ELASTIC_APM_ENVIRONMENT: cdtn-preprod
           ES_INDEX_PREFIX: cdtn-preprod
 
   deploy-preprod:
