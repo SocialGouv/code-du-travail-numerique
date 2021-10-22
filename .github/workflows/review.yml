@@ -93,4 +93,5 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Run test e2e
         run: |
-          yarn test:e2e
+          echo ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+          CODECEPT_BASEURL=${{ github.event.deploy.url }} yarn test:e2e

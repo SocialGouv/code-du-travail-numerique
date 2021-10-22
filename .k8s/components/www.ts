@@ -71,11 +71,11 @@ export default async () => {
           },
           {
             name: "COMMIT",
-            value: process.env.CI_COMMIT_SHA,
+            value: process.env.GITHUB_SHA,
           },
           {
             name: "VERSION",
-            value: process.env.CI_COMMIT_REF_NAME,
+            value: process.env.GITHUB_REF,
           },
         ],
       },
