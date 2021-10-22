@@ -39,6 +39,8 @@ jobs:
           environment: "preprod"
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvbaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ES_INDEX_PREFIX: cdtn-preprod
 
   deploy-preprod:
     name: Deploy preproduction

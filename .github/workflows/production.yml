@@ -36,14 +36,15 @@ jobs:
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
-          environment: "preprod"
+          environment: "prod"
           rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
           socialgouvbaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ES_INDEX_PREFIX: cdtn-prod
 
   deploy-prod:
     name: Deploy production
     runs-on: ubuntu-latest
-    needs: [deploy-preprod]
     environment:
       name: production
       url: https://code.travail.gouv.fr/
