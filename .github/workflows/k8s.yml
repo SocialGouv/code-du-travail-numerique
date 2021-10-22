@@ -4,7 +4,7 @@ on: [push]
 
 concurrency:
   cancel-in-progress: true
-  group: ${{ github.ref }}
+  group: k8s
 
 defaults:
   run:
