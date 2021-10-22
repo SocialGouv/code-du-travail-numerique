@@ -5,6 +5,7 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "build:ui": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/frontend}",
     "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public}",
@@ -20,6 +21,7 @@
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
     "start": "lerna run start",
+    "start:prod": "lerna run start --scope=@cdt/frontend",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui", 
     "storybook:deploy:action": "lerna run deploy-storybook:action --scope=@socialgouv/cdtn-ui",
@@ -49,8 +51,6 @@
   },
   "workspaces": {
     "packages": [
-      "infra/*",
-      "modules/*",
       "packages/*",
       "packages/code-du-travail-data/*"
     ]
