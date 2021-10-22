@@ -352,7 +352,9 @@ spec:
               value: >-
                 https://api-code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr/api/v1
             - name: COMMIT
+              value: 0123456789abcdefghijklmnopqrstuvwxyz0123
             - name: VERSION
+              value: refs/heads/mybranch
             - name: FRONTEND_HOST
               value: code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
           envFrom:
