@@ -29,10 +29,10 @@ describe("Validation de la phrase explicative pour un employé avec moins de 6 m
     isVoluntary | agreement             | noticeUsed                   | expectedDescription
     ${true}     | ${null}               | ${NoticeUsed.none}           | ${"Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de préavis à respecter."}
     ${true}     | ${agreementSupported} | ${NoticeUsed.none}           | ${"Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter."}
-    ${true}     | ${agreementSupported} | ${NoticeUsed.agreementLabor} | ${"Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective."}
+    ${true}     | ${agreementSupported} | ${NoticeUsed.agreementLabor} | ${"Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective."}
     ${false}    | ${null}               | ${NoticeUsed.none}           | ${"Le salarié ayant une ancienneté inférieure à 6 mois, il n’y a pas de préavis à respecter."}
     ${false}    | ${agreementSupported} | ${NoticeUsed.none}           | ${"Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter."}
-    ${false}    | ${agreementSupported} | ${NoticeUsed.agreementLabor} | ${"Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective."}
+    ${false}    | ${agreementSupported} | ${NoticeUsed.agreementLabor} | ${"Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective."}
   `(
     "Départ à la retraite: $isVoluntary, CC: $agreement, Préavis: $noticeUsed, il devrait avoir la description : $expectedDescription",
     ({ isVoluntary, agreement, noticeUsed, expectedDescription }) => {
@@ -53,7 +53,7 @@ describe("Validation de la phrase explicative pour un employé en départ à la 
     agreement                          | noticeUsed                   | expectedDescription
     ${agreementSupported}              | ${NoticeUsed.legal}          | ${"La durée à appliquer pour le salarié est donc la durée légale, celle-ci étant plus courte que la durée prévue par la convention collective."}
     ${agreementSupportedWithoutNotice} | ${NoticeUsed.legal}          | ${"En l’absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale."}
-    ${agreementSupported}              | ${NoticeUsed.same}           | ${"Le résultat correspond à la fois à la durée prévue par le code du travail et à la fois à la durée prévue par la convention collective, celles-ci étant identiques dans cette situation."}
+    ${agreementSupported}              | ${NoticeUsed.same}           | ${null}
     ${agreementSupported}              | ${NoticeUsed.agreementLabor} | ${"La durée à appliquer pour le salarié est donc la durée prévue par la convention collective, celle-ci étant plus courte que la durée légale."}
     ${null}                            | ${NoticeUsed.legal}          | ${"La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."}
     ${agreementNotSupported}           | ${NoticeUsed.legal}          | ${"La convention collective n’ayant pas été traitée par nos services, la durée de préavis affichée correspond à la durée légale."}
@@ -78,7 +78,7 @@ describe("Validation de la phrase explicative pour un employé en mise à la ret
     agreement                          | noticeUsed                   | expectedDescription
     ${agreementSupported}              | ${NoticeUsed.legal}          | ${"La durée à appliquer pour le salarié est donc la durée légale, celle-ci étant plus longue que la durée prévue par la convention collective."}
     ${agreementSupportedWithoutNotice} | ${NoticeUsed.legal}          | ${"En l’absence de durée prévue par la convention collective, la durée de préavis à appliquer pour le salarié est donc la durée légale."}
-    ${agreementSupported}              | ${NoticeUsed.same}           | ${"Le résultat correspond à la fois à la durée prévue par le code du travail et à la fois à la durée prévue par la convention collective, celles-ci étant identiques dans cette situation."}
+    ${agreementSupported}              | ${NoticeUsed.same}           | ${null}
     ${agreementSupported}              | ${NoticeUsed.agreementLabor} | ${"La durée à appliquer pour le salarié est donc la durée prévue par la convention collective, celle-ci étant plus longue que la durée légale."}
     ${null}                            | ${NoticeUsed.legal}          | ${"La convention collective n’ayant pas été renseignée, la durée de préavis affichée correspond à la durée légale."}
     ${agreementNotSupported}           | ${NoticeUsed.legal}          | ${"La convention collective n’ayant pas été traitée par nos services, la durée de préavis affichée correspond à la durée légale."}

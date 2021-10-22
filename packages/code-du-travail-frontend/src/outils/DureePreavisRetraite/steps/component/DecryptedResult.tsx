@@ -124,7 +124,7 @@ export const getDescription = (data: RootData): string | null => {
         return "Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.agreementLabor &&
         data.agreement?.status === AgreementStatus.Supported:
-        return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
+        return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
     }
     return null;
   }
@@ -150,7 +150,6 @@ export const getDescription = (data: RootData): string | null => {
           data.isVoluntary ? "courte" : "longue"
         } que la durée légale.`;
       case NoticeUsed.same:
-        return "Le résultat correspond à la fois à la durée prévue par le code du travail et à la fois à la durée prévue par la convention collective, celles-ci étant identiques dans cette situation.";
       case NoticeUsed.none:
         return null;
     }
