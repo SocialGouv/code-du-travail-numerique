@@ -94,7 +94,7 @@ jobs:
       - name: Download k8s manifests
         uses: actions/download-artifact@v2
         with:
-          name: manifests-dev.yml
+          name: manifest-dev.yml
       - name: Get deployment url
         uses: mikefarah/yq@v4.13.4
         id: url
