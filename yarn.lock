@@ -2859,10 +2859,10 @@
     eslint-import-resolver-typescript "~2.5.0"
     eslint-plugin-import "~2.24.2"
 
-"@socialgouv/fiches-travail-data@^4.220.0":
-  version "4.220.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.220.0.tgz#979d526da23a2175e4970944f905e5c6b7ed88b3"
-  integrity sha512-4NA0ysjgU6pUR5OMlm6oUoNs7R1TFXUiT4+aE0dDxfDSMBBGUrNiTsRKfClelK4PKLpS6J8pd7+4jf5r+EyMew==
+"@socialgouv/fiches-travail-data@^4.221.0":
+  version "4.221.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.221.0.tgz#def4c4ebdb57f32eaa55322380c4ca9c94c3231b"
+  integrity sha512-w3xDnlNHdQM8Gj6naIg7ztw3aUaCQG8GA8fOv75lCidDdENC54SnP3qqz85fjS/yyK64uLV5giapLJWHxTsyBg==
 
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
