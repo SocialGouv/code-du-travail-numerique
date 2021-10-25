@@ -14,7 +14,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c39 {
+.c40 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -187,7 +187,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   color: #f66663;
 }
 
-.c41 {
+.c34 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -225,16 +225,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   will-change: transform;
 }
 
-.c41:link,
-.c41:visited {
+.c34:link,
+.c34:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c41:not([disabled]):hover,
-.c41:not([disabled]):active,
-.c41:not([disabled]):focus {
+.c34:not([disabled]):hover,
+.c34:not([disabled]):active,
+.c34:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -243,7 +243,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c41[disabled] {
+.c34[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -383,7 +383,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c38 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -413,7 +413,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c38 {
+.c39 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -425,13 +425,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: center;
 }
 
-.c34 {
+.c35 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c35 {
+.c36 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -439,7 +439,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c35:before {
+.c36:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -451,13 +451,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   content: "";
 }
 
-.c36 {
+.c37 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c40 {
+.c41 {
   margin-bottom: 2rem;
 }
 
@@ -786,13 +786,13 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c40 {
     padding: 0;
   }
 }
 
 @media print {
-  .c39 {
+  .c40 {
     max-width: 100%;
     padding: 0;
   }
@@ -848,19 +848,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c34 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c41 {
+  .c34 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c34 {
     padding: 0 3rem;
   }
 }
@@ -919,7 +919,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c38 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -944,19 +944,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c39 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c35 {
+  .c36 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c37 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
@@ -1410,15 +1410,16 @@ exports[`<CookiePolicy /> should render 1`] = `
               Nous collectons donc des données par l’intermédiaire de dispositifs appelés “cookies” permettant d’établir des mesures statistiques.
             </p>
             <p>
-              Ces cookies permettent au Code du travail numérique d’établir des mesures statistiques de fréquentation et d’utilisation du site. Pour ce faire, nous utilisons les services proposés par
+              Ces cookies permettent au Code du travail numérique d’établir des mesures statistiques de fréquentation et d’utilisation du site. Pour ce faire, nous utilisons les services proposés par la suite
                
               <a
-                href="https://fr.matomo.org/"
-                title="Page d'accueil de Matomo"
+                href="https://support.google.com/analytics/answer/9019185?hl=fr&ref_topic=2919631"
+                title="Les paramètres de confidentialité dans Google Analytics"
               >
-                Matomo
+                Google Analytics
               </a>
-              .
+               
+              et Matomo.
             </p>
             <p>
               Il convient d’indiquer que :
@@ -1430,7 +1431,17 @@ exports[`<CookiePolicy /> should render 1`] = `
               <li>
                 Les cookies ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.
               </li>
+              <li>
+                Les cookies sont inactifs avant que vous ayez exprimé votre consentement en cliquant sur le bouton « Ok, tout accepter  » ou après que vous ayez pris le soin de personnaliser vos préférences.
+              </li>
             </ul>
+            <p>
+              <button
+                class="c34"
+              >
+                Modifier les réglages
+              </button>
+            </p>
             <p>
               À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
             </p>
@@ -1466,22 +1477,22 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c34"
+      class="c35"
     >
       <footer
-        class="c35"
+        class="c36"
       >
         <div
-          class="c24 c36"
+          class="c24 c37"
         >
           <div
             class="c4"
           >
             <div
-              class="c37"
+              class="c38"
             >
               <strong
-                class="c38"
+                class="c39"
               >
                 <span
                   class="c28"
@@ -1490,12 +1501,12 @@ exports[`<CookiePolicy /> should render 1`] = `
               </strong>
             </div>
             <div
-              class="c39 c40"
+              class="c40 c41"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c41"
+              class="c34"
             >
               Contacter nos services en région
               <svg
