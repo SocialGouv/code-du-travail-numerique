@@ -16,32 +16,25 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-
-      - name: Semantic Release
-        id: semantic
-        uses: cycjimmy/semantic-release-action@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
         with:
-          semantic_version: 17
-          extra_plugins: |
-            @semantic-release/changelog@5.0.1
-            @semantic-release/git@9.0.0
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Deploy
+        run: |
+          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:="--force-publish --yes"}
+          yarn lerna publish from-package --yes
         env:
-          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
-
-      - name: Register docker image for api
-        uses: SocialGouv/actions/autodevops-build-register@v1
-        with:
-          project: "cdtn"
-          imageName: cdtn/code-du-travail-api
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./packages/code-du-travail-api/Dockerfile"
-          dockercontext: "./packages/code-du-travail-api"
-
-      - name: Register docker image for frontend
-        uses: SocialGouv/actions/autodevops-build-register@v1
-        with:
-          project: "cdtn"
-          imageName: cdtn/code-du-travail-frontend
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./Dockerfile"
-          dockercontext: "./"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
