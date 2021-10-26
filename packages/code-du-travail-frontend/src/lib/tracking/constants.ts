@@ -61,10 +61,6 @@ export const URL_TRACKED = [
   },
   {
     type: TrackingType.OUTILS,
-    url: "/outils/convention-collective",
-  },
-  {
-    type: TrackingType.OUTILS,
     url: "/outils",
   },
   {

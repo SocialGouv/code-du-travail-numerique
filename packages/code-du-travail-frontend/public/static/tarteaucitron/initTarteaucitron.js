@@ -56,10 +56,6 @@ const URL_TRACKED = [
   },
   {
     type: "outils",
-    url: "/outils/convention-collective",
-  },
-  {
-    type: "outils",
     url: "/outils",
   },
   {
