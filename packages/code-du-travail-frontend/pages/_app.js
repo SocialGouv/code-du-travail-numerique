@@ -7,10 +7,12 @@ import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
+import { Router } from "next/router";
 import React from "react";
 
 import { A11y } from "../src/a11y";
 import { initATInternetService } from "../src/AtInternetService";
+import { trackUrl } from "../src/lib";
 import { initPiwik } from "../src/piwik";
 import { initializeSentry, notifySentry } from "../src/sentry";
 import CustomError from "./_error";
@@ -67,6 +69,15 @@ export default class MyApp extends App {
       pageProps,
       trackingEnabled: process.env.IS_PRODUCTION_DEPLOYMENT === "true",
     };
+  }
+
+  constructor(props) {
+    super(props);
+    Router.events.on("routeChangeComplete", (url) => trackUrl(url));
+  }
+
+  componentWillUnmount() {
+    Router.events.off("routeChangeComplete", (url) => trackUrl(url));
   }
 
   componentDidMount() {

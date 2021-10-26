@@ -19398,11 +19398,6 @@ tar@^6.0.2, tar@^6.1.0:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-tarteaucitronjs@^1.9.5:
-  version "1.9.5"
-  resolved "https://registry.yarnpkg.com/tarteaucitronjs/-/tarteaucitronjs-1.9.5.tgz#905572bcfdfd1ae102166530f6efcff3d848ce46"
-  integrity sha512-csUmmbHAtlDQLwCjj++VTHjGMxmZX5cJaqH+bASR38psBr7taonmu/DkXhLDzBbZImZqWuHi28dYahz0bH8Fvw==
-
 telejson@^5.3.2:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/telejson/-/telejson-5.3.3.tgz#fa8ca84543e336576d8734123876a9f02bf41d2e"

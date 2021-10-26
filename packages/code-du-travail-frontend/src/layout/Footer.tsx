@@ -28,12 +28,6 @@ const Footer = (): JSX.Element => {
   const router = useRouter();
   const path = router.asPath;
 
-  const [cookieConsent, setCookieConsent] = React.useState(false);
-  React.useEffect(() => {
-    const consent = /tarteaucitron=!gtag=true/.test(document.cookie);
-    setCookieConsent(consent);
-  }, [path]);
-
   return (
     <OverflowWrapper>
       <StyledFooter>
@@ -271,15 +265,6 @@ const Footer = (): JSX.Element => {
             </StyledGovLink>
           </li>
         </GovernmentSection>
-        {cookieConsent && (
-          <img
-            style={{ position: "absolute" }}
-            src={`https://ad.doubleclick.net/ddm/activity/src=3048978;type=emplo253;cat=lpcodet;u1=${path};dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=1;num=1?`}
-            width="1"
-            height="1"
-            alt=""
-          />
-        )}
       </StyledFooter>
     </OverflowWrapper>
   );
