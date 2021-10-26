@@ -6,7 +6,7 @@ on:
 
 concurrency:
   cancel-in-progress: true
-  group: storybook
+  group: storybook-${{ github.ref }}
 
 jobs:
   storybook:
