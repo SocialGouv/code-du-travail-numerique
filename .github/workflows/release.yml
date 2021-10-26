@@ -33,6 +33,7 @@ jobs:
         run: |
           git config --global user.name "${NAME}"
           git config --global user.email "${EMAIL}"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits
           yarn lerna publish from-package --yes
         env:
