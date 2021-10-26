@@ -81,7 +81,6 @@ const URL_TRACKED = [
   },
 ];
 
-
 tarteaucitron.init({
   privacyUrl: "/politique-confidentialite#cookie" /* Privacy policy url */,
   hashtag: "#tarteaucitron" /* Open the panel with this hashtag */,
@@ -97,13 +96,13 @@ tarteaucitron.init({
   moreInfoLink: true /* Show more info link */,
   useExternalCss: false /* If false, the tarteaucitron.css file will be loaded */,
   readmoreLink:
-    "/politique-confidentialite#cookie" /* Change the default readmore link */
+    "/politique-confidentialite#cookie" /* Change the default readmore link */,
 });
 tarteaucitron.user.gtagUa = "DC-3048978";
-tarteaucitron.user.gtagMore = function() {
+tarteaucitron.user.gtagMore = function () {
   // For DOM loading
-  for(let i = 0; i < URL_TRACKED.length; i++) {
-    if(URL_TRACKED[i].url === location.pathname) {
+  for (let i = 0; i < URL_TRACKED.length; i++) {
+    if (URL_TRACKED[i].url === location.pathname) {
       gtag("event", "conversion", {
         allow_custom_scripts: true,
         send_to: `DC-3048978/emplo253/${URL_TRACKED[i].type}+unique`,
@@ -111,7 +110,5 @@ tarteaucitron.user.gtagMore = function() {
       });
     }
   }
-  
 };
 (tarteaucitron.job = tarteaucitron.job || []).push("gtag");
-	
