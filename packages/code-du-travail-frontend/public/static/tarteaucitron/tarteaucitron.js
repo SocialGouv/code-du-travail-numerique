@@ -226,9 +226,9 @@ var tarteaucitron = {
             },
             params = tarteaucitron.parameters;
 
-        // Step -1      
-        if (typeof tarteaucitronCustomPremium !== 'undefined') {        
-            tarteaucitronCustomPremium();       
+        // Step -1
+        if (typeof tarteaucitronCustomPremium !== 'undefined') {
+            tarteaucitronCustomPremium();
         }
 
         // Step 0: get params
@@ -360,9 +360,9 @@ var tarteaucitron = {
                     html += '   </button>';
 
                     if (tarteaucitron.parameters.privacyUrl !== "") {
-                        html += '   <button type="button" id="tarteaucitronPrivacyUrl" onclick="document.location = tarteaucitron.parameters.privacyUrl">';
-                        html += '       ' + tarteaucitron.lang.privacyUrl;
-                        html += '   </button>';
+                        html += '   <a id="tarteaucitronPrivacyUrl" href="tarteaucitron.parameters.privacyUrl">';
+                        html += tarteaucitron.lang.privacyUrl;
+                        html += '   </a>';
                     }
 
                     //html += '   </span>';
@@ -389,9 +389,9 @@ var tarteaucitron = {
                     html += '   </button>';
 
                     if (tarteaucitron.parameters.privacyUrl !== "") {
-                        html += '   <button type="button" id="tarteaucitronPrivacyUrl" onclick="document.location = tarteaucitron.parameters.privacyUrl">';
-                        html += '       ' + tarteaucitron.lang.privacyUrl;
-                        html += '   </button>';
+                        html += '   <a id="tarteaucitronPrivacyUrl" href="tarteaucitron.parameters.privacyUrl">';
+                        html += tarteaucitron.lang.privacyUrl;
+                        html += '   </a>';
                     }
 
                     //html += '   </span>';
