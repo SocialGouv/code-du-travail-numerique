@@ -33,24 +33,10 @@ jobs:
           dockerbuildargs: |
             SENTRY_PUBLIC_DSN=${{ secrets.SENTRY_PUBLIC_DSN }}
 
-  manifests:
-    name: Preproduction manifests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use k8s manifests generation
-        uses: SocialGouv/actions/k8s-manifests@v1
-        with:
-          environment: "prod"
-          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
-          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
-        env:
-          ELASTIC_APM_ENVIRONMENT: cdtn-prod
-          ES_INDEX_PREFIX: cdtn-preprod
-
   deploy-prod:
     name: Deploy production
     runs-on: ubuntu-latest
-    needs: [register, manifests]
+    needs: [register]
     environment:
       name: production
       url: https://code.travail.gouv.fr/
