@@ -31,9 +31,11 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Deploy
         run: |
-          git config --global user.name "${{ secrets.SOCIALGROOVYBOT_NAME }}"
-          git config --global user.email "${{ secrets.SOCIALGROOVYBOT_EMAIL }}"
+          git config --global user.name "${NAME}"
+          git config --global user.email "${EMAIL}"
           GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits
           yarn lerna publish from-package --yes
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
