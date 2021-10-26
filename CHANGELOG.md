@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
+
+
+### Bug Fixes
+
+* secrets ([#3929](https://github.com/SocialGouv/code-du-travail-numerique/issues/3929)) ([e57daa7](https://github.com/SocialGouv/code-du-travail-numerique/commit/e57daa7ecf714f3da9b92b017a41f16cbb244826))
+
+
+
+
+
 # [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
 
 
