@@ -5,12 +5,9 @@ contrat salarié . convention collective . hospitalisation privées:
   références:
     Article 50.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005802016/?idConteneur=KALICONT000005635813
   cdtn:
-    type: "overrideSeniority"
-    property: "seniorityMaximum"
-    value: "61"
-    question: "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise ?"
     idcc: 2264
-    preavisRetraite: true
+    préavis-retraite: true
+    mise à la retraite 5 ans: true
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
   applicable si: mise à la retraite

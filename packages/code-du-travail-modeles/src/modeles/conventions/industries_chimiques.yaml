@@ -5,7 +5,7 @@ contrat salarié . convention collective . industries chimiques:
   valeur: oui
   cdtn:
     idcc: 44
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle:
   applicable si: mise à la retraite

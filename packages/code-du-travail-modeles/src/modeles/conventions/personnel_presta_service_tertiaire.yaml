@@ -4,7 +4,7 @@ contrat salarié . convention collective . personnel presta service tertiaire:
   valeur: oui
   cdtn:
     idcc: 2098
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle:
   titre: Catégorie professionnelle

@@ -5,7 +5,7 @@ contrat salarié . convention collective . restauration rapide:
   valeur: oui
   cdtn:
     idcc: 1501
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle:
   titre: Catégorie professionnelle

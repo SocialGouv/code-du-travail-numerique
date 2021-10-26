@@ -5,7 +5,7 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   valeur: oui
   cdtn:
     idcc: 1483
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . habillement textiles commerce de detail . départ à la retraite:
   applicable si: départ à la retraite

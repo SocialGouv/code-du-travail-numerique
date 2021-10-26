@@ -5,7 +5,7 @@ contrat salarié . convention collective . transport aérien personnel au sol:
   valeur: oui
   cdtn:
     idcc: 275
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . transport aérien personnel au sol . catégorie professionnelle:
   titre: Catégorie professionnelle

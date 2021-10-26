@@ -5,7 +5,7 @@ contrat salarié . convention collective . comptables:
   valeur: oui
   cdtn:
     idcc: 787
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . comptables . mise à la retraite:
   applicable si: mise à la retraite

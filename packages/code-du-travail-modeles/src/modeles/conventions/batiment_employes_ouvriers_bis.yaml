@@ -4,7 +4,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis:
   valeur: oui
   cdtn:
     idcc: 1597
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . batiment ouvriers employés bis . mise ou départ à la retraite:
   applicable si:

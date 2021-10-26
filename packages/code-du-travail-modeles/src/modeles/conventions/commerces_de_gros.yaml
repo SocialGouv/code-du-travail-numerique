@@ -5,7 +5,7 @@ contrat salarié . convention collective . commerces de gros:
   valeur: oui
   cdtn:
     idcc: 573
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
   applicable si: mise à la retraite

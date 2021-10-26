@@ -5,7 +5,7 @@ contrat salarié . convention collective . restauration collectivités:
   valeur: oui
   cdtn:
     idcc: 1266
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
   titre: Catégorie professionnelle

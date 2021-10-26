@@ -4,7 +4,7 @@ contrat salarié . convention collective . banque:
   valeur: oui
   cdtn:
     idcc: 2120
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . banque . mise à la retraite:
   applicable si: mise à la retraite

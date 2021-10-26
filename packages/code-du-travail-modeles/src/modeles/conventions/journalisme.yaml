@@ -5,7 +5,7 @@ contrat salarié . convention collective . journalisme:
   valeur: oui
   cdtn:
     idcc: 1480
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . journalisme . mise ou départ à la retraite:
   applicable si:

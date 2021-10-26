@@ -6,7 +6,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres:
   valeur: oui
   cdtn:
     idcc: 650
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . mise à la retraite:
   applicable si: mise à la retraite

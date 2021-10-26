@@ -5,7 +5,7 @@ contrat salarié . convention collective . établissement handicap:
   valeur: oui
   cdtn:
     idcc: 413
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?

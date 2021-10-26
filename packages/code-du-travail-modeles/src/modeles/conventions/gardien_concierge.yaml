@@ -5,7 +5,7 @@ contrat salarié . convention collective . gardien concierge:
   valeur: oui
   cdtn:
     idcc: 1043
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . gardien concierge . catégorie professionnelle:
   applicable si: mise à la retraite

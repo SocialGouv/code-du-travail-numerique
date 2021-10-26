@@ -5,7 +5,7 @@ contrat salarié . convention collective . boulangerie patisserie:
   valeur: oui
   cdtn:
     idcc: 843
-    preavisRetraite: true
+    préavis-retraite: true
 
 contrat salarié . convention collective . boulangerie patisserie . mise à la retraite:
   remplace: contrat salarié . préavis de retraite collective
