@@ -2,10 +2,7 @@ name: Security vulnerability scanner
 
 on:
   push:
-    branches:
-      - "**"
-    tags-ignore:
-      - v*
+    branches: ["master"]
 
 concurrency:
   cancel-in-progress: true
