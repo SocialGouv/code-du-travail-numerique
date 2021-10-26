@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
+
+
+### Bug Fixes
+
+* **frontend:** modify h-n structure ([#3784](https://github.com/SocialGouv/code-du-travail-numerique/issues/3784)) ([e0e610a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0e610a4f89407f63e249621f97e58ad539213f1))
+* **modeles:** cc préavis-retraite ([#3921](https://github.com/SocialGouv/code-du-travail-numerique/issues/3921)) ([7daa746](https://github.com/SocialGouv/code-du-travail-numerique/commit/7daa7460b88ab46c05353006cae1fd8d85d41e14))
+
+
+### Features
+
+* **ci:** optimize CI and replace gitlab ci ([#3895](https://github.com/SocialGouv/code-du-travail-numerique/issues/3895)) ([f44baf5](https://github.com/SocialGouv/code-du-travail-numerique/commit/f44baf531a4075d42d424d438dba51c85571a65a))
+* **modeles:** add cc 1518 retirement ([#3833](https://github.com/SocialGouv/code-du-travail-numerique/issues/3833)) ([34c8ba8](https://github.com/SocialGouv/code-du-travail-numerique/commit/34c8ba808293116ab3158077d19a50bd83fe5bdb))
+* **simulator:** add a specific message for coming agreements ([#3839](https://github.com/SocialGouv/code-du-travail-numerique/issues/3839)) ([320f144](https://github.com/SocialGouv/code-du-travail-numerique/commit/320f1449d20fea10fd5b44249c11d3022b175352))
+* **simulator:** add CC 1404 ([#3809](https://github.com/SocialGouv/code-du-travail-numerique/issues/3809)) ([e94a694](https://github.com/SocialGouv/code-du-travail-numerique/commit/e94a6945e3b92818cc612248d8ce26e8e3f2e9e9))
+* **simulator:** Add CC 1979 ([#3825](https://github.com/SocialGouv/code-du-travail-numerique/issues/3825)) ([252d419](https://github.com/SocialGouv/code-du-travail-numerique/commit/252d4192fd00833a4ff73fd1eadb0a9a6802791d))
+
+
+
+
+
 ## [4.54.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
