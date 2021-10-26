@@ -20,6 +20,10 @@ on:
   schedule:
     - cron: "16 1 * * 5"
 
+concurrency:
+  cancel-in-progress: true
+  group: codeql
+
 jobs:
   analyze:
     name: Analyze

@@ -28,7 +28,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "generate": "kosko generate",
-    "lint": "prettier __tests__ components environments utils",
+    "lint": "prettier __tests__ components environments",
     "lint:fix": "yarn lint --write",
     "precommit": "lint-staged",
     "prepush": "yarn test",

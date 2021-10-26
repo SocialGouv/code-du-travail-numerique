@@ -2,6 +2,10 @@ name: Kubernetes manifests tests
 
 on: [push]
 
+concurrency:
+  cancel-in-progress: true
+  group: k8s
+
 defaults:
   run:
     shell: bash

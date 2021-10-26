@@ -1,20 +1,21 @@
-name: Storybook
+name: Release
 
-on:
-  push:
-    branches: [master]
+on: workflow_dispatch
 
 concurrency:
   cancel-in-progress: true
-  group: storybook
+  group: quality
 
 jobs:
-  storybook:
-    name: Deployment storybook on gh-pages
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -30,7 +31,7 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Deploy
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn storybook:deploy:action
+          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits
+          yarn lerna publish from-package --yes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}

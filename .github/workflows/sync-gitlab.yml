@@ -1,0 +1,15 @@
+name: Gitlab mirroring
+
+on:
+  - push
+  - delete
+
+jobs:
+  mirror_gitlab:
+    name: Synchronize with Gitlab
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SocialGouv/actions/mirror-gitlab@master
+        with:
+          project: SocialGouv/cdtn/code-du-travail-numerique
+          token: ${{ secrets.SOCIALGROOVYBOT_GITLAB_TOKEN }}
