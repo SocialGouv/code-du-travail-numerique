@@ -15,17 +15,15 @@ export default function EventTracker(): JSX.Element {
       send_to: `DC-3048978/emplo253/${urlToTrack.type}+unique`,
       u1: `${window.location.origin}${urlToTrack.url}`,
     });
+    return <></>;
   }
-  return (
-    <>
-      <script
-        type="text/javascript"
-        src="/static/tarteaucitron/tarteaucitron.js"
-      />
-      <script
-        type="text/javascript"
-        src="/static/tarteaucitron/initTarteaucitron.js"
-      />
-    </>
-  );
+
+  if (typeof document !== "undefined") {
+    const scriptInit = document.createElement("script");
+    document.head.appendChild(scriptInit);
+    scriptInit.src = "/static/tarteaucitron/initTarteaucitron.js";
+    return <></>;
+  }
+
+  return <></>;
 }

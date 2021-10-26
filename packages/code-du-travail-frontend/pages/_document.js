@@ -55,6 +55,10 @@ export default class MyDocument extends Document {
             src="/static/webcomponents-polyfill/loader.js"
           />
           <script key="smarttag" src="/static/smarttag.js" />
+          <script
+            type="text/javascript"
+            src="/static/tarteaucitron/tarteaucitron.js"
+          />
         </Head>
         <body>
           <noscript>
