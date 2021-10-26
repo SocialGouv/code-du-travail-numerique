@@ -10,7 +10,7 @@ on:
 
 concurrency:
   cancel-in-progress: true
-  group: review
+  group: review-${{ github.ref }}
 
 jobs:
   register:

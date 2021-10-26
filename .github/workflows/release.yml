@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 concurrency:
   cancel-in-progress: true
-  group: quality
+  group: release-${{ github.ref }}
 
 jobs:
   release:

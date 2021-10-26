@@ -6,7 +6,7 @@ on:
 
 concurrency:
   cancel-in-progress: true
-  group: security
+  group: security-${{ github.ref }}
 
 jobs:
   register:
