@@ -46,7 +46,6 @@ const Search = ({ onSelectConvention }) => {
         entreprise ou son SIRET.
       </Label>
       <BlockInput
-        role="search"
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
         value={query}
         type="search"
@@ -144,7 +143,7 @@ const Span = styled.span`
 `;
 
 const HelpButton = styled(Button)`
-  color: ${theme.colors.secondary};
+  color: ${({ theme }) => theme.secondary};
   text-decoration: underline;
 `;
 

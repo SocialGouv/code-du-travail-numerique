@@ -537,7 +537,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 .c67 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -844,7 +844,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -861,6 +860,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #f66663;
 }
 
+.c38.spacing-left {
+  margin-left: 1rem;
+}
+
+.c38.spacing-top {
+  margin-top: 1rem;
+}
+
 .c41 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -871,7 +878,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -888,6 +894,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 .c41:hover,
 .c41:focus {
   color: #f66663;
+}
+
+.c41.spacing-left {
+  margin-left: 1rem;
+}
+
+.c41.spacing-top {
+  margin-top: 1rem;
 }
 
 .c39 {
@@ -1182,17 +1196,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c102 {
-  margin: 0.4rem 0;
-}
-
-.c103 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c104 {
+.c103 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1214,11 +1225,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c105 {
+.c104 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c106 {
+.c105 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1974,7 +1985,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c106 {
+  .c105 {
     display: none;
   }
 }
@@ -2131,7 +2142,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       />
       <header
         class="c2"
-        role="banner"
       >
         <div
           class="c3"
@@ -2150,7 +2160,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <img
               alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
               class="c7"
+              height="115"
               src="/static/assets/img/logo-rf.svg"
+              width="135"
             />
             <svg
               aria-label="Code du travail numérique"
@@ -2189,7 +2201,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               >
                 <label
                   for="floating-search"
-                  id="search"
                 >
                   Rechercher
                 </label>
@@ -2282,7 +2293,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       <main
         class="c23"
         id="content"
-        role="main"
         tabindex="-1"
       >
         <nav
@@ -2390,12 +2400,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       class="c37"
                     >
                       <button
-                        class="c38 no-after"
-                        spacing="left"
+                        class="c38 no-after spacing-left"
                         title="Partager sur Facebook"
                         type="button"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2409,15 +2418,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <a
-                        class="c41"
+                        class="c41 spacing-left"
                         href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                        spacing="left"
                         title="Envoyer par email"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2435,14 +2443,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </a>
                       <button
-                        class="c38"
-                        spacing="left"
+                        class="c38 spacing-left"
                         title="Partager sur LinkedIn"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -2456,17 +2463,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <div
                         class="c42"
                       >
                         <button
-                          class="c38"
-                          spacing="left"
+                          class="c38 spacing-left"
                           title="Plus d’options"
                         >
-                          <div
+                          <span
                             class="c39"
                           >
                             <svg
@@ -2490,7 +2496,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                                 stroke-width="1.5"
                               />
                             </svg>
-                          </div>
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -2506,7 +2512,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <div
+                      <span
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -2613,7 +2619,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <div
+                        <span
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -2722,7 +2728,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <div
+                          <span
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -2742,7 +2748,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                          role="search"
                           type="search"
                           value=""
                         />
@@ -2779,12 +2784,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c37"
               >
                 <button
-                  class="c38 no-after"
-                  spacing="left"
+                  class="c38 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2798,15 +2802,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c41"
+                  class="c41 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2824,14 +2827,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c38"
-                  spacing="left"
+                  class="c38 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -2845,17 +2847,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c42"
                 >
                   <button
-                    class="c38"
-                    spacing="left"
+                    class="c38 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c39"
                     >
                       <svg
@@ -2879,7 +2880,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -2899,7 +2900,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <div
+                      <span
                         class="c67"
                       />
                       <span>
@@ -2932,7 +2933,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
       >
         <footer
           class="c86"
-          role="contentinfo"
         >
           <div
             class="c62 c87"
@@ -2946,7 +2946,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <div
+                  <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
@@ -2992,81 +2992,65 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -3085,21 +3069,17 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <button
                       class="c74"
                     >
                       Contact
                     </button>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3107,12 +3087,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       Contribuer sur Github
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3133,12 +3111,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3146,12 +3122,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       La Direction Générale du Travail
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3159,12 +3133,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       La fabrique des Ministères sociaux
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3177,12 +3149,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <ul
-            class="c104"
+            class="c103"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3191,7 +3163,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -3199,7 +3171,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3208,7 +3180,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -3216,7 +3188,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3225,7 +3197,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -3233,7 +3205,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3242,7 +3214,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -3250,7 +3222,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3259,7 +3231,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -3267,7 +3239,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3820,7 +3792,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 .c67 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -4127,7 +4099,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -4144,6 +4115,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #f66663;
 }
 
+.c38.spacing-left {
+  margin-left: 1rem;
+}
+
+.c38.spacing-top {
+  margin-top: 1rem;
+}
+
 .c41 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4154,7 +4133,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -4171,6 +4149,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 .c41:hover,
 .c41:focus {
   color: #f66663;
+}
+
+.c41.spacing-left {
+  margin-left: 1rem;
+}
+
+.c41.spacing-top {
+  margin-top: 1rem;
 }
 
 .c39 {
@@ -4465,17 +4451,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c102 {
-  margin: 0.4rem 0;
-}
-
-.c103 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
+  padding: 0.4rem 0;
 }
 
-.c104 {
+.c103 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4497,11 +4480,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c105 {
+.c104 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c106 {
+.c105 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5257,7 +5240,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c106 {
+  .c105 {
     display: none;
   }
 }
@@ -5414,7 +5397,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       />
       <header
         class="c2"
-        role="banner"
       >
         <div
           class="c3"
@@ -5433,7 +5415,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <img
               alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
               class="c7"
+              height="115"
               src="/static/assets/img/logo-rf.svg"
+              width="135"
             />
             <svg
               aria-label="Code du travail numérique"
@@ -5472,7 +5456,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               >
                 <label
                   for="floating-search"
-                  id="search"
                 >
                   Rechercher
                 </label>
@@ -5565,7 +5548,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       <main
         class="c23"
         id="content"
-        role="main"
         tabindex="-1"
       >
         <nav
@@ -5673,12 +5655,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       class="c37"
                     >
                       <button
-                        class="c38 no-after"
-                        spacing="left"
+                        class="c38 no-after spacing-left"
                         title="Partager sur Facebook"
                         type="button"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5692,15 +5673,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <a
-                        class="c41"
+                        class="c41 spacing-left"
                         href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                        spacing="left"
                         title="Envoyer par email"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5718,14 +5698,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </a>
                       <button
-                        class="c38"
-                        spacing="left"
+                        class="c38 spacing-left"
                         title="Partager sur LinkedIn"
                       >
-                        <div
+                        <span
                           class="c39"
                         >
                           <svg
@@ -5739,17 +5718,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                               fill="currentColor"
                             />
                           </svg>
-                        </div>
+                        </span>
                       </button>
                       <div
                         class="c42"
                       >
                         <button
-                          class="c38"
-                          spacing="left"
+                          class="c38 spacing-left"
                           title="Plus d’options"
                         >
-                          <div
+                          <span
                             class="c39"
                           >
                             <svg
@@ -5773,7 +5751,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                                 stroke-width="1.5"
                               />
                             </svg>
-                          </div>
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -5789,7 +5767,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <h1
                       class="c47"
                     >
-                      <div
+                      <span
                         class="c48"
                       />
                       Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?
@@ -5896,7 +5874,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <h2
                         class="c60"
                       >
-                        <div
+                        <span
                           class="c48"
                         />
                         Que dit le code du travail ?
@@ -6005,7 +5983,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         <h2
                           class="c66"
                         >
-                          <div
+                          <span
                             class="c67"
                           />
                           Que dit votre convention collective ?
@@ -6025,7 +6003,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                          role="search"
                           type="search"
                           value=""
                         />
@@ -6062,12 +6039,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c37"
               >
                 <button
-                  class="c38 no-after"
-                  spacing="left"
+                  class="c38 no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6081,15 +6057,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <a
-                  class="c41"
+                  class="c41 spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-                  spacing="left"
                   title="Envoyer par email"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6107,14 +6082,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </a>
                 <button
-                  class="c38"
-                  spacing="left"
+                  class="c38 spacing-left"
                   title="Partager sur LinkedIn"
                 >
-                  <div
+                  <span
                     class="c39"
                   >
                     <svg
@@ -6128,17 +6102,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </span>
                 </button>
                 <div
                   class="c42"
                 >
                   <button
-                    class="c38"
-                    spacing="left"
+                    class="c38 spacing-left"
                     title="Plus d’options"
                   >
-                    <div
+                    <span
                       class="c39"
                     >
                       <svg
@@ -6162,7 +6135,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           stroke-width="1.5"
                         />
                       </svg>
-                    </div>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -6182,7 +6155,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     <strong
                       class="c80 c81"
                     >
-                      <div
+                      <span
                         class="c67"
                       />
                       <span>
@@ -6215,7 +6188,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
       >
         <footer
           class="c86"
-          role="contentinfo"
         >
           <div
             class="c62 c87"
@@ -6229,7 +6201,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   class="c89"
                 >
-                  <div
+                  <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
@@ -6275,81 +6247,65 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/glossaire"
                     >
                       Glossaire
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/a-propos"
                     >
                       À propos
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/mentions-legales"
                     >
                       Mentions légales
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/stats"
                     >
                       Statistiques d’utilisation
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
-                      class="c103"
+                      class="c102"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -6368,21 +6324,17 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <button
                       class="c74"
                     >
                       Contact
                     </button>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6390,12 +6342,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       Contribuer sur Github
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6416,12 +6366,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <ul
                   class="c100 c101"
                 >
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6429,12 +6377,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       La Direction Générale du Travail
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6442,12 +6388,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       La fabrique des Ministères sociaux
                     </a>
                   </li>
-                  <li
-                    class="c102"
-                  >
+                  <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c102"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6460,12 +6404,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <ul
-            class="c104"
+            class="c103"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6474,7 +6418,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -6482,7 +6426,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6491,7 +6435,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -6499,7 +6443,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6508,7 +6452,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -6516,7 +6460,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6525,7 +6469,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -6533,7 +6477,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6542,7 +6486,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c105"
               >
                 |
               </span>
@@ -6550,7 +6494,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c103 c105"
+                class="c102 c104"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"

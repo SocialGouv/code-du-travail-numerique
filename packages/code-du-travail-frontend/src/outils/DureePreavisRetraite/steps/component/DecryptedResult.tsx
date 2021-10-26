@@ -1,4 +1,4 @@
-import { Text } from "@socialgouv/cdtn-ui";
+import { Paragraph, Text } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
@@ -180,20 +180,19 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   return (
     <>
       <SectionTitle>Le résultat décrypté</SectionTitle>
-      <Text>
+      <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult result={legalResult} />
-      </Text>
-      <br />
-      <Text>
+      </Paragraph>
+      <Paragraph>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
         />
-      </Text>
-      {description && <Text>{description}</Text>}
+      </Paragraph>
+      {description && <Paragraph>{description}</Paragraph>}
     </>
   );
 };

@@ -96,7 +96,7 @@ exports[`<Feedback/> should render 1`] = `
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -293,7 +293,7 @@ exports[`<Feedback/> should render 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span>
@@ -490,10 +490,17 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateX(4px);
 }
 
+.c15 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -501,13 +508,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c15 {
-  color: #9298af;
-  line-height: 1.25;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .c6 {
@@ -836,7 +836,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span
@@ -1083,10 +1083,17 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   cursor: not-allowed;
 }
 
+.c11 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c7 {
   position: absolute;
   background-color: #f66663;
-  border-radius: none;
+  border-radius: 0;
   top: 50%;
   left: 0;
   width: 0.4rem;
@@ -1094,13 +1101,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c11 {
-  color: #9298af;
-  line-height: 1.25;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .c6 {
@@ -1357,7 +1357,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           <strong
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
             <span

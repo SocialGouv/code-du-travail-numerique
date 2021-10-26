@@ -255,7 +255,6 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
         id="convention-search"
         name="q"
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-        role="search"
         type="search"
         value=""
       />
@@ -527,7 +526,6 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
         id="convention-search"
         name="q"
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-        role="search"
         type="search"
         value=""
       />

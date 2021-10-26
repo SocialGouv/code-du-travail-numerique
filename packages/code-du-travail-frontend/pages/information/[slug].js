@@ -116,6 +116,7 @@ const Information = ({
   if (editorialContent.length > 1) {
     editorialContent = (
       <Accordion
+        titleLevel={2}
         preExpanded={[anchor]}
         items={contents.map(({ title, name }, index) => ({
           body: editorialContent[index],
@@ -181,10 +182,12 @@ const GlobalStylesWrapper = styled.div`
     max-width: 100%;
     height: auto;
   }
+
   ul,
   ol {
     padding-left: ${spacings.larger};
   }
+
   li + li {
     margin-top: ${spacings.base};
     @media (max-width: ${breakpoints.mobile}) {

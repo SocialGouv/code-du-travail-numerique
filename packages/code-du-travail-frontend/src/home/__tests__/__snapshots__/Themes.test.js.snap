@@ -33,7 +33,7 @@ exports[`<Themes /> should render 1`] = `
   z-index: 0;
 }
 
-.c30 {
+.c29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -71,16 +71,16 @@ exports[`<Themes /> should render 1`] = `
   will-change: transform;
 }
 
-.c30:link,
-.c30:visited {
+.c29:link,
+.c29:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c30:not([disabled]):hover,
-.c30:not([disabled]):active,
-.c30:not([disabled]):focus {
+.c29:not([disabled]):hover,
+.c29:not([disabled]):active,
+.c29:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -89,7 +89,7 @@ exports[`<Themes /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c30[disabled] {
+.c29[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -200,17 +200,6 @@ exports[`<Themes /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c27 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c23 {
   position: relative;
   display: -webkit-inline-box;
@@ -282,7 +271,7 @@ exports[`<Themes /> should render 1`] = `
   padding-right: 1rem;
 }
 
-.c28 {
+.c27 {
   margin: 0;
 }
 
@@ -381,7 +370,7 @@ exports[`<Themes /> should render 1`] = `
   transform: translateX(20%);
 }
 
-.c29 {
+.c28 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -389,7 +378,7 @@ exports[`<Themes /> should render 1`] = `
   overflow: visible;
 }
 
-.c31 {
+.c30 {
   width: 2.8rem;
   height: 1.5rem;
   margin-left: 1.6rem;
@@ -422,19 +411,19 @@ exports[`<Themes /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c29 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c30 {
+  .c29 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c29 {
     padding: 0 3rem;
   }
 }
@@ -511,12 +500,6 @@ exports[`<Themes /> should render 1`] = `
 @media (max-width:600px) {
   .c16 {
     width: 60%;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    font-size: 1.6rem;
   }
 }
 
@@ -627,7 +610,7 @@ exports[`<Themes /> should render 1`] = `
             <h2
               class="c9"
             >
-              <div
+              <span
                 class="c10"
               />
               Thèmes
@@ -660,7 +643,7 @@ exports[`<Themes /> should render 1`] = `
                     <h2
                       class="c20"
                     >
-                      <div
+                      <span
                         class="c21"
                       />
                       Thèmes
@@ -719,7 +702,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="c27 c28"
+                        class="c27"
                       >
                         Embauche et contrat de travail
                       </h3>
@@ -768,7 +751,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="c27 c28"
+                        class="c27"
                       >
                         Salaire et Rémunération
                       </h3>
@@ -781,7 +764,7 @@ exports[`<Themes /> should render 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="c29"
+                  class="c28"
                   fill="none"
                   viewBox="0 0 236 208"
                 >
@@ -1382,7 +1365,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="c27 c28"
+                        class="c27"
                       >
                         Temps de travail
                       </h3>
@@ -1394,13 +1377,13 @@ exports[`<Themes /> should render 1`] = `
           </div>
         </div>
         <a
-          class="c30"
+          class="c29"
           href="/themes"
         >
           Voir tous les thèmes 
           <svg
             aria-hidden="true"
-            class="c31"
+            class="c30"
             fill="none"
             viewBox="0 0 28 15"
           >

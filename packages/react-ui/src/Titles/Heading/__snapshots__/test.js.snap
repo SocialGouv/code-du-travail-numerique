@@ -71,7 +71,7 @@ exports[`<Heading /> renders a striped shifted H4 heading 1`] = `
   <h4
     class="c0"
   >
-    <div
+    <span
       class="c1"
     />
     Lorem Ipsum

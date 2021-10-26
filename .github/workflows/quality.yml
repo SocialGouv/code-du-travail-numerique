@@ -1,0 +1,93 @@
+name: Code quality
+
+on: [push]
+
+jobs:
+  register-elastic:
+    name: Register elasticsearch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SocialGouv/actions/autodevops-build-register@v1
+        with:
+          project: "cdtn"
+          imageName: cdtn/elasticsearch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./docker/elasticsearch/Dockerfile"
+          dockercontext: "./docker/elasticsearch"
+
+  build:
+    name: Build, lint and test
+    runs-on: ubuntu-latest
+    needs: [register-elastic]
+    services:
+      elasticsearch:
+        image: ghcr.io/socialgouv/cdtn/elasticsearch:sha-${{ github.sha }}
+        ports:
+          - 9200:9200
+        env:
+          ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+        options: >-
+          --health-cmd "curl -sS http://localhost:9200/_cat/health?h=status"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 6
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories:
+          [
+            "@socialgouv/cdtn-ui",
+            "@socialgouv/react-fiche-service-public",
+            "@cdt/frontend",
+            "@cdt/data",
+            "@socialgouv/modeles-social",
+            "@cdt/api",
+          ]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Build code
+        run: |
+          yarn build
+      - name: Lint ${{ matrix.repositories }}
+        run: |
+          yarn workspace ${{ matrix.repositories }} lint
+      - name: Test ${{ matrix.repositories }}
+        run: |
+          yarn workspace ${{ matrix.repositories }} test
+        env:
+          ELASTICSEARCH_URL: http://localhost:9200
+
+  docker:
+    name: Lint Dockerfile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v1.6.0
+        with:
+          recursive: true
+
+  services-de-renseignement:
+    name: Get url from service de renseignement
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Test SDR urls
+        run: |
+          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider

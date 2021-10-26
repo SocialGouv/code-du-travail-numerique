@@ -55,7 +55,7 @@ If you need to work on both frontend and api, don't provide API_URL as it will f
 yarn dev:frontend
 ```
 
-The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv-react-ui.netlify.com>
+The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv.github.io/code-du-travail-numerique/>
 
 ##### Testing
 

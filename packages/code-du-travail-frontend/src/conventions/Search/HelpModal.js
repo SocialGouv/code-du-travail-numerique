@@ -110,6 +110,6 @@ export const HelpModal = ({ children: renderProp }) => {
 };
 
 const HelpButton = styled(Button)`
-  color: ${theme.colors.secondary};
+  color: ${({ theme }) => theme.secondary};
   text-decoration: underline;
 `;

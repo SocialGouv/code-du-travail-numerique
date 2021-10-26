@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Table /> renders 1`] = `
+exports[`<Badge /> renders 1`] = `
 .c0 {
   position: absolute;
   top: 0;
@@ -62,7 +62,7 @@ exports[`<Table /> renders 1`] = `
 </div>
 `;
 
-exports[`<Table /> renders with correct styles and icon 1`] = `
+exports[`<Badge /> renders with correct styles and icon 1`] = `
 .c0 {
   position: absolute;
   top: 0;

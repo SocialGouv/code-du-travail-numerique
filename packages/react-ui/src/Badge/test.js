@@ -4,7 +4,7 @@ import React from "react";
 import { Check } from "../icons/index.js";
 import { Badge } from "./index.js";
 
-describe("<Table />", () => {
+describe("<Badge />", () => {
   it("renders", () => {
     const { container } = render(<Badge />);
     expect(container).toMatchSnapshot();

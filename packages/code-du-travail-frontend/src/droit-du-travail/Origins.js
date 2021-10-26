@@ -34,6 +34,7 @@ const Origins = () => (
     <Container>
       <FlexWrapper>
         <Accordion
+          titleLevel={3}
           variant="tile"
           items={[
             {
@@ -103,7 +104,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.International,
-              title: <h3>Les textes internationaux</h3>,
+              title: "Les textes internationaux",
             },
             {
               body: (
@@ -199,7 +200,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Eurotext,
-              title: <h3>Les textes européens</h3>,
+              title: "Les textes européens",
             },
             {
               body: (
@@ -257,7 +258,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Constitution,
-              title: <h3>La Constitution française</h3>,
+              title: "La Constitution française",
             },
             {
               body: (
@@ -303,7 +304,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Laws,
-              title: <h3>Lois, ordonnances, décrets et arrêtés</h3>,
+              title: "Lois, ordonnances, décrets et arrêtés",
             },
             {
               body: (
@@ -330,7 +331,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Agreement,
-              title: <h3>Les conventions et accords collectifs</h3>,
+              title: "Les conventions et accords collectifs",
             },
             {
               body: (
@@ -358,7 +359,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Uses,
-              title: <h3>Les usages et les engagements unilatéraux</h3>,
+              title: "Les usages et les engagements unilatéraux",
             },
             {
               body: (
@@ -369,7 +370,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Rules,
-              title: <h3>Le règlement intérieur de l’entreprise</h3>,
+              title: "Le règlement intérieur de l’entreprise",
             },
             {
               body: (
@@ -397,7 +398,7 @@ const Origins = () => (
                 </>
               ),
               icon: icons.Contract,
-              title: <h3>Le contrat de travail</h3>,
+              title: "Le contrat de travail",
             },
           ]}
         />
