@@ -1,8 +1,7 @@
 import { supportedCcn } from "@socialgouv/modeles-social";
 import {
-  AgreementCdtnInfo,
   AgreementInfo,
-  AgreementType,
+  SpecialAgreementType,
 } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -16,18 +15,20 @@ import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
-  const [overrideQuestion, setOverrideQuestion] =
-    useState<AgreementCdtnInfo>(null);
+  const [overrideQuestion, setOverrideQuestion] = useState<string>(null);
 
   useEffect(() => {
     let hasBeenFound = false;
     supportedCcn.map((cc: AgreementInfo) => {
       if (
         cc.idcc === form.getState().values.ccn.num &&
-        cc.cdtnInfo.type === AgreementType.OVERRIDE_ANCIENNETE
+        cc.specialAgreementType === SpecialAgreementType.MISE_RETRAITE_5_ANS &&
+        form.getState().values["contrat salarié - mise à la retraite"] === "oui"
       ) {
-        setOverrideQuestion(cc.cdtnInfo);
-        form.change("seniorityValue", cc.cdtnInfo.value);
+        setOverrideQuestion(
+          "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise ?"
+        );
+        form.change("seniorityValue", "61");
         hasBeenFound = true;
       }
     });
@@ -46,8 +47,8 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
     <>
       {overrideQuestion ? (
         <YesNoQuestion
-          name={overrideQuestion.property}
-          label={overrideQuestion.question}
+          name="seniorityMaximum"
+          label={overrideQuestion}
           onChange={() => {
             form.change("contrat salarié - ancienneté", undefined);
           }}

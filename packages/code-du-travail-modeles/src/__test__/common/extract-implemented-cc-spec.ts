@@ -40,6 +40,6 @@ test("Check all agreements have an cdtn with idcc property", () => {
     .forEach((rule) => {
       const rawNode = rule.rawNode as RuleNodeIdcc;
       expect(rawNode.cdtn).not.toBeUndefined();
-      expect(rawNode.cdtn.idcc).not.toBeUndefined();
+      expect(rawNode.cdtn?.idcc).not.toBeUndefined();
     });
 });

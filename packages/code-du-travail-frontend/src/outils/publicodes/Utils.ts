@@ -13,10 +13,9 @@ export const mapToPublicodesSituation = (
   const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
     form;
   const seniority = {
-    "contrat salarié - ancienneté":
-      seniorityMaximum === true
-        ? seniorityValue
-        : formatSeniority(form["contrat salarié - ancienneté"]),
+    "contrat salarié - ancienneté": seniorityMaximum
+      ? seniorityValue
+      : formatSeniority(form["contrat salarié - ancienneté"]),
   };
   return {
     ...infos,
