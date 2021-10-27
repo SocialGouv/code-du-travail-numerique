@@ -13,12 +13,14 @@ type Props = {
   title: string;
   description: string;
   overrideCanonical?: string;
+  noTitleAdd?: string;
 };
 
 export default function Metas({
   title,
   description,
   overrideCanonical,
+  noTitleAdd,
 }: Props): JSX.Element {
   const router = useRouter();
   return (
@@ -29,7 +31,10 @@ export default function Metas({
         content="width=device-width, initial-scale=1"
       />
 
-      <title>{`${title} - Code du travail numérique`}</title>
+      <title>
+        {title}
+        {noTitleAdd ? "" : " - Code du travail numérique"}
+      </title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
       <link
