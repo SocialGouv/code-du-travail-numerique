@@ -23,9 +23,6 @@ export type AgreementInfo = {
 const switchSpecialProperties = (
   property: string | undefined
 ): SpecialAgreementType => {
-  if (!property || property === "") {
-    return SpecialAgreementType.BASIC;
-  }
   switch (property) {
     case "mise à la retraite 5 ans":
       return SpecialAgreementType.MISE_RETRAITE_5_ANS;
