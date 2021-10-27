@@ -13,7 +13,7 @@ type Props = {
   title: string;
   description: string;
   overrideCanonical?: string;
-  noTitleAdd?: string;
+  noTitleAdd?: boolean;
 };
 
 export default function Metas({
