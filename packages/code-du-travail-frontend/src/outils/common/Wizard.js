@@ -1,4 +1,4 @@
-import { icons, IconStripe, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
@@ -151,8 +151,7 @@ function Wizard({
                 {Rules && (
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-                <WizardTitle title={title} icon={icon} />
-                {stepIndex === 0 && <WizardDuration duration={duration} />}
+                <WizardTitle title={title} icon={icon} duration={duration} />
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
@@ -209,7 +208,7 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon }) {
+function WizardTitle({ title, icon, duration }) {
   const Icon = icons[icon];
   return (
     <ToolTitle>
@@ -218,7 +217,8 @@ function WizardTitle({ title, icon }) {
           <Icon />
         </IconWrapper>
       )}
-      {title}
+      <StyledTitle>{title}</StyledTitle>
+      <WizardDuration duration={duration} />
     </ToolTitle>
   );
 }
@@ -226,9 +226,8 @@ function WizardTitle({ title, icon }) {
 function WizardDuration({ duration }) {
   return (
     <ToolDuration>
-      <IconStripe small icon={Clock}>
-        <small>Durée&nbsp;: {duration}</small>
-      </IconStripe>
+      <Clock aria-hidden="true" />
+      <small>{duration}</small>
     </ToolDuration>
   );
 }
@@ -248,8 +247,9 @@ const StyledForm = styled.form`
   }
 `;
 
-const ToolTitle = styled.h1`
+const ToolTitle = styled.div`
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
@@ -262,9 +262,9 @@ const ToolTitle = styled.h1`
 `;
 
 const ToolDuration = styled.div`
-  width: 100%;
   display: flex;
-  justify-content: start;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 0;
   padding-bottom: 0;
   @media (max-width: ${breakpoints.tablet}) {
@@ -274,6 +274,9 @@ const ToolDuration = styled.div`
   }
 `;
 
+const StyledTitle = styled.h1`
+  margin: 0;
+`;
 const IconWrapper = styled.span`
   display: block;
   flex: 0 0 auto;

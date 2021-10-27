@@ -2,7 +2,9 @@ contrat salarié . convention collective . éducation et loisirs:
   description: Convention collective nationale des métiers de l'éducation, de la culture, des loisirs et de l'animation agissant pour l'utilité sociale et environnementale, au service des territoires (ÉCLAT) du 28 juin 1988. Étendue par arrêté du 10 janvier 1989 JORF 13 janvier 1989.
   applicable si: convention collective = 'IDCC1518'
   valeur: oui
-  idcc: 1518
+  cdtn:
+    idcc: 1518
+    préavis-retraite: true
 
 contrat salarié . convention collective . éducation et loisirs . catégorie professionnelle:
   applicable si: mise à la retraite
