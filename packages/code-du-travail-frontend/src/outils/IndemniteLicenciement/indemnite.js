@@ -2,6 +2,7 @@ import { isAfter } from "date-fns";
 
 import { parse } from "../common/date";
 import { round, sum } from "../common/math";
+
 /**
  * Compute the salaire de Réference
  * used in the indemnité calculus
@@ -38,10 +39,9 @@ function getSalaireRef({
 
     moyenne3DerniersMoisSalaires = hasSameSalaire
       ? salaire
-      : (sum(salaryValues.slice(0, 3)) -
-          sum(primeValues) +
-          sum(primeValues) / 12) /
-        3;
+      : sum(primeValues) / 12 +
+        (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
+
     return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
   }
 }

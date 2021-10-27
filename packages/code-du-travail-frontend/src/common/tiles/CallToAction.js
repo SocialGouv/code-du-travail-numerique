@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const CallToActionTile = React.forwardRef(
   ({ action, children, ...props }, ref) => (
-    <Tile custom {...props} ref={ref}>
+    <StyledTile custom {...props} ref={ref}>
       <TileChildren>
         {children}
         <StyledDiv hasContentAbove={Boolean(children)}>
@@ -14,7 +14,7 @@ export const CallToActionTile = React.forwardRef(
           </Button>
         </StyledDiv>
       </TileChildren>
-    </Tile>
+    </StyledTile>
   )
 );
 
@@ -30,13 +30,24 @@ CallToActionTile.defaultProps = {
   children: null,
 };
 
-const { spacings } = theme;
+const { spacings, breakpoints, fonts } = theme;
 
 const TileChildren = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+`;
+
+const StyledTile = styled(Tile)`
+  h2 {
+    font-weight: 600;
+    font-size: ${fonts.sizes.headings.small};
+    font-family: "Open Sans", sans-serif;
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.default};
+    }
+  }
 `;
 
 const StyledDiv = styled.div`

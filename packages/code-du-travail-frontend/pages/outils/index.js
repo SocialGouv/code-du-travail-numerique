@@ -39,6 +39,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     custom
                     title={title}
                     icon={icons[icon]}
+                    titleTagType="h2"
                   >
                     {description}
                   </CallToActionTile>
@@ -50,6 +51,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
             ({ id, action, description, icon, title, url }) => (
               <CallToActionTile
                 key={id}
+                titleTagType="h2"
                 action={action}
                 custom
                 title={title}

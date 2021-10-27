@@ -213,7 +213,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           data-accordion-component="AccordionItem"
         >
           <div
-            aria-level="3"
+            aria-level="2"
             class="accordion__heading"
             data-accordion-component="AccordionItemHeading"
             role="heading"
@@ -248,7 +248,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <div
                 class="c5"
               >
-                Références juridiques concernées :
+                <div>
+                  Références juridiques concernées :
+                </div>
               </div>
             </div>
           </div>

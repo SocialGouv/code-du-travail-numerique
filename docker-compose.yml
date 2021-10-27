@@ -2,20 +2,20 @@ version: "3"
 
 services:
   elasticsearch:
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
+    build:
+      context: ./docker/elasticsearch
+    ports:
+      - 9200:9200
 
   data:
-    restart: "no"
-    env_file:
-      - .env
+    build:
+      context: ./packages/code-du-travail-data
+      args:
+        BASE_IMAGE: cdtn_master:local
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.4
+    ports:
+      - 5601:5601
     depends_on:
       - elasticsearch
-
-volumes:
-  esdata:
-    driver: local

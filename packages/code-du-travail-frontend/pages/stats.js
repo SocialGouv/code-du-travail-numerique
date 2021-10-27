@@ -34,22 +34,22 @@ const Stats = ({ data }) => {
           <Wrapper variant="main">
             <Grid columns={3}>
               <Tile variant="dark">
-                <Heading>Contenus référencés</Heading>
+                <Heading as="h2">Contenus référencés</Heading>
                 <Num>{data.nbDocuments}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Heading>Visites</Heading>
+                <Heading as="h2">Visites</Heading>
                 <Num>{data.nbVisits}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Heading>Recherches</Heading>
+                <Heading as="h2">Recherches</Heading>
                 <Num>{data.nbSearches}</Num>
               </Tile>
 
               <Tile variant="dark">
-                <Heading>Consultations</Heading>
+                <Heading as="h2">Consultations</Heading>
                 <Num>{data.nbPageViews}</Num>
               </Tile>
             </Grid>

@@ -100,6 +100,7 @@ function Articles({ blocs, containerId, convention }) {
         </>
       </MoreContent>
       <Accordion
+        titleLevel={3}
         items={articlesByTheme}
         onChange={trackAccordionPanelState(
           convention.shortTitle,

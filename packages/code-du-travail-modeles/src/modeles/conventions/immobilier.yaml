@@ -2,7 +2,9 @@ contrat salarié . convention collective . immobilier:
   description: Convention collective nationale de l'immobilier, administrateurs de biens, sociétés immobilières, agents immobiliers, etc. (anciennement cabinets d'administrateurs de biens et des sociétés immobilières), du 9 septembre 1988. Etendue par arrêté du 24 février 1989 JORF 3 mars 1989. Mise à jour par avenant n° 47 du 23 novembre 2010, JORF 18 juillet 2012 puis mise à jour par avenant n° 83 du 2 décembre 2019 étendu par arrêté du 2 juillet 2021 JORF 14 juillet 2021.
   applicable si: convention collective = 'IDCC1527'
   valeur: oui
-  idcc: 1527
+  cdtn:
+    idcc: 1527
+    préavis-retraite: true
 
 contrat salarié . convention collective . immobilier . catégorie professionnelle:
   titre: Catégorie professionnelle

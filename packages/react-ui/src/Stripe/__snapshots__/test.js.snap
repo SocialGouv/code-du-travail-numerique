@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Table /> renders 1`] = `
+exports[`<Stripe /> renders 1`] = `
 .c0 {
   position: absolute;
   background-color: #7994d4;
@@ -21,7 +21,7 @@ exports[`<Table /> renders 1`] = `
 </div>
 `;
 
-exports[`<Table /> renders with correct styles 1`] = `
+exports[`<Stripe /> renders with correct styles 1`] = `
 .c0 {
   position: absolute;
   background-color: #f66663;

@@ -1294,7 +1294,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             class="c7"
+            height="115"
             src="/static/assets/img/logo-rf.svg"
+            width="135"
           />
           <svg
             aria-label="Code du travail numérique"
@@ -1551,7 +1553,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   >
                     
                     <h3
-                      class="c37 c44"
+                      class="c44"
                     >
                       Rupture de période d’essai à l'initiative de l'employeur
                     </h3>
@@ -1610,7 +1612,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   >
                     
                     <h3
-                      class="c37 c44"
+                      class="c44"
                     >
                       Demande de rendez-vous en vue d’une rupture conventionnelle
                     </h3>

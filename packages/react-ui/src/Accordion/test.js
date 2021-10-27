@@ -6,24 +6,18 @@ import { Accordion } from "./index.js";
 
 describe("<Accordion />", () => {
   it("renders", () => {
-    const items = [
-      { body: "this is the body", title: <h3>This is the title</h3> },
-    ];
-    const { container } = render(<Accordion items={items} />);
+    const items = [{ body: "this is the body", title: "This is the title" }];
+    const { container } = render(<Accordion titleLevel={3} items={items} />);
     expect(container).toMatchSnapshot();
   });
   it("renders as h2", () => {
-    const items = [
-      { body: "this is the body", title: <h2>This is the title</h2> },
-    ];
-    const { container } = render(<Accordion items={items} />);
+    const items = [{ body: "this is the body", title: "This is the title" }];
+    const { container } = render(<Accordion titleLevel={2} items={items} />);
     expect(container).toMatchSnapshot();
   });
   it("renders as a tile accordion with an icon", () => {
-    const items = [
-      { body: "this is the body", title: <span>This is the title</span> },
-    ];
-    const { container } = render(<Accordion items={items} />);
+    const items = [{ body: "this is the body", title: "This is the title" }];
+    const { container } = render(<Accordion titleLevel={1} items={items} />);
     expect(container).toMatchSnapshot();
   });
   it("renders as a hierarchy accordion with an icon", () => {
@@ -31,11 +25,11 @@ describe("<Accordion />", () => {
       {
         body: "this is the body",
         icon: Custom,
-        title: <span>This is the title</span>,
+        title: "This is the title",
         variant: "hierarchy",
       },
     ];
-    const { container } = render(<Accordion items={items} />);
+    const { container } = render(<Accordion titleLevel={3} items={items} />);
     expect(container).toMatchSnapshot();
   });
 });

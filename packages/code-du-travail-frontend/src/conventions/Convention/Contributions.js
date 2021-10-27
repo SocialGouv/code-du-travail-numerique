@@ -40,6 +40,7 @@ function Contributions({ contributions, convention }) {
       return {
         body: (
           <Accordion
+            titleLevel={4}
             items={contributionsByTheme[theme].map((item) => ({
               body: AccordionContent(item),
               id: item.slug,
@@ -63,7 +64,7 @@ function Contributions({ contributions, convention }) {
       >
         Questions-réponses fréquentes
       </Title>
-      <Accordion items={themes} />
+      <Accordion titleLevel={3} items={themes} />
     </>
   );
 }

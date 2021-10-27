@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
-import Title from "./Title.js";
 
 const { spacings } = theme;
 
@@ -19,6 +18,7 @@ class AccordionWrapper extends React.PureComponent {
     data: PropTypes.object.isRequired,
     headingLevel: PropTypes.number.isRequired,
   };
+
   render() {
     const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem =
@@ -26,12 +26,8 @@ class AccordionWrapper extends React.PureComponent {
     const accordionItems = data.children
       .filter(isItemOfAccordion)
       .map((accordionItem) => {
-        const title = (
-          <Title level={headingLevel}>
-            {getText(
-              accordionItem.children.find((child) => child.name === "Titre")
-            )}
-          </Title>
+        const title = getText(
+          accordionItem.children.find((child) => child.name === "Titre")
         );
         const body = (
           <ElementBuilder
@@ -70,7 +66,10 @@ class AccordionWrapper extends React.PureComponent {
       <>
         {beforeAccordionElements}
         {accordionItems.length > 0 && (
-          <StyledAccordion items={accordionItems} />
+          <StyledAccordion
+            items={accordionItems}
+            titleLevel={headingLevel + 2}
+          />
         )}
         {afterAccordionElements}
       </>

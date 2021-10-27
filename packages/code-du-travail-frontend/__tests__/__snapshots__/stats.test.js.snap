@@ -1315,7 +1315,9 @@ exports[`<Stats /> should render 1`] = `
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             class="c7"
+            height="115"
             src="/static/assets/img/logo-rf.svg"
+            width="135"
           />
           <svg
             aria-label="Code du travail numérique"
@@ -1484,11 +1486,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Contenus référencés
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1502,11 +1504,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Visites
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1520,11 +1522,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Recherches
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
@@ -1538,11 +1540,11 @@ exports[`<Stats /> should render 1`] = `
                     <div
                       class="c34 c35"
                     >
-                      <h3
+                      <h2
                         class="c36"
                       >
                         Consultations
-                      </h3>
+                      </h2>
                       <div
                         class="c37"
                       >
