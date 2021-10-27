@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 import { removeQueryParameters } from "../lib";
+import EventTracker from "../lib/tracking/EventTracker";
 
 const {
   publicRuntimeConfig: { FRONTEND_HOST },
@@ -57,6 +58,7 @@ export default function Metas({
         content="Code du travail numérique"
       />
       <meta key="og:locale" property="og:locale" content="fr" />
+      <EventTracker />
     </Head>
   );
 }
