@@ -49,4 +49,5 @@ exports.config = {
   },
   teardown: null,
   tests: "./specs/*_test.js",
+  timeout: 60000,
 };
