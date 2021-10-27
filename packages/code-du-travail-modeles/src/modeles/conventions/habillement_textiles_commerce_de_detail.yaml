@@ -3,7 +3,9 @@ contrat salarié . convention collective . habillement textiles commerce de deta
   description: Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004.
   applicable si: convention collective = 'IDCC1483'
   valeur: oui
-  idcc: 1483
+  cdtn:
+    idcc: 1483
+    préavis-retraite: true
 
 contrat salarié . convention collective . habillement textiles commerce de detail . départ à la retraite:
   applicable si: départ à la retraite

@@ -1,0 +1,16 @@
+name: Deactivate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [closed]
+
+jobs:
+  bury_review_env:
+    name: Deactivate review branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SocialGouv/actions/autodevops-deactivate@v1
+        with:
+          kube-config: ${{ secrets.KUBECONFIG }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
