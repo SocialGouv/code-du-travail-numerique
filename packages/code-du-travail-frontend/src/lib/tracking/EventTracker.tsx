@@ -18,12 +18,10 @@ export default function EventTracker(): JSX.Element {
     return <></>;
   }
 
-  if (typeof document !== "undefined") {
-    const scriptInit = document.createElement("script");
-    document.head.appendChild(scriptInit);
-    scriptInit.src = "/static/tarteaucitron/initTarteaucitron.js";
-    return <></>;
-  }
-
-  return <></>;
+  return (
+    <script
+      type="text/javascript"
+      src="/static/tarteaucitron/initTarteaucitron.js"
+    />
+  );
 }
