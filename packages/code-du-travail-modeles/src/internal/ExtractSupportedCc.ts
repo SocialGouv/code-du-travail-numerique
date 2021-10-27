@@ -5,7 +5,7 @@ export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
     "préavis-retraite"?: boolean;
-    special?: string;
+    "ancienneté spécifique"?: string;
   };
 };
 
@@ -42,7 +42,9 @@ export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
           return {
             idcc,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
-            specialAgreementType: switchSpecialProperties(cdtnNode.special),
+            specialAgreementType: switchSpecialProperties(
+              cdtnNode["ancienneté spécifique"]
+            ),
           };
         }
       }
