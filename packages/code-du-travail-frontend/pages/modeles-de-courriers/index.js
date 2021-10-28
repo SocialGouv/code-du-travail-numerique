@@ -16,6 +16,7 @@ import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 import { summarize } from "../../src/search/utils";
 
 const {
@@ -105,6 +106,7 @@ function Modeles(props) {
           </StyledList>
         </Container>
       </Section>
+      <EventTracker />
     </Layout>
   );
 }

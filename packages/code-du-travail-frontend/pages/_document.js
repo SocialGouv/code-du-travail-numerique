@@ -59,10 +59,6 @@ export default class MyDocument extends Document {
             type="text/javascript"
             src="/static/tarteaucitron/tarteaucitron.js"
           />
-          <script
-            type="text/javascript"
-            src="/static/tarteaucitron/initTarteaucitron.js"
-          />
         </Head>
         <body>
           <noscript>

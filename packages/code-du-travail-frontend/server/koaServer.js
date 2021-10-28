@@ -58,6 +58,7 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.fr",
         "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
+        "*.fls.doubleclick.net",
       ],
       imgSrc: [
         "'self'",

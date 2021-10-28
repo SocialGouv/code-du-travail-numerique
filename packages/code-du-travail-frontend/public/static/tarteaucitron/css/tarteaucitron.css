@@ -270,9 +270,7 @@ div#tarteaucitronServices {
 }
 
 #tarteaucitronAlertBig strong,
-#tarteaucitronAlertSmall strong,
-#tarteaucitronAlertBig a,
-#tarteaucitronAlertSmall a {
+#tarteaucitronAlertSmall strong {
   color: #fff;
 }
 
