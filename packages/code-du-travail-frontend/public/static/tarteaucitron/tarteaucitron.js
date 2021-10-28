@@ -638,13 +638,13 @@ var tarteaucitron = {
             ) {
               // create a wrapper container at the same level than tarteaucitron so we can add an aria-hidden when tarteaucitron is opened
               /*var wrapper = document.createElement('div');
-            wrapper.id = "contentWrapper";
-            while (document.body.firstChild)
-            {
-                wrapper.appendChild(document.body.firstChild);
-            }
-            // Append the wrapper to the body
-            document.body.appendChild(wrapper);*/
+                        wrapper.id = "contentWrapper";
+                        while (document.body.firstChild)
+                        {
+                            wrapper.appendChild(document.body.firstChild);
+                        }
+                        // Append the wrapper to the body
+                        document.body.appendChild(wrapper);*/
 
               div.id = "tarteaucitronRoot";
               body.appendChild(div, body);
@@ -2170,8 +2170,8 @@ var tarteaucitron = {
   },
   AddOrUpdate: function (source, custom) {
     /**
-     Utility function to Add or update the fields of obj1 with the ones in obj2
-     */
+         Utility function to Add or update the fields of obj1 with the ones in obj2
+         */
     for (key in custom) {
       if (custom[key] instanceof Object) {
         source[key] = tarteaucitron.AddOrUpdate(source[key], custom[key]);
