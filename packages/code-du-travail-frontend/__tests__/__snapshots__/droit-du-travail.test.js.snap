@@ -4209,12 +4209,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
                               </p>
                               <i>
-                                Exemple :
-                                <ul>
-                                  <li>
-                                    le taux de majoration des heures supplémentaires. Un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
-                                  </li>
-                                </ul>
+                                Exemple : le taux de majoration des heures supplémentaires. Un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
                               </i>
                             </div>
                           </div>
@@ -4285,12 +4280,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
                               </p>
                               <i>
-                                Exemple :
-                                <ul>
-                                  <li>
-                                    le taux de majoration des heures supplémentaires. En l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
-                                  </li>
-                                </ul>
+                                Exemple : le taux de majoration des heures supplémentaires. En l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
                               </i>
                             </div>
                           </div>
