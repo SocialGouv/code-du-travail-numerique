@@ -1,7 +1,6 @@
 name: Deactivate
 
 on:
-  workflow_dispatch:
   pull_request:
     types: [closed]
 
@@ -10,7 +9,6 @@ jobs:
     name: Deactivate review branch
     runs-on: ubuntu-latest
     steps:
-      - uses: SocialGouv/actions/autodevops-deactivate@v1
+      - uses: SocialGouv/actions/k8s-deactivate@v1
         with:
-          kube-config: ${{ secrets.KUBECONFIG }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          kube-config: ${{ secrets.SOCIALGOUV_KUBE_CONFIG_DEV  }}
