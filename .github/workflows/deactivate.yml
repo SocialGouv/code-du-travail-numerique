@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: SocialGouv/actions/k8s-deactivate@v1
         with:
-          kube-config: ${{ secrets.SOCIALGOUV_KUBE_CONFIG_DEV  }}
+          kube-config: ${{ secrets.KUBECONFIG  }}
