@@ -1377,9 +1377,6 @@ exports[`<CookiePolicy /> should render 1`] = `
               75015 PARIS
             </address>
             <p>
-              Vous disposez des mêmes droits en matière de témoins de connexion.
-            </p>
-            <p>
               Vous êtes également en droit de saisir la Commission Nationale de l’Informatique et des Libertés pour toute réclamation à
                
               <a
@@ -1419,22 +1416,11 @@ exports[`<CookiePolicy /> should render 1`] = `
                 Google Analytics
               </a>
                
-              et Matomo.
+              , AT Internet et Matomo.
             </p>
             <p>
-              Il convient d’indiquer que :
+              Les cookies sont inactifs avant que vous ayez exprimé votre consentement en cliquant sur le bouton « Accepter  » ou après que vous ayez pris le soin de personnaliser vos préférences.
             </p>
-            <ul>
-              <li>
-                Les données collectées ne sont pas recoupées avec d’autres traitements.
-              </li>
-              <li>
-                Les cookies ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.
-              </li>
-              <li>
-                Les cookies sont inactifs avant que vous ayez exprimé votre consentement en cliquant sur le bouton « Ok, tout accepter  » ou après que vous ayez pris le soin de personnaliser vos préférences.
-              </li>
-            </ul>
             <p>
               <button
                 class="c34"
