@@ -22,38 +22,37 @@ exports[`<Collapse /> renders 1`] = `
   transform: rotate(90deg);
 }
 
-.c3 {
+.c4 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c4 {
-  overflow: auto;
+.c5 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c0:hover,
@@ -61,6 +60,10 @@ exports[`<Collapse /> renders 1`] = `
 .c0:focus-within,
 .c0[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c3 {
+  margin-left: 1rem;
 }
 
 <div>
@@ -87,16 +90,20 @@ exports[`<Collapse /> renders 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c3"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Hello
-      </span>
+        <span
+          class="c4"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Hello
+        </span>
+      </div>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
       <p>
         Hi
