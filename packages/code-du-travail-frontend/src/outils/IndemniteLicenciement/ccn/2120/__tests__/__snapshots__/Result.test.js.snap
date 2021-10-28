@@ -22,38 +22,37 @@ exports[`<Result /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c11 {
+.c12 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c12 {
-  overflow: auto;
+.c13 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c8:hover,
@@ -61,6 +60,10 @@ exports[`<Result /> should render 1`] = `
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c11 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -83,7 +86,7 @@ exports[`<Result /> should render 1`] = `
   font-size: 1.5em;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,7 +110,7 @@ exports[`<Result /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c14 {
+.c15 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -156,7 +159,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -243,16 +246,20 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -295,7 +302,7 @@ exports[`<Result /> should render 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -815,7 +822,7 @@ exports[`<Result /> should render 1`] = `
         class="c5"
       >
         <div
-          class="c14"
+          class="c15"
         />
         <span
           class="c7"
@@ -847,16 +854,20 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -906,7 +917,7 @@ exports[`<Result /> should render 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span

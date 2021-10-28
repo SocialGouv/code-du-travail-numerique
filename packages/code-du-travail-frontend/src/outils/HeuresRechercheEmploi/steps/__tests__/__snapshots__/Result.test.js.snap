@@ -22,7 +22,7 @@ exports[`<StepResult /> should render no results 1`] = `
   transform: rotate(90deg);
 }
 
-.c6 {
+.c7 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -32,46 +32,45 @@ exports[`<StepResult /> should render no results 1`] = `
   border-radius: 0.6rem;
 }
 
-.c6 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c5 {
-  overflow: auto;
+.c6 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c1:hover,
@@ -81,7 +80,11 @@ exports[`<StepResult /> should render no results 1`] = `
   color: #3e486e;
 }
 
-.c8 {
+.c4 {
+  margin-left: 1rem;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,7 +99,7 @@ exports[`<StepResult /> should render no results 1`] = `
   justify-content: stretch;
 }
 
-.c9 {
+.c10 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -106,22 +109,22 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-right: 2rem;
 }
 
-.c9 svg {
+.c10 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c7 {
+.c8 {
   margin-top: 3.2rem;
 }
 
-.c11 {
+.c12 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -138,13 +141,13 @@ exports[`<StepResult /> should render no results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c9 svg {
+  .c10 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -182,16 +185,20 @@ exports[`<StepResult /> should render no results 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c4"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Voir le détail du calcul
-      </span>
+        <span
+          class="c5"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Voir le détail du calcul
+        </span>
+      </div>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       <h2
         class="c0"
@@ -249,13 +256,13 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="c6 c7"
+    class="c7 c8"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <div
-        class="c9"
+        class="c10"
       >
         <svg
           aria-hidden="true"
@@ -274,10 +281,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <span
-          class="c11"
+          class="c12"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -312,7 +319,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -322,46 +329,45 @@ exports[`<StepResult /> should render with duration 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -371,7 +377,11 @@ exports[`<StepResult /> should render with duration 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c6 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -386,7 +396,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -396,22 +406,22 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -439,13 +449,13 @@ exports[`<StepResult /> should render with duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -512,16 +522,20 @@ exports[`<StepResult /> should render with duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c6"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Voir le détail du calcul
-      </span>
+        <span
+          class="c7"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Voir le détail du calcul
+        </span>
+      </div>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -572,13 +586,13 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
@@ -597,10 +611,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -635,7 +649,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -645,46 +659,45 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -694,7 +707,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c6 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -709,7 +726,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -719,22 +736,22 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -762,13 +779,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -819,16 +836,20 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c6"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Voir le détail du calcul
-      </span>
+        <span
+          class="c7"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Voir le détail du calcul
+        </span>
+      </div>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -865,13 +886,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
@@ -890,10 +911,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -928,7 +949,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -938,46 +959,45 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -987,7 +1007,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c6 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1002,7 +1026,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1012,22 +1036,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1055,13 +1079,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1121,16 +1145,20 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c6"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Voir le détail du calcul
-      </span>
+        <span
+          class="c7"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Voir le détail du calcul
+        </span>
+      </div>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -1167,13 +1195,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
@@ -1192,10 +1220,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>

@@ -67,38 +67,37 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   transform: rotate(90deg);
 }
 
-.c11 {
+.c12 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c12 {
-  overflow: auto;
+.c13 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c8:hover,
@@ -106,6 +105,10 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c11 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -128,7 +131,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   font-size: 1.5em;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -152,7 +155,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   border-radius: 0.6rem;
 }
 
-.c14 {
+.c15 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -201,7 +204,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -288,16 +291,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -326,7 +333,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -473,7 +480,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         class="c5"
       >
         <div
-          class="c14"
+          class="c15"
         />
         <span
           class="c7"
@@ -505,16 +512,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -543,7 +554,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -724,38 +735,37 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   transform: rotate(90deg);
 }
 
-.c11 {
+.c12 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c12 {
-  overflow: auto;
+.c13 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c8:hover,
@@ -763,6 +773,10 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c11 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -785,7 +799,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   font-size: 1.5em;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,7 +823,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   border-radius: 0.6rem;
 }
 
-.c14 {
+.c15 {
   width: calc(50% * 0.5348);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -858,7 +872,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     width: calc(100% * 0.5348);
   }
 }
@@ -945,16 +959,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -983,7 +1001,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -1130,7 +1148,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         class="c5"
       >
         <div
-          class="c14"
+          class="c15"
         />
         <span
           class="c7"
@@ -1162,16 +1180,20 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <div
             class="c11"
-            font-size="hsmall"
-            font-weight="600"
           >
-            Voir le détail du calcul
-          </span>
+            <span
+              class="c12"
+              font-size="hsmall"
+              font-weight="600"
+            >
+              Voir le détail du calcul
+            </span>
+          </div>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -1200,7 +1222,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span

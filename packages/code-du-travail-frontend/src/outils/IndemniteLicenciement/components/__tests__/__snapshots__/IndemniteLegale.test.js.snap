@@ -22,38 +22,37 @@ exports[`<IndemniteLegale /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c6 {
+.c7 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -61,6 +60,10 @@ exports[`<IndemniteLegale /> should render 1`] = `
 .c3:focus-within,
 .c3[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c6 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -83,7 +86,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
   font-size: 1.5em;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,16 +139,20 @@ exports[`<IndemniteLegale /> should render 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <div
         class="c6"
-        font-size="hsmall"
-        font-weight="600"
       >
-        Voir le détail du calcul
-      </span>
+        <span
+          class="c7"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Voir le détail du calcul
+        </span>
+      </div>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -167,7 +174,7 @@ exports[`<IndemniteLegale /> should render 1`] = `
         Formule
       </h2>
       <div
-        class="c8"
+        class="c9"
       >
         <div>
           <span
