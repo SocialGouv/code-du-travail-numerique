@@ -682,6 +682,7 @@ a.tarteaucitronSelfLink {
   color: #3e486e;
   display: inline-block;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong {
@@ -694,10 +695,21 @@ a.tarteaucitronSelfLink {
 }
 
 #tarteaucitronAlertBig #tarteaucitronCloseAlert,
-#tarteaucitronAlertBig #tarteaucitronPersonalize,
+#tarteaucitronAlertBig #tarteaucitronPersonalize2,
 #tarteaucitron #tarteaucitronPrivacyUrl,
 #tarteaucitron #tarteaucitronPrivacyUrlDialog {
   background: #f66663;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-left: 7px;
+  border-radius: 0.6rem;
+}
+#tarteaucitronAlertBig #tarteaucitronAllDenied2 {
+  background: #7994d4;
   color: #fff;
   cursor: pointer;
   display: inline-block;

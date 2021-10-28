@@ -81,9 +81,6 @@ const CookiePolicy = () => {
               75015 PARIS
             </Address>
             <p>
-              Vous disposez des mêmes droits en matière de témoins de connexion.
-            </p>
-            <p>
               Vous êtes également en droit de saisir la Commission Nationale de
               l’Informatique et des Libertés pour toute réclamation à{" "}
               <a
@@ -119,25 +116,13 @@ const CookiePolicy = () => {
               >
                 Google Analytics
               </a>{" "}
-              et Matomo.
+              , AT Internet et Matomo.
             </p>
-            <p>Il convient d’indiquer que&nbsp;:</p>
-            <ul>
-              <li>
-                Les données collectées ne sont pas recoupées avec d’autres
-                traitements.
-              </li>
-              <li>
-                Les cookies ne permettent pas de suivre la navigation de
-                l’internaute sur d’autres sites.
-              </li>
-              <li>
-                Les cookies sont inactifs avant que vous ayez exprimé votre
-                consentement en cliquant sur le bouton «&nbsp;Ok, tout
-                accepter&nbsp; » ou après que vous ayez pris le soin de
-                personnaliser vos préférences.
-              </li>
-            </ul>
+            <p>
+              Les cookies sont inactifs avant que vous ayez exprimé votre
+              consentement en cliquant sur le bouton «&nbsp;Accepter&nbsp; » ou
+              après que vous ayez pris le soin de personnaliser vos préférences.
+            </p>
             <p>
               <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
             </p>
