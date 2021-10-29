@@ -6,7 +6,6 @@ on:
       - "**"
     tags-ignore:
       - v*
-  pull_request:
 
 concurrency:
   cancel-in-progress: true
