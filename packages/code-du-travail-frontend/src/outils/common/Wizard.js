@@ -145,7 +145,12 @@ function Wizard({
         {({ handleSubmit, form, invalid, submitFailed }) => {
           return (
             <>
-              <StyledForm onSubmit={handleSubmit}>
+              <StyledForm
+                onSubmit={() => {
+                  event.preventDefault();
+                  handleSubmit();
+                }}
+              >
                 {Rules && (
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
