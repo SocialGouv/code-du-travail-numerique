@@ -451,11 +451,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   >
     <label
       class="c12"
-      for="hasOpe-yes"
+      for="hasOpe-oui"
     >
       <input
         class="c13"
-        id="hasOpe-yes"
+        id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
@@ -464,11 +464,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </label>
     <label
       class="c12"
-      for="hasOpe-no"
+      for="hasOpe-non"
     >
       <input
         class="c13"
-        id="hasOpe-no"
+        id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
@@ -497,11 +497,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   >
     <label
       class="c12"
-      for="isEco-yes"
+      for="isEco-oui"
     >
       <input
         class="c13"
-        id="isEco-yes"
+        id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
@@ -510,11 +510,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </label>
     <label
       class="c12"
-      for="isEco-no"
+      for="isEco-non"
     >
       <input
         class="c13"
-        id="isEco-no"
+        id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
@@ -1103,11 +1103,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   >
     <label
       class="c12"
-      for="hasOpe-yes"
+      for="hasOpe-oui"
     >
       <input
         class="c13"
-        id="hasOpe-yes"
+        id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
@@ -1116,11 +1116,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
     <label
       class="c12"
-      for="hasOpe-no"
+      for="hasOpe-non"
     >
       <input
         class="c13"
-        id="hasOpe-no"
+        id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
@@ -1149,11 +1149,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   >
     <label
       class="c12"
-      for="isEco-yes"
+      for="isEco-oui"
     >
       <input
         class="c13"
-        id="isEco-yes"
+        id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
@@ -1162,11 +1162,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
     <label
       class="c12"
-      for="isEco-no"
+      for="isEco-non"
     >
       <input
         class="c13"
-        id="isEco-no"
+        id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
