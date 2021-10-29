@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import { matopush } from "../../../piwik";
 import { TextQuestion } from "../../common/TextQuestion";
+import {
+  MatomoCommonEvent,
+  MatomoPreavisRetraiteEvent,
+} from "../../common/type/matomo";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
@@ -37,6 +42,16 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
             </p>
           ),
           help: "",
+          trackableFn: (visibility: boolean) => {
+            if (visibility) {
+              matopush([
+                MatomoCommonEvent.TRACK_EVENT,
+                MatomoCommonEvent.OUTIL,
+                MatomoPreavisRetraiteEvent.ACTION,
+                MatomoPreavisRetraiteEvent.CLICK_HELP_ANCIENNETE,
+              ]);
+            }
+          },
         }}
         onChange={() => {
           form.change("contrat salarié - ancienneté", undefined);
