@@ -11,4 +11,12 @@ jobs:
     steps:
       - uses: SocialGouv/actions/k8s-deactivate@v1
         with:
-          kubeconfig: ${{ secrets.KUBECONFIG }}
+          kube-config: ${KUBECONFIG}
+          github-token: ${GITHUB_TOKEN}
+          rancherId: ${RANCHER_PROJECT_ID}
+          socialgouvBaseDomain: ${BASE_DOMAIN_SOCIAL_GOUV}
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+          RANCHER_PROJECT_ID: ${{ secrets.RANCHER_PROJECT_ID }}
+          BASE_DOMAIN_SOCIAL_GOUV: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
