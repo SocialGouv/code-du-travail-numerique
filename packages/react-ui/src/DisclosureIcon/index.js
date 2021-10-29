@@ -60,5 +60,5 @@ DisclosureIcon.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
-  onSwitchVisibility: PropTypes.func.isOptional,
+  onSwitchVisibility: PropTypes.func,
 };
