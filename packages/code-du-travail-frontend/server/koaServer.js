@@ -58,7 +58,7 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.fr",
         "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
-        "*.fls.doubleclick.net",
+        "*.doubleclick.net",
       ],
       imgSrc: [
         "'self'",
@@ -67,7 +67,7 @@ async function getKoaServer({ nextApp }) {
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.fr",
         AZURE_BASE_URL,
-        "https://ad.doubleclick.net",
+        "*.doubleclick.net",
       ],
       scriptSrc: [
         "'self'",
@@ -76,6 +76,7 @@ async function getKoaServer({ nextApp }) {
         "https://cdnjs.cloudflare.com",
         "https://www.googletagmanager.com",
         "'unsafe-inline'",
+        "*.doubleclick.net",
       ],
       styleSrc: ["'self'", "'unsafe-inline'"],
       ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),
