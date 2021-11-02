@@ -8,7 +8,6 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import getConfig from "next/config";
-import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -42,6 +41,7 @@ function Glossaire({ glossary }) {
     </Layout>
   );
 }
+
 Glossaire.getInitialProps = async () => {
   const responseContainer = await fetch(`${API_URL}/glossary`);
   if (!responseContainer.ok) {
@@ -86,9 +86,7 @@ function Glossary({ letters }) {
         <StyledList>
           {terms.map(({ term, slug }) => (
             <li key={slug}>
-              <Link href={`/glossaire/${slug}`}>
-                <a>{term}</a>
-              </Link>
+              <StyledLink href={`/glossaire/${slug}`}>{term}</StyledLink>
             </li>
           ))}
         </StyledList>
@@ -117,6 +115,7 @@ function GlossaryNavigation({ letters }) {
     </ul>
   );
 }
+
 const { breakpoints, fonts, spacings } = theme;
 
 const Item = styled.li`
@@ -130,4 +129,8 @@ const Item = styled.li`
 
 const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
+`;
+const StyledLink = styled.a`
+  padding: ${spacings.tiny} 0;
+  display: block;
 `;
