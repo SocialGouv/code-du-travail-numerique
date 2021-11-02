@@ -4,6 +4,7 @@ contrat salarié . convention collective . restauration collectivités:
   applicable si: convention collective = 'IDCC1266'
   valeur: oui
   idcc: 1266
+  préavis-retraite: true
 
 contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
   titre: Catégorie professionnelle
