@@ -1282,6 +1282,7 @@ exports[`<Themes /> should render 1`] = `
                       y2="0.509"
                     >
                       <stop
+                        offset="0"
                         stop-color="gray"
                         stop-opacity="0.25"
                       />
@@ -1305,6 +1306,7 @@ exports[`<Themes /> should render 1`] = `
                       y2="49649"
                     >
                       <stop
+                        offset="0"
                         stop-color="gray"
                         stop-opacity="0.25"
                       />
