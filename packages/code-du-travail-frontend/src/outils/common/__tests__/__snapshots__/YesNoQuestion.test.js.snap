@@ -121,11 +121,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
   >
     <label
       class="c4"
-      for="test-yes"
+      for="test-oui"
     >
       <input
         class="c5"
-        id="test-yes"
+        id="test-oui"
         name="test"
         type="radio"
         value="true"
@@ -134,11 +134,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
     </label>
     <label
       class="c4"
-      for="test-no"
+      for="test-non"
     >
       <input
         class="c5"
-        id="test-no"
+        id="test-non"
         name="test"
         type="radio"
         value="false"

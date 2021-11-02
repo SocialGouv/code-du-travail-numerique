@@ -15,7 +15,7 @@ import { Layout } from "../src/layout/Layout";
 const Accessibilite = () => (
   <Layout>
     <Metas
-      title="Accessibilité - Code du travail numérique"
+      title="Accessibilité"
       description="Accessibilité du site du Code du travail numérique"
     />
     <Section>

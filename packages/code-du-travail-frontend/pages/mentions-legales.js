@@ -17,7 +17,7 @@ const LegalPage = () => {
   return (
     <Layout>
       <Metas
-        title="Mentions légales - Code du travail numérique"
+        title="Mentions légales"
         description="Mentions légales du Code du travail numérique"
       />
 

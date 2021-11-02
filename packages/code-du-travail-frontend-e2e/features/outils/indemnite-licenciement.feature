@@ -27,13 +27,13 @@ Scénario:
   Alors je ne vois pas "pas dûe pour les CDD"
 
   Alors je vois "Le licenciement est-il dû à une faute grave (ou lourde)"
-  Quand je choisis "#fauteGrave-yes"
+  Quand je choisis "#fauteGrave-oui"
   Alors je vois "pas dûe en cas de faute grave"
-  Quand je choisis "#fauteGrave-no"
+  Quand je choisis "#fauteGrave-non"
   Alors je ne vois pas "pas dûe en cas de faute grave"
 
   Alors je vois "Le licenciement est-il dû à une inaptitude"
-  Quand je choisis "#inaptitude-yes"
+  Quand je choisis "#inaptitude-oui"
 
   Quand je clique sur "Suivant"
 
