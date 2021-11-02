@@ -4,22 +4,22 @@
 
 import * as Sentry from "@sentry/nextjs";
 
-const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
-const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
-const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
-const PACKAGE_VERSION = process.env.VERSION || "";
+// const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
+// const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
+// const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
+// const PACKAGE_VERSION = process.env.VERSION || "";
 
-const isPreProduction = PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
-const environment = isPreProduction ? "preproduction" : "production";
+// const isPreProduction = PACKAGE_VERSION && /^v\d+-\d+-\d+/.test(FRONTEND_HOST);
+// const environment = isPreProduction ? "preproduction" : "production";
 
-let DSN = "";
+// let DSN = "";
 
-if (SENTRY_DSN !== "" && PACKAGE_VERSION !== "") {
-  DSN = `${SENTRY_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
-}
+// if (SENTRY_DSN !== "" && PACKAGE_VERSION !== "") {
+//   DSN = `${SENTRY_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+// }
 
 Sentry.init({
-  dsn: DSN,
+  dsn: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN || "",
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1.0,
   // ...
