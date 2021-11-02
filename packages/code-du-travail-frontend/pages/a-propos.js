@@ -16,7 +16,7 @@ import { Layout } from "../src/layout/Layout";
 const About = () => (
   <Layout>
     <Metas
-      title="À propos - Code du travail numérique"
+      title="À propos"
       description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
     />
     <Section>
