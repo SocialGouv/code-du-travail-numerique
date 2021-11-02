@@ -222,7 +222,11 @@ function WizardTitle({ title, icon, duration }) {
     </ToolTitle>
   );
 }
-
+WizardTitle.propTypes = {
+  duration: PropTypes.string,
+  icon: PropTypes.string,
+  title: PropTypes.string.isRequired,
+};
 function WizardDuration({ duration }) {
   return (
     <ToolDuration>

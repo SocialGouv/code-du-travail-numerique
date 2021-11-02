@@ -31,15 +31,15 @@ const ShowResultAgreement: React.FC<{
   detail: Agreement | null;
 }> = ({ result, detail }) => {
   if (!result) {
-    return <b>convention collective non renseignée</b>;
+    return <strong>convention collective non renseignée</strong>;
   }
   if (result && result.value > 0) {
     return <ShowResult result={result} />;
   }
   if (detail?.status === AgreementStatus.Supported) {
-    return <b>pas de préavis</b>;
+    return <strong>pas de préavis</strong>;
   }
-  return <b>convention collective non traitée</b>;
+  return <strong>convention collective non traitée</strong>;
 };
 
 export enum NoticeUsed {
