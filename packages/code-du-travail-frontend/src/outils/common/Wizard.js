@@ -212,21 +212,25 @@ function WizardTitle({ title, icon, duration }) {
   const Icon = icons[icon];
   return (
     <ToolTitle>
-      {Icon && (
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-      )}
-      <StyledTitle>{title}</StyledTitle>
-      <WizardDuration duration={duration} />
+      <StyledTitleBox>
+        {Icon && (
+          <IconWrapper>
+            <Icon />
+          </IconWrapper>
+        )}
+        <StyledTitle>{title}</StyledTitle>
+      </StyledTitleBox>
+      {duration && <WizardDuration duration={duration} />}
     </ToolTitle>
   );
 }
+
 WizardTitle.propTypes = {
   duration: PropTypes.string,
   icon: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
+
 function WizardDuration({ duration }) {
   return (
     <ToolDuration>
@@ -253,7 +257,7 @@ const StyledForm = styled.form`
 
 const ToolTitle = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
@@ -281,8 +285,11 @@ const ToolDuration = styled.div`
 const StyledTitle = styled.h1`
   margin: 0;
 `;
+const StyledTitleBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const IconWrapper = styled.span`
-  display: block;
   flex: 0 0 auto;
   width: 5.2rem;
   height: 5.2rem;

@@ -6,7 +6,7 @@ import { InfoBulle } from "./InfoBulle";
 
 export type Tooltip = {
   content: JSX.Element;
-  help: string;
+  help?: string;
 };
 type Props = {
   as?: string;
@@ -27,7 +27,7 @@ export const Question = ({
     <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
-      <InfoBulle title={tooltip.help}>
+      <InfoBulle title={tooltip.help ?? "Plus d'informations"}>
         <>{tooltip.content}</>
       </InfoBulle>
     )}

@@ -14,10 +14,7 @@ interface Props {
 
 const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
   const tooltip = rule.description
-    ? {
-        content: <p>{rule.description}</p>,
-        help: rule.titre ? rule.titre : "Plus d'informations",
-      }
+    ? { content: <p>{rule.description}</p> }
     : null;
 
   switch (rule?.cdtn?.type) {

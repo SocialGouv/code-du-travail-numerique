@@ -33,10 +33,9 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
             <p>
               L&apos;ancienneté du salarié est habituellement mentionnée sur
               le&nbsp;
-              <b>bulletin de salaire</b>.
+              <strong>bulletin de salaire</strong>.
             </p>
           ),
-          help: "",
         }}
         onChange={() => {
           form.change("contrat salarié - ancienneté", undefined);

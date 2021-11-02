@@ -272,10 +272,10 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -286,23 +286,18 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -487,14 +482,6 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -505,36 +492,14 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
@@ -943,10 +908,10 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -957,23 +922,18 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -1150,14 +1110,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -1168,36 +1120,14 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
@@ -1554,10 +1484,10 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1568,23 +1498,18 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -1749,14 +1674,6 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -1767,36 +1684,14 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
@@ -2156,10 +2051,10 @@ exports[`<Wizard /> should inject rules component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2170,23 +2065,18 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -2351,14 +2241,6 @@ exports[`<Wizard /> should inject rules component 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -2372,36 +2254,14 @@ exports[`<Wizard /> should inject rules component 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
@@ -2810,10 +2670,10 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2824,23 +2684,18 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -3029,14 +2884,6 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -3047,36 +2894,14 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
@@ -3433,10 +3258,10 @@ exports[`<Wizard /> should render a step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3447,23 +3272,18 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c4 {
+  margin: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin: 0;
 }
 
 @media print {
@@ -3628,14 +3448,6 @@ exports[`<Wizard /> should render a step 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c4 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -3646,36 +3458,14 @@ exports[`<Wizard /> should render a step 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <div
           class="c3"
         >
-          test
-        </h1>
-        <div
-          class="c4"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <h1
+            class="c4"
           >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-            />
-            <polyline
-              points="12 6 12 12 16 14"
-            />
-          </svg>
-          <small />
+            test
+          </h1>
         </div>
       </div>
       <div
