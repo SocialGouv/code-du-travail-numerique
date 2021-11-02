@@ -19,7 +19,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
       mapToPublicodesSituation(form.getState().values)
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [form.getState()]);
+  }, [form, form.getState()]);
 
   return (
     <>
