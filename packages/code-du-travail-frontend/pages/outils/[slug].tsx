@@ -1,5 +1,4 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
@@ -96,7 +95,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     }
   } catch (e) {
     console.error(e);
-    Sentry.captureException(e);
+    throw new Error(e);
   }
 
   const publicodesRules = loadPublicodes(slug);

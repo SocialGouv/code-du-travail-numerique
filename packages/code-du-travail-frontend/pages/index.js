@@ -1,5 +1,4 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
@@ -123,7 +122,7 @@ Home.getInitialProps = async () => {
     }
   } catch (e) {
     console.error(e);
-    Sentry.captureException(e);
+    throw new Error(e);
   }
   return { highlights, themes };
 };

@@ -3,7 +3,6 @@ import "katex/dist/katex.min.css";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "react-image-lightbox/style.css";
 
-import * as Sentry from "@sentry/browser";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
@@ -12,7 +11,6 @@ import React from "react";
 import { A11y } from "../src/a11y";
 import { initATInternetService } from "../src/AtInternetService";
 import { initPiwik } from "../src/piwik";
-import { initializeSentry, notifySentry } from "../src/sentry";
 import CustomError from "./_error";
 import Custom404 from "./404";
 
@@ -26,7 +24,7 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      notifySentry(418, err.message || "Failed to load web component");
+      throw new Error(err.message || "Failed to load web component");
     });
   import("../src/web-components/tooltip-cc")
     .then((module) => {
@@ -36,15 +34,13 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      notifySentry(418, err.message || "Failed to load web component");
+      throw new Error(err.message || "Failed to load web component");
     });
 }
 
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
 } = getConfig();
-
-initializeSentry();
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -74,17 +70,6 @@ export default class MyApp extends App {
     if (this.props.trackingEnabled) {
       initATInternetService();
     }
-  }
-
-  componentDidCatch(error, errorInfo) {
-    Sentry.withScope((scope) => {
-      Object.keys(errorInfo).forEach((key) => {
-        scope.setExtra(key, errorInfo[key]);
-      });
-
-      Sentry.captureException(error);
-    });
-    super.componentDidCatch(error, errorInfo);
   }
 
   render() {

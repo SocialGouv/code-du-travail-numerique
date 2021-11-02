@@ -7,13 +7,10 @@ import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
-import { initializeSentry, notifySentry } from "../src/sentry";
-
-initializeSentry();
 
 export default function Custom404() {
   useEffect(() => {
-    notifySentry(404);
+    throw new Error(404);
   }, []);
   return (
     <>
