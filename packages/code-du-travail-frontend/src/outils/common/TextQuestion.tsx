@@ -12,9 +12,10 @@ type Props = {
   name: string;
   label: string;
   inputType?: string;
-  validate?: (unknown) => boolean;
+  validate?: (unknown) => string;
   validateOnChange?: boolean;
-  tooltip: Tooltip;
+  tooltip?: Tooltip;
+  placeholder?: string;
 };
 
 const TextQuestion = ({

@@ -32,7 +32,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c5 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -40,15 +40,15 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c7 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c7 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
-.c19 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -86,16 +86,16 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c17:link,
+.c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):active,
+.c17:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -104,7 +104,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c19[disabled] {
+.c17[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -112,45 +112,13 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c12 {
+.c10 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c18 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,12 +137,12 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c21 {
+.c19 {
   width: 3rem;
   margin-left: 1rem;
 }
 
-.c8 {
+.c6 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -191,16 +159,16 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-radius: 0.6rem 0 0 0.6rem;
 }
 
-.c9 {
+.c7 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c11 {
+.c9 {
   display: none;
 }
 
-.c14 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -218,11 +186,11 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   outline: none;
 }
 
-.c13 + .c13 {
+.c11 + .c11 {
   margin-top: 1.6rem;
 }
 
-.c16 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -240,11 +208,11 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   outline: none;
 }
 
-.c13 + .c13 {
+.c11 + .c11 {
   margin-top: 1.6rem;
 }
 
-.c15 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -269,7 +237,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c17 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -304,6 +272,10 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -313,18 +285,24 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-bottom: 1px solid #bbcadf;
 }
 
-.c3 {
-  width: 100%;
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.c3 {
+  margin: 0;
 }
 
 @media print {
@@ -347,57 +325,44 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c5 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c7 {
+  .c5 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c17 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c17 {
     padding: 0 3rem;
   }
 }
 
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
 @media (max-width:980px) {
-  .c20 + .c20 {
+  .c18 + .c18 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c18 {
+  .c16 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -409,13 +374,13 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media print {
-  .c18 {
+  .c16 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c6 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -436,6 +401,18 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    margin: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c8 {
     display: none;
   }
@@ -443,41 +420,29 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 
 @media (max-width:980px) {
   .c9 {
-    margin: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c10 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c11 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c13 + .c13 {
+  .c11 + .c11 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c14 {
     display: none;
   }
 
-  .c13 + .c13 {
+  .c11 + .c11 {
     margin-top: 0;
   }
 }
@@ -503,7 +468,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c3 {
+  .c4 {
     margin-bottom: 1.6rem;
     padding: 1.6rem 0 1rem 0;
     border-bottom: 0;
@@ -517,111 +482,101 @@ exports[`<DureePreavisDemission /> should render 1`] = `
     <form
       class="c1"
     >
-      <h1
+      <div
         class="c2"
       >
-        Simulateur de durée de préavis de démission
-      </h1>
-      <div
-        class="c3"
-      >
+        <h1
+          class="c3"
+        >
+          Simulateur de durée de préavis de démission
+        </h1>
         <div
           class="c4"
         >
-          <div
-            class="c5"
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              aria-hidden="true"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <polyline
-                points="12 6 12 12 16 14"
-              />
-            </svg>
-          </div>
-          <div
-            class="c6"
-          >
-            <small>
-              Durée : 
-            </small>
-          </div>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+            />
+            <polyline
+              points="12 6 12 12 16 14"
+            />
+          </svg>
+          <small />
         </div>
       </div>
       <div
-        class="c7 c8"
+        class="c5 c6"
       >
         <span
-          class="c9"
+          class="c7"
         >
           Étape
           <span
-            class="c10"
+            class="c8"
           >
             s
           </span>
           <span
-            class="c11"
+            class="c9"
           >
              
             1/4
           </span>
         </span>
         <ol
-          class="c12"
+          class="c10"
         >
           <li
             aria-live="polite"
-            class="c13 c14"
+            class="c11 c12"
             tabindex="-1"
             title="onglet actif"
           >
             <span
-              class="c15"
+              class="c13"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="c13 c16"
+            class="c11 c14"
           >
             <span
-              class="c17"
+              class="c15"
             >
               2
             </span>
             Convention collective
           </li>
           <li
-            class="c13 c16"
+            class="c11 c14"
           >
             <span
-              class="c17"
+              class="c15"
             >
               3
             </span>
             Informations
           </li>
           <li
-            class="c13 c16"
+            class="c11 c14"
           >
             <span
-              class="c17"
+              class="c15"
             >
               4
             </span>
@@ -642,15 +597,15 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         Cliquez sur commencer pour démarrer la simulation.
       </p>
       <div
-        class="c18"
+        class="c16"
       >
         <button
-          class="c19 c20 "
+          class="c17 c18 "
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c21"
+            class="c19"
             fill="none"
             viewBox="0 0 28 15"
           >

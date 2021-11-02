@@ -42,9 +42,9 @@ const PubliSituation = ({
         return (
           <li key={element.name}>
             {element.rawNode.titre}&nbsp;:&nbsp;
-            <b>
+            <strong>
               {overriden ? overriden : <SituationInput element={element} />}
-            </b>
+            </strong>
           </li>
         );
       })}
