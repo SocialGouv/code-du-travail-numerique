@@ -940,11 +940,11 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   >
     <label
       class="c13"
-      for="hasRetirementAge-yes"
+      for="hasRetirementAge-oui"
     >
       <input
         class="c14"
-        id="hasRetirementAge-yes"
+        id="hasRetirementAge-oui"
         name="hasRetirementAge"
         type="radio"
         value="true"
@@ -953,11 +953,11 @@ exports[`<Step /> should ask detail about retirement 1`] = `
     </label>
     <label
       class="c13"
-      for="hasRetirementAge-no"
+      for="hasRetirementAge-non"
     >
       <input
         class="c14"
-        id="hasRetirementAge-no"
+        id="hasRetirementAge-non"
         name="hasRetirementAge"
         type="radio"
         value="false"

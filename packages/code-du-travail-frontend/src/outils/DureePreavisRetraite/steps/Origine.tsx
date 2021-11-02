@@ -19,7 +19,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
       mapToPublicodesSituation(form.getState().values)
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [form]);
+  }, [form, form.getState()]);
 
   return (
     <>
@@ -36,7 +36,10 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
           {(props) => (
             <InputRadio
               label="Le salarié décide lui-même de partir à la retraite"
-              {...props.input}
+              id={`${props.input.name}-depart`}
+              name={props.input.name}
+              value={props.input.value}
+              onChange={props.input.onChange}
             />
           )}
         </Field>
@@ -49,7 +52,10 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
           {(props) => (
             <InputRadio
               label="L'employeur décide de mettre le salarié à la retraite"
-              {...props.input}
+              id={`${props.input.name}-mise`}
+              name={props.input.name}
+              value={props.input.value}
+              onChange={props.input.onChange}
             />
           )}
         </Field>
