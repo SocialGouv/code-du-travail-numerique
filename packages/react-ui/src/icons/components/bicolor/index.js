@@ -29,7 +29,7 @@ export { default as Resignation } from "./Resignation";
 export { default as Resources } from "./Resources";
 export { default as Rules } from "./Rules";
 export { default as Salary } from "./Salary";
-export { default as SearchCc } from "./SearchCC";
+export { default as SearchCc } from "./SearchCc";
 export { default as Security } from "./Security";
 export { default as SpecificJob } from "./SpecificJob";
 export { default as Termination } from "./Termination";
