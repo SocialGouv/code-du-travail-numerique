@@ -68,6 +68,7 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.fr",
         AZURE_BASE_URL,
         "*.doubleclick.net",
+        "*.xiti.com",
       ],
       scriptSrc: [
         "'self'",
