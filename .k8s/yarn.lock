@@ -666,10 +666,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@9.6.22-beta.1":
-  version "9.6.22-beta.1"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-9.6.22-beta.1.tgz#8966f453678e67b43948caa932859497b26a6091"
-  integrity sha512-p/afJcTG5RSppP4+4OfZiJCpkt+6/KasNQ3UMYboCg3fIntwlz9lIJ6PqlvOPIucjfc8ci0ezCNGw0rkPd2G+Q==
+"@socialgouv/kosko-charts@9.6.22":
+  version "9.6.22"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-9.6.22.tgz#4816f65cb8398b8fa2ead633e9dbc6fc6e22e333"
+  integrity sha512-38FOH7bW7g9QUhjvS9DgcmGwLaNKzZlh0en38qR6+kQigBfyUfrUBNB5W+V9ssh7dBawTDDaGexMAfy5CxnDHw==
   dependencies:
     "@kubernetes-models/sealed-secrets" "^2.0.2"
     "@sindresorhus/is" "^4.2.0"
