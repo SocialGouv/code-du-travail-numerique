@@ -2,7 +2,6 @@ import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
-import { Clock } from "react-feather";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
@@ -239,15 +238,15 @@ WizardTitle.propTypes = {
 function WizardDuration({ duration }) {
   return (
     <ToolDuration>
-      <Clock aria-hidden="true" />
-      <small>{duration}</small>
+      <TimeWithLabel aria-hidden="true" />
+      <ToolDurationLabel>{duration}</ToolDurationLabel>
     </ToolDuration>
   );
 }
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, spacings, fonts } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -275,18 +274,18 @@ const ToolTitle = styled.div`
 `;
 
 const ToolDuration = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-bottom: ${spacings.base};
-    padding: ${spacings.base} 0 ${spacings.small} 0;
-    border-bottom: 0;
-  }
+  position: relative;
+  width: 6.2rem;
 `;
-
+const ToolDurationLabel = styled.span`
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  font-size: ${fonts.sizes.tiny};
+`;
+const TimeWithLabel = styled(icons.TimeWithLabel)`
+  width: 4.2rem;
+`;
 const StyledTitle = styled.h1`
   margin: 0;
 `;
