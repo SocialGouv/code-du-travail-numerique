@@ -7,8 +7,8 @@ export default function EventTracker(): JSX.Element {
   const router = useRouter();
 
   const urlToTrack = React.useMemo(
-    () => URL_TRACKED.find((urlTracked) => urlTracked.url === router.asPath),
-    [router.asPath]
+    () => URL_TRACKED.find((urlTracked) => urlTracked.url === router.pathname),
+    [router.pathname]
   );
 
   React.useEffect(() => {
@@ -19,7 +19,7 @@ export default function EventTracker(): JSX.Element {
         u1: `${window.location.origin}${urlToTrack.url}`,
       });
     }
-  }, [urlToTrack, router.asPath]);
+  }, [urlToTrack, router.pathname]);
 
   return (
     <>
