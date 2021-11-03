@@ -14,7 +14,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c40 {
+.c43 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -136,7 +136,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c51 {
+.c54 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -181,13 +181,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c51:focus,
-.c51:hover,
-.c51:active {
+.c54:focus,
+.c54:hover,
+.c54:active {
   color: #f66663;
 }
 
-.c34 {
+.c37 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -225,16 +225,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   will-change: transform;
 }
 
-.c34:link,
-.c34:visited {
+.c37:link,
+.c37:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c34:not([disabled]):hover,
-.c34:not([disabled]):active,
-.c34:not([disabled]):focus {
+.c37:not([disabled]):hover,
+.c37:not([disabled]):active,
+.c37:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -243,7 +243,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c34[disabled] {
+.c37[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -326,10 +326,43 @@ exports[`<CookiePolicy /> should render 1`] = `
   color: #7994d4;
 }
 
-.c48 {
+.c51 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.c34 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c34:before,
+.c34:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 4rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c34:before {
+  left: -2rem;
+}
+
+.c34:after {
+  right: -2rem;
+}
+
+.c35 {
+  overflow-x: auto;
 }
 
 .c28 {
@@ -358,7 +391,45 @@ exports[`<CookiePolicy /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c47 {
+.c36 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border: 1px solid #bbcadf;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.c36 caption {
+  padding: 1rem 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.c36 td,
+.c36 th {
+  padding: 1rem 1.6rem;
+  border: 1px solid #bbcadf;
+}
+
+.c36 th {
+  color: #2f3b6c;
+  font-weight: 600;
+  background: #e4e8ef;
+}
+
+.c36 thead,
+.c36 tfoot {
+  padding: 1rem 1.6rem;
+  vertical-align: bottom;
+  background: #f2f5fa;
+}
+
+.c36 tfoot {
+  vertical-align: top;
+}
+
+.c50 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -383,7 +454,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c38 {
+.c41 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -413,7 +484,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c39 {
+.c42 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -425,13 +496,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: center;
 }
 
-.c35 {
+.c38 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c36 {
+.c39 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -439,7 +510,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c36:before {
+.c39:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -451,27 +522,27 @@ exports[`<CookiePolicy /> should render 1`] = `
   content: "";
 }
 
-.c37 {
+.c40 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c41 {
+.c44 {
   margin-bottom: 2rem;
 }
 
-.c42 {
+.c45 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c43 {
+.c46 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c44 {
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -482,15 +553,15 @@ exports[`<CookiePolicy /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c45 + .c45 {
+.c48 + .c48 {
   padding-left: 1.6rem;
 }
 
-.c46 {
+.c49 {
   font-size: 1.6rem;
 }
 
-.c50 {
+.c53 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -499,11 +570,11 @@ exports[`<CookiePolicy /> should render 1`] = `
   display: inline-block;
 }
 
-.c52 {
+.c55 {
   padding: 0.4rem;
 }
 
-.c53 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -525,11 +596,11 @@ exports[`<CookiePolicy /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c54 {
+.c57 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c55 {
+.c58 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -791,13 +862,13 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c43 {
     padding: 0;
   }
 }
 
 @media print {
-  .c40 {
+  .c43 {
     max-width: 100%;
     padding: 0;
   }
@@ -841,31 +912,31 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c54 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c51 {
+  .c54 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c37 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c34 {
+  .c37 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c37 {
     padding: 0 3rem;
   }
 }
@@ -904,7 +975,26 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c34 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c34:before,
+  .c34:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
     font-size: 1.6rem;
   }
 }
@@ -924,7 +1014,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c41 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -949,32 +1039,32 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c39 {
+  .c42 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c36 {
+  .c39 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c40 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c46 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c47 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -982,26 +1072,26 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c45 + .c45 {
+  .c48 + .c48 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c49 {
+  .c52 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c49 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c55 {
+  .c58 {
     display: none;
   }
 }
@@ -1347,7 +1437,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               Le Code du travail numérique ne vous demande ni ne stocke d’information nominative.
             </p>
             <p>
-              Pour autant, nous enregistrons les informations saisies dans la barre de recherche. Elles sont conservées pendant deux années pour analyser les usages, améliorer la précision des réponses apportées et améliorer le service et ainsi réaliser la mission d’intérêt public,(qui est la base légale du traitement), telle que présentée dans la page
+              Pour autant, nous enregistrons les informations saisies dans la barre de recherche. Elles sont conservées pendant deux années pour analyser les usages, améliorer la précision des réponses apportées et améliorer le service et ainsi réaliser la mission d’intérêt public telle que présentée dans la page
                
               <a
                 href="/a-propos"
@@ -1394,6 +1484,70 @@ exports[`<CookiePolicy /> should render 1`] = `
             </p>
             <div
               class="c30"
+              id="hebergement"
+            >
+              <h2
+                class="c31"
+              >
+                <span
+                  class="c32"
+                />
+                Hébergement
+              </h2>
+            </div>
+            <div
+              class="c34"
+            >
+              <div
+                class="c35"
+              >
+                <table
+                  class="c36"
+                >
+                  <thead>
+                    <tr>
+                      <th>
+                        Partenaire
+                      </th>
+                      <th>
+                        Pays destinataire
+                      </th>
+                      <th>
+                        Traitement réalisé
+                      </th>
+                      <th>
+                        Garantie
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Microsoft Azure
+                      </td>
+                      <td>
+                        France
+                      </td>
+                      <td>
+                        Hébergement
+                      </td>
+                      <td>
+                        <a
+                          href="https://privacy.microsoft.com/fr-fr/privacystatement"
+                          rel="nofollow, noopener, noreferrer"
+                          target="_blank"
+                          title="Déclaration de confidentialité Microsoft"
+                        >
+                          Déclaration de confidentialité Microsoft
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="c30"
               id="cookie"
             >
               <h2
@@ -1402,7 +1556,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 <span
                   class="c32"
                 />
-                Utilisation de témoins de connexion (« cookies »)
+                Cookies
               </h2>
             </div>
             <p>
@@ -1411,33 +1565,117 @@ exports[`<CookiePolicy /> should render 1`] = `
             <p>
               Nous collectons donc des données par l’intermédiaire de dispositifs appelés “cookies” permettant d’établir des mesures statistiques.
             </p>
-            <p>
-              Ces cookies permettent au Code du travail numérique d’établir des mesures statistiques de fréquentation et d’utilisation du site. Pour ce faire, nous utilisons les services proposés par la suite
-               
-              <a
-                href="https://support.google.com/analytics/answer/9019185?hl=fr&ref_topic=2919631"
-                title="Les paramètres de confidentialité dans Google Analytics"
+            <div
+              class="c34"
+            >
+              <div
+                class="c35"
               >
-                Google Analytics
-              </a>
-               
-              , AT Internet et Matomo.
-            </p>
+                <table
+                  class="c36"
+                >
+                  <thead>
+                    <tr>
+                      <th>
+                        Catégorie de cookie
+                      </th>
+                      <th>
+                        Nom du cookie
+                      </th>
+                      <th>
+                        Délai de conservation
+                      </th>
+                      <th>
+                        Finalités
+                      </th>
+                      <th>
+                        Éditeur
+                      </th>
+                      <th>
+                        Destination
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Mesure d’audience
+                      </td>
+                      <td>
+                        Google Analytics
+                      </td>
+                      <td>
+                        13 mois
+                      </td>
+                      <td>
+                        Mesure d’audience et analyse comportementale
+                      </td>
+                      <td>
+                        Google
+                      </td>
+                      <td>
+                        Etats-Unis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mesure d’audience anonymisée
+                      </td>
+                      <td>
+                        Matomo
+                      </td>
+                      <td>
+                        13 mois
+                      </td>
+                      <td>
+                        Mesure d’audience
+                      </td>
+                      <td>
+                        Matomo & Fabrique numérique
+                      </td>
+                      <td>
+                        France
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mesure d’audience anonymisée
+                      </td>
+                      <td>
+                        AT Internet
+                      </td>
+                      <td>
+                        13 mois
+                      </td>
+                      <td>
+                        Mesure d’audience et analyse comportementale
+                      </td>
+                      <td>
+                        AT Internet
+                      </td>
+                      <td>
+                        France
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <p>
-              Les cookies sont inactifs avant que vous ayez exprimé votre consentement en cliquant sur le bouton « Accepter  » ou après que vous ayez pris le soin de personnaliser vos préférences.
-            </p>
-            <p>
-              <button
-                class="c34"
-              >
-                Modifier les réglages
-              </button>
+              L’accès aux informations contenues dans les cookies est limité aux seules personnes autorisées au sein de la Fabrique numérique. En outre, l’éditeur peut utiliser certaines données pour des finalités qui lui sont propres.
             </p>
             <p>
               À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
             </p>
             <p>
-              Pour l'outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
+              <button
+                class="c37"
+              >
+                Modifier les réglages
+              </button>
+            </p>
+            <p>
+              Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
             </p>
             <iframe
               src="https://matomo.fabrique.social.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=2f3b6c&fontSize=16px&fontFamily=sans-serif"
@@ -1451,15 +1689,21 @@ exports[`<CookiePolicy /> should render 1`] = `
               <li>
                 <a
                   href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+                  rel="nofollow, noopener, noreferrer"
+                  target="_blank"
+                  title="Déclaration de confidentialité Microsoft"
                 >
-                  Cookies et traceurs : que dit la loi ?
+                  Cookies et traceurs : que dit la loi ?
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+                  rel="nofollow, noopener, noreferrer"
+                  target="_blank"
+                  title="Déclaration de confidentialité Microsoft"
                 >
-                  Cookies : les outils pour les maîtriser
+                  Cookies : les outils pour les maîtriser
                 </a>
               </li>
             </ul>
@@ -1468,22 +1712,22 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c35"
+      class="c38"
     >
       <footer
-        class="c36"
+        class="c39"
       >
         <div
-          class="c24 c37"
+          class="c24 c40"
         >
           <div
             class="c4"
           >
             <div
-              class="c38"
+              class="c41"
             >
               <strong
-                class="c39"
+                class="c42"
               >
                 <span
                   class="c28"
@@ -1492,17 +1736,17 @@ exports[`<CookiePolicy /> should render 1`] = `
               </strong>
             </div>
             <div
-              class="c40 c41"
+              class="c43 c44"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c34"
+              class="c37"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c42"
+                class="c45"
                 fill="none"
                 viewBox="0 0 28 15"
               >
@@ -1515,25 +1759,25 @@ exports[`<CookiePolicy /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c24 c43"
+          class="c24 c46"
         >
           <div
-            class="c4 c44"
+            class="c4 c47"
           >
             <div
-              class="c45 "
+              class="c48 "
             >
               <strong
-                class="c46 c47"
+                class="c49 c50"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c48 c49"
+                class="c51 c52"
               >
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -1541,7 +1785,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/glossaire"
                   >
                     Glossaire
@@ -1549,7 +1793,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/a-propos"
                   >
                     À propos
@@ -1557,7 +1801,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -1565,7 +1809,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -1573,7 +1817,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -1581,7 +1825,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -1589,7 +1833,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c50"
+                    class="c53"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -1598,19 +1842,19 @@ exports[`<CookiePolicy /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c45 "
+              class="c48 "
             >
               <strong
-                class="c46 c47"
+                class="c49 c50"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c48 c49"
+                class="c51 c52"
               >
                 <li>
                   <button
-                    class="c51 c52"
+                    class="c54 c55"
                   >
                     Contact
                   </button>
@@ -1618,7 +1862,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c50"
+                    class="c53"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1629,7 +1873,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c50"
+                    class="c53"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1640,20 +1884,20 @@ exports[`<CookiePolicy /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c45 "
+              class="c48 "
             >
               <strong
-                class="c46 c47"
+                class="c49 c50"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c48 c49"
+                class="c51 c52"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c50"
+                    class="c53"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1664,7 +1908,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c50"
+                    class="c53"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1675,7 +1919,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c50"
+                    class="c53"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1688,12 +1932,12 @@ exports[`<CookiePolicy /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c53"
+          class="c56"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1702,7 +1946,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c55"
+              class="c58"
             >
               |
             </span>
@@ -1710,7 +1954,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1719,7 +1963,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c55"
+              class="c58"
             >
               |
             </span>
@@ -1727,7 +1971,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1736,7 +1980,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c55"
+              class="c58"
             >
               |
             </span>
@@ -1744,7 +1988,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1753,7 +1997,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c55"
+              class="c58"
             >
               |
             </span>
@@ -1761,7 +2005,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1770,7 +2014,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c55"
+              class="c58"
             >
               |
             </span>
@@ -1778,7 +2022,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c50 c54"
+              class="c53 c57"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"
