@@ -25,7 +25,7 @@ const CookiePolicy = () => {
   return (
     <Layout>
       <Metas
-        title="Politique de confidentialité - Code du travail numérique"
+        title="Politique de confidentialité"
         description="Politique de confidentialité du Code du travail numérique"
       />
       <Section>

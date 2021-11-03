@@ -349,12 +349,11 @@ exports[`<StepPrimes /> should render 1`] = `
   >
     <label
       class="c4"
-      for="hasPrimes-yes"
+      for="hasPrimes-oui"
     >
       <input
-        checked=""
         class="c5"
-        id="hasPrimes-yes"
+        id="hasPrimes-oui"
         name="hasPrimes"
         type="radio"
         value="true"
@@ -363,11 +362,11 @@ exports[`<StepPrimes /> should render 1`] = `
     </label>
     <label
       class="c4"
-      for="hasPrimes-no"
+      for="hasPrimes-non"
     >
       <input
         class="c5"
-        id="hasPrimes-no"
+        id="hasPrimes-non"
         name="hasPrimes"
         type="radio"
         value="false"

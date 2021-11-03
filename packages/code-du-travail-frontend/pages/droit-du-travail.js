@@ -20,7 +20,7 @@ import { Layout } from "../src/layout/Layout";
 const DroitDuTravail = ({ hash }) => (
   <Layout>
     <Metas
-      title="Le droit du travail - Code du travail numérique"
+      title="Le droit du travail"
       description="Qu’est-ce que le droit du travail ?"
     />
     <Section>

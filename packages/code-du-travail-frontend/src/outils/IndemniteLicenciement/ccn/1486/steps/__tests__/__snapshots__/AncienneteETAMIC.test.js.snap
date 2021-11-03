@@ -458,12 +458,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   >
     <label
       class="c8"
-      for="hasBrancheContrat-yes"
+      for="hasBrancheContrat-oui"
     >
       <input
-        checked=""
         class="c9"
-        id="hasBrancheContrat-yes"
+        id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
@@ -472,11 +471,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
     <label
       class="c8"
-      for="hasBrancheContrat-no"
+      for="hasBrancheContrat-non"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-no"
+        id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"
@@ -564,11 +563,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   >
     <label
       class="c8"
-      for="brancheContrat.considered-yes"
+      for="brancheContrat.considered-oui"
     >
       <input
         class="c9"
-        id="brancheContrat.considered-yes"
+        id="brancheContrat.considered-oui"
         name="brancheContrat.considered"
         type="radio"
         value="true"
@@ -577,12 +576,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
     <label
       class="c8"
-      for="brancheContrat.considered-no"
+      for="brancheContrat.considered-non"
     >
       <input
-        checked=""
         class="c9"
-        id="brancheContrat.considered-no"
+        id="brancheContrat.considered-non"
         name="brancheContrat.considered"
         type="radio"
         value="false"
@@ -802,11 +800,11 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   >
     <label
       class="c8"
-      for="hasBrancheContrat-yes"
+      for="hasBrancheContrat-oui"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-yes"
+        id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
@@ -815,11 +813,11 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
     </label>
     <label
       class="c8"
-      for="hasBrancheContrat-no"
+      for="hasBrancheContrat-non"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-no"
+        id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"

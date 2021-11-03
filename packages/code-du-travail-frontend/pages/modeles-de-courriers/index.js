@@ -64,10 +64,7 @@ function Modeles(props) {
   );
   return (
     <Layout>
-      <Metas
-        title={`${title} - Code du travail numérique`}
-        description={subtitle}
-      />
+      <Metas title={title} description={subtitle} />
       <Section>
         <Container narrow>
           <PageTitle subtitle={subtitle}>{title}</PageTitle>

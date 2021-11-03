@@ -383,11 +383,11 @@ exports[`<Anciennete /> should render 1`] = `
     >
       <label
         class="c10"
-        for="hasAbsenceProlonge-yes"
+        for="hasAbsenceProlonge-oui"
       >
         <input
           class="c11"
-          id="hasAbsenceProlonge-yes"
+          id="hasAbsenceProlonge-oui"
           name="hasAbsenceProlonge"
           type="radio"
           value="true"
@@ -396,11 +396,11 @@ exports[`<Anciennete /> should render 1`] = `
       </label>
       <label
         class="c10"
-        for="hasAbsenceProlonge-no"
+        for="hasAbsenceProlonge-non"
       >
         <input
           class="c11"
-          id="hasAbsenceProlonge-no"
+          id="hasAbsenceProlonge-non"
           name="hasAbsenceProlonge"
           type="radio"
           value="false"

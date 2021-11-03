@@ -19,7 +19,7 @@ import { DocumentsTile } from "../index";
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
     <Metas
-      title={`Boîte a outils - Code du travail numérique`}
+      title="Boîte a outils"
       description="Trouvez des réponses personnalisées selon votre situation"
     />
     <Section>
