@@ -123,11 +123,11 @@ exports[`<StepCDD /> should render 1`] = `
     >
       <label
         class="c4"
-        for="finContratPeriodeDessai-yes"
+        for="finContratPeriodeDessai-oui"
       >
         <input
           class="c5"
-          id="finContratPeriodeDessai-yes"
+          id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
           type="radio"
           value="true"
@@ -136,11 +136,11 @@ exports[`<StepCDD /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="finContratPeriodeDessai-no"
+        for="finContratPeriodeDessai-non"
       >
         <input
           class="c5"
-          id="finContratPeriodeDessai-no"
+          id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
           type="radio"
           value="false"
@@ -170,11 +170,11 @@ exports[`<StepCDD /> should render 1`] = `
     >
       <label
         class="c4"
-        for="propositionCDIFindeContrat-yes"
+        for="propositionCDIFindeContrat-oui"
       >
         <input
           class="c5"
-          id="propositionCDIFindeContrat-yes"
+          id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
           type="radio"
           value="true"
@@ -183,11 +183,11 @@ exports[`<StepCDD /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="propositionCDIFindeContrat-no"
+        for="propositionCDIFindeContrat-non"
       >
         <input
           class="c5"
-          id="propositionCDIFindeContrat-no"
+          id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
           type="radio"
           value="false"
@@ -217,11 +217,11 @@ exports[`<StepCDD /> should render 1`] = `
     >
       <label
         class="c4"
-        for="interruptionFauteGrave-yes"
+        for="interruptionFauteGrave-oui"
       >
         <input
           class="c5"
-          id="interruptionFauteGrave-yes"
+          id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
           type="radio"
           value="true"
@@ -230,11 +230,11 @@ exports[`<StepCDD /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="interruptionFauteGrave-no"
+        for="interruptionFauteGrave-non"
       >
         <input
           class="c5"
-          id="interruptionFauteGrave-no"
+          id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
           type="radio"
           value="false"
@@ -264,11 +264,11 @@ exports[`<StepCDD /> should render 1`] = `
     >
       <label
         class="c4"
-        for="refusRenouvellementAuto-yes"
+        for="refusRenouvellementAuto-oui"
       >
         <input
           class="c5"
-          id="refusRenouvellementAuto-yes"
+          id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
           type="radio"
           value="true"
@@ -277,11 +277,11 @@ exports[`<StepCDD /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="refusRenouvellementAuto-no"
+        for="refusRenouvellementAuto-non"
       >
         <input
           class="c5"
-          id="refusRenouvellementAuto-no"
+          id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
           type="radio"
           value="false"

@@ -63,10 +63,7 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas
-        title={`${title} - Code du travail numérique - Ministère du travail`}
-        description={description}
-      />
+      <Metas title={title} description={description} />
       <StyledSection>
         <Container>
           <Flex>

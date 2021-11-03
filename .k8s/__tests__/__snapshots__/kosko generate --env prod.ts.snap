@@ -367,7 +367,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:

@@ -622,9 +622,14 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c63 {
+  padding: 0.4rem;
+}
+
+.c64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -646,11 +651,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c64 {
+.c65 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c65 {
+.c66 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1120,7 +1125,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c65 {
+  .c66 {
     display: none;
   }
 }
@@ -1772,7 +1777,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="c62"
+                    class="c62 c63"
                   >
                     Contact
                   </button>
@@ -1850,12 +1855,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c63"
+          class="c64"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1864,7 +1869,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c65"
+              class="c66"
             >
               |
             </span>
@@ -1872,7 +1877,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1881,7 +1886,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c65"
+              class="c66"
             >
               |
             </span>
@@ -1889,7 +1894,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1898,7 +1903,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c65"
+              class="c66"
             >
               |
             </span>
@@ -1906,7 +1911,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1915,7 +1920,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c65"
+              class="c66"
             >
               |
             </span>
@@ -1923,7 +1928,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1932,7 +1937,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c65"
+              class="c66"
             >
               |
             </span>
@@ -1940,7 +1945,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c61 c64"
+              class="c61 c65"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

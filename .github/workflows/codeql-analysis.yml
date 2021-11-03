@@ -22,7 +22,7 @@ on:
 
 concurrency:
   cancel-in-progress: true
-  group: codeql
+  group: codeql-${{ github.ref }}
 
 jobs:
   analyze:

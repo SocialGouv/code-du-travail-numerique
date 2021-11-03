@@ -225,11 +225,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   >
     <label
       class="c8"
-      for="hasBrancheContrat-yes"
+      for="hasBrancheContrat-oui"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-yes"
+        id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
@@ -238,11 +238,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     </label>
     <label
       class="c8"
-      for="hasBrancheContrat-no"
+      for="hasBrancheContrat-non"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-no"
+        id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"

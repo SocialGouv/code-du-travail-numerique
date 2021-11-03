@@ -513,7 +513,7 @@ function SvgWorkersTheme(props) {
           y2={0.509}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="gray" stopOpacity={0.25} />
+          <stop stopColor="gray" stopOpacity={0.25} offset={0} />
           <stop offset={0.535} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
@@ -525,7 +525,7 @@ function SvgWorkersTheme(props) {
           y2={49649}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="gray" stopOpacity={0.25} />
+          <stop stopColor="gray" stopOpacity={0.25} offset={0} />
           <stop offset={0.54} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>

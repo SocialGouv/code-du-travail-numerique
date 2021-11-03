@@ -1201,9 +1201,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c103 {
+  padding: 0.4rem;
+}
+
+.c104 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1225,11 +1230,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c104 {
+.c105 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c105 {
+.c106 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1985,7 +1990,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c105 {
+  .c106 {
     display: none;
   }
 }
@@ -3071,7 +3076,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 >
                   <li>
                     <button
-                      class="c74"
+                      class="c74 c103"
                     >
                       Contact
                     </button>
@@ -3149,12 +3154,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <ul
-            class="c103"
+            class="c104"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3163,7 +3168,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -3171,7 +3176,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3180,7 +3185,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -3188,7 +3193,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3197,7 +3202,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -3205,7 +3210,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3214,7 +3219,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -3222,7 +3227,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3231,7 +3236,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -3239,7 +3244,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -4456,9 +4461,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c103 {
+  padding: 0.4rem;
+}
+
+.c104 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4480,11 +4490,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c104 {
+.c105 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c105 {
+.c106 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5240,7 +5250,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:980px) {
-  .c105 {
+  .c106 {
     display: none;
   }
 }
@@ -6326,7 +6336,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 >
                   <li>
                     <button
-                      class="c74"
+                      class="c74 c103"
                     >
                       Contact
                     </button>
@@ -6404,12 +6414,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <ul
-            class="c103"
+            class="c104"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6418,7 +6428,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -6426,7 +6436,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6435,7 +6445,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -6443,7 +6453,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6452,7 +6462,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -6460,7 +6470,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6469,7 +6479,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -6477,7 +6487,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6486,7 +6496,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c105"
+                class="c106"
               >
                 |
               </span>
@@ -6494,7 +6504,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c102 c104"
+                class="c102 c105"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"

@@ -51,6 +51,7 @@ const Home = ({ themes = [], highlights = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       title="Code du travail numérique - Ministère du Travail"
+      noTitleAdd
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     />
     <SearchHero />
