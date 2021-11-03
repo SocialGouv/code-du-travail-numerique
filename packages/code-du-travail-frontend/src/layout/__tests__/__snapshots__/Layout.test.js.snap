@@ -408,9 +408,14 @@ exports[`<Layout /> should render 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c44 {
+  padding: 0.4rem;
+}
+
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,11 +437,11 @@ exports[`<Layout /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c45 {
+.c46 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c46 {
+.c47 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -839,7 +844,7 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c46 {
+  .c47 {
     display: none;
   }
 }
@@ -1298,7 +1303,7 @@ exports[`<Layout /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="c43"
+                    class="c43 c44"
                   >
                     Contact
                   </button>
@@ -1376,12 +1381,12 @@ exports[`<Layout /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c44"
+          class="c45"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1390,7 +1395,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c46"
+              class="c47"
             >
               |
             </span>
@@ -1398,7 +1403,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1407,7 +1412,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c46"
+              class="c47"
             >
               |
             </span>
@@ -1415,7 +1420,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1424,7 +1429,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c46"
+              class="c47"
             >
               |
             </span>
@@ -1432,7 +1437,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1441,7 +1446,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c46"
+              class="c47"
             >
               |
             </span>
@@ -1449,7 +1454,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1458,7 +1463,7 @@ exports[`<Layout /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c46"
+              class="c47"
             >
               |
             </span>
@@ -1466,7 +1471,7 @@ exports[`<Layout /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c42 c45"
+              class="c42 c46"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"
