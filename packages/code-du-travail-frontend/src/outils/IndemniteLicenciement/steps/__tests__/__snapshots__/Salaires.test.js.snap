@@ -267,11 +267,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   >
     <label
       class="c4"
-      for="hasTempsPartiel-yes"
+      for="hasTempsPartiel-oui"
     >
       <input
         class="c5"
-        id="hasTempsPartiel-yes"
+        id="hasTempsPartiel-oui"
         name="hasTempsPartiel"
         type="radio"
         value="true"
@@ -280,12 +280,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </label>
     <label
       class="c4"
-      for="hasTempsPartiel-no"
+      for="hasTempsPartiel-non"
     >
       <input
-        checked=""
         class="c5"
-        id="hasTempsPartiel-no"
+        id="hasTempsPartiel-non"
         name="hasTempsPartiel"
         type="radio"
         value="false"
@@ -314,11 +313,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   >
     <label
       class="c4"
-      for="hasSameSalaire-yes"
+      for="hasSameSalaire-oui"
     >
       <input
         class="c5"
-        id="hasSameSalaire-yes"
+        id="hasSameSalaire-oui"
         name="hasSameSalaire"
         type="radio"
         value="true"
@@ -327,12 +326,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </label>
     <label
       class="c4"
-      for="hasSameSalaire-no"
+      for="hasSameSalaire-non"
     >
       <input
-        checked=""
         class="c5"
-        id="hasSameSalaire-no"
+        id="hasSameSalaire-non"
         name="hasSameSalaire"
         type="radio"
         value="false"
@@ -1085,11 +1083,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   >
     <label
       class="c4"
-      for="hasTempsPartiel-yes"
+      for="hasTempsPartiel-oui"
     >
       <input
         class="c5"
-        id="hasTempsPartiel-yes"
+        id="hasTempsPartiel-oui"
         name="hasTempsPartiel"
         type="radio"
         value="true"
@@ -1098,12 +1096,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </label>
     <label
       class="c4"
-      for="hasTempsPartiel-no"
+      for="hasTempsPartiel-non"
     >
       <input
-        checked=""
         class="c5"
-        id="hasTempsPartiel-no"
+        id="hasTempsPartiel-non"
         name="hasTempsPartiel"
         type="radio"
         value="false"
@@ -1132,12 +1129,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   >
     <label
       class="c4"
-      for="hasSameSalaire-yes"
+      for="hasSameSalaire-oui"
     >
       <input
-        checked=""
         class="c5"
-        id="hasSameSalaire-yes"
+        id="hasSameSalaire-oui"
         name="hasSameSalaire"
         type="radio"
         value="true"
@@ -1146,11 +1142,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </label>
     <label
       class="c4"
-      for="hasSameSalaire-no"
+      for="hasSameSalaire-non"
     >
       <input
         class="c5"
-        id="hasSameSalaire-no"
+        id="hasSameSalaire-non"
         name="hasSameSalaire"
         type="radio"
         value="false"
@@ -1829,12 +1825,11 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   >
     <label
       class="c4"
-      for="hasTempsPartiel-yes"
+      for="hasTempsPartiel-oui"
     >
       <input
-        checked=""
         class="c5"
-        id="hasTempsPartiel-yes"
+        id="hasTempsPartiel-oui"
         name="hasTempsPartiel"
         type="radio"
         value="true"
@@ -1843,11 +1838,11 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </label>
     <label
       class="c4"
-      for="hasTempsPartiel-no"
+      for="hasTempsPartiel-non"
     >
       <input
         class="c5"
-        id="hasTempsPartiel-no"
+        id="hasTempsPartiel-non"
         name="hasTempsPartiel"
         type="radio"
         value="false"

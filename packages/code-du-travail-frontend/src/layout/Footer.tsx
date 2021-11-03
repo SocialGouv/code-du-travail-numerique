@@ -115,7 +115,7 @@ const Footer = (): JSX.Element => {
                 <li>
                   <ContactModal>
                     {(openModal) => (
-                      <Button
+                      <StyledButton
                         variant="navLink"
                         onClick={() => {
                           matopush([
@@ -128,7 +128,7 @@ const Footer = (): JSX.Element => {
                         }}
                       >
                         Contact
-                      </Button>
+                      </StyledButton>
                     )}
                   </ContactModal>
                 </li>
@@ -371,6 +371,10 @@ const StyledLink = styled.a.attrs((props) => ({
   text-decoration: none;
   cursor: pointer;
   padding: ${spacings.tiny} 0;
+  display: inline-block;
+`;
+const StyledButton = styled(Button)`
+  padding: ${spacings.tiny};
 `;
 
 const GovernmentSection = styled.ul`

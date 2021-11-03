@@ -97,16 +97,10 @@ const Hierarchy = ({ hash }) => {
                             défavorable pour le salarié que la loi.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. Un accord collectif peut
-                                prévoir dans une certaine limite un taux
-                                inférieur à 25% (règle prévue par le Code du
-                                travail).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. Un accord collectif peut prévoir
+                            dans une certaine limite un taux inférieur à 25%
+                            (règle prévue par le Code du travail).
                           </i>
                         </>
                       ),
@@ -125,17 +119,12 @@ const Hierarchy = ({ hash }) => {
                             la loi ne s’applique pas.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. En l’absence d’accord collectif
-                                sur le taux de majoration des heures
-                                supplémentaires s’applique le code du travail
-                                (25% de majoration pour les 8 premières heures
-                                et 50% pour les suivantes).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. En l’absence d’accord collectif sur
+                            le taux de majoration des heures supplémentaires
+                            s’applique le code du travail (25% de majoration
+                            pour les 8 premières heures et 50% pour les
+                            suivantes).
                           </i>
                         </>
                       ),

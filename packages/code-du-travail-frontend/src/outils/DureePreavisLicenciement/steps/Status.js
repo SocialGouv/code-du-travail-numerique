@@ -50,12 +50,10 @@ function StepStatus({ form }) {
         label="Le licenciement est-il dû à une faute grave (ou lourde) ?"
       />
       {seriousMisconduct === false && (
-        <>
-          <YesNoQuestion
-            name="disabledWorker"
-            label="Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
-          />
-        </>
+        <YesNoQuestion
+          name="disabledWorker"
+          label="Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
+        />
       )}
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
