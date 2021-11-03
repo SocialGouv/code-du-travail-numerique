@@ -647,10 +647,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@sindresorhus/is@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.1.tgz#d26729db850fa327b7cacc5522252194404226f5"
-  integrity sha512-Qm9hBEBu18wt1PO2flE7LPb30BHMQt1eQgbV76YntdNk73XZGpn3izvGTYxbGgzXKgbCjiia0uxTd3aTNQrY/g==
+"@sindresorhus/is@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.2.0.tgz#667bfc6186ae7c9e0b45a08960c551437176e1ca"
+  integrity sha512-VkE3KLBmJwcCaVARtQpfuKcKv8gcBmUubrfHGF84dXuuW6jgsRYxPtzcIhPyK9WAPpRt2/xY6zkD9MnRaJzSyw==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
@@ -666,16 +666,16 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socialgouv/kosko-charts@^9.5.5":
-  version "9.5.5"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-9.5.5.tgz#de0ed3ba763fb132465736569d181fd9c9eb5710"
-  integrity sha512-0YJ+Y+othrQBFzdRhc104L2+uOAEcvKpgXwv6q/HplVDNWYxFj3JZqOvgbCb5YLNNccvUpj+LLB+a0XGWzQNpg==
+"@socialgouv/kosko-charts@9.6.22":
+  version "9.6.22"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kosko-charts/-/kosko-charts-9.6.22.tgz#4816f65cb8398b8fa2ead633e9dbc6fc6e22e333"
+  integrity sha512-38FOH7bW7g9QUhjvS9DgcmGwLaNKzZlh0en38qR6+kQigBfyUfrUBNB5W+V9ssh7dBawTDDaGexMAfy5CxnDHw==
   dependencies:
     "@kubernetes-models/sealed-secrets" "^2.0.2"
-    "@sindresorhus/is" "^4.0.1"
+    "@sindresorhus/is" "^4.2.0"
     fs-extra "^10.0.0"
     kubernetes-models "^2.0.2"
-    slugify "^1.6.0"
+    slugify "^1.6.1"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -3011,10 +3011,10 @@ slice-ansi@^4.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-slugify@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.0.tgz#6bdf8ed01dabfdc46425b67e3320b698832ff893"
-  integrity sha512-FkMq+MQc5hzYgM86nLuHI98Acwi3p4wX+a5BO9Hhw4JdK4L7WueIiZ4tXEobImPqBz2sVcV0+Mu3GRB30IGang==
+slugify@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.1.tgz#a5fcaef29f4e57c6e932ce7044b6ffd9cf81b641"
+  integrity sha512-5ofqMTbetNhxlzjYYLBaZFQd6oiTuSkQlyfPEFIMwgUABlZQ0hbk5xIV9Ydd5jghWeRoO7GkiJliUvTpLOjNRA==
 
 source-map-support@^0.5.6:
   version "0.5.19"
