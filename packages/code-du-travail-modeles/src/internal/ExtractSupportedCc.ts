@@ -5,30 +5,12 @@ export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
     "préavis-retraite"?: boolean;
-    "ancienneté spécifique"?: string;
   };
 };
-
-export enum SpecialAgreementType {
-  BASIC = "BASIC",
-  MISE_RETRAITE_5_ANS = "MISE_RETRAITE_5_ANS",
-}
 
 export type AgreementInfo = {
   idcc: number;
   preavisRetraite: boolean;
-  specialAgreementType: SpecialAgreementType;
-};
-
-const switchSpecialProperties = (
-  property: string | undefined
-): SpecialAgreementType => {
-  switch (property) {
-    case "mise à la retraite 5 ans":
-      return SpecialAgreementType.MISE_RETRAITE_5_ANS;
-    default:
-      return SpecialAgreementType.BASIC;
-  }
 };
 
 export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
@@ -42,9 +24,6 @@ export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
           return {
             idcc,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
-            specialAgreementType: switchSpecialProperties(
-              cdtnNode["ancienneté spécifique"]
-            ),
           };
         }
       }

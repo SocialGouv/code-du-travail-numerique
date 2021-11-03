@@ -7,7 +7,6 @@ contrat salarié . convention collective . hospitalisation privées:
   cdtn:
     idcc: 2264
     préavis-retraite: true
-    ancienneté spécifique: mise à la retraite 5 ans
 
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
   applicable si: mise à la retraite

@@ -1,8 +1,3 @@
-import { supportedCcn } from "@socialgouv/modeles-social";
-import {
-  AgreementInfo,
-  SpecialAgreementType,
-} from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -18,21 +13,15 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   const [overrideQuestion, setOverrideQuestion] = useState<string>(null);
 
   useEffect(() => {
-    let hasBeenFound = false;
-    supportedCcn.map((cc: AgreementInfo) => {
-      if (
-        cc.idcc === form.getState().values.ccn.num &&
-        cc.specialAgreementType === SpecialAgreementType.MISE_RETRAITE_5_ANS &&
-        form.getState().values["contrat salarié - mise à la retraite"] === "oui"
-      ) {
-        setOverrideQuestion(
-          "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise ?"
-        );
-        form.change("seniorityValue", "61");
-        hasBeenFound = true;
-      }
-    });
-    if (!hasBeenFound) {
+    if (
+      form.getState().values.ccn.num === 2264 &&
+      form.getState().values["contrat salarié - mise à la retraite"] === "oui"
+    ) {
+      setOverrideQuestion(
+        "Le salarié a-t-il plus de 5 ans d'ancienneté dans l'entreprise ?"
+      );
+      form.change("seniorityValue", "61");
+    } else {
       form.change("seniorityValue", "25");
     }
   }, []);
