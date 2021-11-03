@@ -151,7 +151,12 @@ function Wizard({
                 {Rules && (
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-                <WizardTitle title={title} icon={icon} duration={duration} />
+                <WizardTitle
+                  title={title}
+                  icon={icon}
+                  duration={duration}
+                  stepIndex={stepIndex}
+                />
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
@@ -208,7 +213,7 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon, duration }) {
+function WizardTitle({ title, icon, duration, stepIndex }) {
   const Icon = icons[icon];
   return (
     <ToolTitle>
@@ -220,7 +225,7 @@ function WizardTitle({ title, icon, duration }) {
         )}
         <StyledTitle>{title}</StyledTitle>
       </StyledTitleBox>
-      {duration && <WizardDuration duration={duration} />}
+      {duration && stepIndex === 0 && <WizardDuration duration={duration} />}
     </ToolTitle>
   );
 }
