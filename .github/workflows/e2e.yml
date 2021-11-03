@@ -31,4 +31,4 @@ jobs:
           yarn install --prefer-offline --frozen-lockfile
       - name: Run test e2e
         run: |
-          CODECEPT_BASEURL=https://${{ github.event.url }} yarn test:e2e
+          CODECEPT_BASEURL=https://${{ github.event.client_payload.url }} yarn test:e2e

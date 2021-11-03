@@ -84,4 +84,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: deployment-ended
-          url: ${{ steps.url.outputs.result }}
+          client-payload: '{"url": "${{ steps.url.outputs.result }}"}'
