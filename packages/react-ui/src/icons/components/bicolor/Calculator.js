@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgCalculator(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M11 2h30a3 3 0 013 3v42a3 3 0 01-3 3H11a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1h30a1 1 0 001-1V5a1 1 0 00-1-1H11a1 1 0 00-1 1v10s0 1-1 1-1-1-1-1V5a3 3 0 013-3z"
         fill="#4E6896"

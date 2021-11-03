@@ -1,8 +1,14 @@
 import * as React from "react";
 
-function SvgComponent(props) {
+function SvgSearchCc(props) {
   return (
-    <svg viewBox="0 0 52 52" fill="none" aria-hidden="true" {...props}>
+    <svg
+      viewBox="0 0 52 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -21,4 +27,4 @@ function SvgComponent(props) {
   );
 }
 
-export default SvgComponent;
+export default SvgSearchCc;

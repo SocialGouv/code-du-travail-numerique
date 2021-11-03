@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgPriorNotice(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M12 2h30a3 3 0 013 3v40a3 3 0 01-3 3h-8v-2h8a1 1 0 001-1V5a1 1 0 00-1-1H12a1 1 0 00-1 1v11H9V5a3 3 0 013-3z"
         fill="#4E6896"

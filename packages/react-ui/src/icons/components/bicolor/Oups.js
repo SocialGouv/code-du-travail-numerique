@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgOups(props) {
   return (
-    <svg fill="none" viewBox="0 0 57 57" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 57 57"
+      aria-hidden="true"
+      {...props}
+    >
       <g clipPath="url(#oups_svg__clip0)">
         <path
           d="M18.031 37.17s4.008 5.343 10.688 5.343c6.68 0 10.687-5.343 10.687-5.343M12.942 26.228s1.527-2.036 4.071-2.036c2.545 0 4.072 2.036 4.072 2.036m-10.179-5.37s1.483.387 3.183-.48c1.7-.866 2.259-2.293 2.259-2.293m24.538 0s.558 1.427 2.259 2.293c1.7.866 3.183.48 3.183.48m-8.958 5.37s1.527-2.036 4.072-2.036 4.071 2.036 4.071 2.036"

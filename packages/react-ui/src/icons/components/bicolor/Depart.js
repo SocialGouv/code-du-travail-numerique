@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgDepart(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M43.566 34.192a.752.752 0 00-.47-.191.615.615 0 00-.454.173.592.592 0 00-.177.444v3.68H29v4.939h13.467v3.682c0 .163.067.32.185.436a.635.635 0 00.445.181.625.625 0 00.45-.183l6.277-6.143a.645.645 0 000-.885l-6.258-6.133z"
         fill="#FF7067"

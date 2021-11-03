@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgLens(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M22 12a1.5 1.5 0 00-1.5 1.5v6h-6a1.5 1.5 0 000 3h6v6a1.5 1.5 0 003 0v-6h6a1.5 1.5 0 100-3h-6v-6A1.5 1.5 0 0022 12z"
         fill="#FF7067"
