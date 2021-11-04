@@ -15,28 +15,40 @@ function YesNoPubliQuestion({ name, label }) {
         {label}
       </Question>
       <RadioContainer>
-        <Field type="radio" name={name} value="oui" validate={required}>
-          {(props) => (
+        <Field
+          type="radio"
+          name={name}
+          value="oui"
+          validate={required}
+          component={({ input }) => (
             <InputRadio
               label="Oui"
-              id={`${props.input.name}-oui`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              id={`${input.name}-oui`}
+              name={input.name}
+              value={input.value}
+              onChange={input.onChange}
+              onBlur={input.onBlur}
+              checked={input.checked}
             />
           )}
-        </Field>
-        <Field type="radio" name={name} value="non" validate={required}>
-          {(props) => (
+        />
+        <Field
+          type="radio"
+          name={name}
+          value="non"
+          validate={required}
+          component={({ input }) => (
             <InputRadio
               label="Non"
-              id={`${props.input.name}-non`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              id={`${input.name}-non`}
+              name={input.name}
+              value={input.value}
+              onChange={input.onChange}
+              onBlur={input.onBlur}
+              checked={input.checked}
             />
           )}
-        </Field>
+        />
         <ErrorField name={name} />
       </RadioContainer>
     </>

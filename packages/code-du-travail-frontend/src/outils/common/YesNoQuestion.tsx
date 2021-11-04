@@ -31,38 +31,40 @@ const YesNoQuestion = ({
     <RadioContainer {...otherProps}>
       <Field
         type="radio"
-        parse={(value) => value === "true"}
         name={name}
         value={true}
         validate={requiredBoolean}
-      >
-        {(props) => (
+        parse={(value) => value === "true"}
+        component={({ input }) => (
           <InputRadio
-            id={`${props.input.name}-oui`}
             label="Oui"
-            name={props.input.name}
-            value={props.input.value}
-            onChange={props.input.onChange}
+            id={`${input.name}-oui`}
+            name={input.name}
+            value={input.value}
+            onChange={input.onChange}
+            onBlur={input.onBlur}
+            checked={input.checked}
           />
         )}
-      </Field>
+      />
       <Field
         type="radio"
-        parse={(value) => value === "true"}
         name={name}
         value={false}
         validate={requiredBoolean}
-      >
-        {(props) => (
+        parse={(value) => value === "true"}
+        component={({ input }) => (
           <InputRadio
             label="Non"
-            id={`${props.input.name}-non`}
-            name={props.input.name}
-            value={props.input.value}
-            onChange={props.input.onChange}
+            id={`${input.name}-non`}
+            name={input.name}
+            value={input.value}
+            onChange={input.onChange}
+            onBlur={input.onBlur}
+            checked={input.checked}
           />
         )}
-      </Field>
+      />
     </RadioContainer>
     <ErrorField name={name} />
     {onChange && (

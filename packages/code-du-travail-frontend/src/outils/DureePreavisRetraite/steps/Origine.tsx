@@ -32,33 +32,35 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
           name="contrat salarié - mise à la retraite"
           value="non"
           validate={required}
-        >
-          {(props) => (
+          component={({ input }) => (
             <InputRadio
               label="Le salarié décide lui-même de partir à la retraite"
-              id={`${props.input.name}-depart`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              id={`${input.name}-depart`}
+              name={input.name}
+              value={input.value}
+              onChange={input.onChange}
+              onBlur={input.onBlur}
+              checked={input.checked}
             />
           )}
-        </Field>
+        />
         <Field
           type="radio"
           name="contrat salarié - mise à la retraite"
           value="oui"
           validate={required}
-        >
-          {(props) => (
+          component={({ input }) => (
             <InputRadio
               label="L'employeur décide de mettre le salarié à la retraite"
-              id={`${props.input.name}-mise`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              id={`${input.name}-mise`}
+              name={input.name}
+              value={input.value}
+              onChange={input.onChange}
+              onBlur={input.onBlur}
+              checked={input.checked}
             />
           )}
-        </Field>
+        />
         {form.getState().values &&
           form.getState().values["contrat salarié - mise à la retraite"] ===
             "oui" && (
