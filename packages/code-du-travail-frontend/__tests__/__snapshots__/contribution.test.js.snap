@@ -2170,7 +2170,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               width="135"
             />
             <svg
-              aria-label="Code du travail num\\\\xE9rique"
+              aria-label="Code du travail numérique"
               class="c8"
               fill="none"
               viewBox="0 0 657 265"
@@ -5448,7 +5448,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               width="135"
             />
             <svg
-              aria-label="Code du travail num\\\\xE9rique"
+              aria-label="Code du travail numérique"
               class="c8"
               fill="none"
               viewBox="0 0 657 265"

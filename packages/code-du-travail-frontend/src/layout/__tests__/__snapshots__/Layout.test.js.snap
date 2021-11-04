@@ -1023,7 +1023,7 @@ exports[`<Layout /> should render 1`] = `
             width="135"
           />
           <svg
-            aria-label="Code du travail num\\\\xE9rique"
+            aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
