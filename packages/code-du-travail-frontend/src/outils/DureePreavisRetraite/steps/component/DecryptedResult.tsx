@@ -197,8 +197,8 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
       {rootData.handicap && (
         <Paragraph>
           <i>
-            *&nbsp;Ce résultat tient compte de la majoration pour les
-            travailleurs handicapés.
+            Ce résultat tient compte de la majoration pour les travailleurs
+            handicapés.
           </i>
         </Paragraph>
       )}

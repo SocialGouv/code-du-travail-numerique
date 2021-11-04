@@ -162,7 +162,6 @@ function Wizard({
                   anchorRef={anchorRef}
                 />
                 <Step form={form} dispatch={dispatch} />
-
                 <PrevNextBar
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
@@ -171,7 +170,6 @@ function Wizard({
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}
                 />
-
                 {Annotation && (
                   <p>
                     <Annotation />
@@ -247,7 +245,7 @@ function WizardDuration({ duration }) {
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, spacings, fonts } = theme;
+const { breakpoints, spacings, fonts, colors } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -283,6 +281,7 @@ const ToolDurationLabel = styled.span`
   bottom: 3px;
   right: 0;
   font-size: ${fonts.sizes.tiny};
+  color: ${colors.title};
 `;
 const TimeWithLabel = styled(icons.TimeWithLabel)`
   width: 4.2rem;
