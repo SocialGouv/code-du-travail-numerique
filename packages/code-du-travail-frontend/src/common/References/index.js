@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Accordion, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Collapse, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
@@ -14,19 +14,11 @@ class References extends React.PureComponent {
     return (
       <>
         {references.length > accordionDisplay ? (
-          <StyledWrapper variant="light" {...props}>
-            {/* FIXME: utiliser un composant show/hide simple qui ne requiert pas de heading level */}
-            <Accordion
-              titleLevel={2}
-              disableStyles
-              items={[
-                {
-                  body: <ReferenceList references={references} />,
-                  title: <div>{label}</div>,
-                },
-              ]}
-            />
-          </StyledWrapper>
+          <Wrapper variant="light" {...props}>
+            <Collapse title={label}>
+              <ReferenceList references={references} />
+            </Collapse>
+          </Wrapper>
         ) : (
           <Wrapper variant="light" {...props}>
             <Div>{label}</Div>
@@ -60,15 +52,6 @@ References.defaultProps = {
 export default References;
 
 const { breakpoints, spacings } = theme;
-
-const StyledWrapper = styled(Wrapper)`
-  padding-top: 0;
-  padding-bottom: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`;
 
 const Div = styled.div`
   margin-bottom: ${spacings.medium};
