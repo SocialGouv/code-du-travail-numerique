@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgWorkersTheme(props) {
   return (
-    <svg fill="none" viewBox="0 0 236 208" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 236 208"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         opacity={0.1}
         d="M186.687 185.164c26.889 0 48.686-5.409 48.686-12.082 0-6.673-21.797-12.082-48.686-12.082S138 166.409 138 173.082c0 6.673 21.798 12.082 48.687 12.082zm-138 22c26.889 0 48.686-5.409 48.686-12.082 0-6.673-21.797-12.082-48.686-12.082C21.797 183 0 188.409 0 195.082c0 6.673 21.798 12.082 48.687 12.082z"
@@ -534,4 +540,5 @@ function SvgWorkersTheme(props) {
   );
 }
 
-export default SvgWorkersTheme;
+const MemoSvgWorkersTheme = React.memo(SvgWorkersTheme);
+export default MemoSvgWorkersTheme;

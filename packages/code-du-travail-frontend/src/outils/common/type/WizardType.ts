@@ -38,6 +38,7 @@ export interface ConventionCollective {
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;
-  seniorityGreaterThanTwoYears: boolean;
+  seniorityMaximum: boolean;
+  seniorityValue: string;
   infos?: Record<string, string>;
 };

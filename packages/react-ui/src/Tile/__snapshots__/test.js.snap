@@ -126,6 +126,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -394,6 +395,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c6.945 0 13.474-2.704 18.385-7.615C49.295 39.474 52 32.945 52 26c0-6.945-2.705-13.474-7.615-18.385zM26 49.97C12.784 49.969 2.031 39.216 2.031 26S12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 13.216-10.753 23.969-23.969 23.969z"

@@ -29,31 +29,30 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-weight: 600;
 }
 
-.c12 {
-  overflow: auto;
+.c13 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c8:hover,
@@ -63,7 +62,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   color: #3e486e;
 }
 
-.c15 {
+.c12 {
+  margin-left: 1rem;
+}
+
+.c16 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -86,7 +89,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   animation: none;
 }
 
-.c17 {
+.c18 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -118,7 +121,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-size: 1.5em;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +145,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   border-radius: 0.6rem;
 }
 
-.c14 {
+.c15 {
   width: calc(50% * 1);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -170,12 +173,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-size: 1.6rem;
 }
 
-.c16 {
+.c17 {
   margin: 2rem 0;
 }
 
 @media print {
-  .c15 {
+  .c16 {
     display: none;
   }
 }
@@ -201,7 +204,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     width: calc(100% * 1);
   }
 }
@@ -289,7 +292,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
             />
           </svg>
           <span
-            class="c11"
+            class="c11 c12"
             font-size="hsmall"
             font-weight="600"
           >
@@ -297,7 +300,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </span>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -340,7 +343,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -860,7 +863,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
         class="c5"
       >
         <div
-          class="c14"
+          class="c15"
         />
         <span
           class="c7"
@@ -893,7 +896,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
             />
           </svg>
           <span
-            class="c11"
+            class="c11 c12"
             font-size="hsmall"
             font-weight="600"
           >
@@ -901,7 +904,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </span>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -937,7 +940,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -1100,10 +1103,10 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     </div>
   </div>
   <div
-    class="c15 c16"
+    class="c16 c17"
   >
     <div
-      class="c17"
+      class="c18"
       role="alert"
     >
       Si un emploi équivalent a été trouvé
@@ -1170,31 +1173,30 @@ exports[`<Result /> renders legal indemnite 1`] = `
   font-weight: 600;
 }
 
-.c12 {
-  overflow: auto;
+.c13 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c8:hover,
@@ -1202,6 +1204,10 @@ exports[`<Result /> renders legal indemnite 1`] = `
 .c8:focus-within,
 .c8[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c12 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -1224,7 +1230,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
   font-size: 1.5em;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1248,7 +1254,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
   border-radius: 0.6rem;
 }
 
-.c14 {
+.c15 {
   width: calc(50% * 0.5494311811023621);
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1297,7 +1303,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c15 {
     width: calc(100% * 0.5494311811023621);
   }
 }
@@ -1385,7 +1391,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
             />
           </svg>
           <span
-            class="c11"
+            class="c11 c12"
             font-size="hsmall"
             font-weight="600"
           >
@@ -1393,7 +1399,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </span>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -1436,7 +1442,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span
@@ -1956,7 +1962,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
         class="c5"
       >
         <div
-          class="c14"
+          class="c15"
         />
         <span
           class="c7"
@@ -1989,7 +1995,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
             />
           </svg>
           <span
-            class="c11"
+            class="c11 c12"
             font-size="hsmall"
             font-weight="600"
           >
@@ -1997,7 +2003,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </span>
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <h2
             class="c0"
@@ -2033,7 +2039,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
             Formule
           </h2>
           <div
-            class="c13"
+            class="c14"
           >
             <div>
               <span

@@ -742,6 +742,7 @@ exports[`<Answer /> should renders 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -763,6 +764,7 @@ exports[`<Answer /> should renders 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -787,6 +789,7 @@ exports[`<Answer /> should renders 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -810,6 +813,7 @@ exports[`<Answer /> should renders 1`] = `
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -913,6 +917,7 @@ exports[`<Answer /> should renders 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -934,6 +939,7 @@ exports[`<Answer /> should renders 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -958,6 +964,7 @@ exports[`<Answer /> should renders 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -981,6 +988,7 @@ exports[`<Answer /> should renders 1`] = `
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -1940,6 +1948,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c7"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
@@ -1957,6 +1966,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c8"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
@@ -1979,6 +1989,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c8"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
@@ -2031,6 +2042,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -2052,6 +2064,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -2076,6 +2089,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                       class="c17"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -2099,6 +2113,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                         class="c17"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -2207,6 +2222,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -2228,6 +2244,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -2252,6 +2269,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 class="c17"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -2275,6 +2293,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   class="c17"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -3083,6 +3102,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -3104,6 +3124,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -3128,6 +3149,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -3151,6 +3173,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -3254,6 +3277,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -3275,6 +3299,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -3299,6 +3324,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -3322,6 +3348,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -4243,6 +4270,7 @@ exports[`<Answer /> should renders related content 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -4264,6 +4292,7 @@ exports[`<Answer /> should renders related content 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -4288,6 +4317,7 @@ exports[`<Answer /> should renders related content 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -4311,6 +4341,7 @@ exports[`<Answer /> should renders related content 1`] = `
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -4411,6 +4442,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -4432,6 +4464,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -4456,6 +4489,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -4479,6 +4513,7 @@ exports[`<Answer /> should renders related content 1`] = `
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -4568,6 +4603,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4593,6 +4629,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4628,6 +4665,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4653,6 +4691,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4678,6 +4717,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 class="c39 c40"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -5440,6 +5480,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -5461,6 +5502,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -5485,6 +5527,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -5508,6 +5551,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -5612,6 +5656,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -5633,6 +5678,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -5657,6 +5703,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -5680,6 +5727,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -6488,6 +6536,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -6509,6 +6558,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -6533,6 +6583,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -6556,6 +6607,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -6660,6 +6712,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -6681,6 +6734,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -6705,6 +6759,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -6728,6 +6783,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -7536,6 +7592,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -7557,6 +7614,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -7581,6 +7639,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -7604,6 +7663,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -7709,6 +7769,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -7730,6 +7791,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -7754,6 +7816,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -7777,6 +7840,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -8585,6 +8649,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -8606,6 +8671,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -8630,6 +8696,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                       class="c9"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -8653,6 +8720,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                         class="c9"
                         fill="none"
                         viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -8753,6 +8821,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -8774,6 +8843,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -8798,6 +8868,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 class="c9"
                 fill="none"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -8821,6 +8892,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   class="c9"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
