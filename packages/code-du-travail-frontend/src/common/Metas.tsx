@@ -1,6 +1,5 @@
 import getConfig from "next/config";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import React from "react";
 
 import { removeQueryParameters } from "../lib";
@@ -14,6 +13,7 @@ type Props = {
   description: string;
   overrideCanonical?: string;
   noTitleAdd?: boolean;
+  pathname: string;
 };
 
 export default function Metas({
@@ -21,8 +21,8 @@ export default function Metas({
   description,
   overrideCanonical,
   noTitleAdd,
+  pathname,
 }: Props): JSX.Element {
-  const router = useRouter();
   return (
     <Head>
       <meta
@@ -42,7 +42,7 @@ export default function Metas({
         href={
           overrideCanonical ??
           `${FRONTEND_HOST}${
-            router.asPath !== "/" ? removeQueryParameters(router.asPath) : ""
+            pathname !== "/" ? removeQueryParameters(pathname) : ""
           }`
         }
         rel="canonical"
