@@ -14,11 +14,11 @@ class References extends React.PureComponent {
     return (
       <>
         {references.length > accordionDisplay ? (
-          <StyledWrapper variant="light" {...props}>
+          <Wrapper variant="light" {...props}>
             <Collapse title={label}>
               <ReferenceList references={references} />
             </Collapse>
-          </StyledWrapper>
+          </Wrapper>
         ) : (
           <Wrapper variant="light" {...props}>
             <Div>{label}</Div>
@@ -52,15 +52,6 @@ References.defaultProps = {
 export default References;
 
 const { breakpoints, spacings } = theme;
-
-const StyledWrapper = styled(Wrapper)`
-  padding-top: 0;
-  padding-bottom: 0;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`;
 
 const Div = styled.div`
   margin-bottom: ${spacings.medium};

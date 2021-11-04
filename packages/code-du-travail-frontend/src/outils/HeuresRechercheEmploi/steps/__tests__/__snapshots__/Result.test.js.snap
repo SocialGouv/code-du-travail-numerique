@@ -40,7 +40,7 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c5 {
+.c4 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
@@ -80,7 +80,7 @@ exports[`<StepResult /> should render no results 1`] = `
   color: #3e486e;
 }
 
-.c4 {
+.c5 {
   margin-left: 1rem;
 }
 
@@ -185,17 +185,13 @@ exports[`<StepResult /> should render no results 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="c4"
+      <span
+        class="c4 c5"
+        font-size="hsmall"
+        font-weight="600"
       >
-        <span
-          class="c5"
-          font-size="hsmall"
-          font-weight="600"
-        >
-          Voir le détail du calcul
-        </span>
-      </div>
+        Voir le détail du calcul
+      </span>
     </div>
     <div
       class="c6"
@@ -337,7 +333,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c6 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
@@ -377,7 +373,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   color: #3e486e;
 }
 
-.c6 {
+.c7 {
   margin-left: 1rem;
 }
 
@@ -522,17 +518,13 @@ exports[`<StepResult /> should render with duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="c6"
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
       >
-        <span
-          class="c7"
-          font-size="hsmall"
-          font-weight="600"
-        >
-          Voir le détail du calcul
-        </span>
-      </div>
+        Voir le détail du calcul
+      </span>
     </div>
     <div
       class="c8"
@@ -667,7 +659,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c6 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
@@ -707,7 +699,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
 }
 
-.c6 {
+.c7 {
   margin-left: 1rem;
 }
 
@@ -836,17 +828,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="c6"
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
       >
-        <span
-          class="c7"
-          font-size="hsmall"
-          font-weight="600"
-        >
-          Voir le détail du calcul
-        </span>
-      </div>
+        Voir le détail du calcul
+      </span>
     </div>
     <div
       class="c8"
@@ -967,7 +955,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c6 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
@@ -1007,7 +995,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
 }
 
-.c6 {
+.c7 {
   margin-left: 1rem;
 }
 
@@ -1145,17 +1133,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="c6"
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
       >
-        <span
-          class="c7"
-          font-size="hsmall"
-          font-weight="600"
-        >
-          Voir le détail du calcul
-        </span>
-      </div>
+        Voir le détail du calcul
+      </span>
     </div>
     <div
       class="c8"

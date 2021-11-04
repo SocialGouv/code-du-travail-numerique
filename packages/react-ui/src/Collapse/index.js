@@ -26,11 +26,9 @@ export const Collapse = ({ title, children, onClickHandler }) => {
         role="button"
       >
         <AccordionArrow aria-hidden="true" />
-        <StyledTitle>
-          <Text fontSize="hsmall" fontWeight="600">
-            {title}
-          </Text>
-        </StyledTitle>
+        <StyledText fontSize="hsmall" fontWeight="600">
+          {title}
+        </StyledText>
       </StyledLink>
       <ResultsWithTransition
         active={active}
@@ -64,7 +62,7 @@ const StyledLink = styled.div`
     color: ${({ theme }) => theme.paragraph};
   }
 `;
-const StyledTitle = styled.div`
+const StyledText = styled(Text)`
   margin-left: ${spacings.small};
 `;
 Collapse.propTypes = {

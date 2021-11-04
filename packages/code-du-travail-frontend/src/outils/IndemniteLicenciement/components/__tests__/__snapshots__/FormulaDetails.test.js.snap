@@ -22,7 +22,7 @@ exports[`<FormulaDetails /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c4 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
@@ -62,7 +62,7 @@ exports[`<FormulaDetails /> should render 1`] = `
   color: #3e486e;
 }
 
-.c3 {
+.c4 {
   margin-left: 1rem;
 }
 
@@ -106,17 +106,13 @@ exports[`<FormulaDetails /> should render 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <div
-        class="c3"
+      <span
+        class="c3 c4"
+        font-size="hsmall"
+        font-weight="600"
       >
-        <span
-          class="c4"
-          font-size="hsmall"
-          font-weight="600"
-        >
-          Voir le détail du calcul
-        </span>
-      </div>
+        Voir le détail du calcul
+      </span>
     </div>
     <div
       class="c5"
