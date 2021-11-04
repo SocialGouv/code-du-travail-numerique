@@ -24,4 +24,5 @@ function SvgArrowDown(props) {
   );
 }
 
-export default SvgArrowDown;
+const MemoSvgArrowDown = React.memo(SvgArrowDown);
+export default MemoSvgArrowDown;

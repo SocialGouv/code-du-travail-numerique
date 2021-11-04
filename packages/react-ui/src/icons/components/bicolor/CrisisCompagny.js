@@ -27,4 +27,5 @@ function SvgCrisisCompagny(props) {
   );
 }
 
-export default SvgCrisisCompagny;
+const MemoSvgCrisisCompagny = React.memo(SvgCrisisCompagny);
+export default MemoSvgCrisisCompagny;

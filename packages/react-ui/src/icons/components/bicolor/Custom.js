@@ -39,4 +39,5 @@ function SvgCustom(props) {
   );
 }
 
-export default SvgCustom;
+const MemoSvgCustom = React.memo(SvgCustom);
+export default MemoSvgCustom;

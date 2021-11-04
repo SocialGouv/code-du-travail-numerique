@@ -17,4 +17,5 @@ function SvgShareFacebook(props) {
   );
 }
 
-export default SvgShareFacebook;
+const MemoSvgShareFacebook = React.memo(SvgShareFacebook);
+export default MemoSvgShareFacebook;

@@ -31,4 +31,5 @@ function SvgContract(props) {
   );
 }
 
-export default SvgContract;
+const MemoSvgContract = React.memo(SvgContract);
+export default MemoSvgContract;

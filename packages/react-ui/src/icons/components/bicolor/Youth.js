@@ -33,4 +33,5 @@ function SvgYouth(props) {
   );
 }
 
-export default SvgYouth;
+const MemoSvgYouth = React.memo(SvgYouth);
+export default MemoSvgYouth;

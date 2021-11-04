@@ -27,4 +27,5 @@ function SvgLink(props) {
   );
 }
 
-export default SvgLink;
+const MemoSvgLink = React.memo(SvgLink);
+export default MemoSvgLink;

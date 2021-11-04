@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=master",
     "start": "start-storybook",
-    "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --icon --no-dimensions -d src/icons/components src/icons/src",
+    "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "npm run build-storybook && gh-pages -d .out",
     "deploy-storybook:action": "npm run build-storybook && gh-pages -d .out -u \"github-actions-bot <support+actions@github.com>\"",

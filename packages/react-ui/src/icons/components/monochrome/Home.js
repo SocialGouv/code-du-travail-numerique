@@ -17,4 +17,5 @@ function SvgHome(props) {
   );
 }
 
-export default SvgHome;
+const MemoSvgHome = React.memo(SvgHome);
+export default MemoSvgHome;

@@ -25,4 +25,5 @@ function SvgLens(props) {
   );
 }
 
-export default SvgLens;
+const MemoSvgLens = React.memo(SvgLens);
+export default MemoSvgLens;

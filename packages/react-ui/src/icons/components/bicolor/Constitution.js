@@ -26,4 +26,5 @@ function SvgConstitution(props) {
   );
 }
 
-export default SvgConstitution;
+const MemoSvgConstitution = React.memo(SvgConstitution);
+export default MemoSvgConstitution;

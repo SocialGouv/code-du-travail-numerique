@@ -25,4 +25,5 @@ function SvgEurotext(props) {
   );
 }
 
-export default SvgEurotext;
+const MemoSvgEurotext = React.memo(SvgEurotext);
+export default MemoSvgEurotext;

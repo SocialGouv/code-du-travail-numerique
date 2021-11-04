@@ -40,4 +40,5 @@ function SvgIndemnity(props) {
   );
 }
 
-export default SvgIndemnity;
+const MemoSvgIndemnity = React.memo(SvgIndemnity);
+export default MemoSvgIndemnity;

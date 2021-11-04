@@ -21,4 +21,5 @@ function SvgHealth(props) {
   );
 }
 
-export default SvgHealth;
+const MemoSvgHealth = React.memo(SvgHealth);
+export default MemoSvgHealth;

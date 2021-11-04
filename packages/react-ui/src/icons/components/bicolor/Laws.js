@@ -39,4 +39,5 @@ function SvgLaws(props) {
   );
 }
 
-export default SvgLaws;
+const MemoSvgLaws = React.memo(SvgLaws);
+export default MemoSvgLaws;

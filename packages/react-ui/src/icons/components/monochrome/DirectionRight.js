@@ -17,4 +17,5 @@ function SvgDirectionRight(props) {
   );
 }
 
-export default SvgDirectionRight;
+const MemoSvgDirectionRight = React.memo(SvgDirectionRight);
+export default MemoSvgDirectionRight;

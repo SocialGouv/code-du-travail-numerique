@@ -27,4 +27,5 @@ function SvgHandicap(props) {
   );
 }
 
-export default SvgHandicap;
+const MemoSvgHandicap = React.memo(SvgHandicap);
+export default MemoSvgHandicap;

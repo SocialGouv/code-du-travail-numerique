@@ -31,4 +31,5 @@ function SvgDepart(props) {
   );
 }
 
-export default SvgDepart;
+const MemoSvgDepart = React.memo(SvgDepart);
+export default MemoSvgDepart;

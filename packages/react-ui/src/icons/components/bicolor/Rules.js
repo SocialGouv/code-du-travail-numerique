@@ -21,4 +21,5 @@ function SvgRules(props) {
   );
 }
 
-export default SvgRules;
+const MemoSvgRules = React.memo(SvgRules);
+export default MemoSvgRules;

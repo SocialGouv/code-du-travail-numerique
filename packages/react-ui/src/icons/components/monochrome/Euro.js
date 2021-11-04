@@ -17,4 +17,5 @@ function SvgEuro(props) {
   );
 }
 
-export default SvgEuro;
+const MemoSvgEuro = React.memo(SvgEuro);
+export default MemoSvgEuro;

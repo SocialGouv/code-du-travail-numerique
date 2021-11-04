@@ -28,4 +28,5 @@ function SvgCalculator(props) {
   );
 }
 
-export default SvgCalculator;
+const MemoSvgCalculator = React.memo(SvgCalculator);
+export default MemoSvgCalculator;

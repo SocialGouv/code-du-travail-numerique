@@ -17,4 +17,5 @@ function SvgShareTwitter(props) {
   );
 }
 
-export default SvgShareTwitter;
+const MemoSvgShareTwitter = React.memo(SvgShareTwitter);
+export default MemoSvgShareTwitter;

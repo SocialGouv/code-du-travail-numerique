@@ -21,4 +21,5 @@ function SvgResources(props) {
   );
 }
 
-export default SvgResources;
+const MemoSvgResources = React.memo(SvgResources);
+export default MemoSvgResources;

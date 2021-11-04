@@ -19,4 +19,5 @@ function SvgExternal(props) {
   );
 }
 
-export default SvgExternal;
+const MemoSvgExternal = React.memo(SvgExternal);
+export default MemoSvgExternal;

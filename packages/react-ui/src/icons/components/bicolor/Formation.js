@@ -31,4 +31,5 @@ function SvgFormation(props) {
   );
 }
 
-export default SvgFormation;
+const MemoSvgFormation = React.memo(SvgFormation);
+export default MemoSvgFormation;

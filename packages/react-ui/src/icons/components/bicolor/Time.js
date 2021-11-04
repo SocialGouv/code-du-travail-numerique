@@ -31,4 +31,5 @@ function SvgTime(props) {
   );
 }
 
-export default SvgTime;
+const MemoSvgTime = React.memo(SvgTime);
+export default MemoSvgTime;

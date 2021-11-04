@@ -52,4 +52,5 @@ function SvgPartialActivity(props) {
   );
 }
 
-export default SvgPartialActivity;
+const MemoSvgPartialActivity = React.memo(SvgPartialActivity);
+export default MemoSvgPartialActivity;

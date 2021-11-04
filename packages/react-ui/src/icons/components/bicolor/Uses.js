@@ -45,4 +45,5 @@ function SvgUses(props) {
   );
 }
 
-export default SvgUses;
+const MemoSvgUses = React.memo(SvgUses);
+export default MemoSvgUses;

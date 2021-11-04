@@ -21,4 +21,5 @@ function SvgHolidays(props) {
   );
 }
 
-export default SvgHolidays;
+const MemoSvgHolidays = React.memo(SvgHolidays);
+export default MemoSvgHolidays;

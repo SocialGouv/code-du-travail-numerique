@@ -19,4 +19,5 @@ function SvgFocus(props) {
   );
 }
 
-export default SvgFocus;
+const MemoSvgFocus = React.memo(SvgFocus);
+export default MemoSvgFocus;

@@ -17,4 +17,5 @@ function SvgDownload(props) {
   );
 }
 
-export default SvgDownload;
+const MemoSvgDownload = React.memo(SvgDownload);
+export default MemoSvgDownload;

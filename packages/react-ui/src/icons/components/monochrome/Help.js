@@ -19,4 +19,5 @@ function SvgHelp(props) {
   );
 }
 
-export default SvgHelp;
+const MemoSvgHelp = React.memo(SvgHelp);
+export default MemoSvgHelp;

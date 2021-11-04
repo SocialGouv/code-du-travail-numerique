@@ -28,4 +28,5 @@ function SvgSpecificJob(props) {
   );
 }
 
-export default SvgSpecificJob;
+const MemoSvgSpecificJob = React.memo(SvgSpecificJob);
+export default MemoSvgSpecificJob;

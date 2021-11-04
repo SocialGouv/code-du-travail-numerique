@@ -68,4 +68,5 @@ function SvgInternational(props) {
   );
 }
 
-export default SvgInternational;
+const MemoSvgInternational = React.memo(SvgInternational);
+export default MemoSvgInternational;

@@ -37,4 +37,5 @@ function SvgAgreement(props) {
   );
 }
 
-export default SvgAgreement;
+const MemoSvgAgreement = React.memo(SvgAgreement);
+export default MemoSvgAgreement;

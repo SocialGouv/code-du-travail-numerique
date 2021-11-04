@@ -652,4 +652,5 @@ function SvgWorkersHero(props) {
   );
 }
 
-export default SvgWorkersHero;
+const MemoSvgWorkersHero = React.memo(SvgWorkersHero);
+export default MemoSvgWorkersHero;

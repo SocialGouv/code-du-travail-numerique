@@ -38,4 +38,5 @@ function SvgTermination(props) {
   );
 }
 
-export default SvgTermination;
+const MemoSvgTermination = React.memo(SvgTermination);
+export default MemoSvgTermination;

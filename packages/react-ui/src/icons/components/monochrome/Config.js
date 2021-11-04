@@ -25,4 +25,5 @@ function SvgConfig(props) {
   );
 }
 
-export default SvgConfig;
+const MemoSvgConfig = React.memo(SvgConfig);
+export default MemoSvgConfig;

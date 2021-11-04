@@ -17,4 +17,5 @@ function SvgArrowRight(props) {
   );
 }
 
-export default SvgArrowRight;
+const MemoSvgArrowRight = React.memo(SvgArrowRight);
+export default MemoSvgArrowRight;

@@ -39,4 +39,5 @@ function SvgOups(props) {
   );
 }
 
-export default SvgOups;
+const MemoSvgOups = React.memo(SvgOups);
+export default MemoSvgOups;

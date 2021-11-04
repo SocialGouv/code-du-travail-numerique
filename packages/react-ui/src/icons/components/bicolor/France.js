@@ -24,4 +24,5 @@ function SvgFrance(props) {
   );
 }
 
-export default SvgFrance;
+const MemoSvgFrance = React.memo(SvgFrance);
+export default MemoSvgFrance;

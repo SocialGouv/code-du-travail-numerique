@@ -27,4 +27,5 @@ function SvgPopulars(props) {
   );
 }
 
-export default SvgPopulars;
+const MemoSvgPopulars = React.memo(SvgPopulars);
+export default MemoSvgPopulars;

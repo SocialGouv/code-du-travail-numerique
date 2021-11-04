@@ -6,7 +6,7 @@ function SvgLogo(props) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 657 265"
-      aria-label="Code du travail num\xE9rique"
+      aria-label="Code du travail numérique"
       {...props}
     >
       <path fill="#fff" d="M135 160h520v100H135z" />
@@ -26,4 +26,5 @@ function SvgLogo(props) {
   );
 }
 
-export default SvgLogo;
+const MemoSvgLogo = React.memo(SvgLogo);
+export default MemoSvgLogo;

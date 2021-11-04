@@ -29,4 +29,5 @@ function SvgSalary(props) {
   );
 }
 
-export default SvgSalary;
+const MemoSvgSalary = React.memo(SvgSalary);
+export default MemoSvgSalary;

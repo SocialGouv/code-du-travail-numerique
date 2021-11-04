@@ -19,4 +19,5 @@ function SvgMore(props) {
   );
 }
 
-export default SvgMore;
+const MemoSvgMore = React.memo(SvgMore);
+export default MemoSvgMore;

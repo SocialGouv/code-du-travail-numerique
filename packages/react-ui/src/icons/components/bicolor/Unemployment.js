@@ -32,4 +32,5 @@ function SvgUnemployment(props) {
   );
 }
 
-export default SvgUnemployment;
+const MemoSvgUnemployment = React.memo(SvgUnemployment);
+export default MemoSvgUnemployment;

@@ -19,4 +19,5 @@ function SvgBurger(props) {
   );
 }
 
-export default SvgBurger;
+const MemoSvgBurger = React.memo(SvgBurger);
+export default MemoSvgBurger;

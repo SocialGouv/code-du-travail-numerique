@@ -540,4 +540,5 @@ function SvgWorkersTheme(props) {
   );
 }
 
-export default SvgWorkersTheme;
+const MemoSvgWorkersTheme = React.memo(SvgWorkersTheme);
+export default MemoSvgWorkersTheme;

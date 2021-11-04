@@ -35,4 +35,5 @@ function SvgApprenticeship(props) {
   );
 }
 
-export default SvgApprenticeship;
+const MemoSvgApprenticeship = React.memo(SvgApprenticeship);
+export default MemoSvgApprenticeship;

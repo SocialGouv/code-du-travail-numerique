@@ -34,4 +34,5 @@ function SvgPriorNotice(props) {
   );
 }
 
-export default SvgPriorNotice;
+const MemoSvgPriorNotice = React.memo(SvgPriorNotice);
+export default MemoSvgPriorNotice;

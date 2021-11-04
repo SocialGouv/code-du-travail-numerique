@@ -23,4 +23,5 @@ function SvgDocument(props) {
   );
 }
 
-export default SvgDocument;
+const MemoSvgDocument = React.memo(SvgDocument);
+export default MemoSvgDocument;

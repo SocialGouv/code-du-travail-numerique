@@ -29,4 +29,5 @@ function SvgNego(props) {
   );
 }
 
-export default SvgNego;
+const MemoSvgNego = React.memo(SvgNego);
+export default MemoSvgNego;

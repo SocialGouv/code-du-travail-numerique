@@ -19,4 +19,5 @@ function SvgShareWhatsapp(props) {
   );
 }
 
-export default SvgShareWhatsapp;
+const MemoSvgShareWhatsapp = React.memo(SvgShareWhatsapp);
+export default MemoSvgShareWhatsapp;

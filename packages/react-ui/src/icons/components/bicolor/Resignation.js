@@ -31,4 +31,5 @@ function SvgResignation(props) {
   );
 }
 
-export default SvgResignation;
+const MemoSvgResignation = React.memo(SvgResignation);
+export default MemoSvgResignation;

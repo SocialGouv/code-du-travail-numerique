@@ -21,4 +21,5 @@ function SvgMail(props) {
   );
 }
 
-export default SvgMail;
+const MemoSvgMail = React.memo(SvgMail);
+export default MemoSvgMail;

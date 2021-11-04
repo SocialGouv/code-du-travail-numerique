@@ -27,4 +27,5 @@ function SvgSearchCc(props) {
   );
 }
 
-export default SvgSearchCc;
+const MemoSvgSearchCc = React.memo(SvgSearchCc);
+export default MemoSvgSearchCc;

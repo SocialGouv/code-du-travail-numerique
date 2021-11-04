@@ -44,4 +44,5 @@ function SvgPrecarity(props) {
   );
 }
 
-export default SvgPrecarity;
+const MemoSvgPrecarity = React.memo(SvgPrecarity);
+export default MemoSvgPrecarity;

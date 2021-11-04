@@ -17,4 +17,5 @@ function SvgShareLinkedin(props) {
   );
 }
 
-export default SvgShareLinkedin;
+const MemoSvgShareLinkedin = React.memo(SvgShareLinkedin);
+export default MemoSvgShareLinkedin;

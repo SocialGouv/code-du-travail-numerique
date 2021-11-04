@@ -18,4 +18,5 @@ function SvgShade(props) {
   );
 }
 
-export default SvgShade;
+const MemoSvgShade = React.memo(SvgShade);
+export default MemoSvgShade;
