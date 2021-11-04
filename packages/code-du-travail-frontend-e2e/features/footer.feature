@@ -48,7 +48,7 @@ Fonctionnalité: Footer
     Quand je clique sur "Politique de confidentialité"
     Quand j'attends que le titre de page "Politique de confidentialité" apparaisse
     Alors je vois "Traitement des données à caractère personnel"
-    Alors je vois "Utilisation de témoins de connexion (« cookies »)"
+    Alors je vois "Cookies"
 
     Quand je clique sur "Statistiques d’utilisation"
     Quand j'attends que le titre de page "Statistiques du Code du travail numérique" apparaisse
