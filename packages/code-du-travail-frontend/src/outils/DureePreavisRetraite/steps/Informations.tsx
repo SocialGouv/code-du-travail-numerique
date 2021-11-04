@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import { StepDynamicPublicodes } from "../../common/StepDynamicPublicodes";
 import { WizardStepProps } from "../../common/type/WizardType";
@@ -10,9 +11,14 @@ const excludedRules = [
 ];
 
 const Informations = (props: WizardStepProps): JSX.Element => (
-  <>
+  <StyledWidth>
     <StepDynamicPublicodes {...props} excludedRules={excludedRules} />
-  </>
+  </StyledWidth>
 );
+
+const StyledWidth = styled.div`
+  width: fit-content;
+  height: fit-content;
+`;
 
 export { Informations };

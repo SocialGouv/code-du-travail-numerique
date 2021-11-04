@@ -10,12 +10,12 @@ import { PublicodesResult, PublicodesUnit } from "./index";
 export const mapToPublicodesSituation = (
   form: FormContent
 ): Record<string, string> => {
-  const { ccn, infos, seniorityGreaterThanTwoYears, ...formWithoutCcn } = form;
+  const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
+    form;
   const seniority = {
-    "contrat salarié - ancienneté":
-      seniorityGreaterThanTwoYears === true
-        ? "25"
-        : formatSeniority(form["contrat salarié - ancienneté"]),
+    "contrat salarié - ancienneté": seniorityMaximum
+      ? seniorityValue
+      : formatSeniority(form["contrat salarié - ancienneté"]),
   };
   return {
     ...infos,

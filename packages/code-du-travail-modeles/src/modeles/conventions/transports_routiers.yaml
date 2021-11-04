@@ -30,7 +30,6 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   références:
     Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV, article 18: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849573/?idConteneur=KALICONT000005635624
 
-
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . Ouvriers:
   applicable si: catégorie professionnelle = 'Ouvriers'
   valeur: oui
@@ -38,7 +37,6 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . Employés:
   applicable si: catégorie professionnelle = 'Employés'
   valeur: oui
-
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM:
   applicable si: catégorie professionnelle = 'TAM'
@@ -108,7 +106,6 @@ contrat salarié . convention collective . transports routiers . catégorie prof
   valeur: 2 mois
   références:
     Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe III, article 17: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849262/?idConteneur=KALICONT000005635624
-
 
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . préavis de retraite groupe 6 à 8 . notification:
   applicable si:

@@ -3,6 +3,7 @@ import * as React from "react";
 function SvgLogo(props) {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 657 265"
       aria-label="Code du travail numérique"
@@ -25,4 +26,5 @@ function SvgLogo(props) {
   );
 }
 
-export default SvgLogo;
+const MemoSvgLogo = React.memo(SvgLogo);
+export default MemoSvgLogo;

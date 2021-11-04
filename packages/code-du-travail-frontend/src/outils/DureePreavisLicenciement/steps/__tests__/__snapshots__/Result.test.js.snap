@@ -22,7 +22,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -32,11 +32,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -47,31 +47,30 @@ exports[`<StepResult /> should render with O duration 1`] = `
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -81,7 +80,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,7 +99,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -106,22 +109,22 @@ exports[`<StepResult /> should render with O duration 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -149,13 +152,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -205,7 +208,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -213,7 +216,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -320,18 +323,19 @@ exports[`<StepResult /> should render with O duration 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -345,10 +349,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -383,7 +387,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -393,11 +397,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -408,31 +412,30 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -442,7 +445,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   color: #3e486e;
 }
 
-.c10 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -457,7 +464,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -467,22 +474,22 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -510,13 +517,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -567,7 +574,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -575,7 +582,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -632,18 +639,19 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -657,10 +665,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -704,7 +712,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -714,11 +722,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -729,31 +737,30 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -763,7 +770,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -778,7 +789,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -788,22 +799,22 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -831,13 +842,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -887,7 +898,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -895,7 +906,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -952,18 +963,19 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -977,10 +989,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -1024,7 +1036,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1034,11 +1046,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1049,31 +1061,30 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -1083,7 +1094,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1098,7 +1113,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1108,22 +1123,22 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1151,13 +1166,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1208,7 +1223,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -1216,7 +1231,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -1270,18 +1285,19 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1295,10 +1311,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -1333,7 +1349,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c8 {
+.c9 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1343,11 +1359,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1358,31 +1374,30 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -1392,7 +1407,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
 }
 
-.c10 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1407,7 +1426,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1417,22 +1436,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1460,13 +1479,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1517,7 +1536,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -1525,7 +1544,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -1582,18 +1601,19 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
-      class="c10"
+      class="c11"
     >
       <div
-        class="c11"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1607,10 +1627,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c13"
       >
         <span
-          class="c13"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>

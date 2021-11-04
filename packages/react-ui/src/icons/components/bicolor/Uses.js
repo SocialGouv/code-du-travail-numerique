@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgUses(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M5 14.117a2 2 0 00-2 2v19.504a2 2 0 002 2h4.935v-2H5V16.117h13.376V18h2v-1.883a2 2 0 00-2-2H5z"
         fill="#FF7067"
@@ -39,4 +45,5 @@ function SvgUses(props) {
   );
 }
 
-export default SvgUses;
+const MemoSvgUses = React.memo(SvgUses);
+export default MemoSvgUses;

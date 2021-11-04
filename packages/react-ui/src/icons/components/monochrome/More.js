@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgMore(props) {
   return (
-    <svg fill="none" viewBox="0 0 16 16" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,4 +19,5 @@ function SvgMore(props) {
   );
 }
 
-export default SvgMore;
+const MemoSvgMore = React.memo(SvgMore);
+export default MemoSvgMore;

@@ -153,7 +153,8 @@ describe("Validation de l'aggregation des données", () => {
         "contrat salarié - ancienneté": seniority,
         "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
         infos: { "contrat salarié - travailleur handicapé": handicap },
-        seniorityGreaterThanTwoYears: true,
+        seniorityMaximum: true,
+        seniorityValue: "25",
       };
       const rootData = createRootData(
         data as FormContent,

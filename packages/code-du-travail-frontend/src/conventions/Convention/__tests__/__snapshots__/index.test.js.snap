@@ -94,13 +94,6 @@ exports[`<Convention /> renders 1`] = `
   line-height: 1.25;
 }
 
-.c24 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c10 > *:first-child {
   margin-top: 0;
 }
@@ -149,7 +142,7 @@ exports[`<Convention /> renders 1`] = `
   transform: translateX(4px);
 }
 
-.c48 {
+.c50 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -187,16 +180,16 @@ exports[`<Convention /> renders 1`] = `
   will-change: transform;
 }
 
-.c48:link,
-.c48:visited {
+.c50:link,
+.c50:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c48:not([disabled]):hover,
-.c48:not([disabled]):active,
-.c48:not([disabled]):focus {
+.c50:not([disabled]):hover,
+.c50:not([disabled]):active,
+.c50:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -205,12 +198,56 @@ exports[`<Convention /> renders 1`] = `
   border-color: transparent;
 }
 
-.c48[disabled] {
+.c50[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c24 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c26 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  padding: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c23 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c23:hover,
+.c23:focus,
+.c23:focus-within,
+.c23[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c25 {
+  margin-left: 1rem;
 }
 
 .c14 {
@@ -219,13 +256,13 @@ exports[`<Convention /> renders 1`] = `
   list-style-type: none;
 }
 
-.c32 {
+.c34 {
   position: relative;
   overflow: visible;
 }
 
-.c32:before,
-.c32:after {
+.c34:before,
+.c34:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -240,19 +277,19 @@ exports[`<Convention /> renders 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c32:before {
+.c34:before {
   left: -2rem;
 }
 
-.c32:after {
+.c34:after {
   right: -2rem;
 }
 
-.c34 {
+.c36 {
   overflow-x: visible;
 }
 
-.c35 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,7 +316,7 @@ exports[`<Convention /> renders 1`] = `
   list-style-type: none;
 }
 
-.c36 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,7 +333,7 @@ exports[`<Convention /> renders 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c51 {
+.c53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -311,7 +348,7 @@ exports[`<Convention /> renders 1`] = `
   justify-content: stretch;
 }
 
-.c52 {
+.c54 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -321,22 +358,22 @@ exports[`<Convention /> renders 1`] = `
   margin-right: 2rem;
 }
 
-.c52 svg {
+.c54 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c53 {
+.c55 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c25 {
+.c27 {
   margin-bottom: 2.4rem;
 }
 
-.c26 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,14 +390,14 @@ exports[`<Convention /> renders 1`] = `
   cursor: pointer;
 }
 
-.c26:hover,
-.c26:focus,
-.c26:focus-within,
-.c26[aria-expanded="true"] {
+.c28:hover,
+.c28:focus,
+.c28:focus-within,
+.c28[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c28 {
+.c30 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -376,26 +413,26 @@ exports[`<Convention /> renders 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c27,
-[aria-selected="true"] .c28 {
+[aria-expanded="true"] .c29,
+[aria-selected="true"] .c30 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c29 {
+.c31 {
   margin: 1rem 0 1rem 1rem;
 }
 
-.c31 > *:first-child {
+.c33 > *:first-child {
   margin-top: 0;
 }
 
-.c31 > *:last-child {
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
-.c30 {
+.c32 {
   padding: 1rem 0 0 3.2rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -414,7 +451,7 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-50%);
 }
 
-.c40 {
+.c42 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -425,7 +462,7 @@ exports[`<Convention /> renders 1`] = `
   text-transform: uppercase;
 }
 
-.c37 {
+.c39 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -466,9 +503,9 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c37:hover,
-.c37:active,
-.c37:focus {
+.c39:hover,
+.c39:active,
+.c39:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -476,33 +513,33 @@ exports[`<Convention /> renders 1`] = `
   transform: translateY(-2px);
 }
 
-.c38 {
+.c40 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c39 {
+.c41 {
   padding-right: 1rem;
 }
 
-.c41 {
+.c43 {
   margin-bottom: 0;
 }
 
-.c42 {
+.c44 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c45 {
+.c47 {
   position: relative;
   display: inline-block;
 }
 
-.c47 {
+.c49 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -524,15 +561,15 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
-.c47::-webkit-outer-spin-button,
-.c47::-webkit-inner-spin-button {
+.c49::-webkit-outer-spin-button,
+.c49::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c47::-webkit-calendar-picker-indicator {
+.c49::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -545,43 +582,43 @@ exports[`<Convention /> renders 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c47:invalid {
+.c49:invalid {
   border-color: #eb5757;
 }
 
-.c47::-webkit-input-placeholder {
+.c49::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c47::-moz-placeholder {
+.c49::-moz-placeholder {
   color: #9298af;
 }
 
-.c47:-ms-input-placeholder {
+.c49:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c47::placeholder {
+.c49::placeholder {
   color: #9298af;
 }
 
-.c47:focus {
+.c49:focus {
   border-color: #7994d4;
 }
 
-.c47:focus::-webkit-input-placeholder {
+.c49:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c47:focus::-moz-placeholder {
+.c49:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c47:focus:-ms-input-placeholder {
+.c49:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c47:focus::placeholder {
+.c49:focus::placeholder {
   color: transparent;
 }
 
@@ -619,11 +656,6 @@ exports[`<Convention /> renders 1`] = `
   padding-left: 0;
 }
 
-.c23 {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .c13 {
   margin-bottom: 2rem;
 }
@@ -632,7 +664,7 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 2.4rem;
 }
 
-.c44 {
+.c46 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -640,15 +672,15 @@ exports[`<Convention /> renders 1`] = `
   display: flex;
 }
 
-.c46 {
+.c48 {
   width: 100%;
 }
 
-.c46 input {
+.c48 input {
   padding-right: 5rem;
 }
 
-.c49 {
+.c51 {
   position: absolute;
   top: 0;
   right: 0;
@@ -657,11 +689,11 @@ exports[`<Convention /> renders 1`] = `
   color: #7994d4;
 }
 
-.c43 {
+.c45 {
   margin-bottom: 2.4rem;
 }
 
-.c50 {
+.c52 {
   width: 3rem;
   height: 3rem;
 }
@@ -692,12 +724,6 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c24 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c20 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
@@ -709,44 +735,44 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c50 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c48 {
+  .c50 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c32 {
+  .c34 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c32:before,
-  .c32:after {
+  .c34:before,
+  .c34:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c34 {
+  .c36 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c35 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c37 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -757,18 +783,18 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c38 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c36:first-of-type {
+  .c38:first-of-type {
     margin-left: 2rem;
   }
 
-  .c36:last-of-type:after {
+  .c38:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -778,57 +804,57 @@ exports[`<Convention /> renders 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c36 {
+  .c38 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c36 {
+  .c38 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c38 {
     width: 80%;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c54 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c52 svg {
+  .c54 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c32 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c39 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c47 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c49 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -856,13 +882,6 @@ exports[`<Convention /> renders 1`] = `
 @media (max-width:600px) {
   .c1 {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 
@@ -1063,6 +1082,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1235,6 +1255,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1261,6 +1282,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1430,6 +1452,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1654,6 +1677,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1680,6 +1704,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1819,6 +1844,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1942,6 +1968,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1968,6 +1995,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2091,6 +2119,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2117,6 +2146,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2240,6 +2270,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2404,6 +2435,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2605,6 +2637,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2780,6 +2813,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2806,6 +2840,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3000,6 +3035,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3123,6 +3159,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3339,6 +3376,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3640,6 +3678,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3789,6 +3828,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4212,214 +4252,181 @@ exports[`<Convention /> renders 1`] = `
 
                       </div>
                       <div
-                        class="c11 c23 c12"
+                        class="c11 c12"
                       >
-                        <div
-                          class="accordion"
-                          data-accordion-component="Accordion"
-                        >
-                          <div>
-                            <div
-                              class=""
-                              data-accordion-component="AccordionItem"
+                        <div>
+                          <div
+                            aria-expanded="false"
+                            class="c23"
+                            role="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="c5 c6"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <div
-                                aria-level="2"
-                                class="accordion__heading"
-                                data-accordion-component="AccordionItemHeading"
-                                role="heading"
-                              >
-                                <div
-                                  aria-controls="accordion__panel-raa-24"
-                                  aria-disabled="false"
-                                  aria-expanded="false"
-                                  class="c4"
-                                  data-accordion-component="AccordionItemButton"
-                                  id="accordion__heading-raa-24"
-                                  role="button"
-                                  tabindex="0"
+                              <polyline
+                                points="9 18 15 12 9 6"
+                              />
+                            </svg>
+                            <span
+                              class="c24 c25"
+                              font-size="hsmall"
+                              font-weight="600"
+                            >
+                              Références juridiques concernées :
+                            </span>
+                          </div>
+                          <div
+                            class="c26"
+                          >
+                            <ul
+                              class="c14 c15"
+                            >
+                              <li>
+                                <a
+                                  aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
+                                  class="c16 c17 c18 no-after"
+                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                                  rel="noopener noreferrer nofollow"
+                                  target="_blank"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="c5 c6"
+                                    class="c19 c20"
                                     fill="none"
-                                    height="24"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    viewBox="0 0 24 24"
-                                    width="24"
+                                    viewBox="0 0 28 15"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <polyline
-                                      points="9 18 15 12 9 6"
+                                    <path
+                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      fill="currentColor"
                                     />
                                   </svg>
-                                  <div
-                                    class="c24"
+                                  <span
+                                    class="c21"
                                   >
-                                    <div>
-                                      Références juridiques concernées :
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                aria-hidden="true"
-                                aria-labelledby="accordion__heading-raa-24"
-                                class="c8"
-                                data-accordion-component="AccordionItemPanel"
-                                hidden=""
-                                id="accordion__panel-raa-24"
-                              >
-                                <div
-                                  class="c9"
+                                    IDCC 1596 - Article 6-11
+                                  </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
+                                  class="c16 c17 c18 no-after"
+                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                                  rel="noopener noreferrer nofollow"
+                                  target="_blank"
                                 >
-                                  <div>
-                                    Références juridiques concernées :
-                                  </div>
-                                </div>
-                                <div
-                                  class="c10"
-                                >
-                                  <ul
-                                    class="c14 c15"
+                                  <svg
+                                    aria-hidden="true"
+                                    class="c19 c20"
+                                    fill="none"
+                                    viewBox="0 0 28 15"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <li>
-                                      <a
-                                        aria-label="IDCC 1596 - Article 6-11 (Nouvelle fenêtre)"
-                                        class="c16 c17 c18 no-after"
-                                        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                        rel="noopener noreferrer nofollow"
-                                        target="_blank"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="c19 c20"
-                                          fill="none"
-                                          viewBox="0 0 28 15"
-                                        >
-                                          <path
-                                            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                        <span
-                                          class="c21"
-                                        >
-                                          IDCC 1596 - Article 6-11
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        aria-label="IDCC 1596 - Article 6-12 (Nouvelle fenêtre)"
-                                        class="c16 c17 c18 no-after"
-                                        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                        rel="noopener noreferrer nofollow"
-                                        target="_blank"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="c19 c20"
-                                          fill="none"
-                                          viewBox="0 0 28 15"
-                                        >
-                                          <path
-                                            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                        <span
-                                          class="c21"
-                                        >
-                                          IDCC 1596 - Article 6-12
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
-                                        class="c16 c17 c18 no-after"
-                                        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                        rel="noopener noreferrer nofollow"
-                                        target="_blank"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="c19 c20"
-                                          fill="none"
-                                          viewBox="0 0 28 15"
-                                        >
-                                          <path
-                                            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                        <span
-                                          class="c21"
-                                        >
-                                          IDCC 1596 - Article 6-13
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
-                                        class="c16 c17 c18 no-after"
-                                        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                        rel="noopener noreferrer nofollow"
-                                        target="_blank"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="c19 c20"
-                                          fill="none"
-                                          viewBox="0 0 28 15"
-                                        >
-                                          <path
-                                            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                        <span
-                                          class="c21"
-                                        >
-                                          IDCC 1596 - Article 6-14
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
-                                        class="c16 c17 c18 no-after"
-                                        href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
-                                        rel="noopener noreferrer nofollow"
-                                        target="_blank"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="c19 c20"
-                                          fill="none"
-                                          viewBox="0 0 28 15"
-                                        >
-                                          <path
-                                            d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                        <span
-                                          class="c21"
-                                        >
-                                          IDCC 1596 - Article 6-15
-                                        </span>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
+                                    <path
+                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                  <span
+                                    class="c21"
+                                  >
+                                    IDCC 1596 - Article 6-12
+                                  </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  aria-label="IDCC 1596 - Article 6-13 (Nouvelle fenêtre)"
+                                  class="c16 c17 c18 no-after"
+                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                                  rel="noopener noreferrer nofollow"
+                                  target="_blank"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="c19 c20"
+                                    fill="none"
+                                    viewBox="0 0 28 15"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                  <span
+                                    class="c21"
+                                  >
+                                    IDCC 1596 - Article 6-13
+                                  </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  aria-label="IDCC 1596 - Article 6-14 (Nouvelle fenêtre)"
+                                  class="c16 c17 c18 no-after"
+                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                                  rel="noopener noreferrer nofollow"
+                                  target="_blank"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="c19 c20"
+                                    fill="none"
+                                    viewBox="0 0 28 15"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                  <span
+                                    class="c21"
+                                  >
+                                    IDCC 1596 - Article 6-14
+                                  </span>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  aria-label="IDCC 1596 - Article 6-15 (Nouvelle fenêtre)"
+                                  class="c16 c17 c18 no-after"
+                                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635221"
+                                  rel="noopener noreferrer nofollow"
+                                  target="_blank"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="c19 c20"
+                                    fill="none"
+                                    viewBox="0 0 28 15"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      fill="currentColor"
+                                    />
+                                  </svg>
+                                  <span
+                                    class="c21"
+                                  >
+                                    IDCC 1596 - Article 6-15
+                                  </span>
+                                </a>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -4562,6 +4569,7 @@ exports[`<Convention /> renders 1`] = `
                                 class="c19 c20"
                                 fill="none"
                                 viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -4615,7 +4623,7 @@ exports[`<Convention /> renders 1`] = `
     </p>
   </div>
   <div
-    class="c25"
+    class="c27"
     data-accordion-component="Accordion"
   >
     <div
@@ -4629,20 +4637,21 @@ exports[`<Convention /> renders 1`] = `
         role="heading"
       >
         <div
-          aria-controls="accordion__panel-raa-26"
+          aria-controls="accordion__panel-raa-25"
           aria-disabled="false"
           aria-expanded="false"
-          class="c26"
+          class="c28"
           data-accordion-component="AccordionItemButton"
-          id="accordion__heading-raa-26"
+          id="accordion__heading-raa-25"
           role="button"
           tabindex="0"
         >
           <svg
             aria-hidden="true"
-            class="c27 c28"
+            class="c29 c30"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
@@ -4652,22 +4661,22 @@ exports[`<Convention /> renders 1`] = `
             />
           </svg>
           <div
-            class="c29"
+            class="c31"
           >
             En savoir plus
           </div>
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-26"
-        class="c30"
+        aria-labelledby="accordion__heading-raa-25"
+        class="c32"
         data-accordion-component="AccordionItemPanel"
         hidden=""
-        id="accordion__panel-raa-26"
+        id="accordion__panel-raa-25"
         role="region"
       >
         <div
-          class="c31"
+          class="c33"
         >
           <p>
             Les thèmes sélectionnés par le ministère du Travail sont les thèmes pour lesquels la convention collective s’applique à votre situation. Cela signifique que même s’il existe un accord d’entreprise sur ces thèmes, celui-ci ne peut prévoir de règles différentes de celles prévues par la convention collective.
@@ -4719,12 +4728,12 @@ exports[`<Convention /> renders 1`] = `
           role="heading"
         >
           <div
-            aria-controls="accordion__panel-raa-27"
+            aria-controls="accordion__panel-raa-26"
             aria-disabled="false"
             aria-expanded="false"
             class="c4"
             data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-27"
+            id="accordion__heading-raa-26"
             role="button"
             tabindex="0"
           >
@@ -4754,11 +4763,11 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-27"
+          aria-labelledby="accordion__heading-raa-26"
           class="c8"
           data-accordion-component="AccordionItemPanel"
           hidden=""
-          id="accordion__panel-raa-27"
+          id="accordion__panel-raa-26"
         >
           <div
             class="c9"
@@ -4769,31 +4778,31 @@ exports[`<Convention /> renders 1`] = `
             class="c10"
           >
             <div
-              class="c32 c33"
+              class="c34 c35"
             >
               <div
-                class="c34"
+                class="c36"
               >
                 <div
-                  class="c35"
+                  class="c37"
                 >
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778263/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 1-4
                           </span>
@@ -4801,29 +4810,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Salaires minimaux
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778297/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 4-1
                           </span>
@@ -4831,29 +4840,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Salaire mensuel
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778298/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 4-2
                           </span>
@@ -4861,29 +4870,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Déduction des heures non travaillées
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778377/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-8
                           </span>
@@ -4891,9 +4900,446 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Barèmes de salaires minimaux
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="c22"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-27"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c4"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-27"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="c5 c6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="c7"
+            >
+              Durée du travail, répartition et aménagement des horaires
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-27"
+          class="c8"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-27"
+        >
+          <div
+            class="c9"
+          >
+            Durée du travail, répartition et aménagement des horaires
+          </div>
+          <div
+            class="c10"
+          >
+            <div
+              class="c34 c35"
+            >
+              <div
+                class="c36"
+              >
+                <div
+                  class="c37"
+                >
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-13
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Contingent d'heures supplémentaires non soumis à autorisation
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-14
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Heures supplémentaires exceptionnelles
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-15
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Plafonds
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-16
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Définition de la durée du travail
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-17
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Majoration pour heures supplémentaires.
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-18
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Equivalences et dérogations permanentes
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-21
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Semaine de travail en 5 jours
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-22
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Exceptions à la semaine de travail en 5 jours
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-24
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Horaires individualisés
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-25
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Horaires à temps partiel
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-28
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Récupération des heures perdues pour intempéries
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="c38"
+                  >
+                    <a
+                      class="c39 no-after"
+                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
+                      rel="nofollow noopener"
+                      target="_blank"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <div
+                          class="c41"
+                        >
+                          <span
+                            class="c42 c43"
+                          >
+                            Article 3-29
+                          </span>
+                          
+                        </div>
+                      </div>
+                      <div
+                        class="c44"
+                      >
+                        Cas des chefs d'équipe
                       </div>
                     </a>
                   </div>
@@ -4945,7 +5391,7 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Durée du travail, répartition et aménagement des horaires
+              Classifications
             </div>
           </div>
         </div>
@@ -4960,474 +5406,37 @@ exports[`<Convention /> renders 1`] = `
           <div
             class="c9"
           >
-            Durée du travail, répartition et aménagement des horaires
-          </div>
-          <div
-            class="c10"
-          >
-            <div
-              class="c32 c33"
-            >
-              <div
-                class="c34"
-              >
-                <div
-                  class="c35"
-                >
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778277/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-13
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Contingent d'heures supplémentaires non soumis à autorisation
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778278/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-14
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Heures supplémentaires exceptionnelles
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778279/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-15
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Plafonds
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778280/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-16
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Définition de la durée du travail
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778282/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-17
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Majoration pour heures supplémentaires.
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778283/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-18
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Equivalences et dérogations permanentes
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778285/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-21
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Semaine de travail en 5 jours
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778286/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-22
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Exceptions à la semaine de travail en 5 jours
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778288/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-24
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Horaires individualisés
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778289/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-25
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Horaires à temps partiel
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778294/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-28
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Récupération des heures perdues pour intempéries
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="c36"
-                  >
-                    <a
-                      class="c37 no-after"
-                      href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778295/?idConteneur=KALICONT000005635221"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      <div
-                        class="c38"
-                      >
-                        <div
-                          class="c39"
-                        >
-                          <span
-                            class="c40 c41"
-                          >
-                            Article 3-29
-                          </span>
-                          
-                        </div>
-                      </div>
-                      <div
-                        class="c42"
-                      >
-                        Cas des chefs d'équipe
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div
-        class="c22"
-        data-accordion-component="AccordionItem"
-      >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-29"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c4"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-29"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="c5 c6"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c7"
-            >
-              Classifications
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-29"
-          class="c8"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-29"
-        >
-          <div
-            class="c9"
-          >
             Classifications
           </div>
           <div
             class="c10"
           >
             <div
-              class="c32 c33"
+              class="c34 c35"
             >
               <div
-                class="c34"
+                class="c36"
               >
                 <div
-                  class="c35"
+                  class="c37"
                 >
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778366/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-1
                           </span>
@@ -5435,29 +5444,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Préambule
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778367/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-2
                           </span>
@@ -5465,29 +5474,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Définitions générales des critères et des niveaux
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778368/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-3
                           </span>
@@ -5495,29 +5504,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Coefficients hiérarchiques
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778369/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-4
                           </span>
@@ -5525,29 +5534,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Prise en compte des diplômes professionnels bâtiment
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778370/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-5
                           </span>
@@ -5555,29 +5564,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Polyvalence
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778374/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-6
                           </span>
@@ -5585,29 +5594,29 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Evolution de carrière
                       </div>
                     </a>
                   </div>
                   <div
-                    class="c36"
+                    class="c38"
                   >
                     <a
-                      class="c37 no-after"
+                      class="c39 no-after"
                       href="https://legifrance.gouv.fr/conv_coll/id/KALIARTI000005778375/?idConteneur=KALICONT000005635221"
                       rel="nofollow noopener"
                       target="_blank"
                     >
                       <div
-                        class="c38"
+                        class="c40"
                       >
                         <div
-                          class="c39"
+                          class="c41"
                         >
                           <span
-                            class="c40 c41"
+                            class="c42 c43"
                           >
                             Article 12-7
                           </span>
@@ -5615,7 +5624,7 @@ exports[`<Convention /> renders 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c42"
+                        class="c44"
                       >
                         Suivi de l'application dans l'entreprise
                       </div>
@@ -5648,18 +5657,18 @@ exports[`<Convention /> renders 1`] = `
   </div>
   <form
     action="https://legifrance.gouv.fr/search/kali#kali"
-    class="c43"
+    class="c45"
     target="_blank"
   >
     <div
-      class="c44"
+      class="c46"
     >
       <span
-        class="c45 c46"
+        class="c47 c48"
       >
         <input
           autocomplete="off"
-          class="c47"
+          class="c49"
           id="search-agreement"
           name="rawQuery"
           placeholder="Congés exceptionnels, prime"
@@ -5698,16 +5707,17 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="c48 c49"
+        class="c50 c51"
         title="Lancer une recherche"
         type="submit"
       >
         <svg
           aria-hidden="true"
           aria-label="rechercher (nouvelle fenêtre)"
-          class="c50"
+          class="c52"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -5718,15 +5728,16 @@ exports[`<Convention /> renders 1`] = `
     </div>
   </form>
   <div
-    class="c51"
+    class="c53"
   >
     <div
-      class="c52"
+      class="c54"
     >
       <svg
         aria-hidden="true"
         fill="none"
         viewBox="0 0 52 52"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -5740,7 +5751,7 @@ exports[`<Convention /> renders 1`] = `
       </svg>
     </div>
     <div
-      class="c53"
+      class="c55"
     >
       Selon le thème, un accord collectif d’entreprise peut prévoir des règles différentes par rapport à la convention collective.
        

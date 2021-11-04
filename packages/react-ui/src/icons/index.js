@@ -31,7 +31,7 @@ export { default as Resignation } from "./components/bicolor/Resignation.js";
 export { default as Resources } from "./components/bicolor/Resources.js";
 export { default as Rules } from "./components/bicolor/Rules.js";
 export { default as Salary } from "./components/bicolor/Salary.js";
-export { default as SearchCC } from "./components/bicolor/SearchCC.js";
+export { default as SearchCC } from "./components/bicolor/SearchCc.js";
 export { default as Security } from "./components/bicolor/Security.js";
 export { default as SpecificJob } from "./components/bicolor/SpecificJob.js";
 export { default as Termination } from "./components/bicolor/Termination.js";

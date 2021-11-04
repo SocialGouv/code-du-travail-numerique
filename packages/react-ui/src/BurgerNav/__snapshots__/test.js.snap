@@ -131,6 +131,7 @@ exports[`BurgerStyles renders 1`] = `
       class="c2"
       fill="none"
       viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"

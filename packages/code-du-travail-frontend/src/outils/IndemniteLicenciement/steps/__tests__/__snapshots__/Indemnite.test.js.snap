@@ -22,7 +22,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   transform: rotate(90deg);
 }
 
-.c9 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -32,11 +32,11 @@ exports[`<StepIndemnite /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -47,31 +47,30 @@ exports[`<StepIndemnite /> should render 1`] = `
   font-weight: 600;
 }
 
-.c7 {
-  overflow: auto;
+.c8 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
+  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c3:hover,
@@ -81,7 +80,11 @@ exports[`<StepIndemnite /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11 {
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,7 +99,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c12 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -106,22 +109,22 @@ exports[`<StepIndemnite /> should render 1`] = `
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -148,7 +151,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   font-size: 1.5em;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,13 +159,13 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -215,7 +218,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         />
       </svg>
       <span
-        class="c6"
+        class="c6 c7"
         font-size="hsmall"
         font-weight="600"
       >
@@ -223,7 +226,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       </span>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <h2
         class="c0"
@@ -259,7 +262,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         Formule
       </h2>
       <div
-        class="c8"
+        class="c9"
       >
         <div>
           <span
@@ -548,18 +551,19 @@ exports[`<StepIndemnite /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c10 c11"
   >
     <div
-      class="c11"
+      class="c12"
     >
       <div
-        class="c12"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -573,10 +577,10 @@ exports[`<StepIndemnite /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="c14"
       >
         <span
-          class="c14"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>
