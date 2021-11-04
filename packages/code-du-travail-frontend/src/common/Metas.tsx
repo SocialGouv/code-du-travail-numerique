@@ -13,7 +13,7 @@ type Props = {
   description: string;
   overrideCanonical?: string;
   noTitleAdd?: boolean;
-  pathname?: string;
+  pathname: string;
 };
 
 export default function Metas({
@@ -21,7 +21,7 @@ export default function Metas({
   description,
   overrideCanonical,
   noTitleAdd,
-  pathname,
+  pathname = "",
 }: Props): JSX.Element {
   return (
     <Head>
