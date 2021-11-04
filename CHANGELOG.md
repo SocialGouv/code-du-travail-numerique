@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
+
+
+### Bug Fixes
+
+* **ci:** use the preprod environment to generate preprod image ([#3980](https://github.com/SocialGouv/code-du-travail-numerique/issues/3980)) ([5c4c0db](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c4c0db5a6f090a0608778070f81c8ca18a956b6))
+
+
+
+
+
 # [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
 
 
