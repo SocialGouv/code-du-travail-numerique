@@ -232,6 +232,7 @@ function WizardTitle({ title, icon, duration, stepIndex }) {
 WizardTitle.propTypes = {
   duration: PropTypes.string,
   icon: PropTypes.string,
+  stepIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
 };
 
