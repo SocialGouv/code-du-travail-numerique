@@ -7,6 +7,7 @@ import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { usePublicodes } from "../../publicodes";
 import { mapToPublicodesSituation } from "../../publicodes/Utils";
+import { SeniorityMaximum } from "./constants";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes();
@@ -26,10 +27,11 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       setQuestion(
         <>
           Le salarié a-t-il plus de 5 ans d&apos;ancienneté dans
-          l&apos;entreprise ? <Small>(à partir de 5 ans + 1 jour)</Small>
+          l&apos;entreprise <Small>(à partir de 5 ans + 1 jour)</Small>
+          &nbsp;?
         </>
       );
-      form.change("seniorityValue", "61");
+      form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_5_YEARS);
     } else {
       setQuestion(
         <>
@@ -38,7 +40,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           &nbsp;?
         </>
       );
-      form.change("seniorityValue", "25");
+      form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_2_YEARS);
     }
   }, []);
 
@@ -65,7 +67,6 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
         }}
         onChange={() => {
           form.change("contrat salarié - ancienneté", undefined);
-          form.change("seniorityValue", "25");
         }}
       />
       {form.getState().values.seniorityMaximum === false && (
