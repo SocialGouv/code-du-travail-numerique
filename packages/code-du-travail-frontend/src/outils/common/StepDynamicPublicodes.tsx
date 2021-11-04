@@ -28,7 +28,7 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
     publicodesContext.setSituation(
       mapToPublicodesSituation(form.getState().values)
     );
-  }, [form, publicodesContext]);
+  }, [form]);
 
   /**
    * Function called when a older question has been asked.
