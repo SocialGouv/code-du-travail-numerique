@@ -461,6 +461,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       for="hasBrancheContrat-oui"
     >
       <input
+        checked=""
         class="c9"
         id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
@@ -580,6 +581,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       for="brancheContrat.considered-non"
     >
       <input
+        checked=""
         class="c9"
         id="brancheContrat.considered-non"
         name="brancheContrat.considered"
