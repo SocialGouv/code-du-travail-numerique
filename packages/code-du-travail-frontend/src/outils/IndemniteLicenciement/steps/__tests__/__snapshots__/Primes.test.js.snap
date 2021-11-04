@@ -352,6 +352,7 @@ exports[`<StepPrimes /> should render 1`] = `
       for="hasPrimes-oui"
     >
       <input
+        checked=""
         class="c5"
         id="hasPrimes-oui"
         name="hasPrimes"

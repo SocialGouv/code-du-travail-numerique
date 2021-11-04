@@ -37,9 +37,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             <InputRadio
               label="Le salarié décide lui-même de partir à la retraite"
               id={`${props.input.name}-depart`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>
@@ -53,9 +51,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             <InputRadio
               label="L'employeur décide de mettre le salarié à la retraite"
               id={`${props.input.name}-mise`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>
