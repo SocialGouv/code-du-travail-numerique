@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgBurger(props) {
   return (
-    <svg fill="none" viewBox="0 0 32 32" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,4 +19,5 @@ function SvgBurger(props) {
   );
 }
 
-export default SvgBurger;
+const MemoSvgBurger = React.memo(SvgBurger);
+export default MemoSvgBurger;

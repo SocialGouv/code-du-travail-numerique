@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgPrecarity(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <g clipPath="url(#precarity_svg__clip0)">
         <path
           d="M34.71 5.86a21.916 21.916 0 0112.832 15.971 1.016 1.016 0 01-1.995.384 19.886 19.886 0 00-11.644-14.49 1.016 1.016 0 11.807-1.865zm-4.021-1.295l.026.006a1.016 1.016 0 11-.442 1.982l-.012-.002a1.016 1.016 0 11.428-1.986zM6.453 29.785a19.853 19.853 0 0011.873 14.589 1.015 1.015 0 11-.783 1.874 22.062 22.062 0 01-8.521-6.355 21.938 21.938 0 01-4.564-9.724 1.016 1.016 0 011.995-.384zm15.225 15.651l.063.014a1.016 1.016 0 01-.432 1.985l-.071-.016a1.016 1.016 0 11.44-1.983zm.153-40.978a1.015 1.015 0 11.384 1.995A19.854 19.854 0 006.55 21.741a1.016 1.016 0 01-1.985-.432 21.848 21.848 0 016.105-11.002 21.836 21.836 0 0111.161-5.849z"
@@ -38,4 +44,5 @@ function SvgPrecarity(props) {
   );
 }
 
-export default SvgPrecarity;
+const MemoSvgPrecarity = React.memo(SvgPrecarity);
+export default MemoSvgPrecarity;

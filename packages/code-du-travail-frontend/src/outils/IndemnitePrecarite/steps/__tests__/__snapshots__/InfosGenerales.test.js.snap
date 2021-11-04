@@ -444,6 +444,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
             aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g
               clip-path="url(#arrow-down_svg__clip0)"
@@ -787,6 +788,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
             aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g
               clip-path="url(#arrow-down_svg__clip0)"

@@ -57,6 +57,7 @@ exports[`<Grid /> renders 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 52 52"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
