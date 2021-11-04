@@ -14,7 +14,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c43 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -187,7 +187,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   color: #f66663;
 }
 
-.c37 {
+.c44 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -225,16 +225,16 @@ exports[`<CookiePolicy /> should render 1`] = `
   will-change: transform;
 }
 
-.c37:link,
-.c37:visited {
+.c44:link,
+.c44:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c37:not([disabled]):hover,
-.c37:not([disabled]):active,
-.c37:not([disabled]):focus {
+.c44:not([disabled]):hover,
+.c44:not([disabled]):active,
+.c44:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -243,7 +243,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c37[disabled] {
+.c44[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -454,7 +454,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c41 {
+.c40 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -484,7 +484,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: left;
 }
 
-.c42 {
+.c41 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -496,13 +496,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   text-align: center;
 }
 
-.c38 {
+.c37 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c39 {
+.c38 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -510,7 +510,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c39:before {
+.c38:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -522,13 +522,13 @@ exports[`<CookiePolicy /> should render 1`] = `
   content: "";
 }
 
-.c40 {
+.c39 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c44 {
+.c43 {
   margin-bottom: 2rem;
 }
 
@@ -862,13 +862,13 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c42 {
     padding: 0;
   }
 }
 
 @media print {
-  .c43 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
@@ -924,19 +924,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c44 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c37 {
+  .c44 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c44 {
     padding: 0 3rem;
   }
 }
@@ -1014,7 +1014,7 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c40 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1039,19 +1039,19 @@ exports[`<CookiePolicy /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c41 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c38 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c39 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
@@ -1668,11 +1668,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
             </p>
             <p>
-              <button
-                class="c37"
-              >
-                Modifier les réglages
-              </button>
+              Seules certaines pages du site sont concernées par la mesure d’audience et l’analyse comportementale avec Google Analytics et vous n’avez visité aucune de ces pages. Aucun cookie Google Analytics n’a donc été déposé sur votre terminal.
             </p>
             <p>
               Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
@@ -1712,22 +1708,22 @@ exports[`<CookiePolicy /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c38"
+      class="c37"
     >
       <footer
-        class="c39"
+        class="c38"
       >
         <div
-          class="c24 c40"
+          class="c24 c39"
         >
           <div
             class="c4"
           >
             <div
-              class="c41"
+              class="c40"
             >
               <strong
-                class="c42"
+                class="c41"
               >
                 <span
                   class="c28"
@@ -1736,12 +1732,12 @@ exports[`<CookiePolicy /> should render 1`] = `
               </strong>
             </div>
             <div
-              class="c43 c44"
+              class="c42 c43"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
             </div>
             <button
-              class="c37"
+              class="c44"
             >
               Contacter nos services en région
               <svg

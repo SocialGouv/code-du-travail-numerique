@@ -25,6 +25,14 @@ const CookiePolicy = () => {
       window.tarteaucitron.userInterface.openPanel();
     }
   }, []);
+
+  const hasTarteAuCitron = useCallback(() => {
+    // @ts-ignore
+    return (
+      typeof document !== "undefined" &&
+      !!document.getElementById("tarteaucitronClosePanel")
+    );
+  }, []);
   return (
     <Layout>
       <Metas
@@ -188,9 +196,18 @@ const CookiePolicy = () => {
               Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox,
               Apple Safari et Opera).
             </p>
-            <p>
+
+            {hasTarteAuCitron() ? (
               <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
-            </p>
+            ) : (
+              <p>
+                Seules certaines pages du site sont concernées par la mesure
+                d’audience et l’analyse comportementale avec Google Analytics et
+                vous n’avez visité aucune de ces pages. Aucun cookie Google
+                Analytics n’a donc été déposé sur votre terminal.
+              </p>
+            )}
+
             <p>
               Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi,
               y compris anonymement&nbsp;:
