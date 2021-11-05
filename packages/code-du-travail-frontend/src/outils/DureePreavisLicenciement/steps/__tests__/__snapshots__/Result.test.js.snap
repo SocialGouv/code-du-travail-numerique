@@ -51,7 +51,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -416,7 +415,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -741,7 +739,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1065,7 +1062,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1378,7 +1374,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
