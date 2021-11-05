@@ -17,12 +17,10 @@ const URL_TRACKED = [
     url: "/contribution/quelle-est-la-duree-du-preavis-en-cas-de-demission",
   },
   {
-    needVariable: true,
     type: "contrib",
     url: "/contribution/quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur",
   },
   {
-    needVariable: true,
     type: "courrier",
     url: "/modeles-de-courriers/convocation-a-un-entretien-prealable-au-licenciement-pour-motif-personnel",
   },
@@ -35,9 +33,12 @@ const URL_TRACKED = [
     url: "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee",
   },
   {
-    needVariable: true,
     type: "courrier",
     url: "/modeles-de-courriers/lettre-de-reclamation-des-documents-de-fin-de-contrat",
+  },
+  {
+    type: "courrier",
+    url: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie",
   },
   {
     type: "courrier",
@@ -68,7 +69,6 @@ const URL_TRACKED = [
     url: "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus",
   },
   {
-    needVariable: true,
     type: "dossiers",
     url: "/dossiers/aides-et-accompagnement-embauche-et-perennisation-des-emplois",
   },

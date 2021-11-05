@@ -45,6 +45,10 @@ export const URL_TRACKED = [
     url: "/modeles-de-courriers",
   },
   {
+    type: TrackingType.MODELES,
+    url: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie",
+  },
+  {
     type: TrackingType.OUTILS,
     url: "/outils/simulateur-embauche",
   },
