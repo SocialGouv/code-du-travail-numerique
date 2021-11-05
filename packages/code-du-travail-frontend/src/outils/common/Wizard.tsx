@@ -9,8 +9,11 @@ import styled from "styled-components";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
-import { TrackUrlMatomo } from "./type/url";
+import {
+  MatomoCommonEvent,
+  MatomoPreavisRetraiteEvent,
+  MatomoTrackUrl,
+} from "./type/matomo";
 
 const anchorRef = React.createRef();
 
@@ -113,7 +116,7 @@ function Wizard({
   const Annotation = steps[stepIndex].annotation;
 
   const onClickNext = (form) => {
-    if (router.asPath === TrackUrlMatomo.PREAVIS_RETRAITE) {
+    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
       switch (steps[stepIndex].name) {
         case initialState.steps[1].name: // "origine"
           matopush([
