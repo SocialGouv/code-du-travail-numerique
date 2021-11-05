@@ -58,6 +58,10 @@ export const URL_TRACKED = [
   },
   {
     type: TrackingType.OUTILS,
+    url: "/outils/preavis-demission",
+  },
+  {
+    type: TrackingType.OUTILS,
     url: "/outils",
   },
   {

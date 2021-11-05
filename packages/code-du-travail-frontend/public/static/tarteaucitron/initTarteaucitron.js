@@ -49,6 +49,10 @@ const URL_TRACKED = [
   },
   {
     type: "outils",
+    url: "/outils/preavis-demission",
+  },
+  {
+    type: "outils",
     url: "/outils/indemnite-licenciement",
   },
   {
