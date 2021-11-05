@@ -12,7 +12,7 @@ export default function EventTracker(): JSX.Element {
       ? path.substring(0, path.indexOf("?"))
       : path;
     return URL_TRACKED.find((urlTracked) => urlTracked.url === cleanPath);
-  }, [router.pathname]);
+  }, [router.asPath]);
 
   React.useEffect(() => {
     if (typeof window !== "undefined" && typeof window.gtag !== "undefined") {
