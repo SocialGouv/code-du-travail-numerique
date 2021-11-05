@@ -1,5 +1,6 @@
 import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
@@ -8,7 +9,11 @@ import styled from "styled-components";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
+import {
+  MatomoCommonEvent,
+  MatomoPreavisRetraiteEvent,
+  MatomoTrackUrl,
+} from "./type/matomo";
 
 const anchorRef = React.createRef();
 
@@ -22,8 +27,9 @@ function Wizard({
 }) {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
-
+  const router = useRouter();
   const setStepIndex = (index) =>
+    //@ts-ignore
     dispatch({ payload: index, type: "setStepIndex" });
 
   useEffect(() => {
@@ -31,6 +37,7 @@ function Wizard({
     // We only focus on wizzard after wizzard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
+      //@ts-ignore
       node.focus();
     }
     if (window) {
@@ -41,6 +48,7 @@ function Wizard({
   const prevStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.max(0, nextStepIndex - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -57,6 +65,7 @@ function Wizard({
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -82,6 +91,7 @@ function Wizard({
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
+      //@ts-ignore
       dispatch({
         type: "reset",
       });
@@ -106,28 +116,30 @@ function Wizard({
   const Annotation = steps[stepIndex].annotation;
 
   const onClickNext = (form) => {
-    switch (steps[stepIndex].name) {
-      case initialState.steps[1].name: // "origine"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values["contrat salarié - mise à la retraite"] ===
-          "oui"
-            ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
-            : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
-        ]);
-        break;
-      case initialState.steps[4].name: // "anciennete"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values.seniorityGreaterThanTwoYears
-            ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
-            : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
-        ]);
-        break;
-      default:
-        return;
+    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
+      switch (steps[stepIndex].name) {
+        case initialState.steps[1].name: // "origine"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values["contrat salarié - mise à la retraite"] ===
+            "oui"
+              ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
+              : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
+          ]);
+          break;
+        case initialState.steps[4].name: // "anciennete"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values.seniorityGreaterThanTwoYears
+              ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
+              : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
+          ]);
+          break;
+        default:
+          return;
+      }
     }
   };
 
@@ -161,6 +173,7 @@ function Wizard({
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
                   nextVisible={nextVisible}
+                  //@ts-ignore
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}
@@ -175,7 +188,9 @@ function Wizard({
                   process.env.NODE_ENV !== "test" && (
                     <details>
                       <summary>state</summary>
-                      <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                      <pre>
+                        {JSON.stringify(form.getState().values, null, 2)}
+                      </pre>
                     </details>
                   )}
               </StyledForm>
