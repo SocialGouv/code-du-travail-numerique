@@ -22,7 +22,7 @@ export default function EventTracker(): JSX.Element {
         u1: `${window.location.origin}${urlToTrack.url}`,
       });
     }
-  }, [urlToTrack, router.pathname]);
+  }, [urlToTrack, router.asPath]);
 
   return (
     <>
