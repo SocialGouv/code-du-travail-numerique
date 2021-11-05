@@ -6,10 +6,13 @@ import { URL_TRACKED } from "./constants";
 export default function EventTracker(): JSX.Element {
   const router = useRouter();
 
-  const urlToTrack = React.useMemo(
-    () => URL_TRACKED.find((urlTracked) => urlTracked.url === router.pathname),
-    [router.pathname]
-  );
+  const urlToTrack = React.useMemo(() => {
+    const path = router.asPath ?? "";
+    const cleanPath = path.includes("?")
+      ? path.substring(0, path.indexOf("?"))
+      : path;
+    return URL_TRACKED.find((urlTracked) => urlTracked.url === cleanPath);
+  }, [router.pathname]);
 
   React.useEffect(() => {
     if (typeof window !== "undefined" && typeof window.gtag !== "undefined") {
