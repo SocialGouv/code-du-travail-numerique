@@ -11,7 +11,6 @@ import React from "react";
 
 import { A11y } from "../src/a11y";
 import { initATInternetService } from "../src/AtInternetService";
-import { getIsProduction, setIsProduction } from "../src/config-service";
 import { initPiwik } from "../src/piwik";
 import { initializeSentry, notifySentry } from "../src/sentry";
 import CustomError from "./_error";
@@ -63,17 +62,16 @@ export default class MyApp extends App {
         pageProps = { message: err.message, statusCode: 500 };
       }
     }
-    if (process.env.IS_PRODUCTION_DEPLOYMENT === "true") {
-      setIsProduction();
-    }
     return {
       pageProps,
+      trackingEnabled:
+        process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true",
     };
   }
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
-    if (getIsProduction()) {
+    if (this.props.trackingEnabled) {
       initATInternetService();
     }
   }

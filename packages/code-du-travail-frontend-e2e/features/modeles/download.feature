@@ -12,7 +12,7 @@ Fonctionnalité: Modèle de lettre
     Alors je vois "Télécharger le modèle"
 
     Quand je télécharge en cliquant sur "Télécharger le modèle"
-    Quand j'attends 5 secondes
+    Quand j'attends 3 secondes
     Alors j'ai téléchargé le fichier "rupture_periode_d-essai_salarie.docx"
 
 

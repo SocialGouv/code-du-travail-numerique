@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import React from "react";
 
-import { getIsProduction } from "../../config-service";
 import { URL_TRACKED } from "./constants";
 
+const trackingEnabled =
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 export default function EventTracker(): JSX.Element {
   const router = useRouter();
 
@@ -16,7 +17,11 @@ export default function EventTracker(): JSX.Element {
   }, [router.asPath]);
 
   React.useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.gtag !== "undefined") {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.gtag !== "undefined" &&
+      urlToTrack
+    ) {
       window.gtag("event", "conversion", {
         allow_custom_scripts: true,
         send_to: `DC-3048978/emplo253/${urlToTrack.type}+unique`,
@@ -25,15 +30,12 @@ export default function EventTracker(): JSX.Element {
     }
   }, [urlToTrack, router.asPath]);
 
-  if (!getIsProduction()) return <></>;
+  if (!trackingEnabled) return <></>;
 
   return (
     <>
       {urlToTrack && (
-        <script
-          type="text/javascript"
-          src="/static/tarteaucitron/initTarteaucitron.js"
-        />
+        <script src="/static/tarteaucitron/initTarteaucitron.js" />
       )}
     </>
   );
