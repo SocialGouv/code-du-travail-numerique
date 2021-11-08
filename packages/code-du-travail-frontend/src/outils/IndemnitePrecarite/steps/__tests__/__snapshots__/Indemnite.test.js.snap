@@ -51,7 +51,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -673,7 +672,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1287,7 +1285,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1912,7 +1909,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
@@ -2526,7 +2522,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }

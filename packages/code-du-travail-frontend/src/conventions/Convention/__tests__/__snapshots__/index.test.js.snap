@@ -217,7 +217,6 @@ exports[`<Convention /> renders 1`] = `
   max-height: 0px;
   opacity: 0;
   overflow: auto;
-  padding: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
