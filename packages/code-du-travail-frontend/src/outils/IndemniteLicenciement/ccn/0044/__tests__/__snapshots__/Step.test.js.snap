@@ -408,6 +408,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"
@@ -1060,6 +1061,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"
@@ -1536,6 +1538,7 @@ exports[`<Step /> should render 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"

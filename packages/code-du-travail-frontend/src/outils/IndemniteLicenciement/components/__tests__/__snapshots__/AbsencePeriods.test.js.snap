@@ -476,6 +476,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
                 clip-path="url(#arrow-down_svg__clip0)"
@@ -529,6 +530,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       class="c16"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
@@ -1014,6 +1016,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
                 clip-path="url(#arrow-down_svg__clip0)"
@@ -1067,6 +1070,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
       class="c16"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"

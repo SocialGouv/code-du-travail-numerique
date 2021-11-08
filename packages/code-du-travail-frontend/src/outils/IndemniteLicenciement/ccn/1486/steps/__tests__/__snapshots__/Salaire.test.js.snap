@@ -445,6 +445,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       for="hasBrancheNewSalaire-oui"
     >
       <input
+        checked=""
         class="c8"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
@@ -943,6 +944,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       for="hasBrancheNewSalaire-oui"
     >
       <input
+        checked=""
         class="c8"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
@@ -1002,6 +1004,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       for="hasBrancheNewRegularSalaire-non"
     >
       <input
+        checked=""
         class="c8"
         id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
@@ -1434,6 +1437,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       for="hasBrancheNewSalaire-oui"
     >
       <input
+        checked=""
         class="c8"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
@@ -1480,6 +1484,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       for="hasBrancheNewRegularSalaire-oui"
     >
       <input
+        checked=""
         class="c8"
         id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"

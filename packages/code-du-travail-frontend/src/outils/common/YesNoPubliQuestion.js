@@ -20,9 +20,7 @@ function YesNoPubliQuestion({ name, label }) {
             <InputRadio
               label="Oui"
               id={`${props.input.name}-oui`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>
@@ -31,9 +29,7 @@ function YesNoPubliQuestion({ name, label }) {
             <InputRadio
               label="Non"
               id={`${props.input.name}-non`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>

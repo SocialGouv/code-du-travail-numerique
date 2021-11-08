@@ -35,31 +35,29 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   font-weight: 600;
 }
 
-.c11 {
-  overflow: auto;
+.c12 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c7:hover,
@@ -67,6 +65,10 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c7:focus-within,
 .c7[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c11 {
+  margin-left: 1rem;
 }
 
 .c3 {
@@ -121,7 +123,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   font-size: 1.5em;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,7 +227,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
           />
         </svg>
         <span
-          class="c10"
+          class="c10 c11"
           font-size="hsmall"
           font-weight="600"
         >
@@ -233,7 +235,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         </span>
       </div>
       <div
-        class="c11"
+        class="c12"
       >
         <h2
           class="c4"
@@ -269,7 +271,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
           Formule
         </h2>
         <div
-          class="c12"
+          class="c13"
         >
           <div>
             <span

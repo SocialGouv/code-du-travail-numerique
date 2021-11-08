@@ -19,6 +19,7 @@ import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
+import EventTracker from "../src/lib/tracking/EventTracker";
 import SearchHero from "../src/search/SearchHero";
 
 const {
@@ -103,6 +104,7 @@ const Home = ({ themes = [], highlights = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 

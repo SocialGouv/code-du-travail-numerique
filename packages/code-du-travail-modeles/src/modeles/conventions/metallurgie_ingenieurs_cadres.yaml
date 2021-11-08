@@ -8,7 +8,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres:
     idcc: 650
     préavis-retraite: true
 
-
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . mise à la retraite:
   applicable si: mise à la retraite
   remplace: préavis de retraite collective
