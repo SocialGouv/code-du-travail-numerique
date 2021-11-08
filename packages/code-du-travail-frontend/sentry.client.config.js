@@ -10,10 +10,8 @@ function getSentryCspUrl() {
   const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
   const isProduction = FRONTEND_HOST.includes("code.travail.gouv.fr");
   const environment = isProduction ? "production" : "preproduction";
-  if (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN) {
-    return `${
-      process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN
-    }&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
+  if (process.env.SENTRY_DSN) {
+    return `${process.env.SENTRY_DSN}&sentry_environment=${environment}&sentry_release=${PACKAGE_VERSION}`;
   }
   return "";
 }
