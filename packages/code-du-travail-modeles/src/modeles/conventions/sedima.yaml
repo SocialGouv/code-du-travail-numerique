@@ -7,7 +7,7 @@ contrat salarié . convention collective . sedima:
   valeur: oui
   cdtn:
     idcc: 1404
-    préavis-retraite: false
+    préavis-retraite: true
 
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: Catégorie professionnelle
