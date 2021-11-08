@@ -85,6 +85,10 @@ Alors("je vois le bouton {string}", (text) => {
   I.seeElement(`//button[text()="${text}"]`);
 });
 
+Alors("je vois le lien {string}", (text) => {
+  I.seeElement(`//a[contains(., "${text}")]`);
+});
+
 Alors("je vois que bouton {string} est désactivé", (text) => {
   I.seeElement(`//button[text()="${text}" and @disabled]`);
 });

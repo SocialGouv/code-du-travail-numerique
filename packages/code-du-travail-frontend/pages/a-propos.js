@@ -19,7 +19,6 @@ const About = () => {
       <Metas
         title="À propos"
         description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
-        pathname={"/a-propos"}
       />
       <Section>
         <Container narrow>

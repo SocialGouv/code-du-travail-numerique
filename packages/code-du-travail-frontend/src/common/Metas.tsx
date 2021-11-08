@@ -1,5 +1,6 @@
 import getConfig from "next/config";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 import { removeQueryParameters } from "../lib";
@@ -13,7 +14,6 @@ type Props = {
   description: string;
   overrideCanonical?: string;
   noTitleAdd?: boolean;
-  pathname: string;
 };
 
 export default function Metas({
@@ -21,8 +21,9 @@ export default function Metas({
   description,
   overrideCanonical,
   noTitleAdd,
-  pathname = "",
 }: Props): JSX.Element {
+  const router = useRouter();
+
   return (
     <Head>
       <meta
@@ -37,16 +38,15 @@ export default function Metas({
       </title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
-      <link
-        key="canonical"
-        href={
-          overrideCanonical ??
-          `${FRONTEND_HOST}${
-            pathname !== "/" ? removeQueryParameters(pathname) : ""
-          }`
-        }
-        rel="canonical"
-      />
+      {overrideCanonical ? (
+        <link key="canonical" rel="canonical" href={overrideCanonical} />
+      ) : router && router.asPath !== "/" ? (
+        <link
+          key="canonical"
+          rel="canonical"
+          href={`${FRONTEND_HOST}${removeQueryParameters(router.asPath)}`}
+        />
+      ) : null}
       <meta key="twitter:card" name="twitter:card" content="summary" />
       <meta key="og:title" property="og:title" content={title} />
       <meta key="og:type" property="og:type" content="article" />

@@ -18,7 +18,6 @@ const Accessibilite = () => {
       <Metas
         title="Accessibilité"
         description="Accessibilité du site du Code du travail numérique"
-        pathname={"/accessibilite"}
       />
       <Section>
         <Container narrow>
