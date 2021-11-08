@@ -32,8 +32,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: "./Dockerfile"
           dockercontext: "./"
-          dockerbuildargs: |
-            SENTRY_PUBLIC_DSN=${{ secrets.SENTRY_PUBLIC_DSN }}
 
   deploy-prod:
     name: Deploy production
