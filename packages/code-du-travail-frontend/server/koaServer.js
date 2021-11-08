@@ -6,7 +6,7 @@ const Sentry = require("@sentry/node");
 const redirects = require("./redirects.json");
 const { logger } = require("@socialgouv/cdtn-logger");
 
-const NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT =
+const IS_PRODUCTION_DEPLOYMENT =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
@@ -103,7 +103,7 @@ async function getKoaServer({ nextApp }) {
       ctx.status = 204;
     });
   }
-  if (!NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
+  if (!IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();
@@ -116,7 +116,7 @@ async function getKoaServer({ nextApp }) {
 
   router.get("/robots.txt", async (ctx) => {
     ctx.type = "text/plain";
-    ctx.body = NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
+    ctx.body = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
   redirects.forEach(({ baseUrl, code, redirectUrl }) => {
