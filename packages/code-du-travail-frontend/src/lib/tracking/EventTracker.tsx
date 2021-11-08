@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 
+import { getIsProduction } from "../../config-service";
 import { URL_TRACKED } from "./constants";
 
 export default function EventTracker(): JSX.Element {
@@ -23,6 +24,8 @@ export default function EventTracker(): JSX.Element {
       });
     }
   }, [urlToTrack, router.asPath]);
+
+  if (!getIsProduction()) return <></>;
 
   return (
     <>
