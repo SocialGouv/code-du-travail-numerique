@@ -8,7 +8,6 @@ const { logger } = require("@socialgouv/cdtn-logger");
 const IS_PRODUCTION_DEPLOYMENT =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
-const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
 const AZURE_BASE_URL =
   process.env.AZURE_BASE_URL || "https://cdtnadmindev.blob.core.windows.net";
 
@@ -64,7 +63,6 @@ async function getKoaServer({ nextApp }) {
         "*.doubleclick.net",
       ],
       styleSrc: ["'self'", "'unsafe-inline'"],
-      ...SENTRY_PUBLIC_DSN,
       ...(dev && { reportUri: "/report-violation" }),
     },
     reportOnly: dev,

@@ -16,62 +16,70 @@ import EventTracker from "../../src/lib/tracking/EventTracker";
 import { getTools } from "../api/simulateurs/index";
 import { DocumentsTile } from "../index";
 
-const Outils = ({ cdtnSimulators, externalTools }) => (
-  <Layout currentPage="tools">
-    <Metas
-      title="Boîte a outils"
-      description="Trouvez des réponses personnalisées selon votre situation"
-    />
-    <Section>
-      <Container>
-        <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <Grid>
-          {DocumentsTile}
-          {cdtnSimulators.map(
-            ({ id, action, description, icon, slug, title }) => {
-              const linkProps = {
-                passHref: true,
-              };
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-              return (
-                <Link {...linkProps} passHref key={id}>
-                  <CallToActionTile
-                    action={action}
-                    custom
-                    title={title}
-                    icon={icons[icon]}
-                    titleTagType="h2"
-                  >
-                    {description}
-                  </CallToActionTile>
-                </Link>
-              );
-            }
-          )}
-          {externalTools.map(
-            ({ id, action, description, icon, title, url }) => (
-              <CallToActionTile
-                key={id}
-                titleTagType="h2"
-                action={action}
-                custom
-                title={title}
-                icon={icons[icon]}
-                href={url}
-                rel="noopener noreferrer"
-                target="_blank"
-                className="no-after"
-              >
-                {description}
-              </CallToActionTile>
-            )
-          )}
-        </Grid>
-      </Container>
-    </Section>
-    <EventTracker />
-  </Layout>
-);
+const Outils = ({ cdtnSimulators, externalTools }) => {
+  return (
+    <Layout currentPage="tools">
+      <Metas
+        title="Boîte a outils"
+        description="Trouvez des réponses personnalisées selon votre situation"
+      />
+      <Section>
+        <button
+          type="button"
+          onClick={() => {
+            throw new Error("Sentry Frontend Error");
+          }}
+        />
+        <Container>
+          <PageTitle>Retrouvez tous nos outils</PageTitle>
+          <Grid>
+            {DocumentsTile}
+            {cdtnSimulators.map(
+              ({ id, action, description, icon, slug, title }) => {
+                const linkProps = {
+                  passHref: true,
+                };
+                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+                return (
+                  <Link {...linkProps} passHref key={id}>
+                    <CallToActionTile
+                      action={action}
+                      custom
+                      title={title}
+                      icon={icons[icon]}
+                      titleTagType="h2"
+                    >
+                      {description}
+                    </CallToActionTile>
+                  </Link>
+                );
+              }
+            )}
+            {externalTools.map(
+              ({ id, action, description, icon, title, url }) => (
+                <CallToActionTile
+                  key={id}
+                  titleTagType="h2"
+                  action={action}
+                  custom
+                  title={title}
+                  icon={icons[icon]}
+                  href={url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="no-after"
+                >
+                  {description}
+                </CallToActionTile>
+              )
+            )}
+          </Grid>
+        </Container>
+      </Section>
+      <EventTracker />
+    </Layout>
+  );
+};
 
 export async function getServerSideProps() {
   return {
