@@ -42,7 +42,7 @@ export default function Metas({
         <link key="canonical" rel="canonical" href={overrideCanonical} />
       ) : (
         router &&
-        router.asPath !== "/" && (
+        router.asPath && (
           <link
             key="canonical"
             rel="canonical"
