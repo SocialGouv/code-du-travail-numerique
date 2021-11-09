@@ -162,7 +162,8 @@ Alors("j'ai téléchargé le fichier {string}", (filename) => {
 });
 
 Alors("le status de la page est {int}", async (num) => {
-  const statusCode = await I.getStatusCode();
+  const url = await I.grabCurrentUrl();
+  const statusCode = await I.getStatusCode(url);
   if (statusCode !== num) {
     assert.fail(
       `Le status de la page ${statusCode} est différent de celui prévu (${num})`

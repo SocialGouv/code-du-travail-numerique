@@ -1,17 +1,13 @@
 const Helper = require("@codeceptjs/helper");
 
 class StatusCode extends Helper {
-  _before() {
-    const helper = this.helpers["Puppeteer"];
-    helper.page.emitter.on("response", (response) => {
-      if (!this.statusCode) {
-        this.statusCode = response.status();
-      }
+  async getStatusCode(url) {
+    return new Promise((resolve) => {
+      const { page } = this.helpers.Puppeteer;
+      page.goto(url, { waitUntil: "load" }).then((r) => {
+        resolve(r.status());
+      });
     });
-  }
-
-  async getStatusCode() {
-    return this.statusCode;
   }
 }
 
