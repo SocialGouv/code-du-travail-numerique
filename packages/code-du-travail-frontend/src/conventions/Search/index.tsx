@@ -102,7 +102,7 @@ const Search = ({ onSelectConvention }) => {
                       convention={convention}
                       isFirst={index === 0}
                       key={convention.slug}
-                      onClick={onSelectConvention}
+                      onClick={onSelectLocalConvention}
                     />
                   ))}
                 />
@@ -115,7 +115,7 @@ const Search = ({ onSelectConvention }) => {
                     <CompanyTile
                       {...entreprise}
                       key={entreprise.siret}
-                      onClick={onSelectConvention}
+                      onClick={onSelectLocalConvention}
                     />
                   ))}
                 />
