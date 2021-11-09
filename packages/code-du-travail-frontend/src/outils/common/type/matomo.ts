@@ -18,4 +18,8 @@ export enum MatomoPreavisRetraiteEvent {
 
 export enum MatomoTrackUrl {
   PREAVIS_RETRAITE = "/outils/preavis-retraite",
+  PREAVIS_DEMISSION = "/outils/preavis-demission",
+  PREAVIS_LICENCIEMENT = "/outils/preavis-licenciement",
+  INDEMNITE_PRECARITE = "outils/indemnite-precarite",
+  HEURE_RECHERCHE_EMPLOI = "/outils/heures-recherche-emploi",
 }

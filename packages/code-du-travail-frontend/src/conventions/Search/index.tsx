@@ -6,12 +6,6 @@ import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 import { v4 as generateUUID } from "uuid";
 
-import {
-  MatomoCommonEvent,
-  MatomoConventionCollectiveEvent,
-} from "../../outils/common/type/matomo";
-import { AgreementStatus } from "../../outils/DureePreavisRetraite/steps/component/DecryptedResult";
-import { getAgreementStatus } from "../../outils/DureePreavisRetraite/utils";
 import { matopush } from "../../piwik";
 import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
@@ -40,26 +34,6 @@ const Search = ({ onSelectConvention }) => {
     const value = keyEvent.target.value;
     trackInput(value, router.asPath, trackingUID);
     setQuery(value);
-  };
-
-  const onSelectLocalConvention = (ccn) => {
-    const agreementStatus = getAgreementStatus(ccn);
-    if (agreementStatus === AgreementStatus.Supported) {
-      matopush([
-        MatomoCommonEvent.TRACK_EVENT,
-        MatomoCommonEvent.OUTIL,
-        MatomoConventionCollectiveEvent.CC_TREATED,
-        ccn.num,
-      ]);
-    } else {
-      matopush([
-        MatomoCommonEvent.TRACK_EVENT,
-        MatomoCommonEvent.OUTIL,
-        MatomoConventionCollectiveEvent.CC_UNTREATED,
-        ccn.num,
-      ]);
-    }
-    onSelectConvention(ccn);
   };
 
   //@ts-ignore
@@ -102,7 +76,7 @@ const Search = ({ onSelectConvention }) => {
                       convention={convention}
                       isFirst={index === 0}
                       key={convention.slug}
-                      onClick={onSelectLocalConvention}
+                      onClick={onSelectConvention}
                     />
                   ))}
                 />
@@ -115,7 +89,7 @@ const Search = ({ onSelectConvention }) => {
                     <CompanyTile
                       {...entreprise}
                       key={entreprise.siret}
-                      onClick={onSelectLocalConvention}
+                      onClick={onSelectConvention}
                     />
                   ))}
                 />
