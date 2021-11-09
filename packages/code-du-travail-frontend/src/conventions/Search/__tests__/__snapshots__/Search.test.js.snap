@@ -1157,7 +1157,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   margin-bottom: 0;
 }
 
-.c16 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1202,9 +1202,9 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   color: #f66663;
 }
 
@@ -1327,7 +1327,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c12 {
   display: block;
   padding: 1.6rem 0;
   padding-top: 0;
@@ -1338,7 +1338,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-decoration: none;
 }
 
-.c13 {
+.c14 {
   display: block;
   padding: 1.6rem 0;
   color: #7994d4;
@@ -1348,7 +1348,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   text-decoration: none;
 }
 
-.c12 {
+.c13 {
   font-weight: normal;
 }
 
@@ -1369,11 +1369,11 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   margin-top: 2.4rem;
 }
 
-.c15 {
+.c16 {
   display: block;
   margin-top: 1.6rem;
 }
@@ -1402,13 +1402,13 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c16 {
+  .c11 {
     display: none;
   }
 }
@@ -1470,53 +1470,51 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         <li
           class="c9 c10"
         >
-          <a
-            class="c11"
-            href="/convention-collective/275-small-titre"
+          <button
+            class="c11 c12"
           >
             small titre
              
             <span
-              class="c12"
+              class="c13"
             >
               (IDCC 
               0275
               )
             </span>
-          </a>
+          </button>
         </li>
         <li
           class="c9 c10"
         >
-          <a
-            class="c13"
-            href="/convention-collective/276-smaller-convention-2"
+          <button
+            class="c11 c14"
           >
             smaller convention 2
              
             <span
-              class="c12"
+              class="c13"
             >
               (IDCC 
               0276
               )
             </span>
-          </a>
+          </button>
         </li>
       </ul>
     </div>
   </div>
   <p
-    class="c14"
+    class="c15"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c15"
+      class="c16"
     >
       Consultez
        
       <button
-        class="c16 c17"
+        class="c11 c17"
         type="button"
       >
         notre aide
@@ -1544,7 +1542,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   margin-bottom: 0;
 }
 
-.c15 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1589,9 +1587,9 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c15:focus,
-.c15:hover,
-.c15:active {
+.c11:focus,
+.c11:hover,
+.c11:active {
   color: #f66663;
 }
 
@@ -1714,7 +1712,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   cursor: pointer;
 }
 
-.c11 {
+.c12 {
   display: block;
   padding: 1.6rem 0;
   padding-top: 0;
@@ -1725,7 +1723,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   text-decoration: none;
 }
 
-.c12 {
+.c13 {
   font-weight: normal;
 }
 
@@ -1746,11 +1744,11 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   width: 100%;
 }
 
-.c13 {
+.c14 {
   margin-top: 2.4rem;
 }
 
-.c14 {
+.c15 {
   display: block;
   margin-top: 1.6rem;
 }
@@ -1779,13 +1777,13 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c11 {
     display: none;
   }
 }
@@ -1847,35 +1845,34 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         <li
           class="c9 c10"
         >
-          <a
-            class="c11"
-            href="/convention-collective/4567-smaller-convention-2"
+          <button
+            class="c11 c12"
           >
             smaller convention 2
              
             <span
-              class="c12"
+              class="c13"
             >
               (IDCC 
               4567
               )
             </span>
-          </a>
+          </button>
         </li>
       </ul>
     </div>
   </div>
   <p
-    class="c13"
+    class="c14"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c14"
+      class="c15"
     >
       Consultez
        
       <button
-        class="c15 c16"
+        class="c11 c16"
         type="button"
       >
         notre aide
