@@ -85,6 +85,10 @@ Alors("je vois le bouton {string}", (text) => {
   I.seeElement(`//button[text()="${text}"]`);
 });
 
+Alors("je vois le lien {string}", (text) => {
+  I.seeElement(`//a[contains(., "${text}")]`);
+});
+
 Alors("je vois que bouton {string} est désactivé", (text) => {
   I.seeElement(`//button[text()="${text}" and @disabled]`);
 });
@@ -155,4 +159,14 @@ Alors("je suis redirigé vers la page: {string}", (url) => {
 Alors("j'ai téléchargé le fichier {string}", (filename) => {
   I.amInPath("output/downloads");
   I.seeFile(filename);
+});
+
+Alors("le status de la page est {int}", async (num) => {
+  const url = await I.grabCurrentUrl();
+  const statusCode = await I.getStatusCode(url);
+  if (statusCode !== num) {
+    assert.fail(
+      `Le status de la page ${statusCode} est différent de celui prévu (${num})`
+    );
+  }
 });

@@ -24,6 +24,7 @@ function Wizard({
   icon,
   Rules = null,
   stepReducer = (step) => step,
+  duration,
 }) {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
@@ -161,14 +162,18 @@ function Wizard({
                 {Rules && (
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-                <WizardTitle title={title} icon={icon} />
+                <WizardTitle
+                  title={title}
+                  icon={icon}
+                  duration={duration}
+                  stepIndex={stepIndex}
+                />
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
                   anchorRef={anchorRef}
                 />
                 <Step form={form} dispatch={dispatch} />
-
                 <PrevNextBar
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
@@ -178,7 +183,6 @@ function Wizard({
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}
                 />
-
                 {Annotation && (
                   <p>
                     <Annotation />
@@ -204,6 +208,7 @@ function Wizard({
 
 Wizard.propTypes = {
   Rules: PropTypes.func,
+  duration: PropTypes.string,
   icon: PropTypes.string,
   initialState: PropTypes.shape({
     stepIndex: PropTypes.number,
@@ -220,23 +225,42 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon }) {
+function WizardTitle({ title, icon, duration, stepIndex }) {
   const Icon = icons[icon];
   return (
     <ToolTitle>
-      {Icon && (
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-      )}
-      {title}
+      <StyledTitleBox>
+        {Icon && (
+          <IconWrapper>
+            <Icon />
+          </IconWrapper>
+        )}
+        <StyledTitle>{title}</StyledTitle>
+      </StyledTitleBox>
+      {duration && stepIndex === 0 && <WizardDuration duration={duration} />}
     </ToolTitle>
+  );
+}
+
+WizardTitle.propTypes = {
+  duration: PropTypes.string,
+  icon: PropTypes.string,
+  stepIndex: PropTypes.number,
+  title: PropTypes.string.isRequired,
+};
+
+function WizardDuration({ duration }) {
+  return (
+    <ToolDuration>
+      <TimeWithLabel aria-hidden="true" />
+      <ToolDurationLabel>{duration}</ToolDurationLabel>
+    </ToolDuration>
   );
 }
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, spacings, fonts, colors } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -249,8 +273,9 @@ const StyledForm = styled.form`
   }
 `;
 
-const ToolTitle = styled.h1`
+const ToolTitle = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
@@ -262,8 +287,28 @@ const ToolTitle = styled.h1`
   }
 `;
 
+const ToolDuration = styled.div`
+  position: relative;
+  width: 6.2rem;
+`;
+const ToolDurationLabel = styled.span`
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  font-size: ${fonts.sizes.tiny};
+  color: ${colors.title};
+`;
+const TimeWithLabel = styled(icons.TimeWithLabel)`
+  width: 4.2rem;
+`;
+const StyledTitle = styled.h1`
+  margin: 0;
+`;
+const StyledTitleBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const IconWrapper = styled.span`
-  display: block;
   flex: 0 0 auto;
   width: 5.2rem;
   height: 5.2rem;

@@ -31,6 +31,9 @@ exports.config = {
       restart: false,
       url: process.env.CODECEPT_BASEURL || "http://localhost:3000",
     },
+    StatusCode: {
+      require: "./helpers/status.js",
+    },
   },
   hooks: [],
   mocha: {},

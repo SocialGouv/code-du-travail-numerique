@@ -6,26 +6,28 @@ import { InfoBulle } from "./InfoBulle";
 
 export type Tooltip = {
   content: JSX.Element;
-  help: string;
+  help?: string;
 };
 type Props = {
   as?: string;
   required: boolean;
   tooltip?: Tooltip;
   children: React.ReactNode;
+  htmlFor?: string;
 };
 
 export const Question = ({
   required,
   tooltip,
   children,
+  htmlFor,
   ...otherProps
 }: Props): JSX.Element => (
-  <LabelBlock {...otherProps}>
+  <LabelBlock htmlFor={htmlFor} {...otherProps}>
     <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
-      <InfoBulle title={tooltip.help}>
+      <InfoBulle title={tooltip.help ?? "Plus d'informations"}>
         <>{tooltip.content}</>
       </InfoBulle>
     )}

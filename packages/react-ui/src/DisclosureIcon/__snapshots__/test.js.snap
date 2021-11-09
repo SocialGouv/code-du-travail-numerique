@@ -81,7 +81,7 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
   <button
     aria-label="Find out what lies beneath"
     class="c0 c1"
-    title="[object Object]"
+    title="Find out what lies beneath"
     type="button"
   >
     <svg
