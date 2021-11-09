@@ -14,6 +14,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
+const { withSentryConfig } = require("@sentry/nextjs");
+
 const compose =
   (...fns) =>
   (args) =>
@@ -43,9 +45,13 @@ const nextConfig = {
     PIWIK_URL: process.env.PIWIK_URL,
     SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
   },
+
+  sentry: {
+    disableClientWebpackPlugin: true,
+    disableServerWebpackPlugin: true,
+  },
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
-
   webpack: (config) => {
     config.module.rules.push({
       loader: "ignore-loader",
@@ -74,6 +80,7 @@ module.exports = {
   ...compose(
     withSourceMaps,
     withBundleAnalyzer,
-    withTranspileModule
+    withTranspileModule,
+    withSentryConfig
   )(nextConfig),
 };

@@ -1,16 +1,15 @@
 import "@ungap/url-search-params";
 
-import * as Sentry from "@sentry/browser";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
 process.on("unhandledRejection", (err) => {
-  Sentry.captureException(err);
+  throw new Error(err);
 });
 
 process.on("uncaughtException", (err) => {
-  Sentry.captureException(err);
+  throw new Error(err);
 });
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
