@@ -160,3 +160,12 @@ Alors("j'ai téléchargé le fichier {string}", (filename) => {
   I.amInPath("output/downloads");
   I.seeFile(filename);
 });
+
+Alors("le status de la page est {int}", async (num) => {
+  const statusCode = await I.getStatusCode();
+  if (statusCode !== num) {
+    assert.fail(
+      `Le status de la page ${statusCode} est différent de celui prévu (${num})`
+    );
+  }
+});

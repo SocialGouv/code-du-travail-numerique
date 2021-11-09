@@ -40,13 +40,16 @@ export default function Metas({
       <meta key="desc" name="description" content={description} />
       {overrideCanonical ? (
         <link key="canonical" rel="canonical" href={overrideCanonical} />
-      ) : router && router.asPath !== "/" ? (
-        <link
-          key="canonical"
-          rel="canonical"
-          href={`${FRONTEND_HOST}${removeQueryParameters(router.asPath)}`}
-        />
-      ) : null}
+      ) : (
+        router &&
+        router.asPath !== "/" && (
+          <link
+            key="canonical"
+            rel="canonical"
+            href={`${FRONTEND_HOST}${removeQueryParameters(router.asPath)}`}
+          />
+        )
+      )}
       <meta key="twitter:card" name="twitter:card" content="summary" />
       <meta key="og:title" property="og:title" content={title} />
       <meta key="og:type" property="og:type" content="article" />
