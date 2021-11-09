@@ -45,7 +45,6 @@ const ResultsWithTransition = styled.div`
   max-height: ${({ maxHeight }) => maxHeight};
   opacity: ${({ active }) => (active ? "1" : "0")};
   overflow: auto;
-  padding: ${({ active }) => (active ? spacings.base : "0")};
   transition: opacity 0.5s ease-in-out;
 `;
 const StyledLink = styled.div`
