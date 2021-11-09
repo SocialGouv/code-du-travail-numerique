@@ -1,6 +1,6 @@
 {
   "name": "@cdt/e2e",
-  "version": "4.56.5",
+  "version": "4.57.0",
   "private": true,
   "description": "",
   "main": "codecept.conf.js",
@@ -17,7 +17,6 @@
     "puppeteer": "^10.4.0"
   },
   "devDependencies": {
-    "@codeceptjs/helper": "^1.0.2",
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "eslint": "^7.31.0",
     "lint-staged": "^11.2.3"
