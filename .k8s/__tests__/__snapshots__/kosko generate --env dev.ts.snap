@@ -402,6 +402,7 @@ data:
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
   PROD_HOSTNAME: code.travail.gouv.fr
   NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+  NEXT_PUBLIC_SENTRY_ENV: dev
 ---
 apiVersion: v1
 kind: Service
