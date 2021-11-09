@@ -43,8 +43,8 @@ const SubThemes = ({ children = [] }) => {
 const ThemesPage = ({ children = [] }) => (
   <Layout currentPage="themes">
     <Metas
-      title={`Thèmes - Code du travail numérique`}
-      description={`Explorez les contenus autour des thèmes`}
+      title="Thèmes"
+      description="Explorez les contenus autour des thèmes"
     />
     <Section>
       <Container>
@@ -59,14 +59,14 @@ const ThemesPage = ({ children = [] }) => (
                 href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
                 passHref
               >
-                <Tile icon={icons[icon]} title={title}>
+                <StyledTile icon={icons[icon]} title={title} titleTagType="h2">
                   <TileChildren>
                     <SubThemes>{children}</SubThemes>
                     <StyledDiv hasContentAbove={Boolean(children)}>
                       <Button variant="link" as="div" />
                     </StyledDiv>
                   </TileChildren>
-                </Tile>
+                </StyledTile>
               </Link>
             ))}
         </Grid>
@@ -86,7 +86,7 @@ ThemesPage.getInitialProps = async () => {
 
 export default ThemesPage;
 
-const { spacings } = theme;
+const { spacings, breakpoints, fonts } = theme;
 
 const TileChildren = styled.div`
   display: flex;
@@ -97,6 +97,17 @@ const TileChildren = styled.div`
 
 const PrimaryColored = styled.span`
   color: ${({ theme }) => theme.primary};
+`;
+
+const StyledTile = styled(Tile)`
+  h2 {
+    font-weight: 600;
+    font-size: ${fonts.sizes.headings.small};
+    font-family: "Open Sans", sans-serif;
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.default};
+    }
+  }
 `;
 
 const StyledDiv = styled.div`

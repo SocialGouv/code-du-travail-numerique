@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask for ope and licenciement eco 1`] = `
+.c10 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -12,13 +19,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c10 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 .c12 {
@@ -408,6 +408,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"
@@ -451,11 +452,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   >
     <label
       class="c12"
-      for="hasOpe-yes"
+      for="hasOpe-oui"
     >
       <input
         class="c13"
-        id="hasOpe-yes"
+        id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
@@ -464,11 +465,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </label>
     <label
       class="c12"
-      for="hasOpe-no"
+      for="hasOpe-non"
     >
       <input
         class="c13"
-        id="hasOpe-no"
+        id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
@@ -497,11 +498,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   >
     <label
       class="c12"
-      for="isEco-yes"
+      for="isEco-oui"
     >
       <input
         class="c13"
-        id="isEco-yes"
+        id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
@@ -510,11 +511,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </label>
     <label
       class="c12"
-      for="isEco-no"
+      for="isEco-non"
     >
       <input
         class="c13"
-        id="isEco-no"
+        id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
@@ -526,6 +527,13 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 `;
 
 exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
+.c10 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -537,13 +545,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c10 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 .c16 {
@@ -1060,6 +1061,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"
@@ -1103,11 +1105,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   >
     <label
       class="c12"
-      for="hasOpe-yes"
+      for="hasOpe-oui"
     >
       <input
         class="c13"
-        id="hasOpe-yes"
+        id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
@@ -1116,11 +1118,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
     <label
       class="c12"
-      for="hasOpe-no"
+      for="hasOpe-non"
     >
       <input
         class="c13"
-        id="hasOpe-no"
+        id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
@@ -1149,11 +1151,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   >
     <label
       class="c12"
-      for="isEco-yes"
+      for="isEco-oui"
     >
       <input
         class="c13"
-        id="isEco-yes"
+        id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
@@ -1162,11 +1164,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </label>
     <label
       class="c12"
-      for="isEco-no"
+      for="isEco-non"
     >
       <input
         class="c13"
-        id="isEco-no"
+        id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
@@ -1536,6 +1538,7 @@ exports[`<Step /> should render 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           clip-path="url(#arrow-down_svg__clip0)"

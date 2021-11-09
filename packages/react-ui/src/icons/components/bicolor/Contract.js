@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgContract(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M41.953 2H9.047A3.05 3.05 0 006 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016v41.906c0 .56-.456 1.016-1.016 1.016H9.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 009.047 50h32.906A3.05 3.05 0 0045 46.953V5.047A3.05 3.05 0 0041.953 2z"
         fill="#4E6896"
@@ -25,4 +31,5 @@ function SvgContract(props) {
   );
 }
 
-export default SvgContract;
+const MemoSvgContract = React.memo(SvgContract);
+export default MemoSvgContract;

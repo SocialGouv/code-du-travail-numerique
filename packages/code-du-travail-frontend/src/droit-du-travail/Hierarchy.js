@@ -32,6 +32,7 @@ const Hierarchy = ({ hash }) => {
       </p>
       <Accordion
         preExpanded={[hash]}
+        titleLevel={3}
         variant="hierarchy"
         items={[
           {
@@ -42,7 +43,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.International,
-            title: <h3>Les textes internationaux et européens</h3>,
+            title: "Les textes internationaux et européens",
           },
           {
             body: (
@@ -52,7 +53,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Constitution,
-            title: <h3>La Constitution</h3>,
+            title: "La Constitution",
           },
           {
             body: (
@@ -67,6 +68,7 @@ const Hierarchy = ({ hash }) => {
                   possibles&nbsp;:
                 </p>
                 <StyledAccordion
+                  titleLevel={5}
                   items={[
                     {
                       body: (
@@ -79,12 +81,8 @@ const Hierarchy = ({ hash }) => {
                           avantageux pour le salarié qui s’applique.
                         </>
                       ),
-                      title: (
-                        <h5>
-                          Les conventions et accords collectifs doivent
-                          respecter le Code du travail
-                        </h5>
-                      ),
+                      title:
+                        "Les conventions et accords collectifs doivent respecter le Code du travail",
                     },
                     {
                       body: (
@@ -99,26 +97,15 @@ const Hierarchy = ({ hash }) => {
                             défavorable pour le salarié que la loi.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. Un accord collectif peut
-                                prévoir dans une certaine limite un taux
-                                inférieur à 25% (règle prévue par le Code du
-                                travail).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. Un accord collectif peut prévoir
+                            dans une certaine limite un taux inférieur à 25%
+                            (règle prévue par le Code du travail).
                           </i>
                         </>
                       ),
-                      title: (
-                        <h5>
-                          Les conventions et accords collectifs peuvent prévoir
-                          des mesures différentes que celles posées par le Code
-                          du travail
-                        </h5>
-                      ),
+                      title:
+                        "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail",
                     },
                     {
                       body: (
@@ -132,26 +119,17 @@ const Hierarchy = ({ hash }) => {
                             la loi ne s’applique pas.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. En l’absence d’accord collectif
-                                sur le taux de majoration des heures
-                                supplémentaires s’applique le code du travail
-                                (25% de majoration pour les 8 premières heures
-                                et 50% pour les suivantes).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. En l’absence d’accord collectif sur
+                            le taux de majoration des heures supplémentaires
+                            s’applique le code du travail (25% de majoration
+                            pour les 8 premières heures et 50% pour les
+                            suivantes).
                           </i>
                         </>
                       ),
-                      title: (
-                        <h5>
-                          En l’absence de convention ou d’accord collectif sur
-                          le sujet, le Code du travail s’applique
-                        </h5>
-                      ),
+                      title:
+                        "En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique",
                     },
                   ]}
                 />
@@ -179,7 +157,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Laws,
-            title: <h3>Lois, ordonnances et décrets (Code du travail)</h3>,
+            title: "Lois, ordonnances et décrets (Code du travail)",
           },
           {
             body: (
@@ -252,7 +230,7 @@ const Hierarchy = ({ hash }) => {
             ),
             icon: icons.Agreement,
             id: "hierarchie",
-            title: <h3>Les conventions et accords collectifs</h3>,
+            title: "Les conventions et accords collectifs",
           },
           {
             body: (
@@ -264,7 +242,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Uses,
-            title: <h3>Les usages et les engagements unilatéraux</h3>,
+            title: "Les usages et les engagements unilatéraux",
           },
           {
             body: (
@@ -275,7 +253,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Rules,
-            title: <h3>Le règlement intérieur de l’entreprise</h3>,
+            title: "Le règlement intérieur de l’entreprise",
           },
           {
             body: (
@@ -286,7 +264,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Contract,
-            title: <h3>Le contrat de travail</h3>,
+            title: "Le contrat de travail",
           },
         ]}
       />
@@ -312,7 +290,7 @@ const Hierarchy = ({ hash }) => {
           </Ul>
           <Ul>
             <li> CDI de chantier</li>
-            <li>Egalité professionnelle </li>
+            <li>Egalité professionnelle</li>
             <li>
               Conditions et durées de renouvellement de la période d’essai
             </li>
@@ -381,6 +359,7 @@ const ListContainer = styled.div`
 const Ul = styled.ul`
   flex: 1 1 50%;
   margin: 0;
+
   & + & {
     margin-left: ${spacings.medium};
     @media (max-width: ${breakpoints.mobile}) {

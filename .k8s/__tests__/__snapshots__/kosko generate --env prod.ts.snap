@@ -8,9 +8,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: api
     application: cdtn
@@ -29,9 +31,11 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-cdtn
-        app.gitlab.com/env: prod
-        app.gitlab.com/env.name: prod
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/cdtn
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       labels:
         app: api
         application: cdtn
@@ -40,7 +44,7 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-api:1.2.3
+        - image: ghcr.io/socialgouv/cdtn/code-du-travail-api:1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -79,11 +83,10 @@ spec:
             timeoutSeconds: 15
           env:
             - name: ELASTIC_APM_ENVIRONMENT
-              value: cdtn-prod
             - name: ES_INDEX_PREFIX
-              value: cdtn-preprod
+              value: cdtn-prod
             - name: VERSION
-              value: v1.2.3
+              value: refs/tags/v1.2.3
           envFrom:
             - secretRef:
                 name: api-secret
@@ -96,9 +99,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   name: api-secret
   namespace: cdtn
   labels:
@@ -121,9 +126,11 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-cdtn
-        app.gitlab.com/env: prod
-        app.gitlab.com/env.name: prod
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/cdtn
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       name: api-secret
       labels:
         application: cdtn
@@ -139,9 +146,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     application: cdtn
     component: cdtn
@@ -170,9 +179,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   namespace: cdtn
 spec:
   ports:
@@ -192,9 +203,11 @@ metadata:
     kubernetes.io/tls-acme: 'true'
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: api
     application: cdtn
@@ -226,9 +239,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: api
     application: cdtn
@@ -264,9 +279,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: www
     application: cdtn
@@ -285,9 +302,11 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-cdtn
-        app.gitlab.com/env: prod
-        app.gitlab.com/env.name: prod
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/tags/v1.2.3
+        app.github.com/repo: socialgouv/cdtn
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       labels:
         app: www
         application: cdtn
@@ -296,7 +315,7 @@ spec:
         team: cdtn
     spec:
       containers:
-        - image: harbor.fabrique.social.gouv.fr/cdtn/cdtn-frontend:1.2.3
+        - image: ghcr.io/socialgouv/cdtn/code-du-travail-frontend:1.2.3
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -339,7 +358,7 @@ spec:
             - name: COMMIT
               value: 0123456789abcdefghijklmnopqrstuvwxyz0123
             - name: VERSION
-              value: v1.2.3
+              value: refs/tags/v1.2.3
             - name: FRONTEND_HOST
               value: code.travail.gouv.fr
           envFrom:
@@ -348,7 +367,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -366,9 +385,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     application: cdtn
     component: cdtn
@@ -378,7 +399,7 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
   AZURE_CONTAINER: cdtn
-  IS_PRODUCTION_DEPLOYMENT: 'true'
+  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'true'
   NODE_ENV: production
   PIWIK_SITE_ID: '4'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
@@ -398,9 +419,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   namespace: cdtn
 spec:
   ports:
@@ -420,9 +443,11 @@ metadata:
     kubernetes.io/tls-acme: 'true'
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: www
     application: cdtn
@@ -454,9 +479,11 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-cdtn
-    app.gitlab.com/env: prod
-    app.gitlab.com/env.name: prod
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/tags/v1.2.3
+    app.github.com/repo: socialgouv/cdtn
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: www
     application: cdtn

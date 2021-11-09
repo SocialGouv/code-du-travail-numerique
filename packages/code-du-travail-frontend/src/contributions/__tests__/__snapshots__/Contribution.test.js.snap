@@ -461,6 +461,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -490,6 +491,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -579,29 +581,25 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -1086,6 +1084,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -1115,6 +1114,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1204,29 +1204,25 @@ exports[`<Contribution /> should render answer references 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -1711,6 +1707,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -1740,6 +1737,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -1829,29 +1827,25 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -2336,6 +2330,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -2365,6 +2360,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -2454,29 +2450,25 @@ exports[`<Contribution /> should render with both answers 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c17"
+        for="convention-search"
       >
-        <label
-          class="c17"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c18 c19"
-        >
-          <input
-            class="c20"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c18 c19"
+      >
+        <input
+          class="c20"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c21"
       >
@@ -2910,6 +2902,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         aria-hidden="true"
         fill="none"
         viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           clip-rule="evenodd"
@@ -2939,6 +2932,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -3006,29 +3000,25 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           Que dit votre convention collective ?
         </h2>
       </div>
-      <form
-        role="search"
+      <label
+        class="c14"
+        for="convention-search"
       >
-        <label
-          class="c14"
-          for="convention-search"
-        >
-          Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-        </label>
-        <span
-          class="c15 c16"
-        >
-          <input
-            class="c17"
-            id="convention-search"
-            name="q"
-            placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-            type="search"
-            value=""
-          />
-        </span>
-        
-      </form>
+        Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
+      </label>
+      <span
+        class="c15 c16"
+      >
+        <input
+          class="c17"
+          id="convention-search"
+          name="q"
+          placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
+          type="search"
+          value=""
+        />
+      </span>
+      
       <p
         class="c18"
       >
@@ -3379,6 +3369,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               class="c12 c13"
               fill="none"
               viewBox="0 0 28 15"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"

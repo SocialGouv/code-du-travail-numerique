@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgHealth(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M30 17H10a5 5 0 00-5 5v9a5 5 0 005 5h6v-2h-6a3 3 0 01-3-3v-9a3 3 0 013-3h20v-2zm5 2h6a3 3 0 013 3v9a3 3 0 01-3 3H21v2h20a5 5 0 005-5v-9a5 5 0 00-5-5h-6v2z"
         fill="#4E6896"
@@ -15,4 +21,5 @@ function SvgHealth(props) {
   );
 }
 
-export default SvgHealth;
+const MemoSvgHealth = React.memo(SvgHealth);
+export default MemoSvgHealth;

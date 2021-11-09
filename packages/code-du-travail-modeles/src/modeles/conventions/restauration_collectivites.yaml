@@ -1,0 +1,100 @@
+# Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+contrat salarié . convention collective . restauration collectivités:
+  description: Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+  applicable si: convention collective = 'IDCC1266'
+  valeur: oui
+  cdtn:
+    idcc: 1266
+    préavis-retraite: true
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Maîtrises: "'Maîtrises'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . employés . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 8 jour
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 25 mois
+      - montant: 2 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . maîtrises:
+  applicable si: catégorie professionnelle = 'Maîtrises'
+  valeur: oui
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . maîtrises . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 25 mois
+      - montant: 2 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . cadres . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . employés . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 8 jour
+        plafond: 6 mois
+      - montant: 1 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . maîtrises . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 25 mois
+      - montant: 2 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418
+
+contrat salarié . convention collective . restauration collectivités . catégorie professionnelle . cadres . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 35: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649415/?idConteneur=KALICONT000005635418
+    Article 13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018649420/?idConteneur=KALICONT000005635418

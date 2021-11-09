@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgResignation(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M42.953 2H10.047A3.05 3.05 0 007 5.047V15c0 .56.455 1 1.016 1 .56 0 1.015-.44 1.015-1V5.047c0-.56.456-1.016 1.016-1.016h32.906c.56 0 1.016.456 1.016 1.016V27H46V5.047A3.05 3.05 0 0042.953 2zM46 43h-2.031v3.953c0 .56-.456 1.016-1.016 1.016H10.047c-.56 0-1.016-.456-1.016-1.016V23.971a1.016 1.016 0 00-2.031 0v22.982A3.05 3.05 0 0010.047 50h32.906A3.05 3.05 0 0046 46.953V43zM8.062 18a1.018 1.018 0 011.015 1.015 1.017 1.017 0 01-1.734.719 1.026 1.026 0 01-.297-.72c.001-.268.108-.526.297-.717.19-.19.451-.297.719-.297z"
         fill="#4E6896"
@@ -25,4 +31,5 @@ function SvgResignation(props) {
   );
 }
 
-export default SvgResignation;
+const MemoSvgResignation = React.memo(SvgResignation);
+export default MemoSvgResignation;

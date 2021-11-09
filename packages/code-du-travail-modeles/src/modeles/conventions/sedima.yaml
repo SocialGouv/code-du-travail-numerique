@@ -5,7 +5,9 @@ contrat salarié . convention collective . sedima:
   titre: Convention collective nationale des entreprises de commerce, de location et de réparation de tracteurs, machines et matériels agricoles, de matériels de travaux publics, de bâtiment et de manutention, de matériels de motoculture de plaisance, de jardins et d'espaces verts (SEDIMA)
   applicable si: convention collective = 'IDCC1404'
   valeur: oui
-  idcc: 1404
+  cdtn:
+    idcc: 1404
+    préavis-retraite: true
 
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: Catégorie professionnelle

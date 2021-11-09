@@ -34,7 +34,7 @@ exports[`<Outils /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c35 {
+.c36 {
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c35:before {
+.c36:before {
   position: absolute;
   display: block;
   width: 0;
@@ -56,7 +56,7 @@ exports[`<Outils /> should render 1`] = `
   content: "";
 }
 
-.c36 {
+.c37 {
   position: absolute;
   top: 0;
   right: 0;
@@ -478,17 +478,6 @@ exports[`<Outils /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c40 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c61 {
   position: relative;
   display: block;
@@ -551,7 +540,7 @@ exports[`<Outils /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c38 {
+.c39 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -561,13 +550,13 @@ exports[`<Outils /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c37 {
+.c38 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c39 {
+.c40 {
   padding-right: 1rem;
 }
 
@@ -632,6 +621,12 @@ exports[`<Outils /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
+}
+
+.c35 h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c44 {
@@ -709,9 +704,14 @@ exports[`<Outils /> should render 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c66 {
+  padding: 0.4rem;
+}
+
+.c67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -733,11 +733,11 @@ exports[`<Outils /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c67 {
+.c68 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c68 {
+.c69 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1166,12 +1166,6 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c61 {
     font-size: 1.6rem;
   }
@@ -1207,6 +1201,12 @@ exports[`<Outils /> should render 1`] = `
 @media (max-width:600px) {
   .c52 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c35 h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1257,7 +1257,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c68 {
+  .c69 {
     display: none;
   }
 }
@@ -1431,13 +1431,16 @@ exports[`<Outils /> should render 1`] = `
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             class="c7"
+            height="115"
             src="/static/assets/img/logo-rf.svg"
+            width="135"
           />
           <svg
             aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M135 160h520v100H135z"
@@ -1511,6 +1514,7 @@ exports[`<Outils /> should render 1`] = `
                 class="c17"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -1531,6 +1535,7 @@ exports[`<Outils /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -1547,6 +1552,7 @@ exports[`<Outils /> should render 1`] = `
               class="c23"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1595,19 +1601,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/modeles-de-courriers"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1625,15 +1632,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1648,14 +1656,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Modèles de documents
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -1677,6 +1685,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1693,19 +1702,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/indemnite-licenciement"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1723,15 +1733,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <g
                             clip-path="url(#indemnity_svg__clip0)"
@@ -1770,14 +1781,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Indemnité de licenciement
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -1799,6 +1810,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1815,19 +1827,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/preavis-demission"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1845,15 +1858,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M43.847 0H13.448A6.455 6.455 0 007 6.448v39.104A6.455 6.455 0 0013.448 52h30.4c.638 0 1.155-.517 1.155-1.156L45 50.772c.001-.024.003-.048.003-.073V1.156C45.003.517 44.486 0 43.847 0zM12 50c-1.72-.502-3-2.568-3-4.448V11c.5 1 1.59 1.708 3 1.908V50zm1.448-39C11.167 11 9 8.73 9 6.448 9 4.168 11.167 2 13.448 2H40.5C39 2 37 4.5 37 6.5s2.5 4.5 4 4.5H13.448zM35 13.014v6.663l-1.31-1.045a1.155 1.155 0 00-1.381 0l-1.344 1.043V13l4.035.014zm8 36.972L14 50V13.014h15v8.979a1.157 1.157 0 001.847.926L33 21l2.154 1.892A1.156 1.156 0 0037 21.965V13h6v36.986zm0-39.58c-1 0-4.5-1.01-4.5-3.958C38.5 3.5 42 2.5 43 2.463v7.943z"
@@ -1866,14 +1880,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Préavis de démission
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -1895,6 +1909,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1911,19 +1926,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/simulateur-embauche"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1941,15 +1957,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -1970,14 +1987,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Salaire brut/net
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -1999,6 +2016,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2015,19 +2033,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/indemnite-precarite"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2045,15 +2064,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <g
                             clip-path="url(#precarity_svg__clip0)"
@@ -2096,14 +2116,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Indemnité de précarité
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2125,6 +2145,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2141,19 +2162,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/preavis-licenciement"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2171,15 +2193,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <g
                             clip-path="url(#termination_svg__clip0)"
@@ -2216,14 +2239,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Préavis de licenciement
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2245,6 +2268,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2261,19 +2285,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/heures-recherche-emploi"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2291,15 +2316,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c6.945 0 13.474-2.704 18.385-7.615C49.295 39.474 52 32.945 52 26c0-6.945-2.705-13.474-7.615-18.385zM26 49.97C12.784 49.969 2.031 39.216 2.031 26S12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 13.216-10.753 23.969-23.969 23.969z"
@@ -2322,14 +2348,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Heures pour recherche d’emploi
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2351,6 +2377,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2367,19 +2394,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/convention-collective"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2397,15 +2425,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2424,14 +2453,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Trouver sa convention collective
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2453,6 +2482,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2469,19 +2499,20 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34"
+                    class="c34 c35"
                     href="/outils/preavis-retraite"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2499,15 +2530,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <g
                             clip-path="url(#termination_svg__clip0)"
@@ -2544,14 +2576,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Préavis de départ ou de mise à la retraite
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2573,6 +2605,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2589,21 +2622,22 @@ exports[`<Outils /> should render 1`] = `
                   class="c33"
                 >
                   <a
-                    class="c34 no-after"
+                    class="c34 c35 no-after"
                     href="https://www.moncompteformation.gouv.fr"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <div
-                        class="c36"
+                        class="c37"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2621,15 +2655,16 @@ exports[`<Outils /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c37"
+                      class="c38"
                     >
                       <div
-                        class="c38"
+                        class="c39"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2652,14 +2687,14 @@ exports[`<Outils /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c39"
+                        class="c40"
                       >
                         
-                        <h3
-                          class="c40 c41"
+                        <h2
+                          class="c41"
                         >
                           Mon compte formation
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2681,6 +2716,7 @@ exports[`<Outils /> should render 1`] = `
                               class="c46 c47"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2737,6 +2773,7 @@ exports[`<Outils /> should render 1`] = `
                 class="c56"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2842,7 +2879,7 @@ exports[`<Outils /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="c14 c65"
+                    class="c14 c65 c66"
                   >
                     Contact
                   </button>
@@ -2920,12 +2957,12 @@ exports[`<Outils /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c66"
+          class="c67"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2934,7 +2971,7 @@ exports[`<Outils /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c68"
+              class="c69"
             >
               |
             </span>
@@ -2942,7 +2979,7 @@ exports[`<Outils /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2951,7 +2988,7 @@ exports[`<Outils /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c68"
+              class="c69"
             >
               |
             </span>
@@ -2959,7 +2996,7 @@ exports[`<Outils /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2968,7 +3005,7 @@ exports[`<Outils /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c68"
+              class="c69"
             >
               |
             </span>
@@ -2976,7 +3013,7 @@ exports[`<Outils /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2985,7 +3022,7 @@ exports[`<Outils /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c68"
+              class="c69"
             >
               |
             </span>
@@ -2993,7 +3030,7 @@ exports[`<Outils /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3002,7 +3039,7 @@ exports[`<Outils /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c68"
+              class="c69"
             >
               |
             </span>
@@ -3010,7 +3047,7 @@ exports[`<Outils /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c64 c67"
+              class="c64 c68"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

@@ -33,12 +33,15 @@ const YesNoQuestion = ({
         type="radio"
         parse={(value) => value === "true"}
         name={name}
-        label="Oui"
         value={true}
         validate={requiredBoolean}
       >
         {(props) => (
-          <InputRadio id={`${name}-yes`} label="Oui" {...props.input} />
+          <InputRadio
+            id={`${props.input.name}-oui`}
+            label="Oui"
+            {...props.input}
+          />
         )}
       </Field>
       <Field
@@ -46,15 +49,24 @@ const YesNoQuestion = ({
         parse={(value) => value === "true"}
         name={name}
         value={false}
-        label="Non"
         validate={requiredBoolean}
       >
-        {({ input }) => <InputRadio id={`${name}-no`} label="Non" {...input} />}
+        {(props) => (
+          <InputRadio
+            label="Non"
+            id={`${props.input.name}-non`}
+            {...props.input}
+          />
+        )}
       </Field>
     </RadioContainer>
     <ErrorField name={name} />
     {onChange && (
-      <OnChange name={name}>{(values) => onChange(values)}</OnChange>
+      <OnChange name={name}>
+        {(values) => {
+          onChange(values);
+        }}
+      </OnChange>
     )}
   </>
 );

@@ -1,0 +1,64 @@
+name: Production
+
+on:
+  push:
+    tags:
+      - v*
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+jobs:
+  register:
+    name: Build & Register images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register docker image for api
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          environment: prod
+          project: "cdtn"
+          imageName: cdtn/code-du-travail-api
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./packages/code-du-travail-api/Dockerfile"
+          dockercontext: "./packages/code-du-travail-api"
+      - name: Register docker image for frontend
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          environment: prod
+          project: "cdtn"
+          imageName: cdtn/code-du-travail-frontend
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "./"
+          dockerbuildargs: |
+            SENTRY_PUBLIC_DSN=${{ secrets.SENTRY_PUBLIC_DSN }}
+
+  deploy-prod:
+    name: Deploy production
+    runs-on: ubuntu-latest
+    needs: [register]
+    environment:
+      name: production
+      url: https://code.travail.gouv.fr/
+    steps:
+      - name: Use autodevops manifests generation
+        uses: SocialGouv/actions/k8s-manifests@v1
+        with:
+          environment: "prod"
+          productionNamespace: "cdtn"
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ELASTIC_APM_ENVIRONMENT: cdtn-prod
+          ES_INDEX_PREFIX: cdtn-prod
+          KUBE_NAMESPACE: cdtn
+
+      - name: Use autodevops deployment
+        uses: SocialGouv/actions/autodevops-deploy@v1
+        with:
+          environment: "prod"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}

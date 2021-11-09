@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgSpecificJob(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M5.559 3A2.559 2.559 0 003 5.559v24.953a2.559 2.559 0 002.559 2.56h6.313v-2.56H5.56V5.56h17.114v2.409h2.559v-2.41A2.559 2.559 0 0022.673 3H5.56z"
         fill="#FF7067"
@@ -14,7 +20,7 @@ function SvgSpecificJob(props) {
         fill="#4E6896"
       />
       <path
-        d="M8.881 10.527c-.468 0-.848.424-.848.946s.38.946.848.946h8.54c.468 0 .848-.424.848-.946s-.38-.946-.848-.946H8.88zM8.881 14.651c-.468 0-.848.424-.848.946s.38.946.848.946h8.54c.468 0 .848-.424.848-.946s-.38-.946-.848-.946H8.88zM8.881 20.15c-.468 0-.848.424-.848.947 0 .522.38.945.848.945h3.723c.468 0 .848-.423.848-.945 0-.523-.38-.946-.848-.946H8.88z"
+        d="M8.881 10.527c-.468 0-.848.424-.848.946s.38.946.848.946h8.54c.468 0 .848-.424.848-.946s-.38-.946-.848-.946H8.88zm0 4.124c-.468 0-.848.424-.848.946s.38.946.848.946h8.54c.468 0 .848-.424.848-.946s-.38-.946-.848-.946H8.88zm0 5.499c-.468 0-.848.424-.848.947 0 .522.38.945.848.945h3.723c.468 0 .848-.423.848-.945 0-.523-.38-.946-.848-.946H8.88z"
         fill="#4E6896"
       />
       <circle cx={47.35} cy={39.35} r={1.35} fill="#4E6896" />
@@ -22,4 +28,5 @@ function SvgSpecificJob(props) {
   );
 }
 
-export default SvgSpecificJob;
+const MemoSvgSpecificJob = React.memo(SvgSpecificJob);
+export default MemoSvgSpecificJob;

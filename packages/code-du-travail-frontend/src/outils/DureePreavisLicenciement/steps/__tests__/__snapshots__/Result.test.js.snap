@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render with O duration 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -35,43 +22,14 @@ exports[`<StepResult /> should render with O duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -82,25 +40,50 @@ exports[`<StepResult /> should render with O duration 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,7 +98,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -125,22 +108,22 @@ exports[`<StepResult /> should render with O duration 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -168,25 +151,13 @@ exports[`<StepResult /> should render with O duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -212,193 +183,158 @@ exports[`<StepResult /> should render with O duration 1`] = `
   <p>
     Le code du travail et la convention collective ne prévoient pas de préavis.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-0"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Résultat
+      </h2>
+      <p>
+        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+      </p>
+      <ul>
+        <li>
+          Durée légale :
+           
+          <strong>
+            Aucun préavis.
+          </strong>
+        </li>
+        <li>
+          Durée conventionnelle :
+           
+          <strong>
+            Aucun préavis.
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Ancienneté selon le code du travail
+           : 
+          <strong>
+            Moins de 6 mois
+          </strong>
+        </li>
+        <li>
+          Licenciement pour faute grave
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Reconnu en tant que travailleur handicapé
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Employés
+          </strong>
+        </li>
+        <li>
+          Ancienneté selon la convention collective
+           : 
+          <strong>
+            Moins de 1 mois
+          </strong>
+        </li>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L.1234-1 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l.1234-1 du code du travail"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-0"
-        >
-          <div
-            class="c8"
+            Article L.1234-1 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Annexe II, article 13 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’annexe ii, article 13"
           >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Résultat
-            </h2>
-            <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
-            </p>
-            <ul>
-              <li>
-                Durée légale :
-                 
-                <strong>
-                  Aucun préavis.
-                </strong>
-              </li>
-              <li>
-                Durée conventionnelle :
-                 
-                <strong>
-                  Aucun préavis.
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Ancienneté selon le code du travail
-                 : 
-                <strong>
-                  Moins de 6 mois
-                </strong>
-              </li>
-              <li>
-                Licenciement pour faute grave
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Reconnu en tant que travailleur handicapé
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Catégorie professionnelle
-                 : 
-                <strong>
-                  Employés
-                </strong>
-              </li>
-              <li>
-                Ancienneté selon la convention collective
-                 : 
-                <strong>
-                  Moins de 1 mois
-                </strong>
-              </li>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L.1234-1 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l.1234-1 du code du travail"
-                >
-                  Article L.1234-1 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Annexe II, article 13 (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’annexe ii, article 13"
-                >
-                  Annexe II, article 13
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            Annexe II, article 13
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -412,10 +348,10 @@ exports[`<StepResult /> should render with O duration 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -429,19 +365,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -463,43 +386,14 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -510,25 +404,50 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -543,7 +462,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -553,22 +472,22 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -596,25 +515,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -641,143 +548,108 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-2"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-2"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-2"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-2"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Résultat
-            </h2>
-            <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
-            </p>
-            <ul>
-              <li>
-                Durée légale :
-                 
-                <strong>
-                  1 mois
-                </strong>
-              </li>
-              <li>
-                Durée conventionnelle :
-                 
-                <strong>
-                  La convention collective n'a pas été traitée par nos services.
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Ancienneté selon le code du travail
-                 : 
-                <strong>
-                  6 mois à moins de 2 ans
-                </strong>
-              </li>
-              <li>
-                Licenciement pour faute grave
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Reconnu en tant que travailleur handicapé
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Résultat
+      </h2>
+      <p>
+        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+      </p>
+      <ul>
+        <li>
+          Durée légale :
+           
+          <strong>
+            1 mois
+          </strong>
+        </li>
+        <li>
+          Durée conventionnelle :
+           
+          <strong>
+            La convention collective n'a pas été traitée par nos services.
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Ancienneté selon le code du travail
+           : 
+          <strong>
+            6 mois à moins de 2 ans
+          </strong>
+        </li>
+        <li>
+          Licenciement pour faute grave
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Reconnu en tant que travailleur handicapé
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -791,10 +663,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -817,19 +689,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 `;
 
 exports[`<StepResult /> should render with only CC duration 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -851,43 +710,14 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -898,25 +728,50 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -931,7 +786,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -941,22 +796,22 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -984,25 +839,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1028,143 +871,108 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   <p>
     Le code du travail ne prévoit pas de durée de préavis de licenciement sauf, cas particuliers.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-1"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-1"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-1"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Résultat
-            </h2>
-            <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
-            </p>
-            <ul>
-              <li>
-                Durée légale :
-                 
-                <strong>
-                  Aucun préavis.
-                </strong>
-              </li>
-              <li>
-                Durée conventionnelle :
-                 
-                <strong>
-                  La convention collective n'a pas été traitée par nos services.
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Ancienneté selon le code du travail
-                 : 
-                <strong>
-                  Moins de 6 mois
-                </strong>
-              </li>
-              <li>
-                Licenciement pour faute grave
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Reconnu en tant que travailleur handicapé
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Résultat
+      </h2>
+      <p>
+        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+      </p>
+      <ul>
+        <li>
+          Durée légale :
+           
+          <strong>
+            Aucun préavis.
+          </strong>
+        </li>
+        <li>
+          Durée conventionnelle :
+           
+          <strong>
+            La convention collective n'a pas été traitée par nos services.
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Ancienneté selon le code du travail
+           : 
+          <strong>
+            Moins de 6 mois
+          </strong>
+        </li>
+        <li>
+          Licenciement pour faute grave
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Reconnu en tant que travailleur handicapé
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1178,10 +986,10 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -1204,19 +1012,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1238,43 +1033,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -1285,25 +1051,50 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1318,7 +1109,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1328,22 +1119,22 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1371,25 +1162,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1416,140 +1195,105 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-3"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-3"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-3"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-3"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Résultat
-            </h2>
-            <ul>
-              <li>
-                Durée légale :
-                 
-                <strong>
-                  2 mois
-                </strong>
-              </li>
-              <li>
-                Durée conventionnelle :
-                 
-                <strong>
-                  La convention collective n'a pas été renseignée.
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Ancienneté selon le code du travail
-                 : 
-                <strong>
-                  Plus de 2 ans
-                </strong>
-              </li>
-              <li>
-                Licenciement pour faute grave
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Reconnu en tant que travailleur handicapé
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Résultat
+      </h2>
+      <ul>
+        <li>
+          Durée légale :
+           
+          <strong>
+            2 mois
+          </strong>
+        </li>
+        <li>
+          Durée conventionnelle :
+           
+          <strong>
+            La convention collective n'a pas été renseignée.
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Ancienneté selon le code du travail
+           : 
+          <strong>
+            Plus de 2 ans
+          </strong>
+        </li>
+        <li>
+          Licenciement pour faute grave
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Reconnu en tant que travailleur handicapé
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1563,10 +1307,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -1580,19 +1324,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1614,43 +1345,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -1661,25 +1363,50 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1694,7 +1421,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1704,22 +1431,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1747,25 +1474,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1792,143 +1507,108 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-4"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-4"
-            role="button"
-            tabindex="0"
-          >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-4"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Résultat
-            </h2>
-            <p>
-              Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
-            </p>
-            <ul>
-              <li>
-                Durée légale :
-                 
-                <strong>
-                  2 mois
-                </strong>
-              </li>
-              <li>
-                Durée conventionnelle :
-                 
-                <strong>
-                  La convention collective n'a pas été traitée par nos services.
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Ancienneté selon le code du travail
-                 : 
-                <strong>
-                  Plus de 2 ans
-                </strong>
-              </li>
-              <li>
-                Licenciement pour faute grave
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-              <li>
-                Reconnu en tant que travailleur handicapé
-                 : 
-                <strong>
-                  Non
-                </strong>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Résultat
+      </h2>
+      <p>
+        Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective :
+      </p>
+      <ul>
+        <li>
+          Durée légale :
+           
+          <strong>
+            2 mois
+          </strong>
+        </li>
+        <li>
+          Durée conventionnelle :
+           
+          <strong>
+            La convention collective n'a pas été traitée par nos services.
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Ancienneté selon le code du travail
+           : 
+          <strong>
+            Plus de 2 ans
+          </strong>
+        </li>
+        <li>
+          Licenciement pour faute grave
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+        <li>
+          Reconnu en tant que travailleur handicapé
+           : 
+          <strong>
+            Non
+          </strong>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1942,10 +1622,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>

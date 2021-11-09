@@ -22,7 +22,7 @@ const buildAccordionSections = (sections) =>
     .map(({ anchor, html, title }) => ({
       body: <TabContent>{html}</TabContent>,
       id: anchor,
-      title: <h2>{title}</h2>,
+      title,
     }));
 
 const Fiche = ({ data = { _source: {} }, anchor }) => {
@@ -69,7 +69,11 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
         breadcrumbs={breadcrumbs}
       >
         {untitledSection && <Html>{untitledSection.html}</Html>}
-        <Accordion preExpanded={[anchor]} items={titledSections} />
+        <Accordion
+          titleLevel={2}
+          preExpanded={[anchor]}
+          items={titledSections}
+        />
       </StyledAnswer>
     </Layout>
   );

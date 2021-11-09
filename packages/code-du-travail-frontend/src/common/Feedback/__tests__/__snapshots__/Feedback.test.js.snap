@@ -490,6 +490,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateX(4px);
 }
 
+.c15 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c7 {
   position: absolute;
   background-color: #f66663;
@@ -501,13 +508,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c15 {
-  color: #9298af;
-  line-height: 1.25;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .c6 {
@@ -963,6 +963,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               class="c22 c23"
               fill="none"
               viewBox="0 0 28 15"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -1083,6 +1084,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   cursor: not-allowed;
 }
 
+.c11 {
+  color: #9298af;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .c7 {
   position: absolute;
   background-color: #f66663;
@@ -1094,13 +1102,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.c11 {
-  color: #9298af;
-  line-height: 1.25;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .c6 {

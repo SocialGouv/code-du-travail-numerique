@@ -1,5 +1,6 @@
 import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
@@ -8,7 +9,11 @@ import styled from "styled-components";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
+import {
+  MatomoCommonEvent,
+  MatomoPreavisRetraiteEvent,
+  MatomoTrackUrl,
+} from "./type/matomo";
 
 const anchorRef = React.createRef();
 
@@ -22,7 +27,7 @@ function Wizard({
 }) {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
-
+  const router = useRouter();
   const setStepIndex = (index) =>
     //@ts-ignore
     dispatch({ payload: index, type: "setStepIndex" });
@@ -111,28 +116,30 @@ function Wizard({
   const Annotation = steps[stepIndex].annotation;
 
   const onClickNext = (form) => {
-    switch (steps[stepIndex].name) {
-      case initialState.steps[1].name: // "origine"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values["contrat salarié - mise à la retraite"] ===
-          "oui"
-            ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
-            : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
-        ]);
-        break;
-      case initialState.steps[4].name: // "anciennete"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values.seniorityGreaterThanTwoYears
-            ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
-            : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
-        ]);
-        break;
-      default:
-        return;
+    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
+      switch (steps[stepIndex].name) {
+        case initialState.steps[1].name: // "origine"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values["contrat salarié - mise à la retraite"] ===
+            "oui"
+              ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
+              : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
+          ]);
+          break;
+        case initialState.steps[4].name: // "anciennete"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values.seniorityGreaterThanTwoYears
+              ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
+              : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
+          ]);
+          break;
+        default:
+          return;
+      }
     }
   };
 
@@ -166,6 +173,7 @@ function Wizard({
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
                   nextVisible={nextVisible}
+                  //@ts-ignore
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}

@@ -34,7 +34,7 @@ exports[`<Home /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c45 {
+.c46 {
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@ exports[`<Home /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c45:before {
+.c46:before {
   position: absolute;
   display: block;
   width: 0;
@@ -56,7 +56,7 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c46 {
+.c47 {
   position: absolute;
   top: 0;
   right: 0;
@@ -491,17 +491,6 @@ exports[`<Home /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c50 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c74 {
   position: relative;
   display: block;
@@ -564,7 +553,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c48 {
+.c49 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -574,13 +563,13 @@ exports[`<Home /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c47 {
+.c48 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c49 {
+.c50 {
   padding-right: 1rem;
 }
 
@@ -651,6 +640,12 @@ exports[`<Home /> should render 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
+}
+
+.c45 h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
 }
 
 .c54 {
@@ -728,9 +723,14 @@ exports[`<Home /> should render 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c79 {
+  padding: 0.4rem;
+}
+
+.c80 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -752,11 +752,11 @@ exports[`<Home /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c80 {
+.c81 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c81 {
+.c82 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1261,12 +1261,6 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c74 {
     font-size: 1.6rem;
   }
@@ -1317,6 +1311,12 @@ exports[`<Home /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c45 h2 {
+    font-size: 1.6rem;
+  }
+}
+
 @media print {
   .c61 {
     display: none;
@@ -1364,7 +1364,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c81 {
+  .c82 {
     display: none;
   }
 }
@@ -1605,13 +1605,16 @@ exports[`<Home /> should render 1`] = `
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             class="c7"
+            height="115"
             src="/static/assets/img/logo-rf.svg"
+            width="135"
           />
           <svg
             aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M135 160h520v100H135z"
@@ -1643,6 +1646,7 @@ exports[`<Home /> should render 1`] = `
               class="c14"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -1715,6 +1719,7 @@ exports[`<Home /> should render 1`] = `
                 class="c27 c28"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -1765,6 +1770,7 @@ exports[`<Home /> should render 1`] = `
               class="c34"
               fill="none"
               viewBox="0 0 616 514"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
                 opacity="0.8"
@@ -2474,19 +2480,20 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/convention-collective"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2504,15 +2511,16 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2531,11 +2539,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Trouver sa convention collective
                         </h3>
@@ -2560,6 +2568,7 @@ exports[`<Home /> should render 1`] = `
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2576,19 +2585,20 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/preavis-demission"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2606,15 +2616,16 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M43.847 0H13.448A6.455 6.455 0 007 6.448v39.104A6.455 6.455 0 0013.448 52h30.4c.638 0 1.155-.517 1.155-1.156L45 50.772c.001-.024.003-.048.003-.073V1.156C45.003.517 44.486 0 43.847 0zM12 50c-1.72-.502-3-2.568-3-4.448V11c.5 1 1.59 1.708 3 1.908V50zm1.448-39C11.167 11 9 8.73 9 6.448 9 4.168 11.167 2 13.448 2H40.5C39 2 37 4.5 37 6.5s2.5 4.5 4 4.5H13.448zM35 13.014v6.663l-1.31-1.045a1.155 1.155 0 00-1.381 0l-1.344 1.043V13l4.035.014zm8 36.972L14 50V13.014h15v8.979a1.157 1.157 0 001.847.926L33 21l2.154 1.892A1.156 1.156 0 0037 21.965V13h6v36.986zm0-39.58c-1 0-4.5-1.01-4.5-3.958C38.5 3.5 42 2.5 43 2.463v7.943z"
@@ -2627,11 +2638,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Préavis de démission
                         </h3>
@@ -2656,6 +2667,7 @@ exports[`<Home /> should render 1`] = `
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2672,19 +2684,20 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/outils/simulateur-embauche"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2702,15 +2715,16 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2731,11 +2745,11 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
                         <h3
-                          class="c50 c51"
+                          class="c51"
                         >
                           Salaire brut/net
                         </h3>
@@ -2760,6 +2774,7 @@ exports[`<Home /> should render 1`] = `
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2776,19 +2791,20 @@ exports[`<Home /> should render 1`] = `
                   class="c43"
                 >
                   <a
-                    class="c44"
+                    class="c44 c45"
                     href="/modeles-de-courriers"
                   >
                     <div
-                      class="c45"
+                      class="c46"
                     >
                       <div
-                        class="c46"
+                        class="c47"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2806,15 +2822,16 @@ exports[`<Home /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
                       <div
-                        class="c48"
+                        class="c49"
                       >
                         <svg
                           aria-hidden="true"
                           fill="none"
                           viewBox="0 0 52 52"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             clip-rule="evenodd"
@@ -2829,14 +2846,14 @@ exports[`<Home /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         
-                        <h3
-                          class="c50 c51"
+                        <h2
+                          class="c51"
                         >
                           Modèles de documents
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -2858,6 +2875,7 @@ exports[`<Home /> should render 1`] = `
                               class="c56 c57"
                               fill="none"
                               viewBox="0 0 28 15"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
                                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2886,6 +2904,7 @@ exports[`<Home /> should render 1`] = `
                 class="c59"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2935,6 +2954,7 @@ exports[`<Home /> should render 1`] = `
                 class="c69"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -3040,7 +3060,7 @@ exports[`<Home /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="c10 c78"
+                    class="c10 c78 c79"
                   >
                     Contact
                   </button>
@@ -3118,12 +3138,12 @@ exports[`<Home /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c79"
+          class="c80"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3132,7 +3152,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c81"
+              class="c82"
             >
               |
             </span>
@@ -3140,7 +3160,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3149,7 +3169,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c81"
+              class="c82"
             >
               |
             </span>
@@ -3157,7 +3177,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3166,7 +3186,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c81"
+              class="c82"
             >
               |
             </span>
@@ -3174,7 +3194,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3183,7 +3203,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c81"
+              class="c82"
             >
               |
             </span>
@@ -3191,7 +3211,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3200,7 +3220,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c81"
+              class="c82"
             >
               |
             </span>
@@ -3208,7 +3228,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c77 c80"
+              class="c77 c81"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

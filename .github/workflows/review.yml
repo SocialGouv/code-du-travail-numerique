@@ -1,0 +1,105 @@
+name: Review
+
+on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - v*
+
+concurrency:
+  cancel-in-progress: true
+  group: review-${{ github.ref }}
+
+jobs:
+  register:
+    name: Build & Register images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register docker image for api
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: cdtn/code-du-travail-api
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./packages/code-du-travail-api/Dockerfile"
+          dockercontext: "./packages/code-du-travail-api"
+      - name: Register docker image for frontend
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: cdtn/code-du-travail-frontend
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "./"
+
+  manifests:
+    name: Generate k8s manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        shell: bash
+        run: |
+          yarn add @socialgouv/kosko-charts
+      - name: Get k8s infos
+        id: k8s
+        shell: bash
+        run: |
+          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          BRANCH=$(node -e "console.log(require('@socialgouv/kosko-charts/utils/environmentSlug').generate('${RAW_BRANCH}'))")
+          echo "::set-output name=branch::$(echo ${BRANCH})"
+      - name: Use k8s manifests generation
+        uses: SocialGouv/actions/k8s-manifests@v1
+        with:
+          environment: "dev"
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
+          ES_INDEX_PREFIX: cdtn-preprod
+
+  deploy:
+    name: Deploy application
+    runs-on: ubuntu-latest
+    needs: [register, manifests]
+    steps:
+      - name: Use autodevops deployment
+        uses: SocialGouv/actions/autodevops-deploy@v1
+        with:
+          environment: "dev"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+
+  e2e:
+    name: End-to-end testing
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v2
+        with:
+          name: manifests-dev.yml
+      - name: Get deployment url
+        uses: mikefarah/yq@v4.13.4
+        id: url
+        with:
+          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+      - name: Run test e2e
+        run: |
+          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e

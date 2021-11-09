@@ -32,17 +32,6 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   height: 3rem;
 }
 
-.c5 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -104,21 +93,15 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   padding-right: 1rem;
 }
 
-.c6 {
+.c5 {
   margin: 0;
 }
 
-.c7 {
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -143,6 +126,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -167,14 +151,14 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       >
         
         <h3
-          class="c5 c6"
+          class="c5"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       There is text inside
     </div>
@@ -194,17 +178,6 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c0 {
@@ -268,21 +241,15 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   padding-right: 1rem;
 }
 
-.c5 {
+.c4 {
   margin: 0;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -308,14 +275,14 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
       >
         
         <h3
-          class="c4 c5"
+          class="c4"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c6"
+      class="c5"
     >
       There is text inside
     </div>
@@ -324,17 +291,6 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 `;
 
 exports[`<Tile /> renders a tile with an icon 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -406,21 +362,15 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
   padding-right: 1rem;
 }
 
-.c5 {
+.c4 {
   margin: 0;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -445,6 +395,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c6.945 0 13.474-2.704 18.385-7.615C49.295 39.474 52 32.945 52 26c0-6.945-2.705-13.474-7.615-18.385zM26 49.97C12.784 49.969 2.031 39.216 2.031 26S12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 13.216-10.753 23.969-23.969 23.969z"
@@ -471,14 +422,14 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
       >
         
         <h3
-          class="c4 c5"
+          class="c4"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c6"
+      class="c5"
     >
       There is text inside
     </div>
@@ -487,17 +438,6 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 `;
 
 exports[`<Tile /> renders a tile with text inside 1`] = `
-.c3 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -559,21 +499,15 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
   padding-right: 1rem;
 }
 
-.c4 {
+.c3 {
   margin: 0;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -596,14 +530,14 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
       >
         
         <h3
-          class="c3 c4"
+          class="c3"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c5"
+      class="c4"
     >
       There is text inside
     </div>
@@ -612,17 +546,6 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 `;
 
 exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c3 {
   display: block;
   margin: 0 0 1rem 0;
@@ -695,21 +618,15 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
   padding-right: 1rem;
 }
 
-.c5 {
+.c4 {
   margin: 0;
 }
 
-.c6 {
+.c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -735,14 +652,14 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
           This is a theme
         </span>
         <h3
-          class="c4 c5"
+          class="c4"
         >
           Hello !
         </h3>
       </div>
     </div>
     <div
-      class="c6"
+      class="c5"
     >
       There is text inside
     </div>

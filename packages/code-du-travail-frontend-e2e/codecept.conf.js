@@ -5,6 +5,12 @@ exports.config = {
     steps: ["./step_definitions/global.js"],
   },
   helpers: {
+    CurrentCanonicalLink: {
+      require: "./helpers/canonical.js",
+    },
+    CurrentUrl: {
+      require: "./helpers/url.js",
+    },
     FileSystem: {},
     FocusHelper: {
       require: "./helpers/focus.js",
@@ -27,9 +33,6 @@ exports.config = {
     },
   },
   hooks: [],
-  include: {
-    I: "./steps_file.js",
-  },
   mocha: {},
   name: "code-du-travail-numerique",
   output: "./output",
@@ -46,4 +49,5 @@ exports.config = {
   },
   teardown: null,
   tests: "./specs/*_test.js",
+  timeout: 60000,
 };

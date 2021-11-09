@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 
@@ -17,7 +18,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Page non trouvée</title>
+        <Metas title="Page non trouvée" />
       </Head>
       <Layout>
         <CenteredContainer>

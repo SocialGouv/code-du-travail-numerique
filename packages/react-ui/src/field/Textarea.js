@@ -69,7 +69,7 @@ Textarea.propTypes = {
   maxLength: PropTypes.number,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  showCounter: PropTypes.string,
+  showCounter: PropTypes.bool,
 };
 
 const StyledTextarea = styled.textarea`

@@ -1120,9 +1120,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   text-decoration: none;
   cursor: pointer;
   padding: 0.4rem 0;
+  display: inline-block;
 }
 
 .c94 {
+  padding: 0.4rem;
+}
+
+.c95 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1144,11 +1149,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c95 {
+.c96 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c96 {
+.c97 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1892,7 +1897,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c96 {
+  .c97 {
     display: none;
   }
 }
@@ -2066,13 +2071,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             class="c7"
+            height="115"
             src="/static/assets/img/logo-rf.svg"
+            width="135"
           />
           <svg
             aria-label="Code du travail numérique"
             class="c8"
             fill="none"
             viewBox="0 0 657 265"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M135 160h520v100H135z"
@@ -2146,6 +2154,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="c16"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -2166,6 +2175,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
@@ -2182,6 +2192,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               class="c22"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 clip-rule="evenodd"
@@ -2225,6 +2236,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c30"
                     fill="none"
                     viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
@@ -2242,6 +2254,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="c31"
                   fill="none"
                   viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
@@ -2294,6 +2307,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           class="c40"
                           fill="none"
                           viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -2315,6 +2329,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           class="c40"
                           fill="none"
                           viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -2339,6 +2354,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           class="c40"
                           fill="none"
                           viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -2362,6 +2378,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                             class="c40"
                             fill="none"
                             viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -2432,6 +2449,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       aria-hidden="true"
                       fill="none"
                       viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         clip-rule="evenodd"
@@ -2466,6 +2484,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                           class="c61"
                           fill="none"
                           viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M10.95 18.925a.737.737 0 011.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 01.714.717v17.52l3.298-3.312a.737.737 0 011.02 0 .745.745 0 010 1.024l-4.522 4.543a.748.748 0 01-.51.205.748.748 0 01-.51-.205l-4.523-4.543a.687.687 0 010-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 00.714-.717V23c0-.41-.324-1-1-1z"
@@ -2531,6 +2550,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       class="c61"
                       fill="none"
                       viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M10.95 18.925a.737.737 0 011.02 0l3.299 3.313V4.718c0-.41.34-.718.714-.718a.72.72 0 01.714.717v17.52l3.298-3.312a.737.737 0 011.02 0 .745.745 0 010 1.024l-4.522 4.543a.748.748 0 01-.51.205.748.748 0 01-.51-.205l-4.523-4.543a.687.687 0 010-1.024zM26 22c-.676 0-1 .624-1 1v4H7v-4c0-.41-.27-1-1-1s-1 .624-1 1v5.283c0 .41.34.717.714.717h20.572a.72.72 0 00.714-.717V23c0-.41-.324-1-1-1z"
@@ -2562,6 +2582,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c40"
                     fill="none"
                     viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
@@ -2583,6 +2604,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c40"
                     fill="none"
                     viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
@@ -2607,6 +2629,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="c40"
                     fill="none"
                     viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
@@ -2630,6 +2653,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       class="c40"
                       fill="none"
                       viewBox="0 0 16 16"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -2732,6 +2756,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 class="c84"
                 fill="none"
                 viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
@@ -2837,7 +2862,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="c93"
+                    class="c93 c94"
                   >
                     Contact
                   </button>
@@ -2915,12 +2940,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c94"
+          class="c95"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2929,7 +2954,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c97"
             >
               |
             </span>
@@ -2937,7 +2962,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2946,7 +2971,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c97"
             >
               |
             </span>
@@ -2954,7 +2979,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2963,7 +2988,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c97"
             >
               |
             </span>
@@ -2971,7 +2996,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2980,7 +3005,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c97"
             >
               |
             </span>
@@ -2988,7 +3013,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2997,7 +3022,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c96"
+              class="c97"
             >
               |
             </span>
@@ -3005,7 +3030,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c92 c95"
+              class="c92 c96"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

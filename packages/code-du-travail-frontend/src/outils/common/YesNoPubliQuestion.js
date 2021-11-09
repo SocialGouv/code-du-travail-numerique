@@ -16,10 +16,22 @@ function YesNoPubliQuestion({ name, label }) {
       </Question>
       <RadioContainer>
         <Field type="radio" name={name} value="oui" validate={required}>
-          {(props) => <InputRadio label="Oui" {...props.input} />}
+          {(props) => (
+            <InputRadio
+              label="Oui"
+              id={`${props.input.name}-oui`}
+              {...props.input}
+            />
+          )}
         </Field>
         <Field type="radio" name={name} value="non" validate={required}>
-          {(props) => <InputRadio label="Non" {...props.input} />}
+          {(props) => (
+            <InputRadio
+              label="Non"
+              id={`${props.input.name}-non`}
+              {...props.input}
+            />
+          )}
         </Field>
         <ErrorField name={name} />
       </RadioContainer>
