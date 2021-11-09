@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Register docker image for api
-        uses: SocialGouv/actions/autodevops-build-register@local-cache
+        uses: SocialGouv/actions/autodevops-build-register@v1
         with:
           project: "cdtn"
           imageName: cdtn/code-du-travail-api
@@ -25,7 +25,7 @@ jobs:
           dockerfile: "./packages/code-du-travail-api/Dockerfile"
           dockercontext: "./packages/code-du-travail-api"
       - name: Register docker image for frontend
-        uses: SocialGouv/actions/autodevops-build-register@local-cache
+        uses: SocialGouv/actions/autodevops-build-register@v1
         with:
           project: "cdtn"
           imageName: cdtn/code-du-travail-frontend
