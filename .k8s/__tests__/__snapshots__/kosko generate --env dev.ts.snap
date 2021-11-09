@@ -7,7 +7,7 @@ kind: Namespace
 metadata:
   annotations:
     socialgouv/creator: autodevops
-    janitor/ttl: 15d
+    janitor/ttl: 7d
     field.cattle.io/creatorId: gitlab
     field.cattle.io/projectId: c-bar:p-foo
     git/branch: refs/heads/mybranch
@@ -363,7 +363,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -396,7 +396,7 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
   AZURE_CONTAINER: cdtn-dev
-  IS_PRODUCTION_DEPLOYMENT: 'false'
+  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

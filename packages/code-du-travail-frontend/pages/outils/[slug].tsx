@@ -13,6 +13,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { AgreementSearch } from "../../src/outils/ConventionCollective";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
@@ -63,10 +64,7 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas
-        title={`${title} - Code du travail numérique - Ministère du travail`}
-        description={description}
-      />
+      <Metas title={title} description={description} />
       <StyledSection>
         <Container>
           <Flex>
@@ -79,6 +77,7 @@ function Outils({
           <Feedback url={router.asPath} />
         </Container>
       </StyledSection>
+      <EventTracker />
     </Layout>
   );
 }

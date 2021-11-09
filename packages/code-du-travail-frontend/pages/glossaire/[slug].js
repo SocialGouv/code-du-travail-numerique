@@ -24,10 +24,7 @@ const {
 function Term({ term: { term, definition, references } }) {
   return (
     <Layout>
-      <Metas
-        title={`${term} - Code du travail numérique`}
-        description={definition}
-      />
+      <Metas title={term} description={definition} />
       <Section>
         <Container narrow>
           <PageTitle>{term}</PageTitle>

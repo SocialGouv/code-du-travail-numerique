@@ -20,6 +20,7 @@ import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
+import EventTracker from "../src/lib/tracking/EventTracker";
 import SearchHero from "../src/search/SearchHero";
 
 const {
@@ -51,6 +52,7 @@ const Home = ({ themes = [], highlights = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       title="Code du travail numérique - Ministère du Travail"
+      noTitleAdd
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     />
     <SearchHero />
@@ -103,6 +105,7 @@ const Home = ({ themes = [], highlights = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 

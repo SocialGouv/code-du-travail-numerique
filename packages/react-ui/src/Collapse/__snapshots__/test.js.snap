@@ -29,31 +29,29 @@ exports[`<Collapse /> renders 1`] = `
   font-weight: 600;
 }
 
-.c4 {
-  overflow: auto;
+.c5 {
   max-height: 0px;
   opacity: 0;
+  overflow: auto;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  padding: 1.6rem;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   overflow: hidden;
-  cursor: pointer;
-  margin-top: 40px;
 }
 
 .c0:hover,
@@ -61,6 +59,10 @@ exports[`<Collapse /> renders 1`] = `
 .c0:focus-within,
 .c0[aria-expanded="true"] {
   color: #3e486e;
+}
+
+.c4 {
+  margin-left: 1rem;
 }
 
 <div>
@@ -88,7 +90,7 @@ exports[`<Collapse /> renders 1`] = `
         />
       </svg>
       <span
-        class="c3"
+        class="c3 c4"
         font-size="hsmall"
         font-weight="600"
       >
@@ -96,7 +98,7 @@ exports[`<Collapse /> renders 1`] = `
       </span>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
       <p>
         Hi

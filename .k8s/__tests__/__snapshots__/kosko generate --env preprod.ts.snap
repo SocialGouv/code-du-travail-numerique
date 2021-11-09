@@ -69,7 +69,8 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: ghcr.io/socialgouv/cdtn/code-du-travail-api:1.2.3
+        - image: >-
+            ghcr.io/socialgouv/cdtn/code-du-travail-api:preprod-0123456789abcdefghijklmnopqrstuvwxyz0123
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -307,7 +308,8 @@ spec:
         cert: wildcard
     spec:
       containers:
-        - image: ghcr.io/socialgouv/cdtn/code-du-travail-frontend:1.2.3
+        - image: >-
+            ghcr.io/socialgouv/cdtn/code-du-travail-frontend:preprod-0123456789abcdefghijklmnopqrstuvwxyz0123
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -360,7 +362,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -393,7 +395,7 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
   AZURE_CONTAINER: cdtn
-  IS_PRODUCTION_DEPLOYMENT: 'false'
+  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

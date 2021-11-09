@@ -12,13 +12,14 @@ import React from "react";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 import { getTools } from "../api/simulateurs/index";
 import { DocumentsTile } from "../index";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
     <Metas
-      title={`Boîte a outils - Code du travail numérique`}
+      title="Boîte a outils"
       description="Trouvez des réponses personnalisées selon votre situation"
     />
     <Section>
@@ -68,6 +69,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
         </Grid>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 
@@ -76,4 +78,5 @@ export async function getServerSideProps() {
     props: getTools(),
   };
 }
+
 export default Outils;

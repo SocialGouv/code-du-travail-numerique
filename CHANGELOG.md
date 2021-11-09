@@ -3,6 +3,104 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.57.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.5...v4.57.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* **modeles:** cc 1404 ([#3987](https://github.com/SocialGouv/code-du-travail-numerique/issues/3987)) ([393686a](https://github.com/SocialGouv/code-du-travail-numerique/commit/393686a13ca3232efdb1045781aa781f4113fa50))
+
+
+### Features
+
+* **pop-up:** disable cookie consent pop-up if not on production ([#3988](https://github.com/SocialGouv/code-du-travail-numerique/issues/3988)) ([5df8aae](https://github.com/SocialGouv/code-du-travail-numerique/commit/5df8aaedeb3cf044883bc5a0a6d5b220e4dda67e))
+
+
+
+
+
+## [4.56.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.4...v4.56.5) (2021-11-05)
+
+
+### Bug Fixes
+
+* **ci:** preprod ([#3984](https://github.com/SocialGouv/code-du-travail-numerique/issues/3984)) ([e66d1d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/e66d1d6343cc6282cfb305382da48370b78e0669))
+
+
+
+
+
+## [4.56.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.3...v4.56.4) (2021-11-05)
+
+
+### Bug Fixes
+
+* **citron:** ajout des derniers éléments ([#3983](https://github.com/SocialGouv/code-du-travail-numerique/issues/3983)) ([05342e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/05342e3c44eb088816d464a2940cab9aa9569ec1))
+
+
+
+
+
+## [4.56.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.2...v4.56.3) (2021-11-05)
+
+
+### Bug Fixes
+
+* **ci:** tag preprod ([#3982](https://github.com/SocialGouv/code-du-travail-numerique/issues/3982)) ([b7693f2](https://github.com/SocialGouv/code-du-travail-numerique/commit/b7693f214c15eef752589f971add797186264a66))
+
+
+
+
+
+## [4.56.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.1...v4.56.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* **tarteaucitron:** load pop-up on built url (e.g. /outils/[slug]) ([#3981](https://github.com/SocialGouv/code-du-travail-numerique/issues/3981)) ([9f993b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f993b39b1ae363543055b11eef1bce31041630c))
+
+
+
+
+
+## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
+
+
+### Bug Fixes
+
+* **ci:** use the preprod environment to generate preprod image ([#3980](https://github.com/SocialGouv/code-du-travail-numerique/issues/3980)) ([5c4c0db](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c4c0db5a6f090a0608778070f81c8ca18a956b6))
+
+
+
+
+
+# [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
+
+
+### Bug Fixes
+
+* **checkbox:** revert ([#3976](https://github.com/SocialGouv/code-du-travail-numerique/issues/3976)) ([1acb9c1](https://github.com/SocialGouv/code-du-travail-numerique/commit/1acb9c115967a06a430940a2d5aa888f264bbb94))
+* **ci:** kosko ([#3930](https://github.com/SocialGouv/code-du-travail-numerique/issues/3930)) ([bf4b529](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf4b5298ec30226bbc0f45ce3adae0ec3d4e4bb3))
+* **ci:** quality optimization ([#3937](https://github.com/SocialGouv/code-du-travail-numerique/issues/3937)) ([617981a](https://github.com/SocialGouv/code-du-travail-numerique/commit/617981a81e0c6fcbafa69039e79f256554df7f64))
+* **frontend:** checkbox partially clickable ([#3947](https://github.com/SocialGouv/code-du-travail-numerique/issues/3947)) ([722c086](https://github.com/SocialGouv/code-du-travail-numerique/commit/722c0866d0bcd14b8acd863bf348ddfc2eadc1bf))
+* **html:** on page droit du travail & home page ([#3960](https://github.com/SocialGouv/code-du-travail-numerique/issues/3960)) ([86f5335](https://github.com/SocialGouv/code-du-travail-numerique/commit/86f533531f31a926cdd0e174a837bfce31eb993c))
+* **modeles:** cc 1404 et cc 1518 ([#3933](https://github.com/SocialGouv/code-du-travail-numerique/issues/3933)) ([7d7629c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7d7629ce399af250a30b1f529d6ca0eac7920842))
+* **seo:** standardize website's titles ([#3898](https://github.com/SocialGouv/code-du-travail-numerique/issues/3898)) ([3685a6d](https://github.com/SocialGouv/code-du-travail-numerique/commit/3685a6d7a1350f35df7bf101ef20d93b38d7e386))
+* **svg:** command ([#3971](https://github.com/SocialGouv/code-du-travail-numerique/issues/3971)) ([e413e99](https://github.com/SocialGouv/code-du-travail-numerique/commit/e413e99ddbbded249f92851dabca1860225b8507))
+* **title:** use Collapse instead of accordion on References element ([#3934](https://github.com/SocialGouv/code-du-travail-numerique/issues/3934)) ([d844db5](https://github.com/SocialGouv/code-du-travail-numerique/commit/d844db556aed5a0c0d709ec3ce8743ca7853dbe5))
+* deactivation ([#3943](https://github.com/SocialGouv/code-du-travail-numerique/issues/3943)) ([3bedbae](https://github.com/SocialGouv/code-du-travail-numerique/commit/3bedbae58338eaa624a7c1c9ad0496a4cb4e2dad))
+
+
+### Features
+
+* tarteaucitron added ([#3920](https://github.com/SocialGouv/code-du-travail-numerique/issues/3920)) ([46d60ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/46d60abf06e41e1bbf608cbe02b2a3bd65a8f138))
+* **modeles:** add cc 2264 retirement ([#3826](https://github.com/SocialGouv/code-du-travail-numerique/issues/3826)) ([a1b2d3f](https://github.com/SocialGouv/code-du-travail-numerique/commit/a1b2d3fdf9c5ff75ecb39bb1224982273bf7a139))
+* add good params ([#3946](https://github.com/SocialGouv/code-du-travail-numerique/issues/3946)) ([4af5f76](https://github.com/SocialGouv/code-du-travail-numerique/commit/4af5f76bec18110fd694d42582f4cfb29984c4b1))
+
+
+
+
+
 ## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
 
 

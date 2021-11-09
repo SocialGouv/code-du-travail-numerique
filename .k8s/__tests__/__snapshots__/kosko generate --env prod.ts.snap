@@ -367,7 +367,7 @@ spec:
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -399,7 +399,7 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
   AZURE_CONTAINER: cdtn
-  IS_PRODUCTION_DEPLOYMENT: 'true'
+  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'true'
   NODE_ENV: production
   PIWIK_SITE_ID: '4'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

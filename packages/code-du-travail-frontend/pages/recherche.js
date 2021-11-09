@@ -45,7 +45,7 @@ class SearchPage extends React.Component {
           <meta key="robots" name="robots" content="noindex, nofollow" />
         </Head>
         <Metas
-          title={`${query} - Code du travail numérique`}
+          title={query}
           description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (formation, rupture de contrat, démission, indemnités)."
         />
         <Container narrow>

@@ -299,11 +299,11 @@ exports[`<StepInfo /> should render 1`] = `
     >
       <label
         class="c4"
-        for="fauteGrave-yes"
+        for="fauteGrave-oui"
       >
         <input
           class="c5"
-          id="fauteGrave-yes"
+          id="fauteGrave-oui"
           name="fauteGrave"
           type="radio"
           value="true"
@@ -312,11 +312,11 @@ exports[`<StepInfo /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="fauteGrave-no"
+        for="fauteGrave-non"
       >
         <input
           class="c5"
-          id="fauteGrave-no"
+          id="fauteGrave-non"
           name="fauteGrave"
           type="radio"
           value="false"
@@ -345,11 +345,11 @@ exports[`<StepInfo /> should render 1`] = `
     >
       <label
         class="c4"
-        for="inaptitude-yes"
+        for="inaptitude-oui"
       >
         <input
           class="c5"
-          id="inaptitude-yes"
+          id="inaptitude-oui"
           name="inaptitude"
           type="radio"
           value="true"
@@ -358,11 +358,11 @@ exports[`<StepInfo /> should render 1`] = `
       </label>
       <label
         class="c4"
-        for="inaptitude-no"
+        for="inaptitude-non"
       >
         <input
           class="c5"
-          id="inaptitude-no"
+          id="inaptitude-non"
           name="inaptitude"
           type="radio"
           value="false"

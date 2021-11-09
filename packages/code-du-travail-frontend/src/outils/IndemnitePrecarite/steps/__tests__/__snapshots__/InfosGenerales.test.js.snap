@@ -444,6 +444,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
             aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g
               clip-path="url(#arrow-down_svg__clip0)"
@@ -787,6 +788,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
             aria-hidden="true"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <g
               clip-path="url(#arrow-down_svg__clip0)"
@@ -985,11 +987,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <label
         class="c3"
-        for="cttFormation-yes"
+        for="cttFormation-oui"
       >
         <input
           class="c4"
-          id="cttFormation-yes"
+          id="cttFormation-oui"
           name="cttFormation"
           type="radio"
           value="true"
@@ -998,11 +1000,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
       <label
         class="c3"
-        for="cttFormation-no"
+        for="cttFormation-non"
       >
         <input
           class="c4"
-          id="cttFormation-no"
+          id="cttFormation-non"
           name="cttFormation"
           type="radio"
           value="false"
@@ -1032,11 +1034,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <label
         class="c3"
-        for="ruptureContratFauteGrave-yes"
+        for="ruptureContratFauteGrave-oui"
       >
         <input
           class="c4"
-          id="ruptureContratFauteGrave-yes"
+          id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
@@ -1045,11 +1047,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
       <label
         class="c3"
-        for="ruptureContratFauteGrave-no"
+        for="ruptureContratFauteGrave-non"
       >
         <input
           class="c4"
-          id="ruptureContratFauteGrave-no"
+          id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
@@ -1079,11 +1081,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <label
         class="c3"
-        for="propositionCDIFinContrat-yes"
+        for="propositionCDIFinContrat-oui"
       >
         <input
           class="c4"
-          id="propositionCDIFinContrat-yes"
+          id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
@@ -1092,11 +1094,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
       <label
         class="c3"
-        for="propositionCDIFinContrat-no"
+        for="propositionCDIFinContrat-non"
       >
         <input
           class="c4"
-          id="propositionCDIFinContrat-no"
+          id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
@@ -1126,11 +1128,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <label
         class="c3"
-        for="refusSouplesse-yes"
+        for="refusSouplesse-oui"
       >
         <input
           class="c4"
-          id="refusSouplesse-yes"
+          id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
           value="true"
@@ -1139,11 +1141,11 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </label>
       <label
         class="c3"
-        for="refusSouplesse-no"
+        for="refusSouplesse-non"
       >
         <input
           class="c4"
-          id="refusSouplesse-no"
+          id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
           value="false"

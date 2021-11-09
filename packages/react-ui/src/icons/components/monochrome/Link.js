@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgLink(props) {
   return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      {...props}
+    >
       <path
         d="M6.793 8.604a3.018 3.018 0 004.55.326l1.81-1.812A3.022 3.022 0 0011.009 2a3.015 3.015 0 00-2.122.848L7.849 3.88"
         stroke="currentColor"
@@ -21,4 +27,5 @@ function SvgLink(props) {
   );
 }
 
-export default SvgLink;
+const MemoSvgLink = React.memo(SvgLink);
+export default MemoSvgLink;

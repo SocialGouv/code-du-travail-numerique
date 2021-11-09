@@ -121,11 +121,11 @@ exports[`<StepStatus /> should render 1`] = `
   >
     <label
       class="c4"
-      for="seriousMisconduct-yes"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
-        id="seriousMisconduct-yes"
+        id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
@@ -134,11 +134,11 @@ exports[`<StepStatus /> should render 1`] = `
     </label>
     <label
       class="c4"
-      for="seriousMisconduct-no"
+      for="seriousMisconduct-non"
     >
       <input
         class="c5"
-        id="seriousMisconduct-no"
+        id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
@@ -386,11 +386,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   >
     <label
       class="c4"
-      for="seriousMisconduct-yes"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
-        id="seriousMisconduct-yes"
+        id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
@@ -399,12 +399,12 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </label>
     <label
       class="c4"
-      for="seriousMisconduct-no"
+      for="seriousMisconduct-non"
     >
       <input
         checked=""
         class="c5"
-        id="seriousMisconduct-no"
+        id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
@@ -433,12 +433,12 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   >
     <label
       class="c4"
-      for="disabledWorker-yes"
+      for="disabledWorker-oui"
     >
       <input
         checked=""
         class="c5"
-        id="disabledWorker-yes"
+        id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
         value="true"
@@ -447,11 +447,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </label>
     <label
       class="c4"
-      for="disabledWorker-no"
+      for="disabledWorker-non"
     >
       <input
         class="c5"
-        id="disabledWorker-no"
+        id="disabledWorker-non"
         name="disabledWorker"
         type="radio"
         value="false"
@@ -522,6 +522,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <g
             clip-path="url(#arrow-down_svg__clip0)"
@@ -669,11 +670,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   >
     <label
       class="c4"
-      for="seriousMisconduct-yes"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
-        id="seriousMisconduct-yes"
+        id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
@@ -682,12 +683,12 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </label>
     <label
       class="c4"
-      for="seriousMisconduct-no"
+      for="seriousMisconduct-non"
     >
       <input
         checked=""
         class="c5"
-        id="seriousMisconduct-no"
+        id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
@@ -716,11 +717,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   >
     <label
       class="c4"
-      for="disabledWorker-yes"
+      for="disabledWorker-oui"
     >
       <input
         class="c5"
-        id="disabledWorker-yes"
+        id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
         value="true"
@@ -729,11 +730,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </label>
     <label
       class="c4"
-      for="disabledWorker-no"
+      for="disabledWorker-non"
     >
       <input
         class="c5"
-        id="disabledWorker-no"
+        id="disabledWorker-non"
         name="disabledWorker"
         type="radio"
         value="false"

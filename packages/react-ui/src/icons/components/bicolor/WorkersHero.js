@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgWorkersHero(props) {
   return (
-    <svg fill="none" viewBox="0 0 616 514" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 616 514"
+      aria-hidden="true"
+      {...props}
+    >
       <g opacity={0.8}>
         <path
           opacity={0.1}
@@ -625,7 +631,7 @@ function SvgWorkersHero(props) {
           y2={89492.9}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0} stopColor="gray" stopOpacity={0.25} />
+          <stop stopColor="gray" stopOpacity={0.25} offset={0} />
           <stop offset={0.54} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
@@ -637,7 +643,7 @@ function SvgWorkersHero(props) {
           y2={51679.6}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0} stopColor="gray" stopOpacity={0.25} />
+          <stop stopColor="gray" stopOpacity={0.25} offset={0} />
           <stop offset={0.54} stopColor="gray" stopOpacity={0.12} />
           <stop offset={1} stopColor="gray" stopOpacity={0.1} />
         </linearGradient>
@@ -646,4 +652,5 @@ function SvgWorkersHero(props) {
   );
 }
 
-export default SvgWorkersHero;
+const MemoSvgWorkersHero = React.memo(SvgWorkersHero);
+export default MemoSvgWorkersHero;

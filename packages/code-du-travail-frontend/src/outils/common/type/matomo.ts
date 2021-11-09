@@ -18,3 +18,7 @@ export enum MatomoPreavisRetraiteEvent {
   SELECT_ECHELON = "select_value_echelon",
   SELECT_GROUPE = "select_value_groupe",
 }
+
+export enum MatomoTrackUrl {
+  PREAVIS_RETRAITE = "/outils/preavis-retraite",
+}
