@@ -5,12 +5,9 @@ import { TextQuestion } from "../../common/TextQuestion";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituation } from "../../publicodes/Utils";
 import { SeniorityMaximum } from "./constants";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
-  const publicodesContext = usePublicodes();
   const [question, setQuestion] = useState<JSX.Element>(
     <>
       Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans l&apos;entreprise{" "}
@@ -43,12 +40,6 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_2_YEARS);
     }
   }, []);
-
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
-  }, [form]);
 
   return (
     <>
