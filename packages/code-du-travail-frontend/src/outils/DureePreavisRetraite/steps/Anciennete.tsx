@@ -27,7 +27,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       setQuestion(
         <>
           Le salarié a-t-il plus de 5 ans d&apos;ancienneté dans
-          l&apos;entreprise <Small>(à partir de 5 ans + 1 jour)</Small>
+          l&apos;entreprise <Small>(5 ans + 1 jour)</Small>
           &nbsp;?
         </>
       );
@@ -36,7 +36,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       setQuestion(
         <>
           Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans
-          l&apos;entreprise <Small>(à partir de 2 ans + 1 jour)</Small>
+          l&apos;entreprise <Small>(2 ans + 1 jour)</Small>
           &nbsp;?
         </>
       );
