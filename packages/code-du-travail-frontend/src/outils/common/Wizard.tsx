@@ -25,7 +25,7 @@ function Wizard({
   Rules = null,
   stepReducer = (step) => step,
   duration,
-}) {
+}): JSX.Element {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
   const router = useRouter();
