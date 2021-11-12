@@ -1,18 +1,36 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { Error } from "./ErrorField";
-import { Question } from "./Question";
+import { Question, Tooltip } from "./Question";
 import { required } from "./validators";
 
-function SelectQuestion({ name, label, subLabel, options, onChange }) {
+type Props = {
+  name: string;
+  label: string | JSX.Element;
+  subLabel?: string;
+  tooltip?: Tooltip;
+  options: Record<string, string> | [string, string][];
+  onChange?: (values: unknown) => void;
+};
+
+const SelectQuestion = ({
+  name,
+  label,
+  subLabel,
+  tooltip,
+  options,
+  onChange,
+}: Props): JSX.Element => {
   const uid = `input-${name}`;
+  let optionsArray: [string, string][];
   if (!Array.isArray(options)) {
-    options = Object.entries(options);
+    optionsArray = Object.entries(options);
+  } else {
+    optionsArray = options;
   }
   return (
     <Field
@@ -23,7 +41,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
       {({ input, meta: { error, dirty } }) => {
         return (
           <Wrapper>
-            <Question required htmlFor={uid}>
+            <Question required tooltip={tooltip} htmlFor={uid}>
               {label}
             </Question>
             {subLabel && <SubLabel>{subLabel}</SubLabel>}
@@ -31,7 +49,7 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
               <option disabled value="">
                 ...
               </option>
-              {options.map((option) => {
+              {optionsArray.map((option) => {
                 let key, label;
                 if (Array.isArray(option)) {
                   [key, label] = option;
@@ -55,14 +73,6 @@ function SelectQuestion({ name, label, subLabel, options, onChange }) {
       }}
     </Field>
   );
-}
-
-SelectQuestion.propTypes = {
-  label: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  subLabel: PropTypes.string,
 };
 
 export { SelectQuestion };

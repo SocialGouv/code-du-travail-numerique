@@ -12,7 +12,7 @@ export const DisclosureIcon = ({ icon, iconTitle, children }) => {
   return (
     <>
       <DisclosureIconButton
-        title={icon}
+        title={iconTitle}
         aria-label={iconTitle}
         variant="navLink"
         size="small"

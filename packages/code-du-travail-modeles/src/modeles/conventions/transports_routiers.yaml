@@ -10,6 +10,7 @@ contrat salarié . convention collective . transports routiers:
 contrat salarié . convention collective . transports routiers . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le bulletin de salaire.
   cdtn:
     type: liste
     valeurs:
@@ -44,6 +45,7 @@ contrat salarié . convention collective . transports routiers . catégorie prof
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe:
   question: Quel est le groupe du salarié ?
   titre: Groupe
+  description: Le groupe du salarié est habituellement mentionné sur le bulletin de salaire.
   cdtn:
     type: liste
     valeurs:

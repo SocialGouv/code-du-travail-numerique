@@ -8,6 +8,7 @@ Fonctionnalité: Page d'acceuil
 
 Scénario:
   Soit un utilisateur sur la page d'accueil
+  Alors le status de la page est 200
   Alors je vois "Bienvenue sur"
   Alors je vois "le Code du travail numérique"
   Alors je vois "Recherchez par mots-clés"
