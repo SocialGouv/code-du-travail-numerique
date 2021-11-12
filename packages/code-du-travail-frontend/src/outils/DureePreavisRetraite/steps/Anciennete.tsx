@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { matopush } from "../../../piwik";
+import { trackHelpQuestionRetraite } from "../../../lib/matomo";
 import { TextQuestion } from "../../common/TextQuestion";
-import {
-  MatomoCommonEvent,
-  MatomoPreavisRetraiteEvent,
-} from "../../common/type/matomo";
+import { MatomoPreavisRetraiteTrackTitle } from "../../common/type/matomo";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
@@ -67,15 +64,11 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
               le&nbsp;<strong>bulletin de salaire</strong>.
             </p>
           ),
-          help: "",
           trackableFn: (visibility: boolean) => {
             if (visibility) {
-              matopush([
-                MatomoCommonEvent.TRACK_EVENT,
-                MatomoCommonEvent.OUTIL,
-                MatomoPreavisRetraiteEvent.ACTION,
-                MatomoPreavisRetraiteEvent.CLICK_HELP_ANCIENNETE,
-              ]);
+              trackHelpQuestionRetraite(
+                MatomoPreavisRetraiteTrackTitle.ANCIENNETE
+              );
             }
           },
         }}
