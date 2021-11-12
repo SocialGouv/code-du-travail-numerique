@@ -10,6 +10,7 @@ contrat salarié . convention collective . industrie pharmaceutique:
 contrat salarié . convention collective . industrie pharmaceutique . groupe:
   titre: Groupe
   question: Quel est le groupe du salarié ?
+  description: Le groupe du salarié est habituellement mentionné sur le bulletin de salaire.
   cdtn:
     type: liste
     valeurs:

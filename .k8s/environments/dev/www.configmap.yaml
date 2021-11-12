@@ -5,7 +5,7 @@ metadata:
 data:
   AZURE_BASE_URL: "https://cdtnadmindev.blob.core.windows.net"
   AZURE_CONTAINER: "cdtn-dev"
-  IS_PRODUCTION_DEPLOYMENT: "false"
+  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: "false"
   NODE_ENV: "production"
   PIWIK_SITE_ID: "3"
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

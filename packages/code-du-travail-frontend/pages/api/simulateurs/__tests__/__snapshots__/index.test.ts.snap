@@ -95,7 +95,7 @@ Object {
       "date": "08/11/2019",
       "description": "Calculez la durée de préavis à respecter en cas de licenciement",
       "enable": true,
-      "icon": "Termination",
+      "icon": "CalendarTime",
       "id": "fcc43645-9ac1-433d-bd95-0eb44239b864",
       "questions": Array [
         "preavis de licenciement",
@@ -255,7 +255,7 @@ Object {
       "date": "08/11/2019",
       "description": "Calculez la durée de préavis à respecter en cas de licenciement",
       "enable": true,
-      "icon": "Termination",
+      "icon": "CalendarTime",
       "id": "fcc43645-9ac1-433d-bd95-0eb44239b864",
       "questions": Array [
         "preavis de licenciement",
@@ -311,7 +311,7 @@ Object {
       "date": "06/04/2021",
       "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
       "enable": false,
-      "icon": "Termination",
+      "icon": "CalendarTime",
       "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665",
       "slug": "preavis-retraite",
       "title": "Préavis de départ ou de mise à la retraite",
