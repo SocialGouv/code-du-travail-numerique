@@ -4,4 +4,14 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   valeur: oui
   cdtn:
     idcc: 1740
-    préavis-retraite: false
+    préavis-retraite: true
+
+contrat salarié . convention collective . ouvriers bâtiment région parisienne . mise ou départ à la retraite:
+  applicable si:
+    une de ces conditions:
+      - mise à la retraite
+      - départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 1.1.12.a: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801005?idConteneur=KALICONT000005635685
