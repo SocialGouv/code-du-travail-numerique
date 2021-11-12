@@ -39,7 +39,7 @@ async function getKoaServer({ nextApp }) {
       frameSrc: [
         "'self'",
         "https://mon-entreprise.fr",
-        "https://matomo.fabrique.social.gouv.fr",
+        "*.fabrique.social.gouv.fr",
         "*.dailymotion.com",
         "*.doubleclick.net",
       ],
@@ -63,6 +63,9 @@ async function getKoaServer({ nextApp }) {
         "*.doubleclick.net",
       ],
       styleSrc: ["'self'", "'unsafe-inline'"],
+      ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
+        reportUri: process.env.NEXT_PUBLIC_SENTRY_DSN,
+      }),
       ...(dev && { reportUri: "/report-violation" }),
     },
     reportOnly: dev,
