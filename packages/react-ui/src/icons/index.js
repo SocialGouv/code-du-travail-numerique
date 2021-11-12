@@ -2,6 +2,7 @@
 export { default as Agreement } from "./components/bicolor/Agreement.js";
 export { default as Apprenticeship } from "./components/bicolor/Apprenticeship.js";
 export { default as Calculator } from "./components/bicolor/Calculator.js";
+export { default as CalendarTime } from "./components/bicolor/CalendarTime.js";
 export { default as Constitution } from "./components/bicolor/Constitution.js";
 export { default as Contract } from "./components/bicolor/Contract.js";
 export { default as CrisisCompagny } from "./components/bicolor/CrisisCompagny.js";
@@ -35,6 +36,7 @@ export { default as Security } from "./components/bicolor/Security.js";
 export { default as SpecificJob } from "./components/bicolor/SpecificJob.js";
 export { default as Termination } from "./components/bicolor/Termination.js";
 export { default as Time } from "./components/bicolor/Time.js";
+export { default as TimeWithLabel } from "./components/bicolor/TimeWithLabel";
 export { default as Unemployment } from "./components/bicolor/Unemployment.js";
 export { default as Uses } from "./components/bicolor/Uses.js";
 export { default as Warning } from "./components/bicolor/Warning.js";

@@ -1,3 +1,4 @@
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { RuleType, SituationElement } from "../publicodes";
@@ -41,18 +42,18 @@ const PubliSituation = ({
         return (
           <li key={element.name}>
             {element.rawNode.titre}&nbsp;:&nbsp;
-            <b>
+            <strong>
               {overriden ? overriden : <SituationInput element={element} />}
-            </b>
+            </strong>
           </li>
         );
       })}
     </ul>
     {annotations &&
       annotations.map((annotation, index) => (
-        <p key={index}>
+        <Paragraph key={index}>
           <i>*&nbsp;{annotation}</i>
-        </p>
+        </Paragraph>
       ))}
   </>
 );

@@ -22,7 +22,7 @@ export const DisclosureIcon = ({
   return (
     <>
       <DisclosureIconButton
-        title={icon}
+        title={iconTitle}
         aria-label={iconTitle}
         variant="navLink"
         size="small"

@@ -5,23 +5,34 @@ import { UID } from "react-uid";
 import styled from "styled-components";
 
 import { InlineError } from "./ErrorField";
-import { Question } from "./Question";
+import { Question, Tooltip } from "./Question";
 import { required } from "./validators";
 
-function TextQuestion({
+type Props = {
+  name: string;
+  label: string;
+  inputType?: string;
+  validate?: (unknown) => string;
+  validateOnChange?: boolean;
+  tooltip?: Tooltip;
+  placeholder?: string;
+};
+
+const TextQuestion = ({
   name,
   label,
   inputType = "text",
   validate,
   validateOnChange = false,
+  tooltip,
   ...props
-}) {
+}: Props): JSX.Element => {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
     <UID>
       {(id) => (
         <>
-          <Question required htmlFor={id}>
+          <Question required tooltip={tooltip} htmlFor={id}>
             {label}
           </Question>
           <QuestionWrapper>
@@ -64,7 +75,7 @@ function TextQuestion({
       )}
     </UID>
   );
-}
+};
 
 export { TextQuestion };
 const { spacings } = theme;
