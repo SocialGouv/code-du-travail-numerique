@@ -6,7 +6,7 @@ import { InfoBulle } from "./InfoBulle";
 
 export type Tooltip = {
   content: JSX.Element;
-  help: string;
+  help?: string;
   trackableFn?: (actualVisibility: boolean) => void;
 };
 type Props = {
