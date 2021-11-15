@@ -10,13 +10,13 @@ export const DisclosureIcon = ({
   icon,
   iconTitle,
   children,
-  onSwitchVisibility,
+  onVisibilityChange,
 }) => {
   const [isNoticeVisible, setIsNoticeVisible] = useState(false);
 
   const handleClick = () => {
     setIsNoticeVisible(!isNoticeVisible);
-    if (onSwitchVisibility) onSwitchVisibility(!isNoticeVisible);
+    if (onVisibilityChange) onVisibilityChange(!isNoticeVisible);
   };
 
   return (
@@ -60,5 +60,5 @@ DisclosureIcon.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
-  onSwitchVisibility: PropTypes.func,
+  onVisibilityChange: PropTypes.func,
 };

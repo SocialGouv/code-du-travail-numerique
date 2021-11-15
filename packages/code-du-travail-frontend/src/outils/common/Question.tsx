@@ -28,7 +28,10 @@ export const Question = ({
     <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
-      <InfoBulle title={tooltip.help} onSwitchVisibility={tooltip.trackableFn}>
+      <InfoBulle
+        title={tooltip.help ?? "Plus d'informations"}
+        onVisibilityChange={tooltip.trackableFn}
+      >
         <>{tooltip.content}</>
       </InfoBulle>
     )}
