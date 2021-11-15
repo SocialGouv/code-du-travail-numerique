@@ -5,14 +5,12 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
-import { createError } from "../src/lib";
-
 process.on("unhandledRejection", (err) => {
-  Sentry.captureException(createError(err));
+  Sentry.captureException(err);
 });
 
 process.on("uncaughtException", (err) => {
-  Sentry.captureException(createError(err));
+  Sentry.captureException(err);
 });
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
