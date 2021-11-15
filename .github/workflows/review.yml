@@ -33,9 +33,9 @@ jobs:
           dockerfile: "./Dockerfile"
           dockercontext: "./"
           dockerbuildargs: |
-            NEXT_PUBLIC_SENTRY_DSN="https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5"
-            NEXT_PUBLIC_SENTRY_ENV="dev"
-            NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT="false"
+            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+            NEXT_PUBLIC_SENTRY_ENV=dev
+            NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=false
 
   manifests:
     name: Generate k8s manifests
