@@ -20,7 +20,6 @@ import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
-import { createError } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
 import SearchHero from "../src/search/SearchHero";
 
@@ -126,7 +125,7 @@ Home.getInitialProps = async () => {
     }
   } catch (e) {
     console.error(e);
-    Sentry.captureException(createError(e));
+    Sentry.captureException(e);
   }
   return { highlights, themes };
 };
