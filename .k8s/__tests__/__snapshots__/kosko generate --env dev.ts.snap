@@ -396,13 +396,10 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
   AZURE_CONTAINER: cdtn-dev
-  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
   PROD_HOSTNAME: code.travail.gouv.fr
-  NEXT_PUBLIC_SENTRY_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-  NEXT_PUBLIC_SENTRY_ENV: dev
 ---
 apiVersion: v1
 kind: Service
