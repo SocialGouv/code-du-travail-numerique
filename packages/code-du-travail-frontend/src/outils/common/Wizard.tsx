@@ -289,7 +289,7 @@ const ToolTitle = styled.div`
 
 const ToolDuration = styled.div`
   position: relative;
-  width: 6.2rem;
+  padding-right: 20px;
 `;
 const ToolDurationLabel = styled.span`
   position: absolute;
