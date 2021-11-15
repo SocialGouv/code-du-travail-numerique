@@ -7,10 +7,11 @@ import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
+import { createError } from "../src/lib";
 
 export default function Custom404() {
   useEffect(() => {
-    Sentry.captureException(new Error("Page non trouvée"));
+    Sentry.captureException(createError("Page non trouvée", 404));
   }, []);
   return (
     <>

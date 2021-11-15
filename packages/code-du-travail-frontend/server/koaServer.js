@@ -39,7 +39,7 @@ async function getKoaServer({ nextApp }) {
       frameSrc: [
         "'self'",
         "https://mon-entreprise.fr",
-        "*.fabrique.social.gouv.fr",
+        "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
         "*.doubleclick.net",
       ],

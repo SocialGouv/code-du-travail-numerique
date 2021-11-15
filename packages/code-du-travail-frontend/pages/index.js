@@ -1,4 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
+import * as Sentry from "@sentry/nextjs";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
@@ -19,6 +20,7 @@ import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
+import { createError } from "../src/lib";
 import EventTracker from "../src/lib/tracking/EventTracker";
 import SearchHero from "../src/search/SearchHero";
 
@@ -124,7 +126,7 @@ Home.getInitialProps = async () => {
     }
   } catch (e) {
     console.error(e);
-    throw new Error(e);
+    Sentry.captureException(createError(e));
   }
   return { highlights, themes };
 };

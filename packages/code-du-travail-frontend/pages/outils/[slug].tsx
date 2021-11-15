@@ -1,4 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
+import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
@@ -12,6 +13,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
+import { createError } from "../../src/lib";
 import EventTracker from "../../src/lib/tracking/EventTracker";
 import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { AgreementSearch } from "../../src/outils/ConventionCollective";
@@ -97,7 +99,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     }
   } catch (e) {
     console.error(e);
-    throw new Error(e);
+    Sentry.captureException(createError(e));
   }
 
   const publicodesRules = loadPublicodes(slug);
