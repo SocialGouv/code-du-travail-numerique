@@ -1309,6 +1309,7 @@ exports[`<Layout /> should render 1`] = `
                 <li>
                   <button
                     class="c43 c44"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

@@ -1935,6 +1935,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                 <li>
                   <button
                     class="c63 c64"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

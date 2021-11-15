@@ -117,6 +117,7 @@ const Footer = (): JSX.Element => {
                     {(openModal) => (
                       <StyledButton
                         variant="navLink"
+                        style={{ paddingLeft: 0 }}
                         onClick={() => {
                           matopush([
                             "trackEvent",

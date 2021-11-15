@@ -2760,6 +2760,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <li>
                   <button
                     class="c92 c93"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

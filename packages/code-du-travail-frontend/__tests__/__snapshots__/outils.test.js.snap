@@ -2862,6 +2862,7 @@ exports[`<Outils /> should render 1`] = `
                 <li>
                   <button
                     class="c14 c65 c66"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

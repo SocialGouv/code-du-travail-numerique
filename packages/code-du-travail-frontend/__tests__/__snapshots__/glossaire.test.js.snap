@@ -1730,6 +1730,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <li>
                   <button
                     class="c54 c55"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

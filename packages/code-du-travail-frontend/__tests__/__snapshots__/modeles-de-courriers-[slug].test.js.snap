@@ -2863,6 +2863,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <li>
                   <button
                     class="c93 c94"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

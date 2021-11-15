@@ -1535,6 +1535,7 @@ exports[`<Recherche /> should render 1`] = `
                 <li>
                   <button
                     class="c51 c52"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

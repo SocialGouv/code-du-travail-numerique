@@ -5068,6 +5068,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <button
                     class="c14 c107 c108"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

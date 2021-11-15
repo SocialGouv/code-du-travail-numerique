@@ -1718,6 +1718,7 @@ exports[`<Stats /> should render 1`] = `
                 <li>
                   <button
                     class="c55 c56"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

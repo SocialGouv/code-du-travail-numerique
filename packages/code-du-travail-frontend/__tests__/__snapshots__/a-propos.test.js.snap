@@ -1661,6 +1661,7 @@ exports[`<About /> should render 1`] = `
                 <li>
                   <button
                     class="c52 c53"
+                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>
