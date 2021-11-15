@@ -22,7 +22,11 @@ export default function Custom404() {
         <CenteredContainer>
           <Suptitle>ERREUR 404</Suptitle>
           <StyledOups />
-          <H1>Oups, nous ne trouvons pas cette page…</H1>
+          <H1>
+            Oups, nous ne trouvons pas cette page…{" "}
+            {process.env.NEXT_PUBLIC_SENTRY_DSN} et{" "}
+            {process.env.NEXT_PUBLIC_ENV}
+          </H1>
           <div>
             Vérifiez le lien de la page, il est peut être incorrect. Dans le cas
             contraire, la page a été supprimée ou déplacée.
