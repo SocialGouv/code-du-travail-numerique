@@ -296,7 +296,7 @@ const ToolDurationLabel = styled.span`
   bottom: 3px;
   right: 0;
   font-size: ${fonts.sizes.tiny};
-  color: ${colors.title};
+  color: ${({ theme }) => theme.paragraph};
 `;
 const TimeWithLabel = styled(icons.TimeWithLabel)`
   width: 4.2rem;
