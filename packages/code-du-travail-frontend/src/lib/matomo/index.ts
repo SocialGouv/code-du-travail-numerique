@@ -20,40 +20,34 @@ export const trackConventionCollective = (
   let isTracked = false;
   switch (currentPath) {
     case MatomoTrackUrl.PREAVIS_RETRAITE: {
-      const realSupported = retraiteData.map((item) => {
-        return {
-          fullySupported: item.preavisRetraite,
-          idcc: item.idcc,
-        };
-      });
-      const idccInfo = realSupported.find((item) => item.idcc == ccn.num);
-      isTracked = idccInfo && idccInfo.fullySupported;
+      const idccInfo = retraiteData.find((item) => item.idcc == ccn.num);
+      isTracked = idccInfo && idccInfo.preavisRetraite;
       break;
     }
     case MatomoTrackUrl.PREAVIS_DEMISSION: {
       const idcc = demissionData.situations.find(
         (item) => item.idcc == ccn.num
       );
-      isTracked = idcc ? true : false;
+      isTracked = !!idcc;
       break;
     }
     case MatomoTrackUrl.PREAVIS_LICENCIEMENT: {
       const idcc = licenciementData.situations.find(
         (item) => item.idcc == ccn.num
       );
-      isTracked = idcc ? true : false;
+      isTracked = !!idcc;
       break;
     }
     case MatomoTrackUrl.HEURE_RECHERCHE_EMPLOI: {
       const idcc = heuresRecherchesEmploiData.situations.find(
         (item) => item.idcc == ccn.num
       );
-      isTracked = idcc ? true : false;
+      isTracked = !!idcc;
       break;
     }
     case MatomoTrackUrl.INDEMNITE_PRECARITE: {
       const idcc = precariteData.find((item) => item.idcc == ccn.num);
-      isTracked = idcc ? true : false;
+      isTracked = !!idcc;
       break;
     }
     default: {
