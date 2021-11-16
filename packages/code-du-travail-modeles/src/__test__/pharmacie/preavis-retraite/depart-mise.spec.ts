@@ -1,5 +1,6 @@
 import Engine from "publicodes";
 
+import { getNotifications } from "../../..";
 import { mergeModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils/GetReferences";
 import {
@@ -96,6 +97,46 @@ describe("Préavis de retraite de la CC 1996", () => {
         expect(result.missingVariables).toEqual({});
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Vérification des notifications", () => {
+    test("Pour un cadre en mise a la retraite une notification doit s'afficher", () => {
+      const notifications = getNotifications(
+        engine.setSituation({
+          "contrat salarié . ancienneté": 5,
+          "contrat salarié . convention collective": "'IDCC1996'",
+          "contrat salarié . convention collective . pharmacie . catégorie professionnelle": `'Cadres'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        })
+      );
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(
+        "Il s'agit d'un délai minimum."
+      );
+    });
+
+    test.each`
+      category        | type
+      ${"Cadres"}     | ${"depart"}
+      ${"Non-cadres"} | ${"depart"}
+      ${"Non-cadres"} | ${"mise"}
+    `(
+      "Pour les autres cas aucune notification doit s'afficher",
+      ({ category, type }) => {
+        const notifications = getNotifications(
+          engine.setSituation({
+            "contrat salarié . ancienneté": 5,
+            "contrat salarié . convention collective": "'IDCC1996'",
+            "contrat salarié . convention collective . pharmacie . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite":
+              type === "mise" ? "oui" : "non",
+            "contrat salarié . travailleur handicapé": "non",
+          })
+        );
+        expect(notifications).toHaveLength(0);
       }
     );
   });

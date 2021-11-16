@@ -9,7 +9,7 @@ contrat salarié . convention collective . pharmacie:
 contrat salarié . convention collective . pharmacie . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le bulletin de salaire.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le **bulletin de salaire**.
   cdtn:
     type: liste
     valeurs:
@@ -38,3 +38,12 @@ contrat salarié . convention collective . pharmacie . catégorie professionnell
   valeur: 3 mois
   références:
     Dispositions particulières cadres, article 6: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528
+
+contrat salarié . convention collective . pharmacie . mise à la retraite d'un cadre notification:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - catégorie professionnelle = 'Cadres'
+  type: notification
+  description: "Il s'agit d'un délai minimum."
+  valeur: oui
