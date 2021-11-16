@@ -412,7 +412,7 @@ exports[`<Layout /> should render 1`] = `
 }
 
 .c44 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c45 {
@@ -1309,7 +1309,6 @@ exports[`<Layout /> should render 1`] = `
                 <li>
                   <button
                     class="c43 c44"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

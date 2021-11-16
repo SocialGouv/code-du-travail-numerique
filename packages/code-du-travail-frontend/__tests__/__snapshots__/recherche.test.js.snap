@@ -543,7 +543,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 .c52 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c53 {
@@ -1535,7 +1535,6 @@ exports[`<Recherche /> should render 1`] = `
                 <li>
                   <button
                     class="c51 c52"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

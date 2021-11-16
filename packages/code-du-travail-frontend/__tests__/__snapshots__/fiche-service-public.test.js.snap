@@ -731,7 +731,7 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 .c64 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c65 {
@@ -1942,7 +1942,6 @@ exports[`<FicheSP /> should render 1`] = `
                 <li>
                   <button
                     class="c63 c64"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

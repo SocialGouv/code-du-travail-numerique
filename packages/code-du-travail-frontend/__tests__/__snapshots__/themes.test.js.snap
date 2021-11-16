@@ -535,7 +535,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c57 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c58 {
@@ -1636,7 +1636,6 @@ exports[`<Theme /> should render 1`] = `
                 <li>
                   <button
                     class="c56 c57"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

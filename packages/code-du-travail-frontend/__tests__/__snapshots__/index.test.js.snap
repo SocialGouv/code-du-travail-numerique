@@ -727,7 +727,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c79 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c80 {
@@ -3061,7 +3061,6 @@ exports[`<Home /> should render 1`] = `
                 <li>
                   <button
                     class="c10 c78 c79"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

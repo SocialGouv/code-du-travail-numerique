@@ -1124,7 +1124,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 .c94 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c95 {
@@ -2863,7 +2863,6 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <li>
                   <button
                     class="c93 c94"
-                    style="padding-left: 0px;"
                   >
                     Contact
                   </button>

@@ -260,7 +260,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c21 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c22 {
@@ -576,7 +576,6 @@ exports[`<Footer /> should render 1`] = `
               <li>
                 <button
                   class="c20 c21"
-                  style="padding-left: 0px;"
                 >
                   Contact
                 </button>

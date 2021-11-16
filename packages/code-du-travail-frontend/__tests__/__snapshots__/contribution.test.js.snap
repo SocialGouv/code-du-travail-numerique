@@ -1205,7 +1205,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 .c103 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c104 {
@@ -3095,7 +3095,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <button
                       class="c74 c103"
-                      style="padding-left: 0px;"
                     >
                       Contact
                     </button>
@@ -4484,7 +4483,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 .c103 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c104 {
@@ -6374,7 +6373,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <button
                       class="c74 c103"
-                      style="padding-left: 0px;"
                     >
                       Contact
                     </button>
