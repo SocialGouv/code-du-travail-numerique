@@ -708,7 +708,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c66 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c67 {
