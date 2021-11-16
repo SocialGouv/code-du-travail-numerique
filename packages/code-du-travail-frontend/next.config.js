@@ -40,7 +40,6 @@ const nextConfig = {
     FRONTEND_HOST: process.env.FRONTEND_HOST
       ? `https://${process.env.FRONTEND_HOST}`
       : `http://localhost:${process.env.FRONTEND_PORT || 3000}`,
-    NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,

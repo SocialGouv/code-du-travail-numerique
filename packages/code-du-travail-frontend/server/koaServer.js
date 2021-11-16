@@ -1,16 +1,13 @@
 const Koa = require("koa");
-const bodyParser = require("koa-bodyparser");
 const helmet = require("koa-helmet");
 const Router = require("koa-router");
 const redirects = require("./redirects.json");
 
 const IS_PRODUCTION_DEPLOYMENT =
-  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
+  process.env.IS_PRODUCTION_DEPLOYMENT === "true";
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const AZURE_BASE_URL =
   process.env.AZURE_BASE_URL || "https://cdtnadmindev.blob.core.windows.net";
-
-const dev = process.env.NODE_ENV !== "production";
 
 const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
 const robotsProd = [
@@ -67,12 +64,6 @@ async function getKoaServer({ nextApp }) {
       }),
     },
   };
-  if (dev) {
-    // handle local csp reportUri endpoint
-    server.use(bodyParser());
-    cspConfig.directives.defaultSrc.push("http://127.0.0.1:*/");
-    cspConfig.directives.scriptSrc.push("'unsafe-eval'");
-  }
   server.use(helmet.contentSecurityPolicy(cspConfig));
 
   if (!IS_PRODUCTION_DEPLOYMENT) {

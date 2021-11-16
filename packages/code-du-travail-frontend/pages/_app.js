@@ -63,7 +63,7 @@ export default class MyApp extends App {
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
-    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true") {
+    if (process.env.IS_PRODUCTION_DEPLOYMENT === "true") {
       initATInternetService();
     }
   }

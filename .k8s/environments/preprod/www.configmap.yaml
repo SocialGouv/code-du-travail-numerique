@@ -9,3 +9,6 @@ data:
   PIWIK_SITE_ID: "3"
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
   PROD_HOSTNAME: "code.travail.gouv.fr"
+  IS_PRODUCTION_DEPLOYMENT: "false"
+  SENTRY_PUBLIC_DSN: "https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5"
+  SENTRY_ENV: "preproduction"
