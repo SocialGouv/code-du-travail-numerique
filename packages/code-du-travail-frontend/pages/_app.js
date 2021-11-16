@@ -3,6 +3,7 @@ import "katex/dist/katex.min.css";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "react-image-lightbox/style.css";
 
+import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import App from "next/app";
 import getConfig from "next/config";
@@ -24,7 +25,7 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      throw new Error(err.message || "Failed to load web component");
+      Sentry.captureException(err.message || "Failed to load web component");
     });
   import("../src/web-components/tooltip-cc")
     .then((module) => {
@@ -34,7 +35,7 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      throw new Error(err.message || "Failed to load web component");
+      Sentry.captureException(err.message || "Failed to load web component");
     });
 }
 
