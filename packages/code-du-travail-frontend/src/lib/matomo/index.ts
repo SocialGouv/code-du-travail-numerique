@@ -11,6 +11,7 @@ import {
 } from "../../outils/common/type/matomo";
 import { ConventionCollective } from "../../outils/common/type/WizardType";
 import { matopush } from "../../piwik";
+import { removeQueryParameters } from "..";
 
 export const trackConventionCollective = (
   ccn: ConventionCollective | null,
@@ -18,7 +19,7 @@ export const trackConventionCollective = (
 ): void => {
   if (!ccn || !currentPath) return;
   let isTracked = false;
-  switch (currentPath) {
+  switch (removeQueryParameters(currentPath)) {
     case MatomoTrackUrl.PREAVIS_RETRAITE: {
       const idccInfo = retraiteData.find((item) => item.idcc == ccn.num);
       isTracked = idccInfo && idccInfo.preavisRetraite;
