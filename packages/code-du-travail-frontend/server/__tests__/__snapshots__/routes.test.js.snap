@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/IS_PRODUCTION_DEPLOYMENT=false should return dev robots.txt 1`] = `
+exports[`/NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=false should return dev robots.txt 1`] = `
 "User-agent: *
 Disallow: /"
 `;
 
-exports[`/IS_PRODUCTION_DEPLOYMENT=true should return production robots.txt 1`] = `
+exports[`/NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=true should return production robots.txt 1`] = `
 "User-agent: *
 Disallow: /assets/
 Disallow: /images/

@@ -5,10 +5,10 @@ test("getTools should return tools", () => {
 });
 
 test("getTools should return only prod tools", () => {
-  process.env.IS_PRODUCTION_DEPLOYMENT = "true";
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT = "true";
   expect(getTools()).toMatchSnapshot();
 });
 
 afterEach(() => {
-  delete process.env.IS_PRODUCTION_DEPLOYMENT;
+  delete process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT;
 });

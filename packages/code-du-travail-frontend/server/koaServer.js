@@ -3,8 +3,8 @@ const helmet = require("koa-helmet");
 const Router = require("koa-router");
 const redirects = require("./redirects.json");
 
-const IS_PRODUCTION_DEPLOYMENT =
-  process.env.IS_PRODUCTION_DEPLOYMENT === "true";
+const NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT =
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
 const AZURE_BASE_URL =
   process.env.AZURE_BASE_URL || "https://cdtnadmindev.blob.core.windows.net";
@@ -66,7 +66,7 @@ async function getKoaServer({ nextApp }) {
   };
   server.use(helmet.contentSecurityPolicy(cspConfig));
 
-  if (!IS_PRODUCTION_DEPLOYMENT) {
+  if (!NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
       await next();
@@ -79,7 +79,7 @@ async function getKoaServer({ nextApp }) {
 
   router.get("/robots.txt", async (ctx) => {
     ctx.type = "text/plain";
-    ctx.body = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
+    ctx.body = NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
   });
 
   redirects.forEach(({ baseUrl, code, redirectUrl }) => {
