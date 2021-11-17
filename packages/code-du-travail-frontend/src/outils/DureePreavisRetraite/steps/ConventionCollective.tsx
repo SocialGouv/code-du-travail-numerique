@@ -14,7 +14,10 @@ const ConventionCollective = (props: WizardStepProps): JSX.Element => {
           idcc: item.idcc,
         };
       })}
-      isOptional={true}
+      onChange={() => {
+        // Delete infos when change CC
+        props.form.change("infos", undefined);
+      }}
     />
   );
 };

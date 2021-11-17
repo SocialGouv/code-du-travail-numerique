@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import { trackHelpQuestionRetraite } from "../../../lib/matomo";
 import { TextQuestion } from "../../common/TextQuestion";
+import { MatomoPreavisRetraiteTrackTitle } from "../../common/type/matomo";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituation } from "../../publicodes/Utils";
 import { SeniorityMaximum } from "./constants";
 
 function AncienneteStep({ form }: WizardStepProps): JSX.Element {
-  const publicodesContext = usePublicodes();
   const [question, setQuestion] = useState<JSX.Element>(
     <>
       Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans l&apos;entreprise{" "}
@@ -21,13 +20,14 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
 
   useEffect(() => {
     if (
+      form.getState().values.ccn &&
       form.getState().values.ccn.num === 2264 &&
       form.getState().values["contrat salarié - mise à la retraite"] === "oui"
     ) {
       setQuestion(
         <>
           Le salarié a-t-il plus de 5 ans d&apos;ancienneté dans
-          l&apos;entreprise <Small>(à partir de 5 ans + 1 jour)</Small>
+          l&apos;entreprise <Small>(5 ans + 1 jour)</Small>
           &nbsp;?
         </>
       );
@@ -36,19 +36,13 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       setQuestion(
         <>
           Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans
-          l&apos;entreprise <Small>(à partir de 2 ans + 1 jour)</Small>
+          l&apos;entreprise <Small>(2 ans + 1 jour)</Small>
           &nbsp;?
         </>
       );
       form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_2_YEARS);
     }
   }, []);
-
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
-  }, [form]);
 
   return (
     <>
@@ -62,6 +56,13 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
               le&nbsp;<strong>bulletin de salaire</strong>.
             </p>
           ),
+          trackableFn: (visibility: boolean) => {
+            if (visibility) {
+              trackHelpQuestionRetraite(
+                MatomoPreavisRetraiteTrackTitle.ANCIENNETE
+              );
+            }
+          },
         }}
         onChange={() => {
           form.change("contrat salarié - ancienneté", undefined);

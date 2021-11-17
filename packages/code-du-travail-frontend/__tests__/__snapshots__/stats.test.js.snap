@@ -565,7 +565,7 @@ exports[`<Stats /> should render 1`] = `
 }
 
 .c56 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c57 {

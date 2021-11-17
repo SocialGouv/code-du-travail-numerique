@@ -374,7 +374,7 @@ const StyledLink = styled.a.attrs((props) => ({
   display: inline-block;
 `;
 const StyledButton = styled(Button)`
-  padding: ${spacings.tiny};
+  padding: ${spacings.tiny} 0;
 `;
 
 const GovernmentSection = styled.ul`
