@@ -32,7 +32,7 @@ export const Question = ({
         title={tooltip.help ?? "Plus d'informations"}
         onVisibilityChange={tooltip.trackableFn}
       >
-        <>{tooltip.content}</>
+        {tooltip.content}
       </InfoBulle>
     )}
   </LabelBlock>

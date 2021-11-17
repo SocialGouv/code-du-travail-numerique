@@ -1,6 +1,6 @@
 import React from "react";
 
-import Mdx from "../../common/Mdx";
+import Html from "../../common/Html";
 import { trackHelpQuestionRetraite } from "../../lib/matomo";
 import { Rule, RuleType } from "../publicodes";
 import { reverseValues } from "../publicodes/Utils";
@@ -17,7 +17,7 @@ interface Props {
 const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
   const tooltip = rule.description
     ? {
-        content: <Mdx markdown={rule.description} />,
+        content: <Html>{rule.description}</Html>,
         trackableFn: (visibility: boolean) => {
           if (visibility) {
             trackHelpQuestionRetraite(rule.titre);

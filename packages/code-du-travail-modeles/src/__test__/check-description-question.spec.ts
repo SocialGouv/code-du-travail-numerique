@@ -7,11 +7,11 @@ const engine = new Engine(mergeModels());
 describe("Validation de la présence des descriptions pour afficher des aides", () => {
   describe.each`
     title                          | expectedDescription
-    ${"Catégorie professionnelle"} | ${"La catégorie professionnelle du salarié est habituellement mentionnée sur le **bulletin de salaire**."}
-    ${"Échelon"}                   | ${"L'échelon du salarié est habituellement mentionné sur le **bulletin de salaire**."}
-    ${"Groupe"}                    | ${"Le groupe du salarié est habituellement mentionné sur le **bulletin de salaire**."}
-    ${"Coefficient"}               | ${"La coefficient du salarié est habituellement mentionné sur le **bulletin de salaire**."}
-    ${"Niveau"}                    | ${"Le niveau du salarié est habituellement mentionné sur le **bulletin de salaire**."}
+    ${"Catégorie professionnelle"} | ${"La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>."}
+    ${"Échelon"}                   | ${"L'échelon du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>."}
+    ${"Groupe"}                    | ${"Le groupe du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>."}
+    ${"Coefficient"}               | ${"La coefficient du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>."}
+    ${"Niveau"}                    | ${"Le niveau du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>."}
   `(
     "Vérification de la présence d'une description pour les questions $title",
     ({ title, expectedDescription }) => {
