@@ -9,7 +9,7 @@ contrat salarié . convention collective . immobilier:
 contrat salarié . convention collective . immobilier . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le **bulletin de salaire**.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:
