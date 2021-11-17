@@ -98,7 +98,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     }
   } catch (e) {
     console.error(e);
-    Sentry.captureException(e);
+    Sentry.captureException("e");
   }
 
   const publicodesRules = loadPublicodes(slug);
