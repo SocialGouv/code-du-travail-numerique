@@ -25,7 +25,7 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      Sentry.captureException(err.message || "Failed to load web component");
+      Sentry.captureException(err);
     });
   import("../src/web-components/tooltip-cc")
     .then((module) => {
@@ -35,7 +35,7 @@ if (typeof window !== "undefined") {
       );
     })
     .catch((err) => {
-      Sentry.captureException(err.message || "Failed to load web component");
+      Sentry.captureException(err);
     });
 }
 
