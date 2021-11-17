@@ -148,8 +148,8 @@
     "slug": "preavis-retraite",
     "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
     "action": "Calculer",
-    "date": "06/04/2021",
-    "enable": false,
+    "date": "17/11/2021",
+    "enable": true,
     "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665"
   }
 ]
