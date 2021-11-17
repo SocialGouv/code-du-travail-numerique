@@ -535,7 +535,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c57 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c58 {

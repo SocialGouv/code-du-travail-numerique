@@ -36,6 +36,7 @@ const Search = ({ onSelectConvention }) => {
     setQuery(value);
   };
 
+  //@ts-ignore
   const [status, { conventions = [], entreprises = [] } = {}] =
     useSearchCC(query);
 

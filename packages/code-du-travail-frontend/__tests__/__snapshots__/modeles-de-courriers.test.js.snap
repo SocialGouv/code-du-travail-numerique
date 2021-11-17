@@ -626,7 +626,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 .c63 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c64 {
