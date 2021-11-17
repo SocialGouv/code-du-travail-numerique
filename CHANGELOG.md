@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* **simulator:** enable preavis retraite simulator on prod ([#4017](https://github.com/SocialGouv/code-du-travail-numerique/issues/4017)) ([232c99a](https://github.com/SocialGouv/code-du-travail-numerique/commit/232c99a090126b6e95462735233c7768cfbc425d))
+
+
+
+
+
 # [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
 
 
