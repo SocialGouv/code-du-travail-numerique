@@ -7,9 +7,9 @@ import { supportedCcn as retraiteData } from "@socialgouv/modeles-social";
 import {
   MatomoCommonEvent,
   MatomoConventionCollectiveEvent,
-  MatomoTrackUrl,
   MatomoPreavisRetraiteEvent,
-  MatomoPreavisRetraiteTrackTitle
+  MatomoPreavisRetraiteTrackTitle,
+  MatomoTrackUrl,
 } from "../../outils/common/type/matomo";
 import { ConventionCollective } from "../../outils/common/type/WizardType";
 import { matopush } from "../../piwik";
@@ -63,6 +63,7 @@ export const trackSelectQuestionRetraite = (
       event,
     ]);
   }
+};
 
 export const trackConventionCollective = (
   ccn: ConventionCollective | null,
