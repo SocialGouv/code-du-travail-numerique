@@ -6,12 +6,11 @@ jest.mock("../../piwik", () => ({
 }));
 
 describe("Matomo", () => {
+  beforeEach(() => {
+    const ma = matopush as jest.MockedFunction<typeof matopush>;
+    ma.mockReset();
+  });
   describe("Convention collective", () => {
-    beforeEach(() => {
-      const ma = matopush as jest.MockedFunction<typeof matopush>;
-      ma.mockReset();
-    });
-
     test.each`
       path                                        | isTracked
       ${"/outils/preavis-retraite"}               | ${1}
