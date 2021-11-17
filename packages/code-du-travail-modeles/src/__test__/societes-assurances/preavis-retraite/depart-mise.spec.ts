@@ -47,9 +47,11 @@ describe("Préavis de retraite de la CC 1672", () => {
       ${"Non-cadres (Classes 1 à 4)"} | ${5}      | ${1}
       ${"Non-cadres (Classes 1 à 4)"} | ${6}      | ${1}
       ${"Non-cadres (Classes 1 à 4)"} | ${24}     | ${1}
+      ${"Non-cadres (Classes 1 à 4)"} | ${25}     | ${1}
       ${"Cadres (Classes 5 à 7)"}     | ${5}      | ${1}
       ${"Cadres (Classes 5 à 7)"}     | ${6}      | ${1}
-      ${"Cadres (Classes 5 à 7)"}     | ${24}     | ${2}
+      ${"Cadres (Classes 5 à 7)"}     | ${24}     | ${1}
+      ${"Cadres (Classes 5 à 7)"}     | ${25}     | ${2}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
