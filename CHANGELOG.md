@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.228.0 ([#3931](https://github.com/SocialGouv/code-du-travail-numerique/issues/3931)) ([cbeeee7](https://github.com/SocialGouv/code-du-travail-numerique/commit/cbeeee7b59788542a12d9c0282a98409f2b891b9))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.229.0 ([#3999](https://github.com/SocialGouv/code-du-travail-numerique/issues/3999)) ([923a979](https://github.com/SocialGouv/code-du-travail-numerique/commit/923a979a484be18d589a5f871a33bffcb25530aa))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.230.0 ([#4011](https://github.com/SocialGouv/code-du-travail-numerique/issues/4011)) ([7477bd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/7477bd8755f307137b169432c26af4b103309d8a))
+* **frontend:** fix footer alignement ([#4005](https://github.com/SocialGouv/code-du-travail-numerique/issues/4005)) ([df7d381](https://github.com/SocialGouv/code-du-travail-numerique/commit/df7d3817149c889d3b5a45b1ee4db53c6854392e))
+* **RGAA 10.6:** make the email link more visible in contact dialog ([#4008](https://github.com/SocialGouv/code-du-travail-numerique/issues/4008)) ([dcce8da](https://github.com/SocialGouv/code-du-travail-numerique/commit/dcce8dadbcb403a5dd8f400739afc80bd1cf7b27))
+
+
+### Features
+
+* **simulators:** feedbacks after review ([#3997](https://github.com/SocialGouv/code-du-travail-numerique/issues/3997)) ([199e418](https://github.com/SocialGouv/code-du-travail-numerique/commit/199e4184e506a1956c5f5e9b8b66178ca051b558))
+* **tracking:** cc treated or untreated are tracked ([#3872](https://github.com/SocialGouv/code-du-travail-numerique/issues/3872)) ([eb09cbb](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb09cbb8564f5ffdf984255e993d903727297696))
+* **tracking:** metrics on help click ([#3948](https://github.com/SocialGouv/code-du-travail-numerique/issues/3948)) ([2300a18](https://github.com/SocialGouv/code-du-travail-numerique/commit/2300a18fc53724dcc45ec1abde3e818b389d78f8))
+
+
+
+
+
 ## [4.57.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.0...v4.57.1) (2021-11-09)
 
 

@@ -1,10 +1,12 @@
 import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
+import { useRouter } from "next/router";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import ConventionSearch from "../../conventions/Search";
+import { trackConventionCollective } from "../../lib/matomo";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
@@ -18,9 +20,13 @@ type IdccInfo = {
   fullySupported: boolean;
 };
 
-type Props = {
+type BaseProps = {
   form: FormApi<FormContent>;
   supportedCcn?: IdccInfo[];
+  onChange?: (oldValue: any, newValue: any) => void;
+};
+
+type Props = BaseProps & {
   isOptional: boolean;
 };
 
@@ -28,25 +34,29 @@ function StepInfoCCn({
   form,
   supportedCcn,
   isOptional = true,
+  onChange,
 }: Props): JSX.Element {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
     undefined
   );
+  const router = useRouter();
   const onSelectConvention = useCallback(
     (data) => {
+      const oldData = storedConvention;
       setConvention(data);
       if (window) {
         window.scrollTo(0, 0);
       }
+      if (oldData !== data && onChange) {
+        onChange(storedConvention, data);
+      }
     },
-    [setConvention]
+    [setConvention, onChange]
   );
   useEffect(() => {
+    trackConventionCollective(storedConvention, router.asPath);
     form.batch(() => {
-      // Simulateur Duree Preavis Retraite:  Delete infos when change CC
-      form.change("infos", undefined);
-      form.change("contrat salarié - ancienneté", undefined);
       form.change("criteria", undefined);
       form.change("typeRupture", undefined);
       form.change(CONVENTION_NAME, storedConvention);
@@ -149,7 +159,7 @@ function StepInfoCCn({
   );
 }
 
-export const StepInfoCCnMandatory = (props: Props): JSX.Element => (
+export const StepInfoCCnMandatory = (props: BaseProps): JSX.Element => (
   <StepInfoCCn
     {...props}
     isOptional={false}
@@ -157,7 +167,7 @@ export const StepInfoCCnMandatory = (props: Props): JSX.Element => (
   />
 );
 
-export const StepInfoCCnOptionnal = (props: Props): JSX.Element => (
+export const StepInfoCCnOptionnal = (props: BaseProps): JSX.Element => (
   <StepInfoCCn {...props} isOptional={true} supportedCcn={props.supportedCcn} />
 );
 

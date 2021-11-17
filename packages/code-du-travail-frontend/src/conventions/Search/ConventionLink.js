@@ -12,7 +12,12 @@ import { matopush } from "../../piwik";
 const getConventionSlug = (convention) =>
   slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 
-export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
+export const ConventionLink = ({
+  convention,
+  isFirst,
+  onClick,
+  small = false,
+}) => {
   const { num, shortTitle } = convention;
   const router = useRouter();
 
