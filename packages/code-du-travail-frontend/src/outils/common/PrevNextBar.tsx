@@ -8,7 +8,7 @@ type Props = {
   onPrev: () => void;
   hasError: boolean;
   nextVisible: boolean;
-  printVisible: () => void;
+  printVisible: boolean;
   previousVisible: boolean;
   onNext: () => void;
 };

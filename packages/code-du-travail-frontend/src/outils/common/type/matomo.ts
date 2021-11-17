@@ -3,6 +3,11 @@ export enum MatomoCommonEvent {
   OUTIL = "outil",
 }
 
+export enum MatomoConventionCollectiveEvent {
+  CC_TREATED = "cc_select_traitée",
+  CC_UNTREATED = "cc_select_non_traitée",
+}
+
 export enum MatomoPreavisRetraiteEvent {
   ACTION = "view_step_Préavis de départ ou de mise à la retraite",
   MISE_RETRAITE = "mise",
@@ -28,4 +33,8 @@ export enum MatomoPreavisRetraiteTrackTitle {
 
 export enum MatomoTrackUrl {
   PREAVIS_RETRAITE = "/outils/preavis-retraite",
+  PREAVIS_DEMISSION = "/outils/preavis-demission",
+  PREAVIS_LICENCIEMENT = "/outils/preavis-licenciement",
+  INDEMNITE_PRECARITE = "outils/indemnite-precarite",
+  HEURE_RECHERCHE_EMPLOI = "/outils/heures-recherche-emploi",
 }

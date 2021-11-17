@@ -1,4 +1,5 @@
 import { Button, Heading, Modal, Wrapper } from "@socialgouv/cdtn-ui";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
@@ -47,9 +48,9 @@ export const ContactModal = ({ children: renderProp }) => {
               ce site ou si vous avez rencontré un{" "}
               <strong>problème technique</strong>, vous pouvez nous contacter à
               cette adresse&nbsp;:{" "}
-              <StyledLink href="mailto:codedutravailnumerique@travail.gouv.fr">
+              <Link href="mailto:codedutravailnumerique@travail.gouv.fr">
                 codedutravailnumerique@travail.gouv.fr
-              </StyledLink>
+              </Link>
             </p>
           </>
         )}
@@ -66,10 +67,4 @@ ContactModal.propTypes = {
 
 const StyledHeading = styled(Heading)`
   margin-top: 0;
-`;
-
-const StyledLink = styled.a`
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
 `;

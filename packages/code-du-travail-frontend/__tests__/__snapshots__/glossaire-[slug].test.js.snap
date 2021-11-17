@@ -539,7 +539,7 @@ exports[`<Term /> should render 1`] = `
 }
 
 .c51 {
-  padding: 0.4rem;
+  padding: 0.4rem 0;
 }
 
 .c52 {
