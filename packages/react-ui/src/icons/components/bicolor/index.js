@@ -1,6 +1,7 @@
 export { default as Agreement } from "./Agreement";
 export { default as Apprenticeship } from "./Apprenticeship";
 export { default as Calculator } from "./Calculator";
+export { default as CalendarTime } from "./CalendarTime";
 export { default as Constitution } from "./Constitution";
 export { default as Contract } from "./Contract";
 export { default as CrisisCompagny } from "./CrisisCompagny";
@@ -34,6 +35,7 @@ export { default as Security } from "./Security";
 export { default as SpecificJob } from "./SpecificJob";
 export { default as Termination } from "./Termination";
 export { default as Time } from "./Time";
+export { default as TimeWithLabel } from "./TimeWithLabel";
 export { default as Unemployment } from "./Unemployment";
 export { default as Uses } from "./Uses";
 export { default as Warning } from "./Warning";
