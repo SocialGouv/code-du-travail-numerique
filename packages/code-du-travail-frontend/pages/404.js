@@ -10,7 +10,7 @@ import { Layout } from "../src/layout/Layout";
 
 export default function Custom404() {
   useEffect(() => {
-    Sentry.captureException({ message: "Page non trouvée", status: 404 });
+    Sentry.captureException("Page non trouvée");
   }, []);
   return (
     <>
