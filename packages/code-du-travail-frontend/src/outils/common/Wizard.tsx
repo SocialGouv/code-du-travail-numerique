@@ -25,7 +25,7 @@ function Wizard({
   Rules = null,
   stepReducer = (step) => step,
   duration,
-}) {
+}): JSX.Element {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
   const router = useRouter();
@@ -289,14 +289,14 @@ const ToolTitle = styled.div`
 
 const ToolDuration = styled.div`
   position: relative;
-  width: 6.2rem;
+  padding-right: 20px;
 `;
 const ToolDurationLabel = styled.span`
   position: absolute;
   bottom: 3px;
   right: 0;
   font-size: ${fonts.sizes.tiny};
-  color: ${colors.title};
+  color: ${({ theme }) => theme.paragraph};
 `;
 const TimeWithLabel = styled(icons.TimeWithLabel)`
   width: 4.2rem;

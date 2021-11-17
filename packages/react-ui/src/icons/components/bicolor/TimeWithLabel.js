@@ -38,4 +38,5 @@ function SvgTimeWithLabel(props) {
   );
 }
 
-export default SvgTimeWithLabel;
+const MemoSvgTimeWithLabel = React.memo(SvgTimeWithLabel);
+export default MemoSvgTimeWithLabel;
