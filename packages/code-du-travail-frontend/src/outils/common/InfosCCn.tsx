@@ -1,10 +1,12 @@
 import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
+import { useRouter } from "next/router";
 import React, { useCallback, useEffect } from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import ConventionSearch from "../../conventions/Search";
+import { trackConventionCollective } from "../../lib/matomo";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
@@ -33,6 +35,7 @@ function StepInfoCCn({
     "convention",
     undefined
   );
+  const router = useRouter();
   const onSelectConvention = useCallback(
     (data) => {
       setConvention(data);
@@ -43,6 +46,7 @@ function StepInfoCCn({
     [setConvention]
   );
   useEffect(() => {
+    trackConventionCollective(storedConvention, router.asPath);
     form.batch(() => {
       // Simulateur Duree Preavis Retraite:  Delete infos when change CC
       form.change("infos", undefined);
