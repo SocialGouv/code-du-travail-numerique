@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { trackSelectQuestionRetraite } from "../../lib/matomo";
 import { usePublicodes } from "../publicodes";
 import { mapToPublicodesSituation } from "../publicodes/Utils";
 import PubliQuestion from "./PubliQuestion";
@@ -53,6 +54,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
     });
   };
 
+  const onTrackDynamicRule = (titleQuestion: string): void => {
+    trackSelectQuestionRetraite(titleQuestion);
+  };
+
   return (
     <>
       <>
@@ -64,7 +69,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
                 key={item.name}
                 name={"infos." + item.name}
                 rule={item.rawNode}
-                onChange={() => resetNextQuestions(item.name)}
+                onChange={() => {
+                  resetNextQuestions(item.name);
+                  onTrackDynamicRule(item.rawNode.titre);
+                }}
               />
             );
           })}
@@ -79,6 +87,9 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
                 key={item.name}
                 name={"infos." + item.name}
                 rule={item.rawNode}
+                onChange={() => {
+                  onTrackDynamicRule(item.rawNode.titre);
+                }}
               />
             );
           })}

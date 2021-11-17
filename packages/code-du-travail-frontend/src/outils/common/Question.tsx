@@ -7,6 +7,7 @@ import { InfoBulle } from "./InfoBulle";
 export type Tooltip = {
   content: JSX.Element;
   help?: string;
+  trackableFn?: (actualVisibility: boolean) => void;
 };
 type Props = {
   as?: string;
@@ -27,7 +28,10 @@ export const Question = ({
     <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
-      <InfoBulle title={tooltip.help ?? "Plus d'informations"}>
+      <InfoBulle
+        title={tooltip.help ?? "Plus d'informations"}
+        onVisibilityChange={tooltip.trackableFn}
+      >
         <>{tooltip.content}</>
       </InfoBulle>
     )}
