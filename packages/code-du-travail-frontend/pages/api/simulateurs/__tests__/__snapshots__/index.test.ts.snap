@@ -146,6 +146,16 @@ Object {
       "slug": "convention-collective",
       "title": "Trouver sa convention collective",
     },
+    Object {
+      "action": "Calculer",
+      "date": "17/11/2021",
+      "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
+      "enable": true,
+      "icon": "CalendarTime",
+      "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665",
+      "slug": "preavis-retraite",
+      "title": "Préavis de départ ou de mise à la retraite",
+    },
   ],
   "externalTools": Array [
     Object {
@@ -308,9 +318,9 @@ Object {
     },
     Object {
       "action": "Calculer",
-      "date": "06/04/2021",
+      "date": "17/11/2021",
       "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
-      "enable": false,
+      "enable": true,
       "icon": "CalendarTime",
       "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665",
       "slug": "preavis-retraite",
