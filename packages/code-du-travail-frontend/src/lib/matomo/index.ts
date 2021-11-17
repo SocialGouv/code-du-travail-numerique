@@ -104,8 +104,7 @@ export const trackConventionCollective = (
       break;
     }
     default: {
-      isTracked = false;
-      break;
+      return;
     }
   }
   matopush([
