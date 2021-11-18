@@ -7,7 +7,7 @@ const redirects = require("./redirects.json");
 const { logger } = require("@socialgouv/cdtn-logger");
 
 const IS_PRODUCTION_DEPLOYMENT =
-  process.env.IS_PRODUCTION_DEPLOYMENT === "true";
+  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 const PORT = parseInt(process.env.FRONTEND_PORT, 10) || 3000;
 const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const PROD_HOSTNAME = process.env.PROD_HOSTNAME || "code.travail.gouv.fr";
@@ -58,6 +58,7 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.fr",
         "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
+        "*.doubleclick.net",
       ],
       imgSrc: [
         "'self'",
@@ -66,12 +67,17 @@ async function getKoaServer({ nextApp }) {
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.fr",
         AZURE_BASE_URL,
+        "*.doubleclick.net",
+        "*.xiti.com",
       ],
       scriptSrc: [
         "'self'",
         "https://mon-entreprise.fr",
         "*.fabrique.social.gouv.fr",
         "https://cdnjs.cloudflare.com",
+        "https://www.googletagmanager.com",
+        "'unsafe-inline'",
+        "*.doubleclick.net",
       ],
       styleSrc: ["'self'", "'unsafe-inline'"],
       ...(SENTRY_PUBLIC_DSN && { reportUri: getSentryCspUrl() }),

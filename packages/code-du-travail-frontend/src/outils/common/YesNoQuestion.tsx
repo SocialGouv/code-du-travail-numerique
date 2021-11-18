@@ -40,9 +40,7 @@ const YesNoQuestion = ({
           <InputRadio
             id={`${props.input.name}-oui`}
             label="Oui"
-            name={props.input.name}
-            value={props.input.value}
-            onChange={props.input.onChange}
+            {...props.input}
           />
         )}
       </Field>
@@ -57,16 +55,18 @@ const YesNoQuestion = ({
           <InputRadio
             label="Non"
             id={`${props.input.name}-non`}
-            name={props.input.name}
-            value={props.input.value}
-            onChange={props.input.onChange}
+            {...props.input}
           />
         )}
       </Field>
     </RadioContainer>
     <ErrorField name={name} />
     {onChange && (
-      <OnChange name={name}>{(values) => onChange(values)}</OnChange>
+      <OnChange name={name}>
+        {(values) => {
+          onChange(values);
+        }}
+      </OnChange>
     )}
   </>
 );

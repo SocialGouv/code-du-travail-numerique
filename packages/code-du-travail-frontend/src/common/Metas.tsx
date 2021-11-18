@@ -23,6 +23,7 @@ export default function Metas({
   noTitleAdd,
 }: Props): JSX.Element {
   const router = useRouter();
+
   return (
     <Head>
       <meta
@@ -37,16 +38,18 @@ export default function Metas({
       </title>
       <link key="favicon" rel="shortcut icon" href="/favicon.ico" />
       <meta key="desc" name="description" content={description} />
-      <link
-        key="canonical"
-        href={
-          overrideCanonical ??
-          `${FRONTEND_HOST}${
-            router.asPath !== "/" ? removeQueryParameters(router.asPath) : ""
-          }`
-        }
-        rel="canonical"
-      />
+      {overrideCanonical ? (
+        <link key="canonical" rel="canonical" href={overrideCanonical} />
+      ) : (
+        router &&
+        router.asPath && (
+          <link
+            key="canonical"
+            rel="canonical"
+            href={`${FRONTEND_HOST}${removeQueryParameters(router.asPath)}`}
+          />
+        )
+      )}
       <meta key="twitter:card" name="twitter:card" content="summary" />
       <meta key="og:title" property="og:title" content={title} />
       <meta key="og:type" property="og:type" content="article" />

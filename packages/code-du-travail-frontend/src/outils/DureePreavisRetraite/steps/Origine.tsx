@@ -1,5 +1,5 @@
 import { Alert, InputRadio, Text, theme } from "@socialgouv/cdtn-ui";
-import React, { useEffect } from "react";
+import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
@@ -8,19 +8,8 @@ import { Question } from "../../common/Question";
 import { RadioContainer } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { required } from "../../common/validators";
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituation } from "../../publicodes/Utils";
 
 function OrigineStep({ form }: WizardStepProps): JSX.Element {
-  const publicodesContext = usePublicodes();
-
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [form, form.getState()]);
-
   return (
     <>
       <Question as="p" required>
@@ -37,9 +26,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             <InputRadio
               label="Le salarié décide lui-même de partir à la retraite"
               id={`${props.input.name}-depart`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>
@@ -53,9 +40,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             <InputRadio
               label="L'employeur décide de mettre le salarié à la retraite"
               id={`${props.input.name}-mise`}
-              name={props.input.name}
-              value={props.input.value}
-              onChange={props.input.onChange}
+              {...props.input}
             />
           )}
         </Field>

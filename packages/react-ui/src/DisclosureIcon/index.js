@@ -6,18 +6,28 @@ import { Alert } from "../Alert";
 import { Button } from "../Button";
 import { fonts, spacings } from "../theme";
 
-export const DisclosureIcon = ({ icon, iconTitle, children }) => {
+export const DisclosureIcon = ({
+  icon,
+  iconTitle,
+  children,
+  onVisibilityChange,
+}) => {
   const [isNoticeVisible, setIsNoticeVisible] = useState(false);
+
+  const handleClick = () => {
+    setIsNoticeVisible(!isNoticeVisible);
+    if (onVisibilityChange) onVisibilityChange(!isNoticeVisible);
+  };
 
   return (
     <>
       <DisclosureIconButton
-        title={icon}
+        title={iconTitle}
         aria-label={iconTitle}
         variant="navLink"
         size="small"
         type="button"
-        onClick={() => setIsNoticeVisible(!isNoticeVisible)}
+        onClick={handleClick}
       >
         {icon}
       </DisclosureIconButton>
@@ -50,4 +60,5 @@ DisclosureIcon.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
+  onVisibilityChange: PropTypes.func,
 };

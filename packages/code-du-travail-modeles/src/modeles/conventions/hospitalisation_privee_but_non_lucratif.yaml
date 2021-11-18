@@ -10,6 +10,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:
@@ -27,6 +28,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient:
   titre: Coefficient
   question: Quel est le coefficient du salarié ?
+  description: La coefficient du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:

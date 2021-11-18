@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { trackSelectQuestionRetraite } from "../../lib/matomo";
 import { usePublicodes } from "../publicodes";
 import { mapToPublicodesSituation } from "../publicodes/Utils";
 import PubliQuestion from "./PubliQuestion";
@@ -23,12 +24,11 @@ interface Props extends WizardStepProps {
  */
 function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
   const publicodesContext = usePublicodes();
+  const formValues = form.getState().values;
 
   useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
-    );
-  }, [form, publicodesContext]);
+    publicodesContext.setSituation(mapToPublicodesSituation(formValues));
+  }, [formValues]);
 
   /**
    * Function called when a older question has been asked.
@@ -36,7 +36,7 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
    * It's a generic function because the form is based on publicodes
    */
   const resetNextQuestions = (name: string) => {
-    const infos = form.getState().values.infos;
+    const infos = formValues.infos;
     if (!infos) {
       return;
     }
@@ -54,6 +54,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
     });
   };
 
+  const onTrackDynamicRule = (titleQuestion: string): void => {
+    trackSelectQuestionRetraite(titleQuestion);
+  };
+
   return (
     <>
       <>
@@ -65,7 +69,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
                 key={item.name}
                 name={"infos." + item.name}
                 rule={item.rawNode}
-                onChange={() => resetNextQuestions(item.name)}
+                onChange={() => {
+                  resetNextQuestions(item.name);
+                  onTrackDynamicRule(item.rawNode.titre);
+                }}
               />
             );
           })}
@@ -80,6 +87,9 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
                 key={item.name}
                 name={"infos." + item.name}
                 rule={item.rawNode}
+                onChange={() => {
+                  onTrackDynamicRule(item.rawNode.titre);
+                }}
               />
             );
           })}

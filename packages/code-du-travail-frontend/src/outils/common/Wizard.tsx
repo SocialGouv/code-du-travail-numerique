@@ -1,5 +1,6 @@
 import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React, { useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
@@ -8,7 +9,11 @@ import styled from "styled-components";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
+import {
+  MatomoCommonEvent,
+  MatomoPreavisRetraiteEvent,
+  MatomoTrackUrl,
+} from "./type/matomo";
 
 const anchorRef = React.createRef();
 
@@ -19,11 +24,13 @@ function Wizard({
   icon,
   Rules = null,
   stepReducer = (step) => step,
-}) {
+  duration,
+}): JSX.Element {
   const [state, dispatch] = useReducer(stepReducer, initialState);
   const { stepIndex, steps } = state;
-
+  const router = useRouter();
   const setStepIndex = (index) =>
+    //@ts-ignore
     dispatch({ payload: index, type: "setStepIndex" });
 
   useEffect(() => {
@@ -31,6 +38,7 @@ function Wizard({
     // We only focus on wizzard after wizzard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
+      //@ts-ignore
       node.focus();
     }
     if (window) {
@@ -41,6 +49,7 @@ function Wizard({
   const prevStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.max(0, nextStepIndex - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -57,6 +66,7 @@ function Wizard({
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
     let skipFn = () => true;
+    //@ts-ignore
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
       skipFn = steps[nextStepIndex].skip || (() => false);
@@ -82,6 +92,7 @@ function Wizard({
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
+      //@ts-ignore
       dispatch({
         type: "reset",
       });
@@ -106,28 +117,30 @@ function Wizard({
   const Annotation = steps[stepIndex].annotation;
 
   const onClickNext = (form) => {
-    switch (steps[stepIndex].name) {
-      case initialState.steps[1].name: // "origine"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values["contrat salarié - mise à la retraite"] ===
-          "oui"
-            ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
-            : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
-        ]);
-        break;
-      case initialState.steps[4].name: // "anciennete"
-        matopush([
-          MatomoCommonEvent.TRACK_EVENT,
-          MatomoCommonEvent.OUTIL,
-          form.getState().values.seniorityGreaterThanTwoYears
-            ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
-            : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
-        ]);
-        break;
-      default:
-        return;
+    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
+      switch (steps[stepIndex].name) {
+        case initialState.steps[1].name: // "origine"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values["contrat salarié - mise à la retraite"] ===
+            "oui"
+              ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
+              : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
+          ]);
+          break;
+        case initialState.steps[4].name: // "anciennete"
+          matopush([
+            MatomoCommonEvent.TRACK_EVENT,
+            MatomoCommonEvent.OUTIL,
+            form.getState().values.seniorityGreaterThanTwoYears
+              ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
+              : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
+          ]);
+          break;
+        default:
+          return;
+      }
     }
   };
 
@@ -149,23 +162,27 @@ function Wizard({
                 {Rules && (
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
-                <WizardTitle title={title} icon={icon} />
+                <WizardTitle
+                  title={title}
+                  icon={icon}
+                  duration={duration}
+                  stepIndex={stepIndex}
+                />
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
                   anchorRef={anchorRef}
                 />
                 <Step form={form} dispatch={dispatch} />
-
                 <PrevNextBar
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
                   nextVisible={nextVisible}
+                  //@ts-ignore
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}
                 />
-
                 {Annotation && (
                   <p>
                     <Annotation />
@@ -175,7 +192,9 @@ function Wizard({
                   process.env.NODE_ENV !== "test" && (
                     <details>
                       <summary>state</summary>
-                      <pre>{JSON.stringify(form.getState().values, 0, 2)}</pre>
+                      <pre>
+                        {JSON.stringify(form.getState().values, null, 2)}
+                      </pre>
                     </details>
                   )}
               </StyledForm>
@@ -189,6 +208,7 @@ function Wizard({
 
 Wizard.propTypes = {
   Rules: PropTypes.func,
+  duration: PropTypes.string,
   icon: PropTypes.string,
   initialState: PropTypes.shape({
     stepIndex: PropTypes.number,
@@ -205,23 +225,42 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon }) {
+function WizardTitle({ title, icon, duration, stepIndex }) {
   const Icon = icons[icon];
   return (
     <ToolTitle>
-      {Icon && (
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-      )}
-      {title}
+      <StyledTitleBox>
+        {Icon && (
+          <IconWrapper>
+            <Icon />
+          </IconWrapper>
+        )}
+        <StyledTitle>{title}</StyledTitle>
+      </StyledTitleBox>
+      {duration && stepIndex === 0 && <WizardDuration duration={duration} />}
     </ToolTitle>
+  );
+}
+
+WizardTitle.propTypes = {
+  duration: PropTypes.string,
+  icon: PropTypes.string,
+  stepIndex: PropTypes.number,
+  title: PropTypes.string.isRequired,
+};
+
+function WizardDuration({ duration }) {
+  return (
+    <ToolDuration>
+      <TimeWithLabel aria-hidden="true" />
+      <ToolDurationLabel>{duration}</ToolDurationLabel>
+    </ToolDuration>
   );
 }
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, spacings, fonts, colors } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -234,8 +273,9 @@ const StyledForm = styled.form`
   }
 `;
 
-const ToolTitle = styled.h1`
+const ToolTitle = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: ${spacings.larger};
   padding-bottom: ${spacings.base};
@@ -247,8 +287,28 @@ const ToolTitle = styled.h1`
   }
 `;
 
+const ToolDuration = styled.div`
+  position: relative;
+  padding-right: 20px;
+`;
+const ToolDurationLabel = styled.span`
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  font-size: ${fonts.sizes.tiny};
+  color: ${({ theme }) => theme.paragraph};
+`;
+const TimeWithLabel = styled(icons.TimeWithLabel)`
+  width: 4.2rem;
+`;
+const StyledTitle = styled.h1`
+  margin: 0;
+`;
+const StyledTitleBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const IconWrapper = styled.span`
-  display: block;
   flex: 0 0 auto;
   width: 5.2rem;
   height: 5.2rem;

@@ -2,7 +2,13 @@ import * as React from "react";
 
 function SvgIndemnity(props) {
   return (
-    <svg fill="none" viewBox="0 0 52 52" aria-hidden="true" {...props}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      aria-hidden="true"
+      {...props}
+    >
       <g clipPath="url(#indemnity_svg__clip0)">
         <path
           d="M41 2H11a3 3 0 00-3 3v10s0 1 1 1 1-1 1-1V5a1 1 0 011-1h30a1 1 0 011 1v27h2V5a3 3 0 00-3-3zM30 48v2H10.733a3 3 0 01-3-3V24s0-1 1-1 1 1 1 1v23a1 1 0 001 1H30zM9 20a1 1 0 100-2 1 1 0 000 2z"
@@ -34,4 +40,5 @@ function SvgIndemnity(props) {
   );
 }
 
-export default SvgIndemnity;
+const MemoSvgIndemnity = React.memo(SvgIndemnity);
+export default MemoSvgIndemnity;

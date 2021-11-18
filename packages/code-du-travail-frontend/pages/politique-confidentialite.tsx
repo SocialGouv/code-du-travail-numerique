@@ -1,13 +1,15 @@
 import {
+  Button,
   Container,
   PageTitle,
   Section,
+  Table,
   theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
@@ -16,6 +18,21 @@ import { Layout } from "../src/layout/Layout";
 const { spacings } = theme;
 
 const CookiePolicy = () => {
+  const openTarteAuCitron = useCallback(() => {
+    // @ts-ignore
+    if (window && window.tarteaucitron) {
+      // @ts-ignore
+      window.tarteaucitron.userInterface.openPanel();
+    }
+  }, []);
+
+  const hasTarteAuCitron = useCallback(() => {
+    // @ts-ignore
+    return (
+      typeof document !== "undefined" &&
+      !!document.getElementById("tarteaucitronClosePanel")
+    );
+  }, []);
   return (
     <Layout>
       <Metas
@@ -38,8 +55,7 @@ const CookiePolicy = () => {
               barre de recherche. Elles sont conservées pendant deux années pour
               analyser les usages, améliorer la précision des réponses apportées
               et améliorer le service et ainsi réaliser la mission d’intérêt
-              public,(qui est la base légale du traitement), telle que présentée
-              dans la page{" "}
+              public telle que présentée dans la page{" "}
               <Link href="/a-propos">
                 <a>à propos.</a>
               </Link>
@@ -75,9 +91,6 @@ const CookiePolicy = () => {
               75015 PARIS
             </Address>
             <p>
-              Vous disposez des mêmes droits en matière de témoins de connexion.
-            </p>
-            <p>
               Vous êtes également en droit de saisir la Commission Nationale de
               l’Informatique et des Libertés pour toute réclamation à{" "}
               <a
@@ -88,9 +101,38 @@ const CookiePolicy = () => {
               </a>
               .
             </p>
-
+            <Title id="hebergement" shift={spacings.larger}>
+              Hébergement
+            </Title>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Partenaire</th>
+                  <th>Pays destinataire</th>
+                  <th>Traitement réalisé</th>
+                  <th>Garantie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Microsoft Azure</td>
+                  <td>France</td>
+                  <td>Hébergement</td>
+                  <td>
+                    <a
+                      title="Déclaration de confidentialité Microsoft"
+                      target="_blank"
+                      rel="nofollow, noopener, noreferrer"
+                      href="https://privacy.microsoft.com/fr-fr/privacystatement"
+                    >
+                      Déclaration de confidentialité Microsoft
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
             <Title id="cookie" shift={spacings.larger}>
-              Utilisation de témoins de connexion («&nbsp;cookies&nbsp;»)
+              Cookies
             </Title>
             <p>
               Un cookie est un fichier déposé sur votre terminal lors de la
@@ -103,26 +145,50 @@ const CookiePolicy = () => {
               dispositifs appelés “cookies” permettant d’établir des mesures
               statistiques.
             </p>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Catégorie de cookie</th>
+                  <th>Nom du cookie</th>
+                  <th>Délai de conservation</th>
+                  <th>Finalités</th>
+                  <th>Éditeur</th>
+                  <th>Destination</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mesure d’audience</td>
+                  <td>Google Analytics</td>
+                  <td>13 mois</td>
+                  <td>Mesure d’audience et analyse comportementale</td>
+                  <td>Google</td>
+                  <td>Etats-Unis</td>
+                </tr>
+                <tr>
+                  <td>Mesure d’audience anonymisée</td>
+                  <td>Matomo</td>
+                  <td>13 mois</td>
+                  <td>Mesure d’audience</td>
+                  <td>Matomo & Fabrique numérique</td>
+                  <td>France</td>
+                </tr>
+                <tr>
+                  <td>Mesure d’audience anonymisée</td>
+                  <td>AT Internet</td>
+                  <td>13 mois</td>
+                  <td>Mesure d’audience et analyse comportementale</td>
+                  <td>AT Internet</td>
+                  <td>France</td>
+                </tr>
+              </tbody>
+            </Table>
             <p>
-              Ces cookies permettent au Code du travail numérique d’établir des
-              mesures statistiques de fréquentation et d’utilisation du site.
-              Pour ce faire, nous utilisons les services proposés par{" "}
-              <a title="Page d'accueil de Matomo" href="https://fr.matomo.org/">
-                Matomo
-              </a>
-              .
+              L’accès aux informations contenues dans les cookies est limité aux
+              seules personnes autorisées au sein de la Fabrique numérique. En
+              outre, l’éditeur peut utiliser certaines données pour des
+              finalités qui lui sont propres.
             </p>
-            <p>Il convient d’indiquer que&nbsp;:</p>
-            <ul>
-              <li>
-                Les données collectées ne sont pas recoupées avec d’autres
-                traitements.
-              </li>
-              <li>
-                Les cookies ne permettent pas de suivre la navigation de
-                l’internaute sur d’autres sites.
-              </li>
-            </ul>
             <p>
               À tout moment, vous pouvez refuser l’utilisation des cookies et
               désactiver le dépôt sur votre ordinateur en utilisant la fonction
@@ -130,9 +196,21 @@ const CookiePolicy = () => {
               Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox,
               Apple Safari et Opera).
             </p>
+
+            {hasTarteAuCitron() ? (
+              <Button onClick={openTarteAuCitron}>Modifier les réglages</Button>
+            ) : (
+              <p>
+                Seules certaines pages du site sont concernées par la mesure
+                d’audience et l’analyse comportementale avec Google Analytics et
+                vous n’avez visité aucune de ces pages. Aucun cookie Google
+                Analytics n’a donc été déposé sur votre terminal.
+              </p>
+            )}
+
             <p>
-              Pour l&apos;outil Matomo, vous pouvez décider de ne jamais être
-              suivi, y compris anonymement&nbsp;:
+              Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi,
+              y compris anonymement&nbsp;:
             </p>
             <iframe
               title="matomo optout"
@@ -146,13 +224,23 @@ const CookiePolicy = () => {
             </p>
             <ul>
               <li>
-                <a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">
-                  Cookies et traceurs&nbsp;: que dit la loi&nbsp;?
+                <a
+                  title="Déclaration de confidentialité Microsoft"
+                  target="_blank"
+                  rel="nofollow, noopener, noreferrer"
+                  href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+                >
+                  Cookies et traceurs : que dit la loi ?
                 </a>
               </li>
               <li>
-                <a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">
-                  Cookies&nbsp;: les outils pour les maîtriser
+                <a
+                  title="Déclaration de confidentialité Microsoft"
+                  target="_blank"
+                  rel="nofollow, noopener, noreferrer"
+                  href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+                >
+                  Cookies : les outils pour les maîtriser
                 </a>
               </li>
             </ul>

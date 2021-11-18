@@ -62,16 +62,12 @@ export default class MyApp extends App {
         pageProps = { message: err.message, statusCode: 500 };
       }
     }
-
-    return {
-      pageProps,
-      trackingEnabled: process.env.IS_PRODUCTION_DEPLOYMENT === "true",
-    };
+    return { pageProps };
   }
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
-    if (this.props.trackingEnabled) {
+    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true") {
       initATInternetService();
     }
   }

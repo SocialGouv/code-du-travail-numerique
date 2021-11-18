@@ -12,3 +12,4 @@ packages/code-du-travail-modeles/bin
 packages/code-du-travail-modeles/lib
 lerna-debug.log
 .vscode
+.DS_Store
