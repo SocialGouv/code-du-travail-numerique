@@ -94,6 +94,7 @@
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
     "jest": "^27.0.6",
+    "jest-environment-jsdom": "^27.3.1",
     "jest-styled-components": "^7.0.5",
     "jsdom": "^18.1.0",
     "lint-staged": "^11.0.1",
@@ -117,7 +118,7 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom",
+    "testEnvironment": "./test/jest.env.js",
     "testMatch": [
       "**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"
     ],
