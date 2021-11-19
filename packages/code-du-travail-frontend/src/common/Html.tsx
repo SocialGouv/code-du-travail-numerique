@@ -1,11 +1,8 @@
-import dynamic from "next/dynamic";
+import DOMPurify from "dompurify";
 import React from "react";
 import styled from "styled-components";
 
 import { htmlParser } from "../lib";
-
-const newLocal = "isomorphic-dompurify";
-const DOMPurify = dynamic(() => import(newLocal));
 
 type Props = {
   children: string;
@@ -13,21 +10,24 @@ type Props = {
 };
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
-  return inline ? (
-    <InlineBlockDiv
-      {...props}
-      dangerouslySetInnerHTML={{
-        __html: DOMPurify.sanitize(htmlParser(children)),
-      }}
-    />
-  ) : (
-    <div
-      {...props}
-      dangerouslySetInnerHTML={{
-        __html: DOMPurify.sanitize(htmlParser(children)),
-      }}
-    />
-  );
+  if (typeof window !== "undefined") {
+    return inline ? (
+      <InlineBlockDiv
+        {...props}
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(htmlParser(children)),
+        }}
+      />
+    ) : (
+      <div
+        {...props}
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(htmlParser(children)),
+        }}
+      />
+    );
+  }
+  return <></>;
 };
 
 export default Html;
