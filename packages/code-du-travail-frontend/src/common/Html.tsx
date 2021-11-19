@@ -1,6 +1,6 @@
-import DOMPurify from "dompurify";
 import React from "react";
 import styled from "styled-components";
+import xss from "xss";
 
 import { htmlParser } from "../lib";
 
@@ -10,30 +10,20 @@ type Props = {
 };
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
-  if (typeof window !== "undefined") {
-    return inline ? (
-      <InlineBlockDiv
-        {...props}
-        dangerouslySetInnerHTML={{
-          __html: DOMPurify.sanitize(htmlParser(children)),
-        }}
-      />
-    ) : (
-      <Div
-        {...props}
-        dangerouslySetInnerHTML={{
-          __html: DOMPurify.sanitize(htmlParser(children)),
-        }}
-      />
-    );
-  }
-  return <></>;
+  return (
+    <Div
+      {...props}
+      isInline={inline}
+      dangerouslySetInnerHTML={{
+        __html: xss(htmlParser(children)),
+      }}
+    />
+  );
 };
 
 export default Html;
 
-const InlineBlockDiv = styled.div`
-  display: inline-block;
+const Div = styled.div`
+  ${({ isInline }: { isInline: boolean }) =>
+    isInline && "display: inline-block;"};
 `;
-
-const Div = styled.div``;
