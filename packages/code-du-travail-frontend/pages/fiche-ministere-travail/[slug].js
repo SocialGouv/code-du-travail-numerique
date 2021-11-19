@@ -19,11 +19,13 @@ const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
 const buildAccordionSections = (sections) =>
   sections
     .filter((section) => section.anchor)
-    .map(({ anchor, html, title }) => ({
-      body: <TabContent>{html}</TabContent>,
-      id: anchor,
-      title,
-    }));
+    .map(({ anchor, html, title }) => {
+      return {
+        body: <TabContent>{html}</TabContent>,
+        id: anchor,
+        title,
+      };
+    });
 
 const Fiche = ({ data = { _source: {} }, anchor }) => {
   const {

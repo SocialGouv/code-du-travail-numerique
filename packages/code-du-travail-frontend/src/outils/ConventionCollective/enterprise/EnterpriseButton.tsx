@@ -1,5 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
+import DOMPurify from "isomorphic-dompurify";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -56,7 +57,9 @@ export function EnterpriseButton({
             as="div"
             fontSize="hsmall"
             fontWeight="600"
-            dangerouslySetInnerHTML={{ __html: highlightLabel }}
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(highlightLabel),
+            }}
           />
         ) : (
           <>
@@ -66,7 +69,9 @@ export function EnterpriseButton({
             <Subtitle
               as="div"
               fontSize="small"
-              dangerouslySetInnerHTML={{ __html: highlightLabel }}
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(highlightLabel),
+              }}
             />
           </>
         )}
