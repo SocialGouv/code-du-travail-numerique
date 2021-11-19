@@ -1,8 +1,11 @@
-import DOMPurify from "isomorphic-dompurify";
+import dynamic from "next/dynamic";
 import React from "react";
 import styled from "styled-components";
 
 import { htmlParser } from "../lib";
+
+const newLocal = "isomorphic-dompurify";
+const DOMPurify = dynamic(() => import(newLocal));
 
 type Props = {
   children: string;
