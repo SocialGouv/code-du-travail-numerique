@@ -2436,7 +2436,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="c52 c53"
                 >
                   <div
-                    class="Html__Div-sc-v644mo-1"
+                    class=""
                   >
                     un description
                   </div>
@@ -2511,7 +2511,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         class="c26"
                       >
                         <div
-                          class="Html__Div-sc-v644mo-1"
+                          class=""
                         >
                           <p>
                             youhou

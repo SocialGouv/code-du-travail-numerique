@@ -2330,7 +2330,7 @@ exports[`<FicheMT /> should render 1`] = `
                   class="c54 c55"
                 >
                   <div
-                    class="Html__Div-sc-v644mo-1"
+                    class=""
                   >
                     lorem ipsum intro
                   </div>
@@ -2403,7 +2403,7 @@ exports[`<FicheMT /> should render 1`] = `
                           class="c61"
                         >
                           <div
-                            class="Html__Div-sc-v644mo-1 c62"
+                            class="c62"
                           >
                             <p>
                               Depuis le 1er janvier 2017, la 
@@ -2443,9 +2443,8 @@ exports[`<FicheMT /> should render 1`] = `
                               </strong>
                                consultez 
                               <a
-                                class="spip_in"
                                 href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
-                                rel="nofollow, noopener"
+                                target="_blank"
                               >
                                 notre fiche sur le suivi de l’état de santé des salariés
                               </a>

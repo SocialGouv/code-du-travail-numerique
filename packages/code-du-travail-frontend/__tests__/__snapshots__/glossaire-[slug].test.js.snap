@@ -1385,7 +1385,7 @@ exports[`<Term /> should render 1`] = `
                       </th>
                       <td>
                         <div
-                          class="Html__Div-sc-v644mo-1"
+                          class=""
                         >
                           <p>
                             Accord collectif de travail conclu au niveau d'une entreprise.

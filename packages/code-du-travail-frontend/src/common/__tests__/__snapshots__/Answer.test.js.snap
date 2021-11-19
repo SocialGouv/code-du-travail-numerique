@@ -878,17 +878,15 @@ exports[`<Answer /> should renders 1`] = `
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 Contenu au format 
                 <strong>
                   html
@@ -2187,17 +2185,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               class="c30 c31"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 Contenu au format 
                 <strong>
                   html
@@ -3246,17 +3242,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 Contenu au format 
                 <strong>
                   html
@@ -4418,17 +4412,15 @@ exports[`<Answer /> should renders related content 1`] = `
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>
@@ -5632,17 +5624,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 Contenu au format 
                 <strong>
                   html
@@ -6692,17 +6682,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 Contenu au format 
                 <strong>
                   indemnités
@@ -7752,20 +7740,17 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 <a
-                  class="spip_in"
-                  href="emploi/accompagnement-des-mutations-economiques/csp"
+                  href=""
                 >
                   le contrat de sécurisation professionnelle APE
                 </a>
@@ -8813,17 +8798,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               class="c20 c21"
             >
               <div
-                class="Html__Div-sc-v644mo-1"
+                class=""
               >
                 intro de l'article
               </div>
             </div>
             <div
-              class="Html__Div-sc-v644mo-1"
+              class=""
             >
-              <p
-                class="test-content"
-              >
+              <p>
                 annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>
