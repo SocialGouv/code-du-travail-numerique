@@ -79,8 +79,9 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
       </>
       <>
         {publicodesContext.missingArgs
-          .filter((item) => !excludedRules.includes(item.name))
-          .slice(0, 1)
+          .filter(
+            (item, index) => !excludedRules.includes(item.name) && index < 1
+          )
           .map((item) => {
             return (
               <PubliQuestion
