@@ -19,7 +19,7 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
         }}
       />
     ) : (
-      <div
+      <Div
         {...props}
         dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(htmlParser(children)),
@@ -35,3 +35,5 @@ export default Html;
 const InlineBlockDiv = styled.div`
   display: inline-block;
 `;
+
+const Div = styled.div``;

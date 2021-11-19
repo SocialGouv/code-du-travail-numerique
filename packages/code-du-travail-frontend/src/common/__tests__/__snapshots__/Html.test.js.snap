@@ -2,7 +2,9 @@
 
 exports[`<Html /> should render 1`] = `
 <div>
-  <div>
+  <div
+    class="Html__Div-sc-v644mo-1"
+  >
     <b>
       Hello
     </b>

@@ -877,11 +877,15 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -2182,11 +2186,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c30 c31"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -3237,11 +3245,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -4405,11 +4417,15 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -5615,11 +5631,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -6671,11 +6691,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -7727,11 +7751,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >
@@ -8784,11 +8812,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class="Html__Div-sc-v644mo-1"
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class="Html__Div-sc-v644mo-1"
+            >
               <p
                 class="test-content"
               >

@@ -1,10 +1,10 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
-import DOMPurify from "isomorphic-dompurify";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
+import Html from "../../../common/Html";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { ScreenType } from "../common/NavContext";
 import { ResultItem } from "../common/ResultList";
@@ -53,26 +53,17 @@ export function EnterpriseButton({
     >
       <ItemButton isFirst={isFirst} onClick={clickHandler}>
         {showTitleWithHighlight ? (
-          <Title
-            as="div"
-            fontSize="hsmall"
-            fontWeight="600"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(highlightLabel),
-            }}
-          />
+          <Title as="div" fontSize="hsmall" fontWeight="600">
+            {highlightLabel}
+          </Title>
         ) : (
           <>
             <Title as="div" fontWeight="600" fontSize="hsmall">
               {simpleLabel}
             </Title>
-            <Subtitle
-              as="div"
-              fontSize="small"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(highlightLabel),
-              }}
-            />
+            <Subtitle as="div" fontSize="small">
+              {highlightLabel}
+            </Subtitle>
           </>
         )}
         {activitePrincipale && (
@@ -101,12 +92,12 @@ const ItemButton = styled(ResultItem)`
   }
 `;
 
-const Title = styled(Text)`
+const Title = styled(Html)`
   padding-bottom: ${spacings.xsmall};
   & b {
     font-weight: 700;
   }
 `;
-const Subtitle = styled(Text)`
+const Subtitle = styled(Html)`
   padding-bottom: ${spacings.xsmall};
 `;
