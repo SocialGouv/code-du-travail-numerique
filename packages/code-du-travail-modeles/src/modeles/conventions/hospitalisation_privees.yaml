@@ -11,7 +11,7 @@ contrat salarié . convention collective . hospitalisation privées:
 contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle:
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le **bulletin de salaire**.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
     type: liste
