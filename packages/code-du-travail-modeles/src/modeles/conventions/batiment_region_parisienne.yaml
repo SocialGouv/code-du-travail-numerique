@@ -7,10 +7,6 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
     préavis-retraite: true
 
 contrat salarié . convention collective . ouvriers bâtiment région parisienne . mise ou départ à la retraite:
-  applicable si:
-    une de ces conditions:
-      - mise à la retraite
-      - départ à la retraite
   remplace: contrat salarié . préavis de retraite collective
   valeur: 2 mois
   références:
