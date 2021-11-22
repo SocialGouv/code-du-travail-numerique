@@ -10,5 +10,15 @@ export const htmlParser = (html: string): string => {
       : $(this).html();
   });
 
+  $("webcomponent-tooltip").replaceWith(function () {
+    const content = decodeURIComponent($(this).attr("content"));
+    return content;
+  });
+
+  $("a").replaceWith(function () {
+    const content = decodeURIComponent($(this).text());
+    return $(this).text(content);
+  });
+
   return $.html();
 };
