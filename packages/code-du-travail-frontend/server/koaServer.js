@@ -65,9 +65,7 @@ async function getKoaServer({ nextApp }) {
       ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
         reportUri: process.env.NEXT_PUBLIC_SENTRY_DSN,
       }),
-      ...(dev && { reportUri: "/report-violation" }),
     },
-    reportOnly: false,
   };
   if (dev) {
     server.use(bodyParser());
