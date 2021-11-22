@@ -16,8 +16,8 @@ class ErrorBoundary extends React.Component {
     message: "widget non disponible",
   };
 
-  componentDidCatch(error, errorInfo) {
-    Sentry.captureException(errorInfo);
+  componentDidCatch(err) {
+    Sentry.captureException(err);
   }
 
   static getDerivedStateFromError() {
