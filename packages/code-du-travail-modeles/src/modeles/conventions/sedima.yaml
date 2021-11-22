@@ -12,7 +12,7 @@ contrat salarié . convention collective . sedima:
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le **bulletin de salaire**.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:
@@ -27,7 +27,7 @@ contrat salarié . convention collective . sedima . Ouvriers et Employés:
 contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau:
   titre: Niveau
   question: Quelle est le niveau du salarié ?
-  description: Le niveau du salarié est habituellement mentionné sur le **bulletin de salaire**.
+  description: Le niveau du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:
@@ -67,7 +67,7 @@ contrat salarié . convention collective . sedima . Techniciens et agents de ma�
   applicable si: mise à la retraite
   titre: Niveau
   question: Quelle est le niveau du salarié ?
-  description: Le niveau du salarié est habituellement mentionné sur le **bulletin de salaire**.
+  description: Le niveau du salarié est habituellement mentionné sur le <b>bulletin de salaire</b>.
   cdtn:
     type: liste
     valeurs:

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.231.0 ([#4022](https://github.com/SocialGouv/code-du-travail-numerique/issues/4022)) ([6df984f](https://github.com/SocialGouv/code-du-travail-numerique/commit/6df984f6e05f417916e78f65a6ac90c29eb2c054))
+
+
+### Features
+
+* **test:** ajout des tests unitaires pour le simulateur de tracking ([#4019](https://github.com/SocialGouv/code-du-travail-numerique/issues/4019)) ([0d5fb46](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d5fb46e77d7980b9b4f000d38179ffb6239a759))
+
+
+
+
+
+## [4.58.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.1...v4.58.2) (2021-11-17)
+
+
+### Bug Fixes
+
+* **simulator:** use the new logo for preavis retraite ([#4018](https://github.com/SocialGouv/code-du-travail-numerique/issues/4018)) ([26eb3de](https://github.com/SocialGouv/code-du-travail-numerique/commit/26eb3de908fb35a6a718dcc9b846dcb5f6c39891))
+
+
+
+
+
 ## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
 
 
