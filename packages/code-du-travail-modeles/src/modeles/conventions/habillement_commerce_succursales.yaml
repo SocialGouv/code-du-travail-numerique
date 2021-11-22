@@ -10,7 +10,7 @@ contrat salarié . convention collective . habillement commerce succursales:
 contrat salarié . convention collective . habillement commerce succursales . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?
   titre: Catégorie professionnelle
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:
