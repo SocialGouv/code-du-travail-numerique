@@ -21,7 +21,7 @@ const MiseRetraiteNonCadresReferences = [
 const DepartRetraiteCadresReferences = [
   ...DepartRetraiteReferences,
   {
-    article: "Dispositions particulières cadres, article 6",
+    article: "Dispositions particulières applicables aux cadres, article 6",
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
   },
 ];
@@ -29,7 +29,7 @@ const DepartRetraiteCadresReferences = [
 const MiseRetraiteCadresReferences = [
   ...MiseRetraiteReferences,
   {
-    article: "Dispositions particulières cadres, article 6",
+    article: "Dispositions particulières applicables aux cadres, article 6",
     url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
   },
 ];
