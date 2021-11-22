@@ -3,7 +3,6 @@ const bodyParser = require("koa-bodyparser");
 const helmet = require("koa-helmet");
 const Router = require("koa-router");
 const redirects = require("./redirects.json");
-const { logger } = require("@socialgouv/cdtn-logger");
 
 const IS_PRODUCTION_DEPLOYMENT =
   process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
@@ -68,26 +67,14 @@ async function getKoaServer({ nextApp }) {
       }),
       ...(dev && { reportUri: "/report-violation" }),
     },
-    reportOnly: dev,
+    reportOnly: false,
   };
   if (dev) {
-    // handle local csp reportUri endpoint
     server.use(bodyParser());
-    cspConfig.directives.defaultSrc.push("http://127.0.0.1:*/");
     cspConfig.directives.scriptSrc.push("'unsafe-eval'");
   }
   server.use(helmet.contentSecurityPolicy(cspConfig));
 
-  if (dev) {
-    router.post("/report-violation", (ctx) => {
-      if (ctx.request.body) {
-        logger.warning("CSP Violation: ", ctx.request.body);
-      } else {
-        logger.warning("CSP Violation: No data received!");
-      }
-      ctx.status = 204;
-    });
-  }
   if (!IS_PRODUCTION_DEPLOYMENT) {
     server.use(async function (ctx, next) {
       ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
