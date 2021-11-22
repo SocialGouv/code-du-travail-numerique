@@ -8,12 +8,29 @@ contrat salarié . convention collective . entreprises de services à la personn
 
 contrat salarié . convention collective . entreprises de services à la personne . départ à la retraite:
   applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 0 mois
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
   références:
     Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 1.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096
     Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 4: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096
 
 contrat salarié . convention collective . entreprises de services à la personne . mise à la retraite:
   applicable si: mise à la retraite
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 0 mois
+        plafond: 6 mois
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
   références:
     Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 1.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096
     Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096
