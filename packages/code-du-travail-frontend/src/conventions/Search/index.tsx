@@ -20,7 +20,7 @@ const trackInput = debounce((query, path, trackingUID) => {
 }, 2000);
 
 interface Props {
-  onSelectConvention: () => void;
+  onSelectConvention?: () => void;
 }
 
 const Search = ({ onSelectConvention }: Props): JSX.Element => {
