@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
 import { isAfter } from "date-fns";
 
 import { parse } from "../common/date";
@@ -17,43 +16,39 @@ function getSalaireRef({
   primes = [],
   anciennete,
 }) {
-  try {
-    if (!salaires) {
-      salaires = [];
-    }
-    if (!primes) {
-      primes = [];
-    }
-    const primeValues = primes.map((a) => a.prime);
-    const salaryValues = salaires.map((a) => a.salary);
+  if (!salaires) {
+    salaires = [];
+  }
+  if (!primes) {
+    primes = [];
+  }
+  const primeValues = primes.map((a) => a.prime);
+  const salaryValues = salaires.map((a) => a.salary);
 
-    let moyenneSalaires = 0;
-    let moyenne3DerniersMoisSalaires = 0;
+  let moyenneSalaires = 0;
+  let moyenne3DerniersMoisSalaires = 0;
 
-    // calcul du salaire de reference
-    if (hasTempsPartiel) {
-      return salairePeriods.reduce(
-        (salaire, period) =>
-          salaire +
-          (parseInt(period.salary, 10) * parseInt(period.duration, 10)) /
-            12 /
-            anciennete,
-        0
-      );
-    } else {
-      moyenneSalaires = hasSameSalaire
-        ? salaire
-        : sum(salaryValues) / salaires.length;
+  // calcul du salaire de reference
+  if (hasTempsPartiel) {
+    return salairePeriods.reduce(
+      (salaire, period) =>
+        salaire +
+        (parseInt(period.salary, 10) * parseInt(period.duration, 10)) /
+          12 /
+          anciennete,
+      0
+    );
+  } else {
+    moyenneSalaires = hasSameSalaire
+      ? salaire
+      : sum(salaryValues) / salaires.length;
 
-      moyenne3DerniersMoisSalaires = hasSameSalaire
-        ? salaire
-        : sum(primeValues) / 12 +
-          (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
+    moyenne3DerniersMoisSalaires = hasSameSalaire
+      ? salaire
+      : sum(primeValues) / 12 +
+        (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
 
-      return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
-    }
-  } catch (err) {
-    Sentry.captureException(err);
+    return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
   }
 }
 
