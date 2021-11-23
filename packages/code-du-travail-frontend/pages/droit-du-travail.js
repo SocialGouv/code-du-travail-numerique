@@ -60,7 +60,7 @@ const DroitDuTravail = ({ hash }) => (
               comprend des enjeux sociaux, économiques et politiques forts.
             </p>
             <Wrapper variant="dark">
-              <IconStripe icon={icons.Warning}>
+              <IconStripe icon={wrong.Warning}>
                 <InsertTitle>Le droit du travail, ce n’est pas…</InsertTitle>
                 <StyledP>
                   Le droit du travail ne concerne pas les travailleurs qui sont
