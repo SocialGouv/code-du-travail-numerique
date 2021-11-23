@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/nextjs";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -14,6 +15,10 @@ class ErrorBoundary extends React.Component {
   static defaultProps = {
     message: "widget non disponible",
   };
+
+  componentDidCatch(err) {
+    Sentry.captureException(err);
+  }
 
   static getDerivedStateFromError() {
     return { hasError: true };

@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
