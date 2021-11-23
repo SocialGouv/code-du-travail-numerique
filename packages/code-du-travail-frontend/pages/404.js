@@ -1,4 +1,4 @@
-// https://nextjs.org/docs/advanced-features/custom-error-page
+import * as Sentry from "@sentry/nextjs";
 import { Button, Container, icons as Icons, theme } from "@socialgouv/cdtn-ui";
 import Head from "next/head";
 import Link from "next/link";
@@ -7,13 +7,10 @@ import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
 import { Layout } from "../src/layout/Layout";
-import { initializeSentry, notifySentry } from "../src/sentry";
-
-initializeSentry();
 
 export default function Custom404() {
   useEffect(() => {
-    notifySentry(404);
+    Sentry.captureMessage("Page non trouvée");
   }, []);
   return (
     <>

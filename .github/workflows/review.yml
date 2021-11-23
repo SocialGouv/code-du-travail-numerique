@@ -32,6 +32,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: "./Dockerfile"
           dockercontext: "./"
+          dockerbuildargs: |
+            NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+            NEXT_PUBLIC_SENTRY_ENV=dev
 
   manifests:
     name: Generate k8s manifests
