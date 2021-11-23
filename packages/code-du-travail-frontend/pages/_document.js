@@ -1,6 +1,6 @@
 import "@ungap/url-search-params";
 
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
@@ -55,6 +55,10 @@ export default class MyDocument extends Document {
             src="/static/webcomponents-polyfill/loader.js"
           />
           <script key="smarttag" src="/static/smarttag.js" />
+          <script
+            key="tarteaucitron"
+            src="/static/tarteaucitron/tarteaucitron.js"
+          />
         </Head>
         <body>
           <noscript>

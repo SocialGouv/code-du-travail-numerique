@@ -11,6 +11,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:
@@ -33,6 +34,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient:
   titre: Coefficient
   question: Quel est le coefficient du salarié ?
+  description: La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:
@@ -65,6 +67,7 @@ contrat salarié . convention collective . industries chimiques . catégorie pro
 contrat salarié . convention collective . industries chimiques . catégorie professionnelle . agents de maitrise et techniciens . coefficient:
   titre: Coefficient
   question: Quel est le coefficient du salarié ?
+  description: La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:

@@ -59,5 +59,7 @@ export function initPiwik({
 }
 
 export function matopush(args) {
-  window._paq.push(args);
+  if (window && window._paq) {
+    window._paq.push(args);
+  }
 }

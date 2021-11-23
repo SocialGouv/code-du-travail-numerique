@@ -3,6 +3,148 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.58.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.1...v4.58.2) (2021-11-17)
+
+
+### Bug Fixes
+
+* **simulator:** use the new logo for preavis retraite ([#4018](https://github.com/SocialGouv/code-du-travail-numerique/issues/4018)) ([26eb3de](https://github.com/SocialGouv/code-du-travail-numerique/commit/26eb3de908fb35a6a718dcc9b846dcb5f6c39891))
+
+
+
+
+
+## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
+
+
+### Features
+
+* **simulators:** feedbacks after review ([#3997](https://github.com/SocialGouv/code-du-travail-numerique/issues/3997)) ([199e418](https://github.com/SocialGouv/code-du-travail-numerique/commit/199e4184e506a1956c5f5e9b8b66178ca051b558))
+* **tracking:** metrics on help click ([#3948](https://github.com/SocialGouv/code-du-travail-numerique/issues/3948)) ([2300a18](https://github.com/SocialGouv/code-du-travail-numerique/commit/2300a18fc53724dcc45ec1abde3e818b389d78f8))
+
+
+
+
+
+## [4.57.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.0...v4.57.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* **simulators:** fix on preavis de retraite after review ([#3956](https://github.com/SocialGouv/code-du-travail-numerique/issues/3956)) ([511a72f](https://github.com/SocialGouv/code-du-travail-numerique/commit/511a72f49bb65fbc485ce50d1e0520f2bd93963b))
+
+
+
+
+
+# [4.57.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.5...v4.57.0) (2021-11-09)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.56.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.4...v4.56.5) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.56.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.3...v4.56.4) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.56.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.2...v4.56.3) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.56.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.1...v4.56.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* **tarteaucitron:** load pop-up on built url (e.g. /outils/[slug]) ([#3981](https://github.com/SocialGouv/code-du-travail-numerique/issues/3981)) ([9f993b3](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f993b39b1ae363543055b11eef1bce31041630c))
+
+
+
+
+
+## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
+
+
+### Bug Fixes
+
+* **html:** on page droit du travail & home page ([#3960](https://github.com/SocialGouv/code-du-travail-numerique/issues/3960)) ([86f5335](https://github.com/SocialGouv/code-du-travail-numerique/commit/86f533531f31a926cdd0e174a837bfce31eb993c))
+* **svg:** command ([#3971](https://github.com/SocialGouv/code-du-travail-numerique/issues/3971)) ([e413e99](https://github.com/SocialGouv/code-du-travail-numerique/commit/e413e99ddbbded249f92851dabca1860225b8507))
+* **title:** use Collapse instead of accordion on References element ([#3934](https://github.com/SocialGouv/code-du-travail-numerique/issues/3934)) ([d844db5](https://github.com/SocialGouv/code-du-travail-numerique/commit/d844db556aed5a0c0d709ec3ce8743ca7853dbe5))
+
+
+
+
+
+## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
+
+
+### Bug Fixes
+
+* **accessibility:** make html is valid on all pages ([#3846](https://github.com/SocialGouv/code-du-travail-numerique/issues/3846)) ([04c11a7](https://github.com/SocialGouv/code-du-travail-numerique/commit/04c11a7798ed04f74172e5b89cab9e3f022a386b))
+* **frontend:** modify h-n structure ([#3784](https://github.com/SocialGouv/code-du-travail-numerique/issues/3784)) ([e0e610a](https://github.com/SocialGouv/code-du-travail-numerique/commit/e0e610a4f89407f63e249621f97e58ad539213f1))
+* **frontend:** spacing result ([#3875](https://github.com/SocialGouv/code-du-travail-numerique/issues/3875)) ([6ecc109](https://github.com/SocialGouv/code-du-travail-numerique/commit/6ecc109ece297e999a1e5e911fc443e03447db6b))
+* **html:** Fix html validity (remove form within form on wizard) ([#3899](https://github.com/SocialGouv/code-du-travail-numerique/issues/3899)) ([967bf64](https://github.com/SocialGouv/code-du-travail-numerique/commit/967bf64b765bbf7e80f6581bc30e75cec4aa58a6))
+* **storybook:** action github ([#3908](https://github.com/SocialGouv/code-du-travail-numerique/issues/3908)) ([f01fa2e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f01fa2ebcf3a6555a85b071cc461c357bf1a7bb8))
+
+
+### Features
+
+* **simulator:**  add matomo event on show more link  ([#3884](https://github.com/SocialGouv/code-du-travail-numerique/issues/3884)) ([4de4fe2](https://github.com/SocialGouv/code-du-travail-numerique/commit/4de4fe2caf7240d7d6f4ab0117184a1946307f3b))
+
+
+
+
+
 ## [4.54.1](https://github.com/socialgouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

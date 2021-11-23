@@ -103,7 +103,6 @@ exports[`<Accordion /> renders 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -156,9 +155,7 @@ exports[`<Accordion /> renders 1`] = `
           <div
             class="c5"
           >
-            <h3>
-              This is the title
-            </h3>
+            This is the title
           </div>
           <div
             class="c6"
@@ -275,7 +272,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
           aria-level="3"
@@ -328,9 +324,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
           <div
             class="c5"
           >
-            <span>
-              This is the title
-            </span>
+            This is the title
           </div>
           <div
             class="c6"
@@ -447,10 +441,9 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
-          aria-level="3"
+          aria-level="1"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -500,9 +493,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
           <div
             class="c5"
           >
-            <span>
-              This is the title
-            </span>
+            This is the title
           </div>
           <div
             class="c6"
@@ -619,10 +610,9 @@ exports[`<Accordion /> renders as h2 1`] = `
       <div
         class=""
         data-accordion-component="AccordionItem"
-        index="0"
       >
         <div
-          aria-level="3"
+          aria-level="2"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -672,9 +662,7 @@ exports[`<Accordion /> renders as h2 1`] = `
           <div
             class="c5"
           >
-            <h2>
-              This is the title
-            </h2>
+            This is the title
           </div>
           <div
             class="c6"

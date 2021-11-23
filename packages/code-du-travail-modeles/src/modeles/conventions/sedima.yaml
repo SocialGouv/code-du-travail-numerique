@@ -5,11 +5,14 @@ contrat salarié . convention collective . sedima:
   titre: Convention collective nationale des entreprises de commerce, de location et de réparation de tracteurs, machines et matériels agricoles, de matériels de travaux publics, de bâtiment et de manutention, de matériels de motoculture de plaisance, de jardins et d'espaces verts (SEDIMA)
   applicable si: convention collective = 'IDCC1404'
   valeur: oui
-  idcc: 1404
+  cdtn:
+    idcc: 1404
+    préavis-retraite: true
 
 contrat salarié . convention collective . sedima . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:
@@ -22,8 +25,9 @@ contrat salarié . convention collective . sedima . Ouvriers et Employés:
   valeur: oui
 
 contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau:
-  titre: Niveau du salarié
+  titre: Niveau
   question: Quelle est le niveau du salarié ?
+  description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:
@@ -61,8 +65,9 @@ contrat salarié . convention collective . sedima . Techniciens et agents de ma�
 
 contrat salarié . convention collective . sedima . Techniciens et agents de maîtrise . niveau:
   applicable si: mise à la retraite
-  titre: Niveau du salarié
+  titre: Niveau
   question: Quelle est le niveau du salarié ?
+  description: Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:

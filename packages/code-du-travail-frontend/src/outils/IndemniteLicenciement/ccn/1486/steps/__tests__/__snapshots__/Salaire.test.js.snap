@@ -207,11 +207,11 @@ exports[`<Salaire /> renders 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewSalaire-yes"
+      for="hasBrancheNewSalaire-oui"
     >
       <input
         class="c8"
-        id="hasBrancheNewSalaire-yes"
+        id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
@@ -220,11 +220,11 @@ exports[`<Salaire /> renders 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewSalaire-no"
+      for="hasBrancheNewSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewSalaire-no"
+        id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
@@ -442,12 +442,12 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewSalaire-yes"
+      for="hasBrancheNewSalaire-oui"
     >
       <input
         checked=""
         class="c8"
-        id="hasBrancheNewSalaire-yes"
+        id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
@@ -456,11 +456,11 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewSalaire-no"
+      for="hasBrancheNewSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewSalaire-no"
+        id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
@@ -489,11 +489,11 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-yes"
+      for="hasBrancheNewRegularSalaire-oui"
     >
       <input
         class="c8"
-        id="hasBrancheNewRegularSalaire-yes"
+        id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
@@ -502,11 +502,11 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-no"
+      for="hasBrancheNewRegularSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewRegularSalaire-no"
+        id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
@@ -518,6 +518,13 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 `;
 
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
+.c5 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c9 {
   position: relative;
   overflow: hidden;
@@ -587,13 +594,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 
 .c11 tfoot {
   vertical-align: top;
-}
-
-.c5 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 .c0 {
@@ -941,12 +941,12 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewSalaire-yes"
+      for="hasBrancheNewSalaire-oui"
     >
       <input
         checked=""
         class="c8"
-        id="hasBrancheNewSalaire-yes"
+        id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
@@ -955,11 +955,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewSalaire-no"
+      for="hasBrancheNewSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewSalaire-no"
+        id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
@@ -988,11 +988,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-yes"
+      for="hasBrancheNewRegularSalaire-oui"
     >
       <input
         class="c8"
-        id="hasBrancheNewRegularSalaire-yes"
+        id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
@@ -1001,12 +1001,12 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-no"
+      for="hasBrancheNewRegularSalaire-non"
     >
       <input
         checked=""
         class="c8"
-        id="hasBrancheNewRegularSalaire-no"
+        id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
@@ -1434,12 +1434,12 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewSalaire-yes"
+      for="hasBrancheNewSalaire-oui"
     >
       <input
         checked=""
         class="c8"
-        id="hasBrancheNewSalaire-yes"
+        id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
@@ -1448,11 +1448,11 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewSalaire-no"
+      for="hasBrancheNewSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewSalaire-no"
+        id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
@@ -1481,12 +1481,12 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   >
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-yes"
+      for="hasBrancheNewRegularSalaire-oui"
     >
       <input
         checked=""
         class="c8"
-        id="hasBrancheNewRegularSalaire-yes"
+        id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
@@ -1495,11 +1495,11 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     </label>
     <label
       class="c7"
-      for="hasBrancheNewRegularSalaire-no"
+      for="hasBrancheNewRegularSalaire-non"
     >
       <input
         class="c8"
-        id="hasBrancheNewRegularSalaire-no"
+        id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"

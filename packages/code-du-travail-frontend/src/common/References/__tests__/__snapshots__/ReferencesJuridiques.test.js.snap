@@ -17,20 +17,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c4 {
+.c3 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -44,59 +31,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c3,
-[aria-selected="true"] .c4 {
+[aria-expanded="true"] .c2,
+[aria-selected="true"] .c3 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c6 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c2:hover,
-.c2:focus,
-.c2:focus-within,
-.c2[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c5 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c8 > *:first-child {
-  margin-top: 0;
-}
-
-.c8 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c12 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -109,14 +51,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   text-decoration: none;
 }
 
-.c16 {
+.c14 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
 }
 
-.c15 {
+.c13 {
   -webkit-flex: 0 0 2.8rem;
   -ms-flex: 0 0 2.8rem;
   flex: 0 0 2.8rem;
@@ -130,30 +72,68 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c11:hover .c14 {
+.c9:hover .c12 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c9 {
+.c4 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c6 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:focus-within,
+.c1[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c5 {
+  margin-left: 1rem;
+}
+
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c13 {
+.c11 {
   padding: 0.8rem 0;
   font-weight: normal;
 }
 
-.c10 {
+.c8 {
   padding-left: 0;
-}
-
-.c1 {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 @media (max-width:600px) {
@@ -170,19 +150,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
+  .c13 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
@@ -192,216 +160,177 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c1 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="c0"
   >
-    <div
-      class="accordion"
-      data-accordion-component="Accordion"
-    >
-      <div>
-        <div
-          class=""
-          data-accordion-component="AccordionItem"
-          index="0"
+    <div>
+      <div
+        aria-expanded="false"
+        class="c1"
+        role="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="c2 c3"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            aria-level="3"
-            class="accordion__heading"
-            data-accordion-component="AccordionItemHeading"
-            role="heading"
-          >
-            <div
-              aria-controls="accordion__panel-raa-0"
-              aria-disabled="false"
-              aria-expanded="false"
-              class="c2"
-              data-accordion-component="AccordionItemButton"
-              id="accordion__heading-raa-0"
-              role="button"
-              tabindex="0"
+          <polyline
+            points="9 18 15 12 9 6"
+          />
+        </svg>
+        <span
+          class="c4 c5"
+          font-size="hsmall"
+          font-weight="600"
+        >
+          Références juridiques concernées :
+        </span>
+      </div>
+      <div
+        class="c6"
+      >
+        <ul
+          class="c7 c8"
+        >
+          <li>
+            <a
+              class="c9 c10 c11"
+              href="/code-du-travail/l1244-3"
             >
               <svg
                 aria-hidden="true"
-                class="c3 c4"
+                class="c12 c13"
                 fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
+                viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <polyline
-                  points="9 18 15 12 9 6"
+                <path
+                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                  fill="currentColor"
                 />
               </svg>
-              <div
-                class="c5"
+              <span
+                class="c14"
               >
-                Références juridiques concernées :
-              </div>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            aria-labelledby="accordion__heading-raa-0"
-            class="c6"
-            data-accordion-component="AccordionItemPanel"
-            hidden=""
-            id="accordion__panel-raa-0"
-          >
-            <div
-              class="c7"
+                Article L1244-3 du Code du travail
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c9 c10 c11"
+              href="/code-du-travail/r1244-4"
             >
-              <div>
-                Références juridiques concernées :
-              </div>
-            </div>
-            <div
-              class="c8"
-            >
-              <ul
-                class="c9 c10"
+              <svg
+                aria-hidden="true"
+                class="c12 c13"
+                fill="none"
+                viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <li>
-                  <a
-                    class="c11 c12 c13"
-                    href="/code-du-travail/l1244-3"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="c14 c15"
-                      fill="none"
-                      viewBox="0 0 28 15"
-                    >
-                      <path
-                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <span
-                      class="c16"
-                    >
-                      Article L1244-3 du Code du travail
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="c11 c12 c13"
-                    href="/code-du-travail/r1244-4"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="c14 c15"
-                      fill="none"
-                      viewBox="0 0 28 15"
-                    >
-                      <path
-                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <span
-                      class="c16"
-                    >
-                      Article R1244-4 du Code du travail
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-                    class="c11 c12 c13 no-after"
-                    href="https://article.jo/L3121-44"
-                    rel="noopener noreferrer nofollow"
-                    target="_blank"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="c14 c15"
-                      fill="none"
-                      viewBox="0 0 28 15"
-                    >
-                      <path
-                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <span
-                      class="c16"
-                    >
-                      Article L3121-44 du JO
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="Article foo du JPO (Nouvelle fenêtre)"
-                    class="c11 c12 c13 no-after"
-                    href="https://article.jo/foo"
-                    rel="noopener noreferrer nofollow"
-                    target="_blank"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="c14 c15"
-                      fill="none"
-                      viewBox="0 0 28 15"
-                    >
-                      <path
-                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <span
-                      class="c16"
-                    >
-                      Article foo du JPO
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    aria-label="Convention foo (Nouvelle fenêtre)"
-                    class="c11 c12 c13 no-after"
-                    href="https://ma-convention-collective/ccc-foo"
-                    rel="noopener noreferrer nofollow"
-                    target="_blank"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="c14 c15"
-                      fill="none"
-                      viewBox="0 0 28 15"
-                    >
-                      <path
-                        d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <span
-                      class="c16"
-                    >
-                      Convention foo
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+                <path
+                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="c14"
+              >
+                Article R1244-4 du Code du travail
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
+              class="c9 c10 c11 no-after"
+              href="https://article.jo/L3121-44"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="c12 c13"
+                fill="none"
+                viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="c14"
+              >
+                Article L3121-44 du JO
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Article foo du JPO (Nouvelle fenêtre)"
+              class="c9 c10 c11 no-after"
+              href="https://article.jo/foo"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="c12 c13"
+                fill="none"
+                viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="c14"
+              >
+                Article foo du JPO
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Convention foo (Nouvelle fenêtre)"
+              class="c9 c10 c11 no-after"
+              href="https://ma-convention-collective/ccc-foo"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                class="c12 c13"
+                fill="none"
+                viewBox="0 0 28 15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="c14"
+              >
+                Convention foo
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

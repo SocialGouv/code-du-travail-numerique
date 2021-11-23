@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render no results 1`] = `
-.c6 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c3 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -35,43 +22,14 @@ exports[`<StepResult /> should render no results 1`] = `
   transform: rotate(90deg);
 }
 
-.c5 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c1:hover,
-.c1:focus,
-.c1:focus-within,
-.c1[aria-expanded="true"] {
+.c7 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c4 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c7 > *:first-child {
@@ -82,25 +40,50 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c4 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c8 > *:first-child {
-  margin-top: 0;
+.c6 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c8 > *:last-child {
-  margin-bottom: 0;
+.c1 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c10 {
+.c1:hover,
+.c1:focus,
+.c1:focus-within,
+.c1[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c5 {
+  margin-left: 1rem;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,7 +98,7 @@ exports[`<StepResult /> should render no results 1`] = `
   justify-content: stretch;
 }
 
-.c11 {
+.c10 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -125,22 +108,22 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-right: 2rem;
 }
 
-.c11 svg {
+.c10 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c12 {
+.c11 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c9 {
+.c8 {
   margin-top: 3.2rem;
 }
 
-.c13 {
+.c12 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -157,25 +140,13 @@ exports[`<StepResult /> should render no results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
+  .c10 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c11 svg {
+  .c10 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -190,145 +161,109 @@ exports[`<StepResult /> should render no results 1`] = `
   <p>
     D’après les éléments saisis, dans votre situation, la convention collective ne prévoit pas d’heures d’absence autorisée pour rechercher un emploi.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c1"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c2 c3"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-1"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c1"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c4 c5"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c6"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Entreprises de la publicité et assimilées (IDCC 86)
+          </strong>
+        </li>
+        <li>
+          Type de rupture du contrat de travail
+           : 
+          <strong>
+            Rupture de la période d'essai
+          </strong>
+        </li>
+        <li>
+          Initiative de la rupture de la période d'essai
+           : 
+          <strong>
+            Le salarié
+          </strong>
+        </li>
+        <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Agents de maîtrise et Techniciens
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article 33 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article 33"
           >
-            <svg
-              aria-hidden="true"
-              class="c2 c3"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c4"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-1"
-          class="c5"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-1"
-        >
-          <div
-            class="c6"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c7"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Entreprises de la publicité et assimilées (IDCC 86)
-                </strong>
-              </li>
-              <li>
-                Type de rupture du contrat de travail
-                 : 
-                <strong>
-                  Rupture de la période d'essai
-                </strong>
-              </li>
-              <li>
-                Initiative de la rupture de la période d'essai
-                 : 
-                <strong>
-                  Le salarié
-                </strong>
-              </li>
-              <li>
-                Catégorie professionnelle
-                 : 
-                <strong>
-                  Agents de maîtrise et Techniciens
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article 33 (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article 33"
-                >
-                  Article 33
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            Article 33
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c7 c8"
   >
     <div
-      class="c10"
+      class="c9"
     >
       <div
-        class="c11"
+        class="c10"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -342,10 +277,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="c12"
+        class="c11"
       >
         <span
-          class="c13"
+          class="c12"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -359,19 +294,6 @@ exports[`<StepResult /> should render no results 1`] = `
 `;
 
 exports[`<StepResult /> should render with duration 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -393,43 +315,14 @@ exports[`<StepResult /> should render with duration 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -440,25 +333,50 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -473,7 +391,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -483,22 +401,22 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -526,25 +444,13 @@ exports[`<StepResult /> should render with duration 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -588,138 +494,102 @@ exports[`<StepResult /> should render with duration 1`] = `
   <p>
     Le salarié fixe par accord avec l'employeur la période de la journée pendant laquelle il prend ces 2 heures. Si l'employeur et le salarié le décident ensemble, ces heures peuvent être prises, de façon groupée, en une ou plusieurs journées ou demi-journées, consécutives ou non. En cas d'absence d'accord entre l'employeur et le salarié, ces 2 heures sont fixées un jour par l'employeur et, le jour suivant, par le salarié. Lorsque le salarié a retrouvé un emploi, il doit immédiatement en informer l'employeur et ne pourra plus utiliser les heures d'absence autorisée pour rechercher un emploi.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-0"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Entreprises de la publicité et assimilées (IDCC 86)
+          </strong>
+        </li>
+        <li>
+          Type de rupture du contrat de travail
+           : 
+          <strong>
+            Démission
+          </strong>
+        </li>
+        <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Employés
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article 29 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article 29"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-0"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Entreprises de la publicité et assimilées (IDCC 86)
-                </strong>
-              </li>
-              <li>
-                Type de rupture du contrat de travail
-                 : 
-                <strong>
-                  Démission
-                </strong>
-              </li>
-              <li>
-                Catégorie professionnelle
-                 : 
-                <strong>
-                  Employés
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article 29 (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article 29"
-                >
-                  Article 29
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            Article 29
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -733,10 +603,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -750,19 +620,6 @@ exports[`<StepResult /> should render with duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -784,43 +641,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -831,25 +659,50 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -864,7 +717,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -874,22 +727,22 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -917,25 +770,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -963,124 +804,88 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-2"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-2"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            La convention collective n'a pas été renseignée
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l. 1234-17 du code du travail"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-2"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-2"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  La convention collective n'a pas été renseignée
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l. 1234-17 du code du travail"
-                >
-                  Article L. 1234-17 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            Article L. 1234-17 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1094,10 +899,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>
@@ -1111,19 +916,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1145,43 +937,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1rem 2rem;
   color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
 }
 
 .c9 > *:first-child {
@@ -1192,25 +955,50 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+.c6 {
   color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.c10 > *:first-child {
-  margin-top: 0;
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.c10 > *:last-child {
-  margin-bottom: 0;
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.c12 {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1225,7 +1013,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c13 {
+.c12 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1235,22 +1023,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c13 svg {
+.c12 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c14 {
+.c13 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c11 {
+.c10 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c14 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1278,25 +1066,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
+  .c12 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c13 svg {
+  .c12 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1333,124 +1109,88 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-3"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-3"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Cordonnerie multiservice (IDCC 1561)
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l. 1234-17 du code du travail"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-3"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-3"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Cordonnerie multiservice (IDCC 1561)
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L. 1234-17 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=CC74669AD1BB161A1534D72EE0B76FE4.tplgfr29s_3?idArticle=LEGIARTI000006901133&cidTexte=LEGITEXT000006072050&dateTexte=20200102"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l. 1234-17 du code du travail"
-                >
-                  Article L. 1234-17 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            Article L. 1234-17 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c9 c10"
   >
     <div
-      class="c12"
+      class="c11"
     >
       <div
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1464,10 +1204,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c13"
       >
         <span
-          class="c15"
+          class="c14"
         >
           Attention il peut exister une durée plus favorable
         </span>

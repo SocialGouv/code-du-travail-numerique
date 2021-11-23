@@ -1,5 +1,7 @@
 import React from "react";
 
+import Html from "../../common/Html";
+import { trackHelpQuestionRetraite } from "../../lib/matomo";
 import { Rule, RuleType } from "../publicodes";
 import { reverseValues } from "../publicodes/Utils";
 import { SelectQuestion } from "./SelectQuestion";
@@ -13,22 +15,44 @@ interface Props {
 }
 
 const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
+  const tooltip = rule.description
+    ? {
+        content: <Html>{rule.description}</Html>,
+        trackableFn: (visibility: boolean) => {
+          if (visibility) {
+            trackHelpQuestionRetraite(rule.titre);
+          }
+        },
+      }
+    : null;
+
   switch (rule?.cdtn?.type) {
     case RuleType.Liste:
       return (
         <SelectQuestion
           name={name}
           label={rule.question}
-          subLabel={rule.description}
           options={reverseValues(rule.cdtn.valeurs)}
           onChange={onChange}
+          tooltip={tooltip}
         />
       );
     case RuleType.OuiNon:
-      return <YesNoPubliQuestion name={name} label={rule.question} />;
+      return (
+        <YesNoPubliQuestion
+          name={name}
+          label={rule.question}
+          tooltip={tooltip}
+        />
+      );
     default:
       return (
-        <TextQuestion name={name} label={rule.question} validate={undefined} />
+        <TextQuestion
+          name={name}
+          label={rule.question}
+          tooltip={tooltip}
+          validate={undefined}
+        />
       );
   }
 };

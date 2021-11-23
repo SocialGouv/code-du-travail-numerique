@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> should render 1`] = `
-.c1 {
+.c2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -12,7 +12,7 @@ exports[`<Article /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c1:before {
+.c2:before {
   position: absolute;
   display: block;
   width: 0;
@@ -23,7 +23,7 @@ exports[`<Article /> should render 1`] = `
   content: "";
 }
 
-.c2 {
+.c3 {
   position: absolute;
   top: 0;
   right: 0;
@@ -95,17 +95,6 @@ exports[`<Article /> should render 1`] = `
   transform: translateX(4px);
 }
 
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -157,7 +146,7 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 7.2rem;
   height: 7.2rem;
@@ -167,13 +156,13 @@ exports[`<Article /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c5 {
+.c6 {
   padding-right: 1rem;
 }
 
@@ -203,6 +192,12 @@ exports[`<Article /> should render 1`] = `
   height: 100%;
 }
 
+.c1 h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
 .c10 {
   margin-top: 1.6rem;
 }
@@ -220,32 +215,33 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c0 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
+@media (max-width:600px) {
+  .c1 h2 {
+    font-size: 1.6rem;
+  }
+}
+
 <div>
   <button
-    class="c0"
+    class="c0 c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -263,15 +259,16 @@ exports[`<Article /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
@@ -292,11 +289,11 @@ exports[`<Article /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
         
         <h3
-          class="c6 c7"
+          class="c7"
         >
           Saluez moi
         </h3>
@@ -321,6 +318,7 @@ exports[`<Article /> should render 1`] = `
               class="c13 c14"
               fill="none"
               viewBox="0 0 28 15"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"

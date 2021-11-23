@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -35,54 +22,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -92,15 +32,58 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,7 +98,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   justify-content: stretch;
 }
 
-.c14 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -125,18 +108,18 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin-right: 2rem;
 }
 
-.c14 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,11 +146,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   font-size: 1.5em;
 }
 
-.c12 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c16 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -175,25 +158,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c14 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -222,429 +193,393 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-4"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-4"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
+          </strong>
+        </li>
+        <li>
+          Total des salaires
+           : 
+          <strong>
+            3000
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Formule
+      </h2>
+      <div
+        class="c9"
+      >
+        <div>
+          <span
+            class="katex-display"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="katex"
             >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-4"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
-                </strong>
-              </li>
-              <li>
-                Total des salaires
-                 : 
-                <strong>
-                  3000
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Formule
-            </h2>
-            <div
-              class="c10"
-            >
-              <div>
+              <span
+                class="katex-mathml"
+              >
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
+                  <semantics>
+                    <mrow>
+                      <mfrac>
+                        <mn>
+                          6
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
+                      </mfrac>
+                      <mo>
+                        ×
+                      </mo>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        o
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        S
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        i
+                      </mi>
+                      <mi>
+                        r
+                      </mi>
+                      <mi>
+                        e
+                      </mi>
+                      <mi>
+                        s
+                      </mi>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                    </mrow>
+                    <annotation
+                      encoding="application/x-tex"
+                    >
+                      \\frac{6}{100} \\times "totalSalaires"
+                    </annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span
+                aria-hidden="true"
+                class="katex-html"
+              >
                 <span
-                  class="katex-display"
+                  class="base"
                 >
                   <span
-                    class="katex"
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
+                  <span
+                    class="mord"
                   >
                     <span
-                      class="katex-mathml"
-                    >
-                      <math
-                        display="block"
-                        xmlns="http://www.w3.org/1998/Math/MathML"
-                      >
-                        <semantics>
-                          <mrow>
-                            <mfrac>
-                              <mn>
-                                6
-                              </mn>
-                              <mn>
-                                100
-                              </mn>
-                            </mfrac>
-                            <mo>
-                              ×
-                            </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              s
-                            </mi>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            \\frac{6}{100} \\times "totalSalaires"
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
+                      class="mopen nulldelimiter"
+                    />
                     <span
-                      aria-hidden="true"
-                      class="katex-html"
+                      class="mfrac"
                     >
                       <span
-                        class="base"
+                        class="vlist-t vlist-t2"
                       >
                         <span
-                          class="strut"
-                          style="height:2.00744em;vertical-align:-0.686em;"
-                        />
-                        <span
-                          class="mord"
+                          class="vlist-r"
                         >
                           <span
-                            class="mopen nulldelimiter"
-                          />
-                          <span
-                            class="mfrac"
+                            class="vlist"
+                            style="height:1.32144em;"
                           >
                             <span
-                              class="vlist-t vlist-t2"
+                              style="top:-2.314em;"
                             >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:1.32144em;"
+                                  class="mord"
                                 >
-                                  <span
-                                    style="top:-2.314em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        100
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span
-                                    style="top:-3.23em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="frac-line"
-                                      style="border-bottom-width:0.04em;"
-                                    />
-                                  </span>
-                                  <span
-                                    style="top:-3.677em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        6
-                                      </span>
-                                    </span>
-                                  </span>
-                                </span>
-                                <span
-                                  class="vlist-s"
-                                >
-                                  ​
+                                  100
                                 </span>
                               </span>
+                            </span>
+                            <span
+                              style="top:-3.23em;"
+                            >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
+                            </span>
+                            <span
+                              style="top:-3.677em;"
+                            >
+                              <span
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:0.686em;"
+                                  class="mord"
                                 >
-                                  <span />
+                                  6
                                 </span>
                               </span>
                             </span>
                           </span>
                           <span
-                            class="mclose nulldelimiter"
-                          />
+                            class="vlist-s"
+                          >
+                            ​
+                          </span>
                         </span>
                         <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
+                          class="vlist-r"
                         >
-                          ×
-                        </span>
-                        <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                      </span>
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="strut"
-                          style="height:0.69444em;vertical-align:0em;"
-                        />
-                        <span
-                          class="mord"
-                        >
-                          "
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.05764em;"
-                        >
-                          lS
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.01968em;"
-                        >
-                          l
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          ai
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          res
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
+                          <span
+                            class="vlist"
+                            style="height:0.686em;"
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
+                    <span
+                      class="mclose nulldelimiter"
+                    />
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                  <span
+                    class="mbin"
+                  >
+                    ×
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
+                  />
+                  <span
+                    class="mord"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    o
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.05764em;"
+                  >
+                    lS
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.01968em;"
+                  >
+                    l
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    ai
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    res
+                  </span>
+                  <span
+                    class="mord"
+                  >
+                    "
                   </span>
                 </span>
-              </div>
-            </div>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
-                >
-                  Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-8 du code du travail"
-                >
-                  Article L1243-8 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-9 du code du travail"
-                >
-                  Article L1243-9 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
+              </span>
+            </span>
+          </span>
         </div>
       </div>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
+          >
+            Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-8 du code du travail"
+          >
+            Article L1243-8 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-9 du code du travail"
+          >
+            Article L1243-9 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="c10 c11"
   >
     <div
-      class="c13"
+      class="c12"
     >
       <div
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -658,10 +593,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </svg>
       </div>
       <div
-        class="c15"
+        class="c14"
       >
         <span
-          class="c16"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>
@@ -687,19 +622,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -721,54 +643,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -778,15 +653,58 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -801,7 +719,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   justify-content: stretch;
 }
 
-.c14 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -811,18 +729,18 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   margin-right: 2rem;
 }
 
-.c14 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -849,11 +767,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   font-size: 1.5em;
 }
 
-.c12 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c16 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -861,25 +779,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c14 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -908,418 +814,382 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-1"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-1"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            La convention collective n'a pas été renseignée.
+          </strong>
+        </li>
+        <li>
+          Total des salaires
+           : 
+          <strong>
+            3000
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Formule
+      </h2>
+      <div
+        class="c9"
+      >
+        <div>
+          <span
+            class="katex-display"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="katex"
             >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-1"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-1"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  La convention collective n'a pas été renseignée.
-                </strong>
-              </li>
-              <li>
-                Total des salaires
-                 : 
-                <strong>
-                  3000
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Formule
-            </h2>
-            <div
-              class="c10"
-            >
-              <div>
+              <span
+                class="katex-mathml"
+              >
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
+                  <semantics>
+                    <mrow>
+                      <mfrac>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
+                      </mfrac>
+                      <mo>
+                        ×
+                      </mo>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        o
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        S
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        i
+                      </mi>
+                      <mi>
+                        r
+                      </mi>
+                      <mi>
+                        e
+                      </mi>
+                      <mi>
+                        s
+                      </mi>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                    </mrow>
+                    <annotation
+                      encoding="application/x-tex"
+                    >
+                      \\frac{10}{100} \\times "totalSalaires"
+                    </annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span
+                aria-hidden="true"
+                class="katex-html"
+              >
                 <span
-                  class="katex-display"
+                  class="base"
                 >
                   <span
-                    class="katex"
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
+                  <span
+                    class="mord"
                   >
                     <span
-                      class="katex-mathml"
-                    >
-                      <math
-                        display="block"
-                        xmlns="http://www.w3.org/1998/Math/MathML"
-                      >
-                        <semantics>
-                          <mrow>
-                            <mfrac>
-                              <mn>
-                                10
-                              </mn>
-                              <mn>
-                                100
-                              </mn>
-                            </mfrac>
-                            <mo>
-                              ×
-                            </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              s
-                            </mi>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            \\frac{10}{100} \\times "totalSalaires"
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
+                      class="mopen nulldelimiter"
+                    />
                     <span
-                      aria-hidden="true"
-                      class="katex-html"
+                      class="mfrac"
                     >
                       <span
-                        class="base"
+                        class="vlist-t vlist-t2"
                       >
                         <span
-                          class="strut"
-                          style="height:2.00744em;vertical-align:-0.686em;"
-                        />
-                        <span
-                          class="mord"
+                          class="vlist-r"
                         >
                           <span
-                            class="mopen nulldelimiter"
-                          />
-                          <span
-                            class="mfrac"
+                            class="vlist"
+                            style="height:1.32144em;"
                           >
                             <span
-                              class="vlist-t vlist-t2"
+                              style="top:-2.314em;"
                             >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:1.32144em;"
+                                  class="mord"
                                 >
-                                  <span
-                                    style="top:-2.314em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        100
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span
-                                    style="top:-3.23em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="frac-line"
-                                      style="border-bottom-width:0.04em;"
-                                    />
-                                  </span>
-                                  <span
-                                    style="top:-3.677em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        10
-                                      </span>
-                                    </span>
-                                  </span>
-                                </span>
-                                <span
-                                  class="vlist-s"
-                                >
-                                  ​
+                                  100
                                 </span>
                               </span>
+                            </span>
+                            <span
+                              style="top:-3.23em;"
+                            >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
+                            </span>
+                            <span
+                              style="top:-3.677em;"
+                            >
+                              <span
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:0.686em;"
+                                  class="mord"
                                 >
-                                  <span />
+                                  10
                                 </span>
                               </span>
                             </span>
                           </span>
                           <span
-                            class="mclose nulldelimiter"
-                          />
+                            class="vlist-s"
+                          >
+                            ​
+                          </span>
                         </span>
                         <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
+                          class="vlist-r"
                         >
-                          ×
-                        </span>
-                        <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                      </span>
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="strut"
-                          style="height:0.69444em;vertical-align:0em;"
-                        />
-                        <span
-                          class="mord"
-                        >
-                          "
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.05764em;"
-                        >
-                          lS
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.01968em;"
-                        >
-                          l
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          ai
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          res
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
+                          <span
+                            class="vlist"
+                            style="height:0.686em;"
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
+                    <span
+                      class="mclose nulldelimiter"
+                    />
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                  <span
+                    class="mbin"
+                  >
+                    ×
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
+                  />
+                  <span
+                    class="mord"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    o
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.05764em;"
+                  >
+                    lS
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.01968em;"
+                  >
+                    l
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    ai
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    res
+                  </span>
+                  <span
+                    class="mord"
+                  >
+                    "
                   </span>
                 </span>
-              </div>
-            </div>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-8 du code du travail"
-                >
-                  Article L1243-8 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-9 du code du travail"
-                >
-                  Article L1243-9 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
+              </span>
+            </span>
+          </span>
         </div>
       </div>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-8 du code du travail"
+          >
+            Article L1243-8 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-9 du code du travail"
+          >
+            Article L1243-9 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="c10 c11"
   >
     <div
-      class="c13"
+      class="c12"
     >
       <div
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -1333,10 +1203,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </svg>
       </div>
       <div
-        class="c15"
+        class="c14"
       >
         <span
-          class="c16"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>
@@ -1365,19 +1235,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -1399,54 +1256,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -1456,15 +1266,58 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1479,7 +1332,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   justify-content: stretch;
 }
 
-.c14 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1489,18 +1342,18 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   margin-right: 2rem;
 }
 
-.c14 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1527,11 +1380,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   font-size: 1.5em;
 }
 
-.c12 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c16 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1539,25 +1392,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c14 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1586,429 +1427,393 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-3"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-3"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
+          </strong>
+        </li>
+        <li>
+          Total des salaires
+           : 
+          <strong>
+            3000
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Formule
+      </h2>
+      <div
+        class="c9"
+      >
+        <div>
+          <span
+            class="katex-display"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="katex"
             >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-3"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-3"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
-                </strong>
-              </li>
-              <li>
-                Total des salaires
-                 : 
-                <strong>
-                  3000
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Formule
-            </h2>
-            <div
-              class="c10"
-            >
-              <div>
+              <span
+                class="katex-mathml"
+              >
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
+                  <semantics>
+                    <mrow>
+                      <mfrac>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
+                      </mfrac>
+                      <mo>
+                        ×
+                      </mo>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        o
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        S
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        i
+                      </mi>
+                      <mi>
+                        r
+                      </mi>
+                      <mi>
+                        e
+                      </mi>
+                      <mi>
+                        s
+                      </mi>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                    </mrow>
+                    <annotation
+                      encoding="application/x-tex"
+                    >
+                      \\frac{10}{100} \\times "totalSalaires"
+                    </annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span
+                aria-hidden="true"
+                class="katex-html"
+              >
                 <span
-                  class="katex-display"
+                  class="base"
                 >
                   <span
-                    class="katex"
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
+                  <span
+                    class="mord"
                   >
                     <span
-                      class="katex-mathml"
-                    >
-                      <math
-                        display="block"
-                        xmlns="http://www.w3.org/1998/Math/MathML"
-                      >
-                        <semantics>
-                          <mrow>
-                            <mfrac>
-                              <mn>
-                                10
-                              </mn>
-                              <mn>
-                                100
-                              </mn>
-                            </mfrac>
-                            <mo>
-                              ×
-                            </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              s
-                            </mi>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            \\frac{10}{100} \\times "totalSalaires"
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
+                      class="mopen nulldelimiter"
+                    />
                     <span
-                      aria-hidden="true"
-                      class="katex-html"
+                      class="mfrac"
                     >
                       <span
-                        class="base"
+                        class="vlist-t vlist-t2"
                       >
                         <span
-                          class="strut"
-                          style="height:2.00744em;vertical-align:-0.686em;"
-                        />
-                        <span
-                          class="mord"
+                          class="vlist-r"
                         >
                           <span
-                            class="mopen nulldelimiter"
-                          />
-                          <span
-                            class="mfrac"
+                            class="vlist"
+                            style="height:1.32144em;"
                           >
                             <span
-                              class="vlist-t vlist-t2"
+                              style="top:-2.314em;"
                             >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:1.32144em;"
+                                  class="mord"
                                 >
-                                  <span
-                                    style="top:-2.314em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        100
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span
-                                    style="top:-3.23em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="frac-line"
-                                      style="border-bottom-width:0.04em;"
-                                    />
-                                  </span>
-                                  <span
-                                    style="top:-3.677em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        10
-                                      </span>
-                                    </span>
-                                  </span>
-                                </span>
-                                <span
-                                  class="vlist-s"
-                                >
-                                  ​
+                                  100
                                 </span>
                               </span>
+                            </span>
+                            <span
+                              style="top:-3.23em;"
+                            >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
+                            </span>
+                            <span
+                              style="top:-3.677em;"
+                            >
+                              <span
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:0.686em;"
+                                  class="mord"
                                 >
-                                  <span />
+                                  10
                                 </span>
                               </span>
                             </span>
                           </span>
                           <span
-                            class="mclose nulldelimiter"
-                          />
+                            class="vlist-s"
+                          >
+                            ​
+                          </span>
                         </span>
                         <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
+                          class="vlist-r"
                         >
-                          ×
-                        </span>
-                        <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                      </span>
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="strut"
-                          style="height:0.69444em;vertical-align:0em;"
-                        />
-                        <span
-                          class="mord"
-                        >
-                          "
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.05764em;"
-                        >
-                          lS
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.01968em;"
-                        >
-                          l
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          ai
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          res
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
+                          <span
+                            class="vlist"
+                            style="height:0.686em;"
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
+                    <span
+                      class="mclose nulldelimiter"
+                    />
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                  <span
+                    class="mbin"
+                  >
+                    ×
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
+                  />
+                  <span
+                    class="mord"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    o
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.05764em;"
+                  >
+                    lS
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.01968em;"
+                  >
+                    l
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    ai
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    res
+                  </span>
+                  <span
+                    class="mord"
+                  >
+                    "
                   </span>
                 </span>
-              </div>
-            </div>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article 16.03 de la convention collective (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B2ED091AF8ACCF6952BB5EA67D9DE5AE.tplgfr27s_1?idArticle=KALIARTI000005787408&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article 16.03 de la convention collective"
-                >
-                  Article 16.03 de la convention collective
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-8 du code du travail"
-                >
-                  Article L1243-8 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-9 du code du travail"
-                >
-                  Article L1243-9 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
+              </span>
+            </span>
+          </span>
         </div>
       </div>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article 16.03 de la convention collective (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B2ED091AF8ACCF6952BB5EA67D9DE5AE.tplgfr27s_1?idArticle=KALIARTI000005787408&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article 16.03 de la convention collective"
+          >
+            Article 16.03 de la convention collective
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-8 du code du travail"
+          >
+            Article L1243-8 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-9 du code du travail"
+          >
+            Article L1243-9 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="c10 c11"
   >
     <div
-      class="c13"
+      class="c12"
     >
       <div
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -2022,10 +1827,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </svg>
       </div>
       <div
-        class="c15"
+        class="c14"
       >
         <span
-          class="c16"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>
@@ -2054,19 +1859,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -2088,54 +1880,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -2145,15 +1890,58 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2168,7 +1956,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   justify-content: stretch;
 }
 
-.c14 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -2178,18 +1966,18 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   margin-right: 2rem;
 }
 
-.c14 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2216,11 +2004,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   font-size: 1.5em;
 }
 
-.c12 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c16 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2228,25 +2016,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c14 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -2275,418 +2051,382 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-2"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-2"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            La convention collective n'a pas été traitée par nos services.
+          </strong>
+        </li>
+        <li>
+          Total des salaires
+           : 
+          <strong>
+            3000
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Formule
+      </h2>
+      <div
+        class="c9"
+      >
+        <div>
+          <span
+            class="katex-display"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="katex"
             >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-2"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-2"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  La convention collective n'a pas été traitée par nos services.
-                </strong>
-              </li>
-              <li>
-                Total des salaires
-                 : 
-                <strong>
-                  3000
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Formule
-            </h2>
-            <div
-              class="c10"
-            >
-              <div>
+              <span
+                class="katex-mathml"
+              >
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
+                  <semantics>
+                    <mrow>
+                      <mfrac>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
+                      </mfrac>
+                      <mo>
+                        ×
+                      </mo>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        o
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        S
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        i
+                      </mi>
+                      <mi>
+                        r
+                      </mi>
+                      <mi>
+                        e
+                      </mi>
+                      <mi>
+                        s
+                      </mi>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                    </mrow>
+                    <annotation
+                      encoding="application/x-tex"
+                    >
+                      \\frac{10}{100} \\times "totalSalaires"
+                    </annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span
+                aria-hidden="true"
+                class="katex-html"
+              >
                 <span
-                  class="katex-display"
+                  class="base"
                 >
                   <span
-                    class="katex"
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
+                  <span
+                    class="mord"
                   >
                     <span
-                      class="katex-mathml"
-                    >
-                      <math
-                        display="block"
-                        xmlns="http://www.w3.org/1998/Math/MathML"
-                      >
-                        <semantics>
-                          <mrow>
-                            <mfrac>
-                              <mn>
-                                10
-                              </mn>
-                              <mn>
-                                100
-                              </mn>
-                            </mfrac>
-                            <mo>
-                              ×
-                            </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              s
-                            </mi>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            \\frac{10}{100} \\times "totalSalaires"
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
+                      class="mopen nulldelimiter"
+                    />
                     <span
-                      aria-hidden="true"
-                      class="katex-html"
+                      class="mfrac"
                     >
                       <span
-                        class="base"
+                        class="vlist-t vlist-t2"
                       >
                         <span
-                          class="strut"
-                          style="height:2.00744em;vertical-align:-0.686em;"
-                        />
-                        <span
-                          class="mord"
+                          class="vlist-r"
                         >
                           <span
-                            class="mopen nulldelimiter"
-                          />
-                          <span
-                            class="mfrac"
+                            class="vlist"
+                            style="height:1.32144em;"
                           >
                             <span
-                              class="vlist-t vlist-t2"
+                              style="top:-2.314em;"
                             >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:1.32144em;"
+                                  class="mord"
                                 >
-                                  <span
-                                    style="top:-2.314em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        100
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span
-                                    style="top:-3.23em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="frac-line"
-                                      style="border-bottom-width:0.04em;"
-                                    />
-                                  </span>
-                                  <span
-                                    style="top:-3.677em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        10
-                                      </span>
-                                    </span>
-                                  </span>
-                                </span>
-                                <span
-                                  class="vlist-s"
-                                >
-                                  ​
+                                  100
                                 </span>
                               </span>
+                            </span>
+                            <span
+                              style="top:-3.23em;"
+                            >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
+                            </span>
+                            <span
+                              style="top:-3.677em;"
+                            >
+                              <span
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:0.686em;"
+                                  class="mord"
                                 >
-                                  <span />
+                                  10
                                 </span>
                               </span>
                             </span>
                           </span>
                           <span
-                            class="mclose nulldelimiter"
-                          />
+                            class="vlist-s"
+                          >
+                            ​
+                          </span>
                         </span>
                         <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
+                          class="vlist-r"
                         >
-                          ×
-                        </span>
-                        <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                      </span>
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="strut"
-                          style="height:0.69444em;vertical-align:0em;"
-                        />
-                        <span
-                          class="mord"
-                        >
-                          "
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.05764em;"
-                        >
-                          lS
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.01968em;"
-                        >
-                          l
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          ai
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          res
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
+                          <span
+                            class="vlist"
+                            style="height:0.686em;"
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
+                    <span
+                      class="mclose nulldelimiter"
+                    />
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                  <span
+                    class="mbin"
+                  >
+                    ×
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
+                  />
+                  <span
+                    class="mord"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    o
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.05764em;"
+                  >
+                    lS
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.01968em;"
+                  >
+                    l
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    ai
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    res
+                  </span>
+                  <span
+                    class="mord"
+                  >
+                    "
                   </span>
                 </span>
-              </div>
-            </div>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-8 du code du travail"
-                >
-                  Article L1243-8 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-9 du code du travail"
-                >
-                  Article L1243-9 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
+              </span>
+            </span>
+          </span>
         </div>
       </div>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-8 du code du travail"
+          >
+            Article L1243-8 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-9 du code du travail"
+          >
+            Article L1243-9 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="c10 c11"
   >
     <div
-      class="c13"
+      class="c12"
     >
       <div
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -2700,10 +2440,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </svg>
       </div>
       <div
-        class="c15"
+        class="c14"
       >
         <span
-          class="c16"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>
@@ -2732,19 +2472,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c8 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c5 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -2766,54 +2493,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   transform: rotate(90deg);
 }
 
-.c7 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c6 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
   color: #3e486e;
@@ -2823,15 +2503,58 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c13 {
+.c6 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2846,7 +2569,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   justify-content: stretch;
 }
 
-.c14 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -2856,18 +2579,18 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   margin-right: 2rem;
 }
 
-.c14 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2894,11 +2617,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   font-size: 1.5em;
 }
 
-.c12 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c16 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2906,25 +2629,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c14 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -2953,418 +2664,382 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </strong>
     .
   </p>
-  <div
-    class="accordion"
-    data-accordion-component="Accordion"
-  >
-    <div>
-      <div
-        class=""
-        data-accordion-component="AccordionItem"
-        index="0"
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          aria-level="3"
-          class="accordion__heading"
-          data-accordion-component="AccordionItemHeading"
-          role="heading"
-        >
-          <div
-            aria-controls="accordion__panel-raa-0"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="c3"
-            data-accordion-component="AccordionItemButton"
-            id="accordion__heading-raa-0"
-            role="button"
-            tabindex="0"
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <span
+        class="c6 c7"
+        font-size="hsmall"
+        font-weight="600"
+      >
+        Voir le détail du calcul
+      </span>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            La convention collective n'a pas été renseignée.
+          </strong>
+        </li>
+        <li>
+          Total des salaires
+           : 
+          <strong>
+            3000
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Formule
+      </h2>
+      <div
+        class="c9"
+      >
+        <div>
+          <span
+            class="katex-display"
           >
-            <svg
-              aria-hidden="true"
-              class="c4 c5"
-              fill="none"
-              height="24"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="katex"
             >
-              <polyline
-                points="9 18 15 12 9 6"
-              />
-            </svg>
-            <div
-              class="c6"
-            >
-              Voir le détail du calcul
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
-          class="c7"
-          data-accordion-component="AccordionItemPanel"
-          hidden=""
-          id="accordion__panel-raa-0"
-        >
-          <div
-            class="c8"
-          >
-            <p>
-              Voir le détail du calcul
-            </p>
-          </div>
-          <div
-            class="c9"
-          >
-            <h2
-              class="c0"
-            >
-              Éléments saisis
-            </h2>
-            <ul>
-              <li>
-                Convention collective
-                 : 
-                <strong>
-                  La convention collective n'a pas été renseignée.
-                </strong>
-              </li>
-              <li>
-                Total des salaires
-                 : 
-                <strong>
-                  3000
-                </strong>
-              </li>
-            </ul>
-            <h2
-              class="c0"
-            >
-              Formule
-            </h2>
-            <div
-              class="c10"
-            >
-              <div>
+              <span
+                class="katex-mathml"
+              >
+                <math
+                  display="block"
+                  xmlns="http://www.w3.org/1998/Math/MathML"
+                >
+                  <semantics>
+                    <mrow>
+                      <mfrac>
+                        <mn>
+                          10
+                        </mn>
+                        <mn>
+                          100
+                        </mn>
+                      </mfrac>
+                      <mo>
+                        ×
+                      </mo>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        o
+                      </mi>
+                      <mi>
+                        t
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        S
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        l
+                      </mi>
+                      <mi>
+                        a
+                      </mi>
+                      <mi>
+                        i
+                      </mi>
+                      <mi>
+                        r
+                      </mi>
+                      <mi>
+                        e
+                      </mi>
+                      <mi>
+                        s
+                      </mi>
+                      <mi
+                        mathvariant="normal"
+                      >
+                        "
+                      </mi>
+                    </mrow>
+                    <annotation
+                      encoding="application/x-tex"
+                    >
+                      \\frac{10}{100} \\times "totalSalaires"
+                    </annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span
+                aria-hidden="true"
+                class="katex-html"
+              >
                 <span
-                  class="katex-display"
+                  class="base"
                 >
                   <span
-                    class="katex"
+                    class="strut"
+                    style="height:2.00744em;vertical-align:-0.686em;"
+                  />
+                  <span
+                    class="mord"
                   >
                     <span
-                      class="katex-mathml"
-                    >
-                      <math
-                        display="block"
-                        xmlns="http://www.w3.org/1998/Math/MathML"
-                      >
-                        <semantics>
-                          <mrow>
-                            <mfrac>
-                              <mn>
-                                10
-                              </mn>
-                              <mn>
-                                100
-                              </mn>
-                            </mfrac>
-                            <mo>
-                              ×
-                            </mo>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              o
-                            </mi>
-                            <mi>
-                              t
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              S
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              l
-                            </mi>
-                            <mi>
-                              a
-                            </mi>
-                            <mi>
-                              i
-                            </mi>
-                            <mi>
-                              r
-                            </mi>
-                            <mi>
-                              e
-                            </mi>
-                            <mi>
-                              s
-                            </mi>
-                            <mi
-                              mathvariant="normal"
-                            >
-                              "
-                            </mi>
-                          </mrow>
-                          <annotation
-                            encoding="application/x-tex"
-                          >
-                            \\frac{10}{100} \\times "totalSalaires"
-                          </annotation>
-                        </semantics>
-                      </math>
-                    </span>
+                      class="mopen nulldelimiter"
+                    />
                     <span
-                      aria-hidden="true"
-                      class="katex-html"
+                      class="mfrac"
                     >
                       <span
-                        class="base"
+                        class="vlist-t vlist-t2"
                       >
                         <span
-                          class="strut"
-                          style="height:2.00744em;vertical-align:-0.686em;"
-                        />
-                        <span
-                          class="mord"
+                          class="vlist-r"
                         >
                           <span
-                            class="mopen nulldelimiter"
-                          />
-                          <span
-                            class="mfrac"
+                            class="vlist"
+                            style="height:1.32144em;"
                           >
                             <span
-                              class="vlist-t vlist-t2"
+                              style="top:-2.314em;"
                             >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:1.32144em;"
+                                  class="mord"
                                 >
-                                  <span
-                                    style="top:-2.314em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        100
-                                      </span>
-                                    </span>
-                                  </span>
-                                  <span
-                                    style="top:-3.23em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="frac-line"
-                                      style="border-bottom-width:0.04em;"
-                                    />
-                                  </span>
-                                  <span
-                                    style="top:-3.677em;"
-                                  >
-                                    <span
-                                      class="pstrut"
-                                      style="height:3em;"
-                                    />
-                                    <span
-                                      class="mord"
-                                    >
-                                      <span
-                                        class="mord"
-                                      >
-                                        10
-                                      </span>
-                                    </span>
-                                  </span>
-                                </span>
-                                <span
-                                  class="vlist-s"
-                                >
-                                  ​
+                                  100
                                 </span>
                               </span>
+                            </span>
+                            <span
+                              style="top:-3.23em;"
+                            >
                               <span
-                                class="vlist-r"
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="frac-line"
+                                style="border-bottom-width:0.04em;"
+                              />
+                            </span>
+                            <span
+                              style="top:-3.677em;"
+                            >
+                              <span
+                                class="pstrut"
+                                style="height:3em;"
+                              />
+                              <span
+                                class="mord"
                               >
                                 <span
-                                  class="vlist"
-                                  style="height:0.686em;"
+                                  class="mord"
                                 >
-                                  <span />
+                                  10
                                 </span>
                               </span>
                             </span>
                           </span>
                           <span
-                            class="mclose nulldelimiter"
-                          />
+                            class="vlist-s"
+                          >
+                            ​
+                          </span>
                         </span>
                         <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                        <span
-                          class="mbin"
+                          class="vlist-r"
                         >
-                          ×
-                        </span>
-                        <span
-                          class="mspace"
-                          style="margin-right:0.2222222222222222em;"
-                        />
-                      </span>
-                      <span
-                        class="base"
-                      >
-                        <span
-                          class="strut"
-                          style="height:0.69444em;vertical-align:0em;"
-                        />
-                        <span
-                          class="mord"
-                        >
-                          "
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          o
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          t
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.05764em;"
-                        >
-                          lS
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          a
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                          style="margin-right:0.01968em;"
-                        >
-                          l
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          ai
-                        </span>
-                        <span
-                          class="mord mathnormal"
-                        >
-                          res
-                        </span>
-                        <span
-                          class="mord"
-                        >
-                          "
+                          <span
+                            class="vlist"
+                            style="height:0.686em;"
+                          >
+                            <span />
+                          </span>
                         </span>
                       </span>
                     </span>
+                    <span
+                      class="mclose nulldelimiter"
+                    />
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                  <span
+                    class="mbin"
+                  >
+                    ×
+                  </span>
+                  <span
+                    class="mspace"
+                    style="margin-right:0.2222222222222222em;"
+                  />
+                </span>
+                <span
+                  class="base"
+                >
+                  <span
+                    class="strut"
+                    style="height:0.69444em;vertical-align:0em;"
+                  />
+                  <span
+                    class="mord"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    o
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    t
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.05764em;"
+                  >
+                    lS
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    a
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                    style="margin-right:0.01968em;"
+                  >
+                    l
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    ai
+                  </span>
+                  <span
+                    class="mord mathnormal"
+                  >
+                    res
+                  </span>
+                  <span
+                    class="mord"
+                  >
+                    "
                   </span>
                 </span>
-              </div>
-            </div>
-            <h2
-              class="c0"
-            >
-              Sources
-            </h2>
-            <ul>
-              <li>
-                <a
-                  aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-8 du code du travail"
-                >
-                  Article L1243-8 du code du travail
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
-                  href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Consultez l’article l1243-9 du code du travail"
-                >
-                  Article L1243-9 du code du travail
-                </a>
-              </li>
-            </ul>
-          </div>
+              </span>
+            </span>
+          </span>
         </div>
       </div>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label="Article L1243-8 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-8 du code du travail"
+          >
+            Article L1243-8 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article L1243-9 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article l1243-9 du code du travail"
+          >
+            Article L1243-9 du code du travail
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c11 c12"
+    class="c10 c11"
   >
     <div
-      class="c13"
+      class="c12"
     >
       <div
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
           fill="none"
           viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
@@ -3378,10 +3053,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </svg>
       </div>
       <div
-        class="c15"
+        class="c14"
       >
         <span
-          class="c16"
+          class="c15"
         >
           Attention il peut exister un montant plus favorable
         </span>

@@ -1,4 +1,5 @@
 const { Soit, Quand, Alors } = require("./_fr");
+const assert = require("assert");
 
 const { I } = inject();
 
@@ -57,7 +58,7 @@ Quand("j'attends que le titre de page {string} apparaisse", (title) => {
 });
 
 Quand("j'attend que le texte {string} apparaisse", (text) => {
-  I.waitForText(text);
+  I.waitForText(text, 5);
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -100);
 });
 
@@ -84,6 +85,10 @@ Alors("je vois le bouton {string}", (text) => {
   I.seeElement(`//button[text()="${text}"]`);
 });
 
+Alors("je vois le lien {string}", (text) => {
+  I.seeElement(`//a[contains(., "${text}")]`);
+});
+
 Alors("je vois que bouton {string} est désactivé", (text) => {
   I.seeElement(`//button[text()="${text}" and @disabled]`);
 });
@@ -97,6 +102,15 @@ Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
     `//${element}[contains(., "${text}")]`,
     parseInt(num, 10)
   );
+});
+
+Alors("je vois le lien canonique {string}", async (url) => {
+  const baseUrl = await I.getBaseUrl();
+  const currentUrl = baseUrl + url;
+  const href = await I.getCanonicalLink();
+  if (currentUrl !== href) {
+    assert.fail("Canonique non identique");
+  }
 });
 
 Alors("je vois {string} suggestions", (num) => {
@@ -145,4 +159,14 @@ Alors("je suis redirigé vers la page: {string}", (url) => {
 Alors("j'ai téléchargé le fichier {string}", (filename) => {
   I.amInPath("output/downloads");
   I.seeFile(filename);
+});
+
+Alors("le status de la page est {int}", async (num) => {
+  const url = await I.grabCurrentUrl();
+  const statusCode = await I.getStatusCode(url);
+  if (statusCode !== num) {
+    assert.fail(
+      `Le status de la page ${statusCode} est différent de celui prévu (${num})`
+    );
+  }
 });

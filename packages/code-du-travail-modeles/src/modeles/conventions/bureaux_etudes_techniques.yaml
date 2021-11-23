@@ -3,12 +3,15 @@ contrat salarié . convention collective . bureaux études techniques:
   description: Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987.
   applicable si: convention collective = 'IDCC1486'
   valeur: oui
-  idcc: 1486
+  cdtn:
+    idcc: 1486
+    préavis-retraite: true
 
 contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle:
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:

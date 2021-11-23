@@ -408,7 +408,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 id="convention-search"
                 name="q"
                 placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-                role="search"
                 type="search"
                 value=""
               />

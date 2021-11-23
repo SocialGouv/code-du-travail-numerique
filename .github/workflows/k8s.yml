@@ -1,0 +1,36 @@
+name: Kubernetes manifests tests
+
+on: [push]
+
+concurrency:
+  cancel-in-progress: true
+  group: k8s-${{ github.ref }}
+
+defaults:
+  run:
+    shell: bash
+    working-directory: .k8s
+
+jobs:
+  build:
+    name: Test .k8s
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Test .k8s
+        run: |
+          yarn test

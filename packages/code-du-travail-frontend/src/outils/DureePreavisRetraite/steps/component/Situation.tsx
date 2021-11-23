@@ -5,6 +5,7 @@ import React from "react";
 import PubliSituation from "../../../common/PubliSituation";
 import { FormContent } from "../../../common/type/WizardType";
 import { SituationElement } from "../../../publicodes";
+import { SeniorityMaximum } from "../constants";
 
 type Props = {
   content: FormContent;
@@ -18,9 +19,13 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     }
     if (
       element.name === "contrat salarié - ancienneté" &&
-      content.seniorityGreaterThanTwoYears === true
+      content.seniorityMaximum === true
     ) {
-      return <>Plus de 2 ans (exclu)</>;
+      return element.value === SeniorityMaximum.GREATER_THAN_5_YEARS ? (
+        <>Plus de 5 ans</>
+      ) : (
+        <>Plus de 2 ans</>
+      );
     }
     if (
       element.name === "contrat salarié - travailleur handicapé" &&
@@ -49,13 +54,6 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
             </Text>,
           ];
         }
-        return [
-          <Text key="handicap">
-            Le salarié étant reconnu en tant que travailleur handicapé, la durée
-            du préavis de mise à la retraite est doublée mais ne peut pas
-            dépasser un maximum de 3 mois.
-          </Text>,
-        ];
       }
 
       return [

@@ -1,4 +1,4 @@
-import { Text } from "@socialgouv/cdtn-ui";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
@@ -31,15 +31,15 @@ const ShowResultAgreement: React.FC<{
   detail: Agreement | null;
 }> = ({ result, detail }) => {
   if (!result) {
-    return <b>convention collective non renseignée</b>;
+    return <strong>convention collective non renseignée</strong>;
   }
   if (result && result.value > 0) {
     return <ShowResult result={result} />;
   }
   if (detail?.status === AgreementStatus.Supported) {
-    return <b>pas de préavis</b>;
+    return <strong>pas de préavis</strong>;
   }
-  return <b>convention collective non traitée</b>;
+  return <strong>convention collective non traitée</strong>;
 };
 
 export enum NoticeUsed {
@@ -61,8 +61,9 @@ type Agreement = {
 };
 
 type RootData = {
-  isVoluntary: boolean;
   agreement: Agreement | null;
+  handicap: boolean;
+  isVoluntary: boolean;
   noticeUsed: NoticeUsed;
   seniorityLessThan6Months: boolean;
 };
@@ -108,6 +109,7 @@ export const createRootData = (
   }
   return {
     agreement: agreement,
+    handicap: data.infos["contrat salarié - travailleur handicapé"] === "oui",
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
@@ -124,7 +126,7 @@ export const getDescription = (data: RootData): string | null => {
         return "Pour un salarié ayant une ancienneté inférieure à 6 mois, ni le code du travail ni la convention collective sélectionnée ne prévoit de préavis à respecter.";
       case data.noticeUsed === NoticeUsed.agreementLabor &&
         data.agreement?.status === AgreementStatus.Supported:
-        return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois mais il renvoie à la convention ou l'accord collectif de travail ou, à défaut, aux usages pratiqués dans la localité et la profession. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
+        return "Le code du travail ne prévoit pas de durée de préavis pour une ancienneté inférieure à 6 mois. La durée à appliquer pour le salarié est donc la durée prévue par la convention collective.";
     }
     return null;
   }
@@ -150,7 +152,6 @@ export const getDescription = (data: RootData): string | null => {
           data.isVoluntary ? "courte" : "longue"
         } que la durée légale.`;
       case NoticeUsed.same:
-        return "Le résultat correspond à la fois à la durée prévue par le code du travail et à la fois à la durée prévue par la convention collective, celles-ci étant identiques dans cette situation.";
       case NoticeUsed.none:
         return null;
     }
@@ -180,20 +181,27 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   return (
     <>
       <SectionTitle>Le résultat décrypté</SectionTitle>
-      <Text>
+      <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult result={legalResult} />
-      </Text>
-      <br />
-      <Text>
+      </Paragraph>
+      <Paragraph>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
         />
-      </Text>
-      {description && <Text>{description}</Text>}
+      </Paragraph>
+      {description && <Paragraph>{description}</Paragraph>}
+      {rootData.handicap && (
+        <Paragraph>
+          <i>
+            Ce résultat tient compte de la majoration pour les travailleurs
+            handicapés.
+          </i>
+        </Paragraph>
+      )}
     </>
   );
 };

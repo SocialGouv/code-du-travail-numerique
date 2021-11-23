@@ -2,9 +2,8 @@
 name: Nouvelle fonctionnalité
 about: Proposer une nouvelle fonctionnalité pour le projet
 title: Nouvelle fonctionnalité
-labels: 't: nouvelle fonctionnalité'
-assignees: ''
-
+labels: "t: nouvelle fonctionnalité"
+assignees: ""
 ---
 
 **Fonctionnalité**
@@ -21,14 +20,16 @@ _exemple : le lien doit se trouver dans la première colonne du footer et rediri
 
 **Ressources**
 Liste de liens vers des ressources additionnelles importantes pour cette fonctionnalité :
-  - ...
-  - ...
+
+- ...
+- ...
 
 **Autres informations**
 ...
 
 **Checklist**
 Vérifiez que les éléments suivants ont été faits et effacez cette section :
-  - la tâche est compréhensible simplement par toute l'équipe
-  - la tâche n'existe pas déjà
-  - les bons tags ont été ajoutés
+
+- la tâche est compréhensible simplement par toute l'équipe
+- la tâche n'existe pas déjà
+- les bons tags ont été ajoutés

@@ -13,6 +13,7 @@ import styled from "styled-components";
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 import { SearchResults } from "../../src/search/SearchResults";
 
 const {
@@ -40,8 +41,9 @@ class Theme extends React.Component {
 
     return (
       <Layout>
+        <EventTracker />
         <Metas
-          title={`${theme.title} - Code du travail numérique`}
+          title={theme.title}
           description={`Explorez les contenus autour du thème ${theme.title}`}
         />
         <Breadcrumbs items={theme.breadcrumbs} />

@@ -3,11 +3,14 @@ contrat salarié . convention collective . restauration rapide:
   titre: Convention collective nationale de la restauration rapide du 18 mars 1988
   applicable si: convention collective = 'IDCC1501'
   valeur: oui
-  idcc: 1501
+  cdtn:
+    idcc: 1501
+    préavis-retraite: true
 
 contrat salarié . convention collective . restauration rapide . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:

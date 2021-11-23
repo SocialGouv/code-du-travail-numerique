@@ -8,11 +8,12 @@ import { useTOCReducer } from "./useTOCReducer.js";
 const initialState = {
   titles: [],
 };
-
 export const TableOfContent = ({
   contents,
   observerArea,
   threshold,
+  // eslint-disable-next-line no-unused-vars
+  ids,
   ...props
 }) => {
   const { observerCallback, setTitles, titles } = useTOCReducer(initialState);
@@ -80,6 +81,7 @@ TableOfContent.propTypes = {
       label: PropTypes.string,
     })
   ),
+  ids: PropTypes.arrayOf(PropTypes.string),
   observerArea: PropTypes.shape({
     bottom: PropTypes.string,
     top: PropTypes.string,

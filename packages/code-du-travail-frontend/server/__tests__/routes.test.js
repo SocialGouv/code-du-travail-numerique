@@ -24,16 +24,16 @@ jest.mock(
   { virtual: true }
 );
 
-describe("/IS_PRODUCTION_DEPLOYMENT=true", () => {
+describe("/NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=true", () => {
   let app;
   beforeEach(async () => {
-    process.env.IS_PRODUCTION_DEPLOYMENT = true;
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT = true;
     process.env.PROD_HOSTNAME = "prod-test-hostname";
     const { getKoaServer } = require("../koaServer");
     app = await getKoaServer({ nextApp: mockNextApp });
   });
   afterEach(() => {
-    process.env.IS_PRODUCTION_DEPLOYMENT = undefined;
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT = undefined;
     process.env.PROD_HOSTNAME = undefined;
   });
   it("should return production robots.txt", async () => {
@@ -52,15 +52,15 @@ describe("/IS_PRODUCTION_DEPLOYMENT=true", () => {
   });
 });
 
-describe("/IS_PRODUCTION_DEPLOYMENT=false", () => {
+describe("/NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=false", () => {
   let app;
   beforeEach(async () => {
-    process.env.IS_PRODUCTION_DEPLOYMENT = false;
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT = false;
     const { getKoaServer } = require("../koaServer");
     app = await getKoaServer({ nextApp: mockNextApp });
   });
   afterEach(() => {
-    process.env.IS_PRODUCTION_DEPLOYMENT = undefined;
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT = undefined;
   });
   it("should return dev robots.txt", async () => {
     const response = await request(app.callback()).get("/robots.txt");

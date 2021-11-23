@@ -2,7 +2,10 @@ import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
 export type RuleNodeIdcc = Rule & {
-  cdtn?: { idcc?: number; "préavis-retraite"?: boolean };
+  cdtn?: {
+    idcc?: number;
+    "préavis-retraite"?: boolean;
+  };
 };
 
 export type AgreementInfo = {
@@ -10,7 +13,7 @@ export type AgreementInfo = {
   preavisRetraite: boolean;
 };
 
-export function extractImplementedCc(engine: Engine): AgreementInfo[] {
+export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
   return Object.values(engine.getParsedRules())
     .flatMap((rule) => {
       const rawNode = rule.rawNode as RuleNodeIdcc;
@@ -19,7 +22,7 @@ export function extractImplementedCc(engine: Engine): AgreementInfo[] {
         const idcc = cdtnNode.idcc;
         if (idcc) {
           return {
-            idcc: idcc,
+            idcc,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
           };
         }
