@@ -60,6 +60,7 @@ const DroitDuTravail = ({ hash }) => (
               comprend des enjeux sociaux, économiques et politiques forts.
             </p>
             <Wrapper variant="dark">
+              {/* eslint-disable-next-line */}
               <IconStripe icon={wrong.Warning}>
                 <InsertTitle>Le droit du travail, ce n’est pas…</InsertTitle>
                 <StyledP>
