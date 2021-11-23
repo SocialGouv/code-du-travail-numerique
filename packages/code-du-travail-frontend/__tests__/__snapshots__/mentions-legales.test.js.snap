@@ -88,6 +88,54 @@ exports[`<MentionLegales /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c28 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c33 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c36 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c50 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -346,54 +394,6 @@ exports[`<MentionLegales /> should render 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c28 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c33 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c36 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c50 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c26 {
@@ -873,6 +873,18 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c36 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
   }
@@ -945,18 +957,6 @@ exports[`<MentionLegales /> should render 1`] = `
 
 @media (max-width:980px) {
 
-}
-
-@media (max-width:600px) {
-  .c36 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c50 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {

@@ -13,6 +13,19 @@ exports[`<Highlights /> should render 1`] = `
   color: #3e486e;
 }
 
+.c4 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .c5 {
   position: relative;
   overflow: visible;
@@ -88,19 +101,6 @@ exports[`<Highlights /> should render 1`] = `
   margin: 1rem;
   padding: 0;
   width: calc(100% / 2 - 2 * 1rem - 1px);
-}
-
-.c4 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .c13 {

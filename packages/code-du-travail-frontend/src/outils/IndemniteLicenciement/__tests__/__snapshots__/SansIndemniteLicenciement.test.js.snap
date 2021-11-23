@@ -28,6 +28,19 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   transform: rotate(90deg);
 }
 
+.c3 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c10 {
   color: #3e486e;
   line-height: 1.25;
@@ -69,19 +82,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 
 .c11 {
   margin-left: 1rem;
-}
-
-.c3 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c1 {
