@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/nextjs";
 import { isAfter } from "date-fns";
 
 import { parse } from "../common/date";
@@ -51,10 +52,8 @@ function getSalaireRef({
 
       return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
     }
-  } catch (e) {
-    //TODO: handle error
-    console.error(e);
-    return 0;
+  } catch (err) {
+    Sentry.captureException(err);
   }
 }
 
