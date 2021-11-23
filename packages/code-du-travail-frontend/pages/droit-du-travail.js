@@ -1,6 +1,5 @@
 import {
   Container,
-  icons,
   IconStripe,
   InsertTitle,
   PageTitle,
