@@ -69,6 +69,11 @@ export default class MyApp extends App {
     }
   }
 
+  componentDidCatch(err, errorInfo) {
+    Sentry.captureException(err);
+    super.componentDidCatch(err, errorInfo);
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     // Maybe that this should be done at the page level to allow static optimization at the _app lvl

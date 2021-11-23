@@ -25,14 +25,6 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
     <Section>
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <button
-          type="button"
-          onClick={() => {
-            throw new Error("Sentry Frontend Error");
-          }}
-        >
-          Throw error
-        </button>
         <Grid>
           {DocumentsTile}
           {cdtnSimulators.map(

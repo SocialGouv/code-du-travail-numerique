@@ -1,5 +1,6 @@
 import {
   Container,
+  icons,
   IconStripe,
   InsertTitle,
   PageTitle,
@@ -59,8 +60,7 @@ const DroitDuTravail = ({ hash }) => (
               comprend des enjeux sociaux, économiques et politiques forts.
             </p>
             <Wrapper variant="dark">
-              {/* eslint-disable-next-line */}
-              <IconStripe icon={wrong.Warning}>
+              <IconStripe icon={icons.Warning}>
                 <InsertTitle>Le droit du travail, ce n’est pas…</InsertTitle>
                 <StyledP>
                   Le droit du travail ne concerne pas les travailleurs qui sont
