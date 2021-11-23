@@ -12,14 +12,5 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
 };
 
 export function getTools(): Tools {
-  return {
-    cdtnSimulators: tools.filter(
-      (tool) =>
-        tool.enable ||
-        process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT !== "true"
-    ),
-    externalTools: externalTools.filter(
-      (tools) => tools.title === "Mon compte formation"
-    ),
-  };
+  throw new Error("API throw error test");
 }

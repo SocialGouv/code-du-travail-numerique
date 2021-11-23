@@ -83,9 +83,6 @@ async function getKoaServer({ nextApp }) {
   router.get("/health", async (ctx) => {
     ctx.body = { status: "up and running" };
   });
-  router.get("/test-sentry", async () => {
-    throw new Error("API throw error test");
-  });
 
   router.get("/robots.txt", async (ctx) => {
     ctx.type = "text/plain";
