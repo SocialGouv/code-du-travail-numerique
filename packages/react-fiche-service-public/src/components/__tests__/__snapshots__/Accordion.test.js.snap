@@ -14,6 +14,30 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c6 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -78,30 +102,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   line-height: 1.25;
 }
 
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c8 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c11 > *:first-child {
   margin-top: 0;
 }
@@ -134,6 +134,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     padding: 1rem 0;
   }
@@ -141,12 +147,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 
 @media (max-width:600px) {
   .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -196,7 +196,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="2"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -272,7 +272,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="2"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -353,7 +353,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="2"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -441,6 +441,17 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c0 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c4 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -505,17 +516,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   line-height: 1.25;
 }
 
-.c0 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c8 > *:first-child {
   margin-top: 0;
 }
@@ -529,6 +529,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c6 {
     padding: 1rem 0;
   }
@@ -536,12 +542,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 
 @media (max-width:600px) {
   .c5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
     font-size: 1.6rem;
   }
 }
@@ -565,7 +565,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="5"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -641,7 +641,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="5"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -722,7 +722,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="5"
+          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"

@@ -97,66 +97,6 @@ exports[`<FicheMT /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c58 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c57,
-[aria-selected="true"] .c58 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c61 {
-  padding: 1.6rem;
-  -webkit-animation: iHsNqv 250ms ease-in;
-  animation: iHsNqv 250ms ease-in;
-}
-
-.c56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.c56:hover,
-.c56:focus,
-.c56:focus-within,
-.c56[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c59 {
-  margin: 2rem 0 2rem 1rem;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.25;
-}
-
 .c49 {
   position: absolute;
   background-color: #7994d4;
@@ -229,6 +169,66 @@ exports[`<FicheMT /> should render 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.625;
+}
+
+.c58 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c57,
+[aria-selected="true"] .c58 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c61 {
+  padding: 1.6rem;
+  -webkit-animation: iHsNqv 250ms ease-in;
+  animation: iHsNqv 250ms ease-in;
+}
+
+.c56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c56:hover,
+.c56:focus,
+.c56:focus-within,
+.c56[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c59 {
+  margin: 2rem 0 2rem 1rem;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.25;
 }
 
 .c62 > *:first-child {
@@ -1394,18 +1394,6 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c61 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c59 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c60 {
     font-size: 1.6rem;
   }
@@ -1426,6 +1414,18 @@ exports[`<FicheMT /> should render 1`] = `
 
 @media (max-width:600px) {
   .c89 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c61 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c59 {
     font-size: 1.6rem;
   }
 }
@@ -2362,7 +2362,7 @@ exports[`<FicheMT /> should render 1`] = `
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="2"
+                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
                         role="heading"

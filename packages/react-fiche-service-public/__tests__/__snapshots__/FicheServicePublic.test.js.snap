@@ -30,6 +30,30 @@ exports[`<FicheServicePublic /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c12 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c19 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c17 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -92,30 +116,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.25;
-}
-
-.c12 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c19 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c21 > *:first-child {
@@ -374,6 +374,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c19 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c20 {
     padding: 1rem 0;
   }
@@ -381,12 +387,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 @media (max-width:600px) {
   .c18 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
     font-size: 1.6rem;
   }
 }
@@ -1314,7 +1314,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 data-accordion-component="AccordionItem"
                               >
                                 <div
-                                  aria-level="6"
+                                  aria-level="3"
                                   class="accordion__heading"
                                   data-accordion-component="AccordionItemHeading"
                                   role="heading"
@@ -1393,7 +1393,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 data-accordion-component="AccordionItem"
                               >
                                 <div
-                                  aria-level="6"
+                                  aria-level="3"
                                   class="accordion__heading"
                                   data-accordion-component="AccordionItemHeading"
                                   role="heading"

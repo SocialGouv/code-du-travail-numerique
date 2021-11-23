@@ -134,6 +134,54 @@ exports[`<DroitDuTravail /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c28 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c35 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c56 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c103 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c58 {
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -679,54 +727,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
-}
-
-.c28 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c35 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c56 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c103 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c60 > *:first-child {
@@ -1665,6 +1665,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c56 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c103 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c83 {
     padding: 1rem 0;
   }
@@ -1852,18 +1864,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 @media (max-width:600px) {
   .c55 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c56 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c103 {
     font-size: 1.6rem;
   }
 }
@@ -4160,7 +4160,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
+                            aria-level="3"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
@@ -4231,7 +4231,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
+                            aria-level="3"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
@@ -4307,7 +4307,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
+                            aria-level="3"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
                             role="heading"
