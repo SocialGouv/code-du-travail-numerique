@@ -3,14 +3,13 @@ import React from "react";
 
 import ConventionSearch from "../../src/conventions/Search";
 
-const Widget = () => {
-  return (
-    <Section>
-      <Container>
-        <ConventionSearch />
-      </Container>
-    </Section>
-  );
-};
+const Widget = (): JSX.Element => (
+  <Section>
+    <Container>
+      <ConventionSearch />
+    </Container>
+    <p>ICI CUSTOM FOOTER</p>
+  </Section>
+);
 
 export default Widget;

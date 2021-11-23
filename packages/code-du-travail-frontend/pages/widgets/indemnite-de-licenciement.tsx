@@ -5,14 +5,13 @@ import React from "react";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 
 const props = tools.find((cc) => cc.icon === "Indemnity");
-const Widget = () => {
-  return (
-    <Section>
-      <Container>
-        <CalculateurIndemnite {...props} />
-      </Container>
-    </Section>
-  );
-};
+const Widget = (): JSX.Element => (
+  <Section>
+    <Container>
+      <CalculateurIndemnite {...props} />
+    </Container>
+    <div>ICI CUSTOM FOOTER</div>
+  </Section>
+);
 
 export default Widget;
