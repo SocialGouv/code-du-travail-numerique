@@ -15,7 +15,7 @@
 ### Demos
 
 - Production : <https://code.travail.gouv.fr>
-- master (dev) : <https://master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/>
+- master (dev) : <https://code-du-travail-numerique-master.dev.fabrique.social.gouv.fr/>
 
 ## Installation
 
