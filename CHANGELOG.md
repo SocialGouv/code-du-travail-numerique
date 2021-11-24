@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.60.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.59.0...v4.60.0) (2021-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.232.0 ([#4025](https://github.com/SocialGouv/code-du-travail-numerique/issues/4025)) ([c551212](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5512120da493f8f22704fbe1629c4ea7ebf7e82))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.233.0 ([#4032](https://github.com/SocialGouv/code-du-travail-numerique/issues/4032)) ([00a72e4](https://github.com/SocialGouv/code-du-travail-numerique/commit/00a72e45e77cf85bf945066543bad730f65882b4))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.234.0 ([#4035](https://github.com/SocialGouv/code-du-travail-numerique/issues/4035)) ([0811599](https://github.com/SocialGouv/code-du-travail-numerique/commit/0811599907485d79f5caca1c1c55f2c245071f60))
+
+
+### Features
+
+* **modeles:** add cc 1517 retirement ([#4001](https://github.com/SocialGouv/code-du-travail-numerique/issues/4001)) ([55472a6](https://github.com/SocialGouv/code-du-travail-numerique/commit/55472a6fbd544f775da7da80eca8e45f816a9f9a))
+* **modeles:** add cc 1672 retirement ([#4002](https://github.com/SocialGouv/code-du-travail-numerique/issues/4002)) ([8fde611](https://github.com/SocialGouv/code-du-travail-numerique/commit/8fde6114b15fa1e47b214221f8af13e653231b18))
+* **modeles:** add cc 1740 retirement ([#4000](https://github.com/SocialGouv/code-du-travail-numerique/issues/4000)) ([055f926](https://github.com/SocialGouv/code-du-travail-numerique/commit/055f92630fc90baf0c6dde267f4e710631622e75))
+* **modeles:** add cc 1996 retirement ([#4003](https://github.com/SocialGouv/code-du-travail-numerique/issues/4003)) ([b4fc604](https://github.com/SocialGouv/code-du-travail-numerique/commit/b4fc604553f1614de67508726f6ef9027743463b))
+* **modeles:** add cc 3127 retirement ([#4004](https://github.com/SocialGouv/code-du-travail-numerique/issues/4004)) ([ab89b51](https://github.com/SocialGouv/code-du-travail-numerique/commit/ab89b519944f5d585dd874295c30789ffa911afc))
+
+
+
+
+
 # [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
 
 
