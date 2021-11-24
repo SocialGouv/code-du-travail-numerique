@@ -2903,10 +2903,10 @@
     eslint-import-resolver-typescript "~2.5.0"
     eslint-plugin-import "~2.25.2"
 
-"@socialgouv/fiches-travail-data@^4.234.0":
-  version "4.234.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.234.0.tgz#537a03e6370a8b19cfe7a45cde742e6543eea770"
-  integrity sha512-F2nz6piCXa3dcEFpjUyx9chxa+dyUQf5NVbg08nkcirx+sSSf2pMTpUFMzFt6bKQ3GoIFgNanj8lfdMuHOTL2g==
+"@socialgouv/fiches-travail-data@^4.235.0":
+  version "4.235.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.235.0.tgz#13a6fd98f36fe4b624bf263e73776e04d5725da6"
+  integrity sha512-Yh+4f8hQHATRpJgb4Ym/BqN4qPusIjc8MmPkxKIVIwC521Ff/B1CB7BU2PQmK7YBTzF9dab9tCLzRm8kU/JR9Q==
 
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
@@ -14550,12 +14550,12 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@2.6.1, node-fetch@^2.6.1:
+node-fetch@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
-node-fetch@^2.6.0:
+node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.6"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.6.tgz#1751a7c01834e8e1697758732e9efb6eeadfaf89"
   integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
