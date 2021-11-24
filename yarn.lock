@@ -16705,10 +16705,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.8, rc@~1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-accessible-accordion@^3.3.5:
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/react-accessible-accordion/-/react-accessible-accordion-3.3.5.tgz#5d035994a261c832a57e7822f1bbacf914c5a5cc"
-  integrity sha512-yCh3tx+jNuOPs+m58LOBFTGDEaGvM8UfuCNznr855FDAWzwV8V/ZH/TVBvgqH0npP58KrrVrHpj4jcy0EE5hEw==
+"react-accessible-accordion@git://github.com/maxgfr/react-accessible-accordion.git":
+  version "4.0.0"
+  resolved "git://github.com/maxgfr/react-accessible-accordion.git#04c529e8ee2c6bb9742584ec077de077ee964d65"
 
 react-autosuggest@10.1.0:
   version "10.1.0"
