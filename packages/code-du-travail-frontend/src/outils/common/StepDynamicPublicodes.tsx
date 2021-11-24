@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 
 import { trackSelectQuestionRetraite } from "../../lib/matomo";
-import { usePublicodes } from "../publicodes";
+import { Rule, usePublicodes } from "../publicodes";
 import { mapToPublicodesSituation } from "../publicodes/Utils";
 import PubliQuestion from "./PubliQuestion";
 import { WizardStepProps } from "./type/WizardType";
@@ -9,6 +9,12 @@ import { WizardStepProps } from "./type/WizardType";
 interface Props extends WizardStepProps {
   excludedRules: Array<string>;
 }
+
+type Question = {
+  name: string;
+  rule: Rule;
+  answered: boolean;
+};
 
 /**
  * React component to show step by step missing arguments from publicodes.
@@ -29,6 +35,34 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
   useEffect(() => {
     publicodesContext.setSituation(mapToPublicodesSituation(formValues));
   }, [formValues]);
+
+  const memoizedQuestions: Question[] = useMemo(() => {
+    const currentSituation: Question[] = publicodesContext.situation
+      .filter((item) => !excludedRules.includes(item.name))
+      .map((item) => {
+        return {
+          answered: true,
+          name: item.name,
+          rule: item.rawNode,
+        };
+      });
+    const missingArgs: Question[] = publicodesContext.missingArgs
+      .filter((item) => !excludedRules.includes(item.name))
+      .slice(0, 1)
+      .map((item) => {
+        return {
+          answered: false,
+          name: item.name,
+          rule: item.rawNode,
+        };
+      });
+
+    return currentSituation.concat(missingArgs);
+  }, [
+    publicodesContext.situation,
+    publicodesContext.missingArgs,
+    excludedRules,
+  ]);
 
   /**
    * Function called when a older question has been asked.
@@ -60,40 +94,21 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
 
   return (
     <>
-      <>
-        {publicodesContext.situation
-          .filter((item) => !excludedRules.includes(item.name))
-          .map((item) => {
-            return (
-              <PubliQuestion
-                key={item.name}
-                name={"infos." + item.name}
-                rule={item.rawNode}
-                onChange={() => {
-                  resetNextQuestions(item.name);
-                  onTrackDynamicRule(item.rawNode.titre);
-                }}
-              />
-            );
-          })}
-      </>
-      <>
-        {publicodesContext.missingArgs
-          .filter((item) => !excludedRules.includes(item.name))
-          .slice(0, 1)
-          .map((item) => {
-            return (
-              <PubliQuestion
-                key={item.name}
-                name={"infos." + item.name}
-                rule={item.rawNode}
-                onChange={() => {
-                  onTrackDynamicRule(item.rawNode.titre);
-                }}
-              />
-            );
-          })}
-      </>
+      {memoizedQuestions.map((question) => {
+        return (
+          <PubliQuestion
+            key={question.name}
+            name={"infos." + question.name}
+            rule={question.rule}
+            onChange={() => {
+              if (question.answered) {
+                resetNextQuestions(question.name);
+              }
+              onTrackDynamicRule(question.rule.titre);
+            }}
+          />
+        );
+      })}
     </>
   );
 }
