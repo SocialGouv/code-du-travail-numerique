@@ -146,6 +146,7 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-0"
           class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -314,6 +315,7 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-3"
           class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -482,6 +484,7 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-2"
           class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -650,6 +653,7 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
+          aria-labelledby="accordion__heading-raa-1"
           class="c4"
           data-accordion-component="AccordionItemPanel"
           hidden=""

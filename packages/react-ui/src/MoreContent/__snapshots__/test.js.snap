@@ -86,6 +86,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
       data-accordion-component="AccordionItem"
     >
       <div
+        aria-level="3"
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
         role="heading"
@@ -122,10 +123,12 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
         </div>
       </div>
       <div
+        aria-labelledby="accordion__heading-raa-0"
         class="c5"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
+        role="region"
       >
         <div
           class="c6"
