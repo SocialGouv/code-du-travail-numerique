@@ -26,6 +26,9 @@ COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-
 # Copy lockfile
 COPY ./yarn.lock ./yarn.lock
 
+# Add git
+RUN apk add git 
+
 # Install packages
 RUN yarn --frozen-lockfile && yarn cache clean
 
