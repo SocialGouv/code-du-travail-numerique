@@ -1,31 +1,35 @@
-import { supportedCcn as retraiteData } from "@socialgouv/modeles-social";
+import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import Disclaimer from "../../../common/Disclaimer";
 import { SmallText } from "../../../common/stepStyles";
-import { FormContent } from "../../../common/type/WizardType";
-import { PublicodesContextInterface } from "../../../publicodes";
 
 type Props = {
-  publicodesContext: PublicodesContextInterface;
-  data: FormContent;
+  resultValueInDays: number | null;
+  ccNumber: number | null;
+  type: "depart" | "mise" | null;
 };
-const title = "Attention il peut exister une durée plus favorable";
+const titreFavorable = "Attention il peut exister une durée plus favorable";
 
-const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
+const titrePreavis =
+  "Attention il peut quand même exister une durée de préavis";
+
+const WarningResult: React.FC<Props> = ({
+  resultValueInDays,
+  ccNumber,
+  type,
+}) => {
   const isSupported = React.useMemo(() => {
-    if (data && data.ccn) {
-      const idccInfo = retraiteData.find((item) => item.idcc == data.ccn.num);
+    if (ccNumber) {
+      const idccInfo = supportedCcn.find((item) => item.idcc == ccNumber);
       return !!(idccInfo && idccInfo.preavisRetraite);
     }
     return false;
-  }, [data]);
-  if (publicodesContext.result.value === 0) {
+  }, [ccNumber]);
+  if (resultValueInDays === 0) {
     if (isSupported) {
       return (
-        <Disclaimer
-          title={"Attention il peut quand même exister une durée de préavis"}
-        >
+        <Disclaimer title={titrePreavis}>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
             peut prévoir une durée de préavis. Dans ce cas, cette durée doit
@@ -36,9 +40,7 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
       );
     } else {
       return (
-        <Disclaimer
-          title={"Attention il peut quand même exister une durée de préavis"}
-        >
+        <Disclaimer title={titrePreavis}>
           <p>
             Une convention collective de branche, un accord collectif
             d’entreprise, le contrat de travail ou un usage peut prévoir une
@@ -49,13 +51,10 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
       );
     }
   }
-  const type =
-    data["contrat salarié - mise à la retraite"] === "oui" ? "mise" : "depart";
-
   if (type === "depart") {
     if (isSupported) {
       return (
-        <Disclaimer title={title}>
+        <Disclaimer title={titreFavorable}>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
             peut prévoir une durée de préavis<sup>*</sup> ou une condition
@@ -77,9 +76,7 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
       );
     } else {
       return (
-        <Disclaimer
-          title={"Attention il peut quand même exister une durée de préavis"}
-        >
+        <Disclaimer title={titrePreavis}>
           <p>
             Une convention collective de branche, un accord collectif
             d’entreprise, le contrat de travail ou un usage peut prévoir une
@@ -93,7 +90,7 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
 
   if (isSupported) {
     return (
-      <Disclaimer title={title}>
+      <Disclaimer title={titrePreavis}>
         <p>
           Un accord collectif d’entreprise, le contrat de travail ou un usage
           peut prévoir une durée de préavis<sup>*</sup> ou une condition
@@ -115,9 +112,7 @@ const WarningResult: React.FC<Props> = ({ publicodesContext, data }) => {
     );
   } else {
     return (
-      <Disclaimer
-        title={"Attention il peut quand même exister une durée de préavis"}
-      >
+      <Disclaimer title={titrePreavis}>
         <p>
           Une convention collective de branche, un accord collectif
           d’entreprise, le contrat de travail ou un usage peut prévoir une durée
