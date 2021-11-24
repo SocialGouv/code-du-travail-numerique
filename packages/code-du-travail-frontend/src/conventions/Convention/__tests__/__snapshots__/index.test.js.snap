@@ -935,7 +935,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -981,7 +980,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -1007,7 +1005,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1053,7 +1050,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -1146,7 +1142,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1192,7 +1187,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -1351,7 +1345,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1397,7 +1390,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -1529,7 +1521,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -1575,7 +1566,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -1601,7 +1591,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1647,7 +1636,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -1788,7 +1776,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1834,7 +1821,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -1933,7 +1919,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -1979,7 +1964,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2089,7 +2073,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2135,7 +2118,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2245,7 +2227,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2291,7 +2272,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2374,7 +2354,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2420,7 +2399,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2547,7 +2525,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -2593,7 +2570,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-11"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -2619,7 +2595,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2665,7 +2640,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2756,7 +2730,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -2802,7 +2775,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -2964,7 +2936,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3010,7 +2981,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3164,7 +3134,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3210,7 +3179,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3293,7 +3261,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3339,7 +3306,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3391,7 +3357,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3437,7 +3402,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3523,7 +3487,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -3569,7 +3532,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-18"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -3595,7 +3557,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3641,7 +3602,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3684,7 +3644,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3730,7 +3689,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3837,7 +3795,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -3883,7 +3840,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -3995,7 +3951,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -4041,7 +3996,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-22"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -4067,7 +4021,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -4113,7 +4066,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -4588,7 +4540,6 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="3"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
                     role="heading"
@@ -4634,7 +4585,6 @@ exports[`<Convention /> renders 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                     class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
@@ -4772,7 +4722,6 @@ exports[`<Convention /> renders 1`] = `
       data-accordion-component="AccordionItem"
     >
       <div
-        aria-level="3"
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
         role="heading"
@@ -4809,12 +4758,10 @@ exports[`<Convention /> renders 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-25"
         class="c33"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-25"
-        role="region"
       >
         <div
           class="c34"
@@ -4863,7 +4810,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -4909,7 +4855,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-26"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -5065,7 +5010,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -5111,7 +5055,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-27"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -5507,7 +5450,6 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -5553,7 +5495,6 @@ exports[`<Convention /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-28"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""

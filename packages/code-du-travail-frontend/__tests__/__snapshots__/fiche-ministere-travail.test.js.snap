@@ -2362,7 +2362,6 @@ exports[`<FicheMT /> should render 1`] = `
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
                         role="heading"
@@ -2408,7 +2407,6 @@ exports[`<FicheMT /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
                         class="c61"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""

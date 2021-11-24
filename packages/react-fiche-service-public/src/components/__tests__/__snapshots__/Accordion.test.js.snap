@@ -196,7 +196,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -242,7 +241,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -272,7 +270,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -318,7 +315,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-1"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -353,7 +349,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -399,7 +394,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-2"
           class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -565,7 +559,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -611,7 +604,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-3"
           class="c6"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -641,7 +633,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -687,7 +678,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
           class="c6"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -722,7 +712,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -768,7 +757,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-5"
           class="c6"
           data-accordion-component="AccordionItemPanel"
           hidden=""

@@ -122,7 +122,6 @@ exports[`<Accordion /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -168,7 +167,6 @@ exports[`<Accordion /> renders 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
           class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -313,7 +311,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -359,7 +356,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-3"
           class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -504,7 +500,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -550,7 +545,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-2"
           class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""
@@ -695,7 +689,6 @@ exports[`<Accordion /> renders as h2 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
           role="heading"
@@ -741,7 +734,6 @@ exports[`<Accordion /> renders as h2 1`] = `
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-1"
           class="c5"
           data-accordion-component="AccordionItemPanel"
           hidden=""

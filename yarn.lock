@@ -16707,7 +16707,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.8, rc@~1.2.7:
 
 "react-accessible-accordion@git://github.com/maxgfr/react-accessible-accordion.git":
   version "4.0.0"
-  resolved "git://github.com/maxgfr/react-accessible-accordion.git#04c529e8ee2c6bb9742584ec077de077ee964d65"
+  resolved "git://github.com/maxgfr/react-accessible-accordion.git#cd3213b030bdfe39e54f91ac683312c79373ddb1"
 
 react-autosuggest@10.1.0:
   version "10.1.0"
