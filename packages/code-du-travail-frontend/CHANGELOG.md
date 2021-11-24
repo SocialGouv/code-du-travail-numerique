@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.60.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.59.0...v4.60.0) (2021-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.232.0 ([#4025](https://github.com/SocialGouv/code-du-travail-numerique/issues/4025)) ([c551212](https://github.com/SocialGouv/code-du-travail-numerique/commit/c5512120da493f8f22704fbe1629c4ea7ebf7e82))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.233.0 ([#4032](https://github.com/SocialGouv/code-du-travail-numerique/issues/4032)) ([00a72e4](https://github.com/SocialGouv/code-du-travail-numerique/commit/00a72e45e77cf85bf945066543bad730f65882b4))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.234.0 ([#4035](https://github.com/SocialGouv/code-du-travail-numerique/issues/4035)) ([0811599](https://github.com/SocialGouv/code-du-travail-numerique/commit/0811599907485d79f5caca1c1c55f2c245071f60))
+
+
+
+
+
 # [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
 
 
