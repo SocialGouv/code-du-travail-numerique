@@ -72,7 +72,6 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
     <EventTracker />
   </Layout>
 );
-
 export async function getServerSideProps() {
   return {
     props: getTools(),
