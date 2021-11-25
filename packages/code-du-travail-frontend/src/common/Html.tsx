@@ -9,13 +9,23 @@ type Props = {
   inline?: boolean;
 };
 
+const whiteListTags = ["webcomponent-tooltip"];
+
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
   return (
     <Div
       {...props}
       isInline={inline}
       dangerouslySetInnerHTML={{
-        __html: xss(htmlParser(children)),
+        __html: xss(htmlParser(children), {
+          onIgnoreTag: function (tag, html) {
+            for (let i = 0; i < whiteListTags.length; i++) {
+              if (tag.startsWith(whiteListTags[i])) {
+                return html;
+              }
+            }
+          },
+        }),
       }}
     />
   );
