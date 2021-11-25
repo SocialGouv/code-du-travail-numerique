@@ -2448,6 +2448,7 @@ exports[`<FicheMT /> should render 1`] = `
                               >
                                 notre fiche sur le suivi de l’état de santé des salariés
                               </a>
+                              .
                             </p>
                           </div>
                         </div>
