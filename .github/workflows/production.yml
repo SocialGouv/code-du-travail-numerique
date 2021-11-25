@@ -36,15 +36,41 @@ jobs:
             NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
             NEXT_PUBLIC_SENTRY_ENV=production
 
-  deploy-prod:
-    name: Deploy production
+  manifests-preprod:
+    name: Preproduction manifests
     runs-on: ubuntu-latest
-    needs: [register]
-    environment:
-      name: production
-      url: https://code.travail.gouv.fr/
     steps:
-      - name: Use autodevops manifests generation
+      - name: Use k8s manifests generation
+        uses: SocialGouv/actions/k8s-manifests@v1
+        with:
+          environment: "preprod"
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }}
+        env:
+          ELASTIC_APM_ENVIRONMENT: cdtn-preprod
+          ES_INDEX_PREFIX: cdtn-preprod
+
+  deploy-preprod:
+    name: Deploy preproduction
+    runs-on: ubuntu-latest
+    needs: [register, manifests-preprod]
+    environment:
+      name: preproduction
+      url: https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/
+    steps:
+      - name: Use autodevops deployment
+        uses: SocialGouv/actions/autodevops-deploy@v1
+        with:
+          environment: "preprod"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+          rancherId: ${{ secrets.RANCHER_PROJECT_ID }}
+
+  manifests-prod:
+    name: Production manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
           environment: "prod"
@@ -56,6 +82,14 @@ jobs:
           ES_INDEX_PREFIX: cdtn-prod
           KUBE_NAMESPACE: cdtn
 
+  deploy-prod:
+    name: Deploy production
+    runs-on: ubuntu-latest
+    needs: [register, manifests-prod]
+    environment:
+      name: production
+      url: https://code.travail.gouv.fr/
+    steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
         with:
