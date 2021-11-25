@@ -9,7 +9,7 @@
 <br/>
 
 - Consulter le [site internet code.travail.gouv.fr](https://code.travail.gouv.fr)
-- A propos du code du travail numérique : https://code.travail.gouv.fr/a-propos
+- A propos du code du travail numérique : [https://code.travail.gouv.fr/a-propos](https://code.travail.gouv.fr/a-propos)
 - L'[histoire du projet](https://incubateur.social.gouv.fr/startups/code-du-travail-numerique)
 
 ## Contribuer

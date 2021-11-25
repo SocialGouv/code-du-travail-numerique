@@ -110,8 +110,6 @@ exports[`<StepStatus /> should render 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -375,8 +373,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -422,8 +418,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -473,8 +467,6 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -659,8 +651,6 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -706,8 +696,6 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

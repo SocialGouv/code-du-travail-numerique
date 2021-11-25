@@ -1,7 +1,0 @@
-contrat salarié . convention collective . pharmacie officine:
-  description: Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.
-  applicable si: convention collective = 'IDCC1996'
-  valeur: oui
-  cdtn:
-    idcc: 1996
-    préavis-retraite: false

@@ -218,8 +218,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -839,8 +837,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -1452,8 +1448,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -2076,8 +2070,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -2689,8 +2681,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>

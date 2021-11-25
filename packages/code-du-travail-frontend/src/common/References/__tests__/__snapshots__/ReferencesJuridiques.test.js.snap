@@ -189,8 +189,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         </svg>
         <span
           class="c4 c5"
-          font-size="hsmall"
-          font-weight="600"
         >
           Références juridiques concernées :
         </span>

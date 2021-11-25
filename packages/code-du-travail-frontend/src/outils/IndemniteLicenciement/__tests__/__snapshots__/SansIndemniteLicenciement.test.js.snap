@@ -228,8 +228,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
         </svg>
         <span
           class="c10 c11"
-          font-size="hsmall"
-          font-weight="600"
         >
           Voir le détail du calcul
         </span>

@@ -196,8 +196,6 @@ exports[`<Salaire /> renders 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -431,8 +429,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -478,8 +474,6 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -930,8 +924,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -977,8 +969,6 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1423,8 +1413,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1470,8 +1458,6 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
     </span>
     <span
       class="c5"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

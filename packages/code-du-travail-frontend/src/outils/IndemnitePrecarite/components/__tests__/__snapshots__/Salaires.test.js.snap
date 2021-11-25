@@ -309,8 +309,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -545,8 +543,6 @@ exports[`<Salaires /> should delete a salaires 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -883,8 +879,6 @@ exports[`<Salaires /> should render 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

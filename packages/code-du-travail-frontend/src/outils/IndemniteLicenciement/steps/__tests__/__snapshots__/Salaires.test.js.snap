@@ -256,8 +256,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -303,8 +301,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -356,8 +352,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
         </span>
         <span
           class="c2"
-          font-size="default"
-          font-weight="400"
         >
            (obligatoire)
         </span>
@@ -1086,8 +1080,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1133,8 +1125,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1181,8 +1171,6 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1831,8 +1819,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1885,8 +1871,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     >
       <span
         class="c8"
-        font-size="hsmall"
-        font-weight="400"
       >
         Période 
         1
@@ -2035,8 +2019,6 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     >
       <span
         class="c8"
-        font-size="hsmall"
-        font-weight="400"
       >
         Période 
         2
