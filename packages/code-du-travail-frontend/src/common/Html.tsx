@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import xss from "xss";
+import xss, { getDefaultWhiteList } from "xss";
 
 import { htmlParser } from "../lib";
 
@@ -9,6 +9,11 @@ type Props = {
   inline?: boolean;
 };
 
+/**
+ * List of tags that are allowed in the HTML
+ * @type {string[]}
+ * webcomponent-tooltip is used as an overlay for the definition of the words`
+ */
 const whiteListTags = ["webcomponent-tooltip"];
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
@@ -24,6 +29,17 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
                 return html;
               }
             }
+          },
+          // Use for modeles-de-courrier
+          whiteList: {
+            ...getDefaultWhiteList(),
+            ...{
+              div: ["class"],
+              h3: ["class"],
+              li: ["class"],
+              p: ["class"],
+              span: ["class"],
+            },
           },
         }),
       }}

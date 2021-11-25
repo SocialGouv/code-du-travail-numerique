@@ -886,7 +886,9 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 Contenu au format 
                 <strong>
                   html
@@ -2193,7 +2195,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 Contenu au format 
                 <strong>
                   html
@@ -3250,7 +3254,9 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 Contenu au format 
                 <strong>
                   html
@@ -4420,7 +4426,9 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>
@@ -5632,7 +5640,9 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 Contenu au format 
                 <strong>
                   html
@@ -6690,7 +6700,9 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 Contenu au format 
                 <strong>
                   indemnités
@@ -7748,7 +7760,9 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 <a
                   href=""
                 >
@@ -8806,7 +8820,9 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class=""
             >
-              <p>
+              <p
+                class="test-content"
+              >
                 annualisation du temps de travail. Annualisation de l'annualisation.
               </p>
             </div>

@@ -3,6 +3,9 @@ import cheerio from "cheerio";
 export const htmlParser = (html: string): string => {
   const $ = cheerio.load(html, null, false);
 
+  // FIXME: Remove style from docx converter
+  $("style").remove();
+
   $("dl").replaceWith(() => {
     const src = $(this).find("source").attr("srcset");
     return src
