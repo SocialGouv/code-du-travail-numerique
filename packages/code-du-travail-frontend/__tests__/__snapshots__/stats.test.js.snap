@@ -81,6 +81,41 @@ exports[`<Stats /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c27 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c36 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c51 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -416,41 +451,6 @@ exports[`<Stats /> should render 1`] = `
   margin: 1rem;
   padding: 0;
   width: calc(100% / 3 - 2 * 1rem - 1px);
-}
-
-.c27 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c36 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c51 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c25 {
@@ -912,6 +912,18 @@ exports[`<Stats /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c36 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c51 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
   }
@@ -1058,18 +1070,6 @@ exports[`<Stats /> should render 1`] = `
 @media (max-width:600px) {
   .c33 {
     width: 80%;
-  }
-}
-
-@media (max-width:600px) {
-  .c36 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c51 {
-    font-size: 1.6rem;
   }
 }
 

@@ -38,10 +38,6 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: relative;
-}
-
 .c13 {
   position: absolute;
   background-color: #7994d4;
@@ -53,6 +49,10 @@ exports[`<Article /> should render 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.c9 {
+  position: relative;
 }
 
 .c10 {
