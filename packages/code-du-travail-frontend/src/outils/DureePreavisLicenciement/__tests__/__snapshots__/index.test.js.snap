@@ -123,9 +123,6 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
