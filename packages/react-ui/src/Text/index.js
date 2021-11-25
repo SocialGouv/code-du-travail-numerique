@@ -57,9 +57,23 @@ export function Text({ children, fontSize, fontWeight, variant, ...props }) {
     </Span>
   );
 }
-
-export function Paragraph({ children }) {
-  return <P>{children}</P>;
+export function Paragraph({
+  children,
+  fontSize,
+  fontWeight,
+  variant,
+  ...props
+}) {
+  return (
+    <P
+      {...props}
+      $fontWeight={fontWeight}
+      $fontSize={fontSize}
+      $variant={variant}
+    >
+      {children}
+    </P>
+  );
 }
 
 const Span = styled.span`
