@@ -926,8 +926,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           <div>
             <span
               class="c15"
-              font-size="tiny"
-              font-weight="400"
             >
               150
                caractères restants
@@ -1387,8 +1385,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           <div>
             <span
               class="c11"
-              font-size="tiny"
-              font-weight="400"
             >
               150
                caractères restants

@@ -441,8 +441,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -487,8 +485,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1094,8 +1090,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1140,8 +1134,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1187,8 +1179,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

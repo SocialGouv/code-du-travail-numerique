@@ -92,8 +92,6 @@ exports[`<StepInfosGenerales /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -328,8 +326,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -375,8 +371,6 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </span>
         <span
           class="c2"
-          font-size="default"
-          font-weight="400"
         >
            (obligatoire)
         </span>
@@ -672,8 +666,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -719,8 +711,6 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </span>
         <span
           class="c2"
-          font-size="default"
-          font-weight="400"
         >
            (obligatoire)
         </span>
@@ -932,8 +922,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -975,8 +963,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -1022,8 +1008,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -1069,8 +1053,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -1116,8 +1098,6 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
