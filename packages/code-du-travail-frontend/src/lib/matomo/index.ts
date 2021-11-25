@@ -74,7 +74,7 @@ export const trackConventionCollective = (
   switch (removeQueryParameters(currentPath)) {
     case MatomoTrackUrl.PREAVIS_RETRAITE: {
       const idccInfo = retraiteData.find((item) => item.idcc == ccn.num);
-      isTracked = idccInfo && idccInfo.preavisRetraite;
+      isTracked = !!(idccInfo && idccInfo.preavisRetraite);
       break;
     }
     case MatomoTrackUrl.PREAVIS_DEMISSION: {
