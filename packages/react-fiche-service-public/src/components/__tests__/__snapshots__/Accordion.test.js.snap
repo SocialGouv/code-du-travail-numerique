@@ -198,7 +198,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-0"
@@ -272,7 +271,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-1"
@@ -351,7 +349,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-2"
@@ -561,7 +558,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-3"
@@ -635,7 +631,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-4"
@@ -714,7 +709,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-5"

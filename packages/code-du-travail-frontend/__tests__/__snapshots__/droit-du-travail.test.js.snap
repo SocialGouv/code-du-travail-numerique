@@ -2574,7 +2574,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-0"
@@ -2776,7 +2775,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-1"
@@ -2973,7 +2971,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-2"
@@ -3123,7 +3120,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-3"
@@ -3252,7 +3248,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-4"
@@ -3368,7 +3363,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-5"
@@ -3497,7 +3491,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-6"
@@ -3589,7 +3582,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-7"
@@ -3745,7 +3737,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-8"
@@ -3899,7 +3890,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-9"
@@ -4011,7 +4001,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-10"
@@ -4140,7 +4129,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-11"
@@ -4209,7 +4197,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-12"
@@ -4283,7 +4270,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <div
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-13"
@@ -4413,7 +4399,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-hierarchie"
@@ -4635,7 +4620,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-15"
@@ -4763,7 +4747,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-16"
@@ -4867,7 +4850,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <div
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-17"

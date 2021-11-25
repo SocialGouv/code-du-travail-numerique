@@ -124,7 +124,6 @@ exports[`<Accordion /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-0"
@@ -313,7 +312,6 @@ exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-3"
@@ -502,7 +500,6 @@ exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-2"
@@ -691,7 +688,6 @@ exports[`<Accordion /> renders as h2 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-1"

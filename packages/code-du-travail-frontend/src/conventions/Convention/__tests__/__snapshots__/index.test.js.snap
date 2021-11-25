@@ -937,7 +937,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-0"
@@ -1007,7 +1006,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
@@ -1144,7 +1142,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
@@ -1347,7 +1344,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
@@ -1523,7 +1519,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-4"
@@ -1593,7 +1588,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
@@ -1778,7 +1772,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
@@ -1921,7 +1914,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
@@ -2075,7 +2067,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
@@ -2229,7 +2220,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
@@ -2356,7 +2346,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
@@ -2527,7 +2516,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-11"
@@ -2597,7 +2585,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
@@ -2732,7 +2719,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
@@ -2938,7 +2924,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
@@ -3136,7 +3121,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
@@ -3263,7 +3247,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
@@ -3359,7 +3342,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
@@ -3489,7 +3471,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-18"
@@ -3559,7 +3540,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
@@ -3646,7 +3626,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
@@ -3797,7 +3776,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
@@ -3953,7 +3931,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-22"
@@ -4023,7 +4000,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -4542,7 +4518,6 @@ exports[`<Convention /> renders 1`] = `
                   <div
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
@@ -4724,7 +4699,6 @@ exports[`<Convention /> renders 1`] = `
       <div
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
-        role="heading"
       >
         <div
           aria-controls="accordion__panel-raa-25"
@@ -4812,7 +4786,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-26"
@@ -5012,7 +4985,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-27"
@@ -5452,7 +5424,6 @@ exports[`<Convention /> renders 1`] = `
         <div
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-28"

@@ -2364,7 +2364,6 @@ exports[`<FicheMT /> should render 1`] = `
                       <div
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"

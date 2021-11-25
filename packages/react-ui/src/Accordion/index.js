@@ -1,6 +1,6 @@
+import { AccordionItemHeading } from "@maxgfr/react-accessible-accordion";
 import PropTypes from "prop-types";
 import React from "react";
-import { AccordionItemHeading } from "react-accessible-accordion";
 import styled from "styled-components";
 
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";

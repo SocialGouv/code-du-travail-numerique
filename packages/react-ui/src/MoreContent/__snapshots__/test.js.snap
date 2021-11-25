@@ -88,7 +88,6 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
       <div
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
-        role="heading"
       >
         <div
           aria-controls="accordion__panel-raa-0"
