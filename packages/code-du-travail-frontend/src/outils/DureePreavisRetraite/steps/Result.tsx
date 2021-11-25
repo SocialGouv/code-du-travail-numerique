@@ -41,7 +41,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
             ? "mise"
             : "depart"
         }
-        ccNumber={formValues.ccn.num}
+        ccNumber={formValues.ccn && formValues.ccn.num}
       />
     </>
   );
