@@ -2443,6 +2443,7 @@ exports[`<FicheMT /> should render 1`] = `
                               </strong>
                                consultez 
                               <a
+                                class="spip_in"
                                 href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
                                 target="_blank"
                               >

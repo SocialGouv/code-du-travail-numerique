@@ -7764,6 +7764,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 class="test-content"
               >
                 <a
+                  class="spip_in"
                   href=""
                 >
                   le contrat de sécurisation professionnelle APE

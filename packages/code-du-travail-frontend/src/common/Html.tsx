@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import xss, { getDefaultWhiteList } from "xss";
+import xss from "xss";
 
 import { htmlParser } from "../lib";
 
@@ -12,9 +12,16 @@ type Props = {
 /**
  * List of tags that are allowed in the HTML
  * @type {string[]}
- * webcomponent-tooltip is used as an overlay for the definition of the words`
+ * webcomponent-tooltip is used as an overlay for the definition of the words
  */
 const whiteListTags = ["webcomponent-tooltip"];
+
+/**
+ * List of attributes that are allowed for the tags scan in the HTML
+ * @type {string[]}
+ * class is used for modeles-de-courrier
+ */
+const whiteListAttr = ["class"];
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
   return (
@@ -30,16 +37,12 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
               }
             }
           },
-          // Use for modeles-de-courrier
-          whiteList: {
-            ...getDefaultWhiteList(),
-            ...{
-              div: ["class"],
-              h3: ["class"],
-              li: ["class"],
-              p: ["class"],
-              span: ["class"],
-            },
+          onTagAttr: function (tag, name, value) {
+            for (let i = 0; i < whiteListAttr.length; i++) {
+              if (name.startsWith(whiteListAttr[i])) {
+                return `${name}=${value}`;
+              }
+            }
           },
         }),
       }}
