@@ -7,7 +7,7 @@ import { box, spacings } from "../theme.js";
 
 export function Tag({ children }) {
   return (
-    <StyledText fontWeight={600} fontSize="small">
+    <StyledText fontWeight="600" fontSize="small">
       {children}
     </StyledText>
   );

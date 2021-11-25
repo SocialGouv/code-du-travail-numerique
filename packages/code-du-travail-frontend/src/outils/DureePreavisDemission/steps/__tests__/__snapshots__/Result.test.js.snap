@@ -210,8 +210,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>

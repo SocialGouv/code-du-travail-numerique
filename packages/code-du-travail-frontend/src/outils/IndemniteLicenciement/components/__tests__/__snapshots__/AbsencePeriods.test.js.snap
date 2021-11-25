@@ -411,8 +411,6 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
     >
       <span
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
       >
         Absence 
         1
@@ -951,8 +949,6 @@ exports[`<AbsencePeriods /> should render 1`] = `
     >
       <span
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
       >
         Absence 
         1

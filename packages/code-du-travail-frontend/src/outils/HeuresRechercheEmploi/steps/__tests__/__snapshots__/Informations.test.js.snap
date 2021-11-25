@@ -163,8 +163,6 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
       </span>
       <span
         class="c4"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>

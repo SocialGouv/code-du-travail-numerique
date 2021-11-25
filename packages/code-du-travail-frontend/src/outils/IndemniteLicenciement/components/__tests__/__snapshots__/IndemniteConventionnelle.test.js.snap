@@ -292,8 +292,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -509,8 +507,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -951,8 +947,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -1168,8 +1162,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>

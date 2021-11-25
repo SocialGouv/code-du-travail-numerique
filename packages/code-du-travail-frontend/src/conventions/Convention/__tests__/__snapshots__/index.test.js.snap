@@ -4343,8 +4343,6 @@ exports[`<Convention /> renders 1`] = `
                             </svg>
                             <span
                               class="c25 c26"
-                              font-size="hsmall"
-                              font-weight="600"
                             >
                               Références juridiques concernées :
                             </span>
