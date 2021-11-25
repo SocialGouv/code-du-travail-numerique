@@ -85,7 +85,7 @@ const Tile = styled(Wrapper)`
   width: 100%;
 `;
 
-const Num = styled.div`
+const Num = styled.p`
   color: ${({ theme }) => theme.secondary};
   font-weight: bold;
   font-size: 5rem;
