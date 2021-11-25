@@ -214,8 +214,6 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     </span>
     <span
       class="c6"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

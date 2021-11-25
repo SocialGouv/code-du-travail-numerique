@@ -186,8 +186,6 @@ exports[`<StepResult /> should render no results 1`] = `
       </svg>
       <span
         class="c4 c5"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -519,8 +517,6 @@ exports[`<StepResult /> should render with duration 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -829,8 +825,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -1134,8 +1128,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>

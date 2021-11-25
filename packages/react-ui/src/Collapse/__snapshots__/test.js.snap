@@ -91,8 +91,6 @@ exports[`<Collapse /> renders 1`] = `
       </svg>
       <span
         class="c3 c4"
-        font-size="hsmall"
-        font-weight="600"
       >
         Hello
       </span>

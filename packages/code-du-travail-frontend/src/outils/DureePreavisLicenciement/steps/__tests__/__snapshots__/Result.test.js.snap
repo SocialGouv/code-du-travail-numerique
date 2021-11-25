@@ -208,8 +208,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -573,8 +571,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -896,8 +892,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -1220,8 +1214,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
@@ -1532,8 +1524,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       </svg>
       <span
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
       </span>
