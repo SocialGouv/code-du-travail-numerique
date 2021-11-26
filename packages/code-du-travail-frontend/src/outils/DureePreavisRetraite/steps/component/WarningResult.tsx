@@ -9,9 +9,10 @@ type Props = {
   ccNumber: number | null;
   type: "depart" | "mise" | null;
 };
-const titreFavorable = "Attention il peut exister une durée plus favorable";
+export const titreFavorable =
+  "Attention il peut exister une durée plus favorable";
 
-const titrePreavis =
+export const titrePreavis =
   "Attention il peut quand même exister une durée de préavis";
 
 const WarningResult: React.FC<Props> = ({
@@ -54,7 +55,7 @@ const WarningResult: React.FC<Props> = ({
   if (type === "depart") {
     if (isSupported) {
       return (
-        <Disclaimer title={titreFavorable}>
+        <Disclaimer title={titrePreavis}>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
             peut prévoir une durée de préavis<sup>*</sup> ou une condition
@@ -76,7 +77,7 @@ const WarningResult: React.FC<Props> = ({
       );
     } else {
       return (
-        <Disclaimer title={titrePreavis}>
+        <Disclaimer title={titreFavorable}>
           <p>
             Une convention collective de branche, un accord collectif
             d’entreprise, le contrat de travail ou un usage peut prévoir une
@@ -112,7 +113,7 @@ const WarningResult: React.FC<Props> = ({
     );
   } else {
     return (
-      <Disclaimer title={titrePreavis}>
+      <Disclaimer title={titreFavorable}>
         <p>
           Une convention collective de branche, un accord collectif
           d’entreprise, le contrat de travail ou un usage peut prévoir une durée
