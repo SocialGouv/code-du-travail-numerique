@@ -10,7 +10,7 @@ contrat salarié . convention collective . éducation et loisirs . catégorie pr
   applicable si: mise à la retraite
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <b>bulletin de salaire</b>.
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   cdtn:
     type: liste
     valeurs:

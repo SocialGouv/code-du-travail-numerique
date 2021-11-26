@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,

@@ -3,6 +3,12 @@ FROM node:14.17-alpine3.13 AS dist
 
 WORKDIR /
 
+# Add build-arg from github actions
+ARG NEXT_PUBLIC_SENTRY_DSN
+ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
+ARG NEXT_PUBLIC_SENTRY_ENV
+ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
+
 # Copy all package.json
 COPY ./package.json ./package.json
 COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
@@ -38,8 +44,6 @@ RUN yarn install --prod
 
 # app
 FROM node:14.17-alpine3.13
-
-RUN mkdir -p /app
 
 WORKDIR /app
 

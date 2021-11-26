@@ -383,8 +383,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -438,8 +436,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -835,8 +831,6 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -891,8 +885,6 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

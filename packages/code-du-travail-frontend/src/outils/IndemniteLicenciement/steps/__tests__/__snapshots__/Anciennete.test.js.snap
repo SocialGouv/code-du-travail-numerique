@@ -263,8 +263,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -298,8 +296,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -333,8 +329,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -372,8 +366,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>

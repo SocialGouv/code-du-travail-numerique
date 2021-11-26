@@ -19,8 +19,6 @@ exports[`<Tag /> renders text 1`] = `
 <div>
   <span
     class="c0 c1"
-    font-size="small"
-    font-weight="600"
   >
     A simple text
   </span>
