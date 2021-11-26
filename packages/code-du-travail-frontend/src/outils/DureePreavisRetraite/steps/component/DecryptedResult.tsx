@@ -18,12 +18,12 @@ type Props = {
 const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
   if (result.value > 0) {
     return (
-      <b>
+      <strong>
         {result.value} {result.unit}
-      </b>
+      </strong>
     );
   }
-  return <b>pas de préavis</b>;
+  return <strong>pas de préavis</strong>;
 };
 
 const ShowResultAgreement: React.FC<{

@@ -11,6 +11,8 @@ describe("WarningResult", () => {
     resultValueInDays | type        | ccNumber     | expectedMessage                                                          | expectedWarning
     ${0}              | ${"depart"} | ${123456789} | ${"Une convention collective de branche"}                                | ${titrePreavis}
     ${0}              | ${"mise"}   | ${123456789} | ${"Une convention collective de branche"}                                | ${titrePreavis}
+    ${0}              | ${"depart"} | ${undefined} | ${"Une convention collective de branche"}                                | ${titrePreavis}
+    ${0}              | ${"mise"}   | ${null}      | ${"Une convention collective de branche"}                                | ${titrePreavis}
     ${0}              | ${"depart"} | ${1090}      | ${"Un accord collectif d’entreprise"}                                    | ${titrePreavis}
     ${0}              | ${"mise"}   | ${1090}      | ${"Un accord collectif d’entreprise"}                                    | ${titrePreavis}
     ${12}             | ${"depart"} | ${123456789} | ${"Dans ce cas, cette durée doit s’appliquer."}                          | ${titreFavorable}
