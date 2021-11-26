@@ -6,7 +6,7 @@ export const htmlParser = (html: string): string => {
   // FIXME: Remove style from docx converter
   $("style").remove();
 
-  $("dl").replaceWith(() => {
+  $("dl").replaceWith(function () {
     const src = $(this).find("source").attr("srcset");
     return src
       ? `<img src="${src}" style="width:100%;height:auto;"/>`
