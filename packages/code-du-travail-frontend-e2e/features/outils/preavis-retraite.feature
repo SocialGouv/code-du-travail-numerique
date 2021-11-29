@@ -62,8 +62,8 @@ Fonctionnalité: Outil - Préavis de retraite
 
     Alors je vois "Quelle est la convention collective applicable au salarié ?"
     Quand je renseigne "boulangerie" dans le champ avec le css '#content input[name="q"]'
-    Quand j'attend que le texte "Boulangerie-pâtisserie" apparaisse
-    Quand je clique sur "Boulangerie-pâtisserie"
+    Quand j'attend que le texte "Boulangerie" apparaisse en 10 secondes
+    Quand je clique sur "Boulangerie"
     Quand je clique sur "Suivant"
 
     Alors je vois "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
