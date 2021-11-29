@@ -50,7 +50,8 @@ function validate(values) {
 
 function StepInfo() {
   return (
-    <>
+    <fieldset>
+      <legend>THIS IS A LEGEND</legend>
       <TypeContrat name="contrat" />
       <YesNoQuestion
         name="fauteGrave"
@@ -60,7 +61,7 @@ function StepInfo() {
         name="inaptitude"
         label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
       />
-    </>
+    </fieldset>
   );
 }
 StepInfo.validate = validate;
