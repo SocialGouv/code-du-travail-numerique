@@ -486,7 +486,9 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span

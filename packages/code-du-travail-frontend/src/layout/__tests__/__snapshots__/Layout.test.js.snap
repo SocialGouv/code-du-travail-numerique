@@ -1177,7 +1177,9 @@ exports[`<Layout /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c28"
+              role="heading"
             >
               <strong
                 class="c29"
@@ -1222,7 +1224,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1299,7 +1303,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1341,7 +1347,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 En collaboration avec
               </strong>

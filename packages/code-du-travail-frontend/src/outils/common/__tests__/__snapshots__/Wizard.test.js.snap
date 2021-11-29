@@ -506,7 +506,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -1135,7 +1137,9 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -1699,7 +1703,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -2270,7 +2276,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -2911,7 +2919,9 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -3475,7 +3485,9 @@ exports[`<Wizard /> should render a step 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span

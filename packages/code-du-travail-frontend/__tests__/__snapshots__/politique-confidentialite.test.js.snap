@@ -1724,7 +1724,9 @@ exports[`<CookiePolicy /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c40"
+              role="heading"
             >
               <strong
                 class="c41"
@@ -1769,7 +1771,9 @@ exports[`<CookiePolicy /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1846,7 +1850,9 @@ exports[`<CookiePolicy /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1888,7 +1894,9 @@ exports[`<CookiePolicy /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 En collaboration avec
               </strong>

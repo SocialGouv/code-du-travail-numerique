@@ -525,7 +525,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -1148,7 +1150,9 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -1771,7 +1775,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -2394,7 +2400,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -2966,7 +2974,9 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>

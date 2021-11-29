@@ -4972,7 +4972,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c94"
+              role="heading"
             >
               <strong
                 class="c95"
@@ -5017,7 +5019,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -5094,7 +5098,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -5136,7 +5142,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 En collaboration avec
               </strong>
