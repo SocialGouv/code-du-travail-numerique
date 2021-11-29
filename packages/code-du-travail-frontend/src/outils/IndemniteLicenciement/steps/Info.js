@@ -1,5 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Alert } from "@socialgouv/cdtn-ui";
+import { Alert, Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -50,9 +50,9 @@ function validate(values) {
 
 function StepInfo() {
   return (
-    <fieldset>
-      <legend>THIS IS A LEGEND</legend>
-      <TypeContrat name="contrat" />
+    <Fieldset>
+      <Legend isInvisible>Contrat de travail</Legend>
+      <TypeContrat name="contrat" hasNoMarginTop={true} />
       <YesNoQuestion
         name="fauteGrave"
         label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
@@ -61,7 +61,7 @@ function StepInfo() {
         name="inaptitude"
         label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
       />
-    </fieldset>
+    </Fieldset>
   );
 }
 StepInfo.validate = validate;

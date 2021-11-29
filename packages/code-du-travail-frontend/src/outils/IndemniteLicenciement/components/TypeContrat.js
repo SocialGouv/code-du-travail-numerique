@@ -8,10 +8,10 @@ import { Question } from "../../common/Question";
 import { RadioContainer } from "../../common/stepStyles";
 import { required } from "../../common/validators";
 
-function TypeContrat({ name }) {
+function TypeContrat({ name, hasNoMarginTop = false }) {
   return (
     <>
-      <Question as="p" required>
+      <Question as="p" required hasNoMarginTop={hasNoMarginTop}>
         Quel est le type du contrat de travail&nbsp;?
       </Question>
       <RadioContainer>

@@ -14,6 +14,7 @@ type Props = {
   tooltip?: Tooltip;
   required?: boolean;
   onChange?: (values: unknown) => void;
+  questionProps: Record<string, unknown>;
 };
 
 const YesNoQuestion = ({
@@ -22,10 +23,11 @@ const YesNoQuestion = ({
   tooltip,
   required = true,
   onChange,
+  questionProps,
   ...otherProps
 }: Props): JSX.Element => (
   <>
-    <Question as="p" required={required} tooltip={tooltip}>
+    <Question as="p" required={required} tooltip={tooltip} {...questionProps}>
       {label}
     </Question>
     <RadioContainer {...otherProps}>
