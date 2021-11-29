@@ -1,4 +1,3 @@
-import { parseIdcc } from "../../../../code-du-travail-data";
 import elasticsearchClient from "../../conf/elasticsearch.js";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
@@ -26,7 +25,7 @@ router.get("/idcc", async (ctx) => {
   const query = ctx.request.query.q;
 
   // if only digit within query we make it a pure idcc search (like 1234)
-  const idccQuery = /^\d+$/.test(query) ? parseIdcc(query) : undefined;
+  const idccQuery = /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
 
   const body = getIdccBody({ idccQuery, query });
 
