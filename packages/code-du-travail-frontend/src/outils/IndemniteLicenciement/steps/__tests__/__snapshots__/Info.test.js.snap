@@ -78,10 +78,6 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 
 }
 
-@media (max-width:600px) {
-
-}
-
 <div
   class="c0"
 >
@@ -130,37 +126,20 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 
 }
 
-@media (max-width:600px) {
-
-}
-
 <b>
   L’indemnité légale de licenciement n’est pas dûe en cas de faute grave.
 </b>
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c4 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c0 {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c1 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  display: none;
-}
-
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +148,7 @@ exports[`<StepInfo /> should render 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -190,7 +169,7 @@ exports[`<StepInfo /> should render 1`] = `
   appearance: none;
 }
 
-.c7:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -205,24 +184,16 @@ exports[`<StepInfo /> should render 1`] = `
   content: "";
 }
 
-.c7:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c7:checked:before {
+.c5:checked:before {
   display: block;
 }
 
-.c2 {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c8 {
+.c0 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -230,11 +201,11 @@ exports[`<StepInfo /> should render 1`] = `
   cursor: default;
 }
 
-.c3 {
+.c1 {
   font-weight: 600;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,161 +225,145 @@ exports[`<StepInfo /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
+  .c0 {
     font-size: 1.6rem;
   }
 }
 
 <div>
   <form>
-    <fieldset
+    <p
       class="c0"
     >
-       
-      <legend
+      <span
         class="c1"
       >
-        Contrat de travail
-      </legend>
-      <p
+        Quel est le type du contrat de travail ?
+      </span>
+      <span
         class="c2"
       >
-        <span
-          class="c3"
-        >
-          Quel est le type du contrat de travail ?
-        </span>
-        <span
-          class="c4"
-        >
-           (obligatoire)
-        </span>
-      </p>
-      <div
-        class="c5"
+         (obligatoire)
+      </span>
+    </p>
+    <div
+      class="c3"
+    >
+      <label
+        class="c4"
+        for="contrat-cdd"
       >
-        <label
-          class="c6"
-          for="contrat-cdd"
-        >
-          <input
-            class="c7"
-            id="contrat-cdd"
-            name="contrat"
-            type="radio"
-            value="cdd"
-          />
-          Contrat à durée determiné (CDD) ou contrat d’intérim
-        </label>
-        <label
-          class="c6"
-          for="contrat-cdi"
-        >
-          <input
-            class="c7"
-            id="contrat-cdi"
-            name="contrat"
-            type="radio"
-            value="cdi"
-          />
-          Contrat à durée indeterminé (CDI)
-        </label>
-      </div>
-      <p
-        class="c8"
+        <input
+          class="c5"
+          id="contrat-cdd"
+          name="contrat"
+          type="radio"
+          value="cdd"
+        />
+        Contrat à durée determiné (CDD) ou contrat d’intérim
+      </label>
+      <label
+        class="c4"
+        for="contrat-cdi"
       >
-        <span
-          class="c3"
-        >
-          Le licenciement est-il dû à une faute grave (ou lourde) ?
-        </span>
-        <span
-          class="c4"
-        >
-           (obligatoire)
-        </span>
-      </p>
-      <div
-        class="c5"
+        <input
+          class="c5"
+          id="contrat-cdi"
+          name="contrat"
+          type="radio"
+          value="cdi"
+        />
+        Contrat à durée indeterminé (CDI)
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      <span
+        class="c1"
       >
-        <label
-          class="c6"
-          for="fauteGrave-oui"
-        >
-          <input
-            class="c7"
-            id="fauteGrave-oui"
-            name="fauteGrave"
-            type="radio"
-            value="true"
-          />
-          Oui
-        </label>
-        <label
-          class="c6"
-          for="fauteGrave-non"
-        >
-          <input
-            class="c7"
-            id="fauteGrave-non"
-            name="fauteGrave"
-            type="radio"
-            value="false"
-          />
-          Non
-        </label>
-      </div>
-      <p
-        class="c8"
+        Le licenciement est-il dû à une faute grave (ou lourde) ?
+      </span>
+      <span
+        class="c2"
       >
-        <span
-          class="c3"
-        >
-          Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
-        </span>
-        <span
-          class="c4"
-        >
-           (obligatoire)
-        </span>
-      </p>
-      <div
-        class="c5"
+         (obligatoire)
+      </span>
+    </p>
+    <div
+      class="c3"
+    >
+      <label
+        class="c4"
+        for="fauteGrave-oui"
       >
-        <label
-          class="c6"
-          for="inaptitude-oui"
-        >
-          <input
-            class="c7"
-            id="inaptitude-oui"
-            name="inaptitude"
-            type="radio"
-            value="true"
-          />
-          Oui
-        </label>
-        <label
-          class="c6"
-          for="inaptitude-non"
-        >
-          <input
-            class="c7"
-            id="inaptitude-non"
-            name="inaptitude"
-            type="radio"
-            value="false"
-          />
-          Non
-        </label>
-      </div>
-    </fieldset>
+        <input
+          class="c5"
+          id="fauteGrave-oui"
+          name="fauteGrave"
+          type="radio"
+          value="true"
+        />
+        Oui
+      </label>
+      <label
+        class="c4"
+        for="fauteGrave-non"
+      >
+        <input
+          class="c5"
+          id="fauteGrave-non"
+          name="fauteGrave"
+          type="radio"
+          value="false"
+        />
+        Non
+      </label>
+    </div>
+    <p
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
+      </span>
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
+    </p>
+    <div
+      class="c3"
+    >
+      <label
+        class="c4"
+        for="inaptitude-oui"
+      >
+        <input
+          class="c5"
+          id="inaptitude-oui"
+          name="inaptitude"
+          type="radio"
+          value="true"
+        />
+        Oui
+      </label>
+      <label
+        class="c4"
+        for="inaptitude-non"
+      >
+        <input
+          class="c5"
+          id="inaptitude-non"
+          name="inaptitude"
+          type="radio"
+          value="false"
+        />
+        Non
+      </label>
+    </div>
     <button
       data-testid="nextBt"
     >
