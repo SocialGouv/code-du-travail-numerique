@@ -22,12 +22,14 @@ export const initialState = {
     },
     {
       component: StepTypeRupture,
+      isForm: true,
       label: "Type de rupture",
       name: "rupture",
       skip: skipTypeRupture,
     },
     {
       component: StepInformations,
+      isForm: true,
       label: "Informations",
       name: "infos",
       skip: skipInformations,

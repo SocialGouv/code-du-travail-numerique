@@ -15,7 +15,6 @@ type Props = {
   tooltip?: Tooltip;
   children: React.ReactNode;
   htmlFor?: string;
-  hasNoMarginTop?: boolean;
 };
 
 export const Question = ({
@@ -23,10 +22,9 @@ export const Question = ({
   tooltip,
   children,
   htmlFor,
-  hasNoMarginTop,
   ...otherProps
 }: Props): JSX.Element => (
-  <LabelBlock htmlFor={htmlFor} hasNoMarginTop={hasNoMarginTop} {...otherProps}>
+  <LabelBlock htmlFor={htmlFor} {...otherProps}>
     <Label>{children}</Label>
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
@@ -44,7 +42,7 @@ const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
   display: block;
-  margin-top: ${({ hasNoMarginTop }) => (hasNoMarginTop ? 0 : spacings.medium)};
+  margin-top: ${spacings.medium};
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};
   cursor: ${(props) => (props.as ? "default" : "pointer")};
