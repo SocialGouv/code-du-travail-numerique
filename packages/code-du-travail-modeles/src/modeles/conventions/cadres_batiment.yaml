@@ -1,7 +1,0 @@
-contrat salarié . convention collective . cadres du bâtiment:
-  description: Convention collective nationale des cadres du bâtiment du 1er juin 2004.
-  applicable si: convention collective = 'IDCC2420'
-  valeur: oui
-  cdtn:
-    idcc: 2420
-    préavis-retraite: false
