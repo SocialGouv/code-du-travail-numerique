@@ -252,6 +252,7 @@ function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
 
 WizardTitle.propTypes = {
   duration: PropTypes.string,
+  hasFieldset: PropTypes.bool,
   icon: PropTypes.string,
   stepIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
