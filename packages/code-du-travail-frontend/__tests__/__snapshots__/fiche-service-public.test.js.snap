@@ -50,6 +50,56 @@ exports[`<FicheSP /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
+.c41 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c50 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c40 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c59 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c27 {
   margin-bottom: 1.6rem;
   padding: 1rem 2rem;
@@ -394,56 +444,6 @@ exports[`<FicheSP /> should render 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c41 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c50 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c40 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c59 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c48 {
@@ -1036,6 +1036,25 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c40 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c40 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c59 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
   }
@@ -1126,25 +1145,6 @@ exports[`<FicheSP /> should render 1`] = `
 
 @media (max-width:980px) {
 
-}
-
-@media (max-width:600px) {
-  .c40 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c59 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {

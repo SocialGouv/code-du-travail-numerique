@@ -8,6 +8,8 @@ describe("WarningResult", () => {
     resultValueInDays | type        | ccNumber     | expectedMessage
     ${0}              | ${"depart"} | ${123456789} | ${"Une convention collective de branche"}
     ${0}              | ${"mise"}   | ${123456789} | ${"Une convention collective de branche"}
+    ${0}              | ${"depart"} | ${undefined} | ${"Une convention collective de branche"}
+    ${0}              | ${"mise"}   | ${undefined} | ${"Une convention collective de branche"}
     ${0}              | ${"depart"} | ${1090}      | ${"Un accord collectif d’entreprise"}
     ${0}              | ${"mise"}   | ${1090}      | ${"Un accord collectif d’entreprise"}
     ${12}             | ${"depart"} | ${123456789} | ${"Dans ce cas, cette durée doit s’appliquer."}

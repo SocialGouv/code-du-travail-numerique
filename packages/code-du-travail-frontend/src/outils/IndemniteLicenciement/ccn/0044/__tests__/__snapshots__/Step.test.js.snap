@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask for ope and licenciement eco 1`] = `
-.c10 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -19,6 +12,13 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.c10 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c12 {
@@ -441,8 +441,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -487,8 +485,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -527,13 +523,6 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 `;
 
 exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
-.c10 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -545,6 +534,13 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.c10 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c16 {
@@ -1094,8 +1090,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1140,8 +1134,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
@@ -1187,8 +1179,6 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
     <span
       class="c10"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

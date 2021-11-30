@@ -11,8 +11,6 @@ exports[`<Text /> renders text 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="400"
   >
     A simple text
   </span>
@@ -30,8 +28,6 @@ exports[`<Text /> renders text with fontSize 1`] = `
 <div>
   <span
     class="c0"
-    font-size="hlarge"
-    font-weight="400"
   >
     A large text
   </span>
@@ -49,8 +45,6 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="700"
   >
     A bold text
   </span>
@@ -68,8 +62,6 @@ exports[`<Text /> renders text with variant 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="400"
   >
     A colored text
   </span>

@@ -76,6 +76,45 @@ exports[`<Answer /> should renders 1`] = `
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -142,45 +181,6 @@ exports[`<Answer /> should renders 1`] = `
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -515,6 +515,19 @@ exports[`<Answer /> should renders 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -529,19 +542,6 @@ exports[`<Answer /> should renders 1`] = `
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1131,6 +1131,45 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
+.c25 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c39 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c38 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c41 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1230,45 +1269,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c2 {
   overflow-x: auto;
-}
-
-.c25 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c39 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c38 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c20 {
@@ -1686,6 +1686,19 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
+  .c38 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c38 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c41 {
     font-size: 1.4rem;
   }
@@ -1719,19 +1732,6 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 @media (max-width:600px) {
   .c2 {
     overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c38 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c38 {
-    font-size: 1.6rem;
   }
 }
 
@@ -2436,6 +2436,45 @@ exports[`<Answer /> should renders back to results link 1`] = `
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2502,45 +2541,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -2875,6 +2875,19 @@ exports[`<Answer /> should renders back to results link 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -2889,19 +2902,6 @@ exports[`<Answer /> should renders back to results link 1`] = `
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 
@@ -3491,6 +3491,56 @@ exports[`<Answer /> should renders related content 1`] = `
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
+.c34 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c38 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3603,56 +3653,6 @@ exports[`<Answer /> should renders related content 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c34 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c12 {
@@ -4001,6 +4001,25 @@ exports[`<Answer /> should renders related content 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c34 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c40 {
     -webkit-flex: 0 0 2rem;
     -ms-flex: 0 0 2rem;
@@ -4026,25 +4045,6 @@ exports[`<Answer /> should renders related content 1`] = `
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    font-size: 1.6rem;
   }
 }
 
@@ -4814,6 +4814,45 @@ exports[`<Answer /> should renders tooltip 1`] = `
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4880,45 +4919,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -5253,6 +5253,19 @@ exports[`<Answer /> should renders tooltip 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -5267,19 +5280,6 @@ exports[`<Answer /> should renders tooltip 1`] = `
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 
@@ -5870,6 +5870,45 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5936,45 +5975,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -6309,6 +6309,19 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -6323,19 +6336,6 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 
@@ -6926,6 +6926,45 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6992,45 +7031,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -7365,6 +7365,19 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -7379,19 +7392,6 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 
@@ -7983,6 +7983,45 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
   margin-bottom: 0;
 }
 
+.c15 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c29 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c28 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c31 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -8049,45 +8088,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c11 {
   position: relative;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c28 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c12 {
@@ -8422,6 +8422,19 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 }
 
 @media (max-width:600px) {
+  .c28 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c31 {
     font-size: 1.4rem;
   }
@@ -8436,19 +8449,6 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 @media (max-width:600px) {
   .c31 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    font-size: 1.6rem;
   }
 }
 

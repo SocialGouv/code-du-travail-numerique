@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import React from "react";
 import {
   Accordion as RootAccordion,
   AccordionItem,
   AccordionItemButton,
   AccordionItemPanel,
-} from "react-accessible-accordion";
+} from "@maxgfr/react-accessible-accordion";
+import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../../../theme.js";

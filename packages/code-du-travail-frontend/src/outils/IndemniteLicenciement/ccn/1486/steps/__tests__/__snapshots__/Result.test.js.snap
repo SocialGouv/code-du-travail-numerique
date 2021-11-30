@@ -292,8 +292,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -896,8 +894,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -1390,8 +1386,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>
@@ -1994,8 +1988,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
           </svg>
           <span
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
           </span>

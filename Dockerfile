@@ -45,8 +45,6 @@ RUN yarn install --prod
 # app
 FROM node:14.17-alpine3.13
 
-RUN mkdir -p /app
-
 WORKDIR /app
 
 COPY --from=dist . /app/
