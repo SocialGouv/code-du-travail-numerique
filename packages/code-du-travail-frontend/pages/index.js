@@ -27,6 +27,10 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+const StyledParagraph = styled.p`
+  margin: 0;
+`;
+
 export const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
     <CallToActionTile
@@ -36,8 +40,10 @@ export const DocumentsTile = (
       title="Modèles de documents"
       titleTagType="h2"
     >
-      Téléchargez et utilisez des modèles de lettres et de documents
-      personnalisables
+      <StyledParagraph>
+        Téléchargez et utilisez des modèles de lettres et de documents
+        personnalisables
+      </StyledParagraph>
     </CallToActionTile>
   </Link>
 );
@@ -142,8 +148,4 @@ const StyledArrowRight = styled(icons.DirectionRight)`
   width: 2.8rem;
   height: 1.5rem;
   margin-left: ${spacings.base};
-`;
-
-const StyledParagraph = styled.p`
-  margin: 0;
 `;

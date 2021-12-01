@@ -8,6 +8,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
+import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
@@ -42,7 +43,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     icon={icons[icon]}
                     titleTagType="h2"
                   >
-                    {description}
+                    <StyledP>{description}</StyledP>
                   </CallToActionTile>
                 </Link>
               );
@@ -62,7 +63,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 target="_blank"
                 className="no-after"
               >
-                {description}
+                <StyledP>{description}</StyledP>
               </CallToActionTile>
             )
           )}
@@ -72,6 +73,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
     <EventTracker />
   </Layout>
 );
+
 export async function getServerSideProps() {
   return {
     props: getTools(),
@@ -79,3 +81,7 @@ export async function getServerSideProps() {
 }
 
 export default Outils;
+
+const StyledP = styled.p`
+  margin: 0;
+`;

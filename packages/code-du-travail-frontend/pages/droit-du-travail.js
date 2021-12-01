@@ -27,11 +27,11 @@ const DroitDuTravail = ({ hash }) => (
       <Container>
         <PageTitle
           subtitle={
-            <span>
+            <>
               Retrouvez la définition du droit du travail, les textes qui en
               sont à l’origine <DesktopOnlyLineBreak />
               ainsi que leur articulation.
-            </span>
+            </>
           }
         >
           Le droit du travail
@@ -41,11 +41,13 @@ const DroitDuTravail = ({ hash }) => (
             <Title shift={spacings.larger}>
               Qu’est-ce que le droit du travail&nbsp;?
             </Title>
-            <strong>
-              Le droit du travail est l’ensemble des règles juridiques
-              applicables aux relations entre employeurs privés et salariés, à
-              l’occasion du travail.
-            </strong>
+            <p>
+              <strong>
+                Le droit du travail est l’ensemble des règles juridiques
+                applicables aux relations entre employeurs privés et salariés, à
+                l’occasion du travail.
+              </strong>
+            </p>
             <p>
               Le droit du travail organise les relations professionnelles de
               travail entre l’employeur et le salarié individuellement et la

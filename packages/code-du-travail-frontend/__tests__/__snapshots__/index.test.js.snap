@@ -1050,6 +1050,10 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
+.c54 {
+  margin: 0;
+}
+
 .c59 {
   text-align: center;
 }
@@ -1058,10 +1062,6 @@ exports[`<Home /> should render 1`] = `
   width: 2.8rem;
   height: 1.5rem;
   margin-left: 1.6rem;
-}
-
-.c54 {
-  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -2567,7 +2567,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <div
+                          <p
                             class="c10 c56"
                           >
                             Consulter
@@ -2583,7 +2583,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -2670,7 +2670,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <div
+                          <p
                             class="c10 c56"
                           >
                             Calculer
@@ -2686,7 +2686,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -2781,7 +2781,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <div
+                          <p
                             class="c10 c56"
                           >
                             Estimer
@@ -2797,7 +2797,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -2878,11 +2878,15 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c53"
                       >
-                        Téléchargez et utilisez des modèles de lettres et de documents personnalisables
+                        <p
+                          class="c54"
+                        >
+                          Téléchargez et utilisez des modèles de lettres et de documents personnalisables
+                        </p>
                         <div
                           class="c55"
                         >
-                          <div
+                          <p
                             class="c10 c56"
                           >
                             Découvrir
@@ -2898,7 +2902,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </div>
