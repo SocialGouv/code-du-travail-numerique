@@ -11,19 +11,6 @@ exports[`<ConventionModal /> should render 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c12 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -137,6 +124,19 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c12 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c0 {

@@ -28,19 +28,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c28 {
   position: absolute;
   background-color: #7994d4;
@@ -348,6 +335,19 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -1654,7 +1654,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c49"
+              role="heading"
             >
               <strong
                 class="c50"
@@ -1699,7 +1701,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1776,7 +1780,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1818,7 +1824,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 En collaboration avec
               </strong>

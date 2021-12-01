@@ -641,7 +641,10 @@ exports[`<ConventionCollective /> should render 1`] = `
                 <span
                   class="c18"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>

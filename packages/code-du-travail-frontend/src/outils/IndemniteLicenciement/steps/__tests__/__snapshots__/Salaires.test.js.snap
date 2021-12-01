@@ -1870,7 +1870,9 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       class="c7"
     >
       <span
+        aria-level="2"
         class="c8"
+        role="heading"
       >
         Période 
         1
@@ -2018,7 +2020,9 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       class="c7"
     >
       <span
+        aria-level="2"
         class="c8"
+        role="heading"
       >
         Période 
         2

@@ -410,7 +410,9 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Absence 
         1
@@ -948,7 +950,9 @@ exports[`<AbsencePeriods /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Absence 
         1
