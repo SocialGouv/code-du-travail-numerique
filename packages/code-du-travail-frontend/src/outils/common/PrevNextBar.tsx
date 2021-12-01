@@ -29,6 +29,11 @@ export const PrevNextBar: FunctionComponent<Props> = ({
             Imprimer le résultat
           </StyledButton>
         )}
+        {previousVisible && (
+          <StyledButton small type="button" onClick={onPrev} variant="flat">
+            Précédent
+          </StyledButton>
+        )}
         {nextVisible && !previousVisible && (
           <StyledButton disabled={hasError} variant="primary">
             Commencer
@@ -39,11 +44,6 @@ export const PrevNextBar: FunctionComponent<Props> = ({
           <StyledButton disabled={hasError} variant="primary" onClick={onNext}>
             Suivant
             <ArrowIcon />
-          </StyledButton>
-        )}
-        {previousVisible && (
-          <StyledButton small type="button" onClick={onPrev} variant="flat">
-            Précédent
           </StyledButton>
         )}
       </StyledDiv>
@@ -63,7 +63,6 @@ const StyledButton = styled(Button)`
 
 const StyledDiv = styled.div`
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   margin: 5rem 0 ${spacings.large} 0;
