@@ -23,6 +23,32 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-bottom: 0;
 }
 
+.c10 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c0 {
   position: absolute;
   top: 0;
@@ -135,32 +161,6 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c18 {
@@ -525,7 +525,9 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -646,6 +648,32 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-bottom: 0;
 }
 
+.c10 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c0 {
   position: absolute;
   top: 0;
@@ -758,32 +786,6 @@ exports[`<Contribution /> should render answer references 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c18 {
@@ -1148,7 +1150,9 @@ exports[`<Contribution /> should render answer references 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -1269,6 +1273,32 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   margin-bottom: 0;
 }
 
+.c10 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c0 {
   position: absolute;
   top: 0;
@@ -1381,32 +1411,6 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c18 {
@@ -1771,7 +1775,9 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -1892,6 +1898,32 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 0;
 }
 
+.c10 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c0 {
   position: absolute;
   top: 0;
@@ -2004,32 +2036,6 @@ exports[`<Contribution /> should render with both answers 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c16 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c18 {
@@ -2394,7 +2400,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -2515,6 +2523,19 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-bottom: 0;
 }
 
+.c13 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c0 {
   position: absolute;
   top: 0;
@@ -2627,19 +2648,6 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.c13 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c15 {
@@ -2966,7 +2974,9 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         class="c6"
       >
         <div
-          class="c7"
+          aria-level="2"
+          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
+          role="heading"
         >
           Page personnalisable
         </div>
@@ -3137,6 +3147,19 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   margin-bottom: 0;
 }
 
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3181,19 +3204,6 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c0 {

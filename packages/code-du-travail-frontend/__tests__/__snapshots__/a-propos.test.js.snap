@@ -59,17 +59,52 @@ exports[`<About /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c28 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c33 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c34 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c48 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c14 {
@@ -315,6 +350,19 @@ exports[`<About /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
 .c20 {
   height: auto;
   padding: 0;
@@ -330,54 +378,6 @@ exports[`<About /> should render 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c28 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c33 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c34 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c48 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c26 {
@@ -841,6 +841,18 @@ exports[`<About /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c34 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c48 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c14 {
     font-size: 1.4rem;
   }
@@ -913,18 +925,6 @@ exports[`<About /> should render 1`] = `
 
 @media (max-width:980px) {
 
-}
-
-@media (max-width:600px) {
-  .c34 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c48 {
-    font-size: 1.6rem;
-  }
 }
 
 @media (max-width:600px) {
@@ -1529,7 +1529,9 @@ exports[`<About /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c38"
+              role="heading"
             >
               <strong
                 class="c39"
@@ -1574,7 +1576,9 @@ exports[`<About /> should render 1`] = `
               class="c46 "
             >
               <strong
+                aria-level="2"
                 class="c47 c48"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1651,7 +1655,9 @@ exports[`<About /> should render 1`] = `
               class="c46 "
             >
               <strong
+                aria-level="2"
                 class="c47 c48"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1693,7 +1699,9 @@ exports[`<About /> should render 1`] = `
               class="c46 "
             >
               <strong
+                aria-level="2"
                 class="c47 c48"
+                role="heading"
               >
                 En collaboration avec
               </strong>

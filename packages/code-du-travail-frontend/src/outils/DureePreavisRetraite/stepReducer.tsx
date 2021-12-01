@@ -13,6 +13,7 @@ export const initialState: State = {
     },
     {
       component: Steps.OrigineStep,
+      isForm: true,
       label: "Origine du départ à la retraite",
       name: "origine",
     },
@@ -23,11 +24,13 @@ export const initialState: State = {
     },
     {
       component: Steps.Informations,
+      isForm: true,
       label: "Informations",
       name: "infos",
     },
     {
       component: Steps.AncienneteStep,
+      isForm: true,
       label: "Ancienneté",
       name: "anciennete",
     },

@@ -246,7 +246,10 @@ const StyledIcon = styled.span`
   height: 2rem;
 `;
 
-const Center = styled.span`
+const Center = styled.span.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   text-align: center;
 `;
 

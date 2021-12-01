@@ -123,9 +123,6 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -486,7 +483,9 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span

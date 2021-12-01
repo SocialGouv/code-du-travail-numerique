@@ -17,17 +17,28 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c6 {
@@ -55,7 +66,7 @@ exports[`<Convention /> renders 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
+.c9 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -437,19 +448,6 @@ exports[`<Convention /> renders 1`] = `
   animation: iHsNqv 250ms ease-in;
 }
 
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .c42 {
   display: block;
   margin: 0 0 1rem 0;
@@ -712,6 +710,12 @@ exports[`<Convention /> renders 1`] = `
 
 @media (max-width:600px) {
   .c8 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
     padding: 1rem 0;
   }
 }
@@ -918,10 +922,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-0"
@@ -953,23 +955,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Congés et repos
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Congés et repos
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
-          <div
-            class="c9"
-          >
-            Congés et repos
-          </div>
           <div
             class="c10"
           >
@@ -985,10 +986,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
@@ -1020,23 +1019,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Jours fériés et ponts dans le secteur privé
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Jours fériés et ponts dans le secteur privé
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Jours fériés et ponts dans le secteur privé
-                    </div>
                     <div
                       class="c10"
                     >
@@ -1121,10 +1119,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
@@ -1156,23 +1152,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                    </div>
                     <div
                       class="c10"
                     >
@@ -1323,10 +1318,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
@@ -1358,23 +1351,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Les congés pour événements familiaux
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Les congés pour événements familiaux
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Les congés pour événements familiaux
-                    </div>
                     <div
                       class="c10"
                     >
@@ -1498,10 +1490,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-4"
@@ -1533,23 +1523,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Départ de l'entreprise
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Départ de l'entreprise
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-4"
         >
-          <div
-            class="c9"
-          >
-            Départ de l'entreprise
-          </div>
           <div
             class="c10"
           >
@@ -1565,10 +1554,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
@@ -1600,23 +1587,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de licenciement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de licenciement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de licenciement ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -1749,10 +1735,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
@@ -1784,23 +1768,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée du préavis en cas de démission ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée du préavis en cas de démission ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Quelle est la durée du préavis en cas de démission ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -1891,10 +1874,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
@@ -1926,23 +1907,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de départ à la retraite ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de départ à la retraite ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de départ à la retraite ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2044,10 +2024,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
@@ -2079,23 +2057,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de mise à la retraite ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de mise à la retraite ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de mise à la retraite ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2197,10 +2174,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
@@ -2232,23 +2207,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2323,10 +2297,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
@@ -2358,23 +2330,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2493,10 +2464,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-11"
@@ -2528,23 +2497,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Embauche et contrat de travail
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Embauche et contrat de travail
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-11"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-11"
         >
-          <div
-            class="c9"
-          >
-            Embauche et contrat de travail
-          </div>
           <div
             class="c10"
           >
@@ -2560,10 +2528,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
@@ -2595,23 +2561,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2694,10 +2659,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
@@ -2729,23 +2692,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Comment déterminer l'ancienneté du salarié ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Comment déterminer l'ancienneté du salarié ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Comment déterminer l'ancienneté du salarié ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -2899,10 +2861,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
@@ -2934,23 +2894,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3096,10 +3055,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
@@ -3131,23 +3088,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3222,10 +3178,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
@@ -3257,23 +3211,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Embauche en contrat d'extra (CDD d'usage)
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Embauche en contrat d'extra (CDD d'usage)
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
-                    <div
-                      class="c9"
-                    >
-                       Embauche en contrat d'extra (CDD d'usage)
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3317,10 +3270,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
@@ -3352,23 +3303,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions de cumul d'emplois ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions de cumul d'emplois ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions de cumul d'emplois ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3446,10 +3396,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-18"
@@ -3481,23 +3429,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Salaire et Rémunération
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Salaire et Rémunération
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-18"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-18"
         >
-          <div
-            class="c9"
-          >
-            Salaire et Rémunération
-          </div>
           <div
             class="c10"
           >
@@ -3513,10 +3460,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
@@ -3548,23 +3493,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3599,10 +3543,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
@@ -3634,23 +3576,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les primes prévues par la convention collective ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les primes prévues par la convention collective ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quelles sont les primes prévues par la convention collective ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3749,10 +3690,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
@@ -3784,23 +3723,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
-                    <div
-                      class="c9"
-                    >
-                      Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -3904,10 +3842,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-22"
@@ -3939,23 +3875,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Santé, sécurité et conditions de travail
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Santé, sécurité et conditions de travail
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-22"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-22"
         >
-          <div
-            class="c9"
-          >
-            Santé, sécurité et conditions de travail
-          </div>
           <div
             class="c10"
           >
@@ -3971,10 +3906,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -4006,23 +3939,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
-                    <div
-                      class="c9"
-                    >
-                      En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -4315,7 +4247,9 @@ exports[`<Convention /> renders 1`] = `
                               />
                             </svg>
                             <span
+                              aria-level="2"
                               class="c24 c25"
+                              role="heading"
                             >
                               Références juridiques concernées :
                             </span>
@@ -4487,10 +4421,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
@@ -4522,23 +4454,22 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
-                    <div
-                      class="c9"
-                    >
-                      En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-                    </div>
                     <div
                       class="c10"
                     >
@@ -4668,10 +4599,8 @@ exports[`<Convention /> renders 1`] = `
       data-accordion-component="AccordionItem"
     >
       <div
-        aria-level="3"
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
-        role="heading"
       >
         <div
           aria-controls="accordion__panel-raa-25"
@@ -4705,12 +4634,10 @@ exports[`<Convention /> renders 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-25"
         class="c32"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-25"
-        role="region"
       >
         <div
           class="c33"
@@ -4759,10 +4686,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-26"
@@ -4794,23 +4719,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Salaires minima hiérarchiques
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Salaires minima hiérarchiques
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-26"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-26"
         >
-          <div
-            class="c9"
-          >
-            Salaires minima hiérarchiques
-          </div>
           <div
             class="c10"
           >
@@ -4956,10 +4880,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-27"
@@ -4991,23 +4913,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Durée du travail, répartition et aménagement des horaires
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Durée du travail, répartition et aménagement des horaires
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-27"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-27"
         >
-          <div
-            class="c9"
-          >
-            Durée du travail, répartition et aménagement des horaires
-          </div>
           <div
             class="c10"
           >
@@ -5393,10 +5314,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-28"
@@ -5428,23 +5347,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Classifications
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Classifications
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-28"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-28"
         >
-          <div
-            class="c9"
-          >
-            Classifications
-          </div>
           <div
             class="c10"
           >

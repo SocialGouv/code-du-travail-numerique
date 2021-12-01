@@ -15,7 +15,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c64 {
+.c65 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -105,7 +105,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c62 {
+.c63 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -113,28 +113,63 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #fff;
 }
 
-.c62 > *:first-child {
+.c63 > *:first-child {
   margin-top: 0;
 }
 
-.c62 > *:last-child {
+.c63 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c28 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.c57 {
+.c35 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c56 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c103 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c58 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -148,8 +183,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c56,
-[aria-selected="true"] .c57 {
+[aria-expanded="true"] .c57,
+[aria-selected="true"] .c58 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -198,11 +233,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c66 {
+.c67 {
   position: relative;
 }
 
-.c66:after {
+.c67:after {
   position: absolute;
   bottom: -1.4rem;
   left: calc(50% + 8rem / 2);
@@ -224,12 +259,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   user-select: none;
 }
 
-.c76 {
+.c77 {
   position: relative;
   margin-top: 1.6rem;
 }
 
-.c76:after {
+.c77:after {
   position: absolute;
   bottom: -1.4rem;
   left: calc(50% + 8rem / 2);
@@ -279,7 +314,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   display: none;
 }
 
-.c75 {
+.c76 {
   margin-left: 8rem;
   padding: 1.6rem;
   background-color: #f2f5fa;
@@ -288,7 +323,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0 0 0.6rem 0.6rem;
 }
 
-.c67 {
+.c68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -304,7 +339,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: pointer;
 }
 
-.c68 {
+.c69 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,7 +353,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: center;
 }
 
-.c68:before {
+.c69:before {
   position: absolute;
   top: -1.6rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -330,7 +365,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   display: none;
 }
 
-.c68:after {
+.c69:after {
   position: absolute;
   top: 4rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -341,7 +376,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c77 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -355,7 +390,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: center;
 }
 
-.c77:before {
+.c78:before {
   position: absolute;
   top: -1.6rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -366,7 +401,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c77:after {
+.c78:after {
   position: absolute;
   top: 4rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -414,7 +449,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   display: none;
 }
 
-.c69 {
+.c70 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -440,7 +475,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c70 {
+.c71 {
   position: relative;
   height: 0.1rem;
   background-color: #7994d4;
@@ -448,7 +483,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-left: 0.4rem;
 }
 
-.c70:before {
+.c71:before {
   top: calc( (0.4rem + 4rem) / -2 - 1.5 * 0.1rem );
   left: calc(-1 * 0.4rem - 4rem / 2);
   width: calc(0.4rem + 4rem / 2);
@@ -457,7 +492,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-bottom-right-radius: 4rem;
 }
 
-.c70:before {
+.c71:before {
   position: absolute;
   z-index: -1;
   background-color: transparent;
@@ -465,7 +500,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c72 {
+.c73 {
   position: relative;
   z-index: 0;
   display: -webkit-box;
@@ -485,14 +520,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-[aria-expanded="true"] .c71,
-[aria-selected="true"] .c72 {
+[aria-expanded="true"] .c72,
+[aria-selected="true"] .c73 {
   border-bottom: 1px solid transparent;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c72:before {
+.c73:before {
   position: absolute;
   top: -1px;
   left: 50%;
@@ -511,7 +546,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   display: none;
 }
 
-.c78 {
+.c79 {
   position: relative;
   z-index: 0;
   display: -webkit-box;
@@ -531,14 +566,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0.6rem;
 }
 
-[aria-expanded="true"] .c71,
-[aria-selected="true"] .c78 {
+[aria-expanded="true"] .c72,
+[aria-selected="true"] .c79 {
   border-bottom: 1px solid transparent;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c78:before {
+.c79:before {
   position: absolute;
   top: -1px;
   left: 50%;
@@ -556,7 +591,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c73 {
+.c74 {
   display: block;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -566,7 +601,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-right: 2rem;
 }
 
-.c74 {
+.c75 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -602,7 +637,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c60 {
+.c61 {
   position: relative;
   z-index: 1;
   background-color: #fff;
@@ -610,7 +645,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
 
-.c61 {
+.c62 {
   position: relative;
   z-index: 1;
   background-color: #fff;
@@ -619,7 +654,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-top: 2rem;
 }
 
-.c58 {
+.c59 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 0.35s ease-in;
   animation: iHsNqv 0.35s ease-in;
@@ -681,11 +716,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
-.c59 > *:first-child {
+.c60 > *:first-child {
   margin-top: 0;
 }
 
-.c59 > *:last-child {
+.c60 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -995,6 +1030,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transform: translateX(4px);
 }
 
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
 .c21 {
   height: auto;
   padding: 0;
@@ -1044,54 +1092,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   flex: 1 1 auto;
 }
 
-.c28 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c35 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c79 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c103 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c40 {
   margin: 0 0 1rem 0;
   color: #f66663;
@@ -1122,7 +1122,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c65 {
+.c66 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -1214,7 +1214,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 4rem;
 }
 
-.c63 {
+.c64 {
   max-width: 66rem;
 }
 
@@ -1583,13 +1583,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c64 {
+  .c65 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c64 {
+  .c65 {
     max-width: 100%;
     padding: 0;
   }
@@ -1652,15 +1652,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c63 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c62 {
+  .c63 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c56 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c103 {
+    font-size: 1.6rem;
   }
 }
 
@@ -1677,17 +1689,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c66:after {
+  .c67:after {
     left: calc(50% + 4.6rem / 2);
   }
 }
 
 @media (max-width:600px) {
-  .c76 {
+  .c77 {
     margin-top: 0.4rem;
   }
 
-  .c76:after {
+  .c77:after {
     left: calc(50% + 4.6rem / 2);
   }
 }
@@ -1703,33 +1715,33 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c75 {
+  .c76 {
     margin-left: 4.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c68:before {
+  .c69:before {
     top: -0.4rem;
     height: calc(0.4rem + 5rem);
   }
 
-  .c68,
-  .c68:before,
-  .c68:after {
+  .c69,
+  .c69:before,
+  .c69:after {
     left: calc(3rem / 2 - 0.3rem / 2);
   }
 }
 
 @media (max-width:600px) {
-  .c77:before {
+  .c78:before {
     top: -0.4rem;
     height: calc(0.4rem + 5rem);
   }
 
-  .c77,
-  .c77:before,
-  .c77:after {
+  .c78,
+  .c78:before,
+  .c78:after {
     left: calc(3rem / 2 - 0.3rem / 2);
   }
 }
@@ -1748,19 +1760,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c70 {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c71 {
     width: calc(4.6rem - 3rem - 0.3rem);
     margin-left: 0.3rem;
   }
 
-  .c70:before {
+  .c71:before {
     top: calc( (0.3rem + 3rem) / -2 - 1.5 * 0.1rem );
     left: calc(-1 * 0.3rem - 3rem / 2);
     width: calc(0.3rem + 3rem / 2);
@@ -1771,19 +1783,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c72 {
-    padding: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c78 {
-    padding: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c73 {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c79 {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c74 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
@@ -1791,7 +1803,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c74 {
+  .c75 {
     font-size: 1.6rem;
   }
 }
@@ -1815,31 +1827,31 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c60 {
+  .c61 {
     margin-top: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c61 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width:980px) {
-  .c61 {
+  .c62 {
     margin-top: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c62 {
     margin-top: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     padding: 1rem;
   }
 }
@@ -1957,18 +1969,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c79 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c103 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c40 {
     font-size: 1.6rem;
   }
@@ -1996,7 +1996,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c66 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -2511,7 +2511,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c39"
                   >
                     <div
-                      class="c40"
+                      aria-level="4"
+                      class="droit-du-travail__StyledInsertTitle-sc-wr60x8-0 c40"
+                      role="heading"
                     >
                       Le droit du travail, ce n’est pas…
                     </div>
@@ -2572,10 +2574,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-0"
@@ -2662,12 +2662,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les textes internationaux
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Les textes internationaux
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -2686,19 +2691,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-0"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-0"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les textes internationaux
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             Le droit du travail en France est influencé par les textes de
@@ -2767,14 +2766,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c60"
+                      class="c61"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-1"
@@ -2815,12 +2812,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les textes européens
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Les textes européens
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -2839,19 +2841,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-1"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-1"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les textes européens
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             Le droit du travail français est influencé par
@@ -2961,14 +2957,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-2"
@@ -3013,12 +3007,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              La Constitution française
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                La Constitution française
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3037,19 +3036,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-2"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-2"
                       >
                         <div
-                          class="c11"
-                        >
-                          La Constitution française
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             Texte le plus important du système juridique français,
@@ -3108,14 +3101,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-3"
@@ -3170,12 +3161,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Lois, ordonnances, décrets et arrêtés
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Lois, ordonnances, décrets et arrêtés
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3194,19 +3190,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-3"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-3"
                       >
                         <div
-                          class="c11"
-                        >
-                          Lois, ordonnances, décrets et arrêtés
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             La loi est votée par le Parlement et fixe les principes fondamentaux du droit du travail et de la sécurité sociale.
@@ -3234,14 +3224,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-4"
@@ -3294,12 +3282,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les conventions et accords collectifs
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Les conventions et accords collectifs
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3318,19 +3311,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-4"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-4"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les conventions et accords collectifs
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             Les conventions et accords collectifs de travail sont des textes négociés entre un ou plusieurs employeurs et un ou plusieurs syndicats de salariés.
@@ -3347,14 +3334,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-5"
@@ -3415,12 +3400,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Les usages et les engagements unilatéraux
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Les usages et les engagements unilatéraux
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3439,19 +3429,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-5"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-5"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les usages et les engagements unilatéraux
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             L’usage d’entreprise est une pratique répétée de l’employeur attribuant un avantage aux salariés ou à un groupe de salariés de l’entreprise sans que la loi, la convention collective ou le contrat de travail ne le lui impose.
@@ -3473,14 +3457,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-6"
@@ -3517,12 +3499,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Le règlement intérieur de l’entreprise
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Le règlement intérieur de l’entreprise
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3541,19 +3528,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-6"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-6"
                       >
                         <div
-                          class="c11"
-                        >
-                          Le règlement intérieur de l’entreprise
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant la discipline, la santé et la sécurité dans l’entreprise.
                         </div>
@@ -3562,14 +3543,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </div>
                   <div>
                     <div
-                      class="c61"
+                      class="c62"
                       data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-level="3"
                         class="accordion__heading"
                         data-accordion-component="AccordionItemHeading"
-                        role="heading"
                       >
                         <div
                           aria-controls="accordion__panel-raa-7"
@@ -3616,12 +3595,17 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c55"
                             >
-                              Le contrat de travail
+                              <h3
+                                class="c56"
+                                style="margin: 0px;"
+                              >
+                                Le contrat de travail
+                              </h3>
                             </div>
                           </div>
                           <svg
                             aria-hidden="true"
-                            class="c56 c57"
+                            class="c57 c58"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -3640,19 +3624,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__heading-raa-7"
-                        class="c58"
+                        class="c59"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-raa-7"
                       >
                         <div
-                          class="c11"
-                        >
-                          Le contrat de travail
-                        </div>
-                        <div
-                          class="c59"
+                          class="c60"
                         >
                           <p>
                             Le contrat de travail existe dès l’instant où une personne (le salarié) s’engage à travailler, moyennant rémunération, pour le compte et sous la direction d’une autre personne (l’employeur).
@@ -3676,7 +3654,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 class="c31"
               >
                 <div
-                  class="c62 c63"
+                  class="c63 c64"
                 >
                   La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil d’Etat et de la Cour de cassation influence également le droit du travail en France.
                 </div>
@@ -3685,10 +3663,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c64"
+          class="c65"
         >
           <div
-            class="c65"
+            class="c66"
           >
             <h2
               class="c46"
@@ -3715,42 +3693,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
           >
             <div>
               <div
-                class="c66"
+                class="c67"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-8"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-8"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c68"
+                      class="c69"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         1
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c72"
+                      class="c72 c73"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -3819,13 +3795,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Les textes internationaux et européens
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Les textes internationaux et européens
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3845,19 +3826,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-8"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-8"
                 >
                   <div
-                    class="c11"
-                  >
-                    Les textes internationaux et européens
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     Les textes nationaux doivent être conformes aux textes internationaux et européens.
                   </div>
@@ -3866,42 +3841,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c76"
+                class="c77"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-9"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-9"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c77"
+                      class="c78"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         2
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -3928,13 +3901,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        La Constitution
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          La Constitution
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -3954,19 +3932,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-9"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-9"
                 >
                   <div
-                    class="c11"
-                  >
-                    La Constitution
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
                   </div>
@@ -3975,42 +3947,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c76"
+                class="c77"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-10"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-10"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c77"
+                      class="c78"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         3
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -4047,13 +4017,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Lois, ordonnances et décrets (Code du travail)
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Lois, ordonnances et décrets (Code du travail)
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4073,22 +4048,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-10"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-10"
                 >
                   <div
-                    class="c11"
-                  >
-                    Lois, ordonnances et décrets (Code du travail)
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     <h4
-                      class="c79"
+                      class="c56"
                     >
                       Hiérarchie entre le Code du travail et les conventions et accords collectifs
                     </h4>
@@ -4105,10 +4074,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-11"
@@ -4122,7 +4089,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c56 c57"
+                                class="c57 c58"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -4140,25 +4107,24 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                Les conventions et accords collectifs doivent respecter le Code du travail
+                                <h5
+                                  class="c56"
+                                  style="margin: 0px;"
+                                >
+                                  Les conventions et accords collectifs doivent respecter le Code du travail
+                                </h5>
                               </div>
                             </div>
                           </div>
                           <div
                             aria-hidden="true"
-                            aria-labelledby="accordion__heading-raa-11"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-raa-11"
                           >
                             <div
-                              class="c11"
-                            >
-                              Les conventions et accords collectifs doivent respecter le Code du travail
-                            </div>
-                            <div
-                              class="c59"
+                              class="c60"
                             >
                               Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
                             </div>
@@ -4171,10 +4137,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-12"
@@ -4188,7 +4152,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c56 c57"
+                                class="c57 c58"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -4206,25 +4170,24 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                                <h5
+                                  class="c56"
+                                  style="margin: 0px;"
+                                >
+                                  Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
+                                </h5>
                               </div>
                             </div>
                           </div>
                           <div
                             aria-hidden="true"
-                            aria-labelledby="accordion__heading-raa-12"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-raa-12"
                           >
                             <div
-                              class="c11"
-                            >
-                              Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
-                            </div>
-                            <div
-                              class="c59"
+                              class="c60"
                             >
                               <p>
                                 Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
@@ -4242,10 +4205,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           data-accordion-component="AccordionItem"
                         >
                           <div
-                            aria-level="5"
                             class="accordion__heading"
                             data-accordion-component="AccordionItemHeading"
-                            role="heading"
                           >
                             <div
                               aria-controls="accordion__panel-raa-13"
@@ -4259,7 +4220,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c56 c57"
+                                class="c57 c58"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -4277,25 +4238,24 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               <div
                                 class="c82"
                               >
-                                En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                                <h5
+                                  class="c56"
+                                  style="margin: 0px;"
+                                >
+                                  En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
+                                </h5>
                               </div>
                             </div>
                           </div>
                           <div
                             aria-hidden="true"
-                            aria-labelledby="accordion__heading-raa-13"
                             class="c83"
                             data-accordion-component="AccordionItemPanel"
                             hidden=""
                             id="accordion__panel-raa-13"
                           >
                             <div
-                              class="c11"
-                            >
-                              En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
-                            </div>
-                            <div
-                              class="c59"
+                              class="c60"
                             >
                               <p>
                                 Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
@@ -4309,7 +4269,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c62"
+                      class="c63"
                     >
                       <div
                         class="c37"
@@ -4365,42 +4325,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
               id="hierarchie"
             >
               <div
-                class="c76"
+                class="c77"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-hierarchie"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-hierarchie"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c77"
+                      class="c78"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         4
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -4435,13 +4393,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Les conventions et accords collectifs
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Les conventions et accords collectifs
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4461,25 +4424,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-hierarchie"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-hierarchie"
                 >
                   <div
-                    class="c11"
-                  >
-                    Les conventions et accords collectifs
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     <p>
                       La règle qui détermine quel est le texte applicable est différente en fonction du niveau des textes comparés.
                     </p>
                     <h4
-                      class="c79"
+                      class="c56"
                     >
                       Hiérarchie entre convention collective de branche et accord d’entreprise
                     </h4>
@@ -4487,7 +4444,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Le principe est que l’accord d’entreprise s’applique en priorité par rapport à l’accord ou la convention collective de branche. Cela signifie que même si l’accord d’entreprise prévoit des règles différentes, voire plus désavantageuses, que la convention collective de branche, ce sera lui qui s’appliqura au salarié et non la convention collective de branche.
                     </p>
                     <div
-                      class="c62"
+                      class="c63"
                     >
                       <div
                         class="c37"
@@ -4563,7 +4520,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Ces règles sont les mêmes pour la hiérarchie entre convention collective de branche et accord de groupe ou accord d’établissement.
                     </p>
                     <h4
-                      class="c79"
+                      class="c56"
                     >
                       Hiérarchie entre accord de groupe et accord d’entreprise
                     </h4>
@@ -4571,7 +4528,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
                     </p>
                     <h4
-                      class="c79"
+                      class="c56"
                     >
                       Hiérarchie entre accord d’entreprise et accord d’établissement
                     </h4>
@@ -4584,42 +4541,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c76"
+                class="c77"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-15"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-15"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c77"
+                      class="c78"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         5
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -4662,13 +4617,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Les usages et les engagements unilatéraux
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Les usages et les engagements unilatéraux
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4688,19 +4648,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-15"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-15"
                 >
                   <div
-                    class="c11"
-                  >
-                    Les usages et les engagements unilatéraux
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
                   </div>
@@ -4709,42 +4663,40 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c76"
+                class="c77"
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-16"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-16"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="c77"
+                      class="c78"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         6
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -4763,13 +4715,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Le règlement intérieur de l’entreprise
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Le règlement intérieur de l’entreprise
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4789,19 +4746,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-16"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-16"
                 >
                   <div
-                    class="c11"
-                  >
-                    Le règlement intérieur de l’entreprise
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
                   </div>
@@ -4814,16 +4765,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 data-accordion-component="AccordionItem"
               >
                 <div
-                  aria-level="3"
                   class="accordion__heading"
                   data-accordion-component="AccordionItemHeading"
-                  role="heading"
                 >
                   <div
                     aria-controls="accordion__panel-raa-17"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c67"
+                    class="c68"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-17"
                     role="button"
@@ -4833,19 +4782,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       class="c90"
                     >
                       <div
-                        class="c69"
+                        class="c70"
                       >
                         7
                       </div>
                       <div
-                        class="c70"
+                        class="c71"
                       />
                     </div>
                     <div
-                      class="c71 c78"
+                      class="c72 c79"
                     >
                       <div
-                        class="c73"
+                        class="c74"
                       >
                         <svg
                           aria-hidden="true"
@@ -4874,13 +4823,18 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c74"
+                        class="c75"
                       >
-                        Le contrat de travail
+                        <h3
+                          class="c56"
+                          style="margin: 0px;"
+                        >
+                          Le contrat de travail
+                        </h3>
                       </div>
                       <svg
                         aria-hidden="true"
-                        class="c56 c57"
+                        class="c57 c58"
                         fill="none"
                         height="24"
                         stroke="currentColor"
@@ -4900,19 +4854,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  aria-labelledby="accordion__heading-raa-17"
-                  class="c75"
+                  class="c76"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-17"
                 >
                   <div
-                    class="c11"
-                  >
-                    Le contrat de travail
-                  </div>
-                  <div
-                    class="c59"
+                    class="c60"
                   >
                     Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
                   </div>
@@ -4936,7 +4884,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c94"
+              role="heading"
             >
               <strong
                 class="c95"
@@ -4981,7 +4931,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -5058,7 +5010,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -5100,7 +5054,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c101 "
             >
               <strong
+                aria-level="2"
                 class="c102 c103"
+                role="heading"
               >
                 En collaboration avec
               </strong>

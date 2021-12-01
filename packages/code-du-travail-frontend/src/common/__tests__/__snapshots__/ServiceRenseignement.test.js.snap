@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
+.c0 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -63,17 +74,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c0 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c5 {
@@ -270,6 +270,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c8 {
     font-size: 1.4rem;
   }
@@ -278,12 +284,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 @media print {
   .c8 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
   }
 }
 

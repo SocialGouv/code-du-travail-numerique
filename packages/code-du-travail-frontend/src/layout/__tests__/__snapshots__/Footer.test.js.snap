@@ -21,6 +21,30 @@ exports[`<Footer /> should render 1`] = `
   color: #3e486e;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c16 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -140,30 +164,6 @@ exports[`<Footer /> should render 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c16 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c5 {
@@ -330,6 +330,12 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c10 {
     font-size: 1.4rem;
   }
@@ -356,12 +362,6 @@ exports[`<Footer /> should render 1`] = `
 @media print {
   .c20 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.6rem;
   }
 }
 
@@ -444,7 +444,9 @@ exports[`<Footer /> should render 1`] = `
           class="c4"
         >
           <div
+            aria-level="2"
             class="c5"
+            role="heading"
           >
             <strong
               class="c6"
@@ -489,7 +491,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Code du travail numérique
             </strong>
@@ -566,7 +570,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Aidez-nous à améliorer cet outil
             </strong>
@@ -608,7 +614,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               En collaboration avec
             </strong>

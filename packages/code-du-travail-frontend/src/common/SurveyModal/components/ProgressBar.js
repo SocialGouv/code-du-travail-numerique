@@ -6,7 +6,13 @@ import { PAGES_NUMBER } from "../reducer";
 
 export const ProgressBar = ({ state }) => (
   <>
-    <StyledText fontSize="tiny" fontWeight="600" variant="primary">
+    <StyledText
+      fontSize="tiny"
+      fontWeight="600"
+      variant="primary"
+      aria-level="2"
+      role="heading"
+    >
       QUESTION {state.pageNumber} SUR {PAGES_NUMBER}
     </StyledText>
     <StyledProgress ratio={state.pageNumber / PAGES_NUMBER} />

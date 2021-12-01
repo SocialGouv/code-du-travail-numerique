@@ -15,7 +15,10 @@ class References extends React.PureComponent {
       <>
         {references.length > accordionDisplay ? (
           <Wrapper variant="light" {...props}>
-            <Collapse title={label}>
+            <Collapse
+              title={label}
+              textProps={{ "aria-level": "2", role: "heading" }}
+            >
               <ReferenceList references={references} />
             </Collapse>
           </Wrapper>

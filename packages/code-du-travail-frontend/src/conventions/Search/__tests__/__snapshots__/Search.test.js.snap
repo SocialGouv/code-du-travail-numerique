@@ -17,6 +17,17 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   margin-bottom: 0;
 }
 
+.c7 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -72,17 +83,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -252,6 +252,12 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
   }
@@ -260,12 +266,6 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
 @media print {
   .c11 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1157,6 +1157,17 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   margin-bottom: 0;
 }
 
+.c7 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1212,17 +1223,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -1402,6 +1402,12 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c16 {
     font-size: 1.4rem;
   }
@@ -1410,12 +1416,6 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
 @media print {
   .c16 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1544,6 +1544,17 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   margin-bottom: 0;
 }
 
+.c7 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1599,17 +1610,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -1779,6 +1779,12 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c15 {
     font-size: 1.4rem;
   }
@@ -1787,12 +1793,6 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 @media print {
   .c15 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1903,6 +1903,17 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
   margin-bottom: 0;
 }
 
+.c7 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1958,17 +1969,6 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -2142,6 +2142,12 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c12 {
     font-size: 1.4rem;
   }
@@ -2150,12 +2156,6 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
 @media print {
   .c12 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
   }
 }
 
@@ -2518,6 +2518,17 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   margin-bottom: 0;
 }
 
+.c7 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2573,17 +2584,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c7 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -2768,6 +2768,12 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 }
 
 @media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c11 {
     font-size: 1.4rem;
   }
@@ -2776,12 +2782,6 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
 @media print {
   .c11 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
   }
 }
 

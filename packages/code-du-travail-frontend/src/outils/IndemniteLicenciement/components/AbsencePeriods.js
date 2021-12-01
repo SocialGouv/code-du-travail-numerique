@@ -44,7 +44,12 @@ export const AbsencePeriods = ({ name }) => (
           {fields.map((name, index) => (
             <RelativeDiv key={name}>
               <RowTitle>
-                <Text variant="secondary" fontSize="hsmall">
+                <Text
+                  variant="secondary"
+                  fontSize="hsmall"
+                  role="heading"
+                  aria-level="2"
+                >
                   Absence {index + 1}
                 </Text>
               </RowTitle>

@@ -19,11 +19,13 @@ export const initialState = {
     },
     {
       component: StepInfosGenerales,
+      isForm: true,
       label: "Informations générales",
       name: "info_generales",
     },
     {
       component: StepRemuneration,
+      isForm: true,
       label: "Rémunération",
       name: "remuneration",
     },

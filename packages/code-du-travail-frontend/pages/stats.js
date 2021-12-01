@@ -3,6 +3,7 @@ import {
   Grid,
   Heading,
   PageTitle,
+  Paragraph,
   Section,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
@@ -35,22 +36,30 @@ const Stats = ({ data }) => {
             <Grid columns={3}>
               <Tile variant="dark">
                 <Heading as="h2">Contenus référencés</Heading>
-                <Num>{data.nbDocuments}</Num>
+                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                  {data.nbDocuments}
+                </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Visites</Heading>
-                <Num>{data.nbVisits}</Num>
+                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                  {data.nbVisits}
+                </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Recherches</Heading>
-                <Num>{data.nbSearches}</Num>
+                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                  {data.nbSearches}
+                </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Consultations</Heading>
-                <Num>{data.nbPageViews}</Num>
+                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                  {data.nbPageViews}
+                </Num>
               </Tile>
             </Grid>
             <p>
@@ -85,11 +94,8 @@ const Tile = styled(Wrapper)`
   width: 100%;
 `;
 
-const Num = styled.div`
-  color: ${({ theme }) => theme.secondary};
-  font-weight: bold;
+const Num = styled(Paragraph)`
   font-size: 5rem;
-  font-family: "Open Sans", sans-serif;
 `;
 
 export default Stats;
