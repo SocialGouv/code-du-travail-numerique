@@ -68,8 +68,8 @@ Quand("j'attends que le titre de page {string} apparaisse", (title) => {
   I.waitForElement(`//h1[contains(., "${title}")]`, 10);
 });
 
-Quand("j'attend que le texte {string} apparaisse", (text) => {
-  I.waitForText(text, 5);
+Quand("j'attends que le texte {string} apparaisse", (text) => {
+  I.waitForText(text, 10);
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -100);
 });
 
