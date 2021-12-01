@@ -4342,9 +4342,7 @@ exports[`<Convention /> renders 1`] = `
                               />
                             </svg>
                             <span
-                              aria-level="2"
                               class="c25 c26"
-                              role="heading"
                             >
                               Références juridiques concernées :
                             </span>

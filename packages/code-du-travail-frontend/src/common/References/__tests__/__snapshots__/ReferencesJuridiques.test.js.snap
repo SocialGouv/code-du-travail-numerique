@@ -188,9 +188,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           />
         </svg>
         <span
-          aria-level="2"
           class="c4 c5"
-          role="heading"
         >
           Références juridiques concernées :
         </span>
