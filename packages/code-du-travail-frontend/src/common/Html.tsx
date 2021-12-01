@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import xss from "xss";
 
-import { htmlParser } from "../lib";
+import { htmlParser } from "../lib/html";
 
 type Props = {
   children: string;
