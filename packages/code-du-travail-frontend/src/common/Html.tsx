@@ -21,7 +21,7 @@ const whiteListTags = ["webcomponent-tooltip"];
  * @type {string[]}
  * class is used for modeles-de-courrier
  */
-const whiteListAttr = ["class"];
+const whiteListAttr = ["class", "rel", "href"];
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
   return (
