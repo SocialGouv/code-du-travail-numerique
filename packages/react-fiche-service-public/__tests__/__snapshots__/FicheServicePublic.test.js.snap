@@ -17,19 +17,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c12 {
   position: absolute;
   background-color: #7994d4;
@@ -124,6 +111,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c21 > *:last-child {
   margin-bottom: 0;
+}
+
+.c9 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c3 {
@@ -626,11 +626,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-0"
                 >
                   <div
-                    class="c9"
-                  >
-                    De quoi s'agit-il ?
-                  </div>
-                  <div
                     class="c21"
                   >
                     <p>
@@ -704,11 +699,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-1"
                 >
-                  <div
-                    class="c9"
-                  >
-                    Conditions
-                  </div>
                   <div
                     class="c21"
                   >
@@ -827,11 +817,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-2"
                 >
                   <div
-                    class="c9"
-                  >
-                    Volonté de démissionner
-                  </div>
-                  <div
                     class="c21"
                   >
                     <p>
@@ -932,11 +917,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-3"
                 >
-                  <div
-                    class="c9"
-                  >
-                    Procédure
-                  </div>
                   <div
                     class="c21"
                   >
@@ -1050,11 +1030,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-4"
                 >
-                  <div
-                    class="c9"
-                  >
-                    Préavis
-                  </div>
                   <div
                     class="c21"
                   >
@@ -1349,11 +1324,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   id="accordion__panel-raa-5"
                                 >
                                   <div
-                                    class="c9"
-                                  >
-                                    Accord de l'employeur
-                                  </div>
-                                  <div
                                     class="c21"
                                   >
                                     <p>
@@ -1424,11 +1394,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   hidden=""
                                   id="accordion__panel-raa-6"
                                 >
-                                  <div
-                                    class="c9"
-                                  >
-                                    Refus de l'employeur
-                                  </div>
                                   <div
                                     class="c21"
                                   >
@@ -1576,11 +1541,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   id="accordion__panel-raa-7"
                 >
                   <div
-                    class="c9"
-                  >
-                    Indemnisation
-                  </div>
-                  <div
                     class="c21"
                   >
                     <p>
@@ -1702,11 +1662,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-8"
                 >
-                  <div
-                    class="c9"
-                  >
-                    Documents remis au salarié
-                  </div>
                   <div
                     class="c21"
                   >

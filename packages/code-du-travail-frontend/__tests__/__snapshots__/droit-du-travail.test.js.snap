@@ -121,19 +121,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c28 {
   position: absolute;
   background-color: #7994d4;
@@ -1041,6 +1028,19 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c21 {
@@ -2697,11 +2697,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-0"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les textes internationaux
-                        </div>
-                        <div
                           class="c60"
                         >
                           <p>
@@ -2851,11 +2846,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         hidden=""
                         id="accordion__panel-raa-1"
                       >
-                        <div
-                          class="c11"
-                        >
-                          Les textes européens
-                        </div>
                         <div
                           class="c60"
                         >
@@ -3052,11 +3042,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-2"
                       >
                         <div
-                          class="c11"
-                        >
-                          La Constitution française
-                        </div>
-                        <div
                           class="c60"
                         >
                           <p>
@@ -3211,11 +3196,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-3"
                       >
                         <div
-                          class="c11"
-                        >
-                          Lois, ordonnances, décrets et arrêtés
-                        </div>
-                        <div
                           class="c60"
                         >
                           <p>
@@ -3337,11 +3317,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-4"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les conventions et accords collectifs
-                        </div>
-                        <div
                           class="c60"
                         >
                           <p>
@@ -3460,11 +3435,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-5"
                       >
                         <div
-                          class="c11"
-                        >
-                          Les usages et les engagements unilatéraux
-                        </div>
-                        <div
                           class="c60"
                         >
                           <p>
@@ -3564,11 +3534,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         id="accordion__panel-raa-6"
                       >
                         <div
-                          class="c11"
-                        >
-                          Le règlement intérieur de l’entreprise
-                        </div>
-                        <div
                           class="c60"
                         >
                           Le règlement intérieur de l’entreprise est un acte écrit par l’employeur qui fixe les règles concernant la discipline, la santé et la sécurité dans l’entreprise.
@@ -3664,11 +3629,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         hidden=""
                         id="accordion__panel-raa-7"
                       >
-                        <div
-                          class="c11"
-                        >
-                          Le contrat de travail
-                        </div>
                         <div
                           class="c60"
                         >
@@ -3872,11 +3832,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-8"
                 >
                   <div
-                    class="c11"
-                  >
-                    Les textes internationaux et européens
-                  </div>
-                  <div
                     class="c60"
                   >
                     Les textes nationaux doivent être conformes aux textes internationaux et européens.
@@ -3982,11 +3937,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-9"
                 >
-                  <div
-                    class="c11"
-                  >
-                    La Constitution
-                  </div>
                   <div
                     class="c60"
                   >
@@ -4104,11 +4054,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-10"
                 >
                   <div
-                    class="c11"
-                  >
-                    Lois, ordonnances et décrets (Code du travail)
-                  </div>
-                  <div
                     class="c60"
                   >
                     <h4
@@ -4179,11 +4124,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             id="accordion__panel-raa-11"
                           >
                             <div
-                              class="c11"
-                            >
-                              Les conventions et accords collectifs doivent respecter le Code du travail
-                            </div>
-                            <div
                               class="c60"
                             >
                               Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
@@ -4246,11 +4186,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             hidden=""
                             id="accordion__panel-raa-12"
                           >
-                            <div
-                              class="c11"
-                            >
-                              Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail
-                            </div>
                             <div
                               class="c60"
                             >
@@ -4319,11 +4254,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             hidden=""
                             id="accordion__panel-raa-13"
                           >
-                            <div
-                              class="c11"
-                            >
-                              En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
-                            </div>
                             <div
                               class="c60"
                             >
@@ -4499,11 +4429,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-hierarchie"
                 >
-                  <div
-                    class="c11"
-                  >
-                    Les conventions et accords collectifs
-                  </div>
                   <div
                     class="c60"
                   >
@@ -4729,11 +4654,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   id="accordion__panel-raa-15"
                 >
                   <div
-                    class="c11"
-                  >
-                    Les usages et les engagements unilatéraux
-                  </div>
-                  <div
                     class="c60"
                   >
                     Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
@@ -4831,11 +4751,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-16"
                 >
-                  <div
-                    class="c11"
-                  >
-                    Le règlement intérieur de l’entreprise
-                  </div>
                   <div
                     class="c60"
                   >
@@ -4944,11 +4859,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   hidden=""
                   id="accordion__panel-raa-17"
                 >
-                  <div
-                    class="c11"
-                  >
-                    Le contrat de travail
-                  </div>
                   <div
                     class="c60"
                   >
