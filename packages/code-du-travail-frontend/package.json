@@ -92,7 +92,7 @@
     "ignore-loader": "^0.1.2",
     "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
-    "lint-staged": "^11.0.1",
+    "lint-staged": "^12.1.2",
     "mockdate": "^3.0.5",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
