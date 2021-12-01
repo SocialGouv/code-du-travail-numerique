@@ -33,13 +33,15 @@ const Footer = (): JSX.Element => {
       <StyledFooter>
         <ServiceSection>
           <Container>
-            <Title as="strong" isFirst stripe="top">
+            <Title as="p" isFirst stripe="top">
               Besoin de plus d’informations&nbsp;?
             </Title>
             <StyledContainer narrow noPadding>
-              Les services du ministère du Travail en région informent,
-              conseillent et orientent les salariés et les employeurs du secteur
-              privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent,
+                conseillent et orientent les salariés et les employeurs du
+                secteur privé sur leurs questions en droit du travail.
+              </p>
             </StyledContainer>
             <ServiceRenseignementModal>
               {(openModal) => (

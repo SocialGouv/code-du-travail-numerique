@@ -959,11 +959,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         <div
                           class="c27"
                         >
-                          <span
+                          <p
                             class="c28 "
                           >
                             Modèle de document
-                          </span>
+                          </p>
                           <h3
                             class="c29"
                           >
@@ -971,12 +971,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           </h3>
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c30"
                       >
                         Source: 
                         Direction de l'information légale et administrative (Premier ministre)
-                      </div>
+                      </p>
                     </a>
                     <p>
                       
@@ -1776,11 +1776,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
         <div
           class="c27"
         >
-          <span
+          <p
             class="c28 "
           >
             Modèle de document
-          </span>
+          </p>
           <h3
             class="c29"
           >
@@ -1788,12 +1788,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h3>
         </div>
       </div>
-      <div
+      <p
         class="c30"
       >
         Source: 
         Direction de l'information légale et administrative (Premier ministre)
-      </div>
+      </p>
     </a>
   </div>
 </div>

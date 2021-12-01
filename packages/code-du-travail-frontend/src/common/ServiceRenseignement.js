@@ -101,8 +101,10 @@ function ServiceRenseignement() {
       />
       {departementData && <DepartementLink departement={departementData} />}
       <Small>
-        Attention, ces services délivrent une information juridique, ils ne sont
-        pas compétents pour :
+        <p>
+          Attention, ces services délivrent une information juridique, ils ne
+          sont pas compétents pour :
+        </p>
         <ul>
           <li>{"les demandes d'intervention en entreprise"}</li>
           <li>{"la constitution des dossiers prud’homaux"}</li>

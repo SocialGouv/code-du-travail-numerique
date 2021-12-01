@@ -2135,11 +2135,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 </div>
               </div>
             </div>
-            <span
+            <p
               class="c20 c21"
             >
               tag2
-            </span>
+            </p>
             <header
               class="c22 c23"
             >

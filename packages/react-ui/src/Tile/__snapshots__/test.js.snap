@@ -157,11 +157,11 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
         </h3>
       </div>
     </div>
-    <div
+    <p
       class="c6"
     >
       There is text inside
-    </div>
+    </p>
   </a>
 </div>
 `;
@@ -281,11 +281,11 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
         </h3>
       </div>
     </div>
-    <div
+    <p
       class="c5"
     >
       There is text inside
-    </div>
+    </p>
   </a>
 </div>
 `;
@@ -428,11 +428,11 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         </h3>
       </div>
     </div>
-    <div
+    <p
       class="c5"
     >
       There is text inside
-    </div>
+    </p>
   </a>
 </div>
 `;
@@ -536,11 +536,11 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
         </h3>
       </div>
     </div>
-    <div
+    <p
       class="c4"
     >
       There is text inside
-    </div>
+    </p>
   </a>
 </div>
 `;
@@ -646,11 +646,11 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
       <div
         class="c2"
       >
-        <span
+        <p
           class="c3 "
         >
           This is a theme
-        </span>
+        </p>
         <h3
           class="c4"
         >
@@ -658,11 +658,11 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
         </h3>
       </div>
     </div>
-    <div
+    <p
       class="c5"
     >
       There is text inside
-    </div>
+    </p>
   </button>
 </div>
 `;

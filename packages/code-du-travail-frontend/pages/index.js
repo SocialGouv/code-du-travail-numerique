@@ -88,7 +88,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     icon={icons[icon]}
                     title={title}
                   >
-                    {description}
+                    <StyledParagraph>{description}</StyledParagraph>
                   </CallToActionTile>
                 </Link>
               );
@@ -142,4 +142,8 @@ const StyledArrowRight = styled(icons.DirectionRight)`
   width: 2.8rem;
   height: 1.5rem;
   margin-left: ${spacings.base};
+`;
+
+const StyledParagraph = styled.p`
+  margin: 0;
 `;

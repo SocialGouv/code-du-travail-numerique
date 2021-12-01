@@ -407,7 +407,9 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   <small
     class="c11"
   >
-    Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    <p>
+      Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    </p>
     <ul>
       <li>
         les demandes d'intervention en entreprise

@@ -1570,11 +1570,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <div
+                <p
                   class="c45"
                 >
                   Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai…
-                </div>
+                </p>
               </a>
             </li>
             <h2
@@ -1630,11 +1630,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <div
+                <p
                   class="c45"
                 >
                   La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation…
-                </div>
+                </p>
               </a>
             </li>
           </ul>
@@ -1656,19 +1656,21 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <div
               class="c49"
             >
-              <strong
+              <p
                 class="c50"
               >
                 <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c51 c52"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c53"

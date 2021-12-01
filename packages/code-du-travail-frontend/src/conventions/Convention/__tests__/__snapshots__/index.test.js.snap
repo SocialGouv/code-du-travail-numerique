@@ -4863,19 +4863,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 1-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Salaires minimaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4893,19 +4893,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 4-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Salaire mensuel
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4923,19 +4923,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 4-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Déduction des heures non travaillées
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4953,19 +4953,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-8
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Barèmes de salaires minimaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -5062,19 +5062,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-13
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5092,19 +5092,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-14
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Heures supplémentaires exceptionnelles
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5122,19 +5122,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-15
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Plafonds
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5152,19 +5152,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-16
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Définition de la durée du travail
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5182,19 +5182,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-17
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Majoration pour heures supplémentaires.
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5212,19 +5212,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-18
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Equivalences et dérogations permanentes
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5242,19 +5242,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-21
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Semaine de travail en 5 jours
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5272,19 +5272,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-22
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Exceptions à la semaine de travail en 5 jours
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5302,19 +5302,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-24
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Horaires individualisés
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5332,19 +5332,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-25
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Horaires à temps partiel
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5362,19 +5362,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-28
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Récupération des heures perdues pour intempéries
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5392,19 +5392,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 3-29
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Cas des chefs d'équipe
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -5501,19 +5501,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Préambule
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5531,19 +5531,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Définitions générales des critères et des niveaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5561,19 +5561,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-3
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Coefficients hiérarchiques
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5591,19 +5591,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Prise en compte des diplômes professionnels bâtiment
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5621,19 +5621,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-5
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Polyvalence
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5651,19 +5651,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-6
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Evolution de carrière
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5681,19 +5681,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c42"
                         >
-                          <span
+                          <p
                             class="c43 c44"
                           >
                             Article 12-7
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c45"
                       >
                         Suivi de l'application dans l'entreprise
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>

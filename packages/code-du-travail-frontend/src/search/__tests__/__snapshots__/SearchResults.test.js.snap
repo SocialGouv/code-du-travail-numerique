@@ -685,11 +685,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -697,11 +697,11 @@ exports[`<SearchResults/> should render results 1`] = `
               </h3>
             </div>
           </div>
-          <div
+          <p
             class="c9"
           >
             description
-          </div>
+          </p>
         </a>
       </li>
       <li
@@ -744,11 +744,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -756,7 +756,7 @@ exports[`<SearchResults/> should render results 1`] = `
               </h3>
             </div>
           </div>
-          <div
+          <p
             class="c9"
           >
             <div
@@ -785,7 +785,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </p>
         </a>
       </li>
       <li
@@ -804,11 +804,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils externes
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -816,7 +816,7 @@ exports[`<SearchResults/> should render results 1`] = `
               </h3>
             </div>
           </div>
-          <div
+          <p
             class="c9"
           >
             <div
@@ -845,7 +845,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </p>
         </a>
       </li>
       <li
@@ -888,11 +888,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test root content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -900,7 +900,7 @@ exports[`<SearchResults/> should render results 1`] = `
               </h3>
             </div>
           </div>
-          <div
+          <p
             class="c9"
           >
             <div
@@ -929,7 +929,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </p>
         </a>
       </li>
       <li
@@ -972,11 +972,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -984,11 +984,11 @@ exports[`<SearchResults/> should render results 1`] = `
               </h3>
             </div>
           </div>
-          <div
+          <p
             class="c9"
           >
             description
-          </div>
+          </p>
         </a>
       </li>
     </ul>
@@ -1047,11 +1047,11 @@ exports[`<SearchResults/> should render results 1`] = `
                       </h3>
                     </div>
                   </div>
-                  <div
+                  <p
                     class="c9"
                   >
                     la description
-                  </div>
+                  </p>
                 </a>
               </div>
             </div>

@@ -2517,11 +2517,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
+                  <p
                     class="c43 c44"
                   >
                     Autres départs
-                  </span>
+                  </p>
                   <header
                     class="c45 c46"
                   >
@@ -2965,19 +2965,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               <div
                 class="c88"
               >
-                <strong
+                <p
                   class="c89"
                 >
                   <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <div
                 class="c91 c92"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
               </div>
               <button
                 class="c93"
@@ -5795,11 +5797,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
+                  <p
                     class="c43 c44"
                   >
                     Autres départs
-                  </span>
+                  </p>
                   <header
                     class="c45 c46"
                   >
@@ -6243,19 +6245,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               <div
                 class="c88"
               >
-                <strong
+                <p
                   class="c89"
                 >
                   <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <div
                 class="c91 c92"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
               </div>
               <button
                 class="c93"

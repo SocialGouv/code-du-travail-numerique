@@ -360,11 +360,11 @@ exports[`<Highlights /> should render 1`] = `
                   <div
                     class="c12"
                   >
-                    <span
+                    <p
                       class="c13 "
                     >
                       Santé, sécurité et conditions de travail
-                    </span>
+                    </p>
                     <h3
                       class="c14"
                     >
@@ -372,11 +372,11 @@ exports[`<Highlights /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <div
+                <p
                   class="c15"
                 >
                   1. Dois-je prévenir mon employeur si je reviens, ou si...
-                </div>
+                </p>
               </a>
             </div>
             <div
@@ -392,11 +392,11 @@ exports[`<Highlights /> should render 1`] = `
                   <div
                     class="c12"
                   >
-                    <span
+                    <p
                       class="c13 "
                     >
                       Santé, sécurité et conditions de travail
-                    </span>
+                    </p>
                     <h3
                       class="c14"
                     >
@@ -404,11 +404,11 @@ exports[`<Highlights /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <div
+                <p
                   class="c15"
                 >
                   9. Quelles sont les recommandations sanitaires pour...
-                </div>
+                </p>
               </a>
             </div>
           </div>

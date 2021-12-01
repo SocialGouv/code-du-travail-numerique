@@ -598,7 +598,9 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             <small
               class="c14"
             >
-              Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              <p>
+                Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              </p>
               <ul>
                 <li>
                   les demandes d'intervention en entreprise

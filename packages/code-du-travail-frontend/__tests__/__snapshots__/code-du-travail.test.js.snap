@@ -1805,19 +1805,21 @@ exports[`<CodeDuTravail /> should render 1`] = `
             <div
               class="c48"
             >
-              <strong
+              <p
                 class="c49"
               >
                 <span
                   class="c50"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c51 c52"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c53"
