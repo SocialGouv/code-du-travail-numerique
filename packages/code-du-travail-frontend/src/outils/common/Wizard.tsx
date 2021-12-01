@@ -176,7 +176,7 @@ function Wizard({
                 />
                 {steps[stepIndex].isForm ? (
                   <Fieldset>
-                    <Legend isInvisible>{steps[stepIndex].label}</Legend>
+                    <Legend isHidden>{steps[stepIndex].label}</Legend>
                     <Step form={form} dispatch={dispatch} />
                   </Fieldset>
                 ) : (

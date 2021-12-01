@@ -2,22 +2,22 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-export const Legend = ({ isInvisible, ...props }) => {
-  return <StyledLegend {...props} isInvisible={isInvisible} />;
+export const Legend = ({ isHidden, ...props }) => {
+  return <StyledLegend {...props} isHidden={isHidden} />;
 };
 
 Legend.propTypes = {
   children: PropTypes.node.isRequired,
-  isInvisible: PropTypes.bool,
+  isHidden: PropTypes.bool,
 };
 
 Legend.defaultProps = {
-  isInvisible: false,
+  isHidden: false,
 };
 
 export const StyledLegend = styled.legend`
   padding: 0;
   margin: 0;
   border: 0;
-  ${({ isInvisible }) => isInvisible && `display: none`};
+  ${({ isHidden }) => isHidden && `display: none`};
 `;
