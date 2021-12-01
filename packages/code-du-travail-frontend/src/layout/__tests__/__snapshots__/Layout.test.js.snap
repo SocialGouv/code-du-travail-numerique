@@ -21,19 +21,6 @@ exports[`<Layout /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c30 {
   position: absolute;
   background-color: #7994d4;
@@ -299,6 +286,19 @@ exports[`<Layout /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -1177,7 +1177,9 @@ exports[`<Layout /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c28"
+              role="heading"
             >
               <strong
                 class="c29"
@@ -1222,7 +1224,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1299,7 +1303,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1341,7 +1347,9 @@ exports[`<Layout /> should render 1`] = `
               class="c37 "
             >
               <strong
+                aria-level="2"
                 class="c38 c39"
+                role="heading"
               >
                 En collaboration avec
               </strong>

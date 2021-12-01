@@ -90,7 +90,7 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
-              <InsertTitle>Page personnalisable</InsertTitle>
+              <StyledInsertTitle>Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des {}
@@ -240,6 +240,11 @@ const HideOnMobile = styled.span`
 const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
 `;
+
+const StyledInsertTitle = styled(InsertTitle).attrs({
+  "aria-level": "2",
+  role: "heading",
+})``;
 
 const StyledSection = styled(Section)`
   padding-bottom: 0;

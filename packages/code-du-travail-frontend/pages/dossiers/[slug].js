@@ -156,7 +156,10 @@ const FixedWrapper = styled.div`
   }
 `;
 
-const NavTitle = styled.strong`
+const NavTitle = styled.strong.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   display: block;
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};

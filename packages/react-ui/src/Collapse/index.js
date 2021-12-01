@@ -6,7 +6,7 @@ import { AccordionArrow } from "../Accordion";
 import { Text } from "../Text";
 import { spacings } from "../theme.js";
 
-export const Collapse = ({ title, children, onClickHandler }) => {
+export const Collapse = ({ title, children, onClickHandler, textProps }) => {
   const [active, setActive] = React.useState(false);
   const [height, setHeight] = React.useState("0px");
   const contentSpace = React.useRef(null);
@@ -26,7 +26,7 @@ export const Collapse = ({ title, children, onClickHandler }) => {
         role="button"
       >
         <AccordionArrow aria-hidden="true" />
-        <StyledText fontSize="hsmall" fontWeight="600">
+        <StyledText fontSize="hsmall" fontWeight="600" {...textProps}>
           {title}
         </StyledText>
       </StyledLink>
@@ -67,5 +67,6 @@ const StyledText = styled(Text)`
 Collapse.propTypes = {
   children: PropTypes.node.isRequired,
   onClickHandler: PropTypes.func,
+  textProps: PropTypes.object,
   title: PropTypes.string,
 };

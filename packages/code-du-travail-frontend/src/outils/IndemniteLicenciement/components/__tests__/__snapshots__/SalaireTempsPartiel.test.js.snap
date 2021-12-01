@@ -522,7 +522,9 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Période 
         1
@@ -1203,7 +1205,9 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Période 
         1
@@ -1351,7 +1355,9 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Période 
         2

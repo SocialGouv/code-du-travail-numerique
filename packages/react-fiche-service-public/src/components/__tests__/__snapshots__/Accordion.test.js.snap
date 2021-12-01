@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
-.c10 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c2 {
   position: absolute;
   background-color: #7994d4;
@@ -59,7 +46,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   transform: rotate(90deg);
 }
 
-.c12 {
+.c11 {
   border-top: 1px solid #bbcadf;
 }
 
@@ -102,11 +89,11 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   line-height: 1.25;
 }
 
-.c11 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -248,11 +235,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c10"
           >
-            titre 1
-          </div>
-          <div
-            class="c11"
-          >
             <p>
               paragraphe 1-1
             </p>
@@ -265,7 +247,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div>
       <div
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -321,11 +303,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c10"
           >
-            titre 2
-          </div>
-          <div
-            class="c11"
-          >
             <p>
               paragraphe 2-1
             </p>
@@ -343,7 +320,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div>
       <div
-        class="c12"
+        class="c11"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -399,11 +376,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           <div
             class="c10"
           >
-            titre 3
-          </div>
-          <div
-            class="c11"
-          >
             <p>
               paragraphe 3-1
             </p>
@@ -419,19 +391,6 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
-.c7 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c0 {
   position: relative;
   display: block;
@@ -464,7 +423,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   transform: rotate(90deg);
 }
 
-.c9 {
+.c8 {
   border-top: 1px solid #bbcadf;
 }
 
@@ -507,11 +466,11 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   line-height: 1.25;
 }
 
-.c8 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -608,11 +567,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           <div
             class="c7"
           >
-            titre 1
-          </div>
-          <div
-            class="c8"
-          >
             <p>
               paragraphe 1-1
             </p>
@@ -625,7 +579,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div>
       <div
-        class="c9"
+        class="c8"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -681,11 +635,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           <div
             class="c7"
           >
-            titre 2
-          </div>
-          <div
-            class="c8"
-          >
             <p>
               paragraphe 2-1
             </p>
@@ -703,7 +652,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div>
       <div
-        class="c9"
+        class="c8"
         data-accordion-component="AccordionItem"
       >
         <div
@@ -758,11 +707,6 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
         >
           <div
             class="c7"
-          >
-            titre 3
-          </div>
-          <div
-            class="c8"
           >
             <p>
               paragraphe 3-1
