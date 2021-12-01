@@ -10,6 +10,9 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
+export const parseIdcc = (query) =>
+  /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
+
 /**
  * Return documents matching the given query.
  *
@@ -25,7 +28,7 @@ router.get("/idcc", async (ctx) => {
   const query = ctx.request.query.q;
 
   // if only digit within query we make it a pure idcc search (like 1234)
-  const idccQuery = /^\d+$/.test(query) ? parseInt(query, 10) : undefined;
+  const idccQuery = parseIdcc(query);
 
   const body = getIdccBody({ idccQuery, query });
 
