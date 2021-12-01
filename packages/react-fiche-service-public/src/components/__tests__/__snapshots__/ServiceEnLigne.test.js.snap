@@ -121,12 +121,12 @@ exports[`<ServiceEnLigne /> should render 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c6"
     >
       Source: 
       Source qui se retrouve sous le lien
-    </p>
+    </div>
   </a>
 </div>
 `;
