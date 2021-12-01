@@ -28,10 +28,10 @@ const WarningResult: React.FC<Props> = ({
 }) => {
   const statusCcn: StatusCcn = React.useMemo(() => {
     const idccInfo = supportedCcn.find((item) => item.idcc == ccNumber);
-    const find = !!(idccInfo && idccInfo.preavisRetraite);
-    return find && ccNumber
+    const isPreavisRetraite = !!(idccInfo && idccInfo.preavisRetraite);
+    return ccNumber && isPreavisRetraite
       ? StatusCcn.CCN_SUPPORTED
-      : !find && ccNumber
+      : ccNumber && !isPreavisRetraite
       ? StatusCcn.CCN_UNSUPPORTED
       : StatusCcn.CC_UNSELECTED;
   }, [ccNumber]);
