@@ -25,11 +25,13 @@ const initialSteps = [
   },
   {
     component: StepInfo,
+    isForm: true,
     label: "Contrat de travail",
     name: "info_generales",
   },
   {
     component: StepAnciennete,
+    isForm: true,
     label: "Ancienneté",
     name: "anciennete",
   },
