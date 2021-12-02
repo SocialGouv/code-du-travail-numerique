@@ -73,7 +73,7 @@ export function EnterpriseButton({
         {activitePrincipale && (
           <Activity as="div">Activité : {activitePrincipale}</Activity>
         )}
-        {!showAddress && etablissements > 1 ? (
+        {!showAddress || etablissements > 1 ? (
           <Tag> {etablissements} établissements </Tag>
         ) : (
           <Text>{address || matchingEtablissement.address}</Text>
