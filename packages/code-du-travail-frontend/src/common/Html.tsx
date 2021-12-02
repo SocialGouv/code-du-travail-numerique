@@ -21,7 +21,7 @@ const whiteListTags = ["webcomponent-tooltip"];
  * @type {string[]}
  * class is used for modeles-de-courrier
  */
-const whiteListAttr = ["class", "rel", "href"];
+const whiteListAttr = ["class", "rel", "href", "target"];
 
 const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
   return (
@@ -32,14 +32,14 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
         __html: xss(htmlParser(children), {
           onIgnoreTag: function (tag, html, _options) {
             for (let i = 0; i < whiteListTags.length; i++) {
-              if (tag.startsWith(whiteListTags[i])) {
+              if (tag === whiteListTags[i]) {
                 return html;
               }
             }
           },
           onTagAttr: function (_tag, name, value, _isWhiteAttr) {
             for (let i = 0; i < whiteListAttr.length; i++) {
-              if (name.startsWith(whiteListAttr[i])) {
+              if (name === whiteListAttr[i]) {
                 return name + '="' + escapeAttrValue(value) + '"';
               }
             }
