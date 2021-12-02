@@ -2459,8 +2459,7 @@ exports[`<FicheMT /> should render 1`] = `
                               <a
                                 class="spip_in"
                                 href="https://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/article/le-suivi-de-l-etat-de-sante-des-salaries"
-                                noopener=""
-                                rel="nofollow,"
+                                rel="nofollow, noopener"
                                 target="_blank"
                               >
                                 notre fiche sur le suivi de l’état de santé des salariés

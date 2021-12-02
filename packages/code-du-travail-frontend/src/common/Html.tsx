@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import xss from "xss";
+import xss, { escapeAttrValue } from "xss";
 
 import { htmlParser } from "../lib/html";
 
@@ -30,17 +30,17 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
       isInline={inline}
       dangerouslySetInnerHTML={{
         __html: xss(htmlParser(children), {
-          onIgnoreTag: function (tag, html) {
+          onIgnoreTag: function (tag, html, _options) {
             for (let i = 0; i < whiteListTags.length; i++) {
               if (tag.startsWith(whiteListTags[i])) {
                 return html;
               }
             }
           },
-          onTagAttr: function (tag, name, value) {
+          onTagAttr: function (_tag, name, value, _isWhiteAttr) {
             for (let i = 0; i < whiteListAttr.length; i++) {
               if (name.startsWith(whiteListAttr[i])) {
-                return `${name}=${value}`;
+                return name + '="' + escapeAttrValue(value) + '"';
               }
             }
           },
