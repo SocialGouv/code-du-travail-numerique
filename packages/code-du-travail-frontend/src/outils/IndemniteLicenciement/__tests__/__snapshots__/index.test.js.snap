@@ -135,6 +135,10 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -571,12 +575,12 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
