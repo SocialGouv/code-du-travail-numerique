@@ -15,7 +15,7 @@ export interface Enterprise {
   simpleLabel: string;
   siren: string;
   address?: string;
-  matchingEtablissement?: MatchingEtablissement;
+  firstMatchingEtablissement?: MatchingEtablissement;
 }
 
 /**
@@ -47,7 +47,7 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const ENTERPRISE_API_URL =
-  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+  "https://search-recherche-entreprises-sqlite.dev.fabrique.social.gouv.fr/api/v1";
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
