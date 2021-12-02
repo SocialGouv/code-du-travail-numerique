@@ -36,6 +36,7 @@ export interface AgreementData {
 export interface MatchingEtablissement {
   siret: string;
   address: string;
+  idccs: string[];
 }
 
 const siretSirenError =
