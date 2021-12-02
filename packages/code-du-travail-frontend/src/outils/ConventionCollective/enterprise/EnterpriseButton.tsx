@@ -31,6 +31,7 @@ export function EnterpriseButton({
     address,
     siren,
     firstMatchingEtablissement,
+    allMatchingEtablissements,
   } = enterprise;
 
   const { trackEvent, title, uuid } = useTrackingContext();
@@ -74,7 +75,18 @@ export function EnterpriseButton({
           <Activity as="div">Activité : {activitePrincipale}</Activity>
         )}
         {!showAddress || matching > 1 ? (
-          <Tag> {matching} établissements </Tag>
+          <>
+            <Tag> {matching} établissements </Tag>
+            <ul>
+              {allMatchingEtablissements.map((e, i) => {
+                return (
+                  <li key={i}>
+                    {e.address} - {JSON.stringify(e.idccs)}
+                  </li>
+                );
+              })}
+            </ul>
+          </>
         ) : (
           <Text>{address || firstMatchingEtablissement.address}</Text>
         )}

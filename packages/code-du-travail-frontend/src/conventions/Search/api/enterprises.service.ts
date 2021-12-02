@@ -16,6 +16,7 @@ export interface Enterprise {
   siren: string;
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
+  allMatchingEtablissements: MatchingEtablissement[];
 }
 
 /**
